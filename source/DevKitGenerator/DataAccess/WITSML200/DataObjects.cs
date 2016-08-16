@@ -23,30 +23,31 @@ namespace Energistics.DataAccess.WITSML200
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreMarkerSet))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreMarker))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreCompletion))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCompletion))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToolErrorTermSet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimJobStage))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimPerforationCluster))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimJob))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Risk))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Rig))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MudLogReport))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CuttingsGeology))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InterpretedGeology))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ShowEvaluation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreGeology))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreCompletion))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCompletion))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToolErrorTermSet))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimJob))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimPerforationCluster))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimJobStage))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Risk))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Rig))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DepthRegImage))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCMLedger))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpsReport))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Trajectory))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToolErrorModel))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DownholeComponent))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Log))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Channel))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChannelSet))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementJob))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementJobEvaluation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreGeometry))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Log))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Channel))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChannelSet))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BhaRun))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidsReport))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DrillReport))]
@@ -55,11 +56,11 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Wellbore))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Well))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DataAssuranceRecord))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyKind))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyKindDictionary))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyKind))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EpcExternalPartReference))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -366,1494 +367,175 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the CuttingsIntervalShow xsd type.
+    /// This class represents the GravelPackInterval xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CuttingsIntervalShow", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the CuttingsIntervalShow xsd type.")]
-    public partial class CuttingsIntervalShow : Object, IUniqueId, INotifyPropertyChanged
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GravelPackInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the GravelPackInterval xsd type.")]
+    public partial class GravelPackInterval : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
-        /// Citation property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("Citation")]
-        public Citation Citation {
-            get {
-                return CitationField;
-            } 
-            set {
-                CitationField = value;
-                NotifyPropertyChanged("Citation");
-            }
-        }
-
-        private Citation CitationField; 
-
-        /// <summary>
-        /// ShowRating property
-        /// </summary>
-		[Description("Show Rating.")]
-		[XmlElement("ShowRating")]
-        public ShowRating? ShowRating {
-            get {
-                return ShowRatingField;
-            } 
-            set {
-                ShowRatingField = value;
-             if(value!=null) 
-                 this.ShowRatingSpecified = true;
-                NotifyPropertyChanged("ShowRating");
-            }
-        }
-
-        private ShowRating? ShowRatingField; 
-
-        /// <summary>
-        /// ShowRatingSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean ShowRatingSpecified {
-            get {
-                return ShowRatingSpecifiedField;
-            } 
-            set {
-                ShowRatingSpecifiedField = value;
-                NotifyPropertyChanged("ShowRatingSpecified");
-            }
-        }
-
-        private Boolean ShowRatingSpecifiedField; 
-
-        /// <summary>
-        /// StainColor property
+        /// DownholeStringReferenceId property
         /// </summary>
 		[StringLength(64)]
-        [Description("Visible Stain Color.")]
-		[XmlElement("StainColor")]
-        public String StainColor {
+        [Description("Reference to the downhole string that denotes the interval of the gravel pack.")]
+		[XmlElement("DownholeStringReferenceId")]
+        public String DownholeStringReferenceId {
             get {
-                return StainColorField;
+                return DownholeStringReferenceIdField;
             } 
             set {
-                StainColorField = value;
-                NotifyPropertyChanged("StainColor");
+                DownholeStringReferenceIdField = value;
+                NotifyPropertyChanged("DownholeStringReferenceId");
             }
         }
 
-        private String StainColorField; 
+        private String DownholeStringReferenceIdField; 
 
         /// <summary>
-        /// StainDistr property
+        /// GravelPackMdInterval property
         /// </summary>
-		[StringLength(64)]
-        [Description("Visible Stain Distribution.")]
-		[XmlElement("StainDistr")]
-        public String StainDistr {
-            get {
-                return StainDistrField;
-            } 
-            set {
-                StainDistrField = value;
-                NotifyPropertyChanged("StainDistr");
-            }
-        }
-
-        private String StainDistrField; 
-
-        /// <summary>
-        /// StainPc property
-        /// </summary>
-		[Description("Visible Stain (commonly in percent).")]
+		[Description("Gravel packed measured depth interval for this completion.")]
         [ComponentElement]
-		[XmlElement("StainPc")]
-        public AreaPerAreaMeasure StainPercent {
+		[XmlElement("GravelPackMdInterval")]
+        public MdInterval GravelPackMDInterval {
             get {
-                return StainPcField;
+                return GravelPackMdIntervalField;
             } 
             set {
-                StainPcField = value;
-                NotifyPropertyChanged("StainPercent");
+                GravelPackMdIntervalField = value;
+                NotifyPropertyChanged("GravelPackMDInterval");
             }
         }
 
-        private AreaPerAreaMeasure StainPcField; 
+        private MdInterval GravelPackMdIntervalField; 
 
         /// <summary>
-        /// CutSpeed property
+        /// GravelPackTvdInterval property
         /// </summary>
-		[Description("Cut speed.")]
-		[XmlElement("CutSpeed")]
-        public ShowSpeed? CutSpeed {
-            get {
-                return CutSpeedField;
-            } 
-            set {
-                CutSpeedField = value;
-             if(value!=null) 
-                 this.CutSpeedSpecified = true;
-                NotifyPropertyChanged("CutSpeed");
-            }
-        }
-
-        private ShowSpeed? CutSpeedField; 
-
-        /// <summary>
-        /// CutSpeedSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean CutSpeedSpecified {
-            get {
-                return CutSpeedSpecifiedField;
-            } 
-            set {
-                CutSpeedSpecifiedField = value;
-                NotifyPropertyChanged("CutSpeedSpecified");
-            }
-        }
-
-        private Boolean CutSpeedSpecifiedField; 
-
-        /// <summary>
-        /// CutColor property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Cut color.")]
-		[XmlElement("CutColor")]
-        public String CutColor {
-            get {
-                return CutColorField;
-            } 
-            set {
-                CutColorField = value;
-                NotifyPropertyChanged("CutColor");
-            }
-        }
-
-        private String CutColorField; 
-
-        /// <summary>
-        /// CutStrength property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Cut strength.")]
-		[XmlElement("CutStrength")]
-        public String CutStrength {
-            get {
-                return CutStrengthField;
-            } 
-            set {
-                CutStrengthField = value;
-                NotifyPropertyChanged("CutStrength");
-            }
-        }
-
-        private String CutStrengthField; 
-
-        /// <summary>
-        /// CutForm property
-        /// </summary>
-		[Description("Cut formulation.")]
-		[XmlElement("CutForm")]
-        public ShowLevel? CutForm {
-            get {
-                return CutFormField;
-            } 
-            set {
-                CutFormField = value;
-             if(value!=null) 
-                 this.CutFormSpecified = true;
-                NotifyPropertyChanged("CutForm");
-            }
-        }
-
-        private ShowLevel? CutFormField; 
-
-        /// <summary>
-        /// CutFormSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean CutFormSpecified {
-            get {
-                return CutFormSpecifiedField;
-            } 
-            set {
-                CutFormSpecifiedField = value;
-                NotifyPropertyChanged("CutFormSpecified");
-            }
-        }
-
-        private Boolean CutFormSpecifiedField; 
-
-        /// <summary>
-        /// CutLevel property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Cut level (Faint, Bright, etc.).")]
-		[XmlElement("CutLevel")]
-        public String CutLevel {
-            get {
-                return CutLevelField;
-            } 
-            set {
-                CutLevelField = value;
-                NotifyPropertyChanged("CutLevel");
-            }
-        }
-
-        private String CutLevelField; 
-
-        /// <summary>
-        /// CutFlorForm property
-        /// </summary>
-		[Description("Cut fluorescence form.")]
-		[XmlElement("CutFlorForm")]
-        public ShowLevel? CutFlorForm {
-            get {
-                return CutFlorFormField;
-            } 
-            set {
-                CutFlorFormField = value;
-             if(value!=null) 
-                 this.CutFlorFormSpecified = true;
-                NotifyPropertyChanged("CutFlorForm");
-            }
-        }
-
-        private ShowLevel? CutFlorFormField; 
-
-        /// <summary>
-        /// CutFlorFormSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean CutFlorFormSpecified {
-            get {
-                return CutFlorFormSpecifiedField;
-            } 
-            set {
-                CutFlorFormSpecifiedField = value;
-                NotifyPropertyChanged("CutFlorFormSpecified");
-            }
-        }
-
-        private Boolean CutFlorFormSpecifiedField; 
-
-        /// <summary>
-        /// CutFlorColor property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Cut fluorescence color.")]
-		[XmlElement("CutFlorColor")]
-        public String CutFlorColor {
-            get {
-                return CutFlorColorField;
-            } 
-            set {
-                CutFlorColorField = value;
-                NotifyPropertyChanged("CutFlorColor");
-            }
-        }
-
-        private String CutFlorColorField; 
-
-        /// <summary>
-        /// CutFlorStrength property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Cut fluorescence strength.")]
-		[XmlElement("CutFlorStrength")]
-        public String CutFlorStrength {
-            get {
-                return CutFlorStrengthField;
-            } 
-            set {
-                CutFlorStrengthField = value;
-                NotifyPropertyChanged("CutFlorStrength");
-            }
-        }
-
-        private String CutFlorStrengthField; 
-
-        /// <summary>
-        /// CutFlorSpeed property
-        /// </summary>
-		[Description("Cut fluorescence speed.")]
-		[XmlElement("CutFlorSpeed")]
-        public ShowSpeed? CutFlorSpeed {
-            get {
-                return CutFlorSpeedField;
-            } 
-            set {
-                CutFlorSpeedField = value;
-             if(value!=null) 
-                 this.CutFlorSpeedSpecified = true;
-                NotifyPropertyChanged("CutFlorSpeed");
-            }
-        }
-
-        private ShowSpeed? CutFlorSpeedField; 
-
-        /// <summary>
-        /// CutFlorSpeedSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean CutFlorSpeedSpecified {
-            get {
-                return CutFlorSpeedSpecifiedField;
-            } 
-            set {
-                CutFlorSpeedSpecifiedField = value;
-                NotifyPropertyChanged("CutFlorSpeedSpecified");
-            }
-        }
-
-        private Boolean CutFlorSpeedSpecifiedField; 
-
-        /// <summary>
-        /// CutFlorLevel property
-        /// </summary>
-		[Description("Cut fluorescence level.")]
-		[XmlElement("CutFlorLevel")]
-        public ShowFluorescence? CutFlorLevel {
-            get {
-                return CutFlorLevelField;
-            } 
-            set {
-                CutFlorLevelField = value;
-             if(value!=null) 
-                 this.CutFlorLevelSpecified = true;
-                NotifyPropertyChanged("CutFlorLevel");
-            }
-        }
-
-        private ShowFluorescence? CutFlorLevelField; 
-
-        /// <summary>
-        /// CutFlorLevelSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean CutFlorLevelSpecified {
-            get {
-                return CutFlorLevelSpecifiedField;
-            } 
-            set {
-                CutFlorLevelSpecifiedField = value;
-                NotifyPropertyChanged("CutFlorLevelSpecified");
-            }
-        }
-
-        private Boolean CutFlorLevelSpecifiedField; 
-
-        /// <summary>
-        /// NatFlorColor property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Natural Fluorescence Color.")]
-		[XmlElement("NatFlorColor")]
-        public String NatFlorColor {
-            get {
-                return NatFlorColorField;
-            } 
-            set {
-                NatFlorColorField = value;
-                NotifyPropertyChanged("NatFlorColor");
-            }
-        }
-
-        private String NatFlorColorField; 
-
-        /// <summary>
-        /// NatFlorPc property
-        /// </summary>
-		[Description("Natural fluorescence (commonly in percent).")]
+		[Description("Gravel packed true vertical depth interval for this completion.")]
         [ComponentElement]
-		[XmlElement("NatFlorPc")]
-        public AreaPerAreaMeasure NatFlorPercent {
+		[XmlElement("GravelPackTvdInterval")]
+        public TvdInterval GravelPackTvdInterval {
             get {
-                return NatFlorPcField;
+                return GravelPackTvdIntervalField;
             } 
             set {
-                NatFlorPcField = value;
-                NotifyPropertyChanged("NatFlorPercent");
+                GravelPackTvdIntervalField = value;
+                NotifyPropertyChanged("GravelPackTvdInterval");
             }
         }
 
-        private AreaPerAreaMeasure NatFlorPcField; 
+        private TvdInterval GravelPackTvdIntervalField; 
 
         /// <summary>
-        /// NatFlorLevel property
+        /// EventHistory property
         /// </summary>
-		[Description("Natural fluorescence level.")]
-		[XmlElement("NatFlorLevel")]
-        public ShowFluorescence? NatFlorLevel {
-            get {
-                return NatFlorLevelField;
-            } 
-            set {
-                NatFlorLevelField = value;
-             if(value!=null) 
-                 this.NatFlorLevelSpecified = true;
-                NotifyPropertyChanged("NatFlorLevel");
-            }
-        }
-
-        private ShowFluorescence? NatFlorLevelField; 
-
-        /// <summary>
-        /// NatFlorLevelSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean NatFlorLevelSpecified {
-            get {
-                return NatFlorLevelSpecifiedField;
-            } 
-            set {
-                NatFlorLevelSpecifiedField = value;
-                NotifyPropertyChanged("NatFlorLevelSpecified");
-            }
-        }
-
-        private Boolean NatFlorLevelSpecifiedField; 
-
-        /// <summary>
-        /// NatFlorDesc property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Natural fluorescence description.")]
-		[XmlElement("NatFlorDesc")]
-        public String NatFlorDesc {
-            get {
-                return NatFlorDescField;
-            } 
-            set {
-                NatFlorDescField = value;
-                NotifyPropertyChanged("NatFlorDesc");
-            }
-        }
-
-        private String NatFlorDescField; 
-
-        /// <summary>
-        /// ResidueColor property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Residue color.")]
-		[XmlElement("ResidueColor")]
-        public String ResidueColor {
-            get {
-                return ResidueColorField;
-            } 
-            set {
-                ResidueColorField = value;
-                NotifyPropertyChanged("ResidueColor");
-            }
-        }
-
-        private String ResidueColorField; 
-
-        /// <summary>
-        /// ImpregnatedLitho property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Impregnated lithology.")]
-		[XmlElement("ImpregnatedLitho")]
-        public String ImpregnatedLitho {
-            get {
-                return ImpregnatedLithoField;
-            } 
-            set {
-                ImpregnatedLithoField = value;
-                NotifyPropertyChanged("ImpregnatedLitho");
-            }
-        }
-
-        private String ImpregnatedLithoField; 
-
-        /// <summary>
-        /// Odor property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Description of any hydrocarbon type odors smelled.")]
-		[XmlElement("Odor")]
-        public String Odor {
-            get {
-                return OdorField;
-            } 
-            set {
-                OdorField = value;
-                NotifyPropertyChanged("Odor");
-            }
-        }
-
-        private String OdorField; 
-
-        /// <summary>
-        /// CuttingFluid property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Description of any hydrocarbon type odors smelled")]
-		[XmlElement("CuttingFluid")]
-        public String CuttingFluid {
-            get {
-                return CuttingFluidField;
-            } 
-            set {
-                CuttingFluidField = value;
-                NotifyPropertyChanged("CuttingFluid");
-            }
-        }
-
-        private String CuttingFluidField; 
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-		[StringLength(64)]
-        [XmlAttribute("uid")]
-		
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the Citation xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Citation", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the Citation xsd type.")]
-    public partial class Citation : Object, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Title property
-        /// </summary>
-		[Required]
-        [StringLength(2000)]
-        [Description("One line description/name of the RESQML object.  This is the equivalent in ISO 19115 of CI_Citation.title  Legacy DCGroup - title")]
-		[XmlElement("Title")]
-        public String Title {
-            get {
-                return TitleField;
-            } 
-            set {
-                TitleField = value;
-                NotifyPropertyChanged("Title");
-            }
-        }
-
-        private String TitleField; 
-
-        /// <summary>
-        /// Originator property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("Name (or other human-readable identifier) of the person who initially originated the object or RESQML document in the source application. If that information is not available, the user who created the RESQML format file. The originator remains the same as the object is subsequently edited.   This is the equivalent in ISO 19115 to the CI_Individual.name or the CI_Organization.name of the citedResponsibleParty whose role is \"originator\".  Legacy DCGroup - author")]
-		[XmlElement("Originator")]
-        public String Originator {
-            get {
-                return OriginatorField;
-            } 
-            set {
-                OriginatorField = value;
-                NotifyPropertyChanged("Originator");
-            }
-        }
-
-        private String OriginatorField; 
-
-        /// <summary>
-        /// Creation property
-        /// </summary>
-		[Required]
-        [Description("Date and time the document was created in the source application or, if that information is not available, when it was saved to the RESQML format file.  This is the equivalent of the ISO 19115 CI_Date where the CI_DateTypeCode = ”creation\"  The type is the Energistics timestamp datatype which is the W3C xs:dateTime with the optional timezone offset from UTC made mandatory.  Format: YYYY-MM-DDThh:mm:ssZ[+/-]hh:mm  Legacy DCGroup - created")]
-		[XmlElement("Creation")]
-        public DateTime? Creation {
-            get {
-                return CreationField;
-            } 
-            set {
-                CreationField = value;
-                NotifyPropertyChanged("Creation");
-            }
-        }
-
-        private DateTime? CreationField; 
-
-        /// <summary>
-        /// Format property
-        /// </summary>
-		[Required]
-        [StringLength(2000)]
-        [Description("Software or service that was used to originate the object and the file format created. Must be human and machine readable and unambiguously identify the software by including the company name, software name and software version. This is the equivalent in ISO 19115 to the distributionFormat.MD_Format.  The ISO format for this is [vendor:applicationName]/fileExtension where the application name includes the version number of the application.  SIG Implementation Notes  1. RESQML   - Legacy DCGroup from v1.1 - publisher - fileExtension is not relevant and will be ignored if present. - vendor and applicationName are mandatory.")]
-		[XmlElement("Format")]
-        public String Format {
-            get {
-                return FormatField;
-            } 
-            set {
-                FormatField = value;
-                NotifyPropertyChanged("Format");
-            }
-        }
-
-        private String FormatField; 
-
-        /// <summary>
-        /// Editor property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Name (or other human-readable identifier) of the last person who updated the object.   This is the equivalent in ISO 19115 to the CI_Individual.name or the CI_Organization.name of the citedResponsibleParty whose role is \"editor\".  Legacy DCGroup - contributor")]
-		[XmlElement("Editor")]
-        public String Editor {
-            get {
-                return EditorField;
-            } 
-            set {
-                EditorField = value;
-                NotifyPropertyChanged("Editor");
-            }
-        }
-
-        private String EditorField; 
-
-        /// <summary>
-        /// LastUpdate property
-        /// </summary>
-		[Description("Date and time the document was last modified in the source application or, if that information is not available, when it was last saved to the RESQML format file.  This is the equivalent of the ISO 19115 CI_Date where the CI_DateTypeCode = ”lastUpdate\"  The type is the Energistics timestamp datatype which is the W3C xs:dateTime with the optional timezone offset from UTC made mandatory.  Format: YYYY-MM-DDThh:mm:ssZ[+/-]hh:mm  Legacy DCGroup - modified")]
-		[XmlElement("LastUpdate")]
-        public DateTime? LastUpdate {
-            get {
-                return LastUpdateField;
-            } 
-            set {
-                LastUpdateField = value;
-             if(value!=null) 
-                 this.LastUpdateSpecified = true;
-                NotifyPropertyChanged("LastUpdate");
-            }
-        }
-
-        private DateTime? LastUpdateField; 
-
-        /// <summary>
-        /// LastUpdateSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean LastUpdateSpecified {
-            get {
-                return LastUpdateSpecifiedField;
-            } 
-            set {
-                LastUpdateSpecifiedField = value;
-                NotifyPropertyChanged("LastUpdateSpecified");
-            }
-        }
-
-        private Boolean LastUpdateSpecifiedField; 
-
-        /// <summary>
-        /// VersionString property
-        /// </summary>
-		[StringLength(64)]
-		[XmlElement("VersionString")]
-        public String VersionString {
-            get {
-                return VersionStringField;
-            } 
-            set {
-                VersionStringField = value;
-                NotifyPropertyChanged("VersionString");
-            }
-        }
-
-        private String VersionStringField; 
-
-        /// <summary>
-        /// Description property
-        /// </summary>
-		[StringLength(2000)]
-        [Description("User descriptive comments about the object. Intended for end-user use (human readable); not necessarily meant to be used by software.  This is the equivalent of the ISO 19115 abstract.CharacterString  Legacy DCGroup - description")]
-		[XmlElement("Description")]
-        public String Description {
-            get {
-                return DescriptionField;
-            } 
-            set {
-                DescriptionField = value;
-                NotifyPropertyChanged("Description");
-            }
-        }
-
-        private String DescriptionField; 
-
-        /// <summary>
-        /// DescriptiveKeywords property
-        /// </summary>
-		[StringLength(2000)]
-        [Description("Key words to describe the activity, for example, history match or volumetric calculations, relevant to this object. Intended to be used in a search function by software.  This is the equivalent in ISO 19115 of descriptiveKeywords.MD_Keywords  Legacy DCGroup - subject")]
-		[XmlElement("DescriptiveKeywords")]
-        public String DescriptiveKeywords {
-            get {
-                return DescriptiveKeywordsField;
-            } 
-            set {
-                DescriptiveKeywordsField = value;
-                NotifyPropertyChanged("DescriptiveKeywords");
-            }
-        }
-
-        private String DescriptiveKeywordsField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the AreaPerAreaMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AreaPerAreaMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the AreaPerAreaMeasure xsd type.")]
-    public partial class AreaPerAreaMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the AreaPerAreaMeasure class.
-        /// </summary>
-        public AreaPerAreaMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the AreaPerAreaMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public AreaPerAreaMeasure(Double value, AreaPerAreaUom uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public AreaPerAreaUom Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private AreaPerAreaUom uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the CuttingsIntervalLithology xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CuttingsIntervalLithology", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the CuttingsIntervalLithology xsd type.")]
-    public partial class CuttingsIntervalLithology : Object, IUniqueId, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Kind property
-        /// </summary>
-		[Required]
-        [StringLength(40)]
-        [Description("The geological name for the type of lithology from the enum table listing a  subset of the OneGeology / CGI defined formation types.")]
-		[XmlElement("Kind")]
-        public String Kind {
-            get {
-                return KindField;
-            } 
-            set {
-                KindField = value;
-                NotifyPropertyChanged("Kind");
-            }
-        }
-
-        private String KindField; 
-
-        /// <summary>
-        /// LithPc property
-        /// </summary>
-		[Required]
-        [Description("The lithology represents the portion of the sampled interval this lithology type relates to. The total of the lithologies within an interval should add up to 100 percent. If LithologySource in cs-geology is \"interpreted\" only 100% is allowed. If \"core\" or \"cuttings\" then recommended useage is the creating application uses blocks of 10%. i.e. 10, 20, 30, 40, 50, 60, 70, 80, 90, 100. Ideally the input application should enforce a total of 100% for every defined depth interval. If the total for a depth interval does not add up to 100%, the \"undifferentiated\" code should be used to fill out to 100%.")]
+		[Description("The contactInterval event information")]
         [ComponentElement]
-		[XmlElement("LithPc")]
-        public VolumePerVolumeMeasure LithPercent {
+		[XmlElement("EventHistory")]
+        public EventInfo EventHistory {
             get {
-                return LithPcField;
+                return EventHistoryField;
             } 
             set {
-                LithPcField = value;
-                NotifyPropertyChanged("LithPercent");
+                EventHistoryField = value;
+                NotifyPropertyChanged("EventHistory");
             }
         }
 
-        private VolumePerVolumeMeasure LithPcField; 
+        private EventInfo EventHistoryField; 
 
         /// <summary>
-        /// Citation property
+        /// GeologyFeatureReferenceId property
         /// </summary>
-		[ComponentElement]
-		[XmlElement("Citation")]
-        public Citation Citation {
+		[Description("Reference to a geology feature")]
+        [RecurringElement]
+		[XmlElement("GeologyFeatureReferenceId")]
+        public List<String> GeologyFeatureReferenceId {
             get {
-                return CitationField;
+                return GeologyFeatureReferenceIdField;
             } 
             set {
-                CitationField = value;
-                NotifyPropertyChanged("Citation");
-            }
-        }
-
-        private Citation CitationField; 
-
-        /// <summary>
-        /// CodeLith property
-        /// </summary>
-		[StringLength(64)]
-        [Description("A custom Lithology encoding sceme if desired. (It is recommended that if used, this follows the NPD required useage with the numeric values noted in the enum tables, which was the original intent for this item).  The NPD Coding System assigned a digital code to the main lithologies as per the Norwegian Blue Book data standards. The code was then derived by Lithology = (Main lithology * 10) + cement + (modifier / 100). Example: Calcite cemented silty micaceous sandstone: ( 33 * 10 ) + 1 + (21 / 100) gives a numeric code of 331.21. However the NPD is also working through Energistics/Ceasar to potentially change this useage.) This should not be used for mnemonics, as those vary by operator, and if an abbreviation is  required a local look up table should be used by the rendering client, based on Lithology Type.")]
-		[XmlElement("CodeLith")]
-        public String CodeLith {
-            get {
-                return CodeLithField;
-            } 
-            set {
-                CodeLithField = value;
-                NotifyPropertyChanged("CodeLith");
-            }
-        }
-
-        private String CodeLithField; 
-
-        /// <summary>
-        /// Color property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology color description, from Shell 1995 4.3.3.1 and 4.3.3.2 Colors. with the addition of Frosted. eg black blue brown buff green grey olive orange pink purple red translucent frosted white yellow, modified by dark, light, moderate, medium, mottled, variegated, slight, weak, strong, vivid.")]
-		[XmlElement("Color")]
-        public String Color {
-            get {
-                return ColorField;
-            } 
-            set {
-                ColorField = value;
-                NotifyPropertyChanged("Color");
-            }
-        }
-
-        private String ColorField; 
-
-        /// <summary>
-        /// Texture property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6. crystalline, (often \"feather-edge\" appearance on breaking),  friable, dull, earthy,  chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,   sucrosic, (often exhibits capillary imbibition). e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)")]
-		[XmlElement("Texture")]
-        public String Texture {
-            get {
-                return TextureField;
-            } 
-            set {
-                TextureField = value;
-                NotifyPropertyChanged("Texture");
-            }
-        }
-
-        private String TextureField; 
-
-        /// <summary>
-        /// Hardness property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Mineral hardness. (Typically this will rarely be used as mineral hardness is not typically recorded. What is recorded is typically compaction. It is retained though for use defined as per Mohs scale of mineral hardness.)")]
-		[XmlElement("Hardness")]
-        public String Hardness {
-            get {
-                return HardnessField;
-            } 
-            set {
-                HardnessField = value;
-                NotifyPropertyChanged("Hardness");
-            }
-        }
-
-        private String HardnessField; 
-
-        /// <summary>
-        /// Compaction property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5. not compacted, slightly compacted, compacted, strongly compacted, friable, indurated, hard.")]
-		[XmlElement("Compaction")]
-        public String Compaction {
-            get {
-                return CompactionField;
-            } 
-            set {
-                CompactionField = value;
-                NotifyPropertyChanged("Compaction");
-            }
-        }
-
-        private String CompactionField; 
-
-        /// <summary>
-        /// SizeGrain property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite.  Size ranges in millimeter (or micrometer) and Inches. LT 256 mmLT 10.1 in \"boulder\"; 64-256 mm2.5-10.1 in\"cobble\"; 32-64 mm1.26-2.5 in\"very coarse gravel\"; 16-32 mm0.63-1.26 in\"coarse gravel\"; 8-16 mm0.31-0.63 in\"medium gravel\"; 4-8 mm0.157-0.31 in\"fine gravel\"; 2-4 mm0.079-0.157 in\"very fine gravel\"; 1-2 mm0.039-0.079 in\"very coarse sand\"; 0.5-1 mm0.020-0.039 in\"coarse sand\"; 0.25-0.5 mm0.010-0.020 in\"medium sand\"; 125-250 um0.0049-0.010 in\"fine sand\"; 62.5-125 um0.0025-0.0049 in\"very fine sand\"; 3.90625-62.5 um0.00015-0.0025 in\"silt\"; LT 3.90625 umLT 0.00015 in\"clay\"; LT 1 umLT 0.000039 in \"colloid\"")]
-		[XmlElement("SizeGrain")]
-        public String SizeGrain {
-            get {
-                return SizeGrainField;
-            } 
-            set {
-                SizeGrainField = value;
-                NotifyPropertyChanged("SizeGrain");
-            }
-        }
-
-        private String SizeGrainField; 
-
-        /// <summary>
-        /// Roundness property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 Roundness (roundness refers to modal size class). very angular, angular, subangular, subrounded, rounded, well rounded.")]
-		[XmlElement("Roundness")]
-        public String Roundness {
-            get {
-                return RoundnessField;
-            } 
-            set {
-                RoundnessField = value;
-                NotifyPropertyChanged("Roundness");
-            }
-        }
-
-        private String RoundnessField; 
-
-        /// <summary>
-        /// Sphericity property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity. very elongated, elongated, slightly elongated, slightly spherical, spherical, very spherical")]
-		[XmlElement("Sphericity")]
-        public String Sphericity {
-            get {
-                return SphericityField;
-            } 
-            set {
-                SphericityField = value;
-                NotifyPropertyChanged("Sphericity");
-            }
-        }
-
-        private String SphericityField; 
-
-        /// <summary>
-        /// Sorting property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting. very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.")]
-		[XmlElement("Sorting")]
-        public String Sorting {
-            get {
-                return SortingField;
-            } 
-            set {
-                SortingField = value;
-                NotifyPropertyChanged("Sorting");
-            }
-        }
-
-        private String SortingField; 
-
-        /// <summary>
-        /// MatrixCement property
-        /// </summary>
-		[StringLength(40)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table. eg. \"calcite\" (Common) \"dolomite\", \"ankerite\" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation, \"siderite\" (Sherwood sandstones, southern UK typical Siderite cements), \"quartz\" (grain to grain contact cementation or secondary quartz deposition), \"kaolinite\", \"illite\" (eg. Village Fields North Sea), \"smectite\",\"chlorite\" (Teg, Algeria.)")]
-		[XmlElement("MatrixCement")]
-        public String MatrixCement {
-            get {
-                return MatrixCementField;
-            } 
-            set {
-                MatrixCementField = value;
-                NotifyPropertyChanged("MatrixCement");
-            }
-        }
-
-        private String MatrixCementField; 
-
-        /// <summary>
-        /// PorosityVisible property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors. When estimating porosities use: MT 15% \"good\" 10 to 15% \"fair\" 5 to 10% \"poor\" LT 5% \"trace\" 0 \"none\"")]
-		[XmlElement("PorosityVisible")]
-        public String PorosityVisible {
-            get {
-                return PorosityVisibleField;
-            } 
-            set {
-                PorosityVisibleField = value;
-                NotifyPropertyChanged("PorosityVisible");
-            }
-        }
-
-        private String PorosityVisibleField; 
-
-        /// <summary>
-        /// PorosityFabric property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2. intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.")]
-		[XmlElement("PorosityFabric")]
-        public String PorosityFabric {
-            get {
-                return PorosityFabricField;
-            } 
-            set {
-                PorosityFabricField = value;
-                NotifyPropertyChanged("PorosityFabric");
-            }
-        }
-
-        private String PorosityFabricField; 
-
-        /// <summary>
-        /// Permeability property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2.5. In future these would benefit from quantification. tight, slightly, fairly, highly.")]
-		[XmlElement("Permeability")]
-        public String Permeability {
-            get {
-                return PermeabilityField;
-            } 
-            set {
-                PermeabilityField = value;
-                NotifyPropertyChanged("Permeability");
-            }
-        }
-
-        private String PermeabilityField; 
-
-        /// <summary>
-        /// Shows property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("Shows")]
-        public List<CuttingsIntervalShow> Shows {
-            get {
-                return ShowsField;
-            } 
-            set {
-                ShowsField = value;
-                NotifyPropertyChanged("Shows");
+                GeologyFeatureReferenceIdField = value;
+                NotifyPropertyChanged("GeologyFeatureReferenceId");
             }
         }
 
          [XmlIgnore]
-         public bool ShowsSpecified
+         public bool GeologyFeatureReferenceIdSpecified
          {
             get {
-             if(ShowsField!=null)
-                return ShowsField.Count>0?true:false;
+             if(GeologyFeatureReferenceIdField!=null)
+                return GeologyFeatureReferenceIdField.Count>0?true:false;
              else return false;
             } 
          }
-        private List<CuttingsIntervalShow> ShowsField; 
+        private List<String> GeologyFeatureReferenceIdField; 
 
         /// <summary>
-        /// Qualifier property
+        /// ExtensionNameValue property
         /// </summary>
-		[RecurringElement]
-		[XmlElement("Qualifier")]
-        public List<LithologyQualifier> Qualifier {
+		[Description("Extensions to the schema based on a name-value construct.")]
+        [RecurringElement]
+		[XmlElement("ExtensionNameValue")]
+        public List<ExtensionNameValue> ExtensionNameValue {
             get {
-                return QualifierField;
+                return ExtensionNameValueField;
             } 
             set {
-                QualifierField = value;
-                NotifyPropertyChanged("Qualifier");
+                ExtensionNameValueField = value;
+                NotifyPropertyChanged("ExtensionNameValue");
             }
         }
 
          [XmlIgnore]
-         public bool QualifierSpecified
+         public bool ExtensionNameValueSpecified
          {
             get {
-             if(QualifierField!=null)
-                return QualifierField.Count>0?true:false;
+             if(ExtensionNameValueField!=null)
+                return ExtensionNameValueField.Count>0?true:false;
              else return false;
             } 
          }
-        private List<LithologyQualifier> QualifierField; 
+        private List<ExtensionNameValue> ExtensionNameValueField; 
 
-		/// <summary>
-        /// uid property
+        /// <summary>
+        /// StatusHistory property
         /// </summary>
-		[StringLength(64)]
-        [XmlAttribute("uid")]
-		
-        public String Uid {
+		[RecurringElement]
+		[XmlElement("StatusHistory")]
+        public List<IntervalStatusHistory> StatusHistory {
             get {
-                return uidField;
+                return StatusHistoryField;
             } 
             set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
+                StatusHistoryField = value;
+                NotifyPropertyChanged("StatusHistory");
             }
         }
 
-        private String uidField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the VolumePerVolumeMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="VolumePerVolumeMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the VolumePerVolumeMeasure xsd type.")]
-    public partial class VolumePerVolumeMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the VolumePerVolumeMeasure class.
-        /// </summary>
-        public VolumePerVolumeMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the VolumePerVolumeMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public VolumePerVolumeMeasure(Double value, VolumePerVolumeUom uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public VolumePerVolumeUom Uom {
+         [XmlIgnore]
+         public bool StatusHistorySpecified
+         {
             get {
-                return uomField;
+             if(StatusHistoryField!=null)
+                return StatusHistoryField.Count>0?true:false;
+             else return false;
             } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private VolumePerVolumeUom uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the LithologyQualifier xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="LithologyQualifier", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the LithologyQualifier xsd type.")]
-    public partial class LithologyQualifier : Object, IUniqueId, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Kind property
-        /// </summary>
-		[Required]
-        [StringLength(40)]
-        [Description("The type of qualifier.")]
-		[XmlElement("Kind")]
-        public String Kind {
-            get {
-                return KindField;
-            } 
-            set {
-                KindField = value;
-                NotifyPropertyChanged("Kind");
-            }
-        }
-
-        private String KindField; 
-
-        /// <summary>
-        /// MdInterval property
-        /// </summary>
-		[Description("The measured depth interval represented by the qualifier. This must be within the range of the parent geologic interval. If MdInterval is not given then the qualifier is deemed to exist over the entire depth range of the parent geologyInterval.")]
-        [ComponentElement]
-		[XmlElement("MdInterval")]
-        public MdInterval MDInterval {
-            get {
-                return MdIntervalField;
-            } 
-            set {
-                MdIntervalField = value;
-                NotifyPropertyChanged("MDInterval");
-            }
-        }
-
-        private MdInterval MdIntervalField; 
-
-        /// <summary>
-        /// Abundance property
-        /// </summary>
-		[Description("The relative abundance of the qualifier estimated based on a \"visual area\" basis by inspecting the cuttings  spread out on the shaker table prior to washing, or in the sample tray after washing. This represents the upper bound of the observed range, and is in the following increments at the upper bound. 1 = less than or equal to 1%, 2 = greater than or equal to 1 and less than 2%, 5 = greater than or equal to 2 and less than 5% and then in 5% increments, 10 (=5-10%), 15 (=10-15%) up to 100(=95-100%). The end user can then elect  to either display  the %, or map then to an operator specific term or coding, i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., depending on the the end users' terminology.)")]
-        [ComponentElement]
-		[XmlElement("Abundance")]
-        public VolumePerVolumeMeasure Abundance {
-            get {
-                return AbundanceField;
-            } 
-            set {
-                AbundanceField = value;
-                NotifyPropertyChanged("Abundance");
-            }
-        }
-
-        private VolumePerVolumeMeasure AbundanceField; 
-
-        /// <summary>
-        /// Description property
-        /// </summary>
-		[StringLength(2000)]
-        [Description("A textual description of the qualifier.")]
-		[XmlElement("Description")]
-        public String Description {
-            get {
-                return DescriptionField;
-            } 
-            set {
-                DescriptionField = value;
-                NotifyPropertyChanged("Description");
-            }
-        }
-
-        private String DescriptionField; 
+         }
+        private List<IntervalStatusHistory> StatusHistoryField; 
 
 		/// <summary>
         /// uid property
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of GravelPackInterval")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -2053,1590 +735,6 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the IlluminanceMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="IlluminanceMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the IlluminanceMeasure xsd type.")]
-    public partial class IlluminanceMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the IlluminanceMeasure class.
-        /// </summary>
-        public IlluminanceMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the IlluminanceMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public IlluminanceMeasure(Double value, IlluminanceUom uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public IlluminanceUom Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private IlluminanceUom uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    /// <summary>
-    /// This class represents the CuttingsGeologyInterval xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("part_CuttingsInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-	[Description("This class represents the CuttingsGeologyInterval xsd type.")]
-    public partial class CuttingsGeologyInterval : Object, IUniqueId, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// MdInterval property
-        /// </summary>
-		[Required]
-        [Description("The measured depth interval which is represented by the cuttings described here.")]
-        [ComponentElement]
-		[XmlElement("MdInterval")]
-        public MdInterval MDInterval {
-            get {
-                return MdIntervalField;
-            } 
-            set {
-                MdIntervalField = value;
-                NotifyPropertyChanged("MDInterval");
-            }
-        }
-
-        private MdInterval MdIntervalField; 
-
-        /// <summary>
-        /// Citation property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("Citation")]
-        public Citation Citation {
-            get {
-                return CitationField;
-            } 
-            set {
-                CitationField = value;
-                NotifyPropertyChanged("Citation");
-            }
-        }
-
-        private Citation CitationField; 
-
-        /// <summary>
-        /// DensBulk property
-        /// </summary>
-		[Description("Sample bulk density for the interval.")]
-        [ComponentElement]
-		[XmlElement("DensBulk")]
-        public MassPerVolumeMeasure DensBulk {
-            get {
-                return DensBulkField;
-            } 
-            set {
-                DensBulkField = value;
-                NotifyPropertyChanged("DensBulk");
-            }
-        }
-
-        private MassPerVolumeMeasure DensBulkField; 
-
-        /// <summary>
-        /// DensShale property
-        /// </summary>
-		[Description("Shale density for the interval.")]
-        [ComponentElement]
-		[XmlElement("DensShale")]
-        public MassPerVolumeMeasure DensShale {
-            get {
-                return DensShaleField;
-            } 
-            set {
-                DensShaleField = value;
-                NotifyPropertyChanged("DensShale");
-            }
-        }
-
-        private MassPerVolumeMeasure DensShaleField; 
-
-        /// <summary>
-        /// Calcite property
-        /// </summary>
-		[Description("Calcimetry calcite percentage.")]
-        [ComponentElement]
-		[XmlElement("Calcite")]
-        public VolumePerVolumeMeasure Calcite {
-            get {
-                return CalciteField;
-            } 
-            set {
-                CalciteField = value;
-                NotifyPropertyChanged("Calcite");
-            }
-        }
-
-        private VolumePerVolumeMeasure CalciteField; 
-
-        /// <summary>
-        /// CalcStab property
-        /// </summary>
-		[Description("Calcimetry stabilized percentage.")]
-        [ComponentElement]
-		[XmlElement("CalcStab")]
-        public VolumePerVolumeMeasure CalcStab {
-            get {
-                return CalcStabField;
-            } 
-            set {
-                CalcStabField = value;
-                NotifyPropertyChanged("CalcStab");
-            }
-        }
-
-        private VolumePerVolumeMeasure CalcStabField; 
-
-        /// <summary>
-        /// Cec property
-        /// </summary>
-		[Description("Cuttings cationic exchange capacity. Temporarily calling this a DimensionlessMeasure")]
-        [ComponentElement]
-		[XmlElement("Cec")]
-        public DimensionlessMeasure Cec {
-            get {
-                return CecField;
-            } 
-            set {
-                CecField = value;
-                NotifyPropertyChanged("Cec");
-            }
-        }
-
-        private DimensionlessMeasure CecField; 
-
-        /// <summary>
-        /// Dolomite property
-        /// </summary>
-		[Description("Calcimetry dolomite percentage.")]
-        [ComponentElement]
-		[XmlElement("Dolomite")]
-        public VolumePerVolumeMeasure Dolomite {
-            get {
-                return DolomiteField;
-            } 
-            set {
-                DolomiteField = value;
-                NotifyPropertyChanged("Dolomite");
-            }
-        }
-
-        private VolumePerVolumeMeasure DolomiteField; 
-
-        /// <summary>
-        /// SizeMn property
-        /// </summary>
-		[Description("Minimum size.")]
-        [ComponentElement]
-		[XmlElement("SizeMn")]
-        public LengthMeasure SizeMin {
-            get {
-                return SizeMnField;
-            } 
-            set {
-                SizeMnField = value;
-                NotifyPropertyChanged("SizeMin");
-            }
-        }
-
-        private LengthMeasure SizeMnField; 
-
-        /// <summary>
-        /// SizeMax property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("SizeMax")]
-        public LengthMeasure SizeMax {
-            get {
-                return SizeMaxField;
-            } 
-            set {
-                SizeMaxField = value;
-                NotifyPropertyChanged("SizeMax");
-            }
-        }
-
-        private LengthMeasure SizeMaxField; 
-
-        /// <summary>
-        /// Qft property
-        /// </summary>
-		[Description("Fluorescence as measured using a device licensed for the Quantitative Fluorescence Technique.")]
-        [ComponentElement]
-		[XmlElement("Qft")]
-        public IlluminanceMeasure Qft {
-            get {
-                return QftField;
-            } 
-            set {
-                QftField = value;
-                NotifyPropertyChanged("Qft");
-            }
-        }
-
-        private IlluminanceMeasure QftField; 
-
-        /// <summary>
-        /// CleaningMethod property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Sample treatment: cleaning method.")]
-		[XmlElement("CleaningMethod")]
-        public String CleaningMethod {
-            get {
-                return CleaningMethodField;
-            } 
-            set {
-                CleaningMethodField = value;
-                NotifyPropertyChanged("CleaningMethod");
-            }
-        }
-
-        private String CleaningMethodField; 
-
-        /// <summary>
-        /// DryingMethod property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Sample treatment: drying method.")]
-		[XmlElement("DryingMethod")]
-        public String DryingMethod {
-            get {
-                return DryingMethodField;
-            } 
-            set {
-                DryingMethodField = value;
-                NotifyPropertyChanged("DryingMethod");
-            }
-        }
-
-        private String DryingMethodField; 
-
-        /// <summary>
-        /// CuttingsIntervalLithology property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("CuttingsIntervalLithology")]
-        public List<CuttingsIntervalLithology> CuttingsIntervalLithology {
-            get {
-                return CuttingsIntervalLithologyField;
-            } 
-            set {
-                CuttingsIntervalLithologyField = value;
-                NotifyPropertyChanged("CuttingsIntervalLithology");
-            }
-        }
-
-         [XmlIgnore]
-         public bool CuttingsIntervalLithologySpecified
-         {
-            get {
-             if(CuttingsIntervalLithologyField!=null)
-                return CuttingsIntervalLithologyField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<CuttingsIntervalLithology> CuttingsIntervalLithologyField; 
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-		[StringLength(64)]
-        [XmlAttribute("uid")]
-		
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the MassPerVolumeMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="MassPerVolumeMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the MassPerVolumeMeasure xsd type.")]
-    public partial class MassPerVolumeMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the MassPerVolumeMeasure class.
-        /// </summary>
-        public MassPerVolumeMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the MassPerVolumeMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public MassPerVolumeMeasure(Double value, MassPerVolumeUom uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public MassPerVolumeUom Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private MassPerVolumeUom uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the DimensionlessMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DimensionlessMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the DimensionlessMeasure xsd type.")]
-    public partial class DimensionlessMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the DimensionlessMeasure class.
-        /// </summary>
-        public DimensionlessMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the DimensionlessMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public DimensionlessMeasure(Double value, DimensionlessUom uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public DimensionlessUom Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private DimensionlessUom uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the InterpretedIntervalLithology xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="InterpretedIntervalLithology", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the InterpretedIntervalLithology xsd type.")]
-    public partial class InterpretedIntervalLithology : Object, IUniqueId, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Kind property
-        /// </summary>
-		[Required]
-        [StringLength(40)]
-        [Description("The geological name for the type of lithology from the enum table listing a  subset of the OneGeology / CGI defined formation types.")]
-		[XmlElement("Kind")]
-        public String Kind {
-            get {
-                return KindField;
-            } 
-            set {
-                KindField = value;
-                NotifyPropertyChanged("Kind");
-            }
-        }
-
-        private String KindField; 
-
-        /// <summary>
-        /// Citation property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("Citation")]
-        public Citation Citation {
-            get {
-                return CitationField;
-            } 
-            set {
-                CitationField = value;
-                NotifyPropertyChanged("Citation");
-            }
-        }
-
-        private Citation CitationField; 
-
-        /// <summary>
-        /// CodeLith property
-        /// </summary>
-		[StringLength(64)]
-        [Description("A custom Lithology encoding sceme if desired. (It is recommended that if used, this follows the NPD required useage with the numeric values noted in the enum tables, which was the original intent for this item).  The NPD Coding System assigned a digital code to the main lithologies as per the Norwegian Blue Book data standards. The code was then derived by Lithology = (Main lithology * 10) + cement + (modifier / 100). Example: Calcite cemented silty micaceous sandstone: ( 33 * 10 ) + 1 + (21 / 100) gives a numeric code of 331.21. However the NPD is also working through Energistics/Ceasar to potentially change this useage.) This should not be used for mnemonics, as those vary by operator, and if an abbreviation is  required a local look up table should be used by the rendering client, based on Lithology Type.")]
-		[XmlElement("CodeLith")]
-        public String CodeLith {
-            get {
-                return CodeLithField;
-            } 
-            set {
-                CodeLithField = value;
-                NotifyPropertyChanged("CodeLith");
-            }
-        }
-
-        private String CodeLithField; 
-
-        /// <summary>
-        /// Color property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology color description, from Shell 1995 4.3.3.1 and 4.3.3.2 Colors. with the addition of Frosted. eg black blue brown buff green grey olive orange pink purple red translucent frosted white yellow, modified by dark, light, moderate, medium, mottled, variegated, slight, weak, strong, vivid.")]
-		[XmlElement("Color")]
-        public String Color {
-            get {
-                return ColorField;
-            } 
-            set {
-                ColorField = value;
-                NotifyPropertyChanged("Color");
-            }
-        }
-
-        private String ColorField; 
-
-        /// <summary>
-        /// Texture property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6. crystalline, (often \"feather-edge\" appearance on breaking),  friable, dull, earthy,  chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,   sucrosic, (often exhibits capillary imbibition). e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)")]
-		[XmlElement("Texture")]
-        public String Texture {
-            get {
-                return TextureField;
-            } 
-            set {
-                TextureField = value;
-                NotifyPropertyChanged("Texture");
-            }
-        }
-
-        private String TextureField; 
-
-        /// <summary>
-        /// Hardness property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Mineral hardness. (Typically this will rarely be used as mineral hardness is not typically recorded. What is recorded is typically compaction. It is retained though for use defined as per Mohs scale of mineral hardness.)")]
-		[XmlElement("Hardness")]
-        public String Hardness {
-            get {
-                return HardnessField;
-            } 
-            set {
-                HardnessField = value;
-                NotifyPropertyChanged("Hardness");
-            }
-        }
-
-        private String HardnessField; 
-
-        /// <summary>
-        /// Compaction property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5. not compacted, slightly compacted, compacted, strongly compacted, friable, indurated, hard.")]
-		[XmlElement("Compaction")]
-        public String Compaction {
-            get {
-                return CompactionField;
-            } 
-            set {
-                CompactionField = value;
-                NotifyPropertyChanged("Compaction");
-            }
-        }
-
-        private String CompactionField; 
-
-        /// <summary>
-        /// SizeGrain property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite.  Size ranges in millimeter (or micrometer) and Inches. LT 256 mmLT 10.1 in \"boulder\"; 64-256 mm2.5-10.1 in\"cobble\"; 32-64 mm1.26-2.5 in\"very coarse gravel\"; 16-32 mm0.63-1.26 in\"coarse gravel\"; 8-16 mm0.31-0.63 in\"medium gravel\"; 4-8 mm0.157-0.31 in\"fine gravel\"; 2-4 mm0.079-0.157 in\"very fine gravel\"; 1-2 mm0.039-0.079 in\"very coarse sand\"; 0.5-1 mm0.020-0.039 in\"coarse sand\"; 0.25-0.5 mm0.010-0.020 in\"medium sand\"; 125-250 um0.0049-0.010 in\"fine sand\"; 62.5-125 um0.0025-0.0049 in\"very fine sand\"; 3.90625-62.5 um0.00015-0.0025 in\"silt\"; LT 3.90625 umLT 0.00015 in\"clay\"; LT 1 umLT 0.000039 in \"colloid\"")]
-		[XmlElement("SizeGrain")]
-        public String SizeGrain {
-            get {
-                return SizeGrainField;
-            } 
-            set {
-                SizeGrainField = value;
-                NotifyPropertyChanged("SizeGrain");
-            }
-        }
-
-        private String SizeGrainField; 
-
-        /// <summary>
-        /// Roundness property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 Roundness (roundness refers to modal size class). very angular, angular, subangular, subrounded, rounded, well rounded.")]
-		[XmlElement("Roundness")]
-        public String Roundness {
-            get {
-                return RoundnessField;
-            } 
-            set {
-                RoundnessField = value;
-                NotifyPropertyChanged("Roundness");
-            }
-        }
-
-        private String RoundnessField; 
-
-        /// <summary>
-        /// Sorting property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting. very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.")]
-		[XmlElement("Sorting")]
-        public String Sorting {
-            get {
-                return SortingField;
-            } 
-            set {
-                SortingField = value;
-                NotifyPropertyChanged("Sorting");
-            }
-        }
-
-        private String SortingField; 
-
-        /// <summary>
-        /// Sphericity property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity. very elongated, elongated, slightly elongated, slightly spherical, spherical, very spherical")]
-		[XmlElement("Sphericity")]
-        public String Sphericity {
-            get {
-                return SphericityField;
-            } 
-            set {
-                SphericityField = value;
-                NotifyPropertyChanged("Sphericity");
-            }
-        }
-
-        private String SphericityField; 
-
-        /// <summary>
-        /// MatrixCement property
-        /// </summary>
-		[StringLength(40)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table. eg. \"calcite\" (Common) \"dolomite\", \"ankerite\" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation, \"siderite\" (Sherwood sandstones, southern UK typical Siderite cements), \"quartz\" (grain to grain contact cementation or secondary quartz deposition), \"kaolinite\", \"illite\" (eg. Village Fields North Sea), \"smectite\",\"chlorite\" (Teg, Algeria.)")]
-		[XmlElement("MatrixCement")]
-        public String MatrixCement {
-            get {
-                return MatrixCementField;
-            } 
-            set {
-                MatrixCementField = value;
-                NotifyPropertyChanged("MatrixCement");
-            }
-        }
-
-        private String MatrixCementField; 
-
-        /// <summary>
-        /// PorosityVisible property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors. When estimating porosities use: MT 15% \"good\" 10 to 15% \"fair\" 5 to 10% \"poor\" LT 5% \"trace\" 0 \"none\"")]
-		[XmlElement("PorosityVisible")]
-        public String PorosityVisible {
-            get {
-                return PorosityVisibleField;
-            } 
-            set {
-                PorosityVisibleField = value;
-                NotifyPropertyChanged("PorosityVisible");
-            }
-        }
-
-        private String PorosityVisibleField; 
-
-        /// <summary>
-        /// PorosityFabric property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2. intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.")]
-		[XmlElement("PorosityFabric")]
-        public String PorosityFabric {
-            get {
-                return PorosityFabricField;
-            } 
-            set {
-                PorosityFabricField = value;
-                NotifyPropertyChanged("PorosityFabric");
-            }
-        }
-
-        private String PorosityFabricField; 
-
-        /// <summary>
-        /// Permeability property
-        /// </summary>
-		[StringLength(64)]
-        [Description("STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2.5. In future these would benefit from quantification. tight, slightly, fairly, highly.")]
-		[XmlElement("Permeability")]
-        public String Permeability {
-            get {
-                return PermeabilityField;
-            } 
-            set {
-                PermeabilityField = value;
-                NotifyPropertyChanged("Permeability");
-            }
-        }
-
-        private String PermeabilityField; 
-
-        /// <summary>
-        /// Qualifier property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("Qualifier")]
-        public List<LithologyQualifier> Qualifier {
-            get {
-                return QualifierField;
-            } 
-            set {
-                QualifierField = value;
-                NotifyPropertyChanged("Qualifier");
-            }
-        }
-
-         [XmlIgnore]
-         public bool QualifierSpecified
-         {
-            get {
-             if(QualifierField!=null)
-                return QualifierField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<LithologyQualifier> QualifierField; 
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-		[StringLength(64)]
-        [XmlAttribute("uid")]
-		
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the LithostratigraphicUnit xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="LithostratigraphicUnit", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the LithostratigraphicUnit xsd type.")]
-    public partial class LithostratigraphicUnit : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the LithostratigraphicUnit class.
-        /// </summary>
-        public LithostratigraphicUnit() {}
-
-        /// <summary>
-        /// Initializes a new instance of the LithostratigraphicUnit class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        public LithostratigraphicUnit(String value)
-        {
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value.ToString();
-        }
-
-		/// <summary>
-        /// authority property
-        /// </summary>
-		[StringLength(64)]
-        [XmlAttribute("authority")]
-		
-        public String Authority {
-            get {
-                return authorityField;
-            } 
-            set {
-                authorityField = value;
-                NotifyPropertyChanged("Authority");
-            }
-        }
-
-        private String authorityField; 
-
-		/// <summary>
-        /// kind property
-        /// </summary>
-		
-        [XmlAttribute("kind")]
-		
-        public LithostratigraphicRank Kind {
-            get {
-                return kindField;
-            } 
-            set {
-                kindField = value;
-             if(value!=null) 
-                 this.KindSpecified = true;
-                NotifyPropertyChanged("Kind");
-            }
-        }
-
-        private LithostratigraphicRank kindField; 
-
-        /// <summary>
-        /// kindSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean KindSpecified {
-            get {
-                return kindSpecifiedField;
-            } 
-            set {
-                kindSpecifiedField = value;
-                NotifyPropertyChanged("KindSpecified");
-            }
-        }
-
-        private Boolean kindSpecifiedField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        [StringLength(64)]
-        [XmlText]
-        public String Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private String ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    /// <summary>
-    /// This class represents the InterpretedGeologyInterval xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("part_InterpretedGeologyInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-	[Description("This class represents the InterpretedGeologyInterval xsd type.")]
-    public partial class InterpretedGeologyInterval : Object, IUniqueId, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// MdInterval property
-        /// </summary>
-		[Required]
-        [Description("The measured depth interval which is described by this interpreted geology.")]
-        [ComponentElement]
-		[XmlElement("MdInterval")]
-        public MdInterval MDInterval {
-            get {
-                return MdIntervalField;
-            } 
-            set {
-                MdIntervalField = value;
-                NotifyPropertyChanged("MDInterval");
-            }
-        }
-
-        private MdInterval MdIntervalField; 
-
-        /// <summary>
-        /// Citation property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("Citation")]
-        public Citation Citation {
-            get {
-                return CitationField;
-            } 
-            set {
-                CitationField = value;
-                NotifyPropertyChanged("Citation");
-            }
-        }
-
-        private Citation CitationField; 
-
-        /// <summary>
-        /// GeochronologicalUnit property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("GeochronologicalUnit")]
-        public List<String> GeochronologicalUnit {
-            get {
-                return GeochronologicalUnitField;
-            } 
-            set {
-                GeochronologicalUnitField = value;
-                NotifyPropertyChanged("GeochronologicalUnit");
-            }
-        }
-
-         [XmlIgnore]
-         public bool GeochronologicalUnitSpecified
-         {
-            get {
-             if(GeochronologicalUnitField!=null)
-                return GeochronologicalUnitField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<String> GeochronologicalUnitField; 
-
-        /// <summary>
-        /// LithostratigraphicUnit property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("LithostratigraphicUnit")]
-        public List<LithostratigraphicUnit> LithostratigraphicUnit {
-            get {
-                return LithostratigraphicUnitField;
-            } 
-            set {
-                LithostratigraphicUnitField = value;
-                NotifyPropertyChanged("LithostratigraphicUnit");
-            }
-        }
-
-         [XmlIgnore]
-         public bool LithostratigraphicUnitSpecified
-         {
-            get {
-             if(LithostratigraphicUnitField!=null)
-                return LithostratigraphicUnitField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<LithostratigraphicUnit> LithostratigraphicUnitField; 
-
-        /// <summary>
-        /// InterpretedLithology property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("InterpretedLithology")]
-        public InterpretedIntervalLithology InterpretedLithology {
-            get {
-                return InterpretedLithologyField;
-            } 
-            set {
-                InterpretedLithologyField = value;
-                NotifyPropertyChanged("InterpretedLithology");
-            }
-        }
-
-        private InterpretedIntervalLithology InterpretedLithologyField; 
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-		[StringLength(64)]
-        [XmlAttribute("uid")]
-		
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-
-    /// <summary>
-    /// This class represents the ShowEvaluationInterval xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("part_EvaluatedIntervalShow", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-	[Description("This class represents the ShowEvaluationInterval xsd type.")]
-    public partial class ShowEvaluationInterval : Object, IUniqueId, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// MdInterval property
-        /// </summary>
-		[Required]
-        [Description("The measured depth interval over which the show is evaluated.")]
-        [ComponentElement]
-		[XmlElement("MdInterval")]
-        public MdInterval MDInterval {
-            get {
-                return MdIntervalField;
-            } 
-            set {
-                MdIntervalField = value;
-                NotifyPropertyChanged("MDInterval");
-            }
-        }
-
-        private MdInterval MdIntervalField; 
-
-        /// <summary>
-        /// Citation property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("Citation")]
-        public Citation Citation {
-            get {
-                return CitationField;
-            } 
-            set {
-                CitationField = value;
-                NotifyPropertyChanged("Citation");
-            }
-        }
-
-        private Citation CitationField; 
-
-        /// <summary>
-        /// ShowFluid property
-        /// </summary>
-		[Required]
-		[XmlElement("ShowFluid")]
-        public ShowFluid? ShowFluid {
-            get {
-                return ShowFluidField;
-            } 
-            set {
-                ShowFluidField = value;
-                NotifyPropertyChanged("ShowFluid");
-            }
-        }
-
-        private ShowFluid? ShowFluidField; 
-
-        /// <summary>
-        /// ShowRating property
-        /// </summary>
-		[Description("Show Rating.")]
-		[XmlElement("ShowRating")]
-        public ShowRating? ShowRating {
-            get {
-                return ShowRatingField;
-            } 
-            set {
-                ShowRatingField = value;
-             if(value!=null) 
-                 this.ShowRatingSpecified = true;
-                NotifyPropertyChanged("ShowRating");
-            }
-        }
-
-        private ShowRating? ShowRatingField; 
-
-        /// <summary>
-        /// ShowRatingSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean ShowRatingSpecified {
-            get {
-                return ShowRatingSpecifiedField;
-            } 
-            set {
-                ShowRatingSpecifiedField = value;
-                NotifyPropertyChanged("ShowRatingSpecified");
-            }
-        }
-
-        private Boolean ShowRatingSpecifiedField; 
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-		[StringLength(64)]
-        [XmlAttribute("uid")]
-		
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the GravelPackInterval xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GravelPackInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the GravelPackInterval xsd type.")]
-    public partial class GravelPackInterval : Object, IUniqueId, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// DownholeStringReferenceId property
-        /// </summary>
-		[StringLength(64)]
-		[XmlElement("DownholeStringReferenceId")]
-        public String DownholeStringReferenceId {
-            get {
-                return DownholeStringReferenceIdField;
-            } 
-            set {
-                DownholeStringReferenceIdField = value;
-                NotifyPropertyChanged("DownholeStringReferenceId");
-            }
-        }
-
-        private String DownholeStringReferenceIdField; 
-
-        /// <summary>
-        /// GravelPackMdInterval property
-        /// </summary>
-		[Description("Gravel packed measured depth interval for this completion.")]
-        [ComponentElement]
-		[XmlElement("GravelPackMdInterval")]
-        public MdInterval GravelPackMDInterval {
-            get {
-                return GravelPackMdIntervalField;
-            } 
-            set {
-                GravelPackMdIntervalField = value;
-                NotifyPropertyChanged("GravelPackMDInterval");
-            }
-        }
-
-        private MdInterval GravelPackMdIntervalField; 
-
-        /// <summary>
-        /// GravelPackTvdInterval property
-        /// </summary>
-		[Description("Gravel packed true vertical depth interval for this completion.")]
-        [ComponentElement]
-		[XmlElement("GravelPackTvdInterval")]
-        public TvdInterval GravelPackTvdInterval {
-            get {
-                return GravelPackTvdIntervalField;
-            } 
-            set {
-                GravelPackTvdIntervalField = value;
-                NotifyPropertyChanged("GravelPackTvdInterval");
-            }
-        }
-
-        private TvdInterval GravelPackTvdIntervalField; 
-
-        /// <summary>
-        /// EventHistory property
-        /// </summary>
-		[Description("The contactInterval event information")]
-        [ComponentElement]
-		[XmlElement("EventHistory")]
-        public EventInfo EventHistory {
-            get {
-                return EventHistoryField;
-            } 
-            set {
-                EventHistoryField = value;
-                NotifyPropertyChanged("EventHistory");
-            }
-        }
-
-        private EventInfo EventHistoryField; 
-
-        /// <summary>
-        /// GeologyFeatureReferenceId property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("GeologyFeatureReferenceId")]
-        public List<String> GeologyFeatureReferenceId {
-            get {
-                return GeologyFeatureReferenceIdField;
-            } 
-            set {
-                GeologyFeatureReferenceIdField = value;
-                NotifyPropertyChanged("GeologyFeatureReferenceId");
-            }
-        }
-
-         [XmlIgnore]
-         public bool GeologyFeatureReferenceIdSpecified
-         {
-            get {
-             if(GeologyFeatureReferenceIdField!=null)
-                return GeologyFeatureReferenceIdField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<String> GeologyFeatureReferenceIdField; 
-
-        /// <summary>
-        /// ExtensionNameValue property
-        /// </summary>
-		[Description("Extensions to the schema based on a name-value construct.")]
-        [RecurringElement]
-		[XmlElement("ExtensionNameValue")]
-        public List<ExtensionNameValue> ExtensionNameValue {
-            get {
-                return ExtensionNameValueField;
-            } 
-            set {
-                ExtensionNameValueField = value;
-                NotifyPropertyChanged("ExtensionNameValue");
-            }
-        }
-
-         [XmlIgnore]
-         public bool ExtensionNameValueSpecified
-         {
-            get {
-             if(ExtensionNameValueField!=null)
-                return ExtensionNameValueField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<ExtensionNameValue> ExtensionNameValueField; 
-
-        /// <summary>
-        /// StatusHistory property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("StatusHistory")]
-        public List<IntervalStatusHistory> StatusHistory {
-            get {
-                return StatusHistoryField;
-            } 
-            set {
-                StatusHistoryField = value;
-                NotifyPropertyChanged("StatusHistory");
-            }
-        }
-
-         [XmlIgnore]
-         public bool StatusHistorySpecified
-         {
-            get {
-             if(StatusHistoryField!=null)
-                return StatusHistoryField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<IntervalStatusHistory> StatusHistoryField; 
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [XmlAttribute("uid")]
-		
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
 
 
         
@@ -4253,6 +1351,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of IntervalStatusHistory")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -4452,6 +1551,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of PerforationStatusHistory")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -4507,6 +1607,7 @@ namespace Energistics.DataAccess.WITSML200
         /// PerforationSetReferenceId property
         /// </summary>
 		[StringLength(64)]
+        [Description("Reference to perforation set")]
 		[XmlElement("PerforationSetReferenceId")]
         public String PerforationSetReferenceId {
             get {
@@ -4577,7 +1678,8 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// GeologyFeatureReferenceId property
         /// </summary>
-		[RecurringElement]
+		[Description("Reference to a geology feature")]
+        [RecurringElement]
 		[XmlElement("GeologyFeatureReferenceId")]
         public List<String> GeologyFeatureReferenceId {
             get {
@@ -4658,6 +1760,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of PerforationSetInterval")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -4713,6 +1816,7 @@ namespace Energistics.DataAccess.WITSML200
         /// BoreholeStringReferenceId property
         /// </summary>
 		[StringLength(64)]
+        [Description("Reference to borehole String")]
 		[XmlElement("BoreholeStringReferenceId")]
         public String BoreholeStringReferenceId {
             get {
@@ -4783,7 +1887,8 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// GeologyFeatureReferenceId property
         /// </summary>
-		[RecurringElement]
+		[Description("Reference to a geology feature")]
+        [RecurringElement]
 		[XmlElement("GeologyFeatureReferenceId")]
         public List<String> GeologyFeatureReferenceId {
             get {
@@ -4864,6 +1969,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of OpenHoleInterval")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -4919,6 +2025,7 @@ namespace Energistics.DataAccess.WITSML200
         /// StringEquipmentReferenceId property
         /// </summary>
 		[StringLength(64)]
+        [Description("Reference to string equipment")]
 		[XmlElement("StringEquipmentReferenceId")]
         public String StringEquipmentReferenceId {
             get {
@@ -4989,7 +2096,8 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// GeologyFeatureRefID property
         /// </summary>
-		[RecurringElement]
+		[Description("Reference to geology feature")]
+        [RecurringElement]
 		[XmlElement("GeologyFeatureRefID")]
         public List<String> GeologyFeatureRefID {
             get {
@@ -5070,6 +2178,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of SlotsInterval")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -5356,6 +2465,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of CompletionStatusHistory")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -5415,6 +2525,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of AbstractIscwsaErrorCoefficient")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -5665,6 +2776,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of IscwsaErrorCoefficient")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -5912,6 +3024,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of IscwsaErrorTerm")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -6091,6 +3204,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of IscwsaNomenclatureConstant")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -6212,6 +3326,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of IscwsaNameAndDescription")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -6367,1777 +3482,6 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the ElectricConductivityMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ElectricConductivityMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the ElectricConductivityMeasure xsd type.")]
-    public partial class ElectricConductivityMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the ElectricConductivityMeasure class.
-        /// </summary>
-        public ElectricConductivityMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the ElectricConductivityMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public ElectricConductivityMeasure(Double value, ElectricConductivityUom uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public ElectricConductivityUom Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private ElectricConductivityUom uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the StimISO13503_5Point xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimISO13503_5Point", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the StimISO13503_5Point xsd type.")]
-    public partial class StimISO13503_5Point : Object, IUniqueId, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Conductivity property
-        /// </summary>
-		[Required]
-        [Description("The Conductivity under Stress.  TODO: Fix Unit")]
-        [ComponentElement]
-		[XmlElement("Conductivity")]
-        public ElectricConductivityMeasure Conductivity {
-            get {
-                return ConductivityField;
-            } 
-            set {
-                ConductivityField = value;
-                NotifyPropertyChanged("Conductivity");
-            }
-        }
-
-        private ElectricConductivityMeasure ConductivityField; 
-
-        /// <summary>
-        /// Temperature property
-        /// </summary>
-		[Required]
-        [Description("The temperature at the time measurements were taken.")]
-        [ComponentElement]
-		[XmlElement("Temperature")]
-        public ThermodynamicTemperatureMeasure Temperature {
-            get {
-                return TemperatureField;
-            } 
-            set {
-                TemperatureField = value;
-                NotifyPropertyChanged("Temperature");
-            }
-        }
-
-        private ThermodynamicTemperatureMeasure TemperatureField; 
-
-        /// <summary>
-        /// Permeability property
-        /// </summary>
-		[Required]
-        [Description("The permeability under Stress.")]
-        [ComponentElement]
-		[XmlElement("Permeability")]
-        public PermeabilityRockMeasure Permeability {
-            get {
-                return PermeabilityField;
-            } 
-            set {
-                PermeabilityField = value;
-                NotifyPropertyChanged("Permeability");
-            }
-        }
-
-        private PermeabilityRockMeasure PermeabilityField; 
-
-        /// <summary>
-        /// Stress property
-        /// </summary>
-		[Required]
-        [Description("The amount of stress applied.")]
-		[XmlElement("Stress")]
-        public String Stress {
-            get {
-                return StressField;
-            } 
-            set {
-                StressField = value;
-                NotifyPropertyChanged("Stress");
-            }
-        }
-
-        private String StressField; 
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-		[StringLength(64)]
-        [XmlAttribute("uid")]
-		
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the ThermodynamicTemperatureMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ThermodynamicTemperatureMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the ThermodynamicTemperatureMeasure xsd type.")]
-    public partial class ThermodynamicTemperatureMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the ThermodynamicTemperatureMeasure class.
-        /// </summary>
-        public ThermodynamicTemperatureMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the ThermodynamicTemperatureMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public ThermodynamicTemperatureMeasure(Double value, ThermodynamicTemperatureUom uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public ThermodynamicTemperatureUom Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private ThermodynamicTemperatureUom uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the PermeabilityRockMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="PermeabilityRockMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the PermeabilityRockMeasure xsd type.")]
-    public partial class PermeabilityRockMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the PermeabilityRockMeasure class.
-        /// </summary>
-        public PermeabilityRockMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the PermeabilityRockMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public PermeabilityRockMeasure(Double value, PermeabilityRockUom uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public PermeabilityRockUom Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private PermeabilityRockUom uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the ISO13503_2SieveAnalysisData xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ISO13503_2SieveAnalysisData", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the ISO13503_2SieveAnalysisData xsd type.")]
-    public partial class ISO13503_2SieveAnalysisData : Object, IUniqueId, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// PercentRetained property
-        /// </summary>
-		[Required]
-        [Description("The percentage of mass retained in sieve.")]
-        [ComponentElement]
-		[XmlElement("PercentRetained")]
-        public MassPerMassMeasure PercentRetained {
-            get {
-                return PercentRetainedField;
-            } 
-            set {
-                PercentRetainedField = value;
-                NotifyPropertyChanged("PercentRetained");
-            }
-        }
-
-        private MassPerMassMeasure PercentRetainedField; 
-
-        /// <summary>
-        /// SieveNumber property
-        /// </summary>
-		[Required]
-        [Description("ASTM US Standard mesh opening size used in Sieve analysis test.  Use ‘0’ to indicate ‘Pan’.")]
-		[XmlElement("SieveNumber")]
-        public Int64? SieveNumber {
-            get {
-                return SieveNumberField;
-            } 
-            set {
-                SieveNumberField = value;
-                NotifyPropertyChanged("SieveNumber");
-            }
-        }
-
-        private Int64? SieveNumberField; 
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-		[StringLength(64)]
-        [XmlAttribute("uid")]
-		
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the MassPerMassMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="MassPerMassMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the MassPerMassMeasure xsd type.")]
-    public partial class MassPerMassMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the MassPerMassMeasure class.
-        /// </summary>
-        public MassPerMassMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the MassPerMassMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public MassPerMassMeasure(Double value, MassPerMassUom uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public MassPerMassUom Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private MassPerMassUom uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the ISO13503_2CrushTestData xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ISO13503_2CrushTestData", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the ISO13503_2CrushTestData xsd type.")]
-    public partial class ISO13503_2CrushTestData : Object, IUniqueId, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Fines property
-        /// </summary>
-		[Required]
-        [Description("Mass percentage of fines after being exposed to stress.")]
-        [ComponentElement]
-		[XmlElement("Fines")]
-        public MassPerMassMeasure Fines {
-            get {
-                return FinesField;
-            } 
-            set {
-                FinesField = value;
-                NotifyPropertyChanged("Fines");
-            }
-        }
-
-        private MassPerMassMeasure FinesField; 
-
-        /// <summary>
-        /// Stress property
-        /// </summary>
-		[Required]
-        [Description("Stress measured at a point during a crush test.")]
-        [ComponentElement]
-		[XmlElement("Stress")]
-        public PressureMeasure Stress {
-            get {
-                return StressField;
-            } 
-            set {
-                StressField = value;
-                NotifyPropertyChanged("Stress");
-            }
-        }
-
-        private PressureMeasure StressField; 
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-		[StringLength(64)]
-        [XmlAttribute("uid")]
-		
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the PressureMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="PressureMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the PressureMeasure xsd type.")]
-    public partial class PressureMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the PressureMeasure class.
-        /// </summary>
-        public PressureMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the PressureMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public PressureMeasure(Double value, PressureUom uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public PressureUom Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private PressureUom uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the StimISO13503_2Properties xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimISO13503_2Properties", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the StimISO13503_2Properties xsd type.")]
-    public partial class StimISO13503_2Properties : Object, IUniqueId, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// AbsoluteDensity property
-        /// </summary>
-		[Description("Absolute density is the density the material would have if no intra-granular porosity is present. (e.g. Boyle’s Law porosimetry)")]
-        [ComponentElement]
-		[XmlElement("AbsoluteDensity")]
-        public MassPerVolumeMeasure AbsoluteDensity {
-            get {
-                return AbsoluteDensityField;
-            } 
-            set {
-                AbsoluteDensityField = value;
-                NotifyPropertyChanged("AbsoluteDensity");
-            }
-        }
-
-        private MassPerVolumeMeasure AbsoluteDensityField; 
-
-        /// <summary>
-        /// ClustersPercent property
-        /// </summary>
-		[Description("Percentage of undesirable agglomerated discrete proppant particles which typically occurs more with inefficiently processed natural sand proppants as opposed to manufactured ceramic proppants. ISO 13503-2 and API RP19C limit the mass of clusters to less than 1%.")]
-        [ComponentElement]
-		[XmlElement("ClustersPercent")]
-        public DimensionlessMeasure ClustersPercent {
-            get {
-                return ClustersPercentField;
-            } 
-            set {
-                ClustersPercentField = value;
-                NotifyPropertyChanged("ClustersPercent");
-            }
-        }
-
-        private DimensionlessMeasure ClustersPercentField; 
-
-        /// <summary>
-        /// KValue property
-        /// </summary>
-		[Description("Crush test classification indicating the highest stress level at which a proppant generated no more than 10% crushed material rounded down to the nearest 1,000 psi during a crush test. For example, a value of 14 means ‘14K’ which is 14000 psi.")]
-        [ComponentElement]
-		[XmlElement("KValue")]
-        public DimensionlessMeasure KValue {
-            get {
-                return KValueField;
-            } 
-            set {
-                KValueField = value;
-                NotifyPropertyChanged("KValue");
-            }
-        }
-
-        private DimensionlessMeasure KValueField; 
-
-        /// <summary>
-        /// MeanParticleDiameter property
-        /// </summary>
-		[Description("The mean diameter of particles in a sample of proppant.")]
-        [ComponentElement]
-		[XmlElement("MeanParticleDiameter")]
-        public LengthMeasure MeanParticleDiameter {
-            get {
-                return MeanParticleDiameterField;
-            } 
-            set {
-                MeanParticleDiameterField = value;
-                NotifyPropertyChanged("MeanParticleDiameter");
-            }
-        }
-
-        private LengthMeasure MeanParticleDiameterField; 
-
-        /// <summary>
-        /// MedianParticleDiameter property
-        /// </summary>
-		[Description("The median diameter of particles in a sample of proppant.")]
-        [ComponentElement]
-		[XmlElement("MedianParticleDiameter")]
-        public LengthMeasure MedianParticleDiameter {
-            get {
-                return MedianParticleDiameterField;
-            } 
-            set {
-                MedianParticleDiameterField = value;
-                NotifyPropertyChanged("MedianParticleDiameter");
-            }
-        }
-
-        private LengthMeasure MedianParticleDiameterField; 
-
-        /// <summary>
-        /// SpecificGravity property
-        /// </summary>
-		[Description("Not formally part of ISO 13503 .2 properties, the specific gravity is the Apparent Density of the Proppant divided by the Density of Water.")]
-		[XmlElement("SpecificGravity")]
-        public String SpecificGravity {
-            get {
-                return SpecificGravityField;
-            } 
-            set {
-                SpecificGravityField = value;
-                NotifyPropertyChanged("SpecificGravity");
-            }
-        }
-
-        private String SpecificGravityField; 
-
-        /// <summary>
-        /// Roundness property
-        /// </summary>
-		[Description("Krumbein Roundness Shape Factor that is a measure of the relative sharpness of grain corners or of grain curvature. Krumbein and Sloss (1963) are the most widely used method of determining shape factors.")]
-        [ComponentElement]
-		[XmlElement("Roundness")]
-        public DimensionlessMeasure Roundness {
-            get {
-                return RoundnessField;
-            } 
-            set {
-                RoundnessField = value;
-                NotifyPropertyChanged("Roundness");
-            }
-        }
-
-        private DimensionlessMeasure RoundnessField; 
-
-        /// <summary>
-        /// AcidSolubility property
-        /// </summary>
-		[Description("The solubility of a proppant in 12:3 HCl:HF for 30 minutes at 150°F is an indication of the amount of soluble materials (i.e. carbonates, feldspars, iron oxides, clays, etc) present in the proppant.")]
-        [ComponentElement]
-		[XmlElement("AcidSolubility")]
-        public MassPerMassMeasure AcidSolubility {
-            get {
-                return AcidSolubilityField;
-            } 
-            set {
-                AcidSolubilityField = value;
-                NotifyPropertyChanged("AcidSolubility");
-            }
-        }
-
-        private MassPerMassMeasure AcidSolubilityField; 
-
-        /// <summary>
-        /// ApparentDensity property
-        /// </summary>
-		[Description("Apparent Density excludes extra-granular porosity by placing a known mass in a volume of fluid and determining how much of the fluid is displaced (Archimedes).")]
-        [ComponentElement]
-		[XmlElement("ApparentDensity")]
-        public MassPerVolumeMeasure ApparentDensity {
-            get {
-                return ApparentDensityField;
-            } 
-            set {
-                ApparentDensityField = value;
-                NotifyPropertyChanged("ApparentDensity");
-            }
-        }
-
-        private MassPerVolumeMeasure ApparentDensityField; 
-
-        /// <summary>
-        /// BulkDensity property
-        /// </summary>
-		[Description("Bulk Density includes both the proppant and the porosity. This is measured by filling a known volume with dry proppant and measuring the weight.")]
-        [ComponentElement]
-		[XmlElement("BulkDensity")]
-        public MassPerVolumeMeasure BulkDensity {
-            get {
-                return BulkDensityField;
-            } 
-            set {
-                BulkDensityField = value;
-                NotifyPropertyChanged("BulkDensity");
-            }
-        }
-
-        private MassPerVolumeMeasure BulkDensityField; 
-
-        /// <summary>
-        /// LossOnIgnition property
-        /// </summary>
-		[Description("A mass loss (gravimetric) test method applied to coated proppants only, which determines the mass of resin coating applied to a natural sand or manufactured proppant by means of thorough combustion of the flammable resin from the nonflammable proppant. Reported as a % of original mass.")]
-        [ComponentElement]
-		[XmlElement("LossOnIgnition")]
-        public DimensionlessMeasure LossOnIgnition {
-            get {
-                return LossOnIgnitionField;
-            } 
-            set {
-                LossOnIgnitionField = value;
-                NotifyPropertyChanged("LossOnIgnition");
-            }
-        }
-
-        private DimensionlessMeasure LossOnIgnitionField; 
-
-        /// <summary>
-        /// Sphericity property
-        /// </summary>
-		[Description("Krumbein Sphericity Shape Factor that is a measure of how closely a proppant particle approaches the shape of a sphere. Krumbein and Sloss (1963) are the most widely used method of determining shape factors.")]
-        [ComponentElement]
-		[XmlElement("Sphericity")]
-        public DimensionlessMeasure Sphericity {
-            get {
-                return SphericityField;
-            } 
-            set {
-                SphericityField = value;
-                NotifyPropertyChanged("Sphericity");
-            }
-        }
-
-        private DimensionlessMeasure SphericityField; 
-
-        /// <summary>
-        /// Turbidity property
-        /// </summary>
-		[Description("Turbidity is a measure of water clarity how much the material suspended in water decreases the passage of light through the water.  Unit of measure may be Nephelometric Turbidity Unit (NTU), but may vary based upon the detector geometry.")]
-        [ComponentElement]
-		[XmlElement("Turbidity")]
-        public DimensionlessMeasure Turbidity {
-            get {
-                return TurbidityField;
-            } 
-            set {
-                TurbidityField = value;
-                NotifyPropertyChanged("Turbidity");
-            }
-        }
-
-        private DimensionlessMeasure TurbidityField; 
-
-        /// <summary>
-        /// CrushTestData property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("CrushTestData")]
-        public List<ISO13503_2CrushTestData> CrushTestData {
-            get {
-                return CrushTestDataField;
-            } 
-            set {
-                CrushTestDataField = value;
-                NotifyPropertyChanged("CrushTestData");
-            }
-        }
-
-         [XmlIgnore]
-         public bool CrushTestDataSpecified
-         {
-            get {
-             if(CrushTestDataField!=null)
-                return CrushTestDataField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<ISO13503_2CrushTestData> CrushTestDataField; 
-
-        /// <summary>
-        /// SieveAnalysisData property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("SieveAnalysisData")]
-        public List<ISO13503_2SieveAnalysisData> SieveAnalysisData {
-            get {
-                return SieveAnalysisDataField;
-            } 
-            set {
-                SieveAnalysisDataField = value;
-                NotifyPropertyChanged("SieveAnalysisData");
-            }
-        }
-
-         [XmlIgnore]
-         public bool SieveAnalysisDataSpecified
-         {
-            get {
-             if(SieveAnalysisDataField!=null)
-                return SieveAnalysisDataField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<ISO13503_2SieveAnalysisData> SieveAnalysisDataField; 
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-		[StringLength(64)]
-        [XmlAttribute("uid")]
-		
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the AreaPerMassMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AreaPerMassMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the AreaPerMassMeasure xsd type.")]
-    public partial class AreaPerMassMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the AreaPerMassMeasure class.
-        /// </summary>
-        public AreaPerMassMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the AreaPerMassMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public AreaPerMassMeasure(Double value, AreaPerMassUom uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public AreaPerMassUom Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private AreaPerMassUom uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the StimMaterial xsd type.
-    /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimAdditive))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimProppantAgent))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimMaterial", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the StimMaterial xsd type.")]
-    public partial class StimMaterial : Object, IUniqueId, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Kind property
-        /// </summary>
-		
-		[XmlElement("Kind")]
-        public StimMaterialKind? Kind {
-            get {
-                return KindField;
-            } 
-            set {
-                KindField = value;
-             if(value!=null) 
-                 this.KindSpecified = true;
-                NotifyPropertyChanged("Kind");
-            }
-        }
-
-        private StimMaterialKind? KindField; 
-
-        /// <summary>
-        /// KindSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean KindSpecified {
-            get {
-                return KindSpecifiedField;
-            } 
-            set {
-                KindSpecifiedField = value;
-                NotifyPropertyChanged("KindSpecified");
-            }
-        }
-
-        private Boolean KindSpecifiedField; 
-
-        /// <summary>
-        /// Name property
-        /// </summary>
-		
-		[XmlElement("Name")]
-        public String Name {
-            get {
-                return NameField;
-            } 
-            set {
-                NameField = value;
-                NotifyPropertyChanged("Name");
-            }
-        }
-
-        private String NameField; 
-
-        /// <summary>
-        /// Supplier property
-        /// </summary>
-		
-		[XmlElement("Supplier")]
-        public String Supplier {
-            get {
-                return SupplierField;
-            } 
-            set {
-                SupplierField = value;
-                NotifyPropertyChanged("Supplier");
-            }
-        }
-
-        private String SupplierField; 
-
-        /// <summary>
-        /// UnitOfMeasure property
-        /// </summary>
-		
-		[XmlElement("UnitOfMeasure")]
-        public String UnitOfMeasure {
-            get {
-                return UnitOfMeasureField;
-            } 
-            set {
-                UnitOfMeasureField = value;
-                NotifyPropertyChanged("UnitOfMeasure");
-            }
-        }
-
-        private String UnitOfMeasureField; 
-
-        /// <summary>
-        /// ExtensionNameValue property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("ExtensionNameValue")]
-        public List<ExtensionNameValue> ExtensionNameValue {
-            get {
-                return ExtensionNameValueField;
-            } 
-            set {
-                ExtensionNameValueField = value;
-                NotifyPropertyChanged("ExtensionNameValue");
-            }
-        }
-
-         [XmlIgnore]
-         public bool ExtensionNameValueSpecified
-         {
-            get {
-             if(ExtensionNameValueField!=null)
-                return ExtensionNameValueField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<ExtensionNameValue> ExtensionNameValueField; 
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-		
-        [XmlAttribute("uid")]
-		
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the StimAdditive xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimAdditive", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the StimAdditive xsd type.")]
-    public partial class StimAdditive : StimMaterial, IUniqueId, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// AdditiveKind property
-        /// </summary>
-		[Description("Additive type or function from the enumeration 'StimAdditiveKind'.")]
-		[XmlElement("AdditiveKind")]
-        public StimAdditiveKind? AdditiveKind {
-            get {
-                return AdditiveKindField;
-            } 
-            set {
-                AdditiveKindField = value;
-             if(value!=null) 
-                 this.AdditiveKindSpecified = true;
-                NotifyPropertyChanged("AdditiveKind");
-            }
-        }
-
-        private StimAdditiveKind? AdditiveKindField; 
-
-        /// <summary>
-        /// AdditiveKindSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean AdditiveKindSpecified {
-            get {
-                return AdditiveKindSpecifiedField;
-            } 
-            set {
-                AdditiveKindSpecifiedField = value;
-                NotifyPropertyChanged("AdditiveKindSpecified");
-            }
-        }
-
-        private Boolean AdditiveKindSpecifiedField; 
-
-        /// <summary>
-        /// Type property
-        /// </summary>
-		[Required]
-        [StringLength(2000)]
-		[XmlElement("Type")]
-        public String Type {
-            get {
-                return TypeField;
-            } 
-            set {
-                TypeField = value;
-                NotifyPropertyChanged("Type");
-            }
-        }
-
-        private String TypeField; 
-
-        /// <summary>
-        /// SupplierCode property
-        /// </summary>
-		[Required]
-        [StringLength(2000)]
-        [Description("A code used to identify the supplier of the additive.")]
-		[XmlElement("SupplierCode")]
-        public String SupplierCode {
-            get {
-                return SupplierCodeField;
-            } 
-            set {
-                SupplierCodeField = value;
-                NotifyPropertyChanged("SupplierCode");
-            }
-        }
-
-        private String SupplierCodeField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the StimProppantAgent xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimProppantAgent", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the StimProppantAgent xsd type.")]
-    public partial class StimProppantAgent : StimMaterial, IUniqueId, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// FrictionCoefficientLaminar property
-        /// </summary>
-		[Description("Laminar Flow Friction Coefficient.")]
-        [ComponentElement]
-		[XmlElement("FrictionCoefficientLaminar")]
-        public DimensionlessMeasure FrictionCoefficientLaminar {
-            get {
-                return FrictionCoefficientLaminarField;
-            } 
-            set {
-                FrictionCoefficientLaminarField = value;
-                NotifyPropertyChanged("FrictionCoefficientLaminar");
-            }
-        }
-
-        private DimensionlessMeasure FrictionCoefficientLaminarField; 
-
-        /// <summary>
-        /// MassAbsorptionCoefficient property
-        /// </summary>
-		[Description("Characterizes how easily radiation passes through a material. This can be used to compute the concentration of proppant in a slurry using a densitometer.")]
-        [ComponentElement]
-		[XmlElement("MassAbsorptionCoefficient")]
-        public AreaPerMassMeasure MassAbsorptionCoefficient {
-            get {
-                return MassAbsorptionCoefficientField;
-            } 
-            set {
-                MassAbsorptionCoefficientField = value;
-                NotifyPropertyChanged("MassAbsorptionCoefficient");
-            }
-        }
-
-        private AreaPerMassMeasure MassAbsorptionCoefficientField; 
-
-        /// <summary>
-        /// FrictionCoefficientTurbulent property
-        /// </summary>
-		[Description("Turbulent Flow Friction Coefficient.")]
-        [ComponentElement]
-		[XmlElement("FrictionCoefficientTurbulent")]
-        public DimensionlessMeasure FrictionCoefficientTurbulent {
-            get {
-                return FrictionCoefficientTurbulentField;
-            } 
-            set {
-                FrictionCoefficientTurbulentField = value;
-                NotifyPropertyChanged("FrictionCoefficientTurbulent");
-            }
-        }
-
-        private DimensionlessMeasure FrictionCoefficientTurbulentField; 
-
-        /// <summary>
-        /// MeshSizeHigh property
-        /// </summary>
-		[StringLength(64)]
-        [Description("High value of Sieve mesh size - for 40/70 Sand, this value would be 70.")]
-		[XmlElement("MeshSizeHigh")]
-        public String MeshSizeHigh {
-            get {
-                return MeshSizeHighField;
-            } 
-            set {
-                MeshSizeHighField = value;
-                NotifyPropertyChanged("MeshSizeHigh");
-            }
-        }
-
-        private String MeshSizeHighField; 
-
-        /// <summary>
-        /// MeshSizeLow property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Low value of Sieve mesh size - for 40/70 Sand, this value would be 40.")]
-		[XmlElement("MeshSizeLow")]
-        public String MeshSizeLow {
-            get {
-                return MeshSizeLowField;
-            } 
-            set {
-                MeshSizeLowField = value;
-                NotifyPropertyChanged("MeshSizeLow");
-            }
-        }
-
-        private String MeshSizeLowField; 
-
-        /// <summary>
-        /// UnconfinedCompressiveStrength property
-        /// </summary>
-		[Description("The unconfined compressive strength of the proppant.")]
-        [ComponentElement]
-		[XmlElement("UnconfinedCompressiveStrength")]
-        public PressureMeasure UnconfinedCompressiveStrength {
-            get {
-                return UnconfinedCompressiveStrengthField;
-            } 
-            set {
-                UnconfinedCompressiveStrengthField = value;
-                NotifyPropertyChanged("UnconfinedCompressiveStrength");
-            }
-        }
-
-        private PressureMeasure UnconfinedCompressiveStrengthField; 
-
-        /// <summary>
-        /// ProppantAgentKind property
-        /// </summary>
-		[Description("Proppant type or Function.")]
-		[XmlElement("ProppantAgentKind")]
-        public String ProppantAgentKind {
-            get {
-                return ProppantAgentKindField;
-            } 
-            set {
-                ProppantAgentKindField = value;
-                NotifyPropertyChanged("ProppantAgentKind");
-            }
-        }
-
-        private String ProppantAgentKindField; 
-
-        /// <summary>
-        /// ISO13503_2Properties property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("ISO13503_2Properties")]
-        public List<StimISO13503_2Properties> ISO13503_2Properties {
-            get {
-                return ISO13503_2PropertiesField;
-            } 
-            set {
-                ISO13503_2PropertiesField = value;
-                NotifyPropertyChanged("ISO13503_2Properties");
-            }
-        }
-
-         [XmlIgnore]
-         public bool ISO13503_2PropertiesSpecified
-         {
-            get {
-             if(ISO13503_2PropertiesField!=null)
-                return ISO13503_2PropertiesField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<StimISO13503_2Properties> ISO13503_2PropertiesField; 
-
-        /// <summary>
-        /// ISO13503_5Point property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("ISO13503_5Point")]
-        public List<StimISO13503_5Point> ISO13503_5Point {
-            get {
-                return ISO13503_5PointField;
-            } 
-            set {
-                ISO13503_5PointField = value;
-                NotifyPropertyChanged("ISO13503_5Point");
-            }
-        }
-
-         [XmlIgnore]
-         public bool ISO13503_5PointSpecified
-         {
-            get {
-             if(ISO13503_5PointField!=null)
-                return ISO13503_5PointField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<StimISO13503_5Point> ISO13503_5PointField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the StimMaterialCatalog xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimMaterialCatalog", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the StimMaterialCatalog xsd type.")]
-    public partial class StimMaterialCatalog : Object, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Additives property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("Additives")]
-        public List<StimAdditive> Additives {
-            get {
-                return AdditivesField;
-            } 
-            set {
-                AdditivesField = value;
-                NotifyPropertyChanged("Additives");
-            }
-        }
-
-         [XmlIgnore]
-         public bool AdditivesSpecified
-         {
-            get {
-             if(AdditivesField!=null)
-                return AdditivesField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<StimAdditive> AdditivesField; 
-
-        /// <summary>
-        /// ProppantAgents property
-        /// </summary>
-		[Required]
-        [RecurringElement]
-		[XmlElement("ProppantAgents")]
-        public List<StimProppantAgent> ProppantAgents {
-            get {
-                return ProppantAgentsField;
-            } 
-            set {
-                ProppantAgentsField = value;
-                NotifyPropertyChanged("ProppantAgents");
-            }
-        }
-
-         [XmlIgnore]
-         public bool ProppantAgentsSpecified
-         {
-            get {
-             if(ProppantAgentsField!=null)
-                return ProppantAgentsField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<StimProppantAgent> ProppantAgentsField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
     /// This class represents the StimJobDiversion xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -8207,6 +3551,7 @@ namespace Energistics.DataAccess.WITSML200
         /// ToolDescription property
         /// </summary>
 		[StringLength(2000)]
+        [Description("A supplier description of the diversion tool, such as its commercial name.")]
 		[XmlElement("ToolDescription")]
         public String ToolDescription {
             get {
@@ -8223,7 +3568,8 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// ElementSpacing property
         /// </summary>
-		[ComponentElement]
+		[Description("Spacing between packer elements.")]
+        [ComponentElement]
 		[XmlElement("ElementSpacing")]
         public LengthMeasure ElementSpacing {
             get {
@@ -8647,6 +3993,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of StimReservoirInterval")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -8660,6 +4007,196 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the PermeabilityRockMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="PermeabilityRockMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the PermeabilityRockMeasure xsd type.")]
+    public partial class PermeabilityRockMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the PermeabilityRockMeasure class.
+        /// </summary>
+        public PermeabilityRockMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the PermeabilityRockMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public PermeabilityRockMeasure(Double value, PermeabilityRockUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public PermeabilityRockUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private PermeabilityRockUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the PressureMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="PressureMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the PressureMeasure xsd type.")]
+    public partial class PressureMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the PressureMeasure class.
+        /// </summary>
+        public PressureMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the PressureMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public PressureMeasure(Double value, PressureUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public PressureUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private PressureUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
 
 
         
@@ -8833,6 +4370,196 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private DynamicViscosityUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the DimensionlessMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DimensionlessMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the DimensionlessMeasure xsd type.")]
+    public partial class DimensionlessMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the DimensionlessMeasure class.
+        /// </summary>
+        public DimensionlessMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the DimensionlessMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public DimensionlessMeasure(Double value, DimensionlessUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public DimensionlessUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private DimensionlessUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the VolumePerVolumeMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="VolumePerVolumeMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the VolumePerVolumeMeasure xsd type.")]
+    public partial class VolumePerVolumeMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the VolumePerVolumeMeasure class.
+        /// </summary>
+        public VolumePerVolumeMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the VolumePerVolumeMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public VolumePerVolumeMeasure(Double value, VolumePerVolumeUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public VolumePerVolumeUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private VolumePerVolumeUom uomField; 
 
         /// <summary>
         /// Value property
@@ -9139,6 +4866,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of StimTubular")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -9589,7 +5317,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Description("Unit of measure used by this measured depth coordinate")]
         [XmlAttribute("uom")]
 		
         public LengthUom Uom {
@@ -9627,6 +5355,7 @@ namespace Energistics.DataAccess.WITSML200
         /// datum property
         /// </summary>
 		[StringLength(64)]
+        [Description("Defines the vertical datums associated with elevation, vertical depth and measured depth coordinates")]
         [XmlAttribute("datum")]
 		
         public String Datum {
@@ -9791,24 +5520,6 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// ConcentrationVolume property
-        /// </summary>
-		[Description("The volume used to compute the concentration of added fluids with.")]
-        [ComponentElement]
-		[XmlElement("ConcentrationVolume")]
-        public VolumeMeasure ConcentrationVolume {
-            get {
-                return ConcentrationVolumeField;
-            } 
-            set {
-                ConcentrationVolumeField = value;
-                NotifyPropertyChanged("ConcentrationVolume");
-            }
-        }
-
-        private VolumeMeasure ConcentrationVolumeField; 
-
-        /// <summary>
         /// Name property
         /// </summary>
 		[StringLength(2000)]
@@ -9867,7 +5578,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("The fluid subtypes.")]
 		[XmlElement("Subtype")]
-        public StimFluidSubType? Subtype {
+        public StimFluidSubtype? Subtype {
             get {
                 return SubtypeField;
             } 
@@ -9879,7 +5590,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private StimFluidSubType? SubtypeField; 
+        private StimFluidSubtype? SubtypeField; 
 
         /// <summary>
         /// SubtypeSpecified property
@@ -9897,6 +5608,96 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private Boolean SubtypeSpecifiedField; 
+
+        /// <summary>
+        /// Purpose property
+        /// </summary>
+		[StringLength(2000)]
+        [Description("The purpose of the fluid.")]
+		[XmlElement("Purpose")]
+        public String Purpose {
+            get {
+                return PurposeField;
+            } 
+            set {
+                PurposeField = value;
+                NotifyPropertyChanged("Purpose");
+            }
+        }
+
+        private String PurposeField; 
+
+        /// <summary>
+        /// Description property
+        /// </summary>
+		[StringLength(2000)]
+        [Description("The description of the fluid.")]
+		[XmlElement("Description")]
+        public String Description {
+            get {
+                return DescriptionField;
+            } 
+            set {
+                DescriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private String DescriptionField; 
+
+        /// <summary>
+        /// Supplier property
+        /// </summary>
+		[StringLength(2000)]
+        [Description("The supplier of the fluid.")]
+		[XmlElement("Supplier")]
+        public String Supplier {
+            get {
+                return SupplierField;
+            } 
+            set {
+                SupplierField = value;
+                NotifyPropertyChanged("Supplier");
+            }
+        }
+
+        private String SupplierField; 
+
+        /// <summary>
+        /// IsKillFluid property
+        /// </summary>
+		[Description("If true, this fluid is a kill fluid.")]
+		[XmlElement("IsKillFluid")]
+        public Boolean? IsKillFluid {
+            get {
+                return IsKillFluidField;
+            } 
+            set {
+                IsKillFluidField = value;
+             if(value!=null) 
+                 this.IsKillFluidSpecified = true;
+                NotifyPropertyChanged("IsKillFluid");
+            }
+        }
+
+        private Boolean? IsKillFluidField; 
+
+        /// <summary>
+        /// IsKillFluidSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean IsKillFluidSpecified {
+            get {
+                return IsKillFluidSpecifiedField;
+            } 
+            set {
+                IsKillFluidSpecifiedField = value;
+                NotifyPropertyChanged("IsKillFluidSpecified");
+            }
+        }
+
+        private Boolean IsKillFluidSpecifiedField; 
 
         /// <summary>
         /// Volume property
@@ -9987,42 +5788,6 @@ namespace Energistics.DataAccess.WITSML200
         private String GelStrength10SecField; 
 
         /// <summary>
-        /// IsKillFluid property
-        /// </summary>
-		[Description("If true, this fluid is a kill fluid.")]
-		[XmlElement("IsKillFluid")]
-        public Boolean? IsKillFluid {
-            get {
-                return IsKillFluidField;
-            } 
-            set {
-                IsKillFluidField = value;
-             if(value!=null) 
-                 this.IsKillFluidSpecified = true;
-                NotifyPropertyChanged("IsKillFluid");
-            }
-        }
-
-        private Boolean? IsKillFluidField; 
-
-        /// <summary>
-        /// IsKillFluidSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean IsKillFluidSpecified {
-            get {
-                return IsKillFluidSpecifiedField;
-            } 
-            set {
-                IsKillFluidSpecifiedField = value;
-                NotifyPropertyChanged("IsKillFluidSpecified");
-            }
-        }
-
-        private Boolean IsKillFluidSpecifiedField; 
-
-        /// <summary>
         /// SpecificGravity property
         /// </summary>
 		[Description("The specific gravity of the fluid at surface.")]
@@ -10059,24 +5824,6 @@ namespace Energistics.DataAccess.WITSML200
         private DynamicViscosityMeasure ViscosityField; 
 
         /// <summary>
-        /// Description property
-        /// </summary>
-		[StringLength(2000)]
-        [Description("The description of the fluid.")]
-		[XmlElement("Description")]
-        public String Description {
-            get {
-                return DescriptionField;
-            } 
-            set {
-                DescriptionField = value;
-                NotifyPropertyChanged("Description");
-            }
-        }
-
-        private String DescriptionField; 
-
-        /// <summary>
         /// PH property
         /// </summary>
 		[Description("The pH of the fluid.")]
@@ -10093,42 +5840,6 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private DimensionlessMeasure PHField; 
-
-        /// <summary>
-        /// Purpose property
-        /// </summary>
-		[StringLength(2000)]
-        [Description("The purpose of the fluid.")]
-		[XmlElement("Purpose")]
-        public String Purpose {
-            get {
-                return PurposeField;
-            } 
-            set {
-                PurposeField = value;
-                NotifyPropertyChanged("Purpose");
-            }
-        }
-
-        private String PurposeField; 
-
-        /// <summary>
-        /// Supplier property
-        /// </summary>
-		[StringLength(2000)]
-        [Description("The supplier of the fluid.")]
-		[XmlElement("Supplier")]
-        public String Supplier {
-            get {
-                return SupplierField;
-            } 
-            set {
-                SupplierField = value;
-                NotifyPropertyChanged("Supplier");
-            }
-        }
-
-        private String SupplierField; 
 
         /// <summary>
         /// AdditiveConcentration property
@@ -10277,6 +5988,196 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
+    /// This class represents the MassPerVolumeMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="MassPerVolumeMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the MassPerVolumeMeasure xsd type.")]
+    public partial class MassPerVolumeMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the MassPerVolumeMeasure class.
+        /// </summary>
+        public MassPerVolumeMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the MassPerVolumeMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public MassPerVolumeMeasure(Double value, MassPerVolumeUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public MassPerVolumeUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private MassPerVolumeUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the ThermodynamicTemperatureMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ThermodynamicTemperatureMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the ThermodynamicTemperatureMeasure xsd type.")]
+    public partial class ThermodynamicTemperatureMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the ThermodynamicTemperatureMeasure class.
+        /// </summary>
+        public ThermodynamicTemperatureMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the ThermodynamicTemperatureMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public ThermodynamicTemperatureMeasure(Double value, ThermodynamicTemperatureUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public ThermodynamicTemperatureUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private ThermodynamicTemperatureUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
     /// This class represents the StimMaterialQuantity xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -10289,47 +6190,135 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Amount property
+        /// Density property
         /// </summary>
-		[Description("The quantity of material used.  The unit of measure is specified within the material referenced.")]
-		[XmlElement("Amount")]
-        public Double? Amount {
+		[Description("The density of material used.")]
+        [ComponentElement]
+		[XmlElement("Density")]
+        public MassPerVolumeMeasure Density {
             get {
-                return AmountField;
+                return DensityField;
             } 
             set {
-                AmountField = value;
-             if(value!=null) 
-                 this.AmountSpecified = true;
-                NotifyPropertyChanged("Amount");
+                DensityField = value;
+                NotifyPropertyChanged("Density");
             }
         }
 
-        private Double? AmountField; 
+        private MassPerVolumeMeasure DensityField; 
 
         /// <summary>
-        /// AmountSpecified property
+        /// Mass property
         /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean AmountSpecified {
+		[Description("The mass of material used.  This should be used without specifying any of the other material measures (e.g. volume, standard volume, etc.).")]
+        [ComponentElement]
+		[XmlElement("Mass")]
+        public MassMeasure Mass {
             get {
-                return AmountSpecifiedField;
+                return MassField;
             } 
             set {
-                AmountSpecifiedField = value;
-                NotifyPropertyChanged("AmountSpecified");
+                MassField = value;
+                NotifyPropertyChanged("Mass");
             }
         }
 
-        private Boolean AmountSpecifiedField; 
+        private MassMeasure MassField; 
+
+        /// <summary>
+        /// MassFlowRate property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("MassFlowRate")]
+        public MassPerTimeMeasure MassFlowRate {
+            get {
+                return MassFlowRateField;
+            } 
+            set {
+                MassFlowRateField = value;
+                NotifyPropertyChanged("MassFlowRate");
+            }
+        }
+
+        private MassPerTimeMeasure MassFlowRateField; 
+
+        /// <summary>
+        /// StdVolume property
+        /// </summary>
+		[Description("The standard volume of material used. Standard volume is the volume measured under the same conditions. This should be used without specifying any of the other material measures (e.g. mass, volume, etc.).")]
+        [ComponentElement]
+		[XmlElement("StdVolume")]
+        public VolumeMeasure StdVolume {
+            get {
+                return StdVolumeField;
+            } 
+            set {
+                StdVolumeField = value;
+                NotifyPropertyChanged("StdVolume");
+            }
+        }
+
+        private VolumeMeasure StdVolumeField; 
+
+        /// <summary>
+        /// Volume property
+        /// </summary>
+		[Description("The volume of material used.  This should be used without specifying any of the other material measures (e.g. mass, standard volume, etc.).")]
+        [ComponentElement]
+		[XmlElement("Volume")]
+        public VolumeMeasure Volume {
+            get {
+                return VolumeField;
+            } 
+            set {
+                VolumeField = value;
+                NotifyPropertyChanged("Volume");
+            }
+        }
+
+        private VolumeMeasure VolumeField; 
+
+        /// <summary>
+        /// VolumeConcentration property
+        /// </summary>
+		[Description("The volume per volume measure of material used.  This should be used without specifying any of the other material measures (e.g. mass, density, standard volume, etc.).")]
+        [ComponentElement]
+		[XmlElement("VolumeConcentration")]
+        public VolumePerVolumeMeasure VolumeConcentration {
+            get {
+                return VolumeConcentrationField;
+            } 
+            set {
+                VolumeConcentrationField = value;
+                NotifyPropertyChanged("VolumeConcentration");
+            }
+        }
+
+        private VolumePerVolumeMeasure VolumeConcentrationField; 
+
+        /// <summary>
+        /// VolumetricFlowRate property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("VolumetricFlowRate")]
+        public VolumePerTimeMeasure VolumetricFlowRate {
+            get {
+                return VolumetricFlowRateField;
+            } 
+            set {
+                VolumetricFlowRateField = value;
+                NotifyPropertyChanged("VolumetricFlowRate");
+            }
+        }
+
+        private VolumePerTimeMeasure VolumetricFlowRateField; 
 
         /// <summary>
         /// MaterialReference property
         /// </summary>
 		[Required]
         [StringLength(64)]
-        [Description("Material ID - equal to AbstractStimMaterial.RefId  This is a reference to the uuid of the stim material in the material catalog")]
+        [Description("Material ID - equal to AbstractStimMaterial.RefId  This is a reference to the uid of the stim material in the material catalog")]
 		[XmlElement("MaterialReference")]
         public String MaterialReference {
             get {
@@ -10374,6 +6363,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of StimMaterialQuantity")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -10414,6 +6404,291 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
+    /// This class represents the MassMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="MassMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the MassMeasure xsd type.")]
+    public partial class MassMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the MassMeasure class.
+        /// </summary>
+        public MassMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the MassMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public MassMeasure(Double value, MassUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public MassUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private MassUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the MassPerTimeMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="MassPerTimeMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the MassPerTimeMeasure xsd type.")]
+    public partial class MassPerTimeMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the MassPerTimeMeasure class.
+        /// </summary>
+        public MassPerTimeMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the MassPerTimeMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public MassPerTimeMeasure(Double value, MassPerTimeUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public MassPerTimeUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private MassPerTimeUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the VolumePerTimeMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="VolumePerTimeMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the VolumePerTimeMeasure xsd type.")]
+    public partial class VolumePerTimeMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the VolumePerTimeMeasure class.
+        /// </summary>
+        public VolumePerTimeMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the VolumePerTimeMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public VolumePerTimeMeasure(Double value, VolumePerTimeUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public VolumePerTimeUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private VolumePerTimeUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
     /// This class represents the StimJobStep xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -10424,6 +6699,114 @@ namespace Energistics.DataAccess.WITSML200
 	[Description("This class represents the StimJobStep xsd type.")]
     public partial class StimJobStep : Object, IUniqueId, INotifyPropertyChanged
     {
+
+        /// <summary>
+        /// StepName property
+        /// </summary>
+		[StringLength(2000)]
+        [Description("A human readable name for the step.")]
+		[XmlElement("StepName")]
+        public String StepName {
+            get {
+                return StepNameField;
+            } 
+            set {
+                StepNameField = value;
+                NotifyPropertyChanged("StepName");
+            }
+        }
+
+        private String StepNameField; 
+
+        /// <summary>
+        /// StepNumber property
+        /// </summary>
+		[Required]
+        [Description("Step number.")]
+		[XmlElement("StepNumber")]
+        public Int64? StepNumber {
+            get {
+                return StepNumberField;
+            } 
+            set {
+                StepNumberField = value;
+                NotifyPropertyChanged("StepNumber");
+            }
+        }
+
+        private Int64? StepNumberField; 
+
+        /// <summary>
+        /// Kind property
+        /// </summary>
+		[StringLength(2000)]
+        [Description("The type of step.")]
+		[XmlElement("Kind")]
+        public String Kind {
+            get {
+                return KindField;
+            } 
+            set {
+                KindField = value;
+                NotifyPropertyChanged("Kind");
+            }
+        }
+
+        private String KindField; 
+
+        /// <summary>
+        /// Description property
+        /// </summary>
+		[StringLength(2000)]
+        [Description("A short description of the step.")]
+		[XmlElement("Description")]
+        public String Description {
+            get {
+                return DescriptionField;
+            } 
+            set {
+                DescriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private String DescriptionField; 
+
+        /// <summary>
+        /// DTimStart property
+        /// </summary>
+		[RegularExpression(".+T.+[Z+\\-].*")]
+        [Description("Date time of start of the step.")]
+		[XmlElement("DTimStart")]
+        public String DateTimeStart {
+            get {
+                return DTimStartField;
+            } 
+            set {
+                DTimStartField = value;
+                NotifyPropertyChanged("DateTimeStart");
+            }
+        }
+
+        private String DTimStartField; 
+
+        /// <summary>
+        /// DTimEnd property
+        /// </summary>
+		[RegularExpression(".+T.+[Z+\\-].*")]
+        [Description("Date time of end of the step.")]
+		[XmlElement("DTimEnd")]
+        public String DateTimeEnd {
+            get {
+                return DTimEndField;
+            } 
+            set {
+                DTimEndField = value;
+                NotifyPropertyChanged("DateTimeEnd");
+            }
+        }
+
+        private String DTimEndField; 
 
         /// <summary>
         /// AvgBaseFluidQuality property
@@ -10498,58 +6881,58 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure AvgInternalPhaseFractionField; 
 
         /// <summary>
-        /// AvgMaterialUsedPerMinute property
+        /// AvgMaterialUsedRate property
         /// </summary>
 		[Description("Average material user per minute entering the flow stream.")]
         [RecurringElement]
-		[XmlElement("AvgMaterialUsedPerMinute")]
-        public List<StimMaterialQuantity> AvgMaterialUsedPerMinute {
+		[XmlElement("AvgMaterialUsedRate")]
+        public List<StimMaterialQuantity> AvgMaterialUsedRate {
             get {
-                return AvgMaterialUsedPerMinuteField;
+                return AvgMaterialUsedRateField;
             } 
             set {
-                AvgMaterialUsedPerMinuteField = value;
-                NotifyPropertyChanged("AvgMaterialUsedPerMinute");
+                AvgMaterialUsedRateField = value;
+                NotifyPropertyChanged("AvgMaterialUsedRate");
             }
         }
 
          [XmlIgnore]
-         public bool AvgMaterialUsedPerMinuteSpecified
+         public bool AvgMaterialUsedRateSpecified
          {
             get {
-             if(AvgMaterialUsedPerMinuteField!=null)
-                return AvgMaterialUsedPerMinuteField.Count>0?true:false;
+             if(AvgMaterialUsedRateField!=null)
+                return AvgMaterialUsedRateField.Count>0?true:false;
              else return false;
             } 
          }
-        private List<StimMaterialQuantity> AvgMaterialUsedPerMinuteField; 
+        private List<StimMaterialQuantity> AvgMaterialUsedRateField; 
 
         /// <summary>
-        /// AvgMaterialUsePerMinuteBottomhole property
+        /// AvgMaterialUseRateBottomhole property
         /// </summary>
 		[Description("Average material amount used (pumped) per minute at bottomhole.")]
         [RecurringElement]
-		[XmlElement("AvgMaterialUsePerMinuteBottomhole")]
-        public List<StimMaterialQuantity> AvgMaterialUsePerMinuteBottomhole {
+		[XmlElement("AvgMaterialUseRateBottomhole")]
+        public List<StimMaterialQuantity> AvgMaterialUseRateBottomhole {
             get {
-                return AvgMaterialUsePerMinuteBottomholeField;
+                return AvgMaterialUseRateBottomholeField;
             } 
             set {
-                AvgMaterialUsePerMinuteBottomholeField = value;
-                NotifyPropertyChanged("AvgMaterialUsePerMinuteBottomhole");
+                AvgMaterialUseRateBottomholeField = value;
+                NotifyPropertyChanged("AvgMaterialUseRateBottomhole");
             }
         }
 
          [XmlIgnore]
-         public bool AvgMaterialUsePerMinuteBottomholeSpecified
+         public bool AvgMaterialUseRateBottomholeSpecified
          {
             get {
-             if(AvgMaterialUsePerMinuteBottomholeField!=null)
-                return AvgMaterialUsePerMinuteBottomholeField.Count>0?true:false;
+             if(AvgMaterialUseRateBottomholeField!=null)
+                return AvgMaterialUseRateBottomholeField.Count>0?true:false;
              else return false;
             } 
          }
-        private List<StimMaterialQuantity> AvgMaterialUsePerMinuteBottomholeField; 
+        private List<StimMaterialQuantity> AvgMaterialUseRateBottomholeField; 
 
         /// <summary>
         /// AvgN2BaseFluidQuality property
@@ -10680,7 +7063,8 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// AvgSlurryRate property
         /// </summary>
-		[ComponentElement]
+		[Description("Average slurry return rate.")]
+        [ComponentElement]
 		[XmlElement("AvgSlurryRate")]
         public VolumePerTimeMeasure AvgSlurryRate {
             get {
@@ -10713,22 +7097,22 @@ namespace Energistics.DataAccess.WITSML200
         private ThermodynamicTemperatureMeasure AvgTemperatureField; 
 
         /// <summary>
-        /// AvgVolumePerMinuteWellhead property
+        /// AvgVolumeRateWellhead property
         /// </summary>
 		[Description("Average volume per minute at the wellhead.")]
         [ComponentElement]
-		[XmlElement("AvgVolumePerMinuteWellhead")]
-        public VolumeMeasure AvgVolumePerMinuteWellhead {
+		[XmlElement("AvgVolumeRateWellhead")]
+        public VolumePerTimeMeasure AvgVolumeRateWellhead {
             get {
-                return AvgVolumePerMinuteWellheadField;
+                return AvgVolumeRateWellheadField;
             } 
             set {
-                AvgVolumePerMinuteWellheadField = value;
-                NotifyPropertyChanged("AvgVolumePerMinuteWellhead");
+                AvgVolumeRateWellheadField = value;
+                NotifyPropertyChanged("AvgVolumeRateWellhead");
             }
         }
 
-        private VolumeMeasure AvgVolumePerMinuteWellheadField; 
+        private VolumePerTimeMeasure AvgVolumeRateWellheadField; 
 
         /// <summary>
         /// BallsRecovered property
@@ -10839,130 +7223,76 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure BaseFluidVolField; 
 
         /// <summary>
-        /// Description property
-        /// </summary>
-		[StringLength(2000)]
-        [Description("A short description of the step.")]
-		[XmlElement("Description")]
-        public String Description {
-            get {
-                return DescriptionField;
-            } 
-            set {
-                DescriptionField = value;
-                NotifyPropertyChanged("Description");
-            }
-        }
-
-        private String DescriptionField; 
-
-        /// <summary>
-        /// DTimEnd property
-        /// </summary>
-		[RegularExpression(".+T.+[Z+\\-].*")]
-        [Description("Date time of end of the step.")]
-		[XmlElement("DTimEnd")]
-        public String DateTimeEnd {
-            get {
-                return DTimEndField;
-            } 
-            set {
-                DTimEndField = value;
-                NotifyPropertyChanged("DateTimeEnd");
-            }
-        }
-
-        private String DTimEndField; 
-
-        /// <summary>
-        /// DTimStart property
-        /// </summary>
-		[RegularExpression(".+T.+[Z+\\-].*")]
-        [Description("Date time of start of the step.")]
-		[XmlElement("DTimStart")]
-        public String DateTimeStart {
-            get {
-                return DTimStartField;
-            } 
-            set {
-                DTimStartField = value;
-                NotifyPropertyChanged("DateTimeStart");
-            }
-        }
-
-        private String DTimStartField; 
-
-        /// <summary>
-        /// EndDirtyMaterialPerMinute property
+        /// EndDirtyMaterialRate property
         /// </summary>
 		[Description("Ending dirty fluid pump volume per minute.")]
         [ComponentElement]
-		[XmlElement("EndDirtyMaterialPerMinute")]
-        public VolumeMeasure EndDirtyMaterialPerMinute {
+		[XmlElement("EndDirtyMaterialRate")]
+        public VolumePerTimeMeasure EndDirtyMaterialRate {
             get {
-                return EndDirtyMaterialPerMinuteField;
+                return EndDirtyMaterialRateField;
             } 
             set {
-                EndDirtyMaterialPerMinuteField = value;
-                NotifyPropertyChanged("EndDirtyMaterialPerMinute");
+                EndDirtyMaterialRateField = value;
+                NotifyPropertyChanged("EndDirtyMaterialRate");
             }
         }
 
-        private VolumeMeasure EndDirtyMaterialPerMinuteField; 
+        private VolumePerTimeMeasure EndDirtyMaterialRateField; 
 
         /// <summary>
-        /// EndMaterialUsedPerMinute property
+        /// EndMaterialUsedRate property
         /// </summary>
 		[Description("Ending quantity of material used per minute entering the flow stream.")]
         [RecurringElement]
-		[XmlElement("EndMaterialUsedPerMinute")]
-        public List<StimMaterialQuantity> EndMaterialUsedPerMinute {
+		[XmlElement("EndMaterialUsedRate")]
+        public List<StimMaterialQuantity> EndMaterialUsedRate {
             get {
-                return EndMaterialUsedPerMinuteField;
+                return EndMaterialUsedRateField;
             } 
             set {
-                EndMaterialUsedPerMinuteField = value;
-                NotifyPropertyChanged("EndMaterialUsedPerMinute");
+                EndMaterialUsedRateField = value;
+                NotifyPropertyChanged("EndMaterialUsedRate");
             }
         }
 
          [XmlIgnore]
-         public bool EndMaterialUsedPerMinuteSpecified
+         public bool EndMaterialUsedRateSpecified
          {
             get {
-             if(EndMaterialUsedPerMinuteField!=null)
-                return EndMaterialUsedPerMinuteField.Count>0?true:false;
+             if(EndMaterialUsedRateField!=null)
+                return EndMaterialUsedRateField.Count>0?true:false;
              else return false;
             } 
          }
-        private List<StimMaterialQuantity> EndMaterialUsedPerMinuteField; 
+        private List<StimMaterialQuantity> EndMaterialUsedRateField; 
 
         /// <summary>
-        /// EndMaterialUsedPerMinuteBottomhole property
+        /// EndMaterialUsedRateBottomhole property
         /// </summary>
 		[Description("Ending quantity of material used per minute at bottomhole.")]
         [RecurringElement]
-		[XmlElement("EndMaterialUsedPerMinuteBottomhole")]
-        public List<StimMaterialQuantity> EndMaterialUsedPerMinuteBottomhole {
+		[XmlElement("EndMaterialUsedRateBottomhole")]
+        public List<StimMaterialQuantity> EndMaterialUsedRateBottomhole {
             get {
-                return EndMaterialUsedPerMinuteBottomholeField;
+                return EndMaterialUsedRateBottomholeField;
             } 
             set {
-                EndMaterialUsedPerMinuteBottomholeField = value;
-                NotifyPropertyChanged("EndMaterialUsedPerMinuteBottomhole");
+                EndMaterialUsedRateBottomholeField = value;
+                NotifyPropertyChanged("EndMaterialUsedRateBottomhole");
             }
         }
 
          [XmlIgnore]
-         public bool EndMaterialUsedPerMinuteBottomholeSpecified
+         public bool EndMaterialUsedRateBottomholeSpecified
          {
             get {
-             if(EndMaterialUsedPerMinuteBottomholeField!=null)
-                return EndMaterialUsedPerMinuteBottomholeField.Count>0?true:false;
+             if(EndMaterialUsedRateBottomholeField!=null)
+                return EndMaterialUsedRateBottomholeField.Count>0?true:false;
              else return false;
             } 
          }
-        private List<StimMaterialQuantity> EndMaterialUsedPerMinuteBottomholeField; 
+        private List<StimMaterialQuantity> EndMaterialUsedRateBottomholeField; 
 
         /// <summary>
         /// EndPresBottomhole property
@@ -11070,33 +7400,6 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private VolumePerTimeMeasure EndStdRateSurfaceN2Field; 
-
-        /// <summary>
-        /// ExtensionNameValue property
-        /// </summary>
-		[Description("Extensions to the schema based on a name-value construct.")]
-        [RecurringElement]
-		[XmlElement("ExtensionNameValue")]
-        public List<ExtensionNameValue> ExtensionNameValue {
-            get {
-                return ExtensionNameValueField;
-            } 
-            set {
-                ExtensionNameValueField = value;
-                NotifyPropertyChanged("ExtensionNameValue");
-            }
-        }
-
-         [XmlIgnore]
-         public bool ExtensionNameValueSpecified
-         {
-            get {
-             if(ExtensionNameValueField!=null)
-                return ExtensionNameValueField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<ExtensionNameValue> ExtensionNameValueField; 
 
         /// <summary>
         /// FluidVolBase property
@@ -11279,27 +7582,10 @@ namespace Energistics.DataAccess.WITSML200
         private DimensionlessMeasure FrictionFactorField; 
 
         /// <summary>
-        /// Kind property
-        /// </summary>
-		[StringLength(2000)]
-        [Description("The type of step.")]
-		[XmlElement("Kind")]
-        public String Kind {
-            get {
-                return KindField;
-            } 
-            set {
-                KindField = value;
-                NotifyPropertyChanged("Kind");
-            }
-        }
-
-        private String KindField; 
-
-        /// <summary>
         /// MaxHydraulicPower property
         /// </summary>
-		[ComponentElement]
+		[Description("Maximum hydraulic power used during the step.")]
+        [ComponentElement]
 		[XmlElement("MaxHydraulicPower")]
         public PowerMeasure MaxHydraulicPower {
             get {
@@ -11334,7 +7620,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// MaxProppantConcBottomhole property
         /// </summary>
-		[Required]
+		[Description("Maximum proppant concentration at the bottom during the stimulation step.")]
         [ComponentElement]
 		[XmlElement("MaxProppantConcBottomhole")]
         public MassPerVolumeMeasure MaxProppantConcBottomhole {
@@ -11386,58 +7672,22 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerVolumeMeasure MaxSlurryPropConcField; 
 
         /// <summary>
-        /// MaxVolumePerMinuteWellhead property
+        /// MaxVolumeRateWellhead property
         /// </summary>
 		[Description("Maximum volume per minute at the wellhead.")]
         [ComponentElement]
-		[XmlElement("MaxVolumePerMinuteWellhead")]
-        public VolumeMeasure MaxVolumePerMinuteWellhead {
+		[XmlElement("MaxVolumeRateWellhead")]
+        public VolumePerTimeMeasure MaxVolumeRateWellhead {
             get {
-                return MaxVolumePerMinuteWellheadField;
+                return MaxVolumeRateWellheadField;
             } 
             set {
-                MaxVolumePerMinuteWellheadField = value;
-                NotifyPropertyChanged("MaxVolumePerMinuteWellhead");
+                MaxVolumeRateWellheadField = value;
+                NotifyPropertyChanged("MaxVolumeRateWellhead");
             }
         }
 
-        private VolumeMeasure MaxVolumePerMinuteWellheadField; 
-
-        /// <summary>
-        /// Name property
-        /// </summary>
-		[StringLength(2000)]
-        [Description("A human readable name for the step.")]
-		[XmlElement("Name")]
-        public String Name {
-            get {
-                return NameField;
-            } 
-            set {
-                NameField = value;
-                NotifyPropertyChanged("Name");
-            }
-        }
-
-        private String NameField; 
-
-        /// <summary>
-        /// Number property
-        /// </summary>
-		[Required]
-        [Description("Step number.")]
-		[XmlElement("Number")]
-        public Int64? Number {
-            get {
-                return NumberField;
-            } 
-            set {
-                NumberField = value;
-                NotifyPropertyChanged("Number");
-            }
-        }
-
-        private Int64? NumberField; 
+        private VolumePerTimeMeasure MaxVolumeRateWellheadField; 
 
         /// <summary>
         /// PipeFrictionPressure property
@@ -11476,76 +7726,76 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure PumpTimeField; 
 
         /// <summary>
-        /// StartDirtyMaterialPerMinute property
+        /// StartDirtyMaterialRate property
         /// </summary>
 		[Description("Starting dirty fluid volume per minute.")]
         [ComponentElement]
-		[XmlElement("StartDirtyMaterialPerMinute")]
-        public VolumeMeasure StartDirtyMaterialPerMinute {
+		[XmlElement("StartDirtyMaterialRate")]
+        public VolumePerTimeMeasure StartDirtyMaterialRate {
             get {
-                return StartDirtyMaterialPerMinuteField;
+                return StartDirtyMaterialRateField;
             } 
             set {
-                StartDirtyMaterialPerMinuteField = value;
-                NotifyPropertyChanged("StartDirtyMaterialPerMinute");
+                StartDirtyMaterialRateField = value;
+                NotifyPropertyChanged("StartDirtyMaterialRate");
             }
         }
 
-        private VolumeMeasure StartDirtyMaterialPerMinuteField; 
+        private VolumePerTimeMeasure StartDirtyMaterialRateField; 
 
         /// <summary>
-        /// StartMaterialUsedPerMinute property
+        /// StartMaterialUsedRate property
         /// </summary>
 		[Description("Starting quantity of material used per minute entering the flow stream.")]
         [RecurringElement]
-		[XmlElement("StartMaterialUsedPerMinute")]
-        public List<StimMaterialQuantity> StartMaterialUsedPerMinute {
+		[XmlElement("StartMaterialUsedRate")]
+        public List<StimMaterialQuantity> StartMaterialUsedRate {
             get {
-                return StartMaterialUsedPerMinuteField;
+                return StartMaterialUsedRateField;
             } 
             set {
-                StartMaterialUsedPerMinuteField = value;
-                NotifyPropertyChanged("StartMaterialUsedPerMinute");
+                StartMaterialUsedRateField = value;
+                NotifyPropertyChanged("StartMaterialUsedRate");
             }
         }
 
          [XmlIgnore]
-         public bool StartMaterialUsedPerMinuteSpecified
+         public bool StartMaterialUsedRateSpecified
          {
             get {
-             if(StartMaterialUsedPerMinuteField!=null)
-                return StartMaterialUsedPerMinuteField.Count>0?true:false;
+             if(StartMaterialUsedRateField!=null)
+                return StartMaterialUsedRateField.Count>0?true:false;
              else return false;
             } 
          }
-        private List<StimMaterialQuantity> StartMaterialUsedPerMinuteField; 
+        private List<StimMaterialQuantity> StartMaterialUsedRateField; 
 
         /// <summary>
-        /// StartMaterialUsedPerMinuteBottomHole property
+        /// StartMaterialUsedRateBottomHole property
         /// </summary>
 		[Description("Starting quantity of material used per minute at bottomhole.")]
         [RecurringElement]
-		[XmlElement("StartMaterialUsedPerMinuteBottomHole")]
-        public List<StimMaterialQuantity> StartMaterialUsedPerMinuteBottomHole {
+		[XmlElement("StartMaterialUsedRateBottomHole")]
+        public List<StimMaterialQuantity> StartMaterialUsedRateBottomHole {
             get {
-                return StartMaterialUsedPerMinuteBottomHoleField;
+                return StartMaterialUsedRateBottomHoleField;
             } 
             set {
-                StartMaterialUsedPerMinuteBottomHoleField = value;
-                NotifyPropertyChanged("StartMaterialUsedPerMinuteBottomHole");
+                StartMaterialUsedRateBottomHoleField = value;
+                NotifyPropertyChanged("StartMaterialUsedRateBottomHole");
             }
         }
 
          [XmlIgnore]
-         public bool StartMaterialUsedPerMinuteBottomHoleSpecified
+         public bool StartMaterialUsedRateBottomHoleSpecified
          {
             get {
-             if(StartMaterialUsedPerMinuteBottomHoleField!=null)
-                return StartMaterialUsedPerMinuteBottomHoleField.Count>0?true:false;
+             if(StartMaterialUsedRateBottomHoleField!=null)
+                return StartMaterialUsedRateBottomHoleField.Count>0?true:false;
              else return false;
             } 
          }
-        private List<StimMaterialQuantity> StartMaterialUsedPerMinuteBottomHoleField; 
+        private List<StimMaterialQuantity> StartMaterialUsedRateBottomHoleField; 
 
         /// <summary>
         /// StartPresBottomhole property
@@ -11638,6 +7888,33 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure WellheadVolField; 
 
         /// <summary>
+        /// ExtensionNameValue property
+        /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
+        [RecurringElement]
+		[XmlElement("ExtensionNameValue")]
+        public List<ExtensionNameValue> ExtensionNameValue {
+            get {
+                return ExtensionNameValueField;
+            } 
+            set {
+                ExtensionNameValueField = value;
+                NotifyPropertyChanged("ExtensionNameValue");
+            }
+        }
+
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(ExtensionNameValueField!=null)
+                return ExtensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<ExtensionNameValue> ExtensionNameValueField; 
+
+        /// <summary>
         /// MaterialUsed property
         /// </summary>
 		[Description("Material used during the step")]
@@ -11665,30 +7942,30 @@ namespace Energistics.DataAccess.WITSML200
         private List<StimMaterialQuantity> MaterialUsedField; 
 
         /// <summary>
-        /// MaxMaterialUsedPerMinute property
+        /// MaxMaterialUsedRate property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("MaxMaterialUsedPerMinute")]
-        public List<StimMaterialQuantity> MaxMaterialUsedPerMinute {
+		[XmlElement("MaxMaterialUsedRate")]
+        public List<StimMaterialQuantity> MaxMaterialUsedRate {
             get {
-                return MaxMaterialUsedPerMinuteField;
+                return MaxMaterialUsedRateField;
             } 
             set {
-                MaxMaterialUsedPerMinuteField = value;
-                NotifyPropertyChanged("MaxMaterialUsedPerMinute");
+                MaxMaterialUsedRateField = value;
+                NotifyPropertyChanged("MaxMaterialUsedRate");
             }
         }
 
          [XmlIgnore]
-         public bool MaxMaterialUsedPerMinuteSpecified
+         public bool MaxMaterialUsedRateSpecified
          {
             get {
-             if(MaxMaterialUsedPerMinuteField!=null)
-                return MaxMaterialUsedPerMinuteField.Count>0?true:false;
+             if(MaxMaterialUsedRateField!=null)
+                return MaxMaterialUsedRateField.Count>0?true:false;
              else return false;
             } 
          }
-        private List<StimMaterialQuantity> MaxMaterialUsedPerMinuteField; 
+        private List<StimMaterialQuantity> MaxMaterialUsedRateField; 
 
         /// <summary>
         /// Fluid property
@@ -11711,6 +7988,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of StimJobStep")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -11802,101 +8080,6 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private PowerUom uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the VolumePerTimeMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="VolumePerTimeMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the VolumePerTimeMeasure xsd type.")]
-    public partial class VolumePerTimeMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the VolumePerTimeMeasure class.
-        /// </summary>
-        public VolumePerTimeMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the VolumePerTimeMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public VolumePerTimeMeasure(Double value, VolumePerTimeUom uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public VolumePerTimeUom Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private VolumePerTimeUom uomField; 
 
         /// <summary>
         /// Value property
@@ -12168,6 +8351,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of StimEvent")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -12288,6 +8472,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of StimShutInPressure")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -12522,6 +8707,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of StimPumpFlowBackTest")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -12610,22 +8796,22 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure FlowbackVolumeField; 
 
         /// <summary>
-        /// FlowbackVolumePerMinute property
+        /// FlowbackVolumeRate property
         /// </summary>
 		[Description("Flowback Rate.")]
         [ComponentElement]
-		[XmlElement("FlowbackVolumePerMinute")]
-        public VolumeMeasure FlowbackVolumePerMinute {
+		[XmlElement("FlowbackVolumeRate")]
+        public VolumePerTimeMeasure FlowbackVolumeRate {
             get {
-                return FlowbackVolumePerMinuteField;
+                return FlowbackVolumeRateField;
             } 
             set {
-                FlowbackVolumePerMinuteField = value;
-                NotifyPropertyChanged("FlowbackVolumePerMinute");
+                FlowbackVolumeRateField = value;
+                NotifyPropertyChanged("FlowbackVolumeRate");
             }
         }
 
-        private VolumeMeasure FlowbackVolumePerMinuteField; 
+        private VolumePerTimeMeasure FlowbackVolumeRateField; 
 
         /// <summary>
         /// Number property
@@ -12802,6 +8988,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of StimPumpFlowBackTestStep")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -12920,6 +9107,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of StimPressureFlowRate")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -13047,6 +9235,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of StimStepTest")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -13300,6 +9489,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of StimStepDownTest")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -13357,7 +9547,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("An analysis method used for this FET test.")]
         [RecurringElement]
 		[XmlElement("AnalysisMethod")]
-        public List<StimAnalysisMethod> AnalysisMethod {
+        public List<StimFetTestAnalysisMethod> AnalysisMethod {
             get {
                 return AnalysisMethodField;
             } 
@@ -13376,7 +9566,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
             } 
          }
-        private List<StimAnalysisMethod> AnalysisMethodField; 
+        private List<StimFetTestAnalysisMethod> AnalysisMethodField; 
 
         /// <summary>
         /// DTimStart property
@@ -13679,6 +9869,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of StimFetTest")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -14910,6 +11101,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of StimJobDiagnosticSession")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -14987,7 +11179,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Description("Unit of measure used by this vertical depth coordinate")]
         [XmlAttribute("uom")]
 		
         public LengthUom Uom {
@@ -15025,6 +11217,7 @@ namespace Energistics.DataAccess.WITSML200
         /// datum property
         /// </summary>
 		[StringLength(64)]
+        [Description("Defines the vertical datums associated with elevation, vertical depth and measured depth coordinates")]
         [XmlAttribute("datum")]
 		
         public String Datum {
@@ -15055,6 +11248,1517 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the PermeabilityLengthMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="PermeabilityLengthMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the PermeabilityLengthMeasure xsd type.")]
+    public partial class PermeabilityLengthMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the PermeabilityLengthMeasure class.
+        /// </summary>
+        public PermeabilityLengthMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the PermeabilityLengthMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public PermeabilityLengthMeasure(Double value, PermeabilityLengthUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public PermeabilityLengthUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private PermeabilityLengthUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the StimISO13503_5Point xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimISO13503_5Point", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the StimISO13503_5Point xsd type.")]
+    public partial class StimISO13503_5Point : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Conductivity property
+        /// </summary>
+		[Required]
+        [Description("The Conductivity under Stress.")]
+        [ComponentElement]
+		[XmlElement("Conductivity")]
+        public PermeabilityLengthMeasure Conductivity {
+            get {
+                return ConductivityField;
+            } 
+            set {
+                ConductivityField = value;
+                NotifyPropertyChanged("Conductivity");
+            }
+        }
+
+        private PermeabilityLengthMeasure ConductivityField; 
+
+        /// <summary>
+        /// Temperature property
+        /// </summary>
+		[Required]
+        [Description("The temperature at the time measurements were taken.")]
+        [ComponentElement]
+		[XmlElement("Temperature")]
+        public ThermodynamicTemperatureMeasure Temperature {
+            get {
+                return TemperatureField;
+            } 
+            set {
+                TemperatureField = value;
+                NotifyPropertyChanged("Temperature");
+            }
+        }
+
+        private ThermodynamicTemperatureMeasure TemperatureField; 
+
+        /// <summary>
+        /// Permeability property
+        /// </summary>
+		[Required]
+        [Description("The permeability under Stress.")]
+        [ComponentElement]
+		[XmlElement("Permeability")]
+        public PermeabilityRockMeasure Permeability {
+            get {
+                return PermeabilityField;
+            } 
+            set {
+                PermeabilityField = value;
+                NotifyPropertyChanged("Permeability");
+            }
+        }
+
+        private PermeabilityRockMeasure PermeabilityField; 
+
+        /// <summary>
+        /// Stress property
+        /// </summary>
+		[Required]
+        [Description("The amount of stress applied.")]
+		[XmlElement("Stress")]
+        public String Stress {
+            get {
+                return StressField;
+            } 
+            set {
+                StressField = value;
+                NotifyPropertyChanged("Stress");
+            }
+        }
+
+        private String StressField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Unique identifier for this instance of StimISO13503_5Point")]
+        [XmlAttribute("uid")]
+		
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the ISO13503_2SieveAnalysisData xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ISO13503_2SieveAnalysisData", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the ISO13503_2SieveAnalysisData xsd type.")]
+    public partial class ISO13503_2SieveAnalysisData : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// PercentRetained property
+        /// </summary>
+		[Required]
+        [Description("The percentage of mass retained in sieve.")]
+        [ComponentElement]
+		[XmlElement("PercentRetained")]
+        public MassPerMassMeasure PercentRetained {
+            get {
+                return PercentRetainedField;
+            } 
+            set {
+                PercentRetainedField = value;
+                NotifyPropertyChanged("PercentRetained");
+            }
+        }
+
+        private MassPerMassMeasure PercentRetainedField; 
+
+        /// <summary>
+        /// SieveNumber property
+        /// </summary>
+		[Required]
+        [Description("ASTM US Standard mesh opening size used in Sieve analysis test.  Use ‘0’ to indicate ‘Pan’.")]
+		[XmlElement("SieveNumber")]
+        public Int64? SieveNumber {
+            get {
+                return SieveNumberField;
+            } 
+            set {
+                SieveNumberField = value;
+                NotifyPropertyChanged("SieveNumber");
+            }
+        }
+
+        private Int64? SieveNumberField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Unique identifier for this instance of ISO13503_2SieveAnalysisData")]
+        [XmlAttribute("uid")]
+		
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the MassPerMassMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="MassPerMassMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the MassPerMassMeasure xsd type.")]
+    public partial class MassPerMassMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the MassPerMassMeasure class.
+        /// </summary>
+        public MassPerMassMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the MassPerMassMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public MassPerMassMeasure(Double value, MassPerMassUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public MassPerMassUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private MassPerMassUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the ISO13503_2CrushTestData xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ISO13503_2CrushTestData", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the ISO13503_2CrushTestData xsd type.")]
+    public partial class ISO13503_2CrushTestData : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Fines property
+        /// </summary>
+		[Required]
+        [Description("Mass percentage of fines after being exposed to stress.")]
+        [ComponentElement]
+		[XmlElement("Fines")]
+        public MassPerMassMeasure Fines {
+            get {
+                return FinesField;
+            } 
+            set {
+                FinesField = value;
+                NotifyPropertyChanged("Fines");
+            }
+        }
+
+        private MassPerMassMeasure FinesField; 
+
+        /// <summary>
+        /// Stress property
+        /// </summary>
+		[Required]
+        [Description("Stress measured at a point during a crush test.")]
+        [ComponentElement]
+		[XmlElement("Stress")]
+        public PressureMeasure Stress {
+            get {
+                return StressField;
+            } 
+            set {
+                StressField = value;
+                NotifyPropertyChanged("Stress");
+            }
+        }
+
+        private PressureMeasure StressField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Unique identifier for this instance of ISO13503_2CrushTestData")]
+        [XmlAttribute("uid")]
+		
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the StimISO13503_2Properties xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimISO13503_2Properties", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the StimISO13503_2Properties xsd type.")]
+    public partial class StimISO13503_2Properties : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// AbsoluteDensity property
+        /// </summary>
+		[Description("Absolute density is the density the material would have if no intra-granular porosity is present. (e.g. Boyle’s Law porosimetry)")]
+        [ComponentElement]
+		[XmlElement("AbsoluteDensity")]
+        public MassPerVolumeMeasure AbsoluteDensity {
+            get {
+                return AbsoluteDensityField;
+            } 
+            set {
+                AbsoluteDensityField = value;
+                NotifyPropertyChanged("AbsoluteDensity");
+            }
+        }
+
+        private MassPerVolumeMeasure AbsoluteDensityField; 
+
+        /// <summary>
+        /// ClustersPercent property
+        /// </summary>
+		[Description("Percentage of undesirable agglomerated discrete proppant particles which typically occurs more with inefficiently processed natural sand proppants as opposed to manufactured ceramic proppants. ISO 13503-2 and API RP19C limit the mass of clusters to less than 1%.")]
+        [ComponentElement]
+		[XmlElement("ClustersPercent")]
+        public DimensionlessMeasure ClustersPercent {
+            get {
+                return ClustersPercentField;
+            } 
+            set {
+                ClustersPercentField = value;
+                NotifyPropertyChanged("ClustersPercent");
+            }
+        }
+
+        private DimensionlessMeasure ClustersPercentField; 
+
+        /// <summary>
+        /// KValue property
+        /// </summary>
+		[Description("Crush test classification indicating the highest stress level at which a proppant generated no more than 10% crushed material rounded down to the nearest 1,000 psi during a crush test. For example, a value of 14 means ‘14K’ which is 14000 psi.")]
+        [ComponentElement]
+		[XmlElement("KValue")]
+        public DimensionlessMeasure KValue {
+            get {
+                return KValueField;
+            } 
+            set {
+                KValueField = value;
+                NotifyPropertyChanged("KValue");
+            }
+        }
+
+        private DimensionlessMeasure KValueField; 
+
+        /// <summary>
+        /// MeanParticleDiameter property
+        /// </summary>
+		[Description("The mean diameter of particles in a sample of proppant.")]
+        [ComponentElement]
+		[XmlElement("MeanParticleDiameter")]
+        public LengthMeasure MeanParticleDiameter {
+            get {
+                return MeanParticleDiameterField;
+            } 
+            set {
+                MeanParticleDiameterField = value;
+                NotifyPropertyChanged("MeanParticleDiameter");
+            }
+        }
+
+        private LengthMeasure MeanParticleDiameterField; 
+
+        /// <summary>
+        /// MedianParticleDiameter property
+        /// </summary>
+		[Description("The median diameter of particles in a sample of proppant.")]
+        [ComponentElement]
+		[XmlElement("MedianParticleDiameter")]
+        public LengthMeasure MedianParticleDiameter {
+            get {
+                return MedianParticleDiameterField;
+            } 
+            set {
+                MedianParticleDiameterField = value;
+                NotifyPropertyChanged("MedianParticleDiameter");
+            }
+        }
+
+        private LengthMeasure MedianParticleDiameterField; 
+
+        /// <summary>
+        /// SpecificGravity property
+        /// </summary>
+		[Description("Not formally part of ISO 13503 .2 properties, the specific gravity is the Apparent Density of the Proppant divided by the Density of Water.")]
+		[XmlElement("SpecificGravity")]
+        public String SpecificGravity {
+            get {
+                return SpecificGravityField;
+            } 
+            set {
+                SpecificGravityField = value;
+                NotifyPropertyChanged("SpecificGravity");
+            }
+        }
+
+        private String SpecificGravityField; 
+
+        /// <summary>
+        /// Roundness property
+        /// </summary>
+		[Description("Krumbein Roundness Shape Factor that is a measure of the relative sharpness of grain corners or of grain curvature. Krumbein and Sloss (1963) are the most widely used method of determining shape factors.")]
+        [ComponentElement]
+		[XmlElement("Roundness")]
+        public DimensionlessMeasure Roundness {
+            get {
+                return RoundnessField;
+            } 
+            set {
+                RoundnessField = value;
+                NotifyPropertyChanged("Roundness");
+            }
+        }
+
+        private DimensionlessMeasure RoundnessField; 
+
+        /// <summary>
+        /// AcidSolubility property
+        /// </summary>
+		[Description("The solubility of a proppant in 12:3 HCl:HF for 30 minutes at 150°F is an indication of the amount of soluble materials (i.e. carbonates, feldspars, iron oxides, clays, etc) present in the proppant.")]
+        [ComponentElement]
+		[XmlElement("AcidSolubility")]
+        public MassPerMassMeasure AcidSolubility {
+            get {
+                return AcidSolubilityField;
+            } 
+            set {
+                AcidSolubilityField = value;
+                NotifyPropertyChanged("AcidSolubility");
+            }
+        }
+
+        private MassPerMassMeasure AcidSolubilityField; 
+
+        /// <summary>
+        /// ApparentDensity property
+        /// </summary>
+		[Description("Apparent Density excludes extra-granular porosity by placing a known mass in a volume of fluid and determining how much of the fluid is displaced (Archimedes).")]
+        [ComponentElement]
+		[XmlElement("ApparentDensity")]
+        public MassPerVolumeMeasure ApparentDensity {
+            get {
+                return ApparentDensityField;
+            } 
+            set {
+                ApparentDensityField = value;
+                NotifyPropertyChanged("ApparentDensity");
+            }
+        }
+
+        private MassPerVolumeMeasure ApparentDensityField; 
+
+        /// <summary>
+        /// BulkDensity property
+        /// </summary>
+		[Description("Bulk Density includes both the proppant and the porosity. This is measured by filling a known volume with dry proppant and measuring the weight.")]
+        [ComponentElement]
+		[XmlElement("BulkDensity")]
+        public MassPerVolumeMeasure BulkDensity {
+            get {
+                return BulkDensityField;
+            } 
+            set {
+                BulkDensityField = value;
+                NotifyPropertyChanged("BulkDensity");
+            }
+        }
+
+        private MassPerVolumeMeasure BulkDensityField; 
+
+        /// <summary>
+        /// LossOnIgnition property
+        /// </summary>
+		[Description("A mass loss (gravimetric) test method applied to coated proppants only, which determines the mass of resin coating applied to a natural sand or manufactured proppant by means of thorough combustion of the flammable resin from the nonflammable proppant. Reported as a % of original mass.")]
+        [ComponentElement]
+		[XmlElement("LossOnIgnition")]
+        public DimensionlessMeasure LossOnIgnition {
+            get {
+                return LossOnIgnitionField;
+            } 
+            set {
+                LossOnIgnitionField = value;
+                NotifyPropertyChanged("LossOnIgnition");
+            }
+        }
+
+        private DimensionlessMeasure LossOnIgnitionField; 
+
+        /// <summary>
+        /// Sphericity property
+        /// </summary>
+		[Description("Krumbein Sphericity Shape Factor that is a measure of how closely a proppant particle approaches the shape of a sphere. Krumbein and Sloss (1963) are the most widely used method of determining shape factors.")]
+        [ComponentElement]
+		[XmlElement("Sphericity")]
+        public DimensionlessMeasure Sphericity {
+            get {
+                return SphericityField;
+            } 
+            set {
+                SphericityField = value;
+                NotifyPropertyChanged("Sphericity");
+            }
+        }
+
+        private DimensionlessMeasure SphericityField; 
+
+        /// <summary>
+        /// Turbidity property
+        /// </summary>
+		[Description("Turbidity is a measure of water clarity how much the material suspended in water decreases the passage of light through the water.  Unit of measure may be Nephelometric Turbidity Unit (NTU), but may vary based upon the detector geometry.")]
+        [ComponentElement]
+		[XmlElement("Turbidity")]
+        public DimensionlessMeasure Turbidity {
+            get {
+                return TurbidityField;
+            } 
+            set {
+                TurbidityField = value;
+                NotifyPropertyChanged("Turbidity");
+            }
+        }
+
+        private DimensionlessMeasure TurbidityField; 
+
+        /// <summary>
+        /// CrushTestData property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("CrushTestData")]
+        public List<ISO13503_2CrushTestData> CrushTestData {
+            get {
+                return CrushTestDataField;
+            } 
+            set {
+                CrushTestDataField = value;
+                NotifyPropertyChanged("CrushTestData");
+            }
+        }
+
+         [XmlIgnore]
+         public bool CrushTestDataSpecified
+         {
+            get {
+             if(CrushTestDataField!=null)
+                return CrushTestDataField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<ISO13503_2CrushTestData> CrushTestDataField; 
+
+        /// <summary>
+        /// SieveAnalysisData property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("SieveAnalysisData")]
+        public List<ISO13503_2SieveAnalysisData> SieveAnalysisData {
+            get {
+                return SieveAnalysisDataField;
+            } 
+            set {
+                SieveAnalysisDataField = value;
+                NotifyPropertyChanged("SieveAnalysisData");
+            }
+        }
+
+         [XmlIgnore]
+         public bool SieveAnalysisDataSpecified
+         {
+            get {
+             if(SieveAnalysisDataField!=null)
+                return SieveAnalysisDataField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<ISO13503_2SieveAnalysisData> SieveAnalysisDataField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Unique identifier for this instance of StimISO13503_2Properties")]
+        [XmlAttribute("uid")]
+		
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the AreaPerMassMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AreaPerMassMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the AreaPerMassMeasure xsd type.")]
+    public partial class AreaPerMassMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the AreaPerMassMeasure class.
+        /// </summary>
+        public AreaPerMassMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the AreaPerMassMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public AreaPerMassMeasure(Double value, AreaPerMassUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public AreaPerMassUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private AreaPerMassUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the StimMaterial xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimAdditive))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimProppantAgent))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimMaterial", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the StimMaterial xsd type.")]
+    public partial class StimMaterial : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Kind property
+        /// </summary>
+		
+		[XmlElement("Kind")]
+        public StimMaterialKind? Kind {
+            get {
+                return KindField;
+            } 
+            set {
+                KindField = value;
+             if(value!=null) 
+                 this.KindSpecified = true;
+                NotifyPropertyChanged("Kind");
+            }
+        }
+
+        private StimMaterialKind? KindField; 
+
+        /// <summary>
+        /// KindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean KindSpecified {
+            get {
+                return KindSpecifiedField;
+            } 
+            set {
+                KindSpecifiedField = value;
+                NotifyPropertyChanged("KindSpecified");
+            }
+        }
+
+        private Boolean KindSpecifiedField; 
+
+        /// <summary>
+        /// Name property
+        /// </summary>
+		
+		[XmlElement("Name")]
+        public String Name {
+            get {
+                return NameField;
+            } 
+            set {
+                NameField = value;
+                NotifyPropertyChanged("Name");
+            }
+        }
+
+        private String NameField; 
+
+        /// <summary>
+        /// Supplier property
+        /// </summary>
+		
+		[XmlElement("Supplier")]
+        public String Supplier {
+            get {
+                return SupplierField;
+            } 
+            set {
+                SupplierField = value;
+                NotifyPropertyChanged("Supplier");
+            }
+        }
+
+        private String SupplierField; 
+
+        /// <summary>
+        /// ExtensionNameValue property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("ExtensionNameValue")]
+        public List<ExtensionNameValue> ExtensionNameValue {
+            get {
+                return ExtensionNameValueField;
+            } 
+            set {
+                ExtensionNameValueField = value;
+                NotifyPropertyChanged("ExtensionNameValue");
+            }
+        }
+
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(ExtensionNameValueField!=null)
+                return ExtensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<ExtensionNameValue> ExtensionNameValueField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		
+        [XmlAttribute("uid")]
+		
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the StimAdditive xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimAdditive", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the StimAdditive xsd type.")]
+    public partial class StimAdditive : StimMaterial, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// AdditiveKind property
+        /// </summary>
+		[Description("Additive type or function from the enumeration 'StimAdditiveKind'.")]
+		[XmlElement("AdditiveKind")]
+        public StimAdditiveKind? AdditiveKind {
+            get {
+                return AdditiveKindField;
+            } 
+            set {
+                AdditiveKindField = value;
+             if(value!=null) 
+                 this.AdditiveKindSpecified = true;
+                NotifyPropertyChanged("AdditiveKind");
+            }
+        }
+
+        private StimAdditiveKind? AdditiveKindField; 
+
+        /// <summary>
+        /// AdditiveKindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean AdditiveKindSpecified {
+            get {
+                return AdditiveKindSpecifiedField;
+            } 
+            set {
+                AdditiveKindSpecifiedField = value;
+                NotifyPropertyChanged("AdditiveKindSpecified");
+            }
+        }
+
+        private Boolean AdditiveKindSpecifiedField; 
+
+        /// <summary>
+        /// Type property
+        /// </summary>
+		[Required]
+        [StringLength(2000)]
+        [Description("The type of additive that is used which can represent a suppliers description or type of AdditiveKind.  For example, 5% HCl could be the type when AdditiveKind=acid.")]
+		[XmlElement("Type")]
+        public String Type {
+            get {
+                return TypeField;
+            } 
+            set {
+                TypeField = value;
+                NotifyPropertyChanged("Type");
+            }
+        }
+
+        private String TypeField; 
+
+        /// <summary>
+        /// SupplierCode property
+        /// </summary>
+		[Required]
+        [StringLength(2000)]
+        [Description("A code used to identify the supplier of the additive.")]
+		[XmlElement("SupplierCode")]
+        public String SupplierCode {
+            get {
+                return SupplierCodeField;
+            } 
+            set {
+                SupplierCodeField = value;
+                NotifyPropertyChanged("SupplierCode");
+            }
+        }
+
+        private String SupplierCodeField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the StimProppantAgent xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimProppantAgent", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the StimProppantAgent xsd type.")]
+    public partial class StimProppantAgent : StimMaterial, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// FrictionCoefficientLaminar property
+        /// </summary>
+		[Description("Laminar Flow Friction Coefficient.")]
+        [ComponentElement]
+		[XmlElement("FrictionCoefficientLaminar")]
+        public DimensionlessMeasure FrictionCoefficientLaminar {
+            get {
+                return FrictionCoefficientLaminarField;
+            } 
+            set {
+                FrictionCoefficientLaminarField = value;
+                NotifyPropertyChanged("FrictionCoefficientLaminar");
+            }
+        }
+
+        private DimensionlessMeasure FrictionCoefficientLaminarField; 
+
+        /// <summary>
+        /// MassAbsorptionCoefficient property
+        /// </summary>
+		[Description("Characterizes how easily radiation passes through a material. This can be used to compute the concentration of proppant in a slurry using a densitometer.")]
+        [ComponentElement]
+		[XmlElement("MassAbsorptionCoefficient")]
+        public AreaPerMassMeasure MassAbsorptionCoefficient {
+            get {
+                return MassAbsorptionCoefficientField;
+            } 
+            set {
+                MassAbsorptionCoefficientField = value;
+                NotifyPropertyChanged("MassAbsorptionCoefficient");
+            }
+        }
+
+        private AreaPerMassMeasure MassAbsorptionCoefficientField; 
+
+        /// <summary>
+        /// FrictionCoefficientTurbulent property
+        /// </summary>
+		[Description("Turbulent Flow Friction Coefficient.")]
+        [ComponentElement]
+		[XmlElement("FrictionCoefficientTurbulent")]
+        public DimensionlessMeasure FrictionCoefficientTurbulent {
+            get {
+                return FrictionCoefficientTurbulentField;
+            } 
+            set {
+                FrictionCoefficientTurbulentField = value;
+                NotifyPropertyChanged("FrictionCoefficientTurbulent");
+            }
+        }
+
+        private DimensionlessMeasure FrictionCoefficientTurbulentField; 
+
+        /// <summary>
+        /// MeshSizeHigh property
+        /// </summary>
+		[Description("High value of Sieve mesh size - for 40/70 Sand, this value would be 70.")]
+		[XmlElement("MeshSizeHigh")]
+        public Int64? MeshSizeHigh {
+            get {
+                return MeshSizeHighField;
+            } 
+            set {
+                MeshSizeHighField = value;
+             if(value!=null) 
+                 this.MeshSizeHighSpecified = true;
+                NotifyPropertyChanged("MeshSizeHigh");
+            }
+        }
+
+        private Int64? MeshSizeHighField; 
+
+        /// <summary>
+        /// MeshSizeHighSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean MeshSizeHighSpecified {
+            get {
+                return MeshSizeHighSpecifiedField;
+            } 
+            set {
+                MeshSizeHighSpecifiedField = value;
+                NotifyPropertyChanged("MeshSizeHighSpecified");
+            }
+        }
+
+        private Boolean MeshSizeHighSpecifiedField; 
+
+        /// <summary>
+        /// MeshSizeLow property
+        /// </summary>
+		[Description("Low value of Sieve mesh size - for 40/70 Sand, this value would be 40.")]
+		[XmlElement("MeshSizeLow")]
+        public Int64? MeshSizeLow {
+            get {
+                return MeshSizeLowField;
+            } 
+            set {
+                MeshSizeLowField = value;
+             if(value!=null) 
+                 this.MeshSizeLowSpecified = true;
+                NotifyPropertyChanged("MeshSizeLow");
+            }
+        }
+
+        private Int64? MeshSizeLowField; 
+
+        /// <summary>
+        /// MeshSizeLowSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean MeshSizeLowSpecified {
+            get {
+                return MeshSizeLowSpecifiedField;
+            } 
+            set {
+                MeshSizeLowSpecifiedField = value;
+                NotifyPropertyChanged("MeshSizeLowSpecified");
+            }
+        }
+
+        private Boolean MeshSizeLowSpecifiedField; 
+
+        /// <summary>
+        /// UnconfinedCompressiveStrength property
+        /// </summary>
+		[Description("The unconfined compressive strength of the proppant.")]
+        [ComponentElement]
+		[XmlElement("UnconfinedCompressiveStrength")]
+        public PressureMeasure UnconfinedCompressiveStrength {
+            get {
+                return UnconfinedCompressiveStrengthField;
+            } 
+            set {
+                UnconfinedCompressiveStrengthField = value;
+                NotifyPropertyChanged("UnconfinedCompressiveStrength");
+            }
+        }
+
+        private PressureMeasure UnconfinedCompressiveStrengthField; 
+
+        /// <summary>
+        /// ProppantAgentKind property
+        /// </summary>
+		[Description("Proppant type or Function.")]
+		[XmlElement("ProppantAgentKind")]
+        public String ProppantAgentKind {
+            get {
+                return ProppantAgentKindField;
+            } 
+            set {
+                ProppantAgentKindField = value;
+                NotifyPropertyChanged("ProppantAgentKind");
+            }
+        }
+
+        private String ProppantAgentKindField; 
+
+        /// <summary>
+        /// ISO13503_2Properties property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("ISO13503_2Properties")]
+        public List<StimISO13503_2Properties> ISO13503_2Properties {
+            get {
+                return ISO13503_2PropertiesField;
+            } 
+            set {
+                ISO13503_2PropertiesField = value;
+                NotifyPropertyChanged("ISO13503_2Properties");
+            }
+        }
+
+         [XmlIgnore]
+         public bool ISO13503_2PropertiesSpecified
+         {
+            get {
+             if(ISO13503_2PropertiesField!=null)
+                return ISO13503_2PropertiesField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<StimISO13503_2Properties> ISO13503_2PropertiesField; 
+
+        /// <summary>
+        /// ISO13503_5Point property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("ISO13503_5Point")]
+        public List<StimISO13503_5Point> ISO13503_5Point {
+            get {
+                return ISO13503_5PointField;
+            } 
+            set {
+                ISO13503_5PointField = value;
+                NotifyPropertyChanged("ISO13503_5Point");
+            }
+        }
+
+         [XmlIgnore]
+         public bool ISO13503_5PointSpecified
+         {
+            get {
+             if(ISO13503_5PointField!=null)
+                return ISO13503_5PointField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<StimISO13503_5Point> ISO13503_5PointField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the StimJobMaterialCatalog xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimJobMaterialCatalog", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the StimJobMaterialCatalog xsd type.")]
+    public partial class StimJobMaterialCatalog : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Additives property
+        /// </summary>
+		[Description("List of additives in the catalog.")]
+        [RecurringElement]
+		[XmlElement("Additives")]
+        public List<StimAdditive> Additives {
+            get {
+                return AdditivesField;
+            } 
+            set {
+                AdditivesField = value;
+                NotifyPropertyChanged("Additives");
+            }
+        }
+
+         [XmlIgnore]
+         public bool AdditivesSpecified
+         {
+            get {
+             if(AdditivesField!=null)
+                return AdditivesField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<StimAdditive> AdditivesField; 
+
+        /// <summary>
+        /// ProppantAgents property
+        /// </summary>
+		[Description("List of proppant agents in the catalog.")]
+        [RecurringElement]
+		[XmlElement("ProppantAgents")]
+        public List<StimProppantAgent> ProppantAgents {
+            get {
+                return ProppantAgentsField;
+            } 
+            set {
+                ProppantAgentsField = value;
+                NotifyPropertyChanged("ProppantAgents");
+            }
+        }
+
+         [XmlIgnore]
+         public bool ProppantAgentsSpecified
+         {
+            get {
+             if(ProppantAgentsField!=null)
+                return ProppantAgentsField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<StimProppantAgent> ProppantAgentsField; 
 
 
         
@@ -16377,6 +14081,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Degasser")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -16701,6 +14406,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of NameTag")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -16937,6 +14643,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Hydrocyclone")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -17173,6 +14880,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Centrifuge")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -17699,6 +15407,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of MudPump")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -18162,6 +15871,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Pit")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -18425,6 +16135,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of BopComponent")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -19528,6 +17239,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Shaker")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -19564,6 +17276,5695 @@ namespace Energistics.DataAccess.WITSML200
         #endregion INotifyPropertyChanged Members
     } //here
     }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the MudlogParameter xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="MudlogParameter", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the MudlogParameter xsd type.")]
+    public partial class MudlogParameter : Object, IUniqueId, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the MudlogParameter class.
+        /// </summary>
+        public MudlogParameter() {}
+
+        /// <summary>
+        /// Initializes a new instance of the MudlogParameter class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public MudlogParameter(GenericMeasure value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+        /// <summary>
+        /// MdInterval property
+        /// </summary>
+		[Description("Measured depth interval which is the focus of this parameter")]
+        [ComponentElement]
+		[XmlElement("MdInterval")]
+        public MdInterval MDInterval {
+            get {
+                return MdIntervalField;
+            } 
+            set {
+                MdIntervalField = value;
+                NotifyPropertyChanged("MDInterval");
+            }
+        }
+
+        private MdInterval MdIntervalField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+		[Required]
+        [Description("The value of the MudLog Paarameter")]
+        [ComponentElement]
+		[XmlElement("Value")]
+        public GenericMeasure Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private GenericMeasure ValueField; 
+
+        /// <summary>
+        /// Citation property
+        /// </summary>
+		[Required]
+        [Description("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the MudLog Parameter")]
+        [ComponentElement]
+		[XmlElement("Citation")]
+        public Citation Citation {
+            get {
+                return CitationField;
+            } 
+            set {
+                CitationField = value;
+                NotifyPropertyChanged("Citation");
+            }
+        }
+
+        private Citation CitationField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Unique identifier for this instance of MudLog Parameter")]
+        [XmlAttribute("uid")]
+		
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the GenericMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GenericMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the GenericMeasure xsd type.")]
+    public partial class GenericMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the GenericMeasure class.
+        /// </summary>
+        public GenericMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the GenericMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public GenericMeasure(Double value, String uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[StringLength(32)]
+        [XmlAttribute("uom")]
+		
+        public String Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private String uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the Citation xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Citation", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the Citation xsd type.")]
+    public partial class Citation : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Title property
+        /// </summary>
+		[Required]
+        [StringLength(2000)]
+        [Description("One line description/name of the RESQML object.  This is the equivalent in ISO 19115 of CI_Citation.title  Legacy DCGroup - title")]
+		[XmlElement("Title")]
+        public String Title {
+            get {
+                return TitleField;
+            } 
+            set {
+                TitleField = value;
+                NotifyPropertyChanged("Title");
+            }
+        }
+
+        private String TitleField; 
+
+        /// <summary>
+        /// Originator property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("Name (or other human-readable identifier) of the person who initially originated the object or RESQML document in the source application. If that information is not available, the user who created the RESQML format file. The originator remains the same as the object is subsequently edited.   This is the equivalent in ISO 19115 to the CI_Individual.name or the CI_Organization.name of the citedResponsibleParty whose role is \"originator\".  Legacy DCGroup - author")]
+		[XmlElement("Originator")]
+        public String Originator {
+            get {
+                return OriginatorField;
+            } 
+            set {
+                OriginatorField = value;
+                NotifyPropertyChanged("Originator");
+            }
+        }
+
+        private String OriginatorField; 
+
+        /// <summary>
+        /// Creation property
+        /// </summary>
+		[Required]
+        [Description("Date and time the document was created in the source application or, if that information is not available, when it was saved to the RESQML format file.  This is the equivalent of the ISO 19115 CI_Date where the CI_DateTypeCode = ”creation\"  The type is the Energistics timestamp datatype which is the W3C xs:dateTime with the optional timezone offset from UTC made mandatory.  Format: YYYY-MM-DDThh:mm:ssZ[+/-]hh:mm  Legacy DCGroup - created")]
+		[XmlElement("Creation")]
+        public DateTime? Creation {
+            get {
+                return CreationField;
+            } 
+            set {
+                CreationField = value;
+                NotifyPropertyChanged("Creation");
+            }
+        }
+
+        private DateTime? CreationField; 
+
+        /// <summary>
+        /// Format property
+        /// </summary>
+		[Required]
+        [StringLength(2000)]
+        [Description("Software or service that was used to originate the object and the file format created. Must be human and machine readable and unambiguously identify the software by including the company name, software name and software version. This is the equivalent in ISO 19115 to the distributionFormat.MD_Format.  The ISO format for this is [vendor:applicationName]/fileExtension where the application name includes the version number of the application.  SIG Implementation Notes  1. RESQML   - Legacy DCGroup from v1.1 - publisher - fileExtension is not relevant and will be ignored if present. - vendor and applicationName are mandatory.")]
+		[XmlElement("Format")]
+        public String Format {
+            get {
+                return FormatField;
+            } 
+            set {
+                FormatField = value;
+                NotifyPropertyChanged("Format");
+            }
+        }
+
+        private String FormatField; 
+
+        /// <summary>
+        /// Editor property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Name (or other human-readable identifier) of the last person who updated the object.   This is the equivalent in ISO 19115 to the CI_Individual.name or the CI_Organization.name of the citedResponsibleParty whose role is \"editor\".  Legacy DCGroup - contributor")]
+		[XmlElement("Editor")]
+        public String Editor {
+            get {
+                return EditorField;
+            } 
+            set {
+                EditorField = value;
+                NotifyPropertyChanged("Editor");
+            }
+        }
+
+        private String EditorField; 
+
+        /// <summary>
+        /// LastUpdate property
+        /// </summary>
+		[Description("Date and time the document was last modified in the source application or, if that information is not available, when it was last saved to the RESQML format file.  This is the equivalent of the ISO 19115 CI_Date where the CI_DateTypeCode = ”lastUpdate\"  The type is the Energistics timestamp datatype which is the W3C xs:dateTime with the optional timezone offset from UTC made mandatory.  Format: YYYY-MM-DDThh:mm:ssZ[+/-]hh:mm  Legacy DCGroup - modified")]
+		[XmlElement("LastUpdate")]
+        public DateTime? LastUpdate {
+            get {
+                return LastUpdateField;
+            } 
+            set {
+                LastUpdateField = value;
+             if(value!=null) 
+                 this.LastUpdateSpecified = true;
+                NotifyPropertyChanged("LastUpdate");
+            }
+        }
+
+        private DateTime? LastUpdateField; 
+
+        /// <summary>
+        /// LastUpdateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean LastUpdateSpecified {
+            get {
+                return LastUpdateSpecifiedField;
+            } 
+            set {
+                LastUpdateSpecifiedField = value;
+                NotifyPropertyChanged("LastUpdateSpecified");
+            }
+        }
+
+        private Boolean LastUpdateSpecifiedField; 
+
+        /// <summary>
+        /// VersionString property
+        /// </summary>
+		[StringLength(64)]
+		[XmlElement("VersionString")]
+        public String VersionString {
+            get {
+                return VersionStringField;
+            } 
+            set {
+                VersionStringField = value;
+                NotifyPropertyChanged("VersionString");
+            }
+        }
+
+        private String VersionStringField; 
+
+        /// <summary>
+        /// Description property
+        /// </summary>
+		[StringLength(2000)]
+        [Description("User descriptive comments about the object. Intended for end-user use (human readable); not necessarily meant to be used by software.  This is the equivalent of the ISO 19115 abstract.CharacterString  Legacy DCGroup - description")]
+		[XmlElement("Description")]
+        public String Description {
+            get {
+                return DescriptionField;
+            } 
+            set {
+                DescriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private String DescriptionField; 
+
+        /// <summary>
+        /// DescriptiveKeywords property
+        /// </summary>
+		[StringLength(2000)]
+        [Description("Key words to describe the activity, for example, history match or volumetric calculations, relevant to this object. Intended to be used in a search function by software.  This is the equivalent in ISO 19115 of descriptiveKeywords.MD_Keywords  Legacy DCGroup - subject")]
+		[XmlElement("DescriptiveKeywords")]
+        public String DescriptiveKeywords {
+            get {
+                return DescriptiveKeywordsField;
+            } 
+            set {
+                DescriptiveKeywordsField = value;
+                NotifyPropertyChanged("DescriptiveKeywords");
+            }
+        }
+
+        private String DescriptiveKeywordsField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the GasPeak xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GasPeak", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the GasPeak xsd type.")]
+    public partial class GasPeak : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// PeakType property
+        /// </summary>
+		[Required]
+        [Description("Type of gas peak")]
+		[XmlElement("PeakType")]
+        public GasPeakType? PeakType {
+            get {
+                return PeakTypeField;
+            } 
+            set {
+                PeakTypeField = value;
+                NotifyPropertyChanged("PeakType");
+            }
+        }
+
+        private GasPeakType? PeakTypeField; 
+
+        /// <summary>
+        /// MdPeak property
+        /// </summary>
+		[Description("Measured depth at which gas reading was made")]
+        [ComponentElement]
+		[XmlElement("MdPeak")]
+        public LengthMeasure MDPeak {
+            get {
+                return MdPeakField;
+            } 
+            set {
+                MdPeakField = value;
+                NotifyPropertyChanged("MDPeak");
+            }
+        }
+
+        private LengthMeasure MdPeakField; 
+
+        /// <summary>
+        /// AverageGas property
+        /// </summary>
+		[Description("Average total gas")]
+        [ComponentElement]
+		[XmlElement("AverageGas")]
+        public VolumePerVolumeMeasure AverageGas {
+            get {
+                return AverageGasField;
+            } 
+            set {
+                AverageGasField = value;
+                NotifyPropertyChanged("AverageGas");
+            }
+        }
+
+        private VolumePerVolumeMeasure AverageGasField; 
+
+        /// <summary>
+        /// PeakGas property
+        /// </summary>
+		[Description("Peak gas reading")]
+        [ComponentElement]
+		[XmlElement("PeakGas")]
+        public VolumePerVolumeMeasure PeakGas {
+            get {
+                return PeakGasField;
+            } 
+            set {
+                PeakGasField = value;
+                NotifyPropertyChanged("PeakGas");
+            }
+        }
+
+        private VolumePerVolumeMeasure PeakGasField; 
+
+        /// <summary>
+        /// BackgroundGas property
+        /// </summary>
+		[Description("Background gas reading")]
+        [ComponentElement]
+		[XmlElement("BackgroundGas")]
+        public VolumePerVolumeMeasure BackgroundGas {
+            get {
+                return BackgroundGasField;
+            } 
+            set {
+                BackgroundGasField = value;
+                NotifyPropertyChanged("BackgroundGas");
+            }
+        }
+
+        private VolumePerVolumeMeasure BackgroundGasField; 
+
+        /// <summary>
+        /// Channel property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("Channel")]
+        public DataObjectReference Channel {
+            get {
+                return ChannelField;
+            } 
+            set {
+                ChannelField = value;
+                NotifyPropertyChanged("Channel");
+            }
+        }
+
+        private DataObjectReference ChannelField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the DataObjectReference xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DataObjectReference", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the DataObjectReference xsd type.")]
+    public partial class DataObjectReference : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// ContentType property
+        /// </summary>
+		[Required]
+        [StringLength(2000)]
+        [Description("The content type of the referenced element.")]
+		[XmlElement("ContentType")]
+        public String ContentType {
+            get {
+                return ContentTypeField;
+            } 
+            set {
+                ContentTypeField = value;
+                NotifyPropertyChanged("ContentType");
+            }
+        }
+
+        private String ContentTypeField; 
+
+        /// <summary>
+        /// Title property
+        /// </summary>
+		[Required]
+        [StringLength(2000)]
+        [Description("The Title of the referenced object. The Title of a top level element would be inherited from AbstractObject and must be present on any referenced object.")]
+		[XmlElement("Title")]
+        public String Title {
+            get {
+                return TitleField;
+            } 
+            set {
+                TitleField = value;
+                NotifyPropertyChanged("Title");
+            }
+        }
+
+        private String TitleField; 
+
+        /// <summary>
+        /// Uuid property
+        /// </summary>
+		[Required]
+        [RegularExpression("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
+        [Description("Reference to an object using its global UID.")]
+		[XmlElement("Uuid")]
+        public String Uuid {
+            get {
+                return UuidField;
+            } 
+            set {
+                UuidField = value;
+                NotifyPropertyChanged("Uuid");
+            }
+        }
+
+        private String UuidField; 
+
+        /// <summary>
+        /// UuidAuthority property
+        /// </summary>
+		[StringLength(64)]
+        [Description("The authority that issued and maintains the uuid of the referenced object. Used mainly in alias context.")]
+		[XmlElement("UuidAuthority")]
+        public String UuidAuthority {
+            get {
+                return UuidAuthorityField;
+            } 
+            set {
+                UuidAuthorityField = value;
+                NotifyPropertyChanged("UuidAuthority");
+            }
+        }
+
+        private String UuidAuthorityField; 
+
+        /// <summary>
+        /// Uri property
+        /// </summary>
+		[Description("This is the URI of a referenced object.   Do not use this to store the path and file names of an external object - that is done through the External Dataset machinery.  This element is intended for use with the Energistics Transfer Protocol.")]
+		[XmlElement("Uri", DataType="anyURI")]
+        public String Uri {
+            get {
+                return UriField;
+            } 
+            set {
+                UriField = value;
+                NotifyPropertyChanged("Uri");
+            }
+        }
+
+        private String UriField; 
+
+        /// <summary>
+        /// VersionString property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Indicates the version of the object which is referenced.")]
+		[XmlElement("VersionString")]
+        public String VersionString {
+            get {
+                return VersionStringField;
+            } 
+            set {
+                VersionStringField = value;
+                NotifyPropertyChanged("VersionString");
+            }
+        }
+
+        private String VersionStringField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the GasInMud xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GasInMud", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the GasInMud xsd type.")]
+    public partial class GasInMud : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Average property
+        /// </summary>
+		[Description("Average percentage of gas in mud")]
+        [ComponentElement]
+		[XmlElement("Average")]
+        public VolumePerVolumeMeasure Average {
+            get {
+                return AverageField;
+            } 
+            set {
+                AverageField = value;
+                NotifyPropertyChanged("Average");
+            }
+        }
+
+        private VolumePerVolumeMeasure AverageField; 
+
+        /// <summary>
+        /// Maximum property
+        /// </summary>
+		[Description("Maximum percentage of gas in mud")]
+        [ComponentElement]
+		[XmlElement("Maximum")]
+        public VolumePerVolumeMeasure Maximum {
+            get {
+                return MaximumField;
+            } 
+            set {
+                MaximumField = value;
+                NotifyPropertyChanged("Maximum");
+            }
+        }
+
+        private VolumePerVolumeMeasure MaximumField; 
+
+        /// <summary>
+        /// Channel property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("Channel")]
+        public DataObjectReference Channel {
+            get {
+                return ChannelField;
+            } 
+            set {
+                ChannelField = value;
+                NotifyPropertyChanged("Channel");
+            }
+        }
+
+        private DataObjectReference ChannelField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the MudGas xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="MudGas", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the MudGas xsd type.")]
+    public partial class MudGas : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// GasInMud property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("GasInMud")]
+        public GasInMud GasInMud {
+            get {
+                return GasInMudField;
+            } 
+            set {
+                GasInMudField = value;
+                NotifyPropertyChanged("GasInMud");
+            }
+        }
+
+        private GasInMud GasInMudField; 
+
+        /// <summary>
+        /// GasPeak property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("GasPeak")]
+        public List<GasPeak> GasPeak {
+            get {
+                return GasPeakField;
+            } 
+            set {
+                GasPeakField = value;
+                NotifyPropertyChanged("GasPeak");
+            }
+        }
+
+         [XmlIgnore]
+         public bool GasPeakSpecified
+         {
+            get {
+             if(GasPeakField!=null)
+                return GasPeakField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<GasPeak> GasPeakField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the DxcStatistics xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DxcStatistics", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the DxcStatistics xsd type.")]
+    public partial class DxcStatistics : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Average property
+        /// </summary>
+		[Required]
+        [Description("Average drilling coefficient  through Interval")]
+        [ComponentElement]
+		[XmlElement("Average")]
+        public DimensionlessMeasure Average {
+            get {
+                return AverageField;
+            } 
+            set {
+                AverageField = value;
+                NotifyPropertyChanged("Average");
+            }
+        }
+
+        private DimensionlessMeasure AverageField; 
+
+        /// <summary>
+        /// Channel property
+        /// </summary>
+		[Description("Log Channel from which the drilling coefficient statistics were calculated")]
+        [ComponentElement]
+		[XmlElement("Channel")]
+        public DataObjectReference Channel {
+            get {
+                return ChannelField;
+            } 
+            set {
+                ChannelField = value;
+                NotifyPropertyChanged("Channel");
+            }
+        }
+
+        private DataObjectReference ChannelField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the EcdStatistics xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="EcdStatistics", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the EcdStatistics xsd type.")]
+    public partial class EcdStatistics : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Average property
+        /// </summary>
+		[Required]
+        [Description("Average equivalent circulating density at td through Interval")]
+        [ComponentElement]
+		[XmlElement("Average")]
+        public MassPerVolumeMeasure Average {
+            get {
+                return AverageField;
+            } 
+            set {
+                AverageField = value;
+                NotifyPropertyChanged("Average");
+            }
+        }
+
+        private MassPerVolumeMeasure AverageField; 
+
+        /// <summary>
+        /// Channel property
+        /// </summary>
+		[Description("Log Channel from which the equivalent circulating density at td statistics were calculated")]
+        [ComponentElement]
+		[XmlElement("Channel")]
+        public DataObjectReference Channel {
+            get {
+                return ChannelField;
+            } 
+            set {
+                ChannelField = value;
+                NotifyPropertyChanged("Channel");
+            }
+        }
+
+        private DataObjectReference ChannelField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the MudDensityStatistics xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="MudDensityStatistics", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the MudDensityStatistics xsd type.")]
+    public partial class MudDensityStatistics : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Average property
+        /// </summary>
+		[Required]
+        [Description("Average mud density through Interval")]
+        [ComponentElement]
+		[XmlElement("Average")]
+        public MassPerVolumeMeasure Average {
+            get {
+                return AverageField;
+            } 
+            set {
+                AverageField = value;
+                NotifyPropertyChanged("Average");
+            }
+        }
+
+        private MassPerVolumeMeasure AverageField; 
+
+        /// <summary>
+        /// Channel property
+        /// </summary>
+		[Description("Log Channel from which the mud density statistics were calculated")]
+        [ComponentElement]
+		[XmlElement("Channel")]
+        public DataObjectReference Channel {
+            get {
+                return ChannelField;
+            } 
+            set {
+                ChannelField = value;
+                NotifyPropertyChanged("Channel");
+            }
+        }
+
+        private DataObjectReference ChannelField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the RpmStatistics xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RpmStatistics", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the RpmStatistics xsd type.")]
+    public partial class RpmStatistics : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Average property
+        /// </summary>
+		[Required]
+        [Description("Average turn rate bit through Interval")]
+        [ComponentElement]
+		[XmlElement("Average")]
+        public AngularVelocityMeasure Average {
+            get {
+                return AverageField;
+            } 
+            set {
+                AverageField = value;
+                NotifyPropertyChanged("Average");
+            }
+        }
+
+        private AngularVelocityMeasure AverageField; 
+
+        /// <summary>
+        /// Channel property
+        /// </summary>
+		[Description("Log Channel from which the turn rate statistics were calculated")]
+        [ComponentElement]
+		[XmlElement("Channel")]
+        public DataObjectReference Channel {
+            get {
+                return ChannelField;
+            } 
+            set {
+                ChannelField = value;
+                NotifyPropertyChanged("Channel");
+            }
+        }
+
+        private DataObjectReference ChannelField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the ElectricCurrentMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ElectricCurrentMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the ElectricCurrentMeasure xsd type.")]
+    public partial class ElectricCurrentMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the ElectricCurrentMeasure class.
+        /// </summary>
+        public ElectricCurrentMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the ElectricCurrentMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public ElectricCurrentMeasure(Double value, ElectricCurrentUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public ElectricCurrentUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private ElectricCurrentUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the TorqueCurrentStatistics xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TorqueCurrentStatistics", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the TorqueCurrentStatistics xsd type.")]
+    public partial class TorqueCurrentStatistics : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Average property
+        /// </summary>
+		[Required]
+        [Description("Average electric current through Interval")]
+        [ComponentElement]
+		[XmlElement("Average")]
+        public ElectricCurrentMeasure Average {
+            get {
+                return AverageField;
+            } 
+            set {
+                AverageField = value;
+                NotifyPropertyChanged("Average");
+            }
+        }
+
+        private ElectricCurrentMeasure AverageField; 
+
+        /// <summary>
+        /// Channel property
+        /// </summary>
+		[Description("Log Channel from which the electric current statistics were calculated")]
+        [ComponentElement]
+		[XmlElement("Channel")]
+        public DataObjectReference Channel {
+            get {
+                return ChannelField;
+            } 
+            set {
+                ChannelField = value;
+                NotifyPropertyChanged("Channel");
+            }
+        }
+
+        private DataObjectReference ChannelField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the TorqueStatistics xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TorqueStatistics", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the TorqueStatistics xsd type.")]
+    public partial class TorqueStatistics : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Average property
+        /// </summary>
+		[Required]
+        [Description("Average torque through Interval")]
+        [ComponentElement]
+		[XmlElement("Average")]
+        public MomentOfForceMeasure Average {
+            get {
+                return AverageField;
+            } 
+            set {
+                AverageField = value;
+                NotifyPropertyChanged("Average");
+            }
+        }
+
+        private MomentOfForceMeasure AverageField; 
+
+        /// <summary>
+        /// Channel property
+        /// </summary>
+		[Description("Log Channel from which the torque statistics were calculated")]
+        [ComponentElement]
+		[XmlElement("Channel")]
+        public DataObjectReference Channel {
+            get {
+                return ChannelField;
+            } 
+            set {
+                ChannelField = value;
+                NotifyPropertyChanged("Channel");
+            }
+        }
+
+        private DataObjectReference ChannelField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the MomentOfForceMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="MomentOfForceMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the MomentOfForceMeasure xsd type.")]
+    public partial class MomentOfForceMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the MomentOfForceMeasure class.
+        /// </summary>
+        public MomentOfForceMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the MomentOfForceMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public MomentOfForceMeasure(Double value, MomentOfForceUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public MomentOfForceUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private MomentOfForceUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the WobStatistics xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="WobStatistics", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the WobStatistics xsd type.")]
+    public partial class WobStatistics : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Average property
+        /// </summary>
+		[Required]
+        [Description("Average weight on bit through Interval")]
+        [ComponentElement]
+		[XmlElement("Average")]
+        public ForceMeasure Average {
+            get {
+                return AverageField;
+            } 
+            set {
+                AverageField = value;
+                NotifyPropertyChanged("Average");
+            }
+        }
+
+        private ForceMeasure AverageField; 
+
+        /// <summary>
+        /// Channel property
+        /// </summary>
+		[Description("Log Channel from which the WOB statistics were calculated")]
+        [ComponentElement]
+		[XmlElement("Channel")]
+        public DataObjectReference Channel {
+            get {
+                return ChannelField;
+            } 
+            set {
+                ChannelField = value;
+                NotifyPropertyChanged("Channel");
+            }
+        }
+
+        private DataObjectReference ChannelField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the ForceMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ForceMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the ForceMeasure xsd type.")]
+    public partial class ForceMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the ForceMeasure class.
+        /// </summary>
+        public ForceMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the ForceMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public ForceMeasure(Double value, ForceUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public ForceUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private ForceUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the RopStatistics xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RopStatistics", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the RopStatistics xsd type.")]
+    public partial class RopStatistics : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Average property
+        /// </summary>
+		[Description("Average rate of penetration through Interval")]
+        [ComponentElement]
+		[XmlElement("Average")]
+        public LengthPerTimeMeasure Average {
+            get {
+                return AverageField;
+            } 
+            set {
+                AverageField = value;
+                NotifyPropertyChanged("Average");
+            }
+        }
+
+        private LengthPerTimeMeasure AverageField; 
+
+        /// <summary>
+        /// Minimum property
+        /// </summary>
+		[Description("Minimum rate of penetration through Interval")]
+        [ComponentElement]
+		[XmlElement("Minimum")]
+        public LengthPerTimeMeasure Minimum {
+            get {
+                return MinimumField;
+            } 
+            set {
+                MinimumField = value;
+                NotifyPropertyChanged("Minimum");
+            }
+        }
+
+        private LengthPerTimeMeasure MinimumField; 
+
+        /// <summary>
+        /// Maximum property
+        /// </summary>
+		[Description("Maximum rate of penetration through Interval")]
+        [ComponentElement]
+		[XmlElement("Maximum")]
+        public LengthPerTimeMeasure Maximum {
+            get {
+                return MaximumField;
+            } 
+            set {
+                MaximumField = value;
+                NotifyPropertyChanged("Maximum");
+            }
+        }
+
+        private LengthPerTimeMeasure MaximumField; 
+
+        /// <summary>
+        /// Channel property
+        /// </summary>
+		[Description("Log Channel from which the ROP statistics were calculated")]
+        [ComponentElement]
+		[XmlElement("Channel")]
+        public DataObjectReference Channel {
+            get {
+                return ChannelField;
+            } 
+            set {
+                ChannelField = value;
+                NotifyPropertyChanged("Channel");
+            }
+        }
+
+        private DataObjectReference ChannelField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the LengthPerTimeMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="LengthPerTimeMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the LengthPerTimeMeasure xsd type.")]
+    public partial class LengthPerTimeMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the LengthPerTimeMeasure class.
+        /// </summary>
+        public LengthPerTimeMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the LengthPerTimeMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public LengthPerTimeMeasure(Double value, LengthPerTimeUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public LengthPerTimeUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private LengthPerTimeUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the DrillingParameters xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DrillingParameters", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the DrillingParameters xsd type.")]
+    public partial class DrillingParameters : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Rop property
+        /// </summary>
+		[Description("Rate of penetration through interval")]
+		[XmlElement("Rop")]
+        public RopStatistics Rop {
+            get {
+                return RopField;
+            } 
+            set {
+                RopField = value;
+                NotifyPropertyChanged("Rop");
+            }
+        }
+
+        private RopStatistics RopField; 
+
+        /// <summary>
+        /// AverageWeightOnBit property
+        /// </summary>
+		[Description("Surface weight on bit - average through interval")]
+        [ComponentElement]
+		[XmlElement("AverageWeightOnBit")]
+        public WobStatistics AverageWeightOnBit {
+            get {
+                return AverageWeightOnBitField;
+            } 
+            set {
+                AverageWeightOnBitField = value;
+                NotifyPropertyChanged("AverageWeightOnBit");
+            }
+        }
+
+        private WobStatistics AverageWeightOnBitField; 
+
+        /// <summary>
+        /// AverageTorque property
+        /// </summary>
+		[Description("Average torque through interval")]
+        [ComponentElement]
+		[XmlElement("AverageTorque")]
+        public TorqueStatistics AverageTorque {
+            get {
+                return AverageTorqueField;
+            } 
+            set {
+                AverageTorqueField = value;
+                NotifyPropertyChanged("AverageTorque");
+            }
+        }
+
+        private TorqueStatistics AverageTorqueField; 
+
+        /// <summary>
+        /// AverageTorqueCurrent property
+        /// </summary>
+		[Description("Average torque current through interval. This is the raw measurement from which the average torque could be calculated")]
+        [ComponentElement]
+		[XmlElement("AverageTorqueCurrent")]
+        public TorqueCurrentStatistics AverageTorqueCurrent {
+            get {
+                return AverageTorqueCurrentField;
+            } 
+            set {
+                AverageTorqueCurrentField = value;
+                NotifyPropertyChanged("AverageTorqueCurrent");
+            }
+        }
+
+        private TorqueCurrentStatistics AverageTorqueCurrentField; 
+
+        /// <summary>
+        /// AverageTurnRate property
+        /// </summary>
+		[Description("Average turn rate through interval (commonly in rpm)")]
+        [ComponentElement]
+		[XmlElement("AverageTurnRate")]
+        public RpmStatistics AverageTurnRate {
+            get {
+                return AverageTurnRateField;
+            } 
+            set {
+                AverageTurnRateField = value;
+                NotifyPropertyChanged("AverageTurnRate");
+            }
+        }
+
+        private RpmStatistics AverageTurnRateField; 
+
+        /// <summary>
+        /// AverageMudDensity property
+        /// </summary>
+		[Description("Average mud density through the interval")]
+        [ComponentElement]
+		[XmlElement("AverageMudDensity")]
+        public MudDensityStatistics AverageMudDensity {
+            get {
+                return AverageMudDensityField;
+            } 
+            set {
+                AverageMudDensityField = value;
+                NotifyPropertyChanged("AverageMudDensity");
+            }
+        }
+
+        private MudDensityStatistics AverageMudDensityField; 
+
+        /// <summary>
+        /// AverageEcdAtTd property
+        /// </summary>
+		[Description("Average effective circulating density at TD through Interval")]
+        [ComponentElement]
+		[XmlElement("AverageEcdAtTd")]
+        public EcdStatistics AverageEcdAtTd {
+            get {
+                return AverageEcdAtTdField;
+            } 
+            set {
+                AverageEcdAtTdField = value;
+                NotifyPropertyChanged("AverageEcdAtTd");
+            }
+        }
+
+        private EcdStatistics AverageEcdAtTdField; 
+
+        /// <summary>
+        /// AverageDrillingCoefficient property
+        /// </summary>
+		[Description("Average drilling exponent through Interval")]
+        [ComponentElement]
+		[XmlElement("AverageDrillingCoefficient")]
+        public DxcStatistics AverageDrillingCoefficient {
+            get {
+                return AverageDrillingCoefficientField;
+            } 
+            set {
+                AverageDrillingCoefficientField = value;
+                NotifyPropertyChanged("AverageDrillingCoefficient");
+            }
+        }
+
+        private DxcStatistics AverageDrillingCoefficientField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the Chromatograph xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Chromatograph", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the Chromatograph xsd type.")]
+    public partial class Chromatograph : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// ChromatographMdInterval property
+        /// </summary>
+		[Description("Measured interval related to the chromatograph results")]
+        [ComponentElement]
+		[XmlElement("ChromatographMdInterval")]
+        public MdInterval ChromatographMDInterval {
+            get {
+                return ChromatographMdIntervalField;
+            } 
+            set {
+                ChromatographMdIntervalField = value;
+                NotifyPropertyChanged("ChromatographMDInterval");
+            }
+        }
+
+        private MdInterval ChromatographMdIntervalField; 
+
+        /// <summary>
+        /// DateTimeGasSampleProcessed property
+        /// </summary>
+		[RegularExpression(".+T.+[Z+\\-].*")]
+        [Description("The date and time at which the gas sample was processed.")]
+		[XmlElement("DateTimeGasSampleProcessed")]
+        public String DateTimeGasSampleProcessed {
+            get {
+                return DateTimeGasSampleProcessedField;
+            } 
+            set {
+                DateTimeGasSampleProcessedField = value;
+                NotifyPropertyChanged("DateTimeGasSampleProcessed");
+            }
+        }
+
+        private String DateTimeGasSampleProcessedField; 
+
+        /// <summary>
+        /// ChromatographType property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Chromatograph type.")]
+		[XmlElement("ChromatographType")]
+        public String ChromatographType {
+            get {
+                return ChromatographTypeField;
+            } 
+            set {
+                ChromatographTypeField = value;
+                NotifyPropertyChanged("ChromatographType");
+            }
+        }
+
+        private String ChromatographTypeField; 
+
+        /// <summary>
+        /// ETimChromCycle property
+        /// </summary>
+		[Description("Chromatograph cycle time. Commonly in seconds.")]
+        [ComponentElement]
+		[XmlElement("ETimChromCycle")]
+        public TimeMeasure ETimeChromCycle {
+            get {
+                return ETimChromCycleField;
+            } 
+            set {
+                ETimChromCycleField = value;
+                NotifyPropertyChanged("ETimeChromCycle");
+            }
+        }
+
+        private TimeMeasure ETimChromCycleField; 
+
+        /// <summary>
+        /// ChromReportTime property
+        /// </summary>
+		[RegularExpression(".+T.+[Z+\\-].*")]
+        [Description("Chromatograph integrator report time, format may be variable due to recording equipment")]
+		[XmlElement("ChromReportTime")]
+        public String ChromReportTime {
+            get {
+                return ChromReportTimeField;
+            } 
+            set {
+                ChromReportTimeField = value;
+                NotifyPropertyChanged("ChromReportTime");
+            }
+        }
+
+        private String ChromReportTimeField; 
+
+        /// <summary>
+        /// MudWeightIn property
+        /// </summary>
+		[Description("Mud density in (active pits).")]
+        [ComponentElement]
+		[XmlElement("MudWeightIn")]
+        public MassPerVolumeMeasure MudWeightIn {
+            get {
+                return MudWeightInField;
+            } 
+            set {
+                MudWeightInField = value;
+                NotifyPropertyChanged("MudWeightIn");
+            }
+        }
+
+        private MassPerVolumeMeasure MudWeightInField; 
+
+        /// <summary>
+        /// MudWeightOut property
+        /// </summary>
+		[Description("Mud density out (flowline).")]
+        [ComponentElement]
+		[XmlElement("MudWeightOut")]
+        public MassPerVolumeMeasure MudWeightOut {
+            get {
+                return MudWeightOutField;
+            } 
+            set {
+                MudWeightOutField = value;
+                NotifyPropertyChanged("MudWeightOut");
+            }
+        }
+
+        private MassPerVolumeMeasure MudWeightOutField; 
+
+        /// <summary>
+        /// MethAv property
+        /// </summary>
+		[Description("Methane (C1) ppm (average).")]
+        [ComponentElement]
+		[XmlElement("MethAv")]
+        public VolumePerVolumeMeasure MethAverage {
+            get {
+                return MethAvField;
+            } 
+            set {
+                MethAvField = value;
+                NotifyPropertyChanged("MethAverage");
+            }
+        }
+
+        private VolumePerVolumeMeasure MethAvField; 
+
+        /// <summary>
+        /// MethMn property
+        /// </summary>
+		[Description("Methane (C1) ppm (minimum).")]
+        [ComponentElement]
+		[XmlElement("MethMn")]
+        public VolumePerVolumeMeasure MethMin {
+            get {
+                return MethMnField;
+            } 
+            set {
+                MethMnField = value;
+                NotifyPropertyChanged("MethMin");
+            }
+        }
+
+        private VolumePerVolumeMeasure MethMnField; 
+
+        /// <summary>
+        /// MethMx property
+        /// </summary>
+		[Description("Methane (C1) ppm (maximum).")]
+        [ComponentElement]
+		[XmlElement("MethMx")]
+        public VolumePerVolumeMeasure MethMax {
+            get {
+                return MethMxField;
+            } 
+            set {
+                MethMxField = value;
+                NotifyPropertyChanged("MethMax");
+            }
+        }
+
+        private VolumePerVolumeMeasure MethMxField; 
+
+        /// <summary>
+        /// EthAv property
+        /// </summary>
+		[Description("Ethane (C2) ppm (average).")]
+        [ComponentElement]
+		[XmlElement("EthAv")]
+        public VolumePerVolumeMeasure EthAverage {
+            get {
+                return EthAvField;
+            } 
+            set {
+                EthAvField = value;
+                NotifyPropertyChanged("EthAverage");
+            }
+        }
+
+        private VolumePerVolumeMeasure EthAvField; 
+
+        /// <summary>
+        /// EthMn property
+        /// </summary>
+		[Description("Ethane (C2) ppm (minimum).")]
+        [ComponentElement]
+		[XmlElement("EthMn")]
+        public VolumePerVolumeMeasure EthMin {
+            get {
+                return EthMnField;
+            } 
+            set {
+                EthMnField = value;
+                NotifyPropertyChanged("EthMin");
+            }
+        }
+
+        private VolumePerVolumeMeasure EthMnField; 
+
+        /// <summary>
+        /// EthMx property
+        /// </summary>
+		[Description("Ethane (C2) ppm (maximum).")]
+        [ComponentElement]
+		[XmlElement("EthMx")]
+        public VolumePerVolumeMeasure EthMax {
+            get {
+                return EthMxField;
+            } 
+            set {
+                EthMxField = value;
+                NotifyPropertyChanged("EthMax");
+            }
+        }
+
+        private VolumePerVolumeMeasure EthMxField; 
+
+        /// <summary>
+        /// PropAv property
+        /// </summary>
+		[Description("Propane (C3) ppm (average).")]
+        [ComponentElement]
+		[XmlElement("PropAv")]
+        public VolumePerVolumeMeasure PropAverage {
+            get {
+                return PropAvField;
+            } 
+            set {
+                PropAvField = value;
+                NotifyPropertyChanged("PropAverage");
+            }
+        }
+
+        private VolumePerVolumeMeasure PropAvField; 
+
+        /// <summary>
+        /// PropMn property
+        /// </summary>
+		[Description("Propane (C3) ppm (minimum).")]
+        [ComponentElement]
+		[XmlElement("PropMn")]
+        public VolumePerVolumeMeasure PropMin {
+            get {
+                return PropMnField;
+            } 
+            set {
+                PropMnField = value;
+                NotifyPropertyChanged("PropMin");
+            }
+        }
+
+        private VolumePerVolumeMeasure PropMnField; 
+
+        /// <summary>
+        /// PropMx property
+        /// </summary>
+		[Description("Propane (C3) ppm (maximum).")]
+        [ComponentElement]
+		[XmlElement("PropMx")]
+        public VolumePerVolumeMeasure PropMax {
+            get {
+                return PropMxField;
+            } 
+            set {
+                PropMxField = value;
+                NotifyPropertyChanged("PropMax");
+            }
+        }
+
+        private VolumePerVolumeMeasure PropMxField; 
+
+        /// <summary>
+        /// IbutAv property
+        /// </summary>
+		[Description("iso-Butane (iC4) ppm (average).")]
+        [ComponentElement]
+		[XmlElement("IbutAv")]
+        public VolumePerVolumeMeasure IbutAverage {
+            get {
+                return IbutAvField;
+            } 
+            set {
+                IbutAvField = value;
+                NotifyPropertyChanged("IbutAverage");
+            }
+        }
+
+        private VolumePerVolumeMeasure IbutAvField; 
+
+        /// <summary>
+        /// IbutMn property
+        /// </summary>
+		[Description("iso-Butane (iC4) ppm (minimum).")]
+        [ComponentElement]
+		[XmlElement("IbutMn")]
+        public VolumePerVolumeMeasure IbutMin {
+            get {
+                return IbutMnField;
+            } 
+            set {
+                IbutMnField = value;
+                NotifyPropertyChanged("IbutMin");
+            }
+        }
+
+        private VolumePerVolumeMeasure IbutMnField; 
+
+        /// <summary>
+        /// IbutMx property
+        /// </summary>
+		[Description("iso-Butane (iC4) ppm (maximum).")]
+        [ComponentElement]
+		[XmlElement("IbutMx")]
+        public VolumePerVolumeMeasure IbutMax {
+            get {
+                return IbutMxField;
+            } 
+            set {
+                IbutMxField = value;
+                NotifyPropertyChanged("IbutMax");
+            }
+        }
+
+        private VolumePerVolumeMeasure IbutMxField; 
+
+        /// <summary>
+        /// NbutAv property
+        /// </summary>
+		[Description("nor-Butane (nC4) ppm (average).")]
+        [ComponentElement]
+		[XmlElement("NbutAv")]
+        public VolumePerVolumeMeasure NbutAverage {
+            get {
+                return NbutAvField;
+            } 
+            set {
+                NbutAvField = value;
+                NotifyPropertyChanged("NbutAverage");
+            }
+        }
+
+        private VolumePerVolumeMeasure NbutAvField; 
+
+        /// <summary>
+        /// NbutMn property
+        /// </summary>
+		[Description("nor-Butane (nC4) ppm (minimum).")]
+        [ComponentElement]
+		[XmlElement("NbutMn")]
+        public VolumePerVolumeMeasure NbutMin {
+            get {
+                return NbutMnField;
+            } 
+            set {
+                NbutMnField = value;
+                NotifyPropertyChanged("NbutMin");
+            }
+        }
+
+        private VolumePerVolumeMeasure NbutMnField; 
+
+        /// <summary>
+        /// NbutMx property
+        /// </summary>
+		[Description("nor-Butane (nC4) ppm (maximum).")]
+        [ComponentElement]
+		[XmlElement("NbutMx")]
+        public VolumePerVolumeMeasure NbutMax {
+            get {
+                return NbutMxField;
+            } 
+            set {
+                NbutMxField = value;
+                NotifyPropertyChanged("NbutMax");
+            }
+        }
+
+        private VolumePerVolumeMeasure NbutMxField; 
+
+        /// <summary>
+        /// IpentAv property
+        /// </summary>
+		[Description("iso-Pentane (iC5) ppm (average).")]
+        [ComponentElement]
+		[XmlElement("IpentAv")]
+        public VolumePerVolumeMeasure IpentAverage {
+            get {
+                return IpentAvField;
+            } 
+            set {
+                IpentAvField = value;
+                NotifyPropertyChanged("IpentAverage");
+            }
+        }
+
+        private VolumePerVolumeMeasure IpentAvField; 
+
+        /// <summary>
+        /// IpentMn property
+        /// </summary>
+		[Description("iso-Pentane (iC5) ppm (minimum).")]
+        [ComponentElement]
+		[XmlElement("IpentMn")]
+        public VolumePerVolumeMeasure IpentMin {
+            get {
+                return IpentMnField;
+            } 
+            set {
+                IpentMnField = value;
+                NotifyPropertyChanged("IpentMin");
+            }
+        }
+
+        private VolumePerVolumeMeasure IpentMnField; 
+
+        /// <summary>
+        /// IpentMx property
+        /// </summary>
+		[Description("iso-Pentane (iC5) ppm (maximum).")]
+        [ComponentElement]
+		[XmlElement("IpentMx")]
+        public VolumePerVolumeMeasure IpentMax {
+            get {
+                return IpentMxField;
+            } 
+            set {
+                IpentMxField = value;
+                NotifyPropertyChanged("IpentMax");
+            }
+        }
+
+        private VolumePerVolumeMeasure IpentMxField; 
+
+        /// <summary>
+        /// NpentAv property
+        /// </summary>
+		[Description("nor-Pentane (nC5) ppm (average).")]
+        [ComponentElement]
+		[XmlElement("NpentAv")]
+        public VolumePerVolumeMeasure NpentAverage {
+            get {
+                return NpentAvField;
+            } 
+            set {
+                NpentAvField = value;
+                NotifyPropertyChanged("NpentAverage");
+            }
+        }
+
+        private VolumePerVolumeMeasure NpentAvField; 
+
+        /// <summary>
+        /// NpentMn property
+        /// </summary>
+		[Description("nor-Pentane (nC5) ppm (minimum).")]
+        [ComponentElement]
+		[XmlElement("NpentMn")]
+        public VolumePerVolumeMeasure NpentMin {
+            get {
+                return NpentMnField;
+            } 
+            set {
+                NpentMnField = value;
+                NotifyPropertyChanged("NpentMin");
+            }
+        }
+
+        private VolumePerVolumeMeasure NpentMnField; 
+
+        /// <summary>
+        /// NpentMx property
+        /// </summary>
+		[Description("nor-Pentane (nC5) ppm (maximum).")]
+        [ComponentElement]
+		[XmlElement("NpentMx")]
+        public VolumePerVolumeMeasure NpentMax {
+            get {
+                return NpentMxField;
+            } 
+            set {
+                NpentMxField = value;
+                NotifyPropertyChanged("NpentMax");
+            }
+        }
+
+        private VolumePerVolumeMeasure NpentMxField; 
+
+        /// <summary>
+        /// EpentAv property
+        /// </summary>
+		[Description("neo-Pentane (eC5) ppm (average).")]
+        [ComponentElement]
+		[XmlElement("EpentAv")]
+        public VolumePerVolumeMeasure EpentAverage {
+            get {
+                return EpentAvField;
+            } 
+            set {
+                EpentAvField = value;
+                NotifyPropertyChanged("EpentAverage");
+            }
+        }
+
+        private VolumePerVolumeMeasure EpentAvField; 
+
+        /// <summary>
+        /// EpentMn property
+        /// </summary>
+		[Description("neo-Pentane (eC5) ppm (minimum).")]
+        [ComponentElement]
+		[XmlElement("EpentMn")]
+        public VolumePerVolumeMeasure EpentMin {
+            get {
+                return EpentMnField;
+            } 
+            set {
+                EpentMnField = value;
+                NotifyPropertyChanged("EpentMin");
+            }
+        }
+
+        private VolumePerVolumeMeasure EpentMnField; 
+
+        /// <summary>
+        /// EpentMx property
+        /// </summary>
+		[Description("neo-Pentane (eC5) ppm (maximum).")]
+        [ComponentElement]
+		[XmlElement("EpentMx")]
+        public VolumePerVolumeMeasure EpentMax {
+            get {
+                return EpentMxField;
+            } 
+            set {
+                EpentMxField = value;
+                NotifyPropertyChanged("EpentMax");
+            }
+        }
+
+        private VolumePerVolumeMeasure EpentMxField; 
+
+        /// <summary>
+        /// IhexAv property
+        /// </summary>
+		[Description("iso-Hexane (iC6) ppm (average).")]
+        [ComponentElement]
+		[XmlElement("IhexAv")]
+        public VolumePerVolumeMeasure IhexAverage {
+            get {
+                return IhexAvField;
+            } 
+            set {
+                IhexAvField = value;
+                NotifyPropertyChanged("IhexAverage");
+            }
+        }
+
+        private VolumePerVolumeMeasure IhexAvField; 
+
+        /// <summary>
+        /// IhexMn property
+        /// </summary>
+		[Description("iso-Hexane (iC6) ppm (minimum).")]
+        [ComponentElement]
+		[XmlElement("IhexMn")]
+        public VolumePerVolumeMeasure IhexMin {
+            get {
+                return IhexMnField;
+            } 
+            set {
+                IhexMnField = value;
+                NotifyPropertyChanged("IhexMin");
+            }
+        }
+
+        private VolumePerVolumeMeasure IhexMnField; 
+
+        /// <summary>
+        /// IhexMx property
+        /// </summary>
+		[Description("iso-Hexane (iC6) ppm (maximum).")]
+        [ComponentElement]
+		[XmlElement("IhexMx")]
+        public VolumePerVolumeMeasure IhexMax {
+            get {
+                return IhexMxField;
+            } 
+            set {
+                IhexMxField = value;
+                NotifyPropertyChanged("IhexMax");
+            }
+        }
+
+        private VolumePerVolumeMeasure IhexMxField; 
+
+        /// <summary>
+        /// NhexAv property
+        /// </summary>
+		[Description("nor-Hexane (nC6) ppm (average).")]
+        [ComponentElement]
+		[XmlElement("NhexAv")]
+        public VolumePerVolumeMeasure NhexAverage {
+            get {
+                return NhexAvField;
+            } 
+            set {
+                NhexAvField = value;
+                NotifyPropertyChanged("NhexAverage");
+            }
+        }
+
+        private VolumePerVolumeMeasure NhexAvField; 
+
+        /// <summary>
+        /// NhexMn property
+        /// </summary>
+		[Description("nor-Hexane (nC6) ppm (minimum).")]
+        [ComponentElement]
+		[XmlElement("NhexMn")]
+        public VolumePerVolumeMeasure NhexMin {
+            get {
+                return NhexMnField;
+            } 
+            set {
+                NhexMnField = value;
+                NotifyPropertyChanged("NhexMin");
+            }
+        }
+
+        private VolumePerVolumeMeasure NhexMnField; 
+
+        /// <summary>
+        /// NhexMx property
+        /// </summary>
+		[Description("nor-Hexane (nC6) ppm (maximum).")]
+        [ComponentElement]
+		[XmlElement("NhexMx")]
+        public VolumePerVolumeMeasure NhexMax {
+            get {
+                return NhexMxField;
+            } 
+            set {
+                NhexMxField = value;
+                NotifyPropertyChanged("NhexMax");
+            }
+        }
+
+        private VolumePerVolumeMeasure NhexMxField; 
+
+        /// <summary>
+        /// Co2Av property
+        /// </summary>
+		[Description("Carbon Dioxide ppm (average).")]
+        [ComponentElement]
+		[XmlElement("Co2Av")]
+        public VolumePerVolumeMeasure Co2Average {
+            get {
+                return Co2AvField;
+            } 
+            set {
+                Co2AvField = value;
+                NotifyPropertyChanged("Co2Average");
+            }
+        }
+
+        private VolumePerVolumeMeasure Co2AvField; 
+
+        /// <summary>
+        /// Co2Mn property
+        /// </summary>
+		[Description("Carbon Dioxide ppm (minimum).")]
+        [ComponentElement]
+		[XmlElement("Co2Mn")]
+        public VolumePerVolumeMeasure Co2Min {
+            get {
+                return Co2MnField;
+            } 
+            set {
+                Co2MnField = value;
+                NotifyPropertyChanged("Co2Min");
+            }
+        }
+
+        private VolumePerVolumeMeasure Co2MnField; 
+
+        /// <summary>
+        /// Co2Mx property
+        /// </summary>
+		[Description("Carbon Dioxide ppm (maximum).")]
+        [ComponentElement]
+		[XmlElement("Co2Mx")]
+        public VolumePerVolumeMeasure Co2Max {
+            get {
+                return Co2MxField;
+            } 
+            set {
+                Co2MxField = value;
+                NotifyPropertyChanged("Co2Max");
+            }
+        }
+
+        private VolumePerVolumeMeasure Co2MxField; 
+
+        /// <summary>
+        /// H2sAv property
+        /// </summary>
+		[Description("Hydrogen Sulfide (average) ppm.")]
+        [ComponentElement]
+		[XmlElement("H2sAv")]
+        public VolumePerVolumeMeasure H2sAverage {
+            get {
+                return H2sAvField;
+            } 
+            set {
+                H2sAvField = value;
+                NotifyPropertyChanged("H2sAverage");
+            }
+        }
+
+        private VolumePerVolumeMeasure H2sAvField; 
+
+        /// <summary>
+        /// H2sMn property
+        /// </summary>
+		[Description("Hydrogen Sulfide (minimum) ppm.")]
+        [ComponentElement]
+		[XmlElement("H2sMn")]
+        public VolumePerVolumeMeasure H2sMin {
+            get {
+                return H2sMnField;
+            } 
+            set {
+                H2sMnField = value;
+                NotifyPropertyChanged("H2sMin");
+            }
+        }
+
+        private VolumePerVolumeMeasure H2sMnField; 
+
+        /// <summary>
+        /// H2sMx property
+        /// </summary>
+		[Description("Hydrogen Sulfide (maximum) ppm.")]
+        [ComponentElement]
+		[XmlElement("H2sMx")]
+        public VolumePerVolumeMeasure H2sMax {
+            get {
+                return H2sMxField;
+            } 
+            set {
+                H2sMxField = value;
+                NotifyPropertyChanged("H2sMax");
+            }
+        }
+
+        private VolumePerVolumeMeasure H2sMxField; 
+
+        /// <summary>
+        /// Acetylene property
+        /// </summary>
+		[Description("Acetylene.")]
+        [ComponentElement]
+		[XmlElement("Acetylene")]
+        public VolumePerVolumeMeasure Acetylene {
+            get {
+                return AcetyleneField;
+            } 
+            set {
+                AcetyleneField = value;
+                NotifyPropertyChanged("Acetylene");
+            }
+        }
+
+        private VolumePerVolumeMeasure AcetyleneField; 
+
+        /// <summary>
+        /// Channel property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("Channel")]
+        public DataObjectReference Channel {
+            get {
+                return ChannelField;
+            } 
+            set {
+                ChannelField = value;
+                NotifyPropertyChanged("Channel");
+            }
+        }
+
+        private DataObjectReference ChannelField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the MudlogReportInterval xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("part_MudLogReportInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+	[Description("This class represents the MudlogReportInterval xsd type.")]
+    public partial class MudlogReportInterval : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// MdInterval property
+        /// </summary>
+		[Required]
+        [Description("Measured depth interval")]
+        [ComponentElement]
+		[XmlElement("MdInterval")]
+        public MdInterval MDInterval {
+            get {
+                return MdIntervalField;
+            } 
+            set {
+                MdIntervalField = value;
+                NotifyPropertyChanged("MDInterval");
+            }
+        }
+
+        private MdInterval MdIntervalField; 
+
+        /// <summary>
+        /// CuttingsGeologyInterval property
+        /// </summary>
+		[Description("The cuttings geology interval that is part of this mudlog report")]
+        [ComponentElement]
+		[XmlElement("CuttingsGeologyInterval")]
+        public CuttingsGeologyInterval CuttingsGeologyInterval {
+            get {
+                return CuttingsGeologyIntervalField;
+            } 
+            set {
+                CuttingsGeologyIntervalField = value;
+                NotifyPropertyChanged("CuttingsGeologyInterval");
+            }
+        }
+
+        private CuttingsGeologyInterval CuttingsGeologyIntervalField; 
+
+        /// <summary>
+        /// InterpretedGeologyInterval property
+        /// </summary>
+		[Description("The interpreted geology interval that is part of this mudlog report")]
+        [ComponentElement]
+		[XmlElement("InterpretedGeologyInterval")]
+        public InterpretedGeologyInterval InterpretedGeologyInterval {
+            get {
+                return InterpretedGeologyIntervalField;
+            } 
+            set {
+                InterpretedGeologyIntervalField = value;
+                NotifyPropertyChanged("InterpretedGeologyInterval");
+            }
+        }
+
+        private InterpretedGeologyInterval InterpretedGeologyIntervalField; 
+
+        /// <summary>
+        /// ShowEvaluationInterval property
+        /// </summary>
+		[Description("The show evaluation interval that is part of this mudlog report")]
+        [ComponentElement]
+		[XmlElement("ShowEvaluationInterval")]
+        public ShowEvaluationInterval ShowEvaluationInterval {
+            get {
+                return ShowEvaluationIntervalField;
+            } 
+            set {
+                ShowEvaluationIntervalField = value;
+                NotifyPropertyChanged("ShowEvaluationInterval");
+            }
+        }
+
+        private ShowEvaluationInterval ShowEvaluationIntervalField; 
+
+        /// <summary>
+        /// Chromatograph property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("Chromatograph")]
+        public Chromatograph Chromatograph {
+            get {
+                return ChromatographField;
+            } 
+            set {
+                ChromatographField = value;
+                NotifyPropertyChanged("Chromatograph");
+            }
+        }
+
+        private Chromatograph ChromatographField; 
+
+        /// <summary>
+        /// DrillingParameters property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("DrillingParameters")]
+        public List<DrillingParameters> DrillingParameters {
+            get {
+                return DrillingParametersField;
+            } 
+            set {
+                DrillingParametersField = value;
+                NotifyPropertyChanged("DrillingParameters");
+            }
+        }
+
+         [XmlIgnore]
+         public bool DrillingParametersSpecified
+         {
+            get {
+             if(DrillingParametersField!=null)
+                return DrillingParametersField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<DrillingParameters> DrillingParametersField; 
+
+        /// <summary>
+        /// MudGas property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("MudGas")]
+        public List<MudGas> MudGas {
+            get {
+                return MudGasField;
+            } 
+            set {
+                MudGasField = value;
+                NotifyPropertyChanged("MudGas");
+            }
+        }
+
+         [XmlIgnore]
+         public bool MudGasSpecified
+         {
+            get {
+             if(MudGasField!=null)
+                return MudGasField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<MudGas> MudGasField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Unique identifier for this instance of MudLog Report Interval")]
+        [XmlAttribute("uid")]
+		
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    /// <summary>
+    /// This class represents the CuttingsGeologyInterval xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("part_CuttingsInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+	[Description("This class represents the CuttingsGeologyInterval xsd type.")]
+    public partial class CuttingsGeologyInterval : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// MdInterval property
+        /// </summary>
+		[Required]
+        [Description("The measured depth interval which is represented by the cuttings described here.")]
+        [ComponentElement]
+		[XmlElement("MdInterval")]
+        public MdInterval MDInterval {
+            get {
+                return MdIntervalField;
+            } 
+            set {
+                MdIntervalField = value;
+                NotifyPropertyChanged("MDInterval");
+            }
+        }
+
+        private MdInterval MdIntervalField; 
+
+        /// <summary>
+        /// Citation property
+        /// </summary>
+		[Description("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the CuttingsGeologyInterval")]
+        [ComponentElement]
+		[XmlElement("Citation")]
+        public Citation Citation {
+            get {
+                return CitationField;
+            } 
+            set {
+                CitationField = value;
+                NotifyPropertyChanged("Citation");
+            }
+        }
+
+        private Citation CitationField; 
+
+        /// <summary>
+        /// DensBulk property
+        /// </summary>
+		[Description("Sample bulk density for the interval.")]
+        [ComponentElement]
+		[XmlElement("DensBulk")]
+        public MassPerVolumeMeasure DensBulk {
+            get {
+                return DensBulkField;
+            } 
+            set {
+                DensBulkField = value;
+                NotifyPropertyChanged("DensBulk");
+            }
+        }
+
+        private MassPerVolumeMeasure DensBulkField; 
+
+        /// <summary>
+        /// DensShale property
+        /// </summary>
+		[Description("Shale density for the interval.")]
+        [ComponentElement]
+		[XmlElement("DensShale")]
+        public MassPerVolumeMeasure DensShale {
+            get {
+                return DensShaleField;
+            } 
+            set {
+                DensShaleField = value;
+                NotifyPropertyChanged("DensShale");
+            }
+        }
+
+        private MassPerVolumeMeasure DensShaleField; 
+
+        /// <summary>
+        /// Calcite property
+        /// </summary>
+		[Description("Calcimetry calcite percentage.")]
+        [ComponentElement]
+		[XmlElement("Calcite")]
+        public VolumePerVolumeMeasure Calcite {
+            get {
+                return CalciteField;
+            } 
+            set {
+                CalciteField = value;
+                NotifyPropertyChanged("Calcite");
+            }
+        }
+
+        private VolumePerVolumeMeasure CalciteField; 
+
+        /// <summary>
+        /// CalcStab property
+        /// </summary>
+		[Description("Calcimetry stabilized percentage.")]
+        [ComponentElement]
+		[XmlElement("CalcStab")]
+        public VolumePerVolumeMeasure CalcStab {
+            get {
+                return CalcStabField;
+            } 
+            set {
+                CalcStabField = value;
+                NotifyPropertyChanged("CalcStab");
+            }
+        }
+
+        private VolumePerVolumeMeasure CalcStabField; 
+
+        /// <summary>
+        /// Cec property
+        /// </summary>
+		[Description("Cuttings cationic exchange capacity. Temporarily calling this a DimensionlessMeasure")]
+        [ComponentElement]
+		[XmlElement("Cec")]
+        public DimensionlessMeasure Cec {
+            get {
+                return CecField;
+            } 
+            set {
+                CecField = value;
+                NotifyPropertyChanged("Cec");
+            }
+        }
+
+        private DimensionlessMeasure CecField; 
+
+        /// <summary>
+        /// Dolomite property
+        /// </summary>
+		[Description("Calcimetry dolomite percentage.")]
+        [ComponentElement]
+		[XmlElement("Dolomite")]
+        public VolumePerVolumeMeasure Dolomite {
+            get {
+                return DolomiteField;
+            } 
+            set {
+                DolomiteField = value;
+                NotifyPropertyChanged("Dolomite");
+            }
+        }
+
+        private VolumePerVolumeMeasure DolomiteField; 
+
+        /// <summary>
+        /// SizeMin property
+        /// </summary>
+		[Description("Minimum size.")]
+        [ComponentElement]
+		[XmlElement("SizeMin")]
+        public LengthMeasure SizeMin {
+            get {
+                return SizeMinField;
+            } 
+            set {
+                SizeMinField = value;
+                NotifyPropertyChanged("SizeMin");
+            }
+        }
+
+        private LengthMeasure SizeMinField; 
+
+        /// <summary>
+        /// SizeMax property
+        /// </summary>
+		[Description("Maximum size.")]
+        [ComponentElement]
+		[XmlElement("SizeMax")]
+        public LengthMeasure SizeMax {
+            get {
+                return SizeMaxField;
+            } 
+            set {
+                SizeMaxField = value;
+                NotifyPropertyChanged("SizeMax");
+            }
+        }
+
+        private LengthMeasure SizeMaxField; 
+
+        /// <summary>
+        /// Qft property
+        /// </summary>
+		[Description("Fluorescence as measured using a device licensed for the Quantitative Fluorescence Technique.")]
+        [ComponentElement]
+		[XmlElement("Qft")]
+        public IlluminanceMeasure Qft {
+            get {
+                return QftField;
+            } 
+            set {
+                QftField = value;
+                NotifyPropertyChanged("Qft");
+            }
+        }
+
+        private IlluminanceMeasure QftField; 
+
+        /// <summary>
+        /// CleaningMethod property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Sample treatment: cleaning method.")]
+		[XmlElement("CleaningMethod")]
+        public String CleaningMethod {
+            get {
+                return CleaningMethodField;
+            } 
+            set {
+                CleaningMethodField = value;
+                NotifyPropertyChanged("CleaningMethod");
+            }
+        }
+
+        private String CleaningMethodField; 
+
+        /// <summary>
+        /// DryingMethod property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Sample treatment: drying method.")]
+		[XmlElement("DryingMethod")]
+        public String DryingMethod {
+            get {
+                return DryingMethodField;
+            } 
+            set {
+                DryingMethodField = value;
+                NotifyPropertyChanged("DryingMethod");
+            }
+        }
+
+        private String DryingMethodField; 
+
+        /// <summary>
+        /// CuttingsIntervalLithology property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("CuttingsIntervalLithology")]
+        public List<CuttingsIntervalLithology> CuttingsIntervalLithology {
+            get {
+                return CuttingsIntervalLithologyField;
+            } 
+            set {
+                CuttingsIntervalLithologyField = value;
+                NotifyPropertyChanged("CuttingsIntervalLithology");
+            }
+        }
+
+         [XmlIgnore]
+         public bool CuttingsIntervalLithologySpecified
+         {
+            get {
+             if(CuttingsIntervalLithologyField!=null)
+                return CuttingsIntervalLithologyField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<CuttingsIntervalLithology> CuttingsIntervalLithologyField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Unique identifier for this instance of CuttingsGeologyInterval")]
+        [XmlAttribute("uid")]
+		
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the IlluminanceMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="IlluminanceMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the IlluminanceMeasure xsd type.")]
+    public partial class IlluminanceMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the IlluminanceMeasure class.
+        /// </summary>
+        public IlluminanceMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the IlluminanceMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public IlluminanceMeasure(Double value, IlluminanceUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public IlluminanceUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private IlluminanceUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the CuttingsIntervalLithology xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CuttingsIntervalLithology", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the CuttingsIntervalLithology xsd type.")]
+    public partial class CuttingsIntervalLithology : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Kind property
+        /// </summary>
+		[Required]
+        [StringLength(40)]
+        [Description("The geological name for the type of lithology from the enum table listing a  subset of the OneGeology / CGI defined formation types.")]
+		[XmlElement("Kind")]
+        public String Kind {
+            get {
+                return KindField;
+            } 
+            set {
+                KindField = value;
+                NotifyPropertyChanged("Kind");
+            }
+        }
+
+        private String KindField; 
+
+        /// <summary>
+        /// LithPc property
+        /// </summary>
+		[Required]
+        [Description("The lithology represents the portion of the sampled interval this lithology type relates to. The total of the lithologies within an interval should add up to 100 percent. If LithologySource in cs-geology is \"interpreted\" only 100% is allowed. If \"core\" or \"cuttings\" then recommended useage is the creating application uses blocks of 10%. i.e. 10, 20, 30, 40, 50, 60, 70, 80, 90, 100. Ideally the input application should enforce a total of 100% for every defined depth interval. If the total for a depth interval does not add up to 100%, the \"undifferentiated\" code should be used to fill out to 100%.")]
+        [ComponentElement]
+		[XmlElement("LithPc")]
+        public VolumePerVolumeMeasure LithPercent {
+            get {
+                return LithPcField;
+            } 
+            set {
+                LithPcField = value;
+                NotifyPropertyChanged("LithPercent");
+            }
+        }
+
+        private VolumePerVolumeMeasure LithPcField; 
+
+        /// <summary>
+        /// Citation property
+        /// </summary>
+		[Description("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the CuttingsIntervalLithology")]
+        [ComponentElement]
+		[XmlElement("Citation")]
+        public Citation Citation {
+            get {
+                return CitationField;
+            } 
+            set {
+                CitationField = value;
+                NotifyPropertyChanged("Citation");
+            }
+        }
+
+        private Citation CitationField; 
+
+        /// <summary>
+        /// CodeLith property
+        /// </summary>
+		[StringLength(64)]
+        [Description("A custom Lithology encoding sceme if desired. (It is recommended that if used, this follows the NPD required useage with the numeric values noted in the enum tables, which was the original intent for this item).  The NPD Coding System assigned a digital code to the main lithologies as per the Norwegian Blue Book data standards. The code was then derived by Lithology = (Main lithology * 10) + cement + (modifier / 100). Example: Calcite cemented silty micaceous sandstone: ( 33 * 10 ) + 1 + (21 / 100) gives a numeric code of 331.21. However the NPD is also working through Energistics/Ceasar to potentially change this useage.) This should not be used for mnemonics, as those vary by operator, and if an abbreviation is  required a local look up table should be used by the rendering client, based on Lithology Type.")]
+		[XmlElement("CodeLith")]
+        public String CodeLith {
+            get {
+                return CodeLithField;
+            } 
+            set {
+                CodeLithField = value;
+                NotifyPropertyChanged("CodeLith");
+            }
+        }
+
+        private String CodeLithField; 
+
+        /// <summary>
+        /// Color property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology color description, from Shell 1995 4.3.3.1 and 4.3.3.2 Colors. with the addition of Frosted. eg black blue brown buff green grey olive orange pink purple red translucent frosted white yellow, modified by dark, light, moderate, medium, mottled, variegated, slight, weak, strong, vivid.")]
+		[XmlElement("Color")]
+        public String Color {
+            get {
+                return ColorField;
+            } 
+            set {
+                ColorField = value;
+                NotifyPropertyChanged("Color");
+            }
+        }
+
+        private String ColorField; 
+
+        /// <summary>
+        /// Texture property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6. crystalline, (often \"feather-edge\" appearance on breaking),  friable, dull, earthy,  chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,   sucrosic, (often exhibits capillary imbibition). e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)")]
+		[XmlElement("Texture")]
+        public String Texture {
+            get {
+                return TextureField;
+            } 
+            set {
+                TextureField = value;
+                NotifyPropertyChanged("Texture");
+            }
+        }
+
+        private String TextureField; 
+
+        /// <summary>
+        /// Hardness property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Mineral hardness. (Typically this will rarely be used as mineral hardness is not typically recorded. What is recorded is typically compaction. It is retained though for use defined as per Mohs scale of mineral hardness.)")]
+		[XmlElement("Hardness")]
+        public String Hardness {
+            get {
+                return HardnessField;
+            } 
+            set {
+                HardnessField = value;
+                NotifyPropertyChanged("Hardness");
+            }
+        }
+
+        private String HardnessField; 
+
+        /// <summary>
+        /// Compaction property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5. not compacted, slightly compacted, compacted, strongly compacted, friable, indurated, hard.")]
+		[XmlElement("Compaction")]
+        public String Compaction {
+            get {
+                return CompactionField;
+            } 
+            set {
+                CompactionField = value;
+                NotifyPropertyChanged("Compaction");
+            }
+        }
+
+        private String CompactionField; 
+
+        /// <summary>
+        /// SizeGrain property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite.  Size ranges in millimeter (or micrometer) and Inches. LT 256 mmLT 10.1 in \"boulder\"; 64-256 mm2.5-10.1 in\"cobble\"; 32-64 mm1.26-2.5 in\"very coarse gravel\"; 16-32 mm0.63-1.26 in\"coarse gravel\"; 8-16 mm0.31-0.63 in\"medium gravel\"; 4-8 mm0.157-0.31 in\"fine gravel\"; 2-4 mm0.079-0.157 in\"very fine gravel\"; 1-2 mm0.039-0.079 in\"very coarse sand\"; 0.5-1 mm0.020-0.039 in\"coarse sand\"; 0.25-0.5 mm0.010-0.020 in\"medium sand\"; 125-250 um0.0049-0.010 in\"fine sand\"; 62.5-125 um0.0025-0.0049 in\"very fine sand\"; 3.90625-62.5 um0.00015-0.0025 in\"silt\"; LT 3.90625 umLT 0.00015 in\"clay\"; LT 1 umLT 0.000039 in \"colloid\"")]
+		[XmlElement("SizeGrain")]
+        public String SizeGrain {
+            get {
+                return SizeGrainField;
+            } 
+            set {
+                SizeGrainField = value;
+                NotifyPropertyChanged("SizeGrain");
+            }
+        }
+
+        private String SizeGrainField; 
+
+        /// <summary>
+        /// Roundness property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 Roundness (roundness refers to modal size class). very angular, angular, subangular, subrounded, rounded, well rounded.")]
+		[XmlElement("Roundness")]
+        public String Roundness {
+            get {
+                return RoundnessField;
+            } 
+            set {
+                RoundnessField = value;
+                NotifyPropertyChanged("Roundness");
+            }
+        }
+
+        private String RoundnessField; 
+
+        /// <summary>
+        /// Sphericity property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity. very elongated, elongated, slightly elongated, slightly spherical, spherical, very spherical")]
+		[XmlElement("Sphericity")]
+        public String Sphericity {
+            get {
+                return SphericityField;
+            } 
+            set {
+                SphericityField = value;
+                NotifyPropertyChanged("Sphericity");
+            }
+        }
+
+        private String SphericityField; 
+
+        /// <summary>
+        /// Sorting property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting. very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.")]
+		[XmlElement("Sorting")]
+        public String Sorting {
+            get {
+                return SortingField;
+            } 
+            set {
+                SortingField = value;
+                NotifyPropertyChanged("Sorting");
+            }
+        }
+
+        private String SortingField; 
+
+        /// <summary>
+        /// MatrixCement property
+        /// </summary>
+		[StringLength(40)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table. eg. \"calcite\" (Common) \"dolomite\", \"ankerite\" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation, \"siderite\" (Sherwood sandstones, southern UK typical Siderite cements), \"quartz\" (grain to grain contact cementation or secondary quartz deposition), \"kaolinite\", \"illite\" (eg. Village Fields North Sea), \"smectite\",\"chlorite\" (Teg, Algeria.)")]
+		[XmlElement("MatrixCement")]
+        public String MatrixCement {
+            get {
+                return MatrixCementField;
+            } 
+            set {
+                MatrixCementField = value;
+                NotifyPropertyChanged("MatrixCement");
+            }
+        }
+
+        private String MatrixCementField; 
+
+        /// <summary>
+        /// PorosityVisible property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors. When estimating porosities use: MT 15% \"good\" 10 to 15% \"fair\" 5 to 10% \"poor\" LT 5% \"trace\" 0 \"none\"")]
+		[XmlElement("PorosityVisible")]
+        public String PorosityVisible {
+            get {
+                return PorosityVisibleField;
+            } 
+            set {
+                PorosityVisibleField = value;
+                NotifyPropertyChanged("PorosityVisible");
+            }
+        }
+
+        private String PorosityVisibleField; 
+
+        /// <summary>
+        /// PorosityFabric property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2. intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.")]
+		[XmlElement("PorosityFabric")]
+        public String PorosityFabric {
+            get {
+                return PorosityFabricField;
+            } 
+            set {
+                PorosityFabricField = value;
+                NotifyPropertyChanged("PorosityFabric");
+            }
+        }
+
+        private String PorosityFabricField; 
+
+        /// <summary>
+        /// Permeability property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2.5. In future these would benefit from quantification. tight, slightly, fairly, highly.")]
+		[XmlElement("Permeability")]
+        public String Permeability {
+            get {
+                return PermeabilityField;
+            } 
+            set {
+                PermeabilityField = value;
+                NotifyPropertyChanged("Permeability");
+            }
+        }
+
+        private String PermeabilityField; 
+
+        /// <summary>
+        /// Shows property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("Shows")]
+        public List<CuttingsIntervalShow> Shows {
+            get {
+                return ShowsField;
+            } 
+            set {
+                ShowsField = value;
+                NotifyPropertyChanged("Shows");
+            }
+        }
+
+         [XmlIgnore]
+         public bool ShowsSpecified
+         {
+            get {
+             if(ShowsField!=null)
+                return ShowsField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<CuttingsIntervalShow> ShowsField; 
+
+        /// <summary>
+        /// Qualifier property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("Qualifier")]
+        public List<LithologyQualifier> Qualifier {
+            get {
+                return QualifierField;
+            } 
+            set {
+                QualifierField = value;
+                NotifyPropertyChanged("Qualifier");
+            }
+        }
+
+         [XmlIgnore]
+         public bool QualifierSpecified
+         {
+            get {
+             if(QualifierField!=null)
+                return QualifierField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<LithologyQualifier> QualifierField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Unique identifier for this instance of CuttingsIntervalLithology")]
+        [XmlAttribute("uid")]
+		
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the CuttingsIntervalShow xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="CuttingsIntervalShow", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the CuttingsIntervalShow xsd type.")]
+    public partial class CuttingsIntervalShow : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Citation property
+        /// </summary>
+		[Description("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the CuttingsIntervalShow")]
+        [ComponentElement]
+		[XmlElement("Citation")]
+        public Citation Citation {
+            get {
+                return CitationField;
+            } 
+            set {
+                CitationField = value;
+                NotifyPropertyChanged("Citation");
+            }
+        }
+
+        private Citation CitationField; 
+
+        /// <summary>
+        /// ShowRating property
+        /// </summary>
+		[Description("Show Rating.")]
+		[XmlElement("ShowRating")]
+        public ShowRating? ShowRating {
+            get {
+                return ShowRatingField;
+            } 
+            set {
+                ShowRatingField = value;
+             if(value!=null) 
+                 this.ShowRatingSpecified = true;
+                NotifyPropertyChanged("ShowRating");
+            }
+        }
+
+        private ShowRating? ShowRatingField; 
+
+        /// <summary>
+        /// ShowRatingSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean ShowRatingSpecified {
+            get {
+                return ShowRatingSpecifiedField;
+            } 
+            set {
+                ShowRatingSpecifiedField = value;
+                NotifyPropertyChanged("ShowRatingSpecified");
+            }
+        }
+
+        private Boolean ShowRatingSpecifiedField; 
+
+        /// <summary>
+        /// StainColor property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Visible Stain Color.")]
+		[XmlElement("StainColor")]
+        public String StainColor {
+            get {
+                return StainColorField;
+            } 
+            set {
+                StainColorField = value;
+                NotifyPropertyChanged("StainColor");
+            }
+        }
+
+        private String StainColorField; 
+
+        /// <summary>
+        /// StainDistr property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Visible Stain Distribution.")]
+		[XmlElement("StainDistr")]
+        public String StainDistr {
+            get {
+                return StainDistrField;
+            } 
+            set {
+                StainDistrField = value;
+                NotifyPropertyChanged("StainDistr");
+            }
+        }
+
+        private String StainDistrField; 
+
+        /// <summary>
+        /// StainPc property
+        /// </summary>
+		[Description("Visible Stain (commonly in percent).")]
+        [ComponentElement]
+		[XmlElement("StainPc")]
+        public AreaPerAreaMeasure StainPercent {
+            get {
+                return StainPcField;
+            } 
+            set {
+                StainPcField = value;
+                NotifyPropertyChanged("StainPercent");
+            }
+        }
+
+        private AreaPerAreaMeasure StainPcField; 
+
+        /// <summary>
+        /// CutSpeed property
+        /// </summary>
+		[Description("Cut speed.")]
+		[XmlElement("CutSpeed")]
+        public ShowSpeed? CutSpeed {
+            get {
+                return CutSpeedField;
+            } 
+            set {
+                CutSpeedField = value;
+             if(value!=null) 
+                 this.CutSpeedSpecified = true;
+                NotifyPropertyChanged("CutSpeed");
+            }
+        }
+
+        private ShowSpeed? CutSpeedField; 
+
+        /// <summary>
+        /// CutSpeedSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean CutSpeedSpecified {
+            get {
+                return CutSpeedSpecifiedField;
+            } 
+            set {
+                CutSpeedSpecifiedField = value;
+                NotifyPropertyChanged("CutSpeedSpecified");
+            }
+        }
+
+        private Boolean CutSpeedSpecifiedField; 
+
+        /// <summary>
+        /// CutColor property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Cut color.")]
+		[XmlElement("CutColor")]
+        public String CutColor {
+            get {
+                return CutColorField;
+            } 
+            set {
+                CutColorField = value;
+                NotifyPropertyChanged("CutColor");
+            }
+        }
+
+        private String CutColorField; 
+
+        /// <summary>
+        /// CutStrength property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Cut strength.")]
+		[XmlElement("CutStrength")]
+        public String CutStrength {
+            get {
+                return CutStrengthField;
+            } 
+            set {
+                CutStrengthField = value;
+                NotifyPropertyChanged("CutStrength");
+            }
+        }
+
+        private String CutStrengthField; 
+
+        /// <summary>
+        /// CutForm property
+        /// </summary>
+		[Description("Cut formulation.")]
+		[XmlElement("CutForm")]
+        public ShowLevel? CutForm {
+            get {
+                return CutFormField;
+            } 
+            set {
+                CutFormField = value;
+             if(value!=null) 
+                 this.CutFormSpecified = true;
+                NotifyPropertyChanged("CutForm");
+            }
+        }
+
+        private ShowLevel? CutFormField; 
+
+        /// <summary>
+        /// CutFormSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean CutFormSpecified {
+            get {
+                return CutFormSpecifiedField;
+            } 
+            set {
+                CutFormSpecifiedField = value;
+                NotifyPropertyChanged("CutFormSpecified");
+            }
+        }
+
+        private Boolean CutFormSpecifiedField; 
+
+        /// <summary>
+        /// CutLevel property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Cut level (Faint, Bright, etc.).")]
+		[XmlElement("CutLevel")]
+        public String CutLevel {
+            get {
+                return CutLevelField;
+            } 
+            set {
+                CutLevelField = value;
+                NotifyPropertyChanged("CutLevel");
+            }
+        }
+
+        private String CutLevelField; 
+
+        /// <summary>
+        /// CutFlorForm property
+        /// </summary>
+		[Description("Cut fluorescence form.")]
+		[XmlElement("CutFlorForm")]
+        public ShowLevel? CutFlorForm {
+            get {
+                return CutFlorFormField;
+            } 
+            set {
+                CutFlorFormField = value;
+             if(value!=null) 
+                 this.CutFlorFormSpecified = true;
+                NotifyPropertyChanged("CutFlorForm");
+            }
+        }
+
+        private ShowLevel? CutFlorFormField; 
+
+        /// <summary>
+        /// CutFlorFormSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean CutFlorFormSpecified {
+            get {
+                return CutFlorFormSpecifiedField;
+            } 
+            set {
+                CutFlorFormSpecifiedField = value;
+                NotifyPropertyChanged("CutFlorFormSpecified");
+            }
+        }
+
+        private Boolean CutFlorFormSpecifiedField; 
+
+        /// <summary>
+        /// CutFlorColor property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Cut fluorescence color.")]
+		[XmlElement("CutFlorColor")]
+        public String CutFlorColor {
+            get {
+                return CutFlorColorField;
+            } 
+            set {
+                CutFlorColorField = value;
+                NotifyPropertyChanged("CutFlorColor");
+            }
+        }
+
+        private String CutFlorColorField; 
+
+        /// <summary>
+        /// CutFlorStrength property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Cut fluorescence strength.")]
+		[XmlElement("CutFlorStrength")]
+        public String CutFlorStrength {
+            get {
+                return CutFlorStrengthField;
+            } 
+            set {
+                CutFlorStrengthField = value;
+                NotifyPropertyChanged("CutFlorStrength");
+            }
+        }
+
+        private String CutFlorStrengthField; 
+
+        /// <summary>
+        /// CutFlorSpeed property
+        /// </summary>
+		[Description("Cut fluorescence speed.")]
+		[XmlElement("CutFlorSpeed")]
+        public ShowSpeed? CutFlorSpeed {
+            get {
+                return CutFlorSpeedField;
+            } 
+            set {
+                CutFlorSpeedField = value;
+             if(value!=null) 
+                 this.CutFlorSpeedSpecified = true;
+                NotifyPropertyChanged("CutFlorSpeed");
+            }
+        }
+
+        private ShowSpeed? CutFlorSpeedField; 
+
+        /// <summary>
+        /// CutFlorSpeedSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean CutFlorSpeedSpecified {
+            get {
+                return CutFlorSpeedSpecifiedField;
+            } 
+            set {
+                CutFlorSpeedSpecifiedField = value;
+                NotifyPropertyChanged("CutFlorSpeedSpecified");
+            }
+        }
+
+        private Boolean CutFlorSpeedSpecifiedField; 
+
+        /// <summary>
+        /// CutFlorLevel property
+        /// </summary>
+		[Description("Cut fluorescence level.")]
+		[XmlElement("CutFlorLevel")]
+        public ShowFluorescence? CutFlorLevel {
+            get {
+                return CutFlorLevelField;
+            } 
+            set {
+                CutFlorLevelField = value;
+             if(value!=null) 
+                 this.CutFlorLevelSpecified = true;
+                NotifyPropertyChanged("CutFlorLevel");
+            }
+        }
+
+        private ShowFluorescence? CutFlorLevelField; 
+
+        /// <summary>
+        /// CutFlorLevelSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean CutFlorLevelSpecified {
+            get {
+                return CutFlorLevelSpecifiedField;
+            } 
+            set {
+                CutFlorLevelSpecifiedField = value;
+                NotifyPropertyChanged("CutFlorLevelSpecified");
+            }
+        }
+
+        private Boolean CutFlorLevelSpecifiedField; 
+
+        /// <summary>
+        /// NatFlorColor property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Natural Fluorescence Color.")]
+		[XmlElement("NatFlorColor")]
+        public String NatFlorColor {
+            get {
+                return NatFlorColorField;
+            } 
+            set {
+                NatFlorColorField = value;
+                NotifyPropertyChanged("NatFlorColor");
+            }
+        }
+
+        private String NatFlorColorField; 
+
+        /// <summary>
+        /// NatFlorPc property
+        /// </summary>
+		[Description("Natural fluorescence (commonly in percent).")]
+        [ComponentElement]
+		[XmlElement("NatFlorPc")]
+        public AreaPerAreaMeasure NatFlorPercent {
+            get {
+                return NatFlorPcField;
+            } 
+            set {
+                NatFlorPcField = value;
+                NotifyPropertyChanged("NatFlorPercent");
+            }
+        }
+
+        private AreaPerAreaMeasure NatFlorPcField; 
+
+        /// <summary>
+        /// NatFlorLevel property
+        /// </summary>
+		[Description("Natural fluorescence level.")]
+		[XmlElement("NatFlorLevel")]
+        public ShowFluorescence? NatFlorLevel {
+            get {
+                return NatFlorLevelField;
+            } 
+            set {
+                NatFlorLevelField = value;
+             if(value!=null) 
+                 this.NatFlorLevelSpecified = true;
+                NotifyPropertyChanged("NatFlorLevel");
+            }
+        }
+
+        private ShowFluorescence? NatFlorLevelField; 
+
+        /// <summary>
+        /// NatFlorLevelSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean NatFlorLevelSpecified {
+            get {
+                return NatFlorLevelSpecifiedField;
+            } 
+            set {
+                NatFlorLevelSpecifiedField = value;
+                NotifyPropertyChanged("NatFlorLevelSpecified");
+            }
+        }
+
+        private Boolean NatFlorLevelSpecifiedField; 
+
+        /// <summary>
+        /// NatFlorDesc property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Natural fluorescence description.")]
+		[XmlElement("NatFlorDesc")]
+        public String NatFlorDesc {
+            get {
+                return NatFlorDescField;
+            } 
+            set {
+                NatFlorDescField = value;
+                NotifyPropertyChanged("NatFlorDesc");
+            }
+        }
+
+        private String NatFlorDescField; 
+
+        /// <summary>
+        /// ResidueColor property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Residue color.")]
+		[XmlElement("ResidueColor")]
+        public String ResidueColor {
+            get {
+                return ResidueColorField;
+            } 
+            set {
+                ResidueColorField = value;
+                NotifyPropertyChanged("ResidueColor");
+            }
+        }
+
+        private String ResidueColorField; 
+
+        /// <summary>
+        /// ImpregnatedLitho property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Impregnated lithology.")]
+		[XmlElement("ImpregnatedLitho")]
+        public String ImpregnatedLitho {
+            get {
+                return ImpregnatedLithoField;
+            } 
+            set {
+                ImpregnatedLithoField = value;
+                NotifyPropertyChanged("ImpregnatedLitho");
+            }
+        }
+
+        private String ImpregnatedLithoField; 
+
+        /// <summary>
+        /// Odor property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Description of any hydrocarbon type odors smelled.")]
+		[XmlElement("Odor")]
+        public String Odor {
+            get {
+                return OdorField;
+            } 
+            set {
+                OdorField = value;
+                NotifyPropertyChanged("Odor");
+            }
+        }
+
+        private String OdorField; 
+
+        /// <summary>
+        /// CuttingFluid property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Description of any hydrocarbon type odors smelled")]
+		[XmlElement("CuttingFluid")]
+        public String CuttingFluid {
+            get {
+                return CuttingFluidField;
+            } 
+            set {
+                CuttingFluidField = value;
+                NotifyPropertyChanged("CuttingFluid");
+            }
+        }
+
+        private String CuttingFluidField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Unique identifier for this instance of CuttingsIntervalShow")]
+        [XmlAttribute("uid")]
+		
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the AreaPerAreaMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AreaPerAreaMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the AreaPerAreaMeasure xsd type.")]
+    public partial class AreaPerAreaMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the AreaPerAreaMeasure class.
+        /// </summary>
+        public AreaPerAreaMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the AreaPerAreaMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public AreaPerAreaMeasure(Double value, AreaPerAreaUom uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public AreaPerAreaUom Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private AreaPerAreaUom uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the LithologyQualifier xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="LithologyQualifier", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the LithologyQualifier xsd type.")]
+    public partial class LithologyQualifier : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Kind property
+        /// </summary>
+		[Required]
+        [StringLength(40)]
+        [Description("The type of qualifier.")]
+		[XmlElement("Kind")]
+        public String Kind {
+            get {
+                return KindField;
+            } 
+            set {
+                KindField = value;
+                NotifyPropertyChanged("Kind");
+            }
+        }
+
+        private String KindField; 
+
+        /// <summary>
+        /// MdInterval property
+        /// </summary>
+		[Description("The measured depth interval represented by the qualifier. This must be within the range of the parent geologic interval. If MdInterval is not given then the qualifier is deemed to exist over the entire depth range of the parent geologyInterval.")]
+        [ComponentElement]
+		[XmlElement("MdInterval")]
+        public MdInterval MDInterval {
+            get {
+                return MdIntervalField;
+            } 
+            set {
+                MdIntervalField = value;
+                NotifyPropertyChanged("MDInterval");
+            }
+        }
+
+        private MdInterval MdIntervalField; 
+
+        /// <summary>
+        /// Abundance property
+        /// </summary>
+		[Description("The relative abundance of the qualifier estimated based on a \"visual area\" basis by inspecting the cuttings  spread out on the shaker table prior to washing, or in the sample tray after washing. This represents the upper bound of the observed range, and is in the following increments at the upper bound. 1 = less than or equal to 1%, 2 = greater than or equal to 1 and less than 2%, 5 = greater than or equal to 2 and less than 5% and then in 5% increments, 10 (=5-10%), 15 (=10-15%) up to 100(=95-100%). The end user can then elect  to either display  the %, or map then to an operator specific term or coding, i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., depending on the the end users' terminology.)")]
+        [ComponentElement]
+		[XmlElement("Abundance")]
+        public VolumePerVolumeMeasure Abundance {
+            get {
+                return AbundanceField;
+            } 
+            set {
+                AbundanceField = value;
+                NotifyPropertyChanged("Abundance");
+            }
+        }
+
+        private VolumePerVolumeMeasure AbundanceField; 
+
+        /// <summary>
+        /// Description property
+        /// </summary>
+		[StringLength(2000)]
+        [Description("A textual description of the qualifier.")]
+		[XmlElement("Description")]
+        public String Description {
+            get {
+                return DescriptionField;
+            } 
+            set {
+                DescriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private String DescriptionField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("Unique identifier for this instance of LithologyQualifier")]
+        [XmlAttribute("uid")]
+		
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the InterpretedGeologyInterval xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("part_InterpretedGeologyInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+	[Description("This class represents the InterpretedGeologyInterval xsd type.")]
+    public partial class InterpretedGeologyInterval : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// MdInterval property
+        /// </summary>
+		[Required]
+        [Description("The measured depth interval which is described by this interpreted geology.")]
+        [ComponentElement]
+		[XmlElement("MdInterval")]
+        public MdInterval MDInterval {
+            get {
+                return MdIntervalField;
+            } 
+            set {
+                MdIntervalField = value;
+                NotifyPropertyChanged("MDInterval");
+            }
+        }
+
+        private MdInterval MdIntervalField; 
+
+        /// <summary>
+        /// Citation property
+        /// </summary>
+		[Description("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the InterpretedGeologyInterval")]
+        [ComponentElement]
+		[XmlElement("Citation")]
+        public Citation Citation {
+            get {
+                return CitationField;
+            } 
+            set {
+                CitationField = value;
+                NotifyPropertyChanged("Citation");
+            }
+        }
+
+        private Citation CitationField; 
+
+        /// <summary>
+        /// GeochronologicalUnit property
+        /// </summary>
+		[Description("The name of a Geochronology, with the \"kind\" attribute specifying the geochronological time span")]
+        [RecurringElement]
+		[XmlElement("GeochronologicalUnit")]
+        public List<GeochronologicalUnit> GeochronologicalUnit {
+            get {
+                return GeochronologicalUnitField;
+            } 
+            set {
+                GeochronologicalUnitField = value;
+                NotifyPropertyChanged("GeochronologicalUnit");
+            }
+        }
+
+         [XmlIgnore]
+         public bool GeochronologicalUnitSpecified
+         {
+            get {
+             if(GeochronologicalUnitField!=null)
+                return GeochronologicalUnitField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<GeochronologicalUnit> GeochronologicalUnitField; 
+
+        /// <summary>
+        /// LithostratigraphicUnit property
+        /// </summary>
+		[Description("Specifies the unit of lithostratigraphy.")]
+        [RecurringElement]
+		[XmlElement("LithostratigraphicUnit")]
+        public List<LithostratigraphicUnit> LithostratigraphicUnit {
+            get {
+                return LithostratigraphicUnitField;
+            } 
+            set {
+                LithostratigraphicUnitField = value;
+                NotifyPropertyChanged("LithostratigraphicUnit");
+            }
+        }
+
+         [XmlIgnore]
+         public bool LithostratigraphicUnitSpecified
+         {
+            get {
+             if(LithostratigraphicUnitField!=null)
+                return LithostratigraphicUnitField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<LithostratigraphicUnit> LithostratigraphicUnitField; 
+
+        /// <summary>
+        /// InterpretedLithology property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("InterpretedLithology")]
+        public InterpretedIntervalLithology InterpretedLithology {
+            get {
+                return InterpretedLithologyField;
+            } 
+            set {
+                InterpretedLithologyField = value;
+                NotifyPropertyChanged("InterpretedLithology");
+            }
+        }
+
+        private InterpretedIntervalLithology InterpretedLithologyField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Unique identifier for this instance of InterpretedGeologyInterval")]
+        [XmlAttribute("uid")]
+		
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the GeochronologicalUnit xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GeochronologicalUnit", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the GeochronologicalUnit xsd type.")]
+    public partial class GeochronologicalUnit : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the GeochronologicalUnit class.
+        /// </summary>
+        public GeochronologicalUnit() {}
+
+        /// <summary>
+        /// Initializes a new instance of the GeochronologicalUnit class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public GeochronologicalUnit(String value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+		/// <summary>
+        /// authority property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Person or collective body responsible for authorizing the information.")]
+        [XmlAttribute("authority")]
+		
+        public String Authority {
+            get {
+                return authorityField;
+            } 
+            set {
+                authorityField = value;
+                NotifyPropertyChanged("Authority");
+            }
+        }
+
+        private String authorityField; 
+
+		/// <summary>
+        /// kind property
+        /// </summary>
+		[Description("Defines the time spans in Geochronology")]
+        [XmlAttribute("kind")]
+		
+        public GeochronologicalRank Kind {
+            get {
+                return kindField;
+            } 
+            set {
+                kindField = value;
+             if(value!=null) 
+                 this.KindSpecified = true;
+                NotifyPropertyChanged("Kind");
+            }
+        }
+
+        private GeochronologicalRank kindField; 
+
+        /// <summary>
+        /// kindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean KindSpecified {
+            get {
+                return kindSpecifiedField;
+            } 
+            set {
+                kindSpecifiedField = value;
+                NotifyPropertyChanged("KindSpecified");
+            }
+        }
+
+        private Boolean kindSpecifiedField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        [StringLength(64)]
+        [XmlText]
+        public String Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private String ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the LithostratigraphicUnit xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="LithostratigraphicUnit", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the LithostratigraphicUnit xsd type.")]
+    public partial class LithostratigraphicUnit : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the LithostratigraphicUnit class.
+        /// </summary>
+        public LithostratigraphicUnit() {}
+
+        /// <summary>
+        /// Initializes a new instance of the LithostratigraphicUnit class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public LithostratigraphicUnit(String value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+		/// <summary>
+        /// authority property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Person or collective body responsible for authorizing the information.")]
+        [XmlAttribute("authority")]
+		
+        public String Authority {
+            get {
+                return authorityField;
+            } 
+            set {
+                authorityField = value;
+                NotifyPropertyChanged("Authority");
+            }
+        }
+
+        private String authorityField; 
+
+		/// <summary>
+        /// kind property
+        /// </summary>
+		[Description("Specifies the lithostratigraphic unit-hierarchy (Group, Formation, Member or Bed)")]
+        [XmlAttribute("kind")]
+		
+        public LithostratigraphicRank Kind {
+            get {
+                return kindField;
+            } 
+            set {
+                kindField = value;
+             if(value!=null) 
+                 this.KindSpecified = true;
+                NotifyPropertyChanged("Kind");
+            }
+        }
+
+        private LithostratigraphicRank kindField; 
+
+        /// <summary>
+        /// kindSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean KindSpecified {
+            get {
+                return kindSpecifiedField;
+            } 
+            set {
+                kindSpecifiedField = value;
+                NotifyPropertyChanged("KindSpecified");
+            }
+        }
+
+        private Boolean kindSpecifiedField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        [StringLength(64)]
+        [XmlText]
+        public String Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private String ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the InterpretedIntervalLithology xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="InterpretedIntervalLithology", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the InterpretedIntervalLithology xsd type.")]
+    public partial class InterpretedIntervalLithology : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Kind property
+        /// </summary>
+		[Required]
+        [StringLength(40)]
+        [Description("The geological name for the type of lithology from the enum table listing a  subset of the OneGeology / CGI defined formation types.")]
+		[XmlElement("Kind")]
+        public String Kind {
+            get {
+                return KindField;
+            } 
+            set {
+                KindField = value;
+                NotifyPropertyChanged("Kind");
+            }
+        }
+
+        private String KindField; 
+
+        /// <summary>
+        /// Citation property
+        /// </summary>
+		[Description("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the InterpretedIntervalLithology")]
+        [ComponentElement]
+		[XmlElement("Citation")]
+        public Citation Citation {
+            get {
+                return CitationField;
+            } 
+            set {
+                CitationField = value;
+                NotifyPropertyChanged("Citation");
+            }
+        }
+
+        private Citation CitationField; 
+
+        /// <summary>
+        /// CodeLith property
+        /// </summary>
+		[StringLength(64)]
+        [Description("A custom Lithology encoding sceme if desired. (It is recommended that if used, this follows the NPD required useage with the numeric values noted in the enum tables, which was the original intent for this item).  The NPD Coding System assigned a digital code to the main lithologies as per the Norwegian Blue Book data standards. The code was then derived by Lithology = (Main lithology * 10) + cement + (modifier / 100). Example: Calcite cemented silty micaceous sandstone: ( 33 * 10 ) + 1 + (21 / 100) gives a numeric code of 331.21. However the NPD is also working through Energistics/Ceasar to potentially change this useage.) This should not be used for mnemonics, as those vary by operator, and if an abbreviation is  required a local look up table should be used by the rendering client, based on Lithology Type.")]
+		[XmlElement("CodeLith")]
+        public String CodeLith {
+            get {
+                return CodeLithField;
+            } 
+            set {
+                CodeLithField = value;
+                NotifyPropertyChanged("CodeLith");
+            }
+        }
+
+        private String CodeLithField; 
+
+        /// <summary>
+        /// Color property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology color description, from Shell 1995 4.3.3.1 and 4.3.3.2 Colors. with the addition of Frosted. eg black blue brown buff green grey olive orange pink purple red translucent frosted white yellow, modified by dark, light, moderate, medium, mottled, variegated, slight, weak, strong, vivid.")]
+		[XmlElement("Color")]
+        public String Color {
+            get {
+                return ColorField;
+            } 
+            set {
+                ColorField = value;
+                NotifyPropertyChanged("Color");
+            }
+        }
+
+        private String ColorField; 
+
+        /// <summary>
+        /// Texture property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6. crystalline, (often \"feather-edge\" appearance on breaking),  friable, dull, earthy,  chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,   sucrosic, (often exhibits capillary imbibition). e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)")]
+		[XmlElement("Texture")]
+        public String Texture {
+            get {
+                return TextureField;
+            } 
+            set {
+                TextureField = value;
+                NotifyPropertyChanged("Texture");
+            }
+        }
+
+        private String TextureField; 
+
+        /// <summary>
+        /// Hardness property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Mineral hardness. (Typically this will rarely be used as mineral hardness is not typically recorded. What is recorded is typically compaction. It is retained though for use defined as per Mohs scale of mineral hardness.)")]
+		[XmlElement("Hardness")]
+        public String Hardness {
+            get {
+                return HardnessField;
+            } 
+            set {
+                HardnessField = value;
+                NotifyPropertyChanged("Hardness");
+            }
+        }
+
+        private String HardnessField; 
+
+        /// <summary>
+        /// Compaction property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5. not compacted, slightly compacted, compacted, strongly compacted, friable, indurated, hard.")]
+		[XmlElement("Compaction")]
+        public String Compaction {
+            get {
+                return CompactionField;
+            } 
+            set {
+                CompactionField = value;
+                NotifyPropertyChanged("Compaction");
+            }
+        }
+
+        private String CompactionField; 
+
+        /// <summary>
+        /// SizeGrain property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite.  Size ranges in millimeter (or micrometer) and Inches. LT 256 mmLT 10.1 in \"boulder\"; 64-256 mm2.5-10.1 in\"cobble\"; 32-64 mm1.26-2.5 in\"very coarse gravel\"; 16-32 mm0.63-1.26 in\"coarse gravel\"; 8-16 mm0.31-0.63 in\"medium gravel\"; 4-8 mm0.157-0.31 in\"fine gravel\"; 2-4 mm0.079-0.157 in\"very fine gravel\"; 1-2 mm0.039-0.079 in\"very coarse sand\"; 0.5-1 mm0.020-0.039 in\"coarse sand\"; 0.25-0.5 mm0.010-0.020 in\"medium sand\"; 125-250 um0.0049-0.010 in\"fine sand\"; 62.5-125 um0.0025-0.0049 in\"very fine sand\"; 3.90625-62.5 um0.00015-0.0025 in\"silt\"; LT 3.90625 umLT 0.00015 in\"clay\"; LT 1 umLT 0.000039 in \"colloid\"")]
+		[XmlElement("SizeGrain")]
+        public String SizeGrain {
+            get {
+                return SizeGrainField;
+            } 
+            set {
+                SizeGrainField = value;
+                NotifyPropertyChanged("SizeGrain");
+            }
+        }
+
+        private String SizeGrainField; 
+
+        /// <summary>
+        /// Roundness property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 Roundness (roundness refers to modal size class). very angular, angular, subangular, subrounded, rounded, well rounded.")]
+		[XmlElement("Roundness")]
+        public String Roundness {
+            get {
+                return RoundnessField;
+            } 
+            set {
+                RoundnessField = value;
+                NotifyPropertyChanged("Roundness");
+            }
+        }
+
+        private String RoundnessField; 
+
+        /// <summary>
+        /// Sorting property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting. very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.")]
+		[XmlElement("Sorting")]
+        public String Sorting {
+            get {
+                return SortingField;
+            } 
+            set {
+                SortingField = value;
+                NotifyPropertyChanged("Sorting");
+            }
+        }
+
+        private String SortingField; 
+
+        /// <summary>
+        /// Sphericity property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity. very elongated, elongated, slightly elongated, slightly spherical, spherical, very spherical")]
+		[XmlElement("Sphericity")]
+        public String Sphericity {
+            get {
+                return SphericityField;
+            } 
+            set {
+                SphericityField = value;
+                NotifyPropertyChanged("Sphericity");
+            }
+        }
+
+        private String SphericityField; 
+
+        /// <summary>
+        /// MatrixCement property
+        /// </summary>
+		[StringLength(40)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table. eg. \"calcite\" (Common) \"dolomite\", \"ankerite\" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation, \"siderite\" (Sherwood sandstones, southern UK typical Siderite cements), \"quartz\" (grain to grain contact cementation or secondary quartz deposition), \"kaolinite\", \"illite\" (eg. Village Fields North Sea), \"smectite\",\"chlorite\" (Teg, Algeria.)")]
+		[XmlElement("MatrixCement")]
+        public String MatrixCement {
+            get {
+                return MatrixCementField;
+            } 
+            set {
+                MatrixCementField = value;
+                NotifyPropertyChanged("MatrixCement");
+            }
+        }
+
+        private String MatrixCementField; 
+
+        /// <summary>
+        /// PorosityVisible property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors. When estimating porosities use: MT 15% \"good\" 10 to 15% \"fair\" 5 to 10% \"poor\" LT 5% \"trace\" 0 \"none\"")]
+		[XmlElement("PorosityVisible")]
+        public String PorosityVisible {
+            get {
+                return PorosityVisibleField;
+            } 
+            set {
+                PorosityVisibleField = value;
+                NotifyPropertyChanged("PorosityVisible");
+            }
+        }
+
+        private String PorosityVisibleField; 
+
+        /// <summary>
+        /// PorosityFabric property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2. intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.")]
+		[XmlElement("PorosityFabric")]
+        public String PorosityFabric {
+            get {
+                return PorosityFabricField;
+            } 
+            set {
+                PorosityFabricField = value;
+                NotifyPropertyChanged("PorosityFabric");
+            }
+        }
+
+        private String PorosityFabricField; 
+
+        /// <summary>
+        /// Permeability property
+        /// </summary>
+		[StringLength(64)]
+        [Description("STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2.5. In future these would benefit from quantification. tight, slightly, fairly, highly.")]
+		[XmlElement("Permeability")]
+        public String Permeability {
+            get {
+                return PermeabilityField;
+            } 
+            set {
+                PermeabilityField = value;
+                NotifyPropertyChanged("Permeability");
+            }
+        }
+
+        private String PermeabilityField; 
+
+        /// <summary>
+        /// Qualifier property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("Qualifier")]
+        public List<LithologyQualifier> Qualifier {
+            get {
+                return QualifierField;
+            } 
+            set {
+                QualifierField = value;
+                NotifyPropertyChanged("Qualifier");
+            }
+        }
+
+         [XmlIgnore]
+         public bool QualifierSpecified
+         {
+            get {
+             if(QualifierField!=null)
+                return QualifierField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<LithologyQualifier> QualifierField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Unique identifier for this instance of InterpretedIntervalLithology")]
+        [XmlAttribute("uid")]
+		
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the ShowEvaluationInterval xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("part_EvaluatedIntervalShow", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+	[Description("This class represents the ShowEvaluationInterval xsd type.")]
+    public partial class ShowEvaluationInterval : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// MdInterval property
+        /// </summary>
+		[Required]
+        [Description("The measured depth interval over which the show is evaluated.")]
+        [ComponentElement]
+		[XmlElement("MdInterval")]
+        public MdInterval MDInterval {
+            get {
+                return MdIntervalField;
+            } 
+            set {
+                MdIntervalField = value;
+                NotifyPropertyChanged("MDInterval");
+            }
+        }
+
+        private MdInterval MdIntervalField; 
+
+        /// <summary>
+        /// Citation property
+        /// </summary>
+		[Description("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the ShowEvaluationInterval")]
+        [ComponentElement]
+		[XmlElement("Citation")]
+        public Citation Citation {
+            get {
+                return CitationField;
+            } 
+            set {
+                CitationField = value;
+                NotifyPropertyChanged("Citation");
+            }
+        }
+
+        private Citation CitationField; 
+
+        /// <summary>
+        /// ShowFluid property
+        /// </summary>
+		[Required]
+		[XmlElement("ShowFluid")]
+        public ShowFluid? ShowFluid {
+            get {
+                return ShowFluidField;
+            } 
+            set {
+                ShowFluidField = value;
+                NotifyPropertyChanged("ShowFluid");
+            }
+        }
+
+        private ShowFluid? ShowFluidField; 
+
+        /// <summary>
+        /// ShowRating property
+        /// </summary>
+		[Description("Show Rating.")]
+		[XmlElement("ShowRating")]
+        public ShowRating? ShowRating {
+            get {
+                return ShowRatingField;
+            } 
+            set {
+                ShowRatingField = value;
+             if(value!=null) 
+                 this.ShowRatingSpecified = true;
+                NotifyPropertyChanged("ShowRating");
+            }
+        }
+
+        private ShowRating? ShowRatingField; 
+
+        /// <summary>
+        /// ShowRatingSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean ShowRatingSpecified {
+            get {
+                return ShowRatingSpecifiedField;
+            } 
+            set {
+                ShowRatingSpecifiedField = value;
+                NotifyPropertyChanged("ShowRatingSpecified");
+            }
+        }
+
+        private Boolean ShowRatingSpecifiedField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Unique identifier for this instance of ShowEvaluationInterval")]
+        [XmlAttribute("uid")]
+		
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
 
     namespace ComponentSchemas 
     {
@@ -19873,43 +23274,10 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
         /// <summary>
-        /// Ll property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("Ll")]
-        public DepthRegPoint LowerLeft {
-            get {
-                return LlField;
-            } 
-            set {
-                LlField = value;
-                NotifyPropertyChanged("LowerLeft");
-            }
-        }
-
-        private DepthRegPoint LlField; 
-
-        /// <summary>
-        /// Ur property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("Ur")]
-        public DepthRegPoint UpperRight {
-            get {
-                return UrField;
-            } 
-            set {
-                UrField = value;
-                NotifyPropertyChanged("UpperRight");
-            }
-        }
-
-        private DepthRegPoint UrField; 
-
-        /// <summary>
         /// Ul property
         /// </summary>
-		[ComponentElement]
+		[Description("The upper left point of a rectangular region.")]
+        [ComponentElement]
 		[XmlElement("Ul")]
         public DepthRegPoint UpperLeft {
             get {
@@ -19924,9 +23292,46 @@ namespace Energistics.DataAccess.WITSML200
         private DepthRegPoint UlField; 
 
         /// <summary>
+        /// Ur property
+        /// </summary>
+		[Description("The upper right  point of a rectangular region.")]
+        [ComponentElement]
+		[XmlElement("Ur")]
+        public DepthRegPoint UpperRight {
+            get {
+                return UrField;
+            } 
+            set {
+                UrField = value;
+                NotifyPropertyChanged("UpperRight");
+            }
+        }
+
+        private DepthRegPoint UrField; 
+
+        /// <summary>
+        /// Ll property
+        /// </summary>
+		[Description("The lower left point of a rectangular region.")]
+        [ComponentElement]
+		[XmlElement("Ll")]
+        public DepthRegPoint LowerLeft {
+            get {
+                return LlField;
+            } 
+            set {
+                LlField = value;
+                NotifyPropertyChanged("LowerLeft");
+            }
+        }
+
+        private DepthRegPoint LlField; 
+
+        /// <summary>
         /// Lr property
         /// </summary>
-		[ComponentElement]
+		[Description("The lower right point of a rectangular region.")]
+        [ComponentElement]
 		[XmlElement("Lr")]
         public DepthRegPoint LowerRight {
             get {
@@ -20169,31 +23574,31 @@ namespace Energistics.DataAccess.WITSML200
         private List<DepthRegRectangle> TrackCurveScaleRectField; 
 
         /// <summary>
-        /// TxtensionNameValue property
+        /// ExtensionNameValue property
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
-		[XmlElement("TxtensionNameValue")]
-        public List<ExtensionNameValue> TxtensionNameValue {
+		[XmlElement("ExtensionNameValue")]
+        public List<ExtensionNameValue> ExtensionNameValue {
             get {
-                return TxtensionNameValueField;
+                return ExtensionNameValueField;
             } 
             set {
-                TxtensionNameValueField = value;
-                NotifyPropertyChanged("TxtensionNameValue");
+                ExtensionNameValueField = value;
+                NotifyPropertyChanged("ExtensionNameValue");
             }
         }
 
          [XmlIgnore]
-         public bool TxtensionNameValueSpecified
+         public bool ExtensionNameValueSpecified
          {
             get {
-             if(TxtensionNameValueField!=null)
-                return TxtensionNameValueField.Count>0?true:false;
+             if(ExtensionNameValueField!=null)
+                return ExtensionNameValueField.Count>0?true:false;
              else return false;
             } 
          }
-        private List<ExtensionNameValue> TxtensionNameValueField; 
+        private List<ExtensionNameValue> ExtensionNameValueField; 
 
         /// <summary>
         /// AssociatedCurve property
@@ -20226,6 +23631,220 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[StringLength(64)]
         [Description("Unique identifier for the track.")]
+        [XmlAttribute("uid")]
+		
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the DepthRegParameter xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DepthRegParameter", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the DepthRegParameter xsd type.")]
+    public partial class DepthRegParameter : Object, IUniqueId, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the DepthRegParameter class.
+        /// </summary>
+        public DepthRegParameter() {}
+
+        /// <summary>
+        /// Initializes a new instance of the DepthRegParameter class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public DepthRegParameter(GenericMeasure value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+        /// <summary>
+        /// Mnemonic property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("A dictionary-controlled mnemonic.")]
+		[XmlElement("Mnemonic")]
+        public String Mnemonic {
+            get {
+                return MnemonicField;
+            } 
+            set {
+                MnemonicField = value;
+                NotifyPropertyChanged("Mnemonic");
+            }
+        }
+
+        private String MnemonicField; 
+
+        /// <summary>
+        /// Dictionary property
+        /// </summary>
+		[StringLength(64)]
+        [Description("The name or identifier of the controlling dictionary.")]
+		[XmlElement("Dictionary")]
+        public String Dictionary {
+            get {
+                return DictionaryField;
+            } 
+            set {
+                DictionaryField = value;
+                NotifyPropertyChanged("Dictionary");
+            }
+        }
+
+        private String DictionaryField; 
+
+        /// <summary>
+        /// TopIndex property
+        /// </summary>
+		[Description("The upper limit of a vertical region for which the parameter value is applicable.  '@uom' must be consistent with '//indexType'.")]
+        [ComponentElement]
+		[XmlElement("TopIndex")]
+        public GenericMeasure TopIndex {
+            get {
+                return TopIndexField;
+            } 
+            set {
+                TopIndexField = value;
+                NotifyPropertyChanged("TopIndex");
+            }
+        }
+
+        private GenericMeasure TopIndexField; 
+
+        /// <summary>
+        /// BottomIndex property
+        /// </summary>
+		[Description("The lower limit of a vertical region for which the parameter value is applicable.  '@uom' must be consistent with '//indexType'.")]
+        [ComponentElement]
+		[XmlElement("BottomIndex")]
+        public GenericMeasure BottomIndex {
+            get {
+                return BottomIndexField;
+            } 
+            set {
+                BottomIndexField = value;
+                NotifyPropertyChanged("BottomIndex");
+            }
+        }
+
+        private GenericMeasure BottomIndexField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+		[Required]
+        [Description("The value assigned to the parameter.   The unit of measure should be consistent with the property implied by 'mnemonic' in 'dictionary'. If the value is unitless, then use a unit of 'Euc'.")]
+        [ComponentElement]
+		[XmlElement("Value")]
+        public GenericMeasure Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private GenericMeasure ValueField; 
+
+        /// <summary>
+        /// Description property
+        /// </summary>
+		[StringLength(2000)]
+        [Description("A description or definition for the mnemonic; required when ../dictionary is absent.")]
+		[XmlElement("Description")]
+        public String Description {
+            get {
+                return DescriptionField;
+            } 
+            set {
+                DescriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private String DescriptionField; 
+
+        /// <summary>
+        /// ExtensionNameValue property
+        /// </summary>
+		[Description("Extensions to the schema based on a name-value construct.")]
+        [RecurringElement]
+		[XmlElement("ExtensionNameValue")]
+        public List<ExtensionNameValue> ExtensionNameValue {
+            get {
+                return ExtensionNameValueField;
+            } 
+            set {
+                ExtensionNameValueField = value;
+                NotifyPropertyChanged("ExtensionNameValue");
+            }
+        }
+
+         [XmlIgnore]
+         public bool ExtensionNameValueSpecified
+         {
+            get {
+             if(ExtensionNameValueField!=null)
+                return ExtensionNameValueField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<ExtensionNameValue> ExtensionNameValueField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Unique identifier for the parameter.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -20472,315 +24091,6 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[StringLength(64)]
         [Description("Unique identifier for the calibration point.")]
-        [XmlAttribute("uid")]
-		
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the GenericMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GenericMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the GenericMeasure xsd type.")]
-    public partial class GenericMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the GenericMeasure class.
-        /// </summary>
-        public GenericMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the GenericMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public GenericMeasure(Double value, String uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[StringLength(32)]
-        [XmlAttribute("uom")]
-		
-        public String Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private String uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the DepthRegParameter xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DepthRegParameter", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the DepthRegParameter xsd type.")]
-    public partial class DepthRegParameter : Object, IUniqueId, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the DepthRegParameter class.
-        /// </summary>
-        public DepthRegParameter() {}
-
-        /// <summary>
-        /// Initializes a new instance of the DepthRegParameter class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        public DepthRegParameter(GenericMeasure value)
-        {
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value.ToString();
-        }
-
-        /// <summary>
-        /// Mnemonic property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("A dictionary-controlled mnemonic.")]
-		[XmlElement("Mnemonic")]
-        public String Mnemonic {
-            get {
-                return MnemonicField;
-            } 
-            set {
-                MnemonicField = value;
-                NotifyPropertyChanged("Mnemonic");
-            }
-        }
-
-        private String MnemonicField; 
-
-        /// <summary>
-        /// Dictionary property
-        /// </summary>
-		[StringLength(64)]
-        [Description("The name or identifier of the controlling dictionary.")]
-		[XmlElement("Dictionary")]
-        public String Dictionary {
-            get {
-                return DictionaryField;
-            } 
-            set {
-                DictionaryField = value;
-                NotifyPropertyChanged("Dictionary");
-            }
-        }
-
-        private String DictionaryField; 
-
-        /// <summary>
-        /// TopIndex property
-        /// </summary>
-		[Description("The upper limit of a vertical region for which the parameter value is applicable.  '@uom' must be consistent with '//indexType'.")]
-        [ComponentElement]
-		[XmlElement("TopIndex")]
-        public GenericMeasure TopIndex {
-            get {
-                return TopIndexField;
-            } 
-            set {
-                TopIndexField = value;
-                NotifyPropertyChanged("TopIndex");
-            }
-        }
-
-        private GenericMeasure TopIndexField; 
-
-        /// <summary>
-        /// BottomIndex property
-        /// </summary>
-		[Description("The lower limit of a vertical region for which the parameter value is applicable.  '@uom' must be consistent with '//indexType'.")]
-        [ComponentElement]
-		[XmlElement("BottomIndex")]
-        public GenericMeasure BottomIndex {
-            get {
-                return BottomIndexField;
-            } 
-            set {
-                BottomIndexField = value;
-                NotifyPropertyChanged("BottomIndex");
-            }
-        }
-
-        private GenericMeasure BottomIndexField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-		[Required]
-        [Description("The value assigned to the parameter.   The unit of measure should be consistent with the property implied by 'mnemonic' in 'dictionary'. If the value is unitless, then use a unit of 'Euc'.")]
-        [ComponentElement]
-		[XmlElement("Value")]
-        public GenericMeasure Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private GenericMeasure ValueField; 
-
-        /// <summary>
-        /// Description property
-        /// </summary>
-		[StringLength(2000)]
-        [Description("A description or definition for the mnemonic; required when ../dictionary is absent.")]
-		[XmlElement("Description")]
-        public String Description {
-            get {
-                return DescriptionField;
-            } 
-            set {
-                DescriptionField = value;
-                NotifyPropertyChanged("Description");
-            }
-        }
-
-        private String DescriptionField; 
-
-        /// <summary>
-        /// ExtensionNameValue property
-        /// </summary>
-		[Description("Extensions to the schema based on a name-value construct.")]
-        [RecurringElement]
-		[XmlElement("ExtensionNameValue")]
-        public List<ExtensionNameValue> ExtensionNameValue {
-            get {
-                return ExtensionNameValueField;
-            } 
-            set {
-                ExtensionNameValueField = value;
-                NotifyPropertyChanged("ExtensionNameValue");
-            }
-        }
-
-         [XmlIgnore]
-         public bool ExtensionNameValueSpecified
-         {
-            get {
-             if(ExtensionNameValueField!=null)
-                return ExtensionNameValueField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<ExtensionNameValue> ExtensionNameValueField; 
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Unique identifier for the parameter.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -21169,35 +24479,91 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
         /// <summary>
-        /// Parameter property
+        /// UpperCurveScaleRect property
         /// </summary>
-		[RecurringElement]
-		[XmlElement("Parameter")]
-        public List<DepthRegParameter> Parameter {
+		[Description("Boundaries of the Upper Curve Scale (or horizontal scale) section for this log section.")]
+        [RecurringElement]
+		[XmlElement("UpperCurveScaleRect")]
+        public List<DepthRegRectangle> UpperCurveScaleRect {
             get {
-                return ParameterField;
+                return UpperCurveScaleRectField;
             } 
             set {
-                ParameterField = value;
-                NotifyPropertyChanged("Parameter");
+                UpperCurveScaleRectField = value;
+                NotifyPropertyChanged("UpperCurveScaleRect");
             }
         }
 
          [XmlIgnore]
-         public bool ParameterSpecified
+         public bool UpperCurveScaleRectSpecified
          {
             get {
-             if(ParameterField!=null)
-                return ParameterField.Count>0?true:false;
+             if(UpperCurveScaleRectField!=null)
+                return UpperCurveScaleRectField.Count>0?true:false;
              else return false;
             } 
          }
-        private List<DepthRegParameter> ParameterField; 
+        private List<DepthRegRectangle> UpperCurveScaleRectField; 
+
+        /// <summary>
+        /// CalibrationPoint property
+        /// </summary>
+		[Description("Generally this associates an X, Y value pair with a depth value from the log section.")]
+        [RecurringElement]
+		[XmlElement("CalibrationPoint")]
+        public List<DepthRegCalibrationPoint> CalibrationPoint {
+            get {
+                return CalibrationPointField;
+            } 
+            set {
+                CalibrationPointField = value;
+                NotifyPropertyChanged("CalibrationPoint");
+            }
+        }
+
+         [XmlIgnore]
+         public bool CalibrationPointSpecified
+         {
+            get {
+             if(CalibrationPointField!=null)
+                return CalibrationPointField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<DepthRegCalibrationPoint> CalibrationPointField; 
+
+        /// <summary>
+        /// WhiteSpace property
+        /// </summary>
+		[Description("Defines blank space occurring within a log section in an image.")]
+        [RecurringElement]
+		[XmlElement("WhiteSpace")]
+        public List<DepthRegRectangle> WhiteSpace {
+            get {
+                return WhiteSpaceField;
+            } 
+            set {
+                WhiteSpaceField = value;
+                NotifyPropertyChanged("WhiteSpace");
+            }
+        }
+
+         [XmlIgnore]
+         public bool WhiteSpaceSpecified
+         {
+            get {
+             if(WhiteSpaceField!=null)
+                return WhiteSpaceField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<DepthRegRectangle> WhiteSpaceField; 
 
         /// <summary>
         /// LowerCurveScaleRect property
         /// </summary>
-		[RecurringElement]
+		[Description("Boundaries of the Lower Curve Scale (or horizontal scale) section for this log section.")]
+        [RecurringElement]
 		[XmlElement("LowerCurveScaleRect")]
         public List<DepthRegRectangle> LowerCurveScaleRect {
             get {
@@ -21223,7 +24589,8 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// LogSectionRect property
         /// </summary>
-		[RecurringElement]
+		[Description("The bounding rectangle of this log section.")]
+        [RecurringElement]
 		[XmlElement("LogSectionRect")]
         public List<DepthRegRectangle> LogSectionRect {
             get {
@@ -21247,82 +24614,30 @@ namespace Energistics.DataAccess.WITSML200
         private List<DepthRegRectangle> LogSectionRectField; 
 
         /// <summary>
-        /// UpperCurveScaleRect property
+        /// Parameter property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("UpperCurveScaleRect")]
-        public List<DepthRegRectangle> UpperCurveScaleRect {
+		[XmlElement("Parameter")]
+        public List<DepthRegParameter> Parameter {
             get {
-                return UpperCurveScaleRectField;
+                return ParameterField;
             } 
             set {
-                UpperCurveScaleRectField = value;
-                NotifyPropertyChanged("UpperCurveScaleRect");
+                ParameterField = value;
+                NotifyPropertyChanged("Parameter");
             }
         }
 
          [XmlIgnore]
-         public bool UpperCurveScaleRectSpecified
+         public bool ParameterSpecified
          {
             get {
-             if(UpperCurveScaleRectField!=null)
-                return UpperCurveScaleRectField.Count>0?true:false;
+             if(ParameterField!=null)
+                return ParameterField.Count>0?true:false;
              else return false;
             } 
          }
-        private List<DepthRegRectangle> UpperCurveScaleRectField; 
-
-        /// <summary>
-        /// Whitespace property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("Whitespace")]
-        public List<DepthRegRectangle> Whitespace {
-            get {
-                return WhitespaceField;
-            } 
-            set {
-                WhitespaceField = value;
-                NotifyPropertyChanged("Whitespace");
-            }
-        }
-
-         [XmlIgnore]
-         public bool WhitespaceSpecified
-         {
-            get {
-             if(WhitespaceField!=null)
-                return WhitespaceField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<DepthRegRectangle> WhitespaceField; 
-
-        /// <summary>
-        /// CalibrationPoint property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("CalibrationPoint")]
-        public List<DepthRegCalibrationPoint> CalibrationPoint {
-            get {
-                return CalibrationPointField;
-            } 
-            set {
-                CalibrationPointField = value;
-                NotifyPropertyChanged("CalibrationPoint");
-            }
-        }
-
-         [XmlIgnore]
-         public bool CalibrationPointSpecified
-         {
-            get {
-             if(CalibrationPointField!=null)
-                return CalibrationPointField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<DepthRegCalibrationPoint> CalibrationPointField; 
+        private List<DepthRegParameter> ParameterField; 
 
         /// <summary>
         /// Track property
@@ -21395,153 +24710,6 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the DataObjectReference xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DataObjectReference", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the DataObjectReference xsd type.")]
-    public partial class DataObjectReference : Object, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// ContentType property
-        /// </summary>
-		[Required]
-        [StringLength(2000)]
-        [Description("The content type of the referenced element.")]
-		[XmlElement("ContentType")]
-        public String ContentType {
-            get {
-                return ContentTypeField;
-            } 
-            set {
-                ContentTypeField = value;
-                NotifyPropertyChanged("ContentType");
-            }
-        }
-
-        private String ContentTypeField; 
-
-        /// <summary>
-        /// Title property
-        /// </summary>
-		[Required]
-        [StringLength(2000)]
-        [Description("The Title of the referenced object. The Title of a top level element would be inherited from AbstractObject and must be present on any referenced object.")]
-		[XmlElement("Title")]
-        public String Title {
-            get {
-                return TitleField;
-            } 
-            set {
-                TitleField = value;
-                NotifyPropertyChanged("Title");
-            }
-        }
-
-        private String TitleField; 
-
-        /// <summary>
-        /// Uuid property
-        /// </summary>
-		[Required]
-        [RegularExpression("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
-        [Description("Reference to an object using its global UID.")]
-		[XmlElement("Uuid")]
-        public String Uuid {
-            get {
-                return UuidField;
-            } 
-            set {
-                UuidField = value;
-                NotifyPropertyChanged("Uuid");
-            }
-        }
-
-        private String UuidField; 
-
-        /// <summary>
-        /// UuidAuthority property
-        /// </summary>
-		[StringLength(64)]
-        [Description("The authority that issued and maintains the uuid of the referenced object. Used mainly in alias context.")]
-		[XmlElement("UuidAuthority")]
-        public String UuidAuthority {
-            get {
-                return UuidAuthorityField;
-            } 
-            set {
-                UuidAuthorityField = value;
-                NotifyPropertyChanged("UuidAuthority");
-            }
-        }
-
-        private String UuidAuthorityField; 
-
-        /// <summary>
-        /// Uri property
-        /// </summary>
-		[Description("This is the URI of a referenced object.   Do not use this to store the path and file names of an external object - that is done through the External Dataset machinery.  This element is intended for use with the Energistics Transfer Protocol.")]
-		[XmlElement("Uri", DataType="anyURI")]
-        public String Uri {
-            get {
-                return UriField;
-            } 
-            set {
-                UriField = value;
-                NotifyPropertyChanged("Uri");
-            }
-        }
-
-        private String UriField; 
-
-        /// <summary>
-        /// VersionString property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Indicates the version of the object which is referenced.")]
-		[XmlElement("VersionString")]
-        public String VersionString {
-            get {
-                return VersionStringField;
-            } 
-            set {
-                VersionStringField = value;
-                NotifyPropertyChanged("VersionString");
-            }
-        }
-
-        private String VersionStringField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
     /// This class represents the DepthRegLogRect xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -21558,7 +24726,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("A region of an image containing a log section image.")]
 		[XmlElement("Type")]
-        public LogRectangeType? Type {
+        public LogRectangleType? Type {
             get {
                 return TypeField;
             } 
@@ -21570,7 +24738,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private LogRectangeType? TypeField; 
+        private LogRectangleType? TypeField; 
 
         /// <summary>
         /// TypeSpecified property
@@ -21635,21 +24803,21 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
         /// <summary>
-        /// position property
+        /// Position property
         /// </summary>
 		[ComponentElement]
-		[XmlElement("position")]
+		[XmlElement("Position")]
         public DepthRegRectangle Position {
             get {
-                return positionField;
+                return PositionField;
             } 
             set {
-                positionField = value;
+                PositionField = value;
                 NotifyPropertyChanged("Position");
             }
         }
 
-        private DepthRegRectangle positionField; 
+        private DepthRegRectangle PositionField; 
 
 		/// <summary>
         /// uid property
@@ -22093,6 +25261,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of MemberObject")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -22148,6 +25317,7 @@ namespace Energistics.DataAccess.WITSML200
         /// description property
         /// </summary>
 		[StringLength(2000)]
+        [Description("The description of this object sequence.")]
         [XmlAttribute("description")]
 		
         public String Description {
@@ -22225,7 +25395,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// index property
         /// </summary>
-		
+		[Description("Index used to qualify this indexed object")]
         [XmlAttribute("index")]
 		
         public Int32 Index {
@@ -22263,6 +25433,7 @@ namespace Energistics.DataAccess.WITSML200
         /// name property
         /// </summary>
 		[StringLength(64)]
+        [Description("Name of this IndexedObject")]
         [XmlAttribute("name")]
 		
         public String Name {
@@ -22281,6 +25452,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uom property
         /// </summary>
 		[StringLength(32)]
+        [Description("Unit of measure used by this Indexed Object")]
         [XmlAttribute("uom")]
 		
         public String Uom {
@@ -22299,6 +25471,7 @@ namespace Energistics.DataAccess.WITSML200
         /// description property
         /// </summary>
 		[StringLength(2000)]
+        [Description("Description of this IndexedObject")]
         [XmlAttribute("description")]
 		
         public String Description {
@@ -22318,6 +25491,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of IndexedObject")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -22479,7 +25653,8 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// StringEquipmentReferenceId property
         /// </summary>
-		[RecurringElement]
+		[Description("Reference to string equipment")]
+        [RecurringElement]
 		[XmlElement("StringEquipmentReferenceId")]
         public List<String> StringEquipmentReferenceId {
             get {
@@ -22506,6 +25681,7 @@ namespace Energistics.DataAccess.WITSML200
         /// downholeStringReferenceId property
         /// </summary>
 		[StringLength(64)]
+        [Description("Reference to downhole string")]
         [XmlAttribute("downholeStringReferenceId")]
 		
         public String DownholeStringReferenceId {
@@ -22560,7 +25736,8 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// StringEquipmentReferenceId property
         /// </summary>
-		[RecurringElement]
+		[Description("Reference to string equipment")]
+        [RecurringElement]
 		[XmlElement("StringEquipmentReferenceId")]
         public List<String> StringEquipmentReferenceId {
             get {
@@ -22587,6 +25764,7 @@ namespace Energistics.DataAccess.WITSML200
         /// boreholeStringReferenceId property
         /// </summary>
 		[StringLength(64)]
+        [Description("Reference to borehole String")]
         [XmlAttribute("boreholeStringReferenceId")]
 		
         public String BoreholeStringReferenceId {
@@ -22641,7 +25819,8 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// StringEquipmentReferenceId property
         /// </summary>
-		[RecurringElement]
+		[Description("Reference to string equipment")]
+        [RecurringElement]
 		[XmlElement("StringEquipmentReferenceId")]
         public List<String> StringEquipmentReferenceId {
             get {
@@ -22667,7 +25846,8 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// PerforationSetReferenceId property
         /// </summary>
-		[RecurringElement]
+		[Description("Reference to perforation set")]
+        [RecurringElement]
 		[XmlElement("PerforationSetReferenceId")]
         public List<String> PerforationSetReferenceId {
             get {
@@ -23435,101 +26615,6 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private ReciprocalLengthUom uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the MassMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="MassMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the MassMeasure xsd type.")]
-    public partial class MassMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the MassMeasure class.
-        /// </summary>
-        public MassMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the MassMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public MassMeasure(Double value, MassUom uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public MassUom Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private MassUom uomField; 
 
         /// <summary>
         /// Value property
@@ -25103,7 +28188,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// Class property
         /// </summary>
-		
+		[Description("The type of the event (job, daily report, etc.)")]
         [XmlAttribute("Class")]
 		
         public String Class {
@@ -25404,6 +28489,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of PumpOp")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -25596,6 +28682,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of PitVolume")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -25790,6 +28877,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Scr")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -26370,6 +29458,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of DayCost")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -26425,6 +29514,7 @@ namespace Energistics.DataAccess.WITSML200
         /// currency property
         /// </summary>
 		[StringLength(64)]
+        [Description("Currency used for this Cost")]
         [XmlAttribute("currency")]
 		
         public String Currency {
@@ -26598,6 +29688,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Personnel")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -27520,6 +30611,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Inventory")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -28036,6 +31128,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Weather")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -28171,101 +31264,6 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the LengthPerTimeMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="LengthPerTimeMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the LengthPerTimeMeasure xsd type.")]
-    public partial class LengthPerTimeMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the LengthPerTimeMeasure class.
-        /// </summary>
-        public LengthPerTimeMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the LengthPerTimeMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public LengthPerTimeMeasure(Double value, LengthPerTimeUom uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public LengthPerTimeUom Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private LengthPerTimeUom uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
     /// This class represents the SupportCraft xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -28300,6 +31298,7 @@ namespace Energistics.DataAccess.WITSML200
         /// TypeSupportCraft property
         /// </summary>
 		[Required]
+        [Description("Type of support craft (eg. Barge, helicopter, tug boat)")]
 		[XmlElement("TypeSupportCraft")]
         public SupportCraftType? TypeSupportCraft {
             get {
@@ -28399,6 +31398,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of SupportCraft")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -28789,6 +31789,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Incident")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -29800,6 +32801,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of ShakerOp")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -30316,101 +33318,6 @@ namespace Energistics.DataAccess.WITSML200
             } 
          }
         private List<IndexedObject> AnchorAngleField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the ForceMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ForceMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the ForceMeasure xsd type.")]
-    public partial class ForceMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the ForceMeasure class.
-        /// </summary>
-        public ForceMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the ForceMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public ForceMeasure(Double value, ForceUom uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public ForceUom Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private ForceUom uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
 
 
         
@@ -32552,6 +35459,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("A unique identifier for an instance of a trajectory station.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -32785,6 +35693,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("A unique identifier for a well location.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -32837,38 +35746,38 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// X property
+        /// Coordinate1 property
         /// </summary>
 		
-		[XmlElement("X")]
-        public Double? X {
+		[XmlElement("Coordinate1")]
+        public Double? Coordinate1 {
             get {
-                return XField;
+                return Coordinate1Field;
             } 
             set {
-                XField = value;
-                NotifyPropertyChanged("X");
+                Coordinate1Field = value;
+                NotifyPropertyChanged("Coordinate1");
             }
         }
 
-        private Double? XField; 
+        private Double? Coordinate1Field; 
 
         /// <summary>
-        /// Y property
+        /// Coordinate2 property
         /// </summary>
 		
-		[XmlElement("Y")]
-        public Double? Y {
+		[XmlElement("Coordinate2")]
+        public Double? Coordinate2 {
             get {
-                return YField;
+                return Coordinate2Field;
             } 
             set {
-                YField = value;
-                NotifyPropertyChanged("Y");
+                Coordinate2Field = value;
+                NotifyPropertyChanged("Coordinate2");
             }
         }
 
-        private Double? YField; 
+        private Double? Coordinate2Field; 
 
         /// <summary>
         /// Crs property
@@ -32896,10 +35805,10 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AbstractProjectedCrs xsd type.
     /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedGmlCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedUnknownCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedLocalAuthorityCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedGmlCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedWktCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedUnknownCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedEpsgCrs))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -32930,6 +35839,41 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
         #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the ProjectedLocalAuthorityCrs xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedLocalAuthorityCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the ProjectedLocalAuthorityCrs xsd type.")]
+    public partial class ProjectedLocalAuthorityCrs : AbstractProjectedCrs, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// LocalAuthorityCrsName property
+        /// </summary>
+		
+		[XmlElement("LocalAuthorityCrsName")]
+        public String LocalAuthorityCrsName {
+            get {
+                return LocalAuthorityCrsNameField;
+            } 
+            set {
+                LocalAuthorityCrsNameField = value;
+                NotifyPropertyChanged("LocalAuthorityCrsName");
+            }
+        }
+
+        private String LocalAuthorityCrsNameField; 
+
+
     } //here
     }
 
@@ -39938,76 +42882,6 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the ProjectedUnknownCrs xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedUnknownCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the ProjectedUnknownCrs xsd type.")]
-    public partial class ProjectedUnknownCrs : AbstractProjectedCrs, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Unknown property
-        /// </summary>
-		
-		[XmlElement("Unknown")]
-        public String Unknown {
-            get {
-                return UnknownField;
-            } 
-            set {
-                UnknownField = value;
-                NotifyPropertyChanged("Unknown");
-            }
-        }
-
-        private String UnknownField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the ProjectedLocalAuthorityCrs xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedLocalAuthorityCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the ProjectedLocalAuthorityCrs xsd type.")]
-    public partial class ProjectedLocalAuthorityCrs : AbstractProjectedCrs, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// LocalAuthorityCrsName property
-        /// </summary>
-		
-		[XmlElement("LocalAuthorityCrsName")]
-        public String LocalAuthorityCrsName {
-            get {
-                return LocalAuthorityCrsNameField;
-            } 
-            set {
-                LocalAuthorityCrsNameField = value;
-                NotifyPropertyChanged("LocalAuthorityCrsName");
-            }
-        }
-
-        private String LocalAuthorityCrsNameField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
     /// This class represents the ProjectedWktCrs xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -40035,6 +42909,41 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private String WellKnownTextField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the ProjectedUnknownCrs xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedUnknownCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the ProjectedUnknownCrs xsd type.")]
+    public partial class ProjectedUnknownCrs : AbstractProjectedCrs, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Unknown property
+        /// </summary>
+		
+		[XmlElement("Unknown")]
+        public String Unknown {
+            get {
+                return UnknownField;
+            } 
+            set {
+                UnknownField = value;
+                NotifyPropertyChanged("Unknown");
+            }
+        }
+
+        private String UnknownField; 
 
 
     } //here
@@ -40093,6 +43002,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Latitude property
         /// </summary>
 		[Required]
+        [Description("The latitude with north being positive.")]
 		[XmlElement("Latitude")]
         public Double? Latitude {
             get {
@@ -40110,6 +43020,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Longitude property
         /// </summary>
 		[Required]
+        [Description("The longitude with east being positive.")]
 		[XmlElement("Longitude")]
         public Double? Longitude {
             get {
@@ -40149,11 +43060,11 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AbstractGeodeticCrs xsd type.
     /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticLocalAuthorityCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticGmlCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticEpsgCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticLocalAuthorityCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticUnknownCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticWktCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticUnknownCrs))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -40183,6 +43094,41 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
         #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the GeodeticLocalAuthorityCrs xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GeodeticLocalAuthorityCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the GeodeticLocalAuthorityCrs xsd type.")]
+    public partial class GeodeticLocalAuthorityCrs : AbstractGeodeticCrs, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// LocalAuthorityCrsName property
+        /// </summary>
+		
+		[XmlElement("LocalAuthorityCrsName")]
+        public String LocalAuthorityCrsName {
+            get {
+                return LocalAuthorityCrsNameField;
+            } 
+            set {
+                LocalAuthorityCrsNameField = value;
+                NotifyPropertyChanged("LocalAuthorityCrsName");
+            }
+        }
+
+        private String LocalAuthorityCrsNameField; 
+
+
     } //here
     }
 
@@ -40259,33 +43205,33 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the GeodeticLocalAuthorityCrs xsd type.
+    /// This class represents the GeodeticWktCrs xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GeodeticLocalAuthorityCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the GeodeticLocalAuthorityCrs xsd type.")]
-    public partial class GeodeticLocalAuthorityCrs : AbstractGeodeticCrs, INotifyPropertyChanged
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GeodeticWktCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the GeodeticWktCrs xsd type.")]
+    public partial class GeodeticWktCrs : AbstractGeodeticCrs, INotifyPropertyChanged
     {
 
         /// <summary>
-        /// LocalAuthorityCrsName property
+        /// WellKnownText property
         /// </summary>
 		
-		[XmlElement("LocalAuthorityCrsName")]
-        public String LocalAuthorityCrsName {
+		[XmlElement("WellKnownText")]
+        public String WellKnownText {
             get {
-                return LocalAuthorityCrsNameField;
+                return WellKnownTextField;
             } 
             set {
-                LocalAuthorityCrsNameField = value;
-                NotifyPropertyChanged("LocalAuthorityCrsName");
+                WellKnownTextField = value;
+                NotifyPropertyChanged("WellKnownText");
             }
         }
 
-        private String LocalAuthorityCrsNameField; 
+        private String WellKnownTextField; 
 
 
     } //here
@@ -40321,41 +43267,6 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private String UnknownField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the GeodeticWktCrs xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GeodeticWktCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the GeodeticWktCrs xsd type.")]
-    public partial class GeodeticWktCrs : AbstractGeodeticCrs, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// WellKnownText property
-        /// </summary>
-		
-		[XmlElement("WellKnownText")]
-        public String WellKnownText {
-            get {
-                return WellKnownTextField;
-            } 
-            set {
-                WellKnownTextField = value;
-                NotifyPropertyChanged("WellKnownText");
-            }
-        }
-
-        private String WellKnownTextField; 
 
 
     } //here
@@ -40402,6 +43313,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uom property
         /// </summary>
 		[StringLength(32)]
+        [Description("A measure with a uom or a quantity (without a uom). This should not be used except in situations where the underlying class of data is captured elsewhere. For example, via a measure class.")]
         [XmlAttribute("uom")]
 		
         public String Uom {
@@ -40632,6 +43544,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of IscwsaErrorTermValue")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -40988,6 +43901,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of IscwsaSurveyToolOperatingInterval")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -41164,6 +44078,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of IscwsaSurveyToolOperatingCondition")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -43294,6 +46209,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Connection")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -43307,101 +46223,6 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private String uidField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the MomentOfForceMeasure xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="MomentOfForceMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the MomentOfForceMeasure xsd type.")]
-    public partial class MomentOfForceMeasure : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the MomentOfForceMeasure class.
-        /// </summary>
-        public MomentOfForceMeasure() {}
-
-        /// <summary>
-        /// Initializes a new instance of the MomentOfForceMeasure class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public MomentOfForceMeasure(Double value, MomentOfForceUom uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public MomentOfForceUom Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private MomentOfForceUom uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
 
 
         
@@ -45513,6 +48334,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of DownholeString")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -45526,932 +48348,6 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private String uidField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the AbstractLogDataContext xsd type.
-    /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChannelValueContext))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ObjectContext))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IndexRangeContext))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractLogDataContext", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the AbstractLogDataContext xsd type.")]
-    public abstract partial class AbstractLogDataContext : Object, INotifyPropertyChanged
-    {
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the ChannelValueContext xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ChannelValueContext", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the ChannelValueContext xsd type.")]
-    public partial class ChannelValueContext : AbstractLogDataContext, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// ChannelReference property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("ChannelReference")]
-        public DataObjectReference ChannelReference {
-            get {
-                return ChannelReferenceField;
-            } 
-            set {
-                ChannelReferenceField = value;
-                NotifyPropertyChanged("ChannelReference");
-            }
-        }
-
-        private DataObjectReference ChannelReferenceField; 
-
-        /// <summary>
-        /// DataValue property
-        /// </summary>
-		
-		[XmlElement("DataValue")]
-        public String DataValue {
-            get {
-                return DataValueField;
-            } 
-            set {
-                DataValueField = value;
-                NotifyPropertyChanged("DataValue");
-            }
-        }
-
-        private String DataValueField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the ObjectContext xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ObjectContext", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the ObjectContext xsd type.")]
-    public partial class ObjectContext : AbstractLogDataContext, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// ObjectReference property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("ObjectReference")]
-        public DataObjectReference ObjectReference {
-            get {
-                return ObjectReferenceField;
-            } 
-            set {
-                ObjectReferenceField = value;
-                NotifyPropertyChanged("ObjectReference");
-            }
-        }
-
-        private DataObjectReference ObjectReferenceField; 
-
-        /// <summary>
-        /// Uid property
-        /// </summary>
-		
-		[XmlElement("Uid")]
-        public String Uid {
-            get {
-                return UidField;
-            } 
-            set {
-                UidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String UidField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the IndexRangeContext xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="IndexRangeContext", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the IndexRangeContext xsd type.")]
-    public partial class IndexRangeContext : AbstractLogDataContext, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// StartIndex property
-        /// </summary>
-		
-		[XmlElement("StartIndex")]
-        public AbstractIndexValue StartIndex {
-            get {
-                return StartIndexField;
-            } 
-            set {
-                StartIndexField = value;
-                NotifyPropertyChanged("StartIndex");
-            }
-        }
-
-        private AbstractIndexValue StartIndexField; 
-
-        /// <summary>
-        /// EndIndex property
-        /// </summary>
-		
-		[XmlElement("EndIndex")]
-        public AbstractIndexValue EndIndex {
-            get {
-                return EndIndexField;
-            } 
-            set {
-                EndIndexField = value;
-                NotifyPropertyChanged("EndIndex");
-            }
-        }
-
-        private AbstractIndexValue EndIndexField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the AbstractIndexValue xsd type.
-    /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DepthIndexValue))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeIndexValue))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PassIndexedDepth))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractIndexValue", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the AbstractIndexValue xsd type.")]
-    public abstract partial class AbstractIndexValue : Object, INotifyPropertyChanged
-    {
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the DepthIndexValue xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DepthIndexValue", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the DepthIndexValue xsd type.")]
-    public partial class DepthIndexValue : AbstractIndexValue, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Depth property
-        /// </summary>
-		
-		[XmlElement("Depth")]
-        public Single? Depth {
-            get {
-                return DepthField;
-            } 
-            set {
-                DepthField = value;
-                NotifyPropertyChanged("Depth");
-            }
-        }
-
-        private Single? DepthField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the TimeIndexValue xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TimeIndexValue", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the TimeIndexValue xsd type.")]
-    public partial class TimeIndexValue : AbstractIndexValue, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Time property
-        /// </summary>
-		
-		[XmlElement("Time")]
-        public String Time {
-            get {
-                return TimeField;
-            } 
-            set {
-                TimeField = value;
-                NotifyPropertyChanged("Time");
-            }
-        }
-
-        private String TimeField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the PassIndexedDepth xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="PassIndexedDepth", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the PassIndexedDepth xsd type.")]
-    public partial class PassIndexedDepth : AbstractIndexValue, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Pass property
-        /// </summary>
-		
-		[XmlElement("Pass")]
-        public Int32? Pass {
-            get {
-                return PassField;
-            } 
-            set {
-                PassField = value;
-                NotifyPropertyChanged("Pass");
-            }
-        }
-
-        private Int32? PassField; 
-
-        /// <summary>
-        /// Direction property
-        /// </summary>
-		
-		[XmlElement("Direction")]
-        public Int32? Direction {
-            get {
-                return DirectionField;
-            } 
-            set {
-                DirectionField = value;
-                NotifyPropertyChanged("Direction");
-            }
-        }
-
-        private Int32? DirectionField; 
-
-        /// <summary>
-        /// Depth property
-        /// </summary>
-		
-		[XmlElement("Depth")]
-        public Single? Depth {
-            get {
-                return DepthField;
-            } 
-            set {
-                DepthField = value;
-                NotifyPropertyChanged("Depth");
-            }
-        }
-
-        private Single? DepthField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the ChannelData xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ChannelData", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the ChannelData xsd type.")]
-    public partial class ChannelData : Object, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Data property
-        /// </summary>
-		[Description("The data blob in JSON form. This allows you to embed the bulk data in a single file with the xml, to avoid the issues that arise with splitting the data across multiple files.   BUSINESS RULE: Either this element or the FileUri element must be present")]
-		[XmlElement("Data", Type=typeof(XmlCDataSection))]
-        public XmlCDataSection Data {
-            get {
-                return DataField;
-            } 
-            set {
-                DataField = value;
-                NotifyPropertyChanged("Data");
-            }
-        }
-
-        private XmlCDataSection DataField; 
-
-        /// <summary>
-        /// FileUri property
-        /// </summary>
-		[Description("The uri of a file containing the bulkdata. If this field is non-null, then the data field is ignored. For files written to disk, this should normally contain a simple file name in relative URI form. For instance, if an application writes a log file to disk, it might write the xml as abc.xml, and the bulk data abc.avro. In that case the value of this element would be './abc.avro'.   BUSINESS RULE: Either this element or the Data element must be present")]
-		[XmlElement("FileUri", DataType="anyURI")]
-        public String FileUri {
-            get {
-                return FileUriField;
-            } 
-            set {
-                FileUriField = value;
-                NotifyPropertyChanged("FileUri");
-            }
-        }
-
-        private String FileUriField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the PointMetadata xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="PointMetadata", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the PointMetadata xsd type.")]
-    public partial class PointMetadata : Object, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Name property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-		[XmlElement("Name")]
-        public String Name {
-            get {
-                return NameField;
-            } 
-            set {
-                NameField = value;
-                NotifyPropertyChanged("Name");
-            }
-        }
-
-        private String NameField; 
-
-        /// <summary>
-        /// EtpDataType property
-        /// </summary>
-		[Required]
-		[XmlElement("EtpDataType")]
-        public EtpDataType? EtpDataType {
-            get {
-                return EtpDataTypeField;
-            } 
-            set {
-                EtpDataTypeField = value;
-                NotifyPropertyChanged("EtpDataType");
-            }
-        }
-
-        private EtpDataType? EtpDataTypeField; 
-
-        /// <summary>
-        /// Description property
-        /// </summary>
-		[Required]
-        [StringLength(2000)]
-		[XmlElement("Description")]
-        public String Description {
-            get {
-                return DescriptionField;
-            } 
-            set {
-                DescriptionField = value;
-                NotifyPropertyChanged("Description");
-            }
-        }
-
-        private String DescriptionField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the LengthMeasureExt xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="LengthMeasureExt", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the LengthMeasureExt xsd type.")]
-    public partial class LengthMeasureExt : Object, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the LengthMeasureExt class.
-        /// </summary>
-        public LengthMeasureExt() {}
-
-        /// <summary>
-        /// Initializes a new instance of the LengthMeasureExt class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        /// <param name="uom">Initial unit of measure</param>
-        public LengthMeasureExt(Double value, String uom)
-        {
-            this.Uom = uom;
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value + " " + Uom;
-        }
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public String Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private String uomField; 
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the LogChannelAxis xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="LogChannelAxis", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the LogChannelAxis xsd type.")]
-    public partial class LogChannelAxis : Object, IUniqueId, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// AxisStart property
-        /// </summary>
-		[Required]
-        [Description("Value of the initial entry in the list of axis index values.")]
-		[XmlElement("AxisStart")]
-        public Double? AxisStart {
-            get {
-                return AxisStartField;
-            } 
-            set {
-                AxisStartField = value;
-                NotifyPropertyChanged("AxisStart");
-            }
-        }
-
-        private Double? AxisStartField; 
-
-        /// <summary>
-        /// AxisSpacing property
-        /// </summary>
-		[Required]
-        [Description("The increment to be used to fill out the list of the log channel axis index values.")]
-		[XmlElement("AxisSpacing")]
-        public Double? AxisSpacing {
-            get {
-                return AxisSpacingField;
-            } 
-            set {
-                AxisSpacingField = value;
-                NotifyPropertyChanged("AxisSpacing");
-            }
-        }
-
-        private Double? AxisSpacingField; 
-
-        /// <summary>
-        /// AxisCount property
-        /// </summary>
-		[Required]
-        [Description("The count of elements along this axis of the array.")]
-		[XmlElement("AxisCount")]
-        public Int64? AxisCount {
-            get {
-                return AxisCountField;
-            } 
-            set {
-                AxisCountField = value;
-                NotifyPropertyChanged("AxisCount");
-            }
-        }
-
-        private Int64? AxisCountField; 
-
-        /// <summary>
-        /// AxisName property
-        /// </summary>
-		[StringLength(64)]
-        [Description("The name of the array axis.")]
-		[XmlElement("AxisName")]
-        public String AxisName {
-            get {
-                return AxisNameField;
-            } 
-            set {
-                AxisNameField = value;
-                NotifyPropertyChanged("AxisName");
-            }
-        }
-
-        private String AxisNameField; 
-
-        /// <summary>
-        /// AxisPropertyKind property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("The property type by which the array axis is classified. Like \"measured depth\" or \"elapsed time\".")]
-		[XmlElement("AxisPropertyKind")]
-        public String AxisPropertyKind {
-            get {
-                return AxisPropertyKindField;
-            } 
-            set {
-                AxisPropertyKindField = value;
-                NotifyPropertyChanged("AxisPropertyKind");
-            }
-        }
-
-        private String AxisPropertyKindField; 
-
-        /// <summary>
-        /// AxisUom property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("A string representing the units of measure of the axis values.")]
-		[XmlElement("AxisUom")]
-        public String AxisUom {
-            get {
-                return AxisUomField;
-            } 
-            set {
-                AxisUomField = value;
-                NotifyPropertyChanged("AxisUom");
-            }
-        }
-
-        private String AxisUomField; 
-
-		/// <summary>
-        /// uid property
-        /// </summary>
-		[StringLength(64)]
-        [XmlAttribute("uid")]
-		
-        public String Uid {
-            get {
-                return uidField;
-            } 
-            set {
-                uidField = value;
-                NotifyPropertyChanged("Uid");
-            }
-        }
-
-        private String uidField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the ChannelIndex xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ChannelIndex", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the ChannelIndex xsd type.")]
-    public partial class ChannelIndex : Object, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// IndexType property
-        /// </summary>
-		[Required]
-        [Description("The type of index (time, depth, etc)")]
-		[XmlElement("IndexType")]
-        public ChannelIndexType? IndexType {
-            get {
-                return IndexTypeField;
-            } 
-            set {
-                IndexTypeField = value;
-                NotifyPropertyChanged("IndexType");
-            }
-        }
-
-        private ChannelIndexType? IndexTypeField; 
-
-        /// <summary>
-        /// Uom property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("The units of the index. Must be one of the units allowed for the specified IndexType (i.e. time or distance).")]
-		[XmlElement("Uom")]
-        public String Uom {
-            get {
-                return UomField;
-            } 
-            set {
-                UomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private String UomField; 
-
-        /// <summary>
-        /// Direction property
-        /// </summary>
-		[Required]
-        [Description("The direction of the index, either increasing or decreasing. Index direction may not change within the life of a channel.")]
-		[XmlElement("Direction")]
-        public IndexDirection? Direction {
-            get {
-                return DirectionField;
-            } 
-            set {
-                DirectionField = value;
-                NotifyPropertyChanged("Direction");
-            }
-        }
-
-        private IndexDirection? DirectionField; 
-
-        /// <summary>
-        /// Mnemonic property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("The mnemonic for the index.")]
-		[XmlElement("Mnemonic")]
-        public String Mnemonic {
-            get {
-                return MnemonicField;
-            } 
-            set {
-                MnemonicField = value;
-                NotifyPropertyChanged("Mnemonic");
-            }
-        }
-
-        private String MnemonicField; 
-
-        /// <summary>
-        /// DatumReference property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("For depth indexes, this contains the uid of the datum, in the Channel's Well object, to which all of the index values are referenced.")]
-		[XmlElement("DatumReference")]
-        public String DatumReference {
-            get {
-                return DatumReferenceField;
-            } 
-            set {
-                DatumReferenceField = value;
-                NotifyPropertyChanged("DatumReference");
-            }
-        }
-
-        private String DatumReferenceField; 
 
 
         
@@ -48021,6 +49917,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this cementing fluid")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -48166,6 +50063,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Rheometer")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -48258,6 +50156,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of RheometerViscosity")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -48310,22 +50209,23 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// FluidRefId property
+        /// FluidReferenceId property
         /// </summary>
 		[Required]
+        [RegularExpression("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
         [Description("UUID Reference to Fluid used in CementJob.")]
-		[XmlElement("FluidRefId")]
-        public String FluidRefId {
+		[XmlElement("FluidReferenceId")]
+        public String FluidReferenceId {
             get {
-                return FluidRefIdField;
+                return FluidReferenceIdField;
             } 
             set {
-                FluidRefIdField = value;
-                NotifyPropertyChanged("FluidRefId");
+                FluidReferenceIdField = value;
+                NotifyPropertyChanged("FluidReferenceId");
             }
         }
 
-        private String FluidRefIdField; 
+        private String FluidReferenceIdField; 
 
         /// <summary>
         /// RatioFluidExcess property
@@ -48492,6 +50392,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this pump schedule step")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -48544,23 +50445,23 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// FluidRefId property
+        /// FluidReferenceId property
         /// </summary>
 		[Required]
         [RegularExpression("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
         [Description("Reference to Fluid used in CementJob")]
-		[XmlElement("FluidRefId")]
-        public String FluidRefId {
+		[XmlElement("FluidReferenceId")]
+        public String FluidReferenceId {
             get {
-                return FluidRefIdField;
+                return FluidReferenceIdField;
             } 
             set {
-                FluidRefIdField = value;
-                NotifyPropertyChanged("FluidRefId");
+                FluidReferenceIdField = value;
+                NotifyPropertyChanged("FluidReferenceId");
             }
         }
 
-        private String FluidRefIdField; 
+        private String FluidReferenceIdField; 
 
         /// <summary>
         /// MDFluidBase property
@@ -48640,6 +50541,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of FluidLocation")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -49101,6 +51003,42 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private Boolean PillBelowPlugSpecifiedField; 
+
+        /// <summary>
+        /// PlugCatcher property
+        /// </summary>
+		
+		[XmlElement("PlugCatcher")]
+        public Boolean? PlugCatcher {
+            get {
+                return PlugCatcherField;
+            } 
+            set {
+                PlugCatcherField = value;
+             if(value!=null) 
+                 this.PlugCatcherSpecified = true;
+                NotifyPropertyChanged("PlugCatcher");
+            }
+        }
+
+        private Boolean? PlugCatcherField; 
+
+        /// <summary>
+        /// PlugCatcherSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean PlugCatcherSpecified {
+            get {
+                return PlugCatcherSpecifiedField;
+            } 
+            set {
+                PlugCatcherSpecifiedField = value;
+                NotifyPropertyChanged("PlugCatcherSpecified");
+            }
+        }
+
+        private Boolean PlugCatcherSpecifiedField; 
 
         /// <summary>
         /// PresBackPressure property
@@ -50291,6 +52229,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of CementStageReport")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -50322,59 +52261,6 @@ namespace Energistics.DataAccess.WITSML200
 	[Description("This class represents the CementDesignStage xsd type.")]
     public partial class CementDesignStage : AbstractCementStage, INotifyPropertyChanged
     {
-
-        /// <summary>
-        /// SqueezeObj property
-        /// </summary>
-		
-		[XmlElement("SqueezeObj")]
-        public String SqueezeObj {
-            get {
-                return SqueezeObjField;
-            } 
-            set {
-                SqueezeObjField = value;
-                NotifyPropertyChanged("SqueezeObj");
-            }
-        }
-
-        private String SqueezeObjField; 
-
-        /// <summary>
-        /// PlugCatcher property
-        /// </summary>
-		
-		[XmlElement("PlugCatcher")]
-        public Boolean? PlugCatcher {
-            get {
-                return PlugCatcherField;
-            } 
-            set {
-                PlugCatcherField = value;
-             if(value!=null) 
-                 this.PlugCatcherSpecified = true;
-                NotifyPropertyChanged("PlugCatcher");
-            }
-        }
-
-        private Boolean? PlugCatcherField; 
-
-        /// <summary>
-        /// PlugCatcherSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean PlugCatcherSpecified {
-            get {
-                return PlugCatcherSpecifiedField;
-            } 
-            set {
-                PlugCatcherSpecifiedField = value;
-                NotifyPropertyChanged("PlugCatcherSpecified");
-            }
-        }
-
-        private Boolean PlugCatcherSpecifiedField; 
 
 
     } //here
@@ -50646,11 +52532,30 @@ namespace Energistics.DataAccess.WITSML200
             } 
             set {
                 ReciprocatingField = value;
+             if(value!=null) 
+                 this.ReciprocatingSpecified = true;
                 NotifyPropertyChanged("Reciprocating");
             }
         }
 
         private Boolean? ReciprocatingField; 
+
+        /// <summary>
+        /// ReciprocatingSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean ReciprocatingSpecified {
+            get {
+                return ReciprocatingSpecifiedField;
+            } 
+            set {
+                ReciprocatingSpecifiedField = value;
+                NotifyPropertyChanged("ReciprocatingSpecified");
+            }
+        }
+
+        private Boolean ReciprocatingSpecifiedField; 
 
 
         
@@ -50996,7 +52901,8 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Citation property
         /// </summary>
-		[ComponentElement]
+		[Description("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the WellGeometrySection")]
+        [ComponentElement]
 		[XmlElement("Citation")]
         public Citation Citation {
             get {
@@ -51338,6 +53244,936 @@ namespace Energistics.DataAccess.WITSML200
         }
         #endregion INotifyPropertyChanged Members
     } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the AbstractLogDataContext xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChannelValueContext))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ObjectContext))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IndexRangeContext))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractLogDataContext", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the AbstractLogDataContext xsd type.")]
+    public abstract partial class AbstractLogDataContext : Object, INotifyPropertyChanged
+    {
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the ChannelValueContext xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ChannelValueContext", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the ChannelValueContext xsd type.")]
+    public partial class ChannelValueContext : AbstractLogDataContext, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// ChannelReference property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("ChannelReference")]
+        public DataObjectReference ChannelReference {
+            get {
+                return ChannelReferenceField;
+            } 
+            set {
+                ChannelReferenceField = value;
+                NotifyPropertyChanged("ChannelReference");
+            }
+        }
+
+        private DataObjectReference ChannelReferenceField; 
+
+        /// <summary>
+        /// DataValue property
+        /// </summary>
+		
+		[XmlElement("DataValue")]
+        public String DataValue {
+            get {
+                return DataValueField;
+            } 
+            set {
+                DataValueField = value;
+                NotifyPropertyChanged("DataValue");
+            }
+        }
+
+        private String DataValueField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the ObjectContext xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ObjectContext", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the ObjectContext xsd type.")]
+    public partial class ObjectContext : AbstractLogDataContext, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// ObjectReference property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("ObjectReference")]
+        public DataObjectReference ObjectReference {
+            get {
+                return ObjectReferenceField;
+            } 
+            set {
+                ObjectReferenceField = value;
+                NotifyPropertyChanged("ObjectReference");
+            }
+        }
+
+        private DataObjectReference ObjectReferenceField; 
+
+        /// <summary>
+        /// Uid property
+        /// </summary>
+		
+		[XmlElement("Uid")]
+        public String Uid {
+            get {
+                return UidField;
+            } 
+            set {
+                UidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String UidField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the IndexRangeContext xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="IndexRangeContext", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the IndexRangeContext xsd type.")]
+    public partial class IndexRangeContext : AbstractLogDataContext, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// StartIndex property
+        /// </summary>
+		
+		[XmlElement("StartIndex")]
+        public AbstractIndexValue StartIndex {
+            get {
+                return StartIndexField;
+            } 
+            set {
+                StartIndexField = value;
+                NotifyPropertyChanged("StartIndex");
+            }
+        }
+
+        private AbstractIndexValue StartIndexField; 
+
+        /// <summary>
+        /// EndIndex property
+        /// </summary>
+		
+		[XmlElement("EndIndex")]
+        public AbstractIndexValue EndIndex {
+            get {
+                return EndIndexField;
+            } 
+            set {
+                EndIndexField = value;
+                NotifyPropertyChanged("EndIndex");
+            }
+        }
+
+        private AbstractIndexValue EndIndexField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the AbstractIndexValue xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DepthIndexValue))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeIndexValue))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PassIndexedDepth))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractIndexValue", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the AbstractIndexValue xsd type.")]
+    public abstract partial class AbstractIndexValue : Object, INotifyPropertyChanged
+    {
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the DepthIndexValue xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DepthIndexValue", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the DepthIndexValue xsd type.")]
+    public partial class DepthIndexValue : AbstractIndexValue, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Depth property
+        /// </summary>
+		
+		[XmlElement("Depth")]
+        public Single? Depth {
+            get {
+                return DepthField;
+            } 
+            set {
+                DepthField = value;
+                NotifyPropertyChanged("Depth");
+            }
+        }
+
+        private Single? DepthField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the TimeIndexValue xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TimeIndexValue", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the TimeIndexValue xsd type.")]
+    public partial class TimeIndexValue : AbstractIndexValue, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Time property
+        /// </summary>
+		
+		[XmlElement("Time")]
+        public String Time {
+            get {
+                return TimeField;
+            } 
+            set {
+                TimeField = value;
+                NotifyPropertyChanged("Time");
+            }
+        }
+
+        private String TimeField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the PassIndexedDepth xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="PassIndexedDepth", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the PassIndexedDepth xsd type.")]
+    public partial class PassIndexedDepth : AbstractIndexValue, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Pass property
+        /// </summary>
+		
+		[XmlElement("Pass")]
+        public Int32? Pass {
+            get {
+                return PassField;
+            } 
+            set {
+                PassField = value;
+                NotifyPropertyChanged("Pass");
+            }
+        }
+
+        private Int32? PassField; 
+
+        /// <summary>
+        /// Direction property
+        /// </summary>
+		
+		[XmlElement("Direction")]
+        public Int32? Direction {
+            get {
+                return DirectionField;
+            } 
+            set {
+                DirectionField = value;
+                NotifyPropertyChanged("Direction");
+            }
+        }
+
+        private Int32? DirectionField; 
+
+        /// <summary>
+        /// Depth property
+        /// </summary>
+		
+		[XmlElement("Depth")]
+        public Single? Depth {
+            get {
+                return DepthField;
+            } 
+            set {
+                DepthField = value;
+                NotifyPropertyChanged("Depth");
+            }
+        }
+
+        private Single? DepthField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the ChannelData xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ChannelData", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the ChannelData xsd type.")]
+    public partial class ChannelData : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Data property
+        /// </summary>
+		[Description("The data blob in JSON form. This allows you to embed the bulk data in a single file with the xml, to avoid the issues that arise with splitting the data across multiple files.   BUSINESS RULE: Either this element or the FileUri element must be present")]
+		[XmlElement("Data", Type=typeof(XmlCDataSection))]
+        public XmlCDataSection Data {
+            get {
+                return DataField;
+            } 
+            set {
+                DataField = value;
+                NotifyPropertyChanged("Data");
+            }
+        }
+
+        private XmlCDataSection DataField; 
+
+        /// <summary>
+        /// FileUri property
+        /// </summary>
+		[Description("The uri of a file containing the bulkdata. If this field is non-null, then the data field is ignored. For files written to disk, this should normally contain a simple file name in relative URI form. For instance, if an application writes a log file to disk, it might write the xml as abc.xml, and the bulk data abc.avro. In that case the value of this element would be './abc.avro'.   BUSINESS RULE: Either this element or the Data element must be present")]
+		[XmlElement("FileUri", DataType="anyURI")]
+        public String FileUri {
+            get {
+                return FileUriField;
+            } 
+            set {
+                FileUriField = value;
+                NotifyPropertyChanged("FileUri");
+            }
+        }
+
+        private String FileUriField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the PointMetadata xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="PointMetadata", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the PointMetadata xsd type.")]
+    public partial class PointMetadata : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Name property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("The name of the point metadata.")]
+		[XmlElement("Name")]
+        public String Name {
+            get {
+                return NameField;
+            } 
+            set {
+                NameField = value;
+                NotifyPropertyChanged("Name");
+            }
+        }
+
+        private String NameField; 
+
+        /// <summary>
+        /// EtpDataType property
+        /// </summary>
+		[Required]
+        [Description("The underlying Etp data type of the point metadata.")]
+		[XmlElement("EtpDataType")]
+        public EtpDataType? EtpDataType {
+            get {
+                return EtpDataTypeField;
+            } 
+            set {
+                EtpDataTypeField = value;
+                NotifyPropertyChanged("EtpDataType");
+            }
+        }
+
+        private EtpDataType? EtpDataTypeField; 
+
+        /// <summary>
+        /// Description property
+        /// </summary>
+		[Required]
+        [StringLength(2000)]
+        [Description("Free format description of the point metadata.")]
+		[XmlElement("Description")]
+        public String Description {
+            get {
+                return DescriptionField;
+            } 
+            set {
+                DescriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private String DescriptionField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the LengthMeasureExt xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="LengthMeasureExt", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the LengthMeasureExt xsd type.")]
+    public partial class LengthMeasureExt : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the LengthMeasureExt class.
+        /// </summary>
+        public LengthMeasureExt() {}
+
+        /// <summary>
+        /// Initializes a new instance of the LengthMeasureExt class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        /// <param name="uom">Initial unit of measure</param>
+        public LengthMeasureExt(Double value, String uom)
+        {
+            this.Uom = uom;
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value + " " + Uom;
+        }
+
+		/// <summary>
+        /// uom property
+        /// </summary>
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public String Uom {
+            get {
+                return uomField;
+            } 
+            set {
+                uomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private String uomField; 
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the LogChannelAxis xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="LogChannelAxis", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the LogChannelAxis xsd type.")]
+    public partial class LogChannelAxis : Object, IUniqueId, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// AxisStart property
+        /// </summary>
+		[Required]
+        [Description("Value of the initial entry in the list of axis index values.")]
+		[XmlElement("AxisStart")]
+        public Double? AxisStart {
+            get {
+                return AxisStartField;
+            } 
+            set {
+                AxisStartField = value;
+                NotifyPropertyChanged("AxisStart");
+            }
+        }
+
+        private Double? AxisStartField; 
+
+        /// <summary>
+        /// AxisSpacing property
+        /// </summary>
+		[Required]
+        [Description("The increment to be used to fill out the list of the log channel axis index values.")]
+		[XmlElement("AxisSpacing")]
+        public Double? AxisSpacing {
+            get {
+                return AxisSpacingField;
+            } 
+            set {
+                AxisSpacingField = value;
+                NotifyPropertyChanged("AxisSpacing");
+            }
+        }
+
+        private Double? AxisSpacingField; 
+
+        /// <summary>
+        /// AxisCount property
+        /// </summary>
+		[Required]
+        [Description("The count of elements along this axis of the array.")]
+		[XmlElement("AxisCount")]
+        public Int64? AxisCount {
+            get {
+                return AxisCountField;
+            } 
+            set {
+                AxisCountField = value;
+                NotifyPropertyChanged("AxisCount");
+            }
+        }
+
+        private Int64? AxisCountField; 
+
+        /// <summary>
+        /// AxisName property
+        /// </summary>
+		[StringLength(64)]
+        [Description("The name of the array axis.")]
+		[XmlElement("AxisName")]
+        public String AxisName {
+            get {
+                return AxisNameField;
+            } 
+            set {
+                AxisNameField = value;
+                NotifyPropertyChanged("AxisName");
+            }
+        }
+
+        private String AxisNameField; 
+
+        /// <summary>
+        /// AxisPropertyKind property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("The property type by which the array axis is classified. Like \"measured depth\" or \"elapsed time\".")]
+		[XmlElement("AxisPropertyKind")]
+        public String AxisPropertyKind {
+            get {
+                return AxisPropertyKindField;
+            } 
+            set {
+                AxisPropertyKindField = value;
+                NotifyPropertyChanged("AxisPropertyKind");
+            }
+        }
+
+        private String AxisPropertyKindField; 
+
+        /// <summary>
+        /// AxisUom property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("A string representing the units of measure of the axis values.")]
+		[XmlElement("AxisUom")]
+        public String AxisUom {
+            get {
+                return AxisUomField;
+            } 
+            set {
+                AxisUomField = value;
+                NotifyPropertyChanged("AxisUom");
+            }
+        }
+
+        private String AxisUomField; 
+
+		/// <summary>
+        /// uid property
+        /// </summary>
+		[StringLength(64)]
+        [Description("A unique identifier for an instance of a log channel axis")]
+        [XmlAttribute("uid")]
+		
+        public String Uid {
+            get {
+                return uidField;
+            } 
+            set {
+                uidField = value;
+                NotifyPropertyChanged("Uid");
+            }
+        }
+
+        private String uidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the ChannelIndex xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ChannelIndex", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the ChannelIndex xsd type.")]
+    public partial class ChannelIndex : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// IndexType property
+        /// </summary>
+		[Required]
+        [Description("The type of index (time, depth, etc)")]
+		[XmlElement("IndexType")]
+        public ChannelIndexType? IndexType {
+            get {
+                return IndexTypeField;
+            } 
+            set {
+                IndexTypeField = value;
+                NotifyPropertyChanged("IndexType");
+            }
+        }
+
+        private ChannelIndexType? IndexTypeField; 
+
+        /// <summary>
+        /// Uom property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("The units of the index. Must be one of the units allowed for the specified IndexType (i.e. time or distance).")]
+		[XmlElement("Uom")]
+        public String Uom {
+            get {
+                return UomField;
+            } 
+            set {
+                UomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private String UomField; 
+
+        /// <summary>
+        /// Direction property
+        /// </summary>
+		[Required]
+        [Description("The direction of the index, either increasing or decreasing. Index direction may not change within the life of a channel.")]
+		[XmlElement("Direction")]
+        public IndexDirection? Direction {
+            get {
+                return DirectionField;
+            } 
+            set {
+                DirectionField = value;
+                NotifyPropertyChanged("Direction");
+            }
+        }
+
+        private IndexDirection? DirectionField; 
+
+        /// <summary>
+        /// Mnemonic property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("The mnemonic for the index.")]
+		[XmlElement("Mnemonic")]
+        public String Mnemonic {
+            get {
+                return MnemonicField;
+            } 
+            set {
+                MnemonicField = value;
+                NotifyPropertyChanged("Mnemonic");
+            }
+        }
+
+        private String MnemonicField; 
+
+        /// <summary>
+        /// DatumReference property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("For depth indexes, this contains the uid of the datum, in the Channel's Well object, to which all of the index values are referenced.")]
+		[XmlElement("DatumReference")]
+        public String DatumReference {
+            get {
+                return DatumReferenceField;
+            } 
+            set {
+                DatumReferenceField = value;
+                NotifyPropertyChanged("DatumReference");
+            }
+        }
+
+        private String DatumReferenceField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
 
     namespace ComponentSchemas 
     {
@@ -52669,6 +55505,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of DrillReportSurveyStation")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -52745,6 +55582,7 @@ namespace Energistics.DataAccess.WITSML200
         /// dTim property
         /// </summary>
 		[RegularExpression(".+T.+[Z+\\-].*")]
+        [Description("The timestamp of the time-qualified comment")]
         [XmlAttribute("dTim")]
 		
         public String DateTime {
@@ -52936,6 +55774,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of DrillReportPorePressure")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -54202,6 +57041,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Fluid")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -55478,6 +58318,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of DrillReportStatusInfo")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -55555,7 +58396,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Description("The unit of measure by which the datum is expressed")]
         [XmlAttribute("uom")]
 		
         public LengthUom Uom {
@@ -55593,6 +58434,7 @@ namespace Energistics.DataAccess.WITSML200
         /// datum property
         /// </summary>
 		[StringLength(64)]
+        [Description("Defines the vertical datums associated with elevation, vertical depth and measured depth coordinates")]
         [XmlAttribute("datum")]
 		
         public String Datum {
@@ -56098,6 +58940,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of DrillReportGasReadingInfo")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -56253,6 +59096,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of DrillReportPerfInfo")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -56408,6 +59252,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of DrillReportStratInfo")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -56968,6 +59813,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of DrillReportControlIncidentInfo")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -57177,6 +60023,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of DrillReportEquipFailureInfo")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -57350,6 +60197,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of DrillReportLithShowInfo")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -57631,6 +60479,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of DrillReportFormTestInfo")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -58182,6 +61031,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of DrillReportWellTestInfo")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -58445,6 +61295,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of DrillReportCoreInfo")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -58502,6 +61353,7 @@ namespace Energistics.DataAccess.WITSML200
         /// BottomHoleTemperature property
         /// </summary>
 		[Required]
+        [Description("Bottomhole temperature for the job.")]
         [ComponentElement]
 		[XmlElement("BottomHoleTemperature")]
         public ThermodynamicTemperatureMeasure BottomHoleTemperature {
@@ -58799,6 +61651,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of DrillReportLogInfo")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -59358,6 +62211,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of DrillActivity")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -59584,6 +62438,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Nozzle")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -60304,6 +63159,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Sensor")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -60602,6 +63458,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Bend")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -60900,6 +63757,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of Stabilizer")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -62152,6 +65010,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of BitRecord")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -62783,6 +65642,7 @@ namespace Energistics.DataAccess.WITSML200
         /// TypeTubularComponent property
         /// </summary>
 		[Required]
+        [Description("Connection whose type is tubular")]
 		[XmlElement("TypeTubularComponent")]
         public TubularComponentType? TypeTubularComponent {
             get {
@@ -63711,6 +66571,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("Unique identifier for this instance of TubularComponent")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -64164,6 +67025,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("A unique identifier for an instance of a well datum.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -64206,11 +67068,11 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AbstractVerticalCrs xsd type.
     /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalUnknownCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalEpsgCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalLocalAuthorityCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalGmlCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalEpsgCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalWktCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalLocalAuthorityCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalUnknownCrs))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -64246,33 +67108,33 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the VerticalUnknownCrs xsd type.
+    /// This class represents the VerticalGmlCrs xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalUnknownCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the VerticalUnknownCrs xsd type.")]
-    public partial class VerticalUnknownCrs : AbstractVerticalCrs, INotifyPropertyChanged
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalGmlCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the VerticalGmlCrs xsd type.")]
+    public partial class VerticalGmlCrs : AbstractVerticalCrs, INotifyPropertyChanged
     {
 
         /// <summary>
-        /// Unknown property
+        /// GmlVerticalCrsDefinition property
         /// </summary>
-		
-		[XmlElement("Unknown")]
-        public String Unknown {
+		[ComponentElement]
+		[XmlElement("GmlVerticalCrsDefinition")]
+        public VerticalCRSType GmlVerticalCrsDefinition {
             get {
-                return UnknownField;
+                return GmlVerticalCrsDefinitionField;
             } 
             set {
-                UnknownField = value;
-                NotifyPropertyChanged("Unknown");
+                GmlVerticalCrsDefinitionField = value;
+                NotifyPropertyChanged("GmlVerticalCrsDefinition");
             }
         }
 
-        private String UnknownField; 
+        private VerticalCRSType GmlVerticalCrsDefinitionField; 
 
 
     } //here
@@ -64316,6 +67178,41 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
+    /// This class represents the VerticalWktCrs xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalWktCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the VerticalWktCrs xsd type.")]
+    public partial class VerticalWktCrs : AbstractVerticalCrs, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// WellKnownText property
+        /// </summary>
+		
+		[XmlElement("WellKnownText")]
+        public String WellKnownText {
+            get {
+                return WellKnownTextField;
+            } 
+            set {
+                WellKnownTextField = value;
+                NotifyPropertyChanged("WellKnownText");
+            }
+        }
+
+        private String WellKnownTextField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
     /// This class represents the VerticalLocalAuthorityCrs xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -64351,68 +67248,33 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the VerticalGmlCrs xsd type.
+    /// This class represents the VerticalUnknownCrs xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalGmlCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the VerticalGmlCrs xsd type.")]
-    public partial class VerticalGmlCrs : AbstractVerticalCrs, INotifyPropertyChanged
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalUnknownCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the VerticalUnknownCrs xsd type.")]
+    public partial class VerticalUnknownCrs : AbstractVerticalCrs, INotifyPropertyChanged
     {
 
         /// <summary>
-        /// GmlVerticalCrsDefinition property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("GmlVerticalCrsDefinition")]
-        public VerticalCRSType GmlVerticalCrsDefinition {
-            get {
-                return GmlVerticalCrsDefinitionField;
-            } 
-            set {
-                GmlVerticalCrsDefinitionField = value;
-                NotifyPropertyChanged("GmlVerticalCrsDefinition");
-            }
-        }
-
-        private VerticalCRSType GmlVerticalCrsDefinitionField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the VerticalWktCrs xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalWktCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the VerticalWktCrs xsd type.")]
-    public partial class VerticalWktCrs : AbstractVerticalCrs, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// WellKnownText property
+        /// Unknown property
         /// </summary>
 		
-		[XmlElement("WellKnownText")]
-        public String WellKnownText {
+		[XmlElement("Unknown")]
+        public String Unknown {
             get {
-                return WellKnownTextField;
+                return UnknownField;
             } 
             set {
-                WellKnownTextField = value;
-                NotifyPropertyChanged("WellKnownText");
+                UnknownField = value;
+                NotifyPropertyChanged("Unknown");
             }
         }
 
-        private String WellKnownTextField; 
+        private String UnknownField; 
 
 
     } //here
@@ -64581,6 +67443,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [StringLength(64)]
+        [Description("A unique identifier for an instance of a reference point.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -64621,27 +67484,27 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the FootageEastWest xsd type.
+    /// This class represents the DistanceEastWest xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="FootageEastWest", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the FootageEastWest xsd type.")]
-    public partial class FootageEastWest : Object, INotifyPropertyChanged
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DistanceEastWest", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the DistanceEastWest xsd type.")]
+    public partial class DistanceEastWest : Object, INotifyPropertyChanged
     {
         /// <summary>
-        /// Initializes a new instance of the FootageEastWest class.
+        /// Initializes a new instance of the DistanceEastWest class.
         /// </summary>
-        public FootageEastWest() {}
+        public DistanceEastWest() {}
 
         /// <summary>
-        /// Initializes a new instance of the FootageEastWest class.
+        /// Initializes a new instance of the DistanceEastWest class.
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public FootageEastWest(Double value, LengthUom uom)
+        public DistanceEastWest(Double value, LengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -64658,7 +67521,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Description("The unit of measure of the East-West distance.")]
         [XmlAttribute("uom")]
 		
         public LengthUom Uom {
@@ -64693,41 +67556,41 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean uomSpecifiedField; 
 
 		/// <summary>
-        /// ref property
+        /// reference property
         /// </summary>
+		[Description("East or west direction.")]
+        [XmlAttribute("reference")]
 		
-        [XmlAttribute("ref")]
-		
-        public EastOrWest Ref {
+        public EastOrWest Reference {
             get {
-                return refField;
+                return referenceField;
             } 
             set {
-                refField = value;
+                referenceField = value;
              if(value!=null) 
-                 this.RefSpecified = true;
-                NotifyPropertyChanged("Ref");
+                 this.ReferenceSpecified = true;
+                NotifyPropertyChanged("Reference");
             }
         }
 
-        private EastOrWest refField; 
+        private EastOrWest referenceField; 
 
         /// <summary>
-        /// refSpecified property
+        /// referenceSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean RefSpecified {
+        public Boolean ReferenceSpecified {
             get {
-                return refSpecifiedField;
+                return referenceSpecifiedField;
             } 
             set {
-                refSpecifiedField = value;
-                NotifyPropertyChanged("RefSpecified");
+                referenceSpecifiedField = value;
+                NotifyPropertyChanged("ReferenceSpecified");
             }
         }
 
-        private Boolean refSpecifiedField; 
+        private Boolean referenceSpecifiedField; 
 
         /// <summary>
         /// Value property
@@ -64772,27 +67635,27 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the FootageNorthSouth xsd type.
+    /// This class represents the DistanceNorthSouth xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="FootageNorthSouth", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the FootageNorthSouth xsd type.")]
-    public partial class FootageNorthSouth : Object, INotifyPropertyChanged
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DistanceNorthSouth", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+	[Description("This class represents the DistanceNorthSouth xsd type.")]
+    public partial class DistanceNorthSouth : Object, INotifyPropertyChanged
     {
         /// <summary>
-        /// Initializes a new instance of the FootageNorthSouth class.
+        /// Initializes a new instance of the DistanceNorthSouth class.
         /// </summary>
-        public FootageNorthSouth() {}
+        public DistanceNorthSouth() {}
 
         /// <summary>
-        /// Initializes a new instance of the FootageNorthSouth class.
+        /// Initializes a new instance of the DistanceNorthSouth class.
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public FootageNorthSouth(Double value, LengthUom uom)
+        public DistanceNorthSouth(Double value, LengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -64809,7 +67672,7 @@ namespace Energistics.DataAccess.WITSML200
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Description("The unit of measure of the North-South distance.")]
         [XmlAttribute("uom")]
 		
         public LengthUom Uom {
@@ -64844,41 +67707,41 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean uomSpecifiedField; 
 
 		/// <summary>
-        /// ref property
+        /// reference property
         /// </summary>
+		[Description("North or south direction.")]
+        [XmlAttribute("reference")]
 		
-        [XmlAttribute("ref")]
-		
-        public NorthOrSouth Ref {
+        public NorthOrSouth Reference {
             get {
-                return refField;
+                return referenceField;
             } 
             set {
-                refField = value;
+                referenceField = value;
              if(value!=null) 
-                 this.RefSpecified = true;
-                NotifyPropertyChanged("Ref");
+                 this.ReferenceSpecified = true;
+                NotifyPropertyChanged("Reference");
             }
         }
 
-        private NorthOrSouth refField; 
+        private NorthOrSouth referenceField; 
 
         /// <summary>
-        /// refSpecified property
+        /// referenceSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean RefSpecified {
+        public Boolean ReferenceSpecified {
             get {
-                return refSpecifiedField;
+                return referenceSpecifiedField;
             } 
             set {
-                refSpecifiedField = value;
-                NotifyPropertyChanged("RefSpecified");
+                referenceSpecifiedField = value;
+                NotifyPropertyChanged("ReferenceSpecified");
             }
         }
 
-        private Boolean refSpecifiedField; 
+        private Boolean referenceSpecifiedField; 
 
         /// <summary>
         /// Value property
@@ -65176,7 +68039,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[ComponentElement]
 		[XmlElement("FootageNS")]
-        public FootageNorthSouth FootageNS {
+        public DistanceNorthSouth FootageNS {
             get {
                 return FootageNSField;
             } 
@@ -65186,14 +68049,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private FootageNorthSouth FootageNSField; 
+        private DistanceNorthSouth FootageNSField; 
 
         /// <summary>
         /// FootageEW property
         /// </summary>
 		[ComponentElement]
 		[XmlElement("FootageEW")]
-        public FootageEastWest FootageEW {
+        public DistanceEastWest FootageEW {
             get {
                 return FootageEWField;
             } 
@@ -65203,82 +68066,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private FootageEastWest FootageEWField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the IndexRange xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="IndexRange", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the IndexRange xsd type.")]
-    public partial class IndexRange : Object, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// IndexMaximum property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("The maximum index for the range over which the referenced data's conformance with the policy is being assessed.")]
-		[XmlElement("IndexMaximum")]
-        public String IndexMaximum {
-            get {
-                return IndexMaximumField;
-            } 
-            set {
-                IndexMaximumField = value;
-                NotifyPropertyChanged("IndexMaximum");
-            }
-        }
-
-        private String IndexMaximumField; 
-
-        /// <summary>
-        /// IndexMinimum property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("The minimum index for the range over which the referenced data's conformance with the policy is being assessed.")]
-		[XmlElement("IndexMinimum")]
-        public String IndexMinimum {
-            get {
-                return IndexMinimumField;
-            } 
-            set {
-                IndexMinimumField = value;
-                NotifyPropertyChanged("IndexMinimum");
-            }
-        }
-
-        private String IndexMinimumField; 
+        private DistanceEastWest FootageEWField; 
 
 
         
@@ -65422,6 +68210,81 @@ namespace Energistics.DataAccess.WITSML200
     } //here
     }
 
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the IndexRange xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="IndexRange", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the IndexRange xsd type.")]
+    public partial class IndexRange : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// IndexMinimum property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("The minimum index for the range over which the referenced data's conformance with the policy is being assessed.")]
+		[XmlElement("IndexMinimum")]
+        public String IndexMinimum {
+            get {
+                return IndexMinimumField;
+            } 
+            set {
+                IndexMinimumField = value;
+                NotifyPropertyChanged("IndexMinimum");
+            }
+        }
+
+        private String IndexMinimumField; 
+
+        /// <summary>
+        /// IndexMaximum property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("The maximum index for the range over which the referenced data's conformance with the policy is being assessed.")]
+		[XmlElement("IndexMaximum")]
+        public String IndexMaximum {
+            get {
+                return IndexMaximumField;
+            } 
+            set {
+                IndexMaximumField = value;
+                NotifyPropertyChanged("IndexMaximum");
+            }
+        }
+
+        private String IndexMaximumField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
     /// <summary>
     /// This class represents the WellboreMarkerSet xsd type.
     /// </summary>
@@ -65516,9 +68379,10 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// ChronostratigraphicTop property
         /// </summary>
-		[StringLength(64)]
+		[Description("The name of a Geochronology for this marker, with the \"kind\" attribute specifying the geochronological time span")]
+        [ComponentElement]
 		[XmlElement("ChronostratigraphicTop")]
-        public String ChronostratigraphicTop {
+        public GeochronologicalUnit ChronostratigraphicTop {
             get {
                 return ChronostratigraphicTopField;
             } 
@@ -65528,12 +68392,13 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ChronostratigraphicTopField; 
+        private GeochronologicalUnit ChronostratigraphicTopField; 
 
         /// <summary>
         /// LithostratigraphicTop property
         /// </summary>
-		[ComponentElement]
+		[Description("Specifies the unit of lithostratigraphy.")]
+        [ComponentElement]
 		[XmlElement("LithostratigraphicTop")]
         public LithostratigraphicUnit LithostratigraphicTop {
             get {
@@ -65658,348 +68523,6 @@ namespace Energistics.DataAccess.WITSML200
     } //here
 
     /// <summary>
-    /// This class represents the CuttingsGeology xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-	[Description("This class represents the CuttingsGeology xsd type.")]
-    public partial class CuttingsGeology : AbstractObject, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// MdInterval property
-        /// </summary>
-		[Required]
-        [Description("[maintained by the server] The interval which contains the minimum and maximum measured depths for all cuttings intervals in this cuttings geology.")]
-        [ComponentElement]
-		[XmlElement("MdInterval")]
-        public MdInterval MDInterval {
-            get {
-                return MdIntervalField;
-            } 
-            set {
-                MdIntervalField = value;
-                NotifyPropertyChanged("MDInterval");
-            }
-        }
-
-        private MdInterval MdIntervalField; 
-
-        /// <summary>
-        /// CuttingsInterval property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("CuttingsInterval")]
-        public List<CuttingsGeologyInterval> CuttingsInterval {
-            get {
-                return CuttingsIntervalField;
-            } 
-            set {
-                CuttingsIntervalField = value;
-                NotifyPropertyChanged("CuttingsInterval");
-            }
-        }
-
-         [XmlIgnore]
-         public bool CuttingsIntervalSpecified
-         {
-            get {
-             if(CuttingsIntervalField!=null)
-                return CuttingsIntervalField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<CuttingsGeologyInterval> CuttingsIntervalField; 
-
-        /// <summary>
-        /// Wellbore property
-        /// </summary>
-		[Required]
-        [ComponentElement]
-		[XmlElement("Wellbore")]
-        public DataObjectReference Wellbore {
-            get {
-                return WellboreField;
-            } 
-            set {
-                WellboreField = value;
-                NotifyPropertyChanged("Wellbore");
-            }
-        }
-
-        private DataObjectReference WellboreField; 
-
-
-    } //here
-
-    /// <summary>
-    /// This class represents the InterpretedGeology xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-	[Description("This class represents the InterpretedGeology xsd type.")]
-    public partial class InterpretedGeology : AbstractObject, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// MdInterval property
-        /// </summary>
-		[Required]
-        [Description("[maintained by the server] The interval which contains the minimum and maximum measured depths for all interpreted intervals in this interpreted geology.")]
-        [ComponentElement]
-		[XmlElement("MdInterval")]
-        public MdInterval MDInterval {
-            get {
-                return MdIntervalField;
-            } 
-            set {
-                MdIntervalField = value;
-                NotifyPropertyChanged("MDInterval");
-            }
-        }
-
-        private MdInterval MdIntervalField; 
-
-        /// <summary>
-        /// GeologicIntervalInterpreted property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("GeologicIntervalInterpreted")]
-        public List<InterpretedGeologyInterval> GeologicIntervalInterpreted {
-            get {
-                return GeologicIntervalInterpretedField;
-            } 
-            set {
-                GeologicIntervalInterpretedField = value;
-                NotifyPropertyChanged("GeologicIntervalInterpreted");
-            }
-        }
-
-         [XmlIgnore]
-         public bool GeologicIntervalInterpretedSpecified
-         {
-            get {
-             if(GeologicIntervalInterpretedField!=null)
-                return GeologicIntervalInterpretedField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<InterpretedGeologyInterval> GeologicIntervalInterpretedField; 
-
-        /// <summary>
-        /// Wellbore property
-        /// </summary>
-		[Required]
-        [ComponentElement]
-		[XmlElement("Wellbore")]
-        public DataObjectReference Wellbore {
-            get {
-                return WellboreField;
-            } 
-            set {
-                WellboreField = value;
-                NotifyPropertyChanged("Wellbore");
-            }
-        }
-
-        private DataObjectReference WellboreField; 
-
-
-    } //here
-
-    /// <summary>
-    /// This class represents the ShowEvaluation xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-	[Description("This class represents the ShowEvaluation xsd type.")]
-    public partial class ShowEvaluation : AbstractObject, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// MdInterval property
-        /// </summary>
-		[Required]
-        [Description("[maintained by the server] The interval which contains the minimum and maximum measured depths for all show intervals in this show evaluation.")]
-        [ComponentElement]
-		[XmlElement("MdInterval")]
-        public MdInterval MDInterval {
-            get {
-                return MdIntervalField;
-            } 
-            set {
-                MdIntervalField = value;
-                NotifyPropertyChanged("MDInterval");
-            }
-        }
-
-        private MdInterval MdIntervalField; 
-
-        /// <summary>
-        /// EvaluatedIntervalShow property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("EvaluatedIntervalShow")]
-        public List<ShowEvaluationInterval> EvaluatedIntervalShow {
-            get {
-                return EvaluatedIntervalShowField;
-            } 
-            set {
-                EvaluatedIntervalShowField = value;
-                NotifyPropertyChanged("EvaluatedIntervalShow");
-            }
-        }
-
-         [XmlIgnore]
-         public bool EvaluatedIntervalShowSpecified
-         {
-            get {
-             if(EvaluatedIntervalShowField!=null)
-                return EvaluatedIntervalShowField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<ShowEvaluationInterval> EvaluatedIntervalShowField; 
-
-        /// <summary>
-        /// Wellbore property
-        /// </summary>
-		[Required]
-        [ComponentElement]
-		[XmlElement("Wellbore")]
-        public DataObjectReference Wellbore {
-            get {
-                return WellboreField;
-            } 
-            set {
-                WellboreField = value;
-                NotifyPropertyChanged("Wellbore");
-            }
-        }
-
-        private DataObjectReference WellboreField; 
-
-
-    } //here
-
-    /// <summary>
-    /// This class represents the WellboreGeology xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "2.0")]
-    [Description("This class represents the WellboreGeology xsd type.")]
-    public partial class WellboreGeology : AbstractObject, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// MdInterval property
-        /// </summary>
-		[Required]
-        [Description("[maintained by the server] The interval which contains the minimum and maximum measured depths for all wellbore geology types under this wellbore geology entry.")]
-        [ComponentElement]
-		[XmlElement("MdInterval")]
-        public MdInterval MDInterval {
-            get {
-                return MdIntervalField;
-            } 
-            set {
-                MdIntervalField = value;
-                NotifyPropertyChanged("MDInterval");
-            }
-        }
-
-        private MdInterval MdIntervalField; 
-
-        /// <summary>
-        /// ShowIntervalSet property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("ShowIntervalSet")]
-        public ShowEvaluation ShowIntervalSet {
-            get {
-                return ShowIntervalSetField;
-            } 
-            set {
-                ShowIntervalSetField = value;
-                NotifyPropertyChanged("ShowIntervalSet");
-            }
-        }
-
-        private ShowEvaluation ShowIntervalSetField; 
-
-        /// <summary>
-        /// InterpretedGeologyIntervalSet property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("InterpretedGeologyIntervalSet")]
-        public InterpretedGeology InterpretedGeologyIntervalSet {
-            get {
-                return InterpretedGeologyIntervalSetField;
-            } 
-            set {
-                InterpretedGeologyIntervalSetField = value;
-                NotifyPropertyChanged("InterpretedGeologyIntervalSet");
-            }
-        }
-
-        private InterpretedGeology InterpretedGeologyIntervalSetField; 
-
-        /// <summary>
-        /// Wellbore property
-        /// </summary>
-		[Required]
-        [ComponentElement]
-		[XmlElement("Wellbore")]
-        public DataObjectReference Wellbore {
-            get {
-                return WellboreField;
-            } 
-            set {
-                WellboreField = value;
-                NotifyPropertyChanged("Wellbore");
-            }
-        }
-
-        private DataObjectReference WellboreField; 
-
-        /// <summary>
-        /// CuttingsIntervalSet property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("CuttingsIntervalSet")]
-        public CuttingsGeology CuttingsIntervalSet {
-            get {
-                return CuttingsIntervalSetField;
-            } 
-            set {
-                CuttingsIntervalSetField = value;
-                NotifyPropertyChanged("CuttingsIntervalSet");
-            }
-        }
-
-        private CuttingsGeology CuttingsIntervalSetField; 
-
-
-    } //here
-
-    /// <summary>
     /// This class represents the WellboreCompletion xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -66071,7 +68594,8 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// EventHistory property
         /// </summary>
-		[RecurringElement]
+		[Description("The contactInterval event information")]
+        [RecurringElement]
 		[XmlElement("EventHistory")]
         public List<EventInfo> EventHistory {
             get {
@@ -66169,7 +68693,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// CurrentStatus property
         /// </summary>
-		
+		[Description("Status (active, planned, suspended, testing, etc.) of the wellbore completion")]
 		[XmlElement("CurrentStatus")]
         public String CurrentStatus {
             get {
@@ -66187,6 +68711,7 @@ namespace Energistics.DataAccess.WITSML200
         /// StatusDate property
         /// </summary>
 		[RegularExpression(".+T.+[Z+\\-].*")]
+        [Description("Date for when the status was established.")]
 		[XmlElement("StatusDate")]
         public String StatusDate {
             get {
@@ -66407,7 +68932,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// CurrentStatus property
         /// </summary>
-		
+		[Description("Status (active, planned, suspended, testing, etc.) of the well completion")]
 		[XmlElement("CurrentStatus")]
         public String CurrentStatus {
             get {
@@ -66425,6 +68950,7 @@ namespace Energistics.DataAccess.WITSML200
         /// StatusDate property
         /// </summary>
 		[RegularExpression(".+T.+[Z+\\-].*")]
+        [Description("Timestamp for when this status was established")]
 		[XmlElement("StatusDate")]
         public String StatusDate {
             get {
@@ -66563,921 +69089,6 @@ namespace Energistics.DataAccess.WITSML200
     } //here
 
     /// <summary>
-    /// This class represents the StimJob xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "2.0")]
-    [Description("This class represents the StimJob xsd type.")]
-    public partial class StimJob : AbstractObject, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// AvgJobPres property
-        /// </summary>
-		[Description("Average pressure encountered during treatment of all stages.")]
-        [ComponentElement]
-		[XmlElement("AvgJobPres")]
-        public PressureMeasure AvgJobPres {
-            get {
-                return AvgJobPresField;
-            } 
-            set {
-                AvgJobPresField = value;
-                NotifyPropertyChanged("AvgJobPres");
-            }
-        }
-
-        private PressureMeasure AvgJobPresField; 
-
-        /// <summary>
-        /// BottomholeStaticTemperature property
-        /// </summary>
-		[Description("Bottomhole static temperature for the job.")]
-        [ComponentElement]
-		[XmlElement("BottomholeStaticTemperature")]
-        public ThermodynamicTemperatureMeasure BottomholeStaticTemperature {
-            get {
-                return BottomholeStaticTemperatureField;
-            } 
-            set {
-                BottomholeStaticTemperatureField = value;
-                NotifyPropertyChanged("BottomholeStaticTemperature");
-            }
-        }
-
-        private ThermodynamicTemperatureMeasure BottomholeStaticTemperatureField; 
-
-        /// <summary>
-        /// CommonData property
-        /// </summary>
-		[Description("A container element that contains elements that are common to all data objects.")]
-		[XmlElement("CommonData")]
-        public String CommonData {
-            get {
-                return CommonDataField;
-            } 
-            set {
-                CommonDataField = value;
-                NotifyPropertyChanged("CommonData");
-            }
-        }
-
-        private String CommonDataField; 
-
-        /// <summary>
-        /// CustomerName property
-        /// </summary>
-		[Required]
-        [StringLength(2000)]
-        [Description("Customer or company name.")]
-		[XmlElement("CustomerName")]
-        public String CustomerName {
-            get {
-                return CustomerNameField;
-            } 
-            set {
-                CustomerNameField = value;
-                NotifyPropertyChanged("CustomerName");
-            }
-        }
-
-        private String CustomerNameField; 
-
-        /// <summary>
-        /// DTimArrival property
-        /// </summary>
-		[RegularExpression(".+T.+[Z+\\-].*")]
-        [Description("Date and time at which the stimulation contractor arrives on location.")]
-		[XmlElement("DTimArrival")]
-        public String DateTimeArrival {
-            get {
-                return DTimArrivalField;
-            } 
-            set {
-                DTimArrivalField = value;
-                NotifyPropertyChanged("DateTimeArrival");
-            }
-        }
-
-        private String DTimArrivalField; 
-
-        /// <summary>
-        /// DTimEnd property
-        /// </summary>
-		[RegularExpression(".+T.+[Z+\\-].*")]
-        [Description("Ending date and time of stimulation job.")]
-		[XmlElement("DTimEnd")]
-        public String DateTimeEnd {
-            get {
-                return DTimEndField;
-            } 
-            set {
-                DTimEndField = value;
-                NotifyPropertyChanged("DateTimeEnd");
-            }
-        }
-
-        private String DTimEndField; 
-
-        /// <summary>
-        /// DTimStart property
-        /// </summary>
-		[RegularExpression(".+T.+[Z+\\-].*")]
-        [Description("Start date and time of the stimulation job.")]
-		[XmlElement("DTimStart")]
-        public String DateTimeStart {
-            get {
-                return DTimStartField;
-            } 
-            set {
-                DTimStartField = value;
-                NotifyPropertyChanged("DateTimeStart");
-            }
-        }
-
-        private String DTimStartField; 
-
-        /// <summary>
-        /// FlowBackPres property
-        /// </summary>
-		[Description("Pressure recorded on fluid returning to surface.")]
-        [ComponentElement]
-		[XmlElement("FlowBackPres")]
-        public PressureMeasure FlowBackPres {
-            get {
-                return FlowBackPresField;
-            } 
-            set {
-                FlowBackPresField = value;
-                NotifyPropertyChanged("FlowBackPres");
-            }
-        }
-
-        private PressureMeasure FlowBackPresField; 
-
-        /// <summary>
-        /// FlowBackRate property
-        /// </summary>
-		[Description("Rate recorded on fluid returning to surface.")]
-        [ComponentElement]
-		[XmlElement("FlowBackRate")]
-        public VolumePerTimeMeasure FlowBackRate {
-            get {
-                return FlowBackRateField;
-            } 
-            set {
-                FlowBackRateField = value;
-                NotifyPropertyChanged("FlowBackRate");
-            }
-        }
-
-        private VolumePerTimeMeasure FlowBackRateField; 
-
-        /// <summary>
-        /// FlowBackVolume property
-        /// </summary>
-		[Description("Volume recorded on fluid returning to surface.")]
-        [ComponentElement]
-		[XmlElement("FlowBackVolume")]
-        public VolumeMeasure FlowBackVolume {
-            get {
-                return FlowBackVolumeField;
-            } 
-            set {
-                FlowBackVolumeField = value;
-                NotifyPropertyChanged("FlowBackVolume");
-            }
-        }
-
-        private VolumeMeasure FlowBackVolumeField; 
-
-        /// <summary>
-        /// FluidEfficiency property
-        /// </summary>
-		[Description("Percentage of fluid volume in the fracture at the end of pumping.")]
-        [ComponentElement]
-		[XmlElement("FluidEfficiency")]
-        public VolumePerVolumeMeasure FluidEfficiency {
-            get {
-                return FluidEfficiencyField;
-            } 
-            set {
-                FluidEfficiencyField = value;
-                NotifyPropertyChanged("FluidEfficiency");
-            }
-        }
-
-        private VolumePerVolumeMeasure FluidEfficiencyField; 
-
-        /// <summary>
-        /// HhpOrdered property
-        /// </summary>
-		[Description("Hydraulic horsepower ordered for the stimulation job.")]
-        [ComponentElement]
-		[XmlElement("HhpOrdered")]
-        public PowerMeasure HhpOrdered {
-            get {
-                return HhpOrderedField;
-            } 
-            set {
-                HhpOrderedField = value;
-                NotifyPropertyChanged("HhpOrdered");
-            }
-        }
-
-        private PowerMeasure HhpOrderedField; 
-
-        /// <summary>
-        /// HhpUsed property
-        /// </summary>
-		[Description("Hydraulic horsepower actually used for the stimulation job.")]
-        [ComponentElement]
-		[XmlElement("HhpUsed")]
-        public PowerMeasure HhpUsed {
-            get {
-                return HhpUsedField;
-            } 
-            set {
-                HhpUsedField = value;
-                NotifyPropertyChanged("HhpUsed");
-            }
-        }
-
-        private PowerMeasure HhpUsedField; 
-
-        /// <summary>
-        /// JobPerforationClusters property
-        /// </summary>
-		[RecurringElement]
-		[XmlArrayItem("")]
-        [XmlArray("JobPerforationClusters")]
-        public List<StimPerforationCluster> JobPerforationClusters {
-            get {
-                return JobPerforationClustersField;
-            } 
-            set {
-                JobPerforationClustersField = value;
-                NotifyPropertyChanged("JobPerforationClusters");
-            }
-        }
-
-         [XmlIgnore]
-         public bool JobPerforationClustersSpecified
-         {
-            get {
-             if(JobPerforationClustersField!=null)
-                return JobPerforationClustersField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<StimPerforationCluster> JobPerforationClustersField; 
-
-        /// <summary>
-        /// Kind property
-        /// </summary>
-		[Required]
-        [StringLength(2000)]
-        [Description("Type of well stimulation job.")]
-		[XmlElement("Kind")]
-        public String Kind {
-            get {
-                return KindField;
-            } 
-            set {
-                KindField = value;
-                NotifyPropertyChanged("Kind");
-            }
-        }
-
-        private String KindField; 
-
-        /// <summary>
-        /// Materials property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("Materials")]
-        public StimMaterialCatalog Materials {
-            get {
-                return MaterialsField;
-            } 
-            set {
-                MaterialsField = value;
-                NotifyPropertyChanged("Materials");
-            }
-        }
-
-        private StimMaterialCatalog MaterialsField; 
-
-        /// <summary>
-        /// MaxFluidRate property
-        /// </summary>
-		[Description("Maximum job fluid pumping rate encountered during treatment of all stage.")]
-        [ComponentElement]
-		[XmlElement("MaxFluidRate")]
-        public VolumePerTimeMeasure MaxFluidRate {
-            get {
-                return MaxFluidRateField;
-            } 
-            set {
-                MaxFluidRateField = value;
-                NotifyPropertyChanged("MaxFluidRate");
-            }
-        }
-
-        private VolumePerTimeMeasure MaxFluidRateField; 
-
-        /// <summary>
-        /// MaxJobPres property
-        /// </summary>
-		[Description("Maximum pressure encountered during the job.")]
-        [ComponentElement]
-		[XmlElement("MaxJobPres")]
-        public PressureMeasure MaxJobPres {
-            get {
-                return MaxJobPresField;
-            } 
-            set {
-                MaxJobPresField = value;
-                NotifyPropertyChanged("MaxJobPres");
-            }
-        }
-
-        private PressureMeasure MaxJobPresField; 
-
-        /// <summary>
-        /// PIDXCommodityCode property
-        /// </summary>
-		[Description("UNSPSC(Segment 71) Commodity Code from Oil and gas extraction and production enhancement services family.")]
-		[XmlElement("PIDXCommodityCode")]
-        public PIDXCommodityCode? PIDXCommodityCode {
-            get {
-                return PIDXCommodityCodeField;
-            } 
-            set {
-                PIDXCommodityCodeField = value;
-             if(value!=null) 
-                 this.PIDXCommodityCodeSpecified = true;
-                NotifyPropertyChanged("PIDXCommodityCode");
-            }
-        }
-
-        private PIDXCommodityCode? PIDXCommodityCodeField; 
-
-        /// <summary>
-        /// PIDXCommodityCodeSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean PIDXCommodityCodeSpecified {
-            get {
-                return PIDXCommodityCodeSpecifiedField;
-            } 
-            set {
-                PIDXCommodityCodeSpecifiedField = value;
-                NotifyPropertyChanged("PIDXCommodityCodeSpecified");
-            }
-        }
-
-        private Boolean PIDXCommodityCodeSpecifiedField; 
-
-        /// <summary>
-        /// ServiceCompany property
-        /// </summary>
-		[Required]
-        [StringLength(2000)]
-        [Description("Name of the well stimulation contractor.")]
-		[XmlElement("ServiceCompany")]
-        public String ServiceCompany {
-            get {
-                return ServiceCompanyField;
-            } 
-            set {
-                ServiceCompanyField = value;
-                NotifyPropertyChanged("ServiceCompany");
-            }
-        }
-
-        private String ServiceCompanyField; 
-
-        /// <summary>
-        /// StageCount property
-        /// </summary>
-		[Description("Number of stages treated during the stimulation service.")]
-		[XmlElement("StageCount")]
-        public Int64? StageCount {
-            get {
-                return StageCountField;
-            } 
-            set {
-                StageCountField = value;
-             if(value!=null) 
-                 this.StageCountSpecified = true;
-                NotifyPropertyChanged("StageCount");
-            }
-        }
-
-        private Int64? StageCountField; 
-
-        /// <summary>
-        /// StageCountSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean StageCountSpecified {
-            get {
-                return StageCountSpecifiedField;
-            } 
-            set {
-                StageCountSpecifiedField = value;
-                NotifyPropertyChanged("StageCountSpecified");
-            }
-        }
-
-        private Boolean StageCountSpecifiedField; 
-
-        /// <summary>
-        /// Supervisor property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Name of service company supervisor.")]
-		[XmlElement("Supervisor")]
-        public String Supervisor {
-            get {
-                return SupervisorField;
-            } 
-            set {
-                SupervisorField = value;
-                NotifyPropertyChanged("Supervisor");
-            }
-        }
-
-        private String SupervisorField; 
-
-        /// <summary>
-        /// TotalJobVolume property
-        /// </summary>
-		[Description("Total volume pumped for all stages.")]
-        [ComponentElement]
-		[XmlElement("TotalJobVolume")]
-        public VolumeMeasure TotalJobVolume {
-            get {
-                return TotalJobVolumeField;
-            } 
-            set {
-                TotalJobVolumeField = value;
-                NotifyPropertyChanged("TotalJobVolume");
-            }
-        }
-
-        private VolumeMeasure TotalJobVolumeField; 
-
-        /// <summary>
-        /// TotalProppantInFormation property
-        /// </summary>
-		[Description("The mass of proppant placed in the formation.")]
-        [ComponentElement]
-		[XmlElement("TotalProppantInFormation")]
-        public MassMeasure TotalProppantInFormation {
-            get {
-                return TotalProppantInFormationField;
-            } 
-            set {
-                TotalProppantInFormationField = value;
-                NotifyPropertyChanged("TotalProppantInFormation");
-            }
-        }
-
-        private MassMeasure TotalProppantInFormationField; 
-
-        /// <summary>
-        /// TotalProppantUsed property
-        /// </summary>
-		[Description("{Get this from WITSML 1.4.1.1, which Clinton removed.}")]
-        [ComponentElement]
-		[XmlElement("TotalProppantUsed")]
-        public MassMeasure TotalProppantUsed {
-            get {
-                return TotalProppantUsedField;
-            } 
-            set {
-                TotalProppantUsedField = value;
-                NotifyPropertyChanged("TotalProppantUsed");
-            }
-        }
-
-        private MassMeasure TotalProppantUsedField; 
-
-        /// <summary>
-        /// TotalPumpTime property
-        /// </summary>
-		[Description("The total pumping time.")]
-        [ComponentElement]
-		[XmlElement("TotalPumpTime")]
-        public TimeMeasure TotalPumpTime {
-            get {
-                return TotalPumpTimeField;
-            } 
-            set {
-                TotalPumpTimeField = value;
-                NotifyPropertyChanged("TotalPumpTime");
-            }
-        }
-
-        private TimeMeasure TotalPumpTimeField; 
-
-        /// <summary>
-        /// TreatingBottomholeTemperature property
-        /// </summary>
-		[Description("Expected or calculated bottomhole treating temperature for the job.")]
-        [ComponentElement]
-		[XmlElement("TreatingBottomholeTemperature")]
-        public ThermodynamicTemperatureMeasure TreatingBottomholeTemperature {
-            get {
-                return TreatingBottomholeTemperatureField;
-            } 
-            set {
-                TreatingBottomholeTemperatureField = value;
-                NotifyPropertyChanged("TreatingBottomholeTemperature");
-            }
-        }
-
-        private ThermodynamicTemperatureMeasure TreatingBottomholeTemperatureField; 
-
-        /// <summary>
-        /// Stage property
-        /// </summary>
-		[Description("A stage treated during the stimulation job.")]
-        [RecurringElement]
-		[XmlElement("Stage")]
-        public List<DataObjectReference> Stage {
-            get {
-                return StageField;
-            } 
-            set {
-                StageField = value;
-                NotifyPropertyChanged("Stage");
-            }
-        }
-
-         [XmlIgnore]
-         public bool StageSpecified
-         {
-            get {
-             if(StageField!=null)
-                return StageField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<DataObjectReference> StageField; 
-
-        /// <summary>
-        /// MaterialUsed property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("MaterialUsed")]
-        public List<StimMaterialQuantity> MaterialUsed {
-            get {
-                return MaterialUsedField;
-            } 
-            set {
-                MaterialUsedField = value;
-                NotifyPropertyChanged("MaterialUsed");
-            }
-        }
-
-         [XmlIgnore]
-         public bool MaterialUsedSpecified
-         {
-            get {
-             if(MaterialUsedField!=null)
-                return MaterialUsedField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<StimMaterialQuantity> MaterialUsedField; 
-
-        /// <summary>
-        /// Wellbore property
-        /// </summary>
-		[Required]
-        [ComponentElement]
-		[XmlElement("Wellbore")]
-        public DataObjectReference Wellbore {
-            get {
-                return WellboreField;
-            } 
-            set {
-                WellboreField = value;
-                NotifyPropertyChanged("Wellbore");
-            }
-        }
-
-        private DataObjectReference WellboreField; 
-
-        /// <summary>
-        /// MaterialCatalog property
-        /// </summary>
-		[Required]
-        [ComponentElement]
-		[XmlElement("MaterialCatalog")]
-        public StimMaterialCatalog MaterialCatalog {
-            get {
-                return MaterialCatalogField;
-            } 
-            set {
-                MaterialCatalogField = value;
-                NotifyPropertyChanged("MaterialCatalog");
-            }
-        }
-
-        private StimMaterialCatalog MaterialCatalogField; 
-
-        /// <summary>
-        /// LogCatalog property
-        /// </summary>
-		[RecurringElement]
-		[XmlArrayItem("JobLog")]
-        [XmlArray("LogCatalog")]
-        public List<List<DataObjectReference>> LogCatalog {
-            get {
-                return LogCatalogField;
-            } 
-            set {
-                LogCatalogField = value;
-                NotifyPropertyChanged("LogCatalog");
-            }
-        }
-
-         [XmlIgnore]
-         public bool LogCatalogSpecified
-         {
-            get {
-             if(LogCatalogField!=null)
-                return LogCatalogField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<List<DataObjectReference>> LogCatalogField; 
-
-
-    } //here
-
-    /// <summary>
-    /// This class represents the StimPerforationCluster xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-	[Description("This class represents the StimPerforationCluster xsd type.")]
-    public partial class StimPerforationCluster : AbstractObject, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// MdPerforatedInterval property
-        /// </summary>
-		[Description("Measured depths of the top and base perforation.")]
-        [ComponentElement]
-		[XmlElement("MdPerforatedInterval")]
-        public MdInterval MDPerforatedInterval {
-            get {
-                return MdPerforatedIntervalField;
-            } 
-            set {
-                MdPerforatedIntervalField = value;
-                NotifyPropertyChanged("MDPerforatedInterval");
-            }
-        }
-
-        private MdInterval MdPerforatedIntervalField; 
-
-        /// <summary>
-        /// TvdPerforatedInterval property
-        /// </summary>
-		[Description("True vertical depth of the top and base perforation.")]
-        [ComponentElement]
-		[XmlElement("TvdPerforatedInterval")]
-        public TvdInterval TvdPerforatedInterval {
-            get {
-                return TvdPerforatedIntervalField;
-            } 
-            set {
-                TvdPerforatedIntervalField = value;
-                NotifyPropertyChanged("TvdPerforatedInterval");
-            }
-        }
-
-        private TvdInterval TvdPerforatedIntervalField; 
-
-        /// <summary>
-        /// Type property
-        /// </summary>
-		[StringLength(64)]
-        [Description("The type of perforation and/or how the perforation was created.")]
-		[XmlElement("Type")]
-        public String Type {
-            get {
-                return TypeField;
-            } 
-            set {
-                TypeField = value;
-                NotifyPropertyChanged("Type");
-            }
-        }
-
-        private String TypeField; 
-
-        /// <summary>
-        /// PerforationCount property
-        /// </summary>
-		[Description("The number of perforations in this interval.")]
-		[XmlElement("PerforationCount")]
-        public Int64? PerforationCount {
-            get {
-                return PerforationCountField;
-            } 
-            set {
-                PerforationCountField = value;
-             if(value!=null) 
-                 this.PerforationCountSpecified = true;
-                NotifyPropertyChanged("PerforationCount");
-            }
-        }
-
-        private Int64? PerforationCountField; 
-
-        /// <summary>
-        /// PerforationCountSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean PerforationCountSpecified {
-            get {
-                return PerforationCountSpecifiedField;
-            } 
-            set {
-                PerforationCountSpecifiedField = value;
-                NotifyPropertyChanged("PerforationCountSpecified");
-            }
-        }
-
-        private Boolean PerforationCountSpecifiedField; 
-
-        /// <summary>
-        /// Size property
-        /// </summary>
-		[Description("The size of the perforations.")]
-        [ComponentElement]
-		[XmlElement("Size")]
-        public LengthMeasure Size {
-            get {
-                return SizeField;
-            } 
-            set {
-                SizeField = value;
-                NotifyPropertyChanged("Size");
-            }
-        }
-
-        private LengthMeasure SizeField; 
-
-        /// <summary>
-        /// DensityPerforation property
-        /// </summary>
-		[Description("The number of perforation holes per length across the treatment interval.  Used to describe but not limited to the configuration of perforating guns or the placement  of perforations (holes, slots, openings ...) in the wellbore, and is often  abbreviated to spf (shots per foot).")]
-        [ComponentElement]
-		[XmlElement("DensityPerforation")]
-        public ReciprocalLengthMeasure DensityPerforation {
-            get {
-                return DensityPerforationField;
-            } 
-            set {
-                DensityPerforationField = value;
-                NotifyPropertyChanged("DensityPerforation");
-            }
-        }
-
-        private ReciprocalLengthMeasure DensityPerforationField; 
-
-        /// <summary>
-        /// PhasingPerforation property
-        /// </summary>
-		[Description("The radial distribution of successive perforations around the wellbore axis.  Radial distribution is commonly available in 0, 180 120, 90 and 60 degree phasing.")]
-        [ComponentElement]
-		[XmlElement("PhasingPerforation")]
-        public PlaneAngleMeasure PhasingPerforation {
-            get {
-                return PhasingPerforationField;
-            } 
-            set {
-                PhasingPerforationField = value;
-                NotifyPropertyChanged("PhasingPerforation");
-            }
-        }
-
-        private PlaneAngleMeasure PhasingPerforationField; 
-
-        /// <summary>
-        /// FrictionFactor property
-        /// </summary>
-		[Description("The friction factor of each perforation set.")]
-		[XmlElement("FrictionFactor")]
-        public Double? FrictionFactor {
-            get {
-                return FrictionFactorField;
-            } 
-            set {
-                FrictionFactorField = value;
-             if(value!=null) 
-                 this.FrictionFactorSpecified = true;
-                NotifyPropertyChanged("FrictionFactor");
-            }
-        }
-
-        private Double? FrictionFactorField; 
-
-        /// <summary>
-        /// FrictionFactorSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean FrictionFactorSpecified {
-            get {
-                return FrictionFactorSpecifiedField;
-            } 
-            set {
-                FrictionFactorSpecifiedField = value;
-                NotifyPropertyChanged("FrictionFactorSpecified");
-            }
-        }
-
-        private Boolean FrictionFactorSpecifiedField; 
-
-        /// <summary>
-        /// FrictionPres property
-        /// </summary>
-		[Description("The friction pressure for the perforation set.")]
-        [ComponentElement]
-		[XmlElement("FrictionPres")]
-        public PressureMeasure FrictionPres {
-            get {
-                return FrictionPresField;
-            } 
-            set {
-                FrictionPresField = value;
-                NotifyPropertyChanged("FrictionPres");
-            }
-        }
-
-        private PressureMeasure FrictionPresField; 
-
-        /// <summary>
-        /// DischargeCoefficient property
-        /// </summary>
-		[Description("A coefficient used in the equation for calculation of pressure drop across a perforation set.")]
-		[XmlElement("DischargeCoefficient")]
-        public Double? DischargeCoefficient {
-            get {
-                return DischargeCoefficientField;
-            } 
-            set {
-                DischargeCoefficientField = value;
-             if(value!=null) 
-                 this.DischargeCoefficientSpecified = true;
-                NotifyPropertyChanged("DischargeCoefficient");
-            }
-        }
-
-        private Double? DischargeCoefficientField; 
-
-        /// <summary>
-        /// DischargeCoefficientSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean DischargeCoefficientSpecified {
-            get {
-                return DischargeCoefficientSpecifiedField;
-            } 
-            set {
-                DischargeCoefficientSpecifiedField = value;
-                NotifyPropertyChanged("DischargeCoefficientSpecified");
-            }
-        }
-
-        private Boolean DischargeCoefficientSpecifiedField; 
-
-
-    } //here
-
-    /// <summary>
     /// This class represents the StimJobStage xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -67486,8 +69097,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "2.0")]
-    [Description("This class represents the StimJobStage xsd type.")]
+	[Description("This class represents the StimJobStage xsd type.")]
     public partial class StimJobStage : AbstractObject, IUniqueId, INotifyPropertyChanged
     {
 
@@ -67528,24 +69138,6 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean NumberSpecifiedField; 
 
         /// <summary>
-        /// AvgBaseFluidReturnVolumePerMinute property
-        /// </summary>
-		[Description("Average base fluid pumping rate of all steps for stage treatment.")]
-        [ComponentElement]
-		[XmlElement("AvgBaseFluidReturnVolumePerMinute")]
-        public VolumeMeasure AvgBaseFluidReturnVolumePerMinute {
-            get {
-                return AvgBaseFluidReturnVolumePerMinuteField;
-            } 
-            set {
-                AvgBaseFluidReturnVolumePerMinuteField = value;
-                NotifyPropertyChanged("AvgBaseFluidReturnVolumePerMinute");
-            }
-        }
-
-        private VolumeMeasure AvgBaseFluidReturnVolumePerMinuteField; 
-
-        /// <summary>
         /// FractureHeight property
         /// </summary>
 		[Description("The height of the fracture.")]
@@ -67584,7 +69176,8 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// StagePerforationClusters property
         /// </summary>
-		[RecurringElement]
+		[Description("Perforations added just prior to treating the stage.")]
+        [RecurringElement]
 		[XmlArrayItem("")]
         [XmlArray("StagePerforationClusters")]
         public List<StimPerforationCluster> StagePerforationClusters {
@@ -67607,6 +69200,24 @@ namespace Energistics.DataAccess.WITSML200
             } 
          }
         private List<StimPerforationCluster> StagePerforationClustersField; 
+
+        /// <summary>
+        /// AvgBaseFluidReturnVolumeRate property
+        /// </summary>
+		[Description("Average base fluid pumping rate of all steps for stage treatment.")]
+        [ComponentElement]
+		[XmlElement("AvgBaseFluidReturnVolumeRate")]
+        public VolumePerTimeMeasure AvgBaseFluidReturnVolumeRate {
+            get {
+                return AvgBaseFluidReturnVolumeRateField;
+            } 
+            set {
+                AvgBaseFluidReturnVolumeRateField = value;
+                NotifyPropertyChanged("AvgBaseFluidReturnVolumeRate");
+            }
+        }
+
+        private VolumePerTimeMeasure AvgBaseFluidReturnVolumeRateField; 
 
         /// <summary>
         /// AvgBHStaticTemperature property
@@ -67645,22 +69256,22 @@ namespace Energistics.DataAccess.WITSML200
         private ThermodynamicTemperatureMeasure AvgBHTreatingTemperatureField; 
 
         /// <summary>
-        /// AvgBottomholePumpedVolumePerMinute property
+        /// AvgBottomholePumpedVolumeRate property
         /// </summary>
 		[Description("Average bottomhole treatment flow rate.")]
         [ComponentElement]
-		[XmlElement("AvgBottomholePumpedVolumePerMinute")]
-        public VolumeMeasure AvgBottomholePumpedVolumePerMinute {
+		[XmlElement("AvgBottomholePumpedVolumeRate")]
+        public VolumePerTimeMeasure AvgBottomholePumpedVolumeRate {
             get {
-                return AvgBottomholePumpedVolumePerMinuteField;
+                return AvgBottomholePumpedVolumeRateField;
             } 
             set {
-                AvgBottomholePumpedVolumePerMinuteField = value;
-                NotifyPropertyChanged("AvgBottomholePumpedVolumePerMinute");
+                AvgBottomholePumpedVolumeRateField = value;
+                NotifyPropertyChanged("AvgBottomholePumpedVolumeRate");
             }
         }
 
-        private VolumeMeasure AvgBottomholePumpedVolumePerMinuteField; 
+        private VolumePerTimeMeasure AvgBottomholePumpedVolumeRateField; 
 
         /// <summary>
         /// AvgConductivity property
@@ -67701,7 +69312,8 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// AvgHydraulicPower property
         /// </summary>
-		[ComponentElement]
+		[Description("Average hydraulic horse power used.")]
+        [ComponentElement]
 		[XmlElement("AvgHydraulicPower")]
         public PowerMeasure AvgHydraulicPower {
             get {
@@ -67824,22 +69436,22 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerVolumeMeasure AvgProppantConcSurfaceField; 
 
         /// <summary>
-        /// AvgSlurryReturnPerMinute property
+        /// AvgSlurryReturnVolumeRate property
         /// </summary>
 		[Description("Average slurry return rate of all step for the stage treatment.")]
         [ComponentElement]
-		[XmlElement("AvgSlurryReturnPerMinute")]
-        public VolumeMeasure AvgSlurryReturnPerMinute {
+		[XmlElement("AvgSlurryReturnVolumeRate")]
+        public VolumePerTimeMeasure AvgSlurryReturnVolumeRate {
             get {
-                return AvgSlurryReturnPerMinuteField;
+                return AvgSlurryReturnVolumeRateField;
             } 
             set {
-                AvgSlurryReturnPerMinuteField = value;
-                NotifyPropertyChanged("AvgSlurryReturnPerMinute");
+                AvgSlurryReturnVolumeRateField = value;
+                NotifyPropertyChanged("AvgSlurryReturnVolumeRate");
             }
         }
 
-        private VolumeMeasure AvgSlurryReturnPerMinuteField; 
+        private VolumePerTimeMeasure AvgSlurryReturnVolumeRateField; 
 
         /// <summary>
         /// BreakDownPres property
@@ -68148,63 +69760,63 @@ namespace Energistics.DataAccess.WITSML200
         private PowerMeasure InitialShutinPresField; 
 
         /// <summary>
-        /// MaxFluidVolumePerMinuteAnnulus property
+        /// MaxFluidVolumeRateAnnulus property
         /// </summary>
 		[Description("Maximum annulus fluid pumping rate of any step while treating the stage.")]
         [ComponentElement]
-		[XmlElement("MaxFluidVolumePerMinuteAnnulus")]
-        public VolumeMeasure MaxFluidVolumePerMinuteAnnulus {
+		[XmlElement("MaxFluidVolumeRateAnnulus")]
+        public VolumePerTimeMeasure MaxFluidVolumeRateAnnulus {
             get {
-                return MaxFluidVolumePerMinuteAnnulusField;
+                return MaxFluidVolumeRateAnnulusField;
             } 
             set {
-                MaxFluidVolumePerMinuteAnnulusField = value;
-                NotifyPropertyChanged("MaxFluidVolumePerMinuteAnnulus");
+                MaxFluidVolumeRateAnnulusField = value;
+                NotifyPropertyChanged("MaxFluidVolumeRateAnnulus");
             }
         }
 
-        private VolumeMeasure MaxFluidVolumePerMinuteAnnulusField; 
+        private VolumePerTimeMeasure MaxFluidVolumeRateAnnulusField; 
 
         /// <summary>
-        /// MaxFluidVolumePerMinuteCasing property
+        /// MaxFluidVolumeRateCasing property
         /// </summary>
 		[Description("Maximum casing fluid pumping rate of any step while treating the stage.")]
         [ComponentElement]
-		[XmlElement("MaxFluidVolumePerMinuteCasing")]
-        public VolumeMeasure MaxFluidVolumePerMinuteCasing {
+		[XmlElement("MaxFluidVolumeRateCasing")]
+        public VolumePerTimeMeasure MaxFluidVolumeRateCasing {
             get {
-                return MaxFluidVolumePerMinuteCasingField;
+                return MaxFluidVolumeRateCasingField;
             } 
             set {
-                MaxFluidVolumePerMinuteCasingField = value;
-                NotifyPropertyChanged("MaxFluidVolumePerMinuteCasing");
+                MaxFluidVolumeRateCasingField = value;
+                NotifyPropertyChanged("MaxFluidVolumeRateCasing");
             }
         }
 
-        private VolumeMeasure MaxFluidVolumePerMinuteCasingField; 
+        private VolumePerTimeMeasure MaxFluidVolumeRateCasingField; 
 
         /// <summary>
-        /// MaxFluidVolumePerMinuteTubing property
+        /// MaxFluidVolumeRateTubing property
         /// </summary>
 		[Description("Maximum tubing fluid pumping rate of any step while treating the stage.")]
         [ComponentElement]
-		[XmlElement("MaxFluidVolumePerMinuteTubing")]
-        public VolumeMeasure MaxFluidVolumePerMinuteTubing {
+		[XmlElement("MaxFluidVolumeRateTubing")]
+        public VolumePerTimeMeasure MaxFluidVolumeRateTubing {
             get {
-                return MaxFluidVolumePerMinuteTubingField;
+                return MaxFluidVolumeRateTubingField;
             } 
             set {
-                MaxFluidVolumePerMinuteTubingField = value;
-                NotifyPropertyChanged("MaxFluidVolumePerMinuteTubing");
+                MaxFluidVolumeRateTubingField = value;
+                NotifyPropertyChanged("MaxFluidVolumeRateTubing");
             }
         }
 
-        private VolumeMeasure MaxFluidVolumePerMinuteTubingField; 
+        private VolumePerTimeMeasure MaxFluidVolumeRateTubingField; 
 
         /// <summary>
         /// MaxHydraulicPower property
         /// </summary>
-		[Required]
+		[Description("Maximum hydraulic horse power used for stage.")]
         [ComponentElement]
 		[XmlElement("MaxHydraulicPower")]
         public PowerMeasure MaxHydraulicPower {
@@ -68258,7 +69870,8 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// MaxPresSurface property
         /// </summary>
-		[ComponentElement]
+		[Description("Maximum surface pressure during treatment of the stage.")]
+        [ComponentElement]
 		[XmlElement("MaxPresSurface")]
         public PressureMeasure MaxPresSurface {
             get {
@@ -68953,30 +70566,30 @@ namespace Energistics.DataAccess.WITSML200
         private List<StimJobStep> JobStepField; 
 
         /// <summary>
-        /// MaxMaterialUsagePerMinute property
+        /// MaxMaterialUsageRate property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("MaxMaterialUsagePerMinute")]
-        public List<StimMaterialQuantity> MaxMaterialUsagePerMinute {
+		[XmlElement("MaxMaterialUsageRate")]
+        public List<StimMaterialQuantity> MaxMaterialUsageRate {
             get {
-                return MaxMaterialUsagePerMinuteField;
+                return MaxMaterialUsageRateField;
             } 
             set {
-                MaxMaterialUsagePerMinuteField = value;
-                NotifyPropertyChanged("MaxMaterialUsagePerMinute");
+                MaxMaterialUsageRateField = value;
+                NotifyPropertyChanged("MaxMaterialUsageRate");
             }
         }
 
          [XmlIgnore]
-         public bool MaxMaterialUsagePerMinuteSpecified
+         public bool MaxMaterialUsageRateSpecified
          {
             get {
-             if(MaxMaterialUsagePerMinuteField!=null)
-                return MaxMaterialUsagePerMinuteField.Count>0?true:false;
+             if(MaxMaterialUsageRateField!=null)
+                return MaxMaterialUsageRateField.Count>0?true:false;
              else return false;
             } 
          }
-        private List<StimMaterialQuantity> MaxMaterialUsagePerMinuteField; 
+        private List<StimMaterialQuantity> MaxMaterialUsageRateField; 
 
         /// <summary>
         /// MaterialUsed property
@@ -69086,6 +70699,7 @@ namespace Energistics.DataAccess.WITSML200
         /// uid property
         /// </summary>
 		[StringLength(64)]
+        [Description("Unique identifier for this instance of StimJobStage")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -69099,6 +70713,888 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private String uidField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the StimPerforationCluster xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+	[Description("This class represents the StimPerforationCluster xsd type.")]
+    public partial class StimPerforationCluster : AbstractObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// MdPerforatedInterval property
+        /// </summary>
+		[Description("Measured depths of the top and base perforation.")]
+        [ComponentElement]
+		[XmlElement("MdPerforatedInterval")]
+        public MdInterval MDPerforatedInterval {
+            get {
+                return MdPerforatedIntervalField;
+            } 
+            set {
+                MdPerforatedIntervalField = value;
+                NotifyPropertyChanged("MDPerforatedInterval");
+            }
+        }
+
+        private MdInterval MdPerforatedIntervalField; 
+
+        /// <summary>
+        /// TvdPerforatedInterval property
+        /// </summary>
+		[Description("True vertical depth of the top and base perforation.")]
+        [ComponentElement]
+		[XmlElement("TvdPerforatedInterval")]
+        public TvdInterval TvdPerforatedInterval {
+            get {
+                return TvdPerforatedIntervalField;
+            } 
+            set {
+                TvdPerforatedIntervalField = value;
+                NotifyPropertyChanged("TvdPerforatedInterval");
+            }
+        }
+
+        private TvdInterval TvdPerforatedIntervalField; 
+
+        /// <summary>
+        /// Type property
+        /// </summary>
+		[StringLength(64)]
+        [Description("The type of perforation and/or how the perforation was created.")]
+		[XmlElement("Type")]
+        public String Type {
+            get {
+                return TypeField;
+            } 
+            set {
+                TypeField = value;
+                NotifyPropertyChanged("Type");
+            }
+        }
+
+        private String TypeField; 
+
+        /// <summary>
+        /// PerforationCount property
+        /// </summary>
+		[Description("The number of perforations in this interval.")]
+		[XmlElement("PerforationCount")]
+        public Int64? PerforationCount {
+            get {
+                return PerforationCountField;
+            } 
+            set {
+                PerforationCountField = value;
+             if(value!=null) 
+                 this.PerforationCountSpecified = true;
+                NotifyPropertyChanged("PerforationCount");
+            }
+        }
+
+        private Int64? PerforationCountField; 
+
+        /// <summary>
+        /// PerforationCountSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean PerforationCountSpecified {
+            get {
+                return PerforationCountSpecifiedField;
+            } 
+            set {
+                PerforationCountSpecifiedField = value;
+                NotifyPropertyChanged("PerforationCountSpecified");
+            }
+        }
+
+        private Boolean PerforationCountSpecifiedField; 
+
+        /// <summary>
+        /// Size property
+        /// </summary>
+		[Description("The size of the perforations.")]
+        [ComponentElement]
+		[XmlElement("Size")]
+        public LengthMeasure Size {
+            get {
+                return SizeField;
+            } 
+            set {
+                SizeField = value;
+                NotifyPropertyChanged("Size");
+            }
+        }
+
+        private LengthMeasure SizeField; 
+
+        /// <summary>
+        /// DensityPerforation property
+        /// </summary>
+		[Description("The number of perforation holes per length across the treatment interval.  Used to describe but not limited to the configuration of perforating guns or the placement  of perforations (holes, slots, openings ...) in the wellbore, and is often  abbreviated to spf (shots per foot).")]
+        [ComponentElement]
+		[XmlElement("DensityPerforation")]
+        public ReciprocalLengthMeasure DensityPerforation {
+            get {
+                return DensityPerforationField;
+            } 
+            set {
+                DensityPerforationField = value;
+                NotifyPropertyChanged("DensityPerforation");
+            }
+        }
+
+        private ReciprocalLengthMeasure DensityPerforationField; 
+
+        /// <summary>
+        /// PhasingPerforation property
+        /// </summary>
+		[Description("The radial distribution of successive perforations around the wellbore axis.  Radial distribution is commonly available in 0, 180 120, 90 and 60 degree phasing.")]
+        [ComponentElement]
+		[XmlElement("PhasingPerforation")]
+        public PlaneAngleMeasure PhasingPerforation {
+            get {
+                return PhasingPerforationField;
+            } 
+            set {
+                PhasingPerforationField = value;
+                NotifyPropertyChanged("PhasingPerforation");
+            }
+        }
+
+        private PlaneAngleMeasure PhasingPerforationField; 
+
+        /// <summary>
+        /// FrictionFactor property
+        /// </summary>
+		[Description("The friction factor of each perforation set.")]
+		[XmlElement("FrictionFactor")]
+        public Double? FrictionFactor {
+            get {
+                return FrictionFactorField;
+            } 
+            set {
+                FrictionFactorField = value;
+             if(value!=null) 
+                 this.FrictionFactorSpecified = true;
+                NotifyPropertyChanged("FrictionFactor");
+            }
+        }
+
+        private Double? FrictionFactorField; 
+
+        /// <summary>
+        /// FrictionFactorSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean FrictionFactorSpecified {
+            get {
+                return FrictionFactorSpecifiedField;
+            } 
+            set {
+                FrictionFactorSpecifiedField = value;
+                NotifyPropertyChanged("FrictionFactorSpecified");
+            }
+        }
+
+        private Boolean FrictionFactorSpecifiedField; 
+
+        /// <summary>
+        /// FrictionPres property
+        /// </summary>
+		[Description("The friction pressure for the perforation set.")]
+        [ComponentElement]
+		[XmlElement("FrictionPres")]
+        public PressureMeasure FrictionPres {
+            get {
+                return FrictionPresField;
+            } 
+            set {
+                FrictionPresField = value;
+                NotifyPropertyChanged("FrictionPres");
+            }
+        }
+
+        private PressureMeasure FrictionPresField; 
+
+        /// <summary>
+        /// DischargeCoefficient property
+        /// </summary>
+		[Description("A coefficient used in the equation for calculation of pressure drop across a perforation set.")]
+		[XmlElement("DischargeCoefficient")]
+        public Double? DischargeCoefficient {
+            get {
+                return DischargeCoefficientField;
+            } 
+            set {
+                DischargeCoefficientField = value;
+             if(value!=null) 
+                 this.DischargeCoefficientSpecified = true;
+                NotifyPropertyChanged("DischargeCoefficient");
+            }
+        }
+
+        private Double? DischargeCoefficientField; 
+
+        /// <summary>
+        /// DischargeCoefficientSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean DischargeCoefficientSpecified {
+            get {
+                return DischargeCoefficientSpecifiedField;
+            } 
+            set {
+                DischargeCoefficientSpecifiedField = value;
+                NotifyPropertyChanged("DischargeCoefficientSpecified");
+            }
+        }
+
+        private Boolean DischargeCoefficientSpecifiedField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the StimJob xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "2.0")]
+    [Description("This class represents the StimJob xsd type.")]
+    public partial class StimJob : AbstractObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// AvgJobPres property
+        /// </summary>
+		[Description("Average pressure encountered during treatment of all stages.")]
+        [ComponentElement]
+		[XmlElement("AvgJobPres")]
+        public PressureMeasure AvgJobPres {
+            get {
+                return AvgJobPresField;
+            } 
+            set {
+                AvgJobPresField = value;
+                NotifyPropertyChanged("AvgJobPres");
+            }
+        }
+
+        private PressureMeasure AvgJobPresField; 
+
+        /// <summary>
+        /// BottomholeStaticTemperature property
+        /// </summary>
+		[Description("Bottomhole static temperature for the job.")]
+        [ComponentElement]
+		[XmlElement("BottomholeStaticTemperature")]
+        public ThermodynamicTemperatureMeasure BottomholeStaticTemperature {
+            get {
+                return BottomholeStaticTemperatureField;
+            } 
+            set {
+                BottomholeStaticTemperatureField = value;
+                NotifyPropertyChanged("BottomholeStaticTemperature");
+            }
+        }
+
+        private ThermodynamicTemperatureMeasure BottomholeStaticTemperatureField; 
+
+        /// <summary>
+        /// CustomerName property
+        /// </summary>
+		[Required]
+        [StringLength(2000)]
+        [Description("Customer or company name.")]
+		[XmlElement("CustomerName")]
+        public String CustomerName {
+            get {
+                return CustomerNameField;
+            } 
+            set {
+                CustomerNameField = value;
+                NotifyPropertyChanged("CustomerName");
+            }
+        }
+
+        private String CustomerNameField; 
+
+        /// <summary>
+        /// DTimArrival property
+        /// </summary>
+		[RegularExpression(".+T.+[Z+\\-].*")]
+        [Description("Date and time at which the stimulation contractor arrives on location.")]
+		[XmlElement("DTimArrival")]
+        public String DateTimeArrival {
+            get {
+                return DTimArrivalField;
+            } 
+            set {
+                DTimArrivalField = value;
+                NotifyPropertyChanged("DateTimeArrival");
+            }
+        }
+
+        private String DTimArrivalField; 
+
+        /// <summary>
+        /// DTimEnd property
+        /// </summary>
+		[RegularExpression(".+T.+[Z+\\-].*")]
+        [Description("Ending date and time of stimulation job.")]
+		[XmlElement("DTimEnd")]
+        public String DateTimeEnd {
+            get {
+                return DTimEndField;
+            } 
+            set {
+                DTimEndField = value;
+                NotifyPropertyChanged("DateTimeEnd");
+            }
+        }
+
+        private String DTimEndField; 
+
+        /// <summary>
+        /// DTimStart property
+        /// </summary>
+		[RegularExpression(".+T.+[Z+\\-].*")]
+        [Description("Start date and time of the stimulation job.")]
+		[XmlElement("DTimStart")]
+        public String DateTimeStart {
+            get {
+                return DTimStartField;
+            } 
+            set {
+                DTimStartField = value;
+                NotifyPropertyChanged("DateTimeStart");
+            }
+        }
+
+        private String DTimStartField; 
+
+        /// <summary>
+        /// FlowBackPres property
+        /// </summary>
+		[Description("Pressure recorded on fluid returning to surface.")]
+        [ComponentElement]
+		[XmlElement("FlowBackPres")]
+        public PressureMeasure FlowBackPres {
+            get {
+                return FlowBackPresField;
+            } 
+            set {
+                FlowBackPresField = value;
+                NotifyPropertyChanged("FlowBackPres");
+            }
+        }
+
+        private PressureMeasure FlowBackPresField; 
+
+        /// <summary>
+        /// FlowBackRate property
+        /// </summary>
+		[Description("Rate recorded on fluid returning to surface.")]
+        [ComponentElement]
+		[XmlElement("FlowBackRate")]
+        public VolumePerTimeMeasure FlowBackRate {
+            get {
+                return FlowBackRateField;
+            } 
+            set {
+                FlowBackRateField = value;
+                NotifyPropertyChanged("FlowBackRate");
+            }
+        }
+
+        private VolumePerTimeMeasure FlowBackRateField; 
+
+        /// <summary>
+        /// FlowBackVolume property
+        /// </summary>
+		[Description("Volume recorded on fluid returning to surface.")]
+        [ComponentElement]
+		[XmlElement("FlowBackVolume")]
+        public VolumeMeasure FlowBackVolume {
+            get {
+                return FlowBackVolumeField;
+            } 
+            set {
+                FlowBackVolumeField = value;
+                NotifyPropertyChanged("FlowBackVolume");
+            }
+        }
+
+        private VolumeMeasure FlowBackVolumeField; 
+
+        /// <summary>
+        /// FluidEfficiency property
+        /// </summary>
+		[Description("Percentage of fluid volume in the fracture at the end of pumping.")]
+        [ComponentElement]
+		[XmlElement("FluidEfficiency")]
+        public VolumePerVolumeMeasure FluidEfficiency {
+            get {
+                return FluidEfficiencyField;
+            } 
+            set {
+                FluidEfficiencyField = value;
+                NotifyPropertyChanged("FluidEfficiency");
+            }
+        }
+
+        private VolumePerVolumeMeasure FluidEfficiencyField; 
+
+        /// <summary>
+        /// HhpOrdered property
+        /// </summary>
+		[Description("Hydraulic horsepower ordered for the stimulation job.")]
+        [ComponentElement]
+		[XmlElement("HhpOrdered")]
+        public PowerMeasure HhpOrdered {
+            get {
+                return HhpOrderedField;
+            } 
+            set {
+                HhpOrderedField = value;
+                NotifyPropertyChanged("HhpOrdered");
+            }
+        }
+
+        private PowerMeasure HhpOrderedField; 
+
+        /// <summary>
+        /// HhpUsed property
+        /// </summary>
+		[Description("Hydraulic horsepower actually used for the stimulation job.")]
+        [ComponentElement]
+		[XmlElement("HhpUsed")]
+        public PowerMeasure HhpUsed {
+            get {
+                return HhpUsedField;
+            } 
+            set {
+                HhpUsedField = value;
+                NotifyPropertyChanged("HhpUsed");
+            }
+        }
+
+        private PowerMeasure HhpUsedField; 
+
+        /// <summary>
+        /// JobPerforationClusters property
+        /// </summary>
+		[Description("Perforation Clusters existing prior to starting the job.")]
+        [RecurringElement]
+		[XmlArrayItem("")]
+        [XmlArray("JobPerforationClusters")]
+        public List<StimPerforationCluster> JobPerforationClusters {
+            get {
+                return JobPerforationClustersField;
+            } 
+            set {
+                JobPerforationClustersField = value;
+                NotifyPropertyChanged("JobPerforationClusters");
+            }
+        }
+
+         [XmlIgnore]
+         public bool JobPerforationClustersSpecified
+         {
+            get {
+             if(JobPerforationClustersField!=null)
+                return JobPerforationClustersField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<StimPerforationCluster> JobPerforationClustersField; 
+
+        /// <summary>
+        /// Kind property
+        /// </summary>
+		[Required]
+        [StringLength(2000)]
+        [Description("Type of well stimulation job.")]
+		[XmlElement("Kind")]
+        public String Kind {
+            get {
+                return KindField;
+            } 
+            set {
+                KindField = value;
+                NotifyPropertyChanged("Kind");
+            }
+        }
+
+        private String KindField; 
+
+        /// <summary>
+        /// MaxFluidRate property
+        /// </summary>
+		[Description("Maximum job fluid pumping rate encountered during treatment of all stage.")]
+        [ComponentElement]
+		[XmlElement("MaxFluidRate")]
+        public VolumePerTimeMeasure MaxFluidRate {
+            get {
+                return MaxFluidRateField;
+            } 
+            set {
+                MaxFluidRateField = value;
+                NotifyPropertyChanged("MaxFluidRate");
+            }
+        }
+
+        private VolumePerTimeMeasure MaxFluidRateField; 
+
+        /// <summary>
+        /// MaxJobPres property
+        /// </summary>
+		[Description("Maximum pressure encountered during the job.")]
+        [ComponentElement]
+		[XmlElement("MaxJobPres")]
+        public PressureMeasure MaxJobPres {
+            get {
+                return MaxJobPresField;
+            } 
+            set {
+                MaxJobPresField = value;
+                NotifyPropertyChanged("MaxJobPres");
+            }
+        }
+
+        private PressureMeasure MaxJobPresField; 
+
+        /// <summary>
+        /// PIDXCommodityCode property
+        /// </summary>
+		[Description("UNSPSC(Segment 71) Commodity Code from Oil and gas extraction and production enhancement services family.")]
+		[XmlElement("PIDXCommodityCode")]
+        public PIDXCommodityCode? PIDXCommodityCode {
+            get {
+                return PIDXCommodityCodeField;
+            } 
+            set {
+                PIDXCommodityCodeField = value;
+             if(value!=null) 
+                 this.PIDXCommodityCodeSpecified = true;
+                NotifyPropertyChanged("PIDXCommodityCode");
+            }
+        }
+
+        private PIDXCommodityCode? PIDXCommodityCodeField; 
+
+        /// <summary>
+        /// PIDXCommodityCodeSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean PIDXCommodityCodeSpecified {
+            get {
+                return PIDXCommodityCodeSpecifiedField;
+            } 
+            set {
+                PIDXCommodityCodeSpecifiedField = value;
+                NotifyPropertyChanged("PIDXCommodityCodeSpecified");
+            }
+        }
+
+        private Boolean PIDXCommodityCodeSpecifiedField; 
+
+        /// <summary>
+        /// ServiceCompany property
+        /// </summary>
+		[Required]
+        [StringLength(2000)]
+        [Description("Name of the well stimulation contractor.")]
+		[XmlElement("ServiceCompany")]
+        public String ServiceCompany {
+            get {
+                return ServiceCompanyField;
+            } 
+            set {
+                ServiceCompanyField = value;
+                NotifyPropertyChanged("ServiceCompany");
+            }
+        }
+
+        private String ServiceCompanyField; 
+
+        /// <summary>
+        /// StageCount property
+        /// </summary>
+		[Description("Number of stages treated during the stimulation service.")]
+		[XmlElement("StageCount")]
+        public Int64? StageCount {
+            get {
+                return StageCountField;
+            } 
+            set {
+                StageCountField = value;
+             if(value!=null) 
+                 this.StageCountSpecified = true;
+                NotifyPropertyChanged("StageCount");
+            }
+        }
+
+        private Int64? StageCountField; 
+
+        /// <summary>
+        /// StageCountSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean StageCountSpecified {
+            get {
+                return StageCountSpecifiedField;
+            } 
+            set {
+                StageCountSpecifiedField = value;
+                NotifyPropertyChanged("StageCountSpecified");
+            }
+        }
+
+        private Boolean StageCountSpecifiedField; 
+
+        /// <summary>
+        /// Supervisor property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Name of service company supervisor.")]
+		[XmlElement("Supervisor")]
+        public String Supervisor {
+            get {
+                return SupervisorField;
+            } 
+            set {
+                SupervisorField = value;
+                NotifyPropertyChanged("Supervisor");
+            }
+        }
+
+        private String SupervisorField; 
+
+        /// <summary>
+        /// TotalJobVolume property
+        /// </summary>
+		[Description("Total volume pumped for all stages.")]
+        [ComponentElement]
+		[XmlElement("TotalJobVolume")]
+        public VolumeMeasure TotalJobVolume {
+            get {
+                return TotalJobVolumeField;
+            } 
+            set {
+                TotalJobVolumeField = value;
+                NotifyPropertyChanged("TotalJobVolume");
+            }
+        }
+
+        private VolumeMeasure TotalJobVolumeField; 
+
+        /// <summary>
+        /// TotalProppantInFormation property
+        /// </summary>
+		[Description("The total mass of proppant placed in the formation for the entire job.")]
+        [ComponentElement]
+		[XmlElement("TotalProppantInFormation")]
+        public MassMeasure TotalProppantInFormation {
+            get {
+                return TotalProppantInFormationField;
+            } 
+            set {
+                TotalProppantInFormationField = value;
+                NotifyPropertyChanged("TotalProppantInFormation");
+            }
+        }
+
+        private MassMeasure TotalProppantInFormationField; 
+
+        /// <summary>
+        /// TotalProppantUsed property
+        /// </summary>
+		[Description("{Get this from WITSML 1.4.1.1, which Clinton removed.}")]
+        [ComponentElement]
+		[XmlElement("TotalProppantUsed")]
+        public MassMeasure TotalProppantUsed {
+            get {
+                return TotalProppantUsedField;
+            } 
+            set {
+                TotalProppantUsedField = value;
+                NotifyPropertyChanged("TotalProppantUsed");
+            }
+        }
+
+        private MassMeasure TotalProppantUsedField; 
+
+        /// <summary>
+        /// TotalPumpTime property
+        /// </summary>
+		[Description("The total pumping time.")]
+        [ComponentElement]
+		[XmlElement("TotalPumpTime")]
+        public TimeMeasure TotalPumpTime {
+            get {
+                return TotalPumpTimeField;
+            } 
+            set {
+                TotalPumpTimeField = value;
+                NotifyPropertyChanged("TotalPumpTime");
+            }
+        }
+
+        private TimeMeasure TotalPumpTimeField; 
+
+        /// <summary>
+        /// TreatingBottomholeTemperature property
+        /// </summary>
+		[Description("Expected or calculated bottomhole treating temperature for the job.")]
+        [ComponentElement]
+		[XmlElement("TreatingBottomholeTemperature")]
+        public ThermodynamicTemperatureMeasure TreatingBottomholeTemperature {
+            get {
+                return TreatingBottomholeTemperatureField;
+            } 
+            set {
+                TreatingBottomholeTemperatureField = value;
+                NotifyPropertyChanged("TreatingBottomholeTemperature");
+            }
+        }
+
+        private ThermodynamicTemperatureMeasure TreatingBottomholeTemperatureField; 
+
+        /// <summary>
+        /// JobStage property
+        /// </summary>
+		[Description("A stage treated during the stimulation job.")]
+        [RecurringElement]
+		[XmlElement("JobStage")]
+        public List<DataObjectReference> JobStage {
+            get {
+                return JobStageField;
+            } 
+            set {
+                JobStageField = value;
+                NotifyPropertyChanged("JobStage");
+            }
+        }
+
+         [XmlIgnore]
+         public bool JobStageSpecified
+         {
+            get {
+             if(JobStageField!=null)
+                return JobStageField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<DataObjectReference> JobStageField; 
+
+        /// <summary>
+        /// MaterialUsed property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("MaterialUsed")]
+        public List<StimMaterialQuantity> MaterialUsed {
+            get {
+                return MaterialUsedField;
+            } 
+            set {
+                MaterialUsedField = value;
+                NotifyPropertyChanged("MaterialUsed");
+            }
+        }
+
+         [XmlIgnore]
+         public bool MaterialUsedSpecified
+         {
+            get {
+             if(MaterialUsedField!=null)
+                return MaterialUsedField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<StimMaterialQuantity> MaterialUsedField; 
+
+        /// <summary>
+        /// Wellbore property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("Wellbore")]
+        public DataObjectReference Wellbore {
+            get {
+                return WellboreField;
+            } 
+            set {
+                WellboreField = value;
+                NotifyPropertyChanged("Wellbore");
+            }
+        }
+
+        private DataObjectReference WellboreField; 
+
+        /// <summary>
+        /// MaterialCatalog property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("MaterialCatalog")]
+        public StimJobMaterialCatalog MaterialCatalog {
+            get {
+                return MaterialCatalogField;
+            } 
+            set {
+                MaterialCatalogField = value;
+                NotifyPropertyChanged("MaterialCatalog");
+            }
+        }
+
+        private StimJobMaterialCatalog MaterialCatalogField; 
+
+        /// <summary>
+        /// LogCatalog property
+        /// </summary>
+		[RecurringElement]
+		[XmlArrayItem("JobLog")]
+        [XmlArray("LogCatalog")]
+        public List<List<DataObjectReference>> LogCatalog {
+            get {
+                return LogCatalogField;
+            } 
+            set {
+                LogCatalogField = value;
+                NotifyPropertyChanged("LogCatalog");
+            }
+        }
+
+         [XmlIgnore]
+         public bool LogCatalogSpecified
+         {
+            get {
+             if(LogCatalogField!=null)
+                return LogCatalogField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<List<DataObjectReference>> LogCatalogField; 
 
 
     } //here
@@ -71344,6 +73840,622 @@ namespace Energistics.DataAccess.WITSML200
     } //here
 
     /// <summary>
+    /// This class represents the MudLogReport xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "2.0")]
+    [Description("This class represents the MudLogReport xsd type.")]
+    public partial class MudLogReport : AbstractObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// MudLogCompany property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Name of the company recording the information")]
+		[XmlElement("MudLogCompany")]
+        public String MudLogCompany {
+            get {
+                return MudLogCompanyField;
+            } 
+            set {
+                MudLogCompanyField = value;
+                NotifyPropertyChanged("MudLogCompany");
+            }
+        }
+
+        private String MudLogCompanyField; 
+
+        /// <summary>
+        /// MudLogEngineers property
+        /// </summary>
+		[StringLength(2000)]
+        [Description("Concatenated names of mudloggers constructing the log")]
+		[XmlElement("MudLogEngineers")]
+        public String MudLogEngineers {
+            get {
+                return MudLogEngineersField;
+            } 
+            set {
+                MudLogEngineersField = value;
+                NotifyPropertyChanged("MudLogEngineers");
+            }
+        }
+
+        private String MudLogEngineersField; 
+
+        /// <summary>
+        /// MudLogGeologists property
+        /// </summary>
+		[StringLength(2000)]
+        [Description("Concatenated names of geologists constructing the log")]
+		[XmlElement("MudLogGeologists")]
+        public String MudLogGeologists {
+            get {
+                return MudLogGeologistsField;
+            } 
+            set {
+                MudLogGeologistsField = value;
+                NotifyPropertyChanged("MudLogGeologists");
+            }
+        }
+
+        private String MudLogGeologistsField; 
+
+        /// <summary>
+        /// ReportMdInterval property
+        /// </summary>
+		[Description("[maintained by the server] The interval between the minimum and maximum measured depths contained in this MudLog report.")]
+        [ComponentElement]
+		[XmlElement("ReportMdInterval")]
+        public MdInterval ReportMDInterval {
+            get {
+                return ReportMdIntervalField;
+            } 
+            set {
+                ReportMdIntervalField = value;
+                NotifyPropertyChanged("ReportMDInterval");
+            }
+        }
+
+        private MdInterval ReportMdIntervalField; 
+
+        /// <summary>
+        /// GrowingStatus property
+        /// </summary>
+		[Required]
+        [Description("The growing state of the mudlog, whether active, inactive or closed")]
+		[XmlElement("GrowingStatus")]
+        public ChannelStatus? GrowingStatus {
+            get {
+                return GrowingStatusField;
+            } 
+            set {
+                GrowingStatusField = value;
+                NotifyPropertyChanged("GrowingStatus");
+            }
+        }
+
+        private ChannelStatus? GrowingStatusField; 
+
+        /// <summary>
+        /// Wellbore property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("Wellbore")]
+        public DataObjectReference Wellbore {
+            get {
+                return WellboreField;
+            } 
+            set {
+                WellboreField = value;
+                NotifyPropertyChanged("Wellbore");
+            }
+        }
+
+        private DataObjectReference WellboreField; 
+
+        /// <summary>
+        /// WellboreGeology property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("WellboreGeology")]
+        public DataObjectReference WellboreGeology {
+            get {
+                return WellboreGeologyField;
+            } 
+            set {
+                WellboreGeologyField = value;
+                NotifyPropertyChanged("WellboreGeology");
+            }
+        }
+
+        private DataObjectReference WellboreGeologyField; 
+
+        /// <summary>
+        /// MudlogIntervals property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("MudlogIntervals")]
+        public List<MudlogReportInterval> MudlogIntervals {
+            get {
+                return MudlogIntervalsField;
+            } 
+            set {
+                MudlogIntervalsField = value;
+                NotifyPropertyChanged("MudlogIntervals");
+            }
+        }
+
+         [XmlIgnore]
+         public bool MudlogIntervalsSpecified
+         {
+            get {
+             if(MudlogIntervalsField!=null)
+                return MudlogIntervalsField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<MudlogReportInterval> MudlogIntervalsField; 
+
+        /// <summary>
+        /// RelatedLogs property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("RelatedLogs")]
+        public List<DataObjectReference> RelatedLogs {
+            get {
+                return RelatedLogsField;
+            } 
+            set {
+                RelatedLogsField = value;
+                NotifyPropertyChanged("RelatedLogs");
+            }
+        }
+
+         [XmlIgnore]
+         public bool RelatedLogsSpecified
+         {
+            get {
+             if(RelatedLogsField!=null)
+                return RelatedLogsField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<DataObjectReference> RelatedLogsField; 
+
+        /// <summary>
+        /// Parameter property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("Parameter")]
+        public List<MudlogParameter> Parameter {
+            get {
+                return ParameterField;
+            } 
+            set {
+                ParameterField = value;
+                NotifyPropertyChanged("Parameter");
+            }
+        }
+
+         [XmlIgnore]
+         public bool ParameterSpecified
+         {
+            get {
+             if(ParameterField!=null)
+                return ParameterField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<MudlogParameter> ParameterField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the CuttingsGeology xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+	[Description("This class represents the CuttingsGeology xsd type.")]
+    public partial class CuttingsGeology : AbstractObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// MdInterval property
+        /// </summary>
+		[Required]
+        [Description("[maintained by the server] The interval which contains the minimum and maximum measured depths for all cuttings intervals in this cuttings geology.")]
+        [ComponentElement]
+		[XmlElement("MdInterval")]
+        public MdInterval MDInterval {
+            get {
+                return MdIntervalField;
+            } 
+            set {
+                MdIntervalField = value;
+                NotifyPropertyChanged("MDInterval");
+            }
+        }
+
+        private MdInterval MdIntervalField; 
+
+        /// <summary>
+        /// GrowingStatus property
+        /// </summary>
+		[Required]
+        [Description("Describes the growing status of the cuttings, whether active, inactive or closed")]
+		[XmlElement("GrowingStatus")]
+        public ChannelStatus? GrowingStatus {
+            get {
+                return GrowingStatusField;
+            } 
+            set {
+                GrowingStatusField = value;
+                NotifyPropertyChanged("GrowingStatus");
+            }
+        }
+
+        private ChannelStatus? GrowingStatusField; 
+
+        /// <summary>
+        /// CuttingsInterval property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("CuttingsInterval")]
+        public List<CuttingsGeologyInterval> CuttingsInterval {
+            get {
+                return CuttingsIntervalField;
+            } 
+            set {
+                CuttingsIntervalField = value;
+                NotifyPropertyChanged("CuttingsInterval");
+            }
+        }
+
+         [XmlIgnore]
+         public bool CuttingsIntervalSpecified
+         {
+            get {
+             if(CuttingsIntervalField!=null)
+                return CuttingsIntervalField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<CuttingsGeologyInterval> CuttingsIntervalField; 
+
+        /// <summary>
+        /// Wellbore property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("Wellbore")]
+        public DataObjectReference Wellbore {
+            get {
+                return WellboreField;
+            } 
+            set {
+                WellboreField = value;
+                NotifyPropertyChanged("Wellbore");
+            }
+        }
+
+        private DataObjectReference WellboreField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the InterpretedGeology xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+	[Description("This class represents the InterpretedGeology xsd type.")]
+    public partial class InterpretedGeology : AbstractObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// MdInterval property
+        /// </summary>
+		[Required]
+        [Description("[maintained by the server] The interval which contains the minimum and maximum measured depths for all interpreted intervals in this interpreted geology.")]
+        [ComponentElement]
+		[XmlElement("MdInterval")]
+        public MdInterval MDInterval {
+            get {
+                return MdIntervalField;
+            } 
+            set {
+                MdIntervalField = value;
+                NotifyPropertyChanged("MDInterval");
+            }
+        }
+
+        private MdInterval MdIntervalField; 
+
+        /// <summary>
+        /// GrowingStatus property
+        /// </summary>
+		[Required]
+        [Description("Describes the growing status of the interpreted geology, whether active, inactive or closed")]
+		[XmlElement("GrowingStatus")]
+        public ChannelStatus? GrowingStatus {
+            get {
+                return GrowingStatusField;
+            } 
+            set {
+                GrowingStatusField = value;
+                NotifyPropertyChanged("GrowingStatus");
+            }
+        }
+
+        private ChannelStatus? GrowingStatusField; 
+
+        /// <summary>
+        /// GeologicIntervalInterpreted property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("GeologicIntervalInterpreted")]
+        public List<InterpretedGeologyInterval> GeologicIntervalInterpreted {
+            get {
+                return GeologicIntervalInterpretedField;
+            } 
+            set {
+                GeologicIntervalInterpretedField = value;
+                NotifyPropertyChanged("GeologicIntervalInterpreted");
+            }
+        }
+
+         [XmlIgnore]
+         public bool GeologicIntervalInterpretedSpecified
+         {
+            get {
+             if(GeologicIntervalInterpretedField!=null)
+                return GeologicIntervalInterpretedField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<InterpretedGeologyInterval> GeologicIntervalInterpretedField; 
+
+        /// <summary>
+        /// Wellbore property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("Wellbore")]
+        public DataObjectReference Wellbore {
+            get {
+                return WellboreField;
+            } 
+            set {
+                WellboreField = value;
+                NotifyPropertyChanged("Wellbore");
+            }
+        }
+
+        private DataObjectReference WellboreField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the ShowEvaluation xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+	[Description("This class represents the ShowEvaluation xsd type.")]
+    public partial class ShowEvaluation : AbstractObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// MdInterval property
+        /// </summary>
+		[Required]
+        [Description("[maintained by the server] The interval which contains the minimum and maximum measured depths for all show intervals in this show evaluation.")]
+        [ComponentElement]
+		[XmlElement("MdInterval")]
+        public MdInterval MDInterval {
+            get {
+                return MdIntervalField;
+            } 
+            set {
+                MdIntervalField = value;
+                NotifyPropertyChanged("MDInterval");
+            }
+        }
+
+        private MdInterval MdIntervalField; 
+
+        /// <summary>
+        /// GrowingStatus property
+        /// </summary>
+		[Required]
+        [Description("Describes the growing status of the show evaluation intervals, whether active, inactive or closed")]
+		[XmlElement("GrowingStatus")]
+        public ChannelStatus? GrowingStatus {
+            get {
+                return GrowingStatusField;
+            } 
+            set {
+                GrowingStatusField = value;
+                NotifyPropertyChanged("GrowingStatus");
+            }
+        }
+
+        private ChannelStatus? GrowingStatusField; 
+
+        /// <summary>
+        /// EvaluatedIntervalShow property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("EvaluatedIntervalShow")]
+        public List<ShowEvaluationInterval> EvaluatedIntervalShow {
+            get {
+                return EvaluatedIntervalShowField;
+            } 
+            set {
+                EvaluatedIntervalShowField = value;
+                NotifyPropertyChanged("EvaluatedIntervalShow");
+            }
+        }
+
+         [XmlIgnore]
+         public bool EvaluatedIntervalShowSpecified
+         {
+            get {
+             if(EvaluatedIntervalShowField!=null)
+                return EvaluatedIntervalShowField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<ShowEvaluationInterval> EvaluatedIntervalShowField; 
+
+        /// <summary>
+        /// Wellbore property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("Wellbore")]
+        public DataObjectReference Wellbore {
+            get {
+                return WellboreField;
+            } 
+            set {
+                WellboreField = value;
+                NotifyPropertyChanged("Wellbore");
+            }
+        }
+
+        private DataObjectReference WellboreField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the WellboreGeology xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "2.0")]
+    [Description("This class represents the WellboreGeology xsd type.")]
+    public partial class WellboreGeology : AbstractObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// MdInterval property
+        /// </summary>
+		[Required]
+        [Description("[maintained by the server] The interval which contains the minimum and maximum measured depths for all wellbore geology types under this wellbore geology entry.")]
+        [ComponentElement]
+		[XmlElement("MdInterval")]
+        public MdInterval MDInterval {
+            get {
+                return MdIntervalField;
+            } 
+            set {
+                MdIntervalField = value;
+                NotifyPropertyChanged("MDInterval");
+            }
+        }
+
+        private MdInterval MdIntervalField; 
+
+        /// <summary>
+        /// ShowIntervalSet property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("ShowIntervalSet")]
+        public ShowEvaluation ShowIntervalSet {
+            get {
+                return ShowIntervalSetField;
+            } 
+            set {
+                ShowIntervalSetField = value;
+                NotifyPropertyChanged("ShowIntervalSet");
+            }
+        }
+
+        private ShowEvaluation ShowIntervalSetField; 
+
+        /// <summary>
+        /// InterpretedGeologyIntervalSet property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("InterpretedGeologyIntervalSet")]
+        public InterpretedGeology InterpretedGeologyIntervalSet {
+            get {
+                return InterpretedGeologyIntervalSetField;
+            } 
+            set {
+                InterpretedGeologyIntervalSetField = value;
+                NotifyPropertyChanged("InterpretedGeologyIntervalSet");
+            }
+        }
+
+        private InterpretedGeology InterpretedGeologyIntervalSetField; 
+
+        /// <summary>
+        /// Wellbore property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("Wellbore")]
+        public DataObjectReference Wellbore {
+            get {
+                return WellboreField;
+            } 
+            set {
+                WellboreField = value;
+                NotifyPropertyChanged("Wellbore");
+            }
+        }
+
+        private DataObjectReference WellboreField; 
+
+        /// <summary>
+        /// CuttingsIntervalSet property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("CuttingsIntervalSet")]
+        public CuttingsGeology CuttingsIntervalSet {
+            get {
+                return CuttingsIntervalSetField;
+            } 
+            set {
+                CuttingsIntervalSetField = value;
+                NotifyPropertyChanged("CuttingsIntervalSet");
+            }
+        }
+
+        private CuttingsGeology CuttingsIntervalSetField; 
+
+
+    } //here
+
+    /// <summary>
     /// This class represents the DepthRegImage xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -71356,25 +74468,6 @@ namespace Energistics.DataAccess.WITSML200
     [Description("This class represents the DepthRegImage xsd type.")]
     public partial class DepthRegImage : AbstractObject, IUniqueId, INotifyPropertyChanged
     {
-
-        /// <summary>
-        /// FileName property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("Reference to file containing image content.")]
-		[XmlElement("FileName")]
-        public String FileName {
-            get {
-                return FileNameField;
-            } 
-            set {
-                FileNameField = value;
-                NotifyPropertyChanged("FileName");
-            }
-        }
-
-        private String FileNameField; 
 
         /// <summary>
         /// FileNameType property
@@ -71447,6 +74540,25 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private Boolean MimetypeSpecifiedField; 
+
+        /// <summary>
+        /// FileName property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("Reference to file containing image content.")]
+		[XmlElement("FileName")]
+        public String FileName {
+            get {
+                return FileNameField;
+            } 
+            set {
+                FileNameField = value;
+                NotifyPropertyChanged("FileName");
+            }
+        }
+
+        private String FileNameField; 
 
         /// <summary>
         /// FileSize property
@@ -71593,27 +74705,11 @@ namespace Energistics.DataAccess.WITSML200
         private String VersionField; 
 
         /// <summary>
-        /// Wellbore property
-        /// </summary>
-		[Required]
-        [ComponentElement]
-		[XmlElement("Wellbore")]
-        public DataObjectReference Wellbore {
-            get {
-                return WellboreField;
-            } 
-            set {
-                WellboreField = value;
-                NotifyPropertyChanged("Wellbore");
-            }
-        }
-
-        private DataObjectReference WellboreField; 
-
-        /// <summary>
         /// ImageBoundary property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [Description("The bounding rectangle of the image")]
+        [ComponentElement]
 		[XmlElement("ImageBoundary")]
         public DepthRegRectangle ImageBoundary {
             get {
@@ -71630,9 +74726,10 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// HeaderSection property
         /// </summary>
-		[RecurringElement]
+		[Description("Log header information gleaned from the well log image header section. Also contains X, Y coordinates and positional data with respect to the header section location within the log image file.")]
+        [ComponentElement]
 		[XmlElement("HeaderSection")]
-        public List<DepthRegLogRect> HeaderSection {
+        public DepthRegLogRect HeaderSection {
             get {
                 return HeaderSectionField;
             } 
@@ -71642,21 +74739,13 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-         [XmlIgnore]
-         public bool HeaderSectionSpecified
-         {
-            get {
-             if(HeaderSectionField!=null)
-                return HeaderSectionField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<DepthRegLogRect> HeaderSectionField; 
+        private DepthRegLogRect HeaderSectionField; 
 
         /// <summary>
         /// LogSection property
         /// </summary>
-		[RecurringElement]
+		[Description("Provides log name, log type, curve scale and other information about each log section of the image file. Most importantly, this section contains the depth registration elements (CalibrationPoint) necessary for depth calibrating well log sections.")]
+        [RecurringElement]
 		[XmlElement("LogSection")]
         public List<DepthRegLogSection> LogSection {
             get {
@@ -71682,7 +74771,8 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// AlternateSection property
         /// </summary>
-		[RecurringElement]
+		[Description("AlternateSection provides a positional reference for sections of the image file not included in the aforementioned elements.")]
+        [RecurringElement]
 		[XmlElement("AlternateSection")]
         public List<DepthRegLogRect> AlternateSection {
             get {
@@ -71704,6 +74794,24 @@ namespace Energistics.DataAccess.WITSML200
             } 
          }
         private List<DepthRegLogRect> AlternateSectionField; 
+
+        /// <summary>
+        /// Wellbore property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("Wellbore")]
+        public DataObjectReference Wellbore {
+            get {
+                return WellboreField;
+            } 
+            set {
+                WellboreField = value;
+                NotifyPropertyChanged("Wellbore");
+            }
+        }
+
+        private DataObjectReference WellboreField; 
 
 		/// <summary>
         /// uid property
@@ -73797,6 +76905,24 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
+        /// GrowingStatus property
+        /// </summary>
+		[Required]
+        [Description("Describes the growing status of the trajectory, whether active, inactive or closed")]
+		[XmlElement("GrowingStatus")]
+        public ChannelStatus? GrowingStatus {
+            get {
+                return GrowingStatusField;
+            } 
+            set {
+                GrowingStatusField = value;
+                NotifyPropertyChanged("GrowingStatus");
+            }
+        }
+
+        private ChannelStatus? GrowingStatusField; 
+
+        /// <summary>
         /// ObjectGrowing property
         /// </summary>
 		[Description("The growing state of the object. This value is only relevant within the context of a server. This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the  behavior related to this element.")]
@@ -74578,1338 +77704,6 @@ namespace Energistics.DataAccess.WITSML200
             } 
          }
         private List<BoreholeString> BoreholeStringSetField; 
-
-
-    } //here
-
-    /// <summary>
-    /// This class represents the Log xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "2.0")]
-    [Description("This class represents the Log xsd type.")]
-    public partial class Log : AbstractObject, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// ChannelState property
-        /// </summary>
-		
-		[XmlElement("ChannelState")]
-        public ChannelState? ChannelState {
-            get {
-                return ChannelStateField;
-            } 
-            set {
-                ChannelStateField = value;
-             if(value!=null) 
-                 this.ChannelStateSpecified = true;
-                NotifyPropertyChanged("ChannelState");
-            }
-        }
-
-        private ChannelState? ChannelStateField; 
-
-        /// <summary>
-        /// ChannelStateSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean ChannelStateSpecified {
-            get {
-                return ChannelStateSpecifiedField;
-            } 
-            set {
-                ChannelStateSpecifiedField = value;
-                NotifyPropertyChanged("ChannelStateSpecified");
-            }
-        }
-
-        private Boolean ChannelStateSpecifiedField; 
-
-        /// <summary>
-        /// TimeDepth property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("Is this a time or depth log?")]
-		[XmlElement("TimeDepth")]
-        public String TimeDepth {
-            get {
-                return TimeDepthField;
-            } 
-            set {
-                TimeDepthField = value;
-                NotifyPropertyChanged("TimeDepth");
-            }
-        }
-
-        private String TimeDepthField; 
-
-        /// <summary>
-        /// CurveClass property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released.")]
-		[XmlElement("CurveClass")]
-        public String CurveClass {
-            get {
-                return CurveClassField;
-            } 
-            set {
-                CurveClassField = value;
-                NotifyPropertyChanged("CurveClass");
-            }
-        }
-
-        private String CurveClassField; 
-
-        /// <summary>
-        /// RunNumber property
-        /// </summary>
-		[StringLength(64)]
-        [Description("The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.")]
-		[XmlElement("RunNumber")]
-        public String RunNumber {
-            get {
-                return RunNumberField;
-            } 
-            set {
-                RunNumberField = value;
-                NotifyPropertyChanged("RunNumber");
-            }
-        }
-
-        private String RunNumberField; 
-
-        /// <summary>
-        /// PassNumber property
-        /// </summary>
-		[StringLength(64)]
-        [Description("The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.")]
-		[XmlElement("PassNumber")]
-        public String PassNumber {
-            get {
-                return PassNumberField;
-            } 
-            set {
-                PassNumberField = value;
-                NotifyPropertyChanged("PassNumber");
-            }
-        }
-
-        private String PassNumberField; 
-
-        /// <summary>
-        /// StartIndex property
-        /// </summary>
-		
-		[XmlElement("StartIndex")]
-        public AbstractIndexValue StartIndex {
-            get {
-                return StartIndexField;
-            } 
-            set {
-                StartIndexField = value;
-                NotifyPropertyChanged("StartIndex");
-            }
-        }
-
-        private AbstractIndexValue StartIndexField; 
-
-        /// <summary>
-        /// EndIndex property
-        /// </summary>
-		
-		[XmlElement("EndIndex")]
-        public AbstractIndexValue EndIndex {
-            get {
-                return EndIndexField;
-            } 
-            set {
-                EndIndexField = value;
-                NotifyPropertyChanged("EndIndex");
-            }
-        }
-
-        private AbstractIndexValue EndIndexField; 
-
-        /// <summary>
-        /// LoggingCompanyName property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("Name of the logging company.")]
-		[XmlElement("LoggingCompanyName")]
-        public String LoggingCompanyName {
-            get {
-                return LoggingCompanyNameField;
-            } 
-            set {
-                LoggingCompanyNameField = value;
-                NotifyPropertyChanged("LoggingCompanyName");
-            }
-        }
-
-        private String LoggingCompanyNameField; 
-
-        /// <summary>
-        /// LoggingCompanyCode property
-        /// </summary>
-		[StringLength(64)]
-        [Description("The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes")]
-		[XmlElement("LoggingCompanyCode")]
-        public String LoggingCompanyCode {
-            get {
-                return LoggingCompanyCodeField;
-            } 
-            set {
-                LoggingCompanyCodeField = value;
-                NotifyPropertyChanged("LoggingCompanyCode");
-            }
-        }
-
-        private String LoggingCompanyCodeField; 
-
-        /// <summary>
-        /// ToolName property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Name of the logging tool as given by the logging contractor.")]
-		[XmlElement("ToolName")]
-        public String ToolName {
-            get {
-                return ToolNameField;
-            } 
-            set {
-                ToolNameField = value;
-                NotifyPropertyChanged("ToolName");
-            }
-        }
-
-        private String ToolNameField; 
-
-        /// <summary>
-        /// ToolClass property
-        /// </summary>
-		[StringLength(64)]
-        [Description("A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released")]
-		[XmlElement("ToolClass")]
-        public String ToolClass {
-            get {
-                return ToolClassField;
-            } 
-            set {
-                ToolClassField = value;
-                NotifyPropertyChanged("ToolClass");
-            }
-        }
-
-        private String ToolClassField; 
-
-        /// <summary>
-        /// Derivation property
-        /// </summary>
-		[Description("Indicates that the channel is derived from one or more other channels")]
-		[XmlElement("Derivation")]
-        public ChannelDerivation? Derivation {
-            get {
-                return DerivationField;
-            } 
-            set {
-                DerivationField = value;
-             if(value!=null) 
-                 this.DerivationSpecified = true;
-                NotifyPropertyChanged("Derivation");
-            }
-        }
-
-        private ChannelDerivation? DerivationField; 
-
-        /// <summary>
-        /// DerivationSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean DerivationSpecified {
-            get {
-                return DerivationSpecifiedField;
-            } 
-            set {
-                DerivationSpecifiedField = value;
-                NotifyPropertyChanged("DerivationSpecified");
-            }
-        }
-
-        private Boolean DerivationSpecifiedField; 
-
-        /// <summary>
-        /// LoggingMethod property
-        /// </summary>
-		
-		[XmlElement("LoggingMethod")]
-        public LoggingMethod? LoggingMethod {
-            get {
-                return LoggingMethodField;
-            } 
-            set {
-                LoggingMethodField = value;
-             if(value!=null) 
-                 this.LoggingMethodSpecified = true;
-                NotifyPropertyChanged("LoggingMethod");
-            }
-        }
-
-        private LoggingMethod? LoggingMethodField; 
-
-        /// <summary>
-        /// LoggingMethodSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean LoggingMethodSpecified {
-            get {
-                return LoggingMethodSpecifiedField;
-            } 
-            set {
-                LoggingMethodSpecifiedField = value;
-                NotifyPropertyChanged("LoggingMethodSpecified");
-            }
-        }
-
-        private Boolean LoggingMethodSpecifiedField; 
-
-        /// <summary>
-        /// NominalHoleSize property
-        /// </summary>
-		[Description("The nominal hole size at the time the measurement tool was in the hole. The size is \"nominal\" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.")]
-        [ComponentElement]
-		[XmlElement("NominalHoleSize")]
-        public LengthMeasureExt NominalHoleSize {
-            get {
-                return NominalHoleSizeField;
-            } 
-            set {
-                NominalHoleSizeField = value;
-                NotifyPropertyChanged("NominalHoleSize");
-            }
-        }
-
-        private LengthMeasureExt NominalHoleSizeField; 
-
-        /// <summary>
-        /// Wellbore property
-        /// </summary>
-		[Required]
-        [ComponentElement]
-		[XmlElement("Wellbore")]
-        public DataObjectReference Wellbore {
-            get {
-                return WellboreField;
-            } 
-            set {
-                WellboreField = value;
-                NotifyPropertyChanged("Wellbore");
-            }
-        }
-
-        private DataObjectReference WellboreField; 
-
-        /// <summary>
-        /// ChannelSet property
-        /// </summary>
-		[Required]
-        [RecurringElement]
-		[XmlElement("ChannelSet")]
-        public List<ChannelSet> ChannelSet {
-            get {
-                return ChannelSetField;
-            } 
-            set {
-                ChannelSetField = value;
-                NotifyPropertyChanged("ChannelSet");
-            }
-        }
-
-         [XmlIgnore]
-         public bool ChannelSetSpecified
-         {
-            get {
-             if(ChannelSetField!=null)
-                return ChannelSetField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<ChannelSet> ChannelSetField; 
-
-
-    } //here
-
-    /// <summary>
-    /// This class represents the ChannelSet xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-	[Description("This class represents the ChannelSet xsd type.")]
-    public partial class ChannelSet : AbstractObject, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Index property
-        /// </summary>
-		[Required]
-        [RecurringElement]
-		[XmlElement("Index")]
-        public List<ChannelIndex> Index {
-            get {
-                return IndexField;
-            } 
-            set {
-                IndexField = value;
-                NotifyPropertyChanged("Index");
-            }
-        }
-
-         [XmlIgnore]
-         public bool IndexSpecified
-         {
-            get {
-             if(IndexField!=null)
-                return IndexField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<ChannelIndex> IndexField; 
-
-        /// <summary>
-        /// Channel property
-        /// </summary>
-		[Required]
-        [RecurringElement]
-		[XmlElement("Channel")]
-        public List<Channel> Channel {
-            get {
-                return ChannelField;
-            } 
-            set {
-                ChannelField = value;
-                NotifyPropertyChanged("Channel");
-            }
-        }
-
-         [XmlIgnore]
-         public bool ChannelSpecified
-         {
-            get {
-             if(ChannelField!=null)
-                return ChannelField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<Channel> ChannelField; 
-
-        /// <summary>
-        /// Data property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("Data")]
-        public ChannelData Data {
-            get {
-                return DataField;
-            } 
-            set {
-                DataField = value;
-                NotifyPropertyChanged("Data");
-            }
-        }
-
-        private ChannelData DataField; 
-
-        /// <summary>
-        /// ChannelState property
-        /// </summary>
-		
-		[XmlElement("ChannelState")]
-        public ChannelState? ChannelState {
-            get {
-                return ChannelStateField;
-            } 
-            set {
-                ChannelStateField = value;
-             if(value!=null) 
-                 this.ChannelStateSpecified = true;
-                NotifyPropertyChanged("ChannelState");
-            }
-        }
-
-        private ChannelState? ChannelStateField; 
-
-        /// <summary>
-        /// ChannelStateSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean ChannelStateSpecified {
-            get {
-                return ChannelStateSpecifiedField;
-            } 
-            set {
-                ChannelStateSpecifiedField = value;
-                NotifyPropertyChanged("ChannelStateSpecified");
-            }
-        }
-
-        private Boolean ChannelStateSpecifiedField; 
-
-        /// <summary>
-        /// TimeDepth property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("Is this a time or depth log?")]
-		[XmlElement("TimeDepth")]
-        public String TimeDepth {
-            get {
-                return TimeDepthField;
-            } 
-            set {
-                TimeDepthField = value;
-                NotifyPropertyChanged("TimeDepth");
-            }
-        }
-
-        private String TimeDepthField; 
-
-        /// <summary>
-        /// CurveClass property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released.")]
-		[XmlElement("CurveClass")]
-        public String CurveClass {
-            get {
-                return CurveClassField;
-            } 
-            set {
-                CurveClassField = value;
-                NotifyPropertyChanged("CurveClass");
-            }
-        }
-
-        private String CurveClassField; 
-
-        /// <summary>
-        /// RunNumber property
-        /// </summary>
-		[StringLength(64)]
-        [Description("The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.")]
-		[XmlElement("RunNumber")]
-        public String RunNumber {
-            get {
-                return RunNumberField;
-            } 
-            set {
-                RunNumberField = value;
-                NotifyPropertyChanged("RunNumber");
-            }
-        }
-
-        private String RunNumberField; 
-
-        /// <summary>
-        /// PassNumber property
-        /// </summary>
-		[StringLength(64)]
-        [Description("The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.")]
-		[XmlElement("PassNumber")]
-        public String PassNumber {
-            get {
-                return PassNumberField;
-            } 
-            set {
-                PassNumberField = value;
-                NotifyPropertyChanged("PassNumber");
-            }
-        }
-
-        private String PassNumberField; 
-
-        /// <summary>
-        /// StartIndex property
-        /// </summary>
-		
-		[XmlElement("StartIndex")]
-        public AbstractIndexValue StartIndex {
-            get {
-                return StartIndexField;
-            } 
-            set {
-                StartIndexField = value;
-                NotifyPropertyChanged("StartIndex");
-            }
-        }
-
-        private AbstractIndexValue StartIndexField; 
-
-        /// <summary>
-        /// EndIndex property
-        /// </summary>
-		
-		[XmlElement("EndIndex")]
-        public AbstractIndexValue EndIndex {
-            get {
-                return EndIndexField;
-            } 
-            set {
-                EndIndexField = value;
-                NotifyPropertyChanged("EndIndex");
-            }
-        }
-
-        private AbstractIndexValue EndIndexField; 
-
-        /// <summary>
-        /// LoggingCompanyName property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("Name of the logging company.")]
-		[XmlElement("LoggingCompanyName")]
-        public String LoggingCompanyName {
-            get {
-                return LoggingCompanyNameField;
-            } 
-            set {
-                LoggingCompanyNameField = value;
-                NotifyPropertyChanged("LoggingCompanyName");
-            }
-        }
-
-        private String LoggingCompanyNameField; 
-
-        /// <summary>
-        /// LoggingCompanyCode property
-        /// </summary>
-		[StringLength(64)]
-        [Description("The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes")]
-		[XmlElement("LoggingCompanyCode")]
-        public String LoggingCompanyCode {
-            get {
-                return LoggingCompanyCodeField;
-            } 
-            set {
-                LoggingCompanyCodeField = value;
-                NotifyPropertyChanged("LoggingCompanyCode");
-            }
-        }
-
-        private String LoggingCompanyCodeField; 
-
-        /// <summary>
-        /// ToolName property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Name of the logging tool as given by the logging contractor.")]
-		[XmlElement("ToolName")]
-        public String ToolName {
-            get {
-                return ToolNameField;
-            } 
-            set {
-                ToolNameField = value;
-                NotifyPropertyChanged("ToolName");
-            }
-        }
-
-        private String ToolNameField; 
-
-        /// <summary>
-        /// ToolClass property
-        /// </summary>
-		[StringLength(64)]
-        [Description("A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released")]
-		[XmlElement("ToolClass")]
-        public String ToolClass {
-            get {
-                return ToolClassField;
-            } 
-            set {
-                ToolClassField = value;
-                NotifyPropertyChanged("ToolClass");
-            }
-        }
-
-        private String ToolClassField; 
-
-        /// <summary>
-        /// Derivation property
-        /// </summary>
-		[Description("Indicates that the channel is derived from one or more other channels")]
-		[XmlElement("Derivation")]
-        public ChannelDerivation? Derivation {
-            get {
-                return DerivationField;
-            } 
-            set {
-                DerivationField = value;
-             if(value!=null) 
-                 this.DerivationSpecified = true;
-                NotifyPropertyChanged("Derivation");
-            }
-        }
-
-        private ChannelDerivation? DerivationField; 
-
-        /// <summary>
-        /// DerivationSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean DerivationSpecified {
-            get {
-                return DerivationSpecifiedField;
-            } 
-            set {
-                DerivationSpecifiedField = value;
-                NotifyPropertyChanged("DerivationSpecified");
-            }
-        }
-
-        private Boolean DerivationSpecifiedField; 
-
-        /// <summary>
-        /// LoggingMethod property
-        /// </summary>
-		
-		[XmlElement("LoggingMethod")]
-        public LoggingMethod? LoggingMethod {
-            get {
-                return LoggingMethodField;
-            } 
-            set {
-                LoggingMethodField = value;
-             if(value!=null) 
-                 this.LoggingMethodSpecified = true;
-                NotifyPropertyChanged("LoggingMethod");
-            }
-        }
-
-        private LoggingMethod? LoggingMethodField; 
-
-        /// <summary>
-        /// LoggingMethodSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean LoggingMethodSpecified {
-            get {
-                return LoggingMethodSpecifiedField;
-            } 
-            set {
-                LoggingMethodSpecifiedField = value;
-                NotifyPropertyChanged("LoggingMethodSpecified");
-            }
-        }
-
-        private Boolean LoggingMethodSpecifiedField; 
-
-        /// <summary>
-        /// NominalHoleSize property
-        /// </summary>
-		[Description("The nominal hole size at the time the measurement tool was in the hole. The size is \"nominal\" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.")]
-        [ComponentElement]
-		[XmlElement("NominalHoleSize")]
-        public LengthMeasureExt NominalHoleSize {
-            get {
-                return NominalHoleSizeField;
-            } 
-            set {
-                NominalHoleSizeField = value;
-                NotifyPropertyChanged("NominalHoleSize");
-            }
-        }
-
-        private LengthMeasureExt NominalHoleSizeField; 
-
-        /// <summary>
-        /// DataContext property
-        /// </summary>
-		
-		[XmlElement("DataContext")]
-        public AbstractLogDataContext DataContext {
-            get {
-                return DataContextField;
-            } 
-            set {
-                DataContextField = value;
-                NotifyPropertyChanged("DataContext");
-            }
-        }
-
-        private AbstractLogDataContext DataContextField; 
-
-
-    } //here
-
-    /// <summary>
-    /// This class represents the Channel xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-	[Description("This class represents the Channel xsd type.")]
-    public partial class Channel : AbstractObject, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Mnemonic property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("The mnemonic name for this channel. Mnemonics are not unique within a store.")]
-		[XmlElement("Mnemonic")]
-        public String Mnemonic {
-            get {
-                return MnemonicField;
-            } 
-            set {
-                MnemonicField = value;
-                NotifyPropertyChanged("Mnemonic");
-            }
-        }
-
-        private String MnemonicField; 
-
-        /// <summary>
-        /// DataType property
-        /// </summary>
-		[Required]
-		[XmlElement("DataType")]
-        public EtpDataType? DataType {
-            get {
-                return DataTypeField;
-            } 
-            set {
-                DataTypeField = value;
-                NotifyPropertyChanged("DataType");
-            }
-        }
-
-        private EtpDataType? DataTypeField; 
-
-        /// <summary>
-        /// Uom property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-		[XmlElement("Uom")]
-        public String Uom {
-            get {
-                return UomField;
-            } 
-            set {
-                UomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private String UomField; 
-
-        /// <summary>
-        /// Status property
-        /// </summary>
-		[Required]
-        [Description("The status of a Channel with respect to creating new measurements. An active Channel is considered to by actively producing data points. An inactive Channel is known to be offline or not currently producing, but may begin producing again at some future point. A closed Channel will never produce points again. The rules for when a Channel is to be closed will vary some for different kinds of Channels. For instance, time-based surface Channels may remain open for the entire life of the drilling operation, whereas depth-based wireline Channels would be Closed at the end of the wireline job.")]
-		[XmlElement("Status")]
-        public ChannelStatus? Status {
-            get {
-                return StatusField;
-            } 
-            set {
-                StatusField = value;
-                NotifyPropertyChanged("Status");
-            }
-        }
-
-        private ChannelStatus? StatusField; 
-
-        /// <summary>
-        /// Source property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Source of the data in the channel. This would contain the contractor name.")]
-		[XmlElement("Source")]
-        public String Source {
-            get {
-                return SourceField;
-            } 
-            set {
-                SourceField = value;
-                NotifyPropertyChanged("Source");
-            }
-        }
-
-        private String SourceField; 
-
-        /// <summary>
-        /// Wellbore property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("Wellbore")]
-        public DataObjectReference Wellbore {
-            get {
-                return WellboreField;
-            } 
-            set {
-                WellboreField = value;
-                NotifyPropertyChanged("Wellbore");
-            }
-        }
-
-        private DataObjectReference WellboreField; 
-
-        /// <summary>
-        /// AxisDefinition property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("AxisDefinition")]
-        public List<LogChannelAxis> AxisDefinition {
-            get {
-                return AxisDefinitionField;
-            } 
-            set {
-                AxisDefinitionField = value;
-                NotifyPropertyChanged("AxisDefinition");
-            }
-        }
-
-         [XmlIgnore]
-         public bool AxisDefinitionSpecified
-         {
-            get {
-             if(AxisDefinitionField!=null)
-                return AxisDefinitionField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<LogChannelAxis> AxisDefinitionField; 
-
-        /// <summary>
-        /// ChannelState property
-        /// </summary>
-		
-		[XmlElement("ChannelState")]
-        public ChannelState? ChannelState {
-            get {
-                return ChannelStateField;
-            } 
-            set {
-                ChannelStateField = value;
-             if(value!=null) 
-                 this.ChannelStateSpecified = true;
-                NotifyPropertyChanged("ChannelState");
-            }
-        }
-
-        private ChannelState? ChannelStateField; 
-
-        /// <summary>
-        /// ChannelStateSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean ChannelStateSpecified {
-            get {
-                return ChannelStateSpecifiedField;
-            } 
-            set {
-                ChannelStateSpecifiedField = value;
-                NotifyPropertyChanged("ChannelStateSpecified");
-            }
-        }
-
-        private Boolean ChannelStateSpecifiedField; 
-
-        /// <summary>
-        /// TimeDepth property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("Is this a time or depth log?")]
-		[XmlElement("TimeDepth")]
-        public String TimeDepth {
-            get {
-                return TimeDepthField;
-            } 
-            set {
-                TimeDepthField = value;
-                NotifyPropertyChanged("TimeDepth");
-            }
-        }
-
-        private String TimeDepthField; 
-
-        /// <summary>
-        /// CurveClass property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released.")]
-		[XmlElement("CurveClass")]
-        public String CurveClass {
-            get {
-                return CurveClassField;
-            } 
-            set {
-                CurveClassField = value;
-                NotifyPropertyChanged("CurveClass");
-            }
-        }
-
-        private String CurveClassField; 
-
-        /// <summary>
-        /// RunNumber property
-        /// </summary>
-		[StringLength(64)]
-        [Description("The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.")]
-		[XmlElement("RunNumber")]
-        public String RunNumber {
-            get {
-                return RunNumberField;
-            } 
-            set {
-                RunNumberField = value;
-                NotifyPropertyChanged("RunNumber");
-            }
-        }
-
-        private String RunNumberField; 
-
-        /// <summary>
-        /// PassNumber property
-        /// </summary>
-		[StringLength(64)]
-        [Description("The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.")]
-		[XmlElement("PassNumber")]
-        public String PassNumber {
-            get {
-                return PassNumberField;
-            } 
-            set {
-                PassNumberField = value;
-                NotifyPropertyChanged("PassNumber");
-            }
-        }
-
-        private String PassNumberField; 
-
-        /// <summary>
-        /// StartIndex property
-        /// </summary>
-		
-		[XmlElement("StartIndex")]
-        public AbstractIndexValue StartIndex {
-            get {
-                return StartIndexField;
-            } 
-            set {
-                StartIndexField = value;
-                NotifyPropertyChanged("StartIndex");
-            }
-        }
-
-        private AbstractIndexValue StartIndexField; 
-
-        /// <summary>
-        /// EndIndex property
-        /// </summary>
-		
-		[XmlElement("EndIndex")]
-        public AbstractIndexValue EndIndex {
-            get {
-                return EndIndexField;
-            } 
-            set {
-                EndIndexField = value;
-                NotifyPropertyChanged("EndIndex");
-            }
-        }
-
-        private AbstractIndexValue EndIndexField; 
-
-        /// <summary>
-        /// LoggingCompanyName property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("Name of the logging company.")]
-		[XmlElement("LoggingCompanyName")]
-        public String LoggingCompanyName {
-            get {
-                return LoggingCompanyNameField;
-            } 
-            set {
-                LoggingCompanyNameField = value;
-                NotifyPropertyChanged("LoggingCompanyName");
-            }
-        }
-
-        private String LoggingCompanyNameField; 
-
-        /// <summary>
-        /// LoggingCompanyCode property
-        /// </summary>
-		[StringLength(64)]
-        [Description("The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes")]
-		[XmlElement("LoggingCompanyCode")]
-        public String LoggingCompanyCode {
-            get {
-                return LoggingCompanyCodeField;
-            } 
-            set {
-                LoggingCompanyCodeField = value;
-                NotifyPropertyChanged("LoggingCompanyCode");
-            }
-        }
-
-        private String LoggingCompanyCodeField; 
-
-        /// <summary>
-        /// ToolName property
-        /// </summary>
-		[StringLength(64)]
-        [Description("Name of the logging tool as given by the logging contractor.")]
-		[XmlElement("ToolName")]
-        public String ToolName {
-            get {
-                return ToolNameField;
-            } 
-            set {
-                ToolNameField = value;
-                NotifyPropertyChanged("ToolName");
-            }
-        }
-
-        private String ToolNameField; 
-
-        /// <summary>
-        /// ToolClass property
-        /// </summary>
-		[StringLength(64)]
-        [Description("A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released")]
-		[XmlElement("ToolClass")]
-        public String ToolClass {
-            get {
-                return ToolClassField;
-            } 
-            set {
-                ToolClassField = value;
-                NotifyPropertyChanged("ToolClass");
-            }
-        }
-
-        private String ToolClassField; 
-
-        /// <summary>
-        /// Derivation property
-        /// </summary>
-		[Description("Indicates that the channel is derived from one or more other channels")]
-		[XmlElement("Derivation")]
-        public ChannelDerivation? Derivation {
-            get {
-                return DerivationField;
-            } 
-            set {
-                DerivationField = value;
-             if(value!=null) 
-                 this.DerivationSpecified = true;
-                NotifyPropertyChanged("Derivation");
-            }
-        }
-
-        private ChannelDerivation? DerivationField; 
-
-        /// <summary>
-        /// DerivationSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean DerivationSpecified {
-            get {
-                return DerivationSpecifiedField;
-            } 
-            set {
-                DerivationSpecifiedField = value;
-                NotifyPropertyChanged("DerivationSpecified");
-            }
-        }
-
-        private Boolean DerivationSpecifiedField; 
-
-        /// <summary>
-        /// LoggingMethod property
-        /// </summary>
-		
-		[XmlElement("LoggingMethod")]
-        public LoggingMethod? LoggingMethod {
-            get {
-                return LoggingMethodField;
-            } 
-            set {
-                LoggingMethodField = value;
-             if(value!=null) 
-                 this.LoggingMethodSpecified = true;
-                NotifyPropertyChanged("LoggingMethod");
-            }
-        }
-
-        private LoggingMethod? LoggingMethodField; 
-
-        /// <summary>
-        /// LoggingMethodSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean LoggingMethodSpecified {
-            get {
-                return LoggingMethodSpecifiedField;
-            } 
-            set {
-                LoggingMethodSpecifiedField = value;
-                NotifyPropertyChanged("LoggingMethodSpecified");
-            }
-        }
-
-        private Boolean LoggingMethodSpecifiedField; 
-
-        /// <summary>
-        /// NominalHoleSize property
-        /// </summary>
-		[Description("The nominal hole size at the time the measurement tool was in the hole. The size is \"nominal\" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.")]
-        [ComponentElement]
-		[XmlElement("NominalHoleSize")]
-        public LengthMeasureExt NominalHoleSize {
-            get {
-                return NominalHoleSizeField;
-            } 
-            set {
-                NominalHoleSizeField = value;
-                NotifyPropertyChanged("NominalHoleSize");
-            }
-        }
-
-        private LengthMeasureExt NominalHoleSizeField; 
-
-        /// <summary>
-        /// PointMetadata property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("PointMetadata")]
-        public List<PointMetadata> PointMetadata {
-            get {
-                return PointMetadataField;
-            } 
-            set {
-                PointMetadataField = value;
-                NotifyPropertyChanged("PointMetadata");
-            }
-        }
-
-         [XmlIgnore]
-         public bool PointMetadataSpecified
-         {
-            get {
-             if(PointMetadataField!=null)
-                return PointMetadataField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<PointMetadata> PointMetadataField; 
-
-        /// <summary>
-        /// DerivedFrom property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("DerivedFrom")]
-        public List<DataObjectReference> DerivedFrom {
-            get {
-                return DerivedFromField;
-            } 
-            set {
-                DerivedFromField = value;
-                NotifyPropertyChanged("DerivedFrom");
-            }
-        }
-
-         [XmlIgnore]
-         public bool DerivedFromSpecified
-         {
-            get {
-             if(DerivedFromField!=null)
-                return DerivedFromField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<DataObjectReference> DerivedFromField; 
-
-        /// <summary>
-        /// Index property
-        /// </summary>
-		[Required]
-        [RecurringElement]
-		[XmlElement("Index")]
-        public List<ChannelIndex> Index {
-            get {
-                return IndexField;
-            } 
-            set {
-                IndexField = value;
-                NotifyPropertyChanged("Index");
-            }
-        }
-
-         [XmlIgnore]
-         public bool IndexSpecified
-         {
-            get {
-             if(IndexField!=null)
-                return IndexField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<ChannelIndex> IndexField; 
-
-        /// <summary>
-        /// Parent property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("Parent")]
-        public AbstractObject Parent {
-            get {
-                return ParentField;
-            } 
-            set {
-                ParentField = value;
-                NotifyPropertyChanged("Parent");
-            }
-        }
-
-        private AbstractObject ParentField; 
 
 
     } //here
@@ -77245,6 +79039,24 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure DepthWaterMeanField; 
 
         /// <summary>
+        /// GrowingStatus property
+        /// </summary>
+		[Required]
+        [Description("Describes the growing status of the wellbore geometry, whether active, inactive or closed")]
+		[XmlElement("GrowingStatus")]
+        public ChannelStatus? GrowingStatus {
+            get {
+                return GrowingStatusField;
+            } 
+            set {
+                GrowingStatusField = value;
+                NotifyPropertyChanged("GrowingStatus");
+            }
+        }
+
+        private ChannelStatus? GrowingStatusField; 
+
+        /// <summary>
         /// WellboreGeometrySection property
         /// </summary>
 		[RecurringElement]
@@ -77313,6 +79125,1340 @@ namespace Energistics.DataAccess.WITSML200
             } 
          }
         private List<DataObjectReference> BhaRunField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the Log xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "2.0")]
+    [Description("This class represents the Log xsd type.")]
+    public partial class Log : AbstractObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// ChannelState property
+        /// </summary>
+		[Description("Defines where the channel gets its data from, e.g., calculated from another source, or from archive, or raw real-time, etc.")]
+		[XmlElement("ChannelState")]
+        public ChannelState? ChannelState {
+            get {
+                return ChannelStateField;
+            } 
+            set {
+                ChannelStateField = value;
+             if(value!=null) 
+                 this.ChannelStateSpecified = true;
+                NotifyPropertyChanged("ChannelState");
+            }
+        }
+
+        private ChannelState? ChannelStateField; 
+
+        /// <summary>
+        /// ChannelStateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean ChannelStateSpecified {
+            get {
+                return ChannelStateSpecifiedField;
+            } 
+            set {
+                ChannelStateSpecifiedField = value;
+                NotifyPropertyChanged("ChannelStateSpecified");
+            }
+        }
+
+        private Boolean ChannelStateSpecifiedField; 
+
+        /// <summary>
+        /// TimeDepth property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("Is this a time or depth log?")]
+		[XmlElement("TimeDepth")]
+        public String TimeDepth {
+            get {
+                return TimeDepthField;
+            } 
+            set {
+                TimeDepthField = value;
+                NotifyPropertyChanged("TimeDepth");
+            }
+        }
+
+        private String TimeDepthField; 
+
+        /// <summary>
+        /// CurveClass property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released.")]
+		[XmlElement("CurveClass")]
+        public String CurveClass {
+            get {
+                return CurveClassField;
+            } 
+            set {
+                CurveClassField = value;
+                NotifyPropertyChanged("CurveClass");
+            }
+        }
+
+        private String CurveClassField; 
+
+        /// <summary>
+        /// RunNumber property
+        /// </summary>
+		[StringLength(64)]
+        [Description("The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.")]
+		[XmlElement("RunNumber")]
+        public String RunNumber {
+            get {
+                return RunNumberField;
+            } 
+            set {
+                RunNumberField = value;
+                NotifyPropertyChanged("RunNumber");
+            }
+        }
+
+        private String RunNumberField; 
+
+        /// <summary>
+        /// PassNumber property
+        /// </summary>
+		[StringLength(64)]
+        [Description("The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.")]
+		[XmlElement("PassNumber")]
+        public String PassNumber {
+            get {
+                return PassNumberField;
+            } 
+            set {
+                PassNumberField = value;
+                NotifyPropertyChanged("PassNumber");
+            }
+        }
+
+        private String PassNumberField; 
+
+        /// <summary>
+        /// StartIndex property
+        /// </summary>
+		[Description("When the log header defines the direction as \"Increasing\", the startIndex is the starting (minimum) index value at which the first non-null data point is located. When the log header defines the direction as \"Decreasing\", the startIndex is the starting (maximum) index value at which the first non-null data point is located.")]
+		[XmlElement("StartIndex")]
+        public AbstractIndexValue StartIndex {
+            get {
+                return StartIndexField;
+            } 
+            set {
+                StartIndexField = value;
+                NotifyPropertyChanged("StartIndex");
+            }
+        }
+
+        private AbstractIndexValue StartIndexField; 
+
+        /// <summary>
+        /// EndIndex property
+        /// </summary>
+		[Description("When the log header defines the direction as \"Increasing\", the endIndex is the ending (maximum) index value at which the last non-null data point is located. When the log header defines the direction as Decreasing, the endIndex is the ending (minimum) index value at which the last non-null data point is located.")]
+		[XmlElement("EndIndex")]
+        public AbstractIndexValue EndIndex {
+            get {
+                return EndIndexField;
+            } 
+            set {
+                EndIndexField = value;
+                NotifyPropertyChanged("EndIndex");
+            }
+        }
+
+        private AbstractIndexValue EndIndexField; 
+
+        /// <summary>
+        /// LoggingCompanyName property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("Name of the logging company.")]
+		[XmlElement("LoggingCompanyName")]
+        public String LoggingCompanyName {
+            get {
+                return LoggingCompanyNameField;
+            } 
+            set {
+                LoggingCompanyNameField = value;
+                NotifyPropertyChanged("LoggingCompanyName");
+            }
+        }
+
+        private String LoggingCompanyNameField; 
+
+        /// <summary>
+        /// LoggingCompanyCode property
+        /// </summary>
+		[StringLength(64)]
+        [Description("The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes")]
+		[XmlElement("LoggingCompanyCode")]
+        public String LoggingCompanyCode {
+            get {
+                return LoggingCompanyCodeField;
+            } 
+            set {
+                LoggingCompanyCodeField = value;
+                NotifyPropertyChanged("LoggingCompanyCode");
+            }
+        }
+
+        private String LoggingCompanyCodeField; 
+
+        /// <summary>
+        /// ToolName property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Name of the logging tool as given by the logging contractor.")]
+		[XmlElement("ToolName")]
+        public String ToolName {
+            get {
+                return ToolNameField;
+            } 
+            set {
+                ToolNameField = value;
+                NotifyPropertyChanged("ToolName");
+            }
+        }
+
+        private String ToolNameField; 
+
+        /// <summary>
+        /// ToolClass property
+        /// </summary>
+		[StringLength(64)]
+        [Description("A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released")]
+		[XmlElement("ToolClass")]
+        public String ToolClass {
+            get {
+                return ToolClassField;
+            } 
+            set {
+                ToolClassField = value;
+                NotifyPropertyChanged("ToolClass");
+            }
+        }
+
+        private String ToolClassField; 
+
+        /// <summary>
+        /// Derivation property
+        /// </summary>
+		[Description("Indicates that the channel is derived from one or more other channels")]
+		[XmlElement("Derivation")]
+        public ChannelDerivation? Derivation {
+            get {
+                return DerivationField;
+            } 
+            set {
+                DerivationField = value;
+             if(value!=null) 
+                 this.DerivationSpecified = true;
+                NotifyPropertyChanged("Derivation");
+            }
+        }
+
+        private ChannelDerivation? DerivationField; 
+
+        /// <summary>
+        /// DerivationSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean DerivationSpecified {
+            get {
+                return DerivationSpecifiedField;
+            } 
+            set {
+                DerivationSpecifiedField = value;
+                NotifyPropertyChanged("DerivationSpecified");
+            }
+        }
+
+        private Boolean DerivationSpecifiedField; 
+
+        /// <summary>
+        /// LoggingMethod property
+        /// </summary>
+		[Description("Defines where the log channel gets its data from: LWD, MWD, wireline; or whether it is computed, etc.")]
+		[XmlElement("LoggingMethod")]
+        public LoggingMethod? LoggingMethod {
+            get {
+                return LoggingMethodField;
+            } 
+            set {
+                LoggingMethodField = value;
+             if(value!=null) 
+                 this.LoggingMethodSpecified = true;
+                NotifyPropertyChanged("LoggingMethod");
+            }
+        }
+
+        private LoggingMethod? LoggingMethodField; 
+
+        /// <summary>
+        /// LoggingMethodSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean LoggingMethodSpecified {
+            get {
+                return LoggingMethodSpecifiedField;
+            } 
+            set {
+                LoggingMethodSpecifiedField = value;
+                NotifyPropertyChanged("LoggingMethodSpecified");
+            }
+        }
+
+        private Boolean LoggingMethodSpecifiedField; 
+
+        /// <summary>
+        /// NominalHoleSize property
+        /// </summary>
+		[Description("The nominal hole size at the time the measurement tool was in the hole. The size is \"nominal\" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.")]
+        [ComponentElement]
+		[XmlElement("NominalHoleSize")]
+        public LengthMeasureExt NominalHoleSize {
+            get {
+                return NominalHoleSizeField;
+            } 
+            set {
+                NominalHoleSizeField = value;
+                NotifyPropertyChanged("NominalHoleSize");
+            }
+        }
+
+        private LengthMeasureExt NominalHoleSizeField; 
+
+        /// <summary>
+        /// Wellbore property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("Wellbore")]
+        public DataObjectReference Wellbore {
+            get {
+                return WellboreField;
+            } 
+            set {
+                WellboreField = value;
+                NotifyPropertyChanged("Wellbore");
+            }
+        }
+
+        private DataObjectReference WellboreField; 
+
+        /// <summary>
+        /// ChannelSet property
+        /// </summary>
+		[Required]
+        [RecurringElement]
+		[XmlElement("ChannelSet")]
+        public List<ChannelSet> ChannelSet {
+            get {
+                return ChannelSetField;
+            } 
+            set {
+                ChannelSetField = value;
+                NotifyPropertyChanged("ChannelSet");
+            }
+        }
+
+         [XmlIgnore]
+         public bool ChannelSetSpecified
+         {
+            get {
+             if(ChannelSetField!=null)
+                return ChannelSetField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<ChannelSet> ChannelSetField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the ChannelSet xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+	[Description("This class represents the ChannelSet xsd type.")]
+    public partial class ChannelSet : AbstractObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Index property
+        /// </summary>
+		[Required]
+        [RecurringElement]
+		[XmlElement("Index")]
+        public List<ChannelIndex> Index {
+            get {
+                return IndexField;
+            } 
+            set {
+                IndexField = value;
+                NotifyPropertyChanged("Index");
+            }
+        }
+
+         [XmlIgnore]
+         public bool IndexSpecified
+         {
+            get {
+             if(IndexField!=null)
+                return IndexField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<ChannelIndex> IndexField; 
+
+        /// <summary>
+        /// Channel property
+        /// </summary>
+		[Required]
+        [RecurringElement]
+		[XmlElement("Channel")]
+        public List<Channel> Channel {
+            get {
+                return ChannelField;
+            } 
+            set {
+                ChannelField = value;
+                NotifyPropertyChanged("Channel");
+            }
+        }
+
+         [XmlIgnore]
+         public bool ChannelSpecified
+         {
+            get {
+             if(ChannelField!=null)
+                return ChannelField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<Channel> ChannelField; 
+
+        /// <summary>
+        /// Data property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("Data")]
+        public ChannelData Data {
+            get {
+                return DataField;
+            } 
+            set {
+                DataField = value;
+                NotifyPropertyChanged("Data");
+            }
+        }
+
+        private ChannelData DataField; 
+
+        /// <summary>
+        /// ChannelState property
+        /// </summary>
+		[Description("Defines where the channel gets its data from, e.g., calculated from another source, or from archive, or raw real-time, etc.")]
+		[XmlElement("ChannelState")]
+        public ChannelState? ChannelState {
+            get {
+                return ChannelStateField;
+            } 
+            set {
+                ChannelStateField = value;
+             if(value!=null) 
+                 this.ChannelStateSpecified = true;
+                NotifyPropertyChanged("ChannelState");
+            }
+        }
+
+        private ChannelState? ChannelStateField; 
+
+        /// <summary>
+        /// ChannelStateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean ChannelStateSpecified {
+            get {
+                return ChannelStateSpecifiedField;
+            } 
+            set {
+                ChannelStateSpecifiedField = value;
+                NotifyPropertyChanged("ChannelStateSpecified");
+            }
+        }
+
+        private Boolean ChannelStateSpecifiedField; 
+
+        /// <summary>
+        /// TimeDepth property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("Is this a time or depth log?")]
+		[XmlElement("TimeDepth")]
+        public String TimeDepth {
+            get {
+                return TimeDepthField;
+            } 
+            set {
+                TimeDepthField = value;
+                NotifyPropertyChanged("TimeDepth");
+            }
+        }
+
+        private String TimeDepthField; 
+
+        /// <summary>
+        /// CurveClass property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released.")]
+		[XmlElement("CurveClass")]
+        public String CurveClass {
+            get {
+                return CurveClassField;
+            } 
+            set {
+                CurveClassField = value;
+                NotifyPropertyChanged("CurveClass");
+            }
+        }
+
+        private String CurveClassField; 
+
+        /// <summary>
+        /// RunNumber property
+        /// </summary>
+		[StringLength(64)]
+        [Description("The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.")]
+		[XmlElement("RunNumber")]
+        public String RunNumber {
+            get {
+                return RunNumberField;
+            } 
+            set {
+                RunNumberField = value;
+                NotifyPropertyChanged("RunNumber");
+            }
+        }
+
+        private String RunNumberField; 
+
+        /// <summary>
+        /// PassNumber property
+        /// </summary>
+		[StringLength(64)]
+        [Description("The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.")]
+		[XmlElement("PassNumber")]
+        public String PassNumber {
+            get {
+                return PassNumberField;
+            } 
+            set {
+                PassNumberField = value;
+                NotifyPropertyChanged("PassNumber");
+            }
+        }
+
+        private String PassNumberField; 
+
+        /// <summary>
+        /// StartIndex property
+        /// </summary>
+		[Description("When the log header defines the direction as \"Increasing\", the startIndex is the starting (minimum) index value at which the first non-null data point is located. When the log header defines the direction as \"Decreasing\", the startIndex is the starting (maximum) index value at which the first non-null data point is located.")]
+		[XmlElement("StartIndex")]
+        public AbstractIndexValue StartIndex {
+            get {
+                return StartIndexField;
+            } 
+            set {
+                StartIndexField = value;
+                NotifyPropertyChanged("StartIndex");
+            }
+        }
+
+        private AbstractIndexValue StartIndexField; 
+
+        /// <summary>
+        /// EndIndex property
+        /// </summary>
+		[Description("When the log header defines the direction as \"Increasing\", the endIndex is the ending (maximum) index value at which the last non-null data point is located. When the log header defines the direction as Decreasing, the endIndex is the ending (minimum) index value at which the last non-null data point is located.")]
+		[XmlElement("EndIndex")]
+        public AbstractIndexValue EndIndex {
+            get {
+                return EndIndexField;
+            } 
+            set {
+                EndIndexField = value;
+                NotifyPropertyChanged("EndIndex");
+            }
+        }
+
+        private AbstractIndexValue EndIndexField; 
+
+        /// <summary>
+        /// LoggingCompanyName property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("Name of the logging company.")]
+		[XmlElement("LoggingCompanyName")]
+        public String LoggingCompanyName {
+            get {
+                return LoggingCompanyNameField;
+            } 
+            set {
+                LoggingCompanyNameField = value;
+                NotifyPropertyChanged("LoggingCompanyName");
+            }
+        }
+
+        private String LoggingCompanyNameField; 
+
+        /// <summary>
+        /// LoggingCompanyCode property
+        /// </summary>
+		[StringLength(64)]
+        [Description("The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes")]
+		[XmlElement("LoggingCompanyCode")]
+        public String LoggingCompanyCode {
+            get {
+                return LoggingCompanyCodeField;
+            } 
+            set {
+                LoggingCompanyCodeField = value;
+                NotifyPropertyChanged("LoggingCompanyCode");
+            }
+        }
+
+        private String LoggingCompanyCodeField; 
+
+        /// <summary>
+        /// ToolName property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Name of the logging tool as given by the logging contractor.")]
+		[XmlElement("ToolName")]
+        public String ToolName {
+            get {
+                return ToolNameField;
+            } 
+            set {
+                ToolNameField = value;
+                NotifyPropertyChanged("ToolName");
+            }
+        }
+
+        private String ToolNameField; 
+
+        /// <summary>
+        /// ToolClass property
+        /// </summary>
+		[StringLength(64)]
+        [Description("A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released")]
+		[XmlElement("ToolClass")]
+        public String ToolClass {
+            get {
+                return ToolClassField;
+            } 
+            set {
+                ToolClassField = value;
+                NotifyPropertyChanged("ToolClass");
+            }
+        }
+
+        private String ToolClassField; 
+
+        /// <summary>
+        /// Derivation property
+        /// </summary>
+		[Description("Indicates that the channel is derived from one or more other channels")]
+		[XmlElement("Derivation")]
+        public ChannelDerivation? Derivation {
+            get {
+                return DerivationField;
+            } 
+            set {
+                DerivationField = value;
+             if(value!=null) 
+                 this.DerivationSpecified = true;
+                NotifyPropertyChanged("Derivation");
+            }
+        }
+
+        private ChannelDerivation? DerivationField; 
+
+        /// <summary>
+        /// DerivationSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean DerivationSpecified {
+            get {
+                return DerivationSpecifiedField;
+            } 
+            set {
+                DerivationSpecifiedField = value;
+                NotifyPropertyChanged("DerivationSpecified");
+            }
+        }
+
+        private Boolean DerivationSpecifiedField; 
+
+        /// <summary>
+        /// LoggingMethod property
+        /// </summary>
+		[Description("Defines where the log channel gets its data from: LWD, MWD, wireline; or whether it is computed, etc.")]
+		[XmlElement("LoggingMethod")]
+        public LoggingMethod? LoggingMethod {
+            get {
+                return LoggingMethodField;
+            } 
+            set {
+                LoggingMethodField = value;
+             if(value!=null) 
+                 this.LoggingMethodSpecified = true;
+                NotifyPropertyChanged("LoggingMethod");
+            }
+        }
+
+        private LoggingMethod? LoggingMethodField; 
+
+        /// <summary>
+        /// LoggingMethodSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean LoggingMethodSpecified {
+            get {
+                return LoggingMethodSpecifiedField;
+            } 
+            set {
+                LoggingMethodSpecifiedField = value;
+                NotifyPropertyChanged("LoggingMethodSpecified");
+            }
+        }
+
+        private Boolean LoggingMethodSpecifiedField; 
+
+        /// <summary>
+        /// NominalHoleSize property
+        /// </summary>
+		[Description("The nominal hole size at the time the measurement tool was in the hole. The size is \"nominal\" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.")]
+        [ComponentElement]
+		[XmlElement("NominalHoleSize")]
+        public LengthMeasureExt NominalHoleSize {
+            get {
+                return NominalHoleSizeField;
+            } 
+            set {
+                NominalHoleSizeField = value;
+                NotifyPropertyChanged("NominalHoleSize");
+            }
+        }
+
+        private LengthMeasureExt NominalHoleSizeField; 
+
+        /// <summary>
+        /// DataContext property
+        /// </summary>
+		
+		[XmlElement("DataContext")]
+        public AbstractLogDataContext DataContext {
+            get {
+                return DataContextField;
+            } 
+            set {
+                DataContextField = value;
+                NotifyPropertyChanged("DataContext");
+            }
+        }
+
+        private AbstractLogDataContext DataContextField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the Channel xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+	[Description("This class represents the Channel xsd type.")]
+    public partial class Channel : AbstractObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Mnemonic property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("The mnemonic name for this channel. Mnemonics are not unique within a store.")]
+		[XmlElement("Mnemonic")]
+        public String Mnemonic {
+            get {
+                return MnemonicField;
+            } 
+            set {
+                MnemonicField = value;
+                NotifyPropertyChanged("Mnemonic");
+            }
+        }
+
+        private String MnemonicField; 
+
+        /// <summary>
+        /// DataType property
+        /// </summary>
+		[Required]
+        [Description("The underlying Etp data type of the value")]
+		[XmlElement("DataType")]
+        public EtpDataType? DataType {
+            get {
+                return DataTypeField;
+            } 
+            set {
+                DataTypeField = value;
+                NotifyPropertyChanged("DataType");
+            }
+        }
+
+        private EtpDataType? DataTypeField; 
+
+        /// <summary>
+        /// Uom property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("The underlying unit of measure of the value.")]
+		[XmlElement("Uom")]
+        public String Uom {
+            get {
+                return UomField;
+            } 
+            set {
+                UomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private String UomField; 
+
+        /// <summary>
+        /// GrowingStatus property
+        /// </summary>
+		[Required]
+        [Description("The status of a Channel with respect to creating new measurements. An active Channel is considered to by actively producing data points. An inactive Channel is known to be offline or not currently producing, but may begin producing again at some future point. A closed Channel will never produce points again. The rules for when a Channel is to be closed will vary some for different kinds of Channels. For instance, time-based surface Channels may remain open for the entire life of the drilling operation, whereas depth-based wireline Channels would be Closed at the end of the wireline job.")]
+		[XmlElement("GrowingStatus")]
+        public ChannelStatus? GrowingStatus {
+            get {
+                return GrowingStatusField;
+            } 
+            set {
+                GrowingStatusField = value;
+                NotifyPropertyChanged("GrowingStatus");
+            }
+        }
+
+        private ChannelStatus? GrowingStatusField; 
+
+        /// <summary>
+        /// Source property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Source of the data in the channel. This would contain the contractor name.")]
+		[XmlElement("Source")]
+        public String Source {
+            get {
+                return SourceField;
+            } 
+            set {
+                SourceField = value;
+                NotifyPropertyChanged("Source");
+            }
+        }
+
+        private String SourceField; 
+
+        /// <summary>
+        /// Wellbore property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("Wellbore")]
+        public DataObjectReference Wellbore {
+            get {
+                return WellboreField;
+            } 
+            set {
+                WellboreField = value;
+                NotifyPropertyChanged("Wellbore");
+            }
+        }
+
+        private DataObjectReference WellboreField; 
+
+        /// <summary>
+        /// AxisDefinition property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("AxisDefinition")]
+        public List<LogChannelAxis> AxisDefinition {
+            get {
+                return AxisDefinitionField;
+            } 
+            set {
+                AxisDefinitionField = value;
+                NotifyPropertyChanged("AxisDefinition");
+            }
+        }
+
+         [XmlIgnore]
+         public bool AxisDefinitionSpecified
+         {
+            get {
+             if(AxisDefinitionField!=null)
+                return AxisDefinitionField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<LogChannelAxis> AxisDefinitionField; 
+
+        /// <summary>
+        /// ChannelState property
+        /// </summary>
+		[Description("Defines where the channel gets its data from, e.g., calculated from another source, or from archive, or raw real-time, etc.")]
+		[XmlElement("ChannelState")]
+        public ChannelState? ChannelState {
+            get {
+                return ChannelStateField;
+            } 
+            set {
+                ChannelStateField = value;
+             if(value!=null) 
+                 this.ChannelStateSpecified = true;
+                NotifyPropertyChanged("ChannelState");
+            }
+        }
+
+        private ChannelState? ChannelStateField; 
+
+        /// <summary>
+        /// ChannelStateSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean ChannelStateSpecified {
+            get {
+                return ChannelStateSpecifiedField;
+            } 
+            set {
+                ChannelStateSpecifiedField = value;
+                NotifyPropertyChanged("ChannelStateSpecified");
+            }
+        }
+
+        private Boolean ChannelStateSpecifiedField; 
+
+        /// <summary>
+        /// TimeDepth property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("Is this a time or depth log?")]
+		[XmlElement("TimeDepth")]
+        public String TimeDepth {
+            get {
+                return TimeDepthField;
+            } 
+            set {
+                TimeDepthField = value;
+                NotifyPropertyChanged("TimeDepth");
+            }
+        }
+
+        private String TimeDepthField; 
+
+        /// <summary>
+        /// CurveClass property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released.")]
+		[XmlElement("CurveClass")]
+        public String CurveClass {
+            get {
+                return CurveClassField;
+            } 
+            set {
+                CurveClassField = value;
+                NotifyPropertyChanged("CurveClass");
+            }
+        }
+
+        private String CurveClassField; 
+
+        /// <summary>
+        /// RunNumber property
+        /// </summary>
+		[StringLength(64)]
+        [Description("The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.")]
+		[XmlElement("RunNumber")]
+        public String RunNumber {
+            get {
+                return RunNumberField;
+            } 
+            set {
+                RunNumberField = value;
+                NotifyPropertyChanged("RunNumber");
+            }
+        }
+
+        private String RunNumberField; 
+
+        /// <summary>
+        /// PassNumber property
+        /// </summary>
+		[StringLength(64)]
+        [Description("The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.")]
+		[XmlElement("PassNumber")]
+        public String PassNumber {
+            get {
+                return PassNumberField;
+            } 
+            set {
+                PassNumberField = value;
+                NotifyPropertyChanged("PassNumber");
+            }
+        }
+
+        private String PassNumberField; 
+
+        /// <summary>
+        /// StartIndex property
+        /// </summary>
+		[Description("When the log header defines the direction as \"Increasing\", the startIndex is the starting (minimum) index value at which the first non-null data point is located. When the log header defines the direction as \"Decreasing\", the startIndex is the starting (maximum) index value at which the first non-null data point is located.")]
+		[XmlElement("StartIndex")]
+        public AbstractIndexValue StartIndex {
+            get {
+                return StartIndexField;
+            } 
+            set {
+                StartIndexField = value;
+                NotifyPropertyChanged("StartIndex");
+            }
+        }
+
+        private AbstractIndexValue StartIndexField; 
+
+        /// <summary>
+        /// EndIndex property
+        /// </summary>
+		[Description("When the log header defines the direction as \"Increasing\", the endIndex is the ending (maximum) index value at which the last non-null data point is located. When the log header defines the direction as Decreasing, the endIndex is the ending (minimum) index value at which the last non-null data point is located.")]
+		[XmlElement("EndIndex")]
+        public AbstractIndexValue EndIndex {
+            get {
+                return EndIndexField;
+            } 
+            set {
+                EndIndexField = value;
+                NotifyPropertyChanged("EndIndex");
+            }
+        }
+
+        private AbstractIndexValue EndIndexField; 
+
+        /// <summary>
+        /// LoggingCompanyName property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("Name of the logging company.")]
+		[XmlElement("LoggingCompanyName")]
+        public String LoggingCompanyName {
+            get {
+                return LoggingCompanyNameField;
+            } 
+            set {
+                LoggingCompanyNameField = value;
+                NotifyPropertyChanged("LoggingCompanyName");
+            }
+        }
+
+        private String LoggingCompanyNameField; 
+
+        /// <summary>
+        /// LoggingCompanyCode property
+        /// </summary>
+		[StringLength(64)]
+        [Description("The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes")]
+		[XmlElement("LoggingCompanyCode")]
+        public String LoggingCompanyCode {
+            get {
+                return LoggingCompanyCodeField;
+            } 
+            set {
+                LoggingCompanyCodeField = value;
+                NotifyPropertyChanged("LoggingCompanyCode");
+            }
+        }
+
+        private String LoggingCompanyCodeField; 
+
+        /// <summary>
+        /// ToolName property
+        /// </summary>
+		[StringLength(64)]
+        [Description("Name of the logging tool as given by the logging contractor.")]
+		[XmlElement("ToolName")]
+        public String ToolName {
+            get {
+                return ToolNameField;
+            } 
+            set {
+                ToolNameField = value;
+                NotifyPropertyChanged("ToolName");
+            }
+        }
+
+        private String ToolNameField; 
+
+        /// <summary>
+        /// ToolClass property
+        /// </summary>
+		[StringLength(64)]
+        [Description("A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released")]
+		[XmlElement("ToolClass")]
+        public String ToolClass {
+            get {
+                return ToolClassField;
+            } 
+            set {
+                ToolClassField = value;
+                NotifyPropertyChanged("ToolClass");
+            }
+        }
+
+        private String ToolClassField; 
+
+        /// <summary>
+        /// Derivation property
+        /// </summary>
+		[Description("Indicates that the channel is derived from one or more other channels")]
+		[XmlElement("Derivation")]
+        public ChannelDerivation? Derivation {
+            get {
+                return DerivationField;
+            } 
+            set {
+                DerivationField = value;
+             if(value!=null) 
+                 this.DerivationSpecified = true;
+                NotifyPropertyChanged("Derivation");
+            }
+        }
+
+        private ChannelDerivation? DerivationField; 
+
+        /// <summary>
+        /// DerivationSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean DerivationSpecified {
+            get {
+                return DerivationSpecifiedField;
+            } 
+            set {
+                DerivationSpecifiedField = value;
+                NotifyPropertyChanged("DerivationSpecified");
+            }
+        }
+
+        private Boolean DerivationSpecifiedField; 
+
+        /// <summary>
+        /// LoggingMethod property
+        /// </summary>
+		[Description("Defines where the log channel gets its data from: LWD, MWD, wireline; or whether it is computed, etc.")]
+		[XmlElement("LoggingMethod")]
+        public LoggingMethod? LoggingMethod {
+            get {
+                return LoggingMethodField;
+            } 
+            set {
+                LoggingMethodField = value;
+             if(value!=null) 
+                 this.LoggingMethodSpecified = true;
+                NotifyPropertyChanged("LoggingMethod");
+            }
+        }
+
+        private LoggingMethod? LoggingMethodField; 
+
+        /// <summary>
+        /// LoggingMethodSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean LoggingMethodSpecified {
+            get {
+                return LoggingMethodSpecifiedField;
+            } 
+            set {
+                LoggingMethodSpecifiedField = value;
+                NotifyPropertyChanged("LoggingMethodSpecified");
+            }
+        }
+
+        private Boolean LoggingMethodSpecifiedField; 
+
+        /// <summary>
+        /// NominalHoleSize property
+        /// </summary>
+		[Description("The nominal hole size at the time the measurement tool was in the hole. The size is \"nominal\" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.")]
+        [ComponentElement]
+		[XmlElement("NominalHoleSize")]
+        public LengthMeasureExt NominalHoleSize {
+            get {
+                return NominalHoleSizeField;
+            } 
+            set {
+                NominalHoleSizeField = value;
+                NotifyPropertyChanged("NominalHoleSize");
+            }
+        }
+
+        private LengthMeasureExt NominalHoleSizeField; 
+
+        /// <summary>
+        /// PointMetadata property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("PointMetadata")]
+        public List<PointMetadata> PointMetadata {
+            get {
+                return PointMetadataField;
+            } 
+            set {
+                PointMetadataField = value;
+                NotifyPropertyChanged("PointMetadata");
+            }
+        }
+
+         [XmlIgnore]
+         public bool PointMetadataSpecified
+         {
+            get {
+             if(PointMetadataField!=null)
+                return PointMetadataField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<PointMetadata> PointMetadataField; 
+
+        /// <summary>
+        /// DerivedFrom property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("DerivedFrom")]
+        public List<DataObjectReference> DerivedFrom {
+            get {
+                return DerivedFromField;
+            } 
+            set {
+                DerivedFromField = value;
+                NotifyPropertyChanged("DerivedFrom");
+            }
+        }
+
+         [XmlIgnore]
+         public bool DerivedFromSpecified
+         {
+            get {
+             if(DerivedFromField!=null)
+                return DerivedFromField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<DataObjectReference> DerivedFromField; 
+
+        /// <summary>
+        /// Index property
+        /// </summary>
+		[Required]
+        [RecurringElement]
+		[XmlElement("Index")]
+        public List<ChannelIndex> Index {
+            get {
+                return IndexField;
+            } 
+            set {
+                IndexField = value;
+                NotifyPropertyChanged("Index");
+            }
+        }
+
+         [XmlIgnore]
+         public bool IndexSpecified
+         {
+            get {
+             if(IndexField!=null)
+                return IndexField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<ChannelIndex> IndexField; 
+
+        /// <summary>
+        /// Parent property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("Parent")]
+        public AbstractObject Parent {
+            get {
+                return ParentField;
+            } 
+            set {
+                ParentField = value;
+                NotifyPropertyChanged("Parent");
+            }
+        }
+
+        private AbstractObject ParentField; 
 
 
     } //here
@@ -79912,8 +83058,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// GeographicLocationWGS84 property
         /// </summary>
-		[Required]
-        [Description("The latitude (in coordinate1) and longitude (in coordinate2) of the well location in the WGS84 coordinate system (equivalent to EPSG:4326). Units are in decimal degrees.")]
+		[Description("The latitude (in coordinate1) and longitude (in coordinate2) of the well location in the WGS84 coordinate system (equivalent to EPSG:4326). Units are in decimal degrees.")]
         [ComponentElement]
 		[XmlElement("GeographicLocationWGS84")]
         public GeodeticWellLocation GeographicLocationWGS84 {
@@ -80219,6 +83364,23 @@ namespace Energistics.DataAccess.WITSML200
         private String CommentField; 
 
         /// <summary>
+        /// IndexRange property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("IndexRange")]
+        public IndexRange IndexRange {
+            get {
+                return IndexRangeField;
+            } 
+            set {
+                IndexRangeField = value;
+                NotifyPropertyChanged("IndexRange");
+            }
+        }
+
+        private IndexRange IndexRangeField; 
+
+        /// <summary>
         /// FailingRules property
         /// </summary>
 		[RecurringElement]
@@ -80245,23 +83407,6 @@ namespace Energistics.DataAccess.WITSML200
         private List<FailingRule> FailingRulesField; 
 
         /// <summary>
-        /// IndexRange property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("IndexRange")]
-        public IndexRange IndexRange {
-            get {
-                return IndexRangeField;
-            } 
-            set {
-                IndexRangeField = value;
-                NotifyPropertyChanged("IndexRange");
-            }
-        }
-
-        private IndexRange IndexRangeField; 
-
-        /// <summary>
         /// ReferencedData property
         /// </summary>
 		[Required]
@@ -80281,41 +83426,6 @@ namespace Energistics.DataAccess.WITSML200
 
 
     } //here
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the GeodeticCrs xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GeodeticCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the GeodeticCrs xsd type.")]
-    public partial class GeodeticCrs : AbstractObject, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// AbstractGeodeticCrs property
-        /// </summary>
-		
-		[XmlElement("AbstractGeodeticCrs")]
-        public AbstractGeodeticCrs AbstractGeodeticCrs {
-            get {
-                return AbstractGeodeticCrsField;
-            } 
-            set {
-                AbstractGeodeticCrsField = value;
-                NotifyPropertyChanged("AbstractGeodeticCrs");
-            }
-        }
-
-        private AbstractGeodeticCrs AbstractGeodeticCrsField; 
-
-
-    } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -80382,6 +83492,41 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private String uomField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the GeodeticCrs xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GeodeticCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the GeodeticCrs xsd type.")]
+    public partial class GeodeticCrs : AbstractObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// AbstractGeodeticCrs property
+        /// </summary>
+		
+		[XmlElement("AbstractGeodeticCrs")]
+        public AbstractGeodeticCrs AbstractGeodeticCrs {
+            get {
+                return AbstractGeodeticCrsField;
+            } 
+            set {
+                AbstractGeodeticCrsField = value;
+                NotifyPropertyChanged("AbstractGeodeticCrs");
+            }
+        }
+
+        private AbstractGeodeticCrs AbstractGeodeticCrsField; 
 
 
     } //here
@@ -80458,6 +83603,50 @@ namespace Energistics.DataAccess.WITSML200
     }
 
     /// <summary>
+    /// This class represents the PropertyKindDictionary xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+	[Description("This class represents the PropertyKindDictionary xsd type.")]
+    public partial class PropertyKindDictionary : AbstractObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// PropertyKind property
+        /// </summary>
+		[Required]
+        [Description("Defines which property kind are contained into a property kind dictionary.")]
+        [RecurringElement]
+		[XmlElement("PropertyKind")]
+        public List<PropertyKind> PropertyKind {
+            get {
+                return PropertyKindField;
+            } 
+            set {
+                PropertyKindField = value;
+                NotifyPropertyChanged("PropertyKind");
+            }
+        }
+
+         [XmlIgnore]
+         public bool PropertyKindSpecified
+         {
+            get {
+             if(PropertyKindField!=null)
+                return PropertyKindField.Count>0?true:false;
+             else return false;
+            } 
+         }
+        private List<PropertyKind> PropertyKindField; 
+
+
+    } //here
+
+    /// <summary>
     /// This class represents the PropertyKind xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -80505,50 +83694,6 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private DataObjectReference ParentField; 
-
-
-    } //here
-
-    /// <summary>
-    /// This class represents the PropertyKindDictionary xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-	[Description("This class represents the PropertyKindDictionary xsd type.")]
-    public partial class PropertyKindDictionary : AbstractObject, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// PropertyKind property
-        /// </summary>
-		[Required]
-        [Description("Defines which property kind are contained into a property kind dictionary.")]
-        [RecurringElement]
-		[XmlElement("PropertyKind")]
-        public List<DataObjectReference> PropertyKind {
-            get {
-                return PropertyKindField;
-            } 
-            set {
-                PropertyKindField = value;
-                NotifyPropertyChanged("PropertyKind");
-            }
-        }
-
-         [XmlIgnore]
-         public bool PropertyKindSpecified
-         {
-            get {
-             if(PropertyKindField!=null)
-                return PropertyKindField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<DataObjectReference> PropertyKindField; 
 
 
     } //here
@@ -80610,418 +83755,6 @@ namespace Energistics.DataAccess.WITSML200
 
     #region Enumerations
     namespace ReferenceData {
-        /// <summary>
-        /// This class represents the ShowRating xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the ShowRating xsd enumeration.")]
-        public enum ShowRating 
-        {
-        /// <summary>
-        /// none property
-        /// </summary>
-          none,
-        /// <summary>
-        /// verypoor property
-        /// </summary>
-          [XmlEnum("very poor")]
-          verypoor,
-        /// <summary>
-        /// poor property
-        /// </summary>
-          poor,
-        /// <summary>
-        /// fair property
-        /// </summary>
-          fair,
-        /// <summary>
-        /// good property
-        /// </summary>
-          good,
-        /// <summary>
-        /// verygood property
-        /// </summary>
-          [XmlEnum("very good")]
-          verygood,
-        /// <summary>
-        /// unknown property
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the AreaPerAreaUom xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the AreaPerAreaUom xsd enumeration.")]
-        public enum AreaPerAreaUom 
-        {
-        /// <summary>
-        /// Item property
-        /// </summary>
-          [XmlEnum("%")]
-          Item,
-        /// <summary>
-        /// area property
-        /// </summary>
-          [XmlEnum("%[area]")]
-          area,
-        /// <summary>
-        /// cEuc property
-        /// </summary>
-          cEuc,
-        /// <summary>
-        /// Euc property
-        /// </summary>
-          Euc,
-        /// <summary>
-        /// in2ft2 property
-        /// </summary>
-          [XmlEnum("in2/ft2")]
-          in2ft2,
-        /// <summary>
-        /// in2in2 property
-        /// </summary>
-          [XmlEnum("in2/in2")]
-          in2in2,
-        /// <summary>
-        /// m2m2 property
-        /// </summary>
-          [XmlEnum("m2/m2")]
-          m2m2,
-        /// <summary>
-        /// mm2mm2 property
-        /// </summary>
-          [XmlEnum("mm2/mm2")]
-          mm2mm2
-        }
-        /// <summary>
-        /// This class represents the ShowSpeed xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the ShowSpeed xsd enumeration.")]
-        public enum ShowSpeed 
-        {
-        /// <summary>
-        /// slow property
-        /// </summary>
-          slow,
-        /// <summary>
-        /// moderatelyfast property
-        /// </summary>
-          [XmlEnum("moderately fast")]
-          moderatelyfast,
-        /// <summary>
-        /// fast property
-        /// </summary>
-          fast,
-        /// <summary>
-        /// instantaneous property
-        /// </summary>
-          instantaneous,
-        /// <summary>
-        /// none property
-        /// </summary>
-          none,
-        /// <summary>
-        /// unknown property
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the ShowLevel xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the ShowLevel xsd enumeration.")]
-        public enum ShowLevel 
-        {
-        /// <summary>
-        /// blooming property
-        /// </summary>
-          blooming,
-        /// <summary>
-        /// streaming property
-        /// </summary>
-          streaming,
-        /// <summary>
-        /// unknown property
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the ShowFluorescence xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the ShowFluorescence xsd enumeration.")]
-        public enum ShowFluorescence 
-        {
-        /// <summary>
-        /// faint property
-        /// </summary>
-          faint,
-        /// <summary>
-        /// bright property
-        /// </summary>
-          bright,
-        /// <summary>
-        /// none property
-        /// </summary>
-          none,
-        /// <summary>
-        /// unknown property
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the VolumePerVolumeUom xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the VolumePerVolumeUom xsd enumeration.")]
-        public enum VolumePerVolumeUom 
-        {
-        /// <summary>
-        /// Item property
-        /// </summary>
-          [XmlEnum("%")]
-          Item,
-        /// <summary>
-        /// vol property
-        /// </summary>
-          [XmlEnum("%[vol]")]
-          vol,
-        /// <summary>
-        /// Item0001bblft3 property
-        /// </summary>
-          [XmlEnum("0.001 bbl/ft3")]
-          Item0001bblft3,
-        /// <summary>
-        /// Item0001bblm3 property
-        /// </summary>
-          [XmlEnum("0.001 bbl/m3")]
-          Item0001bblm3,
-        /// <summary>
-        /// Item0001galUKbbl property
-        /// </summary>
-          [XmlEnum("0.001 gal[UK]/bbl")]
-          Item0001galUKbbl,
-        /// <summary>
-        /// Item0001galUKgalUK property
-        /// </summary>
-          [XmlEnum("0.001 gal[UK]/gal[UK]")]
-          Item0001galUKgalUK,
-        /// <summary>
-        /// Item0001galUSbbl property
-        /// </summary>
-          [XmlEnum("0.001 gal[US]/bbl")]
-          Item0001galUSbbl,
-        /// <summary>
-        /// Item0001galUSft3 property
-        /// </summary>
-          [XmlEnum("0.001 gal[US]/ft3")]
-          Item0001galUSft3,
-        /// <summary>
-        /// Item0001galUSgalUS property
-        /// </summary>
-          [XmlEnum("0.001 gal[US]/gal[US]")]
-          Item0001galUSgalUS,
-        /// <summary>
-        /// Item0001ptUKbbl property
-        /// </summary>
-          [XmlEnum("0.001 pt[UK]/bbl")]
-          Item0001ptUKbbl,
-        /// <summary>
-        /// Item001bblbbl property
-        /// </summary>
-          [XmlEnum("0.01 bbl/bbl")]
-          Item001bblbbl,
-        /// <summary>
-        /// Item01galUSbbl property
-        /// </summary>
-          [XmlEnum("0.1 gal[US]/bbl")]
-          Item01galUSbbl,
-        /// <summary>
-        /// Item01Lbbl property
-        /// </summary>
-          [XmlEnum("0.1 L/bbl")]
-          Item01Lbbl,
-        /// <summary>
-        /// Item01ptUSbbl property
-        /// </summary>
-          [XmlEnum("0.1 pt[US]/bbl")]
-          Item01ptUSbbl,
-        /// <summary>
-        /// Item1000ft3bbl property
-        /// </summary>
-          [XmlEnum("1000 ft3/bbl")]
-          Item1000ft3bbl,
-        /// <summary>
-        /// Item1000m3m3 property
-        /// </summary>
-          [XmlEnum("1000 m3/m3")]
-          Item1000m3m3,
-        /// <summary>
-        /// Item1E6acreftbbl property
-        /// </summary>
-          [XmlEnum("1E-6 acre.ft/bbl")]
-          Item1E6acreftbbl,
-        /// <summary>
-        /// Item1E6bblft3 property
-        /// </summary>
-          [XmlEnum("1E-6 bbl/ft3")]
-          Item1E6bblft3,
-        /// <summary>
-        /// Item1E6bblm3 property
-        /// </summary>
-          [XmlEnum("1E-6 bbl/m3")]
-          Item1E6bblm3,
-        /// <summary>
-        /// Item1E6bblacreft property
-        /// </summary>
-          [XmlEnum("1E6 bbl/(acre.ft)")]
-          Item1E6bblacreft,
-        /// <summary>
-        /// Item1E6ft3acreft property
-        /// </summary>
-          [XmlEnum("1E6 ft3/(acre.ft)")]
-          Item1E6ft3acreft,
-        /// <summary>
-        /// Item1E6ft3bbl property
-        /// </summary>
-          [XmlEnum("1E6 ft3/bbl")]
-          Item1E6ft3bbl,
-        /// <summary>
-        /// bblacreft property
-        /// </summary>
-          [XmlEnum("bbl/(acre.ft)")]
-          bblacreft,
-        /// <summary>
-        /// bblbbl property
-        /// </summary>
-          [XmlEnum("bbl/bbl")]
-          bblbbl,
-        /// <summary>
-        /// bblft3 property
-        /// </summary>
-          [XmlEnum("bbl/ft3")]
-          bblft3,
-        /// <summary>
-        /// bblm3 property
-        /// </summary>
-          [XmlEnum("bbl/m3")]
-          bblm3,
-        /// <summary>
-        /// cEuc property
-        /// </summary>
-          cEuc,
-        /// <summary>
-        /// cm3cm3 property
-        /// </summary>
-          [XmlEnum("cm3/cm3")]
-          cm3cm3,
-        /// <summary>
-        /// cm3L property
-        /// </summary>
-          [XmlEnum("cm3/L")]
-          cm3L,
-        /// <summary>
-        /// cm3m3 property
-        /// </summary>
-          [XmlEnum("cm3/m3")]
-          cm3m3,
-        /// <summary>
-        /// dm3m3 property
-        /// </summary>
-          [XmlEnum("dm3/m3")]
-          dm3m3,
-        /// <summary>
-        /// Euc property
-        /// </summary>
-          Euc,
-        /// <summary>
-        /// ft3bbl property
-        /// </summary>
-          [XmlEnum("ft3/bbl")]
-          ft3bbl,
-        /// <summary>
-        /// ft3ft3 property
-        /// </summary>
-          [XmlEnum("ft3/ft3")]
-          ft3ft3,
-        /// <summary>
-        /// galUKft3 property
-        /// </summary>
-          [XmlEnum("gal[UK]/ft3")]
-          galUKft3,
-        /// <summary>
-        /// galUSbbl property
-        /// </summary>
-          [XmlEnum("gal[US]/bbl")]
-          galUSbbl,
-        /// <summary>
-        /// galUSft3 property
-        /// </summary>
-          [XmlEnum("gal[US]/ft3")]
-          galUSft3,
-        /// <summary>
-        /// Lm3 property
-        /// </summary>
-          [XmlEnum("L/m3")]
-          Lm3,
-        /// <summary>
-        /// m3ham property
-        /// </summary>
-          [XmlEnum("m3/(ha.m)")]
-          m3ham,
-        /// <summary>
-        /// m3bbl property
-        /// </summary>
-          [XmlEnum("m3/bbl")]
-          m3bbl,
-        /// <summary>
-        /// m3m3 property
-        /// </summary>
-          [XmlEnum("m3/m3")]
-          m3m3,
-        /// <summary>
-        /// mLgalUK property
-        /// </summary>
-          [XmlEnum("mL/gal[UK]")]
-          mLgalUK,
-        /// <summary>
-        /// mLgalUS property
-        /// </summary>
-          [XmlEnum("mL/gal[US]")]
-          mLgalUS,
-        /// <summary>
-        /// mLmL property
-        /// </summary>
-          [XmlEnum("mL/mL")]
-          mLmL,
-        /// <summary>
-        /// ppk property
-        /// </summary>
-          ppk,
-        /// <summary>
-        /// ppm property
-        /// </summary>
-          ppm,
-        /// <summary>
-        /// ppmvol property
-        /// </summary>
-          [XmlEnum("ppm[vol]")]
-          ppmvol
-        }
         /// <summary>
         /// This class represents the LengthUom xsd enumeration.
         /// </summary>
@@ -81424,307 +84157,6 @@ namespace Energistics.DataAccess.WITSML200
           ydUS
         }
         /// <summary>
-        /// This class represents the IlluminanceUom xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the IlluminanceUom xsd enumeration.")]
-        public enum IlluminanceUom 
-        {
-        /// <summary>
-        /// footcandle property
-        /// </summary>
-          footcandle,
-        /// <summary>
-        /// klx property
-        /// </summary>
-          klx,
-        /// <summary>
-        /// lmm2 property
-        /// </summary>
-          [XmlEnum("lm/m2")]
-          lmm2,
-        /// <summary>
-        /// lx property
-        /// </summary>
-          lx
-        }
-        /// <summary>
-        /// This class represents the MassPerVolumeUom xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the MassPerVolumeUom xsd enumeration.")]
-        public enum MassPerVolumeUom 
-        {
-        /// <summary>
-        /// Item0001lbmbbl property
-        /// </summary>
-          [XmlEnum("0.001 lbm/bbl")]
-          Item0001lbmbbl,
-        /// <summary>
-        /// Item0001lbmgalUK property
-        /// </summary>
-          [XmlEnum("0.001 lbm/gal[UK]")]
-          Item0001lbmgalUK,
-        /// <summary>
-        /// Item0001lbmgalUS property
-        /// </summary>
-          [XmlEnum("0.001 lbm/gal[US]")]
-          Item0001lbmgalUS,
-        /// <summary>
-        /// Item001grainft3 property
-        /// </summary>
-          [XmlEnum("0.01 grain/ft3")]
-          Item001grainft3,
-        /// <summary>
-        /// Item01lbmbbl property
-        /// </summary>
-          [XmlEnum("0.1 lbm/bbl")]
-          Item01lbmbbl,
-        /// <summary>
-        /// Item10Mgm3 property
-        /// </summary>
-          [XmlEnum("10 Mg/m3")]
-          Item10Mgm3,
-        /// <summary>
-        /// gcm3 property
-        /// </summary>
-          [XmlEnum("g/cm3")]
-          gcm3,
-        /// <summary>
-        /// gdm3 property
-        /// </summary>
-          [XmlEnum("g/dm3")]
-          gdm3,
-        /// <summary>
-        /// ggalUK property
-        /// </summary>
-          [XmlEnum("g/gal[UK]")]
-          ggalUK,
-        /// <summary>
-        /// ggalUS property
-        /// </summary>
-          [XmlEnum("g/gal[US]")]
-          ggalUS,
-        /// <summary>
-        /// gL property
-        /// </summary>
-          [XmlEnum("g/L")]
-          gL,
-        /// <summary>
-        /// gm3 property
-        /// </summary>
-          [XmlEnum("g/m3")]
-          gm3,
-        /// <summary>
-        /// grainft3 property
-        /// </summary>
-          [XmlEnum("grain/ft3")]
-          grainft3,
-        /// <summary>
-        /// graingalUS property
-        /// </summary>
-          [XmlEnum("grain/gal[US]")]
-          graingalUS,
-        /// <summary>
-        /// kgdm3 property
-        /// </summary>
-          [XmlEnum("kg/dm3")]
-          kgdm3,
-        /// <summary>
-        /// kgL property
-        /// </summary>
-          [XmlEnum("kg/L")]
-          kgL,
-        /// <summary>
-        /// kgm3 property
-        /// </summary>
-          [XmlEnum("kg/m3")]
-          kgm3,
-        /// <summary>
-        /// lbmbbl property
-        /// </summary>
-          [XmlEnum("lbm/bbl")]
-          lbmbbl,
-        /// <summary>
-        /// lbmft3 property
-        /// </summary>
-          [XmlEnum("lbm/ft3")]
-          lbmft3,
-        /// <summary>
-        /// lbmgalUK property
-        /// </summary>
-          [XmlEnum("lbm/gal[UK]")]
-          lbmgalUK,
-        /// <summary>
-        /// lbmgalUS property
-        /// </summary>
-          [XmlEnum("lbm/gal[US]")]
-          lbmgalUS,
-        /// <summary>
-        /// lbmin3 property
-        /// </summary>
-          [XmlEnum("lbm/in3")]
-          lbmin3,
-        /// <summary>
-        /// mgdm3 property
-        /// </summary>
-          [XmlEnum("mg/dm3")]
-          mgdm3,
-        /// <summary>
-        /// mggalUS property
-        /// </summary>
-          [XmlEnum("mg/gal[US]")]
-          mggalUS,
-        /// <summary>
-        /// mgL property
-        /// </summary>
-          [XmlEnum("mg/L")]
-          mgL,
-        /// <summary>
-        /// mgm3 property
-        /// </summary>
-          [XmlEnum("mg/m3")]
-          mgm3,
-        /// <summary>
-        /// Mgm3 property
-        /// </summary>
-          [XmlEnum("Mg/m3")]
-          Mgm3,
-        /// <summary>
-        /// tm3 property
-        /// </summary>
-          [XmlEnum("t/m3")]
-          tm3,
-        /// <summary>
-        /// ugcm3 property
-        /// </summary>
-          [XmlEnum("ug/cm3")]
-          ugcm3
-        }
-        /// <summary>
-        /// This class represents the DimensionlessUom xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the DimensionlessUom xsd enumeration.")]
-        public enum DimensionlessUom 
-        {
-        /// <summary>
-        /// Item property
-        /// </summary>
-          [XmlEnum("%")]
-          Item,
-        /// <summary>
-        /// cEuc property
-        /// </summary>
-          cEuc,
-        /// <summary>
-        /// dEuc property
-        /// </summary>
-          dEuc,
-        /// <summary>
-        /// EEuc property
-        /// </summary>
-          EEuc,
-        /// <summary>
-        /// Euc property
-        /// </summary>
-          Euc,
-        /// <summary>
-        /// fEuc property
-        /// </summary>
-          fEuc,
-        /// <summary>
-        /// GEuc property
-        /// </summary>
-          GEuc,
-        /// <summary>
-        /// kEuc property
-        /// </summary>
-          kEuc,
-        /// <summary>
-        /// MEuc property
-        /// </summary>
-          MEuc,
-        /// <summary>
-        /// mEuc property
-        /// </summary>
-          mEuc,
-        /// <summary>
-        /// nEuc property
-        /// </summary>
-          nEuc,
-        /// <summary>
-        /// pEuc property
-        /// </summary>
-          pEuc,
-        /// <summary>
-        /// ppk property
-        /// </summary>
-          ppk,
-        /// <summary>
-        /// ppm property
-        /// </summary>
-          ppm,
-        /// <summary>
-        /// TEuc property
-        /// </summary>
-          TEuc,
-        /// <summary>
-        /// uEuc property
-        /// </summary>
-          uEuc
-        }
-        /// <summary>
-        /// This class represents the LithostratigraphicRank xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the LithostratigraphicRank xsd enumeration.")]
-        public enum LithostratigraphicRank 
-        {
-        /// <summary>
-        /// group property
-        /// </summary>
-          group,
-        /// <summary>
-        /// formation property
-        /// </summary>
-          formation,
-        /// <summary>
-        /// member property
-        /// </summary>
-          member,
-        /// <summary>
-        /// bed property
-        /// </summary>
-          bed
-        }
-        /// <summary>
-        /// This class represents the ShowFluid xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the ShowFluid xsd enumeration.")]
-        public enum ShowFluid 
-        {
-        /// <summary>
-        /// gas property
-        /// </summary>
-          gas,
-        /// <summary>
-        /// oil property
-        /// </summary>
-          oil
-        }
-        /// <summary>
         /// This class represents the ErrorTermSource xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -81801,60 +84233,49 @@ namespace Energistics.DataAccess.WITSML200
           stationary
         }
         /// <summary>
-        /// This class represents the ElectricConductivityUom xsd enumeration.
+        /// This class represents the StimJobDiversionMethod xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the ElectricConductivityUom xsd enumeration.")]
-        public enum ElectricConductivityUom 
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the StimJobDiversionMethod xsd enumeration.")]
+        public enum StimJobDiversionMethod 
         {
         /// <summary>
-        /// kSm property
+        /// ballsealer property
         /// </summary>
-          [XmlEnum("kS/m")]
-          kSm,
+          [XmlEnum("ball sealer")]
+          ballsealer,
         /// <summary>
-        /// mScm property
+        /// bands property
         /// </summary>
-          [XmlEnum("mS/cm")]
-          mScm,
+          bands,
         /// <summary>
-        /// mSm property
+        /// chemical property
         /// </summary>
-          [XmlEnum("mS/m")]
-          mSm,
+          chemical,
         /// <summary>
-        /// Sm property
+        /// fibers property
         /// </summary>
-          [XmlEnum("S/m")]
-          Sm
-        }
+          fibers,
         /// <summary>
-        /// This class represents the ThermodynamicTemperatureUom xsd enumeration.
+        /// other property
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the ThermodynamicTemperatureUom xsd enumeration.")]
-        public enum ThermodynamicTemperatureUom 
-        {
+          other,
         /// <summary>
-        /// degC property
+        /// packer property
         /// </summary>
-          degC,
+          packer,
         /// <summary>
-        /// degF property
+        /// solidparticle property
         /// </summary>
-          degF,
+          [XmlEnum("solid particle")]
+          solidparticle,
         /// <summary>
-        /// degR property
+        /// straddlepacker property
         /// </summary>
-          degR,
-        /// <summary>
-        /// K property
-        /// </summary>
-          K
+          [XmlEnum("straddle packer")]
+          straddlepacker
         }
         /// <summary>
         /// This class represents the PermeabilityRockUom xsd enumeration.
@@ -81883,98 +84304,6 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           [XmlEnum("TD[API]")]
           TDAPI
-        }
-        /// <summary>
-        /// This class represents the MassPerMassUom xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the MassPerMassUom xsd enumeration.")]
-        public enum MassPerMassUom 
-        {
-        /// <summary>
-        /// Item property
-        /// </summary>
-          [XmlEnum("%")]
-          Item,
-        /// <summary>
-        /// mass property
-        /// </summary>
-          [XmlEnum("%[mass]")]
-          mass,
-        /// <summary>
-        /// Euc property
-        /// </summary>
-          Euc,
-        /// <summary>
-        /// gkg property
-        /// </summary>
-          [XmlEnum("g/kg")]
-          gkg,
-        /// <summary>
-        /// gt property
-        /// </summary>
-          [XmlEnum("g/t")]
-          gt,
-        /// <summary>
-        /// kgkg property
-        /// </summary>
-          [XmlEnum("kg/kg")]
-          kgkg,
-        /// <summary>
-        /// kgsack94lbm property
-        /// </summary>
-          [XmlEnum("kg/sack[94lbm]")]
-          kgsack94lbm,
-        /// <summary>
-        /// kgt property
-        /// </summary>
-          [XmlEnum("kg/t")]
-          kgt,
-        /// <summary>
-        /// mgg property
-        /// </summary>
-          [XmlEnum("mg/g")]
-          mgg,
-        /// <summary>
-        /// mgkg property
-        /// </summary>
-          [XmlEnum("mg/kg")]
-          mgkg,
-        /// <summary>
-        /// ngg property
-        /// </summary>
-          [XmlEnum("ng/g")]
-          ngg,
-        /// <summary>
-        /// ngmg property
-        /// </summary>
-          [XmlEnum("ng/mg")]
-          ngmg,
-        /// <summary>
-        /// ppk property
-        /// </summary>
-          ppk,
-        /// <summary>
-        /// ppm property
-        /// </summary>
-          ppm,
-        /// <summary>
-        /// ppmmass property
-        /// </summary>
-          [XmlEnum("ppm[mass]")]
-          ppmmass,
-        /// <summary>
-        /// ugg property
-        /// </summary>
-          [XmlEnum("ug/g")]
-          ugg,
-        /// <summary>
-        /// ugmg property
-        /// </summary>
-          [XmlEnum("ug/mg")]
-          ugmg
         }
         /// <summary>
         /// This class represents the PressureUom xsd enumeration.
@@ -82178,228 +84507,6 @@ namespace Energistics.DataAccess.WITSML200
           upsi
         }
         /// <summary>
-        /// This class represents the AreaPerMassUom xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the AreaPerMassUom xsd enumeration.")]
-        public enum AreaPerMassUom 
-        {
-        /// <summary>
-        /// cm2g property
-        /// </summary>
-          [XmlEnum("cm2/g")]
-          cm2g,
-        /// <summary>
-        /// ft2lbm property
-        /// </summary>
-          [XmlEnum("ft2/lbm")]
-          ft2lbm,
-        /// <summary>
-        /// m2g property
-        /// </summary>
-          [XmlEnum("m2/g")]
-          m2g,
-        /// <summary>
-        /// m2kg property
-        /// </summary>
-          [XmlEnum("m2/kg")]
-          m2kg
-        }
-        /// <summary>
-        /// This class represents the StimMaterialKind xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the StimMaterialKind xsd enumeration.")]
-        public enum StimMaterialKind 
-        {
-        /// <summary>
-        /// additive property
-        /// </summary>
-          additive,
-        /// <summary>
-        /// brine property
-        /// </summary>
-          brine,
-        /// <summary>
-        /// CO2 property
-        /// </summary>
-          CO2,
-        /// <summary>
-        /// gel property
-        /// </summary>
-          gel,
-        /// <summary>
-        /// N2 property
-        /// </summary>
-          N2,
-        /// <summary>
-        /// other property
-        /// </summary>
-          other,
-        /// <summary>
-        /// proppantagent property
-        /// </summary>
-          [XmlEnum("proppant agent")]
-          proppantagent,
-        /// <summary>
-        /// water property
-        /// </summary>
-          water
-        }
-        /// <summary>
-        /// This class represents the StimAdditiveKind xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the StimAdditiveKind xsd enumeration.")]
-        public enum StimAdditiveKind 
-        {
-        /// <summary>
-        /// acid property
-        /// </summary>
-          acid,
-        /// <summary>
-        /// activator property
-        /// </summary>
-          activator,
-        /// <summary>
-        /// biocide property
-        /// </summary>
-          biocide,
-        /// <summary>
-        /// breaker property
-        /// </summary>
-          breaker,
-        /// <summary>
-        /// breakeraid property
-        /// </summary>
-          [XmlEnum("breaker aid")]
-          breakeraid,
-        /// <summary>
-        /// buffer property
-        /// </summary>
-          buffer,
-        /// <summary>
-        /// claystabilizer property
-        /// </summary>
-          [XmlEnum("clay stabilizer")]
-          claystabilizer,
-        /// <summary>
-        /// corrosioninhibitor property
-        /// </summary>
-          [XmlEnum("corrosion inhibitor")]
-          corrosioninhibitor,
-        /// <summary>
-        /// corrosioninhibitoraid property
-        /// </summary>
-          [XmlEnum("corrosion inhibitor aid")]
-          corrosioninhibitoraid,
-        /// <summary>
-        /// crosslinker property
-        /// </summary>
-          crosslinker,
-        /// <summary>
-        /// delayingagent property
-        /// </summary>
-          [XmlEnum("delaying agent")]
-          delayingagent,
-        /// <summary>
-        /// fibers property
-        /// </summary>
-          fibers,
-        /// <summary>
-        /// fluidlossadditive property
-        /// </summary>
-          [XmlEnum("fluid loss additive")]
-          fluidlossadditive,
-        /// <summary>
-        /// foamer property
-        /// </summary>
-          foamer,
-        /// <summary>
-        /// frictionreducer property
-        /// </summary>
-          [XmlEnum("friction reducer")]
-          frictionreducer,
-        /// <summary>
-        /// gellingagent property
-        /// </summary>
-          [XmlEnum("gelling agent")]
-          gellingagent,
-        /// <summary>
-        /// ironcontroladditive property
-        /// </summary>
-          [XmlEnum("iron control additive")]
-          ironcontroladditive,
-        /// <summary>
-        /// mutualsolvent property
-        /// </summary>
-          [XmlEnum("mutual solvent")]
-          mutualsolvent,
-        /// <summary>
-        /// salt property
-        /// </summary>
-          salt,
-        /// <summary>
-        /// stabilizer property
-        /// </summary>
-          stabilizer,
-        /// <summary>
-        /// surfactant property
-        /// </summary>
-          surfactant
-        }
-        /// <summary>
-        /// This class represents the StimJobDiversionMethod xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the StimJobDiversionMethod xsd enumeration.")]
-        public enum StimJobDiversionMethod 
-        {
-        /// <summary>
-        /// ballsealer property
-        /// </summary>
-          [XmlEnum("ball sealer")]
-          ballsealer,
-        /// <summary>
-        /// bands property
-        /// </summary>
-          bands,
-        /// <summary>
-        /// chemical property
-        /// </summary>
-          chemical,
-        /// <summary>
-        /// fibers property
-        /// </summary>
-          fibers,
-        /// <summary>
-        /// other property
-        /// </summary>
-          other,
-        /// <summary>
-        /// packer property
-        /// </summary>
-          packer,
-        /// <summary>
-        /// solidparticle property
-        /// </summary>
-          [XmlEnum("solid particle")]
-          solidparticle,
-        /// <summary>
-        /// straddlepacker property
-        /// </summary>
-          [XmlEnum("straddle packer")]
-          straddlepacker
-        }
-        /// <summary>
         /// This class represents the IsothermalCompressibilityUom xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -82540,6 +84647,322 @@ namespace Energistics.DataAccess.WITSML200
         /// uP property
         /// </summary>
           uP
+        }
+        /// <summary>
+        /// This class represents the DimensionlessUom xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the DimensionlessUom xsd enumeration.")]
+        public enum DimensionlessUom 
+        {
+        /// <summary>
+        /// Item property
+        /// </summary>
+          [XmlEnum("%")]
+          Item,
+        /// <summary>
+        /// cEuc property
+        /// </summary>
+          cEuc,
+        /// <summary>
+        /// dEuc property
+        /// </summary>
+          dEuc,
+        /// <summary>
+        /// EEuc property
+        /// </summary>
+          EEuc,
+        /// <summary>
+        /// Euc property
+        /// </summary>
+          Euc,
+        /// <summary>
+        /// fEuc property
+        /// </summary>
+          fEuc,
+        /// <summary>
+        /// GEuc property
+        /// </summary>
+          GEuc,
+        /// <summary>
+        /// kEuc property
+        /// </summary>
+          kEuc,
+        /// <summary>
+        /// MEuc property
+        /// </summary>
+          MEuc,
+        /// <summary>
+        /// mEuc property
+        /// </summary>
+          mEuc,
+        /// <summary>
+        /// nEuc property
+        /// </summary>
+          nEuc,
+        /// <summary>
+        /// pEuc property
+        /// </summary>
+          pEuc,
+        /// <summary>
+        /// ppk property
+        /// </summary>
+          ppk,
+        /// <summary>
+        /// ppm property
+        /// </summary>
+          ppm,
+        /// <summary>
+        /// TEuc property
+        /// </summary>
+          TEuc,
+        /// <summary>
+        /// uEuc property
+        /// </summary>
+          uEuc
+        }
+        /// <summary>
+        /// This class represents the VolumePerVolumeUom xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the VolumePerVolumeUom xsd enumeration.")]
+        public enum VolumePerVolumeUom 
+        {
+        /// <summary>
+        /// Item property
+        /// </summary>
+          [XmlEnum("%")]
+          Item,
+        /// <summary>
+        /// vol property
+        /// </summary>
+          [XmlEnum("%[vol]")]
+          vol,
+        /// <summary>
+        /// Item0001bblft3 property
+        /// </summary>
+          [XmlEnum("0.001 bbl/ft3")]
+          Item0001bblft3,
+        /// <summary>
+        /// Item0001bblm3 property
+        /// </summary>
+          [XmlEnum("0.001 bbl/m3")]
+          Item0001bblm3,
+        /// <summary>
+        /// Item0001galUKbbl property
+        /// </summary>
+          [XmlEnum("0.001 gal[UK]/bbl")]
+          Item0001galUKbbl,
+        /// <summary>
+        /// Item0001galUKgalUK property
+        /// </summary>
+          [XmlEnum("0.001 gal[UK]/gal[UK]")]
+          Item0001galUKgalUK,
+        /// <summary>
+        /// Item0001galUSbbl property
+        /// </summary>
+          [XmlEnum("0.001 gal[US]/bbl")]
+          Item0001galUSbbl,
+        /// <summary>
+        /// Item0001galUSft3 property
+        /// </summary>
+          [XmlEnum("0.001 gal[US]/ft3")]
+          Item0001galUSft3,
+        /// <summary>
+        /// Item0001galUSgalUS property
+        /// </summary>
+          [XmlEnum("0.001 gal[US]/gal[US]")]
+          Item0001galUSgalUS,
+        /// <summary>
+        /// Item0001ptUKbbl property
+        /// </summary>
+          [XmlEnum("0.001 pt[UK]/bbl")]
+          Item0001ptUKbbl,
+        /// <summary>
+        /// Item001bblbbl property
+        /// </summary>
+          [XmlEnum("0.01 bbl/bbl")]
+          Item001bblbbl,
+        /// <summary>
+        /// Item01galUSbbl property
+        /// </summary>
+          [XmlEnum("0.1 gal[US]/bbl")]
+          Item01galUSbbl,
+        /// <summary>
+        /// Item01Lbbl property
+        /// </summary>
+          [XmlEnum("0.1 L/bbl")]
+          Item01Lbbl,
+        /// <summary>
+        /// Item01ptUSbbl property
+        /// </summary>
+          [XmlEnum("0.1 pt[US]/bbl")]
+          Item01ptUSbbl,
+        /// <summary>
+        /// Item1000ft3bbl property
+        /// </summary>
+          [XmlEnum("1000 ft3/bbl")]
+          Item1000ft3bbl,
+        /// <summary>
+        /// Item1000m3m3 property
+        /// </summary>
+          [XmlEnum("1000 m3/m3")]
+          Item1000m3m3,
+        /// <summary>
+        /// Item1E6acreftbbl property
+        /// </summary>
+          [XmlEnum("1E-6 acre.ft/bbl")]
+          Item1E6acreftbbl,
+        /// <summary>
+        /// Item1E6bblft3 property
+        /// </summary>
+          [XmlEnum("1E-6 bbl/ft3")]
+          Item1E6bblft3,
+        /// <summary>
+        /// Item1E6bblm3 property
+        /// </summary>
+          [XmlEnum("1E-6 bbl/m3")]
+          Item1E6bblm3,
+        /// <summary>
+        /// Item1E6bblacreft property
+        /// </summary>
+          [XmlEnum("1E6 bbl/(acre.ft)")]
+          Item1E6bblacreft,
+        /// <summary>
+        /// Item1E6ft3acreft property
+        /// </summary>
+          [XmlEnum("1E6 ft3/(acre.ft)")]
+          Item1E6ft3acreft,
+        /// <summary>
+        /// Item1E6ft3bbl property
+        /// </summary>
+          [XmlEnum("1E6 ft3/bbl")]
+          Item1E6ft3bbl,
+        /// <summary>
+        /// bblacreft property
+        /// </summary>
+          [XmlEnum("bbl/(acre.ft)")]
+          bblacreft,
+        /// <summary>
+        /// bblbbl property
+        /// </summary>
+          [XmlEnum("bbl/bbl")]
+          bblbbl,
+        /// <summary>
+        /// bblft3 property
+        /// </summary>
+          [XmlEnum("bbl/ft3")]
+          bblft3,
+        /// <summary>
+        /// bblm3 property
+        /// </summary>
+          [XmlEnum("bbl/m3")]
+          bblm3,
+        /// <summary>
+        /// cEuc property
+        /// </summary>
+          cEuc,
+        /// <summary>
+        /// cm3cm3 property
+        /// </summary>
+          [XmlEnum("cm3/cm3")]
+          cm3cm3,
+        /// <summary>
+        /// cm3L property
+        /// </summary>
+          [XmlEnum("cm3/L")]
+          cm3L,
+        /// <summary>
+        /// cm3m3 property
+        /// </summary>
+          [XmlEnum("cm3/m3")]
+          cm3m3,
+        /// <summary>
+        /// dm3m3 property
+        /// </summary>
+          [XmlEnum("dm3/m3")]
+          dm3m3,
+        /// <summary>
+        /// Euc property
+        /// </summary>
+          Euc,
+        /// <summary>
+        /// ft3bbl property
+        /// </summary>
+          [XmlEnum("ft3/bbl")]
+          ft3bbl,
+        /// <summary>
+        /// ft3ft3 property
+        /// </summary>
+          [XmlEnum("ft3/ft3")]
+          ft3ft3,
+        /// <summary>
+        /// galUKft3 property
+        /// </summary>
+          [XmlEnum("gal[UK]/ft3")]
+          galUKft3,
+        /// <summary>
+        /// galUSbbl property
+        /// </summary>
+          [XmlEnum("gal[US]/bbl")]
+          galUSbbl,
+        /// <summary>
+        /// galUSft3 property
+        /// </summary>
+          [XmlEnum("gal[US]/ft3")]
+          galUSft3,
+        /// <summary>
+        /// Lm3 property
+        /// </summary>
+          [XmlEnum("L/m3")]
+          Lm3,
+        /// <summary>
+        /// m3ham property
+        /// </summary>
+          [XmlEnum("m3/(ha.m)")]
+          m3ham,
+        /// <summary>
+        /// m3bbl property
+        /// </summary>
+          [XmlEnum("m3/bbl")]
+          m3bbl,
+        /// <summary>
+        /// m3m3 property
+        /// </summary>
+          [XmlEnum("m3/m3")]
+          m3m3,
+        /// <summary>
+        /// mLgalUK property
+        /// </summary>
+          [XmlEnum("mL/gal[UK]")]
+          mLgalUK,
+        /// <summary>
+        /// mLgalUS property
+        /// </summary>
+          [XmlEnum("mL/gal[US]")]
+          mLgalUS,
+        /// <summary>
+        /// mLmL property
+        /// </summary>
+          [XmlEnum("mL/mL")]
+          mLmL,
+        /// <summary>
+        /// ppk property
+        /// </summary>
+          ppk,
+        /// <summary>
+        /// ppm property
+        /// </summary>
+          ppm,
+        /// <summary>
+        /// ppmvol property
+        /// </summary>
+          [XmlEnum("ppm[vol]")]
+          ppmvol
         }
         /// <summary>
         /// This class represents the VolumePerLengthUom xsd enumeration.
@@ -82752,6 +85175,191 @@ namespace Energistics.DataAccess.WITSML200
           psim
         }
         /// <summary>
+        /// This class represents the StimFluidKind xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the StimFluidKind xsd enumeration.")]
+        public enum StimFluidKind 
+        {
+        /// <summary>
+        /// acidbased property
+        /// </summary>
+          [XmlEnum("acid-based")]
+          acidbased,
+        /// <summary>
+        /// gas property
+        /// </summary>
+          gas,
+        /// <summary>
+        /// oilbased property
+        /// </summary>
+          [XmlEnum("oil-based")]
+          oilbased,
+        /// <summary>
+        /// waterbased property
+        /// </summary>
+          [XmlEnum("water-based")]
+          waterbased
+        }
+        /// <summary>
+        /// This class represents the StimFluidSubtype xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the StimFluidSubtype xsd enumeration.")]
+        public enum StimFluidSubtype 
+        {
+        /// <summary>
+        /// acid property
+        /// </summary>
+          acid,
+        /// <summary>
+        /// base property
+        /// </summary>
+          @base,
+        /// <summary>
+        /// carbondioxide property
+        /// </summary>
+          [XmlEnum("carbon dioxide")]
+          carbondioxide,
+        /// <summary>
+        /// carbondioxideandnitrogen property
+        /// </summary>
+          [XmlEnum("carbon dioxide and nitrogen")]
+          carbondioxideandnitrogen,
+        /// <summary>
+        /// carbondioxideandwater property
+        /// </summary>
+          [XmlEnum("carbon dioxide and water")]
+          carbondioxideandwater,
+        /// <summary>
+        /// condensate property
+        /// </summary>
+          condensate,
+        /// <summary>
+        /// crosslinkedgel property
+        /// </summary>
+          [XmlEnum("cross-linked gel")]
+          crosslinkedgel,
+        /// <summary>
+        /// crudeoil property
+        /// </summary>
+          [XmlEnum("crude oil")]
+          crudeoil,
+        /// <summary>
+        /// diesel property
+        /// </summary>
+          diesel,
+        /// <summary>
+        /// foam property
+        /// </summary>
+          foam,
+        /// <summary>
+        /// fracturingoil property
+        /// </summary>
+          [XmlEnum("fracturing oil")]
+          fracturingoil,
+        /// <summary>
+        /// freshwater property
+        /// </summary>
+          [XmlEnum("fresh water")]
+          freshwater,
+        /// <summary>
+        /// gelledacid property
+        /// </summary>
+          [XmlEnum("gelled acid")]
+          gelledacid,
+        /// <summary>
+        /// gelledcondensate property
+        /// </summary>
+          [XmlEnum("gelled condensate")]
+          gelledcondensate,
+        /// <summary>
+        /// gelledcrude property
+        /// </summary>
+          [XmlEnum("gelled crude")]
+          gelledcrude,
+        /// <summary>
+        /// gelleddiesel property
+        /// </summary>
+          [XmlEnum("gelled diesel")]
+          gelleddiesel,
+        /// <summary>
+        /// gelledoil property
+        /// </summary>
+          [XmlEnum("gelled oil")]
+          gelledoil,
+        /// <summary>
+        /// gelledsaltwater property
+        /// </summary>
+          [XmlEnum("gelled salt water")]
+          gelledsaltwater,
+        /// <summary>
+        /// hotcondensate property
+        /// </summary>
+          [XmlEnum("hot condensate")]
+          hotcondensate,
+        /// <summary>
+        /// hotfreshwater property
+        /// </summary>
+          [XmlEnum("hot fresh water")]
+          hotfreshwater,
+        /// <summary>
+        /// hotoil property
+        /// </summary>
+          [XmlEnum("hot oil")]
+          hotoil,
+        /// <summary>
+        /// hotsaltwater property
+        /// </summary>
+          [XmlEnum("hot salt water")]
+          hotsaltwater,
+        /// <summary>
+        /// hybrid property
+        /// </summary>
+          hybrid,
+        /// <summary>
+        /// lineargel property
+        /// </summary>
+          [XmlEnum("linear gel")]
+          lineargel,
+        /// <summary>
+        /// liquefiedpetroleumgas property
+        /// </summary>
+          [XmlEnum("liquefied petroleum gas")]
+          liquefiedpetroleumgas,
+        /// <summary>
+        /// nitrogen property
+        /// </summary>
+          nitrogen,
+        /// <summary>
+        /// oil property
+        /// </summary>
+          oil,
+        /// <summary>
+        /// other property
+        /// </summary>
+          other,
+        /// <summary>
+        /// producedwater property
+        /// </summary>
+          [XmlEnum("produced water")]
+          producedwater,
+        /// <summary>
+        /// saltwater property
+        /// </summary>
+          [XmlEnum("salt water")]
+          saltwater,
+        /// <summary>
+        /// slickwater property
+        /// </summary>
+          [XmlEnum("slick water")]
+          slickwater
+        }
+        /// <summary>
         /// This class represents the VolumeUom xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -82929,274 +85537,445 @@ namespace Energistics.DataAccess.WITSML200
           yd3
         }
         /// <summary>
-        /// This class represents the StimFluidKind xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the StimFluidKind xsd enumeration.")]
-        public enum StimFluidKind 
-        {
-        /// <summary>
-        /// acidbased property
-        /// </summary>
-          [XmlEnum("acid-based")]
-          acidbased,
-        /// <summary>
-        /// gas property
-        /// </summary>
-          gas,
-        /// <summary>
-        /// oilbased property
-        /// </summary>
-          [XmlEnum("oil-based")]
-          oilbased,
-        /// <summary>
-        /// waterbased property
-        /// </summary>
-          [XmlEnum("water-based")]
-          waterbased
-        }
-        /// <summary>
-        /// This class represents the StimFluidSubType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the StimFluidSubType xsd enumeration.")]
-        public enum StimFluidSubType 
-        {
-        /// <summary>
-        /// acid property
-        /// </summary>
-          acid,
-        /// <summary>
-        /// base property
-        /// </summary>
-          @base,
-        /// <summary>
-        /// carbondioxide property
-        /// </summary>
-          [XmlEnum("carbon dioxide")]
-          carbondioxide,
-        /// <summary>
-        /// carbondioxideandnitrogen property
-        /// </summary>
-          [XmlEnum("carbon dioxide and nitrogen")]
-          carbondioxideandnitrogen,
-        /// <summary>
-        /// carbondioxideandwater property
-        /// </summary>
-          [XmlEnum("carbon dioxide and water")]
-          carbondioxideandwater,
-        /// <summary>
-        /// condensate property
-        /// </summary>
-          condensate,
-        /// <summary>
-        /// crosslinkedgel property
-        /// </summary>
-          [XmlEnum("cross-linked gel")]
-          crosslinkedgel,
-        /// <summary>
-        /// crudeoil property
-        /// </summary>
-          [XmlEnum("crude oil")]
-          crudeoil,
-        /// <summary>
-        /// diesel property
-        /// </summary>
-          diesel,
-        /// <summary>
-        /// foam property
-        /// </summary>
-          foam,
-        /// <summary>
-        /// fracturingoil property
-        /// </summary>
-          [XmlEnum("fracturing oil")]
-          fracturingoil,
-        /// <summary>
-        /// freshwater property
-        /// </summary>
-          [XmlEnum("fresh water")]
-          freshwater,
-        /// <summary>
-        /// gelledacid property
-        /// </summary>
-          [XmlEnum("gelled acid")]
-          gelledacid,
-        /// <summary>
-        /// gelledcondensate property
-        /// </summary>
-          [XmlEnum("gelled condensate")]
-          gelledcondensate,
-        /// <summary>
-        /// gelledcrude property
-        /// </summary>
-          [XmlEnum("gelled crude")]
-          gelledcrude,
-        /// <summary>
-        /// gelleddiesel property
-        /// </summary>
-          [XmlEnum("gelled diesel")]
-          gelleddiesel,
-        /// <summary>
-        /// gelledoil property
-        /// </summary>
-          [XmlEnum("gelled oil")]
-          gelledoil,
-        /// <summary>
-        /// gelledsaltwater property
-        /// </summary>
-          [XmlEnum("gelled salt water")]
-          gelledsaltwater,
-        /// <summary>
-        /// hotcondensate property
-        /// </summary>
-          [XmlEnum("hot condensate")]
-          hotcondensate,
-        /// <summary>
-        /// hotfreshwater property
-        /// </summary>
-          [XmlEnum("hot fresh water")]
-          hotfreshwater,
-        /// <summary>
-        /// hotoil property
-        /// </summary>
-          [XmlEnum("hot oil")]
-          hotoil,
-        /// <summary>
-        /// hotsaltwater property
-        /// </summary>
-          [XmlEnum("hot salt water")]
-          hotsaltwater,
-        /// <summary>
-        /// hybrid property
-        /// </summary>
-          hybrid,
-        /// <summary>
-        /// lineargel property
-        /// </summary>
-          [XmlEnum("linear gel")]
-          lineargel,
-        /// <summary>
-        /// liquefiedpetroleumgas property
-        /// </summary>
-          [XmlEnum("liquefied petroleum gas")]
-          liquefiedpetroleumgas,
-        /// <summary>
-        /// nitrogen property
-        /// </summary>
-          nitrogen,
-        /// <summary>
-        /// oil property
-        /// </summary>
-          oil,
-        /// <summary>
-        /// other property
-        /// </summary>
-          other,
-        /// <summary>
-        /// producedwater property
-        /// </summary>
-          [XmlEnum("produced water")]
-          producedwater,
-        /// <summary>
-        /// saltwater property
-        /// </summary>
-          [XmlEnum("salt water")]
-          saltwater,
-        /// <summary>
-        /// slickwater property
-        /// </summary>
-          [XmlEnum("slick water")]
-          slickwater
-        }
-        /// <summary>
-        /// This class represents the PowerUom xsd enumeration.
+        /// This class represents the MassPerVolumeUom xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the PowerUom xsd enumeration.")]
-        public enum PowerUom 
+        [Description("This class represents the MassPerVolumeUom xsd enumeration.")]
+        public enum MassPerVolumeUom 
         {
         /// <summary>
-        /// cW property
+        /// Item0001lbmbbl property
         /// </summary>
-          cW,
+          [XmlEnum("0.001 lbm/bbl")]
+          Item0001lbmbbl,
         /// <summary>
-        /// dW property
+        /// Item0001lbmgalUK property
         /// </summary>
-          dW,
+          [XmlEnum("0.001 lbm/gal[UK]")]
+          Item0001lbmgalUK,
         /// <summary>
-        /// EW property
+        /// Item0001lbmgalUS property
         /// </summary>
-          EW,
+          [XmlEnum("0.001 lbm/gal[US]")]
+          Item0001lbmgalUS,
         /// <summary>
-        /// fW property
+        /// Item001grainft3 property
         /// </summary>
-          fW,
+          [XmlEnum("0.01 grain/ft3")]
+          Item001grainft3,
         /// <summary>
-        /// GW property
+        /// Item01lbmbbl property
         /// </summary>
-          GW,
+          [XmlEnum("0.1 lbm/bbl")]
+          Item01lbmbbl,
         /// <summary>
-        /// hp property
+        /// Item10Mgm3 property
         /// </summary>
-          hp,
+          [XmlEnum("10 Mg/m3")]
+          Item10Mgm3,
         /// <summary>
-        /// hpelec property
+        /// gcm3 property
         /// </summary>
-          [XmlEnum("hp[elec]")]
-          hpelec,
+          [XmlEnum("g/cm3")]
+          gcm3,
         /// <summary>
-        /// hphyd property
+        /// gdm3 property
         /// </summary>
-          [XmlEnum("hp[hyd]")]
-          hphyd,
+          [XmlEnum("g/dm3")]
+          gdm3,
         /// <summary>
-        /// hpmetric property
+        /// ggalUK property
         /// </summary>
-          [XmlEnum("hp[metric]")]
-          hpmetric,
+          [XmlEnum("g/gal[UK]")]
+          ggalUK,
         /// <summary>
-        /// kW property
+        /// ggalUS property
         /// </summary>
-          kW,
+          [XmlEnum("g/gal[US]")]
+          ggalUS,
         /// <summary>
-        /// MW property
+        /// gL property
         /// </summary>
-          MW,
+          [XmlEnum("g/L")]
+          gL,
         /// <summary>
-        /// mW property
+        /// gm3 property
         /// </summary>
-          mW,
+          [XmlEnum("g/m3")]
+          gm3,
         /// <summary>
-        /// nW property
+        /// grainft3 property
         /// </summary>
-          nW,
+          [XmlEnum("grain/ft3")]
+          grainft3,
         /// <summary>
-        /// pW property
+        /// graingalUS property
         /// </summary>
-          pW,
+          [XmlEnum("grain/gal[US]")]
+          graingalUS,
         /// <summary>
-        /// tonRefrig property
+        /// kgdm3 property
         /// </summary>
-          tonRefrig,
+          [XmlEnum("kg/dm3")]
+          kgdm3,
         /// <summary>
-        /// TW property
+        /// kgL property
         /// </summary>
-          TW,
+          [XmlEnum("kg/L")]
+          kgL,
         /// <summary>
-        /// uW property
+        /// kgm3 property
         /// </summary>
-          uW,
+          [XmlEnum("kg/m3")]
+          kgm3,
         /// <summary>
-        /// W property
+        /// lbmbbl property
         /// </summary>
-          W
+          [XmlEnum("lbm/bbl")]
+          lbmbbl,
+        /// <summary>
+        /// lbmft3 property
+        /// </summary>
+          [XmlEnum("lbm/ft3")]
+          lbmft3,
+        /// <summary>
+        /// lbmgalUK property
+        /// </summary>
+          [XmlEnum("lbm/gal[UK]")]
+          lbmgalUK,
+        /// <summary>
+        /// lbmgalUS property
+        /// </summary>
+          [XmlEnum("lbm/gal[US]")]
+          lbmgalUS,
+        /// <summary>
+        /// lbmin3 property
+        /// </summary>
+          [XmlEnum("lbm/in3")]
+          lbmin3,
+        /// <summary>
+        /// mgdm3 property
+        /// </summary>
+          [XmlEnum("mg/dm3")]
+          mgdm3,
+        /// <summary>
+        /// mggalUS property
+        /// </summary>
+          [XmlEnum("mg/gal[US]")]
+          mggalUS,
+        /// <summary>
+        /// mgL property
+        /// </summary>
+          [XmlEnum("mg/L")]
+          mgL,
+        /// <summary>
+        /// mgm3 property
+        /// </summary>
+          [XmlEnum("mg/m3")]
+          mgm3,
+        /// <summary>
+        /// Mgm3 property
+        /// </summary>
+          [XmlEnum("Mg/m3")]
+          Mgm3,
+        /// <summary>
+        /// tm3 property
+        /// </summary>
+          [XmlEnum("t/m3")]
+          tm3,
+        /// <summary>
+        /// ugcm3 property
+        /// </summary>
+          [XmlEnum("ug/cm3")]
+          ugcm3
+        }
+        /// <summary>
+        /// This class represents the ThermodynamicTemperatureUom xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the ThermodynamicTemperatureUom xsd enumeration.")]
+        public enum ThermodynamicTemperatureUom 
+        {
+        /// <summary>
+        /// degC property
+        /// </summary>
+          degC,
+        /// <summary>
+        /// degF property
+        /// </summary>
+          degF,
+        /// <summary>
+        /// degR property
+        /// </summary>
+          degR,
+        /// <summary>
+        /// K property
+        /// </summary>
+          K
+        }
+        /// <summary>
+        /// This class represents the MassUom xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the MassUom xsd enumeration.")]
+        public enum MassUom 
+        {
+        /// <summary>
+        /// ag property
+        /// </summary>
+          ag,
+        /// <summary>
+        /// cg property
+        /// </summary>
+          cg,
+        /// <summary>
+        /// ct property
+        /// </summary>
+          ct,
+        /// <summary>
+        /// cwtUK property
+        /// </summary>
+          [XmlEnum("cwt[UK]")]
+          cwtUK,
+        /// <summary>
+        /// cwtUS property
+        /// </summary>
+          [XmlEnum("cwt[US]")]
+          cwtUS,
+        /// <summary>
+        /// Eg property
+        /// </summary>
+          Eg,
+        /// <summary>
+        /// fg property
+        /// </summary>
+          fg,
+        /// <summary>
+        /// g property
+        /// </summary>
+          g,
+        /// <summary>
+        /// Gg property
+        /// </summary>
+          Gg,
+        /// <summary>
+        /// grain property
+        /// </summary>
+          grain,
+        /// <summary>
+        /// hg property
+        /// </summary>
+          hg,
+        /// <summary>
+        /// kg property
+        /// </summary>
+          kg,
+        /// <summary>
+        /// klbm property
+        /// </summary>
+          klbm,
+        /// <summary>
+        /// lbm property
+        /// </summary>
+          lbm,
+        /// <summary>
+        /// mg property
+        /// </summary>
+          mg,
+        /// <summary>
+        /// Mg property
+        /// </summary>
+          Mg,
+        /// <summary>
+        /// ng property
+        /// </summary>
+          ng,
+        /// <summary>
+        /// ozm property
+        /// </summary>
+          ozm,
+        /// <summary>
+        /// ozmtroy property
+        /// </summary>
+          [XmlEnum("ozm[troy]")]
+          ozmtroy,
+        /// <summary>
+        /// pg property
+        /// </summary>
+          pg,
+        /// <summary>
+        /// sack94lbm property
+        /// </summary>
+          [XmlEnum("sack[94lbm]")]
+          sack94lbm,
+        /// <summary>
+        /// t property
+        /// </summary>
+          t,
+        /// <summary>
+        /// Tg property
+        /// </summary>
+          Tg,
+        /// <summary>
+        /// tonUK property
+        /// </summary>
+          [XmlEnum("ton[UK]")]
+          tonUK,
+        /// <summary>
+        /// tonUS property
+        /// </summary>
+          [XmlEnum("ton[US]")]
+          tonUS,
+        /// <summary>
+        /// ug property
+        /// </summary>
+          ug
+        }
+        /// <summary>
+        /// This class represents the MassPerTimeUom xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the MassPerTimeUom xsd enumeration.")]
+        public enum MassPerTimeUom 
+        {
+        /// <summary>
+        /// Item1E6lbma property
+        /// </summary>
+          [XmlEnum("1E6 lbm/a")]
+          Item1E6lbma,
+        /// <summary>
+        /// gs property
+        /// </summary>
+          [XmlEnum("g/s")]
+          gs,
+        /// <summary>
+        /// kgd property
+        /// </summary>
+          [XmlEnum("kg/d")]
+          kgd,
+        /// <summary>
+        /// kgh property
+        /// </summary>
+          [XmlEnum("kg/h")]
+          kgh,
+        /// <summary>
+        /// kgmin property
+        /// </summary>
+          [XmlEnum("kg/min")]
+          kgmin,
+        /// <summary>
+        /// kgs property
+        /// </summary>
+          [XmlEnum("kg/s")]
+          kgs,
+        /// <summary>
+        /// lbmd property
+        /// </summary>
+          [XmlEnum("lbm/d")]
+          lbmd,
+        /// <summary>
+        /// lbmh property
+        /// </summary>
+          [XmlEnum("lbm/h")]
+          lbmh,
+        /// <summary>
+        /// lbmmin property
+        /// </summary>
+          [XmlEnum("lbm/min")]
+          lbmmin,
+        /// <summary>
+        /// lbms property
+        /// </summary>
+          [XmlEnum("lbm/s")]
+          lbms,
+        /// <summary>
+        /// Mga property
+        /// </summary>
+          [XmlEnum("Mg/a")]
+          Mga,
+        /// <summary>
+        /// Mgd property
+        /// </summary>
+          [XmlEnum("Mg/d")]
+          Mgd,
+        /// <summary>
+        /// Mgh property
+        /// </summary>
+          [XmlEnum("Mg/h")]
+          Mgh,
+        /// <summary>
+        /// Mgmin property
+        /// </summary>
+          [XmlEnum("Mg/min")]
+          Mgmin,
+        /// <summary>
+        /// ta property
+        /// </summary>
+          [XmlEnum("t/a")]
+          ta,
+        /// <summary>
+        /// td property
+        /// </summary>
+          [XmlEnum("t/d")]
+          td,
+        /// <summary>
+        /// th property
+        /// </summary>
+          [XmlEnum("t/h")]
+          th,
+        /// <summary>
+        /// tmin property
+        /// </summary>
+          [XmlEnum("t/min")]
+          tmin,
+        /// <summary>
+        /// tonUKa property
+        /// </summary>
+          [XmlEnum("ton[UK]/a")]
+          tonUKa,
+        /// <summary>
+        /// tonUKd property
+        /// </summary>
+          [XmlEnum("ton[UK]/d")]
+          tonUKd,
+        /// <summary>
+        /// tonUKh property
+        /// </summary>
+          [XmlEnum("ton[UK]/h")]
+          tonUKh,
+        /// <summary>
+        /// tonUKmin property
+        /// </summary>
+          [XmlEnum("ton[UK]/min")]
+          tonUKmin,
+        /// <summary>
+        /// tonUSa property
+        /// </summary>
+          [XmlEnum("ton[US]/a")]
+          tonUSa,
+        /// <summary>
+        /// tonUSd property
+        /// </summary>
+          [XmlEnum("ton[US]/d")]
+          tonUSd,
+        /// <summary>
+        /// tonUSh property
+        /// </summary>
+          [XmlEnum("ton[US]/h")]
+          tonUSh,
+        /// <summary>
+        /// tonUSmin property
+        /// </summary>
+          [XmlEnum("ton[US]/min")]
+          tonUSmin
         }
         /// <summary>
         /// This class represents the VolumePerTimeUom xsd enumeration.
@@ -83369,6 +86148,91 @@ namespace Energistics.DataAccess.WITSML200
           m3s
         }
         /// <summary>
+        /// This class represents the PowerUom xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the PowerUom xsd enumeration.")]
+        public enum PowerUom 
+        {
+        /// <summary>
+        /// cW property
+        /// </summary>
+          cW,
+        /// <summary>
+        /// dW property
+        /// </summary>
+          dW,
+        /// <summary>
+        /// EW property
+        /// </summary>
+          EW,
+        /// <summary>
+        /// fW property
+        /// </summary>
+          fW,
+        /// <summary>
+        /// GW property
+        /// </summary>
+          GW,
+        /// <summary>
+        /// hp property
+        /// </summary>
+          hp,
+        /// <summary>
+        /// hpelec property
+        /// </summary>
+          [XmlEnum("hp[elec]")]
+          hpelec,
+        /// <summary>
+        /// hphyd property
+        /// </summary>
+          [XmlEnum("hp[hyd]")]
+          hphyd,
+        /// <summary>
+        /// hpmetric property
+        /// </summary>
+          [XmlEnum("hp[metric]")]
+          hpmetric,
+        /// <summary>
+        /// kW property
+        /// </summary>
+          kW,
+        /// <summary>
+        /// MW property
+        /// </summary>
+          MW,
+        /// <summary>
+        /// mW property
+        /// </summary>
+          mW,
+        /// <summary>
+        /// nW property
+        /// </summary>
+          nW,
+        /// <summary>
+        /// pW property
+        /// </summary>
+          pW,
+        /// <summary>
+        /// tonRefrig property
+        /// </summary>
+          tonRefrig,
+        /// <summary>
+        /// TW property
+        /// </summary>
+          TW,
+        /// <summary>
+        /// uW property
+        /// </summary>
+          uW,
+        /// <summary>
+        /// W property
+        /// </summary>
+          W
+        }
+        /// <summary>
         /// This class represents the TimeUom xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -83483,13 +86347,13 @@ namespace Energistics.DataAccess.WITSML200
           wk
         }
         /// <summary>
-        /// This class represents the StimAnalysisMethod xsd enumeration.
+        /// This class represents the StimFetTestAnalysisMethod xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the StimAnalysisMethod xsd enumeration.")]
-        public enum StimAnalysisMethod 
+        [Description("This class represents the StimFetTestAnalysisMethod xsd enumeration.")]
+        public enum StimFetTestAnalysisMethod 
         {
         /// <summary>
         /// average property
@@ -83707,6 +86571,310 @@ namespace Energistics.DataAccess.WITSML200
           kWhkgdeltaC
         }
         /// <summary>
+        /// This class represents the PermeabilityLengthUom xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the PermeabilityLengthUom xsd enumeration.")]
+        public enum PermeabilityLengthUom 
+        {
+        /// <summary>
+        /// Dft property
+        /// </summary>
+          [XmlEnum("D.ft")]
+          Dft,
+        /// <summary>
+        /// Dm property
+        /// </summary>
+          [XmlEnum("D.m")]
+          Dm,
+        /// <summary>
+        /// mDft property
+        /// </summary>
+          [XmlEnum("mD.ft")]
+          mDft,
+        /// <summary>
+        /// mDm property
+        /// </summary>
+          [XmlEnum("mD.m")]
+          mDm,
+        /// <summary>
+        /// TDAPIm property
+        /// </summary>
+          [XmlEnum("TD[API].m")]
+          TDAPIm
+        }
+        /// <summary>
+        /// This class represents the MassPerMassUom xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the MassPerMassUom xsd enumeration.")]
+        public enum MassPerMassUom 
+        {
+        /// <summary>
+        /// Item property
+        /// </summary>
+          [XmlEnum("%")]
+          Item,
+        /// <summary>
+        /// mass property
+        /// </summary>
+          [XmlEnum("%[mass]")]
+          mass,
+        /// <summary>
+        /// Euc property
+        /// </summary>
+          Euc,
+        /// <summary>
+        /// gkg property
+        /// </summary>
+          [XmlEnum("g/kg")]
+          gkg,
+        /// <summary>
+        /// gt property
+        /// </summary>
+          [XmlEnum("g/t")]
+          gt,
+        /// <summary>
+        /// kgkg property
+        /// </summary>
+          [XmlEnum("kg/kg")]
+          kgkg,
+        /// <summary>
+        /// kgsack94lbm property
+        /// </summary>
+          [XmlEnum("kg/sack[94lbm]")]
+          kgsack94lbm,
+        /// <summary>
+        /// kgt property
+        /// </summary>
+          [XmlEnum("kg/t")]
+          kgt,
+        /// <summary>
+        /// mgg property
+        /// </summary>
+          [XmlEnum("mg/g")]
+          mgg,
+        /// <summary>
+        /// mgkg property
+        /// </summary>
+          [XmlEnum("mg/kg")]
+          mgkg,
+        /// <summary>
+        /// ngg property
+        /// </summary>
+          [XmlEnum("ng/g")]
+          ngg,
+        /// <summary>
+        /// ngmg property
+        /// </summary>
+          [XmlEnum("ng/mg")]
+          ngmg,
+        /// <summary>
+        /// ppk property
+        /// </summary>
+          ppk,
+        /// <summary>
+        /// ppm property
+        /// </summary>
+          ppm,
+        /// <summary>
+        /// ppmmass property
+        /// </summary>
+          [XmlEnum("ppm[mass]")]
+          ppmmass,
+        /// <summary>
+        /// ugg property
+        /// </summary>
+          [XmlEnum("ug/g")]
+          ugg,
+        /// <summary>
+        /// ugmg property
+        /// </summary>
+          [XmlEnum("ug/mg")]
+          ugmg
+        }
+        /// <summary>
+        /// This class represents the AreaPerMassUom xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the AreaPerMassUom xsd enumeration.")]
+        public enum AreaPerMassUom 
+        {
+        /// <summary>
+        /// cm2g property
+        /// </summary>
+          [XmlEnum("cm2/g")]
+          cm2g,
+        /// <summary>
+        /// ft2lbm property
+        /// </summary>
+          [XmlEnum("ft2/lbm")]
+          ft2lbm,
+        /// <summary>
+        /// m2g property
+        /// </summary>
+          [XmlEnum("m2/g")]
+          m2g,
+        /// <summary>
+        /// m2kg property
+        /// </summary>
+          [XmlEnum("m2/kg")]
+          m2kg
+        }
+        /// <summary>
+        /// This class represents the StimMaterialKind xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the StimMaterialKind xsd enumeration.")]
+        public enum StimMaterialKind 
+        {
+        /// <summary>
+        /// additive property
+        /// </summary>
+          additive,
+        /// <summary>
+        /// brine property
+        /// </summary>
+          brine,
+        /// <summary>
+        /// CO2 property
+        /// </summary>
+          CO2,
+        /// <summary>
+        /// gel property
+        /// </summary>
+          gel,
+        /// <summary>
+        /// N2 property
+        /// </summary>
+          N2,
+        /// <summary>
+        /// other property
+        /// </summary>
+          other,
+        /// <summary>
+        /// proppantagent property
+        /// </summary>
+          [XmlEnum("proppant agent")]
+          proppantagent,
+        /// <summary>
+        /// water property
+        /// </summary>
+          water
+        }
+        /// <summary>
+        /// This class represents the StimAdditiveKind xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the StimAdditiveKind xsd enumeration.")]
+        public enum StimAdditiveKind 
+        {
+        /// <summary>
+        /// acid property
+        /// </summary>
+          acid,
+        /// <summary>
+        /// activator property
+        /// </summary>
+          activator,
+        /// <summary>
+        /// biocide property
+        /// </summary>
+          biocide,
+        /// <summary>
+        /// breaker property
+        /// </summary>
+          breaker,
+        /// <summary>
+        /// breakeraid property
+        /// </summary>
+          [XmlEnum("breaker aid")]
+          breakeraid,
+        /// <summary>
+        /// buffer property
+        /// </summary>
+          buffer,
+        /// <summary>
+        /// claystabilizer property
+        /// </summary>
+          [XmlEnum("clay stabilizer")]
+          claystabilizer,
+        /// <summary>
+        /// corrosioninhibitor property
+        /// </summary>
+          [XmlEnum("corrosion inhibitor")]
+          corrosioninhibitor,
+        /// <summary>
+        /// corrosioninhibitoraid property
+        /// </summary>
+          [XmlEnum("corrosion inhibitor aid")]
+          corrosioninhibitoraid,
+        /// <summary>
+        /// crosslinker property
+        /// </summary>
+          crosslinker,
+        /// <summary>
+        /// delayingagent property
+        /// </summary>
+          [XmlEnum("delaying agent")]
+          delayingagent,
+        /// <summary>
+        /// fibers property
+        /// </summary>
+          fibers,
+        /// <summary>
+        /// fluidlossadditive property
+        /// </summary>
+          [XmlEnum("fluid loss additive")]
+          fluidlossadditive,
+        /// <summary>
+        /// foamer property
+        /// </summary>
+          foamer,
+        /// <summary>
+        /// frictionreducer property
+        /// </summary>
+          [XmlEnum("friction reducer")]
+          frictionreducer,
+        /// <summary>
+        /// gellingagent property
+        /// </summary>
+          [XmlEnum("gelling agent")]
+          gellingagent,
+        /// <summary>
+        /// ironcontroladditive property
+        /// </summary>
+          [XmlEnum("iron control additive")]
+          ironcontroladditive,
+        /// <summary>
+        /// mutualsolvent property
+        /// </summary>
+          [XmlEnum("mutual solvent")]
+          mutualsolvent,
+        /// <summary>
+        /// salt property
+        /// </summary>
+          salt,
+        /// <summary>
+        /// stabilizer property
+        /// </summary>
+          stabilizer,
+        /// <summary>
+        /// surfactant property
+        /// </summary>
+          surfactant
+        }
+        /// <summary>
         /// This class represents the SurfEquipType xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -83746,6 +86914,11 @@ namespace Energistics.DataAccess.WITSML200
         /// acre property
         /// </summary>
           acre,
+        /// <summary>
+        /// belectron property
+        /// </summary>
+          [XmlEnum("b/electron")]
+          belectron,
         /// <summary>
         /// b property
         /// </summary>
@@ -84000,6 +87173,746 @@ namespace Energistics.DataAccess.WITSML200
         /// connector property
         /// </summary>
           connector
+        }
+        /// <summary>
+        /// This class represents the GasPeakType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the GasPeakType xsd enumeration.")]
+        public enum GasPeakType 
+        {
+        /// <summary>
+        /// circulatingbackgroundgas property
+        /// </summary>
+          [XmlEnum("circulating background gas")]
+          circulatingbackgroundgas,
+        /// <summary>
+        /// connectiongas property
+        /// </summary>
+          [XmlEnum("connection gas")]
+          connectiongas,
+        /// <summary>
+        /// drillingbackgroundgas property
+        /// </summary>
+          [XmlEnum("drilling background gas")]
+          drillingbackgroundgas,
+        /// <summary>
+        /// drillinggaspeak property
+        /// </summary>
+          [XmlEnum("drilling gas peak")]
+          drillinggaspeak,
+        /// <summary>
+        /// flowcheckgas property
+        /// </summary>
+          [XmlEnum("flow check gas")]
+          flowcheckgas,
+        /// <summary>
+        /// noreadings property
+        /// </summary>
+          [XmlEnum("no readings")]
+          noreadings,
+        /// <summary>
+        /// other property
+        /// </summary>
+          other,
+        /// <summary>
+        /// shutdowngas property
+        /// </summary>
+          [XmlEnum("shut down gas")]
+          shutdowngas,
+        /// <summary>
+        /// tripgas property
+        /// </summary>
+          [XmlEnum("trip gas")]
+          tripgas,
+        /// <summary>
+        /// unknown property
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the ElectricCurrentUom xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the ElectricCurrentUom xsd enumeration.")]
+        public enum ElectricCurrentUom 
+        {
+        /// <summary>
+        /// A property
+        /// </summary>
+          A,
+        /// <summary>
+        /// cA property
+        /// </summary>
+          cA,
+        /// <summary>
+        /// dA property
+        /// </summary>
+          dA,
+        /// <summary>
+        /// EA property
+        /// </summary>
+          EA,
+        /// <summary>
+        /// fA property
+        /// </summary>
+          fA,
+        /// <summary>
+        /// GA property
+        /// </summary>
+          GA,
+        /// <summary>
+        /// kA property
+        /// </summary>
+          kA,
+        /// <summary>
+        /// MA property
+        /// </summary>
+          MA,
+        /// <summary>
+        /// mA property
+        /// </summary>
+          mA,
+        /// <summary>
+        /// nA property
+        /// </summary>
+          nA,
+        /// <summary>
+        /// pA property
+        /// </summary>
+          pA,
+        /// <summary>
+        /// TA property
+        /// </summary>
+          TA,
+        /// <summary>
+        /// uA property
+        /// </summary>
+          uA
+        }
+        /// <summary>
+        /// This class represents the MomentOfForceUom xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the MomentOfForceUom xsd enumeration.")]
+        public enum MomentOfForceUom 
+        {
+        /// <summary>
+        /// Item1000lbfft property
+        /// </summary>
+          [XmlEnum("1000 lbf.ft")]
+          Item1000lbfft,
+        /// <summary>
+        /// daNm property
+        /// </summary>
+          [XmlEnum("daN.m")]
+          daNm,
+        /// <summary>
+        /// dNm property
+        /// </summary>
+          [XmlEnum("dN.m")]
+          dNm,
+        /// <summary>
+        /// J property
+        /// </summary>
+          J,
+        /// <summary>
+        /// kgfm property
+        /// </summary>
+          [XmlEnum("kgf.m")]
+          kgfm,
+        /// <summary>
+        /// kNm property
+        /// </summary>
+          [XmlEnum("kN.m")]
+          kNm,
+        /// <summary>
+        /// lbfft property
+        /// </summary>
+          [XmlEnum("lbf.ft")]
+          lbfft,
+        /// <summary>
+        /// lbfin property
+        /// </summary>
+          [XmlEnum("lbf.in")]
+          lbfin,
+        /// <summary>
+        /// lbmft2s2 property
+        /// </summary>
+          [XmlEnum("lbm.ft2/s2")]
+          lbmft2s2,
+        /// <summary>
+        /// Nm property
+        /// </summary>
+          [XmlEnum("N.m")]
+          Nm,
+        /// <summary>
+        /// pdlft property
+        /// </summary>
+          [XmlEnum("pdl.ft")]
+          pdlft,
+        /// <summary>
+        /// tonfUSft property
+        /// </summary>
+          [XmlEnum("tonf[US].ft")]
+          tonfUSft,
+        /// <summary>
+        /// tonfUSmi property
+        /// </summary>
+          [XmlEnum("tonf[US].mi")]
+          tonfUSmi
+        }
+        /// <summary>
+        /// This class represents the ForceUom xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the ForceUom xsd enumeration.")]
+        public enum ForceUom 
+        {
+        /// <summary>
+        /// Item10kN property
+        /// </summary>
+          [XmlEnum("10 kN")]
+          Item10kN,
+        /// <summary>
+        /// cN property
+        /// </summary>
+          cN,
+        /// <summary>
+        /// daN property
+        /// </summary>
+          daN,
+        /// <summary>
+        /// dN property
+        /// </summary>
+          dN,
+        /// <summary>
+        /// dyne property
+        /// </summary>
+          dyne,
+        /// <summary>
+        /// EN property
+        /// </summary>
+          EN,
+        /// <summary>
+        /// fN property
+        /// </summary>
+          fN,
+        /// <summary>
+        /// gf property
+        /// </summary>
+          gf,
+        /// <summary>
+        /// GN property
+        /// </summary>
+          GN,
+        /// <summary>
+        /// hN property
+        /// </summary>
+          hN,
+        /// <summary>
+        /// kdyne property
+        /// </summary>
+          kdyne,
+        /// <summary>
+        /// kgf property
+        /// </summary>
+          kgf,
+        /// <summary>
+        /// klbf property
+        /// </summary>
+          klbf,
+        /// <summary>
+        /// kN property
+        /// </summary>
+          kN,
+        /// <summary>
+        /// lbf property
+        /// </summary>
+          lbf,
+        /// <summary>
+        /// Mgf property
+        /// </summary>
+          Mgf,
+        /// <summary>
+        /// mN property
+        /// </summary>
+          mN,
+        /// <summary>
+        /// MN property
+        /// </summary>
+          MN,
+        /// <summary>
+        /// N property
+        /// </summary>
+          N,
+        /// <summary>
+        /// nN property
+        /// </summary>
+          nN,
+        /// <summary>
+        /// ozf property
+        /// </summary>
+          ozf,
+        /// <summary>
+        /// pdl property
+        /// </summary>
+          pdl,
+        /// <summary>
+        /// pN property
+        /// </summary>
+          pN,
+        /// <summary>
+        /// TN property
+        /// </summary>
+          TN,
+        /// <summary>
+        /// tonfUK property
+        /// </summary>
+          [XmlEnum("tonf[UK]")]
+          tonfUK,
+        /// <summary>
+        /// tonfUS property
+        /// </summary>
+          [XmlEnum("tonf[US]")]
+          tonfUS,
+        /// <summary>
+        /// uN property
+        /// </summary>
+          uN
+        }
+        /// <summary>
+        /// This class represents the LengthPerTimeUom xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the LengthPerTimeUom xsd enumeration.")]
+        public enum LengthPerTimeUom 
+        {
+        /// <summary>
+        /// Item1000fth property
+        /// </summary>
+          [XmlEnum("1000 ft/h")]
+          Item1000fth,
+        /// <summary>
+        /// Item1000fts property
+        /// </summary>
+          [XmlEnum("1000 ft/s")]
+          Item1000fts,
+        /// <summary>
+        /// cma property
+        /// </summary>
+          [XmlEnum("cm/a")]
+          cma,
+        /// <summary>
+        /// cms property
+        /// </summary>
+          [XmlEnum("cm/s")]
+          cms,
+        /// <summary>
+        /// dms property
+        /// </summary>
+          [XmlEnum("dm/s")]
+          dms,
+        /// <summary>
+        /// ftd property
+        /// </summary>
+          [XmlEnum("ft/d")]
+          ftd,
+        /// <summary>
+        /// fth property
+        /// </summary>
+          [XmlEnum("ft/h")]
+          fth,
+        /// <summary>
+        /// ftmin property
+        /// </summary>
+          [XmlEnum("ft/min")]
+          ftmin,
+        /// <summary>
+        /// ftms property
+        /// </summary>
+          [XmlEnum("ft/ms")]
+          ftms,
+        /// <summary>
+        /// fts property
+        /// </summary>
+          [XmlEnum("ft/s")]
+          fts,
+        /// <summary>
+        /// ftus property
+        /// </summary>
+          [XmlEnum("ft/us")]
+          ftus,
+        /// <summary>
+        /// ina property
+        /// </summary>
+          [XmlEnum("in/a")]
+          ina,
+        /// <summary>
+        /// inmin property
+        /// </summary>
+          [XmlEnum("in/min")]
+          inmin,
+        /// <summary>
+        /// ins property
+        /// </summary>
+          [XmlEnum("in/s")]
+          ins,
+        /// <summary>
+        /// kmh property
+        /// </summary>
+          [XmlEnum("km/h")]
+          kmh,
+        /// <summary>
+        /// kms property
+        /// </summary>
+          [XmlEnum("km/s")]
+          kms,
+        /// <summary>
+        /// knot property
+        /// </summary>
+          knot,
+        /// <summary>
+        /// md property
+        /// </summary>
+          [XmlEnum("m/d")]
+          md,
+        /// <summary>
+        /// mh property
+        /// </summary>
+          [XmlEnum("m/h")]
+          mh,
+        /// <summary>
+        /// mmin property
+        /// </summary>
+          [XmlEnum("m/min")]
+          mmin,
+        /// <summary>
+        /// mms property
+        /// </summary>
+          [XmlEnum("m/ms")]
+          mms,
+        /// <summary>
+        /// ms property
+        /// </summary>
+          [XmlEnum("m/s")]
+          ms,
+        /// <summary>
+        /// mih property
+        /// </summary>
+          [XmlEnum("mi/h")]
+          mih,
+        /// <summary>
+        /// mila property
+        /// </summary>
+          [XmlEnum("mil/a")]
+          mila,
+        /// <summary>
+        /// mma property
+        /// </summary>
+          [XmlEnum("mm/a")]
+          mma,
+        /// <summary>
+        /// mms1 property
+        /// </summary>
+          [XmlEnum("mm/s")]
+          mms1,
+        /// <summary>
+        /// nms property
+        /// </summary>
+          [XmlEnum("nm/s")]
+          nms,
+        /// <summary>
+        /// ums property
+        /// </summary>
+          [XmlEnum("um/s")]
+          ums
+        }
+        /// <summary>
+        /// This class represents the IlluminanceUom xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the IlluminanceUom xsd enumeration.")]
+        public enum IlluminanceUom 
+        {
+        /// <summary>
+        /// footcandle property
+        /// </summary>
+          footcandle,
+        /// <summary>
+        /// klx property
+        /// </summary>
+          klx,
+        /// <summary>
+        /// lmm2 property
+        /// </summary>
+          [XmlEnum("lm/m2")]
+          lmm2,
+        /// <summary>
+        /// lx property
+        /// </summary>
+          lx
+        }
+        /// <summary>
+        /// This class represents the ShowRating xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the ShowRating xsd enumeration.")]
+        public enum ShowRating 
+        {
+        /// <summary>
+        /// none property
+        /// </summary>
+          none,
+        /// <summary>
+        /// verypoor property
+        /// </summary>
+          [XmlEnum("very poor")]
+          verypoor,
+        /// <summary>
+        /// poor property
+        /// </summary>
+          poor,
+        /// <summary>
+        /// fair property
+        /// </summary>
+          fair,
+        /// <summary>
+        /// good property
+        /// </summary>
+          good,
+        /// <summary>
+        /// verygood property
+        /// </summary>
+          [XmlEnum("very good")]
+          verygood,
+        /// <summary>
+        /// unknown property
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the AreaPerAreaUom xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the AreaPerAreaUom xsd enumeration.")]
+        public enum AreaPerAreaUom 
+        {
+        /// <summary>
+        /// Item property
+        /// </summary>
+          [XmlEnum("%")]
+          Item,
+        /// <summary>
+        /// area property
+        /// </summary>
+          [XmlEnum("%[area]")]
+          area,
+        /// <summary>
+        /// cEuc property
+        /// </summary>
+          cEuc,
+        /// <summary>
+        /// Euc property
+        /// </summary>
+          Euc,
+        /// <summary>
+        /// in2ft2 property
+        /// </summary>
+          [XmlEnum("in2/ft2")]
+          in2ft2,
+        /// <summary>
+        /// in2in2 property
+        /// </summary>
+          [XmlEnum("in2/in2")]
+          in2in2,
+        /// <summary>
+        /// m2m2 property
+        /// </summary>
+          [XmlEnum("m2/m2")]
+          m2m2,
+        /// <summary>
+        /// mm2mm2 property
+        /// </summary>
+          [XmlEnum("mm2/mm2")]
+          mm2mm2
+        }
+        /// <summary>
+        /// This class represents the ShowSpeed xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the ShowSpeed xsd enumeration.")]
+        public enum ShowSpeed 
+        {
+        /// <summary>
+        /// slow property
+        /// </summary>
+          slow,
+        /// <summary>
+        /// moderatelyfast property
+        /// </summary>
+          [XmlEnum("moderately fast")]
+          moderatelyfast,
+        /// <summary>
+        /// fast property
+        /// </summary>
+          fast,
+        /// <summary>
+        /// instantaneous property
+        /// </summary>
+          instantaneous,
+        /// <summary>
+        /// none property
+        /// </summary>
+          none,
+        /// <summary>
+        /// unknown property
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the ShowLevel xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the ShowLevel xsd enumeration.")]
+        public enum ShowLevel 
+        {
+        /// <summary>
+        /// blooming property
+        /// </summary>
+          blooming,
+        /// <summary>
+        /// streaming property
+        /// </summary>
+          streaming,
+        /// <summary>
+        /// unknown property
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the ShowFluorescence xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the ShowFluorescence xsd enumeration.")]
+        public enum ShowFluorescence 
+        {
+        /// <summary>
+        /// faint property
+        /// </summary>
+          faint,
+        /// <summary>
+        /// bright property
+        /// </summary>
+          bright,
+        /// <summary>
+        /// none property
+        /// </summary>
+          none,
+        /// <summary>
+        /// unknown property
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the GeochronologicalRank xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the GeochronologicalRank xsd enumeration.")]
+        public enum GeochronologicalRank 
+        {
+        /// <summary>
+        /// eon property
+        /// </summary>
+          eon,
+        /// <summary>
+        /// era property
+        /// </summary>
+          era,
+        /// <summary>
+        /// period property
+        /// </summary>
+          period,
+        /// <summary>
+        /// epoch property
+        /// </summary>
+          epoch,
+        /// <summary>
+        /// age property
+        /// </summary>
+          age,
+        /// <summary>
+        /// chron property
+        /// </summary>
+          chron
+        }
+        /// <summary>
+        /// This class represents the LithostratigraphicRank xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the LithostratigraphicRank xsd enumeration.")]
+        public enum LithostratigraphicRank 
+        {
+        /// <summary>
+        /// group property
+        /// </summary>
+          group,
+        /// <summary>
+        /// formation property
+        /// </summary>
+          formation,
+        /// <summary>
+        /// member property
+        /// </summary>
+          member,
+        /// <summary>
+        /// bed property
+        /// </summary>
+          bed
+        }
+        /// <summary>
+        /// This class represents the ShowFluid xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the ShowFluid xsd enumeration.")]
+        public enum ShowFluid 
+        {
+        /// <summary>
+        /// gas property
+        /// </summary>
+          gas,
+        /// <summary>
+        /// oil property
+        /// </summary>
+          oil
         }
         /// <summary>
         /// This class represents the LineStyle xsd enumeration.
@@ -84289,13 +88202,13 @@ namespace Energistics.DataAccess.WITSML200
           unknown
         }
         /// <summary>
-        /// This class represents the LogRectangeType xsd enumeration.
+        /// This class represents the LogRectangleType xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the LogRectangeType xsd enumeration.")]
-        public enum LogRectangeType 
+        [Description("This class represents the LogRectangleType xsd enumeration.")]
+        public enum LogRectangleType 
         {
         /// <summary>
         /// header property
@@ -84391,126 +88304,6 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           [XmlEnum("1E-9 1/ft")]
           Item1E91ft
-        }
-        /// <summary>
-        /// This class represents the MassUom xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the MassUom xsd enumeration.")]
-        public enum MassUom 
-        {
-        /// <summary>
-        /// ag property
-        /// </summary>
-          ag,
-        /// <summary>
-        /// cg property
-        /// </summary>
-          cg,
-        /// <summary>
-        /// ct property
-        /// </summary>
-          ct,
-        /// <summary>
-        /// cwtUK property
-        /// </summary>
-          [XmlEnum("cwt[UK]")]
-          cwtUK,
-        /// <summary>
-        /// cwtUS property
-        /// </summary>
-          [XmlEnum("cwt[US]")]
-          cwtUS,
-        /// <summary>
-        /// Eg property
-        /// </summary>
-          Eg,
-        /// <summary>
-        /// fg property
-        /// </summary>
-          fg,
-        /// <summary>
-        /// g property
-        /// </summary>
-          g,
-        /// <summary>
-        /// Gg property
-        /// </summary>
-          Gg,
-        /// <summary>
-        /// grain property
-        /// </summary>
-          grain,
-        /// <summary>
-        /// hg property
-        /// </summary>
-          hg,
-        /// <summary>
-        /// kg property
-        /// </summary>
-          kg,
-        /// <summary>
-        /// klbm property
-        /// </summary>
-          klbm,
-        /// <summary>
-        /// lbm property
-        /// </summary>
-          lbm,
-        /// <summary>
-        /// mg property
-        /// </summary>
-          mg,
-        /// <summary>
-        /// Mg property
-        /// </summary>
-          Mg,
-        /// <summary>
-        /// ng property
-        /// </summary>
-          ng,
-        /// <summary>
-        /// ozm property
-        /// </summary>
-          ozm,
-        /// <summary>
-        /// ozmtroy property
-        /// </summary>
-          [XmlEnum("ozm[troy]")]
-          ozmtroy,
-        /// <summary>
-        /// pg property
-        /// </summary>
-          pg,
-        /// <summary>
-        /// sack94lbm property
-        /// </summary>
-          [XmlEnum("sack[94lbm]")]
-          sack94lbm,
-        /// <summary>
-        /// t property
-        /// </summary>
-          t,
-        /// <summary>
-        /// Tg property
-        /// </summary>
-          Tg,
-        /// <summary>
-        /// tonUK property
-        /// </summary>
-          [XmlEnum("ton[UK]")]
-          tonUK,
-        /// <summary>
-        /// tonUS property
-        /// </summary>
-          [XmlEnum("ton[US]")]
-          tonUS,
-        /// <summary>
-        /// ug property
-        /// </summary>
-          ug
         }
         /// <summary>
         /// This class represents the PumpOpType xsd enumeration.
@@ -84640,155 +88433,6 @@ namespace Energistics.DataAccess.WITSML200
           urad
         }
         /// <summary>
-        /// This class represents the LengthPerTimeUom xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the LengthPerTimeUom xsd enumeration.")]
-        public enum LengthPerTimeUom 
-        {
-        /// <summary>
-        /// Item1000fth property
-        /// </summary>
-          [XmlEnum("1000 ft/h")]
-          Item1000fth,
-        /// <summary>
-        /// Item1000fts property
-        /// </summary>
-          [XmlEnum("1000 ft/s")]
-          Item1000fts,
-        /// <summary>
-        /// cma property
-        /// </summary>
-          [XmlEnum("cm/a")]
-          cma,
-        /// <summary>
-        /// cms property
-        /// </summary>
-          [XmlEnum("cm/s")]
-          cms,
-        /// <summary>
-        /// dms property
-        /// </summary>
-          [XmlEnum("dm/s")]
-          dms,
-        /// <summary>
-        /// ftd property
-        /// </summary>
-          [XmlEnum("ft/d")]
-          ftd,
-        /// <summary>
-        /// fth property
-        /// </summary>
-          [XmlEnum("ft/h")]
-          fth,
-        /// <summary>
-        /// ftmin property
-        /// </summary>
-          [XmlEnum("ft/min")]
-          ftmin,
-        /// <summary>
-        /// ftms property
-        /// </summary>
-          [XmlEnum("ft/ms")]
-          ftms,
-        /// <summary>
-        /// fts property
-        /// </summary>
-          [XmlEnum("ft/s")]
-          fts,
-        /// <summary>
-        /// ftus property
-        /// </summary>
-          [XmlEnum("ft/us")]
-          ftus,
-        /// <summary>
-        /// ina property
-        /// </summary>
-          [XmlEnum("in/a")]
-          ina,
-        /// <summary>
-        /// inmin property
-        /// </summary>
-          [XmlEnum("in/min")]
-          inmin,
-        /// <summary>
-        /// ins property
-        /// </summary>
-          [XmlEnum("in/s")]
-          ins,
-        /// <summary>
-        /// kmh property
-        /// </summary>
-          [XmlEnum("km/h")]
-          kmh,
-        /// <summary>
-        /// kms property
-        /// </summary>
-          [XmlEnum("km/s")]
-          kms,
-        /// <summary>
-        /// knot property
-        /// </summary>
-          knot,
-        /// <summary>
-        /// md property
-        /// </summary>
-          [XmlEnum("m/d")]
-          md,
-        /// <summary>
-        /// mh property
-        /// </summary>
-          [XmlEnum("m/h")]
-          mh,
-        /// <summary>
-        /// mmin property
-        /// </summary>
-          [XmlEnum("m/min")]
-          mmin,
-        /// <summary>
-        /// mms property
-        /// </summary>
-          [XmlEnum("m/ms")]
-          mms,
-        /// <summary>
-        /// ms property
-        /// </summary>
-          [XmlEnum("m/s")]
-          ms,
-        /// <summary>
-        /// mih property
-        /// </summary>
-          [XmlEnum("mi/h")]
-          mih,
-        /// <summary>
-        /// mila property
-        /// </summary>
-          [XmlEnum("mil/a")]
-          mila,
-        /// <summary>
-        /// mma property
-        /// </summary>
-          [XmlEnum("mm/a")]
-          mma,
-        /// <summary>
-        /// mms1 property
-        /// </summary>
-          [XmlEnum("mm/s")]
-          mms1,
-        /// <summary>
-        /// nms property
-        /// </summary>
-          [XmlEnum("nm/s")]
-          nms,
-        /// <summary>
-        /// ums property
-        /// </summary>
-          [XmlEnum("um/s")]
-          ums
-        }
-        /// <summary>
         /// This class represents the SupportCraftType xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -84829,127 +88473,6 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           [XmlEnum("tug boat")]
           tugboat
-        }
-        /// <summary>
-        /// This class represents the ForceUom xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the ForceUom xsd enumeration.")]
-        public enum ForceUom 
-        {
-        /// <summary>
-        /// Item10kN property
-        /// </summary>
-          [XmlEnum("10 kN")]
-          Item10kN,
-        /// <summary>
-        /// cN property
-        /// </summary>
-          cN,
-        /// <summary>
-        /// daN property
-        /// </summary>
-          daN,
-        /// <summary>
-        /// dN property
-        /// </summary>
-          dN,
-        /// <summary>
-        /// dyne property
-        /// </summary>
-          dyne,
-        /// <summary>
-        /// EN property
-        /// </summary>
-          EN,
-        /// <summary>
-        /// fN property
-        /// </summary>
-          fN,
-        /// <summary>
-        /// gf property
-        /// </summary>
-          gf,
-        /// <summary>
-        /// GN property
-        /// </summary>
-          GN,
-        /// <summary>
-        /// hN property
-        /// </summary>
-          hN,
-        /// <summary>
-        /// kdyne property
-        /// </summary>
-          kdyne,
-        /// <summary>
-        /// kgf property
-        /// </summary>
-          kgf,
-        /// <summary>
-        /// klbf property
-        /// </summary>
-          klbf,
-        /// <summary>
-        /// kN property
-        /// </summary>
-          kN,
-        /// <summary>
-        /// lbf property
-        /// </summary>
-          lbf,
-        /// <summary>
-        /// Mgf property
-        /// </summary>
-          Mgf,
-        /// <summary>
-        /// mN property
-        /// </summary>
-          mN,
-        /// <summary>
-        /// MN property
-        /// </summary>
-          MN,
-        /// <summary>
-        /// N property
-        /// </summary>
-          N,
-        /// <summary>
-        /// nN property
-        /// </summary>
-          nN,
-        /// <summary>
-        /// ozf property
-        /// </summary>
-          ozf,
-        /// <summary>
-        /// pdl property
-        /// </summary>
-          pdl,
-        /// <summary>
-        /// pN property
-        /// </summary>
-          pN,
-        /// <summary>
-        /// TN property
-        /// </summary>
-          TN,
-        /// <summary>
-        /// tonfUK property
-        /// </summary>
-          [XmlEnum("tonf[UK]")]
-          tonfUK,
-        /// <summary>
-        /// tonfUS property
-        /// </summary>
-          [XmlEnum("tonf[US]")]
-          tonfUS,
-        /// <summary>
-        /// uN property
-        /// </summary>
-          uN
         }
         /// <summary>
         /// This class represents the LinearAccelerationUom xsd enumeration.
@@ -85117,29 +88640,10 @@ namespace Energistics.DataAccess.WITSML200
         public enum TrajStationType 
         {
         /// <summary>
-        /// AZIandTVD property
-        /// </summary>
-          [XmlEnum("AZI and TVD")]
-          AZIandTVD,
-        /// <summary>
         /// azimuthonplane property
         /// </summary>
           [XmlEnum("azimuth on plane")]
           azimuthonplane,
-        /// <summary>
-        /// DLStoNS property
-        /// </summary>
-          [XmlEnum("DLS to NS")]
-          DLStoNS,
-        /// <summary>
-        /// EWandTVD property
-        /// </summary>
-          [XmlEnum("EW and TVD")]
-          EWandTVD,
-        /// <summary>
-        /// NS property
-        /// </summary>
-          NS,
         /// <summary>
         /// buildratetodeltaMD property
         /// </summary>
@@ -85235,6 +88739,11 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("DLS to INCL and TVD")]
           DLStoINCLandTVD,
         /// <summary>
+        /// DLStoNS property
+        /// </summary>
+          [XmlEnum("DLS to NS")]
+          DLStoNS,
+        /// <summary>
         /// DLSandtoolfacetoAZI property
         /// </summary>
           [XmlEnum("DLS and toolface to AZI")]
@@ -85290,6 +88799,15 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("hold to TVD")]
           holdtoTVD,
         /// <summary>
+        /// INCLAZIandTVD property
+        /// </summary>
+          [XmlEnum("INCL AZI and TVD")]
+          INCLAZIandTVD,
+        /// <summary>
+        /// interpolated property
+        /// </summary>
+          interpolated,
+        /// <summary>
         /// markerMD property
         /// </summary>
           [XmlEnum("marker MD")]
@@ -85299,6 +88817,26 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           [XmlEnum("marker TVD")]
           markerTVD,
+        /// <summary>
+        /// MDandINCL property
+        /// </summary>
+          [XmlEnum("MD and INCL")]
+          MDandINCL,
+        /// <summary>
+        /// MDINCLandAZI property
+        /// </summary>
+          [XmlEnum("MD INCL and AZI")]
+          MDINCLandAZI,
+        /// <summary>
+        /// NEandTVD property
+        /// </summary>
+          [XmlEnum("N E and TVD")]
+          NEandTVD,
+        /// <summary>
+        /// NSEWandTVD property
+        /// </summary>
+          [XmlEnum("NS EW and TVD")]
+          NSEWandTVD,
         /// <summary>
         /// targetcenter property
         /// </summary>
@@ -85337,26 +88875,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// unknown property
         /// </summary>
-          unknown,
-        /// <summary>
-        /// MDandINCL property
-        /// </summary>
-          [XmlEnum("MD and INCL")]
-          MDandINCL,
-        /// <summary>
-        /// MDINCLandAZI property
-        /// </summary>
-          [XmlEnum("MD INCL and AZI")]
-          MDINCLandAZI,
-        /// <summary>
-        /// NEandTVD property
-        /// </summary>
-          [XmlEnum("N E and TVD")]
-          NEandTVD,
-        /// <summary>
-        /// interpolated property
-        /// </summary>
-          interpolated
+          unknown
         }
         /// <summary>
         /// This class represents the AnglePerLengthUom xsd enumeration.
@@ -85422,11 +88941,6 @@ namespace Energistics.DataAccess.WITSML200
         [Description("This class represents the TrajStationStatus xsd enumeration.")]
         public enum TrajStationStatus 
         {
-        /// <summary>
-        /// partiallyaccepted property
-        /// </summary>
-          [XmlEnum("partially accepted")]
-          partiallyaccepted,
         /// <summary>
         /// open property
         /// </summary>
@@ -85747,80 +89261,6 @@ namespace Energistics.DataAccess.WITSML200
           welded
         }
         /// <summary>
-        /// This class represents the MomentOfForceUom xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the MomentOfForceUom xsd enumeration.")]
-        public enum MomentOfForceUom 
-        {
-        /// <summary>
-        /// Item1000lbfft property
-        /// </summary>
-          [XmlEnum("1000 lbf.ft")]
-          Item1000lbfft,
-        /// <summary>
-        /// daNm property
-        /// </summary>
-          [XmlEnum("daN.m")]
-          daNm,
-        /// <summary>
-        /// dNm property
-        /// </summary>
-          [XmlEnum("dN.m")]
-          dNm,
-        /// <summary>
-        /// J property
-        /// </summary>
-          J,
-        /// <summary>
-        /// kgfm property
-        /// </summary>
-          [XmlEnum("kgf.m")]
-          kgfm,
-        /// <summary>
-        /// kNm property
-        /// </summary>
-          [XmlEnum("kN.m")]
-          kNm,
-        /// <summary>
-        /// lbfft property
-        /// </summary>
-          [XmlEnum("lbf.ft")]
-          lbfft,
-        /// <summary>
-        /// lbfin property
-        /// </summary>
-          [XmlEnum("lbf.in")]
-          lbfin,
-        /// <summary>
-        /// lbmft2s2 property
-        /// </summary>
-          [XmlEnum("lbm.ft2/s2")]
-          lbmft2s2,
-        /// <summary>
-        /// Nm property
-        /// </summary>
-          [XmlEnum("N.m")]
-          Nm,
-        /// <summary>
-        /// pdlft property
-        /// </summary>
-          [XmlEnum("pdl.ft")]
-          pdlft,
-        /// <summary>
-        /// tonfUSft property
-        /// </summary>
-          [XmlEnum("tonf[US].ft")]
-          tonfUSft,
-        /// <summary>
-        /// tonfUSmi property
-        /// </summary>
-          [XmlEnum("tonf[US].mi")]
-          tonfUSmi
-        }
-        /// <summary>
         /// This class represents the ConnectionPosition xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -85845,113 +89285,6 @@ namespace Energistics.DataAccess.WITSML200
         /// unknown property
         /// </summary>
           unknown
-        }
-        /// <summary>
-        /// This class represents the EtpDataType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the EtpDataType xsd enumeration.")]
-        public enum EtpDataType 
-        {
-        /// <summary>
-        /// boolean property
-        /// </summary>
-          boolean,
-        /// <summary>
-        /// bytes property
-        /// </summary>
-          bytes,
-        /// <summary>
-        /// double property
-        /// </summary>
-          @double,
-        /// <summary>
-        /// float property
-        /// </summary>
-          @float,
-        /// <summary>
-        /// int property
-        /// </summary>
-          @int,
-        /// <summary>
-        /// long property
-        /// </summary>
-          @long,
-        /// <summary>
-        /// null property
-        /// </summary>
-          @null,
-        /// <summary>
-        /// string property
-        /// </summary>
-          @string,
-        /// <summary>
-        /// vector property
-        /// </summary>
-          vector
-        }
-        /// <summary>
-        /// This class represents the ChannelIndexType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the ChannelIndexType xsd enumeration.")]
-        public enum ChannelIndexType 
-        {
-        /// <summary>
-        /// measureddepth property
-        /// </summary>
-          [XmlEnum("measured depth")]
-          measureddepth,
-        /// <summary>
-        /// trueverticaldepth property
-        /// </summary>
-          [XmlEnum("true vertical depth")]
-          trueverticaldepth,
-        /// <summary>
-        /// passindexeddepth property
-        /// </summary>
-          [XmlEnum("pass indexed depth")]
-          passindexeddepth,
-        /// <summary>
-        /// datetime property
-        /// </summary>
-          [XmlEnum("date time")]
-          datetime,
-        /// <summary>
-        /// elapsedtime property
-        /// </summary>
-          [XmlEnum("elapsed time")]
-          elapsedtime,
-        /// <summary>
-        /// temperature property
-        /// </summary>
-          temperature,
-        /// <summary>
-        /// pressure property
-        /// </summary>
-          pressure
-        }
-        /// <summary>
-        /// This class represents the IndexDirection xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the IndexDirection xsd enumeration.")]
-        public enum IndexDirection 
-        {
-        /// <summary>
-        /// decreasing property
-        /// </summary>
-          decreasing,
-        /// <summary>
-        /// increasing property
-        /// </summary>
-          increasing
         }
         /// <summary>
         /// This class represents the VolumePerMassUom xsd enumeration.
@@ -86147,6 +89480,113 @@ namespace Energistics.DataAccess.WITSML200
           tubing
         }
         /// <summary>
+        /// This class represents the EtpDataType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the EtpDataType xsd enumeration.")]
+        public enum EtpDataType 
+        {
+        /// <summary>
+        /// boolean property
+        /// </summary>
+          boolean,
+        /// <summary>
+        /// bytes property
+        /// </summary>
+          bytes,
+        /// <summary>
+        /// double property
+        /// </summary>
+          @double,
+        /// <summary>
+        /// float property
+        /// </summary>
+          @float,
+        /// <summary>
+        /// int property
+        /// </summary>
+          @int,
+        /// <summary>
+        /// long property
+        /// </summary>
+          @long,
+        /// <summary>
+        /// null property
+        /// </summary>
+          @null,
+        /// <summary>
+        /// string property
+        /// </summary>
+          @string,
+        /// <summary>
+        /// vector property
+        /// </summary>
+          vector
+        }
+        /// <summary>
+        /// This class represents the ChannelIndexType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the ChannelIndexType xsd enumeration.")]
+        public enum ChannelIndexType 
+        {
+        /// <summary>
+        /// measureddepth property
+        /// </summary>
+          [XmlEnum("measured depth")]
+          measureddepth,
+        /// <summary>
+        /// trueverticaldepth property
+        /// </summary>
+          [XmlEnum("true vertical depth")]
+          trueverticaldepth,
+        /// <summary>
+        /// passindexeddepth property
+        /// </summary>
+          [XmlEnum("pass indexed depth")]
+          passindexeddepth,
+        /// <summary>
+        /// datetime property
+        /// </summary>
+          [XmlEnum("date time")]
+          datetime,
+        /// <summary>
+        /// elapsedtime property
+        /// </summary>
+          [XmlEnum("elapsed time")]
+          elapsedtime,
+        /// <summary>
+        /// temperature property
+        /// </summary>
+          temperature,
+        /// <summary>
+        /// pressure property
+        /// </summary>
+          pressure
+        }
+        /// <summary>
+        /// This class represents the IndexDirection xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the IndexDirection xsd enumeration.")]
+        public enum IndexDirection 
+        {
+        /// <summary>
+        /// decreasing property
+        /// </summary>
+          decreasing,
+        /// <summary>
+        /// increasing property
+        /// </summary>
+          increasing
+        }
+        /// <summary>
         /// This class represents the MudClass xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -86311,64 +89751,6 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           [XmlEnum("formation integrity test")]
           formationintegritytest,
-        /// <summary>
-        /// unknown property
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the GasPeakType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the GasPeakType xsd enumeration.")]
-        public enum GasPeakType 
-        {
-        /// <summary>
-        /// circulatingbackgroundgas property
-        /// </summary>
-          [XmlEnum("circulating background gas")]
-          circulatingbackgroundgas,
-        /// <summary>
-        /// connectiongas property
-        /// </summary>
-          [XmlEnum("connection gas")]
-          connectiongas,
-        /// <summary>
-        /// drillingbackgroundgas property
-        /// </summary>
-          [XmlEnum("drilling background gas")]
-          drillingbackgroundgas,
-        /// <summary>
-        /// drillinggaspeak property
-        /// </summary>
-          [XmlEnum("drilling gas peak")]
-          drillinggaspeak,
-        /// <summary>
-        /// flowcheckgas property
-        /// </summary>
-          [XmlEnum("flow check gas")]
-          flowcheckgas,
-        /// <summary>
-        /// noreadings property
-        /// </summary>
-          [XmlEnum("no readings")]
-          noreadings,
-        /// <summary>
-        /// other property
-        /// </summary>
-          other,
-        /// <summary>
-        /// shutdowngas property
-        /// </summary>
-          [XmlEnum("shut down gas")]
-          shutdowngas,
-        /// <summary>
-        /// tripgas property
-        /// </summary>
-          [XmlEnum("trip gas")]
-          tripgas,
         /// <summary>
         /// unknown property
         /// </summary>
@@ -90888,6 +94270,28 @@ namespace Energistics.DataAccess.WITSML200
           topdrive
         }
         /// <summary>
+        /// This class represents the ChannelStatus xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the ChannelStatus xsd enumeration.")]
+        public enum ChannelStatus 
+        {
+        /// <summary>
+        /// active property
+        /// </summary>
+          active,
+        /// <summary>
+        /// closed property
+        /// </summary>
+          closed,
+        /// <summary>
+        /// inactive property
+        /// </summary>
+          inactive
+        }
+        /// <summary>
         /// This class represents the FileNameType xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -91002,6 +94406,32 @@ namespace Energistics.DataAccess.WITSML200
           unknown
         }
         /// <summary>
+        /// This class represents the CementJobType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+        [Description("This class represents the CementJobType xsd enumeration.")]
+        public enum CementJobType 
+        {
+        /// <summary>
+        /// primary property
+        /// </summary>
+          primary,
+        /// <summary>
+        /// plug property
+        /// </summary>
+          plug,
+        /// <summary>
+        /// squeeze property
+        /// </summary>
+          squeeze,
+        /// <summary>
+        /// unknown property
+        /// </summary>
+          unknown
+        }
+        /// <summary>
         /// This class represents the ChannelState xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -91099,54 +94529,6 @@ namespace Energistics.DataAccess.WITSML200
         /// wireline property
         /// </summary>
           wireline
-        }
-        /// <summary>
-        /// This class represents the ChannelStatus xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the ChannelStatus xsd enumeration.")]
-        public enum ChannelStatus 
-        {
-        /// <summary>
-        /// active property
-        /// </summary>
-          active,
-        /// <summary>
-        /// closed property
-        /// </summary>
-          closed,
-        /// <summary>
-        /// inactive property
-        /// </summary>
-          inactive
-        }
-        /// <summary>
-        /// This class represents the CementJobType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-        [Description("This class represents the CementJobType xsd enumeration.")]
-        public enum CementJobType 
-        {
-        /// <summary>
-        /// primary property
-        /// </summary>
-          primary,
-        /// <summary>
-        /// plug property
-        /// </summary>
-          plug,
-        /// <summary>
-        /// squeeze property
-        /// </summary>
-          squeeze,
-        /// <summary>
-        /// unknown property
-        /// </summary>
-          unknown
         }
         /// <summary>
         /// This class represents the BhaStatus xsd enumeration.

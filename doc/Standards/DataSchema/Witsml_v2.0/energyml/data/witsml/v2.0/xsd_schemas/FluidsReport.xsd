@@ -314,7 +314,11 @@ to titrate the reagent mixture to the phenolphthalein endpoint).</xs:documentati
 			</xs:element>
 			<xs:element name="Rheometer" type="witsml:Rheometer" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of Fluid</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="RheometerViscosity">
 		<xs:sequence>
@@ -329,7 +333,11 @@ to titrate the reagent mixture to the phenolphthalein endpoint).</xs:documentati
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64"/>
+		<xs:attribute name="uid" use="optional" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of RheometerViscosity</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="MudClass">
 		<xs:annotation>

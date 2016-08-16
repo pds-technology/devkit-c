@@ -267,18 +267,7 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 	<xs:complexType name="CementDesignStage">
 		<xs:complexContent>
 			<xs:extension base="witsml:AbstractCementStage">
-				<xs:sequence>
-					<xs:element name="SqueezeObj" type="eml:String64" minOccurs="0" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>Squeeze objective.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="PlugCatcher" type="xs:boolean" minOccurs="0" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>Plug catcher.  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
+				<xs:sequence/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -361,7 +350,11 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 					<xs:documentation>Pipe reciprocation stroke length.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Reciprocating" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Reciprocating" type="xs:boolean" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>True or false flag to indicate if pipe is being raised or lowered.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="CementJob" type="witsml:CementJob" substitutionGroup="eml:AbstractDataObject"/>
@@ -591,11 +584,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 					<xs:documentation>Pill below plug.  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<!-- <xs:element name="PlugCatcher" type="xs:boolean" minOccurs="0" maxOccurs="1">
+			<xs:element name="PlugCatcher" type="xs:boolean" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Plug catcher.  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 				</xs:annotation>
-			</xs:element> -->
+			</xs:element>
 			<xs:element name="PresBackPressure" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Constant back pressure applied while pumping the job (can be supersede by a back pressure per pumping stage)</xs:documentation>
@@ -1090,14 +1083,18 @@ the appropriate value. Use of this value may result in rejection in some situati
 			<xs:element name="CementAdditive" type="witsml:CementAdditive" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="Rheometer" type="witsml:Rheometer" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64"/>
+		<xs:attribute name="uid" use="optional" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this cementing fluid</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="CementPumpScheduleStep">
 		<xs:annotation>
 			<xs:documentation>WITSML - Cement Pump Schedule Component Schema</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="FluidRefId" type="xs:string" minOccurs="1" maxOccurs="1">
+			<xs:element name="FluidReferenceId" type="eml:UuidString" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>UUID Reference to Fluid used in CementJob.</xs:documentation>
 				</xs:annotation>
@@ -1143,7 +1140,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64"/>
+		<xs:attribute name="uid" use="optional" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this pump schedule step</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="CementAdditive">
 		<xs:annotation>
@@ -1194,7 +1195,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 NOTE: Change the fluid locations (the booleans) into an enumeration.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="FluidRefId" type="eml:UuidString" minOccurs="1" maxOccurs="1">
+			<xs:element name="FluidReferenceId" type="eml:UuidString" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Reference to Fluid used in CementJob</xs:documentation>
 				</xs:annotation>
@@ -1216,7 +1217,11 @@ NOTE: Change the fluid locations (the booleans) into an enumeration.</xs:documen
 			</xs:element>
 			<xs:element name="LocationType" type="witsml:WellboreFluidLocation" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64"/>
+		<xs:attribute name="uid" use="optional" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of FluidLocation</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="CementStageReport">
 		<xs:complexContent>
@@ -1338,7 +1343,11 @@ NOTE: Change the fluid locations (the booleans) into an enumeration.</xs:documen
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
-				<xs:attribute name="uid" use="optional" type="eml:String64"/>
+				<xs:attribute name="uid" use="optional" type="eml:String64">
+					<xs:annotation>
+						<xs:documentation>Unique identifier for this instance of CementStageReport</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>

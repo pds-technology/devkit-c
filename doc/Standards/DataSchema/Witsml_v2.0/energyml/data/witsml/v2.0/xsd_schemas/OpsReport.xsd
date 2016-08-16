@@ -297,7 +297,11 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of Incident</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="Personnel">
 		<xs:annotation>
@@ -330,7 +334,11 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of Personnel</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="SupportCraft">
 		<xs:annotation>
@@ -342,7 +350,11 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 					<xs:documentation>Human recognizable context for support craft.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TypeSupportCraft" type="witsml:SupportCraftType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="TypeSupportCraft" type="witsml:SupportCraftType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Type of support craft (eg. Barge, helicopter, tug boat)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="DTimArrived" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Date and time when vehicle arrived at rig site.</xs:documentation>
@@ -364,7 +376,11 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of SupportCraft</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="Weather">
 		<xs:annotation>
@@ -497,7 +513,11 @@ sample period (typically 20 to 30 minutes).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of Weather</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="BeaufortScaleIntegerCode">
 		<xs:annotation>
@@ -926,7 +946,11 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of DayCost</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="Scr">
 		<xs:annotation>
@@ -969,7 +993,11 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of Scr</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="ScrType">
 		<xs:annotation>
@@ -1029,7 +1057,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of PitVolume</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="MudVolume">
 		<xs:annotation>
@@ -1233,7 +1265,11 @@ for the report interval.</xs:documentation>
 				</xs:element>
 			</xs:choice>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of Inventory</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="RigResponse">
 		<xs:annotation>
@@ -1422,7 +1458,11 @@ effects of wind and waves; measured as the angle from vertical</xs:documentation
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of PumpOp</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="PumpOpType">
 		<xs:restriction base="eml:TypeEnum">
@@ -1476,6 +1516,10 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="ShakerScreen" type="witsml:ShakerScreen" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of ShakerOp</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 </xs:schema>

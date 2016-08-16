@@ -16,10 +16,10 @@
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
 	<!--														-->
 	<xs:include schemaLocation="DrillReport.xsd"/>
-	<xs:include schemaLocation="DownholeComponent.xsd"/>
-	<xs:include schemaLocation="OpsReport.xsd"/>
 	<xs:include schemaLocation="WitsmlCommon.xsd"/>
 	<xs:include schemaLocation="Wellbore.xsd"/>
+	<xs:include schemaLocation="DownholeComponent.xsd"/>
+	<xs:include schemaLocation="OpsReport.xsd"/>
 	<xs:element name="WellCMLedger" type="witsml:WellCMLedger" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="WellCMLedger">
 		<xs:complexContent>
@@ -146,29 +146,57 @@
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="eml:String64">
-				<xs:attribute name="Class" use="optional" type="xs:string"/>
+				<xs:attribute name="Class" use="optional" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>The type of the event (job, daily report, etc.)</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
 	<xs:complexType name="DownholeComponentReference">
 		<xs:sequence>
-			<xs:element name="StringEquipmentReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="PerforationSetReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="StringEquipmentReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to string equipment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PerforationSetReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to perforation set</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="BoreholeStringReference" type="witsml:BoreholeStringReference" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="DownholeStringsReference" type="witsml:DownholeStringReference" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="BoreholeStringReference">
 		<xs:sequence>
-			<xs:element name="StringEquipmentReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="StringEquipmentReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to string equipment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="boreholeStringReferenceId" use="optional" type="eml:String64"/>
+		<xs:attribute name="boreholeStringReferenceId" use="optional" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Reference to borehole String</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="DownholeStringReference">
 		<xs:sequence>
-			<xs:element name="StringEquipmentReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="StringEquipmentReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to string equipment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="downholeStringReferenceId" use="optional" type="eml:String64"/>
+		<xs:attribute name="downholeStringReferenceId" use="optional" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Reference to downhole string</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="AbstractEventExtension" abstract="true">
 		<xs:annotation>
@@ -234,7 +262,7 @@
 				<xs:sequence>
 					<xs:element name="TrajectoryRefID" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>trajectory reference id.</xs:documentation>
+							<xs:documentation>Reference to trajectory</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
@@ -658,7 +686,11 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64"/>
+		<xs:attribute name="uid" use="optional" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of Perforating</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="FluidReportExtension">
 		<xs:annotation>
@@ -771,7 +803,11 @@ The significance of this time is defined by the groupType.</xs:documentation>
 			<xs:element name="Param" type="witsml:IndexedObject" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="Sequence2" type="witsml:ObjectSequence" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of MemberObject</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="LogIndexType">
 		<xs:annotation>

@@ -18,30 +18,31 @@ namespace Energistics.Generator.WITSML200 {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreMarkerSet))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreMarker))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreCompletion))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCompletion))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToolErrorTermSet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimJobStage))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimPerforationCluster))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimJob))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Risk))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Rig))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MudLogReport))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CuttingsGeology))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InterpretedGeology))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ShowEvaluation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreGeology))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreCompletion))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCompletion))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToolErrorTermSet))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimJob))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimPerforationCluster))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimJobStage))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Risk))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Rig))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DepthRegImage))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCMLedger))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpsReport))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Trajectory))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToolErrorModel))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DownholeComponent))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Log))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Channel))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChannelSet))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementJob))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementJobEvaluation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreGeometry))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Log))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Channel))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChannelSet))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BhaRun))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidsReport))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DrillReport))]
@@ -50,11 +51,11 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Wellbore))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Well))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DataAssuranceRecord))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyKind))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyKindDictionary))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyKind))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EpcExternalPartReference))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
@@ -245,1374 +246,116 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class CuttingsIntervalShow {
+    public partial class GravelPackInterval {
         
-        private Citation citationField;
+        private string downholeStringReferenceIdField;
         
-        private ShowRating showRatingField;
+        private MdInterval gravelPackMdIntervalField;
         
-        private bool showRatingFieldSpecified;
+        private TvdInterval gravelPackTvdIntervalField;
         
-        private string stainColorField;
+        private EventInfo eventHistoryField;
         
-        private string stainDistrField;
+        private string[] geologyFeatureReferenceIdField;
         
-        private AreaPerAreaMeasure stainPcField;
+        private ExtensionNameValue[] extensionNameValueField;
         
-        private ShowSpeed cutSpeedField;
-        
-        private bool cutSpeedFieldSpecified;
-        
-        private string cutColorField;
-        
-        private string cutStrengthField;
-        
-        private ShowLevel cutFormField;
-        
-        private bool cutFormFieldSpecified;
-        
-        private string cutLevelField;
-        
-        private ShowLevel cutFlorFormField;
-        
-        private bool cutFlorFormFieldSpecified;
-        
-        private string cutFlorColorField;
-        
-        private string cutFlorStrengthField;
-        
-        private ShowSpeed cutFlorSpeedField;
-        
-        private bool cutFlorSpeedFieldSpecified;
-        
-        private ShowFluorescence cutFlorLevelField;
-        
-        private bool cutFlorLevelFieldSpecified;
-        
-        private string natFlorColorField;
-        
-        private AreaPerAreaMeasure natFlorPcField;
-        
-        private ShowFluorescence natFlorLevelField;
-        
-        private bool natFlorLevelFieldSpecified;
-        
-        private string natFlorDescField;
-        
-        private string residueColorField;
-        
-        private string impregnatedLithoField;
-        
-        private string odorField;
-        
-        private string cuttingFluidField;
+        private IntervalStatusHistory[] statusHistoryField;
         
         private string uidField;
         
         /// <remarks/>
-        public Citation Citation {
-            get {
-                return this.citationField;
-            }
-            set {
-                this.citationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Show Rating.</summary>
-        [System.ComponentModel.DescriptionAttribute("Show Rating.")]
-        public ShowRating ShowRating {
-            get {
-                return this.showRatingField;
-            }
-            set {
-                this.showRatingField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ShowRatingSpecified {
-            get {
-                return this.showRatingFieldSpecified;
-            }
-            set {
-                this.showRatingFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Visible Stain Color.</summary>
+        /// <summary>Reference to the downhole string that denotes the interval of the gravel pack.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Visible Stain Color.")]
-        public string StainColor {
+        [System.ComponentModel.DescriptionAttribute("Reference to the downhole string that denotes the interval of the gravel pack.")]
+        public string DownholeStringReferenceId {
             get {
-                return this.stainColorField;
+                return this.downholeStringReferenceIdField;
             }
             set {
-                this.stainColorField = value;
+                this.downholeStringReferenceIdField = value;
             }
         }
         
         /// <remarks/>
-        /// <summary>Visible Stain Distribution.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Visible Stain Distribution.")]
-        public string StainDistr {
+        /// <summary>Gravel packed measured depth interval for this completion.</summary>
+        [System.ComponentModel.DescriptionAttribute("Gravel packed measured depth interval for this completion.")]
+        public MdInterval GravelPackMdInterval {
             get {
-                return this.stainDistrField;
+                return this.gravelPackMdIntervalField;
             }
             set {
-                this.stainDistrField = value;
+                this.gravelPackMdIntervalField = value;
             }
         }
         
         /// <remarks/>
-        /// <summary>Visible Stain (commonly in percent).</summary>
-        [System.ComponentModel.DescriptionAttribute("Visible Stain (commonly in percent).")]
-        public AreaPerAreaMeasure StainPc {
+        /// <summary>Gravel packed true vertical depth interval for this completion.</summary>
+        [System.ComponentModel.DescriptionAttribute("Gravel packed true vertical depth interval for this completion.")]
+        public TvdInterval GravelPackTvdInterval {
             get {
-                return this.stainPcField;
+                return this.gravelPackTvdIntervalField;
             }
             set {
-                this.stainPcField = value;
+                this.gravelPackTvdIntervalField = value;
             }
         }
         
         /// <remarks/>
-        /// <summary>Cut speed.</summary>
-        [System.ComponentModel.DescriptionAttribute("Cut speed.")]
-        public ShowSpeed CutSpeed {
+        /// <summary>The contactInterval event information</summary>
+        [System.ComponentModel.DescriptionAttribute("The contactInterval event information")]
+        public EventInfo EventHistory {
             get {
-                return this.cutSpeedField;
+                return this.eventHistoryField;
             }
             set {
-                this.cutSpeedField = value;
+                this.eventHistoryField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool CutSpeedSpecified {
+        /// <summary>Reference to a geology feature</summary>
+        [System.Xml.Serialization.XmlElementAttribute("GeologyFeatureReferenceId")]
+        [System.ComponentModel.DescriptionAttribute("Reference to a geology feature")]
+        public string[] GeologyFeatureReferenceId {
             get {
-                return this.cutSpeedFieldSpecified;
+                return this.geologyFeatureReferenceIdField;
             }
             set {
-                this.cutSpeedFieldSpecified = value;
+                this.geologyFeatureReferenceIdField = value;
             }
         }
         
         /// <remarks/>
-        /// <summary>Cut color.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Cut color.")]
-        public string CutColor {
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public ExtensionNameValue[] ExtensionNameValue {
             get {
-                return this.cutColorField;
+                return this.extensionNameValueField;
             }
             set {
-                this.cutColorField = value;
+                this.extensionNameValueField = value;
             }
         }
         
         /// <remarks/>
-        /// <summary>Cut strength.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Cut strength.")]
-        public string CutStrength {
+        [System.Xml.Serialization.XmlElementAttribute("StatusHistory")]
+        public IntervalStatusHistory[] StatusHistory {
             get {
-                return this.cutStrengthField;
+                return this.statusHistoryField;
             }
             set {
-                this.cutStrengthField = value;
+                this.statusHistoryField = value;
             }
         }
         
         /// <remarks/>
-        /// <summary>Cut formulation.</summary>
-        [System.ComponentModel.DescriptionAttribute("Cut formulation.")]
-        public ShowLevel CutForm {
-            get {
-                return this.cutFormField;
-            }
-            set {
-                this.cutFormField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool CutFormSpecified {
-            get {
-                return this.cutFormFieldSpecified;
-            }
-            set {
-                this.cutFormFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Cut level (Faint, Bright, etc.).</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Cut level (Faint, Bright, etc.).")]
-        public string CutLevel {
-            get {
-                return this.cutLevelField;
-            }
-            set {
-                this.cutLevelField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Cut fluorescence form.</summary>
-        [System.ComponentModel.DescriptionAttribute("Cut fluorescence form.")]
-        public ShowLevel CutFlorForm {
-            get {
-                return this.cutFlorFormField;
-            }
-            set {
-                this.cutFlorFormField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool CutFlorFormSpecified {
-            get {
-                return this.cutFlorFormFieldSpecified;
-            }
-            set {
-                this.cutFlorFormFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Cut fluorescence color.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Cut fluorescence color.")]
-        public string CutFlorColor {
-            get {
-                return this.cutFlorColorField;
-            }
-            set {
-                this.cutFlorColorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Cut fluorescence strength.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Cut fluorescence strength.")]
-        public string CutFlorStrength {
-            get {
-                return this.cutFlorStrengthField;
-            }
-            set {
-                this.cutFlorStrengthField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Cut fluorescence speed.</summary>
-        [System.ComponentModel.DescriptionAttribute("Cut fluorescence speed.")]
-        public ShowSpeed CutFlorSpeed {
-            get {
-                return this.cutFlorSpeedField;
-            }
-            set {
-                this.cutFlorSpeedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool CutFlorSpeedSpecified {
-            get {
-                return this.cutFlorSpeedFieldSpecified;
-            }
-            set {
-                this.cutFlorSpeedFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Cut fluorescence level.</summary>
-        [System.ComponentModel.DescriptionAttribute("Cut fluorescence level.")]
-        public ShowFluorescence CutFlorLevel {
-            get {
-                return this.cutFlorLevelField;
-            }
-            set {
-                this.cutFlorLevelField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool CutFlorLevelSpecified {
-            get {
-                return this.cutFlorLevelFieldSpecified;
-            }
-            set {
-                this.cutFlorLevelFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Natural Fluorescence Color.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Natural Fluorescence Color.")]
-        public string NatFlorColor {
-            get {
-                return this.natFlorColorField;
-            }
-            set {
-                this.natFlorColorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Natural fluorescence (commonly in percent).</summary>
-        [System.ComponentModel.DescriptionAttribute("Natural fluorescence (commonly in percent).")]
-        public AreaPerAreaMeasure NatFlorPc {
-            get {
-                return this.natFlorPcField;
-            }
-            set {
-                this.natFlorPcField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Natural fluorescence level.</summary>
-        [System.ComponentModel.DescriptionAttribute("Natural fluorescence level.")]
-        public ShowFluorescence NatFlorLevel {
-            get {
-                return this.natFlorLevelField;
-            }
-            set {
-                this.natFlorLevelField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool NatFlorLevelSpecified {
-            get {
-                return this.natFlorLevelFieldSpecified;
-            }
-            set {
-                this.natFlorLevelFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Natural fluorescence description.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Natural fluorescence description.")]
-        public string NatFlorDesc {
-            get {
-                return this.natFlorDescField;
-            }
-            set {
-                this.natFlorDescField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Residue color.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Residue color.")]
-        public string ResidueColor {
-            get {
-                return this.residueColorField;
-            }
-            set {
-                this.residueColorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Impregnated lithology.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Impregnated lithology.")]
-        public string ImpregnatedLitho {
-            get {
-                return this.impregnatedLithoField;
-            }
-            set {
-                this.impregnatedLithoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Description of any hydrocarbon type odors smelled.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Description of any hydrocarbon type odors smelled.")]
-        public string Odor {
-            get {
-                return this.odorField;
-            }
-            set {
-                this.odorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Description of any hydrocarbon type odors smelled</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Description of any hydrocarbon type odors smelled")]
-        public string CuttingFluid {
-            get {
-                return this.cuttingFluidField;
-            }
-            set {
-                this.cuttingFluidField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class Citation {
-        
-        private string titleField;
-        
-        private string originatorField;
-        
-        private System.DateTime creationField;
-        
-        private string formatField;
-        
-        private string editorField;
-        
-        private System.DateTime lastUpdateField;
-        
-        private bool lastUpdateFieldSpecified;
-        
-        private string versionStringField;
-        
-        private string descriptionField;
-        
-        private string descriptiveKeywordsField;
-        
-        /// <remarks/>
-        /// <summary>One line description/name of the RESQML object.  This is the equivalent in ISO 19115 of CI_Citation.title  Legacy DCGroup - title</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("One line description/name of the RESQML object.  This is the equivalent in ISO 19" +
-            "115 of CI_Citation.title  Legacy DCGroup - title")]
-        public string Title {
-            get {
-                return this.titleField;
-            }
-            set {
-                this.titleField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Name (or other human-readable identifier) of the person who initially originated the object or RESQML document in the source application. If that information is not available, the user who created the RESQML format file. The originator remains the same as the object is subsequently edited.   This is the equivalent in ISO 19115 to the CI_Individual.name or the CI_Organization.name of the citedResponsibleParty whose role is "originator".  Legacy DCGroup - author</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"Name (or other human-readable identifier) of the person who initially originated the object or RESQML document in the source application. If that information is not available, the user who created the RESQML format file. The originator remains the same as the object is subsequently edited.   This is the equivalent in ISO 19115 to the CI_Individual.name or the CI_Organization.name of the citedResponsibleParty whose role is ""originator"".  Legacy DCGroup - author")]
-        public string Originator {
-            get {
-                return this.originatorField;
-            }
-            set {
-                this.originatorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Date and time the document was created in the source application or, if that information is not available, when it was saved to the RESQML format file.  This is the equivalent of the ISO 19115 CI_Date where the CI_DateTypeCode = ”creation"  The type is the Energistics timestamp datatype which is the W3C xs:dateTime with the optional timezone offset from UTC made mandatory.  Format: YYYY-MM-DDThh:mm:ssZ[+/-]hh:mm  Legacy DCGroup - created</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute(@"Date and time the document was created in the source application or, if that information is not available, when it was saved to the RESQML format file.  This is the equivalent of the ISO 19115 CI_Date where the CI_DateTypeCode = ”creation""  The type is the Energistics timestamp datatype which is the W3C xs:dateTime with the optional timezone offset from UTC made mandatory.  Format: YYYY-MM-DDThh:mm:ssZ[+/-]hh:mm  Legacy DCGroup - created")]
-        public System.DateTime Creation {
-            get {
-                return this.creationField;
-            }
-            set {
-                this.creationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Software or service that was used to originate the object and the file format created. Must be human and machine readable and unambiguously identify the software by including the company name, software name and software version. This is the equivalent in ISO 19115 to the distributionFormat.MD_Format.  The ISO format for this is [vendor:applicationName]/fileExtension where the application name includes the version number of the application.  SIG Implementation Notes  1. RESQML   - Legacy DCGroup from v1.1 - publisher - fileExtension is not relevant and will be ignored if present. - vendor and applicationName are mandatory.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute(@"Software or service that was used to originate the object and the file format created. Must be human and machine readable and unambiguously identify the software by including the company name, software name and software version. This is the equivalent in ISO 19115 to the distributionFormat.MD_Format.  The ISO format for this is [vendor:applicationName]/fileExtension where the application name includes the version number of the application.  SIG Implementation Notes  1. RESQML   - Legacy DCGroup from v1.1 - publisher - fileExtension is not relevant and will be ignored if present. - vendor and applicationName are mandatory.")]
-        public string Format {
-            get {
-                return this.formatField;
-            }
-            set {
-                this.formatField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Name (or other human-readable identifier) of the last person who updated the object.   This is the equivalent in ISO 19115 to the CI_Individual.name or the CI_Organization.name of the citedResponsibleParty whose role is "editor".  Legacy DCGroup - contributor</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"Name (or other human-readable identifier) of the last person who updated the object.   This is the equivalent in ISO 19115 to the CI_Individual.name or the CI_Organization.name of the citedResponsibleParty whose role is ""editor"".  Legacy DCGroup - contributor")]
-        public string Editor {
-            get {
-                return this.editorField;
-            }
-            set {
-                this.editorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Date and time the document was last modified in the source application or, if that information is not available, when it was last saved to the RESQML format file.  This is the equivalent of the ISO 19115 CI_Date where the CI_DateTypeCode = ”lastUpdate"  The type is the Energistics timestamp datatype which is the W3C xs:dateTime with the optional timezone offset from UTC made mandatory.  Format: YYYY-MM-DDThh:mm:ssZ[+/-]hh:mm  Legacy DCGroup - modified</summary>
-        [System.ComponentModel.DescriptionAttribute(@"Date and time the document was last modified in the source application or, if that information is not available, when it was last saved to the RESQML format file.  This is the equivalent of the ISO 19115 CI_Date where the CI_DateTypeCode = ”lastUpdate""  The type is the Energistics timestamp datatype which is the W3C xs:dateTime with the optional timezone offset from UTC made mandatory.  Format: YYYY-MM-DDThh:mm:ssZ[+/-]hh:mm  Legacy DCGroup - modified")]
-        public System.DateTime LastUpdate {
-            get {
-                return this.lastUpdateField;
-            }
-            set {
-                this.lastUpdateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool LastUpdateSpecified {
-            get {
-                return this.lastUpdateFieldSpecified;
-            }
-            set {
-                this.lastUpdateFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string VersionString {
-            get {
-                return this.versionStringField;
-            }
-            set {
-                this.versionStringField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>User descriptive comments about the object. Intended for end-user use (human readable); not necessarily meant to be used by software.  This is the equivalent of the ISO 19115 abstract.CharacterString  Legacy DCGroup - description</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("User descriptive comments about the object. Intended for end-user use (human read" +
-            "able); not necessarily meant to be used by software.  This is the equivalent of " +
-            "the ISO 19115 abstract.CharacterString  Legacy DCGroup - description")]
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Key words to describe the activity, for example, history match or volumetric calculations, relevant to this object. Intended to be used in a search function by software.  This is the equivalent in ISO 19115 of descriptiveKeywords.MD_Keywords  Legacy DCGroup - subject</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute(@"Key words to describe the activity, for example, history match or volumetric calculations, relevant to this object. Intended to be used in a search function by software.  This is the equivalent in ISO 19115 of descriptiveKeywords.MD_Keywords  Legacy DCGroup - subject")]
-        public string DescriptiveKeywords {
-            get {
-                return this.descriptiveKeywordsField;
-            }
-            set {
-                this.descriptiveKeywordsField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum ShowRating {
-        
-        /// <remarks/>
-        none,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("very poor")]
-        verypoor,
-        
-        /// <remarks/>
-        poor,
-        
-        /// <remarks/>
-        fair,
-        
-        /// <remarks/>
-        good,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("very good")]
-        verygood,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class AreaPerAreaMeasure {
-        
-        private AreaPerAreaUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public AreaPerAreaUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum AreaPerAreaUom {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("%")]
-        Item,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("%[area]")]
-        area,
-        
-        /// <remarks/>
-        cEuc,
-        
-        /// <remarks/>
-        Euc,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("in2/ft2")]
-        in2ft2,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("in2/in2")]
-        in2in2,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("m2/m2")]
-        m2m2,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mm2/mm2")]
-        mm2mm2,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum ShowSpeed {
-        
-        /// <remarks/>
-        slow,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("moderately fast")]
-        moderatelyfast,
-        
-        /// <remarks/>
-        fast,
-        
-        /// <remarks/>
-        instantaneous,
-        
-        /// <remarks/>
-        none,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum ShowLevel {
-        
-        /// <remarks/>
-        blooming,
-        
-        /// <remarks/>
-        streaming,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum ShowFluorescence {
-        
-        /// <remarks/>
-        faint,
-        
-        /// <remarks/>
-        bright,
-        
-        /// <remarks/>
-        none,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class CuttingsIntervalLithology {
-        
-        private string kindField;
-        
-        private VolumePerVolumeMeasure lithPcField;
-        
-        private Citation citationField;
-        
-        private string codeLithField;
-        
-        private string colorField;
-        
-        private string textureField;
-        
-        private string hardnessField;
-        
-        private string compactionField;
-        
-        private string sizeGrainField;
-        
-        private string roundnessField;
-        
-        private string sphericityField;
-        
-        private string sortingField;
-        
-        private string matrixCementField;
-        
-        private string porosityVisibleField;
-        
-        private string porosityFabricField;
-        
-        private string permeabilityField;
-        
-        private CuttingsIntervalShow[] showsField;
-        
-        private LithologyQualifier[] qualifierField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>The geological name for the type of lithology from the enum table listing a  subset of the OneGeology / CGI defined formation types.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
-        [System.ComponentModel.DescriptionAttribute("The geological name for the type of lithology from the enum table listing a  subs" +
-            "et of the OneGeology / CGI defined formation types.")]
-        public string Kind {
-            get {
-                return this.kindField;
-            }
-            set {
-                this.kindField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The lithology represents the portion of the sampled interval this lithology type relates to. The total of the lithologies within an interval should add up to 100 percent. If LithologySource in cs-geology is "interpreted" only 100% is allowed. If "core" or "cuttings" then recommended useage is the creating application uses blocks of 10%. i.e. 10, 20, 30, 40, 50, 60, 70, 80, 90, 100. Ideally the input application should enforce a total of 100% for every defined depth interval. If the total for a depth interval does not add up to 100%, the "undifferentiated" code should be used to fill out to 100%.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute(@"The lithology represents the portion of the sampled interval this lithology type relates to. The total of the lithologies within an interval should add up to 100 percent. If LithologySource in cs-geology is ""interpreted"" only 100% is allowed. If ""core"" or ""cuttings"" then recommended useage is the creating application uses blocks of 10%. i.e. 10, 20, 30, 40, 50, 60, 70, 80, 90, 100. Ideally the input application should enforce a total of 100% for every defined depth interval. If the total for a depth interval does not add up to 100%, the ""undifferentiated"" code should be used to fill out to 100%.")]
-        public VolumePerVolumeMeasure LithPc {
-            get {
-                return this.lithPcField;
-            }
-            set {
-                this.lithPcField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Citation Citation {
-            get {
-                return this.citationField;
-            }
-            set {
-                this.citationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A custom Lithology encoding sceme if desired. (It is recommended that if used, this follows the NPD required useage with the numeric values noted in the enum tables, which was the original intent for this item).  The NPD Coding System assigned a digital code to the main lithologies as per the Norwegian Blue Book data standards. The code was then derived by Lithology = (Main lithology * 10) + cement + (modifier / 100). Example: Calcite cemented silty micaceous sandstone: ( 33 * 10 ) + 1 + (21 / 100) gives a numeric code of 331.21. However the NPD is also working through Energistics/Ceasar to potentially change this useage.) This should not be used for mnemonics, as those vary by operator, and if an abbreviation is  required a local look up table should be used by the rendering client, based on Lithology Type.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"A custom Lithology encoding sceme if desired. (It is recommended that if used, this follows the NPD required useage with the numeric values noted in the enum tables, which was the original intent for this item).  The NPD Coding System assigned a digital code to the main lithologies as per the Norwegian Blue Book data standards. The code was then derived by Lithology = (Main lithology * 10) + cement + (modifier / 100). Example: Calcite cemented silty micaceous sandstone: ( 33 * 10 ) + 1 + (21 / 100) gives a numeric code of 331.21. However the NPD is also working through Energistics/Ceasar to potentially change this useage.) This should not be used for mnemonics, as those vary by operator, and if an abbreviation is  required a local look up table should be used by the rendering client, based on Lithology Type.")]
-        public string CodeLith {
-            get {
-                return this.codeLithField;
-            }
-            set {
-                this.codeLithField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology color description, from Shell 1995 4.3.3.1 and 4.3.3.2 Colors. with the addition of Frosted. eg black blue brown buff green grey olive orange pink purple red translucent frosted white yellow, modified by dark, light, moderate, medium, mottled, variegated, slight, weak, strong, vivid.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology color description, from Shell 1995 4.3.3.1 and 4.3.3.2 Colors. with the addition of Frosted. eg black blue brown buff green grey olive orange pink purple red translucent frosted white yellow, modified by dark, light, moderate, medium, mottled, variegated, slight, weak, strong, vivid.")]
-        public string Color {
-            get {
-                return this.colorField;
-            }
-            set {
-                this.colorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6. crystalline, (often "feather-edge" appearance on breaking),  friable, dull, earthy,  chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,   sucrosic, (often exhibits capillary imbibition). e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6. crystalline, (often ""feather-edge"" appearance on breaking),  friable, dull, earthy,  chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,   sucrosic, (often exhibits capillary imbibition). e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)")]
-        public string Texture {
-            get {
-                return this.textureField;
-            }
-            set {
-                this.textureField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Mineral hardness. (Typically this will rarely be used as mineral hardness is not typically recorded. What is recorded is typically compaction. It is retained though for use defined as per Mohs scale of mineral hardness.)</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Mineral hardness. (Typically this will rarely be us" +
-            "ed as mineral hardness is not typically recorded. What is recorded is typically " +
-            "compaction. It is retained though for use defined as per Mohs scale of mineral h" +
-            "ardness.)")]
-        public string Hardness {
-            get {
-                return this.hardnessField;
-            }
-            set {
-                this.hardnessField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5. not compacted, slightly compacted, compacted, strongly compacted, friable, indurated, hard.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5. not c" +
-            "ompacted, slightly compacted, compacted, strongly compacted, friable, indurated," +
-            " hard.")]
-        public string Compaction {
-            get {
-                return this.compactionField;
-            }
-            set {
-                this.compactionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite.  Size ranges in millimeter (or micrometer) and Inches. LT 256 mmLT 10.1 in "boulder"; 64-256 mm2.5-10.1 in"cobble"; 32-64 mm1.26-2.5 in"very coarse gravel"; 16-32 mm0.63-1.26 in"coarse gravel"; 8-16 mm0.31-0.63 in"medium gravel"; 4-8 mm0.157-0.31 in"fine gravel"; 2-4 mm0.079-0.157 in"very fine gravel"; 1-2 mm0.039-0.079 in"very coarse sand"; 0.5-1 mm0.020-0.039 in"coarse sand"; 0.25-0.5 mm0.010-0.020 in"medium sand"; 125-250 um0.0049-0.010 in"fine sand"; 62.5-125 um0.0025-0.0049 in"very fine sand"; 3.90625-62.5 um0.00015-0.0025 in"silt"; LT 3.90625 umLT 0.00015 in"clay"; LT 1 umLT 0.000039 in "colloid"</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite.  Size ranges in millimeter (or micrometer) and Inches. LT 256 mmLT 10.1 in ""boulder""; 64-256 mm2.5-10.1 in""cobble""; 32-64 mm1.26-2.5 in""very coarse gravel""; 16-32 mm0.63-1.26 in""coarse gravel""; 8-16 mm0.31-0.63 in""medium gravel""; 4-8 mm0.157-0.31 in""fine gravel""; 2-4 mm0.079-0.157 in""very fine gravel""; 1-2 mm0.039-0.079 in""very coarse sand""; 0.5-1 mm0.020-0.039 in""coarse sand""; 0.25-0.5 mm0.010-0.020 in""medium sand""; 125-250 um0.0049-0.010 in""fine sand""; 62.5-125 um0.0025-0.0049 in""very fine sand""; 3.90625-62.5 um0.00015-0.0025 in""silt""; LT 3.90625 umLT 0.00015 in""clay""; LT 1 umLT 0.000039 in ""colloid""")]
-        public string SizeGrain {
-            get {
-                return this.sizeGrainField;
-            }
-            set {
-                this.sizeGrainField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 Roundness (roundness refers to modal size class). very angular, angular, subangular, subrounded, rounded, well rounded.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 " +
-            "Roundness (roundness refers to modal size class). very angular, angular, subangu" +
-            "lar, subrounded, rounded, well rounded.")]
-        public string Roundness {
-            get {
-                return this.roundnessField;
-            }
-            set {
-                this.roundnessField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity. very elongated, elongated, slightly elongated, slightly spherical, spherical, very spherical</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size" +
-            " class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity. very el" +
-            "ongated, elongated, slightly elongated, slightly spherical, spherical, very sphe" +
-            "rical")]
-        public string Sphericity {
-            get {
-                return this.sphericityField;
-            }
-            set {
-                this.sphericityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting. very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting. very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.")]
-        public string Sorting {
-            get {
-                return this.sortingField;
-            }
-            set {
-                this.sortingField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table. eg. "calcite" (Common) "dolomite", "ankerite" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation, "siderite" (Sherwood sandstones, southern UK typical Siderite cements), "quartz" (grain to grain contact cementation or secondary quartz deposition), "kaolinite", "illite" (eg. Village Fields North Sea), "smectite","chlorite" (Teg, Algeria.)</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
-        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table. eg. ""calcite"" (Common) ""dolomite"", ""ankerite"" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation, ""siderite"" (Sherwood sandstones, southern UK typical Siderite cements), ""quartz"" (grain to grain contact cementation or secondary quartz deposition), ""kaolinite"", ""illite"" (eg. Village Fields North Sea), ""smectite"",""chlorite"" (Teg, Algeria.)")]
-        public string MatrixCement {
-            get {
-                return this.matrixCementField;
-            }
-            set {
-                this.matrixCementField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors. When estimating porosities use: MT 15% "good" 10 to 15% "fair" 5 to 10% "poor" LT 5% "trace" 0 "none"</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors. When estimating porosities use: MT 15% ""good"" 10 to 15% ""fair"" 5 to 10% ""poor"" LT 5% ""trace"" 0 ""none""")]
-        public string PorosityVisible {
-            get {
-                return this.porosityVisibleField;
-            }
-            set {
-                this.porosityVisibleField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2. intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2. intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.")]
-        public string PorosityFabric {
-            get {
-                return this.porosityFabricField;
-            }
-            set {
-                this.porosityFabricField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2.5. In future these would benefit from quantification. tight, slightly, fairly, highly.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2" +
-            ".5. In future these would benefit from quantification. tight, slightly, fairly, " +
-            "highly.")]
-        public string Permeability {
-            get {
-                return this.permeabilityField;
-            }
-            set {
-                this.permeabilityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Shows")]
-        public CuttingsIntervalShow[] Shows {
-            get {
-                return this.showsField;
-            }
-            set {
-                this.showsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Qualifier")]
-        public LithologyQualifier[] Qualifier {
-            get {
-                return this.qualifierField;
-            }
-            set {
-                this.qualifierField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class VolumePerVolumeMeasure {
-        
-        private VolumePerVolumeUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public VolumePerVolumeUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum VolumePerVolumeUom {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("%")]
-        Item,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("%[vol]")]
-        vol,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.001 bbl/ft3")]
-        Item0001bblft3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.001 bbl/m3")]
-        Item0001bblm3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.001 gal[UK]/bbl")]
-        Item0001galUKbbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.001 gal[UK]/gal[UK]")]
-        Item0001galUKgalUK,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.001 gal[US]/bbl")]
-        Item0001galUSbbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.001 gal[US]/ft3")]
-        Item0001galUSft3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.001 gal[US]/gal[US]")]
-        Item0001galUSgalUS,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.001 pt[UK]/bbl")]
-        Item0001ptUKbbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.01 bbl/bbl")]
-        Item001bblbbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.1 gal[US]/bbl")]
-        Item01galUSbbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.1 L/bbl")]
-        Item01Lbbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.1 pt[US]/bbl")]
-        Item01ptUSbbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1000 ft3/bbl")]
-        Item1000ft3bbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1000 m3/m3")]
-        Item1000m3m3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1E-6 acre.ft/bbl")]
-        Item1E6acreftbbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1E-6 bbl/ft3")]
-        Item1E6bblft3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1E-6 bbl/m3")]
-        Item1E6bblm3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1E6 bbl/(acre.ft)")]
-        Item1E6bblacreft,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1E6 ft3/(acre.ft)")]
-        Item1E6ft3acreft,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1E6 ft3/bbl")]
-        Item1E6ft3bbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bbl/(acre.ft)")]
-        bblacreft,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bbl/bbl")]
-        bblbbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bbl/ft3")]
-        bblft3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bbl/m3")]
-        bblm3,
-        
-        /// <remarks/>
-        cEuc,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cm3/cm3")]
-        cm3cm3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cm3/L")]
-        cm3L,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cm3/m3")]
-        cm3m3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dm3/m3")]
-        dm3m3,
-        
-        /// <remarks/>
-        Euc,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft3/bbl")]
-        ft3bbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft3/ft3")]
-        ft3ft3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gal[UK]/ft3")]
-        galUKft3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/bbl")]
-        galUSbbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/ft3")]
-        galUSft3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("L/m3")]
-        Lm3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("m3/(ha.m)")]
-        m3ham,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("m3/bbl")]
-        m3bbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("m3/m3")]
-        m3m3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mL/gal[UK]")]
-        mLgalUK,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mL/gal[US]")]
-        mLgalUS,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mL/mL")]
-        mLmL,
-        
-        /// <remarks/>
-        ppk,
-        
-        /// <remarks/>
-        ppm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ppm[vol]")]
-        ppmvol,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class LithologyQualifier {
-        
-        private string kindField;
-        
-        private MdInterval mdIntervalField;
-        
-        private VolumePerVolumeMeasure abundanceField;
-        
-        private string descriptionField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>The type of qualifier.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
-        [System.ComponentModel.DescriptionAttribute("The type of qualifier.")]
-        public string Kind {
-            get {
-                return this.kindField;
-            }
-            set {
-                this.kindField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The measured depth interval represented by the qualifier. This must be within the range of the parent geologic interval. If MdInterval is not given then the qualifier is deemed to exist over the entire depth range of the parent geologyInterval.</summary>
-        [System.ComponentModel.DescriptionAttribute("The measured depth interval represented by the qualifier. This must be within the" +
-            " range of the parent geologic interval. If MdInterval is not given then the qual" +
-            "ifier is deemed to exist over the entire depth range of the parent geologyInterv" +
-            "al.")]
-        public MdInterval MdInterval {
-            get {
-                return this.mdIntervalField;
-            }
-            set {
-                this.mdIntervalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The relative abundance of the qualifier estimated based on a "visual area" basis by inspecting the cuttings  spread out on the shaker table prior to washing, or in the sample tray after washing. This represents the upper bound of the observed range, and is in the following increments at the upper bound. 1 = less than or equal to 1%, 2 = greater than or equal to 1 and less than 2%, 5 = greater than or equal to 2 and less than 5% and then in 5% increments, 10 (=5-10%), 15 (=10-15%) up to 100(=95-100%). The end user can then elect  to either display  the %, or map then to an operator specific term or coding, i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., depending on the the end users' terminology.)</summary>
-        [System.ComponentModel.DescriptionAttribute(@"The relative abundance of the qualifier estimated based on a ""visual area"" basis by inspecting the cuttings  spread out on the shaker table prior to washing, or in the sample tray after washing. This represents the upper bound of the observed range, and is in the following increments at the upper bound. 1 = less than or equal to 1%, 2 = greater than or equal to 1 and less than 2%, 5 = greater than or equal to 2 and less than 5% and then in 5% increments, 10 (=5-10%), 15 (=10-15%) up to 100(=95-100%). The end user can then elect  to either display  the %, or map then to an operator specific term or coding, i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., depending on the the end users' terminology.)")]
-        public VolumePerVolumeMeasure Abundance {
-            get {
-                return this.abundanceField;
-            }
-            set {
-                this.abundanceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A textual description of the qualifier.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("A textual description of the qualifier.")]
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
-        
-        /// <remarks/>
+        /// <summary>Unique identifier for this instance of GravelPackInterval</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of GravelPackInterval")]
         public string uid {
             get {
                 return this.uidField;
@@ -2029,1200 +772,6 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class IlluminanceMeasure {
-        
-        private IlluminanceUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public IlluminanceUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum IlluminanceUom {
-        
-        /// <remarks/>
-        footcandle,
-        
-        /// <remarks/>
-        klx,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lm/m2")]
-        lmm2,
-        
-        /// <remarks/>
-        lx,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("part_CuttingsInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-    public partial class CuttingsGeologyInterval {
-        
-        private MdInterval mdIntervalField;
-        
-        private Citation citationField;
-        
-        private MassPerVolumeMeasure densBulkField;
-        
-        private MassPerVolumeMeasure densShaleField;
-        
-        private VolumePerVolumeMeasure calciteField;
-        
-        private VolumePerVolumeMeasure calcStabField;
-        
-        private DimensionlessMeasure cecField;
-        
-        private VolumePerVolumeMeasure dolomiteField;
-        
-        private LengthMeasure sizeMnField;
-        
-        private LengthMeasure sizeMaxField;
-        
-        private IlluminanceMeasure qftField;
-        
-        private string cleaningMethodField;
-        
-        private string dryingMethodField;
-        
-        private CuttingsIntervalLithology[] cuttingsIntervalLithologyField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>The measured depth interval which is represented by the cuttings described here.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The measured depth interval which is represented by the cuttings described here.")]
-        public MdInterval MdInterval {
-            get {
-                return this.mdIntervalField;
-            }
-            set {
-                this.mdIntervalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Citation Citation {
-            get {
-                return this.citationField;
-            }
-            set {
-                this.citationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Sample bulk density for the interval.</summary>
-        [System.ComponentModel.DescriptionAttribute("Sample bulk density for the interval.")]
-        public MassPerVolumeMeasure DensBulk {
-            get {
-                return this.densBulkField;
-            }
-            set {
-                this.densBulkField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Shale density for the interval.</summary>
-        [System.ComponentModel.DescriptionAttribute("Shale density for the interval.")]
-        public MassPerVolumeMeasure DensShale {
-            get {
-                return this.densShaleField;
-            }
-            set {
-                this.densShaleField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Calcimetry calcite percentage.</summary>
-        [System.ComponentModel.DescriptionAttribute("Calcimetry calcite percentage.")]
-        public VolumePerVolumeMeasure Calcite {
-            get {
-                return this.calciteField;
-            }
-            set {
-                this.calciteField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Calcimetry stabilized percentage.</summary>
-        [System.ComponentModel.DescriptionAttribute("Calcimetry stabilized percentage.")]
-        public VolumePerVolumeMeasure CalcStab {
-            get {
-                return this.calcStabField;
-            }
-            set {
-                this.calcStabField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Cuttings cationic exchange capacity. Temporarily calling this a DimensionlessMeasure</summary>
-        [System.ComponentModel.DescriptionAttribute("Cuttings cationic exchange capacity. Temporarily calling this a DimensionlessMeas" +
-            "ure")]
-        public DimensionlessMeasure Cec {
-            get {
-                return this.cecField;
-            }
-            set {
-                this.cecField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Calcimetry dolomite percentage.</summary>
-        [System.ComponentModel.DescriptionAttribute("Calcimetry dolomite percentage.")]
-        public VolumePerVolumeMeasure Dolomite {
-            get {
-                return this.dolomiteField;
-            }
-            set {
-                this.dolomiteField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Minimum size.</summary>
-        [System.ComponentModel.DescriptionAttribute("Minimum size.")]
-        public LengthMeasure SizeMn {
-            get {
-                return this.sizeMnField;
-            }
-            set {
-                this.sizeMnField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public LengthMeasure SizeMax {
-            get {
-                return this.sizeMaxField;
-            }
-            set {
-                this.sizeMaxField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Fluorescence as measured using a device licensed for the Quantitative Fluorescence Technique.</summary>
-        [System.ComponentModel.DescriptionAttribute("Fluorescence as measured using a device licensed for the Quantitative Fluorescenc" +
-            "e Technique.")]
-        public IlluminanceMeasure Qft {
-            get {
-                return this.qftField;
-            }
-            set {
-                this.qftField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Sample treatment: cleaning method.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Sample treatment: cleaning method.")]
-        public string CleaningMethod {
-            get {
-                return this.cleaningMethodField;
-            }
-            set {
-                this.cleaningMethodField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Sample treatment: drying method.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Sample treatment: drying method.")]
-        public string DryingMethod {
-            get {
-                return this.dryingMethodField;
-            }
-            set {
-                this.dryingMethodField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CuttingsIntervalLithology")]
-        public CuttingsIntervalLithology[] CuttingsIntervalLithology {
-            get {
-                return this.cuttingsIntervalLithologyField;
-            }
-            set {
-                this.cuttingsIntervalLithologyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class MassPerVolumeMeasure {
-        
-        private MassPerVolumeUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public MassPerVolumeUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum MassPerVolumeUom {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.001 lbm/bbl")]
-        Item0001lbmbbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.001 lbm/gal[UK]")]
-        Item0001lbmgalUK,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.001 lbm/gal[US]")]
-        Item0001lbmgalUS,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.01 grain/ft3")]
-        Item001grainft3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.1 lbm/bbl")]
-        Item01lbmbbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("10 Mg/m3")]
-        Item10Mgm3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("g/cm3")]
-        gcm3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("g/dm3")]
-        gdm3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("g/gal[UK]")]
-        ggalUK,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("g/gal[US]")]
-        ggalUS,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("g/L")]
-        gL,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("g/m3")]
-        gm3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("grain/ft3")]
-        grainft3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("grain/gal[US]")]
-        graingalUS,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kg/dm3")]
-        kgdm3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kg/L")]
-        kgL,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kg/m3")]
-        kgm3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lbm/bbl")]
-        lbmbbl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lbm/ft3")]
-        lbmft3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lbm/gal[UK]")]
-        lbmgalUK,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lbm/gal[US]")]
-        lbmgalUS,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lbm/in3")]
-        lbmin3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mg/dm3")]
-        mgdm3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mg/gal[US]")]
-        mggalUS,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mg/L")]
-        mgL,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mg/m3")]
-        mgm3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Mg/m3")]
-        Mgm3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("t/m3")]
-        tm3,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ug/cm3")]
-        ugcm3,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class DimensionlessMeasure {
-        
-        private DimensionlessUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DimensionlessUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum DimensionlessUom {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("%")]
-        Item,
-        
-        /// <remarks/>
-        cEuc,
-        
-        /// <remarks/>
-        dEuc,
-        
-        /// <remarks/>
-        EEuc,
-        
-        /// <remarks/>
-        Euc,
-        
-        /// <remarks/>
-        fEuc,
-        
-        /// <remarks/>
-        GEuc,
-        
-        /// <remarks/>
-        kEuc,
-        
-        /// <remarks/>
-        MEuc,
-        
-        /// <remarks/>
-        mEuc,
-        
-        /// <remarks/>
-        nEuc,
-        
-        /// <remarks/>
-        pEuc,
-        
-        /// <remarks/>
-        ppk,
-        
-        /// <remarks/>
-        ppm,
-        
-        /// <remarks/>
-        TEuc,
-        
-        /// <remarks/>
-        uEuc,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class InterpretedIntervalLithology {
-        
-        private string kindField;
-        
-        private Citation citationField;
-        
-        private string codeLithField;
-        
-        private string colorField;
-        
-        private string textureField;
-        
-        private string hardnessField;
-        
-        private string compactionField;
-        
-        private string sizeGrainField;
-        
-        private string roundnessField;
-        
-        private string sortingField;
-        
-        private string sphericityField;
-        
-        private string matrixCementField;
-        
-        private string porosityVisibleField;
-        
-        private string porosityFabricField;
-        
-        private string permeabilityField;
-        
-        private LithologyQualifier[] qualifierField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>The geological name for the type of lithology from the enum table listing a  subset of the OneGeology / CGI defined formation types.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
-        [System.ComponentModel.DescriptionAttribute("The geological name for the type of lithology from the enum table listing a  subs" +
-            "et of the OneGeology / CGI defined formation types.")]
-        public string Kind {
-            get {
-                return this.kindField;
-            }
-            set {
-                this.kindField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Citation Citation {
-            get {
-                return this.citationField;
-            }
-            set {
-                this.citationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A custom Lithology encoding sceme if desired. (It is recommended that if used, this follows the NPD required useage with the numeric values noted in the enum tables, which was the original intent for this item).  The NPD Coding System assigned a digital code to the main lithologies as per the Norwegian Blue Book data standards. The code was then derived by Lithology = (Main lithology * 10) + cement + (modifier / 100). Example: Calcite cemented silty micaceous sandstone: ( 33 * 10 ) + 1 + (21 / 100) gives a numeric code of 331.21. However the NPD is also working through Energistics/Ceasar to potentially change this useage.) This should not be used for mnemonics, as those vary by operator, and if an abbreviation is  required a local look up table should be used by the rendering client, based on Lithology Type.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"A custom Lithology encoding sceme if desired. (It is recommended that if used, this follows the NPD required useage with the numeric values noted in the enum tables, which was the original intent for this item).  The NPD Coding System assigned a digital code to the main lithologies as per the Norwegian Blue Book data standards. The code was then derived by Lithology = (Main lithology * 10) + cement + (modifier / 100). Example: Calcite cemented silty micaceous sandstone: ( 33 * 10 ) + 1 + (21 / 100) gives a numeric code of 331.21. However the NPD is also working through Energistics/Ceasar to potentially change this useage.) This should not be used for mnemonics, as those vary by operator, and if an abbreviation is  required a local look up table should be used by the rendering client, based on Lithology Type.")]
-        public string CodeLith {
-            get {
-                return this.codeLithField;
-            }
-            set {
-                this.codeLithField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology color description, from Shell 1995 4.3.3.1 and 4.3.3.2 Colors. with the addition of Frosted. eg black blue brown buff green grey olive orange pink purple red translucent frosted white yellow, modified by dark, light, moderate, medium, mottled, variegated, slight, weak, strong, vivid.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology color description, from Shell 1995 4.3.3.1 and 4.3.3.2 Colors. with the addition of Frosted. eg black blue brown buff green grey olive orange pink purple red translucent frosted white yellow, modified by dark, light, moderate, medium, mottled, variegated, slight, weak, strong, vivid.")]
-        public string Color {
-            get {
-                return this.colorField;
-            }
-            set {
-                this.colorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6. crystalline, (often "feather-edge" appearance on breaking),  friable, dull, earthy,  chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,   sucrosic, (often exhibits capillary imbibition). e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6. crystalline, (often ""feather-edge"" appearance on breaking),  friable, dull, earthy,  chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,   sucrosic, (often exhibits capillary imbibition). e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)")]
-        public string Texture {
-            get {
-                return this.textureField;
-            }
-            set {
-                this.textureField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Mineral hardness. (Typically this will rarely be used as mineral hardness is not typically recorded. What is recorded is typically compaction. It is retained though for use defined as per Mohs scale of mineral hardness.)</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Mineral hardness. (Typically this will rarely be us" +
-            "ed as mineral hardness is not typically recorded. What is recorded is typically " +
-            "compaction. It is retained though for use defined as per Mohs scale of mineral h" +
-            "ardness.)")]
-        public string Hardness {
-            get {
-                return this.hardnessField;
-            }
-            set {
-                this.hardnessField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5. not compacted, slightly compacted, compacted, strongly compacted, friable, indurated, hard.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5. not c" +
-            "ompacted, slightly compacted, compacted, strongly compacted, friable, indurated," +
-            " hard.")]
-        public string Compaction {
-            get {
-                return this.compactionField;
-            }
-            set {
-                this.compactionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite.  Size ranges in millimeter (or micrometer) and Inches. LT 256 mmLT 10.1 in "boulder"; 64-256 mm2.5-10.1 in"cobble"; 32-64 mm1.26-2.5 in"very coarse gravel"; 16-32 mm0.63-1.26 in"coarse gravel"; 8-16 mm0.31-0.63 in"medium gravel"; 4-8 mm0.157-0.31 in"fine gravel"; 2-4 mm0.079-0.157 in"very fine gravel"; 1-2 mm0.039-0.079 in"very coarse sand"; 0.5-1 mm0.020-0.039 in"coarse sand"; 0.25-0.5 mm0.010-0.020 in"medium sand"; 125-250 um0.0049-0.010 in"fine sand"; 62.5-125 um0.0025-0.0049 in"very fine sand"; 3.90625-62.5 um0.00015-0.0025 in"silt"; LT 3.90625 umLT 0.00015 in"clay"; LT 1 umLT 0.000039 in "colloid"</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite.  Size ranges in millimeter (or micrometer) and Inches. LT 256 mmLT 10.1 in ""boulder""; 64-256 mm2.5-10.1 in""cobble""; 32-64 mm1.26-2.5 in""very coarse gravel""; 16-32 mm0.63-1.26 in""coarse gravel""; 8-16 mm0.31-0.63 in""medium gravel""; 4-8 mm0.157-0.31 in""fine gravel""; 2-4 mm0.079-0.157 in""very fine gravel""; 1-2 mm0.039-0.079 in""very coarse sand""; 0.5-1 mm0.020-0.039 in""coarse sand""; 0.25-0.5 mm0.010-0.020 in""medium sand""; 125-250 um0.0049-0.010 in""fine sand""; 62.5-125 um0.0025-0.0049 in""very fine sand""; 3.90625-62.5 um0.00015-0.0025 in""silt""; LT 3.90625 umLT 0.00015 in""clay""; LT 1 umLT 0.000039 in ""colloid""")]
-        public string SizeGrain {
-            get {
-                return this.sizeGrainField;
-            }
-            set {
-                this.sizeGrainField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 Roundness (roundness refers to modal size class). very angular, angular, subangular, subrounded, rounded, well rounded.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 " +
-            "Roundness (roundness refers to modal size class). very angular, angular, subangu" +
-            "lar, subrounded, rounded, well rounded.")]
-        public string Roundness {
-            get {
-                return this.roundnessField;
-            }
-            set {
-                this.roundnessField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting. very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting. very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.")]
-        public string Sorting {
-            get {
-                return this.sortingField;
-            }
-            set {
-                this.sortingField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity. very elongated, elongated, slightly elongated, slightly spherical, spherical, very spherical</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size" +
-            " class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity. very el" +
-            "ongated, elongated, slightly elongated, slightly spherical, spherical, very sphe" +
-            "rical")]
-        public string Sphericity {
-            get {
-                return this.sphericityField;
-            }
-            set {
-                this.sphericityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table. eg. "calcite" (Common) "dolomite", "ankerite" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation, "siderite" (Sherwood sandstones, southern UK typical Siderite cements), "quartz" (grain to grain contact cementation or secondary quartz deposition), "kaolinite", "illite" (eg. Village Fields North Sea), "smectite","chlorite" (Teg, Algeria.)</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
-        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table. eg. ""calcite"" (Common) ""dolomite"", ""ankerite"" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation, ""siderite"" (Sherwood sandstones, southern UK typical Siderite cements), ""quartz"" (grain to grain contact cementation or secondary quartz deposition), ""kaolinite"", ""illite"" (eg. Village Fields North Sea), ""smectite"",""chlorite"" (Teg, Algeria.)")]
-        public string MatrixCement {
-            get {
-                return this.matrixCementField;
-            }
-            set {
-                this.matrixCementField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors. When estimating porosities use: MT 15% "good" 10 to 15% "fair" 5 to 10% "poor" LT 5% "trace" 0 "none"</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors. When estimating porosities use: MT 15% ""good"" 10 to 15% ""fair"" 5 to 10% ""poor"" LT 5% ""trace"" 0 ""none""")]
-        public string PorosityVisible {
-            get {
-                return this.porosityVisibleField;
-            }
-            set {
-                this.porosityVisibleField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2. intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2. intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.")]
-        public string PorosityFabric {
-            get {
-                return this.porosityFabricField;
-            }
-            set {
-                this.porosityFabricField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2.5. In future these would benefit from quantification. tight, slightly, fairly, highly.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2" +
-            ".5. In future these would benefit from quantification. tight, slightly, fairly, " +
-            "highly.")]
-        public string Permeability {
-            get {
-                return this.permeabilityField;
-            }
-            set {
-                this.permeabilityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Qualifier")]
-        public LithologyQualifier[] Qualifier {
-            get {
-                return this.qualifierField;
-            }
-            set {
-                this.qualifierField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class LithostratigraphicUnit {
-        
-        private string authorityField;
-        
-        private LithostratigraphicRank kindField;
-        
-        private bool kindFieldSpecified;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string authority {
-            get {
-                return this.authorityField;
-            }
-            set {
-                this.authorityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public LithostratigraphicRank kind {
-            get {
-                return this.kindField;
-            }
-            set {
-                this.kindField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool kindSpecified {
-            get {
-                return this.kindFieldSpecified;
-            }
-            set {
-                this.kindFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum LithostratigraphicRank {
-        
-        /// <remarks/>
-        group,
-        
-        /// <remarks/>
-        formation,
-        
-        /// <remarks/>
-        member,
-        
-        /// <remarks/>
-        bed,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("part_InterpretedGeologyInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-    public partial class InterpretedGeologyInterval {
-        
-        private MdInterval mdIntervalField;
-        
-        private Citation citationField;
-        
-        private string[] geochronologicalUnitField;
-        
-        private LithostratigraphicUnit[] lithostratigraphicUnitField;
-        
-        private InterpretedIntervalLithology interpretedLithologyField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>The measured depth interval which is described by this interpreted geology.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The measured depth interval which is described by this interpreted geology.")]
-        public MdInterval MdInterval {
-            get {
-                return this.mdIntervalField;
-            }
-            set {
-                this.mdIntervalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Citation Citation {
-            get {
-                return this.citationField;
-            }
-            set {
-                this.citationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("GeochronologicalUnit")]
-        public string[] GeochronologicalUnit {
-            get {
-                return this.geochronologicalUnitField;
-            }
-            set {
-                this.geochronologicalUnitField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("LithostratigraphicUnit")]
-        public LithostratigraphicUnit[] LithostratigraphicUnit {
-            get {
-                return this.lithostratigraphicUnitField;
-            }
-            set {
-                this.lithostratigraphicUnitField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public InterpretedIntervalLithology InterpretedLithology {
-            get {
-                return this.interpretedLithologyField;
-            }
-            set {
-                this.interpretedLithologyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("part_EvaluatedIntervalShow", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-    public partial class ShowEvaluationInterval {
-        
-        private MdInterval mdIntervalField;
-        
-        private Citation citationField;
-        
-        private ShowFluid showFluidField;
-        
-        private ShowRating showRatingField;
-        
-        private bool showRatingFieldSpecified;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>The measured depth interval over which the show is evaluated.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The measured depth interval over which the show is evaluated.")]
-        public MdInterval MdInterval {
-            get {
-                return this.mdIntervalField;
-            }
-            set {
-                this.mdIntervalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Citation Citation {
-            get {
-                return this.citationField;
-            }
-            set {
-                this.citationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public ShowFluid ShowFluid {
-            get {
-                return this.showFluidField;
-            }
-            set {
-                this.showFluidField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Show Rating.</summary>
-        [System.ComponentModel.DescriptionAttribute("Show Rating.")]
-        public ShowRating ShowRating {
-            get {
-                return this.showRatingField;
-            }
-            set {
-                this.showRatingField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ShowRatingSpecified {
-            get {
-                return this.showRatingFieldSpecified;
-            }
-            set {
-                this.showRatingFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum ShowFluid {
-        
-        /// <remarks/>
-        gas,
-        
-        /// <remarks/>
-        oil,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class GravelPackInterval {
-        
-        private string downholeStringReferenceIdField;
-        
-        private MdInterval gravelPackMdIntervalField;
-        
-        private TvdInterval gravelPackTvdIntervalField;
-        
-        private EventInfo eventHistoryField;
-        
-        private string[] geologyFeatureReferenceIdField;
-        
-        private ExtensionNameValue[] extensionNameValueField;
-        
-        private IntervalStatusHistory[] statusHistoryField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string DownholeStringReferenceId {
-            get {
-                return this.downholeStringReferenceIdField;
-            }
-            set {
-                this.downholeStringReferenceIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Gravel packed measured depth interval for this completion.</summary>
-        [System.ComponentModel.DescriptionAttribute("Gravel packed measured depth interval for this completion.")]
-        public MdInterval GravelPackMdInterval {
-            get {
-                return this.gravelPackMdIntervalField;
-            }
-            set {
-                this.gravelPackMdIntervalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Gravel packed true vertical depth interval for this completion.</summary>
-        [System.ComponentModel.DescriptionAttribute("Gravel packed true vertical depth interval for this completion.")]
-        public TvdInterval GravelPackTvdInterval {
-            get {
-                return this.gravelPackTvdIntervalField;
-            }
-            set {
-                this.gravelPackTvdIntervalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The contactInterval event information</summary>
-        [System.ComponentModel.DescriptionAttribute("The contactInterval event information")]
-        public EventInfo EventHistory {
-            get {
-                return this.eventHistoryField;
-            }
-            set {
-                this.eventHistoryField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("GeologyFeatureReferenceId")]
-        public string[] GeologyFeatureReferenceId {
-            get {
-                return this.geologyFeatureReferenceIdField;
-            }
-            set {
-                this.geologyFeatureReferenceIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
-        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
-        public ExtensionNameValue[] ExtensionNameValue {
-            get {
-                return this.extensionNameValueField;
-            }
-            set {
-                this.extensionNameValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("StatusHistory")]
-        public IntervalStatusHistory[] StatusHistory {
-            get {
-                return this.statusHistoryField;
-            }
-            set {
-                this.statusHistoryField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     public partial class TvdInterval {
         
         private LengthMeasure tvdTopField;
@@ -3583,9 +1132,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of IntervalStatusHistory</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of IntervalStatusHistory")]
         public string uid {
             get {
                 return this.uidField;
@@ -3722,9 +1273,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of PerforationStatusHistory</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of PerforationStatusHistory")]
         public string uid {
             get {
                 return this.uidField;
@@ -3760,7 +1313,9 @@ namespace Energistics.Generator.WITSML200 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>Reference to perforation set</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to perforation set")]
         public string PerforationSetReferenceId {
             get {
                 return this.perforationSetReferenceIdField;
@@ -3807,7 +1362,9 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Reference to a geology feature</summary>
         [System.Xml.Serialization.XmlElementAttribute("GeologyFeatureReferenceId")]
+        [System.ComponentModel.DescriptionAttribute("Reference to a geology feature")]
         public string[] GeologyFeatureReferenceId {
             get {
                 return this.geologyFeatureReferenceIdField;
@@ -3842,9 +1399,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of PerforationSetInterval</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of PerforationSetInterval")]
         public string uid {
             get {
                 return this.uidField;
@@ -3880,7 +1439,9 @@ namespace Energistics.Generator.WITSML200 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>Reference to borehole String</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to borehole String")]
         public string BoreholeStringReferenceId {
             get {
                 return this.boreholeStringReferenceIdField;
@@ -3927,7 +1488,9 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Reference to a geology feature</summary>
         [System.Xml.Serialization.XmlElementAttribute("GeologyFeatureReferenceId")]
+        [System.ComponentModel.DescriptionAttribute("Reference to a geology feature")]
         public string[] GeologyFeatureReferenceId {
             get {
                 return this.geologyFeatureReferenceIdField;
@@ -3962,9 +1525,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of OpenHoleInterval</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of OpenHoleInterval")]
         public string uid {
             get {
                 return this.uidField;
@@ -4000,7 +1565,9 @@ namespace Energistics.Generator.WITSML200 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>Reference to string equipment</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to string equipment")]
         public string StringEquipmentReferenceId {
             get {
                 return this.stringEquipmentReferenceIdField;
@@ -4047,7 +1614,9 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Reference to geology feature</summary>
         [System.Xml.Serialization.XmlElementAttribute("GeologyFeatureRefID")]
+        [System.ComponentModel.DescriptionAttribute("Reference to geology feature")]
         public string[] GeologyFeatureRefID {
             get {
                 return this.geologyFeatureRefIDField;
@@ -4082,9 +1651,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of SlotsInterval</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of SlotsInterval")]
         public string uid {
             get {
                 return this.uidField;
@@ -4240,9 +1811,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of CompletionStatusHistory</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of CompletionStatusHistory")]
         public string uid {
             get {
                 return this.uidField;
@@ -4268,8 +1841,10 @@ namespace Energistics.Generator.WITSML200 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of AbstractIscwsaErrorCoefficient</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of AbstractIscwsaErrorCoefficient")]
         public string uid {
             get {
                 return this.uidField;
@@ -4408,9 +1983,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of IscwsaErrorCoefficient</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of IscwsaErrorCoefficient")]
         public string uid {
             get {
                 return this.uidField;
@@ -4569,9 +2146,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of IscwsaErrorTerm</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of IscwsaErrorTerm")]
         public string uid {
             get {
                 return this.uidField;
@@ -4729,9 +2308,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of IscwsaNomenclatureConstant</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of IscwsaNomenclatureConstant")]
         public string uid {
             get {
                 return this.uidField;
@@ -4800,9 +2381,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of IscwsaNameAndDescription</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of IscwsaNameAndDescription")]
         public string uid {
             get {
                 return this.uidField;
@@ -4866,1419 +2449,6 @@ namespace Energistics.Generator.WITSML200 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class ElectricConductivityMeasure {
-        
-        private ElectricConductivityUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public ElectricConductivityUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum ElectricConductivityUom {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kS/m")]
-        kSm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mS/cm")]
-        mScm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mS/m")]
-        mSm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("S/m")]
-        Sm,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class StimISO13503_5Point {
-        
-        private ElectricConductivityMeasure conductivityField;
-        
-        private ThermodynamicTemperatureMeasure temperatureField;
-        
-        private PermeabilityRockMeasure permeabilityField;
-        
-        private string stressField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>The Conductivity under Stress.  TODO: Fix Unit</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The Conductivity under Stress.  TODO: Fix Unit")]
-        public ElectricConductivityMeasure Conductivity {
-            get {
-                return this.conductivityField;
-            }
-            set {
-                this.conductivityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The temperature at the time measurements were taken.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The temperature at the time measurements were taken.")]
-        public ThermodynamicTemperatureMeasure Temperature {
-            get {
-                return this.temperatureField;
-            }
-            set {
-                this.temperatureField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The permeability under Stress.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The permeability under Stress.")]
-        public PermeabilityRockMeasure Permeability {
-            get {
-                return this.permeabilityField;
-            }
-            set {
-                this.permeabilityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The amount of stress applied.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The amount of stress applied.")]
-        public string Stress {
-            get {
-                return this.stressField;
-            }
-            set {
-                this.stressField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class ThermodynamicTemperatureMeasure {
-        
-        private ThermodynamicTemperatureUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public ThermodynamicTemperatureUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum ThermodynamicTemperatureUom {
-        
-        /// <remarks/>
-        degC,
-        
-        /// <remarks/>
-        degF,
-        
-        /// <remarks/>
-        degR,
-        
-        /// <remarks/>
-        K,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class PermeabilityRockMeasure {
-        
-        private PermeabilityRockUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public PermeabilityRockUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum PermeabilityRockUom {
-        
-        /// <remarks/>
-        D,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("D[API]")]
-        DAPI,
-        
-        /// <remarks/>
-        mD,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("TD[API]")]
-        TDAPI,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class ISO13503_2SieveAnalysisData {
-        
-        private MassPerMassMeasure percentRetainedField;
-        
-        private long sieveNumberField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>The percentage of mass retained in sieve.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The percentage of mass retained in sieve.")]
-        public MassPerMassMeasure PercentRetained {
-            get {
-                return this.percentRetainedField;
-            }
-            set {
-                this.percentRetainedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>ASTM US Standard mesh opening size used in Sieve analysis test.  Use ‘0’ to indicate ‘Pan’.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("ASTM US Standard mesh opening size used in Sieve analysis test.  Use ‘0’ to indic" +
-            "ate ‘Pan’.")]
-        public long SieveNumber {
-            get {
-                return this.sieveNumberField;
-            }
-            set {
-                this.sieveNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class MassPerMassMeasure {
-        
-        private MassPerMassUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public MassPerMassUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum MassPerMassUom {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("%")]
-        Item,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("%[mass]")]
-        mass,
-        
-        /// <remarks/>
-        Euc,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("g/kg")]
-        gkg,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("g/t")]
-        gt,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kg/kg")]
-        kgkg,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kg/sack[94lbm]")]
-        kgsack94lbm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kg/t")]
-        kgt,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mg/g")]
-        mgg,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mg/kg")]
-        mgkg,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ng/g")]
-        ngg,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ng/mg")]
-        ngmg,
-        
-        /// <remarks/>
-        ppk,
-        
-        /// <remarks/>
-        ppm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ppm[mass]")]
-        ppmmass,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ug/g")]
-        ugg,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ug/mg")]
-        ugmg,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class ISO13503_2CrushTestData {
-        
-        private MassPerMassMeasure finesField;
-        
-        private PressureMeasure stressField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>Mass percentage of fines after being exposed to stress.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Mass percentage of fines after being exposed to stress.")]
-        public MassPerMassMeasure Fines {
-            get {
-                return this.finesField;
-            }
-            set {
-                this.finesField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Stress measured at a point during a crush test.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Stress measured at a point during a crush test.")]
-        public PressureMeasure Stress {
-            get {
-                return this.stressField;
-            }
-            set {
-                this.stressField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class PressureMeasure {
-        
-        private PressureUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public PressureUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum PressureUom {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.01 lbf/ft2")]
-        Item001lbfft2,
-        
-        /// <remarks/>
-        at,
-        
-        /// <remarks/>
-        atm,
-        
-        /// <remarks/>
-        bar,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cmH2O[4degC]")]
-        cmH2O4degC,
-        
-        /// <remarks/>
-        cPa,
-        
-        /// <remarks/>
-        dPa,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dyne/cm2")]
-        dynecm2,
-        
-        /// <remarks/>
-        EPa,
-        
-        /// <remarks/>
-        fPa,
-        
-        /// <remarks/>
-        GPa,
-        
-        /// <remarks/>
-        hbar,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("inH2O[39degF]")]
-        inH2O39degF,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("inH2O[60degF]")]
-        inH2O60degF,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("inHg[32degF]")]
-        inHg32degF,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("inHg[60degF]")]
-        inHg60degF,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kgf/cm2")]
-        kgfcm2,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kgf/m2")]
-        kgfm2,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kgf/mm2")]
-        kgfmm2,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kN/m2")]
-        kNm2,
-        
-        /// <remarks/>
-        kPa,
-        
-        /// <remarks/>
-        kpsi,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lbf/ft2")]
-        lbfft2,
-        
-        /// <remarks/>
-        mbar,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mmHg[0degC]")]
-        mmHg0degC,
-        
-        /// <remarks/>
-        mPa,
-        
-        /// <remarks/>
-        MPa,
-        
-        /// <remarks/>
-        Mpsi,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("N/m2")]
-        Nm2,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("N/mm2")]
-        Nmm2,
-        
-        /// <remarks/>
-        nPa,
-        
-        /// <remarks/>
-        Pa,
-        
-        /// <remarks/>
-        pPa,
-        
-        /// <remarks/>
-        psi,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tonf[UK]/ft2")]
-        tonfUKft2,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tonf[US]/ft2")]
-        tonfUSft2,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tonf[US]/in2")]
-        tonfUSin2,
-        
-        /// <remarks/>
-        torr,
-        
-        /// <remarks/>
-        TPa,
-        
-        /// <remarks/>
-        ubar,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("umHg[0degC]")]
-        umHg0degC,
-        
-        /// <remarks/>
-        uPa,
-        
-        /// <remarks/>
-        upsi,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class StimISO13503_2Properties {
-        
-        private MassPerVolumeMeasure absoluteDensityField;
-        
-        private DimensionlessMeasure clustersPercentField;
-        
-        private DimensionlessMeasure kValueField;
-        
-        private LengthMeasure meanParticleDiameterField;
-        
-        private LengthMeasure medianParticleDiameterField;
-        
-        private string specificGravityField;
-        
-        private DimensionlessMeasure roundnessField;
-        
-        private MassPerMassMeasure acidSolubilityField;
-        
-        private MassPerVolumeMeasure apparentDensityField;
-        
-        private MassPerVolumeMeasure bulkDensityField;
-        
-        private DimensionlessMeasure lossOnIgnitionField;
-        
-        private DimensionlessMeasure sphericityField;
-        
-        private DimensionlessMeasure turbidityField;
-        
-        private ISO13503_2CrushTestData[] crushTestDataField;
-        
-        private ISO13503_2SieveAnalysisData[] sieveAnalysisDataField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>Absolute density is the density the material would have if no intra-granular porosity is present. (e.g. Boyle’s Law porosimetry)</summary>
-        [System.ComponentModel.DescriptionAttribute("Absolute density is the density the material would have if no intra-granular poro" +
-            "sity is present. (e.g. Boyle’s Law porosimetry)")]
-        public MassPerVolumeMeasure AbsoluteDensity {
-            get {
-                return this.absoluteDensityField;
-            }
-            set {
-                this.absoluteDensityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Percentage of undesirable agglomerated discrete proppant particles which typically occurs more with inefficiently processed natural sand proppants as opposed to manufactured ceramic proppants. ISO 13503-2 and API RP19C limit the mass of clusters to less than 1%.</summary>
-        [System.ComponentModel.DescriptionAttribute(@"Percentage of undesirable agglomerated discrete proppant particles which typically occurs more with inefficiently processed natural sand proppants as opposed to manufactured ceramic proppants. ISO 13503-2 and API RP19C limit the mass of clusters to less than 1%.")]
-        public DimensionlessMeasure ClustersPercent {
-            get {
-                return this.clustersPercentField;
-            }
-            set {
-                this.clustersPercentField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Crush test classification indicating the highest stress level at which a proppant generated no more than 10% crushed material rounded down to the nearest 1,000 psi during a crush test. For example, a value of 14 means ‘14K’ which is 14000 psi.</summary>
-        [System.ComponentModel.DescriptionAttribute("Crush test classification indicating the highest stress level at which a proppant" +
-            " generated no more than 10% crushed material rounded down to the nearest 1,000 p" +
-            "si during a crush test. For example, a value of 14 means ‘14K’ which is 14000 ps" +
-            "i.")]
-        public DimensionlessMeasure KValue {
-            get {
-                return this.kValueField;
-            }
-            set {
-                this.kValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The mean diameter of particles in a sample of proppant.</summary>
-        [System.ComponentModel.DescriptionAttribute("The mean diameter of particles in a sample of proppant.")]
-        public LengthMeasure MeanParticleDiameter {
-            get {
-                return this.meanParticleDiameterField;
-            }
-            set {
-                this.meanParticleDiameterField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The median diameter of particles in a sample of proppant.</summary>
-        [System.ComponentModel.DescriptionAttribute("The median diameter of particles in a sample of proppant.")]
-        public LengthMeasure MedianParticleDiameter {
-            get {
-                return this.medianParticleDiameterField;
-            }
-            set {
-                this.medianParticleDiameterField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Not formally part of ISO 13503 .2 properties, the specific gravity is the Apparent Density of the Proppant divided by the Density of Water.</summary>
-        [System.ComponentModel.DescriptionAttribute("Not formally part of ISO 13503 .2 properties, the specific gravity is the Apparen" +
-            "t Density of the Proppant divided by the Density of Water.")]
-        public string SpecificGravity {
-            get {
-                return this.specificGravityField;
-            }
-            set {
-                this.specificGravityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Krumbein Roundness Shape Factor that is a measure of the relative sharpness of grain corners or of grain curvature. Krumbein and Sloss (1963) are the most widely used method of determining shape factors.</summary>
-        [System.ComponentModel.DescriptionAttribute("Krumbein Roundness Shape Factor that is a measure of the relative sharpness of gr" +
-            "ain corners or of grain curvature. Krumbein and Sloss (1963) are the most widely" +
-            " used method of determining shape factors.")]
-        public DimensionlessMeasure Roundness {
-            get {
-                return this.roundnessField;
-            }
-            set {
-                this.roundnessField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The solubility of a proppant in 12:3 HCl:HF for 30 minutes at 150°F is an indication of the amount of soluble materials (i.e. carbonates, feldspars, iron oxides, clays, etc) present in the proppant.</summary>
-        [System.ComponentModel.DescriptionAttribute("The solubility of a proppant in 12:3 HCl:HF for 30 minutes at 150°F is an indicat" +
-            "ion of the amount of soluble materials (i.e. carbonates, feldspars, iron oxides," +
-            " clays, etc) present in the proppant.")]
-        public MassPerMassMeasure AcidSolubility {
-            get {
-                return this.acidSolubilityField;
-            }
-            set {
-                this.acidSolubilityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Apparent Density excludes extra-granular porosity by placing a known mass in a volume of fluid and determining how much of the fluid is displaced (Archimedes).</summary>
-        [System.ComponentModel.DescriptionAttribute("Apparent Density excludes extra-granular porosity by placing a known mass in a vo" +
-            "lume of fluid and determining how much of the fluid is displaced (Archimedes).")]
-        public MassPerVolumeMeasure ApparentDensity {
-            get {
-                return this.apparentDensityField;
-            }
-            set {
-                this.apparentDensityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Bulk Density includes both the proppant and the porosity. This is measured by filling a known volume with dry proppant and measuring the weight.</summary>
-        [System.ComponentModel.DescriptionAttribute("Bulk Density includes both the proppant and the porosity. This is measured by fil" +
-            "ling a known volume with dry proppant and measuring the weight.")]
-        public MassPerVolumeMeasure BulkDensity {
-            get {
-                return this.bulkDensityField;
-            }
-            set {
-                this.bulkDensityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A mass loss (gravimetric) test method applied to coated proppants only, which determines the mass of resin coating applied to a natural sand or manufactured proppant by means of thorough combustion of the flammable resin from the nonflammable proppant. Reported as a % of original mass.</summary>
-        [System.ComponentModel.DescriptionAttribute(@"A mass loss (gravimetric) test method applied to coated proppants only, which determines the mass of resin coating applied to a natural sand or manufactured proppant by means of thorough combustion of the flammable resin from the nonflammable proppant. Reported as a % of original mass.")]
-        public DimensionlessMeasure LossOnIgnition {
-            get {
-                return this.lossOnIgnitionField;
-            }
-            set {
-                this.lossOnIgnitionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Krumbein Sphericity Shape Factor that is a measure of how closely a proppant particle approaches the shape of a sphere. Krumbein and Sloss (1963) are the most widely used method of determining shape factors.</summary>
-        [System.ComponentModel.DescriptionAttribute("Krumbein Sphericity Shape Factor that is a measure of how closely a proppant part" +
-            "icle approaches the shape of a sphere. Krumbein and Sloss (1963) are the most wi" +
-            "dely used method of determining shape factors.")]
-        public DimensionlessMeasure Sphericity {
-            get {
-                return this.sphericityField;
-            }
-            set {
-                this.sphericityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Turbidity is a measure of water clarity how much the material suspended in water decreases the passage of light through the water.  Unit of measure may be Nephelometric Turbidity Unit (NTU), but may vary based upon the detector geometry.</summary>
-        [System.ComponentModel.DescriptionAttribute("Turbidity is a measure of water clarity how much the material suspended in water " +
-            "decreases the passage of light through the water.  Unit of measure may be Nephel" +
-            "ometric Turbidity Unit (NTU), but may vary based upon the detector geometry.")]
-        public DimensionlessMeasure Turbidity {
-            get {
-                return this.turbidityField;
-            }
-            set {
-                this.turbidityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CrushTestData")]
-        public ISO13503_2CrushTestData[] CrushTestData {
-            get {
-                return this.crushTestDataField;
-            }
-            set {
-                this.crushTestDataField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("SieveAnalysisData")]
-        public ISO13503_2SieveAnalysisData[] SieveAnalysisData {
-            get {
-                return this.sieveAnalysisDataField;
-            }
-            set {
-                this.sieveAnalysisDataField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class AreaPerMassMeasure {
-        
-        private AreaPerMassUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public AreaPerMassUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum AreaPerMassUom {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cm2/g")]
-        cm2g,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft2/lbm")]
-        ft2lbm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("m2/g")]
-        m2g,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("m2/kg")]
-        m2kg,
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimAdditive))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimProppantAgent))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class StimMaterial {
-        
-        private StimMaterialKind kindField;
-        
-        private bool kindFieldSpecified;
-        
-        private string nameField;
-        
-        private string supplierField;
-        
-        private string unitOfMeasureField;
-        
-        private ExtensionNameValue[] extensionNameValueField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        public StimMaterialKind Kind {
-            get {
-                return this.kindField;
-            }
-            set {
-                this.kindField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool KindSpecified {
-            get {
-                return this.kindFieldSpecified;
-            }
-            set {
-                this.kindFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Supplier {
-            get {
-                return this.supplierField;
-            }
-            set {
-                this.supplierField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string UnitOfMeasure {
-            get {
-                return this.unitOfMeasureField;
-            }
-            set {
-                this.unitOfMeasureField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
-        public ExtensionNameValue[] ExtensionNameValue {
-            get {
-                return this.extensionNameValueField;
-            }
-            set {
-                this.extensionNameValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum StimMaterialKind {
-        
-        /// <remarks/>
-        additive,
-        
-        /// <remarks/>
-        brine,
-        
-        /// <remarks/>
-        CO2,
-        
-        /// <remarks/>
-        gel,
-        
-        /// <remarks/>
-        N2,
-        
-        /// <remarks/>
-        other,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("proppant agent")]
-        proppantagent,
-        
-        /// <remarks/>
-        water,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class StimAdditive : StimMaterial {
-        
-        private StimAdditiveKind additiveKindField;
-        
-        private bool additiveKindFieldSpecified;
-        
-        private string typeField;
-        
-        private string supplierCodeField;
-        
-        /// <remarks/>
-        /// <summary>Additive type or function from the enumeration 'StimAdditiveKind'.</summary>
-        [System.ComponentModel.DescriptionAttribute("Additive type or function from the enumeration \'StimAdditiveKind\'.")]
-        public StimAdditiveKind AdditiveKind {
-            get {
-                return this.additiveKindField;
-            }
-            set {
-                this.additiveKindField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool AdditiveKindSpecified {
-            get {
-                return this.additiveKindFieldSpecified;
-            }
-            set {
-                this.additiveKindFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        public string Type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A code used to identify the supplier of the additive.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("A code used to identify the supplier of the additive.")]
-        public string SupplierCode {
-            get {
-                return this.supplierCodeField;
-            }
-            set {
-                this.supplierCodeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum StimAdditiveKind {
-        
-        /// <remarks/>
-        acid,
-        
-        /// <remarks/>
-        activator,
-        
-        /// <remarks/>
-        biocide,
-        
-        /// <remarks/>
-        breaker,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("breaker aid")]
-        breakeraid,
-        
-        /// <remarks/>
-        buffer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("clay stabilizer")]
-        claystabilizer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("corrosion inhibitor")]
-        corrosioninhibitor,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("corrosion inhibitor aid")]
-        corrosioninhibitoraid,
-        
-        /// <remarks/>
-        crosslinker,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("delaying agent")]
-        delayingagent,
-        
-        /// <remarks/>
-        fibers,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fluid loss additive")]
-        fluidlossadditive,
-        
-        /// <remarks/>
-        foamer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("friction reducer")]
-        frictionreducer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gelling agent")]
-        gellingagent,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("iron control additive")]
-        ironcontroladditive,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mutual solvent")]
-        mutualsolvent,
-        
-        /// <remarks/>
-        salt,
-        
-        /// <remarks/>
-        stabilizer,
-        
-        /// <remarks/>
-        surfactant,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class StimProppantAgent : StimMaterial {
-        
-        private DimensionlessMeasure frictionCoefficientLaminarField;
-        
-        private AreaPerMassMeasure massAbsorptionCoefficientField;
-        
-        private DimensionlessMeasure frictionCoefficientTurbulentField;
-        
-        private string meshSizeHighField;
-        
-        private string meshSizeLowField;
-        
-        private PressureMeasure unconfinedCompressiveStrengthField;
-        
-        private string proppantAgentKindField;
-        
-        private StimISO13503_2Properties[] iSO13503_2PropertiesField;
-        
-        private StimISO13503_5Point[] iSO13503_5PointField;
-        
-        /// <remarks/>
-        /// <summary>Laminar Flow Friction Coefficient.</summary>
-        [System.ComponentModel.DescriptionAttribute("Laminar Flow Friction Coefficient.")]
-        public DimensionlessMeasure FrictionCoefficientLaminar {
-            get {
-                return this.frictionCoefficientLaminarField;
-            }
-            set {
-                this.frictionCoefficientLaminarField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Characterizes how easily radiation passes through a material. This can be used to compute the concentration of proppant in a slurry using a densitometer.</summary>
-        [System.ComponentModel.DescriptionAttribute("Characterizes how easily radiation passes through a material. This can be used to" +
-            " compute the concentration of proppant in a slurry using a densitometer.")]
-        public AreaPerMassMeasure MassAbsorptionCoefficient {
-            get {
-                return this.massAbsorptionCoefficientField;
-            }
-            set {
-                this.massAbsorptionCoefficientField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Turbulent Flow Friction Coefficient.</summary>
-        [System.ComponentModel.DescriptionAttribute("Turbulent Flow Friction Coefficient.")]
-        public DimensionlessMeasure FrictionCoefficientTurbulent {
-            get {
-                return this.frictionCoefficientTurbulentField;
-            }
-            set {
-                this.frictionCoefficientTurbulentField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>High value of Sieve mesh size - for 40/70 Sand, this value would be 70.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("High value of Sieve mesh size - for 40/70 Sand, this value would be 70.")]
-        public string MeshSizeHigh {
-            get {
-                return this.meshSizeHighField;
-            }
-            set {
-                this.meshSizeHighField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Low value of Sieve mesh size - for 40/70 Sand, this value would be 40.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Low value of Sieve mesh size - for 40/70 Sand, this value would be 40.")]
-        public string MeshSizeLow {
-            get {
-                return this.meshSizeLowField;
-            }
-            set {
-                this.meshSizeLowField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The unconfined compressive strength of the proppant.</summary>
-        [System.ComponentModel.DescriptionAttribute("The unconfined compressive strength of the proppant.")]
-        public PressureMeasure UnconfinedCompressiveStrength {
-            get {
-                return this.unconfinedCompressiveStrengthField;
-            }
-            set {
-                this.unconfinedCompressiveStrengthField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Proppant type or Function.</summary>
-        [System.ComponentModel.DescriptionAttribute("Proppant type or Function.")]
-        public string ProppantAgentKind {
-            get {
-                return this.proppantAgentKindField;
-            }
-            set {
-                this.proppantAgentKindField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ISO13503_2Properties")]
-        public StimISO13503_2Properties[] ISO13503_2Properties {
-            get {
-                return this.iSO13503_2PropertiesField;
-            }
-            set {
-                this.iSO13503_2PropertiesField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ISO13503_5Point")]
-        public StimISO13503_5Point[] ISO13503_5Point {
-            get {
-                return this.iSO13503_5PointField;
-            }
-            set {
-                this.iSO13503_5PointField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class StimMaterialCatalog {
-        
-        private StimAdditive[] additivesField;
-        
-        private StimProppantAgent[] proppantAgentsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Additives")]
-        public StimAdditive[] Additives {
-            get {
-                return this.additivesField;
-            }
-            set {
-                this.additivesField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ProppantAgents")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public StimProppantAgent[] ProppantAgents {
-            get {
-                return this.proppantAgentsField;
-            }
-            set {
-                this.proppantAgentsField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class StimJobDiversion {
         
@@ -6329,7 +2499,9 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>A supplier description of the diversion tool, such as its commercial name.</summary>
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("A supplier description of the diversion tool, such as its commercial name.")]
         public string ToolDescription {
             get {
                 return this.toolDescriptionField;
@@ -6340,6 +2512,8 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Spacing between packer elements.</summary>
+        [System.ComponentModel.DescriptionAttribute("Spacing between packer elements.")]
         public LengthMeasure ElementSpacing {
             get {
                 return this.elementSpacingField;
@@ -6687,8 +2861,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of StimReservoirInterval</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of StimReservoirInterval")]
         public string uid {
             get {
                 return this.uidField;
@@ -6697,6 +2873,254 @@ namespace Energistics.Generator.WITSML200 {
                 this.uidField = value;
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class PermeabilityRockMeasure {
+        
+        private PermeabilityRockUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public PermeabilityRockUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PermeabilityRockUom {
+        
+        /// <remarks/>
+        D,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("D[API]")]
+        DAPI,
+        
+        /// <remarks/>
+        mD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TD[API]")]
+        TDAPI,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class PressureMeasure {
+        
+        private PressureUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public PressureUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PressureUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.01 lbf/ft2")]
+        Item001lbfft2,
+        
+        /// <remarks/>
+        at,
+        
+        /// <remarks/>
+        atm,
+        
+        /// <remarks/>
+        bar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cmH2O[4degC]")]
+        cmH2O4degC,
+        
+        /// <remarks/>
+        cPa,
+        
+        /// <remarks/>
+        dPa,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dyne/cm2")]
+        dynecm2,
+        
+        /// <remarks/>
+        EPa,
+        
+        /// <remarks/>
+        fPa,
+        
+        /// <remarks/>
+        GPa,
+        
+        /// <remarks/>
+        hbar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("inH2O[39degF]")]
+        inH2O39degF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("inH2O[60degF]")]
+        inH2O60degF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("inHg[32degF]")]
+        inHg32degF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("inHg[60degF]")]
+        inHg60degF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kgf/cm2")]
+        kgfcm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kgf/m2")]
+        kgfm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kgf/mm2")]
+        kgfmm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kN/m2")]
+        kNm2,
+        
+        /// <remarks/>
+        kPa,
+        
+        /// <remarks/>
+        kpsi,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf/ft2")]
+        lbfft2,
+        
+        /// <remarks/>
+        mbar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mmHg[0degC]")]
+        mmHg0degC,
+        
+        /// <remarks/>
+        mPa,
+        
+        /// <remarks/>
+        MPa,
+        
+        /// <remarks/>
+        Mpsi,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N/m2")]
+        Nm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N/mm2")]
+        Nmm2,
+        
+        /// <remarks/>
+        nPa,
+        
+        /// <remarks/>
+        Pa,
+        
+        /// <remarks/>
+        pPa,
+        
+        /// <remarks/>
+        psi,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[UK]/ft2")]
+        tonfUKft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[US]/ft2")]
+        tonfUSft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[US]/in2")]
+        tonfUSin2,
+        
+        /// <remarks/>
+        torr,
+        
+        /// <remarks/>
+        TPa,
+        
+        /// <remarks/>
+        ubar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("umHg[0degC]")]
+        umHg0degC,
+        
+        /// <remarks/>
+        uPa,
+        
+        /// <remarks/>
+        upsi,
     }
     
     /// <remarks/>
@@ -6878,6 +3302,325 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         uP,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class DimensionlessMeasure {
+        
+        private DimensionlessUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DimensionlessUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum DimensionlessUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%")]
+        Item,
+        
+        /// <remarks/>
+        cEuc,
+        
+        /// <remarks/>
+        dEuc,
+        
+        /// <remarks/>
+        EEuc,
+        
+        /// <remarks/>
+        Euc,
+        
+        /// <remarks/>
+        fEuc,
+        
+        /// <remarks/>
+        GEuc,
+        
+        /// <remarks/>
+        kEuc,
+        
+        /// <remarks/>
+        MEuc,
+        
+        /// <remarks/>
+        mEuc,
+        
+        /// <remarks/>
+        nEuc,
+        
+        /// <remarks/>
+        pEuc,
+        
+        /// <remarks/>
+        ppk,
+        
+        /// <remarks/>
+        ppm,
+        
+        /// <remarks/>
+        TEuc,
+        
+        /// <remarks/>
+        uEuc,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class VolumePerVolumeMeasure {
+        
+        private VolumePerVolumeUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public VolumePerVolumeUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumePerVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%")]
+        Item,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%[vol]")]
+        vol,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 bbl/ft3")]
+        Item0001bblft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 bbl/m3")]
+        Item0001bblm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 gal[UK]/bbl")]
+        Item0001galUKbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 gal[UK]/gal[UK]")]
+        Item0001galUKgalUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 gal[US]/bbl")]
+        Item0001galUSbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 gal[US]/ft3")]
+        Item0001galUSft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 gal[US]/gal[US]")]
+        Item0001galUSgalUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 pt[UK]/bbl")]
+        Item0001ptUKbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.01 bbl/bbl")]
+        Item001bblbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.1 gal[US]/bbl")]
+        Item01galUSbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.1 L/bbl")]
+        Item01Lbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.1 pt[US]/bbl")]
+        Item01ptUSbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 ft3/bbl")]
+        Item1000ft3bbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 m3/m3")]
+        Item1000m3m3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E-6 acre.ft/bbl")]
+        Item1E6acreftbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E-6 bbl/ft3")]
+        Item1E6bblft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E-6 bbl/m3")]
+        Item1E6bblm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E6 bbl/(acre.ft)")]
+        Item1E6bblacreft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E6 ft3/(acre.ft)")]
+        Item1E6ft3acreft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E6 ft3/bbl")]
+        Item1E6ft3bbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/(acre.ft)")]
+        bblacreft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/bbl")]
+        bblbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/ft3")]
+        bblft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/m3")]
+        bblm3,
+        
+        /// <remarks/>
+        cEuc,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm3/cm3")]
+        cm3cm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm3/L")]
+        cm3L,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm3/m3")]
+        cm3m3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dm3/m3")]
+        dm3m3,
+        
+        /// <remarks/>
+        Euc,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/bbl")]
+        ft3bbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/ft3")]
+        ft3ft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[UK]/ft3")]
+        galUKft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/bbl")]
+        galUSbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/ft3")]
+        galUSft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("L/m3")]
+        Lm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(ha.m)")]
+        m3ham,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/bbl")]
+        m3bbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/m3")]
+        m3m3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mL/gal[UK]")]
+        mLgalUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mL/gal[US]")]
+        mLgalUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mL/mL")]
+        mLmL,
+        
+        /// <remarks/>
+        ppk,
+        
+        /// <remarks/>
+        ppm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ppm[vol]")]
+        ppmvol,
     }
     
     /// <remarks/>
@@ -7103,8 +3846,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of StimTubular</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of StimTubular")]
         public string uid {
             get {
                 return this.uidField;
@@ -7387,7 +4132,9 @@ namespace Energistics.Generator.WITSML200 {
         private double valueField;
         
         /// <remarks/>
+        /// <summary>Unit of measure used by this measured depth coordinate</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Unit of measure used by this measured depth coordinate")]
         public LengthUom uom {
             get {
                 return this.uomField;
@@ -7409,8 +4156,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Defines the vertical datums associated with elevation, vertical depth and measured depth coordinates</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Defines the vertical datums associated with elevation, vertical depth and measure" +
+            "d depth coordinates")]
         public string datum {
             get {
                 return this.datumField;
@@ -7551,17 +4301,25 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class StimFluid {
         
-        private VolumeMeasure concentrationVolumeField;
-        
         private string nameField;
         
         private StimFluidKind kindField;
         
         private bool kindFieldSpecified;
         
-        private StimFluidSubType subtypeField;
+        private StimFluidSubtype subtypeField;
         
         private bool subtypeFieldSpecified;
+        
+        private string purposeField;
+        
+        private string descriptionField;
+        
+        private string supplierField;
+        
+        private bool isKillFluidField;
+        
+        private bool isKillFluidFieldSpecified;
         
         private VolumeMeasure volumeField;
         
@@ -7573,35 +4331,13 @@ namespace Energistics.Generator.WITSML200 {
         
         private string gelStrength10SecField;
         
-        private bool isKillFluidField;
-        
-        private bool isKillFluidFieldSpecified;
-        
         private DimensionlessMeasure specificGravityField;
         
         private DynamicViscosityMeasure viscosityField;
         
-        private string descriptionField;
-        
         private DimensionlessMeasure phField;
         
-        private string purposeField;
-        
-        private string supplierField;
-        
         private StimMaterialQuantity[] additiveConcentrationField;
-        
-        /// <remarks/>
-        /// <summary>The volume used to compute the concentration of added fluids with.</summary>
-        [System.ComponentModel.DescriptionAttribute("The volume used to compute the concentration of added fluids with.")]
-        public VolumeMeasure ConcentrationVolume {
-            get {
-                return this.concentrationVolumeField;
-            }
-            set {
-                this.concentrationVolumeField = value;
-            }
-        }
         
         /// <remarks/>
         /// <summary>The name of the fluid.</summary>
@@ -7642,7 +4378,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The fluid subtypes.</summary>
         [System.ComponentModel.DescriptionAttribute("The fluid subtypes.")]
-        public StimFluidSubType Subtype {
+        public StimFluidSubtype Subtype {
             get {
                 return this.subtypeField;
             }
@@ -7659,6 +4395,68 @@ namespace Energistics.Generator.WITSML200 {
             }
             set {
                 this.subtypeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The purpose of the fluid.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("The purpose of the fluid.")]
+        public string Purpose {
+            get {
+                return this.purposeField;
+            }
+            set {
+                this.purposeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The description of the fluid.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("The description of the fluid.")]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The supplier of the fluid.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("The supplier of the fluid.")]
+        public string Supplier {
+            get {
+                return this.supplierField;
+            }
+            set {
+                this.supplierField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>If true, this fluid is a kill fluid.</summary>
+        [System.ComponentModel.DescriptionAttribute("If true, this fluid is a kill fluid.")]
+        public bool IsKillFluid {
+            get {
+                return this.isKillFluidField;
+            }
+            set {
+                this.isKillFluidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool IsKillFluidSpecified {
+            get {
+                return this.isKillFluidFieldSpecified;
+            }
+            set {
+                this.isKillFluidFieldSpecified = value;
             }
         }
         
@@ -7725,29 +4523,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        /// <summary>If true, this fluid is a kill fluid.</summary>
-        [System.ComponentModel.DescriptionAttribute("If true, this fluid is a kill fluid.")]
-        public bool IsKillFluid {
-            get {
-                return this.isKillFluidField;
-            }
-            set {
-                this.isKillFluidField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool IsKillFluidSpecified {
-            get {
-                return this.isKillFluidFieldSpecified;
-            }
-            set {
-                this.isKillFluidFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
         /// <summary>The specific gravity of the fluid at surface.</summary>
         [System.ComponentModel.DescriptionAttribute("The specific gravity of the fluid at surface.")]
         public DimensionlessMeasure SpecificGravity {
@@ -7772,19 +4547,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        /// <summary>The description of the fluid.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("The description of the fluid.")]
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
-        
-        /// <remarks/>
         /// <summary>The pH of the fluid.</summary>
         [System.ComponentModel.DescriptionAttribute("The pH of the fluid.")]
         public DimensionlessMeasure PH {
@@ -7793,32 +4555,6 @@ namespace Energistics.Generator.WITSML200 {
             }
             set {
                 this.phField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The purpose of the fluid.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("The purpose of the fluid.")]
-        public string Purpose {
-            get {
-                return this.purposeField;
-            }
-            set {
-                this.purposeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The supplier of the fluid.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("The supplier of the fluid.")]
-        public string Supplier {
-            get {
-                return this.supplierField;
-            }
-            set {
-                this.supplierField = value;
             }
         }
         
@@ -7832,6 +4568,150 @@ namespace Energistics.Generator.WITSML200 {
                 this.additiveConcentrationField = value;
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum StimFluidKind {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("acid-based")]
+        acidbased,
+        
+        /// <remarks/>
+        gas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("oil-based")]
+        oilbased,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("water-based")]
+        waterbased,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum StimFluidSubtype {
+        
+        /// <remarks/>
+        acid,
+        
+        /// <remarks/>
+        @base,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("carbon dioxide")]
+        carbondioxide,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("carbon dioxide and nitrogen")]
+        carbondioxideandnitrogen,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("carbon dioxide and water")]
+        carbondioxideandwater,
+        
+        /// <remarks/>
+        condensate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cross-linked gel")]
+        crosslinkedgel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("crude oil")]
+        crudeoil,
+        
+        /// <remarks/>
+        diesel,
+        
+        /// <remarks/>
+        foam,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fracturing oil")]
+        fracturingoil,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fresh water")]
+        freshwater,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gelled acid")]
+        gelledacid,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gelled condensate")]
+        gelledcondensate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gelled crude")]
+        gelledcrude,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gelled diesel")]
+        gelleddiesel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gelled oil")]
+        gelledoil,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gelled salt water")]
+        gelledsaltwater,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hot condensate")]
+        hotcondensate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hot fresh water")]
+        hotfreshwater,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hot oil")]
+        hotoil,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hot salt water")]
+        hotsaltwater,
+        
+        /// <remarks/>
+        hybrid,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("linear gel")]
+        lineargel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("liquefied petroleum gas")]
+        liquefiedpetroleumgas,
+        
+        /// <remarks/>
+        nitrogen,
+        
+        /// <remarks/>
+        oil,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("produced water")]
+        producedwater,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("salt water")]
+        saltwater,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("slick water")]
+        slickwater,
     }
     
     /// <remarks/>
@@ -8011,1212 +4891,19 @@ namespace Energistics.Generator.WITSML200 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum StimFluidKind {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("acid-based")]
-        acidbased,
-        
-        /// <remarks/>
-        gas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("oil-based")]
-        oilbased,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("water-based")]
-        waterbased,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum StimFluidSubType {
-        
-        /// <remarks/>
-        acid,
-        
-        /// <remarks/>
-        @base,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("carbon dioxide")]
-        carbondioxide,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("carbon dioxide and nitrogen")]
-        carbondioxideandnitrogen,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("carbon dioxide and water")]
-        carbondioxideandwater,
-        
-        /// <remarks/>
-        condensate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cross-linked gel")]
-        crosslinkedgel,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("crude oil")]
-        crudeoil,
-        
-        /// <remarks/>
-        diesel,
-        
-        /// <remarks/>
-        foam,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fracturing oil")]
-        fracturingoil,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fresh water")]
-        freshwater,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gelled acid")]
-        gelledacid,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gelled condensate")]
-        gelledcondensate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gelled crude")]
-        gelledcrude,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gelled diesel")]
-        gelleddiesel,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gelled oil")]
-        gelledoil,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gelled salt water")]
-        gelledsaltwater,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hot condensate")]
-        hotcondensate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hot fresh water")]
-        hotfreshwater,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hot oil")]
-        hotoil,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hot salt water")]
-        hotsaltwater,
-        
-        /// <remarks/>
-        hybrid,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("linear gel")]
-        lineargel,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("liquefied petroleum gas")]
-        liquefiedpetroleumgas,
-        
-        /// <remarks/>
-        nitrogen,
-        
-        /// <remarks/>
-        oil,
-        
-        /// <remarks/>
-        other,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("produced water")]
-        producedwater,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("salt water")]
-        saltwater,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("slick water")]
-        slickwater,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class StimMaterialQuantity {
-        
-        private double amountField;
-        
-        private bool amountFieldSpecified;
-        
-        private string materialReferenceField;
-        
-        private ExtensionNameValue[] extensionNameValueField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>The quantity of material used.  The unit of measure is specified within the material referenced.</summary>
-        [System.ComponentModel.DescriptionAttribute("The quantity of material used.  The unit of measure is specified within the mater" +
-            "ial referenced.")]
-        public double Amount {
-            get {
-                return this.amountField;
-            }
-            set {
-                this.amountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool AmountSpecified {
-            get {
-                return this.amountFieldSpecified;
-            }
-            set {
-                this.amountFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Material ID - equal to AbstractStimMaterial.RefId  This is a reference to the uuid of the stim material in the material catalog</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Material ID - equal to AbstractStimMaterial.RefId  This is a reference to the uui" +
-            "d of the stim material in the material catalog")]
-        public string MaterialReference {
-            get {
-                return this.materialReferenceField;
-            }
-            set {
-                this.materialReferenceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
-        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
-        public ExtensionNameValue[] ExtensionNameValue {
-            get {
-                return this.extensionNameValueField;
-            }
-            set {
-                this.extensionNameValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class StimJobStep {
-        
-        private VolumePerVolumeMeasure avgBaseFluidQualityField;
-        
-        private VolumePerVolumeMeasure avgCO2BaseFluidQualityField;
-        
-        private PowerMeasure avgHydraulicPowerField;
-        
-        private VolumePerVolumeMeasure avgInternalPhaseFractionField;
-        
-        private StimMaterialQuantity[] avgMaterialUsedPerMinuteField;
-        
-        private StimMaterialQuantity[] avgMaterialUsePerMinuteBottomholeField;
-        
-        private VolumePerVolumeMeasure avgN2BaseFluidQualityField;
-        
-        private PressureMeasure avgPresBottomholeField;
-        
-        private PressureMeasure avgPresSurfaceField;
-        
-        private MassPerVolumeMeasure avgPropConcField;
-        
-        private MassPerVolumeMeasure avgProppantConcBottomholeField;
-        
-        private MassPerVolumeMeasure avgProppantConcSurfaceField;
-        
-        private MassPerVolumeMeasure avgSlurryPropConcField;
-        
-        private VolumePerTimeMeasure avgSlurryRateField;
-        
-        private ThermodynamicTemperatureMeasure avgTemperatureField;
-        
-        private VolumeMeasure avgVolumePerMinuteWellheadField;
-        
-        private long ballsRecoveredField;
-        
-        private bool ballsRecoveredFieldSpecified;
-        
-        private long ballsUsedField;
-        
-        private bool ballsUsedFieldSpecified;
-        
-        private VolumeMeasure baseFluidBypassVolField;
-        
-        private VolumeMeasure baseFluidVolField;
-        
-        private string descriptionField;
-        
-        private string dTimEndField;
-        
-        private string dTimStartField;
-        
-        private VolumeMeasure endDirtyMaterialPerMinuteField;
-        
-        private StimMaterialQuantity[] endMaterialUsedPerMinuteField;
-        
-        private StimMaterialQuantity[] endMaterialUsedPerMinuteBottomholeField;
-        
-        private PressureMeasure endPresBottomholeField;
-        
-        private PressureMeasure endPresSurfaceField;
-        
-        private MassPerVolumeMeasure endProppantConcBottomholeField;
-        
-        private MassPerVolumeMeasure endProppantConcSurfaceField;
-        
-        private string endRateSurfaceCO2Field;
-        
-        private VolumePerTimeMeasure endStdRateSurfaceN2Field;
-        
-        private ExtensionNameValue[] extensionNameValueField;
-        
-        private VolumeMeasure fluidVolBaseField;
-        
-        private VolumeMeasure fluidVolCirculatedField;
-        
-        private VolumeMeasure fluidVolPumpedField;
-        
-        private VolumeMeasure fluidVolReturnedField;
-        
-        private VolumeMeasure fluidVolSlurryField;
-        
-        private VolumeMeasure fluidVolSqueezedField;
-        
-        private VolumeMeasure fluidVolWashedField;
-        
-        private ForcePerVolumeMeasure fractureGradientFinalField;
-        
-        private ForcePerVolumeMeasure fractureGradientInitialField;
-        
-        private DimensionlessMeasure frictionFactorField;
-        
-        private string kindField;
-        
-        private PowerMeasure maxHydraulicPowerField;
-        
-        private PressureMeasure maxPresSurfaceField;
-        
-        private MassPerVolumeMeasure maxProppantConcBottomholeField;
-        
-        private MassPerVolumeMeasure maxProppantConcSurfaceField;
-        
-        private MassPerVolumeMeasure maxSlurryPropConcField;
-        
-        private VolumeMeasure maxVolumePerMinuteWellheadField;
-        
-        private string nameField;
-        
-        private long numberField;
-        
-        private PressureMeasure pipeFrictionPressureField;
-        
-        private TimeMeasure pumpTimeField;
-        
-        private VolumeMeasure startDirtyMaterialPerMinuteField;
-        
-        private StimMaterialQuantity[] startMaterialUsedPerMinuteField;
-        
-        private StimMaterialQuantity[] startMaterialUsedPerMinuteBottomHoleField;
-        
-        private PressureMeasure startPresBottomholeField;
-        
-        private PressureMeasure startPresSurfaceField;
-        
-        private MassPerVolumeMeasure startProppantConcBottomholeField;
-        
-        private MassPerVolumeMeasure startProppantConcSurfaceField;
-        
-        private VolumeMeasure wellheadVolField;
-        
-        private StimMaterialQuantity[] materialUsedField;
-        
-        private StimMaterialQuantity[] maxMaterialUsedPerMinuteField;
-        
-        private StimFluid fluidField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>Base quality percentage of foam.</summary>
-        [System.ComponentModel.DescriptionAttribute("Base quality percentage of foam.")]
-        public VolumePerVolumeMeasure AvgBaseFluidQuality {
-            get {
-                return this.avgBaseFluidQualityField;
-            }
-            set {
-                this.avgBaseFluidQualityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Base quality carbon dioxide percent of foam.</summary>
-        [System.ComponentModel.DescriptionAttribute("Base quality carbon dioxide percent of foam.")]
-        public VolumePerVolumeMeasure AvgCO2BaseFluidQuality {
-            get {
-                return this.avgCO2BaseFluidQualityField;
-            }
-            set {
-                this.avgCO2BaseFluidQualityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Average hydraulic horse power used.</summary>
-        [System.ComponentModel.DescriptionAttribute("Average hydraulic horse power used.")]
-        public PowerMeasure AvgHydraulicPower {
-            get {
-                return this.avgHydraulicPowerField;
-            }
-            set {
-                this.avgHydraulicPowerField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Internal Gas Phase percentage of foam.</summary>
-        [System.ComponentModel.DescriptionAttribute("Internal Gas Phase percentage of foam.")]
-        public VolumePerVolumeMeasure AvgInternalPhaseFraction {
-            get {
-                return this.avgInternalPhaseFractionField;
-            }
-            set {
-                this.avgInternalPhaseFractionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Average material user per minute entering the flow stream.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("AvgMaterialUsedPerMinute")]
-        [System.ComponentModel.DescriptionAttribute("Average material user per minute entering the flow stream.")]
-        public StimMaterialQuantity[] AvgMaterialUsedPerMinute {
-            get {
-                return this.avgMaterialUsedPerMinuteField;
-            }
-            set {
-                this.avgMaterialUsedPerMinuteField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Average material amount used (pumped) per minute at bottomhole.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("AvgMaterialUsePerMinuteBottomhole")]
-        [System.ComponentModel.DescriptionAttribute("Average material amount used (pumped) per minute at bottomhole.")]
-        public StimMaterialQuantity[] AvgMaterialUsePerMinuteBottomhole {
-            get {
-                return this.avgMaterialUsePerMinuteBottomholeField;
-            }
-            set {
-                this.avgMaterialUsePerMinuteBottomholeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Base quality nitrogen percentage of foam.</summary>
-        [System.ComponentModel.DescriptionAttribute("Base quality nitrogen percentage of foam.")]
-        public VolumePerVolumeMeasure AvgN2BaseFluidQuality {
-            get {
-                return this.avgN2BaseFluidQualityField;
-            }
-            set {
-                this.avgN2BaseFluidQualityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Average bottomhole pressure.</summary>
-        [System.ComponentModel.DescriptionAttribute("Average bottomhole pressure.")]
-        public PressureMeasure AvgPresBottomhole {
-            get {
-                return this.avgPresBottomholeField;
-            }
-            set {
-                this.avgPresBottomholeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Average surface pressure.</summary>
-        [System.ComponentModel.DescriptionAttribute("Average surface pressure.")]
-        public PressureMeasure AvgPresSurface {
-            get {
-                return this.avgPresSurfaceField;
-            }
-            set {
-                this.avgPresSurfaceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Average proppant concentration at the wellhead.  PPA (pounds proppant added per volume measure) kgpa (kilograms proppant added per volume measure)</summary>
-        [System.ComponentModel.DescriptionAttribute("Average proppant concentration at the wellhead.  PPA (pounds proppant added per v" +
-            "olume measure) kgpa (kilograms proppant added per volume measure)")]
-        public MassPerVolumeMeasure AvgPropConc {
-            get {
-                return this.avgPropConcField;
-            }
-            set {
-                this.avgPropConcField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The average proppant concentration bottomhole.</summary>
-        [System.ComponentModel.DescriptionAttribute("The average proppant concentration bottomhole.")]
-        public MassPerVolumeMeasure AvgProppantConcBottomhole {
-            get {
-                return this.avgProppantConcBottomholeField;
-            }
-            set {
-                this.avgProppantConcBottomholeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The average proppant concentration at the surface.</summary>
-        [System.ComponentModel.DescriptionAttribute("The average proppant concentration at the surface.")]
-        public MassPerVolumeMeasure AvgProppantConcSurface {
-            get {
-                return this.avgProppantConcSurfaceField;
-            }
-            set {
-                this.avgProppantConcSurfaceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Average proppant concentration exiting equipment.</summary>
-        [System.ComponentModel.DescriptionAttribute("Average proppant concentration exiting equipment.")]
-        public MassPerVolumeMeasure AvgSlurryPropConc {
-            get {
-                return this.avgSlurryPropConcField;
-            }
-            set {
-                this.avgSlurryPropConcField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public VolumePerTimeMeasure AvgSlurryRate {
-            get {
-                return this.avgSlurryRateField;
-            }
-            set {
-                this.avgSlurryRateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Average fluid temperature.</summary>
-        [System.ComponentModel.DescriptionAttribute("Average fluid temperature.")]
-        public ThermodynamicTemperatureMeasure AvgTemperature {
-            get {
-                return this.avgTemperatureField;
-            }
-            set {
-                this.avgTemperatureField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Average volume per minute at the wellhead.</summary>
-        [System.ComponentModel.DescriptionAttribute("Average volume per minute at the wellhead.")]
-        public VolumeMeasure AvgVolumePerMinuteWellhead {
-            get {
-                return this.avgVolumePerMinuteWellheadField;
-            }
-            set {
-                this.avgVolumePerMinuteWellheadField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Balls recovered during execution of the step.</summary>
-        [System.ComponentModel.DescriptionAttribute("Balls recovered during execution of the step.")]
-        public long BallsRecovered {
-            get {
-                return this.ballsRecoveredField;
-            }
-            set {
-                this.ballsRecoveredField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool BallsRecoveredSpecified {
-            get {
-                return this.ballsRecoveredFieldSpecified;
-            }
-            set {
-                this.ballsRecoveredFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Balls used during execution of the step.</summary>
-        [System.ComponentModel.DescriptionAttribute("Balls used during execution of the step.")]
-        public long BallsUsed {
-            get {
-                return this.ballsUsedField;
-            }
-            set {
-                this.ballsUsedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool BallsUsedSpecified {
-            get {
-                return this.ballsUsedFieldSpecified;
-            }
-            set {
-                this.ballsUsedFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Base fluid volume recorded after equipment set to bypass.</summary>
-        [System.ComponentModel.DescriptionAttribute("Base fluid volume recorded after equipment set to bypass.")]
-        public VolumeMeasure BaseFluidBypassVol {
-            get {
-                return this.baseFluidBypassVolField;
-            }
-            set {
-                this.baseFluidBypassVolField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Base fluid volume entering equipment.</summary>
-        [System.ComponentModel.DescriptionAttribute("Base fluid volume entering equipment.")]
-        public VolumeMeasure BaseFluidVol {
-            get {
-                return this.baseFluidVolField;
-            }
-            set {
-                this.baseFluidVolField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A short description of the step.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("A short description of the step.")]
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Date time of end of the step.</summary>
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
-        [System.ComponentModel.DescriptionAttribute("Date time of end of the step.")]
-        public string DTimEnd {
-            get {
-                return this.dTimEndField;
-            }
-            set {
-                this.dTimEndField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Date time of start of the step.</summary>
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
-        [System.ComponentModel.DescriptionAttribute("Date time of start of the step.")]
-        public string DTimStart {
-            get {
-                return this.dTimStartField;
-            }
-            set {
-                this.dTimStartField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Ending dirty fluid pump volume per minute.</summary>
-        [System.ComponentModel.DescriptionAttribute("Ending dirty fluid pump volume per minute.")]
-        public VolumeMeasure EndDirtyMaterialPerMinute {
-            get {
-                return this.endDirtyMaterialPerMinuteField;
-            }
-            set {
-                this.endDirtyMaterialPerMinuteField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Ending quantity of material used per minute entering the flow stream.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("EndMaterialUsedPerMinute")]
-        [System.ComponentModel.DescriptionAttribute("Ending quantity of material used per minute entering the flow stream.")]
-        public StimMaterialQuantity[] EndMaterialUsedPerMinute {
-            get {
-                return this.endMaterialUsedPerMinuteField;
-            }
-            set {
-                this.endMaterialUsedPerMinuteField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Ending quantity of material used per minute at bottomhole.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("EndMaterialUsedPerMinuteBottomhole")]
-        [System.ComponentModel.DescriptionAttribute("Ending quantity of material used per minute at bottomhole.")]
-        public StimMaterialQuantity[] EndMaterialUsedPerMinuteBottomhole {
-            get {
-                return this.endMaterialUsedPerMinuteBottomholeField;
-            }
-            set {
-                this.endMaterialUsedPerMinuteBottomholeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Final bottomhole pressure.</summary>
-        [System.ComponentModel.DescriptionAttribute("Final bottomhole pressure.")]
-        public PressureMeasure EndPresBottomhole {
-            get {
-                return this.endPresBottomholeField;
-            }
-            set {
-                this.endPresBottomholeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Final surface pressure.</summary>
-        [System.ComponentModel.DescriptionAttribute("Final surface pressure.")]
-        public PressureMeasure EndPresSurface {
-            get {
-                return this.endPresSurfaceField;
-            }
-            set {
-                this.endPresSurfaceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The final proppant concentration bottomhole.</summary>
-        [System.ComponentModel.DescriptionAttribute("The final proppant concentration bottomhole.")]
-        public MassPerVolumeMeasure EndProppantConcBottomhole {
-            get {
-                return this.endProppantConcBottomholeField;
-            }
-            set {
-                this.endProppantConcBottomholeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The final proppant concentration at the surface.</summary>
-        [System.ComponentModel.DescriptionAttribute("The final proppant concentration at the surface.")]
-        public MassPerVolumeMeasure EndProppantConcSurface {
-            get {
-                return this.endProppantConcSurfaceField;
-            }
-            set {
-                this.endProppantConcSurfaceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Final CO2 pump rate in volume per time at the surface.</summary>
-        [System.ComponentModel.DescriptionAttribute("Final CO2 pump rate in volume per time at the surface.")]
-        public string EndRateSurfaceCO2 {
-            get {
-                return this.endRateSurfaceCO2Field;
-            }
-            set {
-                this.endRateSurfaceCO2Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Final nitrogen pump rate in volume per time at the surface.</summary>
-        [System.ComponentModel.DescriptionAttribute("Final nitrogen pump rate in volume per time at the surface.")]
-        public VolumePerTimeMeasure EndStdRateSurfaceN2 {
-            get {
-                return this.endStdRateSurfaceN2Field;
-            }
-            set {
-                this.endStdRateSurfaceN2Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
-        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
-        public ExtensionNameValue[] ExtensionNameValue {
-            get {
-                return this.extensionNameValueField;
-            }
-            set {
-                this.extensionNameValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The step volume of the base step.</summary>
-        [System.ComponentModel.DescriptionAttribute("The step volume of the base step.")]
-        public VolumeMeasure FluidVolBase {
-            get {
-                return this.fluidVolBaseField;
-            }
-            set {
-                this.fluidVolBaseField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Fluid volume circulated.</summary>
-        [System.ComponentModel.DescriptionAttribute("Fluid volume circulated.")]
-        public VolumeMeasure FluidVolCirculated {
-            get {
-                return this.fluidVolCirculatedField;
-            }
-            set {
-                this.fluidVolCirculatedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Fluid volume pumped.</summary>
-        [System.ComponentModel.DescriptionAttribute("Fluid volume pumped.")]
-        public VolumeMeasure FluidVolPumped {
-            get {
-                return this.fluidVolPumpedField;
-            }
-            set {
-                this.fluidVolPumpedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Fluid volume returned.</summary>
-        [System.ComponentModel.DescriptionAttribute("Fluid volume returned.")]
-        public VolumeMeasure FluidVolReturned {
-            get {
-                return this.fluidVolReturnedField;
-            }
-            set {
-                this.fluidVolReturnedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The volume of the slurry (dirty) step.</summary>
-        [System.ComponentModel.DescriptionAttribute("The volume of the slurry (dirty) step.")]
-        public VolumeMeasure FluidVolSlurry {
-            get {
-                return this.fluidVolSlurryField;
-            }
-            set {
-                this.fluidVolSlurryField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Fluid volume squeezed.</summary>
-        [System.ComponentModel.DescriptionAttribute("Fluid volume squeezed.")]
-        public VolumeMeasure FluidVolSqueezed {
-            get {
-                return this.fluidVolSqueezedField;
-            }
-            set {
-                this.fluidVolSqueezedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Fluid volume washed.</summary>
-        [System.ComponentModel.DescriptionAttribute("Fluid volume washed.")]
-        public VolumeMeasure FluidVolWashed {
-            get {
-                return this.fluidVolWashedField;
-            }
-            set {
-                this.fluidVolWashedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The fracture gradient at the end time of the step.</summary>
-        [System.ComponentModel.DescriptionAttribute("The fracture gradient at the end time of the step.")]
-        public ForcePerVolumeMeasure FractureGradientFinal {
-            get {
-                return this.fractureGradientFinalField;
-            }
-            set {
-                this.fractureGradientFinalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The fracture gradient prior at the start time of the step.</summary>
-        [System.ComponentModel.DescriptionAttribute("The fracture gradient prior at the start time of the step.")]
-        public ForcePerVolumeMeasure FractureGradientInitial {
-            get {
-                return this.fractureGradientInitialField;
-            }
-            set {
-                this.fractureGradientInitialField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Numeric value used to scale a calculated rheological friction.</summary>
-        [System.ComponentModel.DescriptionAttribute("Numeric value used to scale a calculated rheological friction.")]
-        public DimensionlessMeasure FrictionFactor {
-            get {
-                return this.frictionFactorField;
-            }
-            set {
-                this.frictionFactorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The type of step.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("The type of step.")]
-        public string Kind {
-            get {
-                return this.kindField;
-            }
-            set {
-                this.kindField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public PowerMeasure MaxHydraulicPower {
-            get {
-                return this.maxHydraulicPowerField;
-            }
-            set {
-                this.maxHydraulicPowerField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Maximum pumping pressure on surface.</summary>
-        [System.ComponentModel.DescriptionAttribute("Maximum pumping pressure on surface.")]
-        public PressureMeasure MaxPresSurface {
-            get {
-                return this.maxPresSurfaceField;
-            }
-            set {
-                this.maxPresSurfaceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public MassPerVolumeMeasure MaxProppantConcBottomhole {
-            get {
-                return this.maxProppantConcBottomholeField;
-            }
-            set {
-                this.maxProppantConcBottomholeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Maximum proppant concentration at the wellhead.</summary>
-        [System.ComponentModel.DescriptionAttribute("Maximum proppant concentration at the wellhead.")]
-        public MassPerVolumeMeasure MaxProppantConcSurface {
-            get {
-                return this.maxProppantConcSurfaceField;
-            }
-            set {
-                this.maxProppantConcSurfaceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Maximum proppant concentration exiting equipment.</summary>
-        [System.ComponentModel.DescriptionAttribute("Maximum proppant concentration exiting equipment.")]
-        public MassPerVolumeMeasure MaxSlurryPropConc {
-            get {
-                return this.maxSlurryPropConcField;
-            }
-            set {
-                this.maxSlurryPropConcField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Maximum volume per minute at the wellhead.</summary>
-        [System.ComponentModel.DescriptionAttribute("Maximum volume per minute at the wellhead.")]
-        public VolumeMeasure MaxVolumePerMinuteWellhead {
-            get {
-                return this.maxVolumePerMinuteWellheadField;
-            }
-            set {
-                this.maxVolumePerMinuteWellheadField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A human readable name for the step.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("A human readable name for the step.")]
-        public string Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Step number.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Step number.")]
-        public long Number {
-            get {
-                return this.numberField;
-            }
-            set {
-                this.numberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The friction pressure contribution from pipes.</summary>
-        [System.ComponentModel.DescriptionAttribute("The friction pressure contribution from pipes.")]
-        public PressureMeasure PipeFrictionPressure {
-            get {
-                return this.pipeFrictionPressureField;
-            }
-            set {
-                this.pipeFrictionPressureField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Total pumping time for the step.</summary>
-        [System.ComponentModel.DescriptionAttribute("Total pumping time for the step.")]
-        public TimeMeasure PumpTime {
-            get {
-                return this.pumpTimeField;
-            }
-            set {
-                this.pumpTimeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Starting dirty fluid volume per minute.</summary>
-        [System.ComponentModel.DescriptionAttribute("Starting dirty fluid volume per minute.")]
-        public VolumeMeasure StartDirtyMaterialPerMinute {
-            get {
-                return this.startDirtyMaterialPerMinuteField;
-            }
-            set {
-                this.startDirtyMaterialPerMinuteField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Starting quantity of material used per minute entering the flow stream.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("StartMaterialUsedPerMinute")]
-        [System.ComponentModel.DescriptionAttribute("Starting quantity of material used per minute entering the flow stream.")]
-        public StimMaterialQuantity[] StartMaterialUsedPerMinute {
-            get {
-                return this.startMaterialUsedPerMinuteField;
-            }
-            set {
-                this.startMaterialUsedPerMinuteField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Starting quantity of material used per minute at bottomhole.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("StartMaterialUsedPerMinuteBottomHole")]
-        [System.ComponentModel.DescriptionAttribute("Starting quantity of material used per minute at bottomhole.")]
-        public StimMaterialQuantity[] StartMaterialUsedPerMinuteBottomHole {
-            get {
-                return this.startMaterialUsedPerMinuteBottomHoleField;
-            }
-            set {
-                this.startMaterialUsedPerMinuteBottomHoleField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Starting bottomhole pressure.</summary>
-        [System.ComponentModel.DescriptionAttribute("Starting bottomhole pressure.")]
-        public PressureMeasure StartPresBottomhole {
-            get {
-                return this.startPresBottomholeField;
-            }
-            set {
-                this.startPresBottomholeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Starting surface pressure.</summary>
-        [System.ComponentModel.DescriptionAttribute("Starting surface pressure.")]
-        public PressureMeasure StartPresSurface {
-            get {
-                return this.startPresSurfaceField;
-            }
-            set {
-                this.startPresSurfaceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The beginning proppant concentration bottomhole.</summary>
-        [System.ComponentModel.DescriptionAttribute("The beginning proppant concentration bottomhole.")]
-        public MassPerVolumeMeasure StartProppantConcBottomhole {
-            get {
-                return this.startProppantConcBottomholeField;
-            }
-            set {
-                this.startProppantConcBottomholeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The beginning proppant concentration at the surface.</summary>
-        [System.ComponentModel.DescriptionAttribute("The beginning proppant concentration at the surface.")]
-        public MassPerVolumeMeasure StartProppantConcSurface {
-            get {
-                return this.startProppantConcSurfaceField;
-            }
-            set {
-                this.startProppantConcSurfaceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Slurry volume entering the well.</summary>
-        [System.ComponentModel.DescriptionAttribute("Slurry volume entering the well.")]
-        public VolumeMeasure WellheadVol {
-            get {
-                return this.wellheadVolField;
-            }
-            set {
-                this.wellheadVolField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Material used during the step</summary>
-        [System.Xml.Serialization.XmlElementAttribute("MaterialUsed")]
-        [System.ComponentModel.DescriptionAttribute("Material used during the step")]
-        public StimMaterialQuantity[] MaterialUsed {
-            get {
-                return this.materialUsedField;
-            }
-            set {
-                this.materialUsedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("MaxMaterialUsedPerMinute")]
-        public StimMaterialQuantity[] MaxMaterialUsedPerMinute {
-            get {
-                return this.maxMaterialUsedPerMinuteField;
-            }
-            set {
-                this.maxMaterialUsedPerMinuteField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public StimFluid Fluid {
-            get {
-                return this.fluidField;
-            }
-            set {
-                this.fluidField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class PowerMeasure {
+    public partial class MassPerVolumeMeasure {
         
-        private PowerUom uomField;
+        private MassPerVolumeUom uomField;
         
         private double valueField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public PowerUom uom {
+        public MassPerVolumeUom uom {
             get {
                 return this.uomField;
             }
@@ -9241,64 +4928,609 @@ namespace Energistics.Generator.WITSML200 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum PowerUom {
+    public enum MassPerVolumeUom {
         
         /// <remarks/>
-        cW,
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 lbm/bbl")]
+        Item0001lbmbbl,
         
         /// <remarks/>
-        dW,
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 lbm/gal[UK]")]
+        Item0001lbmgalUK,
         
         /// <remarks/>
-        EW,
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 lbm/gal[US]")]
+        Item0001lbmgalUS,
         
         /// <remarks/>
-        fW,
+        [System.Xml.Serialization.XmlEnumAttribute("0.01 grain/ft3")]
+        Item001grainft3,
         
         /// <remarks/>
-        GW,
+        [System.Xml.Serialization.XmlEnumAttribute("0.1 lbm/bbl")]
+        Item01lbmbbl,
         
         /// <remarks/>
-        hp,
+        [System.Xml.Serialization.XmlEnumAttribute("10 Mg/m3")]
+        Item10Mgm3,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hp[elec]")]
-        hpelec,
+        [System.Xml.Serialization.XmlEnumAttribute("g/cm3")]
+        gcm3,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hp[hyd]")]
-        hphyd,
+        [System.Xml.Serialization.XmlEnumAttribute("g/dm3")]
+        gdm3,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("hp[metric]")]
-        hpmetric,
+        [System.Xml.Serialization.XmlEnumAttribute("g/gal[UK]")]
+        ggalUK,
         
         /// <remarks/>
-        kW,
+        [System.Xml.Serialization.XmlEnumAttribute("g/gal[US]")]
+        ggalUS,
         
         /// <remarks/>
-        MW,
+        [System.Xml.Serialization.XmlEnumAttribute("g/L")]
+        gL,
         
         /// <remarks/>
-        mW,
+        [System.Xml.Serialization.XmlEnumAttribute("g/m3")]
+        gm3,
         
         /// <remarks/>
-        nW,
+        [System.Xml.Serialization.XmlEnumAttribute("grain/ft3")]
+        grainft3,
         
         /// <remarks/>
-        pW,
+        [System.Xml.Serialization.XmlEnumAttribute("grain/gal[US]")]
+        graingalUS,
         
         /// <remarks/>
-        tonRefrig,
+        [System.Xml.Serialization.XmlEnumAttribute("kg/dm3")]
+        kgdm3,
         
         /// <remarks/>
-        TW,
+        [System.Xml.Serialization.XmlEnumAttribute("kg/L")]
+        kgL,
         
         /// <remarks/>
-        uW,
+        [System.Xml.Serialization.XmlEnumAttribute("kg/m3")]
+        kgm3,
         
         /// <remarks/>
-        W,
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/bbl")]
+        lbmbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/ft3")]
+        lbmft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/gal[UK]")]
+        lbmgalUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/gal[US]")]
+        lbmgalUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/in3")]
+        lbmin3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mg/dm3")]
+        mgdm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mg/gal[US]")]
+        mggalUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mg/L")]
+        mgL,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mg/m3")]
+        mgm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mg/m3")]
+        Mgm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("t/m3")]
+        tm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ug/cm3")]
+        ugcm3,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class ThermodynamicTemperatureMeasure {
+        
+        private ThermodynamicTemperatureUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public ThermodynamicTemperatureUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ThermodynamicTemperatureUom {
+        
+        /// <remarks/>
+        degC,
+        
+        /// <remarks/>
+        degF,
+        
+        /// <remarks/>
+        degR,
+        
+        /// <remarks/>
+        K,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class StimMaterialQuantity {
+        
+        private MassPerVolumeMeasure densityField;
+        
+        private MassMeasure massField;
+        
+        private MassPerTimeMeasure massFlowRateField;
+        
+        private VolumeMeasure stdVolumeField;
+        
+        private VolumeMeasure volumeField;
+        
+        private VolumePerVolumeMeasure volumeConcentrationField;
+        
+        private VolumePerTimeMeasure volumetricFlowRateField;
+        
+        private string materialReferenceField;
+        
+        private ExtensionNameValue[] extensionNameValueField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>The density of material used.</summary>
+        [System.ComponentModel.DescriptionAttribute("The density of material used.")]
+        public MassPerVolumeMeasure Density {
+            get {
+                return this.densityField;
+            }
+            set {
+                this.densityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The mass of material used.  This should be used without specifying any of the other material measures (e.g. volume, standard volume, etc.).</summary>
+        [System.ComponentModel.DescriptionAttribute("The mass of material used.  This should be used without specifying any of the oth" +
+            "er material measures (e.g. volume, standard volume, etc.).")]
+        public MassMeasure Mass {
+            get {
+                return this.massField;
+            }
+            set {
+                this.massField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MassPerTimeMeasure MassFlowRate {
+            get {
+                return this.massFlowRateField;
+            }
+            set {
+                this.massFlowRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The standard volume of material used. Standard volume is the volume measured under the same conditions. This should be used without specifying any of the other material measures (e.g. mass, volume, etc.).</summary>
+        [System.ComponentModel.DescriptionAttribute("The standard volume of material used. Standard volume is the volume measured unde" +
+            "r the same conditions. This should be used without specifying any of the other m" +
+            "aterial measures (e.g. mass, volume, etc.).")]
+        public VolumeMeasure StdVolume {
+            get {
+                return this.stdVolumeField;
+            }
+            set {
+                this.stdVolumeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The volume of material used.  This should be used without specifying any of the other material measures (e.g. mass, standard volume, etc.).</summary>
+        [System.ComponentModel.DescriptionAttribute("The volume of material used.  This should be used without specifying any of the o" +
+            "ther material measures (e.g. mass, standard volume, etc.).")]
+        public VolumeMeasure Volume {
+            get {
+                return this.volumeField;
+            }
+            set {
+                this.volumeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The volume per volume measure of material used.  This should be used without specifying any of the other material measures (e.g. mass, density, standard volume, etc.).</summary>
+        [System.ComponentModel.DescriptionAttribute("The volume per volume measure of material used.  This should be used without spec" +
+            "ifying any of the other material measures (e.g. mass, density, standard volume, " +
+            "etc.).")]
+        public VolumePerVolumeMeasure VolumeConcentration {
+            get {
+                return this.volumeConcentrationField;
+            }
+            set {
+                this.volumeConcentrationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public VolumePerTimeMeasure VolumetricFlowRate {
+            get {
+                return this.volumetricFlowRateField;
+            }
+            set {
+                this.volumetricFlowRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Material ID - equal to AbstractStimMaterial.RefId  This is a reference to the uid of the stim material in the material catalog</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Material ID - equal to AbstractStimMaterial.RefId  This is a reference to the uid" +
+            " of the stim material in the material catalog")]
+        public string MaterialReference {
+            get {
+                return this.materialReferenceField;
+            }
+            set {
+                this.materialReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public ExtensionNameValue[] ExtensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for this instance of StimMaterialQuantity</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of StimMaterialQuantity")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class MassMeasure {
+        
+        private MassUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public MassUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MassUom {
+        
+        /// <remarks/>
+        ag,
+        
+        /// <remarks/>
+        cg,
+        
+        /// <remarks/>
+        ct,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cwt[UK]")]
+        cwtUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cwt[US]")]
+        cwtUS,
+        
+        /// <remarks/>
+        Eg,
+        
+        /// <remarks/>
+        fg,
+        
+        /// <remarks/>
+        g,
+        
+        /// <remarks/>
+        Gg,
+        
+        /// <remarks/>
+        grain,
+        
+        /// <remarks/>
+        hg,
+        
+        /// <remarks/>
+        kg,
+        
+        /// <remarks/>
+        klbm,
+        
+        /// <remarks/>
+        lbm,
+        
+        /// <remarks/>
+        mg,
+        
+        /// <remarks/>
+        Mg,
+        
+        /// <remarks/>
+        ng,
+        
+        /// <remarks/>
+        ozm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ozm[troy]")]
+        ozmtroy,
+        
+        /// <remarks/>
+        pg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sack[94lbm]")]
+        sack94lbm,
+        
+        /// <remarks/>
+        t,
+        
+        /// <remarks/>
+        Tg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[UK]")]
+        tonUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[US]")]
+        tonUS,
+        
+        /// <remarks/>
+        ug,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class MassPerTimeMeasure {
+        
+        private MassPerTimeUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public MassPerTimeUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MassPerTimeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E6 lbm/a")]
+        Item1E6lbma,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("g/s")]
+        gs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/d")]
+        kgd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/h")]
+        kgh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/min")]
+        kgmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/s")]
+        kgs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/d")]
+        lbmd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/h")]
+        lbmh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/min")]
+        lbmmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/s")]
+        lbms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mg/a")]
+        Mga,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mg/d")]
+        Mgd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mg/h")]
+        Mgh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mg/min")]
+        Mgmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("t/a")]
+        ta,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("t/d")]
+        td,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("t/h")]
+        th,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("t/min")]
+        tmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[UK]/a")]
+        tonUKa,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[UK]/d")]
+        tonUKd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[UK]/h")]
+        tonUKh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[UK]/min")]
+        tonUKmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[US]/a")]
+        tonUSa,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[US]/d")]
+        tonUSd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[US]/h")]
+        tonUSh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[US]/min")]
+        tonUSmin,
     }
     
     /// <remarks/>
@@ -9470,6 +5702,1079 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("m3/s")]
         m3s,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class StimJobStep {
+        
+        private string stepNameField;
+        
+        private long stepNumberField;
+        
+        private string kindField;
+        
+        private string descriptionField;
+        
+        private string dTimStartField;
+        
+        private string dTimEndField;
+        
+        private VolumePerVolumeMeasure avgBaseFluidQualityField;
+        
+        private VolumePerVolumeMeasure avgCO2BaseFluidQualityField;
+        
+        private PowerMeasure avgHydraulicPowerField;
+        
+        private VolumePerVolumeMeasure avgInternalPhaseFractionField;
+        
+        private StimMaterialQuantity[] avgMaterialUsedRateField;
+        
+        private StimMaterialQuantity[] avgMaterialUseRateBottomholeField;
+        
+        private VolumePerVolumeMeasure avgN2BaseFluidQualityField;
+        
+        private PressureMeasure avgPresBottomholeField;
+        
+        private PressureMeasure avgPresSurfaceField;
+        
+        private MassPerVolumeMeasure avgPropConcField;
+        
+        private MassPerVolumeMeasure avgProppantConcBottomholeField;
+        
+        private MassPerVolumeMeasure avgProppantConcSurfaceField;
+        
+        private MassPerVolumeMeasure avgSlurryPropConcField;
+        
+        private VolumePerTimeMeasure avgSlurryRateField;
+        
+        private ThermodynamicTemperatureMeasure avgTemperatureField;
+        
+        private VolumePerTimeMeasure avgVolumeRateWellheadField;
+        
+        private long ballsRecoveredField;
+        
+        private bool ballsRecoveredFieldSpecified;
+        
+        private long ballsUsedField;
+        
+        private bool ballsUsedFieldSpecified;
+        
+        private VolumeMeasure baseFluidBypassVolField;
+        
+        private VolumeMeasure baseFluidVolField;
+        
+        private VolumePerTimeMeasure endDirtyMaterialRateField;
+        
+        private StimMaterialQuantity[] endMaterialUsedRateField;
+        
+        private StimMaterialQuantity[] endMaterialUsedRateBottomholeField;
+        
+        private PressureMeasure endPresBottomholeField;
+        
+        private PressureMeasure endPresSurfaceField;
+        
+        private MassPerVolumeMeasure endProppantConcBottomholeField;
+        
+        private MassPerVolumeMeasure endProppantConcSurfaceField;
+        
+        private string endRateSurfaceCO2Field;
+        
+        private VolumePerTimeMeasure endStdRateSurfaceN2Field;
+        
+        private VolumeMeasure fluidVolBaseField;
+        
+        private VolumeMeasure fluidVolCirculatedField;
+        
+        private VolumeMeasure fluidVolPumpedField;
+        
+        private VolumeMeasure fluidVolReturnedField;
+        
+        private VolumeMeasure fluidVolSlurryField;
+        
+        private VolumeMeasure fluidVolSqueezedField;
+        
+        private VolumeMeasure fluidVolWashedField;
+        
+        private ForcePerVolumeMeasure fractureGradientFinalField;
+        
+        private ForcePerVolumeMeasure fractureGradientInitialField;
+        
+        private DimensionlessMeasure frictionFactorField;
+        
+        private PowerMeasure maxHydraulicPowerField;
+        
+        private PressureMeasure maxPresSurfaceField;
+        
+        private MassPerVolumeMeasure maxProppantConcBottomholeField;
+        
+        private MassPerVolumeMeasure maxProppantConcSurfaceField;
+        
+        private MassPerVolumeMeasure maxSlurryPropConcField;
+        
+        private VolumePerTimeMeasure maxVolumeRateWellheadField;
+        
+        private PressureMeasure pipeFrictionPressureField;
+        
+        private TimeMeasure pumpTimeField;
+        
+        private VolumePerTimeMeasure startDirtyMaterialRateField;
+        
+        private StimMaterialQuantity[] startMaterialUsedRateField;
+        
+        private StimMaterialQuantity[] startMaterialUsedRateBottomHoleField;
+        
+        private PressureMeasure startPresBottomholeField;
+        
+        private PressureMeasure startPresSurfaceField;
+        
+        private MassPerVolumeMeasure startProppantConcBottomholeField;
+        
+        private MassPerVolumeMeasure startProppantConcSurfaceField;
+        
+        private VolumeMeasure wellheadVolField;
+        
+        private ExtensionNameValue[] extensionNameValueField;
+        
+        private StimMaterialQuantity[] materialUsedField;
+        
+        private StimMaterialQuantity[] maxMaterialUsedRateField;
+        
+        private StimFluid fluidField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>A human readable name for the step.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("A human readable name for the step.")]
+        public string StepName {
+            get {
+                return this.stepNameField;
+            }
+            set {
+                this.stepNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Step number.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Step number.")]
+        public long StepNumber {
+            get {
+                return this.stepNumberField;
+            }
+            set {
+                this.stepNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The type of step.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("The type of step.")]
+        public string Kind {
+            get {
+                return this.kindField;
+            }
+            set {
+                this.kindField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A short description of the step.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("A short description of the step.")]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Date time of start of the step.</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
+        [System.ComponentModel.DescriptionAttribute("Date time of start of the step.")]
+        public string DTimStart {
+            get {
+                return this.dTimStartField;
+            }
+            set {
+                this.dTimStartField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Date time of end of the step.</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
+        [System.ComponentModel.DescriptionAttribute("Date time of end of the step.")]
+        public string DTimEnd {
+            get {
+                return this.dTimEndField;
+            }
+            set {
+                this.dTimEndField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Base quality percentage of foam.</summary>
+        [System.ComponentModel.DescriptionAttribute("Base quality percentage of foam.")]
+        public VolumePerVolumeMeasure AvgBaseFluidQuality {
+            get {
+                return this.avgBaseFluidQualityField;
+            }
+            set {
+                this.avgBaseFluidQualityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Base quality carbon dioxide percent of foam.</summary>
+        [System.ComponentModel.DescriptionAttribute("Base quality carbon dioxide percent of foam.")]
+        public VolumePerVolumeMeasure AvgCO2BaseFluidQuality {
+            get {
+                return this.avgCO2BaseFluidQualityField;
+            }
+            set {
+                this.avgCO2BaseFluidQualityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average hydraulic horse power used.</summary>
+        [System.ComponentModel.DescriptionAttribute("Average hydraulic horse power used.")]
+        public PowerMeasure AvgHydraulicPower {
+            get {
+                return this.avgHydraulicPowerField;
+            }
+            set {
+                this.avgHydraulicPowerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Internal Gas Phase percentage of foam.</summary>
+        [System.ComponentModel.DescriptionAttribute("Internal Gas Phase percentage of foam.")]
+        public VolumePerVolumeMeasure AvgInternalPhaseFraction {
+            get {
+                return this.avgInternalPhaseFractionField;
+            }
+            set {
+                this.avgInternalPhaseFractionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average material user per minute entering the flow stream.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("AvgMaterialUsedRate")]
+        [System.ComponentModel.DescriptionAttribute("Average material user per minute entering the flow stream.")]
+        public StimMaterialQuantity[] AvgMaterialUsedRate {
+            get {
+                return this.avgMaterialUsedRateField;
+            }
+            set {
+                this.avgMaterialUsedRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average material amount used (pumped) per minute at bottomhole.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("AvgMaterialUseRateBottomhole")]
+        [System.ComponentModel.DescriptionAttribute("Average material amount used (pumped) per minute at bottomhole.")]
+        public StimMaterialQuantity[] AvgMaterialUseRateBottomhole {
+            get {
+                return this.avgMaterialUseRateBottomholeField;
+            }
+            set {
+                this.avgMaterialUseRateBottomholeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Base quality nitrogen percentage of foam.</summary>
+        [System.ComponentModel.DescriptionAttribute("Base quality nitrogen percentage of foam.")]
+        public VolumePerVolumeMeasure AvgN2BaseFluidQuality {
+            get {
+                return this.avgN2BaseFluidQualityField;
+            }
+            set {
+                this.avgN2BaseFluidQualityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average bottomhole pressure.</summary>
+        [System.ComponentModel.DescriptionAttribute("Average bottomhole pressure.")]
+        public PressureMeasure AvgPresBottomhole {
+            get {
+                return this.avgPresBottomholeField;
+            }
+            set {
+                this.avgPresBottomholeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average surface pressure.</summary>
+        [System.ComponentModel.DescriptionAttribute("Average surface pressure.")]
+        public PressureMeasure AvgPresSurface {
+            get {
+                return this.avgPresSurfaceField;
+            }
+            set {
+                this.avgPresSurfaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average proppant concentration at the wellhead.  PPA (pounds proppant added per volume measure) kgpa (kilograms proppant added per volume measure)</summary>
+        [System.ComponentModel.DescriptionAttribute("Average proppant concentration at the wellhead.  PPA (pounds proppant added per v" +
+            "olume measure) kgpa (kilograms proppant added per volume measure)")]
+        public MassPerVolumeMeasure AvgPropConc {
+            get {
+                return this.avgPropConcField;
+            }
+            set {
+                this.avgPropConcField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The average proppant concentration bottomhole.</summary>
+        [System.ComponentModel.DescriptionAttribute("The average proppant concentration bottomhole.")]
+        public MassPerVolumeMeasure AvgProppantConcBottomhole {
+            get {
+                return this.avgProppantConcBottomholeField;
+            }
+            set {
+                this.avgProppantConcBottomholeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The average proppant concentration at the surface.</summary>
+        [System.ComponentModel.DescriptionAttribute("The average proppant concentration at the surface.")]
+        public MassPerVolumeMeasure AvgProppantConcSurface {
+            get {
+                return this.avgProppantConcSurfaceField;
+            }
+            set {
+                this.avgProppantConcSurfaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average proppant concentration exiting equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("Average proppant concentration exiting equipment.")]
+        public MassPerVolumeMeasure AvgSlurryPropConc {
+            get {
+                return this.avgSlurryPropConcField;
+            }
+            set {
+                this.avgSlurryPropConcField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average slurry return rate.</summary>
+        [System.ComponentModel.DescriptionAttribute("Average slurry return rate.")]
+        public VolumePerTimeMeasure AvgSlurryRate {
+            get {
+                return this.avgSlurryRateField;
+            }
+            set {
+                this.avgSlurryRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average fluid temperature.</summary>
+        [System.ComponentModel.DescriptionAttribute("Average fluid temperature.")]
+        public ThermodynamicTemperatureMeasure AvgTemperature {
+            get {
+                return this.avgTemperatureField;
+            }
+            set {
+                this.avgTemperatureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average volume per minute at the wellhead.</summary>
+        [System.ComponentModel.DescriptionAttribute("Average volume per minute at the wellhead.")]
+        public VolumePerTimeMeasure AvgVolumeRateWellhead {
+            get {
+                return this.avgVolumeRateWellheadField;
+            }
+            set {
+                this.avgVolumeRateWellheadField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Balls recovered during execution of the step.</summary>
+        [System.ComponentModel.DescriptionAttribute("Balls recovered during execution of the step.")]
+        public long BallsRecovered {
+            get {
+                return this.ballsRecoveredField;
+            }
+            set {
+                this.ballsRecoveredField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool BallsRecoveredSpecified {
+            get {
+                return this.ballsRecoveredFieldSpecified;
+            }
+            set {
+                this.ballsRecoveredFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Balls used during execution of the step.</summary>
+        [System.ComponentModel.DescriptionAttribute("Balls used during execution of the step.")]
+        public long BallsUsed {
+            get {
+                return this.ballsUsedField;
+            }
+            set {
+                this.ballsUsedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool BallsUsedSpecified {
+            get {
+                return this.ballsUsedFieldSpecified;
+            }
+            set {
+                this.ballsUsedFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Base fluid volume recorded after equipment set to bypass.</summary>
+        [System.ComponentModel.DescriptionAttribute("Base fluid volume recorded after equipment set to bypass.")]
+        public VolumeMeasure BaseFluidBypassVol {
+            get {
+                return this.baseFluidBypassVolField;
+            }
+            set {
+                this.baseFluidBypassVolField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Base fluid volume entering equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("Base fluid volume entering equipment.")]
+        public VolumeMeasure BaseFluidVol {
+            get {
+                return this.baseFluidVolField;
+            }
+            set {
+                this.baseFluidVolField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Ending dirty fluid pump volume per minute.</summary>
+        [System.ComponentModel.DescriptionAttribute("Ending dirty fluid pump volume per minute.")]
+        public VolumePerTimeMeasure EndDirtyMaterialRate {
+            get {
+                return this.endDirtyMaterialRateField;
+            }
+            set {
+                this.endDirtyMaterialRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Ending quantity of material used per minute entering the flow stream.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("EndMaterialUsedRate")]
+        [System.ComponentModel.DescriptionAttribute("Ending quantity of material used per minute entering the flow stream.")]
+        public StimMaterialQuantity[] EndMaterialUsedRate {
+            get {
+                return this.endMaterialUsedRateField;
+            }
+            set {
+                this.endMaterialUsedRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Ending quantity of material used per minute at bottomhole.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("EndMaterialUsedRateBottomhole")]
+        [System.ComponentModel.DescriptionAttribute("Ending quantity of material used per minute at bottomhole.")]
+        public StimMaterialQuantity[] EndMaterialUsedRateBottomhole {
+            get {
+                return this.endMaterialUsedRateBottomholeField;
+            }
+            set {
+                this.endMaterialUsedRateBottomholeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Final bottomhole pressure.</summary>
+        [System.ComponentModel.DescriptionAttribute("Final bottomhole pressure.")]
+        public PressureMeasure EndPresBottomhole {
+            get {
+                return this.endPresBottomholeField;
+            }
+            set {
+                this.endPresBottomholeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Final surface pressure.</summary>
+        [System.ComponentModel.DescriptionAttribute("Final surface pressure.")]
+        public PressureMeasure EndPresSurface {
+            get {
+                return this.endPresSurfaceField;
+            }
+            set {
+                this.endPresSurfaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The final proppant concentration bottomhole.</summary>
+        [System.ComponentModel.DescriptionAttribute("The final proppant concentration bottomhole.")]
+        public MassPerVolumeMeasure EndProppantConcBottomhole {
+            get {
+                return this.endProppantConcBottomholeField;
+            }
+            set {
+                this.endProppantConcBottomholeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The final proppant concentration at the surface.</summary>
+        [System.ComponentModel.DescriptionAttribute("The final proppant concentration at the surface.")]
+        public MassPerVolumeMeasure EndProppantConcSurface {
+            get {
+                return this.endProppantConcSurfaceField;
+            }
+            set {
+                this.endProppantConcSurfaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Final CO2 pump rate in volume per time at the surface.</summary>
+        [System.ComponentModel.DescriptionAttribute("Final CO2 pump rate in volume per time at the surface.")]
+        public string EndRateSurfaceCO2 {
+            get {
+                return this.endRateSurfaceCO2Field;
+            }
+            set {
+                this.endRateSurfaceCO2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Final nitrogen pump rate in volume per time at the surface.</summary>
+        [System.ComponentModel.DescriptionAttribute("Final nitrogen pump rate in volume per time at the surface.")]
+        public VolumePerTimeMeasure EndStdRateSurfaceN2 {
+            get {
+                return this.endStdRateSurfaceN2Field;
+            }
+            set {
+                this.endStdRateSurfaceN2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The step volume of the base step.</summary>
+        [System.ComponentModel.DescriptionAttribute("The step volume of the base step.")]
+        public VolumeMeasure FluidVolBase {
+            get {
+                return this.fluidVolBaseField;
+            }
+            set {
+                this.fluidVolBaseField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Fluid volume circulated.</summary>
+        [System.ComponentModel.DescriptionAttribute("Fluid volume circulated.")]
+        public VolumeMeasure FluidVolCirculated {
+            get {
+                return this.fluidVolCirculatedField;
+            }
+            set {
+                this.fluidVolCirculatedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Fluid volume pumped.</summary>
+        [System.ComponentModel.DescriptionAttribute("Fluid volume pumped.")]
+        public VolumeMeasure FluidVolPumped {
+            get {
+                return this.fluidVolPumpedField;
+            }
+            set {
+                this.fluidVolPumpedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Fluid volume returned.</summary>
+        [System.ComponentModel.DescriptionAttribute("Fluid volume returned.")]
+        public VolumeMeasure FluidVolReturned {
+            get {
+                return this.fluidVolReturnedField;
+            }
+            set {
+                this.fluidVolReturnedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The volume of the slurry (dirty) step.</summary>
+        [System.ComponentModel.DescriptionAttribute("The volume of the slurry (dirty) step.")]
+        public VolumeMeasure FluidVolSlurry {
+            get {
+                return this.fluidVolSlurryField;
+            }
+            set {
+                this.fluidVolSlurryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Fluid volume squeezed.</summary>
+        [System.ComponentModel.DescriptionAttribute("Fluid volume squeezed.")]
+        public VolumeMeasure FluidVolSqueezed {
+            get {
+                return this.fluidVolSqueezedField;
+            }
+            set {
+                this.fluidVolSqueezedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Fluid volume washed.</summary>
+        [System.ComponentModel.DescriptionAttribute("Fluid volume washed.")]
+        public VolumeMeasure FluidVolWashed {
+            get {
+                return this.fluidVolWashedField;
+            }
+            set {
+                this.fluidVolWashedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The fracture gradient at the end time of the step.</summary>
+        [System.ComponentModel.DescriptionAttribute("The fracture gradient at the end time of the step.")]
+        public ForcePerVolumeMeasure FractureGradientFinal {
+            get {
+                return this.fractureGradientFinalField;
+            }
+            set {
+                this.fractureGradientFinalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The fracture gradient prior at the start time of the step.</summary>
+        [System.ComponentModel.DescriptionAttribute("The fracture gradient prior at the start time of the step.")]
+        public ForcePerVolumeMeasure FractureGradientInitial {
+            get {
+                return this.fractureGradientInitialField;
+            }
+            set {
+                this.fractureGradientInitialField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Numeric value used to scale a calculated rheological friction.</summary>
+        [System.ComponentModel.DescriptionAttribute("Numeric value used to scale a calculated rheological friction.")]
+        public DimensionlessMeasure FrictionFactor {
+            get {
+                return this.frictionFactorField;
+            }
+            set {
+                this.frictionFactorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Maximum hydraulic power used during the step.</summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum hydraulic power used during the step.")]
+        public PowerMeasure MaxHydraulicPower {
+            get {
+                return this.maxHydraulicPowerField;
+            }
+            set {
+                this.maxHydraulicPowerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Maximum pumping pressure on surface.</summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum pumping pressure on surface.")]
+        public PressureMeasure MaxPresSurface {
+            get {
+                return this.maxPresSurfaceField;
+            }
+            set {
+                this.maxPresSurfaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Maximum proppant concentration at the bottom during the stimulation step.</summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum proppant concentration at the bottom during the stimulation step.")]
+        public MassPerVolumeMeasure MaxProppantConcBottomhole {
+            get {
+                return this.maxProppantConcBottomholeField;
+            }
+            set {
+                this.maxProppantConcBottomholeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Maximum proppant concentration at the wellhead.</summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum proppant concentration at the wellhead.")]
+        public MassPerVolumeMeasure MaxProppantConcSurface {
+            get {
+                return this.maxProppantConcSurfaceField;
+            }
+            set {
+                this.maxProppantConcSurfaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Maximum proppant concentration exiting equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum proppant concentration exiting equipment.")]
+        public MassPerVolumeMeasure MaxSlurryPropConc {
+            get {
+                return this.maxSlurryPropConcField;
+            }
+            set {
+                this.maxSlurryPropConcField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Maximum volume per minute at the wellhead.</summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum volume per minute at the wellhead.")]
+        public VolumePerTimeMeasure MaxVolumeRateWellhead {
+            get {
+                return this.maxVolumeRateWellheadField;
+            }
+            set {
+                this.maxVolumeRateWellheadField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The friction pressure contribution from pipes.</summary>
+        [System.ComponentModel.DescriptionAttribute("The friction pressure contribution from pipes.")]
+        public PressureMeasure PipeFrictionPressure {
+            get {
+                return this.pipeFrictionPressureField;
+            }
+            set {
+                this.pipeFrictionPressureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Total pumping time for the step.</summary>
+        [System.ComponentModel.DescriptionAttribute("Total pumping time for the step.")]
+        public TimeMeasure PumpTime {
+            get {
+                return this.pumpTimeField;
+            }
+            set {
+                this.pumpTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Starting dirty fluid volume per minute.</summary>
+        [System.ComponentModel.DescriptionAttribute("Starting dirty fluid volume per minute.")]
+        public VolumePerTimeMeasure StartDirtyMaterialRate {
+            get {
+                return this.startDirtyMaterialRateField;
+            }
+            set {
+                this.startDirtyMaterialRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Starting quantity of material used per minute entering the flow stream.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("StartMaterialUsedRate")]
+        [System.ComponentModel.DescriptionAttribute("Starting quantity of material used per minute entering the flow stream.")]
+        public StimMaterialQuantity[] StartMaterialUsedRate {
+            get {
+                return this.startMaterialUsedRateField;
+            }
+            set {
+                this.startMaterialUsedRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Starting quantity of material used per minute at bottomhole.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("StartMaterialUsedRateBottomHole")]
+        [System.ComponentModel.DescriptionAttribute("Starting quantity of material used per minute at bottomhole.")]
+        public StimMaterialQuantity[] StartMaterialUsedRateBottomHole {
+            get {
+                return this.startMaterialUsedRateBottomHoleField;
+            }
+            set {
+                this.startMaterialUsedRateBottomHoleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Starting bottomhole pressure.</summary>
+        [System.ComponentModel.DescriptionAttribute("Starting bottomhole pressure.")]
+        public PressureMeasure StartPresBottomhole {
+            get {
+                return this.startPresBottomholeField;
+            }
+            set {
+                this.startPresBottomholeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Starting surface pressure.</summary>
+        [System.ComponentModel.DescriptionAttribute("Starting surface pressure.")]
+        public PressureMeasure StartPresSurface {
+            get {
+                return this.startPresSurfaceField;
+            }
+            set {
+                this.startPresSurfaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The beginning proppant concentration bottomhole.</summary>
+        [System.ComponentModel.DescriptionAttribute("The beginning proppant concentration bottomhole.")]
+        public MassPerVolumeMeasure StartProppantConcBottomhole {
+            get {
+                return this.startProppantConcBottomholeField;
+            }
+            set {
+                this.startProppantConcBottomholeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The beginning proppant concentration at the surface.</summary>
+        [System.ComponentModel.DescriptionAttribute("The beginning proppant concentration at the surface.")]
+        public MassPerVolumeMeasure StartProppantConcSurface {
+            get {
+                return this.startProppantConcSurfaceField;
+            }
+            set {
+                this.startProppantConcSurfaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Slurry volume entering the well.</summary>
+        [System.ComponentModel.DescriptionAttribute("Slurry volume entering the well.")]
+        public VolumeMeasure WellheadVol {
+            get {
+                return this.wellheadVolField;
+            }
+            set {
+                this.wellheadVolField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public ExtensionNameValue[] ExtensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Material used during the step</summary>
+        [System.Xml.Serialization.XmlElementAttribute("MaterialUsed")]
+        [System.ComponentModel.DescriptionAttribute("Material used during the step")]
+        public StimMaterialQuantity[] MaterialUsed {
+            get {
+                return this.materialUsedField;
+            }
+            set {
+                this.materialUsedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("MaxMaterialUsedRate")]
+        public StimMaterialQuantity[] MaxMaterialUsedRate {
+            get {
+                return this.maxMaterialUsedRateField;
+            }
+            set {
+                this.maxMaterialUsedRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public StimFluid Fluid {
+            get {
+                return this.fluidField;
+            }
+            set {
+                this.fluidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for this instance of StimJobStep</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of StimJobStep")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class PowerMeasure {
+        
+        private PowerUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public PowerUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PowerUom {
+        
+        /// <remarks/>
+        cW,
+        
+        /// <remarks/>
+        dW,
+        
+        /// <remarks/>
+        EW,
+        
+        /// <remarks/>
+        fW,
+        
+        /// <remarks/>
+        GW,
+        
+        /// <remarks/>
+        hp,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hp[elec]")]
+        hpelec,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hp[hyd]")]
+        hphyd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hp[metric]")]
+        hpmetric,
+        
+        /// <remarks/>
+        kW,
+        
+        /// <remarks/>
+        MW,
+        
+        /// <remarks/>
+        mW,
+        
+        /// <remarks/>
+        nW,
+        
+        /// <remarks/>
+        pW,
+        
+        /// <remarks/>
+        tonRefrig,
+        
+        /// <remarks/>
+        TW,
+        
+        /// <remarks/>
+        uW,
+        
+        /// <remarks/>
+        W,
     }
     
     /// <remarks/>
@@ -9693,8 +6998,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of StimEvent</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of StimEvent")]
         public string uid {
             get {
                 return this.uidField;
@@ -9761,8 +7068,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of StimShutInPressure</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of StimShutInPressure")]
         public string uid {
             get {
                 return this.uidField;
@@ -9912,8 +7221,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of StimPumpFlowBackTest</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of StimPumpFlowBackTest")]
         public string uid {
             get {
                 return this.uidField;
@@ -9936,7 +7247,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private VolumeMeasure flowbackVolumeField;
         
-        private VolumeMeasure flowbackVolumePerMinuteField;
+        private VolumePerTimeMeasure flowbackVolumeRateField;
         
         private long numberField;
         
@@ -9986,12 +7297,12 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Flowback Rate.</summary>
         [System.ComponentModel.DescriptionAttribute("Flowback Rate.")]
-        public VolumeMeasure FlowbackVolumePerMinute {
+        public VolumePerTimeMeasure FlowbackVolumeRate {
             get {
-                return this.flowbackVolumePerMinuteField;
+                return this.flowbackVolumeRateField;
             }
             set {
-                this.flowbackVolumePerMinuteField = value;
+                this.flowbackVolumeRateField = value;
             }
         }
         
@@ -10107,8 +7418,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of StimPumpFlowBackTestStep</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of StimPumpFlowBackTestStep")]
         public string uid {
             get {
                 return this.uidField;
@@ -10173,8 +7486,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of StimPressureFlowRate</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of StimPressureFlowRate")]
         public string uid {
             get {
                 return this.uidField;
@@ -10242,8 +7557,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of StimStepTest</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of StimStepTest")]
         public string uid {
             get {
                 return this.uidField;
@@ -10408,8 +7725,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of StimStepDownTest</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of StimStepDownTest")]
         public string uid {
             get {
                 return this.uidField;
@@ -10428,7 +7747,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class StimFetTest {
         
-        private StimAnalysisMethod[] analysisMethodField;
+        private StimFetTestAnalysisMethod[] analysisMethodField;
         
         private string dTimStartField;
         
@@ -10468,7 +7787,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>An analysis method used for this FET test.</summary>
         [System.Xml.Serialization.XmlElementAttribute("AnalysisMethod")]
         [System.ComponentModel.DescriptionAttribute("An analysis method used for this FET test.")]
-        public StimAnalysisMethod[] AnalysisMethod {
+        public StimFetTestAnalysisMethod[] AnalysisMethod {
             get {
                 return this.analysisMethodField;
             }
@@ -10679,8 +7998,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of StimFetTest</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of StimFetTest")]
         public string uid {
             get {
                 return this.uidField;
@@ -10695,7 +8016,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum StimAnalysisMethod {
+    public enum StimFetTestAnalysisMethod {
         
         /// <remarks/>
         average,
@@ -11660,8 +8981,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of StimJobDiagnosticSession</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of StimJobDiagnosticSession")]
         public string uid {
             get {
                 return this.uidField;
@@ -11689,7 +9012,9 @@ namespace Energistics.Generator.WITSML200 {
         private double valueField;
         
         /// <remarks/>
+        /// <summary>Unit of measure used by this vertical depth coordinate</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Unit of measure used by this vertical depth coordinate")]
         public LengthUom uom {
             get {
                 return this.uomField;
@@ -11711,8 +9036,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Defines the vertical datums associated with elevation, vertical depth and measured depth coordinates</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Defines the vertical datums associated with elevation, vertical depth and measure" +
+            "d depth coordinates")]
         public string datum {
             get {
                 return this.datumField;
@@ -11730,6 +9058,1147 @@ namespace Energistics.Generator.WITSML200 {
             }
             set {
                 this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class PermeabilityLengthMeasure {
+        
+        private PermeabilityLengthUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public PermeabilityLengthUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PermeabilityLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("D.ft")]
+        Dft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("D.m")]
+        Dm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mD.ft")]
+        mDft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mD.m")]
+        mDm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TD[API].m")]
+        TDAPIm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class StimISO13503_5Point {
+        
+        private PermeabilityLengthMeasure conductivityField;
+        
+        private ThermodynamicTemperatureMeasure temperatureField;
+        
+        private PermeabilityRockMeasure permeabilityField;
+        
+        private string stressField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>The Conductivity under Stress.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The Conductivity under Stress.")]
+        public PermeabilityLengthMeasure Conductivity {
+            get {
+                return this.conductivityField;
+            }
+            set {
+                this.conductivityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The temperature at the time measurements were taken.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The temperature at the time measurements were taken.")]
+        public ThermodynamicTemperatureMeasure Temperature {
+            get {
+                return this.temperatureField;
+            }
+            set {
+                this.temperatureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The permeability under Stress.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The permeability under Stress.")]
+        public PermeabilityRockMeasure Permeability {
+            get {
+                return this.permeabilityField;
+            }
+            set {
+                this.permeabilityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The amount of stress applied.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The amount of stress applied.")]
+        public string Stress {
+            get {
+                return this.stressField;
+            }
+            set {
+                this.stressField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for this instance of StimISO13503_5Point</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of StimISO13503_5Point")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class ISO13503_2SieveAnalysisData {
+        
+        private MassPerMassMeasure percentRetainedField;
+        
+        private long sieveNumberField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>The percentage of mass retained in sieve.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The percentage of mass retained in sieve.")]
+        public MassPerMassMeasure PercentRetained {
+            get {
+                return this.percentRetainedField;
+            }
+            set {
+                this.percentRetainedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>ASTM US Standard mesh opening size used in Sieve analysis test.  Use ‘0’ to indicate ‘Pan’.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("ASTM US Standard mesh opening size used in Sieve analysis test.  Use ‘0’ to indic" +
+            "ate ‘Pan’.")]
+        public long SieveNumber {
+            get {
+                return this.sieveNumberField;
+            }
+            set {
+                this.sieveNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for this instance of ISO13503_2SieveAnalysisData</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of ISO13503_2SieveAnalysisData")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class MassPerMassMeasure {
+        
+        private MassPerMassUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public MassPerMassUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MassPerMassUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%")]
+        Item,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%[mass]")]
+        mass,
+        
+        /// <remarks/>
+        Euc,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("g/kg")]
+        gkg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("g/t")]
+        gt,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/kg")]
+        kgkg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/sack[94lbm]")]
+        kgsack94lbm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/t")]
+        kgt,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mg/g")]
+        mgg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mg/kg")]
+        mgkg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ng/g")]
+        ngg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ng/mg")]
+        ngmg,
+        
+        /// <remarks/>
+        ppk,
+        
+        /// <remarks/>
+        ppm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ppm[mass]")]
+        ppmmass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ug/g")]
+        ugg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ug/mg")]
+        ugmg,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class ISO13503_2CrushTestData {
+        
+        private MassPerMassMeasure finesField;
+        
+        private PressureMeasure stressField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Mass percentage of fines after being exposed to stress.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Mass percentage of fines after being exposed to stress.")]
+        public MassPerMassMeasure Fines {
+            get {
+                return this.finesField;
+            }
+            set {
+                this.finesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Stress measured at a point during a crush test.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Stress measured at a point during a crush test.")]
+        public PressureMeasure Stress {
+            get {
+                return this.stressField;
+            }
+            set {
+                this.stressField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for this instance of ISO13503_2CrushTestData</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of ISO13503_2CrushTestData")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class StimISO13503_2Properties {
+        
+        private MassPerVolumeMeasure absoluteDensityField;
+        
+        private DimensionlessMeasure clustersPercentField;
+        
+        private DimensionlessMeasure kValueField;
+        
+        private LengthMeasure meanParticleDiameterField;
+        
+        private LengthMeasure medianParticleDiameterField;
+        
+        private string specificGravityField;
+        
+        private DimensionlessMeasure roundnessField;
+        
+        private MassPerMassMeasure acidSolubilityField;
+        
+        private MassPerVolumeMeasure apparentDensityField;
+        
+        private MassPerVolumeMeasure bulkDensityField;
+        
+        private DimensionlessMeasure lossOnIgnitionField;
+        
+        private DimensionlessMeasure sphericityField;
+        
+        private DimensionlessMeasure turbidityField;
+        
+        private ISO13503_2CrushTestData[] crushTestDataField;
+        
+        private ISO13503_2SieveAnalysisData[] sieveAnalysisDataField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Absolute density is the density the material would have if no intra-granular porosity is present. (e.g. Boyle’s Law porosimetry)</summary>
+        [System.ComponentModel.DescriptionAttribute("Absolute density is the density the material would have if no intra-granular poro" +
+            "sity is present. (e.g. Boyle’s Law porosimetry)")]
+        public MassPerVolumeMeasure AbsoluteDensity {
+            get {
+                return this.absoluteDensityField;
+            }
+            set {
+                this.absoluteDensityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Percentage of undesirable agglomerated discrete proppant particles which typically occurs more with inefficiently processed natural sand proppants as opposed to manufactured ceramic proppants. ISO 13503-2 and API RP19C limit the mass of clusters to less than 1%.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"Percentage of undesirable agglomerated discrete proppant particles which typically occurs more with inefficiently processed natural sand proppants as opposed to manufactured ceramic proppants. ISO 13503-2 and API RP19C limit the mass of clusters to less than 1%.")]
+        public DimensionlessMeasure ClustersPercent {
+            get {
+                return this.clustersPercentField;
+            }
+            set {
+                this.clustersPercentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Crush test classification indicating the highest stress level at which a proppant generated no more than 10% crushed material rounded down to the nearest 1,000 psi during a crush test. For example, a value of 14 means ‘14K’ which is 14000 psi.</summary>
+        [System.ComponentModel.DescriptionAttribute("Crush test classification indicating the highest stress level at which a proppant" +
+            " generated no more than 10% crushed material rounded down to the nearest 1,000 p" +
+            "si during a crush test. For example, a value of 14 means ‘14K’ which is 14000 ps" +
+            "i.")]
+        public DimensionlessMeasure KValue {
+            get {
+                return this.kValueField;
+            }
+            set {
+                this.kValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The mean diameter of particles in a sample of proppant.</summary>
+        [System.ComponentModel.DescriptionAttribute("The mean diameter of particles in a sample of proppant.")]
+        public LengthMeasure MeanParticleDiameter {
+            get {
+                return this.meanParticleDiameterField;
+            }
+            set {
+                this.meanParticleDiameterField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The median diameter of particles in a sample of proppant.</summary>
+        [System.ComponentModel.DescriptionAttribute("The median diameter of particles in a sample of proppant.")]
+        public LengthMeasure MedianParticleDiameter {
+            get {
+                return this.medianParticleDiameterField;
+            }
+            set {
+                this.medianParticleDiameterField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Not formally part of ISO 13503 .2 properties, the specific gravity is the Apparent Density of the Proppant divided by the Density of Water.</summary>
+        [System.ComponentModel.DescriptionAttribute("Not formally part of ISO 13503 .2 properties, the specific gravity is the Apparen" +
+            "t Density of the Proppant divided by the Density of Water.")]
+        public string SpecificGravity {
+            get {
+                return this.specificGravityField;
+            }
+            set {
+                this.specificGravityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Krumbein Roundness Shape Factor that is a measure of the relative sharpness of grain corners or of grain curvature. Krumbein and Sloss (1963) are the most widely used method of determining shape factors.</summary>
+        [System.ComponentModel.DescriptionAttribute("Krumbein Roundness Shape Factor that is a measure of the relative sharpness of gr" +
+            "ain corners or of grain curvature. Krumbein and Sloss (1963) are the most widely" +
+            " used method of determining shape factors.")]
+        public DimensionlessMeasure Roundness {
+            get {
+                return this.roundnessField;
+            }
+            set {
+                this.roundnessField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The solubility of a proppant in 12:3 HCl:HF for 30 minutes at 150°F is an indication of the amount of soluble materials (i.e. carbonates, feldspars, iron oxides, clays, etc) present in the proppant.</summary>
+        [System.ComponentModel.DescriptionAttribute("The solubility of a proppant in 12:3 HCl:HF for 30 minutes at 150°F is an indicat" +
+            "ion of the amount of soluble materials (i.e. carbonates, feldspars, iron oxides," +
+            " clays, etc) present in the proppant.")]
+        public MassPerMassMeasure AcidSolubility {
+            get {
+                return this.acidSolubilityField;
+            }
+            set {
+                this.acidSolubilityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Apparent Density excludes extra-granular porosity by placing a known mass in a volume of fluid and determining how much of the fluid is displaced (Archimedes).</summary>
+        [System.ComponentModel.DescriptionAttribute("Apparent Density excludes extra-granular porosity by placing a known mass in a vo" +
+            "lume of fluid and determining how much of the fluid is displaced (Archimedes).")]
+        public MassPerVolumeMeasure ApparentDensity {
+            get {
+                return this.apparentDensityField;
+            }
+            set {
+                this.apparentDensityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Bulk Density includes both the proppant and the porosity. This is measured by filling a known volume with dry proppant and measuring the weight.</summary>
+        [System.ComponentModel.DescriptionAttribute("Bulk Density includes both the proppant and the porosity. This is measured by fil" +
+            "ling a known volume with dry proppant and measuring the weight.")]
+        public MassPerVolumeMeasure BulkDensity {
+            get {
+                return this.bulkDensityField;
+            }
+            set {
+                this.bulkDensityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A mass loss (gravimetric) test method applied to coated proppants only, which determines the mass of resin coating applied to a natural sand or manufactured proppant by means of thorough combustion of the flammable resin from the nonflammable proppant. Reported as a % of original mass.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"A mass loss (gravimetric) test method applied to coated proppants only, which determines the mass of resin coating applied to a natural sand or manufactured proppant by means of thorough combustion of the flammable resin from the nonflammable proppant. Reported as a % of original mass.")]
+        public DimensionlessMeasure LossOnIgnition {
+            get {
+                return this.lossOnIgnitionField;
+            }
+            set {
+                this.lossOnIgnitionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Krumbein Sphericity Shape Factor that is a measure of how closely a proppant particle approaches the shape of a sphere. Krumbein and Sloss (1963) are the most widely used method of determining shape factors.</summary>
+        [System.ComponentModel.DescriptionAttribute("Krumbein Sphericity Shape Factor that is a measure of how closely a proppant part" +
+            "icle approaches the shape of a sphere. Krumbein and Sloss (1963) are the most wi" +
+            "dely used method of determining shape factors.")]
+        public DimensionlessMeasure Sphericity {
+            get {
+                return this.sphericityField;
+            }
+            set {
+                this.sphericityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Turbidity is a measure of water clarity how much the material suspended in water decreases the passage of light through the water.  Unit of measure may be Nephelometric Turbidity Unit (NTU), but may vary based upon the detector geometry.</summary>
+        [System.ComponentModel.DescriptionAttribute("Turbidity is a measure of water clarity how much the material suspended in water " +
+            "decreases the passage of light through the water.  Unit of measure may be Nephel" +
+            "ometric Turbidity Unit (NTU), but may vary based upon the detector geometry.")]
+        public DimensionlessMeasure Turbidity {
+            get {
+                return this.turbidityField;
+            }
+            set {
+                this.turbidityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("CrushTestData")]
+        public ISO13503_2CrushTestData[] CrushTestData {
+            get {
+                return this.crushTestDataField;
+            }
+            set {
+                this.crushTestDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("SieveAnalysisData")]
+        public ISO13503_2SieveAnalysisData[] SieveAnalysisData {
+            get {
+                return this.sieveAnalysisDataField;
+            }
+            set {
+                this.sieveAnalysisDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for this instance of StimISO13503_2Properties</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of StimISO13503_2Properties")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class AreaPerMassMeasure {
+        
+        private AreaPerMassUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public AreaPerMassUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AreaPerMassUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm2/g")]
+        cm2g,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft2/lbm")]
+        ft2lbm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/g")]
+        m2g,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/kg")]
+        m2kg,
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimAdditive))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimProppantAgent))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class StimMaterial {
+        
+        private StimMaterialKind kindField;
+        
+        private bool kindFieldSpecified;
+        
+        private string nameField;
+        
+        private string supplierField;
+        
+        private ExtensionNameValue[] extensionNameValueField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        public StimMaterialKind Kind {
+            get {
+                return this.kindField;
+            }
+            set {
+                this.kindField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool KindSpecified {
+            get {
+                return this.kindFieldSpecified;
+            }
+            set {
+                this.kindFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Supplier {
+            get {
+                return this.supplierField;
+            }
+            set {
+                this.supplierField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
+        public ExtensionNameValue[] ExtensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum StimMaterialKind {
+        
+        /// <remarks/>
+        additive,
+        
+        /// <remarks/>
+        brine,
+        
+        /// <remarks/>
+        CO2,
+        
+        /// <remarks/>
+        gel,
+        
+        /// <remarks/>
+        N2,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("proppant agent")]
+        proppantagent,
+        
+        /// <remarks/>
+        water,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class StimAdditive : StimMaterial {
+        
+        private StimAdditiveKind additiveKindField;
+        
+        private bool additiveKindFieldSpecified;
+        
+        private string typeField;
+        
+        private string supplierCodeField;
+        
+        /// <remarks/>
+        /// <summary>Additive type or function from the enumeration 'StimAdditiveKind'.</summary>
+        [System.ComponentModel.DescriptionAttribute("Additive type or function from the enumeration \'StimAdditiveKind\'.")]
+        public StimAdditiveKind AdditiveKind {
+            get {
+                return this.additiveKindField;
+            }
+            set {
+                this.additiveKindField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool AdditiveKindSpecified {
+            get {
+                return this.additiveKindFieldSpecified;
+            }
+            set {
+                this.additiveKindFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The type of additive that is used which can represent a suppliers description or type of AdditiveKind.  For example, 5% HCl could be the type when AdditiveKind=acid.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("The type of additive that is used which can represent a suppliers description or " +
+            "type of AdditiveKind.  For example, 5% HCl could be the type when AdditiveKind=a" +
+            "cid.")]
+        public string Type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A code used to identify the supplier of the additive.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("A code used to identify the supplier of the additive.")]
+        public string SupplierCode {
+            get {
+                return this.supplierCodeField;
+            }
+            set {
+                this.supplierCodeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum StimAdditiveKind {
+        
+        /// <remarks/>
+        acid,
+        
+        /// <remarks/>
+        activator,
+        
+        /// <remarks/>
+        biocide,
+        
+        /// <remarks/>
+        breaker,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("breaker aid")]
+        breakeraid,
+        
+        /// <remarks/>
+        buffer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("clay stabilizer")]
+        claystabilizer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("corrosion inhibitor")]
+        corrosioninhibitor,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("corrosion inhibitor aid")]
+        corrosioninhibitoraid,
+        
+        /// <remarks/>
+        crosslinker,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("delaying agent")]
+        delayingagent,
+        
+        /// <remarks/>
+        fibers,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fluid loss additive")]
+        fluidlossadditive,
+        
+        /// <remarks/>
+        foamer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("friction reducer")]
+        frictionreducer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gelling agent")]
+        gellingagent,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("iron control additive")]
+        ironcontroladditive,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mutual solvent")]
+        mutualsolvent,
+        
+        /// <remarks/>
+        salt,
+        
+        /// <remarks/>
+        stabilizer,
+        
+        /// <remarks/>
+        surfactant,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class StimProppantAgent : StimMaterial {
+        
+        private DimensionlessMeasure frictionCoefficientLaminarField;
+        
+        private AreaPerMassMeasure massAbsorptionCoefficientField;
+        
+        private DimensionlessMeasure frictionCoefficientTurbulentField;
+        
+        private long meshSizeHighField;
+        
+        private bool meshSizeHighFieldSpecified;
+        
+        private long meshSizeLowField;
+        
+        private bool meshSizeLowFieldSpecified;
+        
+        private PressureMeasure unconfinedCompressiveStrengthField;
+        
+        private string proppantAgentKindField;
+        
+        private StimISO13503_2Properties[] iSO13503_2PropertiesField;
+        
+        private StimISO13503_5Point[] iSO13503_5PointField;
+        
+        /// <remarks/>
+        /// <summary>Laminar Flow Friction Coefficient.</summary>
+        [System.ComponentModel.DescriptionAttribute("Laminar Flow Friction Coefficient.")]
+        public DimensionlessMeasure FrictionCoefficientLaminar {
+            get {
+                return this.frictionCoefficientLaminarField;
+            }
+            set {
+                this.frictionCoefficientLaminarField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Characterizes how easily radiation passes through a material. This can be used to compute the concentration of proppant in a slurry using a densitometer.</summary>
+        [System.ComponentModel.DescriptionAttribute("Characterizes how easily radiation passes through a material. This can be used to" +
+            " compute the concentration of proppant in a slurry using a densitometer.")]
+        public AreaPerMassMeasure MassAbsorptionCoefficient {
+            get {
+                return this.massAbsorptionCoefficientField;
+            }
+            set {
+                this.massAbsorptionCoefficientField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Turbulent Flow Friction Coefficient.</summary>
+        [System.ComponentModel.DescriptionAttribute("Turbulent Flow Friction Coefficient.")]
+        public DimensionlessMeasure FrictionCoefficientTurbulent {
+            get {
+                return this.frictionCoefficientTurbulentField;
+            }
+            set {
+                this.frictionCoefficientTurbulentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>High value of Sieve mesh size - for 40/70 Sand, this value would be 70.</summary>
+        [System.ComponentModel.DescriptionAttribute("High value of Sieve mesh size - for 40/70 Sand, this value would be 70.")]
+        public long MeshSizeHigh {
+            get {
+                return this.meshSizeHighField;
+            }
+            set {
+                this.meshSizeHighField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool MeshSizeHighSpecified {
+            get {
+                return this.meshSizeHighFieldSpecified;
+            }
+            set {
+                this.meshSizeHighFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Low value of Sieve mesh size - for 40/70 Sand, this value would be 40.</summary>
+        [System.ComponentModel.DescriptionAttribute("Low value of Sieve mesh size - for 40/70 Sand, this value would be 40.")]
+        public long MeshSizeLow {
+            get {
+                return this.meshSizeLowField;
+            }
+            set {
+                this.meshSizeLowField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool MeshSizeLowSpecified {
+            get {
+                return this.meshSizeLowFieldSpecified;
+            }
+            set {
+                this.meshSizeLowFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The unconfined compressive strength of the proppant.</summary>
+        [System.ComponentModel.DescriptionAttribute("The unconfined compressive strength of the proppant.")]
+        public PressureMeasure UnconfinedCompressiveStrength {
+            get {
+                return this.unconfinedCompressiveStrengthField;
+            }
+            set {
+                this.unconfinedCompressiveStrengthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Proppant type or Function.</summary>
+        [System.ComponentModel.DescriptionAttribute("Proppant type or Function.")]
+        public string ProppantAgentKind {
+            get {
+                return this.proppantAgentKindField;
+            }
+            set {
+                this.proppantAgentKindField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ISO13503_2Properties")]
+        public StimISO13503_2Properties[] ISO13503_2Properties {
+            get {
+                return this.iSO13503_2PropertiesField;
+            }
+            set {
+                this.iSO13503_2PropertiesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ISO13503_5Point")]
+        public StimISO13503_5Point[] ISO13503_5Point {
+            get {
+                return this.iSO13503_5PointField;
+            }
+            set {
+                this.iSO13503_5PointField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class StimJobMaterialCatalog {
+        
+        private StimAdditive[] additivesField;
+        
+        private StimProppantAgent[] proppantAgentsField;
+        
+        /// <remarks/>
+        /// <summary>List of additives in the catalog.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("Additives")]
+        [System.ComponentModel.DescriptionAttribute("List of additives in the catalog.")]
+        public StimAdditive[] Additives {
+            get {
+                return this.additivesField;
+            }
+            set {
+                this.additivesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>List of proppant agents in the catalog.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("ProppantAgents")]
+        [System.ComponentModel.DescriptionAttribute("List of proppant agents in the catalog.")]
+        public StimProppantAgent[] ProppantAgents {
+            get {
+                return this.proppantAgentsField;
+            }
+            set {
+                this.proppantAgentsField = value;
             }
         }
     }
@@ -12735,9 +11204,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Degasser</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Degasser")]
         public string uid {
             get {
                 return this.uidField;
@@ -12792,6 +11263,10 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         acre,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("b/electron")]
+        belectron,
         
         /// <remarks/>
         b,
@@ -12983,9 +11458,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of NameTag</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of NameTag")]
         public string uid {
             get {
                 return this.uidField;
@@ -13144,9 +11621,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Hydrocyclone</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Hydrocyclone")]
         public string uid {
             get {
                 return this.uidField;
@@ -13304,9 +11783,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Centrifuge</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Centrifuge")]
         public string uid {
             get {
                 return this.uidField;
@@ -13687,9 +12168,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of MudPump</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of MudPump")]
         public string uid {
             get {
                 return this.uidField;
@@ -14020,9 +12503,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Pit</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Pit")]
         public string uid {
             get {
                 return this.uidField;
@@ -14244,9 +12729,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of BopComponent</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of BopComponent")]
         public string uid {
             get {
                 return this.uidField;
@@ -15092,9 +13579,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Shaker</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Shaker")]
         public string uid {
             get {
                 return this.uidField;
@@ -15103,6 +13592,4230 @@ namespace Energistics.Generator.WITSML200 {
                 this.uidField = value;
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class MudlogParameter {
+        
+        private MdInterval mdIntervalField;
+        
+        private GenericMeasure valueField;
+        
+        private Citation citationField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Measured depth interval which is the focus of this parameter</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth interval which is the focus of this parameter")]
+        public MdInterval MdInterval {
+            get {
+                return this.mdIntervalField;
+            }
+            set {
+                this.mdIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The value of the MudLog Paarameter</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The value of the MudLog Paarameter")]
+        public GenericMeasure Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the MudLog Parameter</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of t" +
+            "he MudLog Parameter")]
+        public Citation Citation {
+            get {
+                return this.citationField;
+            }
+            set {
+                this.citationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for this instance of MudLog Parameter</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of MudLog Parameter")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class GenericMeasure {
+        
+        private string uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
+        public string uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class Citation {
+        
+        private string titleField;
+        
+        private string originatorField;
+        
+        private System.DateTime creationField;
+        
+        private string formatField;
+        
+        private string editorField;
+        
+        private System.DateTime lastUpdateField;
+        
+        private bool lastUpdateFieldSpecified;
+        
+        private string versionStringField;
+        
+        private string descriptionField;
+        
+        private string descriptiveKeywordsField;
+        
+        /// <remarks/>
+        /// <summary>One line description/name of the RESQML object.  This is the equivalent in ISO 19115 of CI_Citation.title  Legacy DCGroup - title</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("One line description/name of the RESQML object.  This is the equivalent in ISO 19" +
+            "115 of CI_Citation.title  Legacy DCGroup - title")]
+        public string Title {
+            get {
+                return this.titleField;
+            }
+            set {
+                this.titleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name (or other human-readable identifier) of the person who initially originated the object or RESQML document in the source application. If that information is not available, the user who created the RESQML format file. The originator remains the same as the object is subsequently edited.   This is the equivalent in ISO 19115 to the CI_Individual.name or the CI_Organization.name of the citedResponsibleParty whose role is "originator".  Legacy DCGroup - author</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"Name (or other human-readable identifier) of the person who initially originated the object or RESQML document in the source application. If that information is not available, the user who created the RESQML format file. The originator remains the same as the object is subsequently edited.   This is the equivalent in ISO 19115 to the CI_Individual.name or the CI_Organization.name of the citedResponsibleParty whose role is ""originator"".  Legacy DCGroup - author")]
+        public string Originator {
+            get {
+                return this.originatorField;
+            }
+            set {
+                this.originatorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Date and time the document was created in the source application or, if that information is not available, when it was saved to the RESQML format file.  This is the equivalent of the ISO 19115 CI_Date where the CI_DateTypeCode = ”creation"  The type is the Energistics timestamp datatype which is the W3C xs:dateTime with the optional timezone offset from UTC made mandatory.  Format: YYYY-MM-DDThh:mm:ssZ[+/-]hh:mm  Legacy DCGroup - created</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"Date and time the document was created in the source application or, if that information is not available, when it was saved to the RESQML format file.  This is the equivalent of the ISO 19115 CI_Date where the CI_DateTypeCode = ”creation""  The type is the Energistics timestamp datatype which is the W3C xs:dateTime with the optional timezone offset from UTC made mandatory.  Format: YYYY-MM-DDThh:mm:ssZ[+/-]hh:mm  Legacy DCGroup - created")]
+        public System.DateTime Creation {
+            get {
+                return this.creationField;
+            }
+            set {
+                this.creationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Software or service that was used to originate the object and the file format created. Must be human and machine readable and unambiguously identify the software by including the company name, software name and software version. This is the equivalent in ISO 19115 to the distributionFormat.MD_Format.  The ISO format for this is [vendor:applicationName]/fileExtension where the application name includes the version number of the application.  SIG Implementation Notes  1. RESQML   - Legacy DCGroup from v1.1 - publisher - fileExtension is not relevant and will be ignored if present. - vendor and applicationName are mandatory.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute(@"Software or service that was used to originate the object and the file format created. Must be human and machine readable and unambiguously identify the software by including the company name, software name and software version. This is the equivalent in ISO 19115 to the distributionFormat.MD_Format.  The ISO format for this is [vendor:applicationName]/fileExtension where the application name includes the version number of the application.  SIG Implementation Notes  1. RESQML   - Legacy DCGroup from v1.1 - publisher - fileExtension is not relevant and will be ignored if present. - vendor and applicationName are mandatory.")]
+        public string Format {
+            get {
+                return this.formatField;
+            }
+            set {
+                this.formatField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name (or other human-readable identifier) of the last person who updated the object.   This is the equivalent in ISO 19115 to the CI_Individual.name or the CI_Organization.name of the citedResponsibleParty whose role is "editor".  Legacy DCGroup - contributor</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"Name (or other human-readable identifier) of the last person who updated the object.   This is the equivalent in ISO 19115 to the CI_Individual.name or the CI_Organization.name of the citedResponsibleParty whose role is ""editor"".  Legacy DCGroup - contributor")]
+        public string Editor {
+            get {
+                return this.editorField;
+            }
+            set {
+                this.editorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Date and time the document was last modified in the source application or, if that information is not available, when it was last saved to the RESQML format file.  This is the equivalent of the ISO 19115 CI_Date where the CI_DateTypeCode = ”lastUpdate"  The type is the Energistics timestamp datatype which is the W3C xs:dateTime with the optional timezone offset from UTC made mandatory.  Format: YYYY-MM-DDThh:mm:ssZ[+/-]hh:mm  Legacy DCGroup - modified</summary>
+        [System.ComponentModel.DescriptionAttribute(@"Date and time the document was last modified in the source application or, if that information is not available, when it was last saved to the RESQML format file.  This is the equivalent of the ISO 19115 CI_Date where the CI_DateTypeCode = ”lastUpdate""  The type is the Energistics timestamp datatype which is the W3C xs:dateTime with the optional timezone offset from UTC made mandatory.  Format: YYYY-MM-DDThh:mm:ssZ[+/-]hh:mm  Legacy DCGroup - modified")]
+        public System.DateTime LastUpdate {
+            get {
+                return this.lastUpdateField;
+            }
+            set {
+                this.lastUpdateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LastUpdateSpecified {
+            get {
+                return this.lastUpdateFieldSpecified;
+            }
+            set {
+                this.lastUpdateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        public string VersionString {
+            get {
+                return this.versionStringField;
+            }
+            set {
+                this.versionStringField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>User descriptive comments about the object. Intended for end-user use (human readable); not necessarily meant to be used by software.  This is the equivalent of the ISO 19115 abstract.CharacterString  Legacy DCGroup - description</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("User descriptive comments about the object. Intended for end-user use (human read" +
+            "able); not necessarily meant to be used by software.  This is the equivalent of " +
+            "the ISO 19115 abstract.CharacterString  Legacy DCGroup - description")]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Key words to describe the activity, for example, history match or volumetric calculations, relevant to this object. Intended to be used in a search function by software.  This is the equivalent in ISO 19115 of descriptiveKeywords.MD_Keywords  Legacy DCGroup - subject</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute(@"Key words to describe the activity, for example, history match or volumetric calculations, relevant to this object. Intended to be used in a search function by software.  This is the equivalent in ISO 19115 of descriptiveKeywords.MD_Keywords  Legacy DCGroup - subject")]
+        public string DescriptiveKeywords {
+            get {
+                return this.descriptiveKeywordsField;
+            }
+            set {
+                this.descriptiveKeywordsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class GasPeak {
+        
+        private GasPeakType peakTypeField;
+        
+        private LengthMeasure mdPeakField;
+        
+        private VolumePerVolumeMeasure averageGasField;
+        
+        private VolumePerVolumeMeasure peakGasField;
+        
+        private VolumePerVolumeMeasure backgroundGasField;
+        
+        private DataObjectReference channelField;
+        
+        /// <remarks/>
+        /// <summary>Type of gas peak</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Type of gas peak")]
+        public GasPeakType PeakType {
+            get {
+                return this.peakTypeField;
+            }
+            set {
+                this.peakTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Measured depth at which gas reading was made</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at which gas reading was made")]
+        public LengthMeasure MdPeak {
+            get {
+                return this.mdPeakField;
+            }
+            set {
+                this.mdPeakField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average total gas</summary>
+        [System.ComponentModel.DescriptionAttribute("Average total gas")]
+        public VolumePerVolumeMeasure AverageGas {
+            get {
+                return this.averageGasField;
+            }
+            set {
+                this.averageGasField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Peak gas reading</summary>
+        [System.ComponentModel.DescriptionAttribute("Peak gas reading")]
+        public VolumePerVolumeMeasure PeakGas {
+            get {
+                return this.peakGasField;
+            }
+            set {
+                this.peakGasField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Background gas reading</summary>
+        [System.ComponentModel.DescriptionAttribute("Background gas reading")]
+        public VolumePerVolumeMeasure BackgroundGas {
+            get {
+                return this.backgroundGasField;
+            }
+            set {
+                this.backgroundGasField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference Channel {
+            get {
+                return this.channelField;
+            }
+            set {
+                this.channelField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum GasPeakType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("circulating background gas")]
+        circulatingbackgroundgas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("connection gas")]
+        connectiongas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling background gas")]
+        drillingbackgroundgas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("drilling gas peak")]
+        drillinggaspeak,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("flow check gas")]
+        flowcheckgas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("no readings")]
+        noreadings,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shut down gas")]
+        shutdowngas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("trip gas")]
+        tripgas,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class DataObjectReference {
+        
+        private string contentTypeField;
+        
+        private string titleField;
+        
+        private string uuidField;
+        
+        private string uuidAuthorityField;
+        
+        private string uriField;
+        
+        private string versionStringField;
+        
+        /// <remarks/>
+        /// <summary>The content type of the referenced element.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("The content type of the referenced element.")]
+        public string ContentType {
+            get {
+                return this.contentTypeField;
+            }
+            set {
+                this.contentTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The Title of the referenced object. The Title of a top level element would be inherited from AbstractObject and must be present on any referenced object.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("The Title of the referenced object. The Title of a top level element would be inh" +
+            "erited from AbstractObject and must be present on any referenced object.")]
+        public string Title {
+            get {
+                return this.titleField;
+            }
+            set {
+                this.titleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Reference to an object using its global UID.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
+        [System.ComponentModel.DescriptionAttribute("Reference to an object using its global UID.")]
+        public string Uuid {
+            get {
+                return this.uuidField;
+            }
+            set {
+                this.uuidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The authority that issued and maintains the uuid of the referenced object. Used mainly in alias context.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The authority that issued and maintains the uuid of the referenced object. Used m" +
+            "ainly in alias context.")]
+        public string UuidAuthority {
+            get {
+                return this.uuidAuthorityField;
+            }
+            set {
+                this.uuidAuthorityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>This is the URI of a referenced object.   Do not use this to store the path and file names of an external object - that is done through the External Dataset machinery.  This element is intended for use with the Energistics Transfer Protocol.</summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
+        [System.ComponentModel.DescriptionAttribute("This is the URI of a referenced object.   Do not use this to store the path and f" +
+            "ile names of an external object - that is done through the External Dataset mach" +
+            "inery.  This element is intended for use with the Energistics Transfer Protocol." +
+            "")]
+        public string Uri {
+            get {
+                return this.uriField;
+            }
+            set {
+                this.uriField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Indicates the version of the object which is referenced.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Indicates the version of the object which is referenced.")]
+        public string VersionString {
+            get {
+                return this.versionStringField;
+            }
+            set {
+                this.versionStringField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class GasInMud {
+        
+        private VolumePerVolumeMeasure averageField;
+        
+        private VolumePerVolumeMeasure maximumField;
+        
+        private DataObjectReference channelField;
+        
+        /// <remarks/>
+        /// <summary>Average percentage of gas in mud</summary>
+        [System.ComponentModel.DescriptionAttribute("Average percentage of gas in mud")]
+        public VolumePerVolumeMeasure Average {
+            get {
+                return this.averageField;
+            }
+            set {
+                this.averageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Maximum percentage of gas in mud</summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum percentage of gas in mud")]
+        public VolumePerVolumeMeasure Maximum {
+            get {
+                return this.maximumField;
+            }
+            set {
+                this.maximumField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference Channel {
+            get {
+                return this.channelField;
+            }
+            set {
+                this.channelField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class MudGas {
+        
+        private GasInMud gasInMudField;
+        
+        private GasPeak[] gasPeakField;
+        
+        /// <remarks/>
+        public GasInMud GasInMud {
+            get {
+                return this.gasInMudField;
+            }
+            set {
+                this.gasInMudField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("GasPeak")]
+        public GasPeak[] GasPeak {
+            get {
+                return this.gasPeakField;
+            }
+            set {
+                this.gasPeakField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class DxcStatistics {
+        
+        private DimensionlessMeasure averageField;
+        
+        private DataObjectReference channelField;
+        
+        /// <remarks/>
+        /// <summary>Average drilling coefficient  through Interval</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Average drilling coefficient  through Interval")]
+        public DimensionlessMeasure Average {
+            get {
+                return this.averageField;
+            }
+            set {
+                this.averageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Log Channel from which the drilling coefficient statistics were calculated</summary>
+        [System.ComponentModel.DescriptionAttribute("Log Channel from which the drilling coefficient statistics were calculated")]
+        public DataObjectReference Channel {
+            get {
+                return this.channelField;
+            }
+            set {
+                this.channelField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class EcdStatistics {
+        
+        private MassPerVolumeMeasure averageField;
+        
+        private DataObjectReference channelField;
+        
+        /// <remarks/>
+        /// <summary>Average equivalent circulating density at td through Interval</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Average equivalent circulating density at td through Interval")]
+        public MassPerVolumeMeasure Average {
+            get {
+                return this.averageField;
+            }
+            set {
+                this.averageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Log Channel from which the equivalent circulating density at td statistics were calculated</summary>
+        [System.ComponentModel.DescriptionAttribute("Log Channel from which the equivalent circulating density at td statistics were c" +
+            "alculated")]
+        public DataObjectReference Channel {
+            get {
+                return this.channelField;
+            }
+            set {
+                this.channelField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class MudDensityStatistics {
+        
+        private MassPerVolumeMeasure averageField;
+        
+        private DataObjectReference channelField;
+        
+        /// <remarks/>
+        /// <summary>Average mud density through Interval</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Average mud density through Interval")]
+        public MassPerVolumeMeasure Average {
+            get {
+                return this.averageField;
+            }
+            set {
+                this.averageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Log Channel from which the mud density statistics were calculated</summary>
+        [System.ComponentModel.DescriptionAttribute("Log Channel from which the mud density statistics were calculated")]
+        public DataObjectReference Channel {
+            get {
+                return this.channelField;
+            }
+            set {
+                this.channelField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class RpmStatistics {
+        
+        private AngularVelocityMeasure averageField;
+        
+        private DataObjectReference channelField;
+        
+        /// <remarks/>
+        /// <summary>Average turn rate bit through Interval</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Average turn rate bit through Interval")]
+        public AngularVelocityMeasure Average {
+            get {
+                return this.averageField;
+            }
+            set {
+                this.averageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Log Channel from which the turn rate statistics were calculated</summary>
+        [System.ComponentModel.DescriptionAttribute("Log Channel from which the turn rate statistics were calculated")]
+        public DataObjectReference Channel {
+            get {
+                return this.channelField;
+            }
+            set {
+                this.channelField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class ElectricCurrentMeasure {
+        
+        private ElectricCurrentUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public ElectricCurrentUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ElectricCurrentUom {
+        
+        /// <remarks/>
+        A,
+        
+        /// <remarks/>
+        cA,
+        
+        /// <remarks/>
+        dA,
+        
+        /// <remarks/>
+        EA,
+        
+        /// <remarks/>
+        fA,
+        
+        /// <remarks/>
+        GA,
+        
+        /// <remarks/>
+        kA,
+        
+        /// <remarks/>
+        MA,
+        
+        /// <remarks/>
+        mA,
+        
+        /// <remarks/>
+        nA,
+        
+        /// <remarks/>
+        pA,
+        
+        /// <remarks/>
+        TA,
+        
+        /// <remarks/>
+        uA,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class TorqueCurrentStatistics {
+        
+        private ElectricCurrentMeasure averageField;
+        
+        private DataObjectReference channelField;
+        
+        /// <remarks/>
+        /// <summary>Average electric current through Interval</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Average electric current through Interval")]
+        public ElectricCurrentMeasure Average {
+            get {
+                return this.averageField;
+            }
+            set {
+                this.averageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Log Channel from which the electric current statistics were calculated</summary>
+        [System.ComponentModel.DescriptionAttribute("Log Channel from which the electric current statistics were calculated")]
+        public DataObjectReference Channel {
+            get {
+                return this.channelField;
+            }
+            set {
+                this.channelField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class TorqueStatistics {
+        
+        private MomentOfForceMeasure averageField;
+        
+        private DataObjectReference channelField;
+        
+        /// <remarks/>
+        /// <summary>Average torque through Interval</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Average torque through Interval")]
+        public MomentOfForceMeasure Average {
+            get {
+                return this.averageField;
+            }
+            set {
+                this.averageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Log Channel from which the torque statistics were calculated</summary>
+        [System.ComponentModel.DescriptionAttribute("Log Channel from which the torque statistics were calculated")]
+        public DataObjectReference Channel {
+            get {
+                return this.channelField;
+            }
+            set {
+                this.channelField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class MomentOfForceMeasure {
+        
+        private MomentOfForceUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public MomentOfForceUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MomentOfForceUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 lbf.ft")]
+        Item1000lbfft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("daN.m")]
+        daNm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dN.m")]
+        dNm,
+        
+        /// <remarks/>
+        J,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kgf.m")]
+        kgfm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kN.m")]
+        kNm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf.ft")]
+        lbfft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf.in")]
+        lbfin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm.ft2/s2")]
+        lbmft2s2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N.m")]
+        Nm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pdl.ft")]
+        pdlft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[US].ft")]
+        tonfUSft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[US].mi")]
+        tonfUSmi,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class WobStatistics {
+        
+        private ForceMeasure averageField;
+        
+        private DataObjectReference channelField;
+        
+        /// <remarks/>
+        /// <summary>Average weight on bit through Interval</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Average weight on bit through Interval")]
+        public ForceMeasure Average {
+            get {
+                return this.averageField;
+            }
+            set {
+                this.averageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Log Channel from which the WOB statistics were calculated</summary>
+        [System.ComponentModel.DescriptionAttribute("Log Channel from which the WOB statistics were calculated")]
+        public DataObjectReference Channel {
+            get {
+                return this.channelField;
+            }
+            set {
+                this.channelField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class ForceMeasure {
+        
+        private ForceUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public ForceUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ForceUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("10 kN")]
+        Item10kN,
+        
+        /// <remarks/>
+        cN,
+        
+        /// <remarks/>
+        daN,
+        
+        /// <remarks/>
+        dN,
+        
+        /// <remarks/>
+        dyne,
+        
+        /// <remarks/>
+        EN,
+        
+        /// <remarks/>
+        fN,
+        
+        /// <remarks/>
+        gf,
+        
+        /// <remarks/>
+        GN,
+        
+        /// <remarks/>
+        hN,
+        
+        /// <remarks/>
+        kdyne,
+        
+        /// <remarks/>
+        kgf,
+        
+        /// <remarks/>
+        klbf,
+        
+        /// <remarks/>
+        kN,
+        
+        /// <remarks/>
+        lbf,
+        
+        /// <remarks/>
+        Mgf,
+        
+        /// <remarks/>
+        mN,
+        
+        /// <remarks/>
+        MN,
+        
+        /// <remarks/>
+        N,
+        
+        /// <remarks/>
+        nN,
+        
+        /// <remarks/>
+        ozf,
+        
+        /// <remarks/>
+        pdl,
+        
+        /// <remarks/>
+        pN,
+        
+        /// <remarks/>
+        TN,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[UK]")]
+        tonfUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[US]")]
+        tonfUS,
+        
+        /// <remarks/>
+        uN,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class RopStatistics {
+        
+        private LengthPerTimeMeasure averageField;
+        
+        private LengthPerTimeMeasure minimumField;
+        
+        private LengthPerTimeMeasure maximumField;
+        
+        private DataObjectReference channelField;
+        
+        /// <remarks/>
+        /// <summary>Average rate of penetration through Interval</summary>
+        [System.ComponentModel.DescriptionAttribute("Average rate of penetration through Interval")]
+        public LengthPerTimeMeasure Average {
+            get {
+                return this.averageField;
+            }
+            set {
+                this.averageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Minimum rate of penetration through Interval</summary>
+        [System.ComponentModel.DescriptionAttribute("Minimum rate of penetration through Interval")]
+        public LengthPerTimeMeasure Minimum {
+            get {
+                return this.minimumField;
+            }
+            set {
+                this.minimumField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Maximum rate of penetration through Interval</summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum rate of penetration through Interval")]
+        public LengthPerTimeMeasure Maximum {
+            get {
+                return this.maximumField;
+            }
+            set {
+                this.maximumField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Log Channel from which the ROP statistics were calculated</summary>
+        [System.ComponentModel.DescriptionAttribute("Log Channel from which the ROP statistics were calculated")]
+        public DataObjectReference Channel {
+            get {
+                return this.channelField;
+            }
+            set {
+                this.channelField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class LengthPerTimeMeasure {
+        
+        private LengthPerTimeUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public LengthPerTimeUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LengthPerTimeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 ft/h")]
+        Item1000fth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 ft/s")]
+        Item1000fts,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm/a")]
+        cma,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm/s")]
+        cms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dm/s")]
+        dms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/d")]
+        ftd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/h")]
+        fth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/min")]
+        ftmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/ms")]
+        ftms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/s")]
+        fts,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/us")]
+        ftus,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in/a")]
+        ina,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in/min")]
+        inmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in/s")]
+        ins,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("km/h")]
+        kmh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("km/s")]
+        kms,
+        
+        /// <remarks/>
+        knot,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/d")]
+        md,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/h")]
+        mh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/min")]
+        mmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/ms")]
+        mms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/s")]
+        ms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mi/h")]
+        mih,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mil/a")]
+        mila,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mm/a")]
+        mma,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mm/s")]
+        mms1,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nm/s")]
+        nms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("um/s")]
+        ums,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class DrillingParameters {
+        
+        private RopStatistics ropField;
+        
+        private WobStatistics averageWeightOnBitField;
+        
+        private TorqueStatistics averageTorqueField;
+        
+        private TorqueCurrentStatistics averageTorqueCurrentField;
+        
+        private RpmStatistics averageTurnRateField;
+        
+        private MudDensityStatistics averageMudDensityField;
+        
+        private EcdStatistics averageEcdAtTdField;
+        
+        private DxcStatistics averageDrillingCoefficientField;
+        
+        /// <remarks/>
+        /// <summary>Rate of penetration through interval</summary>
+        [System.ComponentModel.DescriptionAttribute("Rate of penetration through interval")]
+        public RopStatistics Rop {
+            get {
+                return this.ropField;
+            }
+            set {
+                this.ropField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Surface weight on bit - average through interval</summary>
+        [System.ComponentModel.DescriptionAttribute("Surface weight on bit - average through interval")]
+        public WobStatistics AverageWeightOnBit {
+            get {
+                return this.averageWeightOnBitField;
+            }
+            set {
+                this.averageWeightOnBitField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average torque through interval</summary>
+        [System.ComponentModel.DescriptionAttribute("Average torque through interval")]
+        public TorqueStatistics AverageTorque {
+            get {
+                return this.averageTorqueField;
+            }
+            set {
+                this.averageTorqueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average torque current through interval. This is the raw measurement from which the average torque could be calculated</summary>
+        [System.ComponentModel.DescriptionAttribute("Average torque current through interval. This is the raw measurement from which t" +
+            "he average torque could be calculated")]
+        public TorqueCurrentStatistics AverageTorqueCurrent {
+            get {
+                return this.averageTorqueCurrentField;
+            }
+            set {
+                this.averageTorqueCurrentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average turn rate through interval (commonly in rpm)</summary>
+        [System.ComponentModel.DescriptionAttribute("Average turn rate through interval (commonly in rpm)")]
+        public RpmStatistics AverageTurnRate {
+            get {
+                return this.averageTurnRateField;
+            }
+            set {
+                this.averageTurnRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average mud density through the interval</summary>
+        [System.ComponentModel.DescriptionAttribute("Average mud density through the interval")]
+        public MudDensityStatistics AverageMudDensity {
+            get {
+                return this.averageMudDensityField;
+            }
+            set {
+                this.averageMudDensityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average effective circulating density at TD through Interval</summary>
+        [System.ComponentModel.DescriptionAttribute("Average effective circulating density at TD through Interval")]
+        public EcdStatistics AverageEcdAtTd {
+            get {
+                return this.averageEcdAtTdField;
+            }
+            set {
+                this.averageEcdAtTdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average drilling exponent through Interval</summary>
+        [System.ComponentModel.DescriptionAttribute("Average drilling exponent through Interval")]
+        public DxcStatistics AverageDrillingCoefficient {
+            get {
+                return this.averageDrillingCoefficientField;
+            }
+            set {
+                this.averageDrillingCoefficientField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class Chromatograph {
+        
+        private MdInterval chromatographMdIntervalField;
+        
+        private string dateTimeGasSampleProcessedField;
+        
+        private string chromatographTypeField;
+        
+        private TimeMeasure eTimChromCycleField;
+        
+        private string chromReportTimeField;
+        
+        private MassPerVolumeMeasure mudWeightInField;
+        
+        private MassPerVolumeMeasure mudWeightOutField;
+        
+        private VolumePerVolumeMeasure methAvField;
+        
+        private VolumePerVolumeMeasure methMnField;
+        
+        private VolumePerVolumeMeasure methMxField;
+        
+        private VolumePerVolumeMeasure ethAvField;
+        
+        private VolumePerVolumeMeasure ethMnField;
+        
+        private VolumePerVolumeMeasure ethMxField;
+        
+        private VolumePerVolumeMeasure propAvField;
+        
+        private VolumePerVolumeMeasure propMnField;
+        
+        private VolumePerVolumeMeasure propMxField;
+        
+        private VolumePerVolumeMeasure ibutAvField;
+        
+        private VolumePerVolumeMeasure ibutMnField;
+        
+        private VolumePerVolumeMeasure ibutMxField;
+        
+        private VolumePerVolumeMeasure nbutAvField;
+        
+        private VolumePerVolumeMeasure nbutMnField;
+        
+        private VolumePerVolumeMeasure nbutMxField;
+        
+        private VolumePerVolumeMeasure ipentAvField;
+        
+        private VolumePerVolumeMeasure ipentMnField;
+        
+        private VolumePerVolumeMeasure ipentMxField;
+        
+        private VolumePerVolumeMeasure npentAvField;
+        
+        private VolumePerVolumeMeasure npentMnField;
+        
+        private VolumePerVolumeMeasure npentMxField;
+        
+        private VolumePerVolumeMeasure epentAvField;
+        
+        private VolumePerVolumeMeasure epentMnField;
+        
+        private VolumePerVolumeMeasure epentMxField;
+        
+        private VolumePerVolumeMeasure ihexAvField;
+        
+        private VolumePerVolumeMeasure ihexMnField;
+        
+        private VolumePerVolumeMeasure ihexMxField;
+        
+        private VolumePerVolumeMeasure nhexAvField;
+        
+        private VolumePerVolumeMeasure nhexMnField;
+        
+        private VolumePerVolumeMeasure nhexMxField;
+        
+        private VolumePerVolumeMeasure co2AvField;
+        
+        private VolumePerVolumeMeasure co2MnField;
+        
+        private VolumePerVolumeMeasure co2MxField;
+        
+        private VolumePerVolumeMeasure h2sAvField;
+        
+        private VolumePerVolumeMeasure h2sMnField;
+        
+        private VolumePerVolumeMeasure h2sMxField;
+        
+        private VolumePerVolumeMeasure acetyleneField;
+        
+        private DataObjectReference channelField;
+        
+        /// <remarks/>
+        /// <summary>Measured interval related to the chromatograph results</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured interval related to the chromatograph results")]
+        public MdInterval ChromatographMdInterval {
+            get {
+                return this.chromatographMdIntervalField;
+            }
+            set {
+                this.chromatographMdIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The date and time at which the gas sample was processed.</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
+        [System.ComponentModel.DescriptionAttribute("The date and time at which the gas sample was processed.")]
+        public string DateTimeGasSampleProcessed {
+            get {
+                return this.dateTimeGasSampleProcessedField;
+            }
+            set {
+                this.dateTimeGasSampleProcessedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Chromatograph type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Chromatograph type.")]
+        public string ChromatographType {
+            get {
+                return this.chromatographTypeField;
+            }
+            set {
+                this.chromatographTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Chromatograph cycle time. Commonly in seconds.</summary>
+        [System.ComponentModel.DescriptionAttribute("Chromatograph cycle time. Commonly in seconds.")]
+        public TimeMeasure ETimChromCycle {
+            get {
+                return this.eTimChromCycleField;
+            }
+            set {
+                this.eTimChromCycleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Chromatograph integrator report time, format may be variable due to recording equipment</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
+        [System.ComponentModel.DescriptionAttribute("Chromatograph integrator report time, format may be variable due to recording equ" +
+            "ipment")]
+        public string ChromReportTime {
+            get {
+                return this.chromReportTimeField;
+            }
+            set {
+                this.chromReportTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Mud density in (active pits).</summary>
+        [System.ComponentModel.DescriptionAttribute("Mud density in (active pits).")]
+        public MassPerVolumeMeasure MudWeightIn {
+            get {
+                return this.mudWeightInField;
+            }
+            set {
+                this.mudWeightInField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Mud density out (flowline).</summary>
+        [System.ComponentModel.DescriptionAttribute("Mud density out (flowline).")]
+        public MassPerVolumeMeasure MudWeightOut {
+            get {
+                return this.mudWeightOutField;
+            }
+            set {
+                this.mudWeightOutField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Methane (C1) ppm (average).</summary>
+        [System.ComponentModel.DescriptionAttribute("Methane (C1) ppm (average).")]
+        public VolumePerVolumeMeasure MethAv {
+            get {
+                return this.methAvField;
+            }
+            set {
+                this.methAvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Methane (C1) ppm (minimum).</summary>
+        [System.ComponentModel.DescriptionAttribute("Methane (C1) ppm (minimum).")]
+        public VolumePerVolumeMeasure MethMn {
+            get {
+                return this.methMnField;
+            }
+            set {
+                this.methMnField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Methane (C1) ppm (maximum).</summary>
+        [System.ComponentModel.DescriptionAttribute("Methane (C1) ppm (maximum).")]
+        public VolumePerVolumeMeasure MethMx {
+            get {
+                return this.methMxField;
+            }
+            set {
+                this.methMxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Ethane (C2) ppm (average).</summary>
+        [System.ComponentModel.DescriptionAttribute("Ethane (C2) ppm (average).")]
+        public VolumePerVolumeMeasure EthAv {
+            get {
+                return this.ethAvField;
+            }
+            set {
+                this.ethAvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Ethane (C2) ppm (minimum).</summary>
+        [System.ComponentModel.DescriptionAttribute("Ethane (C2) ppm (minimum).")]
+        public VolumePerVolumeMeasure EthMn {
+            get {
+                return this.ethMnField;
+            }
+            set {
+                this.ethMnField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Ethane (C2) ppm (maximum).</summary>
+        [System.ComponentModel.DescriptionAttribute("Ethane (C2) ppm (maximum).")]
+        public VolumePerVolumeMeasure EthMx {
+            get {
+                return this.ethMxField;
+            }
+            set {
+                this.ethMxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Propane (C3) ppm (average).</summary>
+        [System.ComponentModel.DescriptionAttribute("Propane (C3) ppm (average).")]
+        public VolumePerVolumeMeasure PropAv {
+            get {
+                return this.propAvField;
+            }
+            set {
+                this.propAvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Propane (C3) ppm (minimum).</summary>
+        [System.ComponentModel.DescriptionAttribute("Propane (C3) ppm (minimum).")]
+        public VolumePerVolumeMeasure PropMn {
+            get {
+                return this.propMnField;
+            }
+            set {
+                this.propMnField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Propane (C3) ppm (maximum).</summary>
+        [System.ComponentModel.DescriptionAttribute("Propane (C3) ppm (maximum).")]
+        public VolumePerVolumeMeasure PropMx {
+            get {
+                return this.propMxField;
+            }
+            set {
+                this.propMxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>iso-Butane (iC4) ppm (average).</summary>
+        [System.ComponentModel.DescriptionAttribute("iso-Butane (iC4) ppm (average).")]
+        public VolumePerVolumeMeasure IbutAv {
+            get {
+                return this.ibutAvField;
+            }
+            set {
+                this.ibutAvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>iso-Butane (iC4) ppm (minimum).</summary>
+        [System.ComponentModel.DescriptionAttribute("iso-Butane (iC4) ppm (minimum).")]
+        public VolumePerVolumeMeasure IbutMn {
+            get {
+                return this.ibutMnField;
+            }
+            set {
+                this.ibutMnField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>iso-Butane (iC4) ppm (maximum).</summary>
+        [System.ComponentModel.DescriptionAttribute("iso-Butane (iC4) ppm (maximum).")]
+        public VolumePerVolumeMeasure IbutMx {
+            get {
+                return this.ibutMxField;
+            }
+            set {
+                this.ibutMxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>nor-Butane (nC4) ppm (average).</summary>
+        [System.ComponentModel.DescriptionAttribute("nor-Butane (nC4) ppm (average).")]
+        public VolumePerVolumeMeasure NbutAv {
+            get {
+                return this.nbutAvField;
+            }
+            set {
+                this.nbutAvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>nor-Butane (nC4) ppm (minimum).</summary>
+        [System.ComponentModel.DescriptionAttribute("nor-Butane (nC4) ppm (minimum).")]
+        public VolumePerVolumeMeasure NbutMn {
+            get {
+                return this.nbutMnField;
+            }
+            set {
+                this.nbutMnField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>nor-Butane (nC4) ppm (maximum).</summary>
+        [System.ComponentModel.DescriptionAttribute("nor-Butane (nC4) ppm (maximum).")]
+        public VolumePerVolumeMeasure NbutMx {
+            get {
+                return this.nbutMxField;
+            }
+            set {
+                this.nbutMxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>iso-Pentane (iC5) ppm (average).</summary>
+        [System.ComponentModel.DescriptionAttribute("iso-Pentane (iC5) ppm (average).")]
+        public VolumePerVolumeMeasure IpentAv {
+            get {
+                return this.ipentAvField;
+            }
+            set {
+                this.ipentAvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>iso-Pentane (iC5) ppm (minimum).</summary>
+        [System.ComponentModel.DescriptionAttribute("iso-Pentane (iC5) ppm (minimum).")]
+        public VolumePerVolumeMeasure IpentMn {
+            get {
+                return this.ipentMnField;
+            }
+            set {
+                this.ipentMnField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>iso-Pentane (iC5) ppm (maximum).</summary>
+        [System.ComponentModel.DescriptionAttribute("iso-Pentane (iC5) ppm (maximum).")]
+        public VolumePerVolumeMeasure IpentMx {
+            get {
+                return this.ipentMxField;
+            }
+            set {
+                this.ipentMxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>nor-Pentane (nC5) ppm (average).</summary>
+        [System.ComponentModel.DescriptionAttribute("nor-Pentane (nC5) ppm (average).")]
+        public VolumePerVolumeMeasure NpentAv {
+            get {
+                return this.npentAvField;
+            }
+            set {
+                this.npentAvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>nor-Pentane (nC5) ppm (minimum).</summary>
+        [System.ComponentModel.DescriptionAttribute("nor-Pentane (nC5) ppm (minimum).")]
+        public VolumePerVolumeMeasure NpentMn {
+            get {
+                return this.npentMnField;
+            }
+            set {
+                this.npentMnField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>nor-Pentane (nC5) ppm (maximum).</summary>
+        [System.ComponentModel.DescriptionAttribute("nor-Pentane (nC5) ppm (maximum).")]
+        public VolumePerVolumeMeasure NpentMx {
+            get {
+                return this.npentMxField;
+            }
+            set {
+                this.npentMxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>neo-Pentane (eC5) ppm (average).</summary>
+        [System.ComponentModel.DescriptionAttribute("neo-Pentane (eC5) ppm (average).")]
+        public VolumePerVolumeMeasure EpentAv {
+            get {
+                return this.epentAvField;
+            }
+            set {
+                this.epentAvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>neo-Pentane (eC5) ppm (minimum).</summary>
+        [System.ComponentModel.DescriptionAttribute("neo-Pentane (eC5) ppm (minimum).")]
+        public VolumePerVolumeMeasure EpentMn {
+            get {
+                return this.epentMnField;
+            }
+            set {
+                this.epentMnField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>neo-Pentane (eC5) ppm (maximum).</summary>
+        [System.ComponentModel.DescriptionAttribute("neo-Pentane (eC5) ppm (maximum).")]
+        public VolumePerVolumeMeasure EpentMx {
+            get {
+                return this.epentMxField;
+            }
+            set {
+                this.epentMxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>iso-Hexane (iC6) ppm (average).</summary>
+        [System.ComponentModel.DescriptionAttribute("iso-Hexane (iC6) ppm (average).")]
+        public VolumePerVolumeMeasure IhexAv {
+            get {
+                return this.ihexAvField;
+            }
+            set {
+                this.ihexAvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>iso-Hexane (iC6) ppm (minimum).</summary>
+        [System.ComponentModel.DescriptionAttribute("iso-Hexane (iC6) ppm (minimum).")]
+        public VolumePerVolumeMeasure IhexMn {
+            get {
+                return this.ihexMnField;
+            }
+            set {
+                this.ihexMnField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>iso-Hexane (iC6) ppm (maximum).</summary>
+        [System.ComponentModel.DescriptionAttribute("iso-Hexane (iC6) ppm (maximum).")]
+        public VolumePerVolumeMeasure IhexMx {
+            get {
+                return this.ihexMxField;
+            }
+            set {
+                this.ihexMxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>nor-Hexane (nC6) ppm (average).</summary>
+        [System.ComponentModel.DescriptionAttribute("nor-Hexane (nC6) ppm (average).")]
+        public VolumePerVolumeMeasure NhexAv {
+            get {
+                return this.nhexAvField;
+            }
+            set {
+                this.nhexAvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>nor-Hexane (nC6) ppm (minimum).</summary>
+        [System.ComponentModel.DescriptionAttribute("nor-Hexane (nC6) ppm (minimum).")]
+        public VolumePerVolumeMeasure NhexMn {
+            get {
+                return this.nhexMnField;
+            }
+            set {
+                this.nhexMnField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>nor-Hexane (nC6) ppm (maximum).</summary>
+        [System.ComponentModel.DescriptionAttribute("nor-Hexane (nC6) ppm (maximum).")]
+        public VolumePerVolumeMeasure NhexMx {
+            get {
+                return this.nhexMxField;
+            }
+            set {
+                this.nhexMxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Carbon Dioxide ppm (average).</summary>
+        [System.ComponentModel.DescriptionAttribute("Carbon Dioxide ppm (average).")]
+        public VolumePerVolumeMeasure Co2Av {
+            get {
+                return this.co2AvField;
+            }
+            set {
+                this.co2AvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Carbon Dioxide ppm (minimum).</summary>
+        [System.ComponentModel.DescriptionAttribute("Carbon Dioxide ppm (minimum).")]
+        public VolumePerVolumeMeasure Co2Mn {
+            get {
+                return this.co2MnField;
+            }
+            set {
+                this.co2MnField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Carbon Dioxide ppm (maximum).</summary>
+        [System.ComponentModel.DescriptionAttribute("Carbon Dioxide ppm (maximum).")]
+        public VolumePerVolumeMeasure Co2Mx {
+            get {
+                return this.co2MxField;
+            }
+            set {
+                this.co2MxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Hydrogen Sulfide (average) ppm.</summary>
+        [System.ComponentModel.DescriptionAttribute("Hydrogen Sulfide (average) ppm.")]
+        public VolumePerVolumeMeasure H2sAv {
+            get {
+                return this.h2sAvField;
+            }
+            set {
+                this.h2sAvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Hydrogen Sulfide (minimum) ppm.</summary>
+        [System.ComponentModel.DescriptionAttribute("Hydrogen Sulfide (minimum) ppm.")]
+        public VolumePerVolumeMeasure H2sMn {
+            get {
+                return this.h2sMnField;
+            }
+            set {
+                this.h2sMnField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Hydrogen Sulfide (maximum) ppm.</summary>
+        [System.ComponentModel.DescriptionAttribute("Hydrogen Sulfide (maximum) ppm.")]
+        public VolumePerVolumeMeasure H2sMx {
+            get {
+                return this.h2sMxField;
+            }
+            set {
+                this.h2sMxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Acetylene.</summary>
+        [System.ComponentModel.DescriptionAttribute("Acetylene.")]
+        public VolumePerVolumeMeasure Acetylene {
+            get {
+                return this.acetyleneField;
+            }
+            set {
+                this.acetyleneField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public DataObjectReference Channel {
+            get {
+                return this.channelField;
+            }
+            set {
+                this.channelField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("part_MudLogReportInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    public partial class MudlogReportInterval {
+        
+        private MdInterval mdIntervalField;
+        
+        private CuttingsGeologyInterval cuttingsGeologyIntervalField;
+        
+        private InterpretedGeologyInterval interpretedGeologyIntervalField;
+        
+        private ShowEvaluationInterval showEvaluationIntervalField;
+        
+        private Chromatograph chromatographField;
+        
+        private DrillingParameters[] drillingParametersField;
+        
+        private MudGas[] mudGasField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Measured depth interval</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Measured depth interval")]
+        public MdInterval MdInterval {
+            get {
+                return this.mdIntervalField;
+            }
+            set {
+                this.mdIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The cuttings geology interval that is part of this mudlog report</summary>
+        [System.ComponentModel.DescriptionAttribute("The cuttings geology interval that is part of this mudlog report")]
+        public CuttingsGeologyInterval CuttingsGeologyInterval {
+            get {
+                return this.cuttingsGeologyIntervalField;
+            }
+            set {
+                this.cuttingsGeologyIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The interpreted geology interval that is part of this mudlog report</summary>
+        [System.ComponentModel.DescriptionAttribute("The interpreted geology interval that is part of this mudlog report")]
+        public InterpretedGeologyInterval InterpretedGeologyInterval {
+            get {
+                return this.interpretedGeologyIntervalField;
+            }
+            set {
+                this.interpretedGeologyIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The show evaluation interval that is part of this mudlog report</summary>
+        [System.ComponentModel.DescriptionAttribute("The show evaluation interval that is part of this mudlog report")]
+        public ShowEvaluationInterval ShowEvaluationInterval {
+            get {
+                return this.showEvaluationIntervalField;
+            }
+            set {
+                this.showEvaluationIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Chromatograph Chromatograph {
+            get {
+                return this.chromatographField;
+            }
+            set {
+                this.chromatographField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("DrillingParameters")]
+        public DrillingParameters[] DrillingParameters {
+            get {
+                return this.drillingParametersField;
+            }
+            set {
+                this.drillingParametersField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("MudGas")]
+        public MudGas[] MudGas {
+            get {
+                return this.mudGasField;
+            }
+            set {
+                this.mudGasField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for this instance of MudLog Report Interval</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of MudLog Report Interval")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("part_CuttingsInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    public partial class CuttingsGeologyInterval {
+        
+        private MdInterval mdIntervalField;
+        
+        private Citation citationField;
+        
+        private MassPerVolumeMeasure densBulkField;
+        
+        private MassPerVolumeMeasure densShaleField;
+        
+        private VolumePerVolumeMeasure calciteField;
+        
+        private VolumePerVolumeMeasure calcStabField;
+        
+        private DimensionlessMeasure cecField;
+        
+        private VolumePerVolumeMeasure dolomiteField;
+        
+        private LengthMeasure sizeMinField;
+        
+        private LengthMeasure sizeMaxField;
+        
+        private IlluminanceMeasure qftField;
+        
+        private string cleaningMethodField;
+        
+        private string dryingMethodField;
+        
+        private CuttingsIntervalLithology[] cuttingsIntervalLithologyField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>The measured depth interval which is represented by the cuttings described here.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The measured depth interval which is represented by the cuttings described here.")]
+        public MdInterval MdInterval {
+            get {
+                return this.mdIntervalField;
+            }
+            set {
+                this.mdIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the CuttingsGeologyInterval</summary>
+        [System.ComponentModel.DescriptionAttribute("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of t" +
+            "he CuttingsGeologyInterval")]
+        public Citation Citation {
+            get {
+                return this.citationField;
+            }
+            set {
+                this.citationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Sample bulk density for the interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("Sample bulk density for the interval.")]
+        public MassPerVolumeMeasure DensBulk {
+            get {
+                return this.densBulkField;
+            }
+            set {
+                this.densBulkField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Shale density for the interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("Shale density for the interval.")]
+        public MassPerVolumeMeasure DensShale {
+            get {
+                return this.densShaleField;
+            }
+            set {
+                this.densShaleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Calcimetry calcite percentage.</summary>
+        [System.ComponentModel.DescriptionAttribute("Calcimetry calcite percentage.")]
+        public VolumePerVolumeMeasure Calcite {
+            get {
+                return this.calciteField;
+            }
+            set {
+                this.calciteField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Calcimetry stabilized percentage.</summary>
+        [System.ComponentModel.DescriptionAttribute("Calcimetry stabilized percentage.")]
+        public VolumePerVolumeMeasure CalcStab {
+            get {
+                return this.calcStabField;
+            }
+            set {
+                this.calcStabField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cuttings cationic exchange capacity. Temporarily calling this a DimensionlessMeasure</summary>
+        [System.ComponentModel.DescriptionAttribute("Cuttings cationic exchange capacity. Temporarily calling this a DimensionlessMeas" +
+            "ure")]
+        public DimensionlessMeasure Cec {
+            get {
+                return this.cecField;
+            }
+            set {
+                this.cecField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Calcimetry dolomite percentage.</summary>
+        [System.ComponentModel.DescriptionAttribute("Calcimetry dolomite percentage.")]
+        public VolumePerVolumeMeasure Dolomite {
+            get {
+                return this.dolomiteField;
+            }
+            set {
+                this.dolomiteField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Minimum size.</summary>
+        [System.ComponentModel.DescriptionAttribute("Minimum size.")]
+        public LengthMeasure SizeMin {
+            get {
+                return this.sizeMinField;
+            }
+            set {
+                this.sizeMinField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Maximum size.</summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum size.")]
+        public LengthMeasure SizeMax {
+            get {
+                return this.sizeMaxField;
+            }
+            set {
+                this.sizeMaxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Fluorescence as measured using a device licensed for the Quantitative Fluorescence Technique.</summary>
+        [System.ComponentModel.DescriptionAttribute("Fluorescence as measured using a device licensed for the Quantitative Fluorescenc" +
+            "e Technique.")]
+        public IlluminanceMeasure Qft {
+            get {
+                return this.qftField;
+            }
+            set {
+                this.qftField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Sample treatment: cleaning method.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Sample treatment: cleaning method.")]
+        public string CleaningMethod {
+            get {
+                return this.cleaningMethodField;
+            }
+            set {
+                this.cleaningMethodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Sample treatment: drying method.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Sample treatment: drying method.")]
+        public string DryingMethod {
+            get {
+                return this.dryingMethodField;
+            }
+            set {
+                this.dryingMethodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("CuttingsIntervalLithology")]
+        public CuttingsIntervalLithology[] CuttingsIntervalLithology {
+            get {
+                return this.cuttingsIntervalLithologyField;
+            }
+            set {
+                this.cuttingsIntervalLithologyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for this instance of CuttingsGeologyInterval</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of CuttingsGeologyInterval")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class IlluminanceMeasure {
+        
+        private IlluminanceUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public IlluminanceUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum IlluminanceUom {
+        
+        /// <remarks/>
+        footcandle,
+        
+        /// <remarks/>
+        klx,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lm/m2")]
+        lmm2,
+        
+        /// <remarks/>
+        lx,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class CuttingsIntervalLithology {
+        
+        private string kindField;
+        
+        private VolumePerVolumeMeasure lithPcField;
+        
+        private Citation citationField;
+        
+        private string codeLithField;
+        
+        private string colorField;
+        
+        private string textureField;
+        
+        private string hardnessField;
+        
+        private string compactionField;
+        
+        private string sizeGrainField;
+        
+        private string roundnessField;
+        
+        private string sphericityField;
+        
+        private string sortingField;
+        
+        private string matrixCementField;
+        
+        private string porosityVisibleField;
+        
+        private string porosityFabricField;
+        
+        private string permeabilityField;
+        
+        private CuttingsIntervalShow[] showsField;
+        
+        private LithologyQualifier[] qualifierField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>The geological name for the type of lithology from the enum table listing a  subset of the OneGeology / CGI defined formation types.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute("The geological name for the type of lithology from the enum table listing a  subs" +
+            "et of the OneGeology / CGI defined formation types.")]
+        public string Kind {
+            get {
+                return this.kindField;
+            }
+            set {
+                this.kindField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The lithology represents the portion of the sampled interval this lithology type relates to. The total of the lithologies within an interval should add up to 100 percent. If LithologySource in cs-geology is "interpreted" only 100% is allowed. If "core" or "cuttings" then recommended useage is the creating application uses blocks of 10%. i.e. 10, 20, 30, 40, 50, 60, 70, 80, 90, 100. Ideally the input application should enforce a total of 100% for every defined depth interval. If the total for a depth interval does not add up to 100%, the "undifferentiated" code should be used to fill out to 100%.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"The lithology represents the portion of the sampled interval this lithology type relates to. The total of the lithologies within an interval should add up to 100 percent. If LithologySource in cs-geology is ""interpreted"" only 100% is allowed. If ""core"" or ""cuttings"" then recommended useage is the creating application uses blocks of 10%. i.e. 10, 20, 30, 40, 50, 60, 70, 80, 90, 100. Ideally the input application should enforce a total of 100% for every defined depth interval. If the total for a depth interval does not add up to 100%, the ""undifferentiated"" code should be used to fill out to 100%.")]
+        public VolumePerVolumeMeasure LithPc {
+            get {
+                return this.lithPcField;
+            }
+            set {
+                this.lithPcField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the CuttingsIntervalLithology</summary>
+        [System.ComponentModel.DescriptionAttribute("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of t" +
+            "he CuttingsIntervalLithology")]
+        public Citation Citation {
+            get {
+                return this.citationField;
+            }
+            set {
+                this.citationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A custom Lithology encoding sceme if desired. (It is recommended that if used, this follows the NPD required useage with the numeric values noted in the enum tables, which was the original intent for this item).  The NPD Coding System assigned a digital code to the main lithologies as per the Norwegian Blue Book data standards. The code was then derived by Lithology = (Main lithology * 10) + cement + (modifier / 100). Example: Calcite cemented silty micaceous sandstone: ( 33 * 10 ) + 1 + (21 / 100) gives a numeric code of 331.21. However the NPD is also working through Energistics/Ceasar to potentially change this useage.) This should not be used for mnemonics, as those vary by operator, and if an abbreviation is  required a local look up table should be used by the rendering client, based on Lithology Type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"A custom Lithology encoding sceme if desired. (It is recommended that if used, this follows the NPD required useage with the numeric values noted in the enum tables, which was the original intent for this item).  The NPD Coding System assigned a digital code to the main lithologies as per the Norwegian Blue Book data standards. The code was then derived by Lithology = (Main lithology * 10) + cement + (modifier / 100). Example: Calcite cemented silty micaceous sandstone: ( 33 * 10 ) + 1 + (21 / 100) gives a numeric code of 331.21. However the NPD is also working through Energistics/Ceasar to potentially change this useage.) This should not be used for mnemonics, as those vary by operator, and if an abbreviation is  required a local look up table should be used by the rendering client, based on Lithology Type.")]
+        public string CodeLith {
+            get {
+                return this.codeLithField;
+            }
+            set {
+                this.codeLithField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology color description, from Shell 1995 4.3.3.1 and 4.3.3.2 Colors. with the addition of Frosted. eg black blue brown buff green grey olive orange pink purple red translucent frosted white yellow, modified by dark, light, moderate, medium, mottled, variegated, slight, weak, strong, vivid.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology color description, from Shell 1995 4.3.3.1 and 4.3.3.2 Colors. with the addition of Frosted. eg black blue brown buff green grey olive orange pink purple red translucent frosted white yellow, modified by dark, light, moderate, medium, mottled, variegated, slight, weak, strong, vivid.")]
+        public string Color {
+            get {
+                return this.colorField;
+            }
+            set {
+                this.colorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6. crystalline, (often "feather-edge" appearance on breaking),  friable, dull, earthy,  chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,   sucrosic, (often exhibits capillary imbibition). e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6. crystalline, (often ""feather-edge"" appearance on breaking),  friable, dull, earthy,  chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,   sucrosic, (often exhibits capillary imbibition). e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)")]
+        public string Texture {
+            get {
+                return this.textureField;
+            }
+            set {
+                this.textureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Mineral hardness. (Typically this will rarely be used as mineral hardness is not typically recorded. What is recorded is typically compaction. It is retained though for use defined as per Mohs scale of mineral hardness.)</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Mineral hardness. (Typically this will rarely be us" +
+            "ed as mineral hardness is not typically recorded. What is recorded is typically " +
+            "compaction. It is retained though for use defined as per Mohs scale of mineral h" +
+            "ardness.)")]
+        public string Hardness {
+            get {
+                return this.hardnessField;
+            }
+            set {
+                this.hardnessField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5. not compacted, slightly compacted, compacted, strongly compacted, friable, indurated, hard.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5. not c" +
+            "ompacted, slightly compacted, compacted, strongly compacted, friable, indurated," +
+            " hard.")]
+        public string Compaction {
+            get {
+                return this.compactionField;
+            }
+            set {
+                this.compactionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite.  Size ranges in millimeter (or micrometer) and Inches. LT 256 mmLT 10.1 in "boulder"; 64-256 mm2.5-10.1 in"cobble"; 32-64 mm1.26-2.5 in"very coarse gravel"; 16-32 mm0.63-1.26 in"coarse gravel"; 8-16 mm0.31-0.63 in"medium gravel"; 4-8 mm0.157-0.31 in"fine gravel"; 2-4 mm0.079-0.157 in"very fine gravel"; 1-2 mm0.039-0.079 in"very coarse sand"; 0.5-1 mm0.020-0.039 in"coarse sand"; 0.25-0.5 mm0.010-0.020 in"medium sand"; 125-250 um0.0049-0.010 in"fine sand"; 62.5-125 um0.0025-0.0049 in"very fine sand"; 3.90625-62.5 um0.00015-0.0025 in"silt"; LT 3.90625 umLT 0.00015 in"clay"; LT 1 umLT 0.000039 in "colloid"</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite.  Size ranges in millimeter (or micrometer) and Inches. LT 256 mmLT 10.1 in ""boulder""; 64-256 mm2.5-10.1 in""cobble""; 32-64 mm1.26-2.5 in""very coarse gravel""; 16-32 mm0.63-1.26 in""coarse gravel""; 8-16 mm0.31-0.63 in""medium gravel""; 4-8 mm0.157-0.31 in""fine gravel""; 2-4 mm0.079-0.157 in""very fine gravel""; 1-2 mm0.039-0.079 in""very coarse sand""; 0.5-1 mm0.020-0.039 in""coarse sand""; 0.25-0.5 mm0.010-0.020 in""medium sand""; 125-250 um0.0049-0.010 in""fine sand""; 62.5-125 um0.0025-0.0049 in""very fine sand""; 3.90625-62.5 um0.00015-0.0025 in""silt""; LT 3.90625 umLT 0.00015 in""clay""; LT 1 umLT 0.000039 in ""colloid""")]
+        public string SizeGrain {
+            get {
+                return this.sizeGrainField;
+            }
+            set {
+                this.sizeGrainField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 Roundness (roundness refers to modal size class). very angular, angular, subangular, subrounded, rounded, well rounded.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 " +
+            "Roundness (roundness refers to modal size class). very angular, angular, subangu" +
+            "lar, subrounded, rounded, well rounded.")]
+        public string Roundness {
+            get {
+                return this.roundnessField;
+            }
+            set {
+                this.roundnessField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity. very elongated, elongated, slightly elongated, slightly spherical, spherical, very spherical</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size" +
+            " class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity. very el" +
+            "ongated, elongated, slightly elongated, slightly spherical, spherical, very sphe" +
+            "rical")]
+        public string Sphericity {
+            get {
+                return this.sphericityField;
+            }
+            set {
+                this.sphericityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting. very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting. very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.")]
+        public string Sorting {
+            get {
+                return this.sortingField;
+            }
+            set {
+                this.sortingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table. eg. "calcite" (Common) "dolomite", "ankerite" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation, "siderite" (Sherwood sandstones, southern UK typical Siderite cements), "quartz" (grain to grain contact cementation or secondary quartz deposition), "kaolinite", "illite" (eg. Village Fields North Sea), "smectite","chlorite" (Teg, Algeria.)</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table. eg. ""calcite"" (Common) ""dolomite"", ""ankerite"" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation, ""siderite"" (Sherwood sandstones, southern UK typical Siderite cements), ""quartz"" (grain to grain contact cementation or secondary quartz deposition), ""kaolinite"", ""illite"" (eg. Village Fields North Sea), ""smectite"",""chlorite"" (Teg, Algeria.)")]
+        public string MatrixCement {
+            get {
+                return this.matrixCementField;
+            }
+            set {
+                this.matrixCementField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors. When estimating porosities use: MT 15% "good" 10 to 15% "fair" 5 to 10% "poor" LT 5% "trace" 0 "none"</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors. When estimating porosities use: MT 15% ""good"" 10 to 15% ""fair"" 5 to 10% ""poor"" LT 5% ""trace"" 0 ""none""")]
+        public string PorosityVisible {
+            get {
+                return this.porosityVisibleField;
+            }
+            set {
+                this.porosityVisibleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2. intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2. intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.")]
+        public string PorosityFabric {
+            get {
+                return this.porosityFabricField;
+            }
+            set {
+                this.porosityFabricField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2.5. In future these would benefit from quantification. tight, slightly, fairly, highly.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2" +
+            ".5. In future these would benefit from quantification. tight, slightly, fairly, " +
+            "highly.")]
+        public string Permeability {
+            get {
+                return this.permeabilityField;
+            }
+            set {
+                this.permeabilityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Shows")]
+        public CuttingsIntervalShow[] Shows {
+            get {
+                return this.showsField;
+            }
+            set {
+                this.showsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Qualifier")]
+        public LithologyQualifier[] Qualifier {
+            get {
+                return this.qualifierField;
+            }
+            set {
+                this.qualifierField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for this instance of CuttingsIntervalLithology</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of CuttingsIntervalLithology")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class CuttingsIntervalShow {
+        
+        private Citation citationField;
+        
+        private ShowRating showRatingField;
+        
+        private bool showRatingFieldSpecified;
+        
+        private string stainColorField;
+        
+        private string stainDistrField;
+        
+        private AreaPerAreaMeasure stainPcField;
+        
+        private ShowSpeed cutSpeedField;
+        
+        private bool cutSpeedFieldSpecified;
+        
+        private string cutColorField;
+        
+        private string cutStrengthField;
+        
+        private ShowLevel cutFormField;
+        
+        private bool cutFormFieldSpecified;
+        
+        private string cutLevelField;
+        
+        private ShowLevel cutFlorFormField;
+        
+        private bool cutFlorFormFieldSpecified;
+        
+        private string cutFlorColorField;
+        
+        private string cutFlorStrengthField;
+        
+        private ShowSpeed cutFlorSpeedField;
+        
+        private bool cutFlorSpeedFieldSpecified;
+        
+        private ShowFluorescence cutFlorLevelField;
+        
+        private bool cutFlorLevelFieldSpecified;
+        
+        private string natFlorColorField;
+        
+        private AreaPerAreaMeasure natFlorPcField;
+        
+        private ShowFluorescence natFlorLevelField;
+        
+        private bool natFlorLevelFieldSpecified;
+        
+        private string natFlorDescField;
+        
+        private string residueColorField;
+        
+        private string impregnatedLithoField;
+        
+        private string odorField;
+        
+        private string cuttingFluidField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the CuttingsIntervalShow</summary>
+        [System.ComponentModel.DescriptionAttribute("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of t" +
+            "he CuttingsIntervalShow")]
+        public Citation Citation {
+            get {
+                return this.citationField;
+            }
+            set {
+                this.citationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Show Rating.</summary>
+        [System.ComponentModel.DescriptionAttribute("Show Rating.")]
+        public ShowRating ShowRating {
+            get {
+                return this.showRatingField;
+            }
+            set {
+                this.showRatingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ShowRatingSpecified {
+            get {
+                return this.showRatingFieldSpecified;
+            }
+            set {
+                this.showRatingFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Visible Stain Color.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Visible Stain Color.")]
+        public string StainColor {
+            get {
+                return this.stainColorField;
+            }
+            set {
+                this.stainColorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Visible Stain Distribution.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Visible Stain Distribution.")]
+        public string StainDistr {
+            get {
+                return this.stainDistrField;
+            }
+            set {
+                this.stainDistrField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Visible Stain (commonly in percent).</summary>
+        [System.ComponentModel.DescriptionAttribute("Visible Stain (commonly in percent).")]
+        public AreaPerAreaMeasure StainPc {
+            get {
+                return this.stainPcField;
+            }
+            set {
+                this.stainPcField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cut speed.</summary>
+        [System.ComponentModel.DescriptionAttribute("Cut speed.")]
+        public ShowSpeed CutSpeed {
+            get {
+                return this.cutSpeedField;
+            }
+            set {
+                this.cutSpeedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool CutSpeedSpecified {
+            get {
+                return this.cutSpeedFieldSpecified;
+            }
+            set {
+                this.cutSpeedFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cut color.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Cut color.")]
+        public string CutColor {
+            get {
+                return this.cutColorField;
+            }
+            set {
+                this.cutColorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cut strength.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Cut strength.")]
+        public string CutStrength {
+            get {
+                return this.cutStrengthField;
+            }
+            set {
+                this.cutStrengthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cut formulation.</summary>
+        [System.ComponentModel.DescriptionAttribute("Cut formulation.")]
+        public ShowLevel CutForm {
+            get {
+                return this.cutFormField;
+            }
+            set {
+                this.cutFormField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool CutFormSpecified {
+            get {
+                return this.cutFormFieldSpecified;
+            }
+            set {
+                this.cutFormFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cut level (Faint, Bright, etc.).</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Cut level (Faint, Bright, etc.).")]
+        public string CutLevel {
+            get {
+                return this.cutLevelField;
+            }
+            set {
+                this.cutLevelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cut fluorescence form.</summary>
+        [System.ComponentModel.DescriptionAttribute("Cut fluorescence form.")]
+        public ShowLevel CutFlorForm {
+            get {
+                return this.cutFlorFormField;
+            }
+            set {
+                this.cutFlorFormField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool CutFlorFormSpecified {
+            get {
+                return this.cutFlorFormFieldSpecified;
+            }
+            set {
+                this.cutFlorFormFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cut fluorescence color.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Cut fluorescence color.")]
+        public string CutFlorColor {
+            get {
+                return this.cutFlorColorField;
+            }
+            set {
+                this.cutFlorColorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cut fluorescence strength.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Cut fluorescence strength.")]
+        public string CutFlorStrength {
+            get {
+                return this.cutFlorStrengthField;
+            }
+            set {
+                this.cutFlorStrengthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cut fluorescence speed.</summary>
+        [System.ComponentModel.DescriptionAttribute("Cut fluorescence speed.")]
+        public ShowSpeed CutFlorSpeed {
+            get {
+                return this.cutFlorSpeedField;
+            }
+            set {
+                this.cutFlorSpeedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool CutFlorSpeedSpecified {
+            get {
+                return this.cutFlorSpeedFieldSpecified;
+            }
+            set {
+                this.cutFlorSpeedFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Cut fluorescence level.</summary>
+        [System.ComponentModel.DescriptionAttribute("Cut fluorescence level.")]
+        public ShowFluorescence CutFlorLevel {
+            get {
+                return this.cutFlorLevelField;
+            }
+            set {
+                this.cutFlorLevelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool CutFlorLevelSpecified {
+            get {
+                return this.cutFlorLevelFieldSpecified;
+            }
+            set {
+                this.cutFlorLevelFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Natural Fluorescence Color.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Natural Fluorescence Color.")]
+        public string NatFlorColor {
+            get {
+                return this.natFlorColorField;
+            }
+            set {
+                this.natFlorColorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Natural fluorescence (commonly in percent).</summary>
+        [System.ComponentModel.DescriptionAttribute("Natural fluorescence (commonly in percent).")]
+        public AreaPerAreaMeasure NatFlorPc {
+            get {
+                return this.natFlorPcField;
+            }
+            set {
+                this.natFlorPcField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Natural fluorescence level.</summary>
+        [System.ComponentModel.DescriptionAttribute("Natural fluorescence level.")]
+        public ShowFluorescence NatFlorLevel {
+            get {
+                return this.natFlorLevelField;
+            }
+            set {
+                this.natFlorLevelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool NatFlorLevelSpecified {
+            get {
+                return this.natFlorLevelFieldSpecified;
+            }
+            set {
+                this.natFlorLevelFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Natural fluorescence description.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Natural fluorescence description.")]
+        public string NatFlorDesc {
+            get {
+                return this.natFlorDescField;
+            }
+            set {
+                this.natFlorDescField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Residue color.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Residue color.")]
+        public string ResidueColor {
+            get {
+                return this.residueColorField;
+            }
+            set {
+                this.residueColorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Impregnated lithology.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Impregnated lithology.")]
+        public string ImpregnatedLitho {
+            get {
+                return this.impregnatedLithoField;
+            }
+            set {
+                this.impregnatedLithoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Description of any hydrocarbon type odors smelled.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Description of any hydrocarbon type odors smelled.")]
+        public string Odor {
+            get {
+                return this.odorField;
+            }
+            set {
+                this.odorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Description of any hydrocarbon type odors smelled</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Description of any hydrocarbon type odors smelled")]
+        public string CuttingFluid {
+            get {
+                return this.cuttingFluidField;
+            }
+            set {
+                this.cuttingFluidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for this instance of CuttingsIntervalShow</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of CuttingsIntervalShow")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum ShowRating {
+        
+        /// <remarks/>
+        none,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("very poor")]
+        verypoor,
+        
+        /// <remarks/>
+        poor,
+        
+        /// <remarks/>
+        fair,
+        
+        /// <remarks/>
+        good,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("very good")]
+        verygood,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class AreaPerAreaMeasure {
+        
+        private AreaPerAreaUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public AreaPerAreaUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AreaPerAreaUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%")]
+        Item,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%[area]")]
+        area,
+        
+        /// <remarks/>
+        cEuc,
+        
+        /// <remarks/>
+        Euc,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in2/ft2")]
+        in2ft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in2/in2")]
+        in2in2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/m2")]
+        m2m2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mm2/mm2")]
+        mm2mm2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum ShowSpeed {
+        
+        /// <remarks/>
+        slow,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("moderately fast")]
+        moderatelyfast,
+        
+        /// <remarks/>
+        fast,
+        
+        /// <remarks/>
+        instantaneous,
+        
+        /// <remarks/>
+        none,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum ShowLevel {
+        
+        /// <remarks/>
+        blooming,
+        
+        /// <remarks/>
+        streaming,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum ShowFluorescence {
+        
+        /// <remarks/>
+        faint,
+        
+        /// <remarks/>
+        bright,
+        
+        /// <remarks/>
+        none,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class LithologyQualifier {
+        
+        private string kindField;
+        
+        private MdInterval mdIntervalField;
+        
+        private VolumePerVolumeMeasure abundanceField;
+        
+        private string descriptionField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>The type of qualifier.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute("The type of qualifier.")]
+        public string Kind {
+            get {
+                return this.kindField;
+            }
+            set {
+                this.kindField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The measured depth interval represented by the qualifier. This must be within the range of the parent geologic interval. If MdInterval is not given then the qualifier is deemed to exist over the entire depth range of the parent geologyInterval.</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured depth interval represented by the qualifier. This must be within the" +
+            " range of the parent geologic interval. If MdInterval is not given then the qual" +
+            "ifier is deemed to exist over the entire depth range of the parent geologyInterv" +
+            "al.")]
+        public MdInterval MdInterval {
+            get {
+                return this.mdIntervalField;
+            }
+            set {
+                this.mdIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The relative abundance of the qualifier estimated based on a "visual area" basis by inspecting the cuttings  spread out on the shaker table prior to washing, or in the sample tray after washing. This represents the upper bound of the observed range, and is in the following increments at the upper bound. 1 = less than or equal to 1%, 2 = greater than or equal to 1 and less than 2%, 5 = greater than or equal to 2 and less than 5% and then in 5% increments, 10 (=5-10%), 15 (=10-15%) up to 100(=95-100%). The end user can then elect  to either display  the %, or map then to an operator specific term or coding, i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., depending on the the end users' terminology.)</summary>
+        [System.ComponentModel.DescriptionAttribute(@"The relative abundance of the qualifier estimated based on a ""visual area"" basis by inspecting the cuttings  spread out on the shaker table prior to washing, or in the sample tray after washing. This represents the upper bound of the observed range, and is in the following increments at the upper bound. 1 = less than or equal to 1%, 2 = greater than or equal to 1 and less than 2%, 5 = greater than or equal to 2 and less than 5% and then in 5% increments, 10 (=5-10%), 15 (=10-15%) up to 100(=95-100%). The end user can then elect  to either display  the %, or map then to an operator specific term or coding, i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., depending on the the end users' terminology.)")]
+        public VolumePerVolumeMeasure Abundance {
+            get {
+                return this.abundanceField;
+            }
+            set {
+                this.abundanceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A textual description of the qualifier.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("A textual description of the qualifier.")]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for this instance of LithologyQualifier</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of LithologyQualifier")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("part_InterpretedGeologyInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    public partial class InterpretedGeologyInterval {
+        
+        private MdInterval mdIntervalField;
+        
+        private Citation citationField;
+        
+        private GeochronologicalUnit[] geochronologicalUnitField;
+        
+        private LithostratigraphicUnit[] lithostratigraphicUnitField;
+        
+        private InterpretedIntervalLithology interpretedLithologyField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>The measured depth interval which is described by this interpreted geology.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The measured depth interval which is described by this interpreted geology.")]
+        public MdInterval MdInterval {
+            get {
+                return this.mdIntervalField;
+            }
+            set {
+                this.mdIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the InterpretedGeologyInterval</summary>
+        [System.ComponentModel.DescriptionAttribute("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of t" +
+            "he InterpretedGeologyInterval")]
+        public Citation Citation {
+            get {
+                return this.citationField;
+            }
+            set {
+                this.citationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The name of a Geochronology, with the "kind" attribute specifying the geochronological time span</summary>
+        [System.Xml.Serialization.XmlElementAttribute("GeochronologicalUnit")]
+        [System.ComponentModel.DescriptionAttribute("The name of a Geochronology, with the \"kind\" attribute specifying the geochronolo" +
+            "gical time span")]
+        public GeochronologicalUnit[] GeochronologicalUnit {
+            get {
+                return this.geochronologicalUnitField;
+            }
+            set {
+                this.geochronologicalUnitField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Specifies the unit of lithostratigraphy.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("LithostratigraphicUnit")]
+        [System.ComponentModel.DescriptionAttribute("Specifies the unit of lithostratigraphy.")]
+        public LithostratigraphicUnit[] LithostratigraphicUnit {
+            get {
+                return this.lithostratigraphicUnitField;
+            }
+            set {
+                this.lithostratigraphicUnitField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public InterpretedIntervalLithology InterpretedLithology {
+            get {
+                return this.interpretedLithologyField;
+            }
+            set {
+                this.interpretedLithologyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for this instance of InterpretedGeologyInterval</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of InterpretedGeologyInterval")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class GeochronologicalUnit {
+        
+        private string authorityField;
+        
+        private GeochronologicalRank kindField;
+        
+        private bool kindFieldSpecified;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        /// <summary>Person or collective body responsible for authorizing the information.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Person or collective body responsible for authorizing the information.")]
+        public string authority {
+            get {
+                return this.authorityField;
+            }
+            set {
+                this.authorityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Defines the time spans in Geochronology</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Defines the time spans in Geochronology")]
+        public GeochronologicalRank kind {
+            get {
+                return this.kindField;
+            }
+            set {
+                this.kindField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool kindSpecified {
+            get {
+                return this.kindFieldSpecified;
+            }
+            set {
+                this.kindFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum GeochronologicalRank {
+        
+        /// <remarks/>
+        eon,
+        
+        /// <remarks/>
+        era,
+        
+        /// <remarks/>
+        period,
+        
+        /// <remarks/>
+        epoch,
+        
+        /// <remarks/>
+        age,
+        
+        /// <remarks/>
+        chron,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class LithostratigraphicUnit {
+        
+        private string authorityField;
+        
+        private LithostratigraphicRank kindField;
+        
+        private bool kindFieldSpecified;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        /// <summary>Person or collective body responsible for authorizing the information.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Person or collective body responsible for authorizing the information.")]
+        public string authority {
+            get {
+                return this.authorityField;
+            }
+            set {
+                this.authorityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Specifies the lithostratigraphic unit-hierarchy (Group, Formation, Member or Bed)</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Specifies the lithostratigraphic unit-hierarchy (Group, Formation, Member or Bed)" +
+            "")]
+        public LithostratigraphicRank kind {
+            get {
+                return this.kindField;
+            }
+            set {
+                this.kindField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool kindSpecified {
+            get {
+                return this.kindFieldSpecified;
+            }
+            set {
+                this.kindFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum LithostratigraphicRank {
+        
+        /// <remarks/>
+        group,
+        
+        /// <remarks/>
+        formation,
+        
+        /// <remarks/>
+        member,
+        
+        /// <remarks/>
+        bed,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class InterpretedIntervalLithology {
+        
+        private string kindField;
+        
+        private Citation citationField;
+        
+        private string codeLithField;
+        
+        private string colorField;
+        
+        private string textureField;
+        
+        private string hardnessField;
+        
+        private string compactionField;
+        
+        private string sizeGrainField;
+        
+        private string roundnessField;
+        
+        private string sortingField;
+        
+        private string sphericityField;
+        
+        private string matrixCementField;
+        
+        private string porosityVisibleField;
+        
+        private string porosityFabricField;
+        
+        private string permeabilityField;
+        
+        private LithologyQualifier[] qualifierField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>The geological name for the type of lithology from the enum table listing a  subset of the OneGeology / CGI defined formation types.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute("The geological name for the type of lithology from the enum table listing a  subs" +
+            "et of the OneGeology / CGI defined formation types.")]
+        public string Kind {
+            get {
+                return this.kindField;
+            }
+            set {
+                this.kindField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the InterpretedIntervalLithology</summary>
+        [System.ComponentModel.DescriptionAttribute("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of t" +
+            "he InterpretedIntervalLithology")]
+        public Citation Citation {
+            get {
+                return this.citationField;
+            }
+            set {
+                this.citationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A custom Lithology encoding sceme if desired. (It is recommended that if used, this follows the NPD required useage with the numeric values noted in the enum tables, which was the original intent for this item).  The NPD Coding System assigned a digital code to the main lithologies as per the Norwegian Blue Book data standards. The code was then derived by Lithology = (Main lithology * 10) + cement + (modifier / 100). Example: Calcite cemented silty micaceous sandstone: ( 33 * 10 ) + 1 + (21 / 100) gives a numeric code of 331.21. However the NPD is also working through Energistics/Ceasar to potentially change this useage.) This should not be used for mnemonics, as those vary by operator, and if an abbreviation is  required a local look up table should be used by the rendering client, based on Lithology Type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"A custom Lithology encoding sceme if desired. (It is recommended that if used, this follows the NPD required useage with the numeric values noted in the enum tables, which was the original intent for this item).  The NPD Coding System assigned a digital code to the main lithologies as per the Norwegian Blue Book data standards. The code was then derived by Lithology = (Main lithology * 10) + cement + (modifier / 100). Example: Calcite cemented silty micaceous sandstone: ( 33 * 10 ) + 1 + (21 / 100) gives a numeric code of 331.21. However the NPD is also working through Energistics/Ceasar to potentially change this useage.) This should not be used for mnemonics, as those vary by operator, and if an abbreviation is  required a local look up table should be used by the rendering client, based on Lithology Type.")]
+        public string CodeLith {
+            get {
+                return this.codeLithField;
+            }
+            set {
+                this.codeLithField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology color description, from Shell 1995 4.3.3.1 and 4.3.3.2 Colors. with the addition of Frosted. eg black blue brown buff green grey olive orange pink purple red translucent frosted white yellow, modified by dark, light, moderate, medium, mottled, variegated, slight, weak, strong, vivid.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology color description, from Shell 1995 4.3.3.1 and 4.3.3.2 Colors. with the addition of Frosted. eg black blue brown buff green grey olive orange pink purple red translucent frosted white yellow, modified by dark, light, moderate, medium, mottled, variegated, slight, weak, strong, vivid.")]
+        public string Color {
+            get {
+                return this.colorField;
+            }
+            set {
+                this.colorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6. crystalline, (often "feather-edge" appearance on breaking),  friable, dull, earthy,  chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,   sucrosic, (often exhibits capillary imbibition). e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6. crystalline, (often ""feather-edge"" appearance on breaking),  friable, dull, earthy,  chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular,   sucrosic, (often exhibits capillary imbibition). e.g.: compact interlocking, particulate, (Gradational textures are quite common,) chalky matrix with sucrosic patches, (Composite textures also occur)")]
+        public string Texture {
+            get {
+                return this.textureField;
+            }
+            set {
+                this.textureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Mineral hardness. (Typically this will rarely be used as mineral hardness is not typically recorded. What is recorded is typically compaction. It is retained though for use defined as per Mohs scale of mineral hardness.)</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Mineral hardness. (Typically this will rarely be us" +
+            "ed as mineral hardness is not typically recorded. What is recorded is typically " +
+            "compaction. It is retained though for use defined as per Mohs scale of mineral h" +
+            "ardness.)")]
+        public string Hardness {
+            get {
+                return this.hardnessField;
+            }
+            set {
+                this.hardnessField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5. not compacted, slightly compacted, compacted, strongly compacted, friable, indurated, hard.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5. not c" +
+            "ompacted, slightly compacted, compacted, strongly compacted, friable, indurated," +
+            " hard.")]
+        public string Compaction {
+            get {
+                return this.compactionField;
+            }
+            set {
+                this.compactionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite.  Size ranges in millimeter (or micrometer) and Inches. LT 256 mmLT 10.1 in "boulder"; 64-256 mm2.5-10.1 in"cobble"; 32-64 mm1.26-2.5 in"very coarse gravel"; 16-32 mm0.63-1.26 in"coarse gravel"; 8-16 mm0.31-0.63 in"medium gravel"; 4-8 mm0.157-0.31 in"fine gravel"; 2-4 mm0.079-0.157 in"very fine gravel"; 1-2 mm0.039-0.079 in"very coarse sand"; 0.5-1 mm0.020-0.039 in"coarse sand"; 0.25-0.5 mm0.010-0.020 in"medium sand"; 125-250 um0.0049-0.010 in"fine sand"; 62.5-125 um0.0025-0.0049 in"very fine sand"; 3.90625-62.5 um0.00015-0.0025 in"silt"; LT 3.90625 umLT 0.00015 in"clay"; LT 1 umLT 0.000039 in "colloid"</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term Pelite.  Size ranges in millimeter (or micrometer) and Inches. LT 256 mmLT 10.1 in ""boulder""; 64-256 mm2.5-10.1 in""cobble""; 32-64 mm1.26-2.5 in""very coarse gravel""; 16-32 mm0.63-1.26 in""coarse gravel""; 8-16 mm0.31-0.63 in""medium gravel""; 4-8 mm0.157-0.31 in""fine gravel""; 2-4 mm0.079-0.157 in""very fine gravel""; 1-2 mm0.039-0.079 in""very coarse sand""; 0.5-1 mm0.020-0.039 in""coarse sand""; 0.25-0.5 mm0.010-0.020 in""medium sand""; 125-250 um0.0049-0.010 in""fine sand""; 62.5-125 um0.0025-0.0049 in""very fine sand""; 3.90625-62.5 um0.00015-0.0025 in""silt""; LT 3.90625 umLT 0.00015 in""clay""; LT 1 umLT 0.000039 in ""colloid""")]
+        public string SizeGrain {
+            get {
+                return this.sizeGrainField;
+            }
+            set {
+                this.sizeGrainField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 Roundness (roundness refers to modal size class). very angular, angular, subangular, subrounded, rounded, well rounded.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3 " +
+            "Roundness (roundness refers to modal size class). very angular, angular, subangu" +
+            "lar, subrounded, rounded, well rounded.")]
+        public string Roundness {
+            get {
+                return this.roundnessField;
+            }
+            set {
+                this.roundnessField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting. very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology sorting descriptione from Shell 4.3.1.2 Sorting. very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.")]
+        public string Sorting {
+            get {
+                return this.sortingField;
+            }
+            set {
+                this.sortingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity. very elongated, elongated, slightly elongated, slightly spherical, spherical, very spherical</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size" +
+            " class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity. very el" +
+            "ongated, elongated, slightly elongated, slightly spherical, spherical, very sphe" +
+            "rical")]
+        public string Sphericity {
+            get {
+                return this.sphericityField;
+            }
+            set {
+                this.sphericityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table. eg. "calcite" (Common) "dolomite", "ankerite" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation, "siderite" (Sherwood sandstones, southern UK typical Siderite cements), "quartz" (grain to grain contact cementation or secondary quartz deposition), "kaolinite", "illite" (eg. Village Fields North Sea), "smectite","chlorite" (Teg, Algeria.)</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table. eg. ""calcite"" (Common) ""dolomite"", ""ankerite"" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation, ""siderite"" (Sherwood sandstones, southern UK typical Siderite cements), ""quartz"" (grain to grain contact cementation or secondary quartz deposition), ""kaolinite"", ""illite"" (eg. Village Fields North Sea), ""smectite"",""chlorite"" (Teg, Algeria.)")]
+        public string MatrixCement {
+            get {
+                return this.matrixCementField;
+            }
+            set {
+                this.matrixCementField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors. When estimating porosities use: MT 15% "good" 10 to 15% "fair" 5 to 10% "poor" LT 5% "trace" 0 "none"</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%. This is normally much reduced by other factors. When estimating porosities use: MT 15% ""good"" 10 to 15% ""fair"" 5 to 10% ""poor"" LT 5% ""trace"" 0 ""none""")]
+        public string PorosityVisible {
+            get {
+                return this.porosityVisibleField;
+            }
+            set {
+                this.porosityVisibleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2. intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2. intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.")]
+        public string PorosityFabric {
+            get {
+                return this.porosityFabricField;
+            }
+            set {
+                this.porosityFabricField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2.5. In future these would benefit from quantification. tight, slightly, fairly, highly.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2" +
+            ".5. In future these would benefit from quantification. tight, slightly, fairly, " +
+            "highly.")]
+        public string Permeability {
+            get {
+                return this.permeabilityField;
+            }
+            set {
+                this.permeabilityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Qualifier")]
+        public LithologyQualifier[] Qualifier {
+            get {
+                return this.qualifierField;
+            }
+            set {
+                this.qualifierField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for this instance of InterpretedIntervalLithology</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of InterpretedIntervalLithology")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("part_EvaluatedIntervalShow", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    public partial class ShowEvaluationInterval {
+        
+        private MdInterval mdIntervalField;
+        
+        private Citation citationField;
+        
+        private ShowFluid showFluidField;
+        
+        private ShowRating showRatingField;
+        
+        private bool showRatingFieldSpecified;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>The measured depth interval over which the show is evaluated.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The measured depth interval over which the show is evaluated.")]
+        public MdInterval MdInterval {
+            get {
+                return this.mdIntervalField;
+            }
+            set {
+                this.mdIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the ShowEvaluationInterval</summary>
+        [System.ComponentModel.DescriptionAttribute("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of t" +
+            "he ShowEvaluationInterval")]
+        public Citation Citation {
+            get {
+                return this.citationField;
+            }
+            set {
+                this.citationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public ShowFluid ShowFluid {
+            get {
+                return this.showFluidField;
+            }
+            set {
+                this.showFluidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Show Rating.</summary>
+        [System.ComponentModel.DescriptionAttribute("Show Rating.")]
+        public ShowRating ShowRating {
+            get {
+                return this.showRatingField;
+            }
+            set {
+                this.showRatingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ShowRatingSpecified {
+            get {
+                return this.showRatingFieldSpecified;
+            }
+            set {
+                this.showRatingFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for this instance of ShowEvaluationInterval</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of ShowEvaluationInterval")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum ShowFluid {
+        
+        /// <remarks/>
+        gas,
+        
+        /// <remarks/>
+        oil,
     }
     
     /// <remarks/>
@@ -15362,11 +18075,11 @@ namespace Energistics.Generator.WITSML200 {
         
         private ExtensionNameValue[] extensionNameValueField;
         
-        private DepthRegPoint llField;
+        private DepthRegPoint ulField;
         
         private DepthRegPoint urField;
         
-        private DepthRegPoint ulField;
+        private DepthRegPoint llField;
         
         private DepthRegPoint lrField;
         
@@ -15386,26 +18099,8 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        public DepthRegPoint Ll {
-            get {
-                return this.llField;
-            }
-            set {
-                this.llField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public DepthRegPoint Ur {
-            get {
-                return this.urField;
-            }
-            set {
-                this.urField = value;
-            }
-        }
-        
-        /// <remarks/>
+        /// <summary>The upper left point of a rectangular region.</summary>
+        [System.ComponentModel.DescriptionAttribute("The upper left point of a rectangular region.")]
         public DepthRegPoint Ul {
             get {
                 return this.ulField;
@@ -15416,6 +18111,32 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>The upper right  point of a rectangular region.</summary>
+        [System.ComponentModel.DescriptionAttribute("The upper right  point of a rectangular region.")]
+        public DepthRegPoint Ur {
+            get {
+                return this.urField;
+            }
+            set {
+                this.urField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The lower left point of a rectangular region.</summary>
+        [System.ComponentModel.DescriptionAttribute("The lower left point of a rectangular region.")]
+        public DepthRegPoint Ll {
+            get {
+                return this.llField;
+            }
+            set {
+                this.llField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The lower right point of a rectangular region.</summary>
+        [System.ComponentModel.DescriptionAttribute("The lower right point of a rectangular region.")]
         public DepthRegPoint Lr {
             get {
                 return this.lrField;
@@ -15497,7 +18218,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private DepthRegRectangle[] trackCurveScaleRectField;
         
-        private ExtensionNameValue[] txtensionNameValueField;
+        private ExtensionNameValue[] extensionNameValueField;
         
         private DepthRegTrackCurve[] associatedCurveField;
         
@@ -15570,14 +18291,14 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("TxtensionNameValue")]
+        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
         [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
-        public ExtensionNameValue[] TxtensionNameValue {
+        public ExtensionNameValue[] ExtensionNameValue {
             get {
-                return this.txtensionNameValueField;
+                return this.extensionNameValueField;
             }
             set {
-                this.txtensionNameValueField = value;
+                this.extensionNameValueField = value;
             }
         }
         
@@ -15627,6 +18348,140 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         other,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class DepthRegParameter {
+        
+        private string mnemonicField;
+        
+        private string dictionaryField;
+        
+        private GenericMeasure topIndexField;
+        
+        private GenericMeasure bottomIndexField;
+        
+        private GenericMeasure valueField;
+        
+        private string descriptionField;
+        
+        private ExtensionNameValue[] extensionNameValueField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>A dictionary-controlled mnemonic.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A dictionary-controlled mnemonic.")]
+        public string Mnemonic {
+            get {
+                return this.mnemonicField;
+            }
+            set {
+                this.mnemonicField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The name or identifier of the controlling dictionary.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name or identifier of the controlling dictionary.")]
+        public string Dictionary {
+            get {
+                return this.dictionaryField;
+            }
+            set {
+                this.dictionaryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The upper limit of a vertical region for which the parameter value is applicable.  '@uom' must be consistent with '//indexType'.</summary>
+        [System.ComponentModel.DescriptionAttribute("The upper limit of a vertical region for which the parameter value is applicable." +
+            "  \'@uom\' must be consistent with \'//indexType\'.")]
+        public GenericMeasure TopIndex {
+            get {
+                return this.topIndexField;
+            }
+            set {
+                this.topIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The lower limit of a vertical region for which the parameter value is applicable.  '@uom' must be consistent with '//indexType'.</summary>
+        [System.ComponentModel.DescriptionAttribute("The lower limit of a vertical region for which the parameter value is applicable." +
+            "  \'@uom\' must be consistent with \'//indexType\'.")]
+        public GenericMeasure BottomIndex {
+            get {
+                return this.bottomIndexField;
+            }
+            set {
+                this.bottomIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The value assigned to the parameter.   The unit of measure should be consistent with the property implied by 'mnemonic' in 'dictionary'. If the value is unitless, then use a unit of 'Euc'.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The value assigned to the parameter.   The unit of measure should be consistent w" +
+            "ith the property implied by \'mnemonic\' in \'dictionary\'. If the value is unitless" +
+            ", then use a unit of \'Euc\'.")]
+        public GenericMeasure Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A description or definition for the mnemonic; required when ../dictionary is absent.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("A description or definition for the mnemonic; required when ../dictionary is abse" +
+            "nt.")]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public ExtensionNameValue[] ExtensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for the parameter.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the parameter.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -15791,42 +18646,6 @@ namespace Energistics.Generator.WITSML200 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class GenericMeasure {
-        
-        private string uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
-        public string uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public enum CalibrationPointRole {
         
@@ -15843,140 +18662,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         other,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class DepthRegParameter {
-        
-        private string mnemonicField;
-        
-        private string dictionaryField;
-        
-        private GenericMeasure topIndexField;
-        
-        private GenericMeasure bottomIndexField;
-        
-        private GenericMeasure valueField;
-        
-        private string descriptionField;
-        
-        private ExtensionNameValue[] extensionNameValueField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>A dictionary-controlled mnemonic.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("A dictionary-controlled mnemonic.")]
-        public string Mnemonic {
-            get {
-                return this.mnemonicField;
-            }
-            set {
-                this.mnemonicField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The name or identifier of the controlling dictionary.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The name or identifier of the controlling dictionary.")]
-        public string Dictionary {
-            get {
-                return this.dictionaryField;
-            }
-            set {
-                this.dictionaryField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The upper limit of a vertical region for which the parameter value is applicable.  '@uom' must be consistent with '//indexType'.</summary>
-        [System.ComponentModel.DescriptionAttribute("The upper limit of a vertical region for which the parameter value is applicable." +
-            "  \'@uom\' must be consistent with \'//indexType\'.")]
-        public GenericMeasure TopIndex {
-            get {
-                return this.topIndexField;
-            }
-            set {
-                this.topIndexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The lower limit of a vertical region for which the parameter value is applicable.  '@uom' must be consistent with '//indexType'.</summary>
-        [System.ComponentModel.DescriptionAttribute("The lower limit of a vertical region for which the parameter value is applicable." +
-            "  \'@uom\' must be consistent with \'//indexType\'.")]
-        public GenericMeasure BottomIndex {
-            get {
-                return this.bottomIndexField;
-            }
-            set {
-                this.bottomIndexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The value assigned to the parameter.   The unit of measure should be consistent with the property implied by 'mnemonic' in 'dictionary'. If the value is unitless, then use a unit of 'Euc'.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The value assigned to the parameter.   The unit of measure should be consistent w" +
-            "ith the property implied by \'mnemonic\' in \'dictionary\'. If the value is unitless" +
-            ", then use a unit of \'Euc\'.")]
-        public GenericMeasure Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A description or definition for the mnemonic; required when ../dictionary is absent.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("A description or definition for the mnemonic; required when ../dictionary is abse" +
-            "nt.")]
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
-        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
-        public ExtensionNameValue[] ExtensionNameValue {
-            get {
-                return this.extensionNameValueField;
-            }
-            set {
-                this.extensionNameValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Unique identifier for the parameter.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Unique identifier for the parameter.")]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -16023,17 +18708,17 @@ namespace Energistics.Generator.WITSML200 {
         
         private ExtensionNameValue[] extensionNameValueField;
         
-        private DepthRegParameter[] parameterField;
+        private DepthRegRectangle[] upperCurveScaleRectField;
+        
+        private DepthRegCalibrationPoint[] calibrationPointField;
+        
+        private DepthRegRectangle[] whiteSpaceField;
         
         private DepthRegRectangle[] lowerCurveScaleRectField;
         
         private DepthRegRectangle[] logSectionRectField;
         
-        private DepthRegRectangle[] upperCurveScaleRectField;
-        
-        private DepthRegRectangle[] whitespaceField;
-        
-        private DepthRegCalibrationPoint[] calibrationPointField;
+        private DepthRegParameter[] parameterField;
         
         private DepthRegTrack[] trackField;
         
@@ -16272,40 +18957,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Parameter")]
-        public DepthRegParameter[] Parameter {
-            get {
-                return this.parameterField;
-            }
-            set {
-                this.parameterField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("LowerCurveScaleRect")]
-        public DepthRegRectangle[] LowerCurveScaleRect {
-            get {
-                return this.lowerCurveScaleRectField;
-            }
-            set {
-                this.lowerCurveScaleRectField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("LogSectionRect")]
-        public DepthRegRectangle[] LogSectionRect {
-            get {
-                return this.logSectionRectField;
-            }
-            set {
-                this.logSectionRectField = value;
-            }
-        }
-        
-        /// <remarks/>
+        /// <summary>Boundaries of the Upper Curve Scale (or horizontal scale) section for this log section.</summary>
         [System.Xml.Serialization.XmlElementAttribute("UpperCurveScaleRect")]
+        [System.ComponentModel.DescriptionAttribute("Boundaries of the Upper Curve Scale (or horizontal scale) section for this log se" +
+            "ction.")]
         public DepthRegRectangle[] UpperCurveScaleRect {
             get {
                 return this.upperCurveScaleRectField;
@@ -16316,24 +18971,67 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Whitespace")]
-        public DepthRegRectangle[] Whitespace {
-            get {
-                return this.whitespaceField;
-            }
-            set {
-                this.whitespaceField = value;
-            }
-        }
-        
-        /// <remarks/>
+        /// <summary>Generally this associates an X, Y value pair with a depth value from the log section.</summary>
         [System.Xml.Serialization.XmlElementAttribute("CalibrationPoint")]
+        [System.ComponentModel.DescriptionAttribute("Generally this associates an X, Y value pair with a depth value from the log sect" +
+            "ion.")]
         public DepthRegCalibrationPoint[] CalibrationPoint {
             get {
                 return this.calibrationPointField;
             }
             set {
                 this.calibrationPointField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Defines blank space occurring within a log section in an image.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("WhiteSpace")]
+        [System.ComponentModel.DescriptionAttribute("Defines blank space occurring within a log section in an image.")]
+        public DepthRegRectangle[] WhiteSpace {
+            get {
+                return this.whiteSpaceField;
+            }
+            set {
+                this.whiteSpaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Boundaries of the Lower Curve Scale (or horizontal scale) section for this log section.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("LowerCurveScaleRect")]
+        [System.ComponentModel.DescriptionAttribute("Boundaries of the Lower Curve Scale (or horizontal scale) section for this log se" +
+            "ction.")]
+        public DepthRegRectangle[] LowerCurveScaleRect {
+            get {
+                return this.lowerCurveScaleRectField;
+            }
+            set {
+                this.lowerCurveScaleRectField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The bounding rectangle of this log section.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("LogSectionRect")]
+        [System.ComponentModel.DescriptionAttribute("The bounding rectangle of this log section.")]
+        public DepthRegRectangle[] LogSectionRect {
+            get {
+                return this.logSectionRectField;
+            }
+            set {
+                this.logSectionRectField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Parameter")]
+        public DepthRegParameter[] Parameter {
+            get {
+                return this.parameterField;
+            }
+            set {
+                this.parameterField = value;
             }
         }
         
@@ -16485,117 +19183,10 @@ namespace Energistics.Generator.WITSML200 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class DataObjectReference {
-        
-        private string contentTypeField;
-        
-        private string titleField;
-        
-        private string uuidField;
-        
-        private string uuidAuthorityField;
-        
-        private string uriField;
-        
-        private string versionStringField;
-        
-        /// <remarks/>
-        /// <summary>The content type of the referenced element.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("The content type of the referenced element.")]
-        public string ContentType {
-            get {
-                return this.contentTypeField;
-            }
-            set {
-                this.contentTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The Title of the referenced object. The Title of a top level element would be inherited from AbstractObject and must be present on any referenced object.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("The Title of the referenced object. The Title of a top level element would be inh" +
-            "erited from AbstractObject and must be present on any referenced object.")]
-        public string Title {
-            get {
-                return this.titleField;
-            }
-            set {
-                this.titleField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Reference to an object using its global UID.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
-        [System.ComponentModel.DescriptionAttribute("Reference to an object using its global UID.")]
-        public string Uuid {
-            get {
-                return this.uuidField;
-            }
-            set {
-                this.uuidField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The authority that issued and maintains the uuid of the referenced object. Used mainly in alias context.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The authority that issued and maintains the uuid of the referenced object. Used m" +
-            "ainly in alias context.")]
-        public string UuidAuthority {
-            get {
-                return this.uuidAuthorityField;
-            }
-            set {
-                this.uuidAuthorityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>This is the URI of a referenced object.   Do not use this to store the path and file names of an external object - that is done through the External Dataset machinery.  This element is intended for use with the Energistics Transfer Protocol.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
-        [System.ComponentModel.DescriptionAttribute("This is the URI of a referenced object.   Do not use this to store the path and f" +
-            "ile names of an external object - that is done through the External Dataset mach" +
-            "inery.  This element is intended for use with the Energistics Transfer Protocol." +
-            "")]
-        public string Uri {
-            get {
-                return this.uriField;
-            }
-            set {
-                this.uriField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Indicates the version of the object which is referenced.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Indicates the version of the object which is referenced.")]
-        public string VersionString {
-            get {
-                return this.versionStringField;
-            }
-            set {
-                this.versionStringField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class DepthRegLogRect {
         
-        private LogRectangeType typeField;
+        private LogRectangleType typeField;
         
         private bool typeFieldSpecified;
         
@@ -16610,7 +19201,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>A region of an image containing a log section image.</summary>
         [System.ComponentModel.DescriptionAttribute("A region of an image containing a log section image.")]
-        public LogRectangeType Type {
+        public LogRectangleType Type {
             get {
                 return this.typeField;
             }
@@ -16657,7 +19248,7 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        public DepthRegRectangle position {
+        public DepthRegRectangle Position {
             get {
                 return this.positionField;
             }
@@ -16685,7 +19276,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum LogRectangeType {
+    public enum LogRectangleType {
         
         /// <remarks/>
         header,
@@ -16979,9 +19570,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of MemberObject</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of MemberObject")]
         public string uid {
             get {
                 return this.uidField;
@@ -17003,8 +19596,10 @@ namespace Energistics.Generator.WITSML200 {
         private string descriptionField;
         
         /// <remarks/>
+        /// <summary>The description of this object sequence.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("The description of this object sequence.")]
         public string description {
             get {
                 return this.descriptionField;
@@ -17038,7 +19633,9 @@ namespace Energistics.Generator.WITSML200 {
         private string valueField;
         
         /// <remarks/>
+        /// <summary>Index used to qualify this indexed object</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Index used to qualify this indexed object")]
         public int index {
             get {
                 return this.indexField;
@@ -17060,8 +19657,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Name of this IndexedObject</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of this IndexedObject")]
         public string name {
             get {
                 return this.nameField;
@@ -17072,8 +19671,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unit of measure used by this Indexed Object</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
+        [System.ComponentModel.DescriptionAttribute("Unit of measure used by this Indexed Object")]
         public string uom {
             get {
                 return this.uomField;
@@ -17084,8 +19685,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Description of this IndexedObject</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("Description of this IndexedObject")]
         public string description {
             get {
                 return this.descriptionField;
@@ -17096,9 +19699,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of IndexedObject</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of IndexedObject")]
         public string uid {
             get {
                 return this.uidField;
@@ -17171,7 +19776,9 @@ namespace Energistics.Generator.WITSML200 {
         private string downholeStringReferenceIdField;
         
         /// <remarks/>
+        /// <summary>Reference to string equipment</summary>
         [System.Xml.Serialization.XmlElementAttribute("StringEquipmentReferenceId")]
+        [System.ComponentModel.DescriptionAttribute("Reference to string equipment")]
         public string[] StringEquipmentReferenceId {
             get {
                 return this.stringEquipmentReferenceIdField;
@@ -17182,8 +19789,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Reference to downhole string</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to downhole string")]
         public string downholeStringReferenceId {
             get {
                 return this.downholeStringReferenceIdField;
@@ -17207,7 +19816,9 @@ namespace Energistics.Generator.WITSML200 {
         private string boreholeStringReferenceIdField;
         
         /// <remarks/>
+        /// <summary>Reference to string equipment</summary>
         [System.Xml.Serialization.XmlElementAttribute("StringEquipmentReferenceId")]
+        [System.ComponentModel.DescriptionAttribute("Reference to string equipment")]
         public string[] StringEquipmentReferenceId {
             get {
                 return this.stringEquipmentReferenceIdField;
@@ -17218,8 +19829,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Reference to borehole String</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to borehole String")]
         public string boreholeStringReferenceId {
             get {
                 return this.boreholeStringReferenceIdField;
@@ -17247,7 +19860,9 @@ namespace Energistics.Generator.WITSML200 {
         private DownholeStringReference[] downholeStringsReferenceField;
         
         /// <remarks/>
+        /// <summary>Reference to string equipment</summary>
         [System.Xml.Serialization.XmlElementAttribute("StringEquipmentReferenceId")]
+        [System.ComponentModel.DescriptionAttribute("Reference to string equipment")]
         public string[] StringEquipmentReferenceId {
             get {
                 return this.stringEquipmentReferenceIdField;
@@ -17258,7 +19873,9 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Reference to perforation set</summary>
         [System.Xml.Serialization.XmlElementAttribute("PerforationSetReferenceId")]
+        [System.ComponentModel.DescriptionAttribute("Reference to perforation set")]
         public string[] PerforationSetReferenceId {
             get {
                 return this.perforationSetReferenceIdField;
@@ -17783,133 +20400,6 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1E-9 1/ft")]
         Item1E91ft,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class MassMeasure {
-        
-        private MassUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public MassUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum MassUom {
-        
-        /// <remarks/>
-        ag,
-        
-        /// <remarks/>
-        cg,
-        
-        /// <remarks/>
-        ct,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cwt[UK]")]
-        cwtUK,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cwt[US]")]
-        cwtUS,
-        
-        /// <remarks/>
-        Eg,
-        
-        /// <remarks/>
-        fg,
-        
-        /// <remarks/>
-        g,
-        
-        /// <remarks/>
-        Gg,
-        
-        /// <remarks/>
-        grain,
-        
-        /// <remarks/>
-        hg,
-        
-        /// <remarks/>
-        kg,
-        
-        /// <remarks/>
-        klbm,
-        
-        /// <remarks/>
-        lbm,
-        
-        /// <remarks/>
-        mg,
-        
-        /// <remarks/>
-        Mg,
-        
-        /// <remarks/>
-        ng,
-        
-        /// <remarks/>
-        ozm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ozm[troy]")]
-        ozmtroy,
-        
-        /// <remarks/>
-        pg,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sack[94lbm]")]
-        sack94lbm,
-        
-        /// <remarks/>
-        t,
-        
-        /// <remarks/>
-        Tg,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ton[UK]")]
-        tonUK,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ton[US]")]
-        tonUS,
-        
-        /// <remarks/>
-        ug,
     }
     
     /// <remarks/>
@@ -18834,7 +21324,9 @@ namespace Energistics.Generator.WITSML200 {
         private string valueField;
         
         /// <remarks/>
+        /// <summary>The type of the event (job, daily report, etc.)</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The type of the event (job, daily report, etc.)")]
         public string Class {
             get {
                 return this.classField;
@@ -19039,9 +21531,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of PumpOp</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of PumpOp")]
         public string uid {
             get {
                 return this.uidField;
@@ -19189,9 +21683,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of PitVolume</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of PitVolume")]
         public string uid {
             get {
                 return this.uidField;
@@ -19318,9 +21814,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Scr</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Scr")]
         public string uid {
             get {
                 return this.uidField;
@@ -19772,9 +22270,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of DayCost</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of DayCost")]
         public string uid {
             get {
                 return this.uidField;
@@ -19796,8 +22296,10 @@ namespace Energistics.Generator.WITSML200 {
         private string currencyField;
         
         /// <remarks/>
+        /// <summary>Currency used for this Cost</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Currency used for this Cost")]
         public string currency {
             get {
                 return this.currencyField;
@@ -19905,9 +22407,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Personnel</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Personnel")]
         public string uid {
             get {
                 return this.uidField;
@@ -20517,9 +23021,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Inventory</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Inventory")]
         public string uid {
             get {
                 return this.uidField;
@@ -20901,9 +23407,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Weather</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Weather")]
         public string uid {
             get {
                 return this.uidField;
@@ -21005,160 +23513,6 @@ namespace Energistics.Generator.WITSML200 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class LengthPerTimeMeasure {
-        
-        private LengthPerTimeUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public LengthPerTimeUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum LengthPerTimeUom {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1000 ft/h")]
-        Item1000fth,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1000 ft/s")]
-        Item1000fts,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cm/a")]
-        cma,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cm/s")]
-        cms,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dm/s")]
-        dms,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft/d")]
-        ftd,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft/h")]
-        fth,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft/min")]
-        ftmin,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft/ms")]
-        ftms,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft/s")]
-        fts,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft/us")]
-        ftus,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("in/a")]
-        ina,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("in/min")]
-        inmin,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("in/s")]
-        ins,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("km/h")]
-        kmh,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("km/s")]
-        kms,
-        
-        /// <remarks/>
-        knot,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("m/d")]
-        md,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("m/h")]
-        mh,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("m/min")]
-        mmin,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("m/ms")]
-        mms,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("m/s")]
-        ms,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mi/h")]
-        mih,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mil/a")]
-        mila,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mm/a")]
-        mma,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mm/s")]
-        mms1,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("nm/s")]
-        nms,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("um/s")]
-        ums,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class SupportCraft {
         
@@ -21191,7 +23545,9 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Type of support craft (eg. Barge, helicopter, tug boat)</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Type of support craft (eg. Barge, helicopter, tug boat)")]
         public SupportCraftType TypeSupportCraft {
             get {
                 return this.typeSupportCraftField;
@@ -21254,9 +23610,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of SupportCraft</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of SupportCraft")]
         public string uid {
             get {
                 return this.uidField;
@@ -21568,9 +23926,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Incident</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Incident")]
         public string uid {
             get {
                 return this.uidField;
@@ -22297,9 +24657,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of ShakerOp</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of ShakerOp")]
         public string uid {
             get {
                 return this.uidField;
@@ -22667,133 +25029,6 @@ namespace Energistics.Generator.WITSML200 {
                 this.anchorAngleField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class ForceMeasure {
-        
-        private ForceUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public ForceUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum ForceUom {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("10 kN")]
-        Item10kN,
-        
-        /// <remarks/>
-        cN,
-        
-        /// <remarks/>
-        daN,
-        
-        /// <remarks/>
-        dN,
-        
-        /// <remarks/>
-        dyne,
-        
-        /// <remarks/>
-        EN,
-        
-        /// <remarks/>
-        fN,
-        
-        /// <remarks/>
-        gf,
-        
-        /// <remarks/>
-        GN,
-        
-        /// <remarks/>
-        hN,
-        
-        /// <remarks/>
-        kdyne,
-        
-        /// <remarks/>
-        kgf,
-        
-        /// <remarks/>
-        klbf,
-        
-        /// <remarks/>
-        kN,
-        
-        /// <remarks/>
-        lbf,
-        
-        /// <remarks/>
-        Mgf,
-        
-        /// <remarks/>
-        mN,
-        
-        /// <remarks/>
-        MN,
-        
-        /// <remarks/>
-        N,
-        
-        /// <remarks/>
-        nN,
-        
-        /// <remarks/>
-        ozf,
-        
-        /// <remarks/>
-        pdl,
-        
-        /// <remarks/>
-        pN,
-        
-        /// <remarks/>
-        TN,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tonf[UK]")]
-        tonfUK,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tonf[US]")]
-        tonfUS,
-        
-        /// <remarks/>
-        uN,
     }
     
     /// <remarks/>
@@ -24391,9 +26626,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>A unique identifier for an instance of a trajectory station.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A unique identifier for an instance of a trajectory station.")]
         public string uid {
             get {
                 return this.uidField;
@@ -24411,23 +26648,8 @@ namespace Energistics.Generator.WITSML200 {
     public enum TrajStationType {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("AZI and TVD")]
-        AZIandTVD,
-        
-        /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("azimuth on plane")]
         azimuthonplane,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("DLS to NS")]
-        DLStoNS,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("EW and TVD")]
-        EWandTVD,
-        
-        /// <remarks/>
-        NS,
         
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("buildrate to delta-MD")]
@@ -24505,6 +26727,10 @@ namespace Energistics.Generator.WITSML200 {
         DLStoINCLandTVD,
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DLS to NS")]
+        DLStoNS,
+        
+        /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("DLS and toolface to AZI")]
         DLSandtoolfacetoAZI,
         
@@ -24549,12 +26775,35 @@ namespace Energistics.Generator.WITSML200 {
         holdtoTVD,
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("INCL AZI and TVD")]
+        INCLAZIandTVD,
+        
+        /// <remarks/>
+        interpolated,
+        
+        /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("marker MD")]
         markerMD,
         
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("marker TVD")]
         markerTVD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MD and INCL")]
+        MDandINCL,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MD INCL and AZI")]
+        MDINCLandAZI,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N E and TVD")]
+        NEandTVD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("NS EW and TVD")]
+        NSEWandTVD,
         
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("target center")]
@@ -24586,21 +26835,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         unknown,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MD and INCL")]
-        MDandINCL,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("MD INCL and AZI")]
-        MDINCLandAZI,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("N E and TVD")]
-        NEandTVD,
-        
-        /// <remarks/>
-        interpolated,
     }
     
     /// <remarks/>
@@ -24689,10 +26923,6 @@ namespace Energistics.Generator.WITSML200 {
     public enum TrajStationStatus {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("partially accepted")]
-        partiallyaccepted,
-        
-        /// <remarks/>
         open,
         
         /// <remarks/>
@@ -24775,9 +27005,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>A unique identifier for a well location.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A unique identifier for a well location.")]
         public string uid {
             get {
                 return this.uidField;
@@ -24796,29 +27028,29 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class ProjectedWellLocation : AbstractWellLocation {
         
-        private double xField;
+        private double coordinate1Field;
         
-        private double yField;
+        private double coordinate2Field;
         
         private AbstractProjectedCrs crsField;
         
         /// <remarks/>
-        public double X {
+        public double Coordinate1 {
             get {
-                return this.xField;
+                return this.coordinate1Field;
             }
             set {
-                this.xField = value;
+                this.coordinate1Field = value;
             }
         }
         
         /// <remarks/>
-        public double Y {
+        public double Coordinate2 {
             get {
-                return this.yField;
+                return this.coordinate2Field;
             }
             set {
-                this.yField = value;
+                this.coordinate2Field = value;
             }
         }
         
@@ -24834,10 +27066,10 @@ namespace Energistics.Generator.WITSML200 {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedGmlCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedUnknownCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedLocalAuthorityCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedGmlCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedWktCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedUnknownCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedEpsgCrs))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
@@ -24845,6 +27077,27 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     public abstract partial class AbstractProjectedCrs {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class ProjectedLocalAuthorityCrs : AbstractProjectedCrs {
+        
+        private string localAuthorityCrsNameField;
+        
+        /// <remarks/>
+        public string LocalAuthorityCrsName {
+            get {
+                return this.localAuthorityCrsNameField;
+            }
+            set {
+                this.localAuthorityCrsNameField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -28713,48 +30966,6 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class ProjectedUnknownCrs : AbstractProjectedCrs {
-        
-        private string unknownField;
-        
-        /// <remarks/>
-        public string Unknown {
-            get {
-                return this.unknownField;
-            }
-            set {
-                this.unknownField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class ProjectedLocalAuthorityCrs : AbstractProjectedCrs {
-        
-        private string localAuthorityCrsNameField;
-        
-        /// <remarks/>
-        public string LocalAuthorityCrsName {
-            get {
-                return this.localAuthorityCrsNameField;
-            }
-            set {
-                this.localAuthorityCrsNameField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     public partial class ProjectedWktCrs : AbstractProjectedCrs {
         
         private string wellKnownTextField;
@@ -28766,6 +30977,27 @@ namespace Energistics.Generator.WITSML200 {
             }
             set {
                 this.wellKnownTextField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class ProjectedUnknownCrs : AbstractProjectedCrs {
+        
+        private string unknownField;
+        
+        /// <remarks/>
+        public string Unknown {
+            get {
+                return this.unknownField;
+            }
+            set {
+                this.unknownField = value;
             }
         }
     }
@@ -28806,7 +31038,9 @@ namespace Energistics.Generator.WITSML200 {
         private AbstractGeodeticCrs crsField;
         
         /// <remarks/>
+        /// <summary>The latitude with north being positive.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The latitude with north being positive.")]
         public double Latitude {
             get {
                 return this.latitudeField;
@@ -28817,7 +31051,9 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>The longitude with east being positive.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The longitude with east being positive.")]
         public double Longitude {
             get {
                 return this.longitudeField;
@@ -28840,17 +31076,38 @@ namespace Energistics.Generator.WITSML200 {
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticLocalAuthorityCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticGmlCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticEpsgCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticLocalAuthorityCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticUnknownCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticWktCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticUnknownCrs))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     public abstract partial class AbstractGeodeticCrs {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class GeodeticLocalAuthorityCrs : AbstractGeodeticCrs {
+        
+        private string localAuthorityCrsNameField;
+        
+        /// <remarks/>
+        public string LocalAuthorityCrsName {
+            get {
+                return this.localAuthorityCrsNameField;
+            }
+            set {
+                this.localAuthorityCrsNameField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -28901,17 +31158,17 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class GeodeticLocalAuthorityCrs : AbstractGeodeticCrs {
+    public partial class GeodeticWktCrs : AbstractGeodeticCrs {
         
-        private string localAuthorityCrsNameField;
+        private string wellKnownTextField;
         
         /// <remarks/>
-        public string LocalAuthorityCrsName {
+        public string WellKnownText {
             get {
-                return this.localAuthorityCrsNameField;
+                return this.wellKnownTextField;
             }
             set {
-                this.localAuthorityCrsNameField = value;
+                this.wellKnownTextField = value;
             }
         }
     }
@@ -28942,27 +31199,6 @@ namespace Energistics.Generator.WITSML200 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class GeodeticWktCrs : AbstractGeodeticCrs {
-        
-        private string wellKnownTextField;
-        
-        /// <remarks/>
-        public string WellKnownText {
-            get {
-                return this.wellKnownTextField;
-            }
-            set {
-                this.wellKnownTextField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class MeasureOrQuantity {
         
@@ -28971,8 +31207,12 @@ namespace Energistics.Generator.WITSML200 {
         private double valueField;
         
         /// <remarks/>
+        /// <summary>A measure with a uom or a quantity (without a uom). This should not be used except in situations where the underlying class of data is captured elsewhere. For example, via a measure class.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
+        [System.ComponentModel.DescriptionAttribute("A measure with a uom or a quantity (without a uom). This should not be used excep" +
+            "t in situations where the underlying class of data is captured elsewhere. For ex" +
+            "ample, via a measure class.")]
         public string uom {
             get {
                 return this.uomField;
@@ -29108,9 +31348,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of IscwsaErrorTermValue</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of IscwsaErrorTermValue")]
         public string uid {
             get {
                 return this.uidField;
@@ -29385,9 +31627,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of IscwsaSurveyToolOperatingInterval</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of IscwsaSurveyToolOperatingInterval")]
         public string uid {
             get {
                 return this.uidField;
@@ -29482,9 +31726,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of IscwsaSurveyToolOperatingCondition</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of IscwsaSurveyToolOperatingCondition")]
         public string uid {
             get {
                 return this.uidField;
@@ -30911,9 +33157,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Connection</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Connection")]
         public string uid {
             get {
                 return this.uidField;
@@ -30922,100 +33170,6 @@ namespace Energistics.Generator.WITSML200 {
                 this.uidField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class MomentOfForceMeasure {
-        
-        private MomentOfForceUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public MomentOfForceUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum MomentOfForceUom {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1000 lbf.ft")]
-        Item1000lbfft,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("daN.m")]
-        daNm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dN.m")]
-        dNm,
-        
-        /// <remarks/>
-        J,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kgf.m")]
-        kgfm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kN.m")]
-        kNm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lbf.ft")]
-        lbfft,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lbf.in")]
-        lbfin,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lbm.ft2/s2")]
-        lbmft2s2,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("N.m")]
-        Nm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pdl.ft")]
-        pdlft,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tonf[US].ft")]
-        tonfUSft,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tonf[US].mi")]
-        tonfUSmi,
     }
     
     /// <remarks/>
@@ -32363,9 +34517,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of DownholeString</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of DownholeString")]
         public string uid {
             get {
                 return this.uidField;
@@ -32374,630 +34530,6 @@ namespace Energistics.Generator.WITSML200 {
                 this.uidField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChannelValueContext))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ObjectContext))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IndexRangeContext))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public abstract partial class AbstractLogDataContext {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class ChannelValueContext : AbstractLogDataContext {
-        
-        private DataObjectReference channelReferenceField;
-        
-        private string dataValueField;
-        
-        /// <remarks/>
-        public DataObjectReference ChannelReference {
-            get {
-                return this.channelReferenceField;
-            }
-            set {
-                this.channelReferenceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string DataValue {
-            get {
-                return this.dataValueField;
-            }
-            set {
-                this.dataValueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class ObjectContext : AbstractLogDataContext {
-        
-        private DataObjectReference objectReferenceField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        public DataObjectReference ObjectReference {
-            get {
-                return this.objectReferenceField;
-            }
-            set {
-                this.objectReferenceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class IndexRangeContext : AbstractLogDataContext {
-        
-        private AbstractIndexValue startIndexField;
-        
-        private AbstractIndexValue endIndexField;
-        
-        /// <remarks/>
-        public AbstractIndexValue StartIndex {
-            get {
-                return this.startIndexField;
-            }
-            set {
-                this.startIndexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public AbstractIndexValue EndIndex {
-            get {
-                return this.endIndexField;
-            }
-            set {
-                this.endIndexField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DepthIndexValue))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeIndexValue))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PassIndexedDepth))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public abstract partial class AbstractIndexValue {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class DepthIndexValue : AbstractIndexValue {
-        
-        private float depthField;
-        
-        /// <remarks/>
-        public float Depth {
-            get {
-                return this.depthField;
-            }
-            set {
-                this.depthField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class TimeIndexValue : AbstractIndexValue {
-        
-        private string timeField;
-        
-        /// <remarks/>
-        public string Time {
-            get {
-                return this.timeField;
-            }
-            set {
-                this.timeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class PassIndexedDepth : AbstractIndexValue {
-        
-        private int passField;
-        
-        private int directionField;
-        
-        private float depthField;
-        
-        /// <remarks/>
-        public int Pass {
-            get {
-                return this.passField;
-            }
-            set {
-                this.passField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int Direction {
-            get {
-                return this.directionField;
-            }
-            set {
-                this.directionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public float Depth {
-            get {
-                return this.depthField;
-            }
-            set {
-                this.depthField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class ChannelData {
-        
-        private string dataField;
-        
-        private string fileUriField;
-        
-        /// <remarks/>
-        /// <summary>The data blob in JSON form. This allows you to embed the bulk data in a single file with the xml, to avoid the issues that arise with splitting the data across multiple files.   BUSINESS RULE: Either this element or the FileUri element must be present</summary>
-        [System.ComponentModel.DescriptionAttribute("The data blob in JSON form. This allows you to embed the bulk data in a single fi" +
-            "le with the xml, to avoid the issues that arise with splitting the data across m" +
-            "ultiple files.   BUSINESS RULE: Either this element or the FileUri element must " +
-            "be present")]
-        public string Data {
-            get {
-                return this.dataField;
-            }
-            set {
-                this.dataField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The uri of a file containing the bulkdata. If this field is non-null, then the data field is ignored. For files written to disk, this should normally contain a simple file name in relative URI form. For instance, if an application writes a log file to disk, it might write the xml as abc.xml, and the bulk data abc.avro. In that case the value of this element would be './abc.avro'.   BUSINESS RULE: Either this element or the Data element must be present</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
-        [System.ComponentModel.DescriptionAttribute(@"The uri of a file containing the bulkdata. If this field is non-null, then the data field is ignored. For files written to disk, this should normally contain a simple file name in relative URI form. For instance, if an application writes a log file to disk, it might write the xml as abc.xml, and the bulk data abc.avro. In that case the value of this element would be './abc.avro'.   BUSINESS RULE: Either this element or the Data element must be present")]
-        public string FileUri {
-            get {
-                return this.fileUriField;
-            }
-            set {
-                this.fileUriField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class PointMetadata {
-        
-        private string nameField;
-        
-        private EtpDataType etpDataTypeField;
-        
-        private string descriptionField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public EtpDataType EtpDataType {
-            get {
-                return this.etpDataTypeField;
-            }
-            set {
-                this.etpDataTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum EtpDataType {
-        
-        /// <remarks/>
-        boolean,
-        
-        /// <remarks/>
-        bytes,
-        
-        /// <remarks/>
-        @double,
-        
-        /// <remarks/>
-        @float,
-        
-        /// <remarks/>
-        @int,
-        
-        /// <remarks/>
-        @long,
-        
-        /// <remarks/>
-        @null,
-        
-        /// <remarks/>
-        @string,
-        
-        /// <remarks/>
-        vector,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class LengthMeasureExt {
-        
-        private string uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public string uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class LogChannelAxis {
-        
-        private double axisStartField;
-        
-        private double axisSpacingField;
-        
-        private long axisCountField;
-        
-        private string axisNameField;
-        
-        private string axisPropertyKindField;
-        
-        private string axisUomField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>Value of the initial entry in the list of axis index values.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Value of the initial entry in the list of axis index values.")]
-        public double AxisStart {
-            get {
-                return this.axisStartField;
-            }
-            set {
-                this.axisStartField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The increment to be used to fill out the list of the log channel axis index values.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The increment to be used to fill out the list of the log channel axis index value" +
-            "s.")]
-        public double AxisSpacing {
-            get {
-                return this.axisSpacingField;
-            }
-            set {
-                this.axisSpacingField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The count of elements along this axis of the array.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The count of elements along this axis of the array.")]
-        public long AxisCount {
-            get {
-                return this.axisCountField;
-            }
-            set {
-                this.axisCountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The name of the array axis.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The name of the array axis.")]
-        public string AxisName {
-            get {
-                return this.axisNameField;
-            }
-            set {
-                this.axisNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The property type by which the array axis is classified. Like "measured depth" or "elapsed time".</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The property type by which the array axis is classified. Like \"measured depth\" or" +
-            " \"elapsed time\".")]
-        public string AxisPropertyKind {
-            get {
-                return this.axisPropertyKindField;
-            }
-            set {
-                this.axisPropertyKindField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A string representing the units of measure of the axis values.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("A string representing the units of measure of the axis values.")]
-        public string AxisUom {
-            get {
-                return this.axisUomField;
-            }
-            set {
-                this.axisUomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class ChannelIndex {
-        
-        private ChannelIndexType indexTypeField;
-        
-        private string uomField;
-        
-        private IndexDirection directionField;
-        
-        private string mnemonicField;
-        
-        private string datumReferenceField;
-        
-        /// <remarks/>
-        /// <summary>The type of index (time, depth, etc)</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The type of index (time, depth, etc)")]
-        public ChannelIndexType IndexType {
-            get {
-                return this.indexTypeField;
-            }
-            set {
-                this.indexTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The units of the index. Must be one of the units allowed for the specified IndexType (i.e. time or distance).</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The units of the index. Must be one of the units allowed for the specified IndexT" +
-            "ype (i.e. time or distance).")]
-        public string Uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The direction of the index, either increasing or decreasing. Index direction may not change within the life of a channel.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The direction of the index, either increasing or decreasing. Index direction may " +
-            "not change within the life of a channel.")]
-        public IndexDirection Direction {
-            get {
-                return this.directionField;
-            }
-            set {
-                this.directionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The mnemonic for the index.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The mnemonic for the index.")]
-        public string Mnemonic {
-            get {
-                return this.mnemonicField;
-            }
-            set {
-                this.mnemonicField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>For depth indexes, this contains the uid of the datum, in the Channel's Well object, to which all of the index values are referenced.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("For depth indexes, this contains the uid of the datum, in the Channel\'s Well obje" +
-            "ct, to which all of the index values are referenced.")]
-        public string DatumReference {
-            get {
-                return this.datumReferenceField;
-            }
-            set {
-                this.datumReferenceField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum ChannelIndexType {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("measured depth")]
-        measureddepth,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("true vertical depth")]
-        trueverticaldepth,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pass indexed depth")]
-        passindexeddepth,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("date time")]
-        datetime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("elapsed time")]
-        elapsedtime,
-        
-        /// <remarks/>
-        temperature,
-        
-        /// <remarks/>
-        pressure,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum IndexDirection {
-        
-        /// <remarks/>
-        decreasing,
-        
-        /// <remarks/>
-        increasing,
     }
     
     /// <remarks/>
@@ -34235,8 +35767,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this cementing fluid</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this cementing fluid")]
         public string uid {
             get {
                 return this.uidField;
@@ -34314,9 +35848,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Rheometer</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Rheometer")]
         public string uid {
             get {
                 return this.uidField;
@@ -34369,8 +35905,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of RheometerViscosity</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of RheometerViscosity")]
         public string uid {
             get {
                 return this.uidField;
@@ -34389,7 +35927,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class CementPumpScheduleStep {
         
-        private string fluidRefIdField;
+        private string fluidReferenceIdField;
         
         private string ratioFluidExcessField;
         
@@ -34414,13 +35952,14 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>UUID Reference to Fluid used in CementJob.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
         [System.ComponentModel.DescriptionAttribute("UUID Reference to Fluid used in CementJob.")]
-        public string FluidRefId {
+        public string FluidReferenceId {
             get {
-                return this.fluidRefIdField;
+                return this.fluidReferenceIdField;
             }
             set {
-                this.fluidRefIdField = value;
+                this.fluidReferenceIdField = value;
             }
         }
         
@@ -34533,8 +36072,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this pump schedule step</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this pump schedule step")]
         public string uid {
             get {
                 return this.uidField;
@@ -34553,7 +36094,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class FluidLocation {
         
-        private string fluidRefIdField;
+        private string fluidReferenceIdField;
         
         private LengthMeasure mDFluidBaseField;
         
@@ -34570,12 +36111,12 @@ namespace Energistics.Generator.WITSML200 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
         [System.ComponentModel.DescriptionAttribute("Reference to Fluid used in CementJob")]
-        public string FluidRefId {
+        public string FluidReferenceId {
             get {
-                return this.fluidRefIdField;
+                return this.fluidReferenceIdField;
             }
             set {
-                this.fluidRefIdField = value;
+                this.fluidReferenceIdField = value;
             }
         }
         
@@ -34630,8 +36171,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of FluidLocation</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of FluidLocation")]
         public string uid {
             get {
                 return this.uidField;
@@ -34719,6 +36262,10 @@ namespace Energistics.Generator.WITSML200 {
         private bool pillBelowPlugField;
         
         private bool pillBelowPlugFieldSpecified;
+        
+        private bool plugCatcherField;
+        
+        private bool plugCatcherFieldSpecified;
         
         private PressureMeasure presBackPressureField;
         
@@ -35026,6 +36573,27 @@ namespace Energistics.Generator.WITSML200 {
             }
             set {
                 this.pillBelowPlugFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool PlugCatcher {
+            get {
+                return this.plugCatcherField;
+            }
+            set {
+                this.plugCatcherField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PlugCatcherSpecified {
+            get {
+                return this.plugCatcherFieldSpecified;
+            }
+            set {
+                this.plugCatcherFieldSpecified = value;
             }
         }
         
@@ -35795,8 +37363,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of CementStageReport</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of CementStageReport")]
         public string uid {
             get {
                 return this.uidField;
@@ -35814,43 +37384,6 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class CementDesignStage : AbstractCementStage {
-        
-        private string squeezeObjField;
-        
-        private bool plugCatcherField;
-        
-        private bool plugCatcherFieldSpecified;
-        
-        /// <remarks/>
-        public string SqueezeObj {
-            get {
-                return this.squeezeObjField;
-            }
-            set {
-                this.squeezeObjField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool PlugCatcher {
-            get {
-                return this.plugCatcherField;
-            }
-            set {
-                this.plugCatcherField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool PlugCatcherSpecified {
-            get {
-                return this.plugCatcherFieldSpecified;
-            }
-            set {
-                this.plugCatcherFieldSpecified = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -35899,6 +37432,8 @@ namespace Energistics.Generator.WITSML200 {
         private LengthMeasure lenPipeRecipStrokeField;
         
         private bool reciprocatingField;
+        
+        private bool reciprocatingFieldSpecified;
         
         /// <remarks/>
         public string CementEngr {
@@ -36037,6 +37572,17 @@ namespace Energistics.Generator.WITSML200 {
             }
             set {
                 this.reciprocatingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ReciprocatingSpecified {
+            get {
+                return this.reciprocatingFieldSpecified;
+            }
+            set {
+                this.reciprocatingFieldSpecified = value;
             }
         }
     }
@@ -36307,6 +37853,9 @@ namespace Energistics.Generator.WITSML200 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the WellGeometrySection</summary>
+        [System.ComponentModel.DescriptionAttribute("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of t" +
+            "he WellGeometrySection")]
         public Citation Citation {
             get {
                 return this.citationField;
@@ -36542,6 +38091,638 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         tubing,
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChannelValueContext))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ObjectContext))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IndexRangeContext))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public abstract partial class AbstractLogDataContext {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class ChannelValueContext : AbstractLogDataContext {
+        
+        private DataObjectReference channelReferenceField;
+        
+        private string dataValueField;
+        
+        /// <remarks/>
+        public DataObjectReference ChannelReference {
+            get {
+                return this.channelReferenceField;
+            }
+            set {
+                this.channelReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string DataValue {
+            get {
+                return this.dataValueField;
+            }
+            set {
+                this.dataValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class ObjectContext : AbstractLogDataContext {
+        
+        private DataObjectReference objectReferenceField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        public DataObjectReference ObjectReference {
+            get {
+                return this.objectReferenceField;
+            }
+            set {
+                this.objectReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class IndexRangeContext : AbstractLogDataContext {
+        
+        private AbstractIndexValue startIndexField;
+        
+        private AbstractIndexValue endIndexField;
+        
+        /// <remarks/>
+        public AbstractIndexValue StartIndex {
+            get {
+                return this.startIndexField;
+            }
+            set {
+                this.startIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public AbstractIndexValue EndIndex {
+            get {
+                return this.endIndexField;
+            }
+            set {
+                this.endIndexField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DepthIndexValue))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeIndexValue))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PassIndexedDepth))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public abstract partial class AbstractIndexValue {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class DepthIndexValue : AbstractIndexValue {
+        
+        private float depthField;
+        
+        /// <remarks/>
+        public float Depth {
+            get {
+                return this.depthField;
+            }
+            set {
+                this.depthField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class TimeIndexValue : AbstractIndexValue {
+        
+        private string timeField;
+        
+        /// <remarks/>
+        public string Time {
+            get {
+                return this.timeField;
+            }
+            set {
+                this.timeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class PassIndexedDepth : AbstractIndexValue {
+        
+        private int passField;
+        
+        private int directionField;
+        
+        private float depthField;
+        
+        /// <remarks/>
+        public int Pass {
+            get {
+                return this.passField;
+            }
+            set {
+                this.passField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Direction {
+            get {
+                return this.directionField;
+            }
+            set {
+                this.directionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public float Depth {
+            get {
+                return this.depthField;
+            }
+            set {
+                this.depthField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class ChannelData {
+        
+        private string dataField;
+        
+        private string fileUriField;
+        
+        /// <remarks/>
+        /// <summary>The data blob in JSON form. This allows you to embed the bulk data in a single file with the xml, to avoid the issues that arise with splitting the data across multiple files.   BUSINESS RULE: Either this element or the FileUri element must be present</summary>
+        [System.ComponentModel.DescriptionAttribute("The data blob in JSON form. This allows you to embed the bulk data in a single fi" +
+            "le with the xml, to avoid the issues that arise with splitting the data across m" +
+            "ultiple files.   BUSINESS RULE: Either this element or the FileUri element must " +
+            "be present")]
+        public string Data {
+            get {
+                return this.dataField;
+            }
+            set {
+                this.dataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The uri of a file containing the bulkdata. If this field is non-null, then the data field is ignored. For files written to disk, this should normally contain a simple file name in relative URI form. For instance, if an application writes a log file to disk, it might write the xml as abc.xml, and the bulk data abc.avro. In that case the value of this element would be './abc.avro'.   BUSINESS RULE: Either this element or the Data element must be present</summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
+        [System.ComponentModel.DescriptionAttribute(@"The uri of a file containing the bulkdata. If this field is non-null, then the data field is ignored. For files written to disk, this should normally contain a simple file name in relative URI form. For instance, if an application writes a log file to disk, it might write the xml as abc.xml, and the bulk data abc.avro. In that case the value of this element would be './abc.avro'.   BUSINESS RULE: Either this element or the Data element must be present")]
+        public string FileUri {
+            get {
+                return this.fileUriField;
+            }
+            set {
+                this.fileUriField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class PointMetadata {
+        
+        private string nameField;
+        
+        private EtpDataType etpDataTypeField;
+        
+        private string descriptionField;
+        
+        /// <remarks/>
+        /// <summary>The name of the point metadata.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name of the point metadata.")]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The underlying Etp data type of the point metadata.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The underlying Etp data type of the point metadata.")]
+        public EtpDataType EtpDataType {
+            get {
+                return this.etpDataTypeField;
+            }
+            set {
+                this.etpDataTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Free format description of the point metadata.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("Free format description of the point metadata.")]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum EtpDataType {
+        
+        /// <remarks/>
+        boolean,
+        
+        /// <remarks/>
+        bytes,
+        
+        /// <remarks/>
+        @double,
+        
+        /// <remarks/>
+        @float,
+        
+        /// <remarks/>
+        @int,
+        
+        /// <remarks/>
+        @long,
+        
+        /// <remarks/>
+        @null,
+        
+        /// <remarks/>
+        @string,
+        
+        /// <remarks/>
+        vector,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class LengthMeasureExt {
+        
+        private string uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public string uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class LogChannelAxis {
+        
+        private double axisStartField;
+        
+        private double axisSpacingField;
+        
+        private long axisCountField;
+        
+        private string axisNameField;
+        
+        private string axisPropertyKindField;
+        
+        private string axisUomField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Value of the initial entry in the list of axis index values.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Value of the initial entry in the list of axis index values.")]
+        public double AxisStart {
+            get {
+                return this.axisStartField;
+            }
+            set {
+                this.axisStartField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The increment to be used to fill out the list of the log channel axis index values.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The increment to be used to fill out the list of the log channel axis index value" +
+            "s.")]
+        public double AxisSpacing {
+            get {
+                return this.axisSpacingField;
+            }
+            set {
+                this.axisSpacingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The count of elements along this axis of the array.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The count of elements along this axis of the array.")]
+        public long AxisCount {
+            get {
+                return this.axisCountField;
+            }
+            set {
+                this.axisCountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The name of the array axis.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name of the array axis.")]
+        public string AxisName {
+            get {
+                return this.axisNameField;
+            }
+            set {
+                this.axisNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The property type by which the array axis is classified. Like "measured depth" or "elapsed time".</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The property type by which the array axis is classified. Like \"measured depth\" or" +
+            " \"elapsed time\".")]
+        public string AxisPropertyKind {
+            get {
+                return this.axisPropertyKindField;
+            }
+            set {
+                this.axisPropertyKindField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A string representing the units of measure of the axis values.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A string representing the units of measure of the axis values.")]
+        public string AxisUom {
+            get {
+                return this.axisUomField;
+            }
+            set {
+                this.axisUomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A unique identifier for an instance of a log channel axis</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A unique identifier for an instance of a log channel axis")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class ChannelIndex {
+        
+        private ChannelIndexType indexTypeField;
+        
+        private string uomField;
+        
+        private IndexDirection directionField;
+        
+        private string mnemonicField;
+        
+        private string datumReferenceField;
+        
+        /// <remarks/>
+        /// <summary>The type of index (time, depth, etc)</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The type of index (time, depth, etc)")]
+        public ChannelIndexType IndexType {
+            get {
+                return this.indexTypeField;
+            }
+            set {
+                this.indexTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The units of the index. Must be one of the units allowed for the specified IndexType (i.e. time or distance).</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The units of the index. Must be one of the units allowed for the specified IndexT" +
+            "ype (i.e. time or distance).")]
+        public string Uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The direction of the index, either increasing or decreasing. Index direction may not change within the life of a channel.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The direction of the index, either increasing or decreasing. Index direction may " +
+            "not change within the life of a channel.")]
+        public IndexDirection Direction {
+            get {
+                return this.directionField;
+            }
+            set {
+                this.directionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The mnemonic for the index.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The mnemonic for the index.")]
+        public string Mnemonic {
+            get {
+                return this.mnemonicField;
+            }
+            set {
+                this.mnemonicField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>For depth indexes, this contains the uid of the datum, in the Channel's Well object, to which all of the index values are referenced.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("For depth indexes, this contains the uid of the datum, in the Channel\'s Well obje" +
+            "ct, to which all of the index values are referenced.")]
+        public string DatumReference {
+            get {
+                return this.datumReferenceField;
+            }
+            set {
+                this.datumReferenceField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum ChannelIndexType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("measured depth")]
+        measureddepth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("true vertical depth")]
+        trueverticaldepth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pass indexed depth")]
+        passindexeddepth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("date time")]
+        datetime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("elapsed time")]
+        elapsedtime,
+        
+        /// <remarks/>
+        temperature,
+        
+        /// <remarks/>
+        pressure,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum IndexDirection {
+        
+        /// <remarks/>
+        decreasing,
+        
+        /// <remarks/>
+        increasing,
     }
     
     /// <remarks/>
@@ -37564,9 +39745,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of DrillReportSurveyStation</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of DrillReportSurveyStation")]
         public string uid {
             get {
                 return this.uidField;
@@ -37590,8 +39773,10 @@ namespace Energistics.Generator.WITSML200 {
         private string valueField;
         
         /// <remarks/>
+        /// <summary>The timestamp of the time-qualified comment</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
+        [System.ComponentModel.DescriptionAttribute("The timestamp of the time-qualified comment")]
         public string dTim {
             get {
                 return this.dTimField;
@@ -37712,9 +39897,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of DrillReportPorePressure</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of DrillReportPorePressure")]
         public string uid {
             get {
                 return this.uidField;
@@ -38695,9 +40882,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Fluid</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Fluid")]
         public string uid {
             get {
                 return this.uidField;
@@ -39659,9 +41848,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of DrillReportStatusInfo</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of DrillReportStatusInfo")]
         public string uid {
             get {
                 return this.uidField;
@@ -39735,7 +41926,9 @@ namespace Energistics.Generator.WITSML200 {
         private double valueField;
         
         /// <remarks/>
+        /// <summary>The unit of measure by which the datum is expressed</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The unit of measure by which the datum is expressed")]
         public LengthUom uom {
             get {
                 return this.uomField;
@@ -39757,8 +41950,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Defines the vertical datums associated with elevation, vertical depth and measured depth coordinates</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Defines the vertical datums associated with elevation, vertical depth and measure" +
+            "d depth coordinates")]
         public string datum {
             get {
                 return this.datumField;
@@ -40102,9 +42298,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of DrillReportGasReadingInfo</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of DrillReportGasReadingInfo")]
         public string uid {
             get {
                 return this.uidField;
@@ -40113,51 +42311,6 @@ namespace Energistics.Generator.WITSML200 {
                 this.uidField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum GasPeakType {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("circulating background gas")]
-        circulatingbackgroundgas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("connection gas")]
-        connectiongas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling background gas")]
-        drillingbackgroundgas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("drilling gas peak")]
-        drillinggaspeak,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("flow check gas")]
-        flowcheckgas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("no readings")]
-        noreadings,
-        
-        /// <remarks/>
-        other,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shut down gas")]
-        shutdowngas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("trip gas")]
-        tripgas,
-        
-        /// <remarks/>
-        unknown,
     }
     
     /// <remarks/>
@@ -40244,9 +42397,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of DrillReportPerfInfo</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of DrillReportPerfInfo")]
         public string uid {
             get {
                 return this.uidField;
@@ -40341,9 +42496,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of DrillReportStratInfo</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of DrillReportStratInfo")]
         public string uid {
             get {
                 return this.uidField;
@@ -40750,9 +42907,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of DrillReportControlIncidentInfo</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of DrillReportControlIncidentInfo")]
         public string uid {
             get {
                 return this.uidField;
@@ -40951,9 +43110,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of DrillReportEquipFailureInfo</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of DrillReportEquipFailureInfo")]
         public string uid {
             get {
                 return this.uidField;
@@ -41064,9 +43225,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of DrillReportLithShowInfo</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of DrillReportLithShowInfo")]
         public string uid {
             get {
                 return this.uidField;
@@ -41262,9 +43425,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of DrillReportFormTestInfo</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of DrillReportFormTestInfo")]
         public string uid {
             get {
                 return this.uidField;
@@ -41666,9 +43831,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of DrillReportWellTestInfo</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of DrillReportWellTestInfo")]
         public string uid {
             get {
                 return this.uidField;
@@ -41865,9 +44032,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of DrillReportCoreInfo</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of DrillReportCoreInfo")]
         public string uid {
             get {
                 return this.uidField;
@@ -41913,7 +44082,9 @@ namespace Energistics.Generator.WITSML200 {
         private ThermodynamicTemperatureMeasure bottomHoleTemperatureField;
         
         /// <remarks/>
+        /// <summary>Bottomhole temperature for the job.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Bottomhole temperature for the job.")]
         public ThermodynamicTemperatureMeasure BottomHoleTemperature {
             get {
                 return this.bottomHoleTemperatureField;
@@ -42109,9 +44280,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of DrillReportLogInfo</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of DrillReportLogInfo")]
         public string uid {
             get {
                 return this.uidField;
@@ -42516,9 +44689,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of DrillActivity</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of DrillActivity")]
         public string uid {
             get {
                 return this.uidField;
@@ -42745,9 +44920,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Nozzle</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Nozzle")]
         public string uid {
             get {
                 return this.uidField;
@@ -43253,9 +45430,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Sensor</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Sensor")]
         public string uid {
             get {
                 return this.uidField;
@@ -44586,9 +46765,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Bend</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Bend")]
         public string uid {
             get {
                 return this.uidField;
@@ -44789,9 +46970,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of Stabilizer</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of Stabilizer")]
         public string uid {
             get {
                 return this.uidField;
@@ -45781,9 +47964,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of BitRecord</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of BitRecord")]
         public string uid {
             get {
                 return this.uidField;
@@ -46669,7 +48854,9 @@ namespace Energistics.Generator.WITSML200 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>Connection whose type is tubular</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Connection whose type is tubular")]
         public TubularComponentType TypeTubularComponent {
             get {
                 return this.typeTubularComponentField;
@@ -47249,9 +49436,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of TubularComponent</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of TubularComponent")]
         public string uid {
             get {
                 return this.uidField;
@@ -48203,9 +50392,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>A unique identifier for an instance of a well datum.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A unique identifier for an instance of a well datum.")]
         public string uid {
             get {
                 return this.uidField;
@@ -48217,11 +50408,11 @@ namespace Energistics.Generator.WITSML200 {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalUnknownCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalEpsgCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalLocalAuthorityCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalGmlCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalEpsgCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalWktCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalLocalAuthorityCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalUnknownCrs))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -48236,17 +50427,17 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class VerticalUnknownCrs : AbstractVerticalCrs {
+    public partial class VerticalGmlCrs : AbstractVerticalCrs {
         
-        private string unknownField;
+        private VerticalCRSType gmlVerticalCrsDefinitionField;
         
         /// <remarks/>
-        public string Unknown {
+        public VerticalCRSType GmlVerticalCrsDefinition {
             get {
-                return this.unknownField;
+                return this.gmlVerticalCrsDefinitionField;
             }
             set {
-                this.unknownField = value;
+                this.gmlVerticalCrsDefinitionField = value;
             }
         }
     }
@@ -48278,6 +50469,27 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class VerticalWktCrs : AbstractVerticalCrs {
+        
+        private string wellKnownTextField;
+        
+        /// <remarks/>
+        public string WellKnownText {
+            get {
+                return this.wellKnownTextField;
+            }
+            set {
+                this.wellKnownTextField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     public partial class VerticalLocalAuthorityCrs : AbstractVerticalCrs {
         
         private string localAuthorityCrsNameField;
@@ -48299,38 +50511,17 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class VerticalGmlCrs : AbstractVerticalCrs {
+    public partial class VerticalUnknownCrs : AbstractVerticalCrs {
         
-        private VerticalCRSType gmlVerticalCrsDefinitionField;
-        
-        /// <remarks/>
-        public VerticalCRSType GmlVerticalCrsDefinition {
-            get {
-                return this.gmlVerticalCrsDefinitionField;
-            }
-            set {
-                this.gmlVerticalCrsDefinitionField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class VerticalWktCrs : AbstractVerticalCrs {
-        
-        private string wellKnownTextField;
+        private string unknownField;
         
         /// <remarks/>
-        public string WellKnownText {
+        public string Unknown {
             get {
-                return this.wellKnownTextField;
+                return this.unknownField;
             }
             set {
-                this.wellKnownTextField = value;
+                this.unknownField = value;
             }
         }
     }
@@ -48448,9 +50639,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>A unique identifier for an instance of a reference point.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A unique identifier for an instance of a reference point.")]
         public string uid {
             get {
                 return this.uidField;
@@ -48467,20 +50660,22 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class FootageEastWest {
+    public partial class DistanceEastWest {
         
         private LengthUom uomField;
         
         private bool uomFieldSpecified;
         
-        private EastOrWest refField;
+        private EastOrWest referenceField;
         
-        private bool refFieldSpecified;
+        private bool referenceFieldSpecified;
         
         private double valueField;
         
         /// <remarks/>
+        /// <summary>The unit of measure of the East-West distance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The unit of measure of the East-West distance.")]
         public LengthUom uom {
             get {
                 return this.uomField;
@@ -48502,24 +50697,26 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>East or west direction.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public EastOrWest @ref {
+        [System.ComponentModel.DescriptionAttribute("East or west direction.")]
+        public EastOrWest reference {
             get {
-                return this.refField;
+                return this.referenceField;
             }
             set {
-                this.refField = value;
+                this.referenceField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool refSpecified {
+        public bool referenceSpecified {
             get {
-                return this.refFieldSpecified;
+                return this.referenceFieldSpecified;
             }
             set {
-                this.refFieldSpecified = value;
+                this.referenceFieldSpecified = value;
             }
         }
         
@@ -48557,20 +50754,22 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class FootageNorthSouth {
+    public partial class DistanceNorthSouth {
         
         private LengthUom uomField;
         
         private bool uomFieldSpecified;
         
-        private NorthOrSouth refField;
+        private NorthOrSouth referenceField;
         
-        private bool refFieldSpecified;
+        private bool referenceFieldSpecified;
         
         private double valueField;
         
         /// <remarks/>
+        /// <summary>The unit of measure of the North-South distance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The unit of measure of the North-South distance.")]
         public LengthUom uom {
             get {
                 return this.uomField;
@@ -48592,24 +50791,26 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>North or south direction.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public NorthOrSouth @ref {
+        [System.ComponentModel.DescriptionAttribute("North or south direction.")]
+        public NorthOrSouth reference {
             get {
-                return this.refField;
+                return this.referenceField;
             }
             set {
-                this.refField = value;
+                this.referenceField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool refSpecified {
+        public bool referenceSpecified {
             get {
-                return this.refFieldSpecified;
+                return this.referenceFieldSpecified;
             }
             set {
-                this.refFieldSpecified = value;
+                this.referenceFieldSpecified = value;
             }
         }
         
@@ -48675,9 +50876,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private string quarterTownshipField;
         
-        private FootageNorthSouth footageNSField;
+        private DistanceNorthSouth footageNSField;
         
-        private FootageEastWest footageEWField;
+        private DistanceEastWest footageEWField;
         
         /// <remarks/>
         /// <summary>Principal meridian for this location.</summary>
@@ -48837,7 +51038,7 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        public FootageNorthSouth FootageNS {
+        public DistanceNorthSouth FootageNS {
             get {
                 return this.footageNSField;
             }
@@ -48847,7 +51048,7 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        public FootageEastWest FootageEW {
+        public DistanceEastWest FootageEW {
             get {
                 return this.footageEWField;
             }
@@ -49017,49 +51218,6 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class IndexRange {
-        
-        private string indexMaximumField;
-        
-        private string indexMinimumField;
-        
-        /// <remarks/>
-        /// <summary>The maximum index for the range over which the referenced data's conformance with the policy is being assessed.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The maximum index for the range over which the referenced data\'s conformance with" +
-            " the policy is being assessed.")]
-        public string IndexMaximum {
-            get {
-                return this.indexMaximumField;
-            }
-            set {
-                this.indexMaximumField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The minimum index for the range over which the referenced data's conformance with the policy is being assessed.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The minimum index for the range over which the referenced data\'s conformance with" +
-            " the policy is being assessed.")]
-        public string IndexMinimum {
-            get {
-                return this.indexMinimumField;
-            }
-            set {
-                this.indexMinimumField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     public partial class FailingRule {
         
         private string ruleIdField;
@@ -49122,6 +51280,49 @@ namespace Energistics.Generator.WITSML200 {
             }
             set {
                 this.failingRuleExtensionsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class IndexRange {
+        
+        private string indexMinimumField;
+        
+        private string indexMaximumField;
+        
+        /// <remarks/>
+        /// <summary>The minimum index for the range over which the referenced data's conformance with the policy is being assessed.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The minimum index for the range over which the referenced data\'s conformance with" +
+            " the policy is being assessed.")]
+        public string IndexMinimum {
+            get {
+                return this.indexMinimumField;
+            }
+            set {
+                this.indexMinimumField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The maximum index for the range over which the referenced data's conformance with the policy is being assessed.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The maximum index for the range over which the referenced data\'s conformance with" +
+            " the policy is being assessed.")]
+        public string IndexMaximum {
+            get {
+                return this.indexMaximumField;
+            }
+            set {
+                this.indexMaximumField = value;
             }
         }
     }
@@ -49202,7 +51403,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
     public partial class WellboreMarker : AbstractObject {
         
-        private string chronostratigraphicTopField;
+        private GeochronologicalUnit chronostratigraphicTopField;
         
         private LithostratigraphicUnit lithostratigraphicTopField;
         
@@ -49219,8 +51420,10 @@ namespace Energistics.Generator.WITSML200 {
         private DataObjectReference wellboreField;
         
         /// <remarks/>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string ChronostratigraphicTop {
+        /// <summary>The name of a Geochronology for this marker, with the "kind" attribute specifying the geochronological time span</summary>
+        [System.ComponentModel.DescriptionAttribute("The name of a Geochronology for this marker, with the \"kind\" attribute specifying" +
+            " the geochronological time span")]
+        public GeochronologicalUnit ChronostratigraphicTop {
             get {
                 return this.chronostratigraphicTopField;
             }
@@ -49230,6 +51433,8 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Specifies the unit of lithostratigraphy.</summary>
+        [System.ComponentModel.DescriptionAttribute("Specifies the unit of lithostratigraphy.")]
         public LithostratigraphicUnit LithostratigraphicTop {
             get {
                 return this.lithostratigraphicTopField;
@@ -49316,238 +51521,6 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-    public partial class CuttingsGeology : AbstractObject {
-        
-        private MdInterval mdIntervalField;
-        
-        private CuttingsGeologyInterval[] cuttingsIntervalField;
-        
-        private DataObjectReference wellboreField;
-        
-        /// <remarks/>
-        /// <summary>[maintained by the server] The interval which contains the minimum and maximum measured depths for all cuttings intervals in this cuttings geology.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("[maintained by the server] The interval which contains the minimum and maximum me" +
-            "asured depths for all cuttings intervals in this cuttings geology.")]
-        public MdInterval MdInterval {
-            get {
-                return this.mdIntervalField;
-            }
-            set {
-                this.mdIntervalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CuttingsInterval")]
-        public CuttingsGeologyInterval[] CuttingsInterval {
-            get {
-                return this.cuttingsIntervalField;
-            }
-            set {
-                this.cuttingsIntervalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference Wellbore {
-            get {
-                return this.wellboreField;
-            }
-            set {
-                this.wellboreField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-    public partial class InterpretedGeology : AbstractObject {
-        
-        private MdInterval mdIntervalField;
-        
-        private InterpretedGeologyInterval[] geologicIntervalInterpretedField;
-        
-        private DataObjectReference wellboreField;
-        
-        /// <remarks/>
-        /// <summary>[maintained by the server] The interval which contains the minimum and maximum measured depths for all interpreted intervals in this interpreted geology.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("[maintained by the server] The interval which contains the minimum and maximum me" +
-            "asured depths for all interpreted intervals in this interpreted geology.")]
-        public MdInterval MdInterval {
-            get {
-                return this.mdIntervalField;
-            }
-            set {
-                this.mdIntervalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("GeologicIntervalInterpreted")]
-        public InterpretedGeologyInterval[] GeologicIntervalInterpreted {
-            get {
-                return this.geologicIntervalInterpretedField;
-            }
-            set {
-                this.geologicIntervalInterpretedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference Wellbore {
-            get {
-                return this.wellboreField;
-            }
-            set {
-                this.wellboreField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-    public partial class ShowEvaluation : AbstractObject {
-        
-        private MdInterval mdIntervalField;
-        
-        private ShowEvaluationInterval[] evaluatedIntervalShowField;
-        
-        private DataObjectReference wellboreField;
-        
-        /// <remarks/>
-        /// <summary>[maintained by the server] The interval which contains the minimum and maximum measured depths for all show intervals in this show evaluation.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("[maintained by the server] The interval which contains the minimum and maximum me" +
-            "asured depths for all show intervals in this show evaluation.")]
-        public MdInterval MdInterval {
-            get {
-                return this.mdIntervalField;
-            }
-            set {
-                this.mdIntervalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("EvaluatedIntervalShow")]
-        public ShowEvaluationInterval[] EvaluatedIntervalShow {
-            get {
-                return this.evaluatedIntervalShowField;
-            }
-            set {
-                this.evaluatedIntervalShowField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference Wellbore {
-            get {
-                return this.wellboreField;
-            }
-            set {
-                this.wellboreField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
-    public partial class WellboreGeology : AbstractObject {
-        
-        private MdInterval mdIntervalField;
-        
-        private ShowEvaluation showIntervalSetField;
-        
-        private InterpretedGeology interpretedGeologyIntervalSetField;
-        
-        private DataObjectReference wellboreField;
-        
-        private CuttingsGeology cuttingsIntervalSetField;
-        
-        /// <remarks/>
-        /// <summary>[maintained by the server] The interval which contains the minimum and maximum measured depths for all wellbore geology types under this wellbore geology entry.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("[maintained by the server] The interval which contains the minimum and maximum me" +
-            "asured depths for all wellbore geology types under this wellbore geology entry.")]
-        public MdInterval MdInterval {
-            get {
-                return this.mdIntervalField;
-            }
-            set {
-                this.mdIntervalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public ShowEvaluation ShowIntervalSet {
-            get {
-                return this.showIntervalSetField;
-            }
-            set {
-                this.showIntervalSetField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public InterpretedGeology InterpretedGeologyIntervalSet {
-            get {
-                return this.interpretedGeologyIntervalSetField;
-            }
-            set {
-                this.interpretedGeologyIntervalSetField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference Wellbore {
-            get {
-                return this.wellboreField;
-            }
-            set {
-                this.wellboreField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public CuttingsGeology CuttingsIntervalSet {
-            get {
-                return this.cuttingsIntervalSetField;
-            }
-            set {
-                this.cuttingsIntervalSetField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
     [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class WellboreCompletion : AbstractObject {
         
@@ -49620,7 +51593,9 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>The contactInterval event information</summary>
         [System.Xml.Serialization.XmlElementAttribute("EventHistory")]
+        [System.ComponentModel.DescriptionAttribute("The contactInterval event information")]
         public EventInfo[] EventHistory {
             get {
                 return this.eventHistoryField;
@@ -49681,6 +51656,8 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Status (active, planned, suspended, testing, etc.) of the wellbore completion</summary>
+        [System.ComponentModel.DescriptionAttribute("Status (active, planned, suspended, testing, etc.) of the wellbore completion")]
         public string CurrentStatus {
             get {
                 return this.currentStatusField;
@@ -49691,7 +51668,9 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Date for when the status was established.</summary>
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
+        [System.ComponentModel.DescriptionAttribute("Date for when the status was established.")]
         public string StatusDate {
             get {
                 return this.statusDateField;
@@ -49854,6 +51833,8 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Status (active, planned, suspended, testing, etc.) of the well completion</summary>
+        [System.ComponentModel.DescriptionAttribute("Status (active, planned, suspended, testing, etc.) of the well completion")]
         public string CurrentStatus {
             get {
                 return this.currentStatusField;
@@ -49864,7 +51845,9 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Timestamp for when this status was established</summary>
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
+        [System.ComponentModel.DescriptionAttribute("Timestamp for when this status was established")]
         public string StatusDate {
             get {
                 return this.statusDateField;
@@ -49952,775 +51935,11 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
-    public partial class StimJob : AbstractObject {
-        
-        private PressureMeasure avgJobPresField;
-        
-        private ThermodynamicTemperatureMeasure bottomholeStaticTemperatureField;
-        
-        private string commonDataField;
-        
-        private string customerNameField;
-        
-        private string dTimArrivalField;
-        
-        private string dTimEndField;
-        
-        private string dTimStartField;
-        
-        private PressureMeasure flowBackPresField;
-        
-        private VolumePerTimeMeasure flowBackRateField;
-        
-        private VolumeMeasure flowBackVolumeField;
-        
-        private VolumePerVolumeMeasure fluidEfficiencyField;
-        
-        private PowerMeasure hhpOrderedField;
-        
-        private PowerMeasure hhpUsedField;
-        
-        private StimPerforationCluster[] jobPerforationClustersField;
-        
-        private string kindField;
-        
-        private StimMaterialCatalog materialsField;
-        
-        private VolumePerTimeMeasure maxFluidRateField;
-        
-        private PressureMeasure maxJobPresField;
-        
-        private PIDXCommodityCode pIDXCommodityCodeField;
-        
-        private bool pIDXCommodityCodeFieldSpecified;
-        
-        private string serviceCompanyField;
-        
-        private long stageCountField;
-        
-        private bool stageCountFieldSpecified;
-        
-        private string supervisorField;
-        
-        private VolumeMeasure totalJobVolumeField;
-        
-        private MassMeasure totalProppantInFormationField;
-        
-        private MassMeasure totalProppantUsedField;
-        
-        private TimeMeasure totalPumpTimeField;
-        
-        private ThermodynamicTemperatureMeasure treatingBottomholeTemperatureField;
-        
-        private DataObjectReference[] stageField;
-        
-        private StimMaterialQuantity[] materialUsedField;
-        
-        private DataObjectReference wellboreField;
-        
-        private StimMaterialCatalog materialCatalogField;
-        
-        private DataObjectReference[][] logCatalogField;
-        
-        /// <remarks/>
-        /// <summary>Average pressure encountered during treatment of all stages.</summary>
-        [System.ComponentModel.DescriptionAttribute("Average pressure encountered during treatment of all stages.")]
-        public PressureMeasure AvgJobPres {
-            get {
-                return this.avgJobPresField;
-            }
-            set {
-                this.avgJobPresField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Bottomhole static temperature for the job.</summary>
-        [System.ComponentModel.DescriptionAttribute("Bottomhole static temperature for the job.")]
-        public ThermodynamicTemperatureMeasure BottomholeStaticTemperature {
-            get {
-                return this.bottomholeStaticTemperatureField;
-            }
-            set {
-                this.bottomholeStaticTemperatureField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A container element that contains elements that are common to all data objects.</summary>
-        [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data objects.")]
-        public string CommonData {
-            get {
-                return this.commonDataField;
-            }
-            set {
-                this.commonDataField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Customer or company name.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("Customer or company name.")]
-        public string CustomerName {
-            get {
-                return this.customerNameField;
-            }
-            set {
-                this.customerNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Date and time at which the stimulation contractor arrives on location.</summary>
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
-        [System.ComponentModel.DescriptionAttribute("Date and time at which the stimulation contractor arrives on location.")]
-        public string DTimArrival {
-            get {
-                return this.dTimArrivalField;
-            }
-            set {
-                this.dTimArrivalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Ending date and time of stimulation job.</summary>
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
-        [System.ComponentModel.DescriptionAttribute("Ending date and time of stimulation job.")]
-        public string DTimEnd {
-            get {
-                return this.dTimEndField;
-            }
-            set {
-                this.dTimEndField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Start date and time of the stimulation job.</summary>
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
-        [System.ComponentModel.DescriptionAttribute("Start date and time of the stimulation job.")]
-        public string DTimStart {
-            get {
-                return this.dTimStartField;
-            }
-            set {
-                this.dTimStartField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Pressure recorded on fluid returning to surface.</summary>
-        [System.ComponentModel.DescriptionAttribute("Pressure recorded on fluid returning to surface.")]
-        public PressureMeasure FlowBackPres {
-            get {
-                return this.flowBackPresField;
-            }
-            set {
-                this.flowBackPresField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Rate recorded on fluid returning to surface.</summary>
-        [System.ComponentModel.DescriptionAttribute("Rate recorded on fluid returning to surface.")]
-        public VolumePerTimeMeasure FlowBackRate {
-            get {
-                return this.flowBackRateField;
-            }
-            set {
-                this.flowBackRateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Volume recorded on fluid returning to surface.</summary>
-        [System.ComponentModel.DescriptionAttribute("Volume recorded on fluid returning to surface.")]
-        public VolumeMeasure FlowBackVolume {
-            get {
-                return this.flowBackVolumeField;
-            }
-            set {
-                this.flowBackVolumeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Percentage of fluid volume in the fracture at the end of pumping.</summary>
-        [System.ComponentModel.DescriptionAttribute("Percentage of fluid volume in the fracture at the end of pumping.")]
-        public VolumePerVolumeMeasure FluidEfficiency {
-            get {
-                return this.fluidEfficiencyField;
-            }
-            set {
-                this.fluidEfficiencyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Hydraulic horsepower ordered for the stimulation job.</summary>
-        [System.ComponentModel.DescriptionAttribute("Hydraulic horsepower ordered for the stimulation job.")]
-        public PowerMeasure HhpOrdered {
-            get {
-                return this.hhpOrderedField;
-            }
-            set {
-                this.hhpOrderedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Hydraulic horsepower actually used for the stimulation job.</summary>
-        [System.ComponentModel.DescriptionAttribute("Hydraulic horsepower actually used for the stimulation job.")]
-        public PowerMeasure HhpUsed {
-            get {
-                return this.hhpUsedField;
-            }
-            set {
-                this.hhpUsedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public StimPerforationCluster[] JobPerforationClusters {
-            get {
-                return this.jobPerforationClustersField;
-            }
-            set {
-                this.jobPerforationClustersField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Type of well stimulation job.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("Type of well stimulation job.")]
-        public string Kind {
-            get {
-                return this.kindField;
-            }
-            set {
-                this.kindField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public StimMaterialCatalog Materials {
-            get {
-                return this.materialsField;
-            }
-            set {
-                this.materialsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Maximum job fluid pumping rate encountered during treatment of all stage.</summary>
-        [System.ComponentModel.DescriptionAttribute("Maximum job fluid pumping rate encountered during treatment of all stage.")]
-        public VolumePerTimeMeasure MaxFluidRate {
-            get {
-                return this.maxFluidRateField;
-            }
-            set {
-                this.maxFluidRateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Maximum pressure encountered during the job.</summary>
-        [System.ComponentModel.DescriptionAttribute("Maximum pressure encountered during the job.")]
-        public PressureMeasure MaxJobPres {
-            get {
-                return this.maxJobPresField;
-            }
-            set {
-                this.maxJobPresField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>UNSPSC(Segment 71) Commodity Code from Oil and gas extraction and production enhancement services family.</summary>
-        [System.ComponentModel.DescriptionAttribute("UNSPSC(Segment 71) Commodity Code from Oil and gas extraction and production enha" +
-            "ncement services family.")]
-        public PIDXCommodityCode PIDXCommodityCode {
-            get {
-                return this.pIDXCommodityCodeField;
-            }
-            set {
-                this.pIDXCommodityCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool PIDXCommodityCodeSpecified {
-            get {
-                return this.pIDXCommodityCodeFieldSpecified;
-            }
-            set {
-                this.pIDXCommodityCodeFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Name of the well stimulation contractor.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("Name of the well stimulation contractor.")]
-        public string ServiceCompany {
-            get {
-                return this.serviceCompanyField;
-            }
-            set {
-                this.serviceCompanyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Number of stages treated during the stimulation service.</summary>
-        [System.ComponentModel.DescriptionAttribute("Number of stages treated during the stimulation service.")]
-        public long StageCount {
-            get {
-                return this.stageCountField;
-            }
-            set {
-                this.stageCountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool StageCountSpecified {
-            get {
-                return this.stageCountFieldSpecified;
-            }
-            set {
-                this.stageCountFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Name of service company supervisor.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Name of service company supervisor.")]
-        public string Supervisor {
-            get {
-                return this.supervisorField;
-            }
-            set {
-                this.supervisorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Total volume pumped for all stages.</summary>
-        [System.ComponentModel.DescriptionAttribute("Total volume pumped for all stages.")]
-        public VolumeMeasure TotalJobVolume {
-            get {
-                return this.totalJobVolumeField;
-            }
-            set {
-                this.totalJobVolumeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The mass of proppant placed in the formation.</summary>
-        [System.ComponentModel.DescriptionAttribute("The mass of proppant placed in the formation.")]
-        public MassMeasure TotalProppantInFormation {
-            get {
-                return this.totalProppantInFormationField;
-            }
-            set {
-                this.totalProppantInFormationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>{Get this from WITSML 1.4.1.1, which Clinton removed.}</summary>
-        [System.ComponentModel.DescriptionAttribute("{Get this from WITSML 1.4.1.1, which Clinton removed.}")]
-        public MassMeasure TotalProppantUsed {
-            get {
-                return this.totalProppantUsedField;
-            }
-            set {
-                this.totalProppantUsedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The total pumping time.</summary>
-        [System.ComponentModel.DescriptionAttribute("The total pumping time.")]
-        public TimeMeasure TotalPumpTime {
-            get {
-                return this.totalPumpTimeField;
-            }
-            set {
-                this.totalPumpTimeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Expected or calculated bottomhole treating temperature for the job.</summary>
-        [System.ComponentModel.DescriptionAttribute("Expected or calculated bottomhole treating temperature for the job.")]
-        public ThermodynamicTemperatureMeasure TreatingBottomholeTemperature {
-            get {
-                return this.treatingBottomholeTemperatureField;
-            }
-            set {
-                this.treatingBottomholeTemperatureField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A stage treated during the stimulation job.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("Stage")]
-        [System.ComponentModel.DescriptionAttribute("A stage treated during the stimulation job.")]
-        public DataObjectReference[] Stage {
-            get {
-                return this.stageField;
-            }
-            set {
-                this.stageField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("MaterialUsed")]
-        public StimMaterialQuantity[] MaterialUsed {
-            get {
-                return this.materialUsedField;
-            }
-            set {
-                this.materialUsedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference Wellbore {
-            get {
-                return this.wellboreField;
-            }
-            set {
-                this.wellboreField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public StimMaterialCatalog MaterialCatalog {
-            get {
-                return this.materialCatalogField;
-            }
-            set {
-                this.materialCatalogField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("JobLog", typeof(DataObjectReference), IsNullable=false)]
-        public DataObjectReference[][] LogCatalog {
-            get {
-                return this.logCatalogField;
-            }
-            set {
-                this.logCatalogField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-    public partial class StimPerforationCluster : AbstractObject {
-        
-        private MdInterval mdPerforatedIntervalField;
-        
-        private TvdInterval tvdPerforatedIntervalField;
-        
-        private string typeField;
-        
-        private long perforationCountField;
-        
-        private bool perforationCountFieldSpecified;
-        
-        private LengthMeasure sizeField;
-        
-        private ReciprocalLengthMeasure densityPerforationField;
-        
-        private PlaneAngleMeasure phasingPerforationField;
-        
-        private double frictionFactorField;
-        
-        private bool frictionFactorFieldSpecified;
-        
-        private PressureMeasure frictionPresField;
-        
-        private double dischargeCoefficientField;
-        
-        private bool dischargeCoefficientFieldSpecified;
-        
-        /// <remarks/>
-        /// <summary>Measured depths of the top and base perforation.</summary>
-        [System.ComponentModel.DescriptionAttribute("Measured depths of the top and base perforation.")]
-        public MdInterval MdPerforatedInterval {
-            get {
-                return this.mdPerforatedIntervalField;
-            }
-            set {
-                this.mdPerforatedIntervalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>True vertical depth of the top and base perforation.</summary>
-        [System.ComponentModel.DescriptionAttribute("True vertical depth of the top and base perforation.")]
-        public TvdInterval TvdPerforatedInterval {
-            get {
-                return this.tvdPerforatedIntervalField;
-            }
-            set {
-                this.tvdPerforatedIntervalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The type of perforation and/or how the perforation was created.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The type of perforation and/or how the perforation was created.")]
-        public string Type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The number of perforations in this interval.</summary>
-        [System.ComponentModel.DescriptionAttribute("The number of perforations in this interval.")]
-        public long PerforationCount {
-            get {
-                return this.perforationCountField;
-            }
-            set {
-                this.perforationCountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool PerforationCountSpecified {
-            get {
-                return this.perforationCountFieldSpecified;
-            }
-            set {
-                this.perforationCountFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The size of the perforations.</summary>
-        [System.ComponentModel.DescriptionAttribute("The size of the perforations.")]
-        public LengthMeasure Size {
-            get {
-                return this.sizeField;
-            }
-            set {
-                this.sizeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The number of perforation holes per length across the treatment interval.  Used to describe but not limited to the configuration of perforating guns or the placement  of perforations (holes, slots, openings ...) in the wellbore, and is often  abbreviated to spf (shots per foot).</summary>
-        [System.ComponentModel.DescriptionAttribute(@"The number of perforation holes per length across the treatment interval.  Used to describe but not limited to the configuration of perforating guns or the placement  of perforations (holes, slots, openings ...) in the wellbore, and is often  abbreviated to spf (shots per foot).")]
-        public ReciprocalLengthMeasure DensityPerforation {
-            get {
-                return this.densityPerforationField;
-            }
-            set {
-                this.densityPerforationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The radial distribution of successive perforations around the wellbore axis.  Radial distribution is commonly available in 0, 180 120, 90 and 60 degree phasing.</summary>
-        [System.ComponentModel.DescriptionAttribute("The radial distribution of successive perforations around the wellbore axis.  Rad" +
-            "ial distribution is commonly available in 0, 180 120, 90 and 60 degree phasing.")]
-        public PlaneAngleMeasure PhasingPerforation {
-            get {
-                return this.phasingPerforationField;
-            }
-            set {
-                this.phasingPerforationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The friction factor of each perforation set.</summary>
-        [System.ComponentModel.DescriptionAttribute("The friction factor of each perforation set.")]
-        public double FrictionFactor {
-            get {
-                return this.frictionFactorField;
-            }
-            set {
-                this.frictionFactorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool FrictionFactorSpecified {
-            get {
-                return this.frictionFactorFieldSpecified;
-            }
-            set {
-                this.frictionFactorFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The friction pressure for the perforation set.</summary>
-        [System.ComponentModel.DescriptionAttribute("The friction pressure for the perforation set.")]
-        public PressureMeasure FrictionPres {
-            get {
-                return this.frictionPresField;
-            }
-            set {
-                this.frictionPresField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A coefficient used in the equation for calculation of pressure drop across a perforation set.</summary>
-        [System.ComponentModel.DescriptionAttribute("A coefficient used in the equation for calculation of pressure drop across a perf" +
-            "oration set.")]
-        public double DischargeCoefficient {
-            get {
-                return this.dischargeCoefficientField;
-            }
-            set {
-                this.dischargeCoefficientField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DischargeCoefficientSpecified {
-            get {
-                return this.dischargeCoefficientFieldSpecified;
-            }
-            set {
-                this.dischargeCoefficientFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum PIDXCommodityCode {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131001")]
-        Item71131001,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131002")]
-        Item71131002,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131003")]
-        Item71131003,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131004")]
-        Item71131004,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131005")]
-        Item71131005,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131006")]
-        Item71131006,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131007")]
-        Item71131007,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131008")]
-        Item71131008,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131009")]
-        Item71131009,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131010")]
-        Item71131010,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131011")]
-        Item71131011,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131012")]
-        Item71131012,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131013")]
-        Item71131013,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131014")]
-        Item71131014,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131015")]
-        Item71131015,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131016")]
-        Item71131016,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131018")]
-        Item71131018,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("71131019")]
-        Item71131019,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class StimJobStage : AbstractObject {
         
         private long numberField;
         
         private bool numberFieldSpecified;
-        
-        private VolumeMeasure avgBaseFluidReturnVolumePerMinuteField;
         
         private LengthMeasure fractureHeightField;
         
@@ -50728,11 +51947,13 @@ namespace Energistics.Generator.WITSML200 {
         
         private StimPerforationCluster[] stagePerforationClustersField;
         
+        private VolumePerTimeMeasure avgBaseFluidReturnVolumeRateField;
+        
         private ThermodynamicTemperatureMeasure avgBHStaticTemperatureField;
         
         private ThermodynamicTemperatureMeasure avgBHTreatingTemperatureField;
         
-        private VolumeMeasure avgBottomholePumpedVolumePerMinuteField;
+        private VolumePerTimeMeasure avgBottomholePumpedVolumeRateField;
         
         private LengthPerTimeMeasure avgConductivityField;
         
@@ -50752,7 +51973,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private MassPerVolumeMeasure avgProppantConcSurfaceField;
         
-        private VolumeMeasure avgSlurryReturnPerMinuteField;
+        private VolumePerTimeMeasure avgSlurryReturnVolumeRateField;
         
         private PressureMeasure breakDownPresField;
         
@@ -50788,11 +52009,11 @@ namespace Energistics.Generator.WITSML200 {
         
         private PowerMeasure initialShutinPresField;
         
-        private VolumeMeasure maxFluidVolumePerMinuteAnnulusField;
+        private VolumePerTimeMeasure maxFluidVolumeRateAnnulusField;
         
-        private VolumeMeasure maxFluidVolumePerMinuteCasingField;
+        private VolumePerTimeMeasure maxFluidVolumeRateCasingField;
         
-        private VolumeMeasure maxFluidVolumePerMinuteTubingField;
+        private VolumePerTimeMeasure maxFluidVolumeRateTubingField;
         
         private PowerMeasure maxHydraulicPowerField;
         
@@ -50874,7 +52095,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private StimJobStep[] jobStepField;
         
-        private StimMaterialQuantity[] maxMaterialUsagePerMinuteField;
+        private StimMaterialQuantity[] maxMaterialUsageRateField;
         
         private StimMaterialQuantity[] materialUsedField;
         
@@ -50912,18 +52133,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        /// <summary>Average base fluid pumping rate of all steps for stage treatment.</summary>
-        [System.ComponentModel.DescriptionAttribute("Average base fluid pumping rate of all steps for stage treatment.")]
-        public VolumeMeasure AvgBaseFluidReturnVolumePerMinute {
-            get {
-                return this.avgBaseFluidReturnVolumePerMinuteField;
-            }
-            set {
-                this.avgBaseFluidReturnVolumePerMinuteField = value;
-            }
-        }
-        
-        /// <remarks/>
         /// <summary>The height of the fracture.</summary>
         [System.ComponentModel.DescriptionAttribute("The height of the fracture.")]
         public LengthMeasure FractureHeight {
@@ -50948,13 +52157,27 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Perforations added just prior to treating the stage.</summary>
         [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
+        [System.ComponentModel.DescriptionAttribute("Perforations added just prior to treating the stage.")]
         public StimPerforationCluster[] StagePerforationClusters {
             get {
                 return this.stagePerforationClustersField;
             }
             set {
                 this.stagePerforationClustersField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Average base fluid pumping rate of all steps for stage treatment.</summary>
+        [System.ComponentModel.DescriptionAttribute("Average base fluid pumping rate of all steps for stage treatment.")]
+        public VolumePerTimeMeasure AvgBaseFluidReturnVolumeRate {
+            get {
+                return this.avgBaseFluidReturnVolumeRateField;
+            }
+            set {
+                this.avgBaseFluidReturnVolumeRateField = value;
             }
         }
         
@@ -50988,12 +52211,12 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Average bottomhole treatment flow rate.</summary>
         [System.ComponentModel.DescriptionAttribute("Average bottomhole treatment flow rate.")]
-        public VolumeMeasure AvgBottomholePumpedVolumePerMinute {
+        public VolumePerTimeMeasure AvgBottomholePumpedVolumeRate {
             get {
-                return this.avgBottomholePumpedVolumePerMinuteField;
+                return this.avgBottomholePumpedVolumeRateField;
             }
             set {
-                this.avgBottomholePumpedVolumePerMinuteField = value;
+                this.avgBottomholePumpedVolumeRateField = value;
             }
         }
         
@@ -51022,6 +52245,8 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Average hydraulic horse power used.</summary>
+        [System.ComponentModel.DescriptionAttribute("Average hydraulic horse power used.")]
         public PowerMeasure AvgHydraulicPower {
             get {
                 return this.avgHydraulicPowerField;
@@ -51106,12 +52331,12 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Average slurry return rate of all step for the stage treatment.</summary>
         [System.ComponentModel.DescriptionAttribute("Average slurry return rate of all step for the stage treatment.")]
-        public VolumeMeasure AvgSlurryReturnPerMinute {
+        public VolumePerTimeMeasure AvgSlurryReturnVolumeRate {
             get {
-                return this.avgSlurryReturnPerMinuteField;
+                return this.avgSlurryReturnVolumeRateField;
             }
             set {
-                this.avgSlurryReturnPerMinuteField = value;
+                this.avgSlurryReturnVolumeRateField = value;
             }
         }
         
@@ -51327,41 +52552,42 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>Maximum annulus fluid pumping rate of any step while treating the stage.</summary>
         [System.ComponentModel.DescriptionAttribute("Maximum annulus fluid pumping rate of any step while treating the stage.")]
-        public VolumeMeasure MaxFluidVolumePerMinuteAnnulus {
+        public VolumePerTimeMeasure MaxFluidVolumeRateAnnulus {
             get {
-                return this.maxFluidVolumePerMinuteAnnulusField;
+                return this.maxFluidVolumeRateAnnulusField;
             }
             set {
-                this.maxFluidVolumePerMinuteAnnulusField = value;
+                this.maxFluidVolumeRateAnnulusField = value;
             }
         }
         
         /// <remarks/>
         /// <summary>Maximum casing fluid pumping rate of any step while treating the stage.</summary>
         [System.ComponentModel.DescriptionAttribute("Maximum casing fluid pumping rate of any step while treating the stage.")]
-        public VolumeMeasure MaxFluidVolumePerMinuteCasing {
+        public VolumePerTimeMeasure MaxFluidVolumeRateCasing {
             get {
-                return this.maxFluidVolumePerMinuteCasingField;
+                return this.maxFluidVolumeRateCasingField;
             }
             set {
-                this.maxFluidVolumePerMinuteCasingField = value;
+                this.maxFluidVolumeRateCasingField = value;
             }
         }
         
         /// <remarks/>
         /// <summary>Maximum tubing fluid pumping rate of any step while treating the stage.</summary>
         [System.ComponentModel.DescriptionAttribute("Maximum tubing fluid pumping rate of any step while treating the stage.")]
-        public VolumeMeasure MaxFluidVolumePerMinuteTubing {
+        public VolumePerTimeMeasure MaxFluidVolumeRateTubing {
             get {
-                return this.maxFluidVolumePerMinuteTubingField;
+                return this.maxFluidVolumeRateTubingField;
             }
             set {
-                this.maxFluidVolumePerMinuteTubingField = value;
+                this.maxFluidVolumeRateTubingField = value;
             }
         }
         
         /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        /// <summary>Maximum hydraulic horse power used for stage.</summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum hydraulic horse power used for stage.")]
         public PowerMeasure MaxHydraulicPower {
             get {
                 return this.maxHydraulicPowerField;
@@ -51396,6 +52622,8 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Maximum surface pressure during treatment of the stage.</summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum surface pressure during treatment of the stage.")]
         public PressureMeasure MaxPresSurface {
             get {
                 return this.maxPresSurfaceField;
@@ -51838,13 +53066,13 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("MaxMaterialUsagePerMinute")]
-        public StimMaterialQuantity[] MaxMaterialUsagePerMinute {
+        [System.Xml.Serialization.XmlElementAttribute("MaxMaterialUsageRate")]
+        public StimMaterialQuantity[] MaxMaterialUsageRate {
             get {
-                return this.maxMaterialUsagePerMinuteField;
+                return this.maxMaterialUsageRateField;
             }
             set {
-                this.maxMaterialUsagePerMinuteField = value;
+                this.maxMaterialUsageRateField = value;
             }
         }
         
@@ -51902,8 +53130,10 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for this instance of StimJobStage</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of StimJobStage")]
         public string uid {
             get {
                 return this.uidField;
@@ -51912,6 +53142,743 @@ namespace Energistics.Generator.WITSML200 {
                 this.uidField = value;
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    public partial class StimPerforationCluster : AbstractObject {
+        
+        private MdInterval mdPerforatedIntervalField;
+        
+        private TvdInterval tvdPerforatedIntervalField;
+        
+        private string typeField;
+        
+        private long perforationCountField;
+        
+        private bool perforationCountFieldSpecified;
+        
+        private LengthMeasure sizeField;
+        
+        private ReciprocalLengthMeasure densityPerforationField;
+        
+        private PlaneAngleMeasure phasingPerforationField;
+        
+        private double frictionFactorField;
+        
+        private bool frictionFactorFieldSpecified;
+        
+        private PressureMeasure frictionPresField;
+        
+        private double dischargeCoefficientField;
+        
+        private bool dischargeCoefficientFieldSpecified;
+        
+        /// <remarks/>
+        /// <summary>Measured depths of the top and base perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depths of the top and base perforation.")]
+        public MdInterval MdPerforatedInterval {
+            get {
+                return this.mdPerforatedIntervalField;
+            }
+            set {
+                this.mdPerforatedIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth of the top and base perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the top and base perforation.")]
+        public TvdInterval TvdPerforatedInterval {
+            get {
+                return this.tvdPerforatedIntervalField;
+            }
+            set {
+                this.tvdPerforatedIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The type of perforation and/or how the perforation was created.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The type of perforation and/or how the perforation was created.")]
+        public string Type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The number of perforations in this interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("The number of perforations in this interval.")]
+        public long PerforationCount {
+            get {
+                return this.perforationCountField;
+            }
+            set {
+                this.perforationCountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PerforationCountSpecified {
+            get {
+                return this.perforationCountFieldSpecified;
+            }
+            set {
+                this.perforationCountFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The size of the perforations.</summary>
+        [System.ComponentModel.DescriptionAttribute("The size of the perforations.")]
+        public LengthMeasure Size {
+            get {
+                return this.sizeField;
+            }
+            set {
+                this.sizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The number of perforation holes per length across the treatment interval.  Used to describe but not limited to the configuration of perforating guns or the placement  of perforations (holes, slots, openings ...) in the wellbore, and is often  abbreviated to spf (shots per foot).</summary>
+        [System.ComponentModel.DescriptionAttribute(@"The number of perforation holes per length across the treatment interval.  Used to describe but not limited to the configuration of perforating guns or the placement  of perforations (holes, slots, openings ...) in the wellbore, and is often  abbreviated to spf (shots per foot).")]
+        public ReciprocalLengthMeasure DensityPerforation {
+            get {
+                return this.densityPerforationField;
+            }
+            set {
+                this.densityPerforationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The radial distribution of successive perforations around the wellbore axis.  Radial distribution is commonly available in 0, 180 120, 90 and 60 degree phasing.</summary>
+        [System.ComponentModel.DescriptionAttribute("The radial distribution of successive perforations around the wellbore axis.  Rad" +
+            "ial distribution is commonly available in 0, 180 120, 90 and 60 degree phasing.")]
+        public PlaneAngleMeasure PhasingPerforation {
+            get {
+                return this.phasingPerforationField;
+            }
+            set {
+                this.phasingPerforationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The friction factor of each perforation set.</summary>
+        [System.ComponentModel.DescriptionAttribute("The friction factor of each perforation set.")]
+        public double FrictionFactor {
+            get {
+                return this.frictionFactorField;
+            }
+            set {
+                this.frictionFactorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool FrictionFactorSpecified {
+            get {
+                return this.frictionFactorFieldSpecified;
+            }
+            set {
+                this.frictionFactorFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The friction pressure for the perforation set.</summary>
+        [System.ComponentModel.DescriptionAttribute("The friction pressure for the perforation set.")]
+        public PressureMeasure FrictionPres {
+            get {
+                return this.frictionPresField;
+            }
+            set {
+                this.frictionPresField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A coefficient used in the equation for calculation of pressure drop across a perforation set.</summary>
+        [System.ComponentModel.DescriptionAttribute("A coefficient used in the equation for calculation of pressure drop across a perf" +
+            "oration set.")]
+        public double DischargeCoefficient {
+            get {
+                return this.dischargeCoefficientField;
+            }
+            set {
+                this.dischargeCoefficientField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DischargeCoefficientSpecified {
+            get {
+                return this.dischargeCoefficientFieldSpecified;
+            }
+            set {
+                this.dischargeCoefficientFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
+    public partial class StimJob : AbstractObject {
+        
+        private PressureMeasure avgJobPresField;
+        
+        private ThermodynamicTemperatureMeasure bottomholeStaticTemperatureField;
+        
+        private string customerNameField;
+        
+        private string dTimArrivalField;
+        
+        private string dTimEndField;
+        
+        private string dTimStartField;
+        
+        private PressureMeasure flowBackPresField;
+        
+        private VolumePerTimeMeasure flowBackRateField;
+        
+        private VolumeMeasure flowBackVolumeField;
+        
+        private VolumePerVolumeMeasure fluidEfficiencyField;
+        
+        private PowerMeasure hhpOrderedField;
+        
+        private PowerMeasure hhpUsedField;
+        
+        private StimPerforationCluster[] jobPerforationClustersField;
+        
+        private string kindField;
+        
+        private VolumePerTimeMeasure maxFluidRateField;
+        
+        private PressureMeasure maxJobPresField;
+        
+        private PIDXCommodityCode pIDXCommodityCodeField;
+        
+        private bool pIDXCommodityCodeFieldSpecified;
+        
+        private string serviceCompanyField;
+        
+        private long stageCountField;
+        
+        private bool stageCountFieldSpecified;
+        
+        private string supervisorField;
+        
+        private VolumeMeasure totalJobVolumeField;
+        
+        private MassMeasure totalProppantInFormationField;
+        
+        private MassMeasure totalProppantUsedField;
+        
+        private TimeMeasure totalPumpTimeField;
+        
+        private ThermodynamicTemperatureMeasure treatingBottomholeTemperatureField;
+        
+        private DataObjectReference[] jobStageField;
+        
+        private StimMaterialQuantity[] materialUsedField;
+        
+        private DataObjectReference wellboreField;
+        
+        private StimJobMaterialCatalog materialCatalogField;
+        
+        private DataObjectReference[][] logCatalogField;
+        
+        /// <remarks/>
+        /// <summary>Average pressure encountered during treatment of all stages.</summary>
+        [System.ComponentModel.DescriptionAttribute("Average pressure encountered during treatment of all stages.")]
+        public PressureMeasure AvgJobPres {
+            get {
+                return this.avgJobPresField;
+            }
+            set {
+                this.avgJobPresField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Bottomhole static temperature for the job.</summary>
+        [System.ComponentModel.DescriptionAttribute("Bottomhole static temperature for the job.")]
+        public ThermodynamicTemperatureMeasure BottomholeStaticTemperature {
+            get {
+                return this.bottomholeStaticTemperatureField;
+            }
+            set {
+                this.bottomholeStaticTemperatureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Customer or company name.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("Customer or company name.")]
+        public string CustomerName {
+            get {
+                return this.customerNameField;
+            }
+            set {
+                this.customerNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Date and time at which the stimulation contractor arrives on location.</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
+        [System.ComponentModel.DescriptionAttribute("Date and time at which the stimulation contractor arrives on location.")]
+        public string DTimArrival {
+            get {
+                return this.dTimArrivalField;
+            }
+            set {
+                this.dTimArrivalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Ending date and time of stimulation job.</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
+        [System.ComponentModel.DescriptionAttribute("Ending date and time of stimulation job.")]
+        public string DTimEnd {
+            get {
+                return this.dTimEndField;
+            }
+            set {
+                this.dTimEndField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Start date and time of the stimulation job.</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+T.+[Z+\\-].*")]
+        [System.ComponentModel.DescriptionAttribute("Start date and time of the stimulation job.")]
+        public string DTimStart {
+            get {
+                return this.dTimStartField;
+            }
+            set {
+                this.dTimStartField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Pressure recorded on fluid returning to surface.</summary>
+        [System.ComponentModel.DescriptionAttribute("Pressure recorded on fluid returning to surface.")]
+        public PressureMeasure FlowBackPres {
+            get {
+                return this.flowBackPresField;
+            }
+            set {
+                this.flowBackPresField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Rate recorded on fluid returning to surface.</summary>
+        [System.ComponentModel.DescriptionAttribute("Rate recorded on fluid returning to surface.")]
+        public VolumePerTimeMeasure FlowBackRate {
+            get {
+                return this.flowBackRateField;
+            }
+            set {
+                this.flowBackRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Volume recorded on fluid returning to surface.</summary>
+        [System.ComponentModel.DescriptionAttribute("Volume recorded on fluid returning to surface.")]
+        public VolumeMeasure FlowBackVolume {
+            get {
+                return this.flowBackVolumeField;
+            }
+            set {
+                this.flowBackVolumeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Percentage of fluid volume in the fracture at the end of pumping.</summary>
+        [System.ComponentModel.DescriptionAttribute("Percentage of fluid volume in the fracture at the end of pumping.")]
+        public VolumePerVolumeMeasure FluidEfficiency {
+            get {
+                return this.fluidEfficiencyField;
+            }
+            set {
+                this.fluidEfficiencyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Hydraulic horsepower ordered for the stimulation job.</summary>
+        [System.ComponentModel.DescriptionAttribute("Hydraulic horsepower ordered for the stimulation job.")]
+        public PowerMeasure HhpOrdered {
+            get {
+                return this.hhpOrderedField;
+            }
+            set {
+                this.hhpOrderedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Hydraulic horsepower actually used for the stimulation job.</summary>
+        [System.ComponentModel.DescriptionAttribute("Hydraulic horsepower actually used for the stimulation job.")]
+        public PowerMeasure HhpUsed {
+            get {
+                return this.hhpUsedField;
+            }
+            set {
+                this.hhpUsedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Perforation Clusters existing prior to starting the job.</summary>
+        [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
+        [System.ComponentModel.DescriptionAttribute("Perforation Clusters existing prior to starting the job.")]
+        public StimPerforationCluster[] JobPerforationClusters {
+            get {
+                return this.jobPerforationClustersField;
+            }
+            set {
+                this.jobPerforationClustersField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Type of well stimulation job.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("Type of well stimulation job.")]
+        public string Kind {
+            get {
+                return this.kindField;
+            }
+            set {
+                this.kindField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Maximum job fluid pumping rate encountered during treatment of all stage.</summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum job fluid pumping rate encountered during treatment of all stage.")]
+        public VolumePerTimeMeasure MaxFluidRate {
+            get {
+                return this.maxFluidRateField;
+            }
+            set {
+                this.maxFluidRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Maximum pressure encountered during the job.</summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum pressure encountered during the job.")]
+        public PressureMeasure MaxJobPres {
+            get {
+                return this.maxJobPresField;
+            }
+            set {
+                this.maxJobPresField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>UNSPSC(Segment 71) Commodity Code from Oil and gas extraction and production enhancement services family.</summary>
+        [System.ComponentModel.DescriptionAttribute("UNSPSC(Segment 71) Commodity Code from Oil and gas extraction and production enha" +
+            "ncement services family.")]
+        public PIDXCommodityCode PIDXCommodityCode {
+            get {
+                return this.pIDXCommodityCodeField;
+            }
+            set {
+                this.pIDXCommodityCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PIDXCommodityCodeSpecified {
+            get {
+                return this.pIDXCommodityCodeFieldSpecified;
+            }
+            set {
+                this.pIDXCommodityCodeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name of the well stimulation contractor.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("Name of the well stimulation contractor.")]
+        public string ServiceCompany {
+            get {
+                return this.serviceCompanyField;
+            }
+            set {
+                this.serviceCompanyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Number of stages treated during the stimulation service.</summary>
+        [System.ComponentModel.DescriptionAttribute("Number of stages treated during the stimulation service.")]
+        public long StageCount {
+            get {
+                return this.stageCountField;
+            }
+            set {
+                this.stageCountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool StageCountSpecified {
+            get {
+                return this.stageCountFieldSpecified;
+            }
+            set {
+                this.stageCountFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name of service company supervisor.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of service company supervisor.")]
+        public string Supervisor {
+            get {
+                return this.supervisorField;
+            }
+            set {
+                this.supervisorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Total volume pumped for all stages.</summary>
+        [System.ComponentModel.DescriptionAttribute("Total volume pumped for all stages.")]
+        public VolumeMeasure TotalJobVolume {
+            get {
+                return this.totalJobVolumeField;
+            }
+            set {
+                this.totalJobVolumeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The total mass of proppant placed in the formation for the entire job.</summary>
+        [System.ComponentModel.DescriptionAttribute("The total mass of proppant placed in the formation for the entire job.")]
+        public MassMeasure TotalProppantInFormation {
+            get {
+                return this.totalProppantInFormationField;
+            }
+            set {
+                this.totalProppantInFormationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>{Get this from WITSML 1.4.1.1, which Clinton removed.}</summary>
+        [System.ComponentModel.DescriptionAttribute("{Get this from WITSML 1.4.1.1, which Clinton removed.}")]
+        public MassMeasure TotalProppantUsed {
+            get {
+                return this.totalProppantUsedField;
+            }
+            set {
+                this.totalProppantUsedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The total pumping time.</summary>
+        [System.ComponentModel.DescriptionAttribute("The total pumping time.")]
+        public TimeMeasure TotalPumpTime {
+            get {
+                return this.totalPumpTimeField;
+            }
+            set {
+                this.totalPumpTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Expected or calculated bottomhole treating temperature for the job.</summary>
+        [System.ComponentModel.DescriptionAttribute("Expected or calculated bottomhole treating temperature for the job.")]
+        public ThermodynamicTemperatureMeasure TreatingBottomholeTemperature {
+            get {
+                return this.treatingBottomholeTemperatureField;
+            }
+            set {
+                this.treatingBottomholeTemperatureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A stage treated during the stimulation job.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("JobStage")]
+        [System.ComponentModel.DescriptionAttribute("A stage treated during the stimulation job.")]
+        public DataObjectReference[] JobStage {
+            get {
+                return this.jobStageField;
+            }
+            set {
+                this.jobStageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("MaterialUsed")]
+        public StimMaterialQuantity[] MaterialUsed {
+            get {
+                return this.materialUsedField;
+            }
+            set {
+                this.materialUsedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference Wellbore {
+            get {
+                return this.wellboreField;
+            }
+            set {
+                this.wellboreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public StimJobMaterialCatalog MaterialCatalog {
+            get {
+                return this.materialCatalogField;
+            }
+            set {
+                this.materialCatalogField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayItemAttribute("JobLog", typeof(DataObjectReference), IsNullable=false)]
+        public DataObjectReference[][] LogCatalog {
+            get {
+                return this.logCatalogField;
+            }
+            set {
+                this.logCatalogField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum PIDXCommodityCode {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131001")]
+        Item71131001,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131002")]
+        Item71131002,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131003")]
+        Item71131003,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131004")]
+        Item71131004,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131005")]
+        Item71131005,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131006")]
+        Item71131006,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131007")]
+        Item71131007,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131008")]
+        Item71131008,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131009")]
+        Item71131009,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131010")]
+        Item71131010,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131011")]
+        Item71131011,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131012")]
+        Item71131012,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131013")]
+        Item71131013,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131014")]
+        Item71131014,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131015")]
+        Item71131015,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131016")]
+        Item71131016,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131018")]
+        Item71131018,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("71131019")]
+        Item71131019,
     }
     
     /// <remarks/>
@@ -54319,9 +56286,452 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
     [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
-    public partial class DepthRegImage : AbstractObject {
+    public partial class MudLogReport : AbstractObject {
         
-        private string fileNameField;
+        private string mudLogCompanyField;
+        
+        private string mudLogEngineersField;
+        
+        private string mudLogGeologistsField;
+        
+        private MdInterval reportMdIntervalField;
+        
+        private ChannelStatus growingStatusField;
+        
+        private DataObjectReference wellboreField;
+        
+        private DataObjectReference wellboreGeologyField;
+        
+        private MudlogReportInterval[] mudlogIntervalsField;
+        
+        private DataObjectReference[] relatedLogsField;
+        
+        private MudlogParameter[] parameterField;
+        
+        /// <remarks/>
+        /// <summary>Name of the company recording the information</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of the company recording the information")]
+        public string MudLogCompany {
+            get {
+                return this.mudLogCompanyField;
+            }
+            set {
+                this.mudLogCompanyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Concatenated names of mudloggers constructing the log</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("Concatenated names of mudloggers constructing the log")]
+        public string MudLogEngineers {
+            get {
+                return this.mudLogEngineersField;
+            }
+            set {
+                this.mudLogEngineersField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Concatenated names of geologists constructing the log</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("Concatenated names of geologists constructing the log")]
+        public string MudLogGeologists {
+            get {
+                return this.mudLogGeologistsField;
+            }
+            set {
+                this.mudLogGeologistsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>[maintained by the server] The interval between the minimum and maximum measured depths contained in this MudLog report.</summary>
+        [System.ComponentModel.DescriptionAttribute("[maintained by the server] The interval between the minimum and maximum measured " +
+            "depths contained in this MudLog report.")]
+        public MdInterval ReportMdInterval {
+            get {
+                return this.reportMdIntervalField;
+            }
+            set {
+                this.reportMdIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The growing state of the mudlog, whether active, inactive or closed</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The growing state of the mudlog, whether active, inactive or closed")]
+        public ChannelStatus GrowingStatus {
+            get {
+                return this.growingStatusField;
+            }
+            set {
+                this.growingStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference Wellbore {
+            get {
+                return this.wellboreField;
+            }
+            set {
+                this.wellboreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public DataObjectReference WellboreGeology {
+            get {
+                return this.wellboreGeologyField;
+            }
+            set {
+                this.wellboreGeologyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("MudlogIntervals")]
+        public MudlogReportInterval[] MudlogIntervals {
+            get {
+                return this.mudlogIntervalsField;
+            }
+            set {
+                this.mudlogIntervalsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("RelatedLogs")]
+        public DataObjectReference[] RelatedLogs {
+            get {
+                return this.relatedLogsField;
+            }
+            set {
+                this.relatedLogsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Parameter")]
+        public MudlogParameter[] Parameter {
+            get {
+                return this.parameterField;
+            }
+            set {
+                this.parameterField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum ChannelStatus {
+        
+        /// <remarks/>
+        active,
+        
+        /// <remarks/>
+        closed,
+        
+        /// <remarks/>
+        inactive,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    public partial class CuttingsGeology : AbstractObject {
+        
+        private MdInterval mdIntervalField;
+        
+        private ChannelStatus growingStatusField;
+        
+        private CuttingsGeologyInterval[] cuttingsIntervalField;
+        
+        private DataObjectReference wellboreField;
+        
+        /// <remarks/>
+        /// <summary>[maintained by the server] The interval which contains the minimum and maximum measured depths for all cuttings intervals in this cuttings geology.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("[maintained by the server] The interval which contains the minimum and maximum me" +
+            "asured depths for all cuttings intervals in this cuttings geology.")]
+        public MdInterval MdInterval {
+            get {
+                return this.mdIntervalField;
+            }
+            set {
+                this.mdIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Describes the growing status of the cuttings, whether active, inactive or closed</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Describes the growing status of the cuttings, whether active, inactive or closed")]
+        public ChannelStatus GrowingStatus {
+            get {
+                return this.growingStatusField;
+            }
+            set {
+                this.growingStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("CuttingsInterval")]
+        public CuttingsGeologyInterval[] CuttingsInterval {
+            get {
+                return this.cuttingsIntervalField;
+            }
+            set {
+                this.cuttingsIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference Wellbore {
+            get {
+                return this.wellboreField;
+            }
+            set {
+                this.wellboreField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    public partial class InterpretedGeology : AbstractObject {
+        
+        private MdInterval mdIntervalField;
+        
+        private ChannelStatus growingStatusField;
+        
+        private InterpretedGeologyInterval[] geologicIntervalInterpretedField;
+        
+        private DataObjectReference wellboreField;
+        
+        /// <remarks/>
+        /// <summary>[maintained by the server] The interval which contains the minimum and maximum measured depths for all interpreted intervals in this interpreted geology.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("[maintained by the server] The interval which contains the minimum and maximum me" +
+            "asured depths for all interpreted intervals in this interpreted geology.")]
+        public MdInterval MdInterval {
+            get {
+                return this.mdIntervalField;
+            }
+            set {
+                this.mdIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Describes the growing status of the interpreted geology, whether active, inactive or closed</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Describes the growing status of the interpreted geology, whether active, inactive" +
+            " or closed")]
+        public ChannelStatus GrowingStatus {
+            get {
+                return this.growingStatusField;
+            }
+            set {
+                this.growingStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("GeologicIntervalInterpreted")]
+        public InterpretedGeologyInterval[] GeologicIntervalInterpreted {
+            get {
+                return this.geologicIntervalInterpretedField;
+            }
+            set {
+                this.geologicIntervalInterpretedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference Wellbore {
+            get {
+                return this.wellboreField;
+            }
+            set {
+                this.wellboreField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    public partial class ShowEvaluation : AbstractObject {
+        
+        private MdInterval mdIntervalField;
+        
+        private ChannelStatus growingStatusField;
+        
+        private ShowEvaluationInterval[] evaluatedIntervalShowField;
+        
+        private DataObjectReference wellboreField;
+        
+        /// <remarks/>
+        /// <summary>[maintained by the server] The interval which contains the minimum and maximum measured depths for all show intervals in this show evaluation.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("[maintained by the server] The interval which contains the minimum and maximum me" +
+            "asured depths for all show intervals in this show evaluation.")]
+        public MdInterval MdInterval {
+            get {
+                return this.mdIntervalField;
+            }
+            set {
+                this.mdIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Describes the growing status of the show evaluation intervals, whether active, inactive or closed</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Describes the growing status of the show evaluation intervals, whether active, in" +
+            "active or closed")]
+        public ChannelStatus GrowingStatus {
+            get {
+                return this.growingStatusField;
+            }
+            set {
+                this.growingStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("EvaluatedIntervalShow")]
+        public ShowEvaluationInterval[] EvaluatedIntervalShow {
+            get {
+                return this.evaluatedIntervalShowField;
+            }
+            set {
+                this.evaluatedIntervalShowField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference Wellbore {
+            get {
+                return this.wellboreField;
+            }
+            set {
+                this.wellboreField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
+    public partial class WellboreGeology : AbstractObject {
+        
+        private MdInterval mdIntervalField;
+        
+        private ShowEvaluation showIntervalSetField;
+        
+        private InterpretedGeology interpretedGeologyIntervalSetField;
+        
+        private DataObjectReference wellboreField;
+        
+        private CuttingsGeology cuttingsIntervalSetField;
+        
+        /// <remarks/>
+        /// <summary>[maintained by the server] The interval which contains the minimum and maximum measured depths for all wellbore geology types under this wellbore geology entry.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("[maintained by the server] The interval which contains the minimum and maximum me" +
+            "asured depths for all wellbore geology types under this wellbore geology entry.")]
+        public MdInterval MdInterval {
+            get {
+                return this.mdIntervalField;
+            }
+            set {
+                this.mdIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ShowEvaluation ShowIntervalSet {
+            get {
+                return this.showIntervalSetField;
+            }
+            set {
+                this.showIntervalSetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public InterpretedGeology InterpretedGeologyIntervalSet {
+            get {
+                return this.interpretedGeologyIntervalSetField;
+            }
+            set {
+                this.interpretedGeologyIntervalSetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference Wellbore {
+            get {
+                return this.wellboreField;
+            }
+            set {
+                this.wellboreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CuttingsGeology CuttingsIntervalSet {
+            get {
+                return this.cuttingsIntervalSetField;
+            }
+            set {
+                this.cuttingsIntervalSetField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
+    public partial class DepthRegImage : AbstractObject {
         
         private FileNameType fileNameTypeField;
         
@@ -54330,6 +56740,8 @@ namespace Energistics.Generator.WITSML200 {
         private MimeType mimetypeField;
         
         private bool mimetypeFieldSpecified;
+        
+        private string fileNameField;
         
         private DigitalStorageMeasure fileSizeField;
         
@@ -54347,31 +56759,17 @@ namespace Energistics.Generator.WITSML200 {
         
         private string versionField;
         
-        private DataObjectReference wellboreField;
-        
         private DepthRegRectangle imageBoundaryField;
         
-        private DepthRegLogRect[] headerSectionField;
+        private DepthRegLogRect headerSectionField;
         
         private DepthRegLogSection[] logSectionField;
         
         private DepthRegLogRect[] alternateSectionField;
         
-        private string uidField;
+        private DataObjectReference wellboreField;
         
-        /// <remarks/>
-        /// <summary>Reference to file containing image content.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Reference to file containing image content.")]
-        public string FileName {
-            get {
-                return this.fileNameField;
-            }
-            set {
-                this.fileNameField = value;
-            }
-        }
+        private string uidField;
         
         /// <remarks/>
         /// <summary>Mimetype of image file content.</summary>
@@ -54416,6 +56814,20 @@ namespace Energistics.Generator.WITSML200 {
             }
             set {
                 this.mimetypeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Reference to file containing image content.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to file containing image content.")]
+        public string FileName {
+            get {
+                return this.fileNameField;
+            }
+            set {
+                this.fileNameField = value;
             }
         }
         
@@ -54514,17 +56926,9 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>The bounding rectangle of the image</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference Wellbore {
-            get {
-                return this.wellboreField;
-            }
-            set {
-                this.wellboreField = value;
-            }
-        }
-        
-        /// <remarks/>
+        [System.ComponentModel.DescriptionAttribute("The bounding rectangle of the image")]
         public DepthRegRectangle ImageBoundary {
             get {
                 return this.imageBoundaryField;
@@ -54535,8 +56939,11 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("HeaderSection")]
-        public DepthRegLogRect[] HeaderSection {
+        /// <summary>Log header information gleaned from the well log image header section. Also contains X, Y coordinates and positional data with respect to the header section location within the log image file.</summary>
+        [System.ComponentModel.DescriptionAttribute("Log header information gleaned from the well log image header section. Also conta" +
+            "ins X, Y coordinates and positional data with respect to the header section loca" +
+            "tion within the log image file.")]
+        public DepthRegLogRect HeaderSection {
             get {
                 return this.headerSectionField;
             }
@@ -54546,7 +56953,12 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Provides log name, log type, curve scale and other information about each log section of the image file. Most importantly, this section contains the depth registration elements (CalibrationPoint) necessary for depth calibrating well log sections.</summary>
         [System.Xml.Serialization.XmlElementAttribute("LogSection")]
+        [System.ComponentModel.DescriptionAttribute("Provides log name, log type, curve scale and other information about each log sec" +
+            "tion of the image file. Most importantly, this section contains the depth regist" +
+            "ration elements (CalibrationPoint) necessary for depth calibrating well log sect" +
+            "ions.")]
         public DepthRegLogSection[] LogSection {
             get {
                 return this.logSectionField;
@@ -54557,13 +56969,27 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>AlternateSection provides a positional reference for sections of the image file not included in the aforementioned elements.</summary>
         [System.Xml.Serialization.XmlElementAttribute("AlternateSection")]
+        [System.ComponentModel.DescriptionAttribute("AlternateSection provides a positional reference for sections of the image file n" +
+            "ot included in the aforementioned elements.")]
         public DepthRegLogRect[] AlternateSection {
             get {
                 return this.alternateSectionField;
             }
             set {
                 this.alternateSectionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference Wellbore {
+            get {
+                return this.wellboreField;
+            }
+            set {
+                this.wellboreField = value;
             }
         }
         
@@ -56136,6 +58562,8 @@ namespace Energistics.Generator.WITSML200 {
     [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
     public partial class Trajectory : AbstractObject {
         
+        private ChannelStatus growingStatusField;
+        
         private bool objectGrowingField;
         
         private bool objectGrowingFieldSpecified;
@@ -56181,6 +58609,20 @@ namespace Energistics.Generator.WITSML200 {
         private DataObjectReference wellboreField;
         
         private DataObjectReference parentTrajectoryField;
+        
+        /// <remarks/>
+        /// <summary>Describes the growing status of the trajectory, whether active, inactive or closed</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Describes the growing status of the trajectory, whether active, inactive or close" +
+            "d")]
+        public ChannelStatus GrowingStatus {
+            get {
+                return this.growingStatusField;
+            }
+            set {
+                this.growingStatusField = value;
+            }
+        }
         
         /// <remarks/>
         /// <summary>The growing state of the object. This value is only relevant within the context of a server. This is an API server parameter releted to the "Special Handling of Change Information" within a server.  See the relevant API specification for the  behavior related to this element.</summary>
@@ -56707,1102 +59149,6 @@ namespace Energistics.Generator.WITSML200 {
                 this.boreholeStringSetField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
-    public partial class Log : AbstractObject {
-        
-        private ChannelState channelStateField;
-        
-        private bool channelStateFieldSpecified;
-        
-        private string timeDepthField;
-        
-        private string curveClassField;
-        
-        private string runNumberField;
-        
-        private string passNumberField;
-        
-        private AbstractIndexValue startIndexField;
-        
-        private AbstractIndexValue endIndexField;
-        
-        private string loggingCompanyNameField;
-        
-        private string loggingCompanyCodeField;
-        
-        private string toolNameField;
-        
-        private string toolClassField;
-        
-        private ChannelDerivation derivationField;
-        
-        private bool derivationFieldSpecified;
-        
-        private LoggingMethod loggingMethodField;
-        
-        private bool loggingMethodFieldSpecified;
-        
-        private LengthMeasureExt nominalHoleSizeField;
-        
-        private DataObjectReference wellboreField;
-        
-        private ChannelSet[] channelSetField;
-        
-        /// <remarks/>
-        public ChannelState ChannelState {
-            get {
-                return this.channelStateField;
-            }
-            set {
-                this.channelStateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ChannelStateSpecified {
-            get {
-                return this.channelStateFieldSpecified;
-            }
-            set {
-                this.channelStateFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Is this a time or depth log?</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Is this a time or depth log?")]
-        public string TimeDepth {
-            get {
-                return this.timeDepthField;
-            }
-            set {
-                this.timeDepthField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("A mandatory value categorizing a log channel. The classification system used in W" +
-            "ITSML is the one from the PWLS group.  NOTE: This should turn into an extensible" +
-            " enumeration before WITSML is released.")]
-        public string CurveClass {
-            get {
-                return this.curveClassField;
-            }
-            set {
-                this.curveClassField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The nominal run number for the channel. No precise meaning is declared for this a" +
-            "ttribute but it is so commonly used that it must be included.   The value here s" +
-            "hould match a bit run number for LWD data and a wireline run number for logging " +
-            "data.")]
-        public string RunNumber {
-            get {
-                return this.runNumberField;
-            }
-            set {
-                this.runNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The nominal pass number for the channel. No precise meaning is declared for this " +
-            "attribute but it is so commonly used that it must be included.   The value here " +
-            "should match a wireline pass number for logging data.")]
-        public string PassNumber {
-            get {
-                return this.passNumberField;
-            }
-            set {
-                this.passNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public AbstractIndexValue StartIndex {
-            get {
-                return this.startIndexField;
-            }
-            set {
-                this.startIndexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public AbstractIndexValue EndIndex {
-            get {
-                return this.endIndexField;
-            }
-            set {
-                this.endIndexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Name of the logging company.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Name of the logging company.")]
-        public string LoggingCompanyName {
-            get {
-                return this.loggingCompanyNameField;
-            }
-            set {
-                this.loggingCompanyNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The RP66 organization code assigned to a logging company. The list is available a" +
-            "t http://www.energistics.org/geosciences/geology-standards/rp66-organization-cod" +
-            "es")]
-        public string LoggingCompanyCode {
-            get {
-                return this.loggingCompanyCodeField;
-            }
-            set {
-                this.loggingCompanyCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Name of the logging tool as given by the logging contractor.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Name of the logging tool as given by the logging contractor.")]
-        public string ToolName {
-            get {
-                return this.toolNameField;
-            }
-            set {
-                this.toolNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("A value categorizing a logging tool. The classification system used in WITSML is " +
-            "the one from the PWLS group.  NOTE: This should turn into an extensible enumerat" +
-            "ion before WITSML is released")]
-        public string ToolClass {
-            get {
-                return this.toolClassField;
-            }
-            set {
-                this.toolClassField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Indicates that the channel is derived from one or more other channels</summary>
-        [System.ComponentModel.DescriptionAttribute("Indicates that the channel is derived from one or more other channels")]
-        public ChannelDerivation Derivation {
-            get {
-                return this.derivationField;
-            }
-            set {
-                this.derivationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DerivationSpecified {
-            get {
-                return this.derivationFieldSpecified;
-            }
-            set {
-                this.derivationFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public LoggingMethod LoggingMethod {
-            get {
-                return this.loggingMethodField;
-            }
-            set {
-                this.loggingMethodField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool LoggingMethodSpecified {
-            get {
-                return this.loggingMethodFieldSpecified;
-            }
-            set {
-                this.loggingMethodFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The nominal hole size at the time the measurement tool was in the hole. The size is "nominal" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.</summary>
-        [System.ComponentModel.DescriptionAttribute(@"The nominal hole size at the time the measurement tool was in the hole. The size is ""nominal"" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.")]
-        public LengthMeasureExt NominalHoleSize {
-            get {
-                return this.nominalHoleSizeField;
-            }
-            set {
-                this.nominalHoleSizeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference Wellbore {
-            get {
-                return this.wellboreField;
-            }
-            set {
-                this.wellboreField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ChannelSet")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public ChannelSet[] ChannelSet {
-            get {
-                return this.channelSetField;
-            }
-            set {
-                this.channelSetField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum ChannelState {
-        
-        /// <remarks/>
-        calculated,
-        
-        /// <remarks/>
-        final,
-        
-        /// <remarks/>
-        memory,
-        
-        /// <remarks/>
-        processed,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("real time")]
-        realtime,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum ChannelDerivation {
-        
-        /// <remarks/>
-        raw,
-        
-        /// <remarks/>
-        simulated,
-        
-        /// <remarks/>
-        spliced,
-        
-        /// <remarks/>
-        sampled,
-        
-        /// <remarks/>
-        model,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum LoggingMethod {
-        
-        /// <remarks/>
-        computed,
-        
-        /// <remarks/>
-        distributed,
-        
-        /// <remarks/>
-        LWD,
-        
-        /// <remarks/>
-        mixed,
-        
-        /// <remarks/>
-        MWD,
-        
-        /// <remarks/>
-        surface,
-        
-        /// <remarks/>
-        wireline,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-    public partial class ChannelSet : AbstractObject {
-        
-        private ChannelIndex[] indexField;
-        
-        private Channel[] channelField;
-        
-        private ChannelData dataField;
-        
-        private ChannelState channelStateField;
-        
-        private bool channelStateFieldSpecified;
-        
-        private string timeDepthField;
-        
-        private string curveClassField;
-        
-        private string runNumberField;
-        
-        private string passNumberField;
-        
-        private AbstractIndexValue startIndexField;
-        
-        private AbstractIndexValue endIndexField;
-        
-        private string loggingCompanyNameField;
-        
-        private string loggingCompanyCodeField;
-        
-        private string toolNameField;
-        
-        private string toolClassField;
-        
-        private ChannelDerivation derivationField;
-        
-        private bool derivationFieldSpecified;
-        
-        private LoggingMethod loggingMethodField;
-        
-        private bool loggingMethodFieldSpecified;
-        
-        private LengthMeasureExt nominalHoleSizeField;
-        
-        private AbstractLogDataContext dataContextField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Index")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public ChannelIndex[] Index {
-            get {
-                return this.indexField;
-            }
-            set {
-                this.indexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Channel")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public Channel[] Channel {
-            get {
-                return this.channelField;
-            }
-            set {
-                this.channelField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public ChannelData Data {
-            get {
-                return this.dataField;
-            }
-            set {
-                this.dataField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public ChannelState ChannelState {
-            get {
-                return this.channelStateField;
-            }
-            set {
-                this.channelStateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ChannelStateSpecified {
-            get {
-                return this.channelStateFieldSpecified;
-            }
-            set {
-                this.channelStateFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Is this a time or depth log?</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Is this a time or depth log?")]
-        public string TimeDepth {
-            get {
-                return this.timeDepthField;
-            }
-            set {
-                this.timeDepthField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("A mandatory value categorizing a log channel. The classification system used in W" +
-            "ITSML is the one from the PWLS group.  NOTE: This should turn into an extensible" +
-            " enumeration before WITSML is released.")]
-        public string CurveClass {
-            get {
-                return this.curveClassField;
-            }
-            set {
-                this.curveClassField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The nominal run number for the channel. No precise meaning is declared for this a" +
-            "ttribute but it is so commonly used that it must be included.   The value here s" +
-            "hould match a bit run number for LWD data and a wireline run number for logging " +
-            "data.")]
-        public string RunNumber {
-            get {
-                return this.runNumberField;
-            }
-            set {
-                this.runNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The nominal pass number for the channel. No precise meaning is declared for this " +
-            "attribute but it is so commonly used that it must be included.   The value here " +
-            "should match a wireline pass number for logging data.")]
-        public string PassNumber {
-            get {
-                return this.passNumberField;
-            }
-            set {
-                this.passNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public AbstractIndexValue StartIndex {
-            get {
-                return this.startIndexField;
-            }
-            set {
-                this.startIndexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public AbstractIndexValue EndIndex {
-            get {
-                return this.endIndexField;
-            }
-            set {
-                this.endIndexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Name of the logging company.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Name of the logging company.")]
-        public string LoggingCompanyName {
-            get {
-                return this.loggingCompanyNameField;
-            }
-            set {
-                this.loggingCompanyNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The RP66 organization code assigned to a logging company. The list is available a" +
-            "t http://www.energistics.org/geosciences/geology-standards/rp66-organization-cod" +
-            "es")]
-        public string LoggingCompanyCode {
-            get {
-                return this.loggingCompanyCodeField;
-            }
-            set {
-                this.loggingCompanyCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Name of the logging tool as given by the logging contractor.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Name of the logging tool as given by the logging contractor.")]
-        public string ToolName {
-            get {
-                return this.toolNameField;
-            }
-            set {
-                this.toolNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("A value categorizing a logging tool. The classification system used in WITSML is " +
-            "the one from the PWLS group.  NOTE: This should turn into an extensible enumerat" +
-            "ion before WITSML is released")]
-        public string ToolClass {
-            get {
-                return this.toolClassField;
-            }
-            set {
-                this.toolClassField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Indicates that the channel is derived from one or more other channels</summary>
-        [System.ComponentModel.DescriptionAttribute("Indicates that the channel is derived from one or more other channels")]
-        public ChannelDerivation Derivation {
-            get {
-                return this.derivationField;
-            }
-            set {
-                this.derivationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DerivationSpecified {
-            get {
-                return this.derivationFieldSpecified;
-            }
-            set {
-                this.derivationFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public LoggingMethod LoggingMethod {
-            get {
-                return this.loggingMethodField;
-            }
-            set {
-                this.loggingMethodField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool LoggingMethodSpecified {
-            get {
-                return this.loggingMethodFieldSpecified;
-            }
-            set {
-                this.loggingMethodFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The nominal hole size at the time the measurement tool was in the hole. The size is "nominal" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.</summary>
-        [System.ComponentModel.DescriptionAttribute(@"The nominal hole size at the time the measurement tool was in the hole. The size is ""nominal"" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.")]
-        public LengthMeasureExt NominalHoleSize {
-            get {
-                return this.nominalHoleSizeField;
-            }
-            set {
-                this.nominalHoleSizeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public AbstractLogDataContext DataContext {
-            get {
-                return this.dataContextField;
-            }
-            set {
-                this.dataContextField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
-    public partial class Channel : AbstractObject {
-        
-        private string mnemonicField;
-        
-        private EtpDataType dataTypeField;
-        
-        private string uomField;
-        
-        private ChannelStatus statusField;
-        
-        private string sourceField;
-        
-        private DataObjectReference wellboreField;
-        
-        private LogChannelAxis[] axisDefinitionField;
-        
-        private ChannelState channelStateField;
-        
-        private bool channelStateFieldSpecified;
-        
-        private string timeDepthField;
-        
-        private string curveClassField;
-        
-        private string runNumberField;
-        
-        private string passNumberField;
-        
-        private AbstractIndexValue startIndexField;
-        
-        private AbstractIndexValue endIndexField;
-        
-        private string loggingCompanyNameField;
-        
-        private string loggingCompanyCodeField;
-        
-        private string toolNameField;
-        
-        private string toolClassField;
-        
-        private ChannelDerivation derivationField;
-        
-        private bool derivationFieldSpecified;
-        
-        private LoggingMethod loggingMethodField;
-        
-        private bool loggingMethodFieldSpecified;
-        
-        private LengthMeasureExt nominalHoleSizeField;
-        
-        private PointMetadata[] pointMetadataField;
-        
-        private DataObjectReference[] derivedFromField;
-        
-        private ChannelIndex[] indexField;
-        
-        private AbstractObject parentField;
-        
-        /// <remarks/>
-        /// <summary>The mnemonic name for this channel. Mnemonics are not unique within a store.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The mnemonic name for this channel. Mnemonics are not unique within a store.")]
-        public string Mnemonic {
-            get {
-                return this.mnemonicField;
-            }
-            set {
-                this.mnemonicField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public EtpDataType DataType {
-            get {
-                return this.dataTypeField;
-            }
-            set {
-                this.dataTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string Uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The status of a Channel with respect to creating new measurements. An active Channel is considered to by actively producing data points. An inactive Channel is known to be offline or not currently producing, but may begin producing again at some future point. A closed Channel will never produce points again. The rules for when a Channel is to be closed will vary some for different kinds of Channels. For instance, time-based surface Channels may remain open for the entire life of the drilling operation, whereas depth-based wireline Channels would be Closed at the end of the wireline job.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute(@"The status of a Channel with respect to creating new measurements. An active Channel is considered to by actively producing data points. An inactive Channel is known to be offline or not currently producing, but may begin producing again at some future point. A closed Channel will never produce points again. The rules for when a Channel is to be closed will vary some for different kinds of Channels. For instance, time-based surface Channels may remain open for the entire life of the drilling operation, whereas depth-based wireline Channels would be Closed at the end of the wireline job.")]
-        public ChannelStatus Status {
-            get {
-                return this.statusField;
-            }
-            set {
-                this.statusField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Source of the data in the channel. This would contain the contractor name.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Source of the data in the channel. This would contain the contractor name.")]
-        public string Source {
-            get {
-                return this.sourceField;
-            }
-            set {
-                this.sourceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public DataObjectReference Wellbore {
-            get {
-                return this.wellboreField;
-            }
-            set {
-                this.wellboreField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("AxisDefinition")]
-        public LogChannelAxis[] AxisDefinition {
-            get {
-                return this.axisDefinitionField;
-            }
-            set {
-                this.axisDefinitionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public ChannelState ChannelState {
-            get {
-                return this.channelStateField;
-            }
-            set {
-                this.channelStateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ChannelStateSpecified {
-            get {
-                return this.channelStateFieldSpecified;
-            }
-            set {
-                this.channelStateFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Is this a time or depth log?</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Is this a time or depth log?")]
-        public string TimeDepth {
-            get {
-                return this.timeDepthField;
-            }
-            set {
-                this.timeDepthField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("A mandatory value categorizing a log channel. The classification system used in W" +
-            "ITSML is the one from the PWLS group.  NOTE: This should turn into an extensible" +
-            " enumeration before WITSML is released.")]
-        public string CurveClass {
-            get {
-                return this.curveClassField;
-            }
-            set {
-                this.curveClassField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The nominal run number for the channel. No precise meaning is declared for this a" +
-            "ttribute but it is so commonly used that it must be included.   The value here s" +
-            "hould match a bit run number for LWD data and a wireline run number for logging " +
-            "data.")]
-        public string RunNumber {
-            get {
-                return this.runNumberField;
-            }
-            set {
-                this.runNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The nominal pass number for the channel. No precise meaning is declared for this " +
-            "attribute but it is so commonly used that it must be included.   The value here " +
-            "should match a wireline pass number for logging data.")]
-        public string PassNumber {
-            get {
-                return this.passNumberField;
-            }
-            set {
-                this.passNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public AbstractIndexValue StartIndex {
-            get {
-                return this.startIndexField;
-            }
-            set {
-                this.startIndexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public AbstractIndexValue EndIndex {
-            get {
-                return this.endIndexField;
-            }
-            set {
-                this.endIndexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Name of the logging company.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Name of the logging company.")]
-        public string LoggingCompanyName {
-            get {
-                return this.loggingCompanyNameField;
-            }
-            set {
-                this.loggingCompanyNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The RP66 organization code assigned to a logging company. The list is available a" +
-            "t http://www.energistics.org/geosciences/geology-standards/rp66-organization-cod" +
-            "es")]
-        public string LoggingCompanyCode {
-            get {
-                return this.loggingCompanyCodeField;
-            }
-            set {
-                this.loggingCompanyCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Name of the logging tool as given by the logging contractor.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Name of the logging tool as given by the logging contractor.")]
-        public string ToolName {
-            get {
-                return this.toolNameField;
-            }
-            set {
-                this.toolNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("A value categorizing a logging tool. The classification system used in WITSML is " +
-            "the one from the PWLS group.  NOTE: This should turn into an extensible enumerat" +
-            "ion before WITSML is released")]
-        public string ToolClass {
-            get {
-                return this.toolClassField;
-            }
-            set {
-                this.toolClassField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Indicates that the channel is derived from one or more other channels</summary>
-        [System.ComponentModel.DescriptionAttribute("Indicates that the channel is derived from one or more other channels")]
-        public ChannelDerivation Derivation {
-            get {
-                return this.derivationField;
-            }
-            set {
-                this.derivationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DerivationSpecified {
-            get {
-                return this.derivationFieldSpecified;
-            }
-            set {
-                this.derivationFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public LoggingMethod LoggingMethod {
-            get {
-                return this.loggingMethodField;
-            }
-            set {
-                this.loggingMethodField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool LoggingMethodSpecified {
-            get {
-                return this.loggingMethodFieldSpecified;
-            }
-            set {
-                this.loggingMethodFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The nominal hole size at the time the measurement tool was in the hole. The size is "nominal" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.</summary>
-        [System.ComponentModel.DescriptionAttribute(@"The nominal hole size at the time the measurement tool was in the hole. The size is ""nominal"" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.")]
-        public LengthMeasureExt NominalHoleSize {
-            get {
-                return this.nominalHoleSizeField;
-            }
-            set {
-                this.nominalHoleSizeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("PointMetadata")]
-        public PointMetadata[] PointMetadata {
-            get {
-                return this.pointMetadataField;
-            }
-            set {
-                this.pointMetadataField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DerivedFrom")]
-        public DataObjectReference[] DerivedFrom {
-            get {
-                return this.derivedFromField;
-            }
-            set {
-                this.derivedFromField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Index")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public ChannelIndex[] Index {
-            get {
-                return this.indexField;
-            }
-            set {
-                this.indexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public AbstractObject Parent {
-            get {
-                return this.parentField;
-            }
-            set {
-                this.parentField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public enum ChannelStatus {
-        
-        /// <remarks/>
-        active,
-        
-        /// <remarks/>
-        closed,
-        
-        /// <remarks/>
-        inactive,
     }
     
     /// <remarks/>
@@ -58809,6 +60155,8 @@ namespace Energistics.Generator.WITSML200 {
         
         private LengthMeasure depthWaterMeanField;
         
+        private ChannelStatus growingStatusField;
+        
         private WellboreGeometrySection[] wellboreGeometrySectionField;
         
         private DataObjectReference wellboreField;
@@ -58852,6 +60200,20 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        /// <summary>Describes the growing status of the wellbore geometry, whether active, inactive or closed</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Describes the growing status of the wellbore geometry, whether active, inactive o" +
+            "r closed")]
+        public ChannelStatus GrowingStatus {
+            get {
+                return this.growingStatusField;
+            }
+            set {
+                this.growingStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("WellboreGeometrySection")]
         public WellboreGeometrySection[] WellboreGeometrySection {
             get {
@@ -58881,6 +60243,1120 @@ namespace Energistics.Generator.WITSML200 {
             }
             set {
                 this.bhaRunField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("WITSML", "2.0")]
+    public partial class Log : AbstractObject {
+        
+        private ChannelState channelStateField;
+        
+        private bool channelStateFieldSpecified;
+        
+        private string timeDepthField;
+        
+        private string curveClassField;
+        
+        private string runNumberField;
+        
+        private string passNumberField;
+        
+        private AbstractIndexValue startIndexField;
+        
+        private AbstractIndexValue endIndexField;
+        
+        private string loggingCompanyNameField;
+        
+        private string loggingCompanyCodeField;
+        
+        private string toolNameField;
+        
+        private string toolClassField;
+        
+        private ChannelDerivation derivationField;
+        
+        private bool derivationFieldSpecified;
+        
+        private LoggingMethod loggingMethodField;
+        
+        private bool loggingMethodFieldSpecified;
+        
+        private LengthMeasureExt nominalHoleSizeField;
+        
+        private DataObjectReference wellboreField;
+        
+        private ChannelSet[] channelSetField;
+        
+        /// <remarks/>
+        /// <summary>Defines where the channel gets its data from, e.g., calculated from another source, or from archive, or raw real-time, etc.</summary>
+        [System.ComponentModel.DescriptionAttribute("Defines where the channel gets its data from, e.g., calculated from another sourc" +
+            "e, or from archive, or raw real-time, etc.")]
+        public ChannelState ChannelState {
+            get {
+                return this.channelStateField;
+            }
+            set {
+                this.channelStateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ChannelStateSpecified {
+            get {
+                return this.channelStateFieldSpecified;
+            }
+            set {
+                this.channelStateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Is this a time or depth log?</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Is this a time or depth log?")]
+        public string TimeDepth {
+            get {
+                return this.timeDepthField;
+            }
+            set {
+                this.timeDepthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A mandatory value categorizing a log channel. The classification system used in W" +
+            "ITSML is the one from the PWLS group.  NOTE: This should turn into an extensible" +
+            " enumeration before WITSML is released.")]
+        public string CurveClass {
+            get {
+                return this.curveClassField;
+            }
+            set {
+                this.curveClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The nominal run number for the channel. No precise meaning is declared for this a" +
+            "ttribute but it is so commonly used that it must be included.   The value here s" +
+            "hould match a bit run number for LWD data and a wireline run number for logging " +
+            "data.")]
+        public string RunNumber {
+            get {
+                return this.runNumberField;
+            }
+            set {
+                this.runNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The nominal pass number for the channel. No precise meaning is declared for this " +
+            "attribute but it is so commonly used that it must be included.   The value here " +
+            "should match a wireline pass number for logging data.")]
+        public string PassNumber {
+            get {
+                return this.passNumberField;
+            }
+            set {
+                this.passNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>When the log header defines the direction as "Increasing", the startIndex is the starting (minimum) index value at which the first non-null data point is located. When the log header defines the direction as "Decreasing", the startIndex is the starting (maximum) index value at which the first non-null data point is located.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"When the log header defines the direction as ""Increasing"", the startIndex is the starting (minimum) index value at which the first non-null data point is located. When the log header defines the direction as ""Decreasing"", the startIndex is the starting (maximum) index value at which the first non-null data point is located.")]
+        public AbstractIndexValue StartIndex {
+            get {
+                return this.startIndexField;
+            }
+            set {
+                this.startIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>When the log header defines the direction as "Increasing", the endIndex is the ending (maximum) index value at which the last non-null data point is located. When the log header defines the direction as Decreasing, the endIndex is the ending (minimum) index value at which the last non-null data point is located.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"When the log header defines the direction as ""Increasing"", the endIndex is the ending (maximum) index value at which the last non-null data point is located. When the log header defines the direction as Decreasing, the endIndex is the ending (minimum) index value at which the last non-null data point is located.")]
+        public AbstractIndexValue EndIndex {
+            get {
+                return this.endIndexField;
+            }
+            set {
+                this.endIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name of the logging company.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of the logging company.")]
+        public string LoggingCompanyName {
+            get {
+                return this.loggingCompanyNameField;
+            }
+            set {
+                this.loggingCompanyNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The RP66 organization code assigned to a logging company. The list is available a" +
+            "t http://www.energistics.org/geosciences/geology-standards/rp66-organization-cod" +
+            "es")]
+        public string LoggingCompanyCode {
+            get {
+                return this.loggingCompanyCodeField;
+            }
+            set {
+                this.loggingCompanyCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name of the logging tool as given by the logging contractor.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of the logging tool as given by the logging contractor.")]
+        public string ToolName {
+            get {
+                return this.toolNameField;
+            }
+            set {
+                this.toolNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A value categorizing a logging tool. The classification system used in WITSML is " +
+            "the one from the PWLS group.  NOTE: This should turn into an extensible enumerat" +
+            "ion before WITSML is released")]
+        public string ToolClass {
+            get {
+                return this.toolClassField;
+            }
+            set {
+                this.toolClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Indicates that the channel is derived from one or more other channels</summary>
+        [System.ComponentModel.DescriptionAttribute("Indicates that the channel is derived from one or more other channels")]
+        public ChannelDerivation Derivation {
+            get {
+                return this.derivationField;
+            }
+            set {
+                this.derivationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DerivationSpecified {
+            get {
+                return this.derivationFieldSpecified;
+            }
+            set {
+                this.derivationFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Defines where the log channel gets its data from: LWD, MWD, wireline; or whether it is computed, etc.</summary>
+        [System.ComponentModel.DescriptionAttribute("Defines where the log channel gets its data from: LWD, MWD, wireline; or whether " +
+            "it is computed, etc.")]
+        public LoggingMethod LoggingMethod {
+            get {
+                return this.loggingMethodField;
+            }
+            set {
+                this.loggingMethodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LoggingMethodSpecified {
+            get {
+                return this.loggingMethodFieldSpecified;
+            }
+            set {
+                this.loggingMethodFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The nominal hole size at the time the measurement tool was in the hole. The size is "nominal" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"The nominal hole size at the time the measurement tool was in the hole. The size is ""nominal"" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.")]
+        public LengthMeasureExt NominalHoleSize {
+            get {
+                return this.nominalHoleSizeField;
+            }
+            set {
+                this.nominalHoleSizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference Wellbore {
+            get {
+                return this.wellboreField;
+            }
+            set {
+                this.wellboreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ChannelSet")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public ChannelSet[] ChannelSet {
+            get {
+                return this.channelSetField;
+            }
+            set {
+                this.channelSetField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum ChannelState {
+        
+        /// <remarks/>
+        calculated,
+        
+        /// <remarks/>
+        final,
+        
+        /// <remarks/>
+        memory,
+        
+        /// <remarks/>
+        processed,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("real time")]
+        realtime,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum ChannelDerivation {
+        
+        /// <remarks/>
+        raw,
+        
+        /// <remarks/>
+        simulated,
+        
+        /// <remarks/>
+        spliced,
+        
+        /// <remarks/>
+        sampled,
+        
+        /// <remarks/>
+        model,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public enum LoggingMethod {
+        
+        /// <remarks/>
+        computed,
+        
+        /// <remarks/>
+        distributed,
+        
+        /// <remarks/>
+        LWD,
+        
+        /// <remarks/>
+        mixed,
+        
+        /// <remarks/>
+        MWD,
+        
+        /// <remarks/>
+        surface,
+        
+        /// <remarks/>
+        wireline,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    public partial class ChannelSet : AbstractObject {
+        
+        private ChannelIndex[] indexField;
+        
+        private Channel[] channelField;
+        
+        private ChannelData dataField;
+        
+        private ChannelState channelStateField;
+        
+        private bool channelStateFieldSpecified;
+        
+        private string timeDepthField;
+        
+        private string curveClassField;
+        
+        private string runNumberField;
+        
+        private string passNumberField;
+        
+        private AbstractIndexValue startIndexField;
+        
+        private AbstractIndexValue endIndexField;
+        
+        private string loggingCompanyNameField;
+        
+        private string loggingCompanyCodeField;
+        
+        private string toolNameField;
+        
+        private string toolClassField;
+        
+        private ChannelDerivation derivationField;
+        
+        private bool derivationFieldSpecified;
+        
+        private LoggingMethod loggingMethodField;
+        
+        private bool loggingMethodFieldSpecified;
+        
+        private LengthMeasureExt nominalHoleSizeField;
+        
+        private AbstractLogDataContext dataContextField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Index")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public ChannelIndex[] Index {
+            get {
+                return this.indexField;
+            }
+            set {
+                this.indexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Channel")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public Channel[] Channel {
+            get {
+                return this.channelField;
+            }
+            set {
+                this.channelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ChannelData Data {
+            get {
+                return this.dataField;
+            }
+            set {
+                this.dataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Defines where the channel gets its data from, e.g., calculated from another source, or from archive, or raw real-time, etc.</summary>
+        [System.ComponentModel.DescriptionAttribute("Defines where the channel gets its data from, e.g., calculated from another sourc" +
+            "e, or from archive, or raw real-time, etc.")]
+        public ChannelState ChannelState {
+            get {
+                return this.channelStateField;
+            }
+            set {
+                this.channelStateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ChannelStateSpecified {
+            get {
+                return this.channelStateFieldSpecified;
+            }
+            set {
+                this.channelStateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Is this a time or depth log?</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Is this a time or depth log?")]
+        public string TimeDepth {
+            get {
+                return this.timeDepthField;
+            }
+            set {
+                this.timeDepthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A mandatory value categorizing a log channel. The classification system used in W" +
+            "ITSML is the one from the PWLS group.  NOTE: This should turn into an extensible" +
+            " enumeration before WITSML is released.")]
+        public string CurveClass {
+            get {
+                return this.curveClassField;
+            }
+            set {
+                this.curveClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The nominal run number for the channel. No precise meaning is declared for this a" +
+            "ttribute but it is so commonly used that it must be included.   The value here s" +
+            "hould match a bit run number for LWD data and a wireline run number for logging " +
+            "data.")]
+        public string RunNumber {
+            get {
+                return this.runNumberField;
+            }
+            set {
+                this.runNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The nominal pass number for the channel. No precise meaning is declared for this " +
+            "attribute but it is so commonly used that it must be included.   The value here " +
+            "should match a wireline pass number for logging data.")]
+        public string PassNumber {
+            get {
+                return this.passNumberField;
+            }
+            set {
+                this.passNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>When the log header defines the direction as "Increasing", the startIndex is the starting (minimum) index value at which the first non-null data point is located. When the log header defines the direction as "Decreasing", the startIndex is the starting (maximum) index value at which the first non-null data point is located.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"When the log header defines the direction as ""Increasing"", the startIndex is the starting (minimum) index value at which the first non-null data point is located. When the log header defines the direction as ""Decreasing"", the startIndex is the starting (maximum) index value at which the first non-null data point is located.")]
+        public AbstractIndexValue StartIndex {
+            get {
+                return this.startIndexField;
+            }
+            set {
+                this.startIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>When the log header defines the direction as "Increasing", the endIndex is the ending (maximum) index value at which the last non-null data point is located. When the log header defines the direction as Decreasing, the endIndex is the ending (minimum) index value at which the last non-null data point is located.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"When the log header defines the direction as ""Increasing"", the endIndex is the ending (maximum) index value at which the last non-null data point is located. When the log header defines the direction as Decreasing, the endIndex is the ending (minimum) index value at which the last non-null data point is located.")]
+        public AbstractIndexValue EndIndex {
+            get {
+                return this.endIndexField;
+            }
+            set {
+                this.endIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name of the logging company.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of the logging company.")]
+        public string LoggingCompanyName {
+            get {
+                return this.loggingCompanyNameField;
+            }
+            set {
+                this.loggingCompanyNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The RP66 organization code assigned to a logging company. The list is available a" +
+            "t http://www.energistics.org/geosciences/geology-standards/rp66-organization-cod" +
+            "es")]
+        public string LoggingCompanyCode {
+            get {
+                return this.loggingCompanyCodeField;
+            }
+            set {
+                this.loggingCompanyCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name of the logging tool as given by the logging contractor.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of the logging tool as given by the logging contractor.")]
+        public string ToolName {
+            get {
+                return this.toolNameField;
+            }
+            set {
+                this.toolNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A value categorizing a logging tool. The classification system used in WITSML is " +
+            "the one from the PWLS group.  NOTE: This should turn into an extensible enumerat" +
+            "ion before WITSML is released")]
+        public string ToolClass {
+            get {
+                return this.toolClassField;
+            }
+            set {
+                this.toolClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Indicates that the channel is derived from one or more other channels</summary>
+        [System.ComponentModel.DescriptionAttribute("Indicates that the channel is derived from one or more other channels")]
+        public ChannelDerivation Derivation {
+            get {
+                return this.derivationField;
+            }
+            set {
+                this.derivationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DerivationSpecified {
+            get {
+                return this.derivationFieldSpecified;
+            }
+            set {
+                this.derivationFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Defines where the log channel gets its data from: LWD, MWD, wireline; or whether it is computed, etc.</summary>
+        [System.ComponentModel.DescriptionAttribute("Defines where the log channel gets its data from: LWD, MWD, wireline; or whether " +
+            "it is computed, etc.")]
+        public LoggingMethod LoggingMethod {
+            get {
+                return this.loggingMethodField;
+            }
+            set {
+                this.loggingMethodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LoggingMethodSpecified {
+            get {
+                return this.loggingMethodFieldSpecified;
+            }
+            set {
+                this.loggingMethodFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The nominal hole size at the time the measurement tool was in the hole. The size is "nominal" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"The nominal hole size at the time the measurement tool was in the hole. The size is ""nominal"" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.")]
+        public LengthMeasureExt NominalHoleSize {
+            get {
+                return this.nominalHoleSizeField;
+            }
+            set {
+                this.nominalHoleSizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public AbstractLogDataContext DataContext {
+            get {
+                return this.dataContextField;
+            }
+            set {
+                this.dataContextField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    public partial class Channel : AbstractObject {
+        
+        private string mnemonicField;
+        
+        private EtpDataType dataTypeField;
+        
+        private string uomField;
+        
+        private ChannelStatus growingStatusField;
+        
+        private string sourceField;
+        
+        private DataObjectReference wellboreField;
+        
+        private LogChannelAxis[] axisDefinitionField;
+        
+        private ChannelState channelStateField;
+        
+        private bool channelStateFieldSpecified;
+        
+        private string timeDepthField;
+        
+        private string curveClassField;
+        
+        private string runNumberField;
+        
+        private string passNumberField;
+        
+        private AbstractIndexValue startIndexField;
+        
+        private AbstractIndexValue endIndexField;
+        
+        private string loggingCompanyNameField;
+        
+        private string loggingCompanyCodeField;
+        
+        private string toolNameField;
+        
+        private string toolClassField;
+        
+        private ChannelDerivation derivationField;
+        
+        private bool derivationFieldSpecified;
+        
+        private LoggingMethod loggingMethodField;
+        
+        private bool loggingMethodFieldSpecified;
+        
+        private LengthMeasureExt nominalHoleSizeField;
+        
+        private PointMetadata[] pointMetadataField;
+        
+        private DataObjectReference[] derivedFromField;
+        
+        private ChannelIndex[] indexField;
+        
+        private AbstractObject parentField;
+        
+        /// <remarks/>
+        /// <summary>The mnemonic name for this channel. Mnemonics are not unique within a store.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The mnemonic name for this channel. Mnemonics are not unique within a store.")]
+        public string Mnemonic {
+            get {
+                return this.mnemonicField;
+            }
+            set {
+                this.mnemonicField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The underlying Etp data type of the value</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The underlying Etp data type of the value")]
+        public EtpDataType DataType {
+            get {
+                return this.dataTypeField;
+            }
+            set {
+                this.dataTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The underlying unit of measure of the value.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The underlying unit of measure of the value.")]
+        public string Uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The status of a Channel with respect to creating new measurements. An active Channel is considered to by actively producing data points. An inactive Channel is known to be offline or not currently producing, but may begin producing again at some future point. A closed Channel will never produce points again. The rules for when a Channel is to be closed will vary some for different kinds of Channels. For instance, time-based surface Channels may remain open for the entire life of the drilling operation, whereas depth-based wireline Channels would be Closed at the end of the wireline job.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"The status of a Channel with respect to creating new measurements. An active Channel is considered to by actively producing data points. An inactive Channel is known to be offline or not currently producing, but may begin producing again at some future point. A closed Channel will never produce points again. The rules for when a Channel is to be closed will vary some for different kinds of Channels. For instance, time-based surface Channels may remain open for the entire life of the drilling operation, whereas depth-based wireline Channels would be Closed at the end of the wireline job.")]
+        public ChannelStatus GrowingStatus {
+            get {
+                return this.growingStatusField;
+            }
+            set {
+                this.growingStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Source of the data in the channel. This would contain the contractor name.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Source of the data in the channel. This would contain the contractor name.")]
+        public string Source {
+            get {
+                return this.sourceField;
+            }
+            set {
+                this.sourceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public DataObjectReference Wellbore {
+            get {
+                return this.wellboreField;
+            }
+            set {
+                this.wellboreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("AxisDefinition")]
+        public LogChannelAxis[] AxisDefinition {
+            get {
+                return this.axisDefinitionField;
+            }
+            set {
+                this.axisDefinitionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Defines where the channel gets its data from, e.g., calculated from another source, or from archive, or raw real-time, etc.</summary>
+        [System.ComponentModel.DescriptionAttribute("Defines where the channel gets its data from, e.g., calculated from another sourc" +
+            "e, or from archive, or raw real-time, etc.")]
+        public ChannelState ChannelState {
+            get {
+                return this.channelStateField;
+            }
+            set {
+                this.channelStateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ChannelStateSpecified {
+            get {
+                return this.channelStateFieldSpecified;
+            }
+            set {
+                this.channelStateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Is this a time or depth log?</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Is this a time or depth log?")]
+        public string TimeDepth {
+            get {
+                return this.timeDepthField;
+            }
+            set {
+                this.timeDepthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A mandatory value categorizing a log channel. The classification system used in W" +
+            "ITSML is the one from the PWLS group.  NOTE: This should turn into an extensible" +
+            " enumeration before WITSML is released.")]
+        public string CurveClass {
+            get {
+                return this.curveClassField;
+            }
+            set {
+                this.curveClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The nominal run number for the channel. No precise meaning is declared for this a" +
+            "ttribute but it is so commonly used that it must be included.   The value here s" +
+            "hould match a bit run number for LWD data and a wireline run number for logging " +
+            "data.")]
+        public string RunNumber {
+            get {
+                return this.runNumberField;
+            }
+            set {
+                this.runNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The nominal pass number for the channel. No precise meaning is declared for this " +
+            "attribute but it is so commonly used that it must be included.   The value here " +
+            "should match a wireline pass number for logging data.")]
+        public string PassNumber {
+            get {
+                return this.passNumberField;
+            }
+            set {
+                this.passNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>When the log header defines the direction as "Increasing", the startIndex is the starting (minimum) index value at which the first non-null data point is located. When the log header defines the direction as "Decreasing", the startIndex is the starting (maximum) index value at which the first non-null data point is located.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"When the log header defines the direction as ""Increasing"", the startIndex is the starting (minimum) index value at which the first non-null data point is located. When the log header defines the direction as ""Decreasing"", the startIndex is the starting (maximum) index value at which the first non-null data point is located.")]
+        public AbstractIndexValue StartIndex {
+            get {
+                return this.startIndexField;
+            }
+            set {
+                this.startIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>When the log header defines the direction as "Increasing", the endIndex is the ending (maximum) index value at which the last non-null data point is located. When the log header defines the direction as Decreasing, the endIndex is the ending (minimum) index value at which the last non-null data point is located.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"When the log header defines the direction as ""Increasing"", the endIndex is the ending (maximum) index value at which the last non-null data point is located. When the log header defines the direction as Decreasing, the endIndex is the ending (minimum) index value at which the last non-null data point is located.")]
+        public AbstractIndexValue EndIndex {
+            get {
+                return this.endIndexField;
+            }
+            set {
+                this.endIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name of the logging company.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of the logging company.")]
+        public string LoggingCompanyName {
+            get {
+                return this.loggingCompanyNameField;
+            }
+            set {
+                this.loggingCompanyNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The RP66 organization code assigned to a logging company. The list is available a" +
+            "t http://www.energistics.org/geosciences/geology-standards/rp66-organization-cod" +
+            "es")]
+        public string LoggingCompanyCode {
+            get {
+                return this.loggingCompanyCodeField;
+            }
+            set {
+                this.loggingCompanyCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Name of the logging tool as given by the logging contractor.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of the logging tool as given by the logging contractor.")]
+        public string ToolName {
+            get {
+                return this.toolNameField;
+            }
+            set {
+                this.toolNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A value categorizing a logging tool. The classification system used in WITSML is " +
+            "the one from the PWLS group.  NOTE: This should turn into an extensible enumerat" +
+            "ion before WITSML is released")]
+        public string ToolClass {
+            get {
+                return this.toolClassField;
+            }
+            set {
+                this.toolClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Indicates that the channel is derived from one or more other channels</summary>
+        [System.ComponentModel.DescriptionAttribute("Indicates that the channel is derived from one or more other channels")]
+        public ChannelDerivation Derivation {
+            get {
+                return this.derivationField;
+            }
+            set {
+                this.derivationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DerivationSpecified {
+            get {
+                return this.derivationFieldSpecified;
+            }
+            set {
+                this.derivationFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Defines where the log channel gets its data from: LWD, MWD, wireline; or whether it is computed, etc.</summary>
+        [System.ComponentModel.DescriptionAttribute("Defines where the log channel gets its data from: LWD, MWD, wireline; or whether " +
+            "it is computed, etc.")]
+        public LoggingMethod LoggingMethod {
+            get {
+                return this.loggingMethodField;
+            }
+            set {
+                this.loggingMethodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LoggingMethodSpecified {
+            get {
+                return this.loggingMethodFieldSpecified;
+            }
+            set {
+                this.loggingMethodFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The nominal hole size at the time the measurement tool was in the hole. The size is "nominal" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"The nominal hole size at the time the measurement tool was in the hole. The size is ""nominal"" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.  In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.")]
+        public LengthMeasureExt NominalHoleSize {
+            get {
+                return this.nominalHoleSizeField;
+            }
+            set {
+                this.nominalHoleSizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("PointMetadata")]
+        public PointMetadata[] PointMetadata {
+            get {
+                return this.pointMetadataField;
+            }
+            set {
+                this.pointMetadataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("DerivedFrom")]
+        public DataObjectReference[] DerivedFrom {
+            get {
+                return this.derivedFromField;
+            }
+            set {
+                this.derivedFromField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Index")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public ChannelIndex[] Index {
+            get {
+                return this.indexField;
+            }
+            set {
+                this.indexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public AbstractObject Parent {
+            get {
+                return this.parentField;
+            }
+            set {
+                this.parentField = value;
             }
         }
     }
@@ -61069,7 +63545,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>The latitude (in coordinate1) and longitude (in coordinate2) of the well location in the WGS84 coordinate system (equivalent to EPSG:4326). Units are in decimal degrees.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The latitude (in coordinate1) and longitude (in coordinate2) of the well location" +
             " in the WGS84 coordinate system (equivalent to EPSG:4326). Units are in decimal " +
             "degrees.")]
@@ -61253,9 +63728,9 @@ namespace Energistics.Generator.WITSML200 {
         
         private string commentField;
         
-        private FailingRule[] failingRulesField;
-        
         private IndexRange indexRangeField;
+        
+        private FailingRule[] failingRulesField;
         
         private DataObjectReference referencedDataField;
         
@@ -61369,6 +63844,16 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        public IndexRange IndexRange {
+            get {
+                return this.indexRangeField;
+            }
+            set {
+                this.indexRangeField = value;
+            }
+        }
+        
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("FailingRules")]
         public FailingRule[] FailingRules {
             get {
@@ -61380,16 +63865,6 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
-        public IndexRange IndexRange {
-            get {
-                return this.indexRangeField;
-            }
-            set {
-                this.indexRangeField = value;
-            }
-        }
-        
-        /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DataObjectReference ReferencedData {
             get {
@@ -61397,27 +63872,6 @@ namespace Energistics.Generator.WITSML200 {
             }
             set {
                 this.referencedDataField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class GeodeticCrs : AbstractObject {
-        
-        private AbstractGeodeticCrs abstractGeodeticCrsField;
-        
-        /// <remarks/>
-        public AbstractGeodeticCrs AbstractGeodeticCrs {
-            get {
-                return this.abstractGeodeticCrsField;
-            }
-            set {
-                this.abstractGeodeticCrsField = value;
             }
         }
     }
@@ -61479,6 +63933,27 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         down,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class GeodeticCrs : AbstractObject {
+        
+        private AbstractGeodeticCrs abstractGeodeticCrsField;
+        
+        /// <remarks/>
+        public AbstractGeodeticCrs AbstractGeodeticCrs {
+            get {
+                return this.abstractGeodeticCrsField;
+            }
+            set {
+                this.abstractGeodeticCrsField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -61556,6 +64031,32 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("westing northing")]
         westingnorthing,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    public partial class PropertyKindDictionary : AbstractObject {
+        
+        private PropertyKind[] propertyKindField;
+        
+        /// <remarks/>
+        /// <summary>Defines which property kind are contained into a property kind dictionary.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("PropertyKind")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Defines which property kind are contained into a property kind dictionary.")]
+        public PropertyKind[] PropertyKind {
+            get {
+                return this.propertyKindField;
+            }
+            set {
+                this.propertyKindField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -62133,32 +64634,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         VolumetricThermalExpansion,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-    public partial class PropertyKindDictionary : AbstractObject {
-        
-        private DataObjectReference[] propertyKindField;
-        
-        /// <remarks/>
-        /// <summary>Defines which property kind are contained into a property kind dictionary.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("PropertyKind")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Defines which property kind are contained into a property kind dictionary.")]
-        public DataObjectReference[] PropertyKind {
-            get {
-                return this.propertyKindField;
-            }
-            set {
-                this.propertyKindField = value;
-            }
-        }
     }
     
     /// <remarks/>

@@ -48,7 +48,11 @@ is valid as a sequence of constraints</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of IscwsaSurveyToolOperatingCondition</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="IscwsaSurveyToolOperatingInterval">
 		<xs:annotation>
@@ -88,7 +92,11 @@ the entire valid range of the tool.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of IscwsaSurveyToolOperatingInterval</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="SurveyToolOperatingMode">
 		<xs:annotation>
@@ -201,7 +209,11 @@ The same term may only be referenced once in the model.</xs:documentation>
 			</xs:element>
 			<xs:element name="Value" type="witsml:MeasureOrQuantity" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of IscwsaErrorTermValue</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="ErrorPropagationMode">
 		<xs:annotation>
@@ -243,7 +255,11 @@ captured elsewhere. For example, via a measure class.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="optional" type="eml:UomEnum"/>
+				<xs:attribute name="uom" use="optional" type="eml:UomEnum">
+					<xs:annotation>
+						<xs:documentation>A measure with a uom or a quantity (without a uom). This should not be used except in situations where the underlying class of data is captured elsewhere. For example, via a measure class.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>

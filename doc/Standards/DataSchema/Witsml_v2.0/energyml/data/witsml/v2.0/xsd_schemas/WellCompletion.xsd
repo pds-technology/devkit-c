@@ -51,8 +51,16 @@
 							<xs:documentation>Documents exploration and production rights</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="CurrentStatus" type="xs:string" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="StatusDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="CurrentStatus" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Status (active, planned, suspended, testing, etc.) of the well completion</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="StatusDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Timestamp for when this status was established</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="StatusHistory" type="witsml:CompletionStatusHistory" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="Well" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
@@ -90,7 +98,11 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of CompletionStatusHistory</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="CompletionStatus">
 		<xs:annotation>

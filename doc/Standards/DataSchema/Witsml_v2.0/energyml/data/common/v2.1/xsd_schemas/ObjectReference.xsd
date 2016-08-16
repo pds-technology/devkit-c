@@ -17,48 +17,6 @@
 	<!--														-->
 	<xs:include schemaLocation="BaseTypes.xsd"/>
 	<xs:include schemaLocation="Abstract.xsd"/>
-	<xs:complexType name="DataObjectReference">
-		<xs:annotation>
-			<xs:documentation>It only applies for Energistics data object.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="ContentType" type="eml:String2000" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The content type of the referenced element.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Title" type="eml:String2000" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The Title of the referenced object. The Title of a top level element would be inherited from AbstractObject and must be present on any referenced object. </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Uuid" type="eml:UuidString" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Reference to an object using its global UID.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="UuidAuthority" type="eml:String64" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The authority that issued and maintains the uuid of the referenced object.
-Used mainly in alias context.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Uri" type="xs:anyURI" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>This is the URI of a referenced object. 
-
-Do not use this to store the path and file names of an external object - that is done through the External Dataset machinery.
-
-This element is intended for use with the Energistics Transfer Protocol.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="VersionString" type="eml:String64" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Indicates the version of the object which is referenced.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="ExternalDatasetPart">
 		<xs:sequence>
 			<xs:element name="Count" type="eml:PositiveLong" minOccurs="1" maxOccurs="1"/>
@@ -103,5 +61,47 @@ MIME type for HDF proxy is : application/x-hdf5 (by RESQML convention). </xs:doc
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DataObjectReference">
+		<xs:annotation>
+			<xs:documentation>It only applies for Energistics data object.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ContentType" type="eml:String2000" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The content type of the referenced element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Title" type="eml:String2000" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The Title of the referenced object. The Title of a top level element would be inherited from AbstractObject and must be present on any referenced object. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Uuid" type="eml:UuidString" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Reference to an object using its global UID.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UuidAuthority" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The authority that issued and maintains the uuid of the referenced object.
+Used mainly in alias context.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Uri" type="xs:anyURI" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>This is the URI of a referenced object. 
+
+Do not use this to store the path and file names of an external object - that is done through the External Dataset machinery.
+
+This element is intended for use with the Energistics Transfer Protocol.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VersionString" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Indicates the version of the object which is referenced.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

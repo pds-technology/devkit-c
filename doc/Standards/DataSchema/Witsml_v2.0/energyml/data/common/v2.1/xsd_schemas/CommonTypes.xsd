@@ -5,23 +5,6 @@
 	<!--														-->
 	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../../common/v2.1/xsd_schemas/gml/3.2.1/gml.xsd"/>
 	<xs:include schemaLocation="Abstract.xsd"/>
-	<xs:element name="PropertyKindDictionary" type="eml:PropertyKindDictionary" substitutionGroup="eml:AbstractDataObject"/>
-	<xs:complexType name="PropertyKindDictionary">
-		<xs:annotation>
-			<xs:documentation>This dictionary defines property kind which is intended to handle the requirements of the upstream oil and gas industry. </xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="eml:AbstractObject">
-				<xs:sequence>
-					<xs:element name="PropertyKind" type="eml:DataObjectReference" minOccurs="2" maxOccurs="unbounded">
-						<xs:annotation>
-							<xs:documentation>Defines which property kind are contained into a property kind dictionary.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
 	<xs:element name="PropertyKind" type="eml:PropertyKind" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="PropertyKind">
 		<xs:annotation>
@@ -42,6 +25,23 @@ If there is no match in the Energistics Unit of Measure Dictionary, then this at
 						<xs:annotation>
 							<xs:documentation>Indicates the parent of this property kind.
 BUSINESS RULE : Only the top root abstract property kind has not to define a parent property kind.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="PropertyKindDictionary" type="eml:PropertyKindDictionary" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="PropertyKindDictionary">
+		<xs:annotation>
+			<xs:documentation>This dictionary defines property kind which is intended to handle the requirements of the upstream oil and gas industry. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractObject">
+				<xs:sequence>
+					<xs:element name="PropertyKind" type="eml:PropertyKind" minOccurs="2" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Defines which property kind are contained into a property kind dictionary.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>

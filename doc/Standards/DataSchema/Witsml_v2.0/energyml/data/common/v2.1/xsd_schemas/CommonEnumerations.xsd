@@ -138,6 +138,28 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="ExistenceKind">
+		<xs:annotation>
+			<xs:documentation>A list of lifecycle states like actual, required, planned, predicted, etc. These are used to qualify any top-level element (from Epicentre 2.1).</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="actual">
+				<xs:annotation>
+					<xs:documentation>The object actually exists (from Epicentre 2.1).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="planned">
+				<xs:annotation>
+					<xs:documentation>The object exists only in the planning stage (from Epicentre 2.1).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="simulated">
+				<xs:annotation>
+					<xs:documentation>Created, artificially, as an artifact of processing, to replace or to stand for one or more similar objects. Often referred to as model (from Epicentre 2.1).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="QuantityClassKind">
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="AbsorbedDose"/>
@@ -316,28 +338,6 @@ the appropriate value. Use of this value may result in rejection in some situati
 			<xs:enumeration value="VolumePerVolume"/>
 			<xs:enumeration value="VolumetricHeatTransferCoefficient"/>
 			<xs:enumeration value="VolumetricThermalExpansion"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="ExistenceKind">
-		<xs:annotation>
-			<xs:documentation>A list of lifecycle states like actual, required, planned, predicted, etc. These are used to qualify any top-level element (from Epicentre 2.1).</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="actual">
-				<xs:annotation>
-					<xs:documentation>The object actually exists (from Epicentre 2.1).</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="planned">
-				<xs:annotation>
-					<xs:documentation>The object exists only in the planning stage (from Epicentre 2.1).</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="simulated">
-				<xs:annotation>
-					<xs:documentation>Created, artificially, as an artifact of processing, to replace or to stand for one or more similar objects. Often referred to as model (from Epicentre 2.1).</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<!--														-->

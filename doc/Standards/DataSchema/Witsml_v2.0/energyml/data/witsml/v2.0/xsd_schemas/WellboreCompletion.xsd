@@ -38,7 +38,11 @@
 							<xs:documentation>Preferred alias name</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="EventHistory" type="witsml:EventInfo" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="EventHistory" type="witsml:EventInfo" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The contactInterval event information</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="WellboreCompletionDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>Completion Date</xs:documentation>
@@ -59,8 +63,16 @@
 							<xs:documentation>Overall true vertical depth interval for this wellbore completion.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="CurrentStatus" type="xs:string" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="StatusDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="CurrentStatus" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Status (active, planned, suspended, testing, etc.) of the wellbore completion</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="StatusDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Date for when the status was established.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="StatusHistory" type="witsml:CompletionStatusHistory" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="ContactIntervalSet" type="witsml:ContactIntervalSet" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="ReferenceWellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
@@ -82,7 +94,11 @@
 	</xs:complexType>
 	<xs:complexType name="GravelPackInterval">
 		<xs:sequence>
-			<xs:element name="DownholeStringReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="DownholeStringReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Reference to the downhole string that denotes the interval of the gravel pack.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="GravelPackMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Gravel packed measured depth interval for this completion.</xs:documentation>
@@ -98,7 +114,11 @@
 					<xs:documentation>The contactInterval event information</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GeologyFeatureReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="GeologyFeatureReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to a geology feature</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
@@ -106,7 +126,11 @@
 			</xs:element>
 			<xs:element name="StatusHistory" type="witsml:IntervalStatusHistory" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of GravelPackInterval</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="IntervalStatusHistory">
 		<xs:annotation>
@@ -145,7 +169,11 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of IntervalStatusHistory</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="NonNegativeFraction">
 		<xs:annotation>
@@ -157,7 +185,11 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 	</xs:simpleType>
 	<xs:complexType name="OpenHoleInterval">
 		<xs:sequence>
-			<xs:element name="BoreholeStringReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="BoreholeStringReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Reference to borehole String</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="OpenHoleMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Open hole measured depth interval for this completion.</xs:documentation>
@@ -173,7 +205,11 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 					<xs:documentation>The contactInterval event information</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GeologyFeatureReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="GeologyFeatureReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to a geology feature</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
@@ -181,11 +217,19 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 			</xs:element>
 			<xs:element name="StatusHistory" type="witsml:IntervalStatusHistory" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of OpenHoleInterval</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="PerforationSetInterval">
 		<xs:sequence>
-			<xs:element name="PerforationSetReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="PerforationSetReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Reference to perforation set</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="PerforationSetMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Overall measured depth interval for this perforation set.</xs:documentation>
@@ -201,7 +245,11 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 					<xs:documentation>The contactInterval event information</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GeologyFeatureReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="GeologyFeatureReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to a geology feature</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
@@ -209,7 +257,11 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 			</xs:element>
 			<xs:element name="PerforationStatusHistory" type="witsml:PerforationStatusHistory" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of PerforationSetInterval</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="PerforationStatusHistory">
 		<xs:annotation>
@@ -253,11 +305,19 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of PerforationStatusHistory</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="SlotsInterval">
 		<xs:sequence>
-			<xs:element name="StringEquipmentReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="StringEquipmentReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Reference to string equipment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="SlottedMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Slotted measured depth interval for this completion.</xs:documentation>
@@ -273,7 +333,11 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 					<xs:documentation>The contactInterval event information</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GeologyFeatureRefID" type="eml:String64" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="GeologyFeatureRefID" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Reference to geology feature</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
@@ -281,7 +345,11 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 			</xs:element>
 			<xs:element name="StatusHistory" type="witsml:IntervalStatusHistory" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of SlotsInterval</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="PhysicalStatus">
 		<xs:annotation>

@@ -83,7 +83,11 @@ The components are list in the order that they enter the hole.
 That is, the first component is closest to the bit.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="TypeTubularComponent" type="witsml:TubularComponentType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="TypeTubularComponent" type="witsml:TubularComponentType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Connection whose type is tubular</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Sequence" type="xs:int" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The sequence within which the components entered the hole.
@@ -270,7 +274,11 @@ This structure just identifies the tag and does not describe the contents.</xs:d
 			<xs:element name="ExtensionAny" type="eml:CustomData" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="Nozzle" type="witsml:Nozzle" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of TubularComponent</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="BoxPinConfig">
 		<xs:annotation>
@@ -463,7 +471,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 			<xs:element name="Cost" type="witsml:Cost" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="ExtensionAny" type="eml:CustomData" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of BitRecord</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="BitType">
 		<xs:annotation>
@@ -794,7 +806,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="ExtensionAny" type="eml:CustomData" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of Nozzle</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="NozzleType">
 		<xs:restriction base="eml:TypeEnum">
@@ -876,7 +892,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="ExtensionAny" type="eml:CustomData" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of Connection</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="ConnectionPosition">
 		<xs:annotation>
@@ -1040,7 +1060,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="ExtensionAny" type="eml:CustomData" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of Sensor</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="MeasurementType">
 		<xs:annotation>
@@ -2663,7 +2687,11 @@ blade which measures at the odBladeMx.</xs:documentation>
 			</xs:element>
 			<xs:element name="ExtensionAny" type="eml:CustomData" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of Stabilizer</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="BladeShapeType">
 		<xs:restriction base="eml:TypeEnum">
@@ -2718,7 +2746,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="ExtensionAny" type="eml:CustomData" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of Bend</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="HoleOpener">
 		<xs:annotation>
@@ -3051,7 +3083,11 @@ the desired direction.</xs:documentation>
 		<xs:complexContent>
 			<xs:extension base="witsml:AbstractRotarySteerableTool">
 				<xs:sequence minOccurs="0" maxOccurs="1">
-					<xs:element name="BendAngle" type="eml:PlaneAngleMeasure" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="BendAngle" type="eml:PlaneAngleMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The angle of the bend</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -3063,7 +3099,11 @@ the desired direction.</xs:documentation>
 		<xs:complexContent>
 			<xs:extension base="witsml:AbstractRotarySteerableTool">
 				<xs:sequence minOccurs="0" maxOccurs="1">
-					<xs:element name="BendOffset" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="BendOffset" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Offset distance from bottom connection to bend.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>

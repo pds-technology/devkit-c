@@ -21,7 +21,11 @@
 			<xs:documentation>Describes what survey measurement or value the error term applies to.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence/>
-		<xs:attribute name="uid" use="optional" type="eml:String64"/>
+		<xs:attribute name="uid" use="optional" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of AbstractIscwsaErrorCoefficient</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="Azi">
 		<xs:annotation>
@@ -30,7 +34,11 @@
 		<xs:complexContent>
 			<xs:extension base="witsml:AbstractIscwsaErrorCoefficient">
 				<xs:sequence>
-					<xs:element name="Azi" type="eml:String2000" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Azi" type="eml:String2000" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Hole azimuth. Corrected to wells azimuth reference.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -42,7 +50,11 @@
 		<xs:complexContent>
 			<xs:extension base="witsml:AbstractIscwsaErrorCoefficient">
 				<xs:sequence>
-					<xs:element name="Inc" type="eml:String2000" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Inc" type="eml:String2000" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Measured deviation from vertical.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -54,7 +66,11 @@
 		<xs:complexContent>
 			<xs:extension base="witsml:AbstractIscwsaErrorCoefficient">
 				<xs:sequence>
-					<xs:element name="Depth" type="eml:String2000" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Depth" type="eml:String2000" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The measured depth of the point.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -91,7 +107,11 @@ This value must match an acronym from the WITSML unit of measure dictionary.</xs
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of IscwsaNomenclatureConstant</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="IscwsaErrorTerm">
 		<xs:annotation>
@@ -141,7 +161,11 @@ In the absence of this element assume Stationary.</xs:documentation>
 			</xs:element>
 			<xs:element name="ErrorCoefficient" type="witsml:IscwsaErrorCoefficient" minOccurs="1" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of IscwsaErrorTerm</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="ErrorTermSource">
 		<xs:annotation>
@@ -203,7 +227,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="AbstractIscwsaErrorCoefficient" type="witsml:AbstractIscwsaErrorCoefficient" minOccurs="1" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of IscwsaErrorCoefficient</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:element name="ToolErrorTermSet" type="witsml:ToolErrorTermSet" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="ToolErrorTermSet">
@@ -252,7 +280,11 @@ The semantics of the something is defined by the parent element.</xs:documentati
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of IscwsaNameAndDescription</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="Tvd">
 		<xs:annotation>
@@ -261,7 +293,11 @@ The semantics of the something is defined by the parent element.</xs:documentati
 		<xs:complexContent>
 			<xs:extension base="witsml:AbstractIscwsaErrorCoefficient">
 				<xs:sequence>
-					<xs:element name="Tvd" type="eml:String2000" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Tvd" type="eml:String2000" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The true vertical depth covered by the tool error term set</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>

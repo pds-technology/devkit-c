@@ -15,6 +15,7 @@
 	<!--														-->
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
 	<!--														-->
+	<xs:include schemaLocation="Log.xsd"/>
 	<xs:include schemaLocation="WitsmlCommon.xsd"/>
 	<xs:include schemaLocation="BhaRun.xsd"/>
 	<xs:include schemaLocation="Wellbore.xsd"/>
@@ -26,7 +27,7 @@
 	<xs:element name="WellboreGeometry" type="witsml:WellboreGeometry" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="WellboreGeometry">
 		<xs:annotation>
-			<xs:documentation>The wbGeometry object is used to capture information about the configuration of the permanently installed components in a wellbore. It does not define the transient drilling strings (see the tubular object) or the hanging production components. This object is uniquely identified within the context of one wellbore object.</xs:documentation>
+			<xs:documentation>The WellboreGeometry object is used to capture information about the configuration of the permanently installed components in a wellbore. It does not define the transient drilling strings (see the tubular object) or the hanging production components. This object is uniquely identified within the context of one wellbore object.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
@@ -46,6 +47,11 @@
 							<xs:documentation>Water depth.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="GrowingStatus" type="witsml:ChannelStatus" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Describes the growing status of the wellbore geometry, whether active, inactive or closed</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="WellboreGeometrySection" type="witsml:WellboreGeometrySection" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
 					<xs:element name="BhaRun" type="eml:DataObjectReference" minOccurs="0" maxOccurs="unbounded"/>
@@ -58,7 +64,11 @@
 			<xs:documentation>WITSML - Wellbore Geometry Component Schema. This defines the "fixed" components in a wellbore. It does not define the "transient" drilling strings or the "hanging" production components.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Citation" type="eml:Citation" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Citation" type="eml:Citation" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the WellGeometrySection</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="TypeHoleCasing" type="witsml:HoleCasingType" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Type of fixed component.</xs:documentation>

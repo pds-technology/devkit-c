@@ -23,8 +23,16 @@ Coordinate Reference System and are thus directly comparable.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="optional" type="eml:LengthUom"/>
-				<xs:attribute name="datum" use="optional" type="eml:String64"/>
+				<xs:attribute name="uom" use="optional" type="eml:LengthUom">
+					<xs:annotation>
+						<xs:documentation>Unit of measure used by this vertical depth coordinate</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="datum" use="optional" type="eml:String64">
+					<xs:annotation>
+						<xs:documentation>Defines the vertical datums associated with elevation, vertical depth and measured depth coordinates</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -107,7 +115,11 @@ description, code, or method.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of NameTag</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="NameTagNumberingScheme">
 		<xs:annotation>
@@ -129,7 +141,11 @@ description, code, or method.</xs:documentation>
 	</xs:simpleType>
 	<xs:complexType name="Cost">
 		<xs:sequence/>
-		<xs:attribute name="currency" use="optional" type="eml:String64"/>
+		<xs:attribute name="currency" use="optional" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Currency used for this Cost</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="TimeZone">
 		<xs:annotation>
@@ -147,11 +163,31 @@ description, code, or method.</xs:documentation>
 	<xs:complexType name="IndexedObject">
 		<xs:simpleContent>
 			<xs:extension base="eml:TypeEnum">
-				<xs:attribute name="index" use="optional" type="xs:int"/>
-				<xs:attribute name="name" use="optional" type="eml:String64"/>
-				<xs:attribute name="uom" use="optional" type="eml:UomEnum"/>
-				<xs:attribute name="description" use="optional" type="eml:String2000"/>
-				<xs:attribute name="uid" use="required" type="eml:String64"/>
+				<xs:attribute name="index" use="optional" type="xs:int">
+					<xs:annotation>
+						<xs:documentation>Index used to qualify this indexed object</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="name" use="optional" type="eml:String64">
+					<xs:annotation>
+						<xs:documentation>Name of this IndexedObject</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="uom" use="optional" type="eml:UomEnum">
+					<xs:annotation>
+						<xs:documentation>Unit of measure used by this Indexed Object</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="description" use="optional" type="eml:String2000">
+					<xs:annotation>
+						<xs:documentation>Description of this IndexedObject</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="uid" use="required" type="eml:String64">
+					<xs:annotation>
+						<xs:documentation>Unique identifier for this instance of IndexedObject</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -164,8 +200,16 @@ Coordinate Reference System and are thus directly comparable.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="optional" type="eml:LengthUom"/>
-				<xs:attribute name="datum" use="optional" type="eml:String64"/>
+				<xs:attribute name="uom" use="optional" type="eml:LengthUom">
+					<xs:annotation>
+						<xs:documentation>Unit of measure used by this measured depth coordinate</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="datum" use="optional" type="eml:String64">
+					<xs:annotation>
+						<xs:documentation>Defines the vertical datums associated with elevation, vertical depth and measured depth coordinates</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>

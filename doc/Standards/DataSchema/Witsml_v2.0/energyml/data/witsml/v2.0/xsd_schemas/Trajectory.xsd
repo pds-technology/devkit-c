@@ -16,6 +16,7 @@
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
 	<!--														-->
 	<xs:include schemaLocation="WitsmlCommon.xsd"/>
+	<xs:include schemaLocation="Log.xsd"/>
 	<xs:include schemaLocation="ToolErrorModel.xsd"/>
 	<xs:include schemaLocation="Wellbore.xsd"/>
 	<xs:include schemaLocation="Well.xsd"/>
@@ -27,6 +28,11 @@
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
+					<xs:element name="GrowingStatus" type="witsml:ChannelStatus" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Describes the growing status of the trajectory, whether active, inactive or closed</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="ObjectGrowing" type="xs:boolean" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The growing state of the object.
@@ -429,22 +435,22 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			<xs:element name="CorUsed" type="witsml:StnTrajCorUsed" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="IscwsaToolErrorModel" type="eml:DataObjectReference" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>A unique identifier for an instance of a trajectory station.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="TrajStationType">
 		<xs:annotation>
 			<xs:documentation>These values represent the type of a directional survey station.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="AZI and TVD"/>
 			<xs:enumeration value="azimuth on plane">
 				<xs:annotation>
 					<xs:documentation>Section terminates at a given azimuth on a given plane target, requires target id</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="DLS to NS"/>
-			<xs:enumeration value="EW and TVD"/>
-			<xs:enumeration value="NS"/>
 			<xs:enumeration value="buildrate to delta-MD">
 				<xs:annotation>
 					<xs:documentation>Section follows a given buildrate to a specified delta measured depth</xs:documentation>
@@ -540,6 +546,11 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 					<xs:documentation>Section follows a given dogleg severity until a specified TVD and Inclination</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="DLS to NS">
+				<xs:annotation>
+					<xs:documentation>Section follows a given dogleg severity for a given north, south distance.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="DLS and toolface to AZI">
 				<xs:annotation>
 					<xs:documentation>Section follows a given toolface angle and  dogleg severity to a specified azimuth</xs:documentation>
@@ -595,6 +606,16 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 					<xs:documentation>Section holds angle, azimuth to a specified TVD</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="INCL AZI and TVD">
+				<xs:annotation>
+					<xs:documentation>Section follows a continuous curve to a specified inclination, azimuth and true vertical depth</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="interpolated">
+				<xs:annotation>
+					<xs:documentation>Derived by interpolating between stations with entered values (either planned or surveyed)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="marker MD">
 				<xs:annotation>
 					<xs:documentation>Measured depth marker, can be inserted within actual survey stations also</xs:documentation>
@@ -603,6 +624,26 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			<xs:enumeration value="marker TVD">
 				<xs:annotation>
 					<xs:documentation>TVD marker, can be inserted within actual survey stations also</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MD and INCL">
+				<xs:annotation>
+					<xs:documentation>An old style drift indicator / Totco / Inclination-only survey</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MD INCL and AZI">
+				<xs:annotation>
+					<xs:documentation>A normal MWD / gyro survey</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="N E and TVD">
+				<xs:annotation>
+					<xs:documentation>A point on a computed trajectory with Northing, Easting and True Vertical Depth.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NS EW and TVD">
+				<xs:annotation>
+					<xs:documentation>Specified as TVD, NS, EW, could be used for point or drilling target (non geological target)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="target center">
@@ -647,26 +688,6 @@ in normal situations. All reasonable attempts should be made to determine
 the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="MD and INCL">
-				<xs:annotation>
-					<xs:documentation>An old style drift indicator / Totco / Inclination-only survey</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="MD INCL and AZI">
-				<xs:annotation>
-					<xs:documentation>A normal MWD / gyro survey</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="N E and TVD">
-				<xs:annotation>
-					<xs:documentation>A point on a computed trajectory with Northing, Easting and True Vertical Depth.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="interpolated">
-				<xs:annotation>
-					<xs:documentation>Derived by interpolating between stations with entered values (either planned or surveyed)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="TypeSurveyTool">
@@ -686,7 +707,6 @@ the appropriate value. Use of this value may result in rejection in some situati
 			<xs:documentation>Trajectory Station Status.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="partially accepted"/>
 			<xs:enumeration value="open">
 				<xs:annotation>
 					<xs:documentation>Has not been validated at this point, does not influence position computation for stations below.</xs:documentation>
@@ -699,7 +719,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:enumeration>
 			<xs:enumeration value="position">
 				<xs:annotation>
-					<xs:documentation>Has been validated and is used for position computation, used for position computation for stations below.</xs:documentation>
+					<xs:documentation>This means validated and in-use.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

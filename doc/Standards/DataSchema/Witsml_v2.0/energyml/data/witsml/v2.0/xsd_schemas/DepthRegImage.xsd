@@ -22,8 +22,16 @@
 			<xs:documentation>The role of a calibration point in a log depth registration.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="left edge"/>
-			<xs:enumeration value="right edge"/>
+			<xs:enumeration value="left edge">
+				<xs:annotation>
+					<xs:documentation>Denotes the calibration being made on the left edge of the image</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="right edge">
+				<xs:annotation>
+					<xs:documentation>Denotes the calibration being made on the right edge of the image</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="fraction"/>
 			<xs:enumeration value="other">
 				<xs:annotation>
@@ -39,9 +47,21 @@
 			<xs:documentation>Type of file reference.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="file name"/>
-			<xs:enumeration value="path name"/>
-			<xs:enumeration value="universal resource locator"/>
+			<xs:enumeration value="file name">
+				<xs:annotation>
+					<xs:documentation>The file name of the image</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="path name">
+				<xs:annotation>
+					<xs:documentation>The path where the file is located</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="universal resource locator">
+				<xs:annotation>
+					<xs:documentation>A string of characters used to identify a resource.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="other">
 				<xs:annotation>
 					<xs:documentation>The value is not known. This value should not be used
@@ -81,7 +101,7 @@
 					<xs:documentation>Coordinates of rectangle representing the track.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TxtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
 				</xs:annotation>
@@ -136,10 +156,26 @@
 			<xs:documentation>A partial list of mimetypes</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="image/tiff"/>
-			<xs:enumeration value="image/gif"/>
-			<xs:enumeration value="image/png"/>
-			<xs:enumeration value="image/xml+svg"/>
+			<xs:enumeration value="image/tiff">
+				<xs:annotation>
+					<xs:documentation>The image format is Tagged Image File Format</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="image/gif">
+				<xs:annotation>
+					<xs:documentation>The image format is Graphic Interchange Format</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="image/png">
+				<xs:annotation>
+					<xs:documentation>The image format is Portable Network Graphics</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="image/xml+svg">
+				<xs:annotation>
+					<xs:documentation>The image format is xml with scalable vector graphics</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="other">
 				<xs:annotation>
 					<xs:documentation>The value is not known. This value should not be used
@@ -154,7 +190,7 @@
 			<xs:documentation>A region of an image containing a log rectangle.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Type" type="witsml:LogRectangeType" minOccurs="0" maxOccurs="1">
+			<xs:element name="Type" type="witsml:LogRectangleType" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>A region of an image containing a log section image.</xs:documentation>
 				</xs:annotation>
@@ -169,7 +205,7 @@
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="position" type="witsml:DepthRegRectangle" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Position" type="witsml:DepthRegRectangle" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 		<xs:attribute name="uid" use="optional" type="eml:String64">
 			<xs:annotation>
@@ -252,11 +288,6 @@
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
-					<xs:element name="FileName" type="eml:String64" minOccurs="1" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>Reference to file containing image content.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
 					<xs:element name="FileNameType" type="witsml:FileNameType" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>Mimetype of image file content.</xs:documentation>
@@ -265,6 +296,11 @@
 					<xs:element name="Mimetype" type="witsml:MimeType" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>Mimetype of image file content.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="FileName" type="eml:String64" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Reference to file containing image content.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="FileSize" type="eml:DigitalStorageMeasure" minOccurs="0" maxOccurs="1">
@@ -292,11 +328,27 @@
 							<xs:documentation>File version.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="ImageBoundary" type="witsml:DepthRegRectangle" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The bounding rectangle of the image</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="HeaderSection" type="witsml:DepthRegLogRect" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Log header information gleaned from the well log image header section. Also contains X, Y coordinates and positional data with respect to the header section location within the log image file.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="LogSection" type="witsml:DepthRegLogSection" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Provides log name, log type, curve scale and other information about each log section of the image file. Most importantly, this section contains the depth registration elements (CalibrationPoint) necessary for depth calibrating well log sections.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="AlternateSection" type="witsml:DepthRegLogRect" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>AlternateSection provides a positional reference for sections of the image file not included in the aforementioned elements.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
-					<xs:element name="ImageBoundary" type="witsml:DepthRegRectangle" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="HeaderSection" type="witsml:DepthRegLogRect" minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element name="LogSection" type="witsml:DepthRegLogSection" minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element name="AlternateSection" type="witsml:DepthRegLogRect" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 				<xs:attribute name="uid" use="optional" type="eml:String64">
 					<xs:annotation>
@@ -306,12 +358,16 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:simpleType name="LogRectangeType">
+	<xs:simpleType name="LogRectangleType">
 		<xs:annotation>
 			<xs:documentation>Type of rectangular log area.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="header"/>
+			<xs:enumeration value="header">
+				<xs:annotation>
+					<xs:documentation>Denotes rectangle bounds a header section</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="alternate"/>
 		</xs:restriction>
 	</xs:simpleType>
@@ -400,12 +456,32 @@
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="UpperCurveScaleRect" type="witsml:DepthRegRectangle" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Boundaries of the Upper Curve Scale (or horizontal scale) section for this log section.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CalibrationPoint" type="witsml:DepthRegCalibrationPoint" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Generally this associates an X, Y value pair with a depth value from the log section.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WhiteSpace" type="witsml:DepthRegRectangle" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Defines blank space occurring within a log section in an image.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LowerCurveScaleRect" type="witsml:DepthRegRectangle" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Boundaries of the Lower Curve Scale (or horizontal scale) section for this log section.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LogSectionRect" type="witsml:DepthRegRectangle" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The bounding rectangle of this log section.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="Parameter" type="witsml:DepthRegParameter" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="LowerCurveScaleRect" type="witsml:DepthRegRectangle" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="LogSectionRect" type="witsml:DepthRegRectangle" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="UpperCurveScaleRect" type="witsml:DepthRegRectangle" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="Whitespace" type="witsml:DepthRegRectangle" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="CalibrationPoint" type="witsml:DepthRegCalibrationPoint" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="Track" type="witsml:DepthRegTrack" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="uid" use="optional" type="eml:String64">
@@ -472,9 +548,17 @@ The uom value must be consistent with the indexType.</xs:documentation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="curves"/>
 			<xs:enumeration value="data"/>
-			<xs:enumeration value="depth"/>
+			<xs:enumeration value="depth">
+				<xs:annotation>
+					<xs:documentation>The index used by the track is depth</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="traces"/>
-			<xs:enumeration value="other"/>
+			<xs:enumeration value="other">
+				<xs:annotation>
+					<xs:documentation>The index used by the track is something other than depth</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="DepthRegPoint">
@@ -565,10 +649,27 @@ If the value is unitless, then use a unit of 'Euc'.</xs:documentation>
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Ll" type="witsml:DepthRegPoint" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="Ur" type="witsml:DepthRegPoint" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="Ul" type="witsml:DepthRegPoint" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="Lr" type="witsml:DepthRegPoint" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Ul" type="witsml:DepthRegPoint" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The upper left point of a rectangular region.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Ur" type="witsml:DepthRegPoint" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The upper right
+ point of a rectangular region.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Ll" type="witsml:DepthRegPoint" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The lower left point of a rectangular region.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Lr" type="witsml:DepthRegPoint" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The lower right point of a rectangular region.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="uid" use="optional" type="eml:String64">
 			<xs:annotation>

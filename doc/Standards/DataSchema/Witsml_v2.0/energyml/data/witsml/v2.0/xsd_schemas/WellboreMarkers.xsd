@@ -27,8 +27,16 @@
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
-					<xs:element name="ChronostratigraphicTop" type="witsml:GeochronologicalUnit" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="LithostratigraphicTop" type="witsml:LithostratigraphicUnit" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="ChronostratigraphicTop" type="witsml:GeochronologicalUnit" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The name of a Geochronology for this marker, with the "kind" attribute specifying the geochronological time span</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="LithostratigraphicTop" type="witsml:LithostratigraphicUnit" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Specifies the unit of lithostratigraphy.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="Md" type="witsml:MeasuredDepthCoord" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>Logged measured depth at the top of marker.</xs:documentation>

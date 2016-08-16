@@ -470,7 +470,11 @@ This represents a foreign key to tubular.</xs:documentation>
 			<xs:element name="CostDay" type="witsml:Cost" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="CostDayMud" type="witsml:Cost" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of DrillReportStatusInfo</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="PresTestType">
 		<xs:restriction base="eml:TypeEnum">
@@ -520,7 +524,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="Viscosity" type="witsml:RheometerViscosity" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of Rheometer</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="DrillReportPorePressure">
 		<xs:sequence>
@@ -555,7 +563,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of DrillReportPorePressure</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="ReadingKind">
 		<xs:restriction base="eml:TypeEnum">
@@ -584,7 +596,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="eml:String2000">
-				<xs:attribute name="dTim" use="optional" type="eml:TimeStamp"/>
+				<xs:attribute name="dTim" use="optional" type="eml:TimeStamp">
+					<xs:annotation>
+						<xs:documentation>The timestamp of the time-qualified comment</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -635,7 +651,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="Location" type="witsml:AbstractWellLocation" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of DrillReportSurveyStation</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="DrillActivity">
 		<xs:annotation>
@@ -749,7 +769,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="ProprietaryCode" type="eml:ObjectAlias" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of DrillActivity</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="DrillActivityCode">
 		<xs:annotation>
@@ -908,7 +932,11 @@ bottom hole assembly number.</xs:documentation>
 			</xs:element>
 			<xs:element name="BottomHoleTemperature" type="witsml:AbstractBottomHoleTemperature" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of DrillReportLogInfo</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="DrillReportCoreInfo">
 		<xs:sequence>
@@ -963,7 +991,11 @@ bottom hole assembly number.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of DrillReportCoreInfo</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="InnerBarrelType">
 		<xs:restriction base="eml:TypeEnum">
@@ -1128,7 +1160,11 @@ was disposed of.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of DrillReportWellTestInfo</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="WellTestType">
 		<xs:restriction base="eml:TypeEnum">
@@ -1215,7 +1251,11 @@ False ("false" or "0") or not given indicates otherwise.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of DrillReportFormTestInfo</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="DrillReportLithShowInfo">
 		<xs:sequence>
@@ -1251,7 +1291,11 @@ description/evaluation of the interval.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of DrillReportLithShowInfo</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="DrillReportEquipFailureInfo">
 		<xs:sequence>
@@ -1297,7 +1341,11 @@ repaired and ready for production.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of DrillReportEquipFailureInfo</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="DrillReportControlIncidentInfo">
 		<xs:sequence>
@@ -1423,7 +1471,11 @@ repaired and ready for production.</xs:documentation>
 			</xs:element>
 			<xs:element name="ProprietaryCode" type="eml:ObjectAlias" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of DrillReportControlIncidentInfo</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="WellControlIncidentType">
 		<xs:restriction base="eml:TypeEnum">
@@ -1544,7 +1596,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of DrillReportStratInfo</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="DrillReportPerfInfo">
 		<xs:sequence>
@@ -1574,7 +1630,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of DrillReportPerfInfo</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="DrillReportGasReadingInfo">
 		<xs:sequence>
@@ -1644,11 +1704,19 @@ the appropriate value. Use of this value may result in rejection in some situati
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="required" type="eml:String64"/>
+		<xs:attribute name="uid" use="required" type="eml:String64">
+			<xs:annotation>
+				<xs:documentation>Unique identifier for this instance of DrillReportGasReadingInfo</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="AbstractBottomHoleTemperature" abstract="true">
 		<xs:sequence minOccurs="0" maxOccurs="1">
-			<xs:element name="BottomHoleTemperature" type="eml:ThermodynamicTemperatureMeasure" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="BottomHoleTemperature" type="eml:ThermodynamicTemperatureMeasure" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Bottomhole temperature for the job.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="BottomHoleCirculatingTemperature">
@@ -1662,7 +1730,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 		<xs:complexContent>
 			<xs:extension base="witsml:AbstractBottomHoleTemperature">
 				<xs:sequence minOccurs="0" maxOccurs="1">
-					<xs:element name="eTimStatic" type="eml:TimeMeasure" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="eTimStatic" type="eml:TimeMeasure" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Elapsed time since circulation stopped.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
