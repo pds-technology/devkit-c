@@ -71,6 +71,10 @@ namespace Energistics.Generator.RESQML110 {
         private int referenceField;
         
         /// <remarks/>
+        /// <summary>The I direction cell coordinate for a column of cells.  Minimum value of startIndexI.  Maximum value of ni+startIndexI-1.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The I direction cell coordinate for a column of cells.  Minimum value of startInd" +
+            "exI.  Maximum value of ni+startIndexI-1.")]
         public int i {
             get {
                 return this.iField;
@@ -81,6 +85,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The I direction cell coordinate for a column of cells. Minimum value of startIndexJ.  Maximum value of nj+startIndexJ-1.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The I direction cell coordinate for a column of cells. Minimum value of startInde" +
+            "xJ.  Maximum value of nj+startIndexJ-1.")]
         public int j {
             get {
                 return this.jField;
@@ -91,6 +99,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The K direction cell coordinate for a column of cells. Minimum value of startIndexK.  Maximum value of nj+startIndexK-1.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The K direction cell coordinate for a column of cells. Minimum value of startInde" +
+            "xK.  Maximum value of nj+startIndexK-1.")]
         public int k {
             get {
                 return this.kField;
@@ -101,6 +113,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The I direction corner coordinate for a node within a column of cells.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RangeAttribute(0D, 1D)]
+        [System.ComponentModel.DescriptionAttribute("The I direction corner coordinate for a node within a column of cells.")]
         public short iCorn {
             get {
                 return this.iCornField;
@@ -111,6 +127,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The J direction corner coordinate for a node within a column of cells.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RangeAttribute(0D, 1D)]
+        [System.ComponentModel.DescriptionAttribute("The J direction corner coordinate for a node within a column of cells.")]
         public short jCorn {
             get {
                 return this.jCornField;
@@ -121,6 +141,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The K direction corner coordinate for a node within a column of cells.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RangeAttribute(0D, 1D)]
+        [System.ComponentModel.DescriptionAttribute("The K direction corner coordinate for a node within a column of cells.")]
         public short kCorn {
             get {
                 return this.kCornField;
@@ -131,6 +155,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>A 0-based index into the additional split node list. A value of zero represents the first additional node.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("A 0-based index into the additional split node list. A value of zero represents t" +
+            "he first additional node.")]
         public int reference {
             get {
                 return this.referenceField;
@@ -176,7 +204,13 @@ namespace Energistics.Generator.RESQML110 {
         private string groupPathField;
         
         /// <remarks/>
+        /// <summary>Defines the internal path to data group inside an HDF5 formatted file. The hdf file name is the name of the XML message file (including extension) with an extension of ".h5". in the same folder with the XML message file.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Defines the internal path to data group inside an HDF5 formatted file. The hdf fi" +
+            "le name is the name of the XML message file (including extension) with an extens" +
+            "ion of \".h5\". in the same folder with the XML message file.")]
         public string groupPath {
             get {
                 return this.groupPathField;
@@ -198,7 +232,10 @@ namespace Energistics.Generator.RESQML110 {
         private point3d[] vrtxField;
         
         /// <remarks/>
+        /// <summary>Defines the x,y,z coordinates of one vertex.</summary>
         [System.Xml.Serialization.XmlElementAttribute("vrtx")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Defines the x,y,z coordinates of one vertex.")]
         public point3d[] vrtx {
             get {
                 return this.vrtxField;
@@ -225,6 +262,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public double x {
             get {
                 return this.xField;
@@ -236,6 +274,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public double y {
             get {
                 return this.yField;
@@ -247,6 +286,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public double z {
             get {
                 return this.zField;
@@ -276,6 +316,10 @@ namespace Energistics.Generator.RESQML110 {
         private int referenceField;
         
         /// <remarks/>
+        /// <summary>The I direction cell coordinate for a column of cells.  Minimum value of startIndexI.  Maximum value of ni+startIndexI-1.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The I direction cell coordinate for a column of cells.  Minimum value of startInd" +
+            "exI.  Maximum value of ni+startIndexI-1.")]
         public int i {
             get {
                 return this.iField;
@@ -286,6 +330,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The I direction cell coordinate for a column of cells. Minimum value of startIndexJ.  Maximum value of nj+startIndexJ-1.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The I direction cell coordinate for a column of cells. Minimum value of startInde" +
+            "xJ.  Maximum value of nj+startIndexJ-1.")]
         public int j {
             get {
                 return this.jField;
@@ -296,6 +344,11 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The I direction corner coordinate for a coordinate line within a column of cells.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RangeAttribute(0D, 1D)]
+        [System.ComponentModel.DescriptionAttribute("The I direction corner coordinate for a coordinate line within a column of cells." +
+            "")]
         public short iCorn {
             get {
                 return this.iCornField;
@@ -306,6 +359,11 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The J direction corner coordinate for a coordinate line within a column of cells.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RangeAttribute(0D, 1D)]
+        [System.ComponentModel.DescriptionAttribute("The J direction corner coordinate for a coordinate line within a column of cells." +
+            "")]
         public short jCorn {
             get {
                 return this.jCornField;
@@ -316,6 +374,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>A 0-based index into the coordinate line list. A value of zero represents the first line in the line list.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("A 0-based index into the coordinate line list. A value of zero represents the fir" +
+            "st line in the line list.")]
         public int reference {
             get {
                 return this.referenceField;
@@ -367,6 +429,9 @@ namespace Energistics.Generator.RESQML110 {
         private cs_resqmlSplitNodeSet ijkSplitNodeSetField;
         
         /// <remarks/>
+        /// <summary>A textual description of the grid.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("A textual description of the grid.")]
         public string description {
             get {
                 return this.descriptionField;
@@ -377,6 +442,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>A pointer to the localCRS which represents the 3D coordinates in this grid.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("A pointer to the localCRS which represents the 3D coordinates in this grid.")]
         public refGlobalNameString local3dCRS {
             get {
                 return this.local3dCRSField;
@@ -387,6 +455,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Coordinate line node geometries.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Coordinate line node geometries.")]
         public cs_resqmlExplicitNodeSet ijExplicitNodeSet {
             get {
                 return this.ijExplicitNodeSetField;
@@ -397,6 +468,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Defines the geometry of split nodes. The geometry is defined independent of coordinate lines.</summary>
+        [System.ComponentModel.DescriptionAttribute("Defines the geometry of split nodes. The geometry is defined independent of coord" +
+            "inate lines.")]
         public cs_resqmlSplitNodeSet ijkSplitNodeSet {
             get {
                 return this.ijkSplitNodeSetField;
@@ -465,6 +539,9 @@ namespace Energistics.Generator.RESQML110 {
         private int kField;
         
         /// <remarks/>
+        /// <summary>The I index of the cell.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The I index of the cell.")]
         public int i {
             get {
                 return this.iField;
@@ -475,6 +552,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The J index of the cell.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The J index of the cell.")]
         public int j {
             get {
                 return this.jField;
@@ -485,6 +565,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The K index of the cell.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The K index of the cell.")]
         public int k {
             get {
                 return this.kField;
@@ -508,7 +591,10 @@ namespace Energistics.Generator.RESQML110 {
         private float[] weightField;
         
         /// <remarks/>
+        /// <summary>A list that defines the number of refined cells within each target cell. The length of the list must be equal to the number of target cells in the specified direction (i.e., maxIndex-minIndex+1). The target cells are defined by a target cell window (i.e., by a minimum index and maximum index) in the parent grid. The order in the aggregate is significant. The first value represents the number of refined cells in the first target cell.  The next value represents the number of refined cells in the second target cell. The number of resulting cells in specified direction is equal to the sum of this list of counts.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"A list that defines the number of refined cells within each target cell. The length of the list must be equal to the number of target cells in the specified direction (i.e., maxIndex-minIndex+1). The target cells are defined by a target cell window (i.e., by a minimum index and maximum index) in the parent grid. The order in the aggregate is significant. The first value represents the number of refined cells in the first target cell.  The next value represents the number of refined cells in the second target cell. The number of resulting cells in specified direction is equal to the sum of this list of counts.")]
         public short[] count {
             get {
                 return this.countField;
@@ -519,7 +605,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>A list that defines the weight to apply to each refined cell within each target cell. The length of the array must be equal to the sum of the counts in the count list. The order in the aggregate is significant. The first count(1) values represent the list of refinements for the the first target cell.  The next count(2) values represent the list of refinements for the second target cell. The first weight within each refinement list applies to the lower index side of the target cell. The width of each refined cell will be proportional to the weights within each refinement list. Readers are advised to normalize the weights within each refinement list.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"A list that defines the weight to apply to each refined cell within each target cell. The length of the array must be equal to the sum of the counts in the count list. The order in the aggregate is significant. The first count(1) values represent the list of refinements for the the first target cell.  The next count(2) values represent the list of refinements for the second target cell. The first weight within each refinement list applies to the lower index side of the target cell. The width of each refined cell will be proportional to the weights within each refinement list. Readers are advised to normalize the weights within each refinement list.")]
         public float[] weight {
             get {
                 return this.weightField;
@@ -547,6 +636,9 @@ namespace Energistics.Generator.RESQML110 {
         private cs_resqmlCellIndex[] omittedCellField;
         
         /// <remarks/>
+        /// <summary>Defines the refinement of the parent cells in the I direction.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Defines the refinement of the parent cells in the I direction.")]
         public cs_resqmlCellDivisionWeight iRefine {
             get {
                 return this.iRefineField;
@@ -557,6 +649,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Defines the refinement of the parent cells in the J direction.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Defines the refinement of the parent cells in the J direction.")]
         public cs_resqmlCellDivisionWeight jRefine {
             get {
                 return this.jRefineField;
@@ -567,6 +662,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Defines the refinement of the parent cells in the K direction.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Defines the refinement of the parent cells in the K direction.")]
         public cs_resqmlCellDivisionWeight kRefine {
             get {
                 return this.kRefineField;
@@ -577,7 +675,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>A parent cell to omit from the refinement.</summary>
         [System.Xml.Serialization.XmlElementAttribute("omittedCell")]
+        [System.ComponentModel.DescriptionAttribute("A parent cell to omit from the refinement.")]
         public cs_resqmlCellIndex[] omittedCell {
             get {
                 return this.omittedCellField;
@@ -758,6 +858,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>I indices lower bound. All "I" values will be greater than or equal to this value. May be negative.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("I indices lower bound. All \"I\" values will be greater than or equal to this value" +
+            ". May be negative.")]
         public int startIndexI {
             get {
                 return this.startIndexIField;
@@ -768,6 +872,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>J indices lower bound. All "J" values will be greater than or equal to this value. May be negative.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("J indices lower bound. All \"J\" values will be greater than or equal to this value" +
+            ". May be negative.")]
         public int startIndexJ {
             get {
                 return this.startIndexJField;
@@ -778,6 +886,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>K indices lower bound. All "K" values will be greater than or equal to this value. May be negative.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("K indices lower bound. All \"K\" values will be greater than or equal to this value" +
+            ". May be negative.")]
         public int startIndexK {
             get {
                 return this.startIndexKField;
@@ -788,6 +900,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Number of cells in the "I" direction. Minimum value = 1.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Number of cells in the \"I\" direction. Minimum value = 1.")]
         public int ni {
             get {
                 return this.niField;
@@ -798,6 +913,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Number of cells in the "J" direction. Minimum value = 1.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Number of cells in the \"J\" direction. Minimum value = 1.")]
         public int nj {
             get {
                 return this.njField;
@@ -808,6 +926,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Number of cells in the "K" direction. Minimum value = 1.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Number of cells in the \"K\" direction. Minimum value = 1.")]
         public int nk {
             get {
                 return this.nkField;
@@ -830,7 +951,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Defines a K layer after which a gap exists in the K layering.  For example, if gapAfterLayer=2 then the node arrays will contain an  extra node for the top of layer 3. If there is no gap then each node (except the first and last) represents  the bottom of one layer and the top of the next. The length of the aggregate specifies the number of gaps in the K layering.</summary>
         [System.Xml.Serialization.XmlElementAttribute("gapAfterLayer")]
+        [System.ComponentModel.DescriptionAttribute(@"Defines a K layer after which a gap exists in the K layering.  For example, if gapAfterLayer=2 then the node arrays will contain an  extra node for the top of layer 3. If there is no gap then each node (except the first and last) represents  the bottom of one layer and the top of the next. The length of the aggregate specifies the number of gaps in the K layering.")]
         public short[] gapAfterLayer {
             get {
                 return this.gapAfterLayerField;
@@ -841,6 +964,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Defines the shape of all grid cells.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Defines the shape of all grid cells.")]
         public CellShape gridCellShape {
             get {
                 return this.gridCellShapeField;
@@ -851,6 +977,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The grid parity is the sign of (I cross J dot K) where I, J, and K  are vectors in the direction of increasing I, J, and K numbering. Positive parity means that the IJK cell numbering is right-handed. True ("true" or "1") indicates that the grid has positive parity.  False ("false" or "0") indicates that the grid has negative parity.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"The grid parity is the sign of (I cross J dot K) where I, J, and K  are vectors in the direction of increasing I, J, and K numbering. Positive parity means that the IJK cell numbering is right-handed. True (""true"" or ""1"") indicates that the grid has positive parity.  False (""false"" or ""0"") indicates that the grid has negative parity.")]
         public bool positiveGridParity {
             get {
                 return this.positiveGridParityField;
@@ -861,6 +990,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>True ("true" or "1") indicates that the grid does not deform in time.  False ("false" or "0") indicates that the grid DOES deform in time.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("True (\"true\" or \"1\") indicates that the grid does not deform in time.  False (\"fa" +
+            "lse\" or \"0\") indicates that the grid DOES deform in time.")]
         public bool gridStatic {
             get {
                 return this.gridStaticField;
@@ -871,6 +1004,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Asserts the most complex type of line used in the grid.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Asserts the most complex type of line used in the grid.")]
         public ResqmlMostComplexLineGeometry mostComplexLineGeometry {
             get {
                 return this.mostComplexLineGeometryField;
@@ -881,6 +1017,11 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>True ("true" or "1") indicates that the grid will have split lines with laterally separated geometry.  False ("false" or "0") indicates that the grid will NOT have split lines with laterally separated geometry.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("True (\"true\" or \"1\") indicates that the grid will have split lines with laterally" +
+            " separated geometry.  False (\"false\" or \"0\") indicates that the grid will NOT ha" +
+            "ve split lines with laterally separated geometry.")]
         public bool anyIJGap {
             get {
                 return this.anyIJGapField;
@@ -891,6 +1032,11 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>True ("true" or "1") indicates that the grid will have at least one cell with undefined geometry.  False ("false" or "0") indicates that all cells in the grid have well-defined geometry.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("True (\"true\" or \"1\") indicates that the grid will have at least one cell with und" +
+            "efined geometry.  False (\"false\" or \"0\") indicates that all cells in the grid ha" +
+            "ve well-defined geometry.")]
         public bool anyGeometryUndefined {
             get {
                 return this.anyGeometryUndefinedField;
@@ -901,6 +1047,11 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>True ("true" or "1") indicates that the grid will have at least one cell pinched in the I or J direction. False ("false" or "0") indicates that the grid has neither iPinch nor jPinch.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("True (\"true\" or \"1\") indicates that the grid will have at least one cell pinched " +
+            "in the I or J direction. False (\"false\" or \"0\") indicates that the grid has neit" +
+            "her iPinch nor jPinch.")]
         public bool anyIJPinch {
             get {
                 return this.anyIJPinchField;
@@ -911,6 +1062,11 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>True ("true" or "1") indicates that the grid will have at least one cell pinched in the K direction.  False ("false" or "0") indicates that the grid has no kPinch.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("True (\"true\" or \"1\") indicates that the grid will have at least one cell pinched " +
+            "in the K direction.  False (\"false\" or \"0\") indicates that the grid has no kPinc" +
+            "h.")]
         public bool anyKPinch {
             get {
                 return this.anyKPinchField;
@@ -921,6 +1077,12 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>True ("true" or "1") indicates that at least one coordinate node list line has entirely undefined geometry.  False ("false" or "0") indicates that all coordinate node lists are defined. Individual nodal values may still be undefined in this case.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("True (\"true\" or \"1\") indicates that at least one coordinate node list line has en" +
+            "tirely undefined geometry.  False (\"false\" or \"0\") indicates that all coordinate" +
+            " node lists are defined. Individual nodal values may still be undefined in this " +
+            "case.")]
         public bool anyLineNull {
             get {
                 return this.anyLineNullField;
@@ -931,6 +1093,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Properties for this object.</summary>
+        [System.ComponentModel.DescriptionAttribute("Properties for this object.")]
         public cs_resqmlPropertySet propertyValues {
             get {
                 return this.propertyValuesField;
@@ -941,6 +1105,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -951,7 +1117,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_resqmlExtensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -962,7 +1130,12 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. The value must be globally unique.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The unique identifier of a container element. The value must be globally unique.")]
         public string uid {
             get {
                 return this.uidField;
@@ -1645,6 +1818,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Defines how the data values are associated with the object.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Defines how the data values are associated with the object.")]
         public PropertyAttachment propertyAttachment {
             get {
                 return this.propertyAttachmentField;
@@ -1667,6 +1843,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -1677,7 +1855,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_resqmlExtensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -1688,7 +1868,12 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. The value must be globally unique.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The unique identifier of a container element. The value must be globally unique.")]
         public string uid {
             get {
                 return this.uidField;
@@ -2850,7 +3035,10 @@ namespace Energistics.Generator.RESQML110 {
         private cs_resqmlExplicitCornerPointGridRepresentation explicitGridRepresentationField;
         
         /// <remarks/>
+        /// <summary>Defines a Local Grid related to this root grid.  A local grid may be defined from a root grid or another local grid.</summary>
         [System.Xml.Serialization.XmlElementAttribute("localIJKGrid")]
+        [System.ComponentModel.DescriptionAttribute("Defines a Local Grid related to this root grid.  A local grid may be defined from" +
+            " a root grid or another local grid.")]
         public cs_resqmlLocalIJKGrid[] localIJKGrid {
             get {
                 return this.localIJKGridField;
@@ -2861,6 +3049,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>A 3D corner point grid representation using explicit nodes on coordinate lines.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("A 3D corner point grid representation using explicit nodes on coordinate lines.")]
         public cs_resqmlExplicitCornerPointGridRepresentation explicitGridRepresentation {
             get {
                 return this.explicitGridRepresentationField;
@@ -2896,6 +3087,9 @@ namespace Energistics.Generator.RESQML110 {
         private object item1Field;
         
         /// <remarks/>
+        /// <summary>A pointer to the parent grid that is being locally redefined.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("A pointer to the parent grid that is being locally redefined.")]
         public refGlobalNameString parentGrid {
             get {
                 return this.parentGridField;
@@ -2906,6 +3100,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The beginning cell of the redefinition window in the I direction.  The "redefinition window" defines the cells to be replaced in the parent grid.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The beginning cell of the redefinition window in the I direction.  The \"redefinit" +
+            "ion window\" defines the cells to be replaced in the parent grid.")]
         public int parentIMin {
             get {
                 return this.parentIMinField;
@@ -2916,6 +3114,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The ending cell of the redefinition window in I direction.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The ending cell of the redefinition window in I direction.")]
         public int parentIMax {
             get {
                 return this.parentIMaxField;
@@ -2926,6 +3127,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The beginning cell of the redefinition window in the J direction.  The "redefinition window" defines the cells to be replaced in the parent grid.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The beginning cell of the redefinition window in the J direction.  The \"redefinit" +
+            "ion window\" defines the cells to be replaced in the parent grid.")]
         public int parentJMin {
             get {
                 return this.parentJMinField;
@@ -2936,6 +3141,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The ending cell of the redefinition window in J direction.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The ending cell of the redefinition window in J direction.")]
         public int parentJMax {
             get {
                 return this.parentJMaxField;
@@ -2946,6 +3154,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The beginning cell of the redefinition window in the K direction.  The "redefinition window" defines the cells to be replaced in the parent grid.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The beginning cell of the redefinition window in the K direction.  The \"redefinit" +
+            "ion window\" defines the cells to be replaced in the parent grid.")]
         public int parentKMin {
             get {
                 return this.parentKMinField;
@@ -2956,6 +3168,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The ending cell of the redefinition window in K direction.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The ending cell of the redefinition window in K direction.")]
         public int parentKMax {
             get {
                 return this.parentKMaxField;
@@ -3007,6 +3222,10 @@ namespace Energistics.Generator.RESQML110 {
         private short face2Field;
         
         /// <remarks/>
+        /// <summary>A zero-based pointer to the grid that contains the cell-face. A value of zero represents the first grid in the grid3dGUID aggregate of the parent.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("A zero-based pointer to the grid that contains the cell-face. A value of zero rep" +
+            "resents the first grid in the grid3dGUID aggregate of the parent.")]
         public int gridID1 {
             get {
                 return this.gridID1Field;
@@ -3017,6 +3236,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The I index of the cell.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The I index of the cell.")]
         public int i1 {
             get {
                 return this.i1Field;
@@ -3027,6 +3249,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The J index of the cell.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The J index of the cell.")]
         public int j1 {
             get {
                 return this.j1Field;
@@ -3037,6 +3262,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The K index of the cell.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The K index of the cell.")]
         public int k1 {
             get {
                 return this.k1Field;
@@ -3047,6 +3275,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>0-based cell face index. The value must be from 0 to 5.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RangeAttribute(0D, 5D)]
+        [System.ComponentModel.DescriptionAttribute("0-based cell face index. The value must be from 0 to 5.")]
         public short face1 {
             get {
                 return this.face1Field;
@@ -3057,6 +3289,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>A zero-based pointer to the grid that contains the cell-face. A value of zero represents the first grid in the grid3dGUID aggregate of the parent.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("A zero-based pointer to the grid that contains the cell-face. A value of zero rep" +
+            "resents the first grid in the grid3dGUID aggregate of the parent.")]
         public int gridID2 {
             get {
                 return this.gridID2Field;
@@ -3067,6 +3303,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The I index of the cell.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The I index of the cell.")]
         public int i2 {
             get {
                 return this.i2Field;
@@ -3077,6 +3316,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The J index of the cell.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The J index of the cell.")]
         public int j2 {
             get {
                 return this.j2Field;
@@ -3087,6 +3329,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The K index of the cell.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The K index of the cell.")]
         public int k2 {
             get {
                 return this.k2Field;
@@ -3097,6 +3342,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>0-based cell face index. The value must be from 0 to 5.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RangeAttribute(0D, 5D)]
+        [System.ComponentModel.DescriptionAttribute("0-based cell face index. The value must be from 0 to 5.")]
         public short face2 {
             get {
                 return this.face2Field;
@@ -3247,6 +3496,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Points to the fault associated with this non-standard-adjacency.</summary>
+        [System.ComponentModel.DescriptionAttribute("Points to the fault associated with this non-standard-adjacency.")]
         public refGlobalNameString faultName {
             get {
                 return this.faultNameField;
@@ -3269,7 +3520,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>A pointer to a grid that contains a cell face.  This logically points to the abstract supertype of the corner point and local grids such that  the referenced grid may either be a root-grid or a child-grid. The aggregate of grids represents the 3D grids that are referenced in gridIJKCellFacePair. The order is significant and represents the gridID values in gridIJKCellFacePair. An index of zero will represent the first grid.</summary>
         [System.Xml.Serialization.XmlElementAttribute("grid3dGUID")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"A pointer to a grid that contains a cell face.  This logically points to the abstract supertype of the corner point and local grids such that  the referenced grid may either be a root-grid or a child-grid. The aggregate of grids represents the 3D grids that are referenced in gridIJKCellFacePair. The order is significant and represents the gridID values in gridIJKCellFacePair. An index of zero will represent the first grid.")]
         public refGlobalNameString[] grid3dGUID {
             get {
                 return this.grid3dGUIDField;
@@ -3280,6 +3534,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Properties for this object.</summary>
+        [System.ComponentModel.DescriptionAttribute("Properties for this object.")]
         public cs_resqmlPropertySet propertyValues {
             get {
                 return this.propertyValuesField;
@@ -3290,6 +3546,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -3300,7 +3558,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_resqmlExtensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -3311,7 +3571,12 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. The value must be globally unique.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The unique identifier of a container element. The value must be globally unique.")]
         public string uid {
             get {
                 return this.uidField;
@@ -3339,6 +3604,10 @@ namespace Energistics.Generator.RESQML110 {
         private int kField;
         
         /// <remarks/>
+        /// <summary>A zero-based pointer to the grid that contains the traversed cell. A value of zero represents the first grid in the grid3dGUID aggregate of the parent.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("A zero-based pointer to the grid that contains the traversed cell. A value of zer" +
+            "o represents the first grid in the grid3dGUID aggregate of the parent.")]
         public int gridID {
             get {
                 return this.gridIDField;
@@ -3349,6 +3618,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The I index of the cell.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The I index of the cell.")]
         public int i {
             get {
                 return this.iField;
@@ -3359,6 +3631,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The J index of the cell.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The J index of the cell.")]
         public int j {
             get {
                 return this.jField;
@@ -3369,6 +3644,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The K index of the cell.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The K index of the cell.")]
         public int k {
             get {
                 return this.kField;
@@ -3392,6 +3670,9 @@ namespace Energistics.Generator.RESQML110 {
         private int parentIndexField;
         
         /// <remarks/>
+        /// <summary>Points to the blocked wellbore which contains the kickoff point cell.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Points to the blocked wellbore which contains the kickoff point cell.")]
         public refGlobalNameString parent {
             get {
                 return this.parentField;
@@ -3402,6 +3683,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>A zero-based pointer to the kickoff point cell within parentBlockedWellbore.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("A zero-based pointer to the kickoff point cell within parentBlockedWellbore.")]
         public int parentIndex {
             get {
                 return this.parentIndexField;
@@ -3556,6 +3840,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Points to the well that contains the wellbore. This identifies well.</summary>
+        [System.ComponentModel.DescriptionAttribute("Points to the well that contains the wellbore. This identifies well.")]
         public refNameString wellName {
             get {
                 return this.wellNameField;
@@ -3566,6 +3852,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Points to the wellbore within the specified well. This identifies the wellbore.</summary>
+        [System.ComponentModel.DescriptionAttribute("Points to the wellbore within the specified well. This identifies the wellbore.")]
         public refNameString wellboreName {
             get {
                 return this.wellboreNameField;
@@ -3576,6 +3864,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Points to the parent blocked wellbore and the kickoff point cell.</summary>
+        [System.ComponentModel.DescriptionAttribute("Points to the parent blocked wellbore and the kickoff point cell.")]
         public cs_resqmlParentBlockedWellbore parentBlockedWellbore {
             get {
                 return this.parentBlockedWellboreField;
@@ -3586,7 +3876,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>A pointer to a grid that contains a traversed cell.  This logically points to the abstract supertype of the corner point and local grids such that  the referenced grid may either be a root-grid or a child-grid. The aggregate of grids represents the 3D grids that are referenced in gridIJKCell. The order is significant and represents the gridID values in gridIJKCell. An index of zero will represent the first grid.</summary>
         [System.Xml.Serialization.XmlElementAttribute("grid3dGUID")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"A pointer to a grid that contains a traversed cell.  This logically points to the abstract supertype of the corner point and local grids such that  the referenced grid may either be a root-grid or a child-grid. The aggregate of grids represents the 3D grids that are referenced in gridIJKCell. The order is significant and represents the gridID values in gridIJKCell. An index of zero will represent the first grid.")]
         public refGlobalNameString[] grid3dGUID {
             get {
                 return this.grid3dGUIDField;
@@ -3597,7 +3890,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Points to a grid cell traversed by the wellbore. The aggregate of traversed cells represents the path of the wellbore through the related grids. The order of the cells in the aggregate is significant and represents the relative order from surface toward bottomhole. An index of zero will represent the first cell. Note that the full path of the wellbore may not be represented by the available grids. For the initial (or main) wellbore, the first cell represents the cell at the minimum measured depth. For sidetracks (laterals), the first cell represents the cell containing the kickoff point from the parent wellbore.</summary>
         [System.Xml.Serialization.XmlElementAttribute("gridIJKCell")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"Points to a grid cell traversed by the wellbore. The aggregate of traversed cells represents the path of the wellbore through the related grids. The order of the cells in the aggregate is significant and represents the relative order from surface toward bottomhole. An index of zero will represent the first cell. Note that the full path of the wellbore may not be represented by the available grids. For the initial (or main) wellbore, the first cell represents the cell at the minimum measured depth. For sidetracks (laterals), the first cell represents the cell containing the kickoff point from the parent wellbore.")]
         public cs_resqmlGridIJKCell[] gridIJKCell {
             get {
                 return this.gridIJKCellField;
@@ -3608,6 +3904,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Properties for this object.</summary>
+        [System.ComponentModel.DescriptionAttribute("Properties for this object.")]
         public cs_resqmlPropertySet propertyValues {
             get {
                 return this.propertyValuesField;
@@ -3618,6 +3916,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -3628,7 +3928,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_resqmlExtensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -3639,7 +3941,12 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. The value must be globally unique.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The unique identifier of a container element. The value must be globally unique.")]
         public string uid {
             get {
                 return this.uidField;
@@ -3663,7 +3970,13 @@ namespace Energistics.Generator.RESQML110 {
         private string valueField;
         
         /// <remarks/>
+        /// <summary>A reference to the unique identifier (uid attribute) in the node referenced by the name value.  This attribute is required within the context of a WITSML server.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A reference to the unique identifier (uid attribute) in the node referenced by th" +
+            "e name value.  This attribute is required within the context of a WITSML server." +
+            "")]
         public string uidRef {
             get {
                 return this.uidRefField;
@@ -4197,6 +4510,8 @@ namespace Energistics.Generator.RESQML110 {
         private bool zFieldSpecified;
         
         /// <remarks/>
+        /// <summary>The name and uid of the well that contains the wellbore.</summary>
+        [System.ComponentModel.DescriptionAttribute("The name and uid of the well that contains the wellbore.")]
         public refNameString nameWell {
             get {
                 return this.nameWellField;
@@ -4207,6 +4522,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The name and uid of the wellbore that intersects the feature. If nameWellbore is specified then nameWell must also be specified.</summary>
+        [System.ComponentModel.DescriptionAttribute("The name and uid of the wellbore that intersects the feature. If nameWellbore is " +
+            "specified then nameWell must also be specified.")]
         public refNameString nameWellbore {
             get {
                 return this.nameWellboreField;
@@ -4217,6 +4535,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The name and uid of the formationMarker whose location is represented here. If nameMarker is specified then nameWellbore must also be specified.</summary>
+        [System.ComponentModel.DescriptionAttribute("The name and uid of the formationMarker whose location is represented here. If na" +
+            "meMarker is specified then nameWellbore must also be specified.")]
         public refNameString nameMarker {
             get {
                 return this.nameMarkerField;
@@ -4227,6 +4548,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The measured depth of the intersected point.</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured depth of the intersected point.")]
         public measuredDepthCoord md {
             get {
                 return this.mdField;
@@ -4237,6 +4560,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The x-coordinate of the intersected point.</summary>
+        [System.ComponentModel.DescriptionAttribute("The x-coordinate of the intersected point.")]
         public double x {
             get {
                 return this.xField;
@@ -4258,6 +4583,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The y-coordinate of the intersected point.</summary>
+        [System.ComponentModel.DescriptionAttribute("The y-coordinate of the intersected point.")]
         public double y {
             get {
                 return this.yField;
@@ -4279,6 +4606,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The z-coordinate of the intersected point.</summary>
+        [System.ComponentModel.DescriptionAttribute("The z-coordinate of the intersected point.")]
         public double z {
             get {
                 return this.zField;
@@ -4496,7 +4825,10 @@ namespace Energistics.Generator.RESQML110 {
         private splitEdge[] splitEdgeField;
         
         /// <remarks/>
+        /// <summary>Defines the 2 corner vertex of one edge.</summary>
         [System.Xml.Serialization.XmlElementAttribute("splitEdge")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Defines the 2 corner vertex of one edge.")]
         public splitEdge[] splitEdge {
             get {
                 return this.splitEdgeField;
@@ -4521,6 +4853,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public int ix1 {
             get {
                 return this.ix1Field;
@@ -4532,6 +4865,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public int ix2 {
             get {
                 return this.ix2Field;
@@ -4553,7 +4887,10 @@ namespace Energistics.Generator.RESQML110 {
         private triangle[] trglField;
         
         /// <remarks/>
+        /// <summary>A single triangle defined by the index of each corner vertex.</summary>
         [System.Xml.Serialization.XmlElementAttribute("trgl")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("A single triangle defined by the index of each corner vertex.")]
         public triangle[] trgl {
             get {
                 return this.trglField;
@@ -4580,6 +4917,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public int ix1 {
             get {
                 return this.ix1Field;
@@ -4591,6 +4929,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public int ix2 {
             get {
                 return this.ix2Field;
@@ -4602,6 +4941,7 @@ namespace Energistics.Generator.RESQML110 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public int ix3 {
             get {
                 return this.ix3Field;
@@ -4973,6 +5313,10 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>A pointer to the local 3D CRS which represents the coordinates in all patchs. This must point to a child of spatialReferenceSet.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("A pointer to the local 3D CRS which represents the coordinates in all patchs. Thi" +
+            "s must point to a child of spatialReferenceSet.")]
         public refGlobalNameString local3dCRS {
             get {
                 return this.local3dCRSField;
@@ -4983,6 +5327,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -4993,7 +5339,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_resqmlExtensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -5004,7 +5352,12 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. The value must be globally unique.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The unique identifier of a container element. The value must be globally unique.")]
         public string uid {
             get {
                 return this.uidField;
@@ -5314,6 +5667,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -5324,7 +5679,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_resqmlExtensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -5335,7 +5692,12 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. The value must be globally unique.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The unique identifier of a container element. The value must be globally unique.")]
         public string uid {
             get {
                 return this.uidField;
@@ -5648,6 +6010,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -5658,7 +6022,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_resqmlExtensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -5669,7 +6035,12 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. The value must be globally unique.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The unique identifier of a container element. The value must be globally unique.")]
         public string uid {
             get {
                 return this.uidField;
@@ -6387,7 +6758,11 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The name of the dictionary within which the property is unique. This also defines the name of the controlling authority. A URN of the form "urn:x-resqml:domainOrEmail:dictionaryName" should be used for the namingSystem value. An example public dictionary,    "urn:resqml:energistics.org:RESQML" assigned to values defined by ResqmlPropertyKind. An example corporate dictionary, "urn:resqml:slb.com:product-x". An example personal dictionary,  "urn:resqml:first.last@mycompany.com:my.first.dictionary". The purpose of this scheme is to generate a unique name. Parsing for semantics is not intended.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute(@"The name of the dictionary within which the property is unique. This also defines the name of the controlling authority. A URN of the form ""urn:x-resqml:domainOrEmail:dictionaryName"" should be used for the namingSystem value. An example public dictionary,    ""urn:resqml:energistics.org:RESQML"" assigned to values defined by ResqmlPropertyKind. An example corporate dictionary, ""urn:resqml:slb.com:product-x"". An example personal dictionary,  ""urn:resqml:first.last@mycompany.com:my.first.dictionary"". The purpose of this scheme is to generate a unique name. Parsing for semantics is not intended.")]
         public string namingSystem {
             get {
                 return this.namingSystemField;
@@ -6398,6 +6773,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>A value of True ("true" or "1") indicates that the property kind is abstract and an instance of property values must not represent this kind. A value of False ("false" or "0") indicates otherise (i.e., that an instance of property values  may represent this kind).</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"A value of True (""true"" or ""1"") indicates that the property kind is abstract and an instance of property values must not represent this kind. A value of False (""false"" or ""0"") indicates otherise (i.e., that an instance of property values  may represent this kind).")]
         public bool isAbstract {
             get {
                 return this.isAbstractField;
@@ -6461,6 +6839,8 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -6471,7 +6851,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_resqmlExtensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -6482,7 +6864,12 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. The value must be globally unique.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The unique identifier of a container element. The value must be globally unique.")]
         public string uid {
             get {
                 return this.uidField;
@@ -13034,7 +13421,7 @@ namespace Energistics.Generator.RESQML110 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
     public partial class cs_documentEvent {
         
-        private System.DateTime eventDateField;
+        private Energistics.SchemaGatherer.Timestamp eventDateField;
         
         private string eventTypeField;
         
@@ -13047,7 +13434,10 @@ namespace Energistics.Generator.RESQML110 {
         private string uidField;
         
         /// <remarks/>
-        public System.DateTime eventDate {
+        /// <summary>The date on which the event took place.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The date on which the event took place.")]
+        public Energistics.SchemaGatherer.Timestamp eventDate {
             get {
                 return this.eventDateField;
             }
@@ -13057,6 +13447,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The kind of event event.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The kind of event event.")]
         public string eventType {
             get {
                 return this.eventTypeField;
@@ -13067,6 +13460,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The party responsible for the event.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The party responsible for the event.")]
         public string responsibleParty {
             get {
                 return this.responsiblePartyField;
@@ -13077,6 +13473,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>A free form comment that can further  define the event that occurred.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("A free form comment that can further  define the event that occurred.")]
         public string comment {
             get {
                 return this.commentField;
@@ -13087,7 +13486,9 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -13098,7 +13499,11 @@ namespace Energistics.Generator.RESQML110 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;

@@ -638,7 +638,10 @@ namespace Energistics.Generator.COMPLETION100 {
         private EastOrWest refField;
         
         /// <remarks/>
+        /// <summary>The unit of measure of the distance value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The unit of measure of the distance value.")]
         public LengthUom uom {
             get {
                 return this.uomField;
@@ -649,7 +652,10 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Specifies the reference line that is the origin of the distance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Specifies the reference line that is the origin of the distance.")]
         public EastOrWest @ref {
             get {
                 return this.refField;
@@ -875,7 +881,10 @@ namespace Energistics.Generator.COMPLETION100 {
         private NorthOrSouth refField;
         
         /// <remarks/>
+        /// <summary>The unit of measure of the distance value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The unit of measure of the distance value.")]
         public LengthUom uom {
             get {
                 return this.uomField;
@@ -886,7 +895,10 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Specifies the reference line that is the origin of the distance.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Specifies the reference line that is the origin of the distance.")]
         public NorthOrSouth @ref {
             get {
                 return this.refField;
@@ -926,7 +938,11 @@ namespace Energistics.Generator.COMPLETION100 {
         private string datumField;
         
         /// <remarks/>
+        /// <summary>The unit of measure of the quantity value. If not given then the default unit of measure of the explicitly or implicitly given datum must be assumed.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The unit of measure of the quantity value. If not given then the default unit of " +
+            "measure of the explicitly or implicitly given datum must be assumed.")]
         public WellVerticalCoordinateUom uom {
             get {
                 return this.uomField;
@@ -937,7 +953,12 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>A pointer to the reference datum for this coordinate  value as defined in WellDatum.  If not given then the default WellDatum must be assumed.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A pointer to the reference datum for this coordinate  value as defined in WellDat" +
+            "um.  If not given then the default WellDatum must be assumed.")]
         public string datum {
             get {
                 return this.datumField;
@@ -1030,7 +1051,12 @@ namespace Energistics.Generator.COMPLETION100 {
         private bool denominatorFieldSpecified;
         
         /// <remarks/>
+        /// <summary>The unit of measure for the quantity. If for some reason a uom is not appropriate for the quantity, a unit of "Euc" should be used.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
+        [System.ComponentModel.DescriptionAttribute("The unit of measure for the quantity. If for some reason a uom is not appropriate" +
+            " for the quantity, a unit of \"Euc\" should be used.")]
         public string uom {
             get {
                 return this.uomField;
@@ -1122,7 +1148,12 @@ namespace Energistics.Generator.COMPLETION100 {
         private string uomField;
         
         /// <remarks/>
+        /// <summary>The unit of measure for the quantity. This value must conform to the values allowed by a measure class.  If the value is a measure then the uom must be specified.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
+        [System.ComponentModel.DescriptionAttribute("The unit of measure for the quantity. This value must conform to the values allow" +
+            "ed by a measure class.  If the value is a measure then the uom must be specified" +
+            ".")]
         public string uom {
             get {
                 return this.uomField;
@@ -1145,6 +1176,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PercentUom uom {
             get {
                 return this.uomField;
@@ -1181,7 +1213,10 @@ namespace Energistics.Generator.COMPLETION100 {
         private bool northDirectionFieldSpecified;
         
         /// <remarks/>
+        /// <summary>The unit of measure of the azimuth value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The unit of measure of the azimuth value.")]
         public PlaneAngleUom uom {
             get {
                 return this.uomField;
@@ -1192,7 +1227,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Specifies the direction to be considered North for the y axis.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Specifies the direction to be considered North for the y axis.")]
         public AziRef northDirection {
             get {
                 return this.northDirectionField;
@@ -1303,6 +1340,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumePerVolumeUom uom {
             get {
                 return this.uomField;
@@ -1522,6 +1560,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumePerLengthUom uom {
             get {
                 return this.uomField;
@@ -1601,6 +1640,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeFlowRateUom uom {
             get {
                 return this.uomField;
@@ -1758,6 +1798,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeUom uom {
             get {
                 return this.uomField;
@@ -1889,6 +1930,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VelocityUom uom {
             get {
                 return this.uomField;
@@ -2110,6 +2152,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ThermodynamicTemperatureUom uom {
             get {
                 return this.uomField;
@@ -2151,6 +2194,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ThermalVolumetricExpansionUom uom {
             get {
                 return this.uomField;
@@ -2204,6 +2248,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ThermalConductivityUom uom {
             get {
                 return this.uomField;
@@ -2253,6 +2298,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public StandardVolumePerTimeUom uom {
             get {
                 return this.uomField;
@@ -2326,6 +2372,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public StandardVolumeUom uom {
             get {
                 return this.uomField;
@@ -2397,6 +2444,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public SpecificVolumeUom uom {
             get {
                 return this.uomField;
@@ -2514,6 +2562,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public SpecificHeatCapacityUom uom {
             get {
                 return this.uomField;
@@ -2575,6 +2624,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public RelativePowerUom uom {
             get {
                 return this.uomField;
@@ -2620,6 +2670,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PressureUom uom {
             get {
                 return this.uomField;
@@ -2785,6 +2836,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PowerUom uom {
             get {
                 return this.uomField;
@@ -2865,6 +2917,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PlaneAngleUom uom {
             get {
                 return this.uomField;
@@ -2887,6 +2940,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PermeabilityRockUom uom {
             get {
                 return this.uomField;
@@ -2922,6 +2976,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PerLengthUom uom {
             get {
                 return this.uomField;
@@ -2987,6 +3042,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MomentOfForceUom uom {
             get {
                 return this.uomField;
@@ -3071,6 +3127,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MassPerLengthUom uom {
             get {
                 return this.uomField;
@@ -3120,6 +3177,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MassUom uom {
             get {
                 return this.uomField;
@@ -3208,6 +3266,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MassConcentrationUom uom {
             get {
                 return this.uomField;
@@ -3272,6 +3331,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public MagneticInductionUom uom {
             get {
                 return this.uomField;
@@ -3319,6 +3379,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public LengthPerLengthUom uom {
             get {
                 return this.uomField;
@@ -3419,6 +3480,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public IlluminanceUom uom {
             get {
                 return this.uomField;
@@ -3461,6 +3523,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ForcePerVolumeUom uom {
             get {
                 return this.uomField;
@@ -3558,6 +3621,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ForcePerLengthUom uom {
             get {
                 return this.uomField;
@@ -3643,6 +3707,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ForceUom uom {
             get {
                 return this.uomField;
@@ -3723,6 +3788,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public EquivalentPerMassUom uom {
             get {
                 return this.uomField;
@@ -3764,6 +3830,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ElectricPotentialUom uom {
             get {
                 return this.uomField;
@@ -3808,6 +3875,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ElectricCurrentUom uom {
             get {
                 return this.uomField;
@@ -3858,6 +3926,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DynamicViscosityUom uom {
             get {
                 return this.uomField;
@@ -3925,6 +3994,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DimensionlessUom uom {
             get {
                 return this.uomField;
@@ -3973,6 +4043,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DensityUom uom {
             get {
                 return this.uomField;
@@ -4117,6 +4188,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public CompressibilityUom uom {
             get {
                 return this.uomField;
@@ -4170,6 +4242,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AreaPerAreaUom uom {
             get {
                 return this.uomField;
@@ -4222,6 +4295,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AreaUom uom {
             get {
                 return this.uomField;
@@ -4290,6 +4364,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AnglePerTimeUom uom {
             get {
                 return this.uomField;
@@ -4346,6 +4421,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AnglePerLengthUom uom {
             get {
                 return this.uomField;
@@ -4403,6 +4479,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AccelerationLinearUom uom {
             get {
                 return this.uomField;
@@ -7138,6 +7215,9 @@ namespace Energistics.Generator.COMPLETION100 {
         private cs_extensionNameValue[] extensionNameValueField;
         
         /// <remarks/>
+        /// <summary>Reference to downhole component</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to downhole component")]
         public string downholeComponentRefID {
             get {
                 return this.downholeComponentRefIDField;
@@ -7148,6 +7228,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -7158,7 +7240,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -7184,6 +7268,10 @@ namespace Energistics.Generator.COMPLETION100 {
         private cs_extensionNameValue[] extensionNameValueField;
         
         /// <remarks/>
+        /// <summary>Reference to the fluid report</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to the fluid report")]
         public string fluidReportRefID {
             get {
                 return this.fluidReportRefIDField;
@@ -7194,6 +7282,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -7204,7 +7294,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -7290,6 +7382,8 @@ namespace Energistics.Generator.COMPLETION100 {
         private cs_extensionNameValue[] extensionNameValueField;
         
         /// <remarks/>
+        /// <summary>index number of stage</summary>
+        [System.ComponentModel.DescriptionAttribute("index number of stage")]
         public short stageNumber {
             get {
                 return this.stageNumberField;
@@ -7311,6 +7405,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Perf-Bottom of packer set depth</summary>
+        [System.ComponentModel.DescriptionAttribute("Perf-Bottom of packer set depth")]
         public measuredDepthCoord bottomPackerSet {
             get {
                 return this.bottomPackerSetField;
@@ -7321,6 +7417,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Perforation fluid type</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Perforation fluid type")]
         public string perforationFluidType {
             get {
                 return this.perforationFluidTypeField;
@@ -7331,6 +7430,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>hydrostaticPressure</summary>
+        [System.ComponentModel.DescriptionAttribute("hydrostaticPressure")]
         public pressureMeasure hydrostaticPressure {
             get {
                 return this.hydrostaticPressureField;
@@ -7341,6 +7442,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Surface pressure</summary>
+        [System.ComponentModel.DescriptionAttribute("Surface pressure")]
         public pressureMeasure surfacePressure {
             get {
                 return this.surfacePressureField;
@@ -7351,6 +7454,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Reservoir pressure</summary>
+        [System.ComponentModel.DescriptionAttribute("Reservoir pressure")]
         public pressureMeasure reservoirPressure {
             get {
                 return this.reservoirPressureField;
@@ -7361,6 +7466,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The density of fluid</summary>
+        [System.ComponentModel.DescriptionAttribute("The density of fluid")]
         public densityMeasure fluidDensity {
             get {
                 return this.fluidDensityField;
@@ -7371,6 +7478,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Fluid level.</summary>
+        [System.ComponentModel.DescriptionAttribute("Fluid level.")]
         public measuredDepthCoord fluidLevel {
             get {
                 return this.fluidLevelField;
@@ -7381,6 +7490,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The conveyance method</summary>
+        [System.ComponentModel.DescriptionAttribute("The conveyance method")]
         public PerfConveyanceMethod conveyanceMethod {
             get {
                 return this.conveyanceMethodField;
@@ -7402,6 +7513,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Number of shots planned</summary>
+        [System.ComponentModel.DescriptionAttribute("Number of shots planned")]
         public short shotsPlanned {
             get {
                 return this.shotsPlannedField;
@@ -7423,6 +7536,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Number of shots per unit length (ft, m)</summary>
+        [System.ComponentModel.DescriptionAttribute("Number of shots per unit length (ft, m)")]
         public perLengthMeasure shotsDensity {
             get {
                 return this.shotsDensityField;
@@ -7433,6 +7548,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The number of missed firings from the gun.</summary>
+        [System.ComponentModel.DescriptionAttribute("The number of missed firings from the gun.")]
         public short shotsMisfired {
             get {
                 return this.shotsMisfiredField;
@@ -7454,6 +7571,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>orientaton</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("orientaton")]
         public string orientation {
             get {
                 return this.orientationField;
@@ -7464,6 +7584,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Description of orientaton method</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Description of orientaton method")]
         public string orientationMethod {
             get {
                 return this.orientationMethodField;
@@ -7474,6 +7597,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The name of company providing the perforation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name of company providing the perforation.")]
         public string perforationCompany {
             get {
                 return this.perforationCompanyField;
@@ -7484,6 +7610,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The manufacturer of the carrier.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The manufacturer of the carrier.")]
         public string carrierManufacturer {
             get {
                 return this.carrierManufacturerField;
@@ -7494,6 +7623,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Size of the carrier.</summary>
+        [System.ComponentModel.DescriptionAttribute("Size of the carrier.")]
         public lengthMeasure carrierSize {
             get {
                 return this.carrierSizeField;
@@ -7504,6 +7635,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Description from carrier</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Description from carrier")]
         public string carrierDescription {
             get {
                 return this.carrierDescriptionField;
@@ -7514,6 +7648,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The manufacturer of the charge.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The manufacturer of the charge.")]
         public string chargeManufacturer {
             get {
                 return this.chargeManufacturerField;
@@ -7524,6 +7661,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The size of the charge.</summary>
+        [System.ComponentModel.DescriptionAttribute("The size of the charge.")]
         public lengthMeasure chargeSize {
             get {
                 return this.chargeSizeField;
@@ -7534,6 +7673,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The weight of the charge.</summary>
+        [System.ComponentModel.DescriptionAttribute("The weight of the charge.")]
         public massMeasure chargeWeight {
             get {
                 return this.chargeWeightField;
@@ -7544,6 +7685,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The type of the charge.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The type of the charge.")]
         public string chargeType {
             get {
                 return this.chargeTypeField;
@@ -7554,6 +7698,10 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Reference to the log</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to the log")]
         public string refLog {
             get {
                 return this.refLogField;
@@ -7564,6 +7712,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>True if centralized, else decentralized.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("True if centralized, else decentralized.")]
         public string gunCentralized {
             get {
                 return this.gunCentralizedField;
@@ -7574,6 +7725,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The size of the perforation gun.</summary>
+        [System.ComponentModel.DescriptionAttribute("The size of the perforation gun.")]
         public lengthMeasure gunSize {
             get {
                 return this.gunSizeField;
@@ -7584,6 +7737,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Description about the perforating gun.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Description about the perforating gun.")]
         public string gunDesciption {
             get {
                 return this.gunDesciptionField;
@@ -7594,6 +7750,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Flag indicating whether the gun is left in hole or not.</summary>
+        [System.ComponentModel.DescriptionAttribute("Flag indicating whether the gun is left in hole or not.")]
         public bool gunLeftInHole {
             get {
                 return this.gunLeftInHoleField;
@@ -7615,7 +7773,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -7663,6 +7823,11 @@ namespace Energistics.Generator.COMPLETION100 {
         private cs_extensionAny extensionAnyField;
         
         /// <remarks/>
+        /// <summary>The perforationSet reference ID.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The perforationSet reference ID.")]
         public string perforationSetRefID {
             get {
                 return this.perforationSetRefIDField;
@@ -7673,7 +7838,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Information on perforating event.</summary>
         [System.Xml.Serialization.XmlElementAttribute("perforating")]
+        [System.ComponentModel.DescriptionAttribute("Information on perforating event.")]
         public cs_perforating[] perforating {
             get {
                 return this.perforatingField;
@@ -7684,6 +7851,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -7717,6 +7886,9 @@ namespace Energistics.Generator.COMPLETION100 {
         private cs_extensionNameValue[] extensionNameValueField;
         
         /// <remarks/>
+        /// <summary>Sub category</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Sub category")]
         public string subCategory {
             get {
                 return this.subCategoryField;
@@ -7727,6 +7899,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Code for charge type</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Code for charge type")]
         public string chargeTypeCode {
             get {
                 return this.chargeTypeCodeField;
@@ -7737,6 +7912,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Business organization waiting on</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Business organization waiting on")]
         public string businessOrgWaitingOn {
             get {
                 return this.businessOrgWaitingOnField;
@@ -7747,6 +7925,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Flag indicating whether producer is charged or not</summary>
+        [System.ComponentModel.DescriptionAttribute("Flag indicating whether producer is charged or not")]
         public bool isNoChargeToProducer {
             get {
                 return this.isNoChargeToProducerField;
@@ -7768,6 +7948,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -7778,7 +7960,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -7799,7 +7983,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private lengthMeasure diaOrificeSizeField;
         
-        private System.DateTime dTimeNextTestDateField;
+        private Energistics.SchemaGatherer.Timestamp dTimeNextTestDateField;
         
         private bool dTimeNextTestDateFieldSpecified;
         
@@ -7844,6 +8028,8 @@ namespace Energistics.Generator.COMPLETION100 {
         private cs_extensionNameValue[] extensionNameValueField;
         
         /// <remarks/>
+        /// <summary>Orifice Size</summary>
+        [System.ComponentModel.DescriptionAttribute("Orifice Size")]
         public lengthMeasure diaOrificeSize {
             get {
                 return this.diaOrificeSizeField;
@@ -7854,7 +8040,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
-        public System.DateTime dTimeNextTestDate {
+        /// <summary>Next Test Date</summary>
+        [System.ComponentModel.DescriptionAttribute("Next Test Date")]
+        public Energistics.SchemaGatherer.Timestamp dTimeNextTestDate {
             get {
                 return this.dTimeNextTestDateField;
             }
@@ -7875,6 +8063,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Rate Bled</summary>
+        [System.ComponentModel.DescriptionAttribute("Rate Bled")]
         public volumeFlowRateMeasure flowrateRateBled {
             get {
                 return this.flowrateRateBledField;
@@ -7885,6 +8075,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>String Being Tested</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("String Being Tested")]
         public string identifierJob {
             get {
                 return this.identifierJobField;
@@ -7895,6 +8088,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>True if successful</summary>
+        [System.ComponentModel.DescriptionAttribute("True if successful")]
         public bool isSuccess {
             get {
                 return this.isSuccessField;
@@ -7916,6 +8111,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Maximum pressure held during test</summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum pressure held during test")]
         public pressureMeasure maxPressureDuration {
             get {
                 return this.maxPressureDurationField;
@@ -7926,6 +8123,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Circulating position</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Circulating position")]
         public string circulatingPosition {
             get {
                 return this.circulatingPositionField;
@@ -7936,6 +8136,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Fluid bled type</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Fluid bled type")]
         public string fluidBledType {
             get {
                 return this.fluidBledTypeField;
@@ -7946,6 +8149,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Description of orientaton method</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Description of orientaton method")]
         public string orientationMethod {
             get {
                 return this.orientationMethodField;
@@ -7956,6 +8162,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Test fluid type</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Test fluid type")]
         public string testFluidType {
             get {
                 return this.testFluidTypeField;
@@ -7966,6 +8175,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Test sub type</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Test sub type")]
         public string testSubType {
             get {
                 return this.testSubTypeField;
@@ -7976,6 +8188,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Test type</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Test type")]
         public string testType {
             get {
                 return this.testTypeField;
@@ -7986,6 +8201,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Annulus pressure</summary>
+        [System.ComponentModel.DescriptionAttribute("Annulus pressure")]
         public pressureMeasure annulusPressure {
             get {
                 return this.annulusPressureField;
@@ -7996,6 +8213,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Well pressure used</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Well pressure used")]
         public string wellPressureUsed {
             get {
                 return this.wellPressureUsedField;
@@ -8006,6 +8226,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Reference #</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference #")]
         public string str10Reference {
             get {
                 return this.str10ReferenceField;
@@ -8016,6 +8239,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Well (Assembly)</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Well (Assembly)")]
         public string uidAssembly {
             get {
                 return this.uidAssemblyField;
@@ -8026,6 +8252,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Volume Bled</summary>
+        [System.ComponentModel.DescriptionAttribute("Volume Bled")]
         public volumeMeasure volumeBled {
             get {
                 return this.volumeBledField;
@@ -8036,6 +8264,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Volume Lost</summary>
+        [System.ComponentModel.DescriptionAttribute("Volume Lost")]
         public volumeMeasure volumeLost {
             get {
                 return this.volumeLostField;
@@ -8046,6 +8276,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Volume Pumped</summary>
+        [System.ComponentModel.DescriptionAttribute("Volume Pumped")]
         public volumeMeasure volumePumped {
             get {
                 return this.volumePumpedField;
@@ -8056,6 +8288,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -8066,7 +8300,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -8096,6 +8332,9 @@ namespace Energistics.Generator.COMPLETION100 {
         private cs_extensionNameValue[] extensionNameValueField;
         
         /// <remarks/>
+        /// <summary>Comment on the reason for the job</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Comment on the reason for the job")]
         public string jobReason {
             get {
                 return this.jobReasonField;
@@ -8106,6 +8345,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Status of job</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Status of job")]
         public string jobStatus {
             get {
                 return this.jobStatusField;
@@ -8116,6 +8358,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The primary reason for doing this job.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The primary reason for doing this job.")]
         public string primaryMotivationForJob {
             get {
                 return this.primaryMotivationForJobField;
@@ -8126,6 +8371,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -8136,7 +8383,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -8162,6 +8411,10 @@ namespace Energistics.Generator.COMPLETION100 {
         private cs_extensionAny extensionAnyField;
         
         /// <remarks/>
+        /// <summary>Reference to stimJob</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to stimJob")]
         public string stimJobID {
             get {
                 return this.stimJobIDField;
@@ -8172,7 +8425,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -8183,6 +8438,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -8208,6 +8465,10 @@ namespace Energistics.Generator.COMPLETION100 {
         private cs_extensionNameValue[] extensionNameValueField;
         
         /// <remarks/>
+        /// <summary>Reference to bottom hole pressure</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to bottom hole pressure")]
         public string BHPRefID {
             get {
                 return this.bHPRefIDField;
@@ -8218,6 +8479,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -8228,7 +8491,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -8254,6 +8519,8 @@ namespace Energistics.Generator.COMPLETION100 {
         private cs_extensionNameValue[] extensionNameValueField;
         
         /// <remarks/>
+        /// <summary>Volume lost</summary>
+        [System.ComponentModel.DescriptionAttribute("Volume lost")]
         public volumeMeasure volumeLost {
             get {
                 return this.volumeLostField;
@@ -8264,6 +8531,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -8274,7 +8543,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -8300,6 +8571,10 @@ namespace Energistics.Generator.COMPLETION100 {
         private cs_extensionNameValue[] extensionNameValueField;
         
         /// <remarks/>
+        /// <summary>trajectory reference id.</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("trajectory reference id.")]
         public string trajectoryRefID {
             get {
                 return this.trajectoryRefIDField;
@@ -8310,6 +8585,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -8320,7 +8597,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -8348,6 +8627,9 @@ namespace Energistics.Generator.COMPLETION100 {
         private cs_extensionNameValue[] extensionNameValueField;
         
         /// <remarks/>
+        /// <summary>method of fill and cleaning</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("method of fill and cleaning")]
         public string fillCleaningMethod {
             get {
                 return this.fillCleaningMethodField;
@@ -8358,6 +8640,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>the size of the tool</summary>
+        [System.ComponentModel.DescriptionAttribute("the size of the tool")]
         public lengthMeasure toolSize {
             get {
                 return this.toolSizeField;
@@ -8368,6 +8652,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -8378,7 +8664,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -8404,6 +8692,9 @@ namespace Energistics.Generator.COMPLETION100 {
         private cs_extensionAny extensionAnyField;
         
         /// <remarks/>
+        /// <summary>unique id of cementJob</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("unique id of cementJob")]
         public string cementJobRefID {
             get {
                 return this.cementJobRefIDField;
@@ -8414,7 +8705,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -8425,6 +8718,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -11748,7 +12043,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private string crushDamageRatioField;
         
-        private System.DateTime perforationDateField;
+        private Energistics.SchemaGatherer.Timestamp perforationDateField;
         
         private bool perforationDateFieldSpecified;
         
@@ -11757,7 +12052,9 @@ namespace Energistics.Generator.COMPLETION100 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>perforation on borehole String</summary>
         [System.Xml.Serialization.XmlElementAttribute("boreholeStringRefID")]
+        [System.ComponentModel.DescriptionAttribute("perforation on borehole String")]
         public string[] boreholeStringRefID {
             get {
                 return this.boreholeStringRefIDField;
@@ -11768,7 +12065,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>perforation on downholeStringRefID</summary>
         [System.Xml.Serialization.XmlElementAttribute("downholeStringRefID")]
+        [System.ComponentModel.DescriptionAttribute("perforation on downholeStringRefID")]
         public string[] downholeStringRefID {
             get {
                 return this.downholeStringRefIDField;
@@ -11779,6 +12078,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The contactInterval event information</summary>
+        [System.ComponentModel.DescriptionAttribute("The contactInterval event information")]
         public cs_eventInfo eventHistory {
             get {
                 return this.eventHistoryField;
@@ -11789,6 +12090,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The measured top depth of the hole</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured top depth of the hole")]
         public measuredDepthCoord mdTop {
             get {
                 return this.mdTopField;
@@ -11799,6 +12102,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The measured bottom of the hole</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured bottom of the hole")]
         public measuredDepthCoord mdBottom {
             get {
                 return this.mdBottomField;
@@ -11809,6 +12114,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>True vertical depth of the top perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the top perforation.")]
         public wellVerticalDepthCoord tvdTop {
             get {
                 return this.tvdTopField;
@@ -11819,6 +12126,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>True vertical depth of the bottom perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the bottom perforation.")]
         public wellVerticalDepthCoord tvdBottom {
             get {
                 return this.tvdBottomField;
@@ -11829,6 +12138,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The diameter of the hole</summary>
+        [System.ComponentModel.DescriptionAttribute("The diameter of the hole")]
         public lengthMeasure holeDiameter {
             get {
                 return this.holeDiameterField;
@@ -11839,6 +12150,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The angle of the holes</summary>
+        [System.ComponentModel.DescriptionAttribute("The angle of the holes")]
         public planeAngleMeasure holeAngle {
             get {
                 return this.holeAngleField;
@@ -11849,6 +12162,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The pattern of the holes</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The pattern of the holes")]
         public string holePattern {
             get {
                 return this.holePatternField;
@@ -11859,6 +12175,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The density of the holes</summary>
+        [System.ComponentModel.DescriptionAttribute("The density of the holes")]
         public perLengthMeasure holeDensity {
             get {
                 return this.holeDensityField;
@@ -11869,6 +12187,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The number of holes</summary>
+        [System.ComponentModel.DescriptionAttribute("The number of holes")]
         public short holeCount {
             get {
                 return this.holeCountField;
@@ -11890,6 +12210,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The friction factor of each perforation set.</summary>
+        [System.ComponentModel.DescriptionAttribute("The friction factor of each perforation set.")]
         public double frictionFactor {
             get {
                 return this.frictionFactorField;
@@ -11911,6 +12233,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The friction pressure for the perforation set.</summary>
+        [System.ComponentModel.DescriptionAttribute("The friction pressure for the perforation set.")]
         public pressureMeasure frictionPres {
             get {
                 return this.frictionPresField;
@@ -11921,6 +12245,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>A coefficient used in the equation for calculation of pressure drop  across a perforation set.</summary>
+        [System.ComponentModel.DescriptionAttribute("A coefficient used in the equation for calculation of pressure drop  across a per" +
+            "foration set.")]
         public double dischargeCoefficient {
             get {
                 return this.dischargeCoefficientField;
@@ -11942,6 +12269,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The type of perforation tool.</summary>
+        [System.ComponentModel.DescriptionAttribute("The type of perforation tool.")]
         public PerforationToolType perforationTool {
             get {
                 return this.perforationToolField;
@@ -11963,6 +12292,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The Penetration length of perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("The Penetration length of perforation.")]
         public lengthMeasure perforationPenetration {
             get {
                 return this.perforationPenetrationField;
@@ -11973,6 +12304,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The diameter of crushed zone</summary>
+        [System.ComponentModel.DescriptionAttribute("The diameter of crushed zone")]
         public lengthMeasure crushZoneDiameter {
             get {
                 return this.crushZoneDiameterField;
@@ -11983,6 +12316,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The ratio value of cursh damage</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The ratio value of cursh damage")]
         public string crushDamageRatio {
             get {
                 return this.crushDamageRatioField;
@@ -11993,7 +12329,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
-        public System.DateTime perforationDate {
+        /// <summary>The original perforation date</summary>
+        [System.ComponentModel.DescriptionAttribute("The original perforation date")]
+        public Energistics.SchemaGatherer.Timestamp perforationDate {
             get {
                 return this.perforationDateField;
             }
@@ -12014,6 +12352,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Remarks regarding this perforationSet</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Remarks regarding this perforationSet")]
         public string permanentRemarks {
             get {
                 return this.permanentRemarksField;
@@ -12024,7 +12365,11 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         public string uid {
             get {
                 return this.uidField;
@@ -12113,6 +12458,8 @@ namespace Energistics.Generator.COMPLETION100 {
         private cs_extensionNameValue[] extensionNameValueField;
         
         /// <remarks/>
+        /// <summary>The measured top depth of the hole</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured top depth of the hole")]
         public measuredDepthCoord mdTop {
             get {
                 return this.mdTopField;
@@ -12123,6 +12470,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The measured bottom of the hole</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured bottom of the hole")]
         public measuredDepthCoord mdBottom {
             get {
                 return this.mdBottomField;
@@ -12133,6 +12482,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>True vertical depth of the top perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the top perforation.")]
         public wellVerticalDepthCoord tvdTop {
             get {
                 return this.tvdTopField;
@@ -12143,6 +12494,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>True vertical depth of the bottom perforation.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth of the bottom perforation.")]
         public wellVerticalDepthCoord tvdBottom {
             get {
                 return this.tvdBottomField;
@@ -12153,6 +12506,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The diameter of the hole</summary>
+        [System.ComponentModel.DescriptionAttribute("The diameter of the hole")]
         public lengthMeasure holeDiameter {
             get {
                 return this.holeDiameterField;
@@ -12163,6 +12518,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The angle of the holes</summary>
+        [System.ComponentModel.DescriptionAttribute("The angle of the holes")]
         public planeAngleMeasure holeAngle {
             get {
                 return this.holeAngleField;
@@ -12173,6 +12530,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The pattern of the holes</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The pattern of the holes")]
         public string holePattern {
             get {
                 return this.holePatternField;
@@ -12183,6 +12543,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The density of the holes</summary>
+        [System.ComponentModel.DescriptionAttribute("The density of the holes")]
         public perLengthMeasure holeDensity {
             get {
                 return this.holeDensityField;
@@ -12193,6 +12555,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The number of holes</summary>
+        [System.ComponentModel.DescriptionAttribute("The number of holes")]
         public short holeCount {
             get {
                 return this.holeCountField;
@@ -12214,6 +12578,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Remarks regarding this perforated hole</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Remarks regarding this perforated hole")]
         public string remarks {
             get {
                 return this.remarksField;
@@ -12224,7 +12591,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -12258,6 +12627,8 @@ namespace Energistics.Generator.COMPLETION100 {
         private cs_extensionNameValue[] extensionNameValueField;
         
         /// <remarks/>
+        /// <summary>The height of slot</summary>
+        [System.ComponentModel.DescriptionAttribute("The height of slot")]
         public lengthMeasure slotHeight {
             get {
                 return this.slotHeightField;
@@ -12268,6 +12639,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The width of the slot</summary>
+        [System.ComponentModel.DescriptionAttribute("The width of the slot")]
         public lengthMeasure slotWidth {
             get {
                 return this.slotWidthField;
@@ -12278,6 +12651,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Distance from center point</summary>
+        [System.ComponentModel.DescriptionAttribute("Distance from center point")]
         public lengthMeasure slotCenterDistance {
             get {
                 return this.slotCenterDistanceField;
@@ -12288,6 +12663,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The number of the slot</summary>
+        [System.ComponentModel.DescriptionAttribute("The number of the slot")]
         public short slotCount {
             get {
                 return this.slotCountField;
@@ -12309,6 +12686,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Remarks regarding this perforation slot</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Remarks regarding this perforation slot")]
         public string remarks {
             get {
                 return this.remarksField;
@@ -12319,7 +12699,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -12343,6 +12725,9 @@ namespace Energistics.Generator.COMPLETION100 {
         private extensionvalue valueField;
         
         /// <remarks/>
+        /// <summary>A string representing the name of property.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A string representing the name of property.")]
         public string name {
             get {
                 return this.nameField;
@@ -12353,6 +12738,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>A value string representing the units of measure of the value.</summary>
+        [System.ComponentModel.DescriptionAttribute("A value string representing the units of measure of the value.")]
         public extensionvalue value {
             get {
                 return this.valueField;
@@ -12466,6 +12853,9 @@ namespace Energistics.Generator.COMPLETION100 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The name of the piece of equipment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name of the piece of equipment.")]
         public string equipmentName {
             get {
                 return this.equipmentNameField;
@@ -12476,6 +12866,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The equipment type etc. bridge plug, bull plug. capillary tubing..</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The equipment type etc. bridge plug, bull plug. capillary tubing..")]
         public EquipmentType equipmentType {
             get {
                 return this.equipmentTypeField;
@@ -12486,6 +12879,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Manufacturer of this equipment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Manufacturer of this equipment.")]
         public string manufacturer {
             get {
                 return this.manufacturerField;
@@ -12496,6 +12892,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The model of the equipment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The model of the equipment.")]
         public string model {
             get {
                 return this.modelField;
@@ -12506,6 +12905,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Catalog where equipment can be found.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Catalog where equipment can be found.")]
         public string catalogID {
             get {
                 return this.catalogIDField;
@@ -12516,6 +12918,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Name of equipment as found in catalog.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of equipment as found in catalog.")]
         public string catalogName {
             get {
                 return this.catalogNameField;
@@ -12526,6 +12931,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The equipment's brand name .</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The equipment\'s brand name .")]
         public string brandName {
             get {
                 return this.brandNameField;
@@ -12536,6 +12944,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The equipment's model type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The equipment\'s model type.")]
         public string modelType {
             get {
                 return this.modelTypeField;
@@ -12546,6 +12957,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Series number</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Series number")]
         public string series {
             get {
                 return this.seriesField;
@@ -12556,6 +12970,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>a flag indicates the equipment has serialNumber.</summary>
+        [System.ComponentModel.DescriptionAttribute("a flag indicates the equipment has serialNumber.")]
         public bool isSerialized {
             get {
                 return this.isSerializedField;
@@ -12577,6 +12993,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>serial number</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("serial number")]
         public string serialNumber {
             get {
                 return this.serialNumberField;
@@ -12587,6 +13006,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Number that identifies this part.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Number that identifies this part.")]
         public string partNo {
             get {
                 return this.partNoField;
@@ -12597,6 +13019,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>surface condition.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("surface condition.")]
         public string surfaceCondition {
             get {
                 return this.surfaceConditionField;
@@ -12607,6 +13032,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Material that equipment is made from</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Material that equipment is made from")]
         public string material {
             get {
                 return this.materialField;
@@ -12617,6 +13045,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Grade level of this material.</summary>
+        [System.ComponentModel.DescriptionAttribute("Grade level of this material.")]
         public GradeType grade {
             get {
                 return this.gradeField;
@@ -12638,6 +13068,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The weight per length of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The weight per length of this equipment.")]
         public massPerLengthMeasure unitWeight {
             get {
                 return this.unitWeightField;
@@ -12648,6 +13080,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Flag indicating whether equipment has coating</summary>
+        [System.ComponentModel.DescriptionAttribute("Flag indicating whether equipment has coating")]
         public bool coatingLinerapplied {
             get {
                 return this.coatingLinerappliedField;
@@ -12669,6 +13103,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Equipment's outside coating based on enumeration value</summary>
+        [System.ComponentModel.DescriptionAttribute("Equipment\'s outside coating based on enumeration value")]
         public Coating outsideCoating {
             get {
                 return this.outsideCoatingField;
@@ -12690,6 +13126,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Equipment's inner coating based on enumeration value</summary>
+        [System.ComponentModel.DescriptionAttribute("Equipment\'s inner coating based on enumeration value")]
         public Coating insideCoating {
             get {
                 return this.insideCoatingField;
@@ -12711,6 +13149,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The length of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The length of this equipment.")]
         public lengthMeasure unitLength {
             get {
                 return this.unitLengthField;
@@ -12721,6 +13161,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The major outside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The major outside diameter of this equipment.")]
         public lengthMeasure majorOD {
             get {
                 return this.majorODField;
@@ -12731,6 +13173,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The minor outside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The minor outside diameter of this equipment.")]
         public lengthMeasure minorOD {
             get {
                 return this.minorODField;
@@ -12741,6 +13185,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The outside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The outside diameter of this equipment.")]
         public lengthMeasure OD {
             get {
                 return this.odField;
@@ -12751,6 +13197,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The maximum outside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The maximum outside diameter of this equipment.")]
         public lengthMeasure MaxOD {
             get {
                 return this.maxODField;
@@ -12761,6 +13209,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The minimum outside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The minimum outside diameter of this equipment.")]
         public lengthMeasure MinOD {
             get {
                 return this.minODField;
@@ -12771,6 +13221,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The major inside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The major inside diameter of this equipment.")]
         public lengthMeasure majorID {
             get {
                 return this.majorIDField;
@@ -12781,6 +13233,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The minor inside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The minor inside diameter of this equipment.")]
         public lengthMeasure minorID {
             get {
                 return this.minorIDField;
@@ -12791,6 +13245,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The inside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The inside diameter of this equipment.")]
         public lengthMeasure ID {
             get {
                 return this.idField;
@@ -12801,6 +13257,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The maximum inside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The maximum inside diameter of this equipment.")]
         public lengthMeasure MaxID {
             get {
                 return this.maxIDField;
@@ -12811,6 +13269,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The minimum inside diameter of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The minimum inside diameter of this equipment.")]
         public lengthMeasure MinID {
             get {
                 return this.minIDField;
@@ -12821,6 +13281,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The drift diameter is the minimum inside diameter of pipe through which another tool or string can be pulled.</summary>
+        [System.ComponentModel.DescriptionAttribute("The drift diameter is the minimum inside diameter of pipe through which another t" +
+            "ool or string can be pulled.")]
         public lengthMeasure drift {
             get {
                 return this.driftField;
@@ -12831,6 +13294,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The nominal size of this equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("The nominal size of this equipment.")]
         public lengthMeasure nominalSize {
             get {
                 return this.nominalSizeField;
@@ -12841,6 +13306,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>sweet or sour service.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("sweet or sour service.")]
         public string nameService {
             get {
                 return this.nameServiceField;
@@ -12851,6 +13319,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The description of this equipment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("The description of this equipment.")]
         public string description {
             get {
                 return this.descriptionField;
@@ -12861,6 +13332,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The description of this equipment to be permanently kept.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("The description of this equipment to be permanently kept.")]
         public string descriptionPermanent {
             get {
                 return this.descriptionPermanentField;
@@ -12871,6 +13345,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Remarks about this equipment property.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Remarks about this equipment property.")]
         public string remark {
             get {
                 return this.remarkField;
@@ -12881,7 +13358,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Property description</summary>
         [System.Xml.Serialization.XmlElementAttribute("property")]
+        [System.ComponentModel.DescriptionAttribute("Property description")]
         public cs_extPropNameValue[] property {
             get {
                 return this.propertyField;
@@ -12892,7 +13371,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Describes the slot in equipment.</summary>
         [System.Xml.Serialization.XmlElementAttribute("slotAsManufactured")]
+        [System.ComponentModel.DescriptionAttribute("Describes the slot in equipment.")]
         public cs_perfSlot[] slotAsManufactured {
             get {
                 return this.slotAsManufacturedField;
@@ -12903,7 +13384,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Describes the hole in equipment.</summary>
         [System.Xml.Serialization.XmlElementAttribute("holeAsManufactured")]
+        [System.ComponentModel.DescriptionAttribute("Describes the hole in equipment.")]
         public cs_perfHole[] holeAsManufactured {
             get {
                 return this.holeAsManufacturedField;
@@ -12914,6 +13397,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -12924,7 +13409,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -12935,7 +13422,11 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -14280,6 +14771,9 @@ namespace Energistics.Generator.COMPLETION100 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>Name of the feature</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of the feature")]
         public string name {
             get {
                 return this.nameField;
@@ -14290,6 +14784,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Aquifer or reservoir</summary>
+        [System.ComponentModel.DescriptionAttribute("Aquifer or reservoir")]
         public GeologyType geologyType {
             get {
                 return this.geologyTypeField;
@@ -14311,6 +14807,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Measured depth at top of interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at top of interval.")]
         public measuredDepthCoord mdTop {
             get {
                 return this.mdTopField;
@@ -14321,6 +14819,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Measured depth at base of interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at base of interval.")]
         public measuredDepthCoord mdBottom {
             get {
                 return this.mdBottomField;
@@ -14331,6 +14831,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>True vertical depth at top of the section.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at top of the section.")]
         public wellVerticalDepthCoord tvdTop {
             get {
                 return this.tvdTopField;
@@ -14341,6 +14843,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>True vertical depth at bottom of the section.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at bottom of the section.")]
         public wellVerticalDepthCoord tvdBottom {
             get {
                 return this.tvdBottomField;
@@ -14351,6 +14855,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>True vertical depth at base of interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at base of interval.")]
         public wellVerticalDepthCoord tvdBase {
             get {
                 return this.tvdBaseField;
@@ -14361,7 +14867,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -14372,7 +14880,11 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -14429,6 +14941,9 @@ namespace Energistics.Generator.COMPLETION100 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The name of borehole</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name of borehole")]
         public string name {
             get {
                 return this.nameField;
@@ -14439,6 +14954,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Type of borehole. etc. Cavern, cavity, NormalBorehole,UnderReam</summary>
+        [System.ComponentModel.DescriptionAttribute("Type of borehole. etc. Cavern, cavity, NormalBorehole,UnderReam")]
         public BoreholeType typeBorehole {
             get {
                 return this.typeBoreholeField;
@@ -14460,6 +14977,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Event reference pointing to the eventledger.</summary>
+        [System.ComponentModel.DescriptionAttribute("Event reference pointing to the eventledger.")]
         public cs_eventInfo equipmentEventHistory {
             get {
                 return this.equipmentEventHistoryField;
@@ -14470,6 +14989,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Measured depth at Top of Interval</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at Top of Interval")]
         public measuredDepthCoord mdTop {
             get {
                 return this.mdTopField;
@@ -14480,6 +15001,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Measured depth at bottom of the section</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at bottom of the section")]
         public measuredDepthCoord mdBottom {
             get {
                 return this.mdBottomField;
@@ -14490,6 +15013,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>True vertical depth at top of the section</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at top of the section")]
         public wellVerticalDepthCoord tvdTop {
             get {
                 return this.tvdTopField;
@@ -14500,6 +15025,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>True vertical depth at bottom of the section</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at bottom of the section")]
         public wellVerticalDepthCoord tvdBottom {
             get {
                 return this.tvdBottomField;
@@ -14510,6 +15037,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Borehole diameter</summary>
+        [System.ComponentModel.DescriptionAttribute("Borehole diameter")]
         public lengthMeasure diaBorehole {
             get {
                 return this.diaBoreholeField;
@@ -14520,6 +15049,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The description of this equipment to be permanently kept.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("The description of this equipment to be permanently kept.")]
         public string descriptionPermanent {
             get {
                 return this.descriptionPermanentField;
@@ -14530,7 +15062,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -14541,7 +15075,11 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -14594,6 +15132,9 @@ namespace Energistics.Generator.COMPLETION100 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>Human recognizable context for the downhole equipment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the downhole equipment.")]
         public string nameWellbore {
             get {
                 return this.nameWellboreField;
@@ -14604,6 +15145,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The name of the borehole String</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name of the borehole String")]
         public string name {
             get {
                 return this.nameField;
@@ -14614,7 +15158,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The collection of boreholes</summary>
         [System.Xml.Serialization.XmlElementAttribute("borehole")]
+        [System.ComponentModel.DescriptionAttribute("The collection of boreholes")]
         public cs_borehole[] borehole {
             get {
                 return this.boreholeField;
@@ -14625,7 +15171,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Geology feature information</summary>
         [System.Xml.Serialization.XmlElementAttribute("geologyFeature")]
+        [System.ComponentModel.DescriptionAttribute("Geology feature information")]
         public cs_geologyFeature[] geologyFeature {
             get {
                 return this.geologyFeatureField;
@@ -14636,7 +15184,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The borehole accessories.</summary>
         [System.Xml.Serialization.XmlArrayItemAttribute("accessory", IsNullable=false)]
+        [System.ComponentModel.DescriptionAttribute("The borehole accessories.")]
         public cs_stringEquipment[] accessories {
             get {
                 return this.accessoriesField;
@@ -14647,7 +15197,11 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for the wellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore.")]
         public string uidWellbore {
             get {
                 return this.uidWellboreField;
@@ -14658,7 +15212,11 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         public string uid {
             get {
                 return this.uidField;
@@ -14764,6 +15322,10 @@ namespace Energistics.Generator.COMPLETION100 {
         private string equipmentRefUIDField;
         
         /// <remarks/>
+        /// <summary>The type of the equipment.  Enumeration is defined in cs_equipmentCatalog.xsd. "Optional" is for expansion purpose, strong suggest that only ignore it if the equipment type could not found from equipmentType definition.</summary>
+        [System.ComponentModel.DescriptionAttribute("The type of the equipment.  Enumeration is defined in cs_equipmentCatalog.xsd. \"O" +
+            "ptional\" is for expansion purpose, strong suggest that only ignore it if the equ" +
+            "ipment type could not found from equipmentType definition.")]
         public EquipmentType equipmentType {
             get {
                 return this.equipmentTypeField;
@@ -14785,6 +15347,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The name of the equipment.  Length of this element is 256 characters.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
+        [System.ComponentModel.DescriptionAttribute("The name of the equipment.  Length of this element is 256 characters.")]
         public string name {
             get {
                 return this.nameField;
@@ -14795,7 +15360,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>History of event tied to this equipment</summary>
         [System.Xml.Serialization.XmlElementAttribute("equipmentEventHistory")]
+        [System.ComponentModel.DescriptionAttribute("History of event tied to this equipment")]
         public cs_eventInfo[] equipmentEventHistory {
             get {
                 return this.equipmentEventHistoryField;
@@ -14806,6 +15373,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Defines a sequence number and with an optional description attribute</summary>
+        [System.ComponentModel.DescriptionAttribute("Defines a sequence number and with an optional description attribute")]
         public objectSequence orderOfObject {
             get {
                 return this.orderOfObjectField;
@@ -14816,6 +15385,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The status of the piece of equipment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The status of the piece of equipment.")]
         public string status {
             get {
                 return this.statusField;
@@ -14826,6 +15398,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The well run No</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The well run No")]
         public string runNo {
             get {
                 return this.runNoField;
@@ -14836,6 +15411,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The days that the equipment has run.</summary>
+        [System.ComponentModel.DescriptionAttribute("The days that the equipment has run.")]
         public timeMeasure previousRunDays {
             get {
                 return this.previousRunDaysField;
@@ -14846,6 +15423,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Object condition at installation</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Object condition at installation")]
         public string objectCondition {
             get {
                 return this.objectConditionField;
@@ -14856,6 +15436,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Object surface condition</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Object surface condition")]
         public string surfaceCondition {
             get {
                 return this.surfaceConditionField;
@@ -14866,6 +15449,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The count number of the same equipment. The default is 1.  In some cases, multiple pieces group into one component.</summary>
+        [System.ComponentModel.DescriptionAttribute("The count number of the same equipment. The default is 1.  In some cases, multipl" +
+            "e pieces group into one component.")]
         public short count {
             get {
                 return this.countField;
@@ -14887,6 +15473,10 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The total length of the equipment.  This is NOT length per unit.                     This is the length of unit stored at equipmentset's equipment information section.</summary>
+        [System.ComponentModel.DescriptionAttribute("The total length of the equipment.  This is NOT length per unit.                 " +
+            "    This is the length of unit stored at equipmentset\'s equipment information se" +
+            "ction.")]
         public lengthMeasure length {
             get {
                 return this.lengthField;
@@ -14897,6 +15487,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Measured depth at top of interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at top of interval.")]
         public measuredDepthCoord mdTop {
             get {
                 return this.mdTopField;
@@ -14907,6 +15499,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Measured depth at base of interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("Measured depth at base of interval.")]
         public measuredDepthCoord mdBottom {
             get {
                 return this.mdBottomField;
@@ -14917,6 +15511,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>True vertical depth at top of the section.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at top of the section.")]
         public wellVerticalDepthCoord tvdTop {
             get {
                 return this.tvdTopField;
@@ -14927,6 +15523,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>True vertical depth at bottom of the section.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at bottom of the section.")]
         public wellVerticalDepthCoord tvdBottom {
             get {
                 return this.tvdBottomField;
@@ -14937,6 +15535,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>True vertical depth at base of interval.</summary>
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at base of interval.")]
         public wellVerticalDepthCoord tvdBase {
             get {
                 return this.tvdBaseField;
@@ -14947,6 +15547,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Flag indicating whether this component is inside the string or not .</summary>
+        [System.ComponentModel.DescriptionAttribute("Flag indicating whether this component is inside the string or not .")]
         public bool outsideString {
             get {
                 return this.outsideStringField;
@@ -14968,7 +15570,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The list of components contained in the equipment</summary>
         [System.Xml.Serialization.XmlElementAttribute("insideComponent")]
+        [System.ComponentModel.DescriptionAttribute("The list of components contained in the equipment")]
         public cs_refContainer[] insideComponent {
             get {
                 return this.insideComponentField;
@@ -14979,7 +15583,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The list of components outside of this piece of equipment</summary>
         [System.Xml.Serialization.XmlElementAttribute("outsideComponent")]
+        [System.ComponentModel.DescriptionAttribute("The list of components outside of this piece of equipment")]
         public cs_refContainer[] outsideComponent {
             get {
                 return this.outsideComponentField;
@@ -14990,6 +15596,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Max Tensile Strength</summary>
+        [System.ComponentModel.DescriptionAttribute("Max Tensile Strength")]
         public forceMeasure tensileMax {
             get {
                 return this.tensileMaxField;
@@ -15000,6 +15608,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Pressure  Rating</summary>
+        [System.ComponentModel.DescriptionAttribute("Pressure  Rating")]
         public pressureMeasure presRating {
             get {
                 return this.presRatingField;
@@ -15010,6 +15620,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Collapse Pressure</summary>
+        [System.ComponentModel.DescriptionAttribute("Collapse Pressure")]
         public pressureMeasure presCollapse {
             get {
                 return this.presCollapseField;
@@ -15020,6 +15632,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Burst Pressure</summary>
+        [System.ComponentModel.DescriptionAttribute("Burst Pressure")]
         public pressureMeasure presBurst {
             get {
                 return this.presBurstField;
@@ -15030,6 +15644,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>heat rating</summary>
+        [System.ComponentModel.DescriptionAttribute("heat rating")]
         public thermodynamicTemperatureMeasure heatRating {
             get {
                 return this.heatRatingField;
@@ -15040,6 +15656,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Flag indicating the equipment has line connected to surface.</summary>
+        [System.ComponentModel.DescriptionAttribute("Flag indicating the equipment has line connected to surface.")]
         public bool isLinetoSurface {
             get {
                 return this.isLinetoSurfaceField;
@@ -15061,6 +15679,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Flag indicating equipment is centralized</summary>
+        [System.ComponentModel.DescriptionAttribute("Flag indicating equipment is centralized")]
         public bool isCentralized {
             get {
                 return this.isCentralizedField;
@@ -15082,6 +15702,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Flag indicating scratchers have been added to the equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("Flag indicating scratchers have been added to the equipment.")]
         public bool hasScratchers {
             get {
                 return this.hasScratchersField;
@@ -15103,7 +15725,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Describes the next component connected.</summary>
         [System.Xml.Serialization.XmlElementAttribute("connectionNext")]
+        [System.ComponentModel.DescriptionAttribute("Describes the next component connected.")]
         public cs_equipmentConnection[] connectionNext {
             get {
                 return this.connectionNextField;
@@ -15114,7 +15738,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Describes the assembly connected.</summary>
         [System.Xml.Serialization.XmlArrayItemAttribute("part", IsNullable=false)]
+        [System.ComponentModel.DescriptionAttribute("Describes the assembly connected.")]
         public cs_stringEquipment[] assembly {
             get {
                 return this.assemblyField;
@@ -15125,7 +15751,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>reference the perforated hole in equipment after perforation event.</summary>
         [System.Xml.Serialization.XmlElementAttribute("perforationSetRefID")]
+        [System.ComponentModel.DescriptionAttribute("reference the perforated hole in equipment after perforation event.")]
         public string[] perforationSetRefID {
             get {
                 return this.perforationSetRefIDField;
@@ -15136,6 +15764,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Remarks on the equipment stored permanently.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Remarks on the equipment stored permanently.")]
         public string permanentRemarks {
             get {
                 return this.permanentRemarksField;
@@ -15146,6 +15777,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Remarks on usage of this equipment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Remarks on usage of this equipment.")]
         public string usageComment {
             get {
                 return this.usageCommentField;
@@ -15156,7 +15790,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -15167,6 +15803,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>A container element that contains elements that are common to all data objects.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that contains elements that are common to all data objects.")]
         public cs_commonData commonData {
             get {
                 return this.commonDataField;
@@ -15177,6 +15815,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>A container element that can contain custom or user defined data elements.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined data elements.")]
         public cs_customData customData {
             get {
                 return this.customDataField;
@@ -15187,7 +15827,11 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -15198,7 +15842,11 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Unique reference for the equipment.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique reference for the equipment.")]
         public string equipmentRefUID {
             get {
                 return this.equipmentRefUIDField;
@@ -15226,6 +15874,11 @@ namespace Energistics.Generator.COMPLETION100 {
         private string commentField;
         
         /// <remarks/>
+        /// <summary>DownholeString reference id</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("DownholeString reference id")]
         public string stringRefID {
             get {
                 return this.stringRefIDField;
@@ -15236,6 +15889,11 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Equipment reference id</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Equipment reference id")]
         public string equipmentRefID {
             get {
                 return this.equipmentRefIDField;
@@ -15246,6 +15904,11 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Reference to the equipment for this accessory</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to the equipment for this accessory")]
         public string accesoryEquipmentRefID {
             get {
                 return this.accesoryEquipmentRefIDField;
@@ -15256,6 +15919,10 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Comment on this container reference</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Comment on this container reference")]
         public string comment {
             get {
                 return this.commentField;
@@ -15287,6 +15954,8 @@ namespace Energistics.Generator.COMPLETION100 {
         private string stringEquipmentRefUIDField;
         
         /// <remarks/>
+        /// <summary>measurement of radial offset</summary>
+        [System.ComponentModel.DescriptionAttribute("measurement of radial offset")]
         public lengthMeasure radialOffset {
             get {
                 return this.radialOffsetField;
@@ -15311,6 +15980,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The form of connection: Box or Pin</summary>
+        [System.ComponentModel.DescriptionAttribute("The form of connection: Box or Pin")]
         public ConnectionFormType connectionForm {
             get {
                 return this.connectionFormField;
@@ -15332,6 +16003,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Connection upset</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Connection upset")]
         public string connectionUpset {
             get {
                 return this.connectionUpsetField;
@@ -15342,7 +16016,10 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Reference to the string equipment</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to the string equipment")]
         public string stringEquipmentRefUID {
             get {
                 return this.stringEquipmentRefUIDField;
@@ -15511,6 +16188,8 @@ namespace Energistics.Generator.COMPLETION100 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>Internal diameter of object.</summary>
+        [System.ComponentModel.DescriptionAttribute("Internal diameter of object.")]
         public lengthMeasure id {
             get {
                 return this.idField;
@@ -15521,6 +16200,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Outside diameter of the body of the item.</summary>
+        [System.ComponentModel.DescriptionAttribute("Outside diameter of the body of the item.")]
         public lengthMeasure od {
             get {
                 return this.odField;
@@ -15531,6 +16212,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Length of the item.</summary>
+        [System.ComponentModel.DescriptionAttribute("Length of the item.")]
         public lengthMeasure len {
             get {
                 return this.lenField;
@@ -15541,6 +16224,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Thread type from API RP7G, 5CT.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(32)]
+        [System.ComponentModel.DescriptionAttribute("Thread type from API RP7G, 5CT.")]
         public string typeThread {
             get {
                 return this.typeThreadField;
@@ -15551,6 +16237,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Thread size.</summary>
+        [System.ComponentModel.DescriptionAttribute("Thread size.")]
         public lengthMeasure sizeThread {
             get {
                 return this.sizeThreadField;
@@ -15561,6 +16249,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Yield stress of steel - worn stress.</summary>
+        [System.ComponentModel.DescriptionAttribute("Yield stress of steel - worn stress.")]
         public pressureMeasure tensYield {
             get {
                 return this.tensYieldField;
@@ -15571,6 +16261,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Torque at which yield occurs.</summary>
+        [System.ComponentModel.DescriptionAttribute("Torque at which yield occurs.")]
         public momentOfForceMeasure tqYield {
             get {
                 return this.tqYieldField;
@@ -15581,6 +16273,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Where connected.</summary>
+        [System.ComponentModel.DescriptionAttribute("Where connected.")]
         public ConnectionPosition position {
             get {
                 return this.positionField;
@@ -15602,6 +16296,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>For bending stiffness ratio.</summary>
+        [System.ComponentModel.DescriptionAttribute("For bending stiffness ratio.")]
         public areaMeasure criticalCrossSection {
             get {
                 return this.criticalCrossSectionField;
@@ -15612,6 +16308,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Leak pressure rating.</summary>
+        [System.ComponentModel.DescriptionAttribute("Leak pressure rating.")]
         public pressureMeasure presLeak {
             get {
                 return this.presLeakField;
@@ -15622,6 +16320,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Make up torque.</summary>
+        [System.ComponentModel.DescriptionAttribute("Make up torque.")]
         public momentOfForceMeasure tqMakeup {
             get {
                 return this.tqMakeupField;
@@ -15632,6 +16332,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>A container element that can contain custom or user defined  data elements.</summary>
+        [System.ComponentModel.DescriptionAttribute("A container element that can contain custom or user defined  data elements.")]
         public cs_customData customData {
             get {
                 return this.customDataField;
@@ -15642,6 +16344,8 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema using an xsd:any construct.</summary>
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema using an xsd:any construct.")]
         public cs_extensionAny extensionAny {
             get {
                 return this.extensionAnyField;
@@ -15652,7 +16356,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -15663,7 +16369,11 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -16291,7 +17001,7 @@ namespace Energistics.Generator.COMPLETION100 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     public partial class cs_documentEvent {
         
-        private System.DateTime eventDateField;
+        private Energistics.SchemaGatherer.Timestamp eventDateField;
         
         private string eventTypeField;
         
@@ -16304,7 +17014,10 @@ namespace Energistics.Generator.COMPLETION100 {
         private string uidField;
         
         /// <remarks/>
-        public System.DateTime eventDate {
+        /// <summary>The date on which the event took place.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The date on which the event took place.")]
+        public Energistics.SchemaGatherer.Timestamp eventDate {
             get {
                 return this.eventDateField;
             }
@@ -16314,6 +17027,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The kind of event event.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The kind of event event.")]
         public string eventType {
             get {
                 return this.eventTypeField;
@@ -16324,6 +17040,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The party responsible for the event.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The party responsible for the event.")]
         public string responsibleParty {
             get {
                 return this.responsiblePartyField;
@@ -16334,6 +17053,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>A free form comment that can further  define the event that occurred.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("A free form comment that can further  define the event that occurred.")]
         public string comment {
             get {
                 return this.commentField;
@@ -16344,7 +17066,9 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -16355,7 +17079,11 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;

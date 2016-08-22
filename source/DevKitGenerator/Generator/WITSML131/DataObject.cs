@@ -1572,6 +1572,9 @@ namespace Energistics.Generator.WITSML131 {
         private string commentField;
         
         /// <remarks/>
+        /// <summary>The date on which the event took place.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The date on which the event took place.")]
         public System.DateTime EventDate {
             get {
                 return this.eventDateField;
@@ -1582,6 +1585,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>The party responsible for the event.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The party responsible for the event.")]
         public string ResponsibleParty {
             get {
                 return this.responsiblePartyField;
@@ -1592,6 +1598,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>A free form comment that can further  define the event that occurred.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("A free form comment that can further  define the event that occurred.")]
         public string Comment {
             get {
                 return this.commentField;
@@ -2510,7 +2519,10 @@ namespace Energistics.Generator.WITSML131 {
         private bool northDirectionFieldSpecified;
         
         /// <remarks/>
+        /// <summary>The unit of measure of the azimuth value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The unit of measure of the azimuth value.")]
         public planeAngleUom uom {
             get {
                 return this.uomField;
@@ -2521,7 +2533,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Specifies the direction to be considered North for the y axis.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Specifies the direction to be considered North for the y axis.")]
         public AziRef northDirection {
             get {
                 return this.northDirectionField;
@@ -4289,6 +4303,7 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public magneticFieldStrengthUom uom {
             get {
                 return this.uomField;
@@ -5049,6 +5064,7 @@ namespace Energistics.Generator.WITSML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public energyPerAreaUom uom {
             get {
                 return this.uomField;
@@ -17101,6 +17117,8 @@ namespace Energistics.Generator.WITSML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The speed of the cable.</summary>
+        [System.ComponentModel.DescriptionAttribute("The speed of the cable.")]
         public velocityMeasure cableSpeed {
             get {
                 return this.cableSpeedField;
@@ -17111,6 +17129,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>The length of fiber pumped into the wellbore.</summary>
+        [System.ComponentModel.DescriptionAttribute("The length of fiber pumped into the wellbore.")]
         public lengthMeasure fiberPumpedLength {
             get {
                 return this.fiberPumpedLengthField;
@@ -17121,6 +17141,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>The operating pressure of the pump.</summary>
+        [System.ComponentModel.DescriptionAttribute("The operating pressure of the pump.")]
         public pressureMeasure pumpPressure {
             get {
                 return this.pumpPressureField;
@@ -17131,6 +17153,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>The fluid used in the pumping operation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
+        [System.ComponentModel.DescriptionAttribute("The fluid used in the pumping operation.")]
         public string pumpFluid {
             get {
                 return this.pumpFluidField;
@@ -17141,6 +17166,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>The temperature going into the wellbore.</summary>
+        [System.ComponentModel.DescriptionAttribute("The temperature going into the wellbore.")]
         public thermodynamicTemperatureMeasure temperatureIn {
             get {
                 return this.temperatureInField;
@@ -17151,6 +17178,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>The temperature at the end of the operation</summary>
+        [System.ComponentModel.DescriptionAttribute("The temperature at the end of the operation")]
         public thermodynamicTemperatureMeasure temperatureOut {
             get {
                 return this.temperatureOutField;
@@ -17161,6 +17190,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Any general remarks about the pumping operation.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Any general remarks about the pumping operation.")]
         public string remarks {
             get {
                 return this.remarksField;
@@ -17171,7 +17203,11 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -48553,6 +48589,8 @@ namespace Energistics.Generator.WITSML131 {
         private bool ellipsoidInverseFlatteningFieldSpecified;
         
         /// <remarks/>
+        /// <summary>The name of the coordinate reference system in a particular naming system. An optional short name (code) can also be specified. Specifying a well known system is highly desired. An example would be to specify a name of 'ED50' with a code of '4230' in the 'EPSG' naming system. Note that specifying a name in the EPSG naming system is asserting that the parameters in the EPSG database are appropriate for this CRS. This is  also true for any other naming system. If in doubt, contact your local geodesist.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"The name of the coordinate reference system in a particular naming system. An optional short name (code) can also be specified. Specifying a well known system is highly desired. An example would be to specify a name of 'ED50' with a code of '4230' in the 'EPSG' naming system. Note that specifying a name in the EPSG naming system is asserting that the parameters in the EPSG database are appropriate for this CRS. This is  also true for any other naming system. If in doubt, contact your local geodesist.")]
         public wellKnownNameStruct nameCRS {
             get {
                 return this.nameCRSField;
@@ -48563,6 +48601,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Geodetic datum code. This defines a system in the Geoshare naming system and should probably not be used with CRSName.</summary>
+        [System.ComponentModel.DescriptionAttribute("Geodetic datum code. This defines a system in the Geoshare naming system and shou" +
+            "ld probably not be used with CRSName.")]
         public GeodeticDatum geodeticDatumCode {
             get {
                 return this.geodeticDatumCodeField;
@@ -48584,6 +48625,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Ellipsoid translation (3). Units are meters by convention.</summary>
+        [System.ComponentModel.DescriptionAttribute("Ellipsoid translation (3). Units are meters by convention.")]
         public lengthMeasure xTranslation {
             get {
                 return this.xTranslationField;
@@ -48594,6 +48637,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Ellipsoid translation (3). Units are meters by convention.</summary>
+        [System.ComponentModel.DescriptionAttribute("Ellipsoid translation (3). Units are meters by convention.")]
         public lengthMeasure yTranslation {
             get {
                 return this.yTranslationField;
@@ -48604,6 +48649,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Ellipsoid translation (3). Units are meters by convention.</summary>
+        [System.ComponentModel.DescriptionAttribute("Ellipsoid translation (3). Units are meters by convention.")]
         public lengthMeasure zTranslation {
             get {
                 return this.zTranslationField;
@@ -48614,6 +48661,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Ellipsoid rotation (3). Seconds of arc by convention.</summary>
+        [System.ComponentModel.DescriptionAttribute("Ellipsoid rotation (3). Seconds of arc by convention.")]
         public planeAngleMeasure xRotation {
             get {
                 return this.xRotationField;
@@ -48624,6 +48673,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Ellipsoid rotation (3). Seconds of arc by convention.</summary>
+        [System.ComponentModel.DescriptionAttribute("Ellipsoid rotation (3). Seconds of arc by convention.")]
         public planeAngleMeasure yRotation {
             get {
                 return this.yRotationField;
@@ -48634,6 +48685,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Ellipsoid rotation (3). Seconds of arc by convention.</summary>
+        [System.ComponentModel.DescriptionAttribute("Ellipsoid rotation (3). Seconds of arc by convention.")]
         public planeAngleMeasure zRotation {
             get {
                 return this.zRotationField;
@@ -48644,6 +48697,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Ellipsoid scale factor.</summary>
+        [System.ComponentModel.DescriptionAttribute("Ellipsoid scale factor.")]
         public double scaleFactor {
             get {
                 return this.scaleFactorField;
@@ -48665,6 +48720,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Ellipsoid code (spheroid) defining geographic or planar coordinates.  Implied if geodeticDatumCode is specified (and is not user defined).</summary>
+        [System.ComponentModel.DescriptionAttribute("Ellipsoid code (spheroid) defining geographic or planar coordinates.  Implied if " +
+            "geodeticDatumCode is specified (and is not user defined).")]
         public Ellipsoid ellipsoidCode {
             get {
                 return this.ellipsoidCodeField;
@@ -48686,6 +48744,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Ellipsoid semi-major axis size. Implied if geodeticDatumCode or ellipsoidCode  specified.</summary>
+        [System.ComponentModel.DescriptionAttribute("Ellipsoid semi-major axis size. Implied if geodeticDatumCode or ellipsoidCode  sp" +
+            "ecified.")]
         public lengthMeasure ellipsoidSemiMajorAxis {
             get {
                 return this.ellipsoidSemiMajorAxisField;
@@ -48696,6 +48757,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Ellipsoid inverse flattening value (ie. 1/x). Implied if geodeticDatumCode  or ellipsoidCode specified.</summary>
+        [System.ComponentModel.DescriptionAttribute("Ellipsoid inverse flattening value (ie. 1/x). Implied if geodeticDatumCode  or el" +
+            "lipsoidCode specified.")]
         public double ellipsoidInverseFlattening {
             get {
                 return this.ellipsoidInverseFlatteningField;
@@ -49142,6 +49206,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>The angle of the Y axis from North (as described  in attribute northDirection). Defaults to zero. Positive clockwise.</summary>
+        [System.ComponentModel.DescriptionAttribute("The angle of the Y axis from North (as described  in attribute northDirection). D" +
+            "efaults to zero. Positive clockwise.")]
         public yAxisAzimuth yAxisAzimuth {
             get {
                 return this.yAxisAzimuthField;
@@ -49152,6 +49219,10 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>A free-form description of the Y axis.  Examples would be 'parallel to the west side of the platform', or  'along the main entry road'.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("A free-form description of the Y axis.  Examples would be \'parallel to the west s" +
+            "ide of the platform\', or  \'along the main entry road\'.")]
         public string yAxisDescription {
             get {
                 return this.yAxisDescriptionField;
@@ -49162,6 +49233,11 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>True ("true" or "1") indicates that the X axis is rotated  counter-clockwise from the Y axis when viewed from above the earth looking down. False ("false" or "0") or not given indicates a clockwise rotation.  Generally the X axis is rotated clockwise.</summary>
+        [System.ComponentModel.DescriptionAttribute("True (\"true\" or \"1\") indicates that the X axis is rotated  counter-clockwise from" +
+            " the Y axis when viewed from above the earth looking down. False (\"false\" or \"0\"" +
+            ") or not given indicates a clockwise rotation.  Generally the X axis is rotated " +
+            "clockwise.")]
         public bool xRotationCounterClockwise {
             get {
                 return this.xRotationCounterClockwiseField;
@@ -49256,6 +49332,8 @@ namespace Energistics.Generator.WITSML131 {
         private indexedObject[] parameterField;
         
         /// <remarks/>
+        /// <summary>The name of the coordinate reference system in a particular naming system. An optional short name (code) can also be specified. Specifying a well known system is highly desired. An example would be to specify a name of 'WGS 84 / UTM zone 10N' with a code of '32610' in the 'EPSG' naming system. Note that specifying a name in the EPSG naming system is asserting that the parameters in the EPSG database are appropriate for this CRS. This is  also true for any other naming system. If in doubt, contact your local geodesist.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"The name of the coordinate reference system in a particular naming system. An optional short name (code) can also be specified. Specifying a well known system is highly desired. An example would be to specify a name of 'WGS 84 / UTM zone 10N' with a code of '32610' in the 'EPSG' naming system. Note that specifying a name in the EPSG naming system is asserting that the parameters in the EPSG database are appropriate for this CRS. This is  also true for any other naming system. If in doubt, contact your local geodesist.")]
         public wellKnownNameStruct nameCRS {
             get {
                 return this.nameCRSField;
@@ -49266,6 +49344,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>A code to identify the type of projection.</summary>
+        [System.ComponentModel.DescriptionAttribute("A code to identify the type of projection.")]
         public Projection projectionCode {
             get {
                 return this.projectionCodeField;
@@ -49287,6 +49367,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>A pointer to the wellCRS that represents the geographic system from which this system was projected.</summary>
+        [System.ComponentModel.DescriptionAttribute("A pointer to the wellCRS that represents the geographic system from which this sy" +
+            "stem was projected.")]
         public refNameString projectedFrom {
             get {
                 return this.projectedFromField;
@@ -49297,6 +49380,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Latitude of first standard parallel.</summary>
+        [System.ComponentModel.DescriptionAttribute("Latitude of first standard parallel.")]
         public planeAngleMeasure stdParallel1 {
             get {
                 return this.stdParallel1Field;
@@ -49307,6 +49392,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Latitude of second standard parallel, if used.</summary>
+        [System.ComponentModel.DescriptionAttribute("Latitude of second standard parallel, if used.")]
         public planeAngleMeasure stdParallel2 {
             get {
                 return this.stdParallel2Field;
@@ -49317,6 +49404,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Longitude of the Y axis of the resulting map.</summary>
+        [System.ComponentModel.DescriptionAttribute("Longitude of the Y axis of the resulting map.")]
         public planeAngleMeasure centralMeridian {
             get {
                 return this.centralMeridianField;
@@ -49327,6 +49416,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Latitude at which the X axis intersects the central meridian.</summary>
+        [System.ComponentModel.DescriptionAttribute("Latitude at which the X axis intersects the central meridian.")]
         public planeAngleMeasure originLatitude {
             get {
                 return this.originLatitudeField;
@@ -49337,6 +49428,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Longitude of the central meridian.</summary>
+        [System.ComponentModel.DescriptionAttribute("Longitude of the central meridian.")]
         public planeAngleMeasure originLongitude {
             get {
                 return this.originLongitudeField;
@@ -49347,6 +49440,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Latitude of the first point if the two-point specification  of the central line is used.</summary>
+        [System.ComponentModel.DescriptionAttribute("Latitude of the first point if the two-point specification  of the central line i" +
+            "s used.")]
         public planeAngleMeasure latitude1 {
             get {
                 return this.latitude1Field;
@@ -49357,6 +49453,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Longitude of the first point if the two-point specification  of the central line is used.</summary>
+        [System.ComponentModel.DescriptionAttribute("Longitude of the first point if the two-point specification  of the central line " +
+            "is used.")]
         public planeAngleMeasure longitude1 {
             get {
                 return this.longitude1Field;
@@ -49367,6 +49466,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Latitude of the second point if the two-point specification  of the central line is used.</summary>
+        [System.ComponentModel.DescriptionAttribute("Latitude of the second point if the two-point specification  of the central line " +
+            "is used.")]
         public planeAngleMeasure latitude2 {
             get {
                 return this.latitude2Field;
@@ -49377,6 +49479,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Longitude of the second point if the two-point specification  of the central line is used.</summary>
+        [System.ComponentModel.DescriptionAttribute("Longitude of the second point if the two-point specification  of the central line" +
+            " is used.")]
         public planeAngleMeasure longitude2 {
             get {
                 return this.longitude2Field;
@@ -49387,6 +49492,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Latitude of a point for which the scale factor is specified exactly.  Default to origin.</summary>
+        [System.ComponentModel.DescriptionAttribute("Latitude of a point for which the scale factor is specified exactly.  Default to " +
+            "origin.")]
         public planeAngleMeasure latitudeForScale {
             get {
                 return this.latitudeForScaleField;
@@ -49397,6 +49505,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Longitude of a point for which the scale factor is specified exactly.  Default to origin.</summary>
+        [System.ComponentModel.DescriptionAttribute("Longitude of a point for which the scale factor is specified exactly.  Default to" +
+            " origin.")]
         public planeAngleMeasure longitudeForScale {
             get {
                 return this.longitudeForScaleField;
@@ -49407,6 +49518,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Latitude at which the scale on the map is exact. If none is provided,  scale is assumed to be exact at the equator.</summary>
+        [System.ComponentModel.DescriptionAttribute("Latitude at which the scale on the map is exact. If none is provided,  scale is a" +
+            "ssumed to be exact at the equator.")]
         public planeAngleMeasure trueScaleLatitude {
             get {
                 return this.trueScaleLatitudeField;
@@ -49417,6 +49531,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Spheroid radius.</summary>
+        [System.ComponentModel.DescriptionAttribute("Spheroid radius.")]
         public lengthMeasure spheroidRadius {
             get {
                 return this.spheroidRadiusField;
@@ -49427,6 +49543,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Ellipsoid scale factor.</summary>
+        [System.ComponentModel.DescriptionAttribute("Ellipsoid scale factor.")]
         public double scaleFactor {
             get {
                 return this.scaleFactorField;
@@ -49448,6 +49566,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Projection method variant - establishes minor variations of the projection.  Geoshare proposal.</summary>
+        [System.ComponentModel.DescriptionAttribute("Projection method variant - establishes minor variations of the projection.  Geos" +
+            "hare proposal.")]
         public ProjectionVariantsObliqueMercator methodVariant {
             get {
                 return this.methodVariantField;
@@ -49469,6 +49590,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Height above the surface origin location from which the perspective is taken.</summary>
+        [System.ComponentModel.DescriptionAttribute("Height above the surface origin location from which the perspective is taken.")]
         public lengthMeasure perspectiveHeight {
             get {
                 return this.perspectiveHeightField;
@@ -49479,6 +49602,11 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Zone for the type of projection. Zones have values from 1 to 60 with a required direction of "N" (North) or "S" (South). For example, "21N".</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("([1-9]|[1-5][0-9]|60)[NS]")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(3)]
+        [System.ComponentModel.DescriptionAttribute("Zone for the type of projection. Zones have values from 1 to 60 with a required d" +
+            "irection of \"N\" (North) or \"S\" (South). For example, \"21N\".")]
         public string zone {
             get {
                 return this.zoneField;
@@ -49489,6 +49617,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>North American Datum type.</summary>
+        [System.ComponentModel.DescriptionAttribute("North American Datum type.")]
         public NADTypes NADType {
             get {
                 return this.nADTypeField;
@@ -49510,6 +49640,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Artificial value added to the X axis.</summary>
+        [System.ComponentModel.DescriptionAttribute("Artificial value added to the X axis.")]
         public lengthMeasure falseEasting {
             get {
                 return this.falseEastingField;
@@ -49520,6 +49652,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Artificial value added to the Y axis.</summary>
+        [System.ComponentModel.DescriptionAttribute("Artificial value added to the Y axis.")]
         public lengthMeasure falseNorthing {
             get {
                 return this.falseNorthingField;
@@ -49530,6 +49664,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Bearing angle of the great circle with respect to north at the central  point.</summary>
+        [System.ComponentModel.DescriptionAttribute("Bearing angle of the great circle with respect to north at the central  point.")]
         public planeAngleMeasure bearing {
             get {
                 return this.bearingField;
@@ -49540,6 +49676,8 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Is the projection in the northern hemisphere or the southern hemisphere.</summary>
+        [System.ComponentModel.DescriptionAttribute("Is the projection in the northern hemisphere or the southern hemisphere.")]
         public Hemispheres hemisphere {
             get {
                 return this.hemisphereField;
@@ -49561,6 +49699,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Description of item and details.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Description of item and details.")]
         public string description {
             get {
                 return this.descriptionField;
@@ -49571,7 +49712,9 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
+        /// <summary>Parameter describing the user-defined projection.</summary>
         [System.Xml.Serialization.XmlElementAttribute("parameter")]
+        [System.ComponentModel.DescriptionAttribute("Parameter describing the user-defined projection.")]
         public indexedObject[] parameter {
             get {
                 return this.parameterField;
@@ -51600,7 +51743,12 @@ namespace Energistics.Generator.WITSML131 {
         private string valueField;
         
         /// <remarks/>
+        /// <summary>A pointer to the block descriptor's uid that this level represents.  If more than one block descriptor is specified then this attribute is required.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A pointer to the block descriptor\'s uid that this level represents.  If more than" +
+            " one block descriptor is specified then this attribute is required.")]
         public string id {
             get {
                 return this.idField;

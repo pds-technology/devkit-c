@@ -133,7 +133,7 @@ namespace Energistics.SchemaGatherer
                 ImportXmlSchema(schema, importer, exporter);
             }
 
-            AddValidationAttributes(codeNamespace, schemas, standardFamily, dataSchemaVersion, dataObjects);
+            AddValidationAttributes(codeNamespace, schemas.ToList(), standardFamily, dataSchemaVersion, dataObjects);
 
             using (var writer = new StreamWriter(outputFile, false, Encoding.UTF8))
             {
@@ -333,7 +333,7 @@ namespace Energistics.SchemaGatherer
             }
         }
 
-        private static void AddValidationAttributes(CodeNamespace codeNamespace, IEnumerable<XmlSchema> schemas, string standardFamily, string dataSchemaVersion, ICollection<string> dataObjects)
+        private static void AddValidationAttributes(CodeNamespace codeNamespace, IList<XmlSchema> schemas, string standardFamily, string dataSchemaVersion, ICollection<string> dataObjects)
         {
             var types = new List<string>();
 
@@ -341,19 +341,29 @@ namespace Energistics.SchemaGatherer
             {
                 AddValidationAttributes(codeNamespace, schemaElement, standardFamily, dataSchemaVersion, dataObjects, types);
             }
+
+            foreach (var schemaType in schemas.SelectMany(schema => schema.SchemaTypes.Values.OfType<XmlSchemaComplexType>()))
+            {
+                AddValidationAttributes(codeNamespace, schemaType, standardFamily, dataSchemaVersion, dataObjects, types);
+            }
         }
 
         private static void AddValidationAttributes(CodeNamespace codeNamespace, XmlSchemaElement schemaElement, string standardFamily, string dataSchemaVersion, ICollection<string> dataObjects, ICollection<string> types)
         {
+            var schemaType = schemaElement.ElementSchemaType as XmlSchemaComplexType;
+            if (schemaType == null) return;
+
+            AddValidationAttributes(codeNamespace, schemaType, standardFamily, dataSchemaVersion, dataObjects, types);
+        }
+
+        private static void AddValidationAttributes(CodeNamespace codeNamespace, XmlSchemaComplexType schemaType, string standardFamily, string dataSchemaVersion, ICollection<string> dataObjects, ICollection<string> types)
+        {
             var typeDeclaration = codeNamespace.Types.Cast<CodeTypeDeclaration>()
-                .FirstOrDefault(x => x.Name == schemaElement.SchemaTypeName.Name);
+                .FirstOrDefault(x => x.Name == schemaType.Name);
 
             if (typeDeclaration == null || types.Contains(typeDeclaration.Name)) return;
 
             types.Add(typeDeclaration.Name);
-
-            var schemaType = schemaElement.ElementSchemaType as XmlSchemaComplexType;
-            if (schemaType == null) return;
 
             if (dataObjects.Contains(typeDeclaration.Name))
                 AddEnergisticsDataObjectAttribute(typeDeclaration, standardFamily, dataSchemaVersion);

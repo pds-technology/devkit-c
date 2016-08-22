@@ -921,6 +921,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
         public string uom {
             get {
                 return this.uomField;
@@ -1120,7 +1121,9 @@ namespace Energistics.Generator.PRODML131 {
         private string uomField;
         
         /// <remarks/>
+        /// <summary>An indicator of the quality of the value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("An indicator of the quality of the value.")]
         public ValueStatus status {
             get {
                 return this.statusField;
@@ -1142,7 +1145,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The kind of the value component. For example, "X" in a tuple of X and Y.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute("The kind of the value component. For example, \"X\" in a tuple of X and Y.")]
         public string component {
             get {
                 return this.componentField;
@@ -1153,7 +1159,12 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unit of measure for the value. This value must conform to the values allowed by the measure class.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(24)]
+        [System.ComponentModel.DescriptionAttribute("The unit of measure for the value. This value must conform to the values allowed " +
+            "by the measure class.")]
         public string uom {
             get {
                 return this.uomField;
@@ -1554,6 +1565,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeFlowRateUom uom {
             get {
                 return this.uomField;
@@ -2542,6 +2554,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ElectricCurrentUom uom {
             get {
                 return this.uomField;
@@ -2592,6 +2605,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DynamicViscosityUom uom {
             get {
                 return this.uomField;
@@ -3011,6 +3025,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumePerVolumeUom uom {
             get {
                 return this.uomField;
@@ -3033,6 +3048,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumePerVolumeUom uom {
             get {
                 return this.uomField;
@@ -3078,6 +3094,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeUom uom {
             get {
                 return this.uomField;
@@ -3100,6 +3117,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ThermalConductivityUom uom {
             get {
                 return this.uomField;
@@ -3149,6 +3167,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ProductivityIndexUom uom {
             get {
                 return this.uomField;
@@ -3670,6 +3689,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public CompressibilityUom uom {
             get {
                 return this.uomField;
@@ -6644,6 +6664,8 @@ namespace Energistics.Generator.PRODML131 {
         private cs_wellTestFluidRate waterRateField;
         
         /// <remarks/>
+        /// <summary>Oil volumes measured during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("Oil volumes measured during the well test.")]
         public cs_wellTestTestVolume oilVolume {
             get {
                 return this.oilVolumeField;
@@ -6654,6 +6676,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Oil rates measured during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("Oil rates measured during the well test.")]
         public cs_wellTestFluidRate oilRate {
             get {
                 return this.oilRateField;
@@ -6664,6 +6688,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Gas volumes measured during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("Gas volumes measured during the well test.")]
         public cs_wellTestTestVolume gasVolume {
             get {
                 return this.gasVolumeField;
@@ -6674,6 +6700,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Gas rates measured during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("Gas rates measured during the well test.")]
         public cs_wellTestFluidRate gasRate {
             get {
                 return this.gasRateField;
@@ -6684,6 +6712,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Water volumes measured during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("Water volumes measured during the well test.")]
         public cs_wellTestTestVolume waterVolume {
             get {
                 return this.waterVolumeField;
@@ -6694,6 +6724,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Water rates measured during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("Water rates measured during the well test.")]
         public cs_wellTestFluidRate waterRate {
             get {
                 return this.waterRateField;
@@ -6723,6 +6755,9 @@ namespace Energistics.Generator.PRODML131 {
         private string gasClassField;
         
         /// <remarks/>
+        /// <summary>The volume is the fluid, corrected to standard conditions of temperature and pressure.</summary>
+        [System.ComponentModel.DescriptionAttribute("The volume is the fluid, corrected to standard conditions of temperature and pres" +
+            "sure.")]
         public volumeMeasure volumeStdTempPres {
             get {
                 return this.volumeStdTempPresField;
@@ -6733,6 +6768,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The volume, uncorrected. This volume is generally reported at reservoir conditions.</summary>
+        [System.ComponentModel.DescriptionAttribute("The volume, uncorrected. This volume is generally reported at reservoir condition" +
+            "s.")]
         public volumeMeasure volume {
             get {
                 return this.volumeField;
@@ -6743,6 +6781,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The density of the fluid,  corrected to standard conditions of temperature and pressure.</summary>
+        [System.ComponentModel.DescriptionAttribute("The density of the fluid,  corrected to standard conditions of temperature and pr" +
+            "essure.")]
         public densityMeasure densityStdTempPres {
             get {
                 return this.densityStdTempPresField;
@@ -6753,6 +6794,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The density of the fluid, uncorrected.</summary>
+        [System.ComponentModel.DescriptionAttribute("The density of the fluid, uncorrected.")]
         public densityMeasure density {
             get {
                 return this.densityField;
@@ -6763,6 +6806,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Class for Natural Gas. This is not valid for oil or water.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute("Class for Natural Gas. This is not valid for oil or water.")]
         public string gasClass {
             get {
                 return this.gasClassField;
@@ -6788,6 +6834,8 @@ namespace Energistics.Generator.PRODML131 {
         private string gasClassField;
         
         /// <remarks/>
+        /// <summary>The fluid flow rate.</summary>
+        [System.ComponentModel.DescriptionAttribute("The fluid flow rate.")]
         public volumeFlowRateMeasure fluidRate {
             get {
                 return this.fluidRateField;
@@ -6798,6 +6846,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The fluid flow rate that has been corrected to standard temperature and pressure.</summary>
+        [System.ComponentModel.DescriptionAttribute("The fluid flow rate that has been corrected to standard temperature and pressure." +
+            "")]
         public volumeFlowRateMeasure fluidRateStdTempPres {
             get {
                 return this.fluidRateStdTempPresField;
@@ -6808,6 +6859,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Class for Natural Gas. This is not valid for oil or water.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute("Class for Natural Gas. This is not valid for oil or water.")]
         public string gasClass {
             get {
                 return this.gasClassField;
@@ -6851,6 +6905,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The time length (with uom) of the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The time length (with uom) of the well test.")]
         public timeMeasure testDuration {
             get {
                 return this.testDurationField;
@@ -6861,6 +6917,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The interval tested. This element includes a top and base  depth, and the formation tested.</summary>
+        [System.ComponentModel.DescriptionAttribute("The interval tested. This element includes a top and base  depth, and the formati" +
+            "on tested.")]
         public cs_wellTestInterval testInterval {
             get {
                 return this.testIntervalField;
@@ -6871,6 +6930,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The fluid that is being injected.</summary>
+        [System.ComponentModel.DescriptionAttribute("The fluid that is being injected.")]
         public InjectionFluid InjectedFluid {
             get {
                 return this.injectedFluidField;
@@ -6892,6 +6953,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The cumulative volumes of fluids at the time of the  well test. The fluids are oil, gas, and water.</summary>
+        [System.ComponentModel.DescriptionAttribute("The cumulative volumes of fluids at the time of the  well test. The fluids are oi" +
+            "l, gas, and water.")]
         public cs_wellTestCumulative wellTestCumulative {
             get {
                 return this.wellTestCumulativeField;
@@ -6902,6 +6966,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The size of the opening in the flow choke at the wellhead.</summary>
+        [System.ComponentModel.DescriptionAttribute("The size of the opening in the flow choke at the wellhead.")]
         public lengthMeasure chokeOrificeSize {
             get {
                 return this.chokeOrificeSizeField;
@@ -6912,6 +6978,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The minimum pressure measured at the annulus.</summary>
+        [System.ComponentModel.DescriptionAttribute("The minimum pressure measured at the annulus.")]
         public pressureMeasure minimumAnnularPressure {
             get {
                 return this.minimumAnnularPressureField;
@@ -6922,6 +6990,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The maximum pressure measured at the annulus.</summary>
+        [System.ComponentModel.DescriptionAttribute("The maximum pressure measured at the annulus.")]
         public pressureMeasure maximumAnnularPressure {
             get {
                 return this.maximumAnnularPressureField;
@@ -6932,6 +7002,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The flowing pressure measured at the wellhead during the test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The flowing pressure measured at the wellhead during the test.")]
         public pressureMeasure wellheadFlowingPressure {
             get {
                 return this.wellheadFlowingPressureField;
@@ -6942,6 +7014,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The maximum pressure measured at the wellhead during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The maximum pressure measured at the wellhead during the well test.")]
         public pressureMeasure wellheadMaximumPressure {
             get {
                 return this.wellheadMaximumPressureField;
@@ -6952,6 +7026,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The production results of the test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The production results of the test.")]
         public cs_wellTestInjectionTestResults injectionTestResults {
             get {
                 return this.injectionTestResultsField;
@@ -6962,7 +7038,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -6994,6 +7074,9 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The measured depth to the top of the interval.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The measured depth to the top of the interval.")]
         public measuredDepthCoord mdTop {
             get {
                 return this.mdTopField;
@@ -7004,6 +7087,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The measured depth to the bottom of the interval.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The measured depth to the bottom of the interval.")]
         public measuredDepthCoord mdBase {
             get {
                 return this.mdBaseField;
@@ -7014,6 +7100,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Defines the wellbore (sidetract) represented by the measured depth. This must be given when the well has multiple wellbores and the measured depth  value is deeper than the first kickoff point. It is recommended that it always be given.</summary>
+        [System.ComponentModel.DescriptionAttribute("Defines the wellbore (sidetract) represented by the measured depth. This must be " +
+            "given when the well has multiple wellbores and the measured depth  value is deep" +
+            "er than the first kickoff point. It is recommended that it always be given.")]
         public refNameString wellbore {
             get {
                 return this.wellboreField;
@@ -7024,7 +7114,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>A formation that was tested.</summary>
         [System.Xml.Serialization.XmlElementAttribute("testedFormation")]
+        [System.ComponentModel.DescriptionAttribute("A formation that was tested.")]
         public string[] testedFormation {
             get {
                 return this.testedFormationField;
@@ -7035,6 +7127,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The relative opening of the downhole control valve for the tested zone. This is for surface controllable valves.</summary>
+        [System.ComponentModel.DescriptionAttribute("The relative opening of the downhole control valve for the tested zone. This is f" +
+            "or surface controllable valves.")]
         public lengthPerLengthMeasure valvePosition {
             get {
                 return this.valvePositionField;
@@ -7045,7 +7140,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -7131,6 +7230,8 @@ namespace Energistics.Generator.PRODML131 {
         private volumeMeasure cumulativeWaterField;
         
         /// <remarks/>
+        /// <summary>The cumulative amount of oil.</summary>
+        [System.ComponentModel.DescriptionAttribute("The cumulative amount of oil.")]
         public volumeMeasure cumulativeOil {
             get {
                 return this.cumulativeOilField;
@@ -7141,6 +7242,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The cumulative amount of gas.</summary>
+        [System.ComponentModel.DescriptionAttribute("The cumulative amount of gas.")]
         public volumeMeasure cumulativeGas {
             get {
                 return this.cumulativeGasField;
@@ -7151,6 +7254,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The cumulative amount of water.</summary>
+        [System.ComponentModel.DescriptionAttribute("The cumulative amount of water.")]
         public volumeMeasure cumulativeWater {
             get {
                 return this.cumulativeWaterField;
@@ -7220,6 +7325,8 @@ namespace Energistics.Generator.PRODML131 {
         private productivityIndexMeasure productivityIndexStdTempPresField;
         
         /// <remarks/>
+        /// <summary>Oil volumes measured during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("Oil volumes measured during the well test.")]
         public cs_wellTestTestVolume oilVolume {
             get {
                 return this.oilVolumeField;
@@ -7230,6 +7337,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Oil rates measured during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("Oil rates measured during the well test.")]
         public cs_wellTestFluidRate oilRate {
             get {
                 return this.oilRateField;
@@ -7240,6 +7349,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Gas volumes measured during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("Gas volumes measured during the well test.")]
         public cs_wellTestTestVolume gasVolume {
             get {
                 return this.gasVolumeField;
@@ -7250,6 +7361,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Gas rates measured during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("Gas rates measured during the well test.")]
         public cs_wellTestFluidRate gasRate {
             get {
                 return this.gasRateField;
@@ -7260,6 +7373,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Water volumes measured during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("Water volumes measured during the well test.")]
         public cs_wellTestTestVolume waterVolume {
             get {
                 return this.waterVolumeField;
@@ -7270,6 +7385,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Water rates measured during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("Water rates measured during the well test.")]
         public cs_wellTestFluidRate waterRate {
             get {
                 return this.waterRateField;
@@ -7280,6 +7397,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>condensate volumes measured during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("condensate volumes measured during the well test.")]
         public cs_wellTestTestVolume condensateVolume {
             get {
                 return this.condensateVolumeField;
@@ -7290,6 +7409,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Condensate rates measured during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("Condensate rates measured during the well test.")]
         public cs_wellTestFluidRate condensateRate {
             get {
                 return this.condensateRateField;
@@ -7300,6 +7421,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The ratio of the volume of gas and the volume of oil that was produced.</summary>
+        [System.ComponentModel.DescriptionAttribute("The ratio of the volume of gas and the volume of oil that was produced.")]
         public volumePerVolumeMeasure gasOilRatio {
             get {
                 return this.gasOilRatioField;
@@ -7310,6 +7433,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The ratio of water produced compared to the volume of total liquids produced.</summary>
+        [System.ComponentModel.DescriptionAttribute("The ratio of water produced compared to the volume of total liquids produced.")]
         public volumePerVolumeMeasure waterCut {
             get {
                 return this.waterCutField;
@@ -7320,6 +7445,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The density of the fluid mixture.</summary>
+        [System.ComponentModel.DescriptionAttribute("The density of the fluid mixture.")]
         public densityMeasure density {
             get {
                 return this.densityField;
@@ -7330,6 +7457,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The velocity of the overall fluid mixture.</summary>
+        [System.ComponentModel.DescriptionAttribute("The velocity of the overall fluid mixture.")]
         public velocityMeasure fluidVelocity {
             get {
                 return this.fluidVelocityField;
@@ -7340,6 +7469,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>This is the condensate yield, which describes the amount  of condensate per unit of natural gas produced</summary>
+        [System.ComponentModel.DescriptionAttribute("This is the condensate yield, which describes the amount  of condensate per unit " +
+            "of natural gas produced")]
         public volumePerVolumeMeasure condensateYield {
             get {
                 return this.condensateYieldField;
@@ -7350,6 +7482,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>This is the measured of impurities present in crude oil  as it comes from the well. BSandW content is commonly used as a measure for  treating performance of hydrocarbon liquids</summary>
+        [System.ComponentModel.DescriptionAttribute("This is the measured of impurities present in crude oil  as it comes from the wel" +
+            "l. BSandW content is commonly used as a measure for  treating performance of hyd" +
+            "rocarbon liquids")]
         public volumePerVolumeMeasure basicSedimentAndWater {
             get {
                 return this.basicSedimentAndWaterField;
@@ -7360,6 +7496,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>This is the the potential of the well to produce crude oil.  This represents the flow rate that could be achieved under maximum drawdown.</summary>
+        [System.ComponentModel.DescriptionAttribute("This is the the potential of the well to produce crude oil.  This represents the " +
+            "flow rate that could be achieved under maximum drawdown.")]
         public volumeFlowRateMeasure oilPotential {
             get {
                 return this.oilPotentialField;
@@ -7370,6 +7509,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>This is the potential of the well to produce natural gas.  This represents the flow rate that could be achieved under maximum drawdown.</summary>
+        [System.ComponentModel.DescriptionAttribute("This is the potential of the well to produce natural gas.  This represents the fl" +
+            "ow rate that could be achieved under maximum drawdown.")]
         public volumeFlowRateMeasure gasPotential {
             get {
                 return this.gasPotentialField;
@@ -7380,6 +7522,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The volume of sand that was produced.</summary>
+        [System.ComponentModel.DescriptionAttribute("The volume of sand that was produced.")]
         public volumeMeasure sandVolume {
             get {
                 return this.sandVolumeField;
@@ -7390,6 +7534,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>True ("true" or "1") indicates that the the split factors  are allocated as opposed to measured.  False ("false" or "0") or not given indicates otherwise.</summary>
+        [System.ComponentModel.DescriptionAttribute("True (\"true\" or \"1\") indicates that the the split factors  are allocated as oppos" +
+            "ed to measured.  False (\"false\" or \"0\") or not given indicates otherwise.")]
         public bool allocatedSplit {
             get {
                 return this.allocatedSplitField;
@@ -7411,6 +7558,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The split factor for Oil relative to the overall volume of the test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The split factor for Oil relative to the overall volume of the test.")]
         public volumePerVolumeMeasure oilSplitFactor {
             get {
                 return this.oilSplitFactorField;
@@ -7421,6 +7570,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The split factor for Gas relative to the overall volume of the test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The split factor for Gas relative to the overall volume of the test.")]
         public volumePerVolumeMeasure gasSplitFactor {
             get {
                 return this.gasSplitFactorField;
@@ -7431,6 +7582,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The split factor for Water relative to the overall volume of the test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The split factor for Water relative to the overall volume of the test.")]
         public volumePerVolumeMeasure waterSplitFactor {
             get {
                 return this.waterSplitFactorField;
@@ -7441,6 +7594,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The split factor for Condensate relative to the overall volume of the test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The split factor for Condensate relative to the overall volume of the test.")]
         public volumePerVolumeMeasure condensateSplitFactor {
             get {
                 return this.condensateSplitFactorField;
@@ -7451,6 +7606,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Productivity Index (PI) is an expression which defines the pressure drop in  the reservoir to produce a unit of oil per day. That is, the energy to produce a unit of oil. The value was defined at ambient temperature and pressure.</summary>
+        [System.ComponentModel.DescriptionAttribute("Productivity Index (PI) is an expression which defines the pressure drop in  the " +
+            "reservoir to produce a unit of oil per day. That is, the energy to produce a uni" +
+            "t of oil. The value was defined at ambient temperature and pressure.")]
         public productivityIndexMeasure productivityIndex {
             get {
                 return this.productivityIndexField;
@@ -7461,6 +7620,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Productivity Index (PI) is an expression which defines the pressure drop in  the reservoir to produce a unit of oil per day. That is, the energy to produce a unit of oil. The value has been converted to the declared conditions of standard temperature and pressure.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"Productivity Index (PI) is an expression which defines the pressure drop in  the reservoir to produce a unit of oil per day. That is, the energy to produce a unit of oil. The value has been converted to the declared conditions of standard temperature and pressure.")]
         public productivityIndexMeasure productivityIndexStdTempPres {
             get {
                 return this.productivityIndexStdTempPresField;
@@ -7484,6 +7645,8 @@ namespace Energistics.Generator.PRODML131 {
         private thermodynamicTemperatureMeasure separatorTemperatureField;
         
         /// <remarks/>
+        /// <summary>The pressure measured at the separator during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The pressure measured at the separator during the well test.")]
         public pressureMeasure separatorPressure {
             get {
                 return this.separatorPressureField;
@@ -7494,6 +7657,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The temperature measured at the separator during the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The temperature measured at the separator during the well test.")]
         public thermodynamicTemperatureMeasure separatorTemperature {
             get {
                 return this.separatorTemperatureField;
@@ -7533,6 +7698,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The pressure at the point.</summary>
+        [System.ComponentModel.DescriptionAttribute("The pressure at the point.")]
         public pressureMeasure pres {
             get {
                 return this.presField;
@@ -7543,6 +7710,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The temperature at the point.</summary>
+        [System.ComponentModel.DescriptionAttribute("The temperature at the point.")]
         public thermodynamicTemperatureMeasure temp {
             get {
                 return this.tempField;
@@ -7553,6 +7722,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The P/Z value at the point. This is P/Z, pressure  over gas compressibility factor (z).  Note that the uom is units of pressure., since Z is dimensionless.</summary>
+        [System.ComponentModel.DescriptionAttribute("The P/Z value at the point. This is P/Z, pressure  over gas compressibility facto" +
+            "r (z).  Note that the uom is units of pressure., since Z is dimensionless.")]
         public pressureMeasure pOverZ {
             get {
                 return this.pOverZField;
@@ -7563,6 +7735,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The measured depth of the bottomhole.</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured depth of the bottomhole.")]
         public measuredDepthCoord md {
             get {
                 return this.mdField;
@@ -7573,6 +7747,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Defines the wellbore (sidetract) represented by the measured depth. This must be given when the well has multiple wellbores and the measured depth  value is deeper than the first kickoff point. It is recommended that it always be given.</summary>
+        [System.ComponentModel.DescriptionAttribute("Defines the wellbore (sidetract) represented by the measured depth. This must be " +
+            "given when the well has multiple wellbores and the measured depth  value is deep" +
+            "er than the first kickoff point. It is recommended that it always be given.")]
         public refNameString wellbore {
             get {
                 return this.wellboreField;
@@ -7583,6 +7761,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>A value of true (1 or "true") indicates that the point is at the bottomhole. A value of false (0 or "false") or not given indicates otherwise.</summary>
+        [System.ComponentModel.DescriptionAttribute("A value of true (1 or \"true\") indicates that the point is at the bottomhole. A va" +
+            "lue of false (0 or \"false\") or not given indicates otherwise.")]
         public bool bottomhole {
             get {
                 return this.bottomholeField;
@@ -7604,6 +7785,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>A value of true (1 or "true") indicates a static (non-flowing) pressure. A value of false (0 or "false") or not given indicates otherwise. The pressure may be measured (e.g., shut-in well) or calculated.</summary>
+        [System.ComponentModel.DescriptionAttribute("A value of true (1 or \"true\") indicates a static (non-flowing) pressure. A value " +
+            "of false (0 or \"false\") or not given indicates otherwise. The pressure may be me" +
+            "asured (e.g., shut-in well) or calculated.")]
         public bool @static {
             get {
                 return this.staticField;
@@ -7625,7 +7810,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -7649,6 +7838,10 @@ namespace Energistics.Generator.PRODML131 {
         private frequencyMeasure frequencyField;
         
         /// <remarks/>
+        /// <summary>The average electric current of the electric submersible pump (ESP) during the test. The presumption is that only one pump per well is operational during each test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The average electric current of the electric submersible pump (ESP) during the te" +
+            "st. The presumption is that only one pump per well is operational during each te" +
+            "st.")]
         public electricCurrentMeasure electricCurrent {
             get {
                 return this.electricCurrentField;
@@ -7659,6 +7852,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The average frequency of the electric submersible pump (ESP) during the test. The presumption is that only one pump per well is operational during each test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The average frequency of the electric submersible pump (ESP) during the test. The" +
+            " presumption is that only one pump per well is operational during each test.")]
         public frequencyMeasure frequency {
             get {
                 return this.frequencyField;
@@ -7688,6 +7884,8 @@ namespace Energistics.Generator.PRODML131 {
         private refNameString wellboreField;
         
         /// <remarks/>
+        /// <summary>The pressure at the bottomhole of the well.</summary>
+        [System.ComponentModel.DescriptionAttribute("The pressure at the bottomhole of the well.")]
         public pressureMeasure bottomholePres {
             get {
                 return this.bottomholePresField;
@@ -7698,6 +7896,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The temperature at the bottomhole of the well.</summary>
+        [System.ComponentModel.DescriptionAttribute("The temperature at the bottomhole of the well.")]
         public thermodynamicTemperatureMeasure bottomholeTemp {
             get {
                 return this.bottomholeTempField;
@@ -7708,6 +7908,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The P/Z value at the bottomhole. This is P/Z, pressure  over gas compressibility factor (z), at the bottomhole of the well.  Note that the uom is units of pressure., since Z is dimensionless.</summary>
+        [System.ComponentModel.DescriptionAttribute("The P/Z value at the bottomhole. This is P/Z, pressure  over gas compressibility " +
+            "factor (z), at the bottomhole of the well.  Note that the uom is units of pressu" +
+            "re., since Z is dimensionless.")]
         public pressureMeasure bottomholePOverZ {
             get {
                 return this.bottomholePOverZField;
@@ -7718,6 +7922,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The measured depth of the bottomhole.</summary>
+        [System.ComponentModel.DescriptionAttribute("The measured depth of the bottomhole.")]
         public measuredDepthCoord bottomholeMD {
             get {
                 return this.bottomholeMDField;
@@ -7728,6 +7934,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Defines the wellbore (sidetract) represented by the measured depth. This must be given when the well has multiple wellbores and the measured depth  value is deeper than the first kickoff point. It is recommended that it always be given.</summary>
+        [System.ComponentModel.DescriptionAttribute("Defines the wellbore (sidetract) represented by the measured depth. This must be " +
+            "given when the well has multiple wellbores and the measured depth  value is deep" +
+            "er than the first kickoff point. It is recommended that it always be given.")]
         public refNameString wellbore {
             get {
                 return this.wellboreField;
@@ -7767,6 +7977,8 @@ namespace Energistics.Generator.PRODML131 {
         private lengthMeasure gasLiftchokeOrificeSizeField;
         
         /// <remarks/>
+        /// <summary>The temperature measured at the wellhead during the  well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The temperature measured at the wellhead during the  well test.")]
         public thermodynamicTemperatureMeasure temperature {
             get {
                 return this.temperatureField;
@@ -7777,6 +7989,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The flowing pressure measured at the wellhead during the  well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The flowing pressure measured at the wellhead during the  well test.")]
         public pressureMeasure flowingPressure {
             get {
                 return this.flowingPressureField;
@@ -7787,6 +8001,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The shut-in pressure measured at the wellhead during the  well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The shut-in pressure measured at the wellhead during the  well test.")]
         public pressureMeasure shutInPressure {
             get {
                 return this.shutInPressureField;
@@ -7797,6 +8013,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The pressure measured at the flow line connected to the  wellhead during this well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The pressure measured at the flow line connected to the  wellhead during this wel" +
+            "l test.")]
         public pressureMeasure flowLinePressure {
             get {
                 return this.flowLinePressureField;
@@ -7807,6 +8026,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The size of the choke opening at the wellhead.</summary>
+        [System.ComponentModel.DescriptionAttribute("The size of the choke opening at the wellhead.")]
         public lengthMeasure chokeOrificeSize {
             get {
                 return this.chokeOrificeSizeField;
@@ -7817,6 +8038,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The pressure of the lift gas at the wellhead.</summary>
+        [System.ComponentModel.DescriptionAttribute("The pressure of the lift gas at the wellhead.")]
         public pressureMeasure gasLiftPres {
             get {
                 return this.gasLiftPresField;
@@ -7827,6 +8050,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The temperature of the lift gas at the wellhead.</summary>
+        [System.ComponentModel.DescriptionAttribute("The temperature of the lift gas at the wellhead.")]
         public thermodynamicTemperatureMeasure gasLiftTemp {
             get {
                 return this.gasLiftTempField;
@@ -7837,6 +8062,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Lift gas volumes injected during the well test at the wellhead.</summary>
+        [System.ComponentModel.DescriptionAttribute("Lift gas volumes injected during the well test at the wellhead.")]
         public cs_wellTestTestVolume gasLiftVolume {
             get {
                 return this.gasLiftVolumeField;
@@ -7847,6 +8074,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Lift gas rates injected during the well test at the wellhead.</summary>
+        [System.ComponentModel.DescriptionAttribute("Lift gas rates injected during the well test at the wellhead.")]
         public cs_wellTestFluidRate gasLiftRate {
             get {
                 return this.gasLiftRateField;
@@ -7857,6 +8086,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The size of the gas lift choke opening.</summary>
+        [System.ComponentModel.DescriptionAttribute("The size of the gas lift choke opening.")]
         public lengthMeasure gasLiftchokeOrificeSize {
             get {
                 return this.gasLiftchokeOrificeSizeField;
@@ -7898,6 +8129,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The time length (with uom) of the well test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The time length (with uom) of the well test.")]
         public timeMeasure testDuration {
             get {
                 return this.testDurationField;
@@ -7908,7 +8141,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The interval tested. This element includes a top and base depth,  and the formation(s) tested. It also includes control data for the tested interval.</summary>
         [System.Xml.Serialization.XmlElementAttribute("testInterval")]
+        [System.ComponentModel.DescriptionAttribute("The interval tested. This element includes a top and base depth,  and the formati" +
+            "on(s) tested. It also includes control data for the tested interval.")]
         public cs_wellTestInterval[] testInterval {
             get {
                 return this.testIntervalField;
@@ -7919,6 +8155,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>This element records measurements made and settings made at the wellhead.</summary>
+        [System.ComponentModel.DescriptionAttribute("This element records measurements made and settings made at the wellhead.")]
         public cs_wellTestWellheadData wellheadData {
             get {
                 return this.wellheadDataField;
@@ -7929,6 +8167,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>DEPRECATED - Use pointData instead. This element records measurements made at the bottomhole.</summary>
+        [System.ComponentModel.DescriptionAttribute("DEPRECATED - Use pointData instead. This element records measurements made at the" +
+            " bottomhole.")]
         public cs_wellTestBottomholeData bottomholeData {
             get {
                 return this.bottomholeDataField;
@@ -7939,6 +8180,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Frequency and electric current measured during the  well test for electric submersible pump (ESP) wells. The presumption is that only one pump per well is operational during each test.</summary>
+        [System.ComponentModel.DescriptionAttribute("Frequency and electric current measured during the  well test for electric submer" +
+            "sible pump (ESP) wells. The presumption is that only one pump per well is operat" +
+            "ional during each test.")]
         public cs_wellTestElectricSubmersiblePumpData espData {
             get {
                 return this.espDataField;
@@ -7949,7 +8194,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>This element records temperature and pressure at points in the wellbore.</summary>
         [System.Xml.Serialization.XmlElementAttribute("pointData")]
+        [System.ComponentModel.DescriptionAttribute("This element records temperature and pressure at points in the wellbore.")]
         public cs_wellTestPointData[] pointData {
             get {
                 return this.pointDataField;
@@ -7960,6 +8207,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>This element records the measurements (pressure and temperature) at the separator.</summary>
+        [System.ComponentModel.DescriptionAttribute("This element records the measurements (pressure and temperature) at the separator" +
+            ".")]
         public cs_wellTestSeparatorData separatorData {
             get {
                 return this.separatorDataField;
@@ -7970,6 +8220,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The method being used to operate the well. Examples are 'flowing', 'pumping', 'gas lifted'.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute("The method being used to operate the well. Examples are \'flowing\', \'pumping\', \'ga" +
+            "s lifted\'.")]
         public string operatingMethod {
             get {
                 return this.operatingMethodField;
@@ -7980,6 +8234,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The cumulative volumes of fluids at the time of the well test. The fluids are oil, gas, and water.</summary>
+        [System.ComponentModel.DescriptionAttribute("The cumulative volumes of fluids at the time of the well test. The fluids are oil" +
+            ", gas, and water.")]
         public cs_wellTestCumulative wellTestCumulative {
             get {
                 return this.wellTestCumulativeField;
@@ -7990,6 +8247,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The production results of the test.</summary>
+        [System.ComponentModel.DescriptionAttribute("The production results of the test.")]
         public cs_wellTestProductionTestResults productionTestResults {
             get {
                 return this.productionTestResultsField;
@@ -8000,7 +8259,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -8026,6 +8289,10 @@ namespace Energistics.Generator.PRODML131 {
         private string testedByField;
         
         /// <remarks/>
+        /// <summary>The fluid level achieved in the well.  The value is given as length units from the top of the well.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The fluid level achieved in the well.  The value is given as length units from th" +
+            "e top of the well.")]
         public lengthMeasure fluidLevel {
             get {
                 return this.fluidLevelField;
@@ -8036,6 +8303,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The lowest usable water depth as measured from the  surface. See TxRRC H-15.</summary>
+        [System.ComponentModel.DescriptionAttribute("The lowest usable water depth as measured from the  surface. See TxRRC H-15.")]
         public lengthMeasure baseUsableWater {
             get {
                 return this.baseUsableWaterField;
@@ -8046,6 +8315,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The business associate that conducted the test. This is generally a person.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The business associate that conducted the test. This is generally a person.")]
         public string testedBy {
             get {
                 return this.testedByField;
@@ -8522,7 +8794,11 @@ namespace Energistics.Generator.PRODML131 {
         private string valueField;
         
         /// <remarks/>
+        /// <summary>The naming system within the name is unique.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The naming system within the name is unique.")]
         public string namingSystem {
             get {
                 return this.namingSystemField;
@@ -8533,7 +8809,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>A unique (short) code associated with the name.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute("A unique (short) code associated with the name.")]
         public string code {
             get {
                 return this.codeField;
@@ -10303,7 +10582,9 @@ namespace Energistics.Generator.PRODML131 {
         private string valueField;
         
         /// <remarks/>
+        /// <summary>The date and time at which the value applies. If no time is specified then the value is static and only one sample can be defined. Either dTime or value or both must be specified. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"The date and time at which the value applies. If no time is specified then the value is static and only one sample can be defined. Either dTime or value or both must be specified. If the 'status' attribute is absent and the value is not ""NaN"", the data value can be assumed to be good with no restrictions.")]
         public System.DateTime dTim {
             get {
                 return this.dTimField;
@@ -10325,7 +10606,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>An indicator of the quality of the value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("An indicator of the quality of the value.")]
         public ValueStatus status {
             get {
                 return this.statusField;
@@ -10377,7 +10660,9 @@ namespace Energistics.Generator.PRODML131 {
         private double valueField;
         
         /// <remarks/>
+        /// <summary>The date and time at which the value applies. If no time is specified then the value is static and only one sample can be defined. Either dTime or value or both must be specified. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"The date and time at which the value applies. If no time is specified then the value is static and only one sample can be defined. Either dTime or value or both must be specified. If the 'status' attribute is absent and the value is not ""NaN"", the data value can be assumed to be good with no restrictions.")]
         public System.DateTime dTim {
             get {
                 return this.dTimField;
@@ -10399,7 +10684,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>An indicator of the quality of the value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("An indicator of the quality of the value.")]
         public ValueStatus status {
             get {
                 return this.statusField;
@@ -15928,7 +16215,9 @@ namespace Energistics.Generator.PRODML131 {
         private int valueField;
         
         /// <remarks/>
+        /// <summary>An indicator of the quality of the value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("An indicator of the quality of the value.")]
         public ValueStatus status {
             get {
                 return this.statusField;
@@ -15976,7 +16265,9 @@ namespace Energistics.Generator.PRODML131 {
         private string valueField;
         
         /// <remarks/>
+        /// <summary>An indicator of the quality of the value.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("An indicator of the quality of the value.")]
         public ValueStatus status {
             get {
                 return this.statusField;
@@ -16024,7 +16315,10 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The value of an independent (index) variable in a row of the curve table. The units of measure are specified in the curve definition. The first value corresponds to order=1 for colums where isIndex is true.  The second to order=2. And so on. The number of index and data values must match the number of columns in the table.</summary>
         [System.Xml.Serialization.XmlElementAttribute("index")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"The value of an independent (index) variable in a row of the curve table. The units of measure are specified in the curve definition. The first value corresponds to order=1 for colums where isIndex is true.  The second to order=2. And so on. The number of index and data values must match the number of columns in the table.")]
         public double[] index {
             get {
                 return this.indexField;
@@ -16035,7 +16329,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The value of a dependent (data) variable in a row of the curve table. The units of measure are specified in the curve definition. The first value corresponds to order=1 for columns where isIndex is false.  The second to order=2. And so on. The number of index and data values must match the number of columns in the table.</summary>
         [System.Xml.Serialization.XmlElementAttribute("value")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"The value of a dependent (data) variable in a row of the curve table. The units of measure are specified in the curve definition. The first value corresponds to order=1 for columns where isIndex is false.  The second to order=2. And so on. The number of index and data values must match the number of columns in the table.")]
         public double[] value {
             get {
                 return this.valueField;
@@ -16046,7 +16343,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -19822,6 +20123,10 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The identifier of the account of the sub-unit within the whole business unit.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The identifier of the account of the sub-unit within the whole business unit.")]
         public string accountId {
             get {
                 return this.accountIdField;
@@ -19832,6 +20137,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The product associated with the account identifier.</summary>
+        [System.ComponentModel.DescriptionAttribute("The product associated with the account identifier.")]
         public ReportingProduct product {
             get {
                 return this.productField;
@@ -19853,7 +20160,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -19864,7 +20173,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -19898,6 +20211,9 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The percent ownership of the sub-unit in the unit during the specified time.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The percent ownership of the sub-unit in the unit during the specified time.")]
         public volumePerVolumeMeasurePercent share {
             get {
                 return this.shareField;
@@ -19908,7 +20224,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The date on which the ownership became valid.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
+        [System.ComponentModel.DescriptionAttribute("The date on which the ownership became valid.")]
         public System.DateTime startDate {
             get {
                 return this.startDateField;
@@ -19930,7 +20248,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The final date on which the ownership was valid. If no end date is specified, the share is considered to still be valid.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
+        [System.ComponentModel.DescriptionAttribute("The final date on which the ownership was valid. If no end date is specified, the" +
+            " share is considered to still be valid.")]
         public System.DateTime endDate {
             get {
                 return this.endDateField;
@@ -19952,7 +20273,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -19963,7 +20286,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -25789,6 +26116,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The stepNumber represents a row in the table.</summary>
+        [System.ComponentModel.DescriptionAttribute("The stepNumber represents a row in the table.")]
         public short stepNumber {
             get {
                 return this.stepNumberField;
@@ -25810,6 +26139,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public thermodynamicTemperatureMeasure stepTemperature {
             get {
                 return this.stepTemperatureField;
@@ -25820,6 +26150,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public pressureMeasure stepPressure {
             get {
                 return this.stepPressureField;
@@ -26033,6 +26364,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         public string comment {
             get {
                 return this.commentField;
@@ -26102,7 +26434,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -26180,6 +26516,10 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>xxxxxxxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxx")]
         public string componentName {
             get {
                 return this.componentNameField;
@@ -26210,7 +26550,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -26242,6 +26586,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         public string componentName {
             get {
                 return this.componentNameField;
@@ -26293,7 +26639,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -26323,6 +26673,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>xxxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxx")]
         public short testNumber {
             get {
                 return this.testNumberField;
@@ -26355,6 +26707,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("separatorTestStep")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public cs_fluidResultSeparatorTestStep[] separatorTestStep {
             get {
                 return this.separatorTestStepField;
@@ -26365,7 +26718,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -26391,6 +26748,7 @@ namespace Energistics.Generator.PRODML131 {
         private string commentField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VolumeReferenceKind kind {
             get {
                 return this.kindField;
@@ -26411,6 +26769,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         public string comment {
             get {
                 return this.commentField;
@@ -26648,6 +27007,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The stepNumber represents a row in the table.</summary>
+        [System.ComponentModel.DescriptionAttribute("The stepNumber represents a row in the table.")]
         public short stepNumber {
             get {
                 return this.stepNumberField;
@@ -26669,6 +27030,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public thermodynamicTemperatureMeasure stepTemperature {
             get {
                 return this.stepTemperatureField;
@@ -26679,6 +27041,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public pressureMeasure stepPressure {
             get {
                 return this.stepPressureField;
@@ -26929,6 +27292,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         public string comment {
             get {
                 return this.commentField;
@@ -26998,7 +27362,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -27055,6 +27423,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>xxxxxxxxxxxxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxxxxxxx")]
         public short testNumber {
             get {
                 return this.testNumberField;
@@ -27077,6 +27447,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("transportTestStep")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public cs_fluidResultTransportTestStep[] transportTestStep {
             get {
                 return this.transportTestStepField;
@@ -27087,7 +27458,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -27153,6 +27528,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The stepNumber represents a row in the table.</summary>
+        [System.ComponentModel.DescriptionAttribute("The stepNumber represents a row in the table.")]
         public short stepNumber {
             get {
                 return this.stepNumberField;
@@ -27174,6 +27551,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public pressureMeasure stepPressure {
             get {
                 return this.stepPressureField;
@@ -27321,6 +27699,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         public string comment {
             get {
                 return this.commentField;
@@ -27390,7 +27769,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -27452,6 +27835,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>xxxxxxxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxx")]
         public short testNumber {
             get {
                 return this.testNumberField;
@@ -27473,6 +27858,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public thermodynamicTemperatureMeasure testTemperature {
             get {
                 return this.testTemperatureField;
@@ -27568,6 +27954,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("jcrvTestStep")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public cs_fluidResultJCurveTestStep[] jcrvTestStep {
             get {
                 return this.jcrvTestStepField;
@@ -27578,7 +27965,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -27669,6 +28060,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The stepNumber represents a row in the table.</summary>
+        [System.ComponentModel.DescriptionAttribute("The stepNumber represents a row in the table.")]
         public short stepNumber {
             get {
                 return this.stepNumberField;
@@ -27690,6 +28083,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public pressureMeasure stepPressure {
             get {
                 return this.stepPressureField;
@@ -27895,6 +28289,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         public string comment {
             get {
                 return this.commentField;
@@ -27964,7 +28359,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -28016,6 +28415,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>xxxxxxxxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxxx")]
         public short testNumber {
             get {
                 return this.testNumberField;
@@ -28037,6 +28438,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public thermodynamicTemperatureMeasure testTemperature {
             get {
                 return this.testTemperatureField;
@@ -28082,6 +28484,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("dlTestStep")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public cs_fluidResultDifferentialLiberationTestStep[] dlTestStep {
             get {
                 return this.dlTestStepField;
@@ -28092,7 +28495,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -28167,6 +28574,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The stepNumber represents a row in the table.</summary>
+        [System.ComponentModel.DescriptionAttribute("The stepNumber represents a row in the table.")]
         public short stepNumber {
             get {
                 return this.stepNumberField;
@@ -28188,6 +28597,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public pressureMeasure stepPressure {
             get {
                 return this.stepPressureField;
@@ -28315,6 +28725,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         public string comment {
             get {
                 return this.commentField;
@@ -28384,7 +28795,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -28438,6 +28853,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>xxxxxxxxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxxx")]
         public short testNumber {
             get {
                 return this.testNumberField;
@@ -28459,6 +28876,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public thermodynamicTemperatureMeasure testTemperature {
             get {
                 return this.testTemperatureField;
@@ -28503,6 +28921,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The volume is corrected to standard conditions of temperature and pressure.</summary>
+        [System.ComponentModel.DescriptionAttribute("The volume is corrected to standard conditions of temperature and pressure.")]
         public standardVolumeMeasure cumulativeGasProducedReferenceStd {
             get {
                 return this.cumulativeGasProducedReferenceStdField;
@@ -28514,6 +28934,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("cvdTestStep")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public cs_fluidResultCvdTestStep[] cvdTestStep {
             get {
                 return this.cvdTestStepField;
@@ -28524,7 +28945,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -28603,6 +29028,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The stepNumber represents a row in the table.</summary>
+        [System.ComponentModel.DescriptionAttribute("The stepNumber represents a row in the table.")]
         public short stepNumber {
             get {
                 return this.stepNumberField;
@@ -28624,6 +29051,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public pressureMeasure stepPressure {
             get {
                 return this.stepPressureField;
@@ -28772,6 +29200,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         public string comment {
             get {
                 return this.commentField;
@@ -28841,7 +29270,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -28911,6 +29344,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>xxxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxx")]
         public short testNumber {
             get {
                 return this.testNumberField;
@@ -28932,6 +29367,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public thermodynamicTemperatureMeasure testTemperature {
             get {
                 return this.testTemperatureField;
@@ -28987,6 +29423,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("cceTestStep")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public cs_fluidResultCceTestStep[] cceTestStep {
             get {
                 return this.cceTestStepField;
@@ -28997,7 +29434,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -29046,6 +29487,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The stepNumber represents a row in the table.</summary>
+        [System.ComponentModel.DescriptionAttribute("The stepNumber represents a row in the table.")]
         public short stepNumber {
             get {
                 return this.stepNumberField;
@@ -29067,6 +29510,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public thermodynamicTemperatureMeasure stepTemperature {
             get {
                 return this.stepTemperatureField;
@@ -29111,6 +29555,7 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         public string comment {
             get {
                 return this.commentField;
@@ -29121,7 +29566,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -29162,6 +29611,8 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>xxxxxxxxxxxxxxxxxxxxxx</summary>
+        [System.ComponentModel.DescriptionAttribute("xxxxxxxxxxxxxxxxxxxxxx")]
         public short testNumber {
             get {
                 return this.testNumberField;
@@ -29184,6 +29635,7 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("saturationTestStep")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public cs_fluidResultSaturationTestStep[] saturationTestStep {
             get {
                 return this.saturationTestStepField;
@@ -29194,7 +29646,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -31266,6 +31722,8 @@ namespace Energistics.Generator.PRODML131 {
         private cs_businessAssociate instrumentVendorField;
         
         /// <remarks/>
+        /// <summary>Contact information for the person/company that provided the equipment</summary>
+        [System.ComponentModel.DescriptionAttribute("Contact information for the person/company that provided the equipment")]
         public cs_businessAssociate instrumentVendor {
             get {
                 return this.instrumentVendorField;
@@ -31316,6 +31774,10 @@ namespace Energistics.Generator.PRODML131 {
         private string commentField;
         
         /// <remarks/>
+        /// <summary>The name for the item of equipment.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name for the item of equipment.")]
         public string name {
             get {
                 return this.nameField;
@@ -31326,6 +31788,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The manufacturer for this item of equipment.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The manufacturer for this item of equipment.")]
         public string manufacturer {
             get {
                 return this.manufacturerField;
@@ -31336,7 +31801,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Date when the equipment (e.g. instrument box) was manufactured</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
+        [System.ComponentModel.DescriptionAttribute("Date when the equipment (e.g. instrument box) was manufactured")]
         public System.DateTime manufacturingDate {
             get {
                 return this.manufacturingDateField;
@@ -31358,6 +31825,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The type of equipment. This might include the model type.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute("The type of equipment. This might include the model type.")]
         public string type {
             get {
                 return this.typeField;
@@ -31368,6 +31838,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Contact details for the company/person supplying the equipment.</summary>
+        [System.ComponentModel.DescriptionAttribute("Contact details for the company/person supplying the equipment.")]
         public cs_businessAssociate supplier {
             get {
                 return this.supplierField;
@@ -31378,7 +31850,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The date on which this fiber segment was suppied.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
+        [System.ComponentModel.DescriptionAttribute("The date on which this fiber segment was suppied.")]
         public System.DateTime supplyDate {
             get {
                 return this.supplyDateField;
@@ -31400,6 +31874,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The model number (alphanumeric) that is used by the supplier to reference the type of fiber that is supplied to the user.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The model number (alphanumeric) that is used by the supplier to reference the typ" +
+            "e of fiber that is supplied to the user.")]
         public string supplierModelNumber {
             get {
                 return this.supplierModelNumberField;
@@ -31410,6 +31888,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Latest known version of the software/firmware that is running in the equipment</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Latest known version of the software/firmware that is running in the equipment")]
         public string softwareVersion {
             get {
                 return this.softwareVersionField;
@@ -31420,6 +31901,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>A descriptive remark about the equipment (e.g. optical fiber)</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("A descriptive remark about the equipment (e.g. optical fiber)")]
         public string comment {
             get {
                 return this.commentField;
@@ -31452,6 +31936,9 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
+        /// <summary>The fraction of incident light that is reflected by a fiber path component. Measured in dB.</summary>
+        [System.ComponentModel.DescriptionAttribute("The fraction of incident light that is reflected by a fiber path component. Measu" +
+            "red in dB.")]
         public dimensionlessMeasure reflectance {
             get {
                 return this.reflectanceField;
@@ -31462,6 +31949,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The fraction of incident light that is lost by a fiber path component. Measured in dB.</summary>
+        [System.ComponentModel.DescriptionAttribute("The fraction of incident light that is lost by a fiber path component. Measured i" +
+            "n dB.")]
         public dimensionlessMeasure loss {
             get {
                 return this.lossField;
@@ -31472,6 +31962,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Any remarks that help understand why the optical fiber is no longer in use.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Any remarks that help understand why the optical fiber is no longer in use.")]
         public string reasonForDecommissioning {
             get {
                 return this.reasonForDecommissioningField;
@@ -31482,7 +31975,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;
@@ -32311,6 +32808,10 @@ namespace Energistics.Generator.PRODML131 {
         private string downholeControlLineRefUIDField;
         
         /// <remarks/>
+        /// <summary>Enum of the common sizes of control line. The enum list gives diameters and weight per length values.  A fiber may be installed inside the control line.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Enum of the common sizes of control line. The enum list gives diameters and weigh" +
+            "t per length values.  A fiber may be installed inside the control line.")]
         public ControlLineSize size {
             get {
                 return this.sizeField;
@@ -32321,6 +32822,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Enum of the common materials from which control line may be made.  A fiber may be installed inside the control line.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Enum of the common materials from which control line may be made.  A fiber may be" +
+            " installed inside the control line.")]
         public ControlLineMaterial material {
             get {
                 return this.materialField;
@@ -32331,6 +32836,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Enum of square or round encapsulation  for a control line.   A fiber may be installed inside the control line.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Enum of square or round encapsulation  for a control line.   A fiber may be insta" +
+            "lled inside the control line.")]
         public ControlLineEncapsulationType encapsulationType {
             get {
                 return this.encapsulationTypeField;
@@ -32341,6 +32850,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Enum of the size of encapsulation of a fiber within a control line.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Enum of the size of encapsulation of a fiber within a control line.")]
         public ControlLineEncapsulationSize encapsulationSize {
             get {
                 return this.encapsulationSizeField;
@@ -32351,6 +32863,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>A descriptive remark about the fiber control line</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("A descriptive remark about the fiber control line")]
         public string comment {
             get {
                 return this.commentField;
@@ -32361,7 +32876,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The activity of pumping the fiber downhole into a control line (small diameter tube).</summary>
         [System.Xml.Serialization.XmlElementAttribute("pumpActivity")]
+        [System.ComponentModel.DescriptionAttribute("The activity of pumping the fiber downhole into a control line (small diameter tu" +
+            "be).")]
         public cs_fiberPumpActivity[] pumpActivity {
             get {
                 return this.pumpActivityField;
@@ -32372,7 +32890,12 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>A reference to the control line string in a Completion data-object which represents this control line containing a fiber.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A reference to the control line string in a Completion data-object which represen" +
+            "ts this control line containing a fiber.")]
         public string downholeControlLineRefUID {
             get {
                 return this.downholeControlLineRefUIDField;
@@ -32488,6 +33011,11 @@ namespace Energistics.Generator.PRODML131 {
         private string commentField;
         
         /// <remarks/>
+        /// <summary>A name which can be used to reference the pumping activity. In general a pumping activity does not have a natural name so that this element will not be often used.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A name which can be used to reference the pumping activity. In general a pumping " +
+            "activity does not have a natural name so that this element will not be often use" +
+            "d.")]
         public string name {
             get {
                 return this.nameField;
@@ -32498,6 +33026,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The name of the InstalledFiberInstance that this activity relates to.</summary>
+        [System.ComponentModel.DescriptionAttribute("The name of the InstalledFiberInstance that this activity relates to.")]
         public refNameString installedFiber {
             get {
                 return this.installedFiberField;
@@ -32508,7 +33038,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The date of the pumping activity.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
+        [System.ComponentModel.DescriptionAttribute("The date of the pumping activity.")]
         public System.DateTime pumpingDate {
             get {
                 return this.pumpingDateField;
@@ -32530,6 +33062,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The person in charge of the pumping activity.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The person in charge of the pumping activity.")]
         public string engineerName {
             get {
                 return this.engineerNameField;
@@ -32540,6 +33075,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The company that performed the pumping activity.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The company that performed the pumping activity.")]
         public string serviceCompany {
             get {
                 return this.serviceCompanyField;
@@ -32550,6 +33088,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The type of fluid used in the pump.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute("The type of fluid used in the pump.")]
         public string pumpFluidType {
             get {
                 return this.pumpFluidTypeField;
@@ -32560,6 +33101,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The type of fluid used in the control line.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute("The type of fluid used in the control line.")]
         public string controlLineFluid {
             get {
                 return this.controlLineFluidField;
@@ -32570,6 +33114,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The direction of the pumping.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute("The direction of the pumping.")]
         public string pumpDirection {
             get {
                 return this.pumpDirectionField;
@@ -32580,6 +33127,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The type of end seal on the fiber.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute("The type of end seal on the fiber.")]
         public string fiberEndSeal {
             get {
                 return this.fiberEndSealField;
@@ -32590,6 +33140,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The type of cable meter.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute("The type of cable meter.")]
         public string cableMeterType {
             get {
                 return this.cableMeterTypeField;
@@ -32600,6 +33153,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The serial number of the cable meter.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The serial number of the cable meter.")]
         public string cableMeterSerialNumber {
             get {
                 return this.cableMeterSerialNumberField;
@@ -32610,7 +33166,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The date the cable meter was calibrated.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
+        [System.ComponentModel.DescriptionAttribute("The date the cable meter was calibrated.")]
         public System.DateTime cableMeterCalibrationDate {
             get {
                 return this.cableMeterCalibrationDateField;
@@ -32632,6 +33190,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The length of the excess fiber that was removed.</summary>
+        [System.ComponentModel.DescriptionAttribute("The length of the excess fiber that was removed.")]
         public lengthMeasure excessFiberRecovered {
             get {
                 return this.excessFiberRecoveredField;
@@ -32642,7 +33202,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -32653,6 +33215,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Comment about the pump activity.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Comment about the pump activity.")]
         public string comment {
             get {
                 return this.commentField;
@@ -32676,6 +33241,10 @@ namespace Energistics.Generator.PRODML131 {
         private string commentField;
         
         /// <remarks/>
+        /// <summary>Enum. For intervention conveyance option, the type of conveyance. Example: coiled tubing.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Enum. For intervention conveyance option, the type of conveyance. Example: coiled" +
+            " tubing.")]
         public InterventionConveyanceType interventionConveyanceType {
             get {
                 return this.interventionConveyanceTypeField;
@@ -32686,6 +33255,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Comment about the intervention conveyance.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Comment about the intervention conveyance.")]
         public string comment {
             get {
                 return this.commentField;
@@ -32729,6 +33301,10 @@ namespace Energistics.Generator.PRODML131 {
         private string commentField;
         
         /// <remarks/>
+        /// <summary>Enum. For permanent conveyance option, the type of conveyance. Example: clamped to tubular</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Enum. For permanent conveyance option, the type of conveyance. Example: clamped t" +
+            "o tubular")]
         public PermanentCableInstallationType permanentCableInstallationType {
             get {
                 return this.permanentCableInstallationTypeField;
@@ -32739,6 +33315,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Comment about the intervention conveyance.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("Comment about the intervention conveyance.")]
         public string comment {
             get {
                 return this.commentField;
@@ -33207,6 +33786,9 @@ namespace Energistics.Generator.PRODML131 {
         private facilityIdentifierStruct contextFacilityField;
         
         /// <remarks/>
+        /// <summary>The name of this facilityMapping instance.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The name of this facilityMapping instance.")]
         public nameStruct name {
             get {
                 return this.nameField;
@@ -33217,6 +33799,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>A description of which "port" ie, connection/end or defined point on a pipeline the facilityLength is indexed from.</summary>
+        [System.ComponentModel.DescriptionAttribute("A description of which \"port\" ie, connection/end or defined point on a pipeline t" +
+            "he facilityLength is indexed from.")]
         public string datumPortReference {
             get {
                 return this.datumPortReferenceField;
@@ -33227,6 +33812,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The name of the facility which is represented by this facilityMapping</summary>
+        [System.ComponentModel.DescriptionAttribute("The name of the facility which is represented by this facilityMapping")]
         public facilityIdentifierStruct installation {
             get {
                 return this.installationField;
@@ -33237,6 +33824,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The kind of facility mapped to the optical path. Expected to be a pipeline but this element can be used to show other facilities being mapped to fiber length in future.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
+        [System.ComponentModel.DescriptionAttribute("The kind of facility mapped to the optical path. Expected to be a pipeline but th" +
+            "is element can be used to show other facilities being mapped to fiber length in " +
+            "future.")]
         public string kind {
             get {
                 return this.kindField;
@@ -33247,6 +33839,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The name and type of a facility whose context is relevant to the represented installation.</summary>
+        [System.ComponentModel.DescriptionAttribute("The name and type of a facility whose context is relevant to the represented inst" +
+            "allation.")]
         public facilityIdentifierStruct contextFacility {
             get {
                 return this.contextFacilityField;
@@ -33278,6 +33873,10 @@ namespace Energistics.Generator.PRODML131 {
         private string uidWellboreField;
         
         /// <remarks/>
+        /// <summary>The name of this facilityMapping instance.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The name of this facilityMapping instance.")]
         public string name {
             get {
                 return this.nameField;
@@ -33288,6 +33887,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Human recognizable context for the well that contains the well.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the well that contains the well.")]
         public string nameWell {
             get {
                 return this.nameWellField;
@@ -33298,6 +33901,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Human recognizable context for the wellbore that contains the optical path being mapped to the wellbore.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Human recognizable context for the wellbore that contains the optical path being " +
+            "mapped to the wellbore.")]
         public string nameWellbore {
             get {
                 return this.nameWellboreField;
@@ -33308,6 +33916,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>A reference to the wellDatum from which the facilityLength (ie, depth in this case of a wellbore being mapped) is measured from.</summary>
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("A reference to the wellDatum from which the facilityLength (ie, depth in this cas" +
+            "e of a wellbore being mapped) is measured from.")]
         public string wellDatum {
             get {
                 return this.wellDatumField;
@@ -33318,7 +33931,12 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for the well. This uniquely represents the well referenced by the (possibly non-unique) nameWell.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the well. This uniquely represents the well referenced by t" +
+            "he (possibly non-unique) nameWell.")]
         public string uidWell {
             get {
                 return this.uidWellField;
@@ -33329,7 +33947,12 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Unique identifier for the wellbore. This uniquely represents the wellbore referenced by the (possibly non-unique) nameWellbore.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for the wellbore. This uniquely represents the wellbore referen" +
+            "ced by the (possibly non-unique) nameWellbore.")]
         public string uidWellbore {
             get {
                 return this.uidWellboreField;
@@ -33715,11 +34338,11 @@ namespace Energistics.Generator.PRODML131 {
         
         private facilityIdentifierStruct[] contextFacilityField;
         
-        private System.DateTime dTimStartField;
+        private Energistics.SchemaGatherer.Timestamp dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private System.DateTime dTimEndField;
+        private Energistics.SchemaGatherer.Timestamp dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -33736,6 +34359,9 @@ namespace Energistics.Generator.PRODML131 {
         private string commentField;
         
         /// <remarks/>
+        /// <summary>The name of the facility which is represented by this model.  The name can be qualified by a naming system.  This also defines the kind of facility.</summary>
+        [System.ComponentModel.DescriptionAttribute("The name of the facility which is represented by this model.  The name can be qua" +
+            "lified by a naming system.  This also defines the kind of facility.")]
         public facilityIdentifierStruct installation {
             get {
                 return this.installationField;
@@ -33746,7 +34372,10 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The name and type of a facility whose context is relevant to the represented installation.</summary>
         [System.Xml.Serialization.XmlElementAttribute("contextFacility")]
+        [System.ComponentModel.DescriptionAttribute("The name and type of a facility whose context is relevant to the represented inst" +
+            "allation.")]
         public facilityIdentifierStruct[] contextFacility {
             get {
                 return this.contextFacilityField;
@@ -33757,7 +34386,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
-        public System.DateTime dTimStart {
+        /// <summary>The date and time of the start of validity for this model.</summary>
+        [System.ComponentModel.DescriptionAttribute("The date and time of the start of validity for this model.")]
+        public Energistics.SchemaGatherer.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -33778,7 +34409,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
-        public System.DateTime dTimEnd {
+        /// <summary>The date and time of the termination of validity for this model.</summary>
+        [System.ComponentModel.DescriptionAttribute("The date and time of the termination of validity for this model.")]
+        public Energistics.SchemaGatherer.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -33799,6 +34432,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The time for which "currently existing" data is desired from the network. All connections (and related data) existing at this time (i.e. start and end bracket this value) will will be returned if requested. The existence time is a server query parameter. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"The time for which ""currently existing"" data is desired from the network. All connections (and related data) existing at this time (i.e. start and end bracket this value) will will be returned if requested. The existence time is a server query parameter. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
         public endpointQualifiedDateTime existenceTime {
             get {
                 return this.existenceTimeField;
@@ -33809,6 +34444,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The minimum time index contained within the report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"The minimum time index contained within the report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a ""get"" result. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
         public endpointQualifiedDateTime dTimMin {
             get {
                 return this.dTimMinField;
@@ -33819,6 +34456,8 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The maximum time index contained within the report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a "get" result. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"The maximum time index contained within the report. The minimum and maximum indexes are server query parameters and will be  populated with valid values in a ""get"" result. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
         public endpointQualifiedDateTime dTimMax {
             get {
                 return this.dTimMaxField;
@@ -33829,7 +34468,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Defines the external port in another Product Flow Model to which  an external port in this model is connected. An external port should be connected to an external port with the opposite direction. The connected external port must be in another Product Flow Model. These connections should always be defined on a one-to-one basis. For example, if a facility may receive input from multiple other facilities then a separate input port should be defined for each of those facilities. This allows any question about mass balancing to be contained  within each individual model. The external port name must match the name of an external port on the network that represents this model.</summary>
         [System.Xml.Serialization.XmlElementAttribute("externalConnect")]
+        [System.ComponentModel.DescriptionAttribute(@"Defines the external port in another Product Flow Model to which  an external port in this model is connected. An external port should be connected to an external port with the opposite direction. The connected external port must be in another Product Flow Model. These connections should always be defined on a one-to-one basis. For example, if a facility may receive input from multiple other facilities then a separate input port should be defined for each of those facilities. This allows any question about mass balancing to be contained  within each individual model. The external port name must match the name of an external port on the network that represents this model.")]
         public cs_productFlowExternalReference[] externalConnect {
             get {
                 return this.externalConnectField;
@@ -33840,7 +34481,12 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The description of one named network within this model. Each model is self contained but may reference other newtorks for defining internal detail. One of the networks must represent this model.</summary>
         [System.Xml.Serialization.XmlElementAttribute("network")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The description of one named network within this model. Each model is self contai" +
+            "ned but may reference other newtorks for defining internal detail. One of the ne" +
+            "tworks must represent this model.")]
         public cs_productFlowNetwork[] network {
             get {
                 return this.networkField;
@@ -33851,6 +34497,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>A descriptive remark about the model.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("A descriptive remark about the model.")]
         public string comment {
             get {
                 return this.commentField;
@@ -34366,6 +35015,9 @@ namespace Energistics.Generator.PRODML131 {
         private string[] dataField;
         
         /// <remarks/>
+        /// <summary>A comma delimited list of curve mnemonics. Each mnemonic should only occur once in the list. The order of the mnemonics defines the order of the  delimited values in elements "unitList" and "data".  If the index curve is specified then it must be first in the list. This is an API "column-identifier" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"A comma delimited list of curve mnemonics. Each mnemonic should only occur once in the list. The order of the mnemonics defines the order of the  delimited values in elements ""unitList"" and ""data"".  If the index curve is specified then it must be first in the list. This is an API ""column-identifier"" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
         public string mnemonicList {
             get {
                 return this.mnemonicListField;
@@ -34376,6 +35028,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>A comma delimited list of unit of measure acronyms that represent the values in "data". The units are in the same order as the mnemonics in element mnemonicList. Each unit value must match the value in the logCurveInfo structure for that curve. A null value (i.e., unitless as opposed to dimensionless) will be defined by adjacent commas.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"A comma delimited list of unit of measure acronyms that represent the values in ""data"". The units are in the same order as the mnemonics in element mnemonicList. Each unit value must match the value in the logCurveInfo structure for that curve. A null value (i.e., unitless as opposed to dimensionless) will be defined by adjacent commas.")]
         public string unitList {
             get {
                 return this.unitListField;
@@ -34386,7 +35041,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The actual data corresponding to the curves defined in  the "mnemonicList" element. Normally a comma delimited list of data values (see dataDelimiter) with one  value for each curve on the log (e.g., "xxx,yyy, zzz"). For array curves, the value of the array curve will be a space delimited list of values that are contained within the commas that delimit the value for that curve (e.g., "xxx,aa bb cc,zzz"). This essentially represents one row of a table where the curve  mnemonics represent the column headings. This is an API "data-node" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.</summary>
         [System.Xml.Serialization.XmlElementAttribute("data")]
+        [System.ComponentModel.DescriptionAttribute(@"The actual data corresponding to the curves defined in  the ""mnemonicList"" element. Normally a comma delimited list of data values (see dataDelimiter) with one  value for each curve on the log (e.g., ""xxx,yyy, zzz""). For array curves, the value of the array curve will be a space delimited list of values that are contained within the commas that delimit the value for that curve (e.g., ""xxx,aa bb cc,zzz""). This essentially represents one row of a table where the curve  mnemonics represent the column headings. This is an API ""data-node"" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
         public string[] data {
             get {
                 return this.dataField;
@@ -35385,7 +36042,7 @@ namespace Energistics.Generator.PRODML131 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
     public partial class cs_documentEvent {
         
-        private System.DateTime eventDateField;
+        private Energistics.SchemaGatherer.Timestamp eventDateField;
         
         private string eventTypeField;
         
@@ -35398,7 +36055,10 @@ namespace Energistics.Generator.PRODML131 {
         private string uidField;
         
         /// <remarks/>
-        public System.DateTime eventDate {
+        /// <summary>The date on which the event took place.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The date on which the event took place.")]
+        public Energistics.SchemaGatherer.Timestamp eventDate {
             get {
                 return this.eventDateField;
             }
@@ -35408,6 +36068,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The kind of event event.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The kind of event event.")]
         public string eventType {
             get {
                 return this.eventTypeField;
@@ -35418,6 +36081,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The party responsible for the event.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The party responsible for the event.")]
         public string responsibleParty {
             get {
                 return this.responsiblePartyField;
@@ -35428,6 +36094,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>A free form comment that can further  define the event that occurred.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
+        [System.ComponentModel.DescriptionAttribute("A free form comment that can further  define the event that occurred.")]
         public string comment {
             get {
                 return this.commentField;
@@ -35438,7 +36107,9 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
         [System.Xml.Serialization.XmlElementAttribute("extensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
         public cs_extensionNameValue[] extensionNameValue {
             get {
                 return this.extensionNameValueField;
@@ -35449,7 +36120,11 @@ namespace Energistics.Generator.PRODML131 {
         }
         
         /// <remarks/>
+        /// <summary>The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.</summary>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[^ ]*")]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         public string uid {
             get {
                 return this.uidField;

@@ -2367,7 +2367,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The date on which the event took place.
         /// </summary>
-		
+		[Required]
+        [Description("The date on which the event took place.")]
 		[XmlElement("EventDate")]
         public DateTime? EventDate {
             get {
@@ -2384,7 +2385,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The party responsible for the event.
         /// </summary>
-		
+		[StringLength(64)]
+        [Description("The party responsible for the event.")]
 		[XmlElement("ResponsibleParty")]
         public String ResponsibleParty {
             get {
@@ -2401,7 +2403,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// A free form comment that can further define the event that occurred.
         /// </summary>
-		
+		[StringLength(4000)]
+        [Description("A free form comment that can further  define the event that occurred.")]
 		[XmlElement("Comment")]
         public String Comment {
             get {
@@ -3774,7 +3777,8 @@ namespace Energistics.DataAccess.WITSML131
 		/// <summary>
         /// The unit of measure of the azimuth value.
         /// </summary>
-		
+		[Required]
+        [Description("The unit of measure of the azimuth value.")]
         [XmlAttribute("uom")]
 		
         public PlaneAngleUom Uom {
@@ -3792,7 +3796,7 @@ namespace Energistics.DataAccess.WITSML131
 		/// <summary>
         /// Specifies the direction to be considered North for the y axis.
         /// </summary>
-		
+		[Description("Specifies the direction to be considered North for the y axis.")]
         [XmlAttribute("northDirection")]
 		
         public AziRef NorthDirection {
@@ -4991,7 +4995,7 @@ namespace Energistics.DataAccess.WITSML131
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public MagneticFieldStrengthUom Uom {
@@ -5522,7 +5526,7 @@ namespace Energistics.DataAccess.WITSML131
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public EnergyPerAreaUom Uom {
@@ -20687,7 +20691,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The speed of the cable.
         /// </summary>
-		[ComponentElement]
+		[Description("The speed of the cable.")]
+        [ComponentElement]
 		[XmlElement("cableSpeed")]
         public VelocityMeasure CableSpeed {
             get {
@@ -20704,7 +20709,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The length of fiber pumped into the wellbore.
         /// </summary>
-		[ComponentElement]
+		[Description("The length of fiber pumped into the wellbore.")]
+        [ComponentElement]
 		[XmlElement("fiberPumpedLength")]
         public LengthMeasure FiberPumpedLength {
             get {
@@ -20721,7 +20727,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The operating pressure of the pump.
         /// </summary>
-		[ComponentElement]
+		[Description("The operating pressure of the pump.")]
+        [ComponentElement]
 		[XmlElement("pumpPressure")]
         public PressureMeasure PumpPressure {
             get {
@@ -20738,7 +20745,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The fluid used in the pumping operation.
         /// </summary>
-		
+		[StringLength(50)]
+        [Description("The fluid used in the pumping operation.")]
 		[XmlElement("pumpFluid")]
         public String PumpFluid {
             get {
@@ -20755,7 +20763,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The temperature going into the wellbore.
         /// </summary>
-		[ComponentElement]
+		[Description("The temperature going into the wellbore.")]
+        [ComponentElement]
 		[XmlElement("temperatureIn")]
         public ThermodynamicTemperatureMeasure TemperatureIn {
             get {
@@ -20772,7 +20781,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The temperature at the end of the operation
         /// </summary>
-		[ComponentElement]
+		[Description("The temperature at the end of the operation")]
+        [ComponentElement]
 		[XmlElement("temperatureOut")]
         public ThermodynamicTemperatureMeasure TemperatureOut {
             get {
@@ -20789,7 +20799,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Any general remarks about the pumping operation.
         /// </summary>
-		
+		[StringLength(4000)]
+        [Description("Any general remarks about the pumping operation.")]
 		[XmlElement("remarks")]
         public String Remarks {
             get {
@@ -20806,7 +20817,9 @@ namespace Energistics.DataAccess.WITSML131
 		/// <summary>
         /// uid property
         /// </summary>
-		
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
         public String Uid {
@@ -57019,7 +57032,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The name of the coordinate reference system in a particular naming system. An optional short name (code) can also be specified. Specifying a well known system is highly desired. An example would be to specify a name of 'ED50' with a code of '4230' in the 'EPSG' naming system. Note that specifying a name in the EPSG naming system is asserting that the parameters in the EPSG database are appropriate for this CRS. This is also true for any other naming system. If in doubt, contact your local geodesist.
         /// </summary>
-		[ComponentElement]
+		[Description("The name of the coordinate reference system in a particular naming system. An optional short name (code) can also be specified. Specifying a well known system is highly desired. An example would be to specify a name of 'ED50' with a code of '4230' in the 'EPSG' naming system. Note that specifying a name in the EPSG naming system is asserting that the parameters in the EPSG database are appropriate for this CRS. This is  also true for any other naming system. If in doubt, contact your local geodesist.")]
+        [ComponentElement]
 		[XmlElement("nameCRS")]
         public WellKnownNameStruct NameCRS {
             get {
@@ -57036,7 +57050,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Geodetic datum code. This defines a system in the Geoshare naming system and should probably not be used with CRSName. 
         /// </summary>
-		
+		[Description("Geodetic datum code. This defines a system in the Geoshare naming system and should probably not be used with CRSName.")]
 		[XmlElement("geodeticDatumCode")]
         public GeodeticDatum? GeodeticDatumCode {
             get {
@@ -57072,7 +57086,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Ellipsoid translation (3). Units are meters by convention. 
         /// </summary>
-		[ComponentElement]
+		[Description("Ellipsoid translation (3). Units are meters by convention.")]
+        [ComponentElement]
 		[XmlElement("xTranslation")]
         public LengthMeasure XTranslation {
             get {
@@ -57089,7 +57104,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Ellipsoid translation (3). Units are meters by convention. 
         /// </summary>
-		[ComponentElement]
+		[Description("Ellipsoid translation (3). Units are meters by convention.")]
+        [ComponentElement]
 		[XmlElement("yTranslation")]
         public LengthMeasure YTranslation {
             get {
@@ -57106,7 +57122,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Ellipsoid translation (3). Units are meters by convention. 
         /// </summary>
-		[ComponentElement]
+		[Description("Ellipsoid translation (3). Units are meters by convention.")]
+        [ComponentElement]
 		[XmlElement("zTranslation")]
         public LengthMeasure ZTranslation {
             get {
@@ -57123,7 +57140,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Ellipsoid rotation (3). Seconds of arc by convention. 
         /// </summary>
-		[ComponentElement]
+		[Description("Ellipsoid rotation (3). Seconds of arc by convention.")]
+        [ComponentElement]
 		[XmlElement("xRotation")]
         public PlaneAngleMeasure XRotation {
             get {
@@ -57140,7 +57158,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Ellipsoid rotation (3). Seconds of arc by convention. 
         /// </summary>
-		[ComponentElement]
+		[Description("Ellipsoid rotation (3). Seconds of arc by convention.")]
+        [ComponentElement]
 		[XmlElement("yRotation")]
         public PlaneAngleMeasure YRotation {
             get {
@@ -57157,7 +57176,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Ellipsoid rotation (3). Seconds of arc by convention. 
         /// </summary>
-		[ComponentElement]
+		[Description("Ellipsoid rotation (3). Seconds of arc by convention.")]
+        [ComponentElement]
 		[XmlElement("zRotation")]
         public PlaneAngleMeasure ZRotation {
             get {
@@ -57174,7 +57194,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Ellipsoid scale factor. 
         /// </summary>
-		
+		[Description("Ellipsoid scale factor.")]
 		[XmlElement("scaleFactor")]
         public Double? ScaleFactor {
             get {
@@ -57210,7 +57230,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Ellipsoid code (spheroid) defining geographic or planar coordinates. Implied if geodeticDatumCode is specified (and is not user defined). 
         /// </summary>
-		
+		[Description("Ellipsoid code (spheroid) defining geographic or planar coordinates.  Implied if geodeticDatumCode is specified (and is not user defined).")]
 		[XmlElement("ellipsoidCode")]
         public Ellipsoid? EllipsoidCode {
             get {
@@ -57246,7 +57266,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Ellipsoid semi-major axis size. Implied if geodeticDatumCode or ellipsoidCode specified. 
         /// </summary>
-		[ComponentElement]
+		[Description("Ellipsoid semi-major axis size. Implied if geodeticDatumCode or ellipsoidCode  specified.")]
+        [ComponentElement]
 		[XmlElement("ellipsoidSemiMajorAxis")]
         public LengthMeasure EllipsoidSemiMajorAxis {
             get {
@@ -57263,7 +57284,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Ellipsoid inverse flattening value (ie. 1/x). Implied if geodeticDatumCode or ellipsoidCode specified. 
         /// </summary>
-		
+		[Description("Ellipsoid inverse flattening value (ie. 1/x). Implied if geodeticDatumCode  or ellipsoidCode specified.")]
 		[XmlElement("ellipsoidInverseFlattening")]
         public Double? EllipsoidInverseFlattening {
             get {
@@ -57436,7 +57457,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The angle of the Y axis from North (as described in attribute northDirection). Defaults to zero. Positive clockwise.
         /// </summary>
-		[ComponentElement]
+		[Description("The angle of the Y axis from North (as described  in attribute northDirection). Defaults to zero. Positive clockwise.")]
+        [ComponentElement]
 		[XmlElement("yAxisAzimuth")]
         public YAxisAzimuth YAxisAzimuth {
             get {
@@ -57453,7 +57475,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// A free-form description of the Y axis. Examples would be 'parallel to the west side of the platform', or 'along the main entry road'.
         /// </summary>
-		
+		[StringLength(4000)]
+        [Description("A free-form description of the Y axis.  Examples would be 'parallel to the west side of the platform', or  'along the main entry road'.")]
 		[XmlElement("yAxisDescription")]
         public String YAxisDescription {
             get {
@@ -57470,7 +57493,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// True ("true" or "1") indicates that the X axis is rotated counter-clockwise from the Y axis when viewed from above the earth looking down. False ("false" or "0") or not given indicates a clockwise rotation. Generally the X axis is rotated clockwise.
         /// </summary>
-		
+		[Description("True (\"true\" or \"1\") indicates that the X axis is rotated  counter-clockwise from the Y axis when viewed from above the earth looking down. False (\"false\" or \"0\") or not given indicates a clockwise rotation.  Generally the X axis is rotated clockwise.")]
 		[XmlElement("xRotationCounterClockwise")]
         public Boolean? XRotationCounterClockwise {
             get {
@@ -57543,7 +57566,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The name of the coordinate reference system in a particular naming system. An optional short name (code) can also be specified. Specifying a well known system is highly desired. An example would be to specify a name of 'WGS 84 / UTM zone 10N' with a code of '32610' in the 'EPSG' naming system. Note that specifying a name in the EPSG naming system is asserting that the parameters in the EPSG database are appropriate for this CRS. This is also true for any other naming system. If in doubt, contact your local geodesist.
         /// </summary>
-		[ComponentElement]
+		[Description("The name of the coordinate reference system in a particular naming system. An optional short name (code) can also be specified. Specifying a well known system is highly desired. An example would be to specify a name of 'WGS 84 / UTM zone 10N' with a code of '32610' in the 'EPSG' naming system. Note that specifying a name in the EPSG naming system is asserting that the parameters in the EPSG database are appropriate for this CRS. This is  also true for any other naming system. If in doubt, contact your local geodesist.")]
+        [ComponentElement]
 		[XmlElement("nameCRS")]
         public WellKnownNameStruct NameCRS {
             get {
@@ -57560,7 +57584,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// A code to identify the type of projection. 
         /// </summary>
-		
+		[Description("A code to identify the type of projection.")]
 		[XmlElement("projectionCode")]
         public Projection? ProjectionCode {
             get {
@@ -57596,7 +57620,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// A pointer to the wellCRS that represents the geographic system from which this system was projected.
         /// </summary>
-		[ComponentElement]
+		[Description("A pointer to the wellCRS that represents the geographic system from which this system was projected.")]
+        [ComponentElement]
 		[XmlElement("projectedFrom")]
         public RefNameString ProjectedFrom {
             get {
@@ -57613,7 +57638,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Latitude of first standard parallel. 
         /// </summary>
-		[ComponentElement]
+		[Description("Latitude of first standard parallel.")]
+        [ComponentElement]
 		[XmlElement("stdParallel1")]
         public PlaneAngleMeasure StdParallel1 {
             get {
@@ -57630,7 +57656,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Latitude of second standard parallel, if used. 
         /// </summary>
-		[ComponentElement]
+		[Description("Latitude of second standard parallel, if used.")]
+        [ComponentElement]
 		[XmlElement("stdParallel2")]
         public PlaneAngleMeasure StdParallel2 {
             get {
@@ -57647,7 +57674,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Longitude of the Y axis of the resulting map. 
         /// </summary>
-		[ComponentElement]
+		[Description("Longitude of the Y axis of the resulting map.")]
+        [ComponentElement]
 		[XmlElement("centralMeridian")]
         public PlaneAngleMeasure CentralMeridian {
             get {
@@ -57664,7 +57692,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Latitude at which the X axis intersects the central meridian. 
         /// </summary>
-		[ComponentElement]
+		[Description("Latitude at which the X axis intersects the central meridian.")]
+        [ComponentElement]
 		[XmlElement("originLatitude")]
         public PlaneAngleMeasure OriginLatitude {
             get {
@@ -57681,7 +57710,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Longitude of the central meridian. 
         /// </summary>
-		[ComponentElement]
+		[Description("Longitude of the central meridian.")]
+        [ComponentElement]
 		[XmlElement("originLongitude")]
         public PlaneAngleMeasure OriginLongitude {
             get {
@@ -57698,7 +57728,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Latitude of the first point if the two-point specification of the central line is used. 
         /// </summary>
-		[ComponentElement]
+		[Description("Latitude of the first point if the two-point specification  of the central line is used.")]
+        [ComponentElement]
 		[XmlElement("latitude1")]
         public PlaneAngleMeasure Latitude1 {
             get {
@@ -57715,7 +57746,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Longitude of the first point if the two-point specification of the central line is used. 
         /// </summary>
-		[ComponentElement]
+		[Description("Longitude of the first point if the two-point specification  of the central line is used.")]
+        [ComponentElement]
 		[XmlElement("longitude1")]
         public PlaneAngleMeasure Longitude1 {
             get {
@@ -57732,7 +57764,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Latitude of the second point if the two-point specification of the central line is used. 
         /// </summary>
-		[ComponentElement]
+		[Description("Latitude of the second point if the two-point specification  of the central line is used.")]
+        [ComponentElement]
 		[XmlElement("latitude2")]
         public PlaneAngleMeasure Latitude2 {
             get {
@@ -57749,7 +57782,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Longitude of the second point if the two-point specification of the central line is used. 
         /// </summary>
-		[ComponentElement]
+		[Description("Longitude of the second point if the two-point specification  of the central line is used.")]
+        [ComponentElement]
 		[XmlElement("longitude2")]
         public PlaneAngleMeasure Longitude2 {
             get {
@@ -57766,7 +57800,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Latitude of a point for which the scale factor is specified exactly. Default to origin. 
         /// </summary>
-		[ComponentElement]
+		[Description("Latitude of a point for which the scale factor is specified exactly.  Default to origin.")]
+        [ComponentElement]
 		[XmlElement("latitudeForScale")]
         public PlaneAngleMeasure LatitudeForScale {
             get {
@@ -57783,7 +57818,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Longitude of a point for which the scale factor is specified exactly. Default to origin. 
         /// </summary>
-		[ComponentElement]
+		[Description("Longitude of a point for which the scale factor is specified exactly.  Default to origin.")]
+        [ComponentElement]
 		[XmlElement("longitudeForScale")]
         public PlaneAngleMeasure LongitudeForScale {
             get {
@@ -57800,7 +57836,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Latitude at which the scale on the map is exact. If none is provided, scale is assumed to be exact at the equator. 
         /// </summary>
-		[ComponentElement]
+		[Description("Latitude at which the scale on the map is exact. If none is provided,  scale is assumed to be exact at the equator.")]
+        [ComponentElement]
 		[XmlElement("trueScaleLatitude")]
         public PlaneAngleMeasure TrueScaleLatitude {
             get {
@@ -57817,7 +57854,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Spheroid radius. 
         /// </summary>
-		[ComponentElement]
+		[Description("Spheroid radius.")]
+        [ComponentElement]
 		[XmlElement("spheroidRadius")]
         public LengthMeasure SpheroidRadius {
             get {
@@ -57834,7 +57872,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Ellipsoid scale factor. 
         /// </summary>
-		
+		[Description("Ellipsoid scale factor.")]
 		[XmlElement("scaleFactor")]
         public Double? ScaleFactor {
             get {
@@ -57870,7 +57908,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Projection method variant - establishes minor variations of the projection. Geoshare proposal. 
         /// </summary>
-		
+		[Description("Projection method variant - establishes minor variations of the projection.  Geoshare proposal.")]
 		[XmlElement("methodVariant")]
         public ProjectionVariantsObliqueMercator? MethodVariant {
             get {
@@ -57906,7 +57944,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Height above the surface origin location from which the perspective is taken. 
         /// </summary>
-		[ComponentElement]
+		[Description("Height above the surface origin location from which the perspective is taken.")]
+        [ComponentElement]
 		[XmlElement("perspectiveHeight")]
         public LengthMeasure PerspectiveHeight {
             get {
@@ -57923,7 +57962,9 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Zone for the type of projection. Zones have values from 1 to 60 with a required direction of "N" (North) or "S" (South). For example, "21N". 
         /// </summary>
-		
+		[RegularExpression("([1-9]|[1-5][0-9]|60)[NS]")]
+        [StringLength(3)]
+        [Description("Zone for the type of projection. Zones have values from 1 to 60 with a required direction of \"N\" (North) or \"S\" (South). For example, \"21N\".")]
 		[XmlElement("zone")]
         public String Zone {
             get {
@@ -57940,7 +57981,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// North American Datum type. 
         /// </summary>
-		
+		[Description("North American Datum type.")]
 		[XmlElement("NADType")]
         public NADTypeList? NADType {
             get {
@@ -57976,7 +58017,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Artificial value added to the X axis. 
         /// </summary>
-		[ComponentElement]
+		[Description("Artificial value added to the X axis.")]
+        [ComponentElement]
 		[XmlElement("falseEasting")]
         public LengthMeasure FalseEasting {
             get {
@@ -57993,7 +58035,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Artificial value added to the Y axis. 
         /// </summary>
-		[ComponentElement]
+		[Description("Artificial value added to the Y axis.")]
+        [ComponentElement]
 		[XmlElement("falseNorthing")]
         public LengthMeasure FalseNorthing {
             get {
@@ -58010,7 +58053,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Bearing angle of the great circle with respect to north at the central point. 
         /// </summary>
-		[ComponentElement]
+		[Description("Bearing angle of the great circle with respect to north at the central  point.")]
+        [ComponentElement]
 		[XmlElement("bearing")]
         public PlaneAngleMeasure Bearing {
             get {
@@ -58027,7 +58071,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Is the projection in the northern hemisphere or the southern hemisphere. 
         /// </summary>
-		
+		[Description("Is the projection in the northern hemisphere or the southern hemisphere.")]
 		[XmlElement("hemisphere")]
         public HemisphereList? Hemisphere {
             get {
@@ -58063,7 +58107,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Description of item and details. 
         /// </summary>
-		
+		[StringLength(4000)]
+        [Description("Description of item and details.")]
 		[XmlElement("description")]
         public String Description {
             get {
@@ -58080,7 +58125,8 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Parameter describing the user-defined projection. 
         /// </summary>
-		[RecurringElement]
+		[Description("Parameter describing the user-defined projection.")]
+        [RecurringElement]
 		[XmlElement("parameter")]
         public List<IndexedObject> Parameter {
             get {
@@ -60651,7 +60697,9 @@ namespace Energistics.DataAccess.WITSML131
 		/// <summary>
         /// A pointer to the block descriptor's uid that this level represents. If more than one block descriptor is specified then this attribute is required.
         /// </summary>
-		
+		[RegularExpression("[^ ]*")]
+        [StringLength(64)]
+        [Description("A pointer to the block descriptor's uid that this level represents.  If more than one block descriptor is specified then this attribute is required.")]
         [XmlAttribute("id")]
 		
         public String Id {

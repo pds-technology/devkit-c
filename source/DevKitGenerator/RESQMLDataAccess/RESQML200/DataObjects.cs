@@ -762,7 +762,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Value property
         /// </summary>
-		
+		[Required]
+        [Description("Integer to match for the value to be considered true")]
 		[XmlElement("Value", DataType="integer")]
         public String Value {
             get {
@@ -779,7 +780,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Property property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("Property")]
         public DataObjectReference Property {
             get {
@@ -1032,7 +1034,9 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Values property
         /// </summary>
-		
+		[Required]
+        [Description("Reference to an HDF5 array of values.")]
+        [ComponentElement]
 		[XmlElement("Values")]
         public Hdf5Dataset Values {
             get {
@@ -1067,7 +1071,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// PathInHdfFile property
         /// </summary>
-		
+		[Required]
+        [Description("The path of the referenced dataset in the HDF file.  The separator between groups and final dataset is a slash '/'")]
 		[XmlElement("PathInHdfFile")]
         public String PathInHdfFile {
             get {
@@ -1084,7 +1089,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// HdfProxy property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("HdfProxy")]
         public DataObjectReference HdfProxy {
             get {
@@ -1159,7 +1165,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Value property
         /// </summary>
-		
+		[Required]
+        [Description("Value inside all the elements of the array.")]
 		[XmlElement("Value")]
         public Boolean? Value {
             get {
@@ -1176,7 +1183,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Count property
         /// </summary>
-		
+		[Required]
+        [Description("Size of the array.")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public String Count {
             get {
@@ -1211,7 +1219,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Count property
         /// </summary>
-		
+		[Required]
+        [Description("Total number of Boolean elements in the array. This number is different from the number of indices used to represent the array.")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public String Count {
             get {
@@ -1228,7 +1237,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Indices property
         /// </summary>
-		
+		[Required]
+        [Description("Array of integer indices.  BUSINESS RULE: Must be non-negative.")]
 		[XmlElement("Indices")]
         public AbstractIntegerArray Indices {
             get {
@@ -1245,7 +1255,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// IndexIsTrue property
         /// </summary>
-		
+		[Required]
+        [Description("Indicates whether the specified elements are true or false.")]
 		[XmlElement("IndexIsTrue")]
         public Boolean? IndexIsTrue {
             get {
@@ -1324,7 +1335,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Count property
         /// </summary>
-		
+		[Required]
+        [Description("Size of the array.")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public String Count {
             get {
@@ -1341,7 +1353,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Value property
         /// </summary>
-		
+		[Required]
+        [Description("Start value for the range. End value is start+count-1.")]
 		[XmlElement("Value", DataType="integer")]
         public String Value {
             get {
@@ -1376,7 +1389,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// StartValue property
         /// </summary>
-		
+		[Required]
+        [Description("Value representing the global start for the lattice: i.e., iStart + jStart*ni + kStart*ni*nj")]
 		[XmlElement("StartValue", DataType="integer")]
         public String StartValue {
             get {
@@ -1393,7 +1407,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Offset property
         /// </summary>
-		[RecurringElement]
+		[Required]
+        [RecurringElement]
 		[XmlElement("Offset")]
         public List<IntegerConstantArray> Offset {
             get {
@@ -1458,7 +1473,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Value property
         /// </summary>
-		
+		[Required]
+        [Description("Values inside all the elements of the array.")]
 		[XmlElement("Value", DataType="integer")]
         public String Value {
             get {
@@ -1475,7 +1491,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Count property
         /// </summary>
-		
+		[Required]
+        [Description("Size of the array.")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public String Count {
             get {
@@ -1510,7 +1527,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// NullValue property
         /// </summary>
-		
+		[Required]
 		[XmlElement("NullValue", DataType="integer")]
         public String NullValue {
             get {
@@ -1527,7 +1544,9 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Values property
         /// </summary>
-		
+		[Required]
+        [Description("Reference to an HDF5 array of integers or doubles.")]
+        [ComponentElement]
 		[XmlElement("Values")]
         public Hdf5Dataset Values {
             get {
@@ -1562,7 +1581,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// TotalIndexCount property
         /// </summary>
-		
+		[Required]
+        [Description("Total number of integer elements in the array. This number is different from the number of Boolean mask values used to represent the array.")]
 		[XmlElement("TotalIndexCount", DataType="positiveInteger")]
         public String TotalIndexCount {
             get {
@@ -1579,7 +1599,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Mask property
         /// </summary>
-		
+		[Required]
+        [Description("Boolean mask. A true element indicates that the index is included on the list of integer values.")]
 		[XmlElement("Mask")]
         public AbstractBooleanArray Mask {
             get {
@@ -1614,7 +1635,9 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Values property
         /// </summary>
-		
+		[Required]
+        [Description("Reference to HDF5 array of integer or double")]
+        [ComponentElement]
 		[XmlElement("Values")]
         public Hdf5Dataset Values {
             get {
@@ -1670,7 +1693,9 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Values property
         /// </summary>
-		
+		[Required]
+        [Description("Reference to an HDF5 array of doubles.")]
+        [ComponentElement]
 		[XmlElement("Values")]
         public Hdf5Dataset Values {
             get {
@@ -1726,7 +1751,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Value property
         /// </summary>
-		
+		[Required]
+        [Description("Values inside all the elements of the array.")]
 		[XmlElement("Value")]
         public Double? Value {
             get {
@@ -1743,7 +1769,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Count property
         /// </summary>
-		
+		[Required]
+        [Description("Size of the array.")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public String Count {
             get {
@@ -1778,7 +1805,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// StartValue property
         /// </summary>
-		
+		[Required]
+        [Description("Value representing the global start for the lattice.")]
 		[XmlElement("StartValue")]
         public Double? StartValue {
             get {
@@ -1795,7 +1823,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Offset property
         /// </summary>
-		[RecurringElement]
+		[Required]
+        [RecurringElement]
 		[XmlElement("Offset")]
         public List<DoubleConstantArray> Offset {
             get {
@@ -1954,7 +1983,9 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// NodeIndicesOnSupportingRepresentation property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [Description("The node indices of the selected nodes in the supporting representation. The index selection is regularly incremented from one node to the next node.  BUSINESS RULE: The node indices must be consistent with the size of supporting representation.")]
+        [ComponentElement]
 		[XmlElement("NodeIndicesOnSupportingRepresentation")]
         public IntegerLatticeArray NodeIndicesOnSupportingRepresentation {
             get {
@@ -1971,7 +2002,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// SupportingRepresentation property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("SupportingRepresentation")]
         public DataObjectReference SupportingRepresentation {
             get {
@@ -2006,7 +2038,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Parameters property
         /// </summary>
-		
+		[Required]
+        [Description("A multi-dimensional array of parametric values that implicitly specifies an array of XYZ points.  The parametric values provided in this data-object must be consistent with the parametric values specified in the referenced parametric line array.  When constructing a column-layer grid geometry using parametric points, the array indexing follows the dimensionality of the coordinate lines x NKL, which is either a 2D or 3D array.")]
 		[XmlElement("Parameters")]
         public AbstractValueArray Parameters {
             get {
@@ -2023,7 +2056,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ParametricLineIndices property
         /// </summary>
-		
+		[Description("An optional array of indices that map from the array index to the index of the corresponding parametric line.  If this information is known from context, then this array is not needed. For example, in either of these cases: (1) If the mapping from array index to parametric line is 1:1. (2) If the mapping has already been specified, as with the pillar Index from the column-layer geometry of a grid.  For example, when constructing a column-layer grid geometry using parametric lines, the array indexing follows the dimensionality of the coordinate lines.")]
 		[XmlElement("ParametricLineIndices")]
         public AbstractIntegerArray ParametricLineIndices {
             get {
@@ -2040,7 +2073,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// TruncatedLineIndices property
         /// </summary>
-		
+		[Description("A 2D array of line indices for use with intersecting parametric lines. Each record consists of a single line index, which indicates the array line that uses this truncation information, followed by the parametric line indices for each of the points on that line.  For a non-truncated line, the equivalent record repeats the array line index NKL+1 times.   Size = (NKL+1) x truncatedLineCount")]
 		[XmlElement("TruncatedLineIndices")]
         public AbstractIntegerArray TruncatedLineIndices {
             get {
@@ -2057,7 +2090,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ParametricLines property
         /// </summary>
-		
+		[Required]
 		[XmlElement("ParametricLines")]
         public AbstractParametricLineArray ParametricLines {
             get {
@@ -2131,7 +2164,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ControlPointParameters property
         /// </summary>
-		
+		[Description("An optional array of explicit control point parameters for all of the control points on each of the parametric lines. Used only if control point parameters are present.  The number of explicit control point parameters per line is given by the count of non-null parameters on each line.   Described as a 1D array, the control point parameter array is divided into segments of length count, with null (NaN) values added to each segment to fill it up.  Size = count x #Lines, e.g., 2D or 3D  BUSINESS RULE: This count should be zero for vertical and Z linear cubic parametric lines. For all other parametric line kinds, there should be one control point parameter for each control point.  NOTES: (1) Vertical parametric lines do not require control point parameters (2) Z linear cubic splines have implicitly defined parameters. For a line with N intervals (N+1 control points), the parametric values are P=0,...,N.  BUSINESS RULE: The parametric values must be strictly monotonically increasing on each parametric line.")]
 		[XmlElement("ControlPointParameters")]
         public AbstractDoubleArray ControlPointParameters {
             get {
@@ -2148,7 +2181,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ControlPoints property
         /// </summary>
-		
+		[Required]
+        [Description("An array of 3D points for all of the control points on each of the parametric lines. The number of control points per line is given by the count of non-null 3D points on each line.  Described as a 1D array, the control point array is divided into segments of length count, with null (NaN) values added to each segment to fill it up.  Size = count x #Lines, e.g., 2D or 3D")]
 		[XmlElement("ControlPoints")]
         public AbstractPoint3dArray ControlPoints {
             get {
@@ -2165,7 +2199,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// KnotCount property
         /// </summary>
-		
+		[Required]
+        [Description("The first dimension of the control point, control point parameter, and tangent vector arrays for the parametric splines. The Knot Count is typically chosen to be the maximum number of control points, parameters or tangent vectors on any parametric line in the array of parametric lines.")]
 		[XmlElement("KnotCount", DataType="positiveInteger")]
         public String KnotCount {
             get {
@@ -2182,7 +2217,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// LineKindIndices property
         /// </summary>
-		
+		[Required]
+        [Description("An array of integers indicating the parametric line kind.  0 = vertical 1 = linear spline 2 = natural cubic spline 3 = cubic spline 4 = Z linear cubic spline 5 = minimum-curvature spline (-1) = null: no line   Size = #Lines, e.g., (1D or 2D)")]
 		[XmlElement("LineKindIndices")]
         public AbstractIntegerArray LineKindIndices {
             get {
@@ -2199,7 +2235,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// TangentVectors property
         /// </summary>
-		
+		[Description("An optional array that is of tangent vectors for all of the control points on each of the cubic and minimum-curvature parametric lines. Used only if tangent vectors are present. The number of tangent vectors per line is given by the count of non-null tangent vectors on each of these line kinds.  Described as a 1D array, the tangent vector array is divided into segments of length count, with null (NaN) values added to each segment to fill it up.  Size = count x #Lines, e.g., 2D or 3D  BUSINESS RULE: For all lines other than the cubic and minimum-curvature parametric lines, this count is zero. For these line kinds, there is one tangent vector for each control point.  If a tangent vector is missing, then it is computed in the same fashion as for a natural cubic spline. Specifically, to obtain the tangent at internal knots, the control points are fit by a quadratic function with the two adjacent control points. At edge knots, the second derivative vanishes.")]
 		[XmlElement("TangentVectors")]
         public AbstractPoint3dArray TangentVectors {
             get {
@@ -2251,7 +2287,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Count property
         /// </summary>
-		
+		[Required]
+        [Description("Number of parametric line intersections. Must be positive.")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public String Count {
             get {
@@ -2268,7 +2305,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// IntersectionLinePairs property
         /// </summary>
-		
+		[Required]
+        [Description("Intersected line index pair for (line 1, line 2).  Size = 2 x count")]
 		[XmlElement("IntersectionLinePairs")]
         public AbstractIntegerArray IntersectionLinePairs {
             get {
@@ -2285,7 +2323,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ParameterValuePairs property
         /// </summary>
-		
+		[Required]
+        [Description("Intersected line parameter value pairs for (line 1, line 2).  Size = 2 x count")]
 		[XmlElement("ParameterValuePairs")]
         public AbstractValueArray ParameterValuePairs {
             get {
@@ -2339,7 +2378,9 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// LineIndicesOnSupportingRepresentation property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [Description("The line indices of the selected lines in the supporting representation. The index selection is regularly incremented from one node to the next node.  BUSINESS RULE: The dimensions of the integer lattice array must be consistent with the dimensions of the supporting representation.  For a column-layer grid, the parametric lines follow the indexing of the pillars.  BUSINESS RULE: The start value of the integer lattice array must be the linearized index of the starting line. Example: iStart + ni * jStart in case of a supporting 2D grid.")]
+        [ComponentElement]
 		[XmlElement("LineIndicesOnSupportingRepresentation")]
         public IntegerLatticeArray LineIndicesOnSupportingRepresentation {
             get {
@@ -2356,7 +2397,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// SupportingRepresentation property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("SupportingRepresentation")]
         public DataObjectReference SupportingRepresentation {
             get {
@@ -2391,7 +2433,9 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Coordinates property
         /// </summary>
-		
+		[Required]
+        [Description("Reference to an HDF5 3D dataset of XYZ points. The 3 coordinates are stored sequentially in HDF5, i.e., a multi-dimensional array of points is stored as a 3 x ... HDF5 array.")]
+        [ComponentElement]
 		[XmlElement("Coordinates")]
         public Hdf5Dataset Coordinates {
             get {
@@ -2426,7 +2470,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// SupportingGeometry property
         /// </summary>
-		
+		[Required]
+        [Description("Geometry defining the X and Y coordinates.")]
 		[XmlElement("SupportingGeometry")]
         public AbstractPoint3dArray SupportingGeometry {
             get {
@@ -2443,7 +2488,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ZValues property
         /// </summary>
-		
+		[Required]
+        [Description("The values for Z coordinates")]
 		[XmlElement("ZValues")]
         public AbstractDoubleArray ZValues {
             get {
@@ -2478,7 +2524,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// AllDimensionsAreOrthogonal property
         /// </summary>
-		
+		[Description("The optional element that indicates that the offset vectors for each direction are mutually orthogonal to each other. This meta-information is useful to remove any doubt of orthogonality in case of numerical precision issues.  BUSINESS RULE: If you don't know it or if only one lattice dimension is given, do not provide this element.")]
 		[XmlElement("AllDimensionsAreOrthogonal")]
         public Boolean? AllDimensionsAreOrthogonal {
             get {
@@ -2514,7 +2560,9 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Origin property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [Description("The origin location of the lattice given as XYZ coordinates.")]
+        [ComponentElement]
 		[XmlElement("Origin")]
         public Point3d Origin {
             get {
@@ -2531,7 +2579,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Offset property
         /// </summary>
-		[RecurringElement]
+		[Required]
+        [RecurringElement]
 		[XmlElement("Offset")]
         public List<Point3dOffset> Offset {
             get {
@@ -2666,7 +2715,9 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Offset property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [Description("The direction of the axis of this lattice dimension. This is a relative offset vector instead of an absolute 3D point.")]
+        [ComponentElement]
 		[XmlElement("Offset")]
         public Point3d Offset {
             get {
@@ -2683,7 +2734,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Spacing property
         /// </summary>
-		
+		[Required]
+        [Description("A lattice of N offset points is described by a spacing array of size N-1. The offset between points is given by the spacing value multiplied by the offset vector. For example, the first offset is 0. The second offset is the first spacing * offset. The second offset is (first spacing + second spacing) * offset, etc.")]
 		[XmlElement("Spacing")]
         public AbstractDoubleArray Spacing {
             get {
@@ -2737,7 +2789,9 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Coordinates property
         /// </summary>
-		
+		[Required]
+        [Description("Reference to an HDF5 2D dataset of XY points. The 2 coordinates are stored sequentially in HDF5, i.e., a multi-dimensional array of points is stored as a 2 x ... HDF5 array.")]
+        [ComponentElement]
 		[XmlElement("Coordinates")]
         public Hdf5Dataset Coordinates {
             get {
@@ -3034,7 +3088,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Kind property
         /// </summary>
-		
+		[Required]
 		[XmlElement("Kind")]
         public ResqmlPropertyKind? Kind {
             get {
@@ -3507,7 +3561,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// LineIndiexOnSupportingRepresentation property
         /// </summary>
-		
+		[Required]
+        [Description("The line index of the selected line in the supporting representation.  For a column-layer grid, the parametric lines follow the indexing of the pillars.")]
 		[XmlElement("LineIndiexOnSupportingRepresentation", DataType="nonNegativeInteger")]
         public String LineIndiexOnSupportingRepresentation {
             get {
@@ -3524,7 +3579,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// SupportingRepresentation property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("SupportingRepresentation")]
         public DataObjectReference SupportingRepresentation {
             get {
@@ -3559,7 +3615,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ControlPointParameters property
         /// </summary>
-		
+		[Description("An optional array of explicit control point parameters for the control points on the parametric line. Used only if control point parameters are present.  NOTES: (1) Vertical parametric lines do not require control point parameters. (2) Z linear cubic splines have implicitly defined parameters. For a line with N intervals (N+1 control points), the parametric values are P=0,...,N.  BUSINESS RULE: If present, the size must match the number of control points.  BUSINESS RULE: For vertical and Z linear cubic parametric lines, this count must be zero. For all other parametric line kinds, each control point must have one control point parameter.  BUSINESS RULE: The parametric values must be strictly monotonically increasing on each parametric line. This is an optional array which should only be used if control point parameters are present.  BUSINESS RILE: If present, the size must match the number of control points.  BUSINESS RULE: This count should be zero for vertical and Z linear cubic parametric lines. For all other parametric line kinds there should be one control point parameter for each control point.  Notes: (1) Vertical parametric lines do not require control point parameters (2) Z linear cubic splines have implicitly defined parameters. For a line with N intervals (N+1 control points), the parametric values are P=0,...,N.  BUSINESS RULE: The parametric values must be strictly monotonically increasing on each parametric line.")]
 		[XmlElement("ControlPointParameters")]
         public AbstractDoubleArray ControlPointParameters {
             get {
@@ -3576,7 +3632,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ControlPoints property
         /// </summary>
-		
+		[Required]
+        [Description("An array of 3D points for the control points on the parametric line.")]
 		[XmlElement("ControlPoints")]
         public AbstractPoint3dArray ControlPoints {
             get {
@@ -3593,7 +3650,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// KnotCount property
         /// </summary>
-		
+		[Required]
+        [Description("Number of spline knots in the parametric line.")]
 		[XmlElement("KnotCount", DataType="positiveInteger")]
         public String KnotCount {
             get {
@@ -3610,7 +3668,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// LineKindIndex property
         /// </summary>
-		
+		[Required]
+        [Description("Integer indicating the parametric line kind  0 for vertical 1 for linear spline 2 for natural cubic spline 3 for cubic spline 4 for z linear cubic spline 5 for minimum-curvature spline (-1) for null: no line")]
 		[XmlElement("LineKindIndex", DataType="integer")]
         public String LineKindIndex {
             get {
@@ -3627,7 +3686,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// TangentVectors property
         /// </summary>
-		
+		[Description("An optional array of tangent vectors for each control point on the cubic and minimum-curvature parametric lines. Used only if tangent vectors are present.  If a tangent vector is missing, then it is computed in the same fashion as for a natural cubic spline. Specifically, to obtain the tangent at internal knots, the control points are fit by a quadratic function with the two adjacent control points. At edge knots, the second derivative vanishes.")]
 		[XmlElement("TangentVectors")]
         public AbstractPoint3dArray TangentVectors {
             get {
@@ -3682,7 +3741,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Plane property
         /// </summary>
-		[RecurringElement]
+		[Required]
+        [RecurringElement]
 		[XmlArrayItem("")]
         [XmlArray("Plane")]
         public List<List<Point3d>> Plane {
@@ -3727,7 +3787,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Coordinate property
         /// </summary>
-		
+		[Required]
 		[XmlElement("Coordinate")]
         public Double? Coordinate {
             get {
@@ -3876,7 +3936,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// LineAbscissa property
         /// </summary>
-		
+		[Required]
+        [Description("The sequence of trace or inter-trace positions that correspond to the geometry coordinates. BUSINESS RULE: Both sequences must be in the same order.")]
 		[XmlElement("LineAbscissa")]
         public AbstractDoubleArray LineAbscissa {
             get {
@@ -3893,7 +3954,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// VerticalCoordinates property
         /// </summary>
-		
+		[Description("The sequence of vertical sample or inter-sample positions that correspond to the geometry coordinates. BUSINESS RULE: Sequence must be in the same order than previous one.")]
 		[XmlElement("VerticalCoordinates")]
         public AbstractDoubleArray VerticalCoordinates {
             get {
@@ -3928,7 +3989,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// CrosslineCoordinates property
         /// </summary>
-		
+		[Required]
+        [Description("The sequence of trace or inter-trace crossline positions that correspond to the geometry coordinates. BUSINESS RULE: Both sequences must be in the same order.")]
 		[XmlElement("CrosslineCoordinates")]
         public AbstractDoubleArray CrosslineCoordinates {
             get {
@@ -3945,7 +4007,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// InlineCoordinates property
         /// </summary>
-		
+		[Required]
+        [Description("The sequence of trace or inter-trace inline positions that correspond to the geometry coordinates. BUSINESS RULE: Both sequences must be in the same order.")]
 		[XmlElement("InlineCoordinates")]
         public AbstractDoubleArray InlineCoordinates {
             get {
@@ -3962,7 +4025,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// VerticalCoordinates property
         /// </summary>
-		
+		[Description("The sequence of vertical sample or inter-sample positions that correspond to the geometry coordinates. BUSINESS RULE: Sequence must be in the same order than two previous ones.")]
 		[XmlElement("VerticalCoordinates")]
         public AbstractDoubleArray VerticalCoordinates {
             get {
@@ -4135,7 +4198,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// KDirection property
         /// </summary>
-		
+		[Required]
 		[XmlElement("KDirection")]
         public KDirection? KDirection {
             get {
@@ -4152,7 +4215,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// PillarGeometryIsDefined property
         /// </summary>
-		
+		[Required]
+        [Description("Indicator that a pillar has at least one node with a defined cell geometry. This is considered grid meta-data. If the indicator does not indicate that the pillar geometry is defined, then this over-rides any other node geometry specification.  Array index follows #Pillars and so may be either 2d or 1d.")]
 		[XmlElement("PillarGeometryIsDefined")]
         public AbstractBooleanArray PillarGeometryIsDefined {
             get {
@@ -4169,7 +4233,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// PillarShape property
         /// </summary>
-		
+		[Required]
 		[XmlElement("PillarShape")]
         public PillarShape? PillarShape {
             get {
@@ -4186,7 +4250,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// CellGeometryIsDefined property
         /// </summary>
-		
+		[Description("Indicator that a cell has a defined geometry. This attribute is grid metadata. If the indicator shows that the cell geometry is NOT defined, then this attribute overrides any other node geometry specification.  Array index is 2D/3D.")]
 		[XmlElement("CellGeometryIsDefined")]
         public AbstractBooleanArray CellGeometryIsDefined {
             get {
@@ -4203,7 +4267,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// NodeIsColocatedInKDirection property
         /// </summary>
-		
+		[Description("Optional indicator that two adjacent nodes on a coordinate line are colocated. This is considered grid meta-data, and is intended to over-ride any geometric comparison of node locations.  Array index follows #CoordinateLines x (NKL-1).")]
 		[XmlElement("NodeIsColocatedInKDirection")]
         public AbstractBooleanArray NodeIsColocatedInKDirection {
             get {
@@ -4220,7 +4284,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// NodeIsColocatedOnKEdge property
         /// </summary>
-		
+		[Description("Optional indicator that two adjacent nodes on the KEDGE of a cell are colocated. This is considered grid meta-data, and is intended to over-ride any geometric comparison of node locations.  Array index follows #EdgesPerColumn x NKL for unstructured column layer grids and 4 x NI x NJ x NKL for IJK grids.")]
 		[XmlElement("NodeIsColocatedOnKEdge")]
         public AbstractBooleanArray NodeIsColocatedOnKEdge {
             get {
@@ -4389,7 +4453,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// SubnodeNodeObject property
         /// </summary>
-		
+		[Required]
 		[XmlElement("SubnodeNodeObject")]
         public SubnodeNodeObject? SubnodeNodeObject {
             get {
@@ -4406,7 +4470,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// NodeWeightsPerSubnode property
         /// </summary>
-		
+		[Required]
+        [Description("Node weights for each subnode. Count of nodes per subnode is known for each specific subnode construction.  Data order consists of all the nodes for each subnode in turn. For example, if uniform and stored as a multi-dimensional array, the node index cycles first.  BUSINESS RULE: Weights must be non-negative.  BUSINESS RULE: Length of array must be consistent with the sum of nodeCount x subnodeCount per object, e.g., for 3 subnodes per edge (uniform), there are 6 weights.")]
 		[XmlElement("NodeWeightsPerSubnode")]
         public AbstractValueArray NodeWeightsPerSubnode {
             get {
@@ -4458,7 +4523,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// PatchIndex property
         /// </summary>
-		
+		[Required]
+        [Description("Local index of the patch, making it unique within the representation.")]
 		[XmlElement("PatchIndex", DataType="nonNegativeInteger")]
         public String PatchIndex {
             get {
@@ -4660,7 +4726,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Count property
         /// </summary>
-		
+		[Required]
+        [Description("Number of items in the patch.")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public String Count {
             get {
@@ -7364,7 +7431,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Representation property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("Representation")]
         public DataObjectReference Representation {
             get {
@@ -7504,7 +7572,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Geometry property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("Geometry")]
         public AbstractGeometry Geometry {
             get {
@@ -8054,7 +8123,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// IntervalCount property
         /// </summary>
-		
+		[Required]
+        [Description("The number of intervals in the regrid description. Must be positive.")]
 		[XmlElement("IntervalCount", DataType="positiveInteger")]
         public String IntervalCount {
             get {
@@ -8071,7 +8141,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ParentCountPerInterval property
         /// </summary>
-		
+		[Required]
+        [Description("The number of parent cells in each interval.  BUSINESS RULES: 1.) The array length must be equal to intervalCount. 2.) For the given parentIndex, the total count of parent cells should not extend beyond the boundary of the parent grid.")]
 		[XmlElement("ParentCountPerInterval")]
         public AbstractIntegerArray ParentCountPerInterval {
             get {
@@ -8088,7 +8159,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ChildCountPerInterval property
         /// </summary>
-		
+		[Required]
+        [Description("The number of child cells in each interval.  If the child grid type is not commensurate with the parent type, then this attribute is ignored by a reader, and its value should be set to null (-1). For example, for a parent IJK grid with a child unstructured column layer grid, then the child count is non-null for a K regrid, but null for an I or J regrid.  BUSINESS RULES: 1.) The array length must be equal to intervalCount. 2.) If the child grid type is commensurate with the parent grid, then the sum of values over all intervals must be equal to the corresponding child grid dimension.")]
 		[XmlElement("ChildCountPerInterval")]
         public AbstractIntegerArray ChildCountPerInterval {
             get {
@@ -8105,7 +8177,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ChildCellWeights property
         /// </summary>
-		
+		[Description("Weights that are proportional to the relative sizes of child cells within each interval. The weights need not be normalized.")]
 		[XmlElement("ChildCellWeights")]
         public AbstractDoubleArray ChildCellWeights {
             get {
@@ -8159,7 +8231,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// InitialIndexOnParentGrid property
         /// </summary>
-		
+		[Required]
+        [Description("0-based index for the placement of the window on the parent grid.")]
 		[XmlElement("InitialIndexOnParentGrid", DataType="nonNegativeInteger")]
         public String InitialIndexOnParentGrid {
             get {
@@ -8450,7 +8523,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// CellIndices property
         /// </summary>
-		
+		[Required]
+        [Description("Cell indices which list the cells in the parent window.  BUSINESS RULE: Number of cells must be consistent with the child grid cell count.")]
 		[XmlElement("CellIndices")]
         public AbstractIntegerArray CellIndices {
             get {
@@ -8467,7 +8541,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ParentGrid property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("ParentGrid")]
         public DataObjectReference ParentGrid {
             get {
@@ -8502,7 +8577,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ColumnIndices property
         /// </summary>
-		
+		[Required]
+        [Description("Column indices that list the columns in the parent window.  BUSINESS RULE: Number of columns must be consistent with the child grid column count.")]
 		[XmlElement("ColumnIndices")]
         public AbstractIntegerArray ColumnIndices {
             get {
@@ -8519,7 +8595,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// OmitParentCells property
         /// </summary>
-		
+		[Description("List of parent cells that are to be retained at their original resolution and are not to be included within a local grid. The omit allows non-rectangular local grids to be specified.  0-based indexing follows #Columns x #Layers relative to the parent window cell count, not to the parent grid.")]
 		[XmlElement("OmitParentCells")]
         public AbstractIntegerArray OmitParentCells {
             get {
@@ -8536,7 +8612,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// KRegrid property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("KRegrid")]
         public Regrid KRegrid {
             get {
@@ -8553,7 +8630,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ParentGrid property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("ParentGrid")]
         public DataObjectReference ParentGrid {
             get {
@@ -8588,7 +8666,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// OmitParentCells property
         /// </summary>
-		
+		[Description("List of parent cells that are to be retained at their original resolution and are not to be included within a local grid. The \"omit\" allows non-rectangular local grids to be specified.  0-based indexing follows NI x NJ x NK relative to the parent window cell count—not to the parent grid.")]
 		[XmlElement("OmitParentCells")]
         public AbstractIntegerArray OmitParentCells {
             get {
@@ -8605,7 +8683,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// JRegrid property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("JRegrid")]
         public Regrid JRegrid {
             get {
@@ -8622,7 +8701,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ParentGrid property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("ParentGrid")]
         public DataObjectReference ParentGrid {
             get {
@@ -8639,7 +8719,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// KRegrid property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("KRegrid")]
         public Regrid KRegrid {
             get {
@@ -8656,7 +8737,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// IRegrid property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("IRegrid")]
         public Regrid IRegrid {
             get {
@@ -9898,7 +9980,9 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// With property
         /// </summary>
-		[RecurringElement]
+		[Required]
+        [Description("Indicates a list of binary contacts (by their UUIDs) that participate in this multiple contact.")]
+        [RecurringElement]
 		[XmlElement("With", DataType="nonNegativeInteger")]
         public List<String> With {
             get {
@@ -9942,7 +10026,9 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// DirectObject property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [Description("Data-object reference (by UUID link) to a geologic feature interpretation, which is the direct object of the sentence that defines how the contact was constructed.")]
+        [ComponentElement]
 		[XmlElement("DirectObject")]
         public ContactElementReference DirectObject {
             get {
@@ -9959,7 +10045,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Verb property
         /// </summary>
-		
+		[Required]
 		[XmlElement("Verb")]
         public ContactVerb? Verb {
             get {
@@ -9976,7 +10062,9 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Subject property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [Description("Data-object reference (by UUID link) to a geologic feature interpretation, which is the subject of the sentence that defines how the contact was constructed.")]
+        [ComponentElement]
 		[XmlElement("Subject")]
         public ContactElementReference Subject {
             get {
@@ -10560,7 +10648,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Unknown property
         /// </summary>
-		
+		[Required]
+        [StringLength(256)]
 		[XmlElement("Unknown")]
         public String Unknown {
             get {
@@ -17597,7 +17686,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// EpsgCode property
         /// </summary>
-		
+		[Required]
 		[XmlElement("EpsgCode", DataType="positiveInteger")]
         public String EpsgCode {
             get {
@@ -17672,7 +17761,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Unknown property
         /// </summary>
-		
+		[Required]
+        [StringLength(256)]
 		[XmlElement("Unknown")]
         public String Unknown {
             get {
@@ -17742,7 +17832,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// EpsgCode property
         /// </summary>
-		
+		[Required]
 		[XmlElement("EpsgCode", DataType="positiveInteger")]
         public String EpsgCode {
             get {
@@ -18252,7 +18342,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Count property
         /// </summary>
-		
+		[Required]
+        [Description("Number of elements in a 1D list of properties. When used in a multi-dimensional array, count is always the fastest.")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public String Count {
             get {
@@ -18269,7 +18360,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// IndexableElement property
         /// </summary>
-		
+		[Required]
 		[XmlElement("IndexableElement")]
         public IndexableElements? IndexableElement {
             get {
@@ -18286,7 +18377,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// RealizationIndex property
         /// </summary>
-		
+		[Description("Optional element indicating the realization index (metadata). Used if the property is the result of a multi-realization process.")]
 		[XmlElement("RealizationIndex", DataType="nonNegativeInteger")]
         public String RealizationIndex {
             get {
@@ -18303,7 +18394,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// TimeStep property
         /// </summary>
-		
+		[Description("Indicates that the property is the output of a specific time step from a flow simulator. Time step is metadata that makes sense in the context of a specific simulation run, and should not be confused with the time index.")]
 		[XmlElement("TimeStep", DataType="nonNegativeInteger")]
         public String TimeStep {
             get {
@@ -18337,7 +18428,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// SupportingRepresentation property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("SupportingRepresentation")]
         public DataObjectReference SupportingRepresentation {
             get {
@@ -18371,7 +18463,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// PropertyKind property
         /// </summary>
-		
+		[Required]
 		[XmlElement("PropertyKind")]
         public AbstractPropertyKind PropertyKind {
             get {
@@ -18410,7 +18502,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// PatchOfValues property
         /// </summary>
-		[RecurringElement]
+		[Required]
+        [RecurringElement]
 		[XmlElement("PatchOfValues")]
         public List<PatchOfValues> PatchOfValues {
             get {
@@ -19345,7 +19438,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// SurfaceRole property
         /// </summary>
-		
+		[Required]
 		[XmlElement("SurfaceRole")]
         public SurfaceRole? SurfaceRole {
             get {
@@ -21117,7 +21210,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Nk property
         /// </summary>
-		
+		[Required]
+        [Description("Number of layers in the grid. Must be positive.")]
 		[XmlElement("Nk", DataType="positiveInteger")]
         public String Nk {
             get {
@@ -21346,7 +21440,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Nk property
         /// </summary>
-		
+		[Required]
+        [Description("Number of layers in the grid. Must be positive.")]
 		[XmlElement("Nk", DataType="positiveInteger")]
         public String Nk {
             get {
@@ -21363,7 +21458,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// TruncationCells property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("TruncationCells")]
         public TruncationCellPatch TruncationCells {
             get {
@@ -21809,7 +21905,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Domain property
         /// </summary>
-		
+		[Required]
 		[XmlElement("Domain")]
         public Domain? Domain {
             get {
@@ -21826,7 +21922,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// InterpretedFeature property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [ComponentElement]
 		[XmlElement("InterpretedFeature")]
         public DataObjectReference InterpretedFeature {
             get {
@@ -22632,7 +22729,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// OrderingCriteria property
         /// </summary>
-		
+		[Required]
 		[XmlElement("OrderingCriteria")]
         public OrderingCriteria? OrderingCriteria {
             get {
@@ -23852,7 +23949,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// YOffset property
         /// </summary>
-		
+		[Required]
+        [Description("The Y offset of the origin of the local areal axes relative to the projected CRS origin. The value MUST represent the second axis of the coordinate system. The unit of measure is defined by the unit of measure for the projected 2D CRS.")]
 		[XmlElement("YOffset")]
         public Double? YOffset {
             get {
@@ -23869,7 +23967,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ZOffset property
         /// </summary>
-		
+		[Required]
+        [Description("The Z offset of the origin of the local vertical axis relative to the vertical CRS origin. According to CRS type (depth or time) it corresponds to the depth or time datum  The value MUST represent the third axis of the coordinate system. The unit of measure is defined by the unit of measure for the vertical CRS.")]
 		[XmlElement("ZOffset")]
         public Double? ZOffset {
             get {
@@ -23886,7 +23985,9 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ArealRotation property
         /// </summary>
-		[ComponentElement]
+		[Required]
+        [Description("The rotation of the local Y axis relative to the projected Y axis.   - A positive value indicates a clockwise rotation from the projected Y axis.   - A negative value indicates a counter-clockwise rotation form the projected Y axis.")]
+        [ComponentElement]
 		[XmlElement("ArealRotation")]
         public PlaneAngleMeasure ArealRotation {
             get {
@@ -23903,7 +24004,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ProjectedAxisOrder property
         /// </summary>
-		
+		[Required]
+        [Description("Defines the coordinate system axis order of the global projected CRS when the projected CRS is an unknown CRS, else it must be correspond to the axis order of the projected  CRS.")]
 		[XmlElement("ProjectedAxisOrder")]
         public AxisOrder2d? ProjectedAxisOrder {
             get {
@@ -23920,7 +24022,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ProjectedUom property
         /// </summary>
-		
+		[Required]
+        [Description("Unit of measure of the associated Projected CRS. When the projected CRS is not unknown, it must be the same than the unit defined by the Projected CRS.")]
 		[XmlElement("ProjectedUom")]
         public LengthUom? ProjectedUom {
             get {
@@ -23937,7 +24040,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// VerticalUom property
         /// </summary>
-		
+		[Required]
+        [Description("Unit of measure of the associated Vertical CRS. When the vertical CRS is not unknown, it must be the same than the unit defined by the Vertical CRS.")]
 		[XmlElement("VerticalUom")]
         public LengthUom? VerticalUom {
             get {
@@ -23954,7 +24058,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// XOffset property
         /// </summary>
-		
+		[Required]
+        [Description("The X location of the origin of the local areal axes relative to the projected CRS origin. The value MUST represent the first axis of the coordinate system. The unit of measure is defined by the unit of measure for the projected 2D CRS.")]
 		[XmlElement("XOffset")]
         public Double? XOffset {
             get {
@@ -23971,7 +24076,8 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ZIncreasingDownward property
         /// </summary>
-		
+		[Required]
+        [Description("Indicates that Z values correspond to depth values and are increasing downward, as opposite to elevation values increasing upward. When the vertical CRS is not an unknown, it must correspond to the axis orientation of the vertical CRS.")]
 		[XmlElement("ZIncreasingDownward")]
         public Boolean? ZIncreasingDownward {
             get {
@@ -23988,7 +24094,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// VerticalCrs property
         /// </summary>
-		
+		[Required]
 		[XmlElement("VerticalCrs")]
         public AbstractVerticalCrs VerticalCrs {
             get {
@@ -24005,7 +24111,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ProjectedCrs property
         /// </summary>
-		
+		[Required]
 		[XmlElement("ProjectedCrs")]
         public AbstractProjectedCrs ProjectedCrs {
             get {
@@ -24126,7 +24232,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Direction property
         /// </summary>
-		
+		[Required]
 		[XmlElement("Direction")]
         public VerticalDirection? Direction {
             get {
@@ -24143,7 +24249,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// AbstractVerticalCrs property
         /// </summary>
-		
+		[Required]
 		[XmlElement("AbstractVerticalCrs")]
         public AbstractVerticalCrs AbstractVerticalCrs {
             get {
@@ -24160,7 +24266,7 @@ namespace Energistics.DataAccess.RESQML200
 		/// <summary>
         /// uom property
         /// </summary>
-		
+		[Required]
         [XmlAttribute("uom")]
 		
         public LengthUom Uom {
@@ -24196,7 +24302,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// AxisOrder property
         /// </summary>
-		
+		[Required]
 		[XmlElement("AxisOrder")]
         public AxisOrder2d? AxisOrder {
             get {
@@ -24213,7 +24319,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// AbstractProjectedCrs property
         /// </summary>
-		
+		[Required]
 		[XmlElement("AbstractProjectedCrs")]
         public AbstractProjectedCrs AbstractProjectedCrs {
             get {

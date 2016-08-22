@@ -660,6 +660,7 @@ namespace Energistics.Generator.RESQML201 {
         private TimeIndex timeIndexField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public TimeIndex TimeIndex {
             get {
                 return this.timeIndexField;
@@ -917,6 +918,9 @@ namespace Energistics.Generator.RESQML201 {
         private DataObjectReference dataObjectField;
         
         /// <remarks/>
+        /// <summary>Is actually a reference and not a containment relationship.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Is actually a reference and not a containment relationship.")]
         public DataObjectReference DataObject {
             get {
                 return this.dataObjectField;
@@ -938,6 +942,7 @@ namespace Energistics.Generator.RESQML201 {
         private TimeIndex timeIndexField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public TimeIndex TimeIndex {
             get {
                 return this.timeIndexField;
@@ -961,6 +966,9 @@ namespace Energistics.Generator.RESQML201 {
         private ResqmlUom uomField;
         
         /// <remarks/>
+        /// <summary>Double value</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Double value")]
         public double Value {
             get {
                 return this.valueField;
@@ -971,6 +979,9 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Unit of measure associated with the value</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Unit of measure associated with the value")]
         public ResqmlUom Uom {
             get {
                 return this.uomField;
@@ -6313,6 +6324,9 @@ namespace Energistics.Generator.RESQML201 {
         private long valueField;
         
         /// <remarks/>
+        /// <summary>Integer value</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Integer value")]
         public long Value {
             get {
                 return this.valueField;
@@ -6334,6 +6348,7 @@ namespace Energistics.Generator.RESQML201 {
         private string valueField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string Value {
             get {
                 return this.valueField;
@@ -6355,6 +6370,9 @@ namespace Energistics.Generator.RESQML201 {
         private DataObjectReference dataObjectField;
         
         /// <remarks/>
+        /// <summary>Is actually a reference and not a containment relationship.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Is actually a reference and not a containment relationship.")]
         public DataObjectReference DataObject {
             get {
                 return this.dataObjectField;
@@ -6510,7 +6528,10 @@ namespace Energistics.Generator.RESQML201 {
         private DataObjectReference propertyField;
         
         /// <remarks/>
+        /// <summary>Integer to match for the value to be considered true</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Integer to match for the value to be considered true")]
         public string Value {
             get {
                 return this.valueField;
@@ -6521,6 +6542,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DataObjectReference Property {
             get {
                 return this.propertyField;
@@ -6542,6 +6564,9 @@ namespace Energistics.Generator.RESQML201 {
         private Hdf5Dataset valuesField;
         
         /// <remarks/>
+        /// <summary>Reference to an HDF5 array of values.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Reference to an HDF5 array of values.")]
         public Hdf5Dataset Values {
             get {
                 return this.valuesField;
@@ -6565,6 +6590,10 @@ namespace Energistics.Generator.RESQML201 {
         private DataObjectReference hdfProxyField;
         
         /// <remarks/>
+        /// <summary>The path of the referenced dataset in the HDF file.  The separator between groups and final dataset is a slash '/'</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The path of the referenced dataset in the HDF file.  The separator between groups" +
+            " and final dataset is a slash \'/\'")]
         public string PathInHdfFile {
             get {
                 return this.pathInHdfFileField;
@@ -6575,6 +6604,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DataObjectReference HdfProxy {
             get {
                 return this.hdfProxyField;
@@ -6598,6 +6628,9 @@ namespace Energistics.Generator.RESQML201 {
         private string countField;
         
         /// <remarks/>
+        /// <summary>Value inside all the elements of the array.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Value inside all the elements of the array.")]
         public bool Value {
             get {
                 return this.valueField;
@@ -6608,7 +6641,10 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Size of the array.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Size of the array.")]
         public string Count {
             get {
                 return this.countField;
@@ -6634,7 +6670,11 @@ namespace Energistics.Generator.RESQML201 {
         private bool indexIsTrueField;
         
         /// <remarks/>
+        /// <summary>Total number of Boolean elements in the array. This number is different from the number of indices used to represent the array.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Total number of Boolean elements in the array. This number is different from the " +
+            "number of indices used to represent the array.")]
         public string Count {
             get {
                 return this.countField;
@@ -6645,6 +6685,9 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Array of integer indices.  BUSINESS RULE: Must be non-negative.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Array of integer indices.  BUSINESS RULE: Must be non-negative.")]
         public AbstractIntegerArray Indices {
             get {
                 return this.indicesField;
@@ -6655,6 +6698,9 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Indicates whether the specified elements are true or false.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Indicates whether the specified elements are true or false.")]
         public bool IndexIsTrue {
             get {
                 return this.indexIsTrueField;
@@ -6676,6 +6722,9 @@ namespace Energistics.Generator.RESQML201 {
         private Hdf5Dataset valuesField;
         
         /// <remarks/>
+        /// <summary>Reference to HDF5 array of integer or double</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Reference to HDF5 array of integer or double")]
         public Hdf5Dataset Values {
             get {
                 return this.valuesField;
@@ -6709,6 +6758,9 @@ namespace Energistics.Generator.RESQML201 {
         private Hdf5Dataset valuesField;
         
         /// <remarks/>
+        /// <summary>Reference to an HDF5 array of doubles.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Reference to an HDF5 array of doubles.")]
         public Hdf5Dataset Values {
             get {
                 return this.valuesField;
@@ -6732,6 +6784,9 @@ namespace Energistics.Generator.RESQML201 {
         private string countField;
         
         /// <remarks/>
+        /// <summary>Values inside all the elements of the array.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Values inside all the elements of the array.")]
         public double Value {
             get {
                 return this.valueField;
@@ -6742,7 +6797,10 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Size of the array.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Size of the array.")]
         public string Count {
             get {
                 return this.countField;
@@ -6766,6 +6824,9 @@ namespace Energistics.Generator.RESQML201 {
         private DoubleConstantArray[] offsetField;
         
         /// <remarks/>
+        /// <summary>Value representing the global start for the lattice.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Value representing the global start for the lattice.")]
         public double StartValue {
             get {
                 return this.startValueField;
@@ -6777,6 +6838,7 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Offset")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DoubleConstantArray[] Offset {
             get {
                 return this.offsetField;
@@ -6800,7 +6862,10 @@ namespace Energistics.Generator.RESQML201 {
         private string valueField;
         
         /// <remarks/>
+        /// <summary>Size of the array.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Size of the array.")]
         public string Count {
             get {
                 return this.countField;
@@ -6811,7 +6876,10 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Start value for the range. End value is start+count-1.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Start value for the range. End value is start+count-1.")]
         public string Value {
             get {
                 return this.valueField;
@@ -6835,7 +6903,11 @@ namespace Energistics.Generator.RESQML201 {
         private IntegerConstantArray[] offsetField;
         
         /// <remarks/>
+        /// <summary>Value representing the global start for the lattice: i.e., iStart + jStart*ni + kStart*ni*nj</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Value representing the global start for the lattice: i.e., iStart + jStart*ni + k" +
+            "Start*ni*nj")]
         public string StartValue {
             get {
                 return this.startValueField;
@@ -6847,6 +6919,7 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Offset")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public IntegerConstantArray[] Offset {
             get {
                 return this.offsetField;
@@ -6870,7 +6943,10 @@ namespace Energistics.Generator.RESQML201 {
         private string countField;
         
         /// <remarks/>
+        /// <summary>Values inside all the elements of the array.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Values inside all the elements of the array.")]
         public string Value {
             get {
                 return this.valueField;
@@ -6881,7 +6957,10 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Size of the array.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Size of the array.")]
         public string Count {
             get {
                 return this.countField;
@@ -6906,6 +6985,7 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string NullValue {
             get {
                 return this.nullValueField;
@@ -6916,6 +6996,9 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Reference to an HDF5 array of integers or doubles.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Reference to an HDF5 array of integers or doubles.")]
         public Hdf5Dataset Values {
             get {
                 return this.valuesField;
@@ -6939,7 +7022,11 @@ namespace Energistics.Generator.RESQML201 {
         private AbstractBooleanArray maskField;
         
         /// <remarks/>
+        /// <summary>Total number of integer elements in the array. This number is different from the number of Boolean mask values used to represent the array.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Total number of integer elements in the array. This number is different from the " +
+            "number of Boolean mask values used to represent the array.")]
         public string TotalIndexCount {
             get {
                 return this.totalIndexCountField;
@@ -6950,6 +7037,10 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Boolean mask. A true element indicates that the index is included on the list of integer values.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Boolean mask. A true element indicates that the index is included on the list of " +
+            "integer values.")]
         public AbstractBooleanArray Mask {
             get {
                 return this.maskField;
@@ -7133,6 +7224,12 @@ namespace Energistics.Generator.RESQML201 {
         private DataObjectReference supportingRepresentationField;
         
         /// <remarks/>
+        /// <summary>The node indices of the selected nodes in the supporting representation. The index selection is regularly incremented from one node to the next node.  BUSINESS RULE: The node indices must be consistent with the size of supporting representation.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The node indices of the selected nodes in the supporting representation. The inde" +
+            "x selection is regularly incremented from one node to the next node.  BUSINESS R" +
+            "ULE: The node indices must be consistent with the size of supporting representat" +
+            "ion.")]
         public IntegerLatticeArray NodeIndicesOnSupportingRepresentation {
             get {
                 return this.nodeIndicesOnSupportingRepresentationField;
@@ -7143,6 +7240,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DataObjectReference SupportingRepresentation {
             get {
                 return this.supportingRepresentationField;
@@ -7170,6 +7268,9 @@ namespace Energistics.Generator.RESQML201 {
         private AbstractParametricLineArray parametricLinesField;
         
         /// <remarks/>
+        /// <summary>A multi-dimensional array of parametric values that implicitly specifies an array of XYZ points.  The parametric values provided in this data-object must be consistent with the parametric values specified in the referenced parametric line array.  When constructing a column-layer grid geometry using parametric points, the array indexing follows the dimensionality of the coordinate lines x NKL, which is either a 2D or 3D array.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"A multi-dimensional array of parametric values that implicitly specifies an array of XYZ points.  The parametric values provided in this data-object must be consistent with the parametric values specified in the referenced parametric line array.  When constructing a column-layer grid geometry using parametric points, the array indexing follows the dimensionality of the coordinate lines x NKL, which is either a 2D or 3D array.")]
         public AbstractValueArray Parameters {
             get {
                 return this.parametersField;
@@ -7180,6 +7281,8 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>An optional array of indices that map from the array index to the index of the corresponding parametric line.  If this information is known from context, then this array is not needed. For example, in either of these cases: (1) If the mapping from array index to parametric line is 1:1. (2) If the mapping has already been specified, as with the pillar Index from the column-layer geometry of a grid.  For example, when constructing a column-layer grid geometry using parametric lines, the array indexing follows the dimensionality of the coordinate lines.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"An optional array of indices that map from the array index to the index of the corresponding parametric line.  If this information is known from context, then this array is not needed. For example, in either of these cases: (1) If the mapping from array index to parametric line is 1:1. (2) If the mapping has already been specified, as with the pillar Index from the column-layer geometry of a grid.  For example, when constructing a column-layer grid geometry using parametric lines, the array indexing follows the dimensionality of the coordinate lines.")]
         public AbstractIntegerArray ParametricLineIndices {
             get {
                 return this.parametricLineIndicesField;
@@ -7190,6 +7293,8 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>A 2D array of line indices for use with intersecting parametric lines. Each record consists of a single line index, which indicates the array line that uses this truncation information, followed by the parametric line indices for each of the points on that line.  For a non-truncated line, the equivalent record repeats the array line index NKL+1 times.   Size = (NKL+1) x truncatedLineCount</summary>
+        [System.ComponentModel.DescriptionAttribute(@"A 2D array of line indices for use with intersecting parametric lines. Each record consists of a single line index, which indicates the array line that uses this truncation information, followed by the parametric line indices for each of the points on that line.  For a non-truncated line, the equivalent record repeats the array line index NKL+1 times.   Size = (NKL+1) x truncatedLineCount")]
         public AbstractIntegerArray TruncatedLineIndices {
             get {
                 return this.truncatedLineIndicesField;
@@ -7200,6 +7305,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AbstractParametricLineArray ParametricLines {
             get {
                 return this.parametricLinesField;
@@ -7242,6 +7348,8 @@ namespace Energistics.Generator.RESQML201 {
         private ParametricLineIntersections parametricLineIntersectionsField;
         
         /// <remarks/>
+        /// <summary>An optional array of explicit control point parameters for all of the control points on each of the parametric lines. Used only if control point parameters are present.  The number of explicit control point parameters per line is given by the count of non-null parameters on each line.   Described as a 1D array, the control point parameter array is divided into segments of length count, with null (NaN) values added to each segment to fill it up.  Size = count x #Lines, e.g., 2D or 3D  BUSINESS RULE: This count should be zero for vertical and Z linear cubic parametric lines. For all other parametric line kinds, there should be one control point parameter for each control point.  NOTES: (1) Vertical parametric lines do not require control point parameters (2) Z linear cubic splines have implicitly defined parameters. For a line with N intervals (N+1 control points), the parametric values are P=0,...,N.  BUSINESS RULE: The parametric values must be strictly monotonically increasing on each parametric line.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"An optional array of explicit control point parameters for all of the control points on each of the parametric lines. Used only if control point parameters are present.  The number of explicit control point parameters per line is given by the count of non-null parameters on each line.   Described as a 1D array, the control point parameter array is divided into segments of length count, with null (NaN) values added to each segment to fill it up.  Size = count x #Lines, e.g., 2D or 3D  BUSINESS RULE: This count should be zero for vertical and Z linear cubic parametric lines. For all other parametric line kinds, there should be one control point parameter for each control point.  NOTES: (1) Vertical parametric lines do not require control point parameters (2) Z linear cubic splines have implicitly defined parameters. For a line with N intervals (N+1 control points), the parametric values are P=0,...,N.  BUSINESS RULE: The parametric values must be strictly monotonically increasing on each parametric line.")]
         public AbstractDoubleArray ControlPointParameters {
             get {
                 return this.controlPointParametersField;
@@ -7252,6 +7360,9 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>An array of 3D points for all of the control points on each of the parametric lines. The number of control points per line is given by the count of non-null 3D points on each line.  Described as a 1D array, the control point array is divided into segments of length count, with null (NaN) values added to each segment to fill it up.  Size = count x #Lines, e.g., 2D or 3D</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"An array of 3D points for all of the control points on each of the parametric lines. The number of control points per line is given by the count of non-null 3D points on each line.  Described as a 1D array, the control point array is divided into segments of length count, with null (NaN) values added to each segment to fill it up.  Size = count x #Lines, e.g., 2D or 3D")]
         public AbstractPoint3dArray ControlPoints {
             get {
                 return this.controlPointsField;
@@ -7262,7 +7373,10 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>The first dimension of the control point, control point parameter, and tangent vector arrays for the parametric splines. The Knot Count is typically chosen to be the maximum number of control points, parameters or tangent vectors on any parametric line in the array of parametric lines.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"The first dimension of the control point, control point parameter, and tangent vector arrays for the parametric splines. The Knot Count is typically chosen to be the maximum number of control points, parameters or tangent vectors on any parametric line in the array of parametric lines.")]
         public string KnotCount {
             get {
                 return this.knotCountField;
@@ -7273,6 +7387,12 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>An array of integers indicating the parametric line kind.  0 = vertical 1 = linear spline 2 = natural cubic spline 3 = cubic spline 4 = Z linear cubic spline 5 = minimum-curvature spline (-1) = null: no line   Size = #Lines, e.g., (1D or 2D)</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("An array of integers indicating the parametric line kind.  0 = vertical 1 = linea" +
+            "r spline 2 = natural cubic spline 3 = cubic spline 4 = Z linear cubic spline 5 =" +
+            " minimum-curvature spline (-1) = null: no line   Size = #Lines, e.g., (1D or 2D)" +
+            "")]
         public AbstractIntegerArray LineKindIndices {
             get {
                 return this.lineKindIndicesField;
@@ -7283,6 +7403,8 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>An optional array that is of tangent vectors for all of the control points on each of the cubic and minimum-curvature parametric lines. Used only if tangent vectors are present. The number of tangent vectors per line is given by the count of non-null tangent vectors on each of these line kinds.  Described as a 1D array, the tangent vector array is divided into segments of length count, with null (NaN) values added to each segment to fill it up.  Size = count x #Lines, e.g., 2D or 3D  BUSINESS RULE: For all lines other than the cubic and minimum-curvature parametric lines, this count is zero. For these line kinds, there is one tangent vector for each control point.  If a tangent vector is missing, then it is computed in the same fashion as for a natural cubic spline. Specifically, to obtain the tangent at internal knots, the control points are fit by a quadratic function with the two adjacent control points. At edge knots, the second derivative vanishes.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"An optional array that is of tangent vectors for all of the control points on each of the cubic and minimum-curvature parametric lines. Used only if tangent vectors are present. The number of tangent vectors per line is given by the count of non-null tangent vectors on each of these line kinds.  Described as a 1D array, the tangent vector array is divided into segments of length count, with null (NaN) values added to each segment to fill it up.  Size = count x #Lines, e.g., 2D or 3D  BUSINESS RULE: For all lines other than the cubic and minimum-curvature parametric lines, this count is zero. For these line kinds, there is one tangent vector for each control point.  If a tangent vector is missing, then it is computed in the same fashion as for a natural cubic spline. Specifically, to obtain the tangent at internal knots, the control points are fit by a quadratic function with the two adjacent control points. At edge knots, the second derivative vanishes.")]
         public AbstractPoint3dArray TangentVectors {
             get {
                 return this.tangentVectorsField;
@@ -7318,7 +7440,10 @@ namespace Energistics.Generator.RESQML201 {
         private AbstractValueArray parameterValuePairsField;
         
         /// <remarks/>
+        /// <summary>Number of parametric line intersections. Must be positive.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Number of parametric line intersections. Must be positive.")]
         public string Count {
             get {
                 return this.countField;
@@ -7329,6 +7454,9 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Intersected line index pair for (line 1, line 2).  Size = 2 x count</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Intersected line index pair for (line 1, line 2).  Size = 2 x count")]
         public AbstractIntegerArray IntersectionLinePairs {
             get {
                 return this.intersectionLinePairsField;
@@ -7339,6 +7467,9 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Intersected line parameter value pairs for (line 1, line 2).  Size = 2 x count</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Intersected line parameter value pairs for (line 1, line 2).  Size = 2 x count")]
         public AbstractValueArray ParameterValuePairs {
             get {
                 return this.parameterValuePairsField;
@@ -7362,6 +7493,9 @@ namespace Energistics.Generator.RESQML201 {
         private DataObjectReference supportingRepresentationField;
         
         /// <remarks/>
+        /// <summary>The line indices of the selected lines in the supporting representation. The index selection is regularly incremented from one node to the next node.  BUSINESS RULE: The dimensions of the integer lattice array must be consistent with the dimensions of the supporting representation.  For a column-layer grid, the parametric lines follow the indexing of the pillars.  BUSINESS RULE: The start value of the integer lattice array must be the linearized index of the starting line. Example: iStart + ni * jStart in case of a supporting 2D grid.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"The line indices of the selected lines in the supporting representation. The index selection is regularly incremented from one node to the next node.  BUSINESS RULE: The dimensions of the integer lattice array must be consistent with the dimensions of the supporting representation.  For a column-layer grid, the parametric lines follow the indexing of the pillars.  BUSINESS RULE: The start value of the integer lattice array must be the linearized index of the starting line. Example: iStart + ni * jStart in case of a supporting 2D grid.")]
         public IntegerLatticeArray LineIndicesOnSupportingRepresentation {
             get {
                 return this.lineIndicesOnSupportingRepresentationField;
@@ -7372,6 +7506,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DataObjectReference SupportingRepresentation {
             get {
                 return this.supportingRepresentationField;
@@ -7393,6 +7528,11 @@ namespace Energistics.Generator.RESQML201 {
         private Hdf5Dataset coordinatesField;
         
         /// <remarks/>
+        /// <summary>Reference to an HDF5 3D dataset of XYZ points. The 3 coordinates are stored sequentially in HDF5, i.e., a multi-dimensional array of points is stored as a 3 x ... HDF5 array.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Reference to an HDF5 3D dataset of XYZ points. The 3 coordinates are stored seque" +
+            "ntially in HDF5, i.e., a multi-dimensional array of points is stored as a 3 x .." +
+            ". HDF5 array.")]
         public Hdf5Dataset Coordinates {
             get {
                 return this.coordinatesField;
@@ -7416,6 +7556,9 @@ namespace Energistics.Generator.RESQML201 {
         private AbstractDoubleArray zValuesField;
         
         /// <remarks/>
+        /// <summary>Geometry defining the X and Y coordinates.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Geometry defining the X and Y coordinates.")]
         public AbstractPoint3dArray SupportingGeometry {
             get {
                 return this.supportingGeometryField;
@@ -7426,6 +7569,9 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>The values for Z coordinates</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The values for Z coordinates")]
         public AbstractDoubleArray ZValues {
             get {
                 return this.zValuesField;
@@ -7453,6 +7599,8 @@ namespace Energistics.Generator.RESQML201 {
         private Point3dOffset[] offsetField;
         
         /// <remarks/>
+        /// <summary>The optional element that indicates that the offset vectors for each direction are mutually orthogonal to each other. This meta-information is useful to remove any doubt of orthogonality in case of numerical precision issues.  BUSINESS RULE: If you don't know it or if only one lattice dimension is given, do not provide this element.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"The optional element that indicates that the offset vectors for each direction are mutually orthogonal to each other. This meta-information is useful to remove any doubt of orthogonality in case of numerical precision issues.  BUSINESS RULE: If you don't know it or if only one lattice dimension is given, do not provide this element.")]
         public bool AllDimensionsAreOrthogonal {
             get {
                 return this.allDimensionsAreOrthogonalField;
@@ -7474,6 +7622,9 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>The origin location of the lattice given as XYZ coordinates.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The origin location of the lattice given as XYZ coordinates.")]
         public Point3d Origin {
             get {
                 return this.originField;
@@ -7485,6 +7636,7 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Offset")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public Point3dOffset[] Offset {
             get {
                 return this.offsetField;
@@ -7562,6 +7714,10 @@ namespace Energistics.Generator.RESQML201 {
         private AbstractDoubleArray spacingField;
         
         /// <remarks/>
+        /// <summary>The direction of the axis of this lattice dimension. This is a relative offset vector instead of an absolute 3D point.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The direction of the axis of this lattice dimension. This is a relative offset ve" +
+            "ctor instead of an absolute 3D point.")]
         public Point3d Offset {
             get {
                 return this.offsetField;
@@ -7572,6 +7728,9 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>A lattice of N offset points is described by a spacing array of size N-1. The offset between points is given by the spacing value multiplied by the offset vector. For example, the first offset is 0. The second offset is the first spacing * offset. The second offset is (first spacing + second spacing) * offset, etc.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"A lattice of N offset points is described by a spacing array of size N-1. The offset between points is given by the spacing value multiplied by the offset vector. For example, the first offset is 0. The second offset is the first spacing * offset. The second offset is (first spacing + second spacing) * offset, etc.")]
         public AbstractDoubleArray Spacing {
             get {
                 return this.spacingField;
@@ -7593,6 +7752,11 @@ namespace Energistics.Generator.RESQML201 {
         private Hdf5Dataset coordinatesField;
         
         /// <remarks/>
+        /// <summary>Reference to an HDF5 2D dataset of XY points. The 2 coordinates are stored sequentially in HDF5, i.e., a multi-dimensional array of points is stored as a 2 x ... HDF5 array.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Reference to an HDF5 2D dataset of XY points. The 2 coordinates are stored sequen" +
+            "tially in HDF5, i.e., a multi-dimensional array of points is stored as a 2 x ..." +
+            " HDF5 array.")]
         public Hdf5Dataset Coordinates {
             get {
                 return this.coordinatesField;
@@ -7728,6 +7892,7 @@ namespace Energistics.Generator.RESQML201 {
         private ResqmlPropertyKind kindField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ResqmlPropertyKind Kind {
             get {
                 return this.kindField;
@@ -8797,7 +8962,11 @@ namespace Energistics.Generator.RESQML201 {
         private DataObjectReference supportingRepresentationField;
         
         /// <remarks/>
+        /// <summary>The line index of the selected line in the supporting representation.  For a column-layer grid, the parametric lines follow the indexing of the pillars.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The line index of the selected line in the supporting representation.  For a colu" +
+            "mn-layer grid, the parametric lines follow the indexing of the pillars.")]
         public string LineIndiexOnSupportingRepresentation {
             get {
                 return this.lineIndiexOnSupportingRepresentationField;
@@ -8808,6 +8977,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DataObjectReference SupportingRepresentation {
             get {
                 return this.supportingRepresentationField;
@@ -8837,6 +9007,8 @@ namespace Energistics.Generator.RESQML201 {
         private AbstractPoint3dArray tangentVectorsField;
         
         /// <remarks/>
+        /// <summary>An optional array of explicit control point parameters for the control points on the parametric line. Used only if control point parameters are present.  NOTES: (1) Vertical parametric lines do not require control point parameters. (2) Z linear cubic splines have implicitly defined parameters. For a line with N intervals (N+1 control points), the parametric values are P=0,...,N.  BUSINESS RULE: If present, the size must match the number of control points.  BUSINESS RULE: For vertical and Z linear cubic parametric lines, this count must be zero. For all other parametric line kinds, each control point must have one control point parameter.  BUSINESS RULE: The parametric values must be strictly monotonically increasing on each parametric line. This is an optional array which should only be used if control point parameters are present.  BUSINESS RILE: If present, the size must match the number of control points.  BUSINESS RULE: This count should be zero for vertical and Z linear cubic parametric lines. For all other parametric line kinds there should be one control point parameter for each control point.  Notes: (1) Vertical parametric lines do not require control point parameters (2) Z linear cubic splines have implicitly defined parameters. For a line with N intervals (N+1 control points), the parametric values are P=0,...,N.  BUSINESS RULE: The parametric values must be strictly monotonically increasing on each parametric line.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"An optional array of explicit control point parameters for the control points on the parametric line. Used only if control point parameters are present.  NOTES: (1) Vertical parametric lines do not require control point parameters. (2) Z linear cubic splines have implicitly defined parameters. For a line with N intervals (N+1 control points), the parametric values are P=0,...,N.  BUSINESS RULE: If present, the size must match the number of control points.  BUSINESS RULE: For vertical and Z linear cubic parametric lines, this count must be zero. For all other parametric line kinds, each control point must have one control point parameter.  BUSINESS RULE: The parametric values must be strictly monotonically increasing on each parametric line. This is an optional array which should only be used if control point parameters are present.  BUSINESS RILE: If present, the size must match the number of control points.  BUSINESS RULE: This count should be zero for vertical and Z linear cubic parametric lines. For all other parametric line kinds there should be one control point parameter for each control point.  Notes: (1) Vertical parametric lines do not require control point parameters (2) Z linear cubic splines have implicitly defined parameters. For a line with N intervals (N+1 control points), the parametric values are P=0,...,N.  BUSINESS RULE: The parametric values must be strictly monotonically increasing on each parametric line.")]
         public AbstractDoubleArray ControlPointParameters {
             get {
                 return this.controlPointParametersField;
@@ -8847,6 +9019,9 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>An array of 3D points for the control points on the parametric line.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("An array of 3D points for the control points on the parametric line.")]
         public AbstractPoint3dArray ControlPoints {
             get {
                 return this.controlPointsField;
@@ -8857,7 +9032,10 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Number of spline knots in the parametric line.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Number of spline knots in the parametric line.")]
         public string KnotCount {
             get {
                 return this.knotCountField;
@@ -8868,7 +9046,12 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Integer indicating the parametric line kind  0 for vertical 1 for linear spline 2 for natural cubic spline 3 for cubic spline 4 for z linear cubic spline 5 for minimum-curvature spline (-1) for null: no line</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Integer indicating the parametric line kind  0 for vertical 1 for linear spline 2" +
+            " for natural cubic spline 3 for cubic spline 4 for z linear cubic spline 5 for m" +
+            "inimum-curvature spline (-1) for null: no line")]
         public string LineKindIndex {
             get {
                 return this.lineKindIndexField;
@@ -8879,6 +9062,8 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>An optional array of tangent vectors for each control point on the cubic and minimum-curvature parametric lines. Used only if tangent vectors are present.  If a tangent vector is missing, then it is computed in the same fashion as for a natural cubic spline. Specifically, to obtain the tangent at internal knots, the control points are fit by a quadratic function with the two adjacent control points. At edge knots, the second derivative vanishes.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"An optional array of tangent vectors for each control point on the cubic and minimum-curvature parametric lines. Used only if tangent vectors are present.  If a tangent vector is missing, then it is computed in the same fashion as for a natural cubic spline. Specifically, to obtain the tangent at internal knots, the control points are fit by a quadratic function with the two adjacent control points. At edge knots, the second derivative vanishes.")]
         public AbstractPoint3dArray TangentVectors {
             get {
                 return this.tangentVectorsField;
@@ -8912,6 +9097,7 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayItemAttribute(typeof(Point3d), IsNullable=false)]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public Point3d[][] Plane {
             get {
                 return this.planeField;
@@ -8933,6 +9119,7 @@ namespace Energistics.Generator.RESQML201 {
         private double coordinateField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public double Coordinate {
             get {
                 return this.coordinateField;
@@ -9019,6 +9206,10 @@ namespace Energistics.Generator.RESQML201 {
         private AbstractDoubleArray verticalCoordinatesField;
         
         /// <remarks/>
+        /// <summary>The sequence of trace or inter-trace positions that correspond to the geometry coordinates. BUSINESS RULE: Both sequences must be in the same order.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The sequence of trace or inter-trace positions that correspond to the geometry co" +
+            "ordinates. BUSINESS RULE: Both sequences must be in the same order.")]
         public AbstractDoubleArray LineAbscissa {
             get {
                 return this.lineAbscissaField;
@@ -9029,6 +9220,10 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>The sequence of vertical sample or inter-sample positions that correspond to the geometry coordinates. BUSINESS RULE: Sequence must be in the same order than previous one.</summary>
+        [System.ComponentModel.DescriptionAttribute("The sequence of vertical sample or inter-sample positions that correspond to the " +
+            "geometry coordinates. BUSINESS RULE: Sequence must be in the same order than pre" +
+            "vious one.")]
         public AbstractDoubleArray VerticalCoordinates {
             get {
                 return this.verticalCoordinatesField;
@@ -9054,6 +9249,10 @@ namespace Energistics.Generator.RESQML201 {
         private AbstractDoubleArray verticalCoordinatesField;
         
         /// <remarks/>
+        /// <summary>The sequence of trace or inter-trace crossline positions that correspond to the geometry coordinates. BUSINESS RULE: Both sequences must be in the same order.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The sequence of trace or inter-trace crossline positions that correspond to the g" +
+            "eometry coordinates. BUSINESS RULE: Both sequences must be in the same order.")]
         public AbstractDoubleArray CrosslineCoordinates {
             get {
                 return this.crosslineCoordinatesField;
@@ -9064,6 +9263,10 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>The sequence of trace or inter-trace inline positions that correspond to the geometry coordinates. BUSINESS RULE: Both sequences must be in the same order.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The sequence of trace or inter-trace inline positions that correspond to the geom" +
+            "etry coordinates. BUSINESS RULE: Both sequences must be in the same order.")]
         public AbstractDoubleArray InlineCoordinates {
             get {
                 return this.inlineCoordinatesField;
@@ -9074,6 +9277,10 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>The sequence of vertical sample or inter-sample positions that correspond to the geometry coordinates. BUSINESS RULE: Sequence must be in the same order than two previous ones.</summary>
+        [System.ComponentModel.DescriptionAttribute("The sequence of vertical sample or inter-sample positions that correspond to the " +
+            "geometry coordinates. BUSINESS RULE: Sequence must be in the same order than two" +
+            " previous ones.")]
         public AbstractDoubleArray VerticalCoordinates {
             get {
                 return this.verticalCoordinatesField;
@@ -9221,6 +9428,7 @@ namespace Energistics.Generator.RESQML201 {
         private SplitNodePatch splitNodesField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public KDirection KDirection {
             get {
                 return this.kDirectionField;
@@ -9231,6 +9439,9 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Indicator that a pillar has at least one node with a defined cell geometry. This is considered grid meta-data. If the indicator does not indicate that the pillar geometry is defined, then this over-rides any other node geometry specification.  Array index follows #Pillars and so may be either 2d or 1d.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"Indicator that a pillar has at least one node with a defined cell geometry. This is considered grid meta-data. If the indicator does not indicate that the pillar geometry is defined, then this over-rides any other node geometry specification.  Array index follows #Pillars and so may be either 2d or 1d.")]
         public AbstractBooleanArray PillarGeometryIsDefined {
             get {
                 return this.pillarGeometryIsDefinedField;
@@ -9241,6 +9452,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PillarShape PillarShape {
             get {
                 return this.pillarShapeField;
@@ -9251,6 +9463,10 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Indicator that a cell has a defined geometry. This attribute is grid metadata. If the indicator shows that the cell geometry is NOT defined, then this attribute overrides any other node geometry specification.  Array index is 2D/3D.</summary>
+        [System.ComponentModel.DescriptionAttribute("Indicator that a cell has a defined geometry. This attribute is grid metadata. If" +
+            " the indicator shows that the cell geometry is NOT defined, then this attribute " +
+            "overrides any other node geometry specification.  Array index is 2D/3D.")]
         public AbstractBooleanArray CellGeometryIsDefined {
             get {
                 return this.cellGeometryIsDefinedField;
@@ -9261,6 +9477,10 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Optional indicator that two adjacent nodes on a coordinate line are colocated. This is considered grid meta-data, and is intended to over-ride any geometric comparison of node locations.  Array index follows #CoordinateLines x (NKL-1).</summary>
+        [System.ComponentModel.DescriptionAttribute("Optional indicator that two adjacent nodes on a coordinate line are colocated. Th" +
+            "is is considered grid meta-data, and is intended to over-ride any geometric comp" +
+            "arison of node locations.  Array index follows #CoordinateLines x (NKL-1).")]
         public AbstractBooleanArray NodeIsColocatedInKDirection {
             get {
                 return this.nodeIsColocatedInKDirectionField;
@@ -9271,6 +9491,8 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Optional indicator that two adjacent nodes on the KEDGE of a cell are colocated. This is considered grid meta-data, and is intended to over-ride any geometric comparison of node locations.  Array index follows #EdgesPerColumn x NKL for unstructured column layer grids and 4 x NI x NJ x NKL for IJK grids.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"Optional indicator that two adjacent nodes on the KEDGE of a cell are colocated. This is considered grid meta-data, and is intended to over-ride any geometric comparison of node locations.  Array index follows #EdgesPerColumn x NKL for unstructured column layer grids and 4 x NI x NJ x NKL for IJK grids.")]
         public AbstractBooleanArray NodeIsColocatedOnKEdge {
             get {
                 return this.nodeIsColocatedOnKEdgeField;
@@ -9407,6 +9629,7 @@ namespace Energistics.Generator.RESQML201 {
         private AbstractValueArray nodeWeightsPerSubnodeField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public SubnodeNodeObject SubnodeNodeObject {
             get {
                 return this.subnodeNodeObjectField;
@@ -9417,6 +9640,9 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Node weights for each subnode. Count of nodes per subnode is known for each specific subnode construction.  Data order consists of all the nodes for each subnode in turn. For example, if uniform and stored as a multi-dimensional array, the node index cycles first.  BUSINESS RULE: Weights must be non-negative.  BUSINESS RULE: Length of array must be consistent with the sum of nodeCount x subnodeCount per object, e.g., for 3 subnodes per edge (uniform), there are 6 weights.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"Node weights for each subnode. Count of nodes per subnode is known for each specific subnode construction.  Data order consists of all the nodes for each subnode in turn. For example, if uniform and stored as a multi-dimensional array, the node index cycles first.  BUSINESS RULE: Weights must be non-negative.  BUSINESS RULE: Length of array must be consistent with the sum of nodeCount x subnodeCount per object, e.g., for 3 subnodes per edge (uniform), there are 6 weights.")]
         public AbstractValueArray NodeWeightsPerSubnode {
             get {
                 return this.nodeWeightsPerSubnodeField;
@@ -9472,7 +9698,10 @@ namespace Energistics.Generator.RESQML201 {
         private string patchIndexField;
         
         /// <remarks/>
+        /// <summary>Local index of the patch, making it unique within the representation.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Local index of the patch, making it unique within the representation.")]
         public string PatchIndex {
             get {
                 return this.patchIndexField;
@@ -9782,7 +10011,10 @@ namespace Energistics.Generator.RESQML201 {
         private string countField;
         
         /// <remarks/>
+        /// <summary>Number of items in the patch.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Number of items in the patch.")]
         public string Count {
             get {
                 return this.countField;
@@ -11662,6 +11894,7 @@ namespace Energistics.Generator.RESQML201 {
         private DataObjectReference representationField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DataObjectReference Representation {
             get {
                 return this.representationField;
@@ -11770,6 +12003,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AbstractGeometry Geometry {
             get {
                 return this.geometryField;
@@ -12071,7 +12305,10 @@ namespace Energistics.Generator.RESQML201 {
         private AbstractDoubleArray childCellWeightsField;
         
         /// <remarks/>
+        /// <summary>The number of intervals in the regrid description. Must be positive.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The number of intervals in the regrid description. Must be positive.")]
         public string IntervalCount {
             get {
                 return this.intervalCountField;
@@ -12082,6 +12319,11 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>The number of parent cells in each interval.  BUSINESS RULES: 1.) The array length must be equal to intervalCount. 2.) For the given parentIndex, the total count of parent cells should not extend beyond the boundary of the parent grid.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The number of parent cells in each interval.  BUSINESS RULES: 1.) The array lengt" +
+            "h must be equal to intervalCount. 2.) For the given parentIndex, the total count" +
+            " of parent cells should not extend beyond the boundary of the parent grid.")]
         public AbstractIntegerArray ParentCountPerInterval {
             get {
                 return this.parentCountPerIntervalField;
@@ -12092,6 +12334,9 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>The number of child cells in each interval.  If the child grid type is not commensurate with the parent type, then this attribute is ignored by a reader, and its value should be set to null (-1). For example, for a parent IJK grid with a child unstructured column layer grid, then the child count is non-null for a K regrid, but null for an I or J regrid.  BUSINESS RULES: 1.) The array length must be equal to intervalCount. 2.) If the child grid type is commensurate with the parent grid, then the sum of values over all intervals must be equal to the corresponding child grid dimension.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"The number of child cells in each interval.  If the child grid type is not commensurate with the parent type, then this attribute is ignored by a reader, and its value should be set to null (-1). For example, for a parent IJK grid with a child unstructured column layer grid, then the child count is non-null for a K regrid, but null for an I or J regrid.  BUSINESS RULES: 1.) The array length must be equal to intervalCount. 2.) If the child grid type is commensurate with the parent grid, then the sum of values over all intervals must be equal to the corresponding child grid dimension.")]
         public AbstractIntegerArray ChildCountPerInterval {
             get {
                 return this.childCountPerIntervalField;
@@ -12102,6 +12347,9 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Weights that are proportional to the relative sizes of child cells within each interval. The weights need not be normalized.</summary>
+        [System.ComponentModel.DescriptionAttribute("Weights that are proportional to the relative sizes of child cells within each in" +
+            "terval. The weights need not be normalized.")]
         public AbstractDoubleArray ChildCellWeights {
             get {
                 return this.childCellWeightsField;
@@ -12125,7 +12373,10 @@ namespace Energistics.Generator.RESQML201 {
         private Intervals intervalsField;
         
         /// <remarks/>
+        /// <summary>0-based index for the placement of the window on the parent grid.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("0-based index for the placement of the window on the parent grid.")]
         public string InitialIndexOnParentGrid {
             get {
                 return this.initialIndexOnParentGridField;
@@ -12414,6 +12665,10 @@ namespace Energistics.Generator.RESQML201 {
         private DataObjectReference parentGridField;
         
         /// <remarks/>
+        /// <summary>Cell indices which list the cells in the parent window.  BUSINESS RULE: Number of cells must be consistent with the child grid cell count.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Cell indices which list the cells in the parent window.  BUSINESS RULE: Number of" +
+            " cells must be consistent with the child grid cell count.")]
         public AbstractIntegerArray CellIndices {
             get {
                 return this.cellIndicesField;
@@ -12424,6 +12679,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DataObjectReference ParentGrid {
             get {
                 return this.parentGridField;
@@ -12451,6 +12707,10 @@ namespace Energistics.Generator.RESQML201 {
         private DataObjectReference parentGridField;
         
         /// <remarks/>
+        /// <summary>Column indices that list the columns in the parent window.  BUSINESS RULE: Number of columns must be consistent with the child grid column count.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Column indices that list the columns in the parent window.  BUSINESS RULE: Number" +
+            " of columns must be consistent with the child grid column count.")]
         public AbstractIntegerArray ColumnIndices {
             get {
                 return this.columnIndicesField;
@@ -12461,6 +12721,8 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>List of parent cells that are to be retained at their original resolution and are not to be included within a local grid. The omit allows non-rectangular local grids to be specified.  0-based indexing follows #Columns x #Layers relative to the parent window cell count, not to the parent grid.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"List of parent cells that are to be retained at their original resolution and are not to be included within a local grid. The omit allows non-rectangular local grids to be specified.  0-based indexing follows #Columns x #Layers relative to the parent window cell count, not to the parent grid.")]
         public AbstractIntegerArray OmitParentCells {
             get {
                 return this.omitParentCellsField;
@@ -12471,6 +12733,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public Regrid KRegrid {
             get {
                 return this.kRegridField;
@@ -12481,6 +12744,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DataObjectReference ParentGrid {
             get {
                 return this.parentGridField;
@@ -12510,6 +12774,8 @@ namespace Energistics.Generator.RESQML201 {
         private Regrid iRegridField;
         
         /// <remarks/>
+        /// <summary>List of parent cells that are to be retained at their original resolution and are not to be included within a local grid. The "omit" allows non-rectangular local grids to be specified.  0-based indexing follows NI x NJ x NK relative to the parent window cell count—not to the parent grid.</summary>
+        [System.ComponentModel.DescriptionAttribute(@"List of parent cells that are to be retained at their original resolution and are not to be included within a local grid. The ""omit"" allows non-rectangular local grids to be specified.  0-based indexing follows NI x NJ x NK relative to the parent window cell count—not to the parent grid.")]
         public AbstractIntegerArray OmitParentCells {
             get {
                 return this.omitParentCellsField;
@@ -12520,6 +12786,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public Regrid JRegrid {
             get {
                 return this.jRegridField;
@@ -12530,6 +12797,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DataObjectReference ParentGrid {
             get {
                 return this.parentGridField;
@@ -12540,6 +12808,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public Regrid KRegrid {
             get {
                 return this.kRegridField;
@@ -12550,6 +12819,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public Regrid IRegrid {
             get {
                 return this.iRegridField;
@@ -13603,7 +13873,11 @@ namespace Energistics.Generator.RESQML201 {
         private string[] withField;
         
         /// <remarks/>
+        /// <summary>Indicates a list of binary contacts (by their UUIDs) that participate in this multiple contact.</summary>
         [System.Xml.Serialization.XmlElementAttribute("With", DataType="nonNegativeInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Indicates a list of binary contacts (by their UUIDs) that participate in this mul" +
+            "tiple contact.")]
         public string[] With {
             get {
                 return this.withField;
@@ -13629,6 +13903,11 @@ namespace Energistics.Generator.RESQML201 {
         private ContactElementReference subjectField;
         
         /// <remarks/>
+        /// <summary>Data-object reference (by UUID link) to a geologic feature interpretation, which is the direct object of the sentence that defines how the contact was constructed.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Data-object reference (by UUID link) to a geologic feature interpretation, which " +
+            "is the direct object of the sentence that defines how the contact was constructe" +
+            "d.")]
         public ContactElementReference DirectObject {
             get {
                 return this.directObjectField;
@@ -13639,6 +13918,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public ContactVerb Verb {
             get {
                 return this.verbField;
@@ -13649,6 +13929,10 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Data-object reference (by UUID link) to a geologic feature interpretation, which is the subject of the sentence that defines how the contact was constructed.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Data-object reference (by UUID link) to a geologic feature interpretation, which " +
+            "is the subject of the sentence that defines how the contact was constructed.")]
         public ContactElementReference Subject {
             get {
                 return this.subjectField;
@@ -14004,6 +14288,8 @@ namespace Energistics.Generator.RESQML201 {
         private string unknownField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         public string Unknown {
             get {
                 return this.unknownField;
@@ -17887,6 +18173,7 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string EpsgCode {
             get {
                 return this.epsgCodeField;
@@ -17920,6 +18207,8 @@ namespace Energistics.Generator.RESQML201 {
         private string unknownField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(256)]
         public string Unknown {
             get {
                 return this.unknownField;
@@ -17964,6 +18253,7 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public string EpsgCode {
             get {
                 return this.epsgCodeField;
@@ -18513,7 +18803,11 @@ namespace Energistics.Generator.RESQML201 {
         private AbstractPropertyKind propertyKindField;
         
         /// <remarks/>
+        /// <summary>Number of elements in a 1D list of properties. When used in a multi-dimensional array, count is always the fastest.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Number of elements in a 1D list of properties. When used in a multi-dimensional a" +
+            "rray, count is always the fastest.")]
         public string Count {
             get {
                 return this.countField;
@@ -18524,6 +18818,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public IndexableElements IndexableElement {
             get {
                 return this.indexableElementField;
@@ -18534,7 +18829,10 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Optional element indicating the realization index (metadata). Used if the property is the result of a multi-realization process.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeInteger")]
+        [System.ComponentModel.DescriptionAttribute("Optional element indicating the realization index (metadata). Used if the propert" +
+            "y is the result of a multi-realization process.")]
         public string RealizationIndex {
             get {
                 return this.realizationIndexField;
@@ -18545,7 +18843,11 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Indicates that the property is the output of a specific time step from a flow simulator. Time step is metadata that makes sense in the context of a specific simulation run, and should not be confused with the time index.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeInteger")]
+        [System.ComponentModel.DescriptionAttribute("Indicates that the property is the output of a specific time step from a flow sim" +
+            "ulator. Time step is metadata that makes sense in the context of a specific simu" +
+            "lation run, and should not be confused with the time index.")]
         public string TimeStep {
             get {
                 return this.timeStepField;
@@ -18566,6 +18868,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DataObjectReference SupportingRepresentation {
             get {
                 return this.supportingRepresentationField;
@@ -18586,6 +18889,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AbstractPropertyKind PropertyKind {
             get {
                 return this.propertyKindField;
@@ -18618,6 +18922,7 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("PatchOfValues")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public PatchOfValues[] PatchOfValues {
             get {
                 return this.patchOfValuesField;
@@ -19507,6 +19812,7 @@ namespace Energistics.Generator.RESQML201 {
         private PatchBoundaries[] boundariesField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public SurfaceRole SurfaceRole {
             get {
                 return this.surfaceRoleField;
@@ -20790,7 +21096,10 @@ namespace Energistics.Generator.RESQML201 {
         private IntervalStratigraphicUnits intervalStratigraphicUnitsField;
         
         /// <remarks/>
+        /// <summary>Number of layers in the grid. Must be positive.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Number of layers in the grid. Must be positive.")]
         public string Nk {
             get {
                 return this.nkField;
@@ -20961,7 +21270,10 @@ namespace Energistics.Generator.RESQML201 {
         private TruncationCellPatch truncationCellsField;
         
         /// <remarks/>
+        /// <summary>Number of layers in the grid. Must be positive.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Number of layers in the grid. Must be positive.")]
         public string Nk {
             get {
                 return this.nkField;
@@ -20972,6 +21284,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public TruncationCellPatch TruncationCells {
             get {
                 return this.truncationCellsField;
@@ -21273,6 +21586,7 @@ namespace Energistics.Generator.RESQML201 {
         private TimeInterval hasOccuredDuringField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public Domain Domain {
             get {
                 return this.domainField;
@@ -21283,6 +21597,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public DataObjectReference InterpretedFeature {
             get {
                 return this.interpretedFeatureField;
@@ -22026,6 +22341,7 @@ namespace Energistics.Generator.RESQML201 {
         private OrderingCriteria orderingCriteriaField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public OrderingCriteria OrderingCriteria {
             get {
                 return this.orderingCriteriaField;
@@ -23016,6 +23332,11 @@ namespace Energistics.Generator.RESQML201 {
         private AbstractProjectedCrs projectedCrsField;
         
         /// <remarks/>
+        /// <summary>The Y offset of the origin of the local areal axes relative to the projected CRS origin. The value MUST represent the second axis of the coordinate system. The unit of measure is defined by the unit of measure for the projected 2D CRS.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The Y offset of the origin of the local areal axes relative to the projected CRS " +
+            "origin. The value MUST represent the second axis of the coordinate system. The u" +
+            "nit of measure is defined by the unit of measure for the projected 2D CRS.")]
         public double YOffset {
             get {
                 return this.yOffsetField;
@@ -23026,6 +23347,9 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>The Z offset of the origin of the local vertical axis relative to the vertical CRS origin. According to CRS type (depth or time) it corresponds to the depth or time datum  The value MUST represent the third axis of the coordinate system. The unit of measure is defined by the unit of measure for the vertical CRS.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"The Z offset of the origin of the local vertical axis relative to the vertical CRS origin. According to CRS type (depth or time) it corresponds to the depth or time datum  The value MUST represent the third axis of the coordinate system. The unit of measure is defined by the unit of measure for the vertical CRS.")]
         public double ZOffset {
             get {
                 return this.zOffsetField;
@@ -23036,6 +23360,11 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>The rotation of the local Y axis relative to the projected Y axis.   - A positive value indicates a clockwise rotation from the projected Y axis.   - A negative value indicates a counter-clockwise rotation form the projected Y axis.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The rotation of the local Y axis relative to the projected Y axis.   - A positive" +
+            " value indicates a clockwise rotation from the projected Y axis.   - A negative " +
+            "value indicates a counter-clockwise rotation form the projected Y axis.")]
         public PlaneAngleMeasure ArealRotation {
             get {
                 return this.arealRotationField;
@@ -23046,6 +23375,11 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Defines the coordinate system axis order of the global projected CRS when the projected CRS is an unknown CRS, else it must be correspond to the axis order of the projected  CRS.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Defines the coordinate system axis order of the global projected CRS when the pro" +
+            "jected CRS is an unknown CRS, else it must be correspond to the axis order of th" +
+            "e projected  CRS.")]
         public AxisOrder2d ProjectedAxisOrder {
             get {
                 return this.projectedAxisOrderField;
@@ -23056,6 +23390,10 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Unit of measure of the associated Projected CRS. When the projected CRS is not unknown, it must be the same than the unit defined by the Projected CRS.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Unit of measure of the associated Projected CRS. When the projected CRS is not un" +
+            "known, it must be the same than the unit defined by the Projected CRS.")]
         public LengthUom ProjectedUom {
             get {
                 return this.projectedUomField;
@@ -23066,6 +23404,10 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Unit of measure of the associated Vertical CRS. When the vertical CRS is not unknown, it must be the same than the unit defined by the Vertical CRS.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Unit of measure of the associated Vertical CRS. When the vertical CRS is not unkn" +
+            "own, it must be the same than the unit defined by the Vertical CRS.")]
         public LengthUom VerticalUom {
             get {
                 return this.verticalUomField;
@@ -23076,6 +23418,11 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>The X location of the origin of the local areal axes relative to the projected CRS origin. The value MUST represent the first axis of the coordinate system. The unit of measure is defined by the unit of measure for the projected 2D CRS.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The X location of the origin of the local areal axes relative to the projected CR" +
+            "S origin. The value MUST represent the first axis of the coordinate system. The " +
+            "unit of measure is defined by the unit of measure for the projected 2D CRS.")]
         public double XOffset {
             get {
                 return this.xOffsetField;
@@ -23086,6 +23433,11 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        /// <summary>Indicates that Z values correspond to depth values and are increasing downward, as opposite to elevation values increasing upward. When the vertical CRS is not an unknown, it must correspond to the axis orientation of the vertical CRS.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Indicates that Z values correspond to depth values and are increasing downward, a" +
+            "s opposite to elevation values increasing upward. When the vertical CRS is not a" +
+            "n unknown, it must correspond to the axis orientation of the vertical CRS.")]
         public bool ZIncreasingDownward {
             get {
                 return this.zIncreasingDownwardField;
@@ -23096,6 +23448,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AbstractVerticalCrs VerticalCrs {
             get {
                 return this.verticalCrsField;
@@ -23106,6 +23459,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AbstractProjectedCrs ProjectedCrs {
             get {
                 return this.projectedCrsField;
@@ -23314,6 +23668,7 @@ namespace Energistics.Generator.RESQML201 {
         private LengthUom uomField;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public VerticalDirection Direction {
             get {
                 return this.directionField;
@@ -23324,6 +23679,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AbstractVerticalCrs AbstractVerticalCrs {
             get {
                 return this.abstractVerticalCrsField;
@@ -23335,6 +23691,7 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public LengthUom uom {
             get {
                 return this.uomField;
@@ -23375,6 +23732,7 @@ namespace Energistics.Generator.RESQML201 {
         private bool uomFieldSpecified;
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AxisOrder2d AxisOrder {
             get {
                 return this.axisOrderField;
@@ -23385,6 +23743,7 @@ namespace Energistics.Generator.RESQML201 {
         }
         
         /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         public AbstractProjectedCrs AbstractProjectedCrs {
             get {
                 return this.abstractProjectedCrsField;
