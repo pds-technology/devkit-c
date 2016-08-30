@@ -1197,7 +1197,7 @@ namespace Energistics.Generator
                 init();
                 sb.Append("[ComponentElement]");
             }
-            else if (propType.IsArray)
+            else if (propType.IsArray && propType != typeof(byte[]))
             {
                 init();
                 sb.Append("[RecurringElement]");

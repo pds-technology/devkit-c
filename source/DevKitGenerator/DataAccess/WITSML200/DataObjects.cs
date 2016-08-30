@@ -82198,7 +82198,6 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
         [Description("The actual attachment content.")]
-        [RecurringElement]
 		[XmlElement("Content", DataType="base64Binary")]
         public Byte[] Content {
             get {
