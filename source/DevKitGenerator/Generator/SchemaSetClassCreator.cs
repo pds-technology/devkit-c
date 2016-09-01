@@ -441,7 +441,7 @@ namespace Energistics.Generator
                 newName = string.Format("{0}{1}", newName.Substring(0, 1).ToUpper(), newName.Substring(1, newName.Length - 1));
 
                 // previous code from exxon only works for version 1.0 , not future code.
-                if (!t.FullName.Contains("RESQML200"))
+                if (!t.FullName.Contains("RESQML2"))
                 {
                     //There are two trajectoryStation and wbGeometry types in WITSML.  The cs_trajectoryStation is used when the station is a component of a larger
                     //xml document.  The obj_trajectoryStation is used when the trajectory stations represent the top level object in the xml document.
