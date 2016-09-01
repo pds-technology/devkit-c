@@ -204,7 +204,7 @@ namespace Energistics.DataAccess
                 Type type = typeof(T);
                 //var serializer = new XmlSerializer(type, GetXmlRootAttribute(type));
                 var serializer = new XmlSerializer(type);
-                if(type.FullName.Contains("RESQML200")||(type.Name.Contains("RESQML201")))
+                if (type.FullName.Contains("RESQML200") || (type.FullName.Contains("RESQML201")))
                 {
                     // Strip out any unnecessary xsi:type attributes
                     xml = Regex.Replace(xml, ":type=\"(.*?)\"", new MatchEvaluator(XsiTypeConvert));
