@@ -116,7 +116,7 @@ namespace Energistics.DataAccess.EnumValue
             Type key = this.GetType();
             if (!enumValuesRegistry.ContainsKey(key))
             {
-                enumValuesRegistry.Add(key, new List<EnumValue>());
+                enumValuesRegistry.TryAdd(key, new List<EnumValue>());
             }
 
             List<EnumValue> myList = enumValuesRegistry[key];
