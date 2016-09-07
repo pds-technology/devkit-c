@@ -1048,9 +1048,7 @@ namespace Energistics.Generator
 
         bool IsNullable(Type type)
         {
-            if (type.IsEnum) 
-                return false;
-            if (type.IsValueType && !enumClassNames.Contains(type.Name))
+            if ((!type.IsEnum) &&(type.IsValueType && !enumClassNames.Contains(type.Name)))
             {
                 return true;
             }
