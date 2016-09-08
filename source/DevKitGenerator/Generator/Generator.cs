@@ -119,7 +119,7 @@ namespace Energistics.Generator
             string targetFilename = String.Format(@"{0}\{1}\GeneratedEnumValues.cs", Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENERGY_ML_DATA_ACCESS_PROJ_PATH"), setName);
             List<string> enumClassNames = new List<string>();
            // if ((!setName.Contains("RESQML200"))&&(!setName.Contains("RESQML201")))
-            if (!setName.Contains("RESQML200"))
+            if (!setName.Contains("ML2"))
             {               
                 string csCode = EnumValuesXMLToClass.Convert(Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENUMVAL_PATH"), "Energistics.DataAccess." + setName, enumClassNames, false, null);
 

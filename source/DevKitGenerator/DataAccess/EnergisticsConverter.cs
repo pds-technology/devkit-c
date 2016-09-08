@@ -204,6 +204,11 @@ namespace Energistics.DataAccess
                 Type type = typeof(T);
                 //var serializer = new XmlSerializer(type, GetXmlRootAttribute(type));
                 var serializer = new XmlSerializer(type);
+                if (type.FullName.Contains("RESQML200") || (type.FullName.Contains("RESQML201")))
+                {
+                    // Strip out any unnecessary xsi:type attributes
+                    xml = Regex.Replace(xml, ":type=\"(.*?)\"", new MatchEvaluator(XsiTypeConvert));
+                }
                 if (type.Name == "ResqmlDocument")
                 {
                     // Find all arrays of numbers, and removes extra whitespace so that .net can parse
@@ -339,9 +344,22 @@ namespace Energistics.DataAccess
              */
 
         }
+
+        internal static string XsiTypeConvert(Match match)
+        {
+            string xsiType = match.Groups[1].Value;
+
+            if (xsiType.Contains("obj_"))
+            {
+                xsiType = xsiType.Replace("obj_", "");
+            }
+            return ":type="+"\""+xsiType+"\"";
+        }
+
         internal static string XsiTypeCleaner(Match match)
         {
             string xsiType = match.Groups[1].Value;
+
 
             if (xsiType.Contains(":"))
             {

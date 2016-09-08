@@ -576,10 +576,8 @@ namespace Energistics.Generator
         /// Rename property name to be more .net compliant
         /// </summary>
         public string RenameProperty(PropertyInfo property)
-        {            
-
-            string newName = property.Name;
-
+        { 
+            string newName = property.Name; 
             newName = RenamePropertyByName(newName);
             if (property.DeclaringType.Name.Equals("cs_pump") ||
                 property.DeclaringType.Name.Equals("cs_bop") ||
@@ -599,7 +597,7 @@ namespace Energistics.Generator
         /// Rename property name to be more .net compliant
         /// </summary>
         public string RenamePropertyByName(string newName)
-        {
+        { 
             newName = string.Format("{0}{1}", newName.Substring(0, 1).ToUpper(), newName.Substring(1, newName.Length - 1));
             if (newName.CompareTo("Participant") == 0)
             {
@@ -1005,8 +1003,9 @@ namespace Energistics.Generator
         {
             if (property.GetCustomAttributes(typeof(XmlAttributeAttribute), false).Length == 0 &&
                 property.GetCustomAttributes(typeof(XmlTextAttribute), false).Length == 0 &&
-                property.PropertyType.IsValueType && 
-                !property.Name.EndsWith("Specified") &&
+                property.PropertyType.IsValueType &&
+                !property.PropertyType.IsEnum && 
+                !property.Name.EndsWith("Specified") && 
                 !enumClassNames.Contains(property.PropertyType.Name)
                 )
             {
@@ -1246,7 +1245,7 @@ namespace Energistics.Generator
 
         bool IsNullable(Type type)
         {
-            if (type.IsValueType && !enumClassNames.Contains(type.Name))
+            if ((!type.IsEnum) &&(type.IsValueType && !enumClassNames.Contains(type.Name)))
             {
                 return true;
             }

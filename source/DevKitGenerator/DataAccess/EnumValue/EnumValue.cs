@@ -78,6 +78,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using System.Reflection;
+using System.Collections.Concurrent;
 
 namespace Energistics.DataAccess.EnumValue
 {   
@@ -89,7 +90,7 @@ namespace Energistics.DataAccess.EnumValue
         /// <summary>
         /// Collection to keep track of registered EnumValues
         /// </summary>
-        protected static Dictionary<Type, List<EnumValue>> enumValuesRegistry = new Dictionary<Type, List<EnumValue>>();
+        protected static ConcurrentDictionary<Type, List<EnumValue>> enumValuesRegistry = new ConcurrentDictionary<Type, List<EnumValue>>();
         private string name;
 
         /// <summary>
@@ -115,7 +116,7 @@ namespace Energistics.DataAccess.EnumValue
             Type key = this.GetType();
             if (!enumValuesRegistry.ContainsKey(key))
             {
-                enumValuesRegistry.Add(key, new List<EnumValue>());
+                enumValuesRegistry.TryAdd(key, new List<EnumValue>());
             }
 
             List<EnumValue> myList = enumValuesRegistry[key];
