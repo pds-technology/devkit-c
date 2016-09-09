@@ -957,7 +957,12 @@ namespace Energistics.Generator
                 if (type.GetProperty(property.Name + "Specified") != null)
                 {
                     // If this property has a cooresponding 'PropertyName'Specified property, then the setter should also set that property to true
-                    sb.AppendLine("             if(value!=null) ");
+                    if ((property.PropertyType.IsEnum) && (property.PropertyType.IsValueType)&&(property.PropertyType.FullName.ToLower().Contains("boolean")))
+                    {
+                        //ignore
+                    }
+                    else
+                        sb.AppendLine("             if(value!=null) ");
                     sb.AppendLine("                 this." + specifiedBool + " = true;");
                 }
                 sb.AppendLine("                NotifyPropertyChanged(\"" + RenameProperty(property) + "\");");
@@ -1004,7 +1009,7 @@ namespace Energistics.Generator
             if (property.GetCustomAttributes(typeof(XmlAttributeAttribute), false).Length == 0 &&
                 property.GetCustomAttributes(typeof(XmlTextAttribute), false).Length == 0 &&
                 property.PropertyType.IsValueType &&
-                !property.PropertyType.IsEnum && 
+                //!property.PropertyType.IsEnum && 
                 !property.Name.EndsWith("Specified") && 
                 !enumClassNames.Contains(property.PropertyType.Name)
                 )
@@ -1245,7 +1250,8 @@ namespace Energistics.Generator
 
         bool IsNullable(Type type)
         {
-            if ((!type.IsEnum) &&(type.IsValueType && !enumClassNames.Contains(type.Name)))
+
+            if ((type.IsValueType && !enumClassNames.Contains(type.Name)))
             {
                 return true;
             }
