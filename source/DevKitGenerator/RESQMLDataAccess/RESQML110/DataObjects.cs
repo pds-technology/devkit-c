@@ -2015,7 +2015,6 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 aggregationTypeField = value;
-             if(value!=null) 
                  this.AggregationTypeSpecified = true;
                 NotifyPropertyChanged("AggregationType");
             }
@@ -2537,7 +2536,6 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 relativePositionField = value;
-             if(value!=null) 
                  this.RelativePositionSpecified = true;
                 NotifyPropertyChanged("RelativePosition");
             }
@@ -10677,7 +10675,6 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 measureClassField = value;
-             if(value!=null) 
                  this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }
@@ -12531,7 +12528,6 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 measureClassField = value;
-             if(value!=null) 
                  this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }

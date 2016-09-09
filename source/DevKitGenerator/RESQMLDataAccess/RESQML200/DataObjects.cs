@@ -1166,7 +1166,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 QualifierField = value;
-             if(value!=null) 
                  this.QualifierSpecified = true;
                 NotifyPropertyChanged("Qualifier");
             }
@@ -1205,7 +1204,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 SecondaryQualifierField = value;
-             if(value!=null) 
                  this.SecondaryQualifierSpecified = true;
                 NotifyPropertyChanged("SecondaryQualifier");
             }
@@ -12997,7 +12995,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 aggregationTypeField = value;
-             if(value!=null) 
                  this.AggregationTypeSpecified = true;
                 NotifyPropertyChanged("AggregationType");
             }
@@ -13861,7 +13858,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 relativePositionField = value;
-             if(value!=null) 
                  this.RelativePositionSpecified = true;
                 NotifyPropertyChanged("RelativePosition");
             }
@@ -22457,7 +22453,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 FluidContactField = value;
-             if(value!=null) 
                  this.FluidContactSpecified = true;
                 NotifyPropertyChanged("FluidContact");
             }
@@ -22496,7 +22491,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 FluidMarkerField = value;
-             if(value!=null) 
                  this.FluidMarkerSpecified = true;
                 NotifyPropertyChanged("FluidMarker");
             }
@@ -22535,7 +22529,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 GeologicBoundaryKindField = value;
-             if(value!=null) 
                  this.GeologicBoundaryKindSpecified = true;
                 NotifyPropertyChanged("GeologicBoundaryKind");
             }
@@ -23011,7 +23004,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 LineRoleField = value;
-             if(value!=null) 
                  this.LineRoleSpecified = true;
                 NotifyPropertyChanged("LineRole");
             }
@@ -23109,7 +23101,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 LineRoleField = value;
-             if(value!=null) 
                  this.LineRoleSpecified = true;
                 NotifyPropertyChanged("LineRole");
             }
@@ -23302,7 +23293,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 MdDomainField = value;
-             if(value!=null) 
                  this.MDDomainSpecified = true;
                 NotifyPropertyChanged("MDDomain");
             }
@@ -25590,7 +25580,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 GeologicUnitCompositionField = value;
-             if(value!=null) 
                  this.GeologicUnitCompositionSpecified = true;
                 NotifyPropertyChanged("GeologicUnitComposition");
             }
@@ -25629,7 +25618,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 GeologicUnitMaterialImplacementField = value;
-             if(value!=null) 
                  this.GeologicUnitMaterialImplacementSpecified = true;
                 NotifyPropertyChanged("GeologicUnitMaterialImplacement");
             }
@@ -25691,7 +25679,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 DepositionModeField = value;
-             if(value!=null) 
                  this.DepositionModeSpecified = true;
                 NotifyPropertyChanged("DepositionMode");
             }
@@ -25789,7 +25776,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 Geobody3dShapeField = value;
-             if(value!=null) 
                  this.Geobody3dShapeSpecified = true;
                 NotifyPropertyChanged("Geobody3dShape");
             }
@@ -25851,7 +25837,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 PhaseField = value;
-             if(value!=null) 
                  this.PhaseSpecified = true;
                 NotifyPropertyChanged("Phase");
             }
@@ -26073,7 +26058,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 SequenceStratigraphySurfaceField = value;
-             if(value!=null) 
                  this.SequenceStratigraphySurfaceSpecified = true;
                 NotifyPropertyChanged("SequenceStratigraphySurface");
             }
@@ -28352,7 +28336,6 @@ namespace Energistics.DataAccess.RESQML200
             } 
             set {
                 uomField = value;
-             if(value!=null) 
                  this.UomSpecified = true;
                 NotifyPropertyChanged("Uom");
             }

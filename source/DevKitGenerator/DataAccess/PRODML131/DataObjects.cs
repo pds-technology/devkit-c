@@ -1497,7 +1497,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 statusField = value;
-             if(value!=null) 
                  this.StatusSpecified = true;
                 NotifyPropertyChanged("Status");
             }
@@ -1620,7 +1619,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 statusField = value;
-             if(value!=null) 
                  this.StatusSpecified = true;
                 NotifyPropertyChanged("Status");
             }
@@ -1981,7 +1979,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 statusField = value;
-             if(value!=null) 
                  this.StatusSpecified = true;
                 NotifyPropertyChanged("Status");
             }
@@ -5409,7 +5406,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 measureClassField = value;
-             if(value!=null) 
                  this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }
@@ -5671,7 +5667,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 measureClassField = value;
-             if(value!=null) 
                  this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }
@@ -7331,7 +7326,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 itemStateField = value;
-             if(value!=null) 
                  this.ItemStateSpecified = true;
                 NotifyPropertyChanged("ItemState");
             }
@@ -8220,7 +8214,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 InjectedFluidField = value;
-             if(value!=null) 
                  this.InjectedFluidSpecified = true;
                 NotifyPropertyChanged("InjectedFluid");
             }
@@ -11431,7 +11424,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 codeField = value;
-             if(value!=null) 
                  this.CodeSpecified = true;
                 NotifyPropertyChanged("Code");
             }
@@ -11951,7 +11943,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 fluidWellField = value;
-             if(value!=null) 
                  this.FluidWellSpecified = true;
                 NotifyPropertyChanged("FluidWell");
             }
@@ -11990,7 +11981,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 directionWellField = value;
-             if(value!=null) 
                  this.DirectionWellSpecified = true;
                 NotifyPropertyChanged("DirectionWell");
             }
@@ -12318,7 +12308,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 testReasonField = value;
-             if(value!=null) 
                  this.TestReasonSpecified = true;
                 NotifyPropertyChanged("TestReason");
             }
@@ -12447,7 +12436,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 standardTempPresField = value;
-             if(value!=null) 
                  this.StandardTempPresSpecified = true;
                 NotifyPropertyChanged("StandardTempPres");
             }
@@ -12486,7 +12474,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 validationStateField = value;
-             if(value!=null) 
                  this.ValidationStateSpecified = true;
                 NotifyPropertyChanged("ValidationState");
             }
@@ -12806,7 +12793,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 endpointField = value;
-             if(value!=null) 
                  this.EndpointSpecified = true;
                 NotifyPropertyChanged("Endpoint");
             }
@@ -13307,7 +13293,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 measureClassField = value;
-             if(value!=null) 
                  this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }
@@ -13945,7 +13930,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 statusField = value;
-             if(value!=null) 
                  this.StatusSpecified = true;
                 NotifyPropertyChanged("Status");
             }
@@ -14124,7 +14108,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 statusField = value;
-             if(value!=null) 
                  this.StatusSpecified = true;
                 NotifyPropertyChanged("Status");
             }
@@ -14287,7 +14270,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 measureClassField = value;
-             if(value!=null) 
                  this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }
@@ -15132,7 +15114,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 referenceKindField = value;
-             if(value!=null) 
                  this.ReferenceKindSpecified = true;
                 NotifyPropertyChanged("ReferenceKind");
             }
@@ -16636,7 +16617,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 typeField = value;
-             if(value!=null) 
                  this.TypeSpecified = true;
                 NotifyPropertyChanged("Type");
             }
@@ -16739,7 +16719,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 kindField = value;
-             if(value!=null) 
                  this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
@@ -16989,7 +16968,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 kindField = value;
-             if(value!=null) 
                  this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
@@ -19720,7 +19698,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 kindField = value;
-             if(value!=null) 
                  this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
@@ -19896,7 +19873,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 kindField = value;
-             if(value!=null) 
                  this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
@@ -20107,7 +20083,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 directionField = value;
-             if(value!=null) 
                  this.DirectionSpecified = true;
                 NotifyPropertyChanged("Direction");
             }
@@ -20191,7 +20166,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 qualifierField = value;
-             if(value!=null) 
                  this.QualifierSpecified = true;
                 NotifyPropertyChanged("Qualifier");
             }
@@ -20230,7 +20204,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 subQualifierField = value;
-             if(value!=null) 
                  this.SubQualifierSpecified = true;
                 NotifyPropertyChanged("SubQualifier");
             }
@@ -21303,7 +21276,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 statusField = value;
-             if(value!=null) 
                  this.StatusSpecified = true;
                 NotifyPropertyChanged("Status");
             }
@@ -21443,7 +21415,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 statusField = value;
-             if(value!=null) 
                  this.StatusSpecified = true;
                 NotifyPropertyChanged("Status");
             }
@@ -22281,7 +22252,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 measureClassField = value;
-             if(value!=null) 
                  this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }
@@ -22365,7 +22335,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 qualifierField = value;
-             if(value!=null) 
                  this.QualifierSpecified = true;
                 NotifyPropertyChanged("Qualifier");
             }
@@ -22404,7 +22373,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 subQualifierField = value;
-             if(value!=null) 
                  this.SubQualifierSpecified = true;
                 NotifyPropertyChanged("SubQualifier");
             }
@@ -22500,7 +22468,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 productField = value;
-             if(value!=null) 
                  this.ProductSpecified = true;
                 NotifyPropertyChanged("Product");
             }
@@ -22539,7 +22506,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 periodKindField = value;
-             if(value!=null) 
                  this.PeriodKindSpecified = true;
                 NotifyPropertyChanged("PeriodKind");
             }
@@ -22858,7 +22824,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 statusWellField = value;
-             if(value!=null) 
                  this.StatusWellSpecified = true;
                 NotifyPropertyChanged("StatusWell");
             }
@@ -22897,7 +22862,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 fluidWellField = value;
-             if(value!=null) 
                  this.FluidWellSpecified = true;
                 NotifyPropertyChanged("FluidWell");
             }
@@ -22936,7 +22900,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 operatingMethodField = value;
-             if(value!=null) 
                  this.OperatingMethodSpecified = true;
                 NotifyPropertyChanged("OperatingMethod");
             }
@@ -23366,7 +23329,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 periodKindField = value;
-             if(value!=null) 
                  this.PeriodKindSpecified = true;
                 NotifyPropertyChanged("PeriodKind");
             }
@@ -23681,7 +23643,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 calculationMethodField = value;
-             if(value!=null) 
                  this.CalculationMethodSpecified = true;
                 NotifyPropertyChanged("CalculationMethod");
             }
@@ -23906,7 +23867,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 standardTempPresField = value;
-             if(value!=null) 
                  this.StandardTempPresSpecified = true;
                 NotifyPropertyChanged("StandardTempPres");
             }
@@ -24850,7 +24810,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 kindField = value;
-             if(value!=null) 
                  this.KindSpecified = true;
                 NotifyPropertyChanged("Kind");
             }
@@ -25024,7 +24983,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 qualifierField = value;
-             if(value!=null) 
                  this.QualifierSpecified = true;
                 NotifyPropertyChanged("Qualifier");
             }
@@ -25182,7 +25140,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 qualifierField = value;
-             if(value!=null) 
                  this.QualifierSpecified = true;
                 NotifyPropertyChanged("Qualifier");
             }
@@ -26013,7 +25970,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 productField = value;
-             if(value!=null) 
                  this.ProductSpecified = true;
                 NotifyPropertyChanged("Product");
             }
@@ -26330,7 +26286,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 typeField = value;
-             if(value!=null) 
                  this.TypeSpecified = true;
                 NotifyPropertyChanged("Type");
             }
@@ -29317,7 +29272,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 typeField = value;
-             if(value!=null) 
                  this.TypeSpecified = true;
                 NotifyPropertyChanged("Type");
             }
@@ -29372,7 +29326,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 periodField = value;
-             if(value!=null) 
                  this.PeriodSpecified = true;
                 NotifyPropertyChanged("Period");
             }
@@ -30048,7 +30001,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 typeField = value;
-             if(value!=null) 
                  this.TypeSpecified = true;
                 NotifyPropertyChanged("Type");
             }
@@ -30503,7 +30455,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 periodKindField = value;
-             if(value!=null) 
                  this.PeriodKindSpecified = true;
                 NotifyPropertyChanged("PeriodKind");
             }
@@ -32649,7 +32600,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 productField = value;
-             if(value!=null) 
                  this.ProductSpecified = true;
                 NotifyPropertyChanged("Product");
             }
@@ -34102,7 +34052,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 sampleTypeField = value;
-             if(value!=null) 
                  this.SampleTypeSpecified = true;
                 NotifyPropertyChanged("SampleType");
             }
@@ -34222,7 +34171,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 testKindField = value;
-             if(value!=null) 
                  this.TestKindSpecified = true;
                 NotifyPropertyChanged("TestKind");
             }
@@ -34333,7 +34281,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 reservoirFluidTypeField = value;
-             if(value!=null) 
                  this.ReservoirFluidTypeSpecified = true;
                 NotifyPropertyChanged("ReservoirFluidType");
             }
@@ -41703,7 +41650,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 componentBaseKindField = value;
-             if(value!=null) 
                  this.ComponentBaseKindSpecified = true;
                 NotifyPropertyChanged("ComponentBaseKind");
             }
@@ -41742,7 +41688,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 componentKindField = value;
-             if(value!=null) 
                  this.ComponentKindSpecified = true;
                 NotifyPropertyChanged("ComponentKind");
             }
@@ -42962,7 +42907,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 eosMOdelField = value;
-             if(value!=null) 
                  this.EosMOdelSpecified = true;
                 NotifyPropertyChanged("EosMOdel");
             }
@@ -43845,7 +43789,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 reasonForRunField = value;
-             if(value!=null) 
                  this.ReasonForRunSpecified = true;
                 NotifyPropertyChanged("ReasonForRun");
             }
@@ -44752,7 +44695,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 pressureRatingField = value;
-             if(value!=null) 
                  this.PressureRatingSpecified = true;
                 NotifyPropertyChanged("PressureRating");
             }
@@ -44791,7 +44733,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 bendAngleField = value;
-             if(value!=null) 
                  this.BendAngleSpecified = true;
                 NotifyPropertyChanged("BendAngle");
             }
@@ -45028,7 +44969,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 modeField = value;
-             if(value!=null) 
                  this.ModeSpecified = true;
                 NotifyPropertyChanged("Mode");
             }
@@ -45256,7 +45196,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 cableTypeField = value;
-             if(value!=null) 
                  this.CableTypeSpecified = true;
                 NotifyPropertyChanged("CableType");
             }
@@ -51798,7 +51737,6 @@ namespace Energistics.DataAccess.PRODML131
             } 
             set {
                 reportStatusField = value;
-             if(value!=null) 
                  this.ReportStatusSpecified = true;
                 NotifyPropertyChanged("ReportStatus");
             }

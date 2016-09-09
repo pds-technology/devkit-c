@@ -874,7 +874,7 @@ namespace Energistics.Generator
                 if (type.GetProperty(property.Name + "Specified") != null)
                 {
                     // If this property has a cooresponding 'PropertyName'Specified property, then the setter should also set that property to true
-                    if ((property.PropertyType.IsEnum) || (property.PropertyType.IsValueType) || (property.PropertyType.Name.ToLower().Contains("Boolean")))
+                    if ((property.PropertyType.IsEnum) || (property.PropertyType.IsValueType) || (property.PropertyType.Name.ToLower().Contains("boolean")))
                     {
                         //ignore
                     }

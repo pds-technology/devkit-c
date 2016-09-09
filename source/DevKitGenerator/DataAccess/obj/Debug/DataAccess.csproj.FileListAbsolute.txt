@@ -1,0 +1,6 @@
+C:\projects\source_master\source\DevKitGenerator\DataAccess\bin\Debug\Energistics.DataAccess.XML
+C:\projects\source_master\source\DevKitGenerator\DataAccess\bin\Debug\Energistics.DataAccess.dll
+C:\projects\source_master\source\DevKitGenerator\DataAccess\bin\Debug\Energistics.DataAccess.pdb
+C:\projects\source_master\source\DevKitGenerator\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\projects\source_master\source\DevKitGenerator\DataAccess\obj\Debug\Energistics.DataAccess.dll
+C:\projects\source_master\source\DevKitGenerator\DataAccess\obj\Debug\Energistics.DataAccess.pdb

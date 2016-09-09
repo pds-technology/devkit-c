@@ -2898,7 +2898,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 statusBhaField = value;
-             if(value!=null) 
                  this.StatusBhaSpecified = true;
                 NotifyPropertyChanged("StatusBha");
             }
@@ -4090,7 +4089,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 northDirectionField = value;
-             if(value!=null) 
                  this.NorthDirectionSpecified = true;
                 NotifyPropertyChanged("NorthDirection");
             }
@@ -7890,7 +7888,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 itemStateField = value;
-             if(value!=null) 
                  this.ItemStateSpecified = true;
                 NotifyPropertyChanged("ItemState");
             }
@@ -8234,7 +8231,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 jobTypeField = value;
-             if(value!=null) 
                  this.JobTypeSpecified = true;
                 NotifyPropertyChanged("JobType");
             }
@@ -9626,7 +9622,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeHoleCasingField = value;
-             if(value!=null) 
                  this.TypeHoleCasingSpecified = true;
                 NotifyPropertyChanged("TypeHoleCasing");
             }
@@ -15966,7 +15961,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeField = value;
-             if(value!=null) 
                  this.TypeSpecified = true;
                 NotifyPropertyChanged("Type");
             }
@@ -16556,7 +16550,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 showRatField = value;
-             if(value!=null) 
                  this.ShowRatSpecified = true;
                 NotifyPropertyChanged("ShowRat");
             }
@@ -16685,7 +16678,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 natFlorLevelField = value;
-             if(value!=null) 
                  this.NatFlorLevelSpecified = true;
                 NotifyPropertyChanged("NatFlorLevel");
             }
@@ -16760,7 +16752,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 cutSpeedField = value;
-             if(value!=null) 
                  this.CutSpeedSpecified = true;
                 NotifyPropertyChanged("CutSpeed");
             }
@@ -16817,7 +16808,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 cutFormField = value;
-             if(value!=null) 
                  this.CutFormSpecified = true;
                 NotifyPropertyChanged("CutForm");
             }
@@ -16892,7 +16882,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 cutFlorSpeedField = value;
-             if(value!=null) 
                  this.CutFlorSpeedSpecified = true;
                 NotifyPropertyChanged("CutFlorSpeed");
             }
@@ -16949,7 +16938,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 cutFlorFormField = value;
-             if(value!=null) 
                  this.CutFlorFormSpecified = true;
                 NotifyPropertyChanged("CutFlorForm");
             }
@@ -16988,7 +16976,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 cutFlorLevelField = value;
-             if(value!=null) 
                  this.CutFlorLevelSpecified = true;
                 NotifyPropertyChanged("CutFlorLevel");
             }
@@ -18079,7 +18066,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 gasPeakTypeField = value;
-             if(value!=null) 
                  this.GasPeakTypeSpecified = true;
                 NotifyPropertyChanged("GasPeakType");
             }
@@ -20719,7 +20705,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 technologyField = value;
-             if(value!=null) 
                  this.TechnologySpecified = true;
                 NotifyPropertyChanged("Technology");
             }
@@ -20758,7 +20743,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 locationField = value;
-             if(value!=null) 
                  this.LocationSpecified = true;
                 NotifyPropertyChanged("Location");
             }
@@ -21310,7 +21294,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeField = value;
-             if(value!=null) 
                  this.TypeSpecified = true;
                 NotifyPropertyChanged("Type");
             }
@@ -25689,7 +25672,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 directionField = value;
-             if(value!=null) 
                  this.DirectionSpecified = true;
                 NotifyPropertyChanged("Direction");
             }
@@ -26101,7 +26083,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 classWitsmlField = value;
-             if(value!=null) 
                  this.ClassWitsmlSpecified = true;
                 NotifyPropertyChanged("ClassWitsml");
             }
@@ -26455,7 +26436,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 traceStateField = value;
-             if(value!=null) 
                  this.TraceStateSpecified = true;
                 NotifyPropertyChanged("TraceState");
             }
@@ -26494,7 +26474,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 traceOriginField = value;
-             if(value!=null) 
                  this.TraceOriginSpecified = true;
                 NotifyPropertyChanged("TraceOrigin");
             }
@@ -26533,7 +26512,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeLogDataField = value;
-             if(value!=null) 
                  this.TypeLogDataSpecified = true;
                 NotifyPropertyChanged("TypeLogData");
             }
@@ -27105,7 +27083,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 activityCodeField = value;
-             if(value!=null) 
                  this.ActivityCodeSpecified = true;
                 NotifyPropertyChanged("ActivityCode");
             }
@@ -27261,7 +27238,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 severityField = value;
-             if(value!=null) 
                  this.SeveritySpecified = true;
                 NotifyPropertyChanged("Severity");
             }
@@ -27300,7 +27276,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 warnProbabilityField = value;
-             if(value!=null) 
                  this.WarnProbabilitySpecified = true;
                 NotifyPropertyChanged("WarnProbability");
             }
@@ -30272,7 +30247,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 activityCodeField = value;
-             if(value!=null) 
                  this.ActivityCodeSpecified = true;
                 NotifyPropertyChanged("ActivityCode");
             }
@@ -30329,7 +30303,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeActivityClassField = value;
-             if(value!=null) 
                  this.TypeActivityClassSpecified = true;
                 NotifyPropertyChanged("TypeActivityClass");
             }
@@ -30608,7 +30581,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 itemStateField = value;
-             if(value!=null) 
                  this.ItemStateSpecified = true;
                 NotifyPropertyChanged("ItemState");
             }
@@ -31481,7 +31453,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeSurveyToolField = value;
-             if(value!=null) 
                  this.TypeSurveyToolSpecified = true;
                 NotifyPropertyChanged("TypeSurveyTool");
             }
@@ -32108,7 +32079,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 statusTrajStationField = value;
-             if(value!=null) 
                  this.StatusTrajStationSpecified = true;
                 NotifyPropertyChanged("StatusTrajStation");
             }
@@ -35692,7 +35662,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeOperationField = value;
-             if(value!=null) 
                  this.TypeOperationSpecified = true;
                 NotifyPropertyChanged("TypeOperation");
             }
@@ -37795,7 +37764,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeSuppCraftField = value;
-             if(value!=null) 
                  this.TypeSuppCraftSpecified = true;
                 NotifyPropertyChanged("TypeSuppCraft");
             }
@@ -38682,7 +38650,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 activityCodeField = value;
-             if(value!=null) 
                  this.ActivityCodeSpecified = true;
                 NotifyPropertyChanged("ActivityCode");
             }
@@ -39618,7 +39585,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dataTypeField = value;
-             if(value!=null) 
                  this.DataTypeSpecified = true;
                 NotifyPropertyChanged("DataType");
             }
@@ -39657,7 +39623,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 classWitsmlField = value;
-             if(value!=null) 
                  this.ClassWitsmlSpecified = true;
                 NotifyPropertyChanged("ClassWitsml");
             }
@@ -40575,7 +40540,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeRigField = value;
-             if(value!=null) 
                  this.TypeRigSpecified = true;
                 NotifyPropertyChanged("TypeRig");
             }
@@ -41184,7 +41148,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeDerrickField = value;
-             if(value!=null) 
                  this.TypeDerrickSpecified = true;
                 NotifyPropertyChanged("TypeDerrick");
             }
@@ -41424,7 +41387,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeDrawWorksField = value;
-             if(value!=null) 
                  this.TypeDrawWorksSpecified = true;
                 NotifyPropertyChanged("TypeDrawWorks");
             }
@@ -41571,7 +41533,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 rotSystemField = value;
-             if(value!=null) 
                  this.RotSystemSpecified = true;
                 NotifyPropertyChanged("RotSystem");
             }
@@ -43263,7 +43224,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeBopCompField = value;
-             if(value!=null) 
                  this.TypeBopCompSpecified = true;
                 NotifyPropertyChanged("TypeBopComp");
             }
@@ -43645,7 +43605,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typePitField = value;
-             if(value!=null) 
                  this.TypePitSpecified = true;
                 NotifyPropertyChanged("TypePit");
             }
@@ -43964,7 +43923,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typePumpField = value;
-             if(value!=null) 
                  this.TypePumpSpecified = true;
                 NotifyPropertyChanged("TypePump");
             }
@@ -46937,7 +46895,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 subCategoryField = value;
-             if(value!=null) 
                  this.SubCategorySpecified = true;
                 NotifyPropertyChanged("SubCategory");
             }
@@ -49116,7 +49073,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 itemStateField = value;
-             if(value!=null) 
                  this.ItemStateSpecified = true;
                 NotifyPropertyChanged("ItemState");
             }
@@ -49639,7 +49595,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeTargetScopeField = value;
-             if(value!=null) 
                  this.TypeTargetScopeSpecified = true;
                 NotifyPropertyChanged("TypeTargetScope");
             }
@@ -49714,7 +49669,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 aziRefField = value;
-             if(value!=null) 
                  this.AziRefSpecified = true;
                 NotifyPropertyChanged("AziRef");
             }
@@ -49753,7 +49707,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 catTargField = value;
-             if(value!=null) 
                  this.CatTargSpecified = true;
                 NotifyPropertyChanged("CatTarg");
             }
@@ -50743,7 +50696,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 aziRefField = value;
-             if(value!=null) 
                  this.AziRefSpecified = true;
                 NotifyPropertyChanged("AziRef");
             }
@@ -51268,7 +51220,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeSurveyToolField = value;
-             if(value!=null) 
                  this.TypeSurveyToolSpecified = true;
                 NotifyPropertyChanged("TypeSurveyTool");
             }
@@ -51895,7 +51846,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 statusTrajStationField = value;
-             if(value!=null) 
                  this.StatusTrajStationSpecified = true;
                 NotifyPropertyChanged("StatusTrajStation");
             }
@@ -53099,7 +53049,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 configConField = value;
-             if(value!=null) 
                  this.ConfigConSpecified = true;
                 NotifyPropertyChanged("ConfigCon");
             }
@@ -53192,7 +53141,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeMaterialField = value;
-             if(value!=null) 
                  this.TypeMaterialSpecified = true;
                 NotifyPropertyChanged("TypeMaterial");
             }
@@ -53718,7 +53666,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeBitField = value;
-             if(value!=null) 
                  this.TypeBitSpecified = true;
                 NotifyPropertyChanged("TypeBit");
             }
@@ -53871,7 +53818,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 condInitDullField = value;
-             if(value!=null) 
                  this.CondInitDullSpecified = true;
                 NotifyPropertyChanged("CondInitDull");
             }
@@ -53982,7 +53928,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 condInitReasonField = value;
-             if(value!=null) 
                  this.CondInitReasonSpecified = true;
                 NotifyPropertyChanged("CondInitReason");
             }
@@ -54099,7 +54044,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 condFinalDullField = value;
-             if(value!=null) 
                  this.CondFinalDullSpecified = true;
                 NotifyPropertyChanged("CondFinalDull");
             }
@@ -54210,7 +54154,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 condFinalReasonField = value;
-             if(value!=null) 
                  this.CondFinalReasonSpecified = true;
                 NotifyPropertyChanged("CondFinalReason");
             }
@@ -54406,7 +54349,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeNozzleField = value;
-             if(value!=null) 
                  this.TypeNozzleSpecified = true;
                 NotifyPropertyChanged("TypeNozzle");
             }
@@ -54689,7 +54631,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 positionField = value;
-             if(value!=null) 
                  this.PositionSpecified = true;
                 NotifyPropertyChanged("Position");
             }
@@ -54972,7 +54913,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeJarField = value;
-             if(value!=null) 
                  this.TypeJarSpecified = true;
                 NotifyPropertyChanged("TypeJar");
             }
@@ -55011,7 +54951,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 jarActionField = value;
-             if(value!=null) 
                  this.JarActionSpecified = true;
                 NotifyPropertyChanged("JarAction");
             }
@@ -55277,7 +55216,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeMeasurementField = value;
-             if(value!=null) 
                  this.TypeMeasurementSpecified = true;
                 NotifyPropertyChanged("TypeMeasurement");
             }
@@ -55641,7 +55579,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeBearingField = value;
-             if(value!=null) 
                  this.TypeBearingSpecified = true;
                 NotifyPropertyChanged("TypeBearing");
             }
@@ -56023,7 +55960,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 shapeBladeField = value;
-             if(value!=null) 
                  this.ShapeBladeSpecified = true;
                 NotifyPropertyChanged("ShapeBlade");
             }
@@ -56101,7 +56037,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeBladeField = value;
-             if(value!=null) 
                  this.TypeBladeSpecified = true;
                 NotifyPropertyChanged("TypeBlade");
             }
@@ -56340,7 +56275,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeHoleOpenerField = value;
-             if(value!=null) 
                  this.TypeHoleOpenerSpecified = true;
                 NotifyPropertyChanged("TypeHoleOpener");
             }
@@ -57865,7 +57799,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 statusWellField = value;
-             if(value!=null) 
                  this.StatusWellSpecified = true;
                 NotifyPropertyChanged("StatusWell");
             }
@@ -57904,7 +57837,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 purposeWellField = value;
-             if(value!=null) 
                  this.PurposeWellSpecified = true;
                 NotifyPropertyChanged("PurposeWell");
             }
@@ -57943,7 +57875,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 fluidWellField = value;
-             if(value!=null) 
                  this.FluidWellSpecified = true;
                 NotifyPropertyChanged("FluidWell");
             }
@@ -57982,7 +57913,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 directionWellField = value;
-             if(value!=null) 
                  this.DirectionWellSpecified = true;
                 NotifyPropertyChanged("DirectionWell");
             }
@@ -58377,7 +58307,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 codeField = value;
-             if(value!=null) 
                  this.CodeSpecified = true;
                 NotifyPropertyChanged("Code");
             }
@@ -59435,7 +59364,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 geodeticDatumCodeField = value;
-             if(value!=null) 
                  this.GeodeticDatumCodeSpecified = true;
                 NotifyPropertyChanged("GeodeticDatumCode");
             }
@@ -59621,7 +59549,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 ellipsoidCodeField = value;
-             if(value!=null) 
                  this.EllipsoidCodeSpecified = true;
                 NotifyPropertyChanged("EllipsoidCode");
             }
@@ -60003,7 +59930,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 projectionCodeField = value;
-             if(value!=null) 
                  this.ProjectionCodeSpecified = true;
                 NotifyPropertyChanged("ProjectionCode");
             }
@@ -60333,7 +60259,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 methodVariantField = value;
-             if(value!=null) 
                  this.MethodVariantSpecified = true;
                 NotifyPropertyChanged("MethodVariant");
             }
@@ -60408,7 +60333,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 NADTypeField = value;
-             if(value!=null) 
                  this.NADTypeSpecified = true;
                 NotifyPropertyChanged("NADType");
             }
@@ -60501,7 +60425,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 hemisphereField = value;
-             if(value!=null) 
                  this.HemisphereSpecified = true;
                 NotifyPropertyChanged("Hemisphere");
             }
@@ -60853,7 +60776,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 statusWellboreField = value;
-             if(value!=null) 
                  this.StatusWellboreSpecified = true;
                 NotifyPropertyChanged("StatusWellbore");
             }
@@ -60892,7 +60814,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 purposeWellboreField = value;
-             if(value!=null) 
                  this.PurposeWellboreSpecified = true;
                 NotifyPropertyChanged("PurposeWellbore");
             }
@@ -60931,7 +60852,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 typeWellboreField = value;
-             if(value!=null) 
                  this.TypeWellboreSpecified = true;
                 NotifyPropertyChanged("TypeWellbore");
             }
@@ -60970,7 +60890,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 shapeField = value;
-             if(value!=null) 
                  this.ShapeSpecified = true;
                 NotifyPropertyChanged("Shape");
             }
@@ -62115,7 +62034,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 classWitsmlField = value;
-             if(value!=null) 
                  this.ClassWitsmlSpecified = true;
                 NotifyPropertyChanged("ClassWitsml");
             }
@@ -62337,7 +62255,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 traceStateField = value;
-             if(value!=null) 
                  this.TraceStateSpecified = true;
                 NotifyPropertyChanged("TraceState");
             }
@@ -62376,7 +62293,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 traceOriginField = value;
-             if(value!=null) 
                  this.TraceOriginSpecified = true;
                 NotifyPropertyChanged("TraceOrigin");
             }
@@ -62797,7 +62713,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 directionField = value;
-             if(value!=null) 
                  this.DirectionSpecified = true;
                 NotifyPropertyChanged("Direction");
             }

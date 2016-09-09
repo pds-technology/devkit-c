@@ -1,0 +1,13 @@
+C:\projects\source_master\source\DevkitTest\bin\Debug\DevkitTest.exe.config
+C:\projects\source_master\source\DevkitTest\obj\Debug\DevkitTest.csprojResolveAssemblyReference.cache
+C:\projects\source_master\source\DevkitTest\bin\Debug\DevkitTest.exe
+C:\projects\source_master\source\DevkitTest\bin\Debug\DevkitTest.pdb
+C:\projects\source_master\source\DevkitTest\bin\Debug\Avro.dll
+C:\projects\source_master\source\DevkitTest\bin\Debug\Energistics.DataAccess.dll
+C:\projects\source_master\source\DevkitTest\bin\Debug\Energistics.RESQMLDataAccess.dll
+C:\projects\source_master\source\DevkitTest\bin\Debug\Energistics.DataAccess.pdb
+C:\projects\source_master\source\DevkitTest\bin\Debug\Energistics.DataAccess.xml
+C:\projects\source_master\source\DevkitTest\bin\Debug\Energistics.RESQMLDataAccess.pdb
+C:\projects\source_master\source\DevkitTest\bin\Debug\Energistics.RESQMLDataAccess.xml
+C:\projects\source_master\source\DevkitTest\obj\Debug\DevkitTest.exe
+C:\projects\source_master\source\DevkitTest\obj\Debug\DevkitTest.pdb

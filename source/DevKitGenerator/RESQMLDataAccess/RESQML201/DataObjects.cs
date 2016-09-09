@@ -62,19 +62,19 @@ namespace Energistics.DataAccess.RESQML201
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalPropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscreteProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscretePropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscretePropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentPropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousPropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointsProperty))]
 
@@ -232,19 +232,19 @@ namespace Energistics.DataAccess.RESQML201
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidUnitFeature))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSeries))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalDepth3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalDepth3dCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalTime3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalTime3dCrs))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EpcExternalPartReference))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrs))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -282,7 +282,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("Aliases")]
 
-        public List<ObjectAliaList> Aliases {
+        public List<ObjectAlias> Aliases {
             get {
                 return AliasesField;
             } 
@@ -301,7 +301,7 @@ namespace Energistics.DataAccess.RESQML201
              else return false;
             } 
          }
-        private List<ObjectAliaList> AliasesField; 
+        private List<ObjectAlias> AliasesField; 
 
 
         /// <summary>
@@ -1388,7 +1388,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 QualifierField = value;
-             if(value!=null) 
                  this.QualifierSpecified = true;
                 NotifyPropertyChanged("Qualifier");
             }
@@ -1427,7 +1426,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 SecondaryQualifierField = value;
-             if(value!=null) 
                  this.SecondaryQualifierSpecified = true;
                 NotifyPropertyChanged("SecondaryQualifier");
             }
@@ -1829,7 +1827,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="TimeIndices", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the TimeIndices xsd type.")]
-    public partial class TimeIndiceList : Object , INotifyPropertyChanged
+    public partial class TimeIndices : Object , INotifyPropertyChanged
     {
 
 
@@ -3239,7 +3237,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="PatchOfValues", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the PatchOfValues xsd type.")]
-    public partial class PatchOfValueList : Object , INotifyPropertyChanged
+    public partial class PatchOfValues : Object , INotifyPropertyChanged
     {
 
 
@@ -3321,7 +3319,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="PatchOfPoints", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the PatchOfPoints xsd type.")]
-    public partial class PatchOfPointList : Object , INotifyPropertyChanged
+    public partial class PatchOfPoints : Object , INotifyPropertyChanged
     {
 
 
@@ -3772,7 +3770,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("ParametricLineIntersections")]
 
-        public ParametricLineIntersectionList ParametricLineIntersections {
+        public ParametricLineIntersections ParametricLineIntersections {
             get {
                 return ParametricLineIntersectionsField;
             } 
@@ -3782,7 +3780,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private ParametricLineIntersectionList ParametricLineIntersectionsField; 
+        private ParametricLineIntersections ParametricLineIntersectionsField; 
 
 
 
@@ -3808,7 +3806,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ParametricLineIntersections", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the ParametricLineIntersections xsd type.")]
-    public partial class ParametricLineIntersectionList : Object , INotifyPropertyChanged
+    public partial class ParametricLineIntersections : Object , INotifyPropertyChanged
     {
 
 
@@ -4727,7 +4725,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("Kind")]
 
-        public ResqmlPropertyKind Kind {
+        public ResqmlPropertyKind? Kind {
             get {
                 return KindField;
             } 
@@ -4737,7 +4735,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private ResqmlPropertyKind KindField; 
+        private ResqmlPropertyKind? KindField; 
 
 
 
@@ -4763,7 +4761,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StreamlineWellbores", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the StreamlineWellbores xsd type.")]
-    public partial class StreamlineWellboreList : Object , INotifyPropertyChanged
+    public partial class StreamlineWellbores : Object , INotifyPropertyChanged
     {
 
 
@@ -4872,7 +4870,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="PatchBoundaries", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the PatchBoundaries xsd type.")]
-    public partial class PatchBoundarieList : Object , INotifyPropertyChanged
+    public partial class PatchBoundaries : Object , INotifyPropertyChanged
     {
 
 
@@ -5648,7 +5646,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("SeismicCoordinates")]
 
-        public AbstractSeismicCoordinateList SeismicCoordinates {
+        public AbstractSeismicCoordinates SeismicCoordinates {
             get {
                 return SeismicCoordinatesField;
             } 
@@ -5658,7 +5656,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private AbstractSeismicCoordinateList SeismicCoordinatesField; 
+        private AbstractSeismicCoordinates SeismicCoordinatesField; 
 
 
 
@@ -5676,9 +5674,9 @@ namespace Energistics.DataAccess.RESQML201
     /// This class represents the AbstractSeismicCoordinates xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Seismic2dCoordinateList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Seismic2dCoordinates))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Seismic3dCoordinateList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Seismic3dCoordinates))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -5688,7 +5686,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractSeismicCoordinates", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the AbstractSeismicCoordinates xsd type.")]
-    public abstract partial class AbstractSeismicCoordinateList : Object , INotifyPropertyChanged
+    public abstract partial class AbstractSeismicCoordinates : Object , INotifyPropertyChanged
     {
 
 
@@ -5752,7 +5750,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Seismic2dCoordinates", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the Seismic2dCoordinates xsd type.")]
-    public partial class Seismic2dCoordinateList : AbstractSeismicCoordinateList , INotifyPropertyChanged
+    public partial class Seismic2dCoordinates : AbstractSeismicCoordinates , INotifyPropertyChanged
     {
 
 
@@ -5815,7 +5813,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Seismic3dCoordinates", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the Seismic3dCoordinates xsd type.")]
-    public partial class Seismic3dCoordinateList : AbstractSeismicCoordinateList , INotifyPropertyChanged
+    public partial class Seismic3dCoordinates : AbstractSeismicCoordinates , INotifyPropertyChanged
     {
 
 
@@ -5913,7 +5911,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("AdditionalGridPoints")]
 
-        public List<AdditionalGridPointList> AdditionalGridPoints {
+        public List<AdditionalGridPoints> AdditionalGridPoints {
             get {
                 return AdditionalGridPointsField;
             } 
@@ -5932,7 +5930,7 @@ namespace Energistics.DataAccess.RESQML201
              else return false;
             } 
          }
-        private List<AdditionalGridPointList> AdditionalGridPointsField; 
+        private List<AdditionalGridPoints> AdditionalGridPointsField; 
 
 
 
@@ -5958,7 +5956,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AdditionalGridPoints", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the AdditionalGridPoints xsd type.")]
-    public partial class AdditionalGridPointList : Object , INotifyPropertyChanged
+    public partial class AdditionalGridPoints : Object , INotifyPropertyChanged
     {
 
 
@@ -6197,7 +6195,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("SplitCoordinateLines")]
 
-        public ColumnLayerSplitCoordinateLineList SplitCoordinateLines {
+        public ColumnLayerSplitCoordinateLines SplitCoordinateLines {
             get {
                 return SplitCoordinateLinesField;
             } 
@@ -6207,7 +6205,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private ColumnLayerSplitCoordinateLineList SplitCoordinateLinesField; 
+        private ColumnLayerSplitCoordinateLines SplitCoordinateLinesField; 
 
 
         /// <summary>
@@ -6704,7 +6702,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("IntervalGridCells")]
 
-        public IntervalGridCellList IntervalGridCells {
+        public IntervalGridCells IntervalGridCells {
             get {
                 return IntervalGridCellsField;
             } 
@@ -6714,7 +6712,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private IntervalGridCellList IntervalGridCellsField; 
+        private IntervalGridCells IntervalGridCellsField; 
 
 
 
@@ -6740,7 +6738,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IntervalGridCells", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the IntervalGridCells xsd type.")]
-    public partial class IntervalGridCellList : Object , INotifyPropertyChanged
+    public partial class IntervalGridCells : Object , INotifyPropertyChanged
     {
 
 
@@ -7372,7 +7370,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("ElementIndices")]
 
-        public List<ElementIndiceList> ElementIndices {
+        public List<ElementIndices> ElementIndices {
             get {
                 return ElementIndicesField;
             } 
@@ -7391,7 +7389,7 @@ namespace Energistics.DataAccess.RESQML201
              else return false;
             } 
          }
-        private List<ElementIndiceList> ElementIndicesField; 
+        private List<ElementIndices> ElementIndicesField; 
 
 
 
@@ -7417,7 +7415,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ElementIndices", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the ElementIndices xsd type.")]
-    public partial class ElementIndiceList : Object , INotifyPropertyChanged
+    public partial class ElementIndices : Object , INotifyPropertyChanged
     {
 
 
@@ -7426,7 +7424,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("IndexableElement")]
 
-        public IndexableElementList? IndexableElement {
+        public IndexableElements? IndexableElement {
             get {
                 return IndexableElementField;
             } 
@@ -7436,7 +7434,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private IndexableElementList? IndexableElementField; 
+        private IndexableElements? IndexableElementField; 
 
 
         /// <summary>
@@ -7664,7 +7662,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("IjGaps")]
 
-        public IjGapList IjGaps {
+        public IjGaps IjGaps {
             get {
                 return IjGapsField;
             } 
@@ -7674,7 +7672,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private IjGapList IjGapsField; 
+        private IjGaps IjGapsField; 
 
 
 
@@ -7700,7 +7698,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IjGaps", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the IjGaps xsd type.")]
-    public partial class IjGapList : Object , INotifyPropertyChanged
+    public partial class IjGaps : Object , INotifyPropertyChanged
     {
 
 
@@ -7763,7 +7761,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("IjSplitColumnEdges")]
 
-        public IjSplitColumnEdgeList IjSplitColumnEdges {
+        public IjSplitColumnEdges IjSplitColumnEdges {
             get {
                 return IjSplitColumnEdgesField;
             } 
@@ -7773,7 +7771,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private IjSplitColumnEdgeList IjSplitColumnEdgesField; 
+        private IjSplitColumnEdges IjSplitColumnEdgesField; 
 
 
 
@@ -7900,7 +7898,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IjSplitColumnEdges", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the IjSplitColumnEdges xsd type.")]
-    public partial class IjSplitColumnEdgeList : Object , INotifyPropertyChanged
+    public partial class IjSplitColumnEdges : Object , INotifyPropertyChanged
     {
 
 
@@ -8333,7 +8331,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("HingeNodeFaces")]
 
-        public UnstructuredGridHingeNodeFaceList HingeNodeFaces {
+        public UnstructuredGridHingeNodeFaces HingeNodeFaces {
             get {
                 return HingeNodeFacesField;
             } 
@@ -8343,7 +8341,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private UnstructuredGridHingeNodeFaceList HingeNodeFacesField; 
+        private UnstructuredGridHingeNodeFaces HingeNodeFacesField; 
 
 
         /// <summary>
@@ -8387,7 +8385,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="UnstructuredGridHingeNodeFaces", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the UnstructuredGridHingeNodeFaces xsd type.")]
-    public partial class UnstructuredGridHingeNodeFaceList : Object , INotifyPropertyChanged
+    public partial class UnstructuredGridHingeNodeFaces : Object , INotifyPropertyChanged
     {
 
 
@@ -8478,7 +8476,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("Edges")]
 
-        public EdgeList Edges {
+        public Edges Edges {
             get {
                 return EdgesField;
             } 
@@ -8488,7 +8486,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private EdgeList EdgesField; 
+        private Edges EdgesField; 
 
 
         /// <summary>
@@ -8532,7 +8530,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Edges", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the Edges xsd type.")]
-    public partial class EdgeList : Object , INotifyPropertyChanged
+    public partial class Edges : Object , INotifyPropertyChanged
     {
 
 
@@ -8948,7 +8946,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("ColumnEdges")]
 
-        public UnstructuredColumnEdgeList ColumnEdges {
+        public UnstructuredColumnEdges ColumnEdges {
             get {
                 return ColumnEdgesField;
             } 
@@ -8958,7 +8956,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private UnstructuredColumnEdgeList ColumnEdgesField; 
+        private UnstructuredColumnEdges ColumnEdgesField; 
 
 
 
@@ -8984,7 +8982,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="UnstructuredColumnEdges", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the UnstructuredColumnEdges xsd type.")]
-    public partial class UnstructuredColumnEdgeList : Object , INotifyPropertyChanged
+    public partial class UnstructuredColumnEdges : Object , INotifyPropertyChanged
     {
 
 
@@ -9129,7 +9127,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("SplitFaces")]
 
-        public SplitFaceList SplitFaces {
+        public SplitFaces SplitFaces {
             get {
                 return SplitFacesField;
             } 
@@ -9139,7 +9137,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private SplitFaceList SplitFacesField; 
+        private SplitFaces SplitFacesField; 
 
 
 
@@ -9165,7 +9163,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="SplitFaces", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the SplitFaces xsd type.")]
-    public partial class SplitFaceList : Object , INotifyPropertyChanged
+    public partial class SplitFaces : Object , INotifyPropertyChanged
     {
 
 
@@ -9228,7 +9226,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("SplitEdges")]
 
-        public SplitEdgeList SplitEdges {
+        public SplitEdges SplitEdges {
             get {
                 return SplitEdgesField;
             } 
@@ -9238,7 +9236,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private SplitEdgeList SplitEdgesField; 
+        private SplitEdges SplitEdgesField; 
 
 
 
@@ -9283,7 +9281,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="SplitEdges", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the SplitEdges xsd type.")]
-    public partial class SplitEdgeList : Object , INotifyPropertyChanged
+    public partial class SplitEdges : Object , INotifyPropertyChanged
     {
 
 
@@ -9383,7 +9381,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ColumnLayerSplitCoordinateLines", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the ColumnLayerSplitCoordinateLines xsd type.")]
-    public partial class ColumnLayerSplitCoordinateLineList : Object , INotifyPropertyChanged
+    public partial class ColumnLayerSplitCoordinateLines : Object , INotifyPropertyChanged
     {
 
 
@@ -9446,7 +9444,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("SplitColumnEdges")]
 
-        public ColumnLayerSplitColumnEdgeList SplitColumnEdges {
+        public ColumnLayerSplitColumnEdges SplitColumnEdges {
             get {
                 return SplitColumnEdgesField;
             } 
@@ -9456,7 +9454,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private ColumnLayerSplitColumnEdgeList SplitColumnEdgesField; 
+        private ColumnLayerSplitColumnEdges SplitColumnEdgesField; 
 
 
 
@@ -9501,7 +9499,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ColumnLayerSplitColumnEdges", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the ColumnLayerSplitColumnEdges xsd type.")]
-    public partial class ColumnLayerSplitColumnEdgeList : Object , INotifyPropertyChanged
+    public partial class ColumnLayerSplitColumnEdges : Object , INotifyPropertyChanged
     {
 
 
@@ -10296,7 +10294,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ConnectionInterpretations", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the ConnectionInterpretations xsd type.")]
-    public partial class ConnectionInterpretationList : Object , INotifyPropertyChanged
+    public partial class ConnectionInterpretations : Object , INotifyPropertyChanged
     {
 
 
@@ -10387,7 +10385,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IntervalStratigraphicUnits", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the IntervalStratigraphicUnits xsd type.")]
-    public partial class IntervalStratigraphicUnitList : Object , INotifyPropertyChanged
+    public partial class IntervalStratigraphicUnits : Object , INotifyPropertyChanged
     {
 
 
@@ -10469,7 +10467,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="KGaps", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the KGaps xsd type.")]
-    public partial class KGapList : Object , INotifyPropertyChanged
+    public partial class KGaps : Object , INotifyPropertyChanged
     {
 
 
@@ -10578,7 +10576,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("KGaps")]
 
-        public KGapList KGaps {
+        public KGaps KGaps {
             get {
                 return KGapsField;
             } 
@@ -10588,7 +10586,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private KGapList KGapsField; 
+        private KGaps KGapsField; 
 
 
         /// <summary>
@@ -10687,7 +10685,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CellStratigraphicUnits", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the CellStratigraphicUnits xsd type.")]
-    public partial class CellStratigraphicUnitList : Object , INotifyPropertyChanged
+    public partial class CellStratigraphicUnits : Object , INotifyPropertyChanged
     {
 
 
@@ -10769,7 +10767,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Intervals", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the Intervals xsd type.")]
-    public partial class IntervalList : Object , INotifyPropertyChanged
+    public partial class Intervals : Object , INotifyPropertyChanged
     {
 
 
@@ -10914,7 +10912,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("Intervals")]
 
-        public IntervalList Intervals {
+        public Intervals Intervals {
             get {
                 return IntervalsField;
             } 
@@ -10924,7 +10922,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private IntervalList IntervalsField; 
+        private Intervals IntervalsField; 
 
 
 
@@ -11500,7 +11498,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CellFluidPhaseUnits", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the CellFluidPhaseUnits xsd type.")]
-    public partial class CellFluidPhaseUnitList : Object , INotifyPropertyChanged
+    public partial class CellFluidPhaseUnits : Object , INotifyPropertyChanged
     {
 
 
@@ -11591,7 +11589,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("SplitEdges")]
 
-        public SplitEdgeList SplitEdges {
+        public SplitEdges SplitEdges {
             get {
                 return SplitEdgesField;
             } 
@@ -11601,7 +11599,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private SplitEdgeList SplitEdgesField; 
+        private SplitEdges SplitEdgesField; 
 
 
         /// <summary>
@@ -11627,7 +11625,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("SplitColumnEdges")]
 
-        public ColumnLayerSplitColumnEdgeList SplitColumnEdges {
+        public ColumnLayerSplitColumnEdges SplitColumnEdges {
             get {
                 return SplitColumnEdgesField;
             } 
@@ -11637,7 +11635,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private ColumnLayerSplitColumnEdgeList SplitColumnEdgesField; 
+        private ColumnLayerSplitColumnEdges SplitColumnEdgesField; 
 
 
         /// <summary>
@@ -11645,7 +11643,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("UnstructuredColumnEdges")]
 
-        public UnstructuredColumnEdgeList UnstructuredColumnEdges {
+        public UnstructuredColumnEdges UnstructuredColumnEdges {
             get {
                 return UnstructuredColumnEdgesField;
             } 
@@ -11655,7 +11653,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private UnstructuredColumnEdgeList UnstructuredColumnEdgesField; 
+        private UnstructuredColumnEdges UnstructuredColumnEdgesField; 
 
 
         /// <summary>
@@ -11663,7 +11661,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("SplitFaces")]
 
-        public SplitFaceList SplitFaces {
+        public SplitFaces SplitFaces {
             get {
                 return SplitFacesField;
             } 
@@ -11673,7 +11671,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private SplitFaceList SplitFacesField; 
+        private SplitFaces SplitFacesField; 
 
 
         /// <summary>
@@ -11681,7 +11679,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("IjSplitColumnEdges")]
 
-        public IjSplitColumnEdgeList IjSplitColumnEdges {
+        public IjSplitColumnEdges IjSplitColumnEdges {
             get {
                 return IjSplitColumnEdgesField;
             } 
@@ -11691,7 +11689,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private IjSplitColumnEdgeList IjSplitColumnEdgesField; 
+        private IjSplitColumnEdges IjSplitColumnEdgesField; 
 
 
         /// <summary>
@@ -11817,7 +11815,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("IndexableElement")]
 
-        public IndexableElementList? IndexableElement {
+        public IndexableElements? IndexableElement {
             get {
                 return IndexableElementField;
             } 
@@ -11827,7 +11825,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private IndexableElementList? IndexableElementField; 
+        private IndexableElements? IndexableElementField; 
 
 
         /// <summary>
@@ -13542,7 +13540,7 @@ namespace Energistics.DataAccess.RESQML201
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrsEpsgCode))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalUnknownCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalUnknownCrs))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -13552,7 +13550,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractVerticalCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the AbstractVerticalCrs xsd type.")]
-    public abstract partial class AbstractVerticalCrList : Object , INotifyPropertyChanged
+    public abstract partial class AbstractVerticalCrs : Object , INotifyPropertyChanged
     {
 
 
@@ -13598,7 +13596,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalUnknownCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the VerticalUnknownCrs xsd type.")]
-    public partial class VerticalUnknownCrList : AbstractVerticalCrList , INotifyPropertyChanged
+    public partial class VerticalUnknownCrs : AbstractVerticalCrs , INotifyPropertyChanged
     {
 
 
@@ -13643,7 +13641,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="GmlVerticalCrsDefinition", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the GmlVerticalCrsDefinition xsd type.")]
-    public partial class GmlVerticalCrsDefinition : AbstractVerticalCrList , INotifyPropertyChanged
+    public partial class GmlVerticalCrsDefinition : AbstractVerticalCrs , INotifyPropertyChanged
     {
 
 
@@ -14379,7 +14377,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 aggregationTypeField = value;
-             if(value!=null) 
                  this.AggregationTypeSpecified = true;
                 NotifyPropertyChanged("AggregationType");
             }
@@ -15243,7 +15240,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 relativePositionField = value;
-             if(value!=null) 
                  this.RelativePositionSpecified = true;
                 NotifyPropertyChanged("RelativePosition");
             }
@@ -21052,7 +21048,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("secondDefiningParameter")]
 
-        public StandAloneSecondDefiningParameter SecondDefiningParameter {
+        public SecondDefParameter SecondDefiningParameter {
             get {
                 return secondDefiningParameterField;
             } 
@@ -21062,7 +21058,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private StandAloneSecondDefiningParameter secondDefiningParameterField; 
+        private SecondDefParameter secondDefiningParameterField; 
 
 
 
@@ -21089,7 +21085,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
 
     [Description("This class represents the secondDefiningParameter xsd type.")]
-    public partial class StandAloneSecondDefiningParameter : Object , INotifyPropertyChanged
+    public partial class SecondDefParameter : Object , INotifyPropertyChanged
     {
 
 
@@ -21918,7 +21914,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalCrsEpsgCode", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the VerticalCrsEpsgCode xsd type.")]
-    public partial class VerticalCrsEpsgCode : AbstractVerticalCrList , INotifyPropertyChanged
+    public partial class VerticalCrsEpsgCode : AbstractVerticalCrs , INotifyPropertyChanged
     {
 
 
@@ -21957,7 +21953,7 @@ namespace Energistics.DataAccess.RESQML201
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrsEpsgCode))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedUnknownCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedUnknownCrs))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GmlProjectedCrsDefinition))]
 
@@ -21969,7 +21965,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractProjectedCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the AbstractProjectedCrs xsd type.")]
-    public abstract partial class AbstractProjectedCrList : Object , INotifyPropertyChanged
+    public abstract partial class AbstractProjectedCrs : Object , INotifyPropertyChanged
     {
 
 
@@ -22015,7 +22011,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedUnknownCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the ProjectedUnknownCrs xsd type.")]
-    public partial class ProjectedUnknownCrList : AbstractProjectedCrList , INotifyPropertyChanged
+    public partial class ProjectedUnknownCrs : AbstractProjectedCrs , INotifyPropertyChanged
     {
 
 
@@ -22060,7 +22056,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="GmlProjectedCrsDefinition", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the GmlProjectedCrsDefinition xsd type.")]
-    public partial class GmlProjectedCrsDefinition : AbstractProjectedCrList , INotifyPropertyChanged
+    public partial class GmlProjectedCrsDefinition : AbstractProjectedCrs , INotifyPropertyChanged
     {
 
 
@@ -22105,7 +22101,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedCrsEpsgCode", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the ProjectedCrsEpsgCode xsd type.")]
-    public partial class ProjectedCrsEpsgCode : AbstractProjectedCrList , INotifyPropertyChanged
+    public partial class ProjectedCrsEpsgCode : AbstractProjectedCrs , INotifyPropertyChanged
     {
 
 
@@ -22223,7 +22219,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ObjectAlias", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the ObjectAlias xsd type.")]
-    public partial class ObjectAliaList : Object , INotifyPropertyChanged
+    public partial class ObjectAlias : Object , INotifyPropertyChanged
     {
 
 
@@ -22333,19 +22329,19 @@ namespace Energistics.DataAccess.RESQML201
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalPropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscreteProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscretePropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscretePropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentPropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousPropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointsProperty))]
 
@@ -22505,19 +22501,19 @@ namespace Energistics.DataAccess.RESQML201
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidUnitFeature))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSeries))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalDepth3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalDepth3dCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalTime3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalTime3dCrs))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EpcExternalPartReference))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrs))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -22564,19 +22560,19 @@ namespace Energistics.DataAccess.RESQML201
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalPropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscreteProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscretePropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscretePropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentPropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousPropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointsProperty))]
 
@@ -22734,13 +22730,13 @@ namespace Energistics.DataAccess.RESQML201
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RockFluidUnitFeature))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSeries))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalDepth3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalDepth3dCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalTime3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalTime3dCrs))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -23015,15 +23011,15 @@ namespace Energistics.DataAccess.RESQML201
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalPropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscreteProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscretePropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscretePropertySeries))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousPropertySeries))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentPropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousProperty))]
 
@@ -23064,7 +23060,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("IndexableElement")]
 
-        public IndexableElementList? IndexableElement {
+        public IndexableElements? IndexableElement {
             get {
                 return IndexableElementField;
             } 
@@ -23074,7 +23070,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private IndexableElementList? IndexableElementField; 
+        private IndexableElements? IndexableElementField; 
 
 
         /// <summary>
@@ -23200,21 +23196,21 @@ namespace Energistics.DataAccess.RESQML201
     /// This class represents the AbstractValuesProperty xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalPropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentPropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscreteProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscretePropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscretePropertySeries))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousProperty))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalProperty))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousPropertySeries))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -23233,7 +23229,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("PatchOfValues")]
 
-        public List<PatchOfValueList> PatchOfValues {
+        public List<PatchOfValues> PatchOfValues {
             get {
                 return PatchOfValuesField;
             } 
@@ -23252,7 +23248,7 @@ namespace Energistics.DataAccess.RESQML201
              else return false;
             } 
          }
-        private List<PatchOfValueList> PatchOfValuesField; 
+        private List<PatchOfValues> PatchOfValuesField; 
 
 
         /// <summary>
@@ -23294,7 +23290,7 @@ namespace Energistics.DataAccess.RESQML201
     /// This class represents the obj_CategoricalProperty xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CategoricalPropertySeries))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -23346,7 +23342,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("CategoricalPropertySeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_CategoricalPropertySeries xsd type.")]
-    public partial class CategoricalPropertySerieList : CategoricalProperty , INotifyPropertyChanged
+    public partial class CategoricalPropertySeries : CategoricalProperty , INotifyPropertyChanged
     {
 
 
@@ -23373,7 +23369,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("SeriesTimeIndices")]
 
-        public TimeIndiceList SeriesTimeIndices {
+        public TimeIndices SeriesTimeIndices {
             get {
                 return SeriesTimeIndicesField;
             } 
@@ -23383,7 +23379,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private TimeIndiceList SeriesTimeIndicesField; 
+        private TimeIndices SeriesTimeIndicesField; 
 
 
 
@@ -23396,7 +23392,7 @@ namespace Energistics.DataAccess.RESQML201
     /// This class represents the obj_DiscreteProperty xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscretePropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiscretePropertySeries))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -23484,7 +23480,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("DiscretePropertySeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_DiscretePropertySeries xsd type.")]
-    public partial class DiscretePropertySerieList : DiscreteProperty , INotifyPropertyChanged
+    public partial class DiscretePropertySeries : DiscreteProperty , INotifyPropertyChanged
     {
 
 
@@ -23511,7 +23507,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("SeriesTimeIndices")]
 
-        public TimeIndiceList SeriesTimeIndices {
+        public TimeIndices SeriesTimeIndices {
             get {
                 return SeriesTimeIndicesField;
             } 
@@ -23521,7 +23517,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private TimeIndiceList SeriesTimeIndicesField; 
+        private TimeIndices SeriesTimeIndicesField; 
 
 
 
@@ -23534,7 +23530,7 @@ namespace Energistics.DataAccess.RESQML201
     /// This class represents the obj_CommentProperty xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CommentPropertySeries))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -23586,7 +23582,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("CommentPropertySeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_CommentPropertySeries xsd type.")]
-    public partial class CommentPropertySerieList : CommentProperty , INotifyPropertyChanged
+    public partial class CommentPropertySeries : CommentProperty , INotifyPropertyChanged
     {
 
 
@@ -23613,7 +23609,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("SeriesTimeIndices")]
 
-        public TimeIndiceList SeriesTimeIndices {
+        public TimeIndices SeriesTimeIndices {
             get {
                 return SeriesTimeIndicesField;
             } 
@@ -23623,7 +23619,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private TimeIndiceList SeriesTimeIndicesField; 
+        private TimeIndices SeriesTimeIndicesField; 
 
 
 
@@ -23636,7 +23632,7 @@ namespace Energistics.DataAccess.RESQML201
     /// This class represents the obj_ContinuousProperty xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousPropertySerieList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContinuousPropertySeries))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -23742,7 +23738,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("ContinuousPropertySeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_ContinuousPropertySeries xsd type.")]
-    public partial class ContinuousPropertySerieList : ContinuousProperty , INotifyPropertyChanged
+    public partial class ContinuousPropertySeries : ContinuousProperty , INotifyPropertyChanged
     {
 
 
@@ -23769,7 +23765,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("SeriesTimeIndices")]
 
-        public TimeIndiceList SeriesTimeIndices {
+        public TimeIndices SeriesTimeIndices {
             get {
                 return SeriesTimeIndicesField;
             } 
@@ -23779,7 +23775,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private TimeIndiceList SeriesTimeIndicesField; 
+        private TimeIndices SeriesTimeIndicesField; 
 
 
 
@@ -23810,7 +23806,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("PatchOfPoints")]
 
-        public List<PatchOfPointList> PatchOfPoints {
+        public List<PatchOfPoints> PatchOfPoints {
             get {
                 return PatchOfPointsField;
             } 
@@ -23829,7 +23825,7 @@ namespace Energistics.DataAccess.RESQML201
              else return false;
             } 
          }
-        private List<PatchOfPointList> PatchOfPointsField; 
+        private List<PatchOfPoints> PatchOfPointsField; 
 
 
 
@@ -24267,7 +24263,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 FluidContactField = value;
-             if(value!=null) 
                  this.FluidContactSpecified = true;
                 NotifyPropertyChanged("FluidContact");
             }
@@ -24306,7 +24301,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 FluidMarkerField = value;
-             if(value!=null) 
                  this.FluidMarkerSpecified = true;
                 NotifyPropertyChanged("FluidMarker");
             }
@@ -24345,7 +24339,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 GeologicBoundaryKindField = value;
-             if(value!=null) 
                  this.GeologicBoundaryKindSpecified = true;
                 NotifyPropertyChanged("GeologicBoundaryKind");
             }
@@ -24564,7 +24557,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("StreamlineWellbores")]
 
-        public StreamlineWellboreList StreamlineWellbores {
+        public StreamlineWellbores StreamlineWellbores {
             get {
                 return StreamlineWellboresField;
             } 
@@ -24574,7 +24567,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private StreamlineWellboreList StreamlineWellboresField; 
+        private StreamlineWellbores StreamlineWellboresField; 
 
 
         /// <summary>
@@ -24651,7 +24644,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("Boundaries")]
 
-        public List<PatchBoundarieList> Boundaries {
+        public List<PatchBoundaries> Boundaries {
             get {
                 return BoundariesField;
             } 
@@ -24670,7 +24663,7 @@ namespace Energistics.DataAccess.RESQML201
              else return false;
             } 
          }
-        private List<PatchBoundarieList> BoundariesField; 
+        private List<PatchBoundaries> BoundariesField; 
 
 
 
@@ -24900,7 +24893,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 LineRoleField = value;
-             if(value!=null) 
                  this.LineRoleSpecified = true;
                 NotifyPropertyChanged("LineRole");
             }
@@ -24998,7 +24990,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 LineRoleField = value;
-             if(value!=null) 
                  this.LineRoleSpecified = true;
                 NotifyPropertyChanged("LineRole");
             }
@@ -25191,7 +25182,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 MdDomainField = value;
-             if(value!=null) 
                  this.MDDomainSpecified = true;
                 NotifyPropertyChanged("MDDomain");
             }
@@ -25395,7 +25385,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("IntervalStratigraphiUnits")]
 
-        public IntervalStratigraphicUnitList IntervalStratigraphiUnits {
+        public IntervalStratigraphicUnits IntervalStratigraphiUnits {
             get {
                 return IntervalStratigraphiUnitsField;
             } 
@@ -25405,7 +25395,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private IntervalStratigraphicUnitList IntervalStratigraphiUnitsField; 
+        private IntervalStratigraphicUnits IntervalStratigraphiUnitsField; 
 
 
         /// <summary>
@@ -25413,7 +25403,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("CellFluidPhaseUnits")]
 
-        public CellFluidPhaseUnitList CellFluidPhaseUnits {
+        public CellFluidPhaseUnits CellFluidPhaseUnits {
             get {
                 return CellFluidPhaseUnitsField;
             } 
@@ -25423,7 +25413,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private CellFluidPhaseUnitList CellFluidPhaseUnitsField; 
+        private CellFluidPhaseUnits CellFluidPhaseUnitsField; 
 
 
         /// <summary>
@@ -26420,7 +26410,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("ConnectionInterpretations")]
 
-        public ConnectionInterpretationList ConnectionInterpretations {
+        public ConnectionInterpretations ConnectionInterpretations {
             get {
                 return ConnectionInterpretationsField;
             } 
@@ -26430,7 +26420,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private ConnectionInterpretationList ConnectionInterpretationsField; 
+        private ConnectionInterpretations ConnectionInterpretationsField; 
 
 
         /// <summary>
@@ -26506,7 +26496,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("CellFluidPhaseUnits")]
 
-        public CellFluidPhaseUnitList CellFluidPhaseUnits {
+        public CellFluidPhaseUnits CellFluidPhaseUnits {
             get {
                 return CellFluidPhaseUnitsField;
             } 
@@ -26516,7 +26506,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private CellFluidPhaseUnitList CellFluidPhaseUnitsField; 
+        private CellFluidPhaseUnits CellFluidPhaseUnitsField; 
 
 
         /// <summary>
@@ -26542,7 +26532,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("CellStratigraphicUnits")]
 
-        public CellStratigraphicUnitList CellStratigraphicUnits {
+        public CellStratigraphicUnits CellStratigraphicUnits {
             get {
                 return CellStratigraphicUnitsField;
             } 
@@ -26552,7 +26542,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private CellStratigraphicUnitList CellStratigraphicUnitsField; 
+        private CellStratigraphicUnits CellStratigraphicUnitsField; 
 
 
 
@@ -26609,7 +26599,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("IntervalStratigraphicUnits")]
 
-        public IntervalStratigraphicUnitList IntervalStratigraphicUnits {
+        public IntervalStratigraphicUnits IntervalStratigraphicUnits {
             get {
                 return IntervalStratigraphicUnitsField;
             } 
@@ -26619,7 +26609,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private IntervalStratigraphicUnitList IntervalStratigraphicUnitsField; 
+        private IntervalStratigraphicUnits IntervalStratigraphicUnitsField; 
 
 
 
@@ -26727,7 +26717,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("KGaps")]
 
-        public KGapList KGaps {
+        public KGaps KGaps {
             get {
                 return KGapsField;
             } 
@@ -26737,7 +26727,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private KGapList KGapsField; 
+        private KGaps KGapsField; 
 
 
         /// <summary>
@@ -27479,7 +27469,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 GeologicUnitCompositionField = value;
-             if(value!=null) 
                  this.GeologicUnitCompositionSpecified = true;
                 NotifyPropertyChanged("GeologicUnitComposition");
             }
@@ -27518,7 +27507,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 GeologicUnitMaterialImplacementField = value;
-             if(value!=null) 
                  this.GeologicUnitMaterialImplacementSpecified = true;
                 NotifyPropertyChanged("GeologicUnitMaterialImplacement");
             }
@@ -27580,7 +27568,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 DepositionModeField = value;
-             if(value!=null) 
                  this.DepositionModeSpecified = true;
                 NotifyPropertyChanged("DepositionMode");
             }
@@ -27678,7 +27665,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 Geobody3dShapeField = value;
-             if(value!=null) 
                  this.Geobody3dShapeSpecified = true;
                 NotifyPropertyChanged("Geobody3dShape");
             }
@@ -27740,7 +27726,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 PhaseField = value;
-             if(value!=null) 
                  this.PhaseSpecified = true;
                 NotifyPropertyChanged("Phase");
             }
@@ -27962,7 +27947,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 SequenceStratigraphySurfaceField = value;
-             if(value!=null) 
                  this.SequenceStratigraphySurfaceSpecified = true;
                 NotifyPropertyChanged("SequenceStratigraphySurface");
             }
@@ -29804,7 +29788,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("TimeSeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_TimeSeries xsd type.")]
-    public partial class TimeSerieList : AbstractResqmlDataObject , INotifyPropertyChanged
+    public partial class TimeSeries : AbstractResqmlDataObject , INotifyPropertyChanged
     {
 
 
@@ -29834,18 +29818,6 @@ namespace Energistics.DataAccess.RESQML201
          }
         private List<Timestamp> TimeField; 
 
-
-        /// <summary>
-        /// Time property
-        /// </summary>
-        [XmlIgnore]		
-        public IList Items
-        {
-		    get
-			{
-			    return Time;
-			}
-        }
 
         /// <summary>
         /// TimeSeriesParentage property
@@ -29878,9 +29850,9 @@ namespace Energistics.DataAccess.RESQML201
     /// This class represents the AbstractLocal3dCrs xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalTime3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalTime3dCrs))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalDepth3dCrList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocalDepth3dCrs))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -29890,7 +29862,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractLocal3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
 
     [Description("This class represents the AbstractLocal3dCrs xsd type.")]
-    public abstract partial class AbstractLocal3dCrList : AbstractResqmlDataObject , INotifyPropertyChanged
+    public abstract partial class AbstractLocal3dCrs : AbstractResqmlDataObject , INotifyPropertyChanged
     {
 
 
@@ -30043,7 +30015,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("VerticalCrs")]
 
-        public AbstractVerticalCrList VerticalCrs {
+        public AbstractVerticalCrs VerticalCrs {
             get {
                 return VerticalCrsField;
             } 
@@ -30053,7 +30025,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private AbstractVerticalCrList VerticalCrsField; 
+        private AbstractVerticalCrs VerticalCrsField; 
 
 
         /// <summary>
@@ -30061,7 +30033,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("ProjectedCrs")]
 
-        public AbstractProjectedCrList ProjectedCrs {
+        public AbstractProjectedCrs ProjectedCrs {
             get {
                 return ProjectedCrsField;
             } 
@@ -30071,7 +30043,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private AbstractProjectedCrList ProjectedCrsField; 
+        private AbstractProjectedCrs ProjectedCrsField; 
 
 
 
@@ -30095,7 +30067,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("LocalDepth3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_LocalDepth3dCrs xsd type.")]
-    public partial class LocalDepth3dCrList : AbstractLocal3dCrList , INotifyPropertyChanged
+    public partial class LocalDepth3dCrs : AbstractLocal3dCrs , INotifyPropertyChanged
     {
 
 
@@ -30118,7 +30090,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlRootAttribute("LocalTime3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
 
     [Description("This class represents the obj_LocalTime3dCrs xsd type.")]
-    public partial class LocalTime3dCrList : AbstractLocal3dCrList , INotifyPropertyChanged
+    public partial class LocalTime3dCrs : AbstractLocal3dCrs , INotifyPropertyChanged
     {
 
 
@@ -30202,7 +30174,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the VerticalCrs xsd type.")]
-    public partial class VerticalCrList : AbstractCitedDataObject , INotifyPropertyChanged
+    public partial class VerticalCrs : AbstractCitedDataObject , INotifyPropertyChanged
     {
 
 
@@ -30229,7 +30201,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("AbstractVerticalCrs")]
 
-        public AbstractVerticalCrList AbstractVerticalCrs {
+        public AbstractVerticalCrs AbstractVerticalCrs {
             get {
                 return AbstractVerticalCrsField;
             } 
@@ -30239,7 +30211,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private AbstractVerticalCrList AbstractVerticalCrsField; 
+        private AbstractVerticalCrs AbstractVerticalCrsField; 
 
 
 		/// <summary>
@@ -30283,7 +30255,7 @@ namespace Energistics.DataAccess.RESQML201
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
 
     [Description("This class represents the ProjectedCrs xsd type.")]
-    public partial class ProjectedCrList : AbstractCitedDataObject , INotifyPropertyChanged
+    public partial class ProjectedCrs : AbstractCitedDataObject , INotifyPropertyChanged
     {
 
 
@@ -30310,7 +30282,7 @@ namespace Energistics.DataAccess.RESQML201
         /// </summary>
 		[XmlElement("AbstractProjectedCrs")]
 
-        public AbstractProjectedCrList AbstractProjectedCrs {
+        public AbstractProjectedCrs AbstractProjectedCrs {
             get {
                 return AbstractProjectedCrsField;
             } 
@@ -30320,7 +30292,7 @@ namespace Energistics.DataAccess.RESQML201
             }
         }
 
-        private AbstractProjectedCrList AbstractProjectedCrsField; 
+        private AbstractProjectedCrs AbstractProjectedCrsField; 
 
 
 		/// <summary>
@@ -30334,7 +30306,6 @@ namespace Energistics.DataAccess.RESQML201
             } 
             set {
                 uomField = value;
-             if(value!=null) 
                  this.UomSpecified = true;
                 NotifyPropertyChanged("Uom");
             }
@@ -37289,6 +37260,1009 @@ namespace Energistics.DataAccess.RESQML201
         }
 
         /// <summary>
+        /// This class represents the ResqmlPropertyKind xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+        [Description("This class represents the ResqmlPropertyKind xsd enumeration.")]
+        public enum ResqmlPropertyKind 
+        {
+        /// <summary>
+        /// absorbeddose property
+        /// </summary>
+          [XmlEnum("absorbed dose")]
+          absorbeddose,
+        /// <summary>
+        /// accelerationlinear property
+        /// </summary>
+          [XmlEnum("acceleration linear")]
+          accelerationlinear,
+        /// <summary>
+        /// activityofradioactivity property
+        /// </summary>
+          [XmlEnum("activity (of radioactivity)")]
+          activityofradioactivity,
+        /// <summary>
+        /// amountofsubstance property
+        /// </summary>
+          [XmlEnum("amount of substance")]
+          amountofsubstance,
+        /// <summary>
+        /// amplitude property
+        /// </summary>
+          amplitude,
+        /// <summary>
+        /// angleperlength property
+        /// </summary>
+          [XmlEnum("angle per length")]
+          angleperlength,
+        /// <summary>
+        /// anglepertime property
+        /// </summary>
+          [XmlEnum("angle per time")]
+          anglepertime,
+        /// <summary>
+        /// anglepervolume property
+        /// </summary>
+          [XmlEnum("angle per volume")]
+          anglepervolume,
+        /// <summary>
+        /// angularacceleration property
+        /// </summary>
+          [XmlEnum("angular acceleration")]
+          angularacceleration,
+        /// <summary>
+        /// area property
+        /// </summary>
+          area,
+        /// <summary>
+        /// areaperarea property
+        /// </summary>
+          [XmlEnum("area per area")]
+          areaperarea,
+        /// <summary>
+        /// areapervolume property
+        /// </summary>
+          [XmlEnum("area per volume")]
+          areapervolume,
+        /// <summary>
+        /// attenuation property
+        /// </summary>
+          attenuation,
+        /// <summary>
+        /// attenuationperlength property
+        /// </summary>
+          [XmlEnum("attenuation per length")]
+          attenuationperlength,
+        /// <summary>
+        /// azimuth property
+        /// </summary>
+          azimuth,
+        /// <summary>
+        /// bubblepointpressure property
+        /// </summary>
+          [XmlEnum("bubble point pressure")]
+          bubblepointpressure,
+        /// <summary>
+        /// bulkmodulus property
+        /// </summary>
+          [XmlEnum("bulk modulus")]
+          bulkmodulus,
+        /// <summary>
+        /// capacitance property
+        /// </summary>
+          capacitance,
+        /// <summary>
+        /// categorical property
+        /// </summary>
+          categorical,
+        /// <summary>
+        /// celllength property
+        /// </summary>
+          [XmlEnum("cell length")]
+          celllength,
+        /// <summary>
+        /// chargedensity property
+        /// </summary>
+          [XmlEnum("charge density")]
+          chargedensity,
+        /// <summary>
+        /// chemicalpotential property
+        /// </summary>
+          [XmlEnum("chemical potential")]
+          chemicalpotential,
+        /// <summary>
+        /// code property
+        /// </summary>
+          code,
+        /// <summary>
+        /// compressibility property
+        /// </summary>
+          compressibility,
+        /// <summary>
+        /// concentrationofB property
+        /// </summary>
+          [XmlEnum("concentration of B")]
+          concentrationofB,
+        /// <summary>
+        /// conductivity property
+        /// </summary>
+          conductivity,
+        /// <summary>
+        /// continuous property
+        /// </summary>
+          continuous,
+        /// <summary>
+        /// crosssectionabsorption property
+        /// </summary>
+          [XmlEnum("cross section absorption")]
+          crosssectionabsorption,
+        /// <summary>
+        /// currentdensity property
+        /// </summary>
+          [XmlEnum("current density")]
+          currentdensity,
+        /// <summary>
+        /// Darcyflowcoefficient property
+        /// </summary>
+          [XmlEnum("Darcy flow coefficient")]
+          Darcyflowcoefficient,
+        /// <summary>
+        /// datatransmissionspeed property
+        /// </summary>
+          [XmlEnum("data transmission speed")]
+          datatransmissionspeed,
+        /// <summary>
+        /// deltatemperature property
+        /// </summary>
+          [XmlEnum("delta temperature")]
+          deltatemperature,
+        /// <summary>
+        /// density property
+        /// </summary>
+          density,
+        /// <summary>
+        /// depth property
+        /// </summary>
+          depth,
+        /// <summary>
+        /// diffusioncoefficient property
+        /// </summary>
+          [XmlEnum("diffusion coefficient")]
+          diffusioncoefficient,
+        /// <summary>
+        /// digitalstorage property
+        /// </summary>
+          [XmlEnum("digital storage")]
+          digitalstorage,
+        /// <summary>
+        /// dimensionless property
+        /// </summary>
+          dimensionless,
+        /// <summary>
+        /// dip property
+        /// </summary>
+          dip,
+        /// <summary>
+        /// discrete property
+        /// </summary>
+          discrete,
+        /// <summary>
+        /// doseequivalent property
+        /// </summary>
+          [XmlEnum("dose equivalent")]
+          doseequivalent,
+        /// <summary>
+        /// doseequivalentrate property
+        /// </summary>
+          [XmlEnum("dose equivalent rate")]
+          doseequivalentrate,
+        /// <summary>
+        /// dynamicviscosity property
+        /// </summary>
+          [XmlEnum("dynamic viscosity")]
+          dynamicviscosity,
+        /// <summary>
+        /// electriccharge property
+        /// </summary>
+          [XmlEnum("electric charge")]
+          electriccharge,
+        /// <summary>
+        /// electricconductance property
+        /// </summary>
+          [XmlEnum("electric conductance")]
+          electricconductance,
+        /// <summary>
+        /// electriccurrent property
+        /// </summary>
+          [XmlEnum("electric current")]
+          electriccurrent,
+        /// <summary>
+        /// electricdipolemoment property
+        /// </summary>
+          [XmlEnum("electric dipole moment")]
+          electricdipolemoment,
+        /// <summary>
+        /// electricfieldstrength property
+        /// </summary>
+          [XmlEnum("electric field strength")]
+          electricfieldstrength,
+        /// <summary>
+        /// electricpolarization property
+        /// </summary>
+          [XmlEnum("electric polarization")]
+          electricpolarization,
+        /// <summary>
+        /// electricpotential property
+        /// </summary>
+          [XmlEnum("electric potential")]
+          electricpotential,
+        /// <summary>
+        /// electricalresistivity property
+        /// </summary>
+          [XmlEnum("electrical resistivity")]
+          electricalresistivity,
+        /// <summary>
+        /// electrochemicalequivalent property
+        /// </summary>
+          [XmlEnum("electrochemical equivalent")]
+          electrochemicalequivalent,
+        /// <summary>
+        /// electromagneticmoment property
+        /// </summary>
+          [XmlEnum("electromagnetic moment")]
+          electromagneticmoment,
+        /// <summary>
+        /// energylengthperarea property
+        /// </summary>
+          [XmlEnum("energy length per area")]
+          energylengthperarea,
+        /// <summary>
+        /// energylengthpertimeareatemperature property
+        /// </summary>
+          [XmlEnum("energy length per time area temperature")]
+          energylengthpertimeareatemperature,
+        /// <summary>
+        /// energyperarea property
+        /// </summary>
+          [XmlEnum("energy per area")]
+          energyperarea,
+        /// <summary>
+        /// energyperlength property
+        /// </summary>
+          [XmlEnum("energy per length")]
+          energyperlength,
+        /// <summary>
+        /// equivalentpermass property
+        /// </summary>
+          [XmlEnum("equivalent per mass")]
+          equivalentpermass,
+        /// <summary>
+        /// equivalentpervolume property
+        /// </summary>
+          [XmlEnum("equivalent per volume")]
+          equivalentpervolume,
+        /// <summary>
+        /// exposureradioactivity property
+        /// </summary>
+          [XmlEnum("exposure (radioactivity)")]
+          exposureradioactivity,
+        /// <summary>
+        /// fluidvolume property
+        /// </summary>
+          [XmlEnum("fluid volume")]
+          fluidvolume,
+        /// <summary>
+        /// force property
+        /// </summary>
+          force,
+        /// <summary>
+        /// forcearea property
+        /// </summary>
+          [XmlEnum("force area")]
+          forcearea,
+        /// <summary>
+        /// forcelengthperlength property
+        /// </summary>
+          [XmlEnum("force length per length")]
+          forcelengthperlength,
+        /// <summary>
+        /// forceperforce property
+        /// </summary>
+          [XmlEnum("force per force")]
+          forceperforce,
+        /// <summary>
+        /// forceperlength property
+        /// </summary>
+          [XmlEnum("force per length")]
+          forceperlength,
+        /// <summary>
+        /// forcepervolume property
+        /// </summary>
+          [XmlEnum("force per volume")]
+          forcepervolume,
+        /// <summary>
+        /// formationvolumefactor property
+        /// </summary>
+          [XmlEnum("formation volume factor")]
+          formationvolumefactor,
+        /// <summary>
+        /// frequency property
+        /// </summary>
+          frequency,
+        /// <summary>
+        /// frequencyinterval property
+        /// </summary>
+          [XmlEnum("frequency interval")]
+          frequencyinterval,
+        /// <summary>
+        /// gammarayAPIunit property
+        /// </summary>
+          [XmlEnum("gamma ray API unit")]
+          gammarayAPIunit,
+        /// <summary>
+        /// heatcapacity property
+        /// </summary>
+          [XmlEnum("heat capacity")]
+          heatcapacity,
+        /// <summary>
+        /// heatflowrate property
+        /// </summary>
+          [XmlEnum("heat flow rate")]
+          heatflowrate,
+        /// <summary>
+        /// heattransfercoefficient property
+        /// </summary>
+          [XmlEnum("heat transfer coefficient")]
+          heattransfercoefficient,
+        /// <summary>
+        /// illuminance property
+        /// </summary>
+          illuminance,
+        /// <summary>
+        /// index property
+        /// </summary>
+          index,
+        /// <summary>
+        /// irradiance property
+        /// </summary>
+          irradiance,
+        /// <summary>
+        /// isothermalcompressibility property
+        /// </summary>
+          [XmlEnum("isothermal compressibility")]
+          isothermalcompressibility,
+        /// <summary>
+        /// kinematicviscosity property
+        /// </summary>
+          [XmlEnum("kinematic viscosity")]
+          kinematicviscosity,
+        /// <summary>
+        /// LambdaRho property
+        /// </summary>
+          [XmlEnum("Lambda Rho")]
+          LambdaRho,
+        /// <summary>
+        /// Lameconstant property
+        /// </summary>
+          [XmlEnum("Lame constant")]
+          Lameconstant,
+        /// <summary>
+        /// length property
+        /// </summary>
+          length,
+        /// <summary>
+        /// lengthperlength property
+        /// </summary>
+          [XmlEnum("length per length")]
+          lengthperlength,
+        /// <summary>
+        /// lengthpertemperature property
+        /// </summary>
+          [XmlEnum("length per temperature")]
+          lengthpertemperature,
+        /// <summary>
+        /// lengthpervolume property
+        /// </summary>
+          [XmlEnum("length per volume")]
+          lengthpervolume,
+        /// <summary>
+        /// levelofpowerintensity property
+        /// </summary>
+          [XmlEnum("level of power intensity")]
+          levelofpowerintensity,
+        /// <summary>
+        /// lightexposure property
+        /// </summary>
+          [XmlEnum("light exposure")]
+          lightexposure,
+        /// <summary>
+        /// linearthermalexpansion property
+        /// </summary>
+          [XmlEnum("linear thermal expansion")]
+          linearthermalexpansion,
+        /// <summary>
+        /// luminance property
+        /// </summary>
+          luminance,
+        /// <summary>
+        /// luminousefficacy property
+        /// </summary>
+          [XmlEnum("luminous efficacy")]
+          luminousefficacy,
+        /// <summary>
+        /// luminousflux property
+        /// </summary>
+          [XmlEnum("luminous flux")]
+          luminousflux,
+        /// <summary>
+        /// luminousintensity property
+        /// </summary>
+          [XmlEnum("luminous intensity")]
+          luminousintensity,
+        /// <summary>
+        /// magneticdipolemoment property
+        /// </summary>
+          [XmlEnum("magnetic dipole moment")]
+          magneticdipolemoment,
+        /// <summary>
+        /// magneticfieldstrength property
+        /// </summary>
+          [XmlEnum("magnetic field strength")]
+          magneticfieldstrength,
+        /// <summary>
+        /// magneticflux property
+        /// </summary>
+          [XmlEnum("magnetic flux")]
+          magneticflux,
+        /// <summary>
+        /// magneticinduction property
+        /// </summary>
+          [XmlEnum("magnetic induction")]
+          magneticinduction,
+        /// <summary>
+        /// magneticpermeability property
+        /// </summary>
+          [XmlEnum("magnetic permeability")]
+          magneticpermeability,
+        /// <summary>
+        /// magneticvectorpotential property
+        /// </summary>
+          [XmlEnum("magnetic vector potential")]
+          magneticvectorpotential,
+        /// <summary>
+        /// mass property
+        /// </summary>
+          mass,
+        /// <summary>
+        /// massattenuationcoefficient property
+        /// </summary>
+          [XmlEnum("mass attenuation coefficient")]
+          massattenuationcoefficient,
+        /// <summary>
+        /// massconcentration property
+        /// </summary>
+          [XmlEnum("mass concentration")]
+          massconcentration,
+        /// <summary>
+        /// massflowrate property
+        /// </summary>
+          [XmlEnum("mass flow rate")]
+          massflowrate,
+        /// <summary>
+        /// masslength property
+        /// </summary>
+          [XmlEnum("mass length")]
+          masslength,
+        /// <summary>
+        /// massperenergy property
+        /// </summary>
+          [XmlEnum("mass per energy")]
+          massperenergy,
+        /// <summary>
+        /// massperlength property
+        /// </summary>
+          [XmlEnum("mass per length")]
+          massperlength,
+        /// <summary>
+        /// masspertimeperarea property
+        /// </summary>
+          [XmlEnum("mass per time per area")]
+          masspertimeperarea,
+        /// <summary>
+        /// masspertimeperlength property
+        /// </summary>
+          [XmlEnum("mass per time per length")]
+          masspertimeperlength,
+        /// <summary>
+        /// masspervolumeperlength property
+        /// </summary>
+          [XmlEnum("mass per volume per length")]
+          masspervolumeperlength,
+        /// <summary>
+        /// mobility property
+        /// </summary>
+          mobility,
+        /// <summary>
+        /// modulusofcompression property
+        /// </summary>
+          [XmlEnum("modulus of compression")]
+          modulusofcompression,
+        /// <summary>
+        /// molarconcentration property
+        /// </summary>
+          [XmlEnum("molar concentration")]
+          molarconcentration,
+        /// <summary>
+        /// molarheatcapacity property
+        /// </summary>
+          [XmlEnum("molar heat capacity")]
+          molarheatcapacity,
+        /// <summary>
+        /// molarvolume property
+        /// </summary>
+          [XmlEnum("molar volume")]
+          molarvolume,
+        /// <summary>
+        /// moleperarea property
+        /// </summary>
+          [XmlEnum("mole per area")]
+          moleperarea,
+        /// <summary>
+        /// molepertime property
+        /// </summary>
+          [XmlEnum("mole per time")]
+          molepertime,
+        /// <summary>
+        /// molepertimeperarea property
+        /// </summary>
+          [XmlEnum("mole per time per area")]
+          molepertimeperarea,
+        /// <summary>
+        /// momentofforce property
+        /// </summary>
+          [XmlEnum("moment of force")]
+          momentofforce,
+        /// <summary>
+        /// momentofinertia property
+        /// </summary>
+          [XmlEnum("moment of inertia")]
+          momentofinertia,
+        /// <summary>
+        /// momentofsection property
+        /// </summary>
+          [XmlEnum("moment of section")]
+          momentofsection,
+        /// <summary>
+        /// momentum property
+        /// </summary>
+          momentum,
+        /// <summary>
+        /// MuRho property
+        /// </summary>
+          [XmlEnum("Mu Rho")]
+          MuRho,
+        /// <summary>
+        /// nettogrossratio property
+        /// </summary>
+          [XmlEnum("net to gross ratio")]
+          nettogrossratio,
+        /// <summary>
+        /// neutronAPIunit property
+        /// </summary>
+          [XmlEnum("neutron API unit")]
+          neutronAPIunit,
+        /// <summary>
+        /// nonDarcyflowcoefficient property
+        /// </summary>
+          [XmlEnum("nonDarcy flow coefficient")]
+          nonDarcyflowcoefficient,
+        /// <summary>
+        /// operationspertime property
+        /// </summary>
+          [XmlEnum("operations per time")]
+          operationspertime,
+        /// <summary>
+        /// parachor property
+        /// </summary>
+          parachor,
+        /// <summary>
+        /// perarea property
+        /// </summary>
+          [XmlEnum("per area")]
+          perarea,
+        /// <summary>
+        /// perelectricpotential property
+        /// </summary>
+          [XmlEnum("per electric potential")]
+          perelectricpotential,
+        /// <summary>
+        /// perforce property
+        /// </summary>
+          [XmlEnum("per force")]
+          perforce,
+        /// <summary>
+        /// perlength property
+        /// </summary>
+          [XmlEnum("per length")]
+          perlength,
+        /// <summary>
+        /// permass property
+        /// </summary>
+          [XmlEnum("per mass")]
+          permass,
+        /// <summary>
+        /// pervolume property
+        /// </summary>
+          [XmlEnum("per volume")]
+          pervolume,
+        /// <summary>
+        /// permeabilitylength property
+        /// </summary>
+          [XmlEnum("permeability length")]
+          permeabilitylength,
+        /// <summary>
+        /// permeabilityrock property
+        /// </summary>
+          [XmlEnum("permeability rock")]
+          permeabilityrock,
+        /// <summary>
+        /// permeabilitythickness property
+        /// </summary>
+          [XmlEnum("permeability thickness")]
+          permeabilitythickness,
+        /// <summary>
+        /// permeance property
+        /// </summary>
+          permeance,
+        /// <summary>
+        /// permittivity property
+        /// </summary>
+          permittivity,
+        /// <summary>
+        /// pH property
+        /// </summary>
+          pH,
+        /// <summary>
+        /// planeangle property
+        /// </summary>
+          [XmlEnum("plane angle")]
+          planeangle,
+        /// <summary>
+        /// Poissonratio property
+        /// </summary>
+          [XmlEnum("Poisson ratio")]
+          Poissonratio,
+        /// <summary>
+        /// porevolume property
+        /// </summary>
+          [XmlEnum("pore volume")]
+          porevolume,
+        /// <summary>
+        /// porosity property
+        /// </summary>
+          porosity,
+        /// <summary>
+        /// potentialdifferenceperpowerdrop property
+        /// </summary>
+          [XmlEnum("potential difference per power drop")]
+          potentialdifferenceperpowerdrop,
+        /// <summary>
+        /// power property
+        /// </summary>
+          power,
+        /// <summary>
+        /// powerpervolume property
+        /// </summary>
+          [XmlEnum("power per volume")]
+          powerpervolume,
+        /// <summary>
+        /// pressure property
+        /// </summary>
+          pressure,
+        /// <summary>
+        /// pressurepertime property
+        /// </summary>
+          [XmlEnum("pressure per time")]
+          pressurepertime,
+        /// <summary>
+        /// pressuresquared property
+        /// </summary>
+          [XmlEnum("pressure squared")]
+          pressuresquared,
+        /// <summary>
+        /// pressuresquaredperforcetimeperarea property
+        /// </summary>
+          [XmlEnum("pressure squared per force time per area")]
+          pressuresquaredperforcetimeperarea,
+        /// <summary>
+        /// pressuretimepervolume property
+        /// </summary>
+          [XmlEnum("pressure time per volume")]
+          pressuretimepervolume,
+        /// <summary>
+        /// productivityindex property
+        /// </summary>
+          [XmlEnum("productivity index")]
+          productivityindex,
+        /// <summary>
+        /// propertymultiplier property
+        /// </summary>
+          [XmlEnum("property multiplier")]
+          propertymultiplier,
+        /// <summary>
+        /// quantity property
+        /// </summary>
+          quantity,
+        /// <summary>
+        /// quantityoflight property
+        /// </summary>
+          [XmlEnum("quantity of light")]
+          quantityoflight,
+        /// <summary>
+        /// radiance property
+        /// </summary>
+          radiance,
+        /// <summary>
+        /// radiantintensity property
+        /// </summary>
+          [XmlEnum("radiant intensity")]
+          radiantintensity,
+        /// <summary>
+        /// relativepermeability property
+        /// </summary>
+          [XmlEnum("relative permeability")]
+          relativepermeability,
+        /// <summary>
+        /// relativepower property
+        /// </summary>
+          [XmlEnum("relative power")]
+          relativepower,
+        /// <summary>
+        /// relativetime property
+        /// </summary>
+          [XmlEnum("relative time")]
+          relativetime,
+        /// <summary>
+        /// reluctance property
+        /// </summary>
+          reluctance,
+        /// <summary>
+        /// resistance property
+        /// </summary>
+          resistance,
+        /// <summary>
+        /// resistivityperlength property
+        /// </summary>
+          [XmlEnum("resistivity per length")]
+          resistivityperlength,
+        /// <summary>
+        /// RESQMLrootproperty property
+        /// </summary>
+          [XmlEnum("RESQML root property")]
+          RESQMLrootproperty,
+        /// <summary>
+        /// RockImpedance property
+        /// </summary>
+          [XmlEnum("Rock Impedance")]
+          RockImpedance,
+        /// <summary>
+        /// rockpermeability property
+        /// </summary>
+          [XmlEnum("rock permeability")]
+          rockpermeability,
+        /// <summary>
+        /// rockvolume property
+        /// </summary>
+          [XmlEnum("rock volume")]
+          rockvolume,
+        /// <summary>
+        /// saturation property
+        /// </summary>
+          saturation,
+        /// <summary>
+        /// secondmomentofarea property
+        /// </summary>
+          [XmlEnum("second moment of area")]
+          secondmomentofarea,
+        /// <summary>
+        /// shearmodulus property
+        /// </summary>
+          [XmlEnum("shear modulus")]
+          shearmodulus,
+        /// <summary>
+        /// solidangle property
+        /// </summary>
+          [XmlEnum("solid angle")]
+          solidangle,
+        /// <summary>
+        /// solutiongasoilratio property
+        /// </summary>
+          [XmlEnum("solution gas-oil ratio")]
+          solutiongasoilratio,
+        /// <summary>
+        /// specificactivityofradioactivity property
+        /// </summary>
+          [XmlEnum("specific activity (of radioactivity)")]
+          specificactivityofradioactivity,
+        /// <summary>
+        /// specificenergy property
+        /// </summary>
+          [XmlEnum("specific energy")]
+          specificenergy,
+        /// <summary>
+        /// specificheatcapacity property
+        /// </summary>
+          [XmlEnum("specific heat capacity")]
+          specificheatcapacity,
+        /// <summary>
+        /// specificproductivityindex property
+        /// </summary>
+          [XmlEnum("specific productivity index")]
+          specificproductivityindex,
+        /// <summary>
+        /// specificvolume property
+        /// </summary>
+          [XmlEnum("specific volume")]
+          specificvolume,
+        /// <summary>
+        /// surfacedensity property
+        /// </summary>
+          [XmlEnum("surface density")]
+          surfacedensity,
+        /// <summary>
+        /// temperatureperlength property
+        /// </summary>
+          [XmlEnum("temperature per length")]
+          temperatureperlength,
+        /// <summary>
+        /// temperaturepertime property
+        /// </summary>
+          [XmlEnum("temperature per time")]
+          temperaturepertime,
+        /// <summary>
+        /// thermalconductance property
+        /// </summary>
+          [XmlEnum("thermal conductance")]
+          thermalconductance,
+        /// <summary>
+        /// thermalconductivity property
+        /// </summary>
+          [XmlEnum("thermal conductivity")]
+          thermalconductivity,
+        /// <summary>
+        /// thermaldiffusivity property
+        /// </summary>
+          [XmlEnum("thermal diffusivity")]
+          thermaldiffusivity,
+        /// <summary>
+        /// thermalinsulance property
+        /// </summary>
+          [XmlEnum("thermal insulance")]
+          thermalinsulance,
+        /// <summary>
+        /// thermalresistance property
+        /// </summary>
+          [XmlEnum("thermal resistance")]
+          thermalresistance,
+        /// <summary>
+        /// thermodynamictemperature property
+        /// </summary>
+          [XmlEnum("thermodynamic temperature")]
+          thermodynamictemperature,
+        /// <summary>
+        /// thickness property
+        /// </summary>
+          thickness,
+        /// <summary>
+        /// time property
+        /// </summary>
+          time,
+        /// <summary>
+        /// timeperlength property
+        /// </summary>
+          [XmlEnum("time per length")]
+          timeperlength,
+        /// <summary>
+        /// timepervolume property
+        /// </summary>
+          [XmlEnum("time per volume")]
+          timepervolume,
+        /// <summary>
+        /// transmissibility property
+        /// </summary>
+          transmissibility,
+        /// <summary>
+        /// unitproductivityindex property
+        /// </summary>
+          [XmlEnum("unit productivity index")]
+          unitproductivityindex,
+        /// <summary>
+        /// unitless property
+        /// </summary>
+          unitless,
+        /// <summary>
+        /// vaporoilgasratio property
+        /// </summary>
+          [XmlEnum("vapor oil-gas ratio")]
+          vaporoilgasratio,
+        /// <summary>
+        /// velocity property
+        /// </summary>
+          velocity,
+        /// <summary>
+        /// volume property
+        /// </summary>
+          volume,
+        /// <summary>
+        /// volumeflowrate property
+        /// </summary>
+          [XmlEnum("volume flow rate")]
+          volumeflowrate,
+        /// <summary>
+        /// volumelengthpertime property
+        /// </summary>
+          [XmlEnum("volume length per time")]
+          volumelengthpertime,
+        /// <summary>
+        /// volumeperarea property
+        /// </summary>
+          [XmlEnum("volume per area")]
+          volumeperarea,
+        /// <summary>
+        /// volumeperlength property
+        /// </summary>
+          [XmlEnum("volume per length")]
+          volumeperlength,
+        /// <summary>
+        /// volumepertimeperarea property
+        /// </summary>
+          [XmlEnum("volume per time per area")]
+          volumepertimeperarea,
+        /// <summary>
+        /// volumepertimeperlength property
+        /// </summary>
+          [XmlEnum("volume per time per length")]
+          volumepertimeperlength,
+        /// <summary>
+        /// volumepertimepertime property
+        /// </summary>
+          [XmlEnum("volume per time per time")]
+          volumepertimepertime,
+        /// <summary>
+        /// volumepertimepervolume property
+        /// </summary>
+          [XmlEnum("volume per time per volume")]
+          volumepertimepervolume,
+        /// <summary>
+        /// volumepervolume property
+        /// </summary>
+          [XmlEnum("volume per volume")]
+          volumepervolume,
+        /// <summary>
+        /// volumetricheattransfercoefficient property
+        /// </summary>
+          [XmlEnum("volumetric heat transfer coefficient")]
+          volumetricheattransfercoefficient,
+        /// <summary>
+        /// volumetricthermalexpansion property
+        /// </summary>
+          [XmlEnum("volumetric thermal expansion")]
+          volumetricthermalexpansion,
+        /// <summary>
+        /// work property
+        /// </summary>
+          work,
+        /// <summary>
+        /// Youngmodulus property
+        /// </summary>
+          [XmlEnum("Young modulus")]
+          Youngmodulus
+
+        }
+
+        /// <summary>
         /// This class represents the GridGeometryAttachment xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -37410,7 +38384,7 @@ namespace Energistics.DataAccess.RESQML201
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
         [Description("This class represents the IndexableElements xsd enumeration.")]
-        public enum IndexableElementList 
+        public enum IndexableElements 
         {
         /// <summary>
         /// cells property

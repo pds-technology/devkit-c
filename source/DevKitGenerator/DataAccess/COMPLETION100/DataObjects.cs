@@ -780,7 +780,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 currentStatusField = value;
-             if(value!=null) 
                  this.CurrentStatusSpecified = true;
                 NotifyPropertyChanged("CurrentStatus");
             }
@@ -1001,7 +1000,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 statusField = value;
-             if(value!=null) 
                  this.StatusSpecified = true;
                 NotifyPropertyChanged("Status");
             }
@@ -2225,7 +2223,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 northDirectionField = value;
-             if(value!=null) 
                  this.NorthDirectionSpecified = true;
                 NotifyPropertyChanged("NorthDirection");
             }
@@ -5243,7 +5240,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 itemStateField = value;
-             if(value!=null) 
                  this.ItemStateSpecified = true;
                 NotifyPropertyChanged("ItemState");
             }
@@ -5943,7 +5939,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 measureClassField = value;
-             if(value!=null) 
                  this.MeasureClassSpecified = true;
                 NotifyPropertyChanged("MeasureClass");
             }
@@ -6558,7 +6553,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 indexTypeField = value;
-             if(value!=null) 
                  this.IndexTypeSpecified = true;
                 NotifyPropertyChanged("IndexType");
             }
@@ -7197,7 +7191,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 technologyField = value;
-             if(value!=null) 
                  this.TechnologySpecified = true;
                 NotifyPropertyChanged("Technology");
             }
@@ -7236,7 +7229,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 locationField = value;
-             if(value!=null) 
                  this.LocationSpecified = true;
                 NotifyPropertyChanged("Location");
             }
@@ -8546,7 +8538,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 conveyanceMethodField = value;
-             if(value!=null) 
                  this.ConveyanceMethodSpecified = true;
                 NotifyPropertyChanged("ConveyanceMethod");
             }
@@ -11539,7 +11530,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 classField = value;
-             if(value!=null) 
                  this.ClassSpecified = true;
                 NotifyPropertyChanged("Class");
             }
@@ -11909,7 +11899,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 activityCodeField = value;
-             if(value!=null) 
                  this.ActivityCodeSpecified = true;
                 NotifyPropertyChanged("ActivityCode");
             }
@@ -12791,7 +12780,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 physicalStatusField = value;
-             if(value!=null) 
                  this.PhysicalStatusSpecified = true;
                 NotifyPropertyChanged("PhysicalStatus");
             }
@@ -13277,7 +13265,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 perforationStatusField = value;
-             if(value!=null) 
                  this.PerforationStatusSpecified = true;
                 NotifyPropertyChanged("PerforationStatus");
             }
@@ -14725,7 +14712,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 currentStatusField = value;
-             if(value!=null) 
                  this.CurrentStatusSpecified = true;
                 NotifyPropertyChanged("CurrentStatus");
             }
@@ -15351,7 +15337,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 perforationToolField = value;
-             if(value!=null) 
                  this.PerforationToolSpecified = true;
                 NotifyPropertyChanged("PerforationTool");
             }
@@ -16378,7 +16363,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 gradeField = value;
-             if(value!=null) 
                  this.GradeSpecified = true;
                 NotifyPropertyChanged("Grade");
             }
@@ -16474,7 +16458,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 outsideCoatingField = value;
-             if(value!=null) 
                  this.OutsideCoatingSpecified = true;
                 NotifyPropertyChanged("OutsideCoating");
             }
@@ -16513,7 +16496,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 insideCoatingField = value;
-             if(value!=null) 
                  this.InsideCoatingSpecified = true;
                 NotifyPropertyChanged("InsideCoating");
             }
@@ -17066,7 +17048,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 geologyTypeField = value;
-             if(value!=null) 
                  this.GeologyTypeSpecified = true;
                 NotifyPropertyChanged("GeologyType");
             }
@@ -17304,7 +17285,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 typeBoreholeField = value;
-             if(value!=null) 
                  this.TypeBoreholeSpecified = true;
                 NotifyPropertyChanged("TypeBorehole");
             }
@@ -17760,7 +17740,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 equipmentTypeField = value;
-             if(value!=null) 
                  this.EquipmentTypeSpecified = true;
                 NotifyPropertyChanged("EquipmentType");
             }
@@ -18908,7 +18887,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 positionField = value;
-             if(value!=null) 
                  this.PositionSpecified = true;
                 NotifyPropertyChanged("Position");
             }
@@ -19272,7 +19250,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 connectionFormField = value;
-             if(value!=null) 
                  this.ConnectionFormSpecified = true;
                 NotifyPropertyChanged("ConnectionForm");
             }
@@ -19392,7 +19369,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 subStringTypeField = value;
-             if(value!=null) 
                  this.SubStringTypeSpecified = true;
                 NotifyPropertyChanged("SubStringType");
             }

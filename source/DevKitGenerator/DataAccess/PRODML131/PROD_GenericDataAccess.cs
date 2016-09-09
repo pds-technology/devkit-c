@@ -37,7 +37,7 @@ namespace Energistics.DataAccess.PRODML131.PROD_GenericDataAccess {
         
         /// <remarks/>
         public PROD_GenericDataAccess() {
-            this.Url = "localhost://Prodml210/ProdmlService/";
+            this.Url = "http://_Vendor_Address_And_Port_/_Vendor_Service_Name_/";
         }
         
         /// <remarks/>

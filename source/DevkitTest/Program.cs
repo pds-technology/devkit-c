@@ -80,16 +80,19 @@ namespace DevkitTest
 
         static void Main(string[] args)
         {
+            String product = "";
+            String assemblyName = "Energistics.DataAccess"; 
             testWitsmlObject();
+            /*
+        
             String assemblyName = "Energistics.DataAccess";
             // if webservice is up, can use this line to test the webservice
             //Console.WriteLine("Test the WITSML WebServiceAPI ... ");
-            //testWITSMLWebService();
-
+            testWITSMLWebService();
+         
             //Console.WriteLine("Test the PRODML WebServiceAPI ... ");
-            //testProdmlWebService();
+            testProdmlWebService();
 
-            String product = "";
 
             product = "PRODML_v1.3";
             assemblyName = "Energistics.DataAccess";
@@ -110,10 +113,10 @@ namespace DevkitTest
 
             product = "PRODML_v1.2.2";
             testDemoFile(assemblyName, "Energistics.DataAccess.PRODML122", product);
-
+            */
             product = "RESQML_v2.0";
             assemblyName = "Energistics.RESQMLDataAccess";
-            testDemoFile(assemblyName, "Energistics.DataAccess.RESQML200", product);
+            testDemoFile(assemblyName, "Energistics.DataAccess.RESQML201", product);
 
             if (successs == true)
                 Console.WriteLine("test output class successfully!");
