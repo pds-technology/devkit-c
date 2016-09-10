@@ -108,7 +108,7 @@ namespace Energistics.Generator
         {
             string currentPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             foreach (string set in Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting("SETS").Split(new Char[] { ',' }))
-            {
+            { 
                 GenerateClasses(set, currentPath);
             }
         }

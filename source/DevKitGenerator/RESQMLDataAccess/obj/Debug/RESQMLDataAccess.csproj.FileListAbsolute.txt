@@ -7,4 +7,13 @@ C:\projects\source\DevKitGenerator\RESQMLDataAccess\bin\Debug\Energistics.DataAc
 C:\projects\source\DevKitGenerator\RESQMLDataAccess\bin\Debug\Energistics.DataAccess.xml
 C:\projects\source\DevKitGenerator\RESQMLDataAccess\obj\Debug\Energistics.RESQMLDataAccess.dll
 C:\projects\source\DevKitGenerator\RESQMLDataAccess\obj\Debug\Energistics.RESQMLDataAccess.pdb
-C:\Projects\source\DevKitGenerator\RESQMLDataAccess\obj\Debug\RESQMLDataAccess.csprojResolveAssemblyReference.cache
+C:\projects\source\DevKitGenerator\RESQMLDataAccess\obj\Debug\RESQMLDataAccess.csprojResolveAssemblyReference.cache
+C:\projects\source_master\source\DevKitGenerator\RESQMLDataAccess\bin\Debug\Energistics.RESQMLDataAccess.XML
+C:\projects\source_master\source\DevKitGenerator\RESQMLDataAccess\bin\Debug\Energistics.RESQMLDataAccess.dll
+C:\projects\source_master\source\DevKitGenerator\RESQMLDataAccess\bin\Debug\Energistics.RESQMLDataAccess.pdb
+C:\projects\source_master\source\DevKitGenerator\RESQMLDataAccess\bin\Debug\Energistics.DataAccess.dll
+C:\projects\source_master\source\DevKitGenerator\RESQMLDataAccess\bin\Debug\Energistics.DataAccess.pdb
+C:\projects\source_master\source\DevKitGenerator\RESQMLDataAccess\bin\Debug\Energistics.DataAccess.xml
+C:\projects\source_master\source\DevKitGenerator\RESQMLDataAccess\obj\Debug\RESQMLDataAccess.csprojResolveAssemblyReference.cache
+C:\projects\source_master\source\DevKitGenerator\RESQMLDataAccess\obj\Debug\Energistics.RESQMLDataAccess.dll
+C:\projects\source_master\source\DevKitGenerator\RESQMLDataAccess\obj\Debug\Energistics.RESQMLDataAccess.pdb
