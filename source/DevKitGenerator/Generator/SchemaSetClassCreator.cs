@@ -921,23 +921,23 @@ namespace Energistics.Generator
                 sb.AppendLine();
              
                 sb.AppendLine("        private " + wrapperClassName + (IsNullable(attr.Type) ? "?" : String.Empty) + array + " " + privateFieldName + "; ");
+                sb.AppendLine("        private bool " + propertyName +" = false; ");
+                sb.AppendLine();
+
+                //here we need to need the specified property.
                 sb.AppendLine("        /// <summary>");
                 sb.AppendLine("        /// bool to indicate if " + publicPropName + " has been set. Used for serialization.");
                 sb.AppendLine("        /// </summary>");
-                //sb.AppendLine("        [XmlIgnore]");
-                sb.AppendLine("        private bool " + propertyName +" = false; ");
-                
-                //here we need to need the specified property.
-                sb.AppendLine("         [XmlIgnore]");
-                sb.AppendLine("         public bool " + publicPropName + "Specified");
-                sb.AppendLine("         {");
+                sb.AppendLine("        [XmlIgnore]");
+                sb.AppendLine("        public bool " + publicPropName + "Specified");
+                sb.AppendLine("        {");
                 sb.AppendLine("            get {");
                 sb.AppendLine("                return " + propertyName + ";");
-                sb.AppendLine("            } ");
+                sb.AppendLine("            }");
                 sb.AppendLine("            set {");
                 sb.AppendLine("                " + propertyName + "= value;");
-                sb.AppendLine("            } ");
-                sb.AppendLine("         }");
+                sb.AppendLine("            }");
+                sb.AppendLine("        }");
                 string realClassName = RenameClass(attr.Type);
 
                 return sb.ToString();
@@ -974,24 +974,26 @@ namespace Energistics.Generator
                 // from the research, there is two ways to prevent the null : 1. bool xxxSpecified property 2. ShouldSerializexxx() method
                 if (IsArray(type, property))
                 {
-      
+                    sb.AppendLine("         /// <summary>");
+                    sb.AppendLine("         /// bool to indicate if " + RenameProperty(property) + " has been set. Used for serialization.");
+                    sb.AppendLine("         /// </summary>");
                     sb.AppendLine("         [XmlIgnore]");
                     sb.AppendLine("         public bool " + specifiedBool);
                     sb.AppendLine("         {");
-                    sb.AppendLine("            get {");
+                    sb.AppendLine("             get {");
                     if (property.PropertyType == typeof(Byte)||property.PropertyType == typeof(Byte[]))
                     {
                         sb.AppendLine("             if("+privateFieldName +"!=null)");
-                        sb.AppendLine("                return " + privateFieldName + ".Length>0?true:false;");
+                        sb.AppendLine("                 return " + privateFieldName + ".Length>0?true:false;");
                         sb.AppendLine("             else return false;");
                     } 
                     else
                     {
                         sb.AppendLine("             if(" + privateFieldName + "!=null)");
-                        sb.AppendLine("                return " + privateFieldName + ".Count>0?true:false;");
+                        sb.AppendLine("                 return " + privateFieldName + ".Count>0?true:false;");
                         sb.AppendLine("             else return false;");
                     }
-                    sb.AppendLine("            } ");
+                    sb.AppendLine("             }");
                     sb.AppendLine("         }");
                 }
                 sb.AppendLine("        private " + GetPropertyType(property) + MakePropertyNullable(property) + " " + privateFieldName + ((property.PropertyType == typeof(String) && privateFieldName == "versionField" && !string.IsNullOrEmpty(versionString)) ? String.Format(" = \"{0}\"", versionString) : String.Empty) + "; ");
