@@ -266,8 +266,9 @@ namespace Energistics.SchemaGatherer
 
             }
 
-            bool addValidation = bool.Parse(GetAppSetting("INCLUDE_VALIDATION_ATTRIBUTES"));
-            if (addValidation)
+            // NOTE: Using CodeDom to generate data object classes
+            //bool addValidation = bool.Parse(GetAppSetting("INCLUDE_VALIDATION_ATTRIBUTES"));
+            //if (addValidation)
             {
                 List<string> dataObjects = dataObjectSchemas.Select(Path.GetFileNameWithoutExtension).ToList();
 
@@ -278,10 +279,10 @@ namespace Energistics.SchemaGatherer
                 dataSchemaVersion = Regex.Replace(dataSchemaVersion, @"[^\d.]", string.Empty);
                 ValidationExtensions.GenerateDataObjectsWithCodeDom(targetFolder, targetXmlFile, nameSpace, sourceFolder, standardFamily, dataSchemaVersion, dataObjects, schemaSubstitutions);
             }
-            else
-            {
-                GenerateDataObjectsWithXsdUtility(targetFolder, targetXmlFile, newTypeCatalog, newTypeCatalogProdml);
-            }
+            //else
+            //{
+            //    GenerateDataObjectsWithXsdUtility(targetFolder, targetXmlFile, newTypeCatalog, newTypeCatalogProdml);
+            //}
         }
 
         private static void GetSchemas(string setName, string enumList, string sourceFolder, List<string> dataObjectSchemas, List<string> apiSchemas, List<string> supportingSchemas, Dictionary<string, string> schemaSubstitutions)

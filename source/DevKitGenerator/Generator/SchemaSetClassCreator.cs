@@ -1112,16 +1112,11 @@ namespace Energistics.Generator
         /// <returns>A populated EnergisticsDataObject if the incoming type has this attribute.  The emptry string otherwise.</returns>
         public string GetEnergisticsDataObjectAttribute(Type type)
         {
-            bool addValidation = bool.Parse(SchemaGatherer.SchemaGatherer.GetAppSetting("INCLUDE_VALIDATION_ATTRIBUTES"));
-            if (!addValidation)
-                return string.Empty;
-
             var attributes = type.GetCustomAttributes(typeof(EnergisticsDataObjectAttribute), false);
-            if (attributes.Length == 0)
-                return String.Empty;
+            if (attributes.Length == 0) return String.Empty;
 
             var attribute = ((EnergisticsDataObjectAttribute)attributes[0]);
-            return "[" + nameof(EnergisticsDataObjectAttribute) + "(StandardFamily." + attribute.StandardFamily + ", \"" + attribute.DataSchemaVersion + "\")]" + Environment.NewLine + "    ";
+            return "[" + typeof(EnergisticsDataObjectAttribute).Name + "(StandardFamily." + attribute.StandardFamily + ", \"" + attribute.DataSchemaVersion + "\")]" + Environment.NewLine + "    ";
         }
 
         /// <summary>
@@ -1135,12 +1130,6 @@ namespace Energistics.Generator
         public string GetValidationAttributes(Type type, PropertyInfo property)
         {
             StringBuilder sb = new StringBuilder();
-
-            bool addValidation = bool.Parse(SchemaGatherer.SchemaGatherer.GetAppSetting("INCLUDE_VALIDATION_ATTRIBUTES"));
-            if (!addValidation)
-            {
-                return string.Empty;
-            }
 
             Action init = () =>
             {
