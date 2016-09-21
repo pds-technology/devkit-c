@@ -67,7 +67,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellCompletion", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.COMPLETION, "1.0")]
     [Description("The non-contextual content of a well completion object.")]
-    public partial class WellCompletion : Object, IWellObject, INotifyPropertyChanged
+    public partial class WellCompletion : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -167,7 +167,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("Field date.")]
 		[XmlElement("effectiveDate")]
-        public Timestamp? EffectiveDate {
+        public DateTime? EffectiveDate {
             get {
                 return effectiveDateField;
             } 
@@ -178,7 +178,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? effectiveDateField; 
+        private DateTime? effectiveDateField; 
 
         /// <summary>
         /// effectiveDateSpecified property
@@ -202,7 +202,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("Expiration date")]
 		[XmlElement("expiredDate")]
-        public Timestamp? ExpiredDate {
+        public DateTime? ExpiredDate {
             get {
                 return expiredDateField;
             } 
@@ -213,7 +213,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? expiredDateField; 
+        private DateTime? expiredDateField; 
 
         /// <summary>
         /// expiredDateSpecified property
@@ -290,7 +290,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		
 		[XmlElement("statusDate")]
-        public Timestamp? StatusDate {
+        public DateTime? StatusDate {
             get {
                 return statusDateField;
             } 
@@ -301,7 +301,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? statusDateField; 
+        private DateTime? statusDateField; 
 
         /// <summary>
         /// statusDateSpecified property
@@ -457,7 +457,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CompletionStatusHistory", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the CompletionStatusHistory xsd type.")]
-    public partial class CompletionStatusHistory : Object, IUniqueId, INotifyPropertyChanged
+    public partial class CompletionStatusHistory : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -500,7 +500,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("the start date of status")]
 		[XmlElement("startDate")]
-        public Timestamp? StartDate {
+        public DateTime? StartDate {
             get {
                 return startDateField;
             } 
@@ -511,7 +511,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? startDateField; 
+        private DateTime? startDateField; 
 
         /// <summary>
         /// startDateSpecified property
@@ -535,7 +535,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("the end date of status")]
 		[XmlElement("endDate")]
-        public Timestamp? EndDate {
+        public DateTime? EndDate {
             get {
                 return endDateField;
             } 
@@ -546,7 +546,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? endDateField; 
+        private DateTime? endDateField; 
 
         /// <summary>
         /// endDateSpecified property
@@ -4090,7 +4090,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("When the data was created at the persistent data store.  This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the  behavior related to this element.")]
 		[XmlElement("dTimCreation")]
-        public Timestamp? DateTimeCreation {
+        public DateTime? DateTimeCreation {
             get {
                 return dTimCreationField;
             } 
@@ -4101,7 +4101,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? dTimCreationField; 
+        private DateTime? dTimCreationField; 
 
         /// <summary>
         /// dTimCreationSpecified property
@@ -4125,7 +4125,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("Last change of any element of the data at the persistent data store. This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the  behavior related to this element.")]
 		[XmlElement("dTimLastChange")]
-        public Timestamp? DateTimeLastChange {
+        public DateTime? DateTimeLastChange {
             get {
                 return dTimLastChangeField;
             } 
@@ -4136,7 +4136,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? dTimLastChangeField; 
+        private DateTime? dTimLastChangeField; 
 
         /// <summary>
         /// dTimLastChangeSpecified property
@@ -4662,7 +4662,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_extensionNameValue", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Extension values Schema. The intent is to allow standard WITSML named extensions without having to modify the schema. A client or server can ignore any name that it does not recognize but certain meta data is required in order to allow generic clients or servers to process the value.")]
-    public partial class ExtensionNameValue : Object, IUniqueId, INotifyPropertyChanged
+    public partial class ExtensionNameValue : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4725,7 +4725,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The date-time associated with the value.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -4736,7 +4736,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -5077,7 +5077,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="indexedObject", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the indexedObject xsd type.")]
-    public partial class IndexedObject : Object, IDataObject, INotifyPropertyChanged
+    public partial class IndexedObject : Object, INotifyPropertyChanged
     {
         /// <summary>
         /// Initializes a new instance of the IndexedObject class.
@@ -5362,7 +5362,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_memberObject", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Defines a member of an objectGroup.")]
-    public partial class MemberObject : Object, IUniqueId, INotifyPropertyChanged
+    public partial class MemberObject : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -5513,7 +5513,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The minimum log date-time index value that applies to this group. The significance of this range is defined by the groupType.")]
 		[XmlElement("rangeDateTimeMin")]
-        public Timestamp? RangeDateTimeMin {
+        public DateTime? RangeDateTimeMin {
             get {
                 return rangeDateTimeMinField;
             } 
@@ -5524,7 +5524,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? rangeDateTimeMinField; 
+        private DateTime? rangeDateTimeMinField; 
 
         /// <summary>
         /// rangeDateTimeMinSpecified property
@@ -5548,7 +5548,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The maximum log date-time index value that applies to this group. The significance of this range is defined by the groupType.")]
 		[XmlElement("rangeDateTimeMax")]
-        public Timestamp? RangeDateTimeMax {
+        public DateTime? RangeDateTimeMax {
             get {
                 return rangeDateTimeMaxField;
             } 
@@ -5559,7 +5559,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? rangeDateTimeMaxField; 
+        private DateTime? rangeDateTimeMaxField; 
 
         /// <summary>
         /// rangeDateTimeMaxSpecified property
@@ -5618,7 +5618,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("A date and time related to this group.  This does not necessarily represent an actual index within a growing-object. The significance of this time is defined by the groupType.")]
 		[XmlElement("referenceDateTime")]
-        public Timestamp? ReferenceDateTime {
+        public DateTime? ReferenceDateTime {
             get {
                 return referenceDateTimeField;
             } 
@@ -5629,7 +5629,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? referenceDateTimeField; 
+        private DateTime? referenceDateTimeField; 
 
         /// <summary>
         /// referenceDateTimeSpecified property
@@ -5953,7 +5953,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_nameTag", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Equipment NameTag Schema")]
-    public partial class NameTag : Object, IDataObject, INotifyPropertyChanged
+    public partial class NameTag : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -6068,7 +6068,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("When the tag was installed in or on the item.")]
 		[XmlElement("installationDate")]
-        public Timestamp? InstallationDate {
+        public DateTime? InstallationDate {
             get {
                 return installationDateField;
             } 
@@ -6079,7 +6079,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? installationDateField; 
+        private DateTime? installationDateField; 
 
         /// <summary>
         /// installationDateSpecified property
@@ -6329,7 +6329,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_dayCost", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Day Cost Component Schema ")]
-    public partial class DayCost : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DayCost : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8059,7 +8059,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("Next Test Date")]
 		[XmlElement("dTimeNextTestDate")]
-        public Timestamp? DTimeNextTestDate {
+        public DateTime? DTimeNextTestDate {
             get {
                 return dTimeNextTestDateField;
             } 
@@ -8070,7 +8070,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? dTimeNextTestDateField; 
+        private DateTime? dTimeNextTestDateField; 
 
         /// <summary>
         /// dTimeNextTestDateSpecified property
@@ -10251,7 +10251,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellCMLedger", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.COMPLETION, "1.0")]
     [Description("This class represents the obj_wellCMLedger xsd type.")]
-    public partial class WellCMLedger : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class WellCMLedger : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -10332,7 +10332,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("Date and time that activities started.")]
 		[XmlElement("dTimStart")]
-        public Timestamp? DateTimeStart {
+        public DateTime? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -10343,7 +10343,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? dTimStartField; 
+        private DateTime? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
@@ -10367,7 +10367,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("Date and time that activities were completed.")]
 		[XmlElement("dTimEnd")]
-        public Timestamp? DateTimeEnd {
+        public DateTime? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -10378,7 +10378,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? dTimEndField; 
+        private DateTime? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
@@ -11124,7 +11124,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_slotsInterval", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_slotsInterval xsd type.")]
-    public partial class SlotsInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class SlotsInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11378,7 +11378,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_intervalStatusHistory", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Information on the status history in the interval")]
-    public partial class IntervalStatusHistory : Object, IUniqueId, INotifyPropertyChanged
+    public partial class IntervalStatusHistory : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11421,7 +11421,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The start date of status and allocation factor")]
 		[XmlElement("startDate")]
-        public Timestamp? StartDate {
+        public DateTime? StartDate {
             get {
                 return startDateField;
             } 
@@ -11432,7 +11432,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? startDateField; 
+        private DateTime? startDateField; 
 
         /// <summary>
         /// startDateSpecified property
@@ -11456,7 +11456,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The end date of status and allocation factor")]
 		[XmlElement("endDate")]
-        public Timestamp? EndDate {
+        public DateTime? EndDate {
             get {
                 return endDateField;
             } 
@@ -11467,7 +11467,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? endDateField; 
+        private DateTime? endDateField; 
 
         /// <summary>
         /// endDateSpecified property
@@ -11760,7 +11760,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("install/pull date")]
 		[XmlElement("eventDate")]
-        public Timestamp? EventDate {
+        public DateTime? EventDate {
             get {
                 return eventDateField;
             } 
@@ -11771,7 +11771,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? eventDateField; 
+        private DateTime? eventDateField; 
 
         /// <summary>
         /// eventDateSpecified property
@@ -11824,7 +11824,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perforationStatusHistory", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Information on collection of perforation status history")]
-    public partial class PerforationStatusHistory : Object, IUniqueId, INotifyPropertyChanged
+    public partial class PerforationStatusHistory : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11867,7 +11867,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("the start date of status")]
 		[XmlElement("startDate")]
-        public Timestamp? StartDate {
+        public DateTime? StartDate {
             get {
                 return startDateField;
             } 
@@ -11878,7 +11878,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? startDateField; 
+        private DateTime? startDateField; 
 
         /// <summary>
         /// startDateSpecified property
@@ -11902,7 +11902,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("the end date of status")]
 		[XmlElement("endDate")]
-        public Timestamp? EndDate {
+        public DateTime? EndDate {
             get {
                 return endDateField;
             } 
@@ -11913,7 +11913,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? endDateField; 
+        private DateTime? endDateField; 
 
         /// <summary>
         /// endDateSpecified property
@@ -12076,7 +12076,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perforationSetInterval", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_perforationSetInterval xsd type.")]
-    public partial class PerforationSetInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class PerforationSetInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -12330,7 +12330,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_openHoleInterval", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_openHoleInterval xsd type.")]
-    public partial class OpenHoleInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class OpenHoleInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -12584,7 +12584,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_gravelPackInterval", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_gravelPackInterval xsd type.")]
-    public partial class GravelPackInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class GravelPackInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -12994,7 +12994,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellboreCompletion", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.COMPLETION, "1.0")]
     [Description("This class represents the obj_wellboreCompletion xsd type.")]
-    public partial class WellboreCompletion : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class WellboreCompletion : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -13142,7 +13142,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("Completion Date")]
 		[XmlElement("wellboreCompletionDate")]
-        public Timestamp? WellboreCompletionDate {
+        public DateTime? WellboreCompletionDate {
             get {
                 return wellboreCompletionDateField;
             } 
@@ -13153,7 +13153,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? wellboreCompletionDateField; 
+        private DateTime? wellboreCompletionDateField; 
 
         /// <summary>
         /// wellboreCompletionDateSpecified property
@@ -13302,7 +13302,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		
 		[XmlElement("statusDate")]
-        public Timestamp? StatusDate {
+        public DateTime? StatusDate {
             get {
                 return statusDateField;
             } 
@@ -13313,7 +13313,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? statusDateField; 
+        private DateTime? statusDateField; 
 
         /// <summary>
         /// statusDateSpecified property
@@ -13527,7 +13527,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_perforationSet", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_perforationSet xsd type.")]
-    public partial class PerforationSet : Object, IUniqueId, INotifyPropertyChanged
+    public partial class PerforationSet : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -13969,7 +13969,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The original perforation date")]
 		[XmlElement("perforationDate")]
-        public Timestamp? PerforationDate {
+        public DateTime? PerforationDate {
             get {
                 return perforationDateField;
             } 
@@ -13980,7 +13980,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? perforationDateField; 
+        private DateTime? perforationDateField; 
 
         /// <summary>
         /// perforationDateSpecified property
@@ -14582,7 +14582,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_equipment", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_equipment xsd type.")]
-    public partial class Equipment : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Equipment : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -15509,7 +15509,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_geologyFeature", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Geology features found in the location of the borehole string.  ")]
-    public partial class GeologyFeature : Object, IDataObject, INotifyPropertyChanged
+    public partial class GeologyFeature : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -15739,7 +15739,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_borehole", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Information on the borehole")]
-    public partial class Borehole : Object, IDataObject, INotifyPropertyChanged
+    public partial class Borehole : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -16005,7 +16005,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_boreholeString", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_boreholeString xsd type.")]
-    public partial class BoreholeString : Object, IDataObject, INotifyPropertyChanged
+    public partial class BoreholeString : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -16209,7 +16209,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stringEquipment", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_stringEquipment xsd type.")]
-    public partial class StringEquipment : Object, IDataObject, INotifyPropertyChanged
+    public partial class StringEquipment : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -17218,7 +17218,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_equipmentConnection", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Information detailing the connection between 2 components")]
-    public partial class EquipmentConnection : Connection, IUniqueId, INotifyPropertyChanged
+    public partial class EquipmentConnection : Connection, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -17456,7 +17456,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_connection", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Tubular Connection Component Schema ")]
-    public partial class Connection : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Connection : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -17792,7 +17792,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_downholeString", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_downholeString xsd type.")]
-    public partial class DownholeString : Object, IDataObject, INotifyPropertyChanged
+    public partial class DownholeString : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -17871,7 +17871,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The install date of downhole string.")]
 		[XmlElement("stringInstallDate")]
-        public Timestamp? StringInstallDate {
+        public DateTime? StringInstallDate {
             get {
                 return stringInstallDateField;
             } 
@@ -17882,7 +17882,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? stringInstallDateField; 
+        private DateTime? stringInstallDateField; 
 
         /// <summary>
         /// stringInstallDateSpecified property
@@ -18176,7 +18176,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_downholeComponent", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.COMPLETION, "1.0")]
     [Description("The non-contextual content of a WITSML downhole component object.")]
-    public partial class DownholeComponent : Object, IWellObject, INotifyPropertyChanged
+    public partial class DownholeComponent : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -18222,7 +18222,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The date range specification: start date")]
 		[XmlElement("startDate")]
-        public Timestamp? StartDate {
+        public DateTime? StartDate {
             get {
                 return startDateField;
             } 
@@ -18233,7 +18233,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? startDateField; 
+        private DateTime? startDateField; 
 
         /// <summary>
         /// startDateSpecified property
@@ -18257,7 +18257,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The date range specification: end date")]
 		[XmlElement("endDate")]
-        public Timestamp? EndDate {
+        public DateTime? EndDate {
             get {
                 return endDateField;
             } 
@@ -18268,7 +18268,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? endDateField; 
+        private DateTime? endDateField; 
 
         /// <summary>
         /// endDateSpecified property
@@ -18537,7 +18537,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentEvent", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("An event type captures the basic information about an event that has affected the data.")]
-    public partial class DocumentEvent : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DocumentEvent : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -18546,7 +18546,7 @@ namespace Energistics.DataAccess.COMPLETION100
 		[Required]
         [Description("The date on which the event took place.")]
 		[XmlElement("eventDate")]
-        public Timestamp? EventDate {
+        public DateTime? EventDate {
             get {
                 return eventDateField;
             } 
@@ -18556,7 +18556,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? eventDateField; 
+        private DateTime? eventDateField; 
 
         /// <summary>
         /// The kind of event event.
@@ -18696,7 +18696,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentSecurityInfo", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Information about the security classification of the document. This is intended as a documentation of the security so that the file will not inadvertently be sent to someone who is not allowed access to the data. This block also carries a date that the security classification expires. For example, a well log is confidential for a period of time, and then becomes open. All security classes are characterized by their classification systems.")]
-    public partial class DocumentSecurityInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DocumentSecurityInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -18740,7 +18740,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The date on which this security class is no  longer applicable.")]
 		[XmlElement("endDate")]
-        public Timestamp? EndDate {
+        public DateTime? EndDate {
             get {
                 return endDateField;
             } 
@@ -18751,7 +18751,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? endDateField; 
+        private DateTime? endDateField; 
 
         /// <summary>
         /// endDateSpecified property
@@ -18881,7 +18881,7 @@ namespace Energistics.DataAccess.COMPLETION100
 		[Required]
         [Description("The date and time that the file was created.")]
 		[XmlElement("fileCreationDate")]
-        public Timestamp? FileCreationDate {
+        public DateTime? FileCreationDate {
             get {
                 return fileCreationDateField;
             } 
@@ -18891,7 +18891,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? fileCreationDateField; 
+        private DateTime? fileCreationDateField; 
 
         /// <summary>
         /// If appropriate, the software that created the file. This is a free form string, and may include whatever information is deemed relevant.
@@ -19132,7 +19132,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// </summary>
 		[Description("The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.")]
 		[XmlElement("documentDate")]
-        public Timestamp? DocumentDate {
+        public DateTime? DocumentDate {
             get {
                 return documentDateField;
             } 
@@ -19143,7 +19143,7 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
-        private Timestamp? documentDateField; 
+        private DateTime? documentDateField; 
 
         /// <summary>
         /// documentDateSpecified property

@@ -380,7 +380,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="GravelPackInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the GravelPackInterval xsd type.")]
-    public partial class GravelPackInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class GravelPackInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -1234,7 +1234,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IntervalStatusHistory", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the IntervalStatusHistory xsd type.")]
-    public partial class IntervalStatusHistory : Object, IUniqueId, INotifyPropertyChanged
+    public partial class IntervalStatusHistory : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -1415,7 +1415,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="PerforationStatusHistory", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the PerforationStatusHistory xsd type.")]
-    public partial class PerforationStatusHistory : Object, IUniqueId, INotifyPropertyChanged
+    public partial class PerforationStatusHistory : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -1614,7 +1614,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="PerforationSetInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the PerforationSetInterval xsd type.")]
-    public partial class PerforationSetInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class PerforationSetInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -1832,7 +1832,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="OpenHoleInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the OpenHoleInterval xsd type.")]
-    public partial class OpenHoleInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class OpenHoleInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -2050,7 +2050,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="SlotsInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the SlotsInterval xsd type.")]
-    public partial class SlotsInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class SlotsInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -2421,7 +2421,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CompletionStatusHistory", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the CompletionStatusHistory xsd type.")]
-    public partial class CompletionStatusHistory : Object, IUniqueId, INotifyPropertyChanged
+    public partial class CompletionStatusHistory : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -2571,7 +2571,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractIscwsaErrorCoefficient", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the AbstractIscwsaErrorCoefficient xsd type.")]
-    public abstract partial class AbstractIscwsaErrorCoefficient : Object, IUniqueId, INotifyPropertyChanged
+    public abstract partial class AbstractIscwsaErrorCoefficient : Object, INotifyPropertyChanged
     {
 
 		/// <summary>
@@ -2627,7 +2627,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Tvd", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Tvd xsd type.")]
-    public partial class Tvd : AbstractIscwsaErrorCoefficient, IUniqueId, INotifyPropertyChanged
+    public partial class Tvd : AbstractIscwsaErrorCoefficient, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -2662,7 +2662,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Depth", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Depth xsd type.")]
-    public partial class Depth : AbstractIscwsaErrorCoefficient, IUniqueId, INotifyPropertyChanged
+    public partial class Depth : AbstractIscwsaErrorCoefficient, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -2697,7 +2697,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Inc", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Inc xsd type.")]
-    public partial class Inc : AbstractIscwsaErrorCoefficient, IUniqueId, INotifyPropertyChanged
+    public partial class Inc : AbstractIscwsaErrorCoefficient, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -2732,7 +2732,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Azi", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Azi xsd type.")]
-    public partial class Azi : AbstractIscwsaErrorCoefficient, IUniqueId, INotifyPropertyChanged
+    public partial class Azi : AbstractIscwsaErrorCoefficient, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -2767,7 +2767,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IscwsaErrorCoefficient", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the IscwsaErrorCoefficient xsd type.")]
-    public partial class IscwsaErrorCoefficient : Object, IUniqueId, INotifyPropertyChanged
+    public partial class IscwsaErrorCoefficient : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -2884,7 +2884,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IscwsaErrorTerm", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the IscwsaErrorTerm xsd type.")]
-    public partial class IscwsaErrorTerm : Object, IUniqueId, INotifyPropertyChanged
+    public partial class IscwsaErrorTerm : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -3140,7 +3140,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IscwsaNomenclatureConstant", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the IscwsaNomenclatureConstant xsd type.")]
-    public partial class IscwsaNomenclatureConstant : Object, IUniqueId, INotifyPropertyChanged
+    public partial class IscwsaNomenclatureConstant : Object, INotifyPropertyChanged
     {
         /// <summary>
         /// Initializes a new instance of the IscwsaNomenclatureConstant class.
@@ -3323,7 +3323,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IscwsaNameAndDescription", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the IscwsaNameAndDescription xsd type.")]
-    public partial class IscwsaNameAndDescription : Object, IUniqueId, INotifyPropertyChanged
+    public partial class IscwsaNameAndDescription : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -3698,7 +3698,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimReservoirInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimReservoirInterval xsd type.")]
-    public partial class StimReservoirInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimReservoirInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4791,7 +4791,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimTubular", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimTubular xsd type.")]
-    public partial class StimTubular : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimTubular : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -6275,7 +6275,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimMaterialQuantity", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimMaterialQuantity xsd type.")]
-    public partial class StimMaterialQuantity : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimMaterialQuantity : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -6789,7 +6789,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimJobStep", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimJobStep xsd type.")]
-    public partial class StimJobStep : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimJobStep : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8344,7 +8344,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimEvent", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimEvent xsd type.")]
-    public partial class StimEvent : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimEvent : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8519,7 +8519,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimShutInPressure", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimShutInPressure xsd type.")]
-    public partial class StimShutInPressure : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimShutInPressure : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8643,7 +8643,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimPumpFlowBackTest", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimPumpFlowBackTest xsd type.")]
-    public partial class StimPumpFlowBackTest : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimPumpFlowBackTest : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -8884,7 +8884,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimPumpFlowBackTestStep", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimPumpFlowBackTestStep xsd type.")]
-    public partial class StimPumpFlowBackTestStep : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimPumpFlowBackTestStep : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -9168,7 +9168,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimPressureFlowRate", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimPressureFlowRate xsd type.")]
-    public partial class StimPressureFlowRate : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimPressureFlowRate : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -9290,7 +9290,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimStepTest", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimStepTest xsd type.")]
-    public partial class StimStepTest : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimStepTest : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -9424,7 +9424,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimStepDownTest", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimStepDownTest xsd type.")]
-    public partial class StimStepDownTest : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimStepDownTest : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -9682,7 +9682,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimFetTest", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimFetTest xsd type.")]
-    public partial class StimFetTest : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimFetTest : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -10353,7 +10353,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimJobDiagnosticSession", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimJobDiagnosticSession xsd type.")]
-    public partial class StimJobDiagnosticSession : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimJobDiagnosticSession : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11539,7 +11539,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimISO13503_5Point", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimISO13503_5Point xsd type.")]
-    public partial class StimISO13503_5Point : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimISO13503_5Point : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11670,7 +11670,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ISO13503_2SieveAnalysisData", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the ISO13503_2SieveAnalysisData xsd type.")]
-    public partial class ISO13503_2SieveAnalysisData : Object, IUniqueId, INotifyPropertyChanged
+    public partial class ISO13503_2SieveAnalysisData : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11858,7 +11858,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ISO13503_2CrushTestData", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the ISO13503_2CrushTestData xsd type.")]
-    public partial class ISO13503_2CrushTestData : Object, IUniqueId, INotifyPropertyChanged
+    public partial class ISO13503_2CrushTestData : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11952,7 +11952,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimISO13503_2Properties", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimISO13503_2Properties xsd type.")]
-    public partial class StimISO13503_2Properties : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimISO13503_2Properties : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -12396,7 +12396,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimMaterial", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimMaterial xsd type.")]
-    public partial class StimMaterial : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimMaterial : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -12553,7 +12553,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimAdditive", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimAdditive xsd type.")]
-    public partial class StimAdditive : StimMaterial, IUniqueId, INotifyPropertyChanged
+    public partial class StimAdditive : StimMaterial, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -12644,7 +12644,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimProppantAgent", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StimProppantAgent xsd type.")]
-    public partial class StimProppantAgent : StimMaterial, IUniqueId, INotifyPropertyChanged
+    public partial class StimProppantAgent : StimMaterial, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -13849,7 +13849,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Degasser", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Degasser xsd type.")]
-    public partial class Degasser : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Degasser : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -14403,7 +14403,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="NameTag", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the NameTag xsd type.")]
-    public partial class NameTag : Object, IUniqueId, INotifyPropertyChanged
+    public partial class NameTag : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -14636,7 +14636,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Hydrocyclone", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Hydrocyclone xsd type.")]
-    public partial class Hydrocyclone : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Hydrocyclone : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -14879,7 +14879,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Centrifuge", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Centrifuge xsd type.")]
-    public partial class Centrifuge : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Centrifuge : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -15122,7 +15122,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="MudPump", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the MudPump xsd type.")]
-    public partial class MudPump : Object, IUniqueId, INotifyPropertyChanged
+    public partial class MudPump : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -15842,7 +15842,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Pit", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Pit xsd type.")]
-    public partial class Pit : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Pit : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -16120,7 +16120,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="BopComponent", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the BopComponent xsd type.")]
-    public partial class BopComponent : Object, IUniqueId, INotifyPropertyChanged
+    public partial class BopComponent : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -17094,7 +17094,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Shaker", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Shaker xsd type.")]
-    public partial class Shaker : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Shaker : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -17497,7 +17497,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="MudlogParameter", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the MudlogParameter xsd type.")]
-    public partial class MudlogParameter : Object, IUniqueId, INotifyPropertyChanged
+    public partial class MudlogParameter : Object, INotifyPropertyChanged
     {
         /// <summary>
         /// Initializes a new instance of the MudlogParameter class.
@@ -20441,7 +20441,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("part_MudLogReportInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
 	[Description("This class represents the MudlogReportInterval xsd type.")]
-    public partial class MudlogReportInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class MudlogReportInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20643,7 +20643,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("part_CuttingsInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
 	[Description("This class represents the CuttingsGeologyInterval xsd type.")]
-    public partial class CuttingsGeologyInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class CuttingsGeologyInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21057,7 +21057,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CuttingsIntervalLithology", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the CuttingsIntervalLithology xsd type.")]
-    public partial class CuttingsIntervalLithology : Object, IUniqueId, INotifyPropertyChanged
+    public partial class CuttingsIntervalLithology : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21461,7 +21461,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CuttingsIntervalShow", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the CuttingsIntervalShow xsd type.")]
-    public partial class CuttingsIntervalShow : Object, IUniqueId, INotifyPropertyChanged
+    public partial class CuttingsIntervalShow : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22145,7 +22145,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="LithologyQualifier", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the LithologyQualifier xsd type.")]
-    public partial class LithologyQualifier : Object, IUniqueId, INotifyPropertyChanged
+    public partial class LithologyQualifier : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22274,7 +22274,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("part_InterpretedGeologyInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
 	[Description("This class represents the InterpretedGeologyInterval xsd type.")]
-    public partial class InterpretedGeologyInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class InterpretedGeologyInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22703,7 +22703,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="InterpretedIntervalLithology", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the InterpretedIntervalLithology xsd type.")]
-    public partial class InterpretedIntervalLithology : Object, IUniqueId, INotifyPropertyChanged
+    public partial class InterpretedIntervalLithology : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23058,7 +23058,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("part_EvaluatedIntervalShow", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
 	[Description("This class represents the ShowEvaluationInterval xsd type.")]
-    public partial class ShowEvaluationInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class ShowEvaluationInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23202,7 +23202,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DepthRegTrackCurve", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DepthRegTrackCurve xsd type.")]
-    public partial class DepthRegTrackCurve : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DepthRegTrackCurve : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23471,7 +23471,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DepthRegRectangle", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DepthRegRectangle xsd type.")]
-    public partial class DepthRegRectangle : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DepthRegRectangle : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23702,7 +23702,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DepthRegTrack", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DepthRegTrack xsd type.")]
-    public partial class DepthRegTrack : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DepthRegTrack : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23919,7 +23919,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DepthRegParameter", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DepthRegParameter xsd type.")]
-    public partial class DepthRegParameter : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DepthRegParameter : Object, INotifyPropertyChanged
     {
         /// <summary>
         /// Initializes a new instance of the DepthRegParameter class.
@@ -24136,7 +24136,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DepthRegCalibrationPoint", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DepthRegCalibrationPoint xsd type.")]
-    public partial class DepthRegCalibrationPoint : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DepthRegCalibrationPoint : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24391,7 +24391,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DepthRegLogSection", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DepthRegLogSection xsd type.")]
-    public partial class DepthRegLogSection : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DepthRegLogSection : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24992,7 +24992,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DepthRegLogRect", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DepthRegLogRect xsd type.")]
-    public partial class DepthRegLogRect : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DepthRegLogRect : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25243,7 +25243,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="MemberObject", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the MemberObject xsd type.")]
-    public partial class MemberObject : Object, IUniqueId, INotifyPropertyChanged
+    public partial class MemberObject : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25647,7 +25647,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IndexedObject", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the IndexedObject xsd type.")]
-    public partial class IndexedObject : Object, IDataObject, INotifyPropertyChanged
+    public partial class IndexedObject : Object, INotifyPropertyChanged
     {
         /// <summary>
         /// Initializes a new instance of the IndexedObject class.
@@ -26260,7 +26260,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Perforating", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Perforating xsd type.")]
-    public partial class Perforating : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Perforating : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -28664,7 +28664,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="PumpOp", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the PumpOp xsd type.")]
-    public partial class PumpOp : Object, IUniqueId, INotifyPropertyChanged
+    public partial class PumpOp : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -28950,7 +28950,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="PitVolume", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the PitVolume xsd type.")]
-    public partial class PitVolume : Object, IUniqueId, INotifyPropertyChanged
+    public partial class PitVolume : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -29146,7 +29146,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Scr", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Scr xsd type.")]
-    public partial class Scr : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Scr : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -29344,7 +29344,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DayCost", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DayCost xsd type.")]
-    public partial class DayCost : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DayCost : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -29982,7 +29982,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Personnel", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Personnel xsd type.")]
-    public partial class Personnel : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Personnel : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -30663,7 +30663,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Inventory", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Inventory xsd type.")]
-    public partial class Inventory : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Inventory : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -31080,7 +31080,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Weather", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Weather xsd type.")]
-    public partial class Weather : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Weather : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -31694,7 +31694,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="SupportCraft", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the SupportCraft xsd type.")]
-    public partial class SupportCraft : Object, IUniqueId, INotifyPropertyChanged
+    public partial class SupportCraft : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -31872,7 +31872,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Incident", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Incident xsd type.")]
-    public partial class Incident : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Incident : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -33081,7 +33081,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ShakerOp", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the ShakerOp xsd type.")]
-    public partial class ShakerOp : Object, IUniqueId, INotifyPropertyChanged
+    public partial class ShakerOp : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -34791,7 +34791,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("part_TrajectoryStation", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
 	[Description("This class represents the TrajectoryStation xsd type.")]
-    public partial class TrajectoryStation : Object, IUniqueId, INotifyPropertyChanged
+    public partial class TrajectoryStation : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -36030,7 +36030,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractWellLocation", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the AbstractWellLocation xsd type.")]
-    public abstract partial class AbstractWellLocation : Object, IUniqueId, INotifyPropertyChanged
+    public abstract partial class AbstractWellLocation : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -36170,7 +36170,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedWellLocation", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the ProjectedWellLocation xsd type.")]
-    public partial class ProjectedWellLocation : AbstractWellLocation, IUniqueId, INotifyPropertyChanged
+    public partial class ProjectedWellLocation : AbstractWellLocation, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -43502,7 +43502,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="GeodeticWellLocation", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the GeodeticWellLocation xsd type.")]
-    public partial class GeodeticWellLocation : AbstractWellLocation, IUniqueId, INotifyPropertyChanged
+    public partial class GeodeticWellLocation : AbstractWellLocation, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -43891,7 +43891,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IscwsaErrorTermValue", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the IscwsaErrorTermValue xsd type.")]
-    public partial class IscwsaErrorTermValue : Object, IUniqueId, INotifyPropertyChanged
+    public partial class IscwsaErrorTermValue : Object, INotifyPropertyChanged
     {
         /// <summary>
         /// Initializes a new instance of the IscwsaErrorTermValue class.
@@ -44286,7 +44286,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IscwsaSurveyToolOperatingInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the IscwsaSurveyToolOperatingInterval xsd type.")]
-    public partial class IscwsaSurveyToolOperatingInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class IscwsaSurveyToolOperatingInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -44465,7 +44465,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="IscwsaSurveyToolOperatingCondition", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the IscwsaSurveyToolOperatingCondition xsd type.")]
-    public partial class IscwsaSurveyToolOperatingCondition : Object, IUniqueId, INotifyPropertyChanged
+    public partial class IscwsaSurveyToolOperatingCondition : Object, INotifyPropertyChanged
     {
         /// <summary>
         /// Initializes a new instance of the IscwsaSurveyToolOperatingCondition class.
@@ -44791,7 +44791,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="GeologyFeature", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the GeologyFeature xsd type.")]
-    public partial class GeologyFeature : Object, IUniqueId, INotifyPropertyChanged
+    public partial class GeologyFeature : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -44949,7 +44949,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Borehole", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Borehole xsd type.")]
-    public partial class Borehole : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Borehole : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -45160,7 +45160,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="BoreholeString", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the BoreholeString xsd type.")]
-    public partial class BoreholeString : Object, IUniqueId, INotifyPropertyChanged
+    public partial class BoreholeString : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -45341,7 +45341,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StringEquipment", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the StringEquipment xsd type.")]
-    public partial class StringEquipment : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StringEquipment : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -46121,7 +46121,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ReferenceContainer", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the ReferenceContainer xsd type.")]
-    public partial class ReferenceContainer : Object, IUniqueId, INotifyPropertyChanged
+    public partial class ReferenceContainer : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -46253,7 +46253,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="EquipmentConnection", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the EquipmentConnection xsd type.")]
-    public partial class EquipmentConnection : Connection, IUniqueId, INotifyPropertyChanged
+    public partial class EquipmentConnection : Connection, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -46542,7 +46542,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Connection", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Connection xsd type.")]
-    public partial class Connection : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Connection : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -46861,7 +46861,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="PerfHole", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the PerfHole xsd type.")]
-    public partial class PerfHole : Object, IUniqueId, INotifyPropertyChanged
+    public partial class PerfHole : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -47108,7 +47108,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="PerfSlot", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the PerfSlot xsd type.")]
-    public partial class PerfSlot : Object, IUniqueId, INotifyPropertyChanged
+    public partial class PerfSlot : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -47301,7 +47301,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ExtPropNameValue", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the ExtPropNameValue xsd type.")]
-    public partial class ExtPropNameValue : Object, IUniqueId, INotifyPropertyChanged
+    public partial class ExtPropNameValue : Object, INotifyPropertyChanged
     {
         /// <summary>
         /// Initializes a new instance of the ExtPropNameValue class.
@@ -47414,7 +47414,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Equipment", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Equipment xsd type.")]
-    public partial class Equipment : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Equipment : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -48284,7 +48284,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="PerforationSet", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the PerforationSet xsd type.")]
-    public partial class PerforationSet : Object, IUniqueId, INotifyPropertyChanged
+    public partial class PerforationSet : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -48756,7 +48756,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DownholeString", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DownholeString xsd type.")]
-    public partial class DownholeString : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DownholeString : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -49080,7 +49080,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CementAdditive", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the CementAdditive xsd type.")]
-    public partial class CementAdditive : Object, IUniqueId, INotifyPropertyChanged
+    public partial class CementAdditive : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -49354,7 +49354,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CementingFluid", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the CementingFluid xsd type.")]
-    public partial class CementingFluid : Object, IUniqueId, INotifyPropertyChanged
+    public partial class CementingFluid : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -50670,7 +50670,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Rheometer", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Rheometer xsd type.")]
-    public partial class Rheometer : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Rheometer : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -50822,7 +50822,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="RheometerViscosity", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the RheometerViscosity xsd type.")]
-    public partial class RheometerViscosity : Object, IUniqueId, INotifyPropertyChanged
+    public partial class RheometerViscosity : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -50915,7 +50915,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CementPumpScheduleStep", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the CementPumpScheduleStep xsd type.")]
-    public partial class CementPumpScheduleStep : Object, IUniqueId, INotifyPropertyChanged
+    public partial class CementPumpScheduleStep : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -51150,7 +51150,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="FluidLocation", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the FluidLocation xsd type.")]
-    public partial class FluidLocation : Object, IUniqueId, INotifyPropertyChanged
+    public partial class FluidLocation : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -52489,7 +52489,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="CementStageReport", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the CementStageReport xsd type.")]
-    public partial class CementStageReport : AbstractCementStage, IUniqueId, INotifyPropertyChanged
+    public partial class CementStageReport : AbstractCementStage, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -53661,7 +53661,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("part_WellboreGeometrySection", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
 	[Description("This class represents the WellboreGeometrySection xsd type.")]
-    public partial class WellboreGeometrySection : Object, IUniqueId, INotifyPropertyChanged
+    public partial class WellboreGeometrySection : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -54674,7 +54674,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="LogChannelAxis", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the LogChannelAxis xsd type.")]
-    public partial class LogChannelAxis : Object, IUniqueId, INotifyPropertyChanged
+    public partial class LogChannelAxis : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -54970,7 +54970,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DrillingParams", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DrillingParams xsd type.")]
-    public partial class DrillingParams : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillingParams : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -56102,7 +56102,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DrillReportSurveyStation", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DrillReportSurveyStation xsd type.")]
-    public partial class DrillReportSurveyStation : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportSurveyStation : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -56440,7 +56440,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DrillReportPorePressure", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DrillReportPorePressure xsd type.")]
-    public partial class DrillReportPorePressure : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportPorePressure : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -56713,7 +56713,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Fluid", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Fluid xsd type.")]
-    public partial class Fluid : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Fluid : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -57888,7 +57888,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DrillReportStatusInfo", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DrillReportStatusInfo xsd type.")]
-    public partial class DrillReportStatusInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportStatusInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -59470,7 +59470,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DrillReportGasReadingInfo", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DrillReportGasReadingInfo xsd type.")]
-    public partial class DrillReportGasReadingInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportGasReadingInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -59790,7 +59790,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DrillReportPerfInfo", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DrillReportPerfInfo xsd type.")]
-    public partial class DrillReportPerfInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportPerfInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -59949,7 +59949,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DrillReportStratInfo", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DrillReportStratInfo xsd type.")]
-    public partial class DrillReportStratInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportStratInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -60108,7 +60108,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DrillReportControlIncidentInfo", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DrillReportControlIncidentInfo xsd type.")]
-    public partial class DrillReportControlIncidentInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportControlIncidentInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -60673,7 +60673,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DrillReportEquipFailureInfo", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DrillReportEquipFailureInfo xsd type.")]
-    public partial class DrillReportEquipFailureInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportEquipFailureInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -60886,7 +60886,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DrillReportLithShowInfo", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DrillReportLithShowInfo xsd type.")]
-    public partial class DrillReportLithShowInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportLithShowInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -61063,7 +61063,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DrillReportFormTestInfo", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DrillReportFormTestInfo xsd type.")]
-    public partial class DrillReportFormTestInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportFormTestInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -61347,7 +61347,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DrillReportWellTestInfo", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DrillReportWellTestInfo xsd type.")]
-    public partial class DrillReportWellTestInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportWellTestInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -61900,7 +61900,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DrillReportCoreInfo", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DrillReportCoreInfo xsd type.")]
-    public partial class DrillReportCoreInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportCoreInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -62279,7 +62279,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DrillReportLogInfo", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DrillReportLogInfo xsd type.")]
-    public partial class DrillReportLogInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportLogInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -62527,7 +62527,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="DrillActivity", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the DrillActivity xsd type.")]
-    public partial class DrillActivity : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillActivity : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -63088,7 +63088,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Nozzle", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Nozzle xsd type.")]
-    public partial class Nozzle : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Nozzle : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -63865,7 +63865,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Sensor", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Sensor xsd type.")]
-    public partial class Sensor : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Sensor : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -64200,7 +64200,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Bend", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Bend xsd type.")]
-    public partial class Bend : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Bend : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -64340,7 +64340,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="Stabilizer", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the Stabilizer xsd type.")]
-    public partial class Stabilizer : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Stabilizer : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -65100,7 +65100,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="BitRecord", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the BitRecord xsd type.")]
-    public partial class BitRecord : Object, IUniqueId, INotifyPropertyChanged
+    public partial class BitRecord : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -66454,7 +66454,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="TubularComponent", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the TubularComponent xsd type.")]
-    public partial class TubularComponent : Object, IUniqueId, INotifyPropertyChanged
+    public partial class TubularComponent : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -67620,7 +67620,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="WellDatum", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the WellDatum xsd type.")]
-    public partial class WellDatum : Object, IUniqueId, INotifyPropertyChanged
+    public partial class WellDatum : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -68135,7 +68135,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ReferencePoint", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
 	[Description("This class represents the ReferencePoint xsd type.")]
-    public partial class ReferencePoint : Object, IUniqueId, INotifyPropertyChanged
+    public partial class ReferencePoint : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -69957,7 +69957,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
 	[Description("This class represents the StimJobStage xsd type.")]
-    public partial class StimJobStage : AbstractObject, IUniqueId, INotifyPropertyChanged
+    public partial class StimJobStage : AbstractObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -75377,7 +75377,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "2.0")]
     [Description("This class represents the DepthRegImage xsd type.")]
-    public partial class DepthRegImage : AbstractObject, IUniqueId, INotifyPropertyChanged
+    public partial class DepthRegImage : AbstractObject, INotifyPropertyChanged
     {
 
         /// <summary>

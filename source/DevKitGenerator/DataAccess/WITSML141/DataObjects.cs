@@ -89,7 +89,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellbore", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Wellbore object.")]
-    public partial class Wellbore : Object, IWellObject, INotifyPropertyChanged
+    public partial class Wellbore : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -382,7 +382,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of wellbore kickoff.")]
 		[XmlElement("dTimKickoff")]
-        public Timestamp? DateTimeKickoff {
+        public DateTime? DateTimeKickoff {
             get {
                 return dTimKickoffField;
             } 
@@ -393,7 +393,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimKickoffField; 
+        private DateTime? dTimKickoffField; 
 
         /// <summary>
         /// dTimKickoffSpecified property
@@ -4265,7 +4265,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("When the data was created at the persistent data store.  This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the  behavior related to this element.")]
 		[XmlElement("dTimCreation")]
-        public Timestamp? DateTimeCreation {
+        public DateTime? DateTimeCreation {
             get {
                 return dTimCreationField;
             } 
@@ -4276,7 +4276,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimCreationField; 
+        private DateTime? dTimCreationField; 
 
         /// <summary>
         /// dTimCreationSpecified property
@@ -4300,7 +4300,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last change of any element of the data at the persistent data store. This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the  behavior related to this element.")]
 		[XmlElement("dTimLastChange")]
-        public Timestamp? DateTimeLastChange {
+        public DateTime? DateTimeLastChange {
             get {
                 return dTimLastChangeField;
             } 
@@ -4311,7 +4311,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimLastChangeField; 
+        private DateTime? dTimLastChangeField; 
 
         /// <summary>
         /// dTimLastChangeSpecified property
@@ -4742,7 +4742,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_extensionNameValue", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Extension values Schema. The intent is to allow standard WITSML named extensions without having to modify the schema. A client or server can ignore any name that it does not recognize but certain meta data is required in order to allow generic clients or servers to process the value.")]
-    public partial class ExtensionNameValue : Object, IUniqueId, INotifyPropertyChanged
+    public partial class ExtensionNameValue : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -4805,7 +4805,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date-time associated with the value.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -4816,7 +4816,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -5157,7 +5157,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_referencePoint", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Reference Point Component Schema.")]
-    public partial class ReferencePoint : Object, IDataObject, INotifyPropertyChanged
+    public partial class ReferencePoint : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -5366,7 +5366,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_location", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML Location Component Schema This is a location that is expressed in terms of 2D coordinates. In order that the location be understood, the coordinate reference system (CRS) must be known. The survey location is given by a pair of tagged values. The pairs may be: (1) latitude/longitude, (2) easting/northing, (3) westing/southing, (4) projectedX/projectedY, or (5) localX/localY. The appropriate pair must be chosen for the data.")]
-    public partial class Location : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Location : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -6257,7 +6257,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_well", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Well object.")]
-    public partial class Well : Object, IDataObject, INotifyPropertyChanged
+    public partial class Well : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -6338,7 +6338,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time license  was issued.")]
 		[XmlElement("dTimLicense")]
-        public Timestamp? DateTimeLicense {
+        public DateTime? DateTimeLicense {
             get {
                 return dTimLicenseField;
             } 
@@ -6349,7 +6349,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimLicenseField; 
+        private DateTime? dTimLicenseField; 
 
         /// <summary>
         /// dTimLicenseSpecified property
@@ -6730,7 +6730,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at which well was spudded.")]
 		[XmlElement("dTimSpud")]
-        public Timestamp? DateTimeSpud {
+        public DateTime? DateTimeSpud {
             get {
                 return dTimSpudField;
             } 
@@ -6741,7 +6741,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimSpudField; 
+        private DateTime? dTimSpudField; 
 
         /// <summary>
         /// dTimSpudSpecified property
@@ -6765,7 +6765,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at which well was plugged and abandoned.")]
 		[XmlElement("dTimPa")]
-        public Timestamp? DateTimePluggedAndAbandoned {
+        public DateTime? DateTimePluggedAndAbandoned {
             get {
                 return dTimPaField;
             } 
@@ -6776,7 +6776,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimPaField; 
+        private DateTime? dTimPaField; 
 
         /// <summary>
         /// dTimPaSpecified property
@@ -7075,7 +7075,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wellDatum", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Defines the vertical datums associated with elevation, vertical depth and measured depth coordinates within the context of a well. ")]
-    public partial class WellDatum : Object, IDataObject, INotifyPropertyChanged
+    public partial class WellDatum : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -7702,7 +7702,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wellCRS", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Well Coordinate Reference System Component Schema. Note that this is intended for use with two dimensional coordinates. That does not prevent the use of a three dimensional CRS. It just means that only two coordinates will be specified in that 3D system. The veritcal coordinates are specified separately and, for 3D systems, one of the linked wellDatums should represent the vertical datum of that 3D system so that the height in the 3d system can be determined. ")]
-    public partial class WellCRS : Object, IDataObject, INotifyPropertyChanged
+    public partial class WellCRS : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -9250,7 +9250,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="indexedObject", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the indexedObject xsd type.")]
-    public partial class IndexedObject : Object, IDataObject, INotifyPropertyChanged
+    public partial class IndexedObject : Object, INotifyPropertyChanged
     {
         /// <summary>
         /// Initializes a new instance of the IndexedObject class.
@@ -9419,7 +9419,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wbGeometry", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("WITSML - Wellbore Geometry Component Schema ")]
-    public partial class StandAloneWellboreGeometry : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class StandAloneWellboreGeometry : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -9485,7 +9485,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
         [Description("Time report generated.")]
 		[XmlElement("dTimReport")]
-        public Timestamp? DateTimeReport {
+        public DateTime? DateTimeReport {
             get {
                 return dTimReportField;
             } 
@@ -9495,7 +9495,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimReportField; 
+        private DateTime? dTimReportField; 
 
         /// <summary>
         /// Measured depth at bottom. 
@@ -9709,7 +9709,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wbGeometrySection", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Wellbore Geometry Component Schema. This defines the fixed components in a wellbore. It does not define the transient drilling strings or the hanging production components. ")]
-    public partial class WellboreGeometrySection : Object, IUniqueId, INotifyPropertyChanged
+    public partial class WellboreGeometrySection : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -10571,7 +10571,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_sensor", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Tubular Sensor Component Schema")]
-    public partial class Sensor : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Sensor : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -10940,7 +10940,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_bend", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Tubular Bend Component Schema.")]
-    public partial class Bend : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Bend : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11097,7 +11097,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stabilizer", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Stablizer Component Schema")]
-    public partial class Stabilizer : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Stabilizer : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -12313,7 +12313,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_connection", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Tubular Connection Component Schema ")]
-    public partial class Connection : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Connection : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -12649,7 +12649,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_nozzle", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Nozzle Component Schema")]
-    public partial class Nozzle : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Nozzle : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -12894,7 +12894,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_tubularComponent", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - tubular component - component schema. The order of the components in the XML instance is significant. The components are list in the order that they enter the hole. That is, the first component is closest to the bit.")]
-    public partial class TubularComponent : Object, IUniqueId, INotifyPropertyChanged
+    public partial class TubularComponent : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -13919,7 +13919,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_nameTag", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Equipment NameTag Schema")]
-    public partial class NameTag : Object, IDataObject, INotifyPropertyChanged
+    public partial class NameTag : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -14034,7 +14034,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("When the tag was installed in or on the item.")]
 		[XmlElement("installationDate")]
-        public Timestamp? InstallationDate {
+        public DateTime? InstallationDate {
             get {
                 return installationDateField;
             } 
@@ -14045,7 +14045,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? installationDateField; 
+        private DateTime? installationDateField; 
 
         /// <summary>
         /// installationDateSpecified property
@@ -14202,7 +14202,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_bitRecord", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Bit Record Component Schema.")]
-    public partial class BitRecord : Object, IUniqueId, INotifyPropertyChanged
+    public partial class BitRecord : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -15061,7 +15061,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_tubular", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML tubular object.")]
-    public partial class Tubular : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class Tubular : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -15458,7 +15458,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_trajectory", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Trajectory object.")]
-    public partial class Trajectory : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class Trajectory : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -15576,7 +15576,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Start date and time of trajectory station measurements. Note that this is NOT a server query parameter.")]
 		[XmlElement("dTimTrajStart")]
-        public Timestamp? DateTimeTrajStart {
+        public DateTime? DateTimeTrajStart {
             get {
                 return dTimTrajStartField;
             } 
@@ -15587,7 +15587,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimTrajStartField; 
+        private DateTime? dTimTrajStartField; 
 
         /// <summary>
         /// dTimTrajStartSpecified property
@@ -15611,7 +15611,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("End date and time of trajectory station measurements. Note that this is NOT a server query parameter.")]
 		[XmlElement("dTimTrajEnd")]
-        public Timestamp? DateTimeTrajEnd {
+        public DateTime? DateTimeTrajEnd {
             get {
                 return dTimTrajEndField;
             } 
@@ -15622,7 +15622,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimTrajEndField; 
+        private DateTime? dTimTrajEndField; 
 
         /// <summary>
         /// dTimTrajEndSpecified property
@@ -16101,7 +16101,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_trajectoryStation", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Trajectory Station Component Schema")]
-    public partial class TrajectoryStation : Object, IUniqueId, INotifyPropertyChanged
+    public partial class TrajectoryStation : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -16127,7 +16127,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time the station was measured or created.")]
 		[XmlElement("dTimStn")]
-        public Timestamp? DateTimeStn {
+        public DateTime? DateTimeStn {
             get {
                 return dTimStnField;
             } 
@@ -16138,7 +16138,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimStnField; 
+        private DateTime? dTimStnField; 
 
         /// <summary>
         /// dTimStnSpecified property
@@ -18102,7 +18102,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_iscwsaErrorCoefficient", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Describes what survey measurement or value the error term applies to.")]
-    public partial class IscwsaErrorCoefficient : Object, IUniqueId, INotifyPropertyChanged
+    public partial class IscwsaErrorCoefficient : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -18347,7 +18347,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_iscwsaErrorTerm", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Error Term Component Schema. The reference error terms that are included in error models via ErrorTermValues.")]
-    public partial class IscwsaErrorTerm : Object, IDataObject, INotifyPropertyChanged
+    public partial class IscwsaErrorTerm : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -18621,7 +18621,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_iscwsaNomenclatureConstant", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("A nomenclature constant.")]
-    public partial class IscwsaNomenclatureConstant : Object, IDataObject, INotifyPropertyChanged
+    public partial class IscwsaNomenclatureConstant : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -18783,7 +18783,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_iscwsaNameAndDescription", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("A generic type which captures a name and a description of something. The semantics of the something is defined by the parent element.")]
-    public partial class IscwsaNameAndDescription : Object, IDataObject, INotifyPropertyChanged
+    public partial class IscwsaNameAndDescription : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -19034,7 +19034,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_toolErrorTermSet", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML error term set object.")]
-    public partial class ToolErrorTermSet : Object, IDataObject, INotifyPropertyChanged
+    public partial class ToolErrorTermSet : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -19356,7 +19356,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_iscwsaErrorTermValue", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("The instantiation of an error term in an error model. The content of this element (a number) is the variance scaling factor of the term in the model. ")]
-    public partial class IscwsaErrorTermValue : Object, IUniqueId, INotifyPropertyChanged
+    public partial class IscwsaErrorTermValue : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -19731,7 +19731,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_iscwsaSurveyToolOperatingInterval", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Inclination interval for a particular operating mode. Intervals may overlap to suppress mode flip-flopping, but should cover the entire valid range of the tool. ")]
-    public partial class IscwsaSurveyToolOperatingInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class IscwsaSurveyToolOperatingInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -19910,7 +19910,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_iscwsaSurveyToolOperatingCondition", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Describes the survey acquisition context in which an error model is valid as a sequence of constraints")]
-    public partial class IscwsaSurveyToolOperatingCondition : Object, IUniqueId, INotifyPropertyChanged
+    public partial class IscwsaSurveyToolOperatingCondition : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20068,7 +20068,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_toolErrorModel", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Tool Error Model object.")]
-    public partial class ToolErrorModel : Object, IDataObject, INotifyPropertyChanged
+    public partial class ToolErrorModel : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20341,7 +20341,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_targetSection", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML Element Types")]
-    public partial class TargetSection : Object, IUniqueId, INotifyPropertyChanged
+    public partial class TargetSection : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20565,7 +20565,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_target", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Target object.")]
-    public partial class Target : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class Target : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21188,7 +21188,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_surveySection", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Survey Section Component Schema ")]
-    public partial class SurveySection : Object, IDataObject, INotifyPropertyChanged
+    public partial class SurveySection : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21529,7 +21529,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_surveyProgram", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Survey Program object.")]
-    public partial class SurveyProgram : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class SurveyProgram : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21612,7 +21612,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time trajectory program was created or edited.")]
 		[XmlElement("dTimTrajProg")]
-        public Timestamp? DateTimeTrajProg {
+        public DateTime? DateTimeTrajProg {
             get {
                 return dTimTrajProgField;
             } 
@@ -21623,7 +21623,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimTrajProgField; 
+        private DateTime? dTimTrajProgField; 
 
         /// <summary>
         /// dTimTrajProgSpecified property
@@ -21836,7 +21836,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimPerforationSet", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Information about a set of perforations. The assumption is that all perforations within a given set are created with the same device or method. ")]
-    public partial class StimPerforationSet : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimPerforationSet : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22190,7 +22190,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimReservoirInterval", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Reservoir Interval Component Schema.")]
-    public partial class StimReservoirInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimReservoirInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22655,7 +22655,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimTestStep", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("In a step down pump diagnostics test, this item contains all the data for a particular step in that test.")]
-    public partial class StimTestStep : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimTestStep : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -22886,7 +22886,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimStepDownTest", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Diagnostic test involving flowing a well back after treatment.")]
-    public partial class StimStepDownTest : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimStepDownTest : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23162,7 +23162,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimPumpFlowBackTest", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Diagnostic test involving flowing a well back after treatment.")]
-    public partial class StimPumpFlowBackTest : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimPumpFlowBackTest : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23285,7 +23285,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimFetTest", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("A diagnostic test determining fluid efficiency.")]
-    public partial class StimFetTest : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimFetTest : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23323,7 +23323,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Start time for the fluid efficiency test (FET).")]
 		[XmlElement("dTimStart")]
-        public Timestamp? DateTimeStart {
+        public DateTime? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -23334,7 +23334,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimStartField; 
+        private DateTime? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
@@ -23358,7 +23358,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("End time for the fluid efficiency test.")]
 		[XmlElement("dTimEnd")]
-        public Timestamp? DateTimeEnd {
+        public DateTime? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -23369,7 +23369,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimEndField; 
+        private DateTime? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
@@ -23705,7 +23705,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimPressureFlowRate", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("In an injection step test, the injection rate at a particular pressure.")]
-    public partial class StimPressureFlowRate : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimPressureFlowRate : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23828,7 +23828,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimStepTest", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("An injection test, plotted pressure against injection rate, where a curve deflection and change of slope indicates the fracture breakdown pressure.")]
-    public partial class StimStepTest : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimStepTest : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -23963,7 +23963,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimPdatSession", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("A pumping diagnostics session.")]
-    public partial class StimPdatSession : Object, IDataObject, INotifyPropertyChanged
+    public partial class StimPdatSession : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -24042,7 +24042,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time pumping began.")]
 		[XmlElement("dTimPumpOn")]
-        public Timestamp? DateTimePumpOn {
+        public DateTime? DateTimePumpOn {
             get {
                 return dTimPumpOnField;
             } 
@@ -24053,7 +24053,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimPumpOnField; 
+        private DateTime? dTimPumpOnField; 
 
         /// <summary>
         /// dTimPumpOnSpecified property
@@ -24077,7 +24077,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time pumping ended.")]
 		[XmlElement("dTimPumpOff")]
-        public Timestamp? DateTimePumpOff {
+        public DateTime? DateTimePumpOff {
             get {
                 return dTimPumpOffField;
             } 
@@ -24088,7 +24088,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimPumpOffField; 
+        private DateTime? dTimPumpOffField; 
 
         /// <summary>
         /// dTimPumpOffSpecified property
@@ -24112,7 +24112,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time at which a well ceases flowing and the valves are closed.")]
 		[XmlElement("dTimWellShutin")]
-        public Timestamp? DateTimeWellShutin {
+        public DateTime? DateTimeWellShutin {
             get {
                 return dTimWellShutinField;
             } 
@@ -24123,7 +24123,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimWellShutinField; 
+        private DateTime? dTimWellShutinField; 
 
         /// <summary>
         /// dTimWellShutinSpecified property
@@ -24147,7 +24147,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time when the fluid in the fracture is completely leaked off  into the formation and the fracture closes on its faces.")]
 		[XmlElement("dTimFractureClose")]
-        public Timestamp? DateTimeFractureClose {
+        public DateTime? DateTimeFractureClose {
             get {
                 return dTimFractureCloseField;
             } 
@@ -24158,7 +24158,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimFractureCloseField; 
+        private DateTime? dTimFractureCloseField; 
 
         /// <summary>
         /// dTimFractureCloseSpecified property
@@ -25007,7 +25007,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimEvent", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - event log for stimulation jobs.")]
-    public partial class StimEvent : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimEvent : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25033,7 +25033,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date time of this event.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -25044,7 +25044,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -25327,7 +25327,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimAdditive", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - additive for stimulation jobs.")]
-    public partial class StimAdditive : Object, IDataObject, INotifyPropertyChanged
+    public partial class StimAdditive : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25820,7 +25820,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimJobStage", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Job stage for a well stimulation treatment, where one or more stages are part of a flow path, one or more flow paths are part of a treatment, and one or more treatments are part of a job.")]
-    public partial class StimJobStage : Object, IDataObject, INotifyPropertyChanged
+    public partial class StimJobStage : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -25900,7 +25900,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date time of start of this stimulation stage.")]
 		[XmlElement("dTimStart")]
-        public Timestamp? DateTimeStart {
+        public DateTime? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -25911,7 +25911,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimStartField; 
+        private DateTime? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
@@ -25935,7 +25935,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date time of end of this stimulation stage.")]
 		[XmlElement("dTimEnd")]
-        public Timestamp? DateTimeEnd {
+        public DateTime? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -25946,7 +25946,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimEndField; 
+        private DateTime? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
@@ -27362,7 +27362,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimTubular", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("In a production enhancement job, this item constitutes the data for a tubular in the hole.")]
-    public partial class StimTubular : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimTubular : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -27611,7 +27611,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimFlowPath", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - the flow path for a well stimulation job.")]
-    public partial class StimFlowPath : Object, IDataObject, INotifyPropertyChanged
+    public partial class StimFlowPath : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -28775,7 +28775,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimShutInPressure", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("A pressure measurement taken a certain time after the well has been shutin. This object is intended to be used with the performance enhancement schemas.")]
-    public partial class StimShutInPressure : Object, IUniqueId, INotifyPropertyChanged
+    public partial class StimShutInPressure : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -28900,7 +28900,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimProppantUsage", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("The name and amount of a proppant used during some time period in a    performance enhancement job.")]
-    public partial class StimProppantUsage : Object, IDataObject, INotifyPropertyChanged
+    public partial class StimProppantUsage : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -29025,7 +29025,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stimJobInterval", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Information for a well stimulation job treatment interval")]
-    public partial class StimJobInterval : Object, IDataObject, INotifyPropertyChanged
+    public partial class StimJobInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -29090,7 +29090,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Starting date and time for the stimulation treatment interval.")]
 		[XmlElement("dTimStart")]
-        public Timestamp? DateTimeStart {
+        public DateTime? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -29101,7 +29101,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimStartField; 
+        private DateTime? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
@@ -29125,7 +29125,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Ending date and time for the stimulation treatment interval.")]
 		[XmlElement("dTimEnd")]
-        public Timestamp? DateTimeEnd {
+        public DateTime? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -29136,7 +29136,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimEndField; 
+        private DateTime? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
@@ -30568,7 +30568,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_stimJob", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML well stimulation Job.")]
-    public partial class StimJob : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class StimJob : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -30762,7 +30762,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at which the stimulation contractor arrives on location.")]
 		[XmlElement("dTimArrival")]
-        public Timestamp? DateTimeArrival {
+        public DateTime? DateTimeArrival {
             get {
                 return dTimArrivalField;
             } 
@@ -30773,7 +30773,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimArrivalField; 
+        private DateTime? dTimArrivalField; 
 
         /// <summary>
         /// dTimArrivalSpecified property
@@ -30797,7 +30797,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Start date and time of well stimulation Job.")]
 		[XmlElement("dTimStart")]
-        public Timestamp? DateTimeStart {
+        public DateTime? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -30808,7 +30808,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimStartField; 
+        private DateTime? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
@@ -30832,7 +30832,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Ending date and time of well stimulation job.")]
 		[XmlElement("dTimEnd")]
-        public Timestamp? DateTimeEnd {
+        public DateTime? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -30843,7 +30843,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimEndField; 
+        private DateTime? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
@@ -31443,7 +31443,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_swcSample", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Sidewall Core Sample Component Schema")]
-    public partial class SwcSample : Object, IUniqueId, INotifyPropertyChanged
+    public partial class SwcSample : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -31621,7 +31621,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_lithology", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Lithology Component Schema. The standard for this version is principally intended for the implementation of the graphical columns for lithology and anticipates the use of a free text entry for the description. It is possible in the future the standard may be used to generate a structured text description from discrete entries and so some of terminology has been better defined to enable that useage. Either the free text description should be used, or structured description, but not both.")]
-    public partial class Lithology : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Lithology : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -32119,7 +32119,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_qualifier", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - lithology qualifier Component Schema")]
-    public partial class Qualifier : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Qualifier : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -32868,7 +32868,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_sidewallCore", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Sidewall Core object.")]
-    public partial class SidewallCore : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class SidewallCore : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -32933,7 +32933,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time logging suite run in the hole.")]
 		[XmlElement("dTimToolRun")]
-        public Timestamp? DateTimeToolRun {
+        public DateTime? DateTimeToolRun {
             get {
                 return dTimToolRunField;
             } 
@@ -32944,7 +32944,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimToolRunField; 
+        private DateTime? dTimToolRunField; 
 
         /// <summary>
         /// dTimToolRunSpecified property
@@ -32968,7 +32968,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time logging suite pulled out of the hole.")]
 		[XmlElement("dTimToolPull")]
-        public Timestamp? DateTimeToolPull {
+        public DateTime? DateTimeToolPull {
             get {
                 return dTimToolPullField;
             } 
@@ -32979,7 +32979,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimToolPullField; 
+        private DateTime? dTimToolPullField; 
 
         /// <summary>
         /// dTimToolPullSpecified property
@@ -33528,7 +33528,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_risk", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Risk object.")]
-    public partial class Risk : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class Risk : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -33730,7 +33730,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that activities started.")]
 		[XmlElement("dTimStart")]
-        public Timestamp? DateTimeStart {
+        public DateTime? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -33741,7 +33741,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimStartField; 
+        private DateTime? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
@@ -33765,7 +33765,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that activities were completed.")]
 		[XmlElement("dTimEnd")]
-        public Timestamp? DateTimeEnd {
+        public DateTime? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -33776,7 +33776,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimEndField; 
+        private DateTime? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
@@ -35211,7 +35211,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_degasser", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Rig Degasser Component Schema ")]
-    public partial class Degasser : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Degasser : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -35255,7 +35255,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of installation.")]
 		[XmlElement("dTimInstall")]
-        public Timestamp? DateTimeInstall {
+        public DateTime? DateTimeInstall {
             get {
                 return dTimInstallField;
             } 
@@ -35266,7 +35266,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimInstallField; 
+        private DateTime? dTimInstallField; 
 
         /// <summary>
         /// dTimInstallSpecified property
@@ -35290,7 +35290,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Removal date and time.")]
 		[XmlElement("dTimRemove")]
-        public Timestamp? DateTimeRemove {
+        public DateTime? DateTimeRemove {
             get {
                 return dTimRemoveField;
             } 
@@ -35301,7 +35301,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimRemoveField; 
+        private DateTime? dTimRemoveField; 
 
         /// <summary>
         /// dTimRemoveSpecified property
@@ -35704,7 +35704,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_hydrocyclone", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Rig HydroCyclones Component Schema ")]
-    public partial class Hydrocyclone : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Hydrocyclone : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -35748,7 +35748,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of installation.")]
 		[XmlElement("dTimInstall")]
-        public Timestamp? DateTimeInstall {
+        public DateTime? DateTimeInstall {
             get {
                 return dTimInstallField;
             } 
@@ -35759,7 +35759,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimInstallField; 
+        private DateTime? dTimInstallField; 
 
         /// <summary>
         /// dTimInstallSpecified property
@@ -35783,7 +35783,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Removal date and time.")]
 		[XmlElement("dTimRemove")]
-        public Timestamp? DateTimeRemove {
+        public DateTime? DateTimeRemove {
             get {
                 return dTimRemoveField;
             } 
@@ -35794,7 +35794,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimRemoveField; 
+        private DateTime? dTimRemoveField; 
 
         /// <summary>
         /// dTimRemoveSpecified property
@@ -35981,7 +35981,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_centrifuge", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Rig Centrifuge Component Schema ")]
-    public partial class Centrifuge : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Centrifuge : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -36025,7 +36025,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of installation.")]
 		[XmlElement("dTimInstall")]
-        public Timestamp? DateTimeInstall {
+        public DateTime? DateTimeInstall {
             get {
                 return dTimInstallField;
             } 
@@ -36036,7 +36036,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimInstallField; 
+        private DateTime? dTimInstallField; 
 
         /// <summary>
         /// dTimInstallSpecified property
@@ -36060,7 +36060,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Removal date and time.")]
 		[XmlElement("dTimRemove")]
-        public Timestamp? DateTimeRemove {
+        public DateTime? DateTimeRemove {
             get {
                 return dTimRemoveField;
             } 
@@ -36071,7 +36071,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimRemoveField; 
+        private DateTime? dTimRemoveField; 
 
         /// <summary>
         /// dTimRemoveSpecified property
@@ -36258,7 +36258,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_shaker", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Rig Shaker Component Schema ")]
-    public partial class Shaker : Object, IDataObject, INotifyPropertyChanged
+    public partial class Shaker : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -36321,7 +36321,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of installation.")]
 		[XmlElement("dTimInstall")]
-        public Timestamp? DateTimeInstall {
+        public DateTime? DateTimeInstall {
             get {
                 return dTimInstallField;
             } 
@@ -36332,7 +36332,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimInstallField; 
+        private DateTime? dTimInstallField; 
 
         /// <summary>
         /// dTimInstallSpecified property
@@ -36356,7 +36356,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Removal date and time.")]
 		[XmlElement("dTimRemove")]
-        public Timestamp? DateTimeRemove {
+        public DateTime? DateTimeRemove {
             get {
                 return dTimRemoveField;
             } 
@@ -36367,7 +36367,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimRemoveField; 
+        private DateTime? dTimRemoveField; 
 
         /// <summary>
         /// dTimRemoveSpecified property
@@ -36695,7 +36695,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_pump", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Rig Pump Component Schema ")]
-    public partial class Pump : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Pump : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -36757,7 +36757,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of pump installation.")]
 		[XmlElement("dTimInstall")]
-        public Timestamp? DateTimeInstall {
+        public DateTime? DateTimeInstall {
             get {
                 return dTimInstallField;
             } 
@@ -36768,7 +36768,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimInstallField; 
+        private DateTime? dTimInstallField; 
 
         /// <summary>
         /// dTimInstallSpecified property
@@ -36792,7 +36792,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time the pump was removed.")]
 		[XmlElement("dTimRemove")]
-        public Timestamp? DateTimeRemove {
+        public DateTime? DateTimeRemove {
             get {
                 return dTimRemoveField;
             } 
@@ -36803,7 +36803,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimRemoveField; 
+        private DateTime? dTimRemoveField; 
 
         /// <summary>
         /// dTimRemoveSpecified property
@@ -37260,7 +37260,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_pit", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Rig Pit Component Schema ")]
-    public partial class Pit : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Pit : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -37286,7 +37286,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of installation.")]
 		[XmlElement("dTimInstall")]
-        public Timestamp? DateTimeInstall {
+        public DateTime? DateTimeInstall {
             get {
                 return dTimInstallField;
             } 
@@ -37297,7 +37297,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimInstallField; 
+        private DateTime? dTimInstallField; 
 
         /// <summary>
         /// dTimInstallSpecified property
@@ -37321,7 +37321,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Removal date and time.")]
 		[XmlElement("dTimRemove")]
-        public Timestamp? DateTimeRemove {
+        public DateTime? DateTimeRemove {
             get {
                 return dTimRemoveField;
             } 
@@ -37332,7 +37332,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimRemoveField; 
+        private DateTime? dTimRemoveField; 
 
         /// <summary>
         /// dTimRemoveSpecified property
@@ -37572,7 +37572,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_bopComponent", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Blow Out Preventer Component Schema.")]
-    public partial class BopComponent : Object, IUniqueId, INotifyPropertyChanged
+    public partial class BopComponent : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -37881,7 +37881,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of installation.")]
 		[XmlElement("dTimInstall")]
-        public Timestamp? DateTimeInstall {
+        public DateTime? DateTimeInstall {
             get {
                 return dTimInstallField;
             } 
@@ -37892,7 +37892,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimInstallField; 
+        private DateTime? dTimInstallField; 
 
         /// <summary>
         /// dTimInstallSpecified property
@@ -37916,7 +37916,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Removal Date.")]
 		[XmlElement("dTimRemove")]
-        public Timestamp? DateTimeRemove {
+        public DateTime? DateTimeRemove {
             get {
                 return dTimRemoveField;
             } 
@@ -37927,7 +37927,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimRemoveField; 
+        private DateTime? dTimRemoveField; 
 
         /// <summary>
         /// dTimRemoveSpecified property
@@ -38580,7 +38580,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_rig", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Rig object.")]
-    public partial class Rig : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class Rig : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -38967,7 +38967,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time rig operations started, or date and time object created.")]
 		[XmlElement("dTimStartOp")]
-        public Timestamp? DateTimeStartOperating {
+        public DateTime? DateTimeStartOperating {
             get {
                 return dTimStartOpField;
             } 
@@ -38978,7 +38978,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimStartOpField; 
+        private DateTime? dTimStartOpField; 
 
         /// <summary>
         /// dTimStartOpSpecified property
@@ -39002,7 +39002,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time rig operations ended (May be NULL for active rig).")]
 		[XmlElement("dTimEndOp")]
-        public Timestamp? DateTimeEndOperating {
+        public DateTime? DateTimeEndOperating {
             get {
                 return dTimEndOpField;
             } 
@@ -39013,7 +39013,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimEndOpField; 
+        private DateTime? dTimEndOpField; 
 
         /// <summary>
         /// dTimEndOpSpecified property
@@ -40551,7 +40551,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_weather", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Operations Weather Component Schema")]
-    public partial class Weather : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Weather : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -40560,7 +40560,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
         [Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -40570,7 +40570,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// Name of company that supplied the data. 
@@ -41070,7 +41070,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_supportCraft", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Operations Support Craft Component Schema")]
-    public partial class SupportCraft : Object, IDataObject, INotifyPropertyChanged
+    public partial class SupportCraft : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -41132,7 +41132,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time when vehicle arrived at rig site.")]
 		[XmlElement("dTimArrived")]
-        public Timestamp? DateTimeArrived {
+        public DateTime? DateTimeArrived {
             get {
                 return dTimArrivedField;
             } 
@@ -41143,7 +41143,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimArrivedField; 
+        private DateTime? dTimArrivedField; 
 
         /// <summary>
         /// dTimArrivedSpecified property
@@ -41167,7 +41167,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time when vehicle departed rig site.")]
 		[XmlElement("dTimDeparted")]
-        public Timestamp? DateTimeDeparted {
+        public DateTime? DateTimeDeparted {
             get {
                 return dTimDepartedField;
             } 
@@ -41178,7 +41178,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimDepartedField; 
+        private DateTime? dTimDepartedField; 
 
         /// <summary>
         /// dTimDepartedSpecified property
@@ -41299,7 +41299,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_personnel", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Operations Personnel Component Schema")]
-    public partial class Personnel : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Personnel : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -41475,7 +41475,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_incident", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Operations HSE Component Schema")]
-    public partial class Incident : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Incident : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -41484,7 +41484,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
         [Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -41494,7 +41494,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// Name of person who prepared incident report. 
@@ -41920,7 +41920,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last casing pressure test date and time.")]
 		[XmlElement("lastCsgPresTest")]
-        public Timestamp? LastCsgPresTest {
+        public DateTime? LastCsgPresTest {
             get {
                 return lastCsgPresTestField;
             } 
@@ -41931,7 +41931,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? lastCsgPresTestField; 
+        private DateTime? lastCsgPresTestField; 
 
         /// <summary>
         /// lastCsgPresTestSpecified property
@@ -41973,7 +41973,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last blow out preventer pressure test.")]
 		[XmlElement("lastBopPresTest")]
-        public Timestamp? LastBopPresTest {
+        public DateTime? LastBopPresTest {
             get {
                 return lastBopPresTestField;
             } 
@@ -41984,7 +41984,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? lastBopPresTestField; 
+        private DateTime? lastBopPresTestField; 
 
         /// <summary>
         /// lastBopPresTestSpecified property
@@ -42008,7 +42008,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Next blow out preventer pressure test.")]
 		[XmlElement("nextBopPresTest")]
-        public Timestamp? NextBopPresTest {
+        public DateTime? NextBopPresTest {
             get {
                 return nextBopPresTestField;
             } 
@@ -42019,7 +42019,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? nextBopPresTestField; 
+        private DateTime? nextBopPresTestField; 
 
         /// <summary>
         /// nextBopPresTestSpecified property
@@ -42169,7 +42169,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last fire or boat drill.")]
 		[XmlElement("lastFireBoatDrill")]
-        public Timestamp? LastFireBoatDrill {
+        public DateTime? LastFireBoatDrill {
             get {
                 return lastFireBoatDrillField;
             } 
@@ -42180,7 +42180,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? lastFireBoatDrillField; 
+        private DateTime? lastFireBoatDrillField; 
 
         /// <summary>
         /// lastFireBoatDrillSpecified property
@@ -42204,7 +42204,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last abandonment drill.")]
 		[XmlElement("lastAbandonDrill")]
-        public Timestamp? LastAbandonDrill {
+        public DateTime? LastAbandonDrill {
             get {
                 return lastAbandonDrillField;
             } 
@@ -42215,7 +42215,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? lastAbandonDrillField; 
+        private DateTime? lastAbandonDrillField; 
 
         /// <summary>
         /// lastAbandonDrillSpecified property
@@ -42239,7 +42239,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last rig inspection/check.")]
 		[XmlElement("lastRigInspection")]
-        public Timestamp? LastRigInspection {
+        public DateTime? LastRigInspection {
             get {
                 return lastRigInspectionField;
             } 
@@ -42250,7 +42250,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? lastRigInspectionField; 
+        private DateTime? lastRigInspectionField; 
 
         /// <summary>
         /// lastRigInspectionSpecified property
@@ -42274,7 +42274,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last safety meeting.")]
 		[XmlElement("lastSafetyMeeting")]
-        public Timestamp? LastSafetyMeeting {
+        public DateTime? LastSafetyMeeting {
             get {
                 return lastSafetyMeetingField;
             } 
@@ -42285,7 +42285,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? lastSafetyMeetingField; 
+        private DateTime? lastSafetyMeetingField; 
 
         /// <summary>
         /// lastSafetyMeetingSpecified property
@@ -42309,7 +42309,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last safety inspection.")]
 		[XmlElement("lastSafetyInspection")]
-        public Timestamp? LastSafetyInspection {
+        public DateTime? LastSafetyInspection {
             get {
                 return lastSafetyInspectionField;
             } 
@@ -42320,7 +42320,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? lastSafetyInspectionField; 
+        private DateTime? lastSafetyInspectionField; 
 
         /// <summary>
         /// lastSafetyInspectionSpecified property
@@ -42344,7 +42344,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last trip drill.")]
 		[XmlElement("lastTripDrill")]
-        public Timestamp? LastTripDrill {
+        public DateTime? LastTripDrill {
             get {
                 return lastTripDrillField;
             } 
@@ -42355,7 +42355,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? lastTripDrillField; 
+        private DateTime? lastTripDrillField; 
 
         /// <summary>
         /// lastTripDrillSpecified property
@@ -42379,7 +42379,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last diverter drill.")]
 		[XmlElement("lastDiverterDrill")]
-        public Timestamp? LastDiverterDrill {
+        public DateTime? LastDiverterDrill {
             get {
                 return lastDiverterDrillField;
             } 
@@ -42390,7 +42390,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? lastDiverterDrillField; 
+        private DateTime? lastDiverterDrillField; 
 
         /// <summary>
         /// lastDiverterDrillSpecified property
@@ -42414,7 +42414,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last blow out preventer drill.")]
 		[XmlElement("lastBopDrill")]
-        public Timestamp? LastBopDrill {
+        public DateTime? LastBopDrill {
             get {
                 return lastBopDrillField;
             } 
@@ -42425,7 +42425,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? lastBopDrillField; 
+        private DateTime? lastBopDrillField; 
 
         /// <summary>
         /// lastBopDrillSpecified property
@@ -42681,7 +42681,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that activities started.")]
 		[XmlElement("dTimStart")]
-        public Timestamp? DateTimeStart {
+        public DateTime? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -42692,7 +42692,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimStartField; 
+        private DateTime? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
@@ -42716,7 +42716,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time activities were completed.")]
 		[XmlElement("dTimEnd")]
-        public Timestamp? DateTimeEnd {
+        public DateTime? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -42727,7 +42727,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimEndField; 
+        private DateTime? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
@@ -42905,7 +42905,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_shakerOp", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Operations Shaker Component Schema")]
-    public partial class ShakerOp : Object, IUniqueId, INotifyPropertyChanged
+    public partial class ShakerOp : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -42950,7 +42950,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -42961,7 +42961,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -43118,7 +43118,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_pumpOp", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Operations Pump Component Schema")]
-    public partial class PumpOp : Object, IUniqueId, INotifyPropertyChanged
+    public partial class PumpOp : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -43126,7 +43126,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -43137,7 +43137,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -44028,7 +44028,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_inventory", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Inventory Component Schema ")]
-    public partial class Inventory : Object, IDataObject, INotifyPropertyChanged
+    public partial class Inventory : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -44952,7 +44952,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_pitVolume", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Pit Volume Component Schema")]
-    public partial class PitVolume : Object, IUniqueId, INotifyPropertyChanged
+    public partial class PitVolume : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -44979,7 +44979,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -44990,7 +44990,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -45166,7 +45166,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_scr", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Operations Slow Circulation Rates (SCR) Component Schema")]
-    public partial class Scr : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Scr : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -45175,7 +45175,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
         [Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -45185,7 +45185,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// This is a pointer to the corresponding pump on the rig.
@@ -45364,7 +45364,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_dayCost", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Day Cost Component Schema ")]
-    public partial class DayCost : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DayCost : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -45946,7 +45946,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_opsReport", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Operations Report object.")]
-    public partial class OpsReport : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class OpsReport : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -46030,7 +46030,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
         [Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -46040,7 +46040,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// Time from start of Operations (commonly in days). 
@@ -47575,7 +47575,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_activity", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Operations Activity Component Schema ")]
-    public partial class Activity : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Activity : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -47583,7 +47583,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that activities started.")]
 		[XmlElement("dTimStart")]
-        public Timestamp? DateTimeStart {
+        public DateTime? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -47594,7 +47594,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimStartField; 
+        private DateTime? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
@@ -47618,7 +47618,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that activities were completed.")]
 		[XmlElement("dTimEnd")]
-        public Timestamp? DateTimeEnd {
+        public DateTime? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -47629,7 +47629,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimEndField; 
+        private DateTime? dTimEndField; 
 
         /// <summary>
         /// dTimEndSpecified property
@@ -48336,7 +48336,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_drillingParams", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Bottom hole assembly drilling parameters component schema ")]
-    public partial class DrillingParams : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillingParams : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -49494,7 +49494,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
         [Description("Time report generated.")]
 		[XmlElement("dTimReport")]
-        public Timestamp? DateTimeReport {
+        public DateTime? DateTimeReport {
             get {
                 return dTimReportField;
             } 
@@ -49504,7 +49504,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimReportField; 
+        private DateTime? dTimReportField; 
 
         /// <summary>
         /// Measured depth at bottom. 
@@ -49624,7 +49624,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_fluid", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - fluids component schema ")]
-    public partial class Fluid : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Fluid : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -49668,7 +49668,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The time when fluid readings were recorded.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -49679,7 +49679,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -50817,7 +50817,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_rheometer", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Rheometer Component Schema ")]
-    public partial class Rheometer : Object, IUniqueId, INotifyPropertyChanged
+    public partial class Rheometer : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -51244,7 +51244,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_memberObject", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Defines a member of an objectGroup.")]
-    public partial class MemberObject : Object, IUniqueId, INotifyPropertyChanged
+    public partial class MemberObject : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -51395,7 +51395,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The minimum log date-time index value that applies to this group. The significance of this range is defined by the groupType.")]
 		[XmlElement("rangeDateTimeMin")]
-        public Timestamp? RangeDateTimeMin {
+        public DateTime? RangeDateTimeMin {
             get {
                 return rangeDateTimeMinField;
             } 
@@ -51406,7 +51406,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? rangeDateTimeMinField; 
+        private DateTime? rangeDateTimeMinField; 
 
         /// <summary>
         /// rangeDateTimeMinSpecified property
@@ -51430,7 +51430,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The maximum log date-time index value that applies to this group. The significance of this range is defined by the groupType.")]
 		[XmlElement("rangeDateTimeMax")]
-        public Timestamp? RangeDateTimeMax {
+        public DateTime? RangeDateTimeMax {
             get {
                 return rangeDateTimeMaxField;
             } 
@@ -51441,7 +51441,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? rangeDateTimeMaxField; 
+        private DateTime? rangeDateTimeMaxField; 
 
         /// <summary>
         /// rangeDateTimeMaxSpecified property
@@ -51500,7 +51500,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("A date and time related to this group.  This does not necessarily represent an actual index within a growing-object. The significance of this time is defined by the groupType.")]
 		[XmlElement("referenceDateTime")]
-        public Timestamp? ReferenceDateTime {
+        public DateTime? ReferenceDateTime {
             get {
                 return referenceDateTimeField;
             } 
@@ -51511,7 +51511,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? referenceDateTimeField; 
+        private DateTime? referenceDateTimeField; 
 
         /// <summary>
         /// referenceDateTimeSpecified property
@@ -51643,7 +51643,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_objectGroup", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML objectGroup object.")]
-    public partial class ObjectGroup : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class ObjectGroup : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -51982,7 +51982,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_mudLogParameter", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Mud Log Parameter Component Schema")]
-    public partial class MudLogParameter : Object, IUniqueId, INotifyPropertyChanged
+    public partial class MudLogParameter : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -52008,7 +52008,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The data and time related to the parameter. The time refers to the top of the interval.")]
 		[XmlElement("dTime")]
-        public Timestamp? DTime {
+        public DateTime? DTime {
             get {
                 return dTimeField;
             } 
@@ -52019,7 +52019,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimeField; 
+        private DateTime? dTimeField; 
 
         /// <summary>
         /// dTimeSpecified property
@@ -52344,7 +52344,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("When the data was created at the persistent data store.  This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the  behavior related to this element.")]
 		[XmlElement("dTimCreation")]
-        public Timestamp? DateTimeCreation {
+        public DateTime? DateTimeCreation {
             get {
                 return dTimCreationField;
             } 
@@ -52355,7 +52355,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimCreationField; 
+        private DateTime? dTimCreationField; 
 
         /// <summary>
         /// dTimCreationSpecified property
@@ -52379,7 +52379,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Last change of any element of the data at the persistent data store. This is an API server parameter releted to the \"Special Handling of Change Information\" within a server.  See the relevant API specification for the  behavior related to this element.")]
 		[XmlElement("dTimLastChange")]
-        public Timestamp? DateTimeLastChange {
+        public DateTime? DateTimeLastChange {
             get {
                 return dTimLastChangeField;
             } 
@@ -52390,7 +52390,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimLastChangeField; 
+        private DateTime? dTimLastChangeField; 
 
         /// <summary>
         /// dTimLastChangeSpecified property
@@ -52442,7 +52442,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_mudLog", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Mud Log object.")]
-    public partial class MudLog : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class MudLog : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -52542,7 +52542,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -52553,7 +52553,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -52862,7 +52862,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_geologyInterval", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Geology Interval Component Schema")]
-    public partial class GeologyInterval : Object, IUniqueId, INotifyPropertyChanged
+    public partial class GeologyInterval : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -52926,7 +52926,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time the information is related to.  The time refers to the top of the interval.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -52937,7 +52937,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -53742,7 +53742,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time at which the gas sample was processed.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -53753,7 +53753,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -53885,7 +53885,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Chromatograph integrator report time, format may be variable due to recording equipment")]
 		[XmlElement("chromIntRpt")]
-        public Timestamp? ChromIntRpt {
+        public DateTime? ChromIntRpt {
             get {
                 return chromIntRptField;
             } 
@@ -53896,7 +53896,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? chromIntRptField; 
+        private DateTime? chromIntRptField; 
 
         /// <summary>
         /// chromIntRptSpecified property
@@ -55016,7 +55016,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_message", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Message object.")]
-    public partial class Message : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class Message : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -55118,7 +55118,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
         [Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -55128,7 +55128,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// A code used to define rig activity.
@@ -55586,7 +55586,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_axisDefinition", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Metadata by which the array structure of a compound value is defined. This defines one axis of an array. ")]
-    public partial class AxisDefinition : Object, IDataObject, INotifyPropertyChanged
+    public partial class AxisDefinition : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -55941,7 +55941,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_logCurveInfo", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML Log - Curve Information")]
-    public partial class LogCurveInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class LogCurveInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -56164,7 +56164,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The minimum index value of any valid data point in the curve.  Null values are excluded from this determination. The value is the same regardless of the direction of the curve. This is an API \"column-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
 		[XmlElement("minDateTimeIndex")]
-        public Timestamp? MinDateTimeIndex {
+        public DateTime? MinDateTimeIndex {
             get {
                 return minDateTimeIndexField;
             } 
@@ -56175,7 +56175,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? minDateTimeIndexField; 
+        private DateTime? minDateTimeIndexField; 
 
         /// <summary>
         /// minDateTimeIndexSpecified property
@@ -56199,7 +56199,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The maximum index value of any valid data point in the curve.  Null values are excluded from this determination. The value is the same regardless of the direction of the curve. This is an API \"column-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
 		[XmlElement("maxDateTimeIndex")]
-        public Timestamp? MaxDateTimeIndex {
+        public DateTime? MaxDateTimeIndex {
             get {
                 return maxDateTimeIndexField;
             } 
@@ -56210,7 +56210,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? maxDateTimeIndexField; 
+        private DateTime? maxDateTimeIndexField; 
 
         /// <summary>
         /// maxDateTimeIndexSpecified property
@@ -56502,7 +56502,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_log", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Log.")]
-    public partial class Log : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class Log : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -56779,7 +56779,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that the log was created.")]
 		[XmlElement("creationDate")]
-        public Timestamp? CreationDate {
+        public DateTime? CreationDate {
             get {
                 return creationDateField;
             } 
@@ -56790,7 +56790,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? creationDateField; 
+        private DateTime? creationDateField; 
 
         /// <summary>
         /// creationDateSpecified property
@@ -56922,7 +56922,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("When the log header defines the direction as \"Increasing\",  the startIndex is the starting (minimum) index value at which the first non-null data point is located.  When the log header defines the direction as \"Decreasing\", the startIndex  is the starting (maximum) index value at which the first non-null data point is located. Either a quantity index set (start and end) or a date time index set must be given. If both sets are given then \"indexType\" and  \"indexCurve\" must represent an elapsed time from \"startDateTimeIndex\". This is an API \"structural-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
 		[XmlElement("startDateTimeIndex")]
-        public Timestamp? StartDateTimeIndex {
+        public DateTime? StartDateTimeIndex {
             get {
                 return startDateTimeIndexField;
             } 
@@ -56933,7 +56933,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? startDateTimeIndexField; 
+        private DateTime? startDateTimeIndexField; 
 
         /// <summary>
         /// startDateTimeIndexSpecified property
@@ -56957,7 +56957,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("When the log header defines the direction as \"Increasing\", the endIndex  is the ending (maximum) index value at which the last non-null data point is located.   When the log header defines the direction as Decreasing, the endIndex is the ending  (minimum) index value at which the last non-null data point is located.  This is an API \"structural-range\" query parameter for growing objects.  See the relevant API specification for the query behavior related to this element.")]
 		[XmlElement("endDateTimeIndex")]
-        public Timestamp? EndDateTimeIndex {
+        public DateTime? EndDateTimeIndex {
             get {
                 return endDateTimeIndexField;
             } 
@@ -56968,7 +56968,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? endDateTimeIndexField; 
+        private DateTime? endDateTimeIndexField; 
 
         /// <summary>
         /// endDateTimeIndexSpecified property
@@ -57276,7 +57276,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_formationMarker", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Formation Marker.")]
-    public partial class FormationMarker : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class FormationMarker : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -57735,7 +57735,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_fluidsReport", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Fluids Report.")]
-    public partial class FluidsReport : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class FluidsReport : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -57801,7 +57801,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
         [Description("Date and time the information is related to.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -57811,7 +57811,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// Along hole measured depth of measurement from the drill datum. 
@@ -58043,7 +58043,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_drillReportGasReadingInfo", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_drillReportGasReadingInfo xsd type.")]
-    public partial class DrillReportGasReadingInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportGasReadingInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -58051,7 +58051,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of the gas reading.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -58062,7 +58062,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -58416,7 +58416,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_drillReportPerfInfo", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_drillReportPerfInfo xsd type.")]
-    public partial class DrillReportPerfInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportPerfInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -58424,7 +58424,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time at which the well perforation interval is opened.")]
 		[XmlElement("dTimOpen")]
-        public Timestamp? DateTimeOpen {
+        public DateTime? DateTimeOpen {
             get {
                 return dTimOpenField;
             } 
@@ -58435,7 +58435,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimOpenField; 
+        private DateTime? dTimOpenField; 
 
         /// <summary>
         /// dTimOpenSpecified property
@@ -58459,7 +58459,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time at which the well perforation interval is closed.")]
 		[XmlElement("dTimClose")]
-        public Timestamp? DateTimeClose {
+        public DateTime? DateTimeClose {
             get {
                 return dTimCloseField;
             } 
@@ -58470,7 +58470,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimCloseField; 
+        private DateTime? dTimCloseField; 
 
         /// <summary>
         /// dTimCloseSpecified property
@@ -58645,7 +58645,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_drillReportStratInfo", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_drillReportStratInfo xsd type.")]
-    public partial class DrillReportStratInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportStratInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -58653,7 +58653,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at which a preliminary zonation is established.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -58664,7 +58664,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -58821,7 +58821,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_drillReportControlIncidentInfo", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_drillReportControlIncidentInfo xsd type.")]
-    public partial class DrillReportControlIncidentInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportControlIncidentInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -58829,7 +58829,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of the well control incident.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -58840,7 +58840,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -59019,7 +59019,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time at which control of the well is regained.")]
 		[XmlElement("dTimRegained")]
-        public Timestamp? DateTimeRegained {
+        public DateTime? DateTimeRegained {
             get {
                 return dTimRegainedField;
             } 
@@ -59030,7 +59030,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimRegainedField; 
+        private DateTime? dTimRegainedField; 
 
         /// <summary>
         /// dTimRegainedSpecified property
@@ -59438,7 +59438,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_drillReportEquipFailureInfo", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_drillReportEquipFailureInfo xsd type.")]
-    public partial class DrillReportEquipFailureInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportEquipFailureInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -59446,7 +59446,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that the equipment failed.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -59457,7 +59457,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -59553,7 +59553,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time at which the production equipment was  repaired and ready for production.")]
 		[XmlElement("dTimRepair")]
-        public Timestamp? DateTimeRepair {
+        public DateTime? DateTimeRepair {
             get {
                 return dTimRepairField;
             } 
@@ -59564,7 +59564,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimRepairField; 
+        private DateTime? dTimRepairField; 
 
         /// <summary>
         /// dTimRepairSpecified property
@@ -59685,7 +59685,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_drillReportLithShowInfo", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_drillReportLithShowInfo xsd type.")]
-    public partial class DrillReportLithShowInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportLithShowInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -59693,7 +59693,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that the well test was completed.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -59704,7 +59704,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -59915,7 +59915,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_drillReportFormTestInfo", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_drillReportFormTestInfo xsd type.")]
-    public partial class DrillReportFormTestInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportFormTestInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -59923,7 +59923,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that the wireline formation test was completed.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -59934,7 +59934,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -60216,7 +60216,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_drillReportWellTestInfo", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_drillReportWellTestInfo xsd type.")]
-    public partial class DrillReportWellTestInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportWellTestInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -60224,7 +60224,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that the well test was completed.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -60235,7 +60235,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -60822,7 +60822,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_drillReportCoreInfo", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_drillReportCoreInfo xsd type.")]
-    public partial class DrillReportCoreInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportCoreInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -60830,7 +60830,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that the core was completed.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -60841,7 +60841,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -61141,7 +61141,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_drillReportLogInfo", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_drillReportLogInfo xsd type.")]
-    public partial class DrillReportLogInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportLogInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -61149,7 +61149,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time that the log was completed.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -61160,7 +61160,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -61555,7 +61555,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_drillReportSurveyStation", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("WITSML - Trajectory Station Component Schema")]
-    public partial class DrillReportSurveyStation : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportSurveyStation : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -61564,7 +61564,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
         [Description("The date at which the directional survey took place.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -61574,7 +61574,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// Measured depth of measurement from the drill datum. 
@@ -61892,7 +61892,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_drillReportPorePressure", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_drillReportPorePressure xsd type.")]
-    public partial class DrillReportPorePressure : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportPorePressure : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -61937,7 +61937,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at the reading was made.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -61948,7 +61948,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -62087,7 +62087,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_drillReportStatusInfo", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_drillReportStatusInfo xsd type.")]
-    public partial class DrillReportStatusInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DrillReportStatusInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -62095,7 +62095,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("the date and time that for which the well status is reported.")]
 		[XmlElement("dTim")]
-        public Timestamp? DateTime {
+        public DateTime? DateTime {
             get {
                 return dTimField;
             } 
@@ -62106,7 +62106,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimField; 
+        private DateTime? dTimField; 
 
         /// <summary>
         /// dTimSpecified property
@@ -63385,7 +63385,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_wellAlias", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("A common way for handling names of objects. An identifier type must include a Name. It may also include a NamingSystem, which gives meaning to the name. ")]
-    public partial class WellAlias : Object, IDataObject, INotifyPropertyChanged
+    public partial class WellAlias : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -63509,7 +63509,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_alias", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("A common way for handling names of objects. An identifier type must include a Name. It may also include a NamingSystem, which gives meaning to the name. ")]
-    public partial class Alias : Object, IDataObject, INotifyPropertyChanged
+    public partial class Alias : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -63642,7 +63642,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at which the well was spudded.  This is when the well drilling equipment begin to bore into  the earth's surface for the purpose of drilling a well.")]
 		[XmlElement("dTimSpud")]
-        public Timestamp? DateTimeSpud {
+        public DateTime? DateTimeSpud {
             get {
                 return dTimSpudField;
             } 
@@ -63653,7 +63653,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimSpudField; 
+        private DateTime? dTimSpudField; 
 
         /// <summary>
         /// dTimSpudSpecified property
@@ -63677,7 +63677,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at which the well was predrilled.  This is when the well drilling equipment begin to bore into  the earth's surface for the purpose of drilling a well.")]
 		[XmlElement("dTimPreSpud")]
-        public Timestamp? DateTimePreSpud {
+        public DateTime? DateTimePreSpud {
             get {
                 return dTimPreSpudField;
             } 
@@ -63688,7 +63688,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimPreSpudField; 
+        private DateTime? dTimPreSpudField; 
 
         /// <summary>
         /// dTimPreSpudSpecified property
@@ -63841,7 +63841,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_drillReport", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Drilling Report object.")]
-    public partial class DrillReport : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class DrillReport : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -63907,7 +63907,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
         [Description("Date and time of the start of the reporting period.")]
 		[XmlElement("dTimStart")]
-        public Timestamp? DateTimeStart {
+        public DateTime? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -63917,7 +63917,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimStartField; 
+        private DateTime? dTimStartField; 
 
         /// <summary>
         /// Date and time end of the reporting period. Report periods are commonly 24 hour periods. 
@@ -63925,7 +63925,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
         [Description("Date and time end of the reporting period. Report periods are commonly 24 hour periods.")]
 		[XmlElement("dTimEnd")]
-        public Timestamp? DateTimeEnd {
+        public DateTime? DateTimeEnd {
             get {
                 return dTimEndField;
             } 
@@ -63935,7 +63935,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimEndField; 
+        private DateTime? dTimEndField; 
 
         /// <summary>
         /// The kind of report version. For example, a preliminary version.
@@ -63977,7 +63977,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date and time of the report creation. A later timestamp indicates a newer version. In order to update values in a report a full  updated copy of the original report should be submitted.")]
 		[XmlElement("createDate")]
-        public Timestamp? CreateDate {
+        public DateTime? CreateDate {
             get {
                 return createDateField;
             } 
@@ -63988,7 +63988,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? createDateField; 
+        private DateTime? createDateField; 
 
         /// <summary>
         /// createDateSpecified property
@@ -64758,7 +64758,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_convCore", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Conventional Core.")]
-    public partial class ConvCore : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class ConvCore : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -64859,7 +64859,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time when coring commenced (cutting new core).")]
 		[XmlElement("dTimCoreStart")]
-        public Timestamp? DateTimeCoreStart {
+        public DateTime? DateTimeCoreStart {
             get {
                 return dTimCoreStartField;
             } 
@@ -64870,7 +64870,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimCoreStartField; 
+        private DateTime? dTimCoreStartField; 
 
         /// <summary>
         /// dTimCoreStartSpecified property
@@ -64894,7 +64894,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time when coring complete (end of cutting new core).")]
 		[XmlElement("dTimCoreEnd")]
-        public Timestamp? DateTimeCoreEnd {
+        public DateTime? DateTimeCoreEnd {
             get {
                 return dTimCoreEndField;
             } 
@@ -64905,7 +64905,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimCoreEndField; 
+        private DateTime? dTimCoreEndField; 
 
         /// <summary>
         /// dTimCoreEndSpecified property
@@ -65464,7 +65464,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_changeHistory", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Defines detail changes of an object.")]
-    public partial class ChangeHistory : Object, IUniqueId, INotifyPropertyChanged
+    public partial class ChangeHistory : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -65473,7 +65473,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
         [Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("dTimChange")]
-        public Timestamp? DateTimeChange {
+        public DateTime? DateTimeChange {
             get {
                 return dTimChangeField;
             } 
@@ -65483,7 +65483,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimChangeField; 
+        private DateTime? dTimChangeField; 
 
         /// <summary>
         /// See the API specification for a description of the use of this data.
@@ -65632,7 +65632,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("startDateTimeIndex")]
-        public Timestamp? StartDateTimeIndex {
+        public DateTime? StartDateTimeIndex {
             get {
                 return startDateTimeIndexField;
             } 
@@ -65643,7 +65643,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? startDateTimeIndexField; 
+        private DateTime? startDateTimeIndexField; 
 
         /// <summary>
         /// startDateTimeIndexSpecified property
@@ -65667,7 +65667,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("See the API specification for a description of the use of this data.")]
 		[XmlElement("endDateTimeIndex")]
-        public Timestamp? EndDateTimeIndex {
+        public DateTime? EndDateTimeIndex {
             get {
                 return endDateTimeIndexField;
             } 
@@ -65678,7 +65678,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? endDateTimeIndexField; 
+        private DateTime? endDateTimeIndexField; 
 
         /// <summary>
         /// endDateTimeIndexSpecified property
@@ -65798,7 +65798,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_changeLog", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML attachment object.")]
-    public partial class ChangeLog : Object, IUniqueId, INotifyPropertyChanged
+    public partial class ChangeLog : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -66837,7 +66837,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_cementAdditive", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Cement Additive Component Schema ")]
-    public partial class CementAdditive : Object, IUniqueId, INotifyPropertyChanged
+    public partial class CementAdditive : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -68606,7 +68606,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_cementStage", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description(" WITSML - Cement Stage Component Schema ")]
-    public partial class CementStage : Object, IUniqueId, INotifyPropertyChanged
+    public partial class CementStage : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -68651,7 +68651,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time when mixing started.")]
 		[XmlElement("dTimMixStart")]
-        public Timestamp? DateTimeMixStart {
+        public DateTime? DateTimeMixStart {
             get {
                 return dTimMixStartField;
             } 
@@ -68662,7 +68662,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimMixStartField; 
+        private DateTime? dTimMixStartField; 
 
         /// <summary>
         /// dTimMixStartSpecified property
@@ -68686,7 +68686,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Datetime at start of pumping cement.")]
 		[XmlElement("dTimPumpStart")]
-        public Timestamp? DateTimePumpStart {
+        public DateTime? DateTimePumpStart {
             get {
                 return dTimPumpStartField;
             } 
@@ -68697,7 +68697,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimPumpStartField; 
+        private DateTime? dTimPumpStartField; 
 
         /// <summary>
         /// dTimPumpStartSpecified property
@@ -68721,7 +68721,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Datetime at end of pumping cement.")]
 		[XmlElement("dTimPumpEnd")]
-        public Timestamp? DateTimePumpEnd {
+        public DateTime? DateTimePumpEnd {
             get {
                 return dTimPumpEndField;
             } 
@@ -68732,7 +68732,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimPumpEndField; 
+        private DateTime? dTimPumpEndField; 
 
         /// <summary>
         /// dTimPumpEndSpecified property
@@ -68756,7 +68756,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time when displacing cement started.")]
 		[XmlElement("dTimDisplaceStart")]
-        public Timestamp? DateTimeDisplaceStart {
+        public DateTime? DateTimeDisplaceStart {
             get {
                 return dTimDisplaceStartField;
             } 
@@ -68767,7 +68767,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimDisplaceStartField; 
+        private DateTime? dTimDisplaceStartField; 
 
         /// <summary>
         /// dTimDisplaceStartSpecified property
@@ -70350,7 +70350,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_cementJob", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Cement Job.")]
-    public partial class CementJob : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class CementJob : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -70468,7 +70468,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of Cement Job.")]
 		[XmlElement("dTimJob")]
-        public Timestamp? DateTimeJob {
+        public DateTime? DateTimeJob {
             get {
                 return dTimJobField;
             } 
@@ -70479,7 +70479,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimJobField; 
+        private DateTime? dTimJobField; 
 
         /// <summary>
         /// dTimJobSpecified property
@@ -70944,7 +70944,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that cement plug was set.")]
 		[XmlElement("dTimPlugSet")]
-        public Timestamp? DateTimePlugSet {
+        public DateTime? DateTimePlugSet {
             get {
                 return dTimPlugSetField;
             } 
@@ -70955,7 +70955,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimPlugSetField; 
+        private DateTime? dTimPlugSetField; 
 
         /// <summary>
         /// dTimPlugSetSpecified property
@@ -71014,7 +71014,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that cement was drilled out.")]
 		[XmlElement("dTimCementDrillOut")]
-        public Timestamp? DateTimeCementDrillOut {
+        public DateTime? DateTimeCementDrillOut {
             get {
                 return dTimCementDrillOutField;
             } 
@@ -71025,7 +71025,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimCementDrillOutField; 
+        private DateTime? dTimCementDrillOutField; 
 
         /// <summary>
         /// dTimCementDrillOutSpecified property
@@ -71085,7 +71085,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time of squeeze.")]
 		[XmlElement("dTimSqueeze")]
-        public Timestamp? DateTimeSqueeze {
+        public DateTime? DateTimeSqueeze {
             get {
                 return dTimSqueezeField;
             } 
@@ -71096,7 +71096,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimSqueezeField; 
+        private DateTime? dTimSqueezeField; 
 
         /// <summary>
         /// dTimSqueezeSpecified property
@@ -71156,7 +71156,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Pipe rotation start time.")]
 		[XmlElement("dTimPipeRotStart")]
-        public Timestamp? DateTimePipeRotStart {
+        public DateTime? DateTimePipeRotStart {
             get {
                 return dTimPipeRotStartField;
             } 
@@ -71167,7 +71167,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimPipeRotStartField; 
+        private DateTime? dTimPipeRotStartField; 
 
         /// <summary>
         /// dTimPipeRotStartSpecified property
@@ -71191,7 +71191,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Pipe rotation end time.")]
 		[XmlElement("dTimPipeRotEnd")]
-        public Timestamp? DateTimePipeRotEnd {
+        public DateTime? DateTimePipeRotEnd {
             get {
                 return dTimPipeRotEndField;
             } 
@@ -71202,7 +71202,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimPipeRotEndField; 
+        private DateTime? dTimPipeRotEndField; 
 
         /// <summary>
         /// dTimPipeRotEndSpecified property
@@ -71298,7 +71298,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at start of pipe reciprocation.")]
 		[XmlElement("dTimRecipStart")]
-        public Timestamp? DateTimeRecipStart {
+        public DateTime? DateTimeRecipStart {
             get {
                 return dTimRecipStartField;
             } 
@@ -71309,7 +71309,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimRecipStartField; 
+        private DateTime? dTimRecipStartField; 
 
         /// <summary>
         /// dTimRecipStartSpecified property
@@ -71333,7 +71333,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time at end of pipe reciprocation.")]
 		[XmlElement("dTimRecipEnd")]
-        public Timestamp? DateTimeRecipEnd {
+        public DateTime? DateTimeRecipEnd {
             get {
                 return dTimRecipEndField;
             } 
@@ -71344,7 +71344,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimRecipEndField; 
+        private DateTime? dTimRecipEndField; 
 
         /// <summary>
         /// dTimRecipEndSpecified property
@@ -71597,7 +71597,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_bhaRun", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML bottom hole assembly run object.")]
-    public partial class BhaRun : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class BhaRun : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -71681,7 +71681,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that activities started.")]
 		[XmlElement("dTimStart")]
-        public Timestamp? DateTimeStart {
+        public DateTime? DateTimeStart {
             get {
                 return dTimStartField;
             } 
@@ -71692,7 +71692,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimStartField; 
+        private DateTime? dTimStartField; 
 
         /// <summary>
         /// dTimStartSpecified property
@@ -71716,7 +71716,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Date and time that activities stopped.")]
 		[XmlElement("dTimStop")]
-        public Timestamp? DateTimeStop {
+        public DateTime? DateTimeStop {
             get {
                 return dTimStopField;
             } 
@@ -71727,7 +71727,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimStopField; 
+        private DateTime? dTimStopField; 
 
         /// <summary>
         /// dTimStopSpecified property
@@ -71751,7 +71751,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Start on bottom - date and time.")]
 		[XmlElement("dTimStartDrilling")]
-        public Timestamp? DateTimeStartDrilling {
+        public DateTime? DateTimeStartDrilling {
             get {
                 return dTimStartDrillingField;
             } 
@@ -71762,7 +71762,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimStartDrillingField; 
+        private DateTime? dTimStartDrillingField; 
 
         /// <summary>
         /// dTimStartDrillingSpecified property
@@ -71786,7 +71786,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("Start off bottom - date and time.")]
 		[XmlElement("dTimStopDrilling")]
-        public Timestamp? DateTimeStopDrilling {
+        public DateTime? DateTimeStopDrilling {
             get {
                 return dTimStopDrillingField;
             } 
@@ -71797,7 +71797,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dTimStopDrillingField; 
+        private DateTime? dTimStopDrillingField; 
 
         /// <summary>
         /// dTimStopDrillingSpecified property
@@ -72151,7 +72151,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_attachment", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML attachment object.")]
-    public partial class Attachment : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class Attachment : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -72524,7 +72524,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentEvent", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("An event type captures the basic information about an event that has affected the data.")]
-    public partial class DocumentEvent : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DocumentEvent : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -72533,7 +72533,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
         [Description("The date on which the event took place.")]
 		[XmlElement("eventDate")]
-        public Timestamp? EventDate {
+        public DateTime? EventDate {
             get {
                 return eventDateField;
             } 
@@ -72543,7 +72543,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? eventDateField; 
+        private DateTime? eventDateField; 
 
         /// <summary>
         /// The kind of event event.
@@ -72683,7 +72683,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentSecurityInfo", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("Information about the security classification of the document. This is intended as a documentation of the security so that the file will not inadvertently be sent to someone who is not allowed access to the data. This block also carries a date that the security classification expires. For example, a well log is confidential for a period of time, and then becomes open. All security classes are characterized by their classification systems.")]
-    public partial class DocumentSecurityInfo : Object, IUniqueId, INotifyPropertyChanged
+    public partial class DocumentSecurityInfo : Object, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -72727,7 +72727,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date on which this security class is no  longer applicable.")]
 		[XmlElement("endDate")]
-        public Timestamp? EndDate {
+        public DateTime? EndDate {
             get {
                 return endDateField;
             } 
@@ -72738,7 +72738,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? endDateField; 
+        private DateTime? endDateField; 
 
         /// <summary>
         /// endDateSpecified property
@@ -72868,7 +72868,7 @@ namespace Energistics.DataAccess.WITSML141
 		[Required]
         [Description("The date and time that the file was created.")]
 		[XmlElement("fileCreationDate")]
-        public Timestamp? FileCreationDate {
+        public DateTime? FileCreationDate {
             get {
                 return fileCreationDateField;
             } 
@@ -72878,7 +72878,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? fileCreationDateField; 
+        private DateTime? fileCreationDateField; 
 
         /// <summary>
         /// If appropriate, the software that created the file. This is a free form string, and may include whatever information is deemed relevant.
@@ -73025,7 +73025,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.")]
 		[XmlElement("documentDate")]
-        public Timestamp? DocumentDate {
+        public DateTime? DocumentDate {
             get {
                 return documentDateField;
             } 
@@ -73036,7 +73036,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? documentDateField; 
+        private DateTime? documentDateField; 
 
         /// <summary>
         /// documentDateSpecified property

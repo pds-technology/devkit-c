@@ -54,11 +54,11 @@ namespace Energistics.Generator.PRODML122 {
         
         private string kindField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private System.DateTime dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private System.DateTime dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -144,7 +144,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Sampling  start time.</summary>
         [System.ComponentModel.DescriptionAttribute("Sampling  start time.")]
-        public Energistics.SchemaGatherer.Timestamp dTimStart {
+        public System.DateTime dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -167,7 +167,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Sampling  end time.</summary>
         [System.ComponentModel.DescriptionAttribute("Sampling  end time.")]
-        public Energistics.SchemaGatherer.Timestamp dTimEnd {
+        public System.DateTime dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -4050,11 +4050,11 @@ namespace Energistics.Generator.PRODML122 {
         
         private string mnemonicField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private System.DateTime dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private System.DateTime dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -4093,7 +4093,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The date and time of the start of the relevant interval. If not specified then the beginning of the curve is assumed.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time of the start of the relevant interval. If not specified then th" +
             "e beginning of the curve is assumed.")]
-        public Energistics.SchemaGatherer.Timestamp dTimStart {
+        public System.DateTime dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -4117,7 +4117,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The date and time of the end of the relevant interval. If not specified then the end of the curve is assumed.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time of the end of the relevant interval. If not specified then the " +
             "end of the curve is assumed.")]
-        public Energistics.SchemaGatherer.Timestamp dTimEnd {
+        public System.DateTime dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -4239,7 +4239,7 @@ namespace Energistics.Generator.PRODML122 {
         
         private PrimitiveType dataTypeField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private System.DateTime dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -4300,7 +4300,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date-time associated with the value.</summary>
         [System.ComponentModel.DescriptionAttribute("The date-time associated with the value.")]
-        public Energistics.SchemaGatherer.Timestamp dTim {
+        public System.DateTime dTim {
             get {
                 return this.dTimField;
             }
@@ -5408,11 +5408,11 @@ namespace Energistics.Generator.PRODML122 {
         
         private WftTestKind testKindField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private System.DateTime dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private System.DateTime dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -5438,7 +5438,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time when the data collection started for this test.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time when the data collection started for this test.")]
-        public Energistics.SchemaGatherer.Timestamp dTimStart {
+        public System.DateTime dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -5461,7 +5461,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time when the data collection ended for this test.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time when the data collection ended for this test.")]
-        public Energistics.SchemaGatherer.Timestamp dTimEnd {
+        public System.DateTime dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -5549,7 +5549,7 @@ namespace Energistics.Generator.PRODML122 {
         
         private WftEventKind kindField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private System.DateTime dTimField;
         
         private timeMeasure durationField;
         
@@ -5576,7 +5576,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Date and time of the start of the event.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time of the start of the event.")]
-        public Energistics.SchemaGatherer.Timestamp dTim {
+        public System.DateTime dTim {
             get {
                 return this.dTimField;
             }
@@ -5668,11 +5668,11 @@ namespace Energistics.Generator.PRODML122 {
         
         private WftStationKind stationKindField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private System.DateTime dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private System.DateTime dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -5718,7 +5718,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time when the data collection started for this station.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time when the data collection started for this station.")]
-        public Energistics.SchemaGatherer.Timestamp dTimStart {
+        public System.DateTime dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -5741,7 +5741,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time when the data collection completed for this station.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time when the data collection completed for this station.")]
-        public Energistics.SchemaGatherer.Timestamp dTimEnd {
+        public System.DateTime dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -5992,11 +5992,11 @@ namespace Energistics.Generator.PRODML122 {
         
         private string serviceCompanyField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private System.DateTime dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private System.DateTime dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -6117,7 +6117,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time when the data collection started.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time when the data collection started.")]
-        public Energistics.SchemaGatherer.Timestamp dTimStart {
+        public System.DateTime dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -6140,7 +6140,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time when the data collection completed.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time when the data collection completed.")]
-        public Energistics.SchemaGatherer.Timestamp dTimEnd {
+        public System.DateTime dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -6322,11 +6322,11 @@ namespace Energistics.Generator.PRODML122 {
         
         private string sourceNameField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimCreationField;
+        private System.DateTime dTimCreationField;
         
         private bool dTimCreationFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimLastChangeField;
+        private System.DateTime dTimLastChangeField;
         
         private bool dTimLastChangeFieldSpecified;
         
@@ -6364,7 +6364,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("When the data was created at the persistent data store.  In a query template, a s" +
             "pecified value will be interpreted by the server as a request for dTimCreation v" +
             "alues that are greater-than the specified value.")]
-        public Energistics.SchemaGatherer.Timestamp dTimCreation {
+        public System.DateTime dTimCreation {
             get {
                 return this.dTimCreationField;
             }
@@ -6387,7 +6387,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>Last change of any element of the data at the persistent data store. The change time is not updated for a growing object while it is growing. In a query template, a specified value will be interpreted by the server as a request for dTimLastChange values that are greater-than the specified value. The dTimLastChange value may be changed by a client (user).</summary>
         [System.ComponentModel.DescriptionAttribute(@"Last change of any element of the data at the persistent data store. The change time is not updated for a growing object while it is growing. In a query template, a specified value will be interpreted by the server as a request for dTimLastChange values that are greater-than the specified value. The dTimLastChange value may be changed by a client (user).")]
-        public Energistics.SchemaGatherer.Timestamp dTimLastChange {
+        public System.DateTime dTimLastChange {
             get {
                 return this.dTimLastChangeField;
             }
@@ -8495,21 +8495,21 @@ namespace Energistics.Generator.PRODML122 {
         
         private endpointQualifiedDateTime dTimMaxField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimCurrentField;
+        private System.DateTime dTimCurrentField;
         
         private bool dTimCurrentFieldSpecified;
         
         private cs_wellContext wellContextField;
         
-        private Energistics.SchemaGatherer.Timestamp testDateField;
+        private System.DateTime testDateField;
         
         private bool testDateFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp previousTestDateField;
+        private System.DateTime previousTestDateField;
         
         private bool previousTestDateFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp lastValidTestField;
+        private System.DateTime lastValidTestField;
         
         private bool lastValidTestFieldSpecified;
         
@@ -8602,7 +8602,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The definition of the "current time" index for this object. The current time index is a server query parameter which requests the  selection of a single node from a recurring set  (e.g., the data related to one point in a time series). That is, the "most recent" (at or before the specified time) wellTest for a well. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The definition of the ""current time"" index for this object. The current time index is a server query parameter which requests the  selection of a single node from a recurring set  (e.g., the data related to one point in a time series). That is, the ""most recent"" (at or before the specified time) wellTest for a well. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
-        public Energistics.SchemaGatherer.Timestamp dTimCurrent {
+        public System.DateTime dTimCurrent {
             get {
                 return this.dTimCurrentField;
             }
@@ -8637,7 +8637,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date-time of well test.</summary>
         [System.ComponentModel.DescriptionAttribute("The date-time of well test.")]
-        public Energistics.SchemaGatherer.Timestamp testDate {
+        public System.DateTime testDate {
             get {
                 return this.testDateField;
             }
@@ -8660,7 +8660,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date-time of the previous well test.</summary>
         [System.ComponentModel.DescriptionAttribute("The date-time of the previous well test.")]
-        public Energistics.SchemaGatherer.Timestamp previousTestDate {
+        public System.DateTime previousTestDate {
             get {
                 return this.previousTestDateField;
             }
@@ -8683,7 +8683,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date-time of the last valid well test.</summary>
         [System.ComponentModel.DescriptionAttribute("The date-time of the last valid well test.")]
-        public Energistics.SchemaGatherer.Timestamp lastValidTest {
+        public System.DateTime lastValidTest {
             get {
                 return this.lastValidTestField;
             }
@@ -13706,11 +13706,11 @@ namespace Energistics.Generator.PRODML122 {
         
         private string roleField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private System.DateTime dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private System.DateTime dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -13750,7 +13750,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time where the comment begins to be valid.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time where the comment begins to be valid.")]
-        public Energistics.SchemaGatherer.Timestamp dTimStart {
+        public System.DateTime dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -13773,7 +13773,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time where the comment is no longer valid.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time where the comment is no longer valid.")]
-        public Energistics.SchemaGatherer.Timestamp dTimEnd {
+        public System.DateTime dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -15089,7 +15089,7 @@ namespace Energistics.Generator.PRODML122 {
         
         private cs_productVolumeRelatedFacility relatedFacilityField;
         
-        private Energistics.SchemaGatherer.Timestamp versionField;
+        private System.DateTime versionField;
         
         private bool versionFieldSpecified;
         
@@ -15342,7 +15342,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A timestamp representing the version of this data.  A flow (same port and products) with a more recent timestamp will represent  the "current" version.</summary>
         [System.ComponentModel.DescriptionAttribute("A timestamp representing the version of this data.  A flow (same port and product" +
             "s) with a more recent timestamp will represent  the \"current\" version.")]
-        public Energistics.SchemaGatherer.Timestamp version {
+        public System.DateTime version {
             get {
                 return this.versionField;
             }
@@ -16333,11 +16333,11 @@ namespace Energistics.Generator.PRODML122 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
     public partial class cs_productVolumeParameterValue {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private System.DateTime dTimField;
         
         private bool dTimFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private System.DateTime dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -16357,7 +16357,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The date and time at which the parameter applies. If no time is specified then the value is static.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time at which the parameter applies. If no time is specified then th" +
             "e value is static.")]
-        public Energistics.SchemaGatherer.Timestamp dTim {
+        public System.DateTime dTim {
             get {
                 return this.dTimField;
             }
@@ -16382,7 +16382,7 @@ namespace Energistics.Generator.PRODML122 {
         [System.ComponentModel.DescriptionAttribute("The date and time at which the parameter no longer applies. The \"active\" time int" +
             "erval is inclusive of this point. If dTimEnd is given then dTim shall also be gi" +
             "ven.")]
-        public Energistics.SchemaGatherer.Timestamp dTimEnd {
+        public System.DateTime dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -16649,7 +16649,7 @@ namespace Energistics.Generator.PRODML122 {
         
         private bool subQualifierFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp versionField;
+        private System.DateTime versionField;
         
         private bool versionFieldSpecified;
         
@@ -16814,7 +16814,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>A timestamp representing the version of this data.  A parameter set with a more recent timestamp will represent  the "current" version.</summary>
         [System.ComponentModel.DescriptionAttribute("A timestamp representing the version of this data.  A parameter set with a more r" +
             "ecent timestamp will represent  the \"current\" version.")]
-        public Energistics.SchemaGatherer.Timestamp version {
+        public System.DateTime version {
             get {
                 return this.versionField;
             }
@@ -18844,7 +18844,7 @@ namespace Energistics.Generator.PRODML122 {
         
         private endpointQualifiedDateTime dTimMaxField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimCurrentField;
+        private System.DateTime dTimCurrentField;
         
         private bool dTimCurrentFieldSpecified;
         
@@ -19018,7 +19018,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The definition of the "current time" index for this report. The current time index is a server query parameter which requests the  selection of a single node from a recurring "period" set  (e.g., the data related to one point in a time series). For the purposes of this parameter, a "period" without any time data should be assumed to have the time associated with the overall report. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The definition of the ""current time"" index for this report. The current time index is a server query parameter which requests the  selection of a single node from a recurring ""period"" set  (e.g., the data related to one point in a time series). For the purposes of this parameter, a ""period"" without any time data should be assumed to have the time associated with the overall report. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
-        public Energistics.SchemaGatherer.Timestamp dTimCurrent {
+        public System.DateTime dTimCurrent {
             get {
                 return this.dTimCurrentField;
             }
@@ -20280,11 +20280,11 @@ namespace Energistics.Generator.PRODML122 {
         
         private bool typeFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private System.DateTime dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private System.DateTime dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -20320,7 +20320,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The beginning date and time that the comment represents.</summary>
         [System.ComponentModel.DescriptionAttribute("The beginning date and time that the comment represents.")]
-        public Energistics.SchemaGatherer.Timestamp dTimStart {
+        public System.DateTime dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -20343,7 +20343,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The ending date and time that the comment represents.</summary>
         [System.ComponentModel.DescriptionAttribute("The ending date and time that the comment represents.")]
-        public Energistics.SchemaGatherer.Timestamp dTimEnd {
+        public System.DateTime dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -20451,11 +20451,11 @@ namespace Energistics.Generator.PRODML122 {
         
         private string vesselNameField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private System.DateTime dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private System.DateTime dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -20509,7 +20509,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time that the vessel arrived.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time that the vessel arrived.")]
-        public Energistics.SchemaGatherer.Timestamp dTimStart {
+        public System.DateTime dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -20532,7 +20532,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time that the vessel left.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time that the vessel left.")]
-        public Energistics.SchemaGatherer.Timestamp dTimEnd {
+        public System.DateTime dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -20785,11 +20785,11 @@ namespace Energistics.Generator.PRODML122 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
     public partial class cs_productionOperationMarineOperation {
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private System.DateTime dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private System.DateTime dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -20814,7 +20814,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The beginning date and time that the information represents.</summary>
         [System.ComponentModel.DescriptionAttribute("The beginning date and time that the information represents.")]
-        public Energistics.SchemaGatherer.Timestamp dTimStart {
+        public System.DateTime dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -20837,7 +20837,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The ending date and time that the comment represents.</summary>
         [System.ComponentModel.DescriptionAttribute("The ending date and time that the comment represents.")]
-        public Energistics.SchemaGatherer.Timestamp dTimEnd {
+        public System.DateTime dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -20985,7 +20985,7 @@ namespace Energistics.Generator.PRODML122 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
     public partial class cs_productionOperationAlarm {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private System.DateTime dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -21004,7 +21004,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time when the alarms went off.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time when the alarms went off.")]
-        public Energistics.SchemaGatherer.Timestamp dTim {
+        public System.DateTime dTim {
             get {
                 return this.dTimField;
             }
@@ -21117,11 +21117,11 @@ namespace Energistics.Generator.PRODML122 {
         
         private string descriptionField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private System.DateTime dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private System.DateTime dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -21167,7 +21167,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The time the shutdown started.</summary>
         [System.ComponentModel.DescriptionAttribute("The time the shutdown started.")]
-        public Energistics.SchemaGatherer.Timestamp dTimStart {
+        public System.DateTime dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -21190,7 +21190,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The time the shutdown ended.</summary>
         [System.ComponentModel.DescriptionAttribute("The time the shutdown ended.")]
-        public Energistics.SchemaGatherer.Timestamp dTimEnd {
+        public System.DateTime dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -21824,7 +21824,7 @@ namespace Energistics.Generator.PRODML122 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
     public partial class cs_productionOperationWeather {
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private System.DateTime dTimField;
         
         private string agencyField;
         
@@ -21882,7 +21882,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>Date and time the information is related to.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Date and time the information is related to.")]
-        public Energistics.SchemaGatherer.Timestamp dTim {
+        public System.DateTime dTim {
             get {
                 return this.dTimField;
             }
@@ -23322,7 +23322,7 @@ namespace Energistics.Generator.PRODML122 {
         
         private string nameField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private System.DateTime dTimStartField;
         
         private string purposeField;
         
@@ -23350,7 +23350,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The date and time of the start of the plan. This point coincides with the end of the actual configuration. The configuration of the actual at this point in time represents the configuration of the plan at this starting point. All changes to this plan must be in the future from this point in time.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The date and time of the start of the plan. This point coincides with the end of the actual configuration. The configuration of the actual at this point in time represents the configuration of the plan at this starting point. All changes to this plan must be in the future from this point in time.")]
-        public Energistics.SchemaGatherer.Timestamp dTimStart {
+        public System.DateTime dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -23424,7 +23424,7 @@ namespace Energistics.Generator.PRODML122 {
         
         private string nameField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private System.DateTime dTimField;
         
         private string reasonField;
         
@@ -23450,7 +23450,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The timestamp associated with the change. All changes must use this timestamp.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The timestamp associated with the change. All changes must use this timestamp.")]
-        public Energistics.SchemaGatherer.Timestamp dTim {
+        public System.DateTime dTim {
             get {
                 return this.dTimField;
             }
@@ -23511,11 +23511,11 @@ namespace Energistics.Generator.PRODML122 {
         
         private ReportingProperty propertyField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private System.DateTime dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private System.DateTime dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -23549,7 +23549,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time that the sensor was activated on the port.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time that the sensor was activated on the port.")]
-        public Energistics.SchemaGatherer.Timestamp dTimStart {
+        public System.DateTime dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -23572,7 +23572,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time that the sensor was deactivated on the port.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time that the sensor was deactivated on the port.")]
-        public Energistics.SchemaGatherer.Timestamp dTimEnd {
+        public System.DateTime dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -23919,11 +23919,11 @@ namespace Energistics.Generator.PRODML122 {
         
         private string planNameField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private System.DateTime dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private System.DateTime dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -23965,7 +23965,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time that the connection was activated.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time that the connection was activated.")]
-        public Energistics.SchemaGatherer.Timestamp dTimStart {
+        public System.DateTime dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -23988,7 +23988,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time that the connection was terminated.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time that the connection was terminated.")]
-        public Energistics.SchemaGatherer.Timestamp dTimEnd {
+        public System.DateTime dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -25132,11 +25132,11 @@ namespace Energistics.Generator.PRODML122 {
         
         private facilityIdentifierStruct[] contextFacilityField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimStartField;
+        private System.DateTime dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dTimEndField;
+        private System.DateTime dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -25202,7 +25202,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time of the start of validity for this model.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time of the start of validity for this model.")]
-        public Energistics.SchemaGatherer.Timestamp dTimStart {
+        public System.DateTime dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -25225,7 +25225,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date and time of the termination of validity for this model.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time of the termination of validity for this model.")]
-        public Energistics.SchemaGatherer.Timestamp dTimEnd {
+        public System.DateTime dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -31631,13 +31631,13 @@ namespace Energistics.Generator.PRODML122 {
         
         private endpointQualifiedDateTime dTimMaxField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimCurrentField;
+        private System.DateTime dTimCurrentField;
         
         private bool dTimCurrentFieldSpecified;
         
         private cs_wellContext wellContextField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimField;
+        private System.DateTime dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -31736,7 +31736,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The definition of the "current time" index for this object. The current time index is a server query parameter which requests the  selection of a single node from a recurring set  (e.g., the data related to one point in a time series). That is, the "most recent" (at or before the specified time) measurement for a well. See the WITSML API Specification appendix on "Special Handling" of growing objects  for a description of the behavior related to this parameter.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The definition of the ""current time"" index for this object. The current time index is a server query parameter which requests the  selection of a single node from a recurring set  (e.g., the data related to one point in a time series). That is, the ""most recent"" (at or before the specified time) measurement for a well. See the WITSML API Specification appendix on ""Special Handling"" of growing objects  for a description of the behavior related to this parameter.")]
-        public Energistics.SchemaGatherer.Timestamp dTimCurrent {
+        public System.DateTime dTimCurrent {
             get {
                 return this.dTimCurrentField;
             }
@@ -31772,7 +31772,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The date and time associated with the measurement.  This will normally be the start of the run.</summary>
         [System.ComponentModel.DescriptionAttribute("The date and time associated with the measurement.  This will normally be the sta" +
             "rt of the run.")]
-        public Energistics.SchemaGatherer.Timestamp dTim {
+        public System.DateTime dTim {
             get {
                 return this.dTimField;
             }
@@ -32163,7 +32163,7 @@ namespace Energistics.Generator.PRODML122 {
         
         private OTDRReason reasonForRunField;
         
-        private Energistics.SchemaGatherer.Timestamp dTimRunField;
+        private System.DateTime dTimRunField;
         
         private bool dTimRunFieldSpecified;
         
@@ -32193,7 +32193,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The dateTime of the run.</summary>
         [System.ComponentModel.DescriptionAttribute("The dateTime of the run.")]
-        public Energistics.SchemaGatherer.Timestamp dTimRun {
+        public System.DateTime dTimRun {
             get {
                 return this.dTimRunField;
             }
@@ -33028,7 +33028,7 @@ namespace Energistics.Generator.PRODML122 {
         
         private bool locationFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp installationDateField;
+        private System.DateTime installationDateField;
         
         private bool installationDateFieldSpecified;
         
@@ -33118,7 +33118,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>When the tag was installed in or on the item.</summary>
         [System.ComponentModel.DescriptionAttribute("When the tag was installed in or on the item.")]
-        public Energistics.SchemaGatherer.Timestamp installationDate {
+        public System.DateTime installationDate {
             get {
                 return this.installationDateField;
             }
@@ -35048,7 +35048,7 @@ namespace Energistics.Generator.PRODML122 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
     public partial class cs_documentEvent {
         
-        private Energistics.SchemaGatherer.Timestamp eventDateField;
+        private System.DateTime eventDateField;
         
         private string eventTypeField;
         
@@ -35064,7 +35064,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The date on which the event took place.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The date on which the event took place.")]
-        public Energistics.SchemaGatherer.Timestamp eventDate {
+        public System.DateTime eventDate {
             get {
                 return this.eventDateField;
             }
@@ -35153,7 +35153,7 @@ namespace Energistics.Generator.PRODML122 {
         
         private string securitySystemField;
         
-        private Energistics.SchemaGatherer.Timestamp endDateField;
+        private System.DateTime endDateField;
         
         private bool endDateFieldSpecified;
         
@@ -35195,7 +35195,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date on which this security class is no  longer applicable.</summary>
         [System.ComponentModel.DescriptionAttribute("The date on which this security class is no  longer applicable.")]
-        public Energistics.SchemaGatherer.Timestamp endDate {
+        public System.DateTime endDate {
             get {
                 return this.endDateField;
             }
@@ -35265,7 +35265,7 @@ namespace Energistics.Generator.PRODML122 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
     public partial class cs_documentFileCreation {
         
-        private Energistics.SchemaGatherer.Timestamp fileCreationDateField;
+        private System.DateTime fileCreationDateField;
         
         private string softwareNameField;
         
@@ -35277,7 +35277,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <summary>The date and time that the file was created.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The date and time that the file was created.")]
-        public Energistics.SchemaGatherer.Timestamp fileCreationDate {
+        public System.DateTime fileCreationDate {
             get {
                 return this.fileCreationDateField;
             }
@@ -35340,7 +35340,7 @@ namespace Energistics.Generator.PRODML122 {
         
         private nameStruct[] documentAliasField;
         
-        private Energistics.SchemaGatherer.Timestamp documentDateField;
+        private System.DateTime documentDateField;
         
         private bool documentDateFieldSpecified;
         
@@ -35391,7 +35391,7 @@ namespace Energistics.Generator.PRODML122 {
         /// <remarks/>
         /// <summary>The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.")]
-        public Energistics.SchemaGatherer.Timestamp documentDate {
+        public System.DateTime documentDate {
             get {
                 return this.documentDateField;
             }
