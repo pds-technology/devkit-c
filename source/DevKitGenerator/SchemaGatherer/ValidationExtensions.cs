@@ -360,8 +360,7 @@ namespace Energistics.SchemaGatherer
 
         private static void AddValidationAttributes(CodeNamespace codeNamespace, XmlSchemaComplexType schemaType, string standardFamily, string dataSchemaVersion, ICollection<string> dataObjects, ICollection<string> types)
         {
-            var typeDeclaration = codeNamespace.Types.Cast<CodeTypeDeclaration>()
-                .FirstOrDefault(x => x.Name == schemaType.Name);
+            var typeDeclaration = GetTypeDeclaration(codeNamespace, schemaType.Name);
 
             if (typeDeclaration == null || types.Contains(typeDeclaration.Name)) return;
 
@@ -438,8 +437,7 @@ namespace Energistics.SchemaGatherer
             }
             else
             {
-                var baseTypeDeclaration = codeNamespace.Types.Cast<CodeTypeDeclaration>()
-                    .FirstOrDefault(x => x.Name == memberProperty.Type.BaseType);
+                var baseTypeDeclaration = GetTypeDeclaration(codeNamespace, memberProperty.Type.BaseType);
 
                 if (baseTypeDeclaration == null) return;
 
@@ -472,9 +470,9 @@ namespace Energistics.SchemaGatherer
                     memberProperty.CustomAttributes.Add(new CodeAttributeDeclaration(typeof(RegularExpressionAttribute).FullName,
                         new CodeAttributeArgument(new CodePrimitiveExpression(pattern.Value))));
                 }
-                else if (memberProperty.Type.BaseType == typeof(DateTime).FullName && pattern.Value != ".+")
+                else if (memberProperty.Type.BaseType == typeof(DateTime).FullName /*&& pattern.Value != ".+"*/)
                 {
-                    if (UseCustomTimestamp && !IsXmlAttribute(memberProperty))
+                    if (UseCustomTimestamp && !Has<XmlAttributeAttribute>(memberProperty))
                     {
                         var memberField = GetMemberField(typeDeclaration, memberProperty.Name + "Field");
                         memberField.Type = new CodeTypeReference("Energistics.SchemaGatherer.Timestamp");
@@ -514,16 +512,22 @@ namespace Energistics.SchemaGatherer
                 .Any(x => x.Name == typeof(T).FullName);
         }
 
+        private static CodeTypeDeclaration GetTypeDeclaration(CodeNamespace codeNamespace, string schemaTypeName)
+        {
+            return codeNamespace.Types.Cast<CodeTypeDeclaration>()
+                .FirstOrDefault(x => x.Name == schemaTypeName);
+        }
+
         private static CodeMemberProperty GetMemberProperty(CodeTypeDeclaration typeDeclaration, string propertyName)
         {
             return typeDeclaration.Members.OfType<CodeMemberProperty>()
-                .FirstOrDefault(x => x.Name == propertyName);
+                .FirstOrDefault(x => string.Equals(x.Name, propertyName, StringComparison.InvariantCultureIgnoreCase));
         }
 
         private static CodeMemberField GetMemberField(CodeTypeDeclaration typeDeclaration, string propertyName)
         {
             return typeDeclaration.Members.OfType<CodeMemberField>()
-                .FirstOrDefault(x => x.Name == propertyName);
+                .FirstOrDefault(x => string.Equals(x.Name, propertyName, StringComparison.InvariantCultureIgnoreCase));
         }
 
         private static IEnumerable<XmlSchemaFacet> GetElementRestrictions(XmlSchemaElement schemaElement)
@@ -592,15 +596,6 @@ namespace Energistics.SchemaGatherer
             }
 
             return description;
-        }
-
-        private static bool IsXmlAttribute(CodeMemberProperty memberProperty)
-        {
-            var xmlAttributeName = typeof(XmlAttributeAttribute).FullName;
-
-            return memberProperty.CustomAttributes
-                .Cast<CodeAttributeDeclaration>()
-                .Any(x => x.Name == xmlAttributeName);
         }
     }
 }
