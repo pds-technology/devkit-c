@@ -13421,7 +13421,7 @@ namespace Energistics.Generator.RESQML110 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
     public partial class cs_documentEvent {
         
-        private System.DateTime eventDateField;
+        private Energistics.SchemaGatherer.Timestamp eventDateField;
         
         private string eventTypeField;
         
@@ -13437,7 +13437,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <summary>The date on which the event took place.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The date on which the event took place.")]
-        public System.DateTime eventDate {
+        public Energistics.SchemaGatherer.Timestamp eventDate {
             get {
                 return this.eventDateField;
             }
@@ -13528,7 +13528,7 @@ namespace Energistics.Generator.RESQML110 {
         
         private PrimitiveType dataTypeField;
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -13589,7 +13589,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <remarks/>
         /// <summary>The date-time associated with the value.</summary>
         [System.ComponentModel.DescriptionAttribute("The date-time associated with the value.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -13710,7 +13710,7 @@ namespace Energistics.Generator.RESQML110 {
         
         private string securitySystemField;
         
-        private System.DateTime endDateField;
+        private Energistics.SchemaGatherer.Timestamp endDateField;
         
         private bool endDateFieldSpecified;
         
@@ -13752,7 +13752,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <remarks/>
         /// <summary>The date on which this security class is no  longer applicable.</summary>
         [System.ComponentModel.DescriptionAttribute("The date on which this security class is no  longer applicable.")]
-        public System.DateTime endDate {
+        public Energistics.SchemaGatherer.Timestamp endDate {
             get {
                 return this.endDateField;
             }
@@ -13822,7 +13822,7 @@ namespace Energistics.Generator.RESQML110 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
     public partial class cs_documentFileCreation {
         
-        private System.DateTime fileCreationDateField;
+        private Energistics.SchemaGatherer.Timestamp fileCreationDateField;
         
         private string softwareNameField;
         
@@ -13834,7 +13834,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <summary>The date and time that the file was created.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The date and time that the file was created.")]
-        public System.DateTime fileCreationDate {
+        public Energistics.SchemaGatherer.Timestamp fileCreationDate {
             get {
                 return this.fileCreationDateField;
             }
@@ -13936,7 +13936,7 @@ namespace Energistics.Generator.RESQML110 {
         
         private nameStruct[] documentAliasField;
         
-        private System.DateTime documentDateField;
+        private Energistics.SchemaGatherer.Timestamp documentDateField;
         
         private bool documentDateFieldSpecified;
         
@@ -13985,7 +13985,7 @@ namespace Energistics.Generator.RESQML110 {
         /// <remarks/>
         /// <summary>The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.")]
-        public System.DateTime documentDate {
+        public Energistics.SchemaGatherer.Timestamp documentDate {
             get {
                 return this.documentDateField;
             }

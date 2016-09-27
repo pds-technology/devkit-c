@@ -48,11 +48,11 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private string fieldTypeField;
         
-        private System.DateTime effectiveDateField;
+        private Energistics.SchemaGatherer.Timestamp effectiveDateField;
         
         private bool effectiveDateFieldSpecified;
         
-        private System.DateTime expiredDateField;
+        private Energistics.SchemaGatherer.Timestamp expiredDateField;
         
         private bool expiredDateFieldSpecified;
         
@@ -62,7 +62,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private bool currentStatusFieldSpecified;
         
-        private System.DateTime statusDateField;
+        private Energistics.SchemaGatherer.Timestamp statusDateField;
         
         private bool statusDateFieldSpecified;
         
@@ -146,7 +146,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>Field date.</summary>
         [System.ComponentModel.DescriptionAttribute("Field date.")]
-        public System.DateTime effectiveDate {
+        public Energistics.SchemaGatherer.Timestamp effectiveDate {
             get {
                 return this.effectiveDateField;
             }
@@ -169,7 +169,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>Expiration date</summary>
         [System.ComponentModel.DescriptionAttribute("Expiration date")]
-        public System.DateTime expiredDate {
+        public Energistics.SchemaGatherer.Timestamp expiredDate {
             get {
                 return this.expiredDateField;
             }
@@ -224,7 +224,7 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
-        public System.DateTime statusDate {
+        public Energistics.SchemaGatherer.Timestamp statusDate {
             get {
                 return this.statusDateField;
             }
@@ -353,11 +353,11 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private bool statusFieldSpecified;
         
-        private System.DateTime startDateField;
+        private Energistics.SchemaGatherer.Timestamp startDateField;
         
         private bool startDateFieldSpecified;
         
-        private System.DateTime endDateField;
+        private Energistics.SchemaGatherer.Timestamp endDateField;
         
         private bool endDateFieldSpecified;
         
@@ -395,7 +395,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>the start date of status</summary>
         [System.ComponentModel.DescriptionAttribute("the start date of status")]
-        public System.DateTime startDate {
+        public Energistics.SchemaGatherer.Timestamp startDate {
             get {
                 return this.startDateField;
             }
@@ -418,7 +418,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>the end date of status</summary>
         [System.ComponentModel.DescriptionAttribute("the end date of status")]
-        public System.DateTime endDate {
+        public Energistics.SchemaGatherer.Timestamp endDate {
             get {
                 return this.endDateField;
             }
@@ -4531,11 +4531,11 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private string sourceNameField;
         
-        private System.DateTime dTimCreationField;
+        private Energistics.SchemaGatherer.Timestamp dTimCreationField;
         
         private bool dTimCreationFieldSpecified;
         
-        private System.DateTime dTimLastChangeField;
+        private Energistics.SchemaGatherer.Timestamp dTimLastChangeField;
         
         private bool dTimLastChangeFieldSpecified;
         
@@ -4579,7 +4579,7 @@ namespace Energistics.Generator.COMPLETION100 {
         [System.ComponentModel.DescriptionAttribute("When the data was created at the persistent data store.  This is an API server pa" +
             "rameter releted to the \"Special Handling of Change Information\" within a server." +
             "  See the relevant API specification for the  behavior related to this element.")]
-        public System.DateTime dTimCreation {
+        public Energistics.SchemaGatherer.Timestamp dTimCreation {
             get {
                 return this.dTimCreationField;
             }
@@ -4605,7 +4605,7 @@ namespace Energistics.Generator.COMPLETION100 {
             "PI server parameter releted to the \"Special Handling of Change Information\" with" +
             "in a server.  See the relevant API specification for the  behavior related to th" +
             "is element.")]
-        public System.DateTime dTimLastChange {
+        public Energistics.SchemaGatherer.Timestamp dTimLastChange {
             get {
                 return this.dTimLastChangeField;
             }
@@ -4899,7 +4899,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private PrimitiveType dataTypeField;
         
-        private System.DateTime dTimField;
+        private Energistics.SchemaGatherer.Timestamp dTimField;
         
         private bool dTimFieldSpecified;
         
@@ -4960,7 +4960,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>The date-time associated with the value.</summary>
         [System.ComponentModel.DescriptionAttribute("The date-time associated with the value.")]
-        public System.DateTime dTim {
+        public Energistics.SchemaGatherer.Timestamp dTim {
             get {
                 return this.dTimField;
             }
@@ -6061,11 +6061,11 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private genericMeasure rangeMaxField;
         
-        private System.DateTime rangeDateTimeMinField;
+        private Energistics.SchemaGatherer.Timestamp rangeDateTimeMinField;
         
         private bool rangeDateTimeMinFieldSpecified;
         
-        private System.DateTime rangeDateTimeMaxField;
+        private Energistics.SchemaGatherer.Timestamp rangeDateTimeMaxField;
         
         private bool rangeDateTimeMaxFieldSpecified;
         
@@ -6073,7 +6073,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private measuredDepthCoord referenceDepthField;
         
-        private System.DateTime referenceDateTimeField;
+        private Energistics.SchemaGatherer.Timestamp referenceDateTimeField;
         
         private bool referenceDateTimeFieldSpecified;
         
@@ -6185,7 +6185,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <summary>The minimum log date-time index value that applies to this group. The significance of this range is defined by the groupType.</summary>
         [System.ComponentModel.DescriptionAttribute("The minimum log date-time index value that applies to this group. The significanc" +
             "e of this range is defined by the groupType.")]
-        public System.DateTime rangeDateTimeMin {
+        public Energistics.SchemaGatherer.Timestamp rangeDateTimeMin {
             get {
                 return this.rangeDateTimeMinField;
             }
@@ -6209,7 +6209,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <summary>The maximum log date-time index value that applies to this group. The significance of this range is defined by the groupType.</summary>
         [System.ComponentModel.DescriptionAttribute("The maximum log date-time index value that applies to this group. The significanc" +
             "e of this range is defined by the groupType.")]
-        public System.DateTime rangeDateTimeMax {
+        public Energistics.SchemaGatherer.Timestamp rangeDateTimeMax {
             get {
                 return this.rangeDateTimeMaxField;
             }
@@ -6262,7 +6262,7 @@ namespace Energistics.Generator.COMPLETION100 {
         [System.ComponentModel.DescriptionAttribute("A date and time related to this group.  This does not necessarily represent an ac" +
             "tual index within a growing-object. The significance of this time is defined by " +
             "the groupType.")]
-        public System.DateTime referenceDateTime {
+        public Energistics.SchemaGatherer.Timestamp referenceDateTime {
             get {
                 return this.referenceDateTimeField;
             }
@@ -6455,7 +6455,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private bool locationFieldSpecified;
         
-        private System.DateTime installationDateField;
+        private Energistics.SchemaGatherer.Timestamp installationDateField;
         
         private bool installationDateFieldSpecified;
         
@@ -6545,7 +6545,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>When the tag was installed in or on the item.</summary>
         [System.ComponentModel.DescriptionAttribute("When the tag was installed in or on the item.")]
-        public System.DateTime installationDate {
+        public Energistics.SchemaGatherer.Timestamp installationDate {
             get {
                 return this.installationDateField;
             }
@@ -7983,7 +7983,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private lengthMeasure diaOrificeSizeField;
         
-        private System.DateTime dTimeNextTestDateField;
+        private Energistics.SchemaGatherer.Timestamp dTimeNextTestDateField;
         
         private bool dTimeNextTestDateFieldSpecified;
         
@@ -8042,7 +8042,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>Next Test Date</summary>
         [System.ComponentModel.DescriptionAttribute("Next Test Date")]
-        public System.DateTime dTimeNextTestDate {
+        public Energistics.SchemaGatherer.Timestamp dTimeNextTestDate {
             get {
                 return this.dTimeNextTestDateField;
             }
@@ -9003,11 +9003,11 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private string parentEventIDField;
         
-        private System.DateTime dTimStartField;
+        private Energistics.SchemaGatherer.Timestamp dTimStartField;
         
         private bool dTimStartFieldSpecified;
         
-        private System.DateTime dTimEndField;
+        private Energistics.SchemaGatherer.Timestamp dTimEndField;
         
         private bool dTimEndFieldSpecified;
         
@@ -9139,7 +9139,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>Date and time that activities started.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities started.")]
-        public System.DateTime dTimStart {
+        public Energistics.SchemaGatherer.Timestamp dTimStart {
             get {
                 return this.dTimStartField;
             }
@@ -9162,7 +9162,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>Date and time that activities were completed.</summary>
         [System.ComponentModel.DescriptionAttribute("Date and time that activities were completed.")]
-        public System.DateTime dTimEnd {
+        public Energistics.SchemaGatherer.Timestamp dTimEnd {
             get {
                 return this.dTimEndField;
             }
@@ -10591,11 +10591,11 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private bool physicalStatusFieldSpecified;
         
-        private System.DateTime startDateField;
+        private Energistics.SchemaGatherer.Timestamp startDateField;
         
         private bool startDateFieldSpecified;
         
-        private System.DateTime endDateField;
+        private Energistics.SchemaGatherer.Timestamp endDateField;
         
         private bool endDateFieldSpecified;
         
@@ -10637,7 +10637,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>The start date of status and allocation factor</summary>
         [System.ComponentModel.DescriptionAttribute("The start date of status and allocation factor")]
-        public System.DateTime startDate {
+        public Energistics.SchemaGatherer.Timestamp startDate {
             get {
                 return this.startDateField;
             }
@@ -10660,7 +10660,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>The end date of status and allocation factor</summary>
         [System.ComponentModel.DescriptionAttribute("The end date of status and allocation factor")]
-        public System.DateTime endDate {
+        public Energistics.SchemaGatherer.Timestamp endDate {
             get {
                 return this.endDateField;
             }
@@ -10836,7 +10836,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private string eventRefIDField;
         
-        private System.DateTime eventDateField;
+        private Energistics.SchemaGatherer.Timestamp eventDateField;
         
         private bool eventDateFieldSpecified;
         
@@ -10857,7 +10857,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>install/pull date</summary>
         [System.ComponentModel.DescriptionAttribute("install/pull date")]
-        public System.DateTime eventDate {
+        public Energistics.SchemaGatherer.Timestamp eventDate {
             get {
                 return this.eventDateField;
             }
@@ -10890,11 +10890,11 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private bool perforationStatusFieldSpecified;
         
-        private System.DateTime startDateField;
+        private Energistics.SchemaGatherer.Timestamp startDateField;
         
         private bool startDateFieldSpecified;
         
-        private System.DateTime endDateField;
+        private Energistics.SchemaGatherer.Timestamp endDateField;
         
         private bool endDateFieldSpecified;
         
@@ -10936,7 +10936,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>the start date of status</summary>
         [System.ComponentModel.DescriptionAttribute("the start date of status")]
-        public System.DateTime startDate {
+        public Energistics.SchemaGatherer.Timestamp startDate {
             get {
                 return this.startDateField;
             }
@@ -10959,7 +10959,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>the end date of status</summary>
         [System.ComponentModel.DescriptionAttribute("the end date of status")]
-        public System.DateTime endDate {
+        public Energistics.SchemaGatherer.Timestamp endDate {
             get {
                 return this.endDateField;
             }
@@ -11624,7 +11624,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private cs_eventInfo[] evenHistoryField;
         
-        private System.DateTime wellboreCompletionDateField;
+        private Energistics.SchemaGatherer.Timestamp wellboreCompletionDateField;
         
         private bool wellboreCompletionDateFieldSpecified;
         
@@ -11642,7 +11642,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private bool currentStatusFieldSpecified;
         
-        private System.DateTime statusDateField;
+        private Energistics.SchemaGatherer.Timestamp statusDateField;
         
         private bool statusDateFieldSpecified;
         
@@ -11757,7 +11757,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>Completion Date</summary>
         [System.ComponentModel.DescriptionAttribute("Completion Date")]
-        public System.DateTime wellboreCompletionDate {
+        public Energistics.SchemaGatherer.Timestamp wellboreCompletionDate {
             get {
                 return this.wellboreCompletionDateField;
             }
@@ -11860,7 +11860,7 @@ namespace Energistics.Generator.COMPLETION100 {
         }
         
         /// <remarks/>
-        public System.DateTime statusDate {
+        public Energistics.SchemaGatherer.Timestamp statusDate {
             get {
                 return this.statusDateField;
             }
@@ -12043,7 +12043,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private string crushDamageRatioField;
         
-        private System.DateTime perforationDateField;
+        private Energistics.SchemaGatherer.Timestamp perforationDateField;
         
         private bool perforationDateFieldSpecified;
         
@@ -12331,7 +12331,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>The original perforation date</summary>
         [System.ComponentModel.DescriptionAttribute("The original perforation date")]
-        public System.DateTime perforationDate {
+        public Energistics.SchemaGatherer.Timestamp perforationDate {
             get {
                 return this.perforationDateField;
             }
@@ -16419,7 +16419,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private string nameField;
         
-        private System.DateTime stringInstallDateField;
+        private Energistics.SchemaGatherer.Timestamp stringInstallDateField;
         
         private bool stringInstallDateFieldSpecified;
         
@@ -16499,7 +16499,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>The install date of downhole string.</summary>
         [System.ComponentModel.DescriptionAttribute("The install date of downhole string.")]
-        public System.DateTime stringInstallDate {
+        public Energistics.SchemaGatherer.Timestamp stringInstallDate {
             get {
                 return this.stringInstallDateField;
             }
@@ -16773,11 +16773,11 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private string nameField;
         
-        private System.DateTime startDateField;
+        private Energistics.SchemaGatherer.Timestamp startDateField;
         
         private bool startDateFieldSpecified;
         
-        private System.DateTime endDateField;
+        private Energistics.SchemaGatherer.Timestamp endDateField;
         
         private bool endDateFieldSpecified;
         
@@ -16830,7 +16830,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>The date range specification: start date</summary>
         [System.ComponentModel.DescriptionAttribute("The date range specification: start date")]
-        public System.DateTime startDate {
+        public Energistics.SchemaGatherer.Timestamp startDate {
             get {
                 return this.startDateField;
             }
@@ -16853,7 +16853,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>The date range specification: end date</summary>
         [System.ComponentModel.DescriptionAttribute("The date range specification: end date")]
-        public System.DateTime endDate {
+        public Energistics.SchemaGatherer.Timestamp endDate {
             get {
                 return this.endDateField;
             }
@@ -17001,7 +17001,7 @@ namespace Energistics.Generator.COMPLETION100 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     public partial class cs_documentEvent {
         
-        private System.DateTime eventDateField;
+        private Energistics.SchemaGatherer.Timestamp eventDateField;
         
         private string eventTypeField;
         
@@ -17017,7 +17017,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <summary>The date on which the event took place.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The date on which the event took place.")]
-        public System.DateTime eventDate {
+        public Energistics.SchemaGatherer.Timestamp eventDate {
             get {
                 return this.eventDateField;
             }
@@ -17106,7 +17106,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private string securitySystemField;
         
-        private System.DateTime endDateField;
+        private Energistics.SchemaGatherer.Timestamp endDateField;
         
         private bool endDateFieldSpecified;
         
@@ -17148,7 +17148,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>The date on which this security class is no  longer applicable.</summary>
         [System.ComponentModel.DescriptionAttribute("The date on which this security class is no  longer applicable.")]
-        public System.DateTime endDate {
+        public Energistics.SchemaGatherer.Timestamp endDate {
             get {
                 return this.endDateField;
             }
@@ -17218,7 +17218,7 @@ namespace Energistics.Generator.COMPLETION100 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
     public partial class cs_documentFileCreation {
         
-        private System.DateTime fileCreationDateField;
+        private Energistics.SchemaGatherer.Timestamp fileCreationDateField;
         
         private string softwareNameField;
         
@@ -17230,7 +17230,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <summary>The date and time that the file was created.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The date and time that the file was created.")]
-        public System.DateTime fileCreationDate {
+        public Energistics.SchemaGatherer.Timestamp fileCreationDate {
             get {
                 return this.fileCreationDateField;
             }
@@ -17332,7 +17332,7 @@ namespace Energistics.Generator.COMPLETION100 {
         
         private nameStruct[] documentAliasField;
         
-        private System.DateTime documentDateField;
+        private Energistics.SchemaGatherer.Timestamp documentDateField;
         
         private bool documentDateFieldSpecified;
         
@@ -17381,7 +17381,7 @@ namespace Energistics.Generator.COMPLETION100 {
         /// <remarks/>
         /// <summary>The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.</summary>
         [System.ComponentModel.DescriptionAttribute(@"The date of the creation of the document.  This is not the same as the date that the file was created.  For this date, the document is considered to be the set of  information associated with this document information.  For example, the document may be a seismic binset.  This represents the date that the binset was created.  The FileCreation information would capture the date that  the XML file was created to send or exchange the binset.")]
-        public System.DateTime documentDate {
+        public Energistics.SchemaGatherer.Timestamp documentDate {
             get {
                 return this.documentDateField;
             }
