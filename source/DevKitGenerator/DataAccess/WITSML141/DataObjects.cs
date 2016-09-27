@@ -63712,7 +63712,7 @@ namespace Energistics.DataAccess.WITSML141
         /// </summary>
 		[Description("The date when the drilling activity is completed.")]
 		[XmlElement("dateDrillComplete", DataType="date")]
-        public Timestamp? DateDrillComplete {
+        public DateTime? DateDrillComplete {
             get {
                 return dateDrillCompleteField;
             } 
@@ -63723,7 +63723,7 @@ namespace Energistics.DataAccess.WITSML141
             }
         }
 
-        private Timestamp? dateDrillCompleteField; 
+        private DateTime? dateDrillCompleteField; 
 
         /// <summary>
         /// dateDrillCompleteSpecified property

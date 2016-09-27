@@ -55905,7 +55905,7 @@ namespace Energistics.Generator.WITSML141 {
         
         private bool dTimPreSpudFieldSpecified;
         
-        private Energistics.SchemaGatherer.Timestamp dateDrillCompleteField;
+        private System.DateTime dateDrillCompleteField;
         
         private bool dateDrillCompleteFieldSpecified;
         
@@ -55969,7 +55969,7 @@ namespace Energistics.Generator.WITSML141 {
         /// <summary>The date when the drilling activity is completed.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         [System.ComponentModel.DescriptionAttribute("The date when the drilling activity is completed.")]
-        public Energistics.SchemaGatherer.Timestamp dateDrillComplete {
+        public System.DateTime dateDrillComplete {
             get {
                 return this.dateDrillCompleteField;
             }

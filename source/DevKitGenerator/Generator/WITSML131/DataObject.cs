@@ -15706,7 +15706,7 @@ namespace Energistics.Generator.WITSML131 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
     public partial class cs_calibration {
         
-        private Energistics.SchemaGatherer.Timestamp dTimCalibrationField;
+        private System.DateTime dTimCalibrationField;
         
         private bool dTimCalibrationFieldSpecified;
         
@@ -15724,7 +15724,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>The date of the calibration</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         [System.ComponentModel.DescriptionAttribute("The date of the calibration")]
-        public Energistics.SchemaGatherer.Timestamp dTimCalibration {
+        public System.DateTime dTimCalibration {
             get {
                 return this.dTimCalibrationField;
             }
@@ -16479,7 +16479,7 @@ namespace Energistics.Generator.WITSML131 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
     public partial class cs_instrumentBoxCalibration {
         
-        private Energistics.SchemaGatherer.Timestamp dTimCalibrationField;
+        private System.DateTime dTimCalibrationField;
         
         private bool dTimCalibrationFieldSpecified;
         
@@ -16501,7 +16501,7 @@ namespace Energistics.Generator.WITSML131 {
         /// <summary>The date of the calibration</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         [System.ComponentModel.DescriptionAttribute("The date of the calibration")]
-        public Energistics.SchemaGatherer.Timestamp dTimCalibration {
+        public System.DateTime dTimCalibration {
             get {
                 return this.dTimCalibrationField;
             }

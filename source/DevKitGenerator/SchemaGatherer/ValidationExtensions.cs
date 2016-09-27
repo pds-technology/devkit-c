@@ -470,9 +470,9 @@ namespace Energistics.SchemaGatherer
                     memberProperty.CustomAttributes.Add(new CodeAttributeDeclaration(typeof(RegularExpressionAttribute).FullName,
                         new CodeAttributeArgument(new CodePrimitiveExpression(pattern.Value))));
                 }
-                else if (memberProperty.Type.BaseType == typeof(DateTime).FullName /*&& pattern.Value != ".+"*/)
+                else if (memberProperty.Type.BaseType == typeof(DateTime).FullName)
                 {
-                    if (UseCustomTimestamp && !Has<XmlAttributeAttribute>(memberProperty))
+                    if (UseCustomTimestamp && !Has<XmlElementAttribute>(memberProperty) && !Has<XmlAttributeAttribute>(memberProperty))
                     {
                         var memberField = GetMemberField(typeDeclaration, memberProperty.Name + "Field");
                         memberField.Type = new CodeTypeReference("Energistics.SchemaGatherer.Timestamp");

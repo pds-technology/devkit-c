@@ -18886,7 +18886,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
 		[Description("The date of the calibration")]
 		[XmlElement("dTimCalibration", DataType="date")]
-        public Timestamp? DateTimeCalibration {
+        public DateTime? DateTimeCalibration {
             get {
                 return dTimCalibrationField;
             } 
@@ -18897,7 +18897,7 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
-        private Timestamp? dTimCalibrationField; 
+        private DateTime? dTimCalibrationField; 
 
         /// <summary>
         /// dTimCalibrationSpecified property
@@ -19904,7 +19904,7 @@ namespace Energistics.DataAccess.WITSML131
         /// </summary>
 		[Description("The date of the calibration")]
 		[XmlElement("dTimCalibration", DataType="date")]
-        public Timestamp? DateTimeCalibration {
+        public DateTime? DateTimeCalibration {
             get {
                 return dTimCalibrationField;
             } 
@@ -19915,7 +19915,7 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
-        private Timestamp? dTimCalibrationField; 
+        private DateTime? dTimCalibrationField; 
 
         /// <summary>
         /// dTimCalibrationSpecified property
