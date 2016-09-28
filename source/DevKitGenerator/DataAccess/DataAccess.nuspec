@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Energistics.DataAccess</id>
+    <id>Standards.DevKit-PDS</id>
     <version>$version$</version>
     <authors>ExxonMobil Upstream Research Company, Energistics</authors>
     <copyright>Copyright 2012 ExxonMobil Upstream Research Company</copyright>
