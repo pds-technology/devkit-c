@@ -152,8 +152,7 @@
   <PropertyGroup>
     <PostBuildEvent>copy $(TargetDir)Energistics.DataAccess.dll $(SolutionDir)..\DevKit\Assemblies
 copy $(TargetDir)Energistics.DataAccess.xml $(SolutionDir)..\DevKit\Assemblies
-copy $(TargetDir)Energistics.DataAccess.pdb $(SolutionDir)..\DevKit\Assemblies
-xcopy /s /y "$(SolutionDir)packages\HDF5DotNet.x64.1.8.9\lib\net40\*.*"  "$(SolutionDir)..\DevKit\Assemblies"</PostBuildEvent>
+copy $(TargetDir)Energistics.DataAccess.pdb $(SolutionDir)..\DevKit\Assemblies</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

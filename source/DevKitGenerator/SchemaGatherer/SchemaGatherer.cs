@@ -74,9 +74,11 @@
 // (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
 using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -197,140 +199,213 @@ namespace Energistics.SchemaGatherer
             string sourceFolder = GetAppSetting(setName + "_XSD_PATH");
             string nameSpace = "Energistics.Generator." + setName;
             string enumList = GetAppSetting(setName + "_ENUMVAL_PATH");
-            string enumProdList ="";
-            if(setName.Contains("PRODML"))
+            string enumProdList = "";
+            if (setName.Contains("PRODML"))
                 enumProdList = GetAppSetting(setName + "_ENUMVALPRODML_PATH");
-            string abstractXsd = GetAppSetting(setName + "_ABSTRACTXSD_PATH") + @"\sub_abstractSubstitutionGroup.xsd";
-            string wsdlPath = GetAppSetting(setName + "_WSDL");
-        
+            string dataSchemaVersion = GetAppSetting(setName + "_VERSION_STRING");
 
-            if( !Directory.Exists(targetFolder) ) {
+            List<string> dataObjectSchemas = new List<string>();
+            List<string> apiSchemas = new List<string>();
+            List<string> supportingSchemas = new List<string>();
+            Dictionary<string, string> schemaSubstitutions = new Dictionary<string, string>();
+
+            if (!Directory.Exists(targetFolder))
+            {
                 Directory.CreateDirectory(targetFolder);
             }
-            if(! Directory.Exists(sourceFolder))
+            if (!Directory.Exists(sourceFolder))
             {
                 Console.WriteLine("{0} doesn't exist", sourceFolder);
                 return;
             }
-            
 
-                string targetXmlFile = targetFolder + @"\out2.xml";                                                
-                string newTypeCatalog = targetFolder + @"\new_typ_catalog.xsd";
-                string newTypeCatalogProdml = targetFolder + @"\typ_catalogProdml.xsd";
-                
+            GetSchemas(setName, enumList, sourceFolder, dataObjectSchemas, apiSchemas, supportingSchemas, schemaSubstitutions);
+
+            string targetXmlFile = targetFolder + @"\out2.xml";
+            string newTypeCatalog = targetFolder + @"\new_typ_catalog.xsd";
+            string newTypeCatalogProdml = targetFolder + @"\typ_catalogProdml.xsd";
 
 
-                using (StreamWriter sw = new StreamWriter(targetXmlFile))
+
+            using (StreamWriter sw = new StreamWriter(targetXmlFile))
+            {
+                sw.WriteLine("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
+                sw.WriteLine("<xsd xmlns='http://microsoft.com/dotnet/tools/xsd/'>");
+                sw.WriteLine("  <generateClasses language='CS' namespace='" + nameSpace + "'>");
+                foreach (string schema in supportingSchemas)
                 {
-                    sw.WriteLine("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
-                    sw.WriteLine("<xsd xmlns='http://microsoft.com/dotnet/tools/xsd/'>");
-                    sw.WriteLine("  <generateClasses language='CS' namespace='" + nameSpace + "'>");
-                    if (!String.IsNullOrEmpty(abstractXsd) && File.Exists(abstractXsd))
-                    {
-                        sw.WriteLine("    <schema>" + abstractXsd + "</schema>");
-                    }
-
-                    if (setName.StartsWith("RESQML"))
-                    {
-                        if(setName.StartsWith("RESQML1"))
-                        {
-                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_DUBLIN_PATH"), "dcterms.xsd") + "</schema>"); 
-                            if(enumList.Length>0)
-                                sw.WriteLine("    <schema>" + Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd") + "</schema>");
-                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"gml\3.2.1\gml.xsd") + "</schema>");
-                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gmd\gmd.xsd") + "</schema>");
-                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gco\gco.xsd") + "</schema>");
-                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gts\gts.xsd") + "</schema>");
-                            sw.WriteLine("    <schema>" + Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gsr\gsr.xsd") + "</schema>"); 
-                        }
-                        else
-                          if(setName.StartsWith("RESQML2"))
-                        { 
-                            // we also need to include all xsd file in common v2.
-                            foreach (string f in Directory.GetFiles(GetAppSetting(setName + "_COMMON_PATH"), "*.xsd", SearchOption.AllDirectories))
-                            {
-                                sw.WriteLine("    <schema>" + f + "</schema>");
-                            }
-                        }
-                    }
-                    else
-                    {
-                        if(setName.StartsWith("COMPLETION"))
-                        {
-                            ProcessEnumValuesXml(sourceFolder + @"\typ_catalogCompletion.xsd", newTypeCatalog, enumList, sw);
-
-                            ProcessEnumValuesXml(sourceFolder + @"\cs_equipmentCatalog.xsd", newTypeCatalog, enumList, sw);
-                        }
-                        ProcessEnumValuesXml(sourceFolder + @"\typ_catalog.xsd", newTypeCatalog, enumList, sw);
-                        ProcessEnumValuesXml(sourceFolder + @"\typ_catalogProdml.xsd", newTypeCatalogProdml, enumProdList, sw);
-                    }
-
-                    if (!String.IsNullOrEmpty(wsdlPath))
-                    {
-                        foreach (string f in Directory.GetFiles(wsdlPath, "obj*.xsd", SearchOption.AllDirectories))
-                        {
-                            sw.WriteLine("    <schema>" + f + "</schema>");
-                        }
-                    }
-
-                    foreach (string f in Directory.GetFiles(sourceFolder, "obj*.xsd", SearchOption.TopDirectoryOnly))
-                    {
-                        if (!f.Contains("obj_coordinateReferenceSystem.xsd"))
-                        {
-                            sw.WriteLine("    <schema>" + f + "</schema>");
-                        }
-                    }
-
-                    sw.WriteLine("  </generateClasses>");
-                    sw.WriteLine("</xsd>");
-                
+                    sw.WriteLine("    <schema>" + schema + "</schema>");
                 }
 
-
-                using (Process p = new Process())
+                if (!setName.StartsWith("RESQML") && !setName.StartsWith("WITSML2"))
                 {
-                    p.StartInfo.FileName = GetAppSetting("MS_SDK") + @"\xsd.exe";
-                    p.StartInfo.Arguments = String.Format(@"/parameters:{0} /out:{1}", targetXmlFile, targetFolder);
-                    p.StartInfo.RedirectStandardError = true;
-                    p.StartInfo.RedirectStandardOutput = true;
-                    p.StartInfo.UseShellExecute = false;
-                    p.Start();
-
-
-                    string output = p.StandardOutput.ReadToEnd();
-                    string error = p.StandardError.ReadToEnd();
-
-                    p.WaitForExit();
-                    if (!String.IsNullOrEmpty(error))
+                    if (setName.StartsWith("COMPLETION"))
                     {
-                        Debugger.Break();
+                        ProcessEnumValuesXml(sourceFolder + @"\typ_catalogCompletion.xsd", newTypeCatalog, enumList, sw);
+
+                        ProcessEnumValuesXml(sourceFolder + @"\cs_equipmentCatalog.xsd", newTypeCatalog, enumList, sw);
                     }
+                    ProcessEnumValuesXml(sourceFolder + @"\typ_catalog.xsd", newTypeCatalog, enumList, sw);
+                    ProcessEnumValuesXml(sourceFolder + @"\typ_catalogProdml.xsd", newTypeCatalogProdml, enumProdList, sw);
+                    schemaSubstitutions.Add(newTypeCatalog, sourceFolder + @"\typ_catalog.xsd");
+                    schemaSubstitutions.Add(newTypeCatalogProdml, sourceFolder + @"\typ_catalogProdml.xsd");
+                }
 
-                    foreach (Match m in Regex.Matches(output, @"Writing file '(" + targetFolder.Replace(@"\", @"\\") + ".*?)'."))
+                foreach (string schema in apiSchemas)
+                {
+                    sw.WriteLine("    <schema>" + schema + "</schema>");
+                }
+
+                foreach (string schema in dataObjectSchemas)
+                {
+                    sw.WriteLine("    <schema>" + schema + "</schema>");
+                }
+
+                sw.WriteLine("  </generateClasses>");
+                sw.WriteLine("</xsd>");
+
+            }
+
+            // NOTE: Using CodeDom to generate data object classes
+            //bool addValidation = bool.Parse(GetAppSetting("INCLUDE_VALIDATION_ATTRIBUTES"));
+            //if (addValidation)
+            {
+                List<string> dataObjects = dataObjectSchemas.Select(Path.GetFileNameWithoutExtension).ToList();
+
+                // Strip out numbers from the family name
+                string standardFamily = Regex.Replace(setName, @"\d", string.Empty);
+
+                // Strip out anything not a digit or a '.'
+                dataSchemaVersion = Regex.Replace(dataSchemaVersion, @"[^\d.]", string.Empty);
+                ValidationExtensions.GenerateDataObjectsWithCodeDom(targetFolder, targetXmlFile, nameSpace, sourceFolder, standardFamily, dataSchemaVersion, dataObjects, schemaSubstitutions);
+            }
+            //else
+            //{
+            //    GenerateDataObjectsWithXsdUtility(targetFolder, targetXmlFile, newTypeCatalog, newTypeCatalogProdml);
+            //}
+            }
+
+        private static void GetSchemas(string setName, string enumList, string sourceFolder, List<string> dataObjectSchemas, List<string> apiSchemas, List<string> supportingSchemas, Dictionary<string, string> schemaSubstitutions)
+        {
+            string abstractXsd = GetAppSetting(setName + "_ABSTRACTXSD_PATH") + @"\sub_abstractSubstitutionGroup.xsd";
+            string wsdlPath = GetAppSetting(setName + "_WSDL");
+
+            if (!string.IsNullOrEmpty(abstractXsd) && File.Exists(abstractXsd))
+            {
+                supportingSchemas.Add(abstractXsd);
+            }
+
+            if (setName.StartsWith("RESQML"))
+            {
+                if (setName.StartsWith("RESQML1"))
+                {
+                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_DUBLIN_PATH"), "dcterms.xsd"));
+                    if (enumList.Length > 0)
                     {
-                        string sourceFile = m.Groups[1].Value;
-                        string targetCSFile = String.Format(@"{0}\DataObject.cs", targetFolder);
-
-                        if (File.Exists(sourceFile))
+                        supportingSchemas.Add(Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd"));
+                        schemaSubstitutions.Add(Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd"), sourceFolder + @"\typ_catalog.xsd");
+                    }
+                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"xlink\1.0.0\xlinks.xsd"));
+                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"gml\3.2.1\gml.xsd"));
+                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gmd\gmd.xsd"));
+                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gco\gco.xsd"));
+                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gts\gts.xsd"));
+                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gsr\gsr.xsd"));
+                }
+                // schema 2.0 is not support in this release.
+                    /*
+                else
+                    if (setName.StartsWith("RESQML2"))
+                    {
+                        // we also need to include all xsd file in common v2.
+                        foreach (string f in Directory.GetFiles(GetAppSetting(setName + "_COMMON_PATH"), "*.xsd", SearchOption.AllDirectories))
                         {
-                            if (File.Exists(targetCSFile))
-                            {
-                                File.Delete(targetCSFile);
-                            }
-                            File.Move(sourceFile, targetCSFile);
-                            File.Delete(targetXmlFile);
-                            File.Delete(newTypeCatalog);
-                            if (File.Exists(newTypeCatalogProdml))
-                            {
-                                File.Delete(newTypeCatalogProdml);
-                            }
+                            supportingSchemas.Add(f);
                         }
+                    }*/
+                     
+            }
+            /*
+            else if (setName.StartsWith("WITSML2"))
+            {
+                // we also need to include all xsd file in common v2.
+                foreach (string f in Directory.GetFiles(GetAppSetting(setName + "_COMMON_PATH"), "*.xsd", SearchOption.AllDirectories))
+                {
+                    supportingSchemas.Add(f);
+                }
 
-                        break;
-                    }
+                foreach (string f in Directory.GetFiles(sourceFolder, "*.xsd", SearchOption.TopDirectoryOnly))
+                {
+                    dataObjectSchemas.Add(f);
+                }
+
+                // stop processing now since there are no obj*.xsd in WITSML v2+
+                return;
+            }*/
+
+            if (!string.IsNullOrEmpty(wsdlPath))
+            {
+                foreach (string f in Directory.GetFiles(wsdlPath, "obj*.xsd", SearchOption.AllDirectories))
+                {
+                    apiSchemas.Add(f);
                 }
             }
-        
+
+            foreach (string f in Directory.GetFiles(sourceFolder, "obj*.xsd", SearchOption.TopDirectoryOnly))
+            {
+                if (!f.Contains("obj_coordinateReferenceSystem.xsd"))
+                {
+                    dataObjectSchemas.Add(f);
+                }
+            }
+        }
+
+
+        private static void GenerateDataObjectsWithXsdUtility(string targetFolder, string targetXmlFile, string newTypeCatalog, string newTypeCatalogProdml)
+        {
+            using (Process p = new Process())
+            {
+                p.StartInfo.FileName = GetAppSetting("MS_SDK") + @"\xsd.exe";
+                p.StartInfo.Arguments = String.Format(@"/parameters:{0} /out:{1}", targetXmlFile, targetFolder);
+                p.StartInfo.RedirectStandardError = true;
+                p.StartInfo.RedirectStandardOutput = true;
+                p.StartInfo.UseShellExecute = false;
+                p.Start();
+
+
+                string output = p.StandardOutput.ReadToEnd();
+                string error = p.StandardError.ReadToEnd();
+
+                p.WaitForExit();
+                if (!String.IsNullOrEmpty(error))
+                {
+                    Debugger.Break();
+                }
+
+                foreach (Match m in Regex.Matches(output, @"Writing file '(" + targetFolder.Replace(@"\", @"\\") + ".*?)'."))
+                {
+                    string sourceFile = m.Groups[1].Value;
+                    string targetCSFile = String.Format(@"{0}\DataObject.cs", targetFolder);
+
+                    if (File.Exists(sourceFile))
+                    {
+                        if (File.Exists(targetCSFile))
+                        {
+                            File.Delete(targetCSFile);
+                        }
+                        File.Move(sourceFile, targetCSFile);
+                        File.Delete(targetXmlFile);
+                        File.Delete(newTypeCatalog);
+                        if (File.Exists(newTypeCatalogProdml))
+                        {
+                            File.Delete(newTypeCatalogProdml);
+                        }
+                    }
+
+                    break;
+                }
+            }
+        }
 
         /// <summary>
         /// Parses enumValues.xml and inserts the values into typ_catalog.xsd

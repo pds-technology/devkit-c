@@ -39,18 +39,19 @@ namespace Energistics.DataAccess.COMPLETION100
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DownholeComponentList))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCMLedgerList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCompletionList))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreCompletionList))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCompletionList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCMLedgerList))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
 
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="abstractObject", Namespace="http://www.energistics.org/schemas/abstract")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/schemas/abstract")]
+    [System.Xml.Serialization.XmlRootAttribute("abstractDataObject", Namespace="http://www.energistics.org/schemas/abstract", IsNullable=false)]
 
     [Description("This class represents the abstractObject xsd type.")]
     public abstract partial class AbstractObject : Object , INotifyPropertyChanged
@@ -79,491 +80,6 @@ namespace Energistics.DataAccess.COMPLETION100
         #endregion INotifyPropertyChanged Members
 
     } //here
-
-
-
-    /// <summary>
-    /// This class represents the obj_downholeComponents xsd type.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
-    [System.Xml.Serialization.XmlRootAttribute("downholeComponents", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
-
-    [Description("This class represents the obj_downholeComponents xsd type.")]
-    public partial class DownholeComponentList : AbstractObject , IEnergisticsCollection, INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// Information about the downhole component.
-        /// </summary>
-		[XmlElement("documentInfo")]
-
-        public DocumentInfo DocumentInfo {
-            get {
-                return documentInfoField;
-            } 
-            set {
-                documentInfoField = value;
-                NotifyPropertyChanged("DocumentInfo");
-            }
-        }
-
-        private DocumentInfo documentInfoField; 
-
-
-        /// <summary>
-        /// Information about a downhole equipment
-        /// </summary>
-		[XmlElement("downholeComponent")]
-
-        public List<DownholeComponent> DownholeComponent {
-            get {
-                return downholeComponentField;
-            } 
-            set {
-                downholeComponentField = value;
-                NotifyPropertyChanged("DownholeComponent");
-            }
-        }
-
-         [XmlIgnore]
-         public bool DownholeComponentSpecified
-         {
-            get {
-             if(downholeComponentField!=null)
-                return downholeComponentField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<DownholeComponent> downholeComponentField; 
-
-
-        /// <summary>
-        /// Information about a downhole equipment
-        /// </summary>
-        [XmlIgnore]		
-        public IList Items
-        {
-		    get
-			{
-			    return DownholeComponent;
-			}
-        }
-
-		/// <summary>
-        /// Data object schema version.
-        /// </summary>
-        [XmlAttribute("version")]
-
-        public String Version {
-            get {
-                return versionField;
-            } 
-            set {
-                versionField = value;
-                NotifyPropertyChanged("Version");
-            }
-        }
-
-        private String versionField = "1.0"; 
-
-
-
-
-    } //here
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentInfo", Namespace="http://www.witsml.org/schemas/1series")]
-
-    [Description("A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.")]
-    public partial class DocumentInfo : Object , INotifyPropertyChanged
-    {
-
-
-        /// <summary>
-        /// An identifier for the document. This is intended to be unique within the context of the NamingSystem.
-        /// </summary>
-		[XmlElement("documentName")]
-
-        public NameStruct DocumentName {
-            get {
-                return documentNameField;
-            } 
-            set {
-                documentNameField = value;
-                NotifyPropertyChanged("DocumentName");
-            }
-        }
-
-        private NameStruct documentNameField; 
-
-
-        /// <summary>
-        /// Zero or more alternate names for the document. These names do not need to be unique within the naming system.
-        /// </summary>
-		[XmlElement("documentAlias")]
-
-        public List<NameStruct> DocumentAlias {
-            get {
-                return documentAliasField;
-            } 
-            set {
-                documentAliasField = value;
-                NotifyPropertyChanged("DocumentAlias");
-            }
-        }
-
-         [XmlIgnore]
-         public bool DocumentAliasSpecified
-         {
-            get {
-             if(documentAliasField!=null)
-                return documentAliasField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<NameStruct> documentAliasField; 
-
-
-        /// <summary>
-        /// The date of the creation of the document. This is not the same as the date that the file was created. For this date, the document is considered to be the set of information associated with this document information. For example, the document may be a seismic binset. This represents the date that the binset was created. The FileCreation information would capture the date that the XML file was created to send or exchange the binset.
-        /// </summary>
-		[XmlElement("documentDate")]
-
-        public DateTime? DocumentDate {
-            get {
-                return documentDateField;
-            } 
-            set {
-                documentDateField = value;
-             if(value!=null) 
-                 this.DocumentDateSpecified = true;
-                NotifyPropertyChanged("DocumentDate");
-            }
-        }
-
-        private DateTime? documentDateField; 
-
-
-		/// <summary>
-        /// documentDateSpecified property
-        /// </summary>
-        [XmlIgnore]
-		[Browsable(false)]
-
-        public Boolean DocumentDateSpecified {
-            get {
-                return documentDateSpecifiedField;
-            } 
-            set {
-                documentDateSpecifiedField = value;
-                NotifyPropertyChanged("DocumentDateSpecified");
-            }
-        }
-
-        private Boolean documentDateSpecifiedField; 
-
-
-        /// <summary>
-        /// A document class. Examples of classes would be a metadata classification or a set of keywords. 
-        /// </summary>
-		[XmlElement("documentClass")]
-
-        public List<NameStruct> DocumentClass {
-            get {
-                return documentClassField;
-            } 
-            set {
-                documentClassField = value;
-                NotifyPropertyChanged("DocumentClass");
-            }
-        }
-
-         [XmlIgnore]
-         public bool DocumentClassSpecified
-         {
-            get {
-             if(documentClassField!=null)
-                return documentClassField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<NameStruct> documentClassField; 
-
-
-        /// <summary>
-        /// The information about the creation of the exchange file. This is not about the creation of the data within the file, but the creation of the file itself.
-        /// </summary>
-		[XmlElement("fileCreationInformation")]
-
-        public DocumentFileCreation FileCreationInformation {
-            get {
-                return fileCreationInformationField;
-            } 
-            set {
-                fileCreationInformationField = value;
-                NotifyPropertyChanged("FileCreationInformation");
-            }
-        }
-
-        private DocumentFileCreation fileCreationInformationField; 
-
-
-        /// <summary>
-        /// Information about the security to be applied to this file. More than one classification can be given.
-        /// </summary>
-		[XmlElement("securityInformation")]
-
-        public List<DocumentSecurityInfo> SecurityInformation {
-            get {
-                return securityInformationField;
-            } 
-            set {
-                securityInformationField = value;
-                NotifyPropertyChanged("SecurityInformation");
-            }
-        }
-
-         [XmlIgnore]
-         public bool SecurityInformationSpecified
-         {
-            get {
-             if(securityInformationField!=null)
-                return securityInformationField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<DocumentSecurityInfo> securityInformationField; 
-
-
-        /// <summary>
-        /// A free-form string that allows a disclaimer to accompany the information.
-        /// </summary>
-		[XmlElement("disclaimer")]
-
-        public String Disclaimer {
-            get {
-                return disclaimerField;
-            } 
-            set {
-                disclaimerField = value;
-                NotifyPropertyChanged("Disclaimer");
-            }
-        }
-
-        private String disclaimerField; 
-
-
-        /// <summary>
-        /// A collection of events that can document the history of the data.
-        /// </summary>
-		[XmlArrayItem("event")]
-        [XmlArray("auditTrail")]
-
-        public List<DocumentEvent> AuditTrail {
-            get {
-                return auditTrailField;
-            } 
-            set {
-                auditTrailField = value;
-                NotifyPropertyChanged("AuditTrail");
-            }
-        }
-
-         [XmlIgnore]
-         public bool AuditTrailSpecified
-         {
-            get {
-             if(auditTrailField!=null)
-                return auditTrailField.Count>0?true:false;
-             else return false;
-            } 
-         }
-        private List<DocumentEvent> auditTrailField; 
-
-
-        /// <summary>
-        /// The owner of the data.
-        /// </summary>
-		[XmlElement("owner")]
-
-        public String Owner {
-            get {
-                return ownerField;
-            } 
-            set {
-                ownerField = value;
-                NotifyPropertyChanged("Owner");
-            }
-        }
-
-        private String ownerField; 
-
-
-        /// <summary>
-        /// An optional comment about the document.
-        /// </summary>
-		[XmlElement("comment")]
-
-        public String Comment {
-            get {
-                return commentField;
-            } 
-            set {
-                commentField = value;
-                NotifyPropertyChanged("Comment");
-            }
-        }
-
-        private String commentField; 
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
-
-
-
-    namespace ComponentSchemas 
-    {
-
-    /// <summary>
-    /// This class represents the nameStruct xsd type.
-    /// </summary>
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="nameStruct", Namespace="http://www.witsml.org/schemas/1series")]
-
-    [Description("This class represents the nameStruct xsd type.")]
-    public partial class NameStruct : Object , INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the NameStruct class.
-        /// </summary>
-        public NameStruct() {}
-
-        /// <summary>
-        /// Initializes a new instance of the NameStruct class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        public NameStruct(String value)
-        {
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value.ToString();
-        }
-
-
-		/// <summary>
-        /// The naming system within the name is (hopefully) unique.
-        /// </summary>
-        [XmlAttribute("namingSystem")]
-
-        public String NamingSystem {
-            get {
-                return namingSystemField;
-            } 
-            set {
-                namingSystemField = value;
-                NotifyPropertyChanged("NamingSystem");
-            }
-        }
-
-        private String namingSystemField; 
-
-
-		/// <summary>
-        /// Value property
-        /// </summary>
-        [XmlText]
-
-        public String Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private String ValueField; 
-
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-
-    } //here
-
-    }
 
 
 
@@ -684,7 +200,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 effectiveDateField = value;
-             if(value!=null) 
                  this.EffectiveDateSpecified = true;
                 NotifyPropertyChanged("EffectiveDate");
             }
@@ -723,7 +238,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 expiredDateField = value;
-             if(value!=null) 
                  this.ExpiredDateSpecified = true;
                 NotifyPropertyChanged("ExpiredDate");
             }
@@ -818,7 +332,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 statusDateField = value;
-             if(value!=null) 
                  this.StatusDateSpecified = true;
                 NotifyPropertyChanged("StatusDate");
             }
@@ -861,14 +374,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if StatusHistory has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool StatusHistorySpecified
          {
-            get {
+             get {
              if(statusHistoryField!=null)
-                return statusHistoryField.Count>0?true:false;
+                 return statusHistoryField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<CompletionStatusHistory> statusHistoryField; 
 
@@ -1038,7 +554,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 startDateField = value;
-             if(value!=null) 
                  this.StartDateSpecified = true;
                 NotifyPropertyChanged("StartDate");
             }
@@ -1077,7 +592,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 endDateField = value;
-             if(value!=null) 
                  this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
@@ -1211,15 +725,17 @@ namespace Energistics.DataAccess.COMPLETION100
     /// This class represents the abstractMeasure xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalConductivityMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PermeabilityRockMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerLengthMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AccelerationLinearMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MomentOfForceMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PerLengthMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PowerMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlaneAngleMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageEastWest))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageNorthSouth))]
 
@@ -1239,6 +755,8 @@ namespace Energistics.DataAccess.COMPLETION100
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(YAxisAzimuth))]
 
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasure))]
+
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerLengthMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeFlowRateMeasure))]
@@ -1253,8 +771,6 @@ namespace Energistics.DataAccess.COMPLETION100
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalVolumetricExpansionMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalConductivityMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumePerTimeMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumeMeasure))]
@@ -1267,9 +783,11 @@ namespace Energistics.DataAccess.COMPLETION100
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PressureMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageEastWest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PowerMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MomentOfForceMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlaneAngleMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PermeabilityRockMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassPerLengthMeasure))]
 
@@ -1310,10 +828,6 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerTimeMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerLengthMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AccelerationLinearMeasure))]
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -1873,7 +1387,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 numeratorField = value;
-             if(value!=null) 
                  this.NumeratorSpecified = true;
                 NotifyPropertyChanged("Numerator");
             }
@@ -1912,7 +1425,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 denominatorField = value;
-             if(value!=null) 
                  this.DenominatorSpecified = true;
                 NotifyPropertyChanged("Denominator");
             }
@@ -5162,7 +4674,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 dTimCreationField = value;
-             if(value!=null) 
                  this.DateTimeCreationSpecified = true;
                 NotifyPropertyChanged("DateTimeCreation");
             }
@@ -5201,7 +4712,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 dTimLastChangeField = value;
-             if(value!=null) 
                  this.DateTimeLastChangeSpecified = true;
                 NotifyPropertyChanged("DateTimeLastChange");
             }
@@ -5318,14 +4828,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if AcquisitionTimeZone has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool AcquisitionTimeZoneSpecified
          {
-            get {
+             get {
              if(acquisitionTimeZoneField!=null)
-                return acquisitionTimeZoneField.Count>0?true:false;
+                 return acquisitionTimeZoneField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<TimestampedTimeZone> acquisitionTimeZoneField; 
 
@@ -5359,7 +4872,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 privateGroupOnlyField = value;
-             if(value!=null) 
                  this.PrivateGroupOnlySpecified = true;
                 NotifyPropertyChanged("PrivateGroupOnly");
             }
@@ -5420,14 +4932,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -5510,7 +5025,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 dTimField = value;
-             if(value!=null) 
                  this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
@@ -5720,14 +5234,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Any has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool AnySpecified
          {
-            get {
+             get {
              if(AnyField!=null)
-                return AnyField.Count>0?true:false;
+                 return AnyField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<XmlElement> AnyField; 
 
@@ -5843,7 +5360,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 dTimField = value;
-             if(value!=null) 
                  this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
@@ -5900,7 +5416,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 indexField = value;
-             if(value!=null) 
                  this.IndexSpecified = true;
                 NotifyPropertyChanged("Index");
             }
@@ -6168,14 +5683,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Any has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool AnySpecified
          {
-            get {
+             get {
              if(AnyField!=null)
-                return AnyField.Count>0?true:false;
+                 return AnyField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<XmlElement> AnyField; 
 
@@ -6681,7 +6199,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 rangeDateTimeMinField = value;
-             if(value!=null) 
                  this.RangeDateTimeMinSpecified = true;
                 NotifyPropertyChanged("RangeDateTimeMin");
             }
@@ -6720,7 +6237,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 rangeDateTimeMaxField = value;
-             if(value!=null) 
                  this.RangeDateTimeMaxSpecified = true;
                 NotifyPropertyChanged("RangeDateTimeMax");
             }
@@ -6795,7 +6311,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 referenceDateTimeField = value;
-             if(value!=null) 
                  this.ReferenceDateTimeSpecified = true;
                 NotifyPropertyChanged("ReferenceDateTime");
             }
@@ -6838,14 +6353,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Param has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ParamSpecified
          {
-            get {
+             get {
              if(paramField!=null)
-                return paramField.Count>0?true:false;
+                 return paramField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<IndexedObject> paramField; 
 
@@ -6865,14 +6383,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -7059,14 +6580,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Participants has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ParticipantsSpecified
          {
-            get {
+             get {
              if(participantField!=null)
-                return participantField.Count>0?true:false;
+                 return participantField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<MemberObject> participantField; 
 
@@ -7086,14 +6610,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtNameValues has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtNameValuesSpecified
          {
-            get {
+             get {
              if(extNameValuesField!=null)
-                return extNameValuesField.Count>0?true:false;
+                 return extNameValuesField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extNameValuesField; 
 
@@ -7267,7 +6794,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 installationDateField = value;
-             if(value!=null) 
                  this.InstallationDateSpecified = true;
                 NotifyPropertyChanged("InstallationDate");
             }
@@ -7364,14 +6890,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -7698,7 +7227,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 itemSizeField = value;
-             if(value!=null) 
                  this.ItemSizeSpecified = true;
                 NotifyPropertyChanged("ItemSize");
             }
@@ -7737,7 +7265,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 qtyItemField = value;
-             if(value!=null) 
                  this.QtyItemSpecified = true;
                 NotifyPropertyChanged("QtyItem");
             }
@@ -7848,7 +7375,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 isCarryOverField = value;
-             if(value!=null) 
                  this.IsCarryOverSpecified = true;
                 NotifyPropertyChanged("IsCarryOver");
             }
@@ -7887,7 +7413,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 isRentalField = value;
-             if(value!=null) 
                  this.IsRentalSpecified = true;
                 NotifyPropertyChanged("IsRental");
             }
@@ -7930,14 +7455,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if NameTag has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool NameTagSpecified
          {
-            get {
+             get {
              if(nameTagField!=null)
-                return nameTagField.Count>0?true:false;
+                 return nameTagField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<NameTag> nameTagField; 
 
@@ -8025,7 +7553,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 estimatedField = value;
-             if(value!=null) 
                  this.EstimatedSpecified = true;
                 NotifyPropertyChanged("Estimated");
             }
@@ -8068,14 +7595,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -8195,14 +7725,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -8304,14 +7837,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -8373,7 +7909,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 stageNumberField = value;
-             if(value!=null) 
                  this.StageNumberSpecified = true;
                 NotifyPropertyChanged("StageNumber");
             }
@@ -8576,7 +8111,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 shotsPlannedField = value;
-             if(value!=null) 
                  this.ShotsPlannedSpecified = true;
                 NotifyPropertyChanged("ShotsPlanned");
             }
@@ -8633,7 +8167,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 shotsMisfiredField = value;
-             if(value!=null) 
                  this.ShotsMisfiredSpecified = true;
                 NotifyPropertyChanged("ShotsMisfired");
             }
@@ -8924,7 +8457,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 gunLeftInHoleField = value;
-             if(value!=null) 
                  this.GunLeftInHoleSpecified = true;
                 NotifyPropertyChanged("GunLeftInHole");
             }
@@ -8967,14 +8499,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -9058,14 +8593,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Perforating has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool PerforatingSpecified
          {
-            get {
+             get {
              if(perforatingField!=null)
-                return perforatingField.Count>0?true:false;
+                 return perforatingField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Perforating> perforatingField; 
 
@@ -9199,7 +8737,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 isNoChargeToProducerField = value;
-             if(value!=null) 
                  this.IsNoChargeToProducerSpecified = true;
                 NotifyPropertyChanged("IsNoChargeToProducer");
             }
@@ -9260,14 +8797,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -9347,7 +8887,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 dTimeNextTestDateField = value;
-             if(value!=null) 
                  this.DTimeNextTestDateSpecified = true;
                 NotifyPropertyChanged("DTimeNextTestDate");
             }
@@ -9422,7 +8961,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 isSuccessField = value;
-             if(value!=null) 
                  this.IsSuccessSpecified = true;
                 NotifyPropertyChanged("IsSuccess");
             }
@@ -9735,14 +9273,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -9880,14 +9421,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -9971,14 +9515,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -10098,14 +9645,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -10207,14 +9757,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -10316,14 +9869,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -10443,14 +9999,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -10534,14 +10093,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -10619,17 +10181,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return cementExtensionField;
             } 
             set {
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property CementExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property CementExtension when property AcidizeFracExtension is already set");
-                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property CementExtension when property CleanFillExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property CementExtension when property WaitingOnExtension is already set");
                 if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property CementExtension when property DownholeExtension is already set");
+                if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property CementExtension when property CleanFillExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property CementExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property CementExtension when property BHPExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property CementExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property CementExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property CementExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property CementExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property CementExtension when property PressureTestExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property CementExtension when property BHPExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property CementExtension when property WaitingOnExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property CementExtension when property AcidizeFracExtension is already set");
                 cementExtensionField = value;
                 CementExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("CementExtension");
@@ -10637,20 +10199,21 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private CementExtension cementExtensionField; 
+        private bool cementExtensionSpecified = false; 
+
         /// <summary>
         /// bool to indicate if CementExtension has been set. Used for serialization.
         /// </summary>
-        private bool cementExtensionSpecified = false; 
-         [XmlIgnore]
-         public bool CementExtensionSpecified
-         {
+        [XmlIgnore]
+        public bool CementExtensionSpecified
+        {
             get {
                 return cementExtensionSpecified;
-            } 
+            }
             set {
                 cementExtensionSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Extension event for clean fill
@@ -10661,17 +10224,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return cleanFillExtensionField;
             } 
             set {
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property AcidizeFracExtension is already set");
-                if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property CementExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property WaitingOnExtension is already set");
                 if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property DownholeExtension is already set");
+                if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property CementExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property BHPExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property PressureTestExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property BHPExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property WaitingOnExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property AcidizeFracExtension is already set");
                 cleanFillExtensionField = value;
                 CleanFillExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("CleanFillExtension");
@@ -10679,20 +10242,21 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private CleanFillExtension cleanFillExtensionField; 
+        private bool cleanFillExtensionSpecified = false; 
+
         /// <summary>
         /// bool to indicate if CleanFillExtension has been set. Used for serialization.
         /// </summary>
-        private bool cleanFillExtensionSpecified = false; 
-         [XmlIgnore]
-         public bool CleanFillExtensionSpecified
-         {
+        [XmlIgnore]
+        public bool CleanFillExtensionSpecified
+        {
             get {
                 return cleanFillExtensionSpecified;
-            } 
+            }
             set {
                 cleanFillExtensionSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Extension event for directional survey
@@ -10703,17 +10267,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return directionalSurveyExtensionField;
             } 
             set {
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property AcidizeFracExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property DownholeExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property CleanFillExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property WaitingOnExtension is already set");
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property DownholeExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property BHPExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property PressureTestExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property BHPExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property WaitingOnExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property AcidizeFracExtension is already set");
                 directionalSurveyExtensionField = value;
                 DirectionalSurveyExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("DirectionalSurveyExtension");
@@ -10721,20 +10285,21 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private DirectionalSurveyExtension directionalSurveyExtensionField; 
+        private bool directionalSurveyExtensionSpecified = false; 
+
         /// <summary>
         /// bool to indicate if DirectionalSurveyExtension has been set. Used for serialization.
         /// </summary>
-        private bool directionalSurveyExtensionSpecified = false; 
-         [XmlIgnore]
-         public bool DirectionalSurveyExtensionSpecified
-         {
+        [XmlIgnore]
+        public bool DirectionalSurveyExtensionSpecified
+        {
             get {
                 return directionalSurveyExtensionSpecified;
-            } 
+            }
             set {
                 directionalSurveyExtensionSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Extension event for lost circulation
@@ -10745,17 +10310,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return lostCirculationExtensionField;
             } 
             set {
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property AcidizeFracExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property DownholeExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property CleanFillExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property WaitingOnExtension is already set");
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property DownholeExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property BHPExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property JobExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property PressureTestExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property BHPExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property WaitingOnExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property AcidizeFracExtension is already set");
                 lostCirculationExtensionField = value;
                 LostCirculationExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("LostCirculationExtension");
@@ -10763,20 +10328,21 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private LostCirculationExtension lostCirculationExtensionField; 
+        private bool lostCirculationExtensionSpecified = false; 
+
         /// <summary>
         /// bool to indicate if LostCirculationExtension has been set. Used for serialization.
         /// </summary>
-        private bool lostCirculationExtensionSpecified = false; 
-         [XmlIgnore]
-         public bool LostCirculationExtensionSpecified
-         {
+        [XmlIgnore]
+        public bool LostCirculationExtensionSpecified
+        {
             get {
                 return lostCirculationExtensionSpecified;
-            } 
+            }
             set {
                 lostCirculationExtensionSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Extension event for bottom hole pressure
@@ -10787,17 +10353,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return BHPExtensionField;
             } 
             set {
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property AcidizeFracExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property DownholeExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property CleanFillExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property WaitingOnExtension is already set");
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property DownholeExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property DirectionalSurveyExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property PressureTestExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property WaitingOnExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property AcidizeFracExtension is already set");
                 BHPExtensionField = value;
                 BHPExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("BHPExtension");
@@ -10805,20 +10371,21 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private BHPExtension BHPExtensionField; 
+        private bool bHPExtensionSpecified = false; 
+
         /// <summary>
         /// bool to indicate if BHPExtension has been set. Used for serialization.
         /// </summary>
-        private bool bHPExtensionSpecified = false; 
-         [XmlIgnore]
-         public bool BHPExtensionSpecified
-         {
+        [XmlIgnore]
+        public bool BHPExtensionSpecified
+        {
             get {
                 return bHPExtensionSpecified;
-            } 
+            }
             set {
                 bHPExtensionSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Extension event for acidizing and fracturing
@@ -10829,17 +10396,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return acidizeFracExtensionField;
             } 
             set {
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property DownholeExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property CleanFillExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property WaitingOnExtension is already set");
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property DownholeExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property BHPExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property PressureTestExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property BHPExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property WaitingOnExtension is already set");
                 acidizeFracExtensionField = value;
                 AcidizeFracExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("AcidizeFracExtension");
@@ -10847,20 +10414,21 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private AcidizefracExtension acidizeFracExtensionField; 
+        private bool acidizeFracExtensionSpecified = false; 
+
         /// <summary>
         /// bool to indicate if AcidizeFracExtension has been set. Used for serialization.
         /// </summary>
-        private bool acidizeFracExtensionSpecified = false; 
-         [XmlIgnore]
-         public bool AcidizeFracExtensionSpecified
-         {
+        [XmlIgnore]
+        public bool AcidizeFracExtensionSpecified
+        {
             get {
                 return acidizeFracExtensionSpecified;
-            } 
+            }
             set {
                 acidizeFracExtensionSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Extension event for job
@@ -10871,17 +10439,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return jobExtensionField;
             } 
             set {
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property JobExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property JobExtension when property AcidizeFracExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property JobExtension when property DownholeExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property JobExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property JobExtension when property CleanFillExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property JobExtension when property WaitingOnExtension is already set");
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property JobExtension when property DownholeExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property JobExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property JobExtension when property BHPExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property JobExtension when property FluidReportExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property JobExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property JobExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property JobExtension when property PressureTestExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property JobExtension when property BHPExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property JobExtension when property WaitingOnExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property JobExtension when property AcidizeFracExtension is already set");
                 jobExtensionField = value;
                 JobExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("JobExtension");
@@ -10889,20 +10457,21 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private JobExtension jobExtensionField; 
+        private bool jobExtensionSpecified = false; 
+
         /// <summary>
         /// bool to indicate if JobExtension has been set. Used for serialization.
         /// </summary>
-        private bool jobExtensionSpecified = false; 
-         [XmlIgnore]
-         public bool JobExtensionSpecified
-         {
+        [XmlIgnore]
+        public bool JobExtensionSpecified
+        {
             get {
                 return jobExtensionSpecified;
-            } 
+            }
             set {
                 jobExtensionSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Extension event for pressure test
@@ -10913,17 +10482,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return pressureTestExtensionField;
             } 
             set {
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property AcidizeFracExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property DownholeExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property CleanFillExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property WaitingOnExtension is already set");
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property DownholeExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property BHPExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property PerforationExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property BHPExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property WaitingOnExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property AcidizeFracExtension is already set");
                 pressureTestExtensionField = value;
                 PressureTestExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("PressureTestExtension");
@@ -10931,20 +10500,21 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private PressureTestExtension pressureTestExtensionField; 
+        private bool pressureTestExtensionSpecified = false; 
+
         /// <summary>
         /// bool to indicate if PressureTestExtension has been set. Used for serialization.
         /// </summary>
-        private bool pressureTestExtensionSpecified = false; 
-         [XmlIgnore]
-         public bool PressureTestExtensionSpecified
-         {
+        [XmlIgnore]
+        public bool PressureTestExtensionSpecified
+        {
             get {
                 return pressureTestExtensionSpecified;
-            } 
+            }
             set {
                 pressureTestExtensionSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Extension event for waiting on
@@ -10955,17 +10525,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return waitingOnExtensionField;
             } 
             set {
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property AcidizeFracExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property DownholeExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property CleanFillExtension is already set");
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property DownholeExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property BHPExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property PressureTestExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property BHPExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property AcidizeFracExtension is already set");
                 waitingOnExtensionField = value;
                 WaitingOnExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("WaitingOnExtension");
@@ -10973,20 +10543,21 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private WaitingOnExtension waitingOnExtensionField; 
+        private bool waitingOnExtensionSpecified = false; 
+
         /// <summary>
         /// bool to indicate if WaitingOnExtension has been set. Used for serialization.
         /// </summary>
-        private bool waitingOnExtensionSpecified = false; 
-         [XmlIgnore]
-         public bool WaitingOnExtensionSpecified
-         {
+        [XmlIgnore]
+        public bool WaitingOnExtensionSpecified
+        {
             get {
                 return waitingOnExtensionSpecified;
-            } 
+            }
             set {
                 waitingOnExtensionSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Extension event for perforating event
@@ -10997,17 +10568,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return perforationExtensionField;
             } 
             set {
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property AcidizeFracExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property DownholeExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property CleanFillExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property WaitingOnExtension is already set");
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property DownholeExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property BHPExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property LostCirculationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property PressureTestExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property BHPExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property WaitingOnExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property AcidizeFracExtension is already set");
                 perforationExtensionField = value;
                 PerforationExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("PerforationExtension");
@@ -11015,20 +10586,21 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private PerforatingExtension perforationExtensionField; 
+        private bool perforationExtensionSpecified = false; 
+
         /// <summary>
         /// bool to indicate if PerforationExtension has been set. Used for serialization.
         /// </summary>
-        private bool perforationExtensionSpecified = false; 
-         [XmlIgnore]
-         public bool PerforationExtensionSpecified
-         {
+        [XmlIgnore]
+        public bool PerforationExtensionSpecified
+        {
             get {
                 return perforationExtensionSpecified;
-            } 
+            }
             set {
                 perforationExtensionSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Extension event for fluid report
@@ -11039,17 +10611,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return fluidReportExtensionField;
             } 
             set {
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property AcidizeFracExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property DownholeExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property CleanFillExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property WaitingOnExtension is already set");
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property DownholeExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property BHPExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property PressureTestExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property BHPExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property WaitingOnExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property AcidizeFracExtension is already set");
                 fluidReportExtensionField = value;
                 FluidReportExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("FluidReportExtension");
@@ -11057,20 +10629,21 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private FluidReportExtension fluidReportExtensionField; 
+        private bool fluidReportExtensionSpecified = false; 
+
         /// <summary>
         /// bool to indicate if FluidReportExtension has been set. Used for serialization.
         /// </summary>
-        private bool fluidReportExtensionSpecified = false; 
-         [XmlIgnore]
-         public bool FluidReportExtensionSpecified
-         {
+        [XmlIgnore]
+        public bool FluidReportExtensionSpecified
+        {
             get {
                 return fluidReportExtensionSpecified;
-            } 
+            }
             set {
                 fluidReportExtensionSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Extension event for downhole component
@@ -11081,17 +10654,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return downholeExtensionField;
             } 
             set {
-                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property CleanFillExtension is already set");
-                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property WaitingOnExtension is already set");
+                if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property BHPExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property PressureTestExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property BHPExtension is already set");
+                if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property WaitingOnExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property AcidizeFracExtension is already set");
                 downholeExtensionField = value;
                 DownholeExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("DownholeExtension");
@@ -11099,20 +10672,21 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private DownholeExtension downholeExtensionField; 
+        private bool downholeExtensionSpecified = false; 
+
         /// <summary>
         /// bool to indicate if DownholeExtension has been set. Used for serialization.
         /// </summary>
-        private bool downholeExtensionSpecified = false; 
-         [XmlIgnore]
-         public bool DownholeExtensionSpecified
-         {
+        [XmlIgnore]
+        public bool DownholeExtensionSpecified
+        {
             get {
                 return downholeExtensionSpecified;
-            } 
+            }
             set {
                 downholeExtensionSpecified= value;
-            } 
-         }
+            }
+        }
 
 
 
@@ -11177,14 +10751,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if StringEquipmentRefID has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool StringEquipmentRefIDSpecified
          {
-            get {
+             get {
              if(stringEquipmentRefIDField!=null)
-                return stringEquipmentRefIDField.Count>0?true:false;
+                 return stringEquipmentRefIDField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> stringEquipmentRefIDField; 
 
@@ -11268,14 +10845,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if StringEquipmentRefID has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool StringEquipmentRefIDSpecified
          {
-            get {
+             get {
              if(stringEquipmentRefIDField!=null)
-                return stringEquipmentRefIDField.Count>0?true:false;
+                 return stringEquipmentRefIDField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> stringEquipmentRefIDField; 
 
@@ -11359,14 +10939,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if StringEquipmentRefID has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool StringEquipmentRefIDSpecified
          {
-            get {
+             get {
              if(stringEquipmentRefIDField!=null)
-                return stringEquipmentRefIDField.Count>0?true:false;
+                 return stringEquipmentRefIDField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> stringEquipmentRefIDField; 
 
@@ -11386,14 +10969,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if BoreholeStringRef has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool BoreholeStringRefSpecified
          {
-            get {
+             get {
              if(boreholeStringRefField!=null)
-                return boreholeStringRefField.Count>0?true:false;
+                 return boreholeStringRefField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<BoreholeStringRef> boreholeStringRefField; 
 
@@ -11413,14 +10999,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if DownholeStringsRef has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool DownholeStringsRefSpecified
          {
-            get {
+             get {
              if(downholeStringsRefField!=null)
-                return downholeStringsRefField.Count>0?true:false;
+                 return downholeStringsRefField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<DownholeStringRef> downholeStringsRefField; 
 
@@ -11440,14 +11029,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if PerforationSetRefID has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool PerforationSetRefIDSpecified
          {
-            get {
+             get {
              if(perforationSetRefIDField!=null)
-                return perforationSetRefIDField.Count>0?true:false;
+                 return perforationSetRefIDField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> perforationSetRefIDField; 
 
@@ -11701,7 +11293,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 dTimStartField = value;
-             if(value!=null) 
                  this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
@@ -11740,7 +11331,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 dTimEndField = value;
-             if(value!=null) 
                  this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
@@ -11833,7 +11423,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 eventOrderField = value;
-             if(value!=null) 
                  this.EventOrderSpecified = true;
                 NotifyPropertyChanged("EventOrder");
             }
@@ -11876,14 +11465,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if RigID has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool RigIDSpecified
          {
-            get {
+             get {
              if(rigIDField!=null)
-                return rigIDField.Count>0?true:false;
+                 return rigIDField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> rigIDField; 
 
@@ -11955,7 +11547,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 isPlanField = value;
-             if(value!=null) 
                  this.IsPlanSpecified = true;
                 NotifyPropertyChanged("IsPlan");
             }
@@ -12034,14 +11625,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if EventExtension has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool EventExtensionSpecified
          {
-            get {
+             get {
              if(eventExtensionField!=null)
-                return eventExtensionField.Count>0?true:false;
+                 return eventExtensionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<EventExtension> eventExtensionField; 
 
@@ -12115,14 +11709,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Cost has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool CostSpecified
          {
-            get {
+             get {
              if(costField!=null)
-                return costField.Count>0?true:false;
+                 return costField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<DayCost> costField; 
 
@@ -12138,7 +11735,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 nonproductiveField = value;
-             if(value!=null) 
                  this.NonproductiveSpecified = true;
                 NotifyPropertyChanged("Nonproductive");
             }
@@ -12177,7 +11773,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 troubleField = value;
-             if(value!=null) 
                  this.TroubleSpecified = true;
                 NotifyPropertyChanged("Trouble");
             }
@@ -12216,7 +11811,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 preventiveMaintenanceField = value;
-             if(value!=null) 
                  this.PreventiveMaintenanceSpecified = true;
                 NotifyPropertyChanged("PreventiveMaintenance");
             }
@@ -12255,7 +11849,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 unplannedField = value;
-             if(value!=null) 
                  this.UnplannedSpecified = true;
                 NotifyPropertyChanged("Unplanned");
             }
@@ -12352,14 +11945,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -12621,14 +12217,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if IntervalStatusHistory has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool IntervalStatusHistorySpecified
          {
-            get {
+             get {
              if(intervalStatusHistoryField!=null)
-                return intervalStatusHistoryField.Count>0?true:false;
+                 return intervalStatusHistoryField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<IntervalStatusHistory> intervalStatusHistoryField; 
 
@@ -12666,14 +12265,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if GeologyFeatureRefID has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool GeologyFeatureRefIDSpecified
          {
-            get {
+             get {
              if(geologyFeatureRefIDField!=null)
-                return geologyFeatureRefIDField.Count>0?true:false;
+                 return geologyFeatureRefIDField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> geologyFeatureRefIDField; 
 
@@ -12693,14 +12295,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -12818,7 +12423,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 startDateField = value;
-             if(value!=null) 
                  this.StartDateSpecified = true;
                 NotifyPropertyChanged("StartDate");
             }
@@ -12857,7 +12461,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 endDateField = value;
-             if(value!=null) 
                  this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
@@ -12932,7 +12535,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 allocationFactorField = value;
-             if(value!=null) 
                  this.AllocationFactorSpecified = true;
                 NotifyPropertyChanged("AllocationFactor");
             }
@@ -13093,14 +12695,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -13180,7 +12785,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 eventDateField = value;
-             if(value!=null) 
                  this.EventDateSpecified = true;
                 NotifyPropertyChanged("EventDate");
             }
@@ -13303,7 +12907,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 startDateField = value;
-             if(value!=null) 
                  this.StartDateSpecified = true;
                 NotifyPropertyChanged("StartDate");
             }
@@ -13342,7 +12945,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 endDateField = value;
-             if(value!=null) 
                  this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
@@ -13417,7 +13019,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 allocationFactorField = value;
-             if(value!=null) 
                  this.AllocationFactorSpecified = true;
                 NotifyPropertyChanged("AllocationFactor");
             }
@@ -13632,14 +13233,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if PerforationStatusHistory has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool PerforationStatusHistorySpecified
          {
-            get {
+             get {
              if(perforationStatusHistoryField!=null)
-                return perforationStatusHistoryField.Count>0?true:false;
+                 return perforationStatusHistoryField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<PerforationStatusHistory> perforationStatusHistoryField; 
 
@@ -13677,14 +13281,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if GeologyFeatureRefID has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool GeologyFeatureRefIDSpecified
          {
-            get {
+             get {
              if(geologyFeatureRefIDField!=null)
-                return geologyFeatureRefIDField.Count>0?true:false;
+                 return geologyFeatureRefIDField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> geologyFeatureRefIDField; 
 
@@ -13704,14 +13311,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -13885,14 +13495,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if IntervalStatusHistory has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool IntervalStatusHistorySpecified
          {
-            get {
+             get {
              if(intervalStatusHistoryField!=null)
-                return intervalStatusHistoryField.Count>0?true:false;
+                 return intervalStatusHistoryField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<IntervalStatusHistory> intervalStatusHistoryField; 
 
@@ -13930,14 +13543,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if GeologyFeatureRefID has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool GeologyFeatureRefIDSpecified
          {
-            get {
+             get {
              if(geologyFeatureRefIDField!=null)
-                return geologyFeatureRefIDField.Count>0?true:false;
+                 return geologyFeatureRefIDField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> geologyFeatureRefIDField; 
 
@@ -13957,14 +13573,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -14138,14 +13757,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if IntervalStatusHistory has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool IntervalStatusHistorySpecified
          {
-            get {
+             get {
              if(intervalStatusHistoryField!=null)
-                return intervalStatusHistoryField.Count>0?true:false;
+                 return intervalStatusHistoryField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<IntervalStatusHistory> intervalStatusHistoryField; 
 
@@ -14183,14 +13805,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if GeologyFeatureRefID has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool GeologyFeatureRefIDSpecified
          {
-            get {
+             get {
              if(geologyFeatureRefIDField!=null)
-                return geologyFeatureRefIDField.Count>0?true:false;
+                 return geologyFeatureRefIDField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> geologyFeatureRefIDField; 
 
@@ -14210,14 +13835,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -14301,14 +13929,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if GravelPackInterval has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool GravelPackIntervalSpecified
          {
-            get {
+             get {
              if(gravelPackIntervalField!=null)
-                return gravelPackIntervalField.Count>0?true:false;
+                 return gravelPackIntervalField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<GravelPackInterval> gravelPackIntervalField; 
 
@@ -14328,14 +13959,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if OpenHoleInterval has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool OpenHoleIntervalSpecified
          {
-            get {
+             get {
              if(openHoleIntervalField!=null)
-                return openHoleIntervalField.Count>0?true:false;
+                 return openHoleIntervalField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<OpenHoleInterval> openHoleIntervalField; 
 
@@ -14355,14 +13989,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if PerforationSetInterval has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool PerforationSetIntervalSpecified
          {
-            get {
+             get {
              if(perforationSetIntervalField!=null)
-                return perforationSetIntervalField.Count>0?true:false;
+                 return perforationSetIntervalField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<PerforationSetInterval> perforationSetIntervalField; 
 
@@ -14382,14 +14019,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if SlotsInterval has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool SlotsIntervalSpecified
          {
-            get {
+             get {
              if(slotsIntervalField!=null)
-                return slotsIntervalField.Count>0?true:false;
+                 return slotsIntervalField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<SlotsInterval> slotsIntervalField; 
 
@@ -14560,14 +14200,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if EvenHistory has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool EvenHistorySpecified
          {
-            get {
+             get {
              if(evenHistoryField!=null)
-                return evenHistoryField.Count>0?true:false;
+                 return evenHistoryField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<EventInfo> evenHistoryField; 
 
@@ -14583,7 +14226,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 wellboreCompletionDateField = value;
-             if(value!=null) 
                  this.WellboreCompletionDateSpecified = true;
                 NotifyPropertyChanged("WellboreCompletionDate");
             }
@@ -14750,7 +14392,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 statusDateField = value;
-             if(value!=null) 
                  this.StatusDateSpecified = true;
                 NotifyPropertyChanged("StatusDate");
             }
@@ -14793,14 +14434,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if StatusHistory has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool StatusHistorySpecified
          {
-            get {
+             get {
              if(statusHistoryField!=null)
-                return statusHistoryField.Count>0?true:false;
+                 return statusHistoryField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<CompletionStatusHistory> statusHistoryField; 
 
@@ -14990,14 +14634,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if BoreholeStringRefID has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool BoreholeStringRefIDSpecified
          {
-            get {
+             get {
              if(boreholeStringRefIDField!=null)
-                return boreholeStringRefIDField.Count>0?true:false;
+                 return boreholeStringRefIDField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> boreholeStringRefIDField; 
 
@@ -15017,14 +14664,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if DownholeStringRefID has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool DownholeStringRefIDSpecified
          {
-            get {
+             get {
              if(downholeStringRefIDField!=null)
-                return downholeStringRefIDField.Count>0?true:false;
+                 return downholeStringRefIDField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> downholeStringRefIDField; 
 
@@ -15202,7 +14852,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 holeCountField = value;
-             if(value!=null) 
                  this.HoleCountSpecified = true;
                 NotifyPropertyChanged("HoleCount");
             }
@@ -15241,7 +14890,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 frictionFactorField = value;
-             if(value!=null) 
                  this.FrictionFactorSpecified = true;
                 NotifyPropertyChanged("FrictionFactor");
             }
@@ -15298,7 +14946,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 dischargeCoefficientField = value;
-             if(value!=null) 
                  this.DischargeCoefficientSpecified = true;
                 NotifyPropertyChanged("DischargeCoefficient");
             }
@@ -15429,7 +15076,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 perforationDateField = value;
-             if(value!=null) 
                  this.PerforationDateSpecified = true;
                 NotifyPropertyChanged("PerforationDate");
             }
@@ -15694,7 +15340,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 holeCountField = value;
-             if(value!=null) 
                  this.HoleCountSpecified = true;
                 NotifyPropertyChanged("HoleCount");
             }
@@ -15755,14 +15400,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -15878,7 +15526,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 slotCountField = value;
-             if(value!=null) 
                  this.SlotCountSpecified = true;
                 NotifyPropertyChanged("SlotCount");
             }
@@ -15939,14 +15586,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -16252,7 +15902,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 isSerializedField = value;
-             if(value!=null) 
                  this.IsSerializedSpecified = true;
                 NotifyPropertyChanged("IsSerialized");
             }
@@ -16419,7 +16068,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 coatingLinerappliedField = value;
-             if(value!=null) 
                  this.CoatingLinerappliedSpecified = true;
                 NotifyPropertyChanged("CoatingLinerapplied");
             }
@@ -16844,14 +16492,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Property has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool PropertySpecified
          {
-            get {
+             get {
              if(propertyField!=null)
-                return propertyField.Count>0?true:false;
+                 return propertyField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtPropNameValue> propertyField; 
 
@@ -16871,14 +16522,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if SlotAsManufactured has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool SlotAsManufacturedSpecified
          {
-            get {
+             get {
              if(slotAsManufacturedField!=null)
-                return slotAsManufacturedField.Count>0?true:false;
+                 return slotAsManufacturedField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<PerfSlot> slotAsManufacturedField; 
 
@@ -16898,14 +16552,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if HoleAsManufactured has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool HoleAsManufacturedSpecified
          {
-            get {
+             get {
              if(holeAsManufacturedField!=null)
-                return holeAsManufacturedField.Count>0?true:false;
+                 return holeAsManufacturedField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<PerfHole> holeAsManufacturedField; 
 
@@ -16943,14 +16600,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -17180,14 +16840,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -17453,14 +17116,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -17580,14 +17246,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Borehole has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool BoreholeSpecified
          {
-            get {
+             get {
              if(boreholeField!=null)
-                return boreholeField.Count>0?true:false;
+                 return boreholeField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Borehole> boreholeField; 
 
@@ -17607,14 +17276,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if GeologyFeature has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool GeologyFeatureSpecified
          {
-            get {
+             get {
              if(geologyFeatureField!=null)
-                return geologyFeatureField.Count>0?true:false;
+                 return geologyFeatureField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<GeologyFeature> geologyFeatureField; 
 
@@ -17635,14 +17307,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Accessories has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool AccessoriesSpecified
          {
-            get {
+             get {
              if(accessoriesField!=null)
-                return accessoriesField.Count>0?true:false;
+                 return accessoriesField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<StringEquipment> accessoriesField; 
 
@@ -17800,14 +17475,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if EquipmentEventHistory has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool EquipmentEventHistorySpecified
          {
-            get {
+             get {
              if(equipmentEventHistoryField!=null)
-                return equipmentEventHistoryField.Count>0?true:false;
+                 return equipmentEventHistoryField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<EventInfo> equipmentEventHistoryField; 
 
@@ -17931,7 +17609,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 countField = value;
-             if(value!=null) 
                  this.CountSpecified = true;
                 NotifyPropertyChanged("Count");
             }
@@ -18078,7 +17755,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 outsideStringField = value;
-             if(value!=null) 
                  this.OutsideStringSpecified = true;
                 NotifyPropertyChanged("OutsideString");
             }
@@ -18121,14 +17797,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if InsideComponent has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool InsideComponentSpecified
          {
-            get {
+             get {
              if(insideComponentField!=null)
-                return insideComponentField.Count>0?true:false;
+                 return insideComponentField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<RefContainer> insideComponentField; 
 
@@ -18148,14 +17827,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if OutsideComponent has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool OutsideComponentSpecified
          {
-            get {
+             get {
              if(outsideComponentField!=null)
-                return outsideComponentField.Count>0?true:false;
+                 return outsideComponentField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<RefContainer> outsideComponentField; 
 
@@ -18261,7 +17943,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 isLinetoSurfaceField = value;
-             if(value!=null) 
                  this.IsLinetoSurfaceSpecified = true;
                 NotifyPropertyChanged("IsLinetoSurface");
             }
@@ -18300,7 +17981,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 isCentralizedField = value;
-             if(value!=null) 
                  this.IsCentralizedSpecified = true;
                 NotifyPropertyChanged("IsCentralized");
             }
@@ -18339,7 +18019,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 hasScratchersField = value;
-             if(value!=null) 
                  this.HasScratchersSpecified = true;
                 NotifyPropertyChanged("HasScratchers");
             }
@@ -18382,14 +18061,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ConnectionNext has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ConnectionNextSpecified
          {
-            get {
+             get {
              if(connectionNextField!=null)
-                return connectionNextField.Count>0?true:false;
+                 return connectionNextField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<EquipmentConnection> connectionNextField; 
 
@@ -18410,14 +18092,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Assembly has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool AssemblySpecified
          {
-            get {
+             get {
              if(assemblyField!=null)
-                return assemblyField.Count>0?true:false;
+                 return assemblyField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<StringEquipment> assemblyField; 
 
@@ -18437,14 +18122,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if PerforationSetRefID has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool PerforationSetRefIDSpecified
          {
-            get {
+             get {
              if(perforationSetRefIDField!=null)
-                return perforationSetRefIDField.Count>0?true:false;
+                 return perforationSetRefIDField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> perforationSetRefIDField; 
 
@@ -18500,14 +18188,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -19019,14 +18710,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -19114,37 +18808,6 @@ namespace Energistics.DataAccess.COMPLETION100
 
 
         /// <summary>
-        /// The connection type of casing
-        /// </summary>
-        [XmlElement("casingConnectionType")]
-        public CasingConnectionType? CasingConnectionType {
-            get {
-                return casingConnectionTypeField;
-            } 
-            set {
-                casingConnectionTypeField = value;
-                CasingConnectionTypeSpecified = (value!=null);
-                NotifyPropertyChanged("CasingConnectionType");
-            }
-        }
-
-        private CasingConnectionType? casingConnectionTypeField; 
-        /// <summary>
-        /// bool to indicate if CasingConnectionType has been set. Used for serialization.
-        /// </summary>
-        private bool casingConnectionTypeSpecified = false; 
-         [XmlIgnore]
-         public bool CasingConnectionTypeSpecified
-         {
-            get {
-                return casingConnectionTypeSpecified;
-            } 
-            set {
-                casingConnectionTypeSpecified= value;
-            } 
-         }
-
-        /// <summary>
         /// The connection type of rod
         /// </summary>
         [XmlElement("rodConnectionType")]
@@ -19160,51 +18823,21 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private RodConnectionType? rodConnectionTypeField; 
+        private bool rodConnectionTypeSpecified = false; 
+
         /// <summary>
         /// bool to indicate if RodConnectionType has been set. Used for serialization.
         /// </summary>
-        private bool rodConnectionTypeSpecified = false; 
-         [XmlIgnore]
-         public bool RodConnectionTypeSpecified
-         {
+        [XmlIgnore]
+        public bool RodConnectionTypeSpecified
+        {
             get {
                 return rodConnectionTypeSpecified;
-            } 
+            }
             set {
                 rodConnectionTypeSpecified= value;
-            } 
-         }
-
-        /// <summary>
-        /// The other connection type which is used for other tools
-        /// </summary>
-        [XmlElement("otherConnectionType")]
-        public OtherConnectionType? OtherConnectionType {
-            get {
-                return otherConnectionTypeField;
-            } 
-            set {
-                otherConnectionTypeField = value;
-                OtherConnectionTypeSpecified = (value!=null);
-                NotifyPropertyChanged("OtherConnectionType");
             }
         }
-
-        private OtherConnectionType? otherConnectionTypeField; 
-        /// <summary>
-        /// bool to indicate if OtherConnectionType has been set. Used for serialization.
-        /// </summary>
-        private bool otherConnectionTypeSpecified = false; 
-         [XmlIgnore]
-         public bool OtherConnectionTypeSpecified
-         {
-            get {
-                return otherConnectionTypeSpecified;
-            } 
-            set {
-                otherConnectionTypeSpecified= value;
-            } 
-         }
 
         /// <summary>
         /// The connection type of tubing
@@ -19222,20 +18855,85 @@ namespace Energistics.DataAccess.COMPLETION100
         }
 
         private TubingConnectionType? tubingConnectionTypeField; 
+        private bool tubingConnectionTypeSpecified = false; 
+
         /// <summary>
         /// bool to indicate if TubingConnectionType has been set. Used for serialization.
         /// </summary>
-        private bool tubingConnectionTypeSpecified = false; 
-         [XmlIgnore]
-         public bool TubingConnectionTypeSpecified
-         {
+        [XmlIgnore]
+        public bool TubingConnectionTypeSpecified
+        {
             get {
                 return tubingConnectionTypeSpecified;
-            } 
+            }
             set {
                 tubingConnectionTypeSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// The connection type of casing
+        /// </summary>
+        [XmlElement("casingConnectionType")]
+        public CasingConnectionType? CasingConnectionType {
+            get {
+                return casingConnectionTypeField;
             } 
-         }
+            set {
+                casingConnectionTypeField = value;
+                CasingConnectionTypeSpecified = (value!=null);
+                NotifyPropertyChanged("CasingConnectionType");
+            }
+        }
+
+        private CasingConnectionType? casingConnectionTypeField; 
+        private bool casingConnectionTypeSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if CasingConnectionType has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool CasingConnectionTypeSpecified
+        {
+            get {
+                return casingConnectionTypeSpecified;
+            }
+            set {
+                casingConnectionTypeSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// The other connection type which is used for other tools
+        /// </summary>
+        [XmlElement("otherConnectionType")]
+        public OtherConnectionType? OtherConnectionType {
+            get {
+                return otherConnectionTypeField;
+            } 
+            set {
+                otherConnectionTypeField = value;
+                OtherConnectionTypeSpecified = (value!=null);
+                NotifyPropertyChanged("OtherConnectionType");
+            }
+        }
+
+        private OtherConnectionType? otherConnectionTypeField; 
+        private bool otherConnectionTypeSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if OtherConnectionType has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool OtherConnectionTypeSpecified
+        {
+            get {
+                return otherConnectionTypeSpecified;
+            }
+            set {
+                otherConnectionTypeSpecified= value;
+            }
+        }
 
 
 
@@ -19425,7 +19123,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 stringInstallDateField = value;
-             if(value!=null) 
                  this.StringInstallDateSpecified = true;
                 NotifyPropertyChanged("StringInstallDate");
             }
@@ -19541,14 +19238,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if StringEquipmentSet has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool StringEquipmentSetSpecified
          {
-            get {
+             get {
              if(stringEquipmentSetField!=null)
-                return stringEquipmentSetField.Count>0?true:false;
+                 return stringEquipmentSetField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<StringEquipment> stringEquipmentSetField; 
 
@@ -19569,14 +19269,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Accessories has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool AccessoriesSpecified
          {
-            get {
+             get {
              if(accessoriesField!=null)
-                return accessoriesField.Count>0?true:false;
+                 return accessoriesField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<StringEquipment> accessoriesField; 
 
@@ -19614,14 +19317,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -19770,7 +19476,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 startDateField = value;
-             if(value!=null) 
                  this.StartDateSpecified = true;
                 NotifyPropertyChanged("StartDate");
             }
@@ -19809,7 +19514,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 endDateField = value;
-             if(value!=null) 
                  this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
@@ -19871,14 +19575,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if BoreholeStringSet has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool BoreholeStringSetSpecified
          {
-            get {
+             get {
              if(boreholeStringSetField!=null)
-                return boreholeStringSetField.Count>0?true:false;
+                 return boreholeStringSetField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<BoreholeString> boreholeStringSetField; 
 
@@ -19899,14 +19606,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if DownholeStringSet has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool DownholeStringSetSpecified
          {
-            get {
+             get {
              if(downholeStringSetField!=null)
-                return downholeStringSetField.Count>0?true:false;
+                 return downholeStringSetField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<DownholeString> downholeStringSetField; 
 
@@ -19927,14 +19637,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if EquipmentSet has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool EquipmentSetSpecified
          {
-            get {
+             get {
              if(equipmentSetField!=null)
-                return equipmentSetField.Count>0?true:false;
+                 return equipmentSetField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Equipment> equipmentSetField; 
 
@@ -19955,14 +19668,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if PerforationSets has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool PerforationSetsSpecified
          {
-            get {
+             get {
              if(perforationSetsField!=null)
-                return perforationSetsField.Count>0?true:false;
+                 return perforationSetsField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<PerforationSet> perforationSetsField; 
 
@@ -20170,14 +19886,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -20293,7 +20012,6 @@ namespace Energistics.DataAccess.COMPLETION100
             } 
             set {
                 endDateField = value;
-             if(value!=null) 
                  this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
@@ -20354,14 +20072,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ExtensionNameValue has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ExtensionNameValueSpecified
          {
-            get {
+             get {
              if(extensionNameValueField!=null)
-                return extensionNameValueField.Count>0?true:false;
+                 return extensionNameValueField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ExtensionNameValue> extensionNameValueField; 
 
@@ -20529,6 +20250,404 @@ namespace Energistics.DataAccess.COMPLETION100
 
 
 
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// This class represents the nameStruct xsd type.
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="nameStruct", Namespace="http://www.witsml.org/schemas/1series")]
+
+    [Description("This class represents the nameStruct xsd type.")]
+    public partial class NameStruct : Object , INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the NameStruct class.
+        /// </summary>
+        public NameStruct() {}
+
+        /// <summary>
+        /// Initializes a new instance of the NameStruct class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public NameStruct(String value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+
+		/// <summary>
+        /// The naming system within the name is (hopefully) unique.
+        /// </summary>
+        [XmlAttribute("namingSystem")]
+
+        public String NamingSystem {
+            get {
+                return namingSystemField;
+            } 
+            set {
+                namingSystemField = value;
+                NotifyPropertyChanged("NamingSystem");
+            }
+        }
+
+        private String namingSystemField; 
+
+
+		/// <summary>
+        /// Value property
+        /// </summary>
+        [XmlText]
+
+        public String Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private String ValueField; 
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+
+    }
+
+
+
+    namespace ComponentSchemas 
+    {
+
+    /// <summary>
+    /// A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_documentInfo", Namespace="http://www.witsml.org/schemas/1series")]
+
+    [Description("A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.")]
+    public partial class DocumentInfo : Object , INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// An identifier for the document. This is intended to be unique within the context of the NamingSystem.
+        /// </summary>
+		[XmlElement("documentName")]
+
+        public NameStruct DocumentName {
+            get {
+                return documentNameField;
+            } 
+            set {
+                documentNameField = value;
+                NotifyPropertyChanged("DocumentName");
+            }
+        }
+
+        private NameStruct documentNameField; 
+
+
+        /// <summary>
+        /// Zero or more alternate names for the document. These names do not need to be unique within the naming system.
+        /// </summary>
+		[XmlElement("documentAlias")]
+
+        public List<NameStruct> DocumentAlias {
+            get {
+                return documentAliasField;
+            } 
+            set {
+                documentAliasField = value;
+                NotifyPropertyChanged("DocumentAlias");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if DocumentAlias has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool DocumentAliasSpecified
+         {
+             get {
+             if(documentAliasField!=null)
+                 return documentAliasField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<NameStruct> documentAliasField; 
+
+
+        /// <summary>
+        /// The date of the creation of the document. This is not the same as the date that the file was created. For this date, the document is considered to be the set of information associated with this document information. For example, the document may be a seismic binset. This represents the date that the binset was created. The FileCreation information would capture the date that the XML file was created to send or exchange the binset.
+        /// </summary>
+		[XmlElement("documentDate")]
+
+        public DateTime? DocumentDate {
+            get {
+                return documentDateField;
+            } 
+            set {
+                documentDateField = value;
+                 this.DocumentDateSpecified = true;
+                NotifyPropertyChanged("DocumentDate");
+            }
+        }
+
+        private DateTime? documentDateField; 
+
+
+		/// <summary>
+        /// documentDateSpecified property
+        /// </summary>
+        [XmlIgnore]
+		[Browsable(false)]
+
+        public Boolean DocumentDateSpecified {
+            get {
+                return documentDateSpecifiedField;
+            } 
+            set {
+                documentDateSpecifiedField = value;
+                NotifyPropertyChanged("DocumentDateSpecified");
+            }
+        }
+
+        private Boolean documentDateSpecifiedField; 
+
+
+        /// <summary>
+        /// A document class. Examples of classes would be a metadata classification or a set of keywords. 
+        /// </summary>
+		[XmlElement("documentClass")]
+
+        public List<NameStruct> DocumentClass {
+            get {
+                return documentClassField;
+            } 
+            set {
+                documentClassField = value;
+                NotifyPropertyChanged("DocumentClass");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if DocumentClass has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool DocumentClassSpecified
+         {
+             get {
+             if(documentClassField!=null)
+                 return documentClassField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<NameStruct> documentClassField; 
+
+
+        /// <summary>
+        /// The information about the creation of the exchange file. This is not about the creation of the data within the file, but the creation of the file itself.
+        /// </summary>
+		[XmlElement("fileCreationInformation")]
+
+        public DocumentFileCreation FileCreationInformation {
+            get {
+                return fileCreationInformationField;
+            } 
+            set {
+                fileCreationInformationField = value;
+                NotifyPropertyChanged("FileCreationInformation");
+            }
+        }
+
+        private DocumentFileCreation fileCreationInformationField; 
+
+
+        /// <summary>
+        /// Information about the security to be applied to this file. More than one classification can be given.
+        /// </summary>
+		[XmlElement("securityInformation")]
+
+        public List<DocumentSecurityInfo> SecurityInformation {
+            get {
+                return securityInformationField;
+            } 
+            set {
+                securityInformationField = value;
+                NotifyPropertyChanged("SecurityInformation");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if SecurityInformation has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool SecurityInformationSpecified
+         {
+             get {
+             if(securityInformationField!=null)
+                 return securityInformationField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DocumentSecurityInfo> securityInformationField; 
+
+
+        /// <summary>
+        /// A free-form string that allows a disclaimer to accompany the information.
+        /// </summary>
+		[XmlElement("disclaimer")]
+
+        public String Disclaimer {
+            get {
+                return disclaimerField;
+            } 
+            set {
+                disclaimerField = value;
+                NotifyPropertyChanged("Disclaimer");
+            }
+        }
+
+        private String disclaimerField; 
+
+
+        /// <summary>
+        /// A collection of events that can document the history of the data.
+        /// </summary>
+		[XmlArrayItem("event")]
+        [XmlArray("auditTrail")]
+
+        public List<DocumentEvent> AuditTrail {
+            get {
+                return auditTrailField;
+            } 
+            set {
+                auditTrailField = value;
+                NotifyPropertyChanged("AuditTrail");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if AuditTrail has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool AuditTrailSpecified
+         {
+             get {
+             if(auditTrailField!=null)
+                 return auditTrailField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DocumentEvent> auditTrailField; 
+
+
+        /// <summary>
+        /// The owner of the data.
+        /// </summary>
+		[XmlElement("owner")]
+
+        public String Owner {
+            get {
+                return ownerField;
+            } 
+            set {
+                ownerField = value;
+                NotifyPropertyChanged("Owner");
+            }
+        }
+
+        private String ownerField; 
+
+
+        /// <summary>
+        /// An optional comment about the document.
+        /// </summary>
+		[XmlElement("comment")]
+
+        public String Comment {
+            get {
+                return commentField;
+            } 
+            set {
+                commentField = value;
+                NotifyPropertyChanged("Comment");
+            }
+        }
+
+        private String commentField; 
+
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+
+    } //here
+
+    }
+
+
+
     /// <summary>
     /// The WITSML API mandated plural root element which allows multiple singular objects to be sent. The plural name is formed by adding an "s" to the singular name.
     /// </summary>
@@ -20579,14 +20698,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if WellCompletion has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool WellCompletionSpecified
          {
-            get {
+             get {
              if(wellCompletionField!=null)
-                return wellCompletionField.Count>0?true:false;
+                 return wellCompletionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<WellCompletion> wellCompletionField; 
 
@@ -20677,14 +20799,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if WellCMLedger has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool WellCMLedgerSpecified
          {
-            get {
+             get {
              if(wellCMLedgerField!=null)
-                return wellCMLedgerField.Count>0?true:false;
+                 return wellCMLedgerField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<WellCMLedger> wellCMLedgerField; 
 
@@ -20775,14 +20900,17 @@ namespace Energistics.DataAccess.COMPLETION100
             }
         }
 
+         /// <summary>
+         /// bool to indicate if WellboreCompletion has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool WellboreCompletionSpecified
          {
-            get {
+             get {
              if(wellboreCompletionField!=null)
-                return wellboreCompletionField.Count>0?true:false;
+                 return wellboreCompletionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<WellboreCompletion> wellboreCompletionField; 
 
@@ -20796,6 +20924,107 @@ namespace Energistics.DataAccess.COMPLETION100
 		    get
 			{
 			    return WellboreCompletion;
+			}
+        }
+
+		/// <summary>
+        /// Data object schema version.
+        /// </summary>
+        [XmlAttribute("version")]
+
+        public String Version {
+            get {
+                return versionField;
+            } 
+            set {
+                versionField = value;
+                NotifyPropertyChanged("Version");
+            }
+        }
+
+        private String versionField = "1.0"; 
+
+
+
+
+    } //here
+
+
+
+    /// <summary>
+    /// This class represents the obj_downholeComponents xsd type.
+    /// </summary>
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
+    [System.Xml.Serialization.XmlRootAttribute("downholeComponents", Namespace="http://www.witsml.org/schemas/1series", IsNullable=false)]
+
+    [Description("This class represents the obj_downholeComponents xsd type.")]
+    public partial class DownholeComponentList : AbstractObject , IEnergisticsCollection, INotifyPropertyChanged
+    {
+
+
+        /// <summary>
+        /// Information about the downhole component.
+        /// </summary>
+		[XmlElement("documentInfo")]
+
+        public DocumentInfo DocumentInfo {
+            get {
+                return documentInfoField;
+            } 
+            set {
+                documentInfoField = value;
+                NotifyPropertyChanged("DocumentInfo");
+            }
+        }
+
+        private DocumentInfo documentInfoField; 
+
+
+        /// <summary>
+        /// Information about a downhole equipment
+        /// </summary>
+		[XmlElement("downholeComponent")]
+
+        public List<DownholeComponent> DownholeComponent {
+            get {
+                return downholeComponentField;
+            } 
+            set {
+                downholeComponentField = value;
+                NotifyPropertyChanged("DownholeComponent");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if DownholeComponent has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool DownholeComponentSpecified
+         {
+             get {
+             if(downholeComponentField!=null)
+                 return downholeComponentField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DownholeComponent> downholeComponentField; 
+
+
+        /// <summary>
+        /// Information about a downhole equipment
+        /// </summary>
+        [XmlIgnore]		
+        public IList Items
+        {
+		    get
+			{
+			    return DownholeComponent;
 			}
         }
 

@@ -75,6 +75,8 @@
 // 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -82,6 +84,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Serialization;
+using Energistics.SchemaGatherer;
 
 namespace Energistics.Generator
 {
@@ -116,7 +119,7 @@ namespace Energistics.Generator
                 return retval;
             }
         }
-        
+
         public List<string> Flatten()
         {
             List<string> retStrings = new List<string>();
@@ -133,7 +136,7 @@ namespace Energistics.Generator
             }
             return retStrings;
         }
-                
+
         public bool IsSameSequence(string one, string two)
         {
             foreach (ChoiceElement elem in Sequences)
@@ -229,15 +232,15 @@ namespace Energistics.Generator
     }
 
 
-    
-     
-    
+
+
+
     /// <summary>
     /// This is the helper class used by the EnergisticsTextTemplate.tt TextTemplate
     /// It is used to help generated the devkit
     /// </summary>
     public class SchemaSetClassCreator
-    {   
+    {
         private Dictionary<string, string> xmlSchemas = new Dictionary<string, string>();
         private List<Sequence> choices = new List<Sequence>();
         private List<string> enumClassNames;
@@ -249,7 +252,7 @@ namespace Energistics.Generator
         /// Constructor
         /// </summary>
         public SchemaSetClassCreator(string mlPath, string mlVersion, List<string> enumClassNames, string versionString)
-        {            
+        {
             this.mlPath = mlPath;
             this.mlVersion = mlVersion;
             this.enumClassNames = enumClassNames;
@@ -276,7 +279,7 @@ namespace Energistics.Generator
                     }
                 }
 
-                return seq;                
+                return seq;
             }
             else if (element.Name == "xsd:element")
             {
@@ -288,7 +291,8 @@ namespace Energistics.Generator
                 try
                 {
                     normalElement.Unbounded = (element.Attributes["maxOccurs"].Value == "unbounded") ? true : false;
-                }catch(Exception)
+                }
+                catch (Exception)
                 {
                     normalElement.Unbounded = false;
                 }
@@ -325,8 +329,8 @@ namespace Energistics.Generator
 
                     do
                     {
-                        parent = parent.ParentNode; 
-                        
+                        parent = parent.ParentNode;
+
                     } while (parent.Name == "xsd:sequence");
 
                     // 1. if choice are single then it is exclusive.
@@ -344,9 +348,9 @@ namespace Energistics.Generator
                         }
                         else
                             choice.Name = parent.Attributes["name"].Value;
-                    } 
+                    }
                     choices.Add(choice);
-                 
+
 
                     foreach (XmlElement element in choiceElements)
                     {
@@ -354,7 +358,7 @@ namespace Energistics.Generator
                         {
                             choice.Sequences.Add(ParseElement(element));
                         }
-                    }                    
+                    }
                 }
             }
         }
@@ -401,7 +405,10 @@ namespace Energistics.Generator
                 //the duplicate classes are removed.  Classes starting with Item are left in the list since those are generated as part of a XSD choice element.
                 //XSD Choice elements need to be handled separately.
                 return Assembly.GetExecutingAssembly().GetTypes().Except(new Type[] { this.GetType() }).Where(
-                    (t) => !t.IsEnum && t.Namespace == "Energistics.Generator." + mlVersion && !t.Name.Equals("cs_documentInfoQueryPara") && (!t.Name.EndsWith("1") || t.Name.StartsWith("Item")));
+                    (t) => !t.IsEnum
+                        && t.Namespace == "Energistics.Generator." + mlVersion
+                        && !t.Name.Equals("cs_documentInfoQueryPara")
+                        && (!t.Name.EndsWith("1") || t.Name.StartsWith("Item") || mlVersion.StartsWith("WITSML2")));
             }
         }
 
@@ -410,10 +417,73 @@ namespace Energistics.Generator
             get
             {
                 return Assembly.GetExecutingAssembly().GetTypes().Except(new Type[] { this.GetType() }).Where(
-                    (t) => t.IsEnum && t.Namespace == "Energistics.Generator." + mlVersion && (!t.Name.EndsWith("1") || t.Name.StartsWith("Item")));
+                    (t) => t.IsEnum
+                        && t.Namespace == "Energistics.Generator." + mlVersion
+                        && (!t.Name.EndsWith("1") || t.Name.StartsWith("Item") || mlVersion.StartsWith("WITSML2")));
             }
         }
 
+
+        /// <summary>
+        /// Gets the WITSML interface of data object.
+        /// </summary>
+        /// <param name="t">The data object type.</param>
+        /// <returns>The WITSML interface in a string format</returns>
+        public string GetDataObjectInterface(Type t)
+        {
+            bool addInterfaces = bool.Parse(SchemaGatherer.SchemaGatherer.GetAppSetting("INCLUDE_DATA_OBJECT_INTERFACE"));
+
+            if (!addInterfaces)
+            {
+                return string.Empty;
+            }
+
+            var properties = t.GetProperties()
+                .Where(x => x.Name.Contains("uid") || x.Name.Contains("name"))
+                .Where(x => x.PropertyType == typeof(String))
+                .Select(x => x.Name.ToLowerInvariant())
+                .ToList();
+
+            if (properties.Contains("uid") && properties.Contains("name")
+                && properties.Contains("uidwell") && properties.Contains("namewell")
+                && properties.Contains("uidwellbore") && properties.Contains("namewellbore"))
+            {
+                return ", IWellboreObject";
+            }
+            else if (properties.Contains("uid") && properties.Contains("name")
+                && properties.Contains("uidwell") && properties.Contains("namewell"))
+            {
+                return ", IWellObject";
+            }
+            else if (properties.Contains("uid") && properties.Contains("name"))
+            {
+                return ", IDataObject";
+            }
+
+            else if (properties.Contains("uid"))
+            {
+                return ", IUniqueId";
+            }
+
+            return string.Empty;
+        }
+
+        public string GetPropertyType(PropertyInfo property)
+        {
+            if (property.DeclaringType.Name.EndsWith("ChannelData") && property.Name == "Data")
+            {
+                return typeof(XmlCDataSection).Name;
+            }
+
+            return RenameClass(property.PropertyType);
+        }
+
+        public bool IsComponentSchemaType(Type type)
+        {
+            return !type.Name.StartsWith("obj_") &&
+                   !type.Name.Equals("abstractObject", StringComparison.InvariantCultureIgnoreCase) &&
+                   !type.IsDefined(typeof(XmlRootAttribute), false);
+        }
 
         private static Boolean OnceRename = false;
         public string RenameClass(Type t)
@@ -428,69 +498,78 @@ namespace Energistics.Generator
             }
 
             //If the type referred to isn't one of the xsd.exe generated types, don't rename it.
-            if(!t.Assembly.Equals(Assembly.GetExecutingAssembly()))
+            if (!t.Assembly.Equals(Assembly.GetExecutingAssembly()))
             {
                 return t.Name;
             }
 
-                string newName = t.Name;
-                newName = newName.Replace("obj_", "");
+            string newName = t.Name;
+            newName = newName.Replace("obj_", "");
 
-                newName = newName.Replace("cs_", "");
+            newName = newName.Replace("cs_", "");
 
-                newName = string.Format("{0}{1}", newName.Substring(0, 1).ToUpper(), newName.Substring(1, newName.Length - 1));
+            newName = string.Format("{0}{1}", newName.Substring(0, 1).ToUpper(), newName.Substring(1, newName.Length - 1));
 
-                // previous code from exxon only works for version 1.0 , not future code.
-                if (!t.FullName.Contains("RESQML2"))
+            // previous code from exxon only works for version 1.0 , not future code.
+            if (!t.FullName.Contains("RESQML2") && !t.FullName.Contains("WITSML2"))
+            {
+                //There are two trajectoryStation and wbGeometry types in WITSML.  The cs_trajectoryStation is used when the station is a component of a larger
+                //xml document.  The obj_trajectoryStation is used when the trajectory stations represent the top level object in the xml document.
+                //Since trajectory stations are normally a part of a obj_trajectory document, allow that one to use the base name.  Follow a similar pattern
+                //for wbGeometry.
+                if (t.Name.Equals("obj_trajectoryStation") || t.Name.Equals("obj_wbGeometry") || t.Name.Equals("secondDefiningParameter") || t.Name.Equals("cs_resqmlPropertyKind"))
                 {
-                    //There are two trajectoryStation and wbGeometry types in WITSML.  The cs_trajectoryStation is used when the station is a component of a larger
-                    //xml document.  The obj_trajectoryStation is used when the trajectory stations represent the top level object in the xml document.
-                    //Since trajectory stations are normally a part of a obj_trajectory document, allow that one to use the base name.  Follow a similar pattern
-                    //for wbGeometry.
-                    if (t.Name.Equals("obj_trajectoryStation") || t.Name.Equals("obj_wbGeometry") || t.Name.Equals("secondDefiningParameter") || t.Name.Equals("cs_resqmlPropertyKind"))
-                    {
-                        newName = string.Format("StandAlone{0}", newName);
-                    }
+                    newName = string.Format("StandAlone{0}", newName);
+                }
 
-                    //The type listed below have both a class with the given name and an enumeration describing the "type" of that object.  Append "Type" to the name
-                    //of the enumeration to give them unique names.
-                    if (t.IsEnum && (newName.Equals("SupportCraft") || newName.Equals("TubularComponent")))
-                    {
-                        newName = string.Format("{0}Type", newName);
-                    }
+                //The type listed below have both a class with the given name and an enumeration describing the "type" of that object.  Append "Type" to the name
+                //of the enumeration to give them unique names.
+                if (t.IsEnum && (newName.Equals("SupportCraft") || newName.Equals("TubularComponent")))
+                {
+                    newName = string.Format("{0}Type", newName);
+                }
 
-                    //Rename plural class names to from [ClassName]s to [ClassName]List.
-                    if (t.Name.EndsWith("s") && !t.Name.EndsWith("Class") && !t.Name.EndsWith("Status") && !t.Name.EndsWith("Analysis") && !t.Name.StartsWith("cs_") && !t.Name.EndsWith("Press") && !t.Name.Equals("obj_capServers") && !t.Name.Equals("obj_capClients") && !t.Name.Equals("obj_capPublishers") && !t.Name.Equals("obj_capSubscribers"))
-                    {
-                        newName = string.Format("{0}List", newName.Substring(0, newName.Length - 1));
-                    }
+                //Rename plural class names to from [ClassName]s to [ClassName]List.
+                if (t.Name.EndsWith("s") && !t.Name.EndsWith("Class") && !t.Name.EndsWith("Status") && !t.Name.EndsWith("Analysis") && !t.Name.StartsWith("cs_") && !t.Name.EndsWith("Press") && !t.Name.Equals("obj_capServers") && !t.Name.Equals("obj_capClients") && !t.Name.Equals("obj_capPublishers") && !t.Name.Equals("obj_capSubscribers"))
+                {
+                    newName = string.Format("{0}List", newName.Substring(0, newName.Length - 1));
+                }
 
+                //Rename 1 from the end of class names that are duplicated between PRODML and WITSML.
+                if (t.Name.EndsWith("1") && !t.Name.StartsWith("Item"))
+                {
+                    newName = newName.Substring(0, newName.Length - 1);
+                }
+
+                newName = newName.Replace("Wb", "Wellbore");
+
+                if (newName.Equals("Data"))
+                {
+                    newName = "LogCurveInfoData";
+                }
+            }
+            else
+            {
+                if (t.FullName.Contains("WITSML2"))
+                {
                     //Rename 1 from the end of class names that are duplicated between PRODML and WITSML.
                     if (t.Name.EndsWith("1") && !t.Name.StartsWith("Item"))
                     {
                         newName = newName.Substring(0, newName.Length - 1);
                     }
-
-                    newName = newName.Replace("Wb", "Wellbore");
-
-                    if (newName.Equals("Data"))
-                    {
-                        newName = "LogCurveInfoData";
-                    }
                 }
-                else
+
+                //RESQML2.0 there is two same name class declared SecondDefiningParameter.
+                if (!OnceRename)
                 {
-                    //RESQML2.0 there is two same name class declared SecondDefiningParameter.
-                    if (!OnceRename)
+                    if (t.FullName.Contains("secondDefiningParameter"))
                     {
-                        if (t.FullName.Contains("secondDefiningParameter"))
-                            {
-                                newName = newName.Replace("SecondDefiningParameter", "SecondDefParameter");
-                               // OnceRename = true;
-                            } 
+                        newName = newName.Replace("SecondDefiningParameter", "SecondDefParameter");
+                        // OnceRename = true;
                     }
                 }
-             
+            }
+
             return newName;
         }
 
@@ -498,8 +577,8 @@ namespace Energistics.Generator
         /// Rename property name to be more .net compliant
         /// </summary>
         public string RenameProperty(PropertyInfo property)
-        { 
-            string newName = property.Name; 
+        {
+            string newName = property.Name;
             newName = RenamePropertyByName(newName);
             if (property.DeclaringType.Name.Equals("cs_pump") ||
                 property.DeclaringType.Name.Equals("cs_bop") ||
@@ -519,7 +598,7 @@ namespace Energistics.Generator
         /// Rename property name to be more .net compliant
         /// </summary>
         public string RenamePropertyByName(string newName)
-        { 
+        {
             newName = string.Format("{0}{1}", newName.Substring(0, 1).ToUpper(), newName.Substring(1, newName.Length - 1));
             if (newName.CompareTo("Participant") == 0)
             {
@@ -564,7 +643,7 @@ namespace Energistics.Generator
             newName = ReplaceSubstringIfNotPartial(newName, "Dh", "Downhole");
             newName = ReplaceSubstringIfNotPartial(newName, "Ca", "CA");
             newName = ReplaceSubstringIfNotPartial(newName, "Op", "Operating");
-            
+
             return newName;
         }
 
@@ -652,7 +731,7 @@ namespace Energistics.Generator
                     return result;
                 }
             }
-         
+
             return "/// <summary>\n        /// " + name + " property\n        /// </summary>";
         }
 
@@ -660,7 +739,7 @@ namespace Energistics.Generator
         /// Gets the description for use in "summary" tags
         /// </summary>
         public string GetDescription(Type t)
-        { 
+        {
             string typeName = t.Name;
 
             if (typeName.Contains("_"))
@@ -688,16 +767,21 @@ namespace Energistics.Generator
                     sb.Replace("  ", " ");
                     return sb.ToString();
                 }
-            }            
+            }
 
-            return string.Format("This class represents the {0} xsd {1}.", t.Name, t.IsEnum ? "enumeration" : "type" );
+            return string.Format("This class represents the {0} xsd {1}.", t.Name, t.IsEnum ? "enumeration" : "type");
         }
 
+        /// <summary>
+        /// Differentiate the enum name from C# keywords.
+        /// </summary>
+        /// <param name="originalName">Name of the original enum.</param>
+        /// <returns>The name of the enum after treatment.</returns>
         public string GetEnumName(string originalName)
         {
             //Some of the enumeration values duplicate the names of C# keywords.  In those cases, prepend an '@' to the name to indicate to the compiler
             //that the string should be treated literally.
-            string[] keywords = new string[] { "float", "double", "int", "long", "short", "event", "in", "string", "byte", "default", "fixed", "base" };
+            string[] keywords = new string[] { "float", "double", "int", "long", "short", "event", "in", "string", "byte", "default", "fixed", "base", "null" };
 
             if (keywords.Contains(originalName))
             {
@@ -783,7 +867,7 @@ namespace Energistics.Generator
 
         String getPrivateFieldName(String name)
         {
-           return name.Substring(0,1).ToLower() + name.Substring(1, name.Length - 1);
+            return name.Substring(0, 1).ToLower() + name.Substring(1, name.Length - 1);
         }
         /// <summary>
         /// Gets the body of a property. Handles properties that are part of a ordered sequence as well as
@@ -795,7 +879,7 @@ namespace Energistics.Generator
             {
                 string privateFieldName = attr.ElementName + "Field";
                 string publicPropName = RenamePropertyByName(attr.ElementName);
-                
+
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine("{");
                 sb.AppendLine("            get {");
@@ -804,7 +888,7 @@ namespace Energistics.Generator
                 sb.AppendLine("            set {");
 
                 string array = GetArrayString(type, attr);
-                
+
                 foreach (Sequence choice in choices)
                 {
                     if (choice.Name == type.Name)
@@ -830,31 +914,31 @@ namespace Energistics.Generator
                 string wrapperClassName = RenameClass(attr.Type);
                 string propertyName = getPrivateFieldName(publicPropName) + "Specified";
                 sb.AppendLine("                " + privateFieldName + " = value;");
-             
+
                 sb.AppendLine("                " + publicPropName + "Specified = (value!=null);");
                 sb.AppendLine("                NotifyPropertyChanged(\"" + publicPropName + "\");");
                 sb.AppendLine("            }");
                 sb.AppendLine("        }");
                 sb.AppendLine();
-             
+
                 sb.AppendLine("        private " + wrapperClassName + (IsNullable(attr.Type) ? "?" : String.Empty) + array + " " + privateFieldName + "; ");
+                sb.AppendLine("        private bool " + propertyName + " = false; ");
+                sb.AppendLine();
+
+                //here we need to need the specified property.
                 sb.AppendLine("        /// <summary>");
                 sb.AppendLine("        /// bool to indicate if " + publicPropName + " has been set. Used for serialization.");
                 sb.AppendLine("        /// </summary>");
-                //sb.AppendLine("        [XmlIgnore]");
-                sb.AppendLine("        private bool " + propertyName +" = false; ");
-                
-                //here we need to need the specified property.
-                sb.AppendLine("         [XmlIgnore]");
-                sb.AppendLine("         public bool " + publicPropName + "Specified");
-                sb.AppendLine("         {");
+                sb.AppendLine("        [XmlIgnore]");
+                sb.AppendLine("        public bool " + publicPropName + "Specified");
+                sb.AppendLine("        {");
                 sb.AppendLine("            get {");
                 sb.AppendLine("                return " + propertyName + ";");
-                sb.AppendLine("            } ");
+                sb.AppendLine("            }");
                 sb.AppendLine("            set {");
                 sb.AppendLine("                " + propertyName + "= value;");
-                sb.AppendLine("            } ");
-                sb.AppendLine("         }");
+                sb.AppendLine("            }");
+                sb.AppendLine("        }");
                 string realClassName = RenameClass(attr.Type);
 
                 return sb.ToString();
@@ -874,7 +958,7 @@ namespace Energistics.Generator
                 if (type.GetProperty(property.Name + "Specified") != null)
                 {
                     // If this property has a cooresponding 'PropertyName'Specified property, then the setter should also set that property to true
-                    if ((property.PropertyType.IsEnum) || (property.PropertyType.IsValueType)||(property.PropertyType.FullName.ToLower().Contains("boolean")))
+                    if ((property.PropertyType.IsEnum) || (property.PropertyType.IsValueType) || (property.PropertyType.FullName.ToLower().Contains("boolean")))
                     {
                         //ignore
                     }
@@ -886,34 +970,36 @@ namespace Energistics.Generator
                 sb.AppendLine("            }");
                 sb.AppendLine("        }");
                 sb.AppendLine();
-                
+
                 // create the Sepcified field for array list. thus prevent the nil output in xml.
                 // from the research, there is two ways to prevent the null : 1. bool xxxSpecified property 2. ShouldSerializexxx() method
                 if (IsArray(type, property))
                 {
-      
+                    sb.AppendLine("         /// <summary>");
+                    sb.AppendLine("         /// bool to indicate if " + RenameProperty(property) + " has been set. Used for serialization.");
+                    sb.AppendLine("         /// </summary>");
                     sb.AppendLine("         [XmlIgnore]");
                     sb.AppendLine("         public bool " + specifiedBool);
                     sb.AppendLine("         {");
-                    sb.AppendLine("            get {");
-                    if (property.PropertyType == typeof(Byte)||property.PropertyType == typeof(Byte[]))
+                    sb.AppendLine("             get {");
+                    if (property.PropertyType == typeof(Byte) || property.PropertyType == typeof(Byte[]))
                     {
-                        sb.AppendLine("             if("+privateFieldName +"!=null)");
-                        sb.AppendLine("                return " + privateFieldName + ".Length>0?true:false;");
+                        sb.AppendLine("             if(" + privateFieldName + "!=null)");
+                        sb.AppendLine("                 return " + privateFieldName + ".Length>0?true:false;");
                         sb.AppendLine("             else return false;");
-                    } 
+                    }
                     else
                     {
                         sb.AppendLine("             if(" + privateFieldName + "!=null)");
-                        sb.AppendLine("                return " + privateFieldName + ".Count>0?true:false;");
+                        sb.AppendLine("                 return " + privateFieldName + ".Count>0?true:false;");
                         sb.AppendLine("             else return false;");
                     }
-                    sb.AppendLine("            } ");
+                    sb.AppendLine("             }");
                     sb.AppendLine("         }");
                 }
-                sb.AppendLine("        private " + RenameClass(property.PropertyType) + MakePropertyNullable(property) + " " + privateFieldName + ((property.PropertyType == typeof(String) && privateFieldName == "versionField" && !string.IsNullOrEmpty(versionString)) ? String.Format(" = \"{0}\"", versionString) : String.Empty) + "; ");
+                sb.AppendLine("        private " + GetPropertyType(property) + MakePropertyNullable(property) + " " + privateFieldName + ((property.PropertyType == typeof(String) && privateFieldName == "versionField" && !string.IsNullOrEmpty(versionString)) ? String.Format(" = \"{0}\"", versionString) : String.Empty) + "; ");
 
-                
+
                 return sb.ToString();
             }
         }
@@ -927,7 +1013,7 @@ namespace Energistics.Generator
                 property.GetCustomAttributes(typeof(XmlTextAttribute), false).Length == 0 &&
                 property.PropertyType.IsValueType &&
                 //!property.PropertyType.IsEnum && 
-                !property.Name.EndsWith("Specified") && 
+                !property.Name.EndsWith("Specified") &&
                 !enumClassNames.Contains(property.PropertyType.Name)
                 )
             {
@@ -954,7 +1040,7 @@ namespace Energistics.Generator
                 attrIndex.Add(attr.ElementName, attr);
             }
 
-            
+
 
             foreach (Sequence choice in choices)
             {
@@ -962,25 +1048,25 @@ namespace Energistics.Generator
                 {
                     foreach (string sequenceElement in choice.Flatten())
                     {
-                        if (sequenceElement!=null && attrIndex.ContainsKey(sequenceElement))
-                        {                            
+                        if (sequenceElement != null && attrIndex.ContainsKey(sequenceElement))
+                        {
                             ExpandSingleChoiceAttributes(sb, type, property, attrIndex[sequenceElement], choice);
                             attrIndex.Remove(sequenceElement);
-                        }                        
+                        }
                     }
                 }
             }
-           
+
             // this cause the object[]items wrong, it shoudl depends on the property type: array or single then create the correspondent properties.
             // if property is array create the choiceAttribute as array.
             // if property is single, then create signle choiceAttribute.
-            
+
             // Write out the remaining attributes. Since they are not in sequences, order does not matter
             foreach (XmlElementAttribute attr in attrIndex.Values)
             {
                 ExpandSingleChoiceAttributes(sb, type, property, attr, null);
             }
-            
+
 
             return sb.ToString();
         }
@@ -998,20 +1084,123 @@ namespace Energistics.Generator
             }
             else
             {
-                    object[] elementAttr = property.GetCustomAttributes(typeof(XmlElementAttribute), false);
-                    if(elementAttr.Length > 0)
+                object[] elementAttr = property.GetCustomAttributes(typeof(XmlElementAttribute), false);
+                if (elementAttr.Length > 0)
+                {
+                    XmlElementAttribute xmlElemAttr = (elementAttribute[0] as XmlElementAttribute);
+                    return GetXmlElementAttrTag(xmlElemAttr, property);
+                }
+                else
+                {
+                    var xmlElementAttrTag = String.Format("[XmlElement(\"{0}\"", property.Name);
+
+                    if (property.DeclaringType.Name.EndsWith("ChannelData") && property.Name == "Data")
                     {
-					   XmlElementAttribute xmlElemAttr = (elementAttribute[0] as XmlElementAttribute);
-                       return GetXmlElementAttrTag(xmlElemAttr, property);
+                        xmlElementAttrTag += String.Format(", Type=typeof({0})", typeof(XmlCDataSection).Name);
                     }
-                    else
-                    {
-                        return String.Format("[XmlElement(\"{0}\")]", property.Name);
-                    } 
+
+                    xmlElementAttrTag += ")]";
+
+                    return xmlElementAttrTag;
+                }
             }
         }
-        
-        
+
+        /// <summary>
+        /// Get the EnergisticsDataObject attribute string for the specified type.
+        /// </summary>
+        /// <param name="type">The type to create the attribute for.</param>
+        /// <returns>A populated EnergisticsDataObject if the incoming type has this attribute.  The emptry string otherwise.</returns>
+        public string GetEnergisticsDataObjectAttribute(Type type)
+        {
+            var attributes = type.GetCustomAttributes(typeof(EnergisticsDataObjectAttribute), false);
+            if (attributes.Length == 0) return String.Empty;
+
+            var attribute = ((EnergisticsDataObjectAttribute)attributes[0]);
+            return "[" + typeof(EnergisticsDataObjectAttribute).Name + "(StandardFamily." + attribute.StandardFamily + ", \"" + attribute.DataSchemaVersion + "\")]" + Environment.NewLine + "    ";
+        }
+
+        /// <summary>
+        /// Gets validation attributes to the property.
+        /// </summary>
+        /// <param name="type">The type.</param>
+        /// <param name="property">The property.</param>
+        /// <returns>
+        /// The validation attributes for the property.
+        /// </returns>
+        public string GetValidationAttributes(Type type, PropertyInfo property)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            Action init = () =>
+            {
+                if (sb.Length > 0)
+                    sb.AppendLine().Append("        ");
+            };
+
+            var reqs = property.GetCustomAttributes(typeof(RequiredAttribute), false);
+            if (reqs.Length > 0)
+            {
+                init();
+                var req = ((RequiredAttribute)reqs[0]);
+                sb.Append("[Required]");
+            }
+
+            var regexs = property.GetCustomAttributes(typeof(RegularExpressionAttribute), false);
+            if (regexs.Length > 0 && property.PropertyType == typeof(string))
+            {
+                init();
+                var regex = ((RegularExpressionAttribute)regexs[0]);
+                sb.AppendFormat("[RegularExpression(\"{0}\")]", regex.Pattern
+                    .Replace("\\", "\\\\")
+                    .Replace("\"", "\\\""));
+            }
+
+            var lengths = property.GetCustomAttributes(typeof(StringLengthAttribute), false);
+            if (lengths.Length > 0)
+            {
+                init();
+                var length = ((StringLengthAttribute)lengths[0]);
+                sb.AppendFormat("[StringLength({0})]", length.MaximumLength);
+            }
+
+            var ranges = property.GetCustomAttributes(typeof(RangeAttribute), false);
+            if (ranges.Length > 0)
+            {
+                init();
+                var range = ((RangeAttribute)ranges[0]);
+                sb.AppendFormat("[Range({0}, {1})]", range.Minimum, range.Maximum);
+            }
+
+            var descriptions = property.GetCustomAttributes(typeof(DescriptionAttribute), false);
+            if (descriptions.Length > 0)
+            {
+                init();
+                var desc = ((DescriptionAttribute)descriptions[0]);
+                sb.AppendFormat("[Description(\"{0}\")]", desc.Description
+                    .Replace("\\", "\\\\")
+                    .Replace("\"", "\\\""));
+            }
+
+            var propType = property.PropertyType;
+            var nested = propType.GetProperties()
+                .Any(p => p.IsDefined(typeof(XmlElementAttribute), false) ||
+                          p.IsDefined(typeof(XmlAttributeAttribute), false) ||
+                          p.IsDefined(typeof(ValidationAttribute), false));
+
+            if (nested)
+            {
+                init();
+                sb.Append("[ComponentElement]");
+            }
+            else if (propType.IsArray && propType != typeof(byte[]))
+            {
+                init();
+                sb.Append("[RecurringElement]");
+            }
+
+            return sb.ToString();
+        }
 
         /// <summary>
         /// Used by ExpandChoiceAttributes
@@ -1042,13 +1231,13 @@ namespace Energistics.Generator
             }
 
             string array = GetArrayString(type, attr);
-           
+
             sb.AppendLine("        " + GetDescription(type, attr.ElementName, extraDesc));
             //make sure the type is specify in xmlelement annoatation , otherwise the xml output is invalidate.
             sb.AppendLine("        " + GetXmlElementAttrTag(attr, property));
-           // sb.AppendLine("        [XmlElement(\"" + attr.ElementName + "\")]");
+            // sb.AppendLine("        [XmlElement(\"" + attr.ElementName + "\")]");
             sb.AppendLine("        public " + RenameClass(attr.Type) + ((IsNullable(attr.Type)) ? "?" : String.Empty) + array + " " + RenamePropertyByName(attr.ElementName) + " " + GetGetterSetter(attr, type, property));
-            
+
         }
 
         bool IsNullable(Type type)
@@ -1090,11 +1279,11 @@ namespace Energistics.Generator
             string className = RenameClass(type);
             if (property.PropertyType.IsArray)
             {
-                    return true;
+                return true;
             }
             return false;
         }
-                
+
         public bool IsItemsList(Type type, PropertyInfo property)
         {
             string className = RenameClass(type);
@@ -1104,13 +1293,13 @@ namespace Energistics.Generator
                 {
                     return true;
                 }
-                
+
                 string classes = RenameClass(property.PropertyType);
                 Regex regex = new Regex(@"List<(\w*)>");
                 if (regex.IsMatch(classes))
                 {
                     string listType = regex.Match(classes).Groups[1].Value;
-                    
+
                     if (className.StartsWith(listType))
                     {
                         return true;
@@ -1146,7 +1335,7 @@ namespace Energistics.Generator
         /// This is needed because you cannot serialize a complex type as an XmlAttribute
         /// </summary>
         public string GetSurrogate(Type type, PropertyInfo property)
-        { 
+        {
             StringBuilder sb = new StringBuilder();
             string propertyName = RenameProperty(property);
             string surrogateName = propertyName + "Surrogate";
@@ -1154,15 +1343,15 @@ namespace Energistics.Generator
             if (enumClassNames.Contains(property.PropertyType.Name))
             {
                 sb.AppendLine("        public string " + surrogateName);
-                sb.AppendLine("        {");   
+                sb.AppendLine("        {");
                 sb.AppendLine("            get {");
                 sb.AppendLine("                     if(" + propertyName + "==null)  return null;");
-                sb.AppendLine("                     else return " + propertyName + ".Name; }");  
+                sb.AppendLine("                     else return " + propertyName + ".Name; }");
                 sb.AppendLine("            set { \n");
                 sb.AppendLine("                 if(this." + propertyName + "== null)");
-                sb.AppendLine("                 "+ propertyName + "= new " + property.PropertyType.Name + "(value);");
+                sb.AppendLine("                 " + propertyName + "= new " + property.PropertyType.Name + "(value);");
                 sb.AppendLine("                 else");
-                sb.AppendLine("                   "+propertyName + ".Name = value; }");
+                sb.AppendLine("                   " + propertyName + ".Name = value; }");
                 sb.AppendLine("        }");
                 sb.AppendLine("        " + GetDescription(type, property.Name));
                 sb.AppendLine("        [XmlIgnore]");
@@ -1202,21 +1391,20 @@ namespace Energistics.Generator
         public string GetXmlElementAttrTag(XmlElementAttribute xmlElemAttr, PropertyInfo property)
         {
             string elementName = String.IsNullOrEmpty(xmlElemAttr.ElementName) ? property.Name : xmlElemAttr.ElementName;
-           
-       
-           string xmlElementAttrTag = String.Format("[XmlElement(\"{0}\"",elementName);
+
+
+            string xmlElementAttrTag = String.Format("[XmlElement(\"{0}\"", elementName);
 
             if (!String.IsNullOrEmpty(xmlElemAttr.Namespace))
             {
                 xmlElementAttrTag += String.Format(", Namespace=\"{0}\"", xmlElemAttr.Namespace);
             }
-            
+
             if (!String.IsNullOrEmpty(xmlElemAttr.DataType))
             {
                 xmlElementAttrTag += String.Format(", DataType=\"{0}\"", xmlElemAttr.DataType);
             }
 
-           
             xmlElementAttrTag += ")]";
 
             return xmlElementAttrTag;

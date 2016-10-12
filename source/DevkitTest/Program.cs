@@ -14,8 +14,7 @@ using Energistics.DataAccess.COMPLETION100;
 using Energistics.DataAccess.WITSML131;
 using Energistics.DataAccess.WITSML141;
 using Energistics.DataAccess.PRODML122;
-using Energistics.DataAccess.PRODML131;
-using Energistics.DataAccess.RESQML200;
+using Energistics.DataAccess.PRODML131; 
 using Energistics.DataAccess;
 using Energistics.DataAccess.PRODML122.PROD_GenericDataAccess;
 namespace DevkitTest
@@ -82,16 +81,12 @@ namespace DevkitTest
         {
             String product = "";
             String assemblyName = "Energistics.DataAccess"; 
-            testWitsmlObject();
-            /*
-        
-            String assemblyName = "Energistics.DataAccess";
-            // if webservice is up, can use this line to test the webservice
+           // if webservice is up, can use this line to test the webservice
             //Console.WriteLine("Test the WITSML WebServiceAPI ... ");
-            testWITSMLWebService();
+            //testWITSMLWebService();
          
             //Console.WriteLine("Test the PRODML WebServiceAPI ... ");
-            testProdmlWebService();
+            //testProdmlWebService();
 
 
             product = "PRODML_v1.3";
@@ -113,22 +108,8 @@ namespace DevkitTest
 
             product = "PRODML_v1.2.2";
             testDemoFile(assemblyName, "Energistics.DataAccess.PRODML122", product);
-            */
-            product = "RESQML_v2.0";
-            assemblyName = "Energistics.RESQMLDataAccess";
-            testDemoFile(assemblyName, "Energistics.DataAccess.RESQML201", product);
-
-            if (successs == true)
-                Console.WriteLine("test output class successfully!");
-            else
-            {
-                Console.WriteLine("the following test class failed:");
-                foreach (String f in failureList)
-                {
-                    Console.WriteLine(f);
-                }
-            }
-
+     
+           
 
             Console.WriteLine("Press any key to stop...");
             Console.ReadKey();
@@ -347,10 +328,7 @@ namespace DevkitTest
             {
                 return converterWITSML1411(type, xmlstr);
             }
-            if (type.FullName.Contains("RESQML200"))
-            {
-                return converterRESQML200(type, xmlstr);
-            }
+          
             return "";
         }
 
@@ -1050,155 +1028,6 @@ namespace DevkitTest
             return result;
         }
 
-
-
-        private static String converterRESQML200(Type type, string xmlstr)
-        {
-            String xmloutput = "";
-
-            if (type == typeof(Energistics.DataAccess.RESQML200.DiscreteProperty))
-            {
-                Energistics.DataAccess.RESQML200.DiscreteProperty obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.DiscreteProperty>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.EarthModelInterpretation))
-            {
-                Energistics.DataAccess.RESQML200.EarthModelInterpretation obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.EarthModelInterpretation>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.EpcExternalPartReference))
-            {
-                Energistics.DataAccess.RESQML200.EpcExternalPartReference obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.EpcExternalPartReference>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.FaultInterpretation))
-            {
-                Energistics.DataAccess.RESQML200.FaultInterpretation obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.FaultInterpretation>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.GenericFeatureInterpretation))
-            {
-                Energistics.DataAccess.RESQML200.GenericFeatureInterpretation obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.GenericFeatureInterpretation>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.GeneticBoundaryFeature))
-            {
-                Energistics.DataAccess.RESQML200.GeneticBoundaryFeature obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.GeneticBoundaryFeature>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.Grid2dRepresentation))
-            {
-                Energistics.DataAccess.RESQML200.Grid2dRepresentation obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.Grid2dRepresentation>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.HorizonInterpretation))
-            {
-                Energistics.DataAccess.RESQML200.HorizonInterpretation obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.HorizonInterpretation>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.IjkGridRepresentation))
-            {
-                Energistics.DataAccess.RESQML200.IjkGridRepresentation obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.IjkGridRepresentation>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.LocalDepth3dCrs))
-            {
-                Energistics.DataAccess.RESQML200.LocalDepth3dCrs obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.LocalDepth3dCrs>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.LocalTime3dCrs))
-            {
-                Energistics.DataAccess.RESQML200.LocalTime3dCrs obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.LocalTime3dCrs>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.OrganizationFeature))
-            {
-                Energistics.DataAccess.RESQML200.OrganizationFeature obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.OrganizationFeature>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.PointSetRepresentation))
-            {
-                Energistics.DataAccess.RESQML200.PointSetRepresentation obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.PointSetRepresentation>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.PointSetRepresentation))
-            {
-                Energistics.DataAccess.RESQML200.PointSetRepresentation obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.PointSetRepresentation>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            // addition to 1.2
-            if (type == typeof(Energistics.DataAccess.RESQML200.PolylineRepresentation))
-            {
-                Energistics.DataAccess.RESQML200.PolylineRepresentation obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.PolylineRepresentation>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.PolylineSetRepresentation))
-            {
-                Energistics.DataAccess.RESQML200.PolylineSetRepresentation obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.PolylineSetRepresentation>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.PropertyKind))
-            {
-                Energistics.DataAccess.RESQML200.PropertyKind obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.PropertyKind>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.SealedSurfaceFrameworkRepresentation))
-            {
-                Energistics.DataAccess.RESQML200.SealedSurfaceFrameworkRepresentation obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.SealedSurfaceFrameworkRepresentation>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            // addition to 1.2
-            if (type == typeof(Energistics.DataAccess.RESQML200.SeismicLatticeFeature))
-            {
-                Energistics.DataAccess.RESQML200.SeismicLatticeFeature obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.SeismicLatticeFeature>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.StructuralOrganizationInterpretation))
-            {
-                Energistics.DataAccess.RESQML200.StructuralOrganizationInterpretation obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.StructuralOrganizationInterpretation>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.TectonicBoundaryFeature))
-            {
-                Energistics.DataAccess.RESQML200.TectonicBoundaryFeature obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.TectonicBoundaryFeature>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            if (type == typeof(Energistics.DataAccess.RESQML200.TriangulatedSetRepresentation))
-            {
-                Energistics.DataAccess.RESQML200.TriangulatedSetRepresentation obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.TriangulatedSetRepresentation>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            }
-            // addition to 1.2
-            if (type == typeof(Energistics.DataAccess.RESQML200.WellboreFeature))
-            {
-                Energistics.DataAccess.RESQML200.WellboreFeature obj = EnergisticsConverter.XmlToObject<Energistics.DataAccess.RESQML200.WellboreFeature>(xmlstr);
-                xmloutput = EnergisticsConverter.ObjectToXml(obj);
-                return xmloutput;
-            } 
-            return xmloutput;
-        }
 
 
     }

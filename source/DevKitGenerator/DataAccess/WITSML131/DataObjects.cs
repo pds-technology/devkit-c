@@ -595,14 +595,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Function has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool FunctionSpecified
          {
-            get {
+             get {
              if(functionField!=null)
-                return functionField.Count>0?true:false;
+                 return functionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Function> functionField; 
 
@@ -684,14 +687,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if DataObject has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool DataObjectSpecified
          {
-            get {
+             get {
              if(dataObjectField!=null)
-                return dataObjectField.Count>0?true:false;
+                 return dataObjectField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> dataObjectField; 
 
@@ -958,14 +964,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Function has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool FunctionSpecified
          {
-            get {
+             get {
              if(functionField!=null)
-                return functionField.Count>0?true:false;
+                 return functionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Function> functionField; 
 
@@ -1290,14 +1299,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Subscription has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool SubscriptionSpecified
          {
-            get {
+             get {
              if(subscriptionField!=null)
-                return subscriptionField.Count>0?true:false;
+                 return subscriptionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Subscription> subscriptionField; 
 
@@ -1388,14 +1400,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Any has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool AnySpecified
          {
-            get {
+             get {
              if(AnyField!=null)
-                return AnyField.Count>0?true:false;
+                 return AnyField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<XmlElement> AnyField; 
 
@@ -1447,7 +1462,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 encryptField = value;
-             if(value!=null) 
                  this.EncryptSpecified = true;
                 NotifyPropertyChanged("Encrypt");
             }
@@ -1504,7 +1518,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 retryField = value;
-             if(value!=null) 
                  this.RetrySpecified = true;
                 NotifyPropertyChanged("Retry");
             }
@@ -1579,7 +1592,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 retCodeField = value;
-             if(value!=null) 
                  this.RetCodeSpecified = true;
                 NotifyPropertyChanged("RetCode");
             }
@@ -1636,7 +1648,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 testField = value;
-             if(value!=null) 
                  this.TestSpecified = true;
                 NotifyPropertyChanged("Test");
             }
@@ -1675,7 +1686,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 updateIntervalField = value;
-             if(value!=null) 
                  this.UpdateIntervalSpecified = true;
                 NotifyPropertyChanged("UpdateInterval");
             }
@@ -1778,14 +1788,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if BhaRun has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool BhaRunSpecified
          {
-            get {
+             get {
              if(bhaRunField!=null)
-                return bhaRunField.Count>0?true:false;
+                 return bhaRunField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<BhaRun> bhaRunField; 
 
@@ -1897,14 +1910,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if DocumentAlias has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool DocumentAliasSpecified
          {
-            get {
+             get {
              if(DocumentAliasField!=null)
-                return DocumentAliasField.Count>0?true:false;
+                 return DocumentAliasField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<NameStruct> DocumentAliasField; 
 
@@ -1920,7 +1936,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 DocumentDateField = value;
-             if(value!=null) 
                  this.DocumentDateSpecified = true;
                 NotifyPropertyChanged("DocumentDate");
             }
@@ -1963,14 +1978,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if DocumentClass has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool DocumentClassSpecified
          {
-            get {
+             get {
              if(documentClassField!=null)
-                return documentClassField.Count>0?true:false;
+                 return documentClassField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<NameStruct> documentClassField; 
 
@@ -2008,14 +2026,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if SecurityInformation has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool SecurityInformationSpecified
          {
-            get {
+             get {
              if(SecurityInformationField!=null)
-                return SecurityInformationField.Count>0?true:false;
+                 return SecurityInformationField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<SecurityInfoType> SecurityInformationField; 
 
@@ -2054,14 +2075,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if AuditTrail has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool AuditTrailSpecified
          {
-            get {
+             get {
              if(AuditTrailField!=null)
-                return AuditTrailField.Count>0?true:false;
+                 return AuditTrailField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<EventType> AuditTrailField; 
 
@@ -2416,7 +2440,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 EndDateField = value;
-             if(value!=null) 
                  this.EndDateSpecified = true;
                 NotifyPropertyChanged("EndDate");
             }
@@ -2688,7 +2711,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimStartField = value;
-             if(value!=null) 
                  this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
@@ -2727,7 +2749,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimStopField = value;
-             if(value!=null) 
                  this.DateTimeStopSpecified = true;
                 NotifyPropertyChanged("DateTimeStop");
             }
@@ -2766,7 +2787,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimStartDrillingField = value;
-             if(value!=null) 
                  this.DateTimeStartDrillingSpecified = true;
                 NotifyPropertyChanged("DateTimeStartDrilling");
             }
@@ -2805,7 +2825,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimStopDrillingField = value;
-             if(value!=null) 
                  this.DateTimeStopDrillingSpecified = true;
                 NotifyPropertyChanged("DateTimeStopDrilling");
             }
@@ -2954,7 +2973,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numStringRunField = value;
-             if(value!=null) 
                  this.NumStringRunSpecified = true;
                 NotifyPropertyChanged("NumStringRun");
             }
@@ -3261,21 +3279,17 @@ namespace Energistics.DataAccess.WITSML131
     /// This class represents the abstractMeasure xsd type.
     /// </summary>
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeneralMeasureType))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DensityMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerTimeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaPerAreaMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerVolumeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DimensionlessMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IlluminanceMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DynamicViscosityMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FrequencyMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MagneticInductionMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassConcentrationMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellElevationCoord))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellVerticalDepthCoord))]
 
@@ -3290,8 +3304,6 @@ namespace Energistics.DataAccess.WITSML131
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(YAxisAzimuth))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TemperatureSlopeMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeneralMeasureType))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasure))]
 
@@ -3321,13 +3333,23 @@ namespace Energistics.DataAccess.WITSML131
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassPerLengthMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellElevationCoord))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassConcentrationMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MagneticInductionMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MagneticFieldStrengthMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthPerLengthMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IlluminanceMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FrequencyMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerVolumeMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerLengthMeasure))]
 
@@ -3339,15 +3361,11 @@ namespace Energistics.DataAccess.WITSML131
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricPotentialMeasure))]
 
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DynamicViscosityMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DimensionlessMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DensityMeasure))]
-
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaPerAreaMeasure))]
-
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricCurrentMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaMeasure))]
+
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerTimeMeasure))]
 
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerLengthMeasure))]
 
@@ -3807,7 +3825,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numeratorField = value;
-             if(value!=null) 
                  this.NumeratorSpecified = true;
                 NotifyPropertyChanged("Numerator");
             }
@@ -3846,7 +3863,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 denominatorField = value;
-             if(value!=null) 
                  this.DenominatorSpecified = true;
                 NotifyPropertyChanged("Denominator");
             }
@@ -7810,7 +7826,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimCreationField = value;
-             if(value!=null) 
                  this.DateTimeCreationSpecified = true;
                 NotifyPropertyChanged("DateTimeCreation");
             }
@@ -7849,7 +7864,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimLastChangeField = value;
-             if(value!=null) 
                  this.DateTimeLastChangeSpecified = true;
                 NotifyPropertyChanged("DateTimeLastChange");
             }
@@ -7994,14 +8008,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Any has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool AnySpecified
          {
-            get {
+             get {
              if(AnyField!=null)
-                return AnyField.Count>0?true:false;
+                 return AnyField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<XmlElement> AnyField; 
 
@@ -8083,14 +8100,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if CementJob has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool CementJobSpecified
          {
-            get {
+             get {
              if(cementJobField!=null)
-                return cementJobField.Count>0?true:false;
+                 return cementJobField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<CementJob> cementJobField; 
 
@@ -8287,7 +8307,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimJobField = value;
-             if(value!=null) 
                  this.DateTimeJobSpecified = true;
                 NotifyPropertyChanged("DateTimeJob");
             }
@@ -8416,7 +8435,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 offshoreJobField = value;
-             if(value!=null) 
                  this.OffshoreJobSpecified = true;
                 NotifyPropertyChanged("OffshoreJob");
             }
@@ -8473,7 +8491,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 returnsToSeabedField = value;
-             if(value!=null) 
                  this.ReturnsToSeabedSpecified = true;
                 NotifyPropertyChanged("ReturnsToSeabed");
             }
@@ -8512,7 +8529,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 reciprocatingField = value;
-             if(value!=null) 
                  this.ReciprocatingSpecified = true;
                 NotifyPropertyChanged("Reciprocating");
             }
@@ -8699,14 +8715,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if CementStage has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool CementStageSpecified
          {
-            get {
+             get {
              if(cementStageField!=null)
-                return cementStageField.Count>0?true:false;
+                 return cementStageField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<CementStage> cementStageField; 
 
@@ -8776,7 +8795,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimPlugSetField = value;
-             if(value!=null) 
                  this.DateTimePlugSetSpecified = true;
                 NotifyPropertyChanged("DateTimePlugSet");
             }
@@ -8815,7 +8833,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 cementDrillOutField = value;
-             if(value!=null) 
                  this.CementDrillOutSpecified = true;
                 NotifyPropertyChanged("CementDrillOut");
             }
@@ -8854,7 +8871,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimCementDrillOutField = value;
-             if(value!=null) 
                  this.DateTimeCementDrillOutSpecified = true;
                 NotifyPropertyChanged("DateTimeCementDrillOut");
             }
@@ -8929,7 +8945,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimSqueezeField = value;
-             if(value!=null) 
                  this.DateTimeSqueezeSpecified = true;
                 NotifyPropertyChanged("DateTimeSqueeze");
             }
@@ -9004,7 +9019,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimPipeRotStartField = value;
-             if(value!=null) 
                  this.DateTimePipeRotStartSpecified = true;
                 NotifyPropertyChanged("DateTimePipeRotStart");
             }
@@ -9043,7 +9057,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimPipeRotEndField = value;
-             if(value!=null) 
                  this.DateTimePipeRotEndSpecified = true;
                 NotifyPropertyChanged("DateTimePipeRotEnd");
             }
@@ -9154,7 +9167,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimRecipStartField = value;
-             if(value!=null) 
                  this.DateTimeRecipStartSpecified = true;
                 NotifyPropertyChanged("DateTimeRecipStart");
             }
@@ -9193,7 +9205,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimRecipEndField = value;
-             if(value!=null) 
                  this.DateTimeRecipEndSpecified = true;
                 NotifyPropertyChanged("DateTimeRecipEnd");
             }
@@ -9304,7 +9315,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 coilTubingField = value;
-             if(value!=null) 
                  this.CoilTubingSpecified = true;
                 NotifyPropertyChanged("CoilTubing");
             }
@@ -9553,14 +9563,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if WellboreGeometrySection has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool WellboreGeometrySectionSpecified
          {
-            get {
+             get {
              if(wbGeometrySectionField!=null)
-                return wbGeometrySectionField.Count>0?true:false;
+                 return wbGeometrySectionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<WellboreGeometrySection> wbGeometrySectionField; 
 
@@ -9804,7 +9817,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 curveConductorField = value;
-             if(value!=null) 
                  this.CurveConductorSpecified = true;
                 NotifyPropertyChanged("CurveConductor");
             }
@@ -9861,7 +9873,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 factFricField = value;
-             if(value!=null) 
                  this.FactFricSpecified = true;
                 NotifyPropertyChanged("FactFric");
             }
@@ -10000,7 +10011,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimMixStartField = value;
-             if(value!=null) 
                  this.DateTimeMixStartSpecified = true;
                 NotifyPropertyChanged("DateTimeMixStart");
             }
@@ -10039,7 +10049,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimPumpStartField = value;
-             if(value!=null) 
                  this.DateTimePumpStartSpecified = true;
                 NotifyPropertyChanged("DateTimePumpStart");
             }
@@ -10078,7 +10087,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimPumpEndField = value;
-             if(value!=null) 
                  this.DateTimePumpEndSpecified = true;
                 NotifyPropertyChanged("DateTimePumpEnd");
             }
@@ -10117,7 +10125,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimDisplaceStartField = value;
-             if(value!=null) 
                  this.DateTimeDisplaceStartSpecified = true;
                 NotifyPropertyChanged("DateTimeDisplaceStart");
             }
@@ -10372,7 +10379,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 afterFlowAnnField = value;
-             if(value!=null) 
                  this.AfterFlowAnnSpecified = true;
                 NotifyPropertyChanged("AfterFlowAnn");
             }
@@ -10429,7 +10435,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 squeezeObtainedField = value;
-             if(value!=null) 
                  this.SqueezeObtainedSpecified = true;
                 NotifyPropertyChanged("SqueezeObtained");
             }
@@ -10558,7 +10563,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 tailPipeUsedField = value;
-             if(value!=null) 
                  this.TailPipeUsedSpecified = true;
                 NotifyPropertyChanged("TailPipeUsed");
             }
@@ -10615,7 +10619,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 tailPipePerfField = value;
-             if(value!=null) 
                  this.TailPipePerfSpecified = true;
                 NotifyPropertyChanged("TailPipePerf");
             }
@@ -10852,7 +10855,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 presSqueezeHeldField = value;
-             if(value!=null) 
                  this.PresSqueezeHeldSpecified = true;
                 NotifyPropertyChanged("PresSqueezeHeld");
             }
@@ -10999,7 +11001,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 pillBelowPlugField = value;
-             if(value!=null) 
                  this.PillBelowPlugSpecified = true;
                 NotifyPropertyChanged("PillBelowPlug");
             }
@@ -11038,7 +11039,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 plugCatcherField = value;
-             if(value!=null) 
                  this.PlugCatcherSpecified = true;
                 NotifyPropertyChanged("PlugCatcher");
             }
@@ -11329,7 +11329,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 annFlowAfterField = value;
-             if(value!=null) 
                  this.AnnFlowAfterSpecified = true;
                 NotifyPropertyChanged("AnnFlowAfter");
             }
@@ -11368,7 +11367,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 topPlugField = value;
-             if(value!=null) 
                  this.TopPlugSpecified = true;
                 NotifyPropertyChanged("TopPlug");
             }
@@ -11407,7 +11405,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 botPlugField = value;
-             if(value!=null) 
                  this.BotPlugSpecified = true;
                 NotifyPropertyChanged("BotPlug");
             }
@@ -11446,7 +11443,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 botPlugNumberField = value;
-             if(value!=null) 
                  this.BotPlugNumberSpecified = true;
                 NotifyPropertyChanged("BotPlugNumber");
             }
@@ -11485,7 +11481,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 plugBumpedField = value;
-             if(value!=null) 
                  this.PlugBumpedSpecified = true;
                 NotifyPropertyChanged("PlugBumped");
             }
@@ -11578,7 +11573,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 floatHeldField = value;
-             if(value!=null) 
                  this.FloatHeldSpecified = true;
                 NotifyPropertyChanged("FloatHeld");
             }
@@ -11771,7 +11765,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 fluidIndexField = value;
-             if(value!=null) 
                  this.FluidIndexSpecified = true;
                 NotifyPropertyChanged("FluidIndex");
             }
@@ -12444,14 +12437,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if CementAdditive has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool CementAdditiveSpecified
          {
-            get {
+             get {
              if(cementAdditiveField!=null)
-                return cementAdditiveField.Count>0?true:false;
+                 return cementAdditiveField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<CementAdditive> cementAdditiveField; 
 
@@ -12467,7 +12463,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 foamUsedField = value;
-             if(value!=null) 
                  this.FoamUsedSpecified = true;
                 NotifyPropertyChanged("FoamUsed");
             }
@@ -13092,7 +13087,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 strokePumpField = value;
-             if(value!=null) 
                  this.StrokePumpSpecified = true;
                 NotifyPropertyChanged("StrokePump");
             }
@@ -13310,20 +13304,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private String typeConcField; 
+        private bool typeConcSpecified = false; 
+
         /// <summary>
         /// bool to indicate if TypeConc has been set. Used for serialization.
         /// </summary>
-        private bool typeConcSpecified = false; 
-         [XmlIgnore]
-         public bool TypeConcSpecified
-         {
+        [XmlIgnore]
+        public bool TypeConcSpecified
+        {
             get {
                 return typeConcSpecified;
-            } 
+            }
             set {
                 typeConcSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Concentration Amount: unit type depends of typeConc. . If you set this property, you must also set TypeConc.
@@ -13343,20 +13338,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private MassConcentrationMeasure concentrationField; 
+        private bool concentrationSpecified = false; 
+
         /// <summary>
         /// bool to indicate if Concentration has been set. Used for serialization.
         /// </summary>
-        private bool concentrationSpecified = false; 
-         [XmlIgnore]
-         public bool ConcentrationSpecified
-         {
+        [XmlIgnore]
+        public bool ConcentrationSpecified
+        {
             get {
                 return concentrationSpecified;
-            } 
+            }
             set {
                 concentrationSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Concentration in terms of weight per sack.
@@ -13367,8 +13363,8 @@ namespace Energistics.DataAccess.WITSML131
                 return wtSackField;
             } 
             set {
-                if (value != null && VolSackSpecified) throw new Exception("Cannot set property WeightSack when property VolSack is already set");
                 if (value != null && ConcentrationSpecified) throw new Exception("Cannot set property WeightSack when property Concentration is already set");
+                if (value != null && VolSackSpecified) throw new Exception("Cannot set property WeightSack when property VolSack is already set");
                 if (value != null && TypeConcSpecified) throw new Exception("Cannot set property WeightSack when property TypeConc is already set");
                 wtSackField = value;
                 WeightSackSpecified = (value!=null);
@@ -13377,20 +13373,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private MassMeasure wtSackField; 
+        private bool weightSackSpecified = false; 
+
         /// <summary>
         /// bool to indicate if WeightSack has been set. Used for serialization.
         /// </summary>
-        private bool weightSackSpecified = false; 
-         [XmlIgnore]
-         public bool WeightSackSpecified
-         {
+        [XmlIgnore]
+        public bool WeightSackSpecified
+        {
             get {
                 return weightSackSpecified;
-            } 
+            }
             set {
                 weightSackSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Concentration in terms of volume per sack.
@@ -13401,8 +13398,8 @@ namespace Energistics.DataAccess.WITSML131
                 return volSackField;
             } 
             set {
-                if (value != null && WeightSackSpecified) throw new Exception("Cannot set property VolSack when property WeightSack is already set");
                 if (value != null && ConcentrationSpecified) throw new Exception("Cannot set property VolSack when property Concentration is already set");
+                if (value != null && WeightSackSpecified) throw new Exception("Cannot set property VolSack when property WeightSack is already set");
                 if (value != null && TypeConcSpecified) throw new Exception("Cannot set property VolSack when property TypeConc is already set");
                 volSackField = value;
                 VolSackSpecified = (value!=null);
@@ -13411,20 +13408,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private VolumeMeasure volSackField; 
+        private bool volSackSpecified = false; 
+
         /// <summary>
         /// bool to indicate if VolSack has been set. Used for serialization.
         /// </summary>
-        private bool volSackSpecified = false; 
-         [XmlIgnore]
-         public bool VolSackSpecified
-         {
+        [XmlIgnore]
+        public bool VolSackSpecified
+        {
             get {
                 return volSackSpecified;
-            } 
+            }
             set {
                 volSackSpecified= value;
-            } 
-         }
+            }
+        }
 
 
 
@@ -13557,7 +13555,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 cementShoeCollarField = value;
-             if(value!=null) 
                  this.CementShoeCollarSpecified = true;
                 NotifyPropertyChanged("CementShoeCollar");
             }
@@ -13596,7 +13593,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 cetRunField = value;
-             if(value!=null) 
                  this.CetRunSpecified = true;
                 NotifyPropertyChanged("CetRun");
             }
@@ -13635,7 +13631,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 cetBondQualField = value;
-             if(value!=null) 
                  this.CetBondQualSpecified = true;
                 NotifyPropertyChanged("CetBondQual");
             }
@@ -13674,7 +13669,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 cblRunField = value;
-             if(value!=null) 
                  this.CblRunSpecified = true;
                 NotifyPropertyChanged("CblRun");
             }
@@ -13713,7 +13707,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 cblBondQualField = value;
-             if(value!=null) 
                  this.CblBondQualSpecified = true;
                 NotifyPropertyChanged("CblBondQual");
             }
@@ -13770,7 +13763,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 tempSurveyField = value;
-             if(value!=null) 
                  this.TempSurveySpecified = true;
                 NotifyPropertyChanged("TempSurvey");
             }
@@ -13917,7 +13909,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 tocOKField = value;
-             if(value!=null) 
                  this.TocOKSpecified = true;
                 NotifyPropertyChanged("TocOK");
             }
@@ -13974,7 +13965,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 remedialCementField = value;
-             if(value!=null) 
                  this.RemedialCementSpecified = true;
                 NotifyPropertyChanged("RemedialCement");
             }
@@ -14013,7 +14003,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numRemedialField = value;
-             if(value!=null) 
                  this.NumRemedialSpecified = true;
                 NotifyPropertyChanged("NumRemedial");
             }
@@ -14196,7 +14185,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 cementFoundOnToolField = value;
-             if(value!=null) 
                  this.CementFoundOnToolSpecified = true;
                 NotifyPropertyChanged("CementFoundOnTool");
             }
@@ -14319,14 +14307,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ConvCore has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ConvCoreSpecified
          {
-            get {
+             get {
              if(convCoreField!=null)
-                return convCoreField.Count>0?true:false;
+                 return convCoreField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ConvCore> convCoreField; 
 
@@ -14503,7 +14494,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimCoreStartField = value;
-             if(value!=null) 
                  this.DateTimeCoreStartSpecified = true;
                 NotifyPropertyChanged("DateTimeCoreStart");
             }
@@ -14542,7 +14532,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimCoreEndField = value;
-             if(value!=null) 
                  this.DateTimeCoreEndSpecified = true;
                 NotifyPropertyChanged("DateTimeCoreEnd");
             }
@@ -14653,7 +14642,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 innerBarrelUsedField = value;
-             if(value!=null) 
                  this.InnerBarrelUsedSpecified = true;
                 NotifyPropertyChanged("InnerBarrelUsed");
             }
@@ -14854,7 +14842,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 coreOrientationField = value;
-             if(value!=null) 
                  this.CoreOrientationSpecified = true;
                 NotifyPropertyChanged("CoreOrientation");
             }
@@ -15189,7 +15176,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimField = value;
-             if(value!=null) 
                  this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
@@ -15426,7 +15412,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dxcAvField = value;
-             if(value!=null) 
                  this.DxcAverageSpecified = true;
                 NotifyPropertyChanged("DxcAverage");
             }
@@ -15469,14 +15454,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Lithology has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool LithologySpecified
          {
-            get {
+             get {
              if(lithologyField!=null)
-                return lithologyField.Count>0?true:false;
+                 return lithologyField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Lithology> lithologyField; 
 
@@ -15676,14 +15664,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if NameFormation has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool NameFormationSpecified
          {
-            get {
+             get {
              if(nameFormationField!=null)
-                return nameFormationField.Count>0?true:false;
+                 return nameFormationField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> nameFormationField; 
 
@@ -15703,14 +15694,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Lithostratigraphic has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool LithostratigraphicSpecified
          {
-            get {
+             get {
              if(lithostratigraphicField!=null)
-                return lithostratigraphicField.Count>0?true:false;
+                 return lithostratigraphicField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> lithostratigraphicField; 
 
@@ -15730,14 +15724,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Chronostratigraphic has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ChronostratigraphicSpecified
          {
-            get {
+             get {
              if(chronostratigraphicField!=null)
-                return chronostratigraphicField.Count>0?true:false;
+                 return chronostratigraphicField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> chronostratigraphicField; 
 
@@ -16291,14 +16288,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Qualifier has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool QualifierSpecified
          {
-            get {
+             get {
              if(qualifierField!=null)
-                return qualifierField.Count>0?true:false;
+                 return qualifierField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Qualifier> qualifierField; 
 
@@ -17132,7 +17132,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimField = value;
-             if(value!=null) 
                  this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
@@ -17279,7 +17278,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 chromIntRptField = value;
-             if(value!=null) 
                  this.ChromIntRptSpecified = true;
                 NotifyPropertyChanged("ChromIntRpt");
             }
@@ -18242,14 +18240,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if DtsInstalledSystem has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool DtsInstalledSystemSpecified
          {
-            get {
+             get {
              if(dtsInstalledSystemField!=null)
-                return dtsInstalledSystemField.Count>0?true:false;
+                 return dtsInstalledSystemField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<DtsInstalledSystem> dtsInstalledSystemField; 
 
@@ -18390,7 +18391,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 isPlannedField = value;
-             if(value!=null) 
                  this.IsPlannedSpecified = true;
                 NotifyPropertyChanged("IsPlanned");
             }
@@ -18487,14 +18487,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if FiberEndPoint has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool FiberEndPointSpecified
          {
-            get {
+             get {
              if(fiberEndPointField!=null)
-                return fiberEndPointField.Count>0?true:false;
+                 return fiberEndPointField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<FiberEndPoint> fiberEndPointField; 
 
@@ -18533,14 +18536,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if WellboreFiberSchematic has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool WellboreFiberSchematicSpecified
          {
-            get {
+             get {
              if(wellboreFiberSchematicField!=null)
-                return wellboreFiberSchematicField.Count>0?true:false;
+                 return wellboreFiberSchematicField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<SingleInstalledPoint> wellboreFiberSchematicField; 
 
@@ -18596,14 +18602,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if OtdrInstallationTest has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool OtdrInstallationTestSpecified
          {
-            get {
+             get {
              if(otdrInstallationTestField!=null)
-                return otdrInstallationTestField.Count>0?true:false;
+                 return otdrInstallationTestField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Otdr> otdrInstallationTestField; 
 
@@ -18623,14 +18632,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if InstallationCalibration has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool InstallationCalibrationSpecified
          {
-            get {
+             get {
              if(installationCalibrationField!=null)
-                return installationCalibrationField.Count>0?true:false;
+                 return installationCalibrationField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Calibration> installationCalibrationField; 
 
@@ -18874,14 +18886,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Fiber has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool FiberSpecified
          {
-            get {
+             get {
              if(fiberField!=null)
-                return fiberField.Count>0?true:false;
+                 return fiberField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Fiber> fiberField; 
 
@@ -18983,14 +18998,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Type has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool TypeSpecified
          {
-            get {
+             get {
              if(typeField!=null)
-                return typeField.Count>0?true:false;
+                 return typeField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<TypeOptionalClassString> typeField; 
 
@@ -19100,14 +19118,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if RefractiveIndex has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool RefractiveIndexSpecified
          {
-            get {
+             get {
              if(refractiveIndexField!=null)
-                return refractiveIndexField.Count>0?true:false;
+                 return refractiveIndexField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<RefractiveIndex> refractiveIndexField; 
 
@@ -19127,14 +19148,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if OneWayLoss has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool OneWayLossSpecified
          {
-            get {
+             get {
              if(oneWayLossField!=null)
-                return oneWayLossField.Count>0?true:false;
+                 return oneWayLossField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<OneWayLoss> oneWayLossField; 
 
@@ -19154,14 +19178,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Parameter has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ParameterSpecified
          {
-            get {
+             get {
              if(parameterField!=null)
-                return parameterField.Count>0?true:false;
+                 return parameterField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<IndexedObject> parameterField; 
 
@@ -19271,14 +19298,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if FactoryCalibration has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool FactoryCalibrationSpecified
          {
-            get {
+             get {
              if(factoryCalibrationField!=null)
-                return factoryCalibrationField.Count>0?true:false;
+                 return factoryCalibrationField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Calibration> factoryCalibrationField; 
 
@@ -19298,14 +19328,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if InstallationHistory has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool InstallationHistorySpecified
          {
-            get {
+             get {
              if(installationHistoryField!=null)
-                return installationHistoryField.Count>0?true:false;
+                 return installationHistoryField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<RefNameString> installationHistoryField; 
 
@@ -19883,7 +19916,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimCalibrationField = value;
-             if(value!=null) 
                  this.DateTimeCalibrationSpecified = true;
                 NotifyPropertyChanged("DateTimeCalibration");
             }
@@ -19962,14 +19994,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Parameter has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ParameterSpecified
          {
-            get {
+             get {
              if(parameterField!=null)
-                return parameterField.Count>0?true:false;
+                 return parameterField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<CalibrationParameter> parameterField; 
 
@@ -20402,14 +20437,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if NameTag has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool NameTagSpecified
          {
-            get {
+             get {
              if(nameTagField!=null)
-                return nameTagField.Count>0?true:false;
+                 return nameTagField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<NameTag> nameTagField; 
 
@@ -20447,14 +20485,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if FactoryCalibration has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool FactoryCalibrationSpecified
          {
-            get {
+             get {
              if(factoryCalibrationField!=null)
-                return factoryCalibrationField.Count>0?true:false;
+                 return factoryCalibrationField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<InstrumentBoxCalibration> factoryCalibrationField; 
 
@@ -20582,14 +20623,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Parameter has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ParameterSpecified
          {
-            get {
+             get {
              if(parameterField!=null)
-                return parameterField.Count>0?true:false;
+                 return parameterField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<IndexedObject> parameterField; 
 
@@ -20781,7 +20825,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 installationDateField = value;
-             if(value!=null) 
                  this.InstallationDateSpecified = true;
                 NotifyPropertyChanged("InstallationDate");
             }
@@ -20938,7 +20981,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimCalibrationField = value;
-             if(value!=null) 
                  this.DateTimeCalibrationSpecified = true;
                 NotifyPropertyChanged("DateTimeCalibration");
             }
@@ -21017,14 +21059,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Parameter has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ParameterSpecified
          {
-            get {
+             get {
              if(parameterField!=null)
-                return parameterField.Count>0?true:false;
+                 return parameterField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<CalibrationParameter> parameterField; 
 
@@ -21618,20 +21663,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private Boolean? wasDriftRunPerformedField; 
+        private bool wasDriftRunPerformedSpecified = false; 
+
         /// <summary>
         /// bool to indicate if WasDriftRunPerformed has been set. Used for serialization.
         /// </summary>
-        private bool wasDriftRunPerformedSpecified = false; 
-         [XmlIgnore]
-         public bool WasDriftRunPerformedSpecified
-         {
+        [XmlIgnore]
+        public bool WasDriftRunPerformedSpecified
+        {
             get {
                 return wasDriftRunPerformedSpecified;
-            } 
+            }
             set {
                 wasDriftRunPerformedSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// A reference to the OTDR that was run. If an OTDR was run, but there is not instance of the OTDR to reference, choose the wasDriftRunPerformed element, and set it to True.
@@ -21650,20 +21696,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private RefNameString[] OTDRPerformedField; 
+        private bool oTDRPerformedSpecified = false; 
+
         /// <summary>
         /// bool to indicate if OTDRPerformed has been set. Used for serialization.
         /// </summary>
-        private bool oTDRPerformedSpecified = false; 
-         [XmlIgnore]
-         public bool OTDRPerformedSpecified
-         {
+        [XmlIgnore]
+        public bool OTDRPerformedSpecified
+        {
             get {
                 return oTDRPerformedSpecified;
-            } 
+            }
             set {
                 oTDRPerformedSpecified= value;
-            } 
-         }
+            }
+        }
 
 
 
@@ -21701,14 +21748,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if PumpLog has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool PumpLogSpecified
          {
-            get {
+             get {
              if(pumpLogField!=null)
-                return pumpLogField.Count>0?true:false;
+                 return pumpLogField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<PumpLogRow> pumpLogField; 
 
@@ -21996,7 +22046,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimRunField = value;
-             if(value!=null) 
                  this.DateTimeRunSpecified = true;
                 NotifyPropertyChanged("DateTimeRun");
             }
@@ -22173,14 +22222,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if DtsMeasurement has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool DtsMeasurementSpecified
          {
-            get {
+             get {
              if(dtsMeasurementField!=null)
-                return dtsMeasurementField.Count>0?true:false;
+                 return dtsMeasurementField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<DtsMeasurement> dtsMeasurementField; 
 
@@ -22433,14 +22485,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ErrorReport has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ErrorReportSpecified
          {
-            get {
+             get {
              if(errorReportField!=null)
-                return errorReportField.Count>0?true:false;
+                 return errorReportField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ErrorReport> errorReportField; 
 
@@ -22728,14 +22783,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if FluidsReport has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool FluidsReportSpecified
          {
-            get {
+             get {
              if(fluidsReportField!=null)
-                return fluidsReportField.Count>0?true:false;
+                 return fluidsReportField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<FluidsReport> fluidsReportField; 
 
@@ -22930,7 +22988,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numReportField = value;
-             if(value!=null) 
                  this.NumReportSpecified = true;
                 NotifyPropertyChanged("NumReport");
             }
@@ -22973,14 +23030,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Fluid has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool FluidSpecified
          {
-            get {
+             get {
              if(fluidField!=null)
-                return fluidField.Count>0?true:false;
+                 return fluidField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Fluid> fluidField; 
 
@@ -23166,7 +23226,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimField = value;
-             if(value!=null) 
                  this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
@@ -23637,7 +23696,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 phField = value;
-             if(value!=null) 
                  this.PHSpecified = true;
                 NotifyPropertyChanged("PH");
             }
@@ -23860,14 +23918,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Rheometer has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool RheometerSpecified
          {
-            get {
+             get {
              if(rheometerField!=null)
-                return rheometerField.Count>0?true:false;
+                 return rheometerField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Rheometer> rheometerField; 
 
@@ -23991,7 +24052,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 asgField = value;
-             if(value!=null) 
                  this.AsgSpecified = true;
                 NotifyPropertyChanged("Asg");
             }
@@ -24274,7 +24334,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 vis3RpmField = value;
-             if(value!=null) 
                  this.Vis3RpmSpecified = true;
                 NotifyPropertyChanged("Vis3Rpm");
             }
@@ -24313,7 +24372,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 vis6RpmField = value;
-             if(value!=null) 
                  this.Vis6RpmSpecified = true;
                 NotifyPropertyChanged("Vis6Rpm");
             }
@@ -24352,7 +24410,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 vis100RpmField = value;
-             if(value!=null) 
                  this.Vis100RpmSpecified = true;
                 NotifyPropertyChanged("Vis100Rpm");
             }
@@ -24391,7 +24448,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 vis200RpmField = value;
-             if(value!=null) 
                  this.Vis200RpmSpecified = true;
                 NotifyPropertyChanged("Vis200Rpm");
             }
@@ -24430,7 +24486,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 vis300RpmField = value;
-             if(value!=null) 
                  this.Vis300RpmSpecified = true;
                 NotifyPropertyChanged("Vis300Rpm");
             }
@@ -24469,7 +24524,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 vis600RpmField = value;
-             if(value!=null) 
                  this.Vis600RpmSpecified = true;
                 NotifyPropertyChanged("Vis600Rpm");
             }
@@ -24592,14 +24646,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if FormationMarker has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool FormationMarkerSpecified
          {
-            get {
+             get {
              if(formationMarkerField!=null)
-                return formationMarkerField.Count>0?true:false;
+                 return formationMarkerField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<FormationMarker> formationMarkerField; 
 
@@ -25146,14 +25203,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Log has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool LogSpecified
          {
-            get {
+             get {
              if(logField!=null)
-                return logField.Count>0?true:false;
+                 return logField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Log> logField; 
 
@@ -25294,7 +25354,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 objectGrowingField = value;
-             if(value!=null) 
                  this.ObjectGrowingSpecified = true;
                 NotifyPropertyChanged("ObjectGrowing");
             }
@@ -25333,7 +25392,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dataRowCountField = value;
-             if(value!=null) 
                  this.DataRowCountSpecified = true;
                 NotifyPropertyChanged("DataRowCount");
             }
@@ -25408,7 +25466,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 bhaRunNumberField = value;
-             if(value!=null) 
                  this.BhaRunNumberSpecified = true;
                 NotifyPropertyChanged("BhaRunNumber");
             }
@@ -25465,7 +25522,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 creationDateField = value;
-             if(value!=null) 
                  this.CreationDateSpecified = true;
                 NotifyPropertyChanged("CreationDate");
             }
@@ -25594,7 +25650,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 startDateTimeIndexField = value;
-             if(value!=null) 
                  this.StartDateTimeIndexSpecified = true;
                 NotifyPropertyChanged("StartDateTimeIndex");
             }
@@ -25633,7 +25688,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 endDateTimeIndexField = value;
-             if(value!=null) 
                  this.EndDateTimeIndexSpecified = true;
                 NotifyPropertyChanged("EndDateTimeIndex");
             }
@@ -25750,14 +25804,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if LogParam has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool LogParamSpecified
          {
-            get {
+             get {
              if(logParamField!=null)
-                return logParamField.Count>0?true:false;
+                 return logParamField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<IndexedObject> logParamField; 
 
@@ -25777,14 +25834,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if LogCurveInfo has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool LogCurveInfoSpecified
          {
-            get {
+             get {
              if(logCurveInfoField!=null)
-                return logCurveInfoField.Count>0?true:false;
+                 return logCurveInfoField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<LogCurveInfo> logCurveInfoField; 
 
@@ -25805,14 +25865,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if LogData has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool LogDataSpecified
          {
-            get {
+             get {
              if(logDataField!=null)
-                return logDataField.Count>0?true:false;
+                 return logDataField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> logDataField; 
 
@@ -26175,7 +26238,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 alternateIndexField = value;
-             if(value!=null) 
                  this.AlternateIndexSpecified = true;
                 NotifyPropertyChanged("AlternateIndex");
             }
@@ -26268,7 +26330,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 minDateTimeIndexField = value;
-             if(value!=null) 
                  this.MinDateTimeIndexSpecified = true;
                 NotifyPropertyChanged("MinDateTimeIndex");
             }
@@ -26307,7 +26368,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 maxDateTimeIndexField = value;
-             if(value!=null) 
                  this.MaxDateTimeIndexSpecified = true;
                 NotifyPropertyChanged("MaxDateTimeIndex");
             }
@@ -26554,14 +26614,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if AxisDefinition has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool AxisDefinitionSpecified
          {
-            get {
+             get {
              if(axisDefinitionField!=null)
-                return axisDefinitionField.Count>0?true:false;
+                 return axisDefinitionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<AxisDefinition> axisDefinitionField; 
 
@@ -26737,20 +26800,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private Double? doubleValuesField; 
+        private bool doubleValuesSpecified = false; 
+
         /// <summary>
         /// bool to indicate if DoubleValues has been set. Used for serialization.
         /// </summary>
-        private bool doubleValuesSpecified = false; 
-         [XmlIgnore]
-         public bool DoubleValuesSpecified
-         {
+        [XmlIgnore]
+        public bool DoubleValuesSpecified
+        {
             get {
                 return doubleValuesSpecified;
-            } 
+            }
             set {
                 doubleValuesSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// The serialziation of the axis positions of an array as a whitespace-delimited list values of type xsd:String. Note: the serialization of string elements with embedded whitespace cannot be properly decoded.
@@ -26769,20 +26833,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private String stringValuesField; 
+        private bool stringValuesSpecified = false; 
+
         /// <summary>
         /// bool to indicate if StringValues has been set. Used for serialization.
         /// </summary>
-        private bool stringValuesSpecified = false; 
-         [XmlIgnore]
-         public bool StringValuesSpecified
-         {
+        [XmlIgnore]
+        public bool StringValuesSpecified
+        {
             get {
                 return stringValuesSpecified;
-            } 
+            }
             set {
                 stringValuesSpecified= value;
-            } 
-         }
+            }
+        }
 
 
 
@@ -26881,14 +26946,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Message has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool MessageSpecified
          {
-            get {
+             get {
              if(messageField!=null)
-                return messageField.Count>0?true:false;
+                 return messageField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Message> messageField; 
 
@@ -27215,14 +27283,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Param has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ParamSpecified
          {
-            get {
+             get {
              if(paramField!=null)
-                return paramField.Count>0?true:false;
+                 return paramField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<IndexedObject> paramField; 
 
@@ -27589,14 +27660,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if MudLog has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool MudLogSpecified
          {
-            get {
+             get {
              if(mudLogField!=null)
-                return mudLogField.Count>0?true:false;
+                 return mudLogField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<MudLog> mudLogField; 
 
@@ -27737,7 +27811,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 objectGrowingField = value;
-             if(value!=null) 
                  this.ObjectGrowingSpecified = true;
                 NotifyPropertyChanged("ObjectGrowing");
             }
@@ -27776,7 +27849,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimField = value;
-             if(value!=null) 
                  this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
@@ -27891,14 +27963,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if RelatedLog has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool RelatedLogSpecified
          {
-            get {
+             get {
              if(relatedLogField!=null)
-                return relatedLogField.Count>0?true:false;
+                 return relatedLogField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<RefNameString> relatedLogField; 
 
@@ -27918,14 +27993,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Parameter has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ParameterSpecified
          {
-            get {
+             get {
              if(parameterField!=null)
-                return parameterField.Count>0?true:false;
+                 return parameterField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<MudLogParameter> parameterField; 
 
@@ -27945,14 +28023,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if GeologyInterval has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool GeologyIntervalSpecified
          {
-            get {
+             get {
              if(geologyIntervalField!=null)
-                return geologyIntervalField.Count>0?true:false;
+                 return geologyIntervalField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<GeologyInterval> geologyIntervalField; 
 
@@ -28120,7 +28201,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimeField = value;
-             if(value!=null) 
                  this.DTimeSpecified = true;
                 NotifyPropertyChanged("DTime");
             }
@@ -28194,8 +28274,8 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 if (value != null && ConcentrationSpecified) throw new Exception("Cannot set property Force when property Concentration is already set");
-                if (value != null && EquivalentMudWeightSpecified) throw new Exception("Cannot set property Force when property EquivalentMudWeight is already set");
                 if (value != null && PressureGradientSpecified) throw new Exception("Cannot set property Force when property PressureGradient is already set");
+                if (value != null && EquivalentMudWeightSpecified) throw new Exception("Cannot set property Force when property EquivalentMudWeight is already set");
                 forceField = value;
                 ForceSpecified = (value!=null);
                 NotifyPropertyChanged("Force");
@@ -28203,20 +28283,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private ForceMeasure forceField; 
+        private bool forceSpecified = false; 
+
         /// <summary>
         /// bool to indicate if Force has been set. Used for serialization.
         /// </summary>
-        private bool forceSpecified = false; 
-         [XmlIgnore]
-         public bool ForceSpecified
-         {
+        [XmlIgnore]
+        public bool ForceSpecified
+        {
             get {
                 return forceSpecified;
-            } 
+            }
             set {
                 forceSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// A concentration value that represents the parameter.
@@ -28227,9 +28308,9 @@ namespace Energistics.DataAccess.WITSML131
                 return concentrationField;
             } 
             set {
-                if (value != null && EquivalentMudWeightSpecified) throw new Exception("Cannot set property Concentration when property EquivalentMudWeight is already set");
                 if (value != null && ForceSpecified) throw new Exception("Cannot set property Concentration when property Force is already set");
                 if (value != null && PressureGradientSpecified) throw new Exception("Cannot set property Concentration when property PressureGradient is already set");
+                if (value != null && EquivalentMudWeightSpecified) throw new Exception("Cannot set property Concentration when property EquivalentMudWeight is already set");
                 concentrationField = value;
                 ConcentrationSpecified = (value!=null);
                 NotifyPropertyChanged("Concentration");
@@ -28237,20 +28318,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private VolumePerVolumeMeasure concentrationField; 
+        private bool concentrationSpecified = false; 
+
         /// <summary>
         /// bool to indicate if Concentration has been set. Used for serialization.
         /// </summary>
-        private bool concentrationSpecified = false; 
-         [XmlIgnore]
-         public bool ConcentrationSpecified
-         {
+        [XmlIgnore]
+        public bool ConcentrationSpecified
+        {
             get {
                 return concentrationSpecified;
-            } 
+            }
             set {
                 concentrationSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// A equivalent mud weight value that represents the parameter. This commonly used for pressure gradient parameters and pressure parameters.
@@ -28271,20 +28353,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private DensityMeasure equivalentMudWeightField; 
+        private bool equivalentMudWeightSpecified = false; 
+
         /// <summary>
         /// bool to indicate if EquivalentMudWeight has been set. Used for serialization.
         /// </summary>
-        private bool equivalentMudWeightSpecified = false; 
-         [XmlIgnore]
-         public bool EquivalentMudWeightSpecified
-         {
+        [XmlIgnore]
+        public bool EquivalentMudWeightSpecified
+        {
             get {
                 return equivalentMudWeightSpecified;
-            } 
+            }
             set {
                 equivalentMudWeightSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// A pressure gradient value that represents the parameter. This is sometimes specified instead of an equivalent mud weight.
@@ -28296,8 +28379,8 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 if (value != null && ConcentrationSpecified) throw new Exception("Cannot set property PressureGradient when property Concentration is already set");
-                if (value != null && EquivalentMudWeightSpecified) throw new Exception("Cannot set property PressureGradient when property EquivalentMudWeight is already set");
                 if (value != null && ForceSpecified) throw new Exception("Cannot set property PressureGradient when property Force is already set");
+                if (value != null && EquivalentMudWeightSpecified) throw new Exception("Cannot set property PressureGradient when property EquivalentMudWeight is already set");
                 pressureGradientField = value;
                 PressureGradientSpecified = (value!=null);
                 NotifyPropertyChanged("PressureGradient");
@@ -28305,20 +28388,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private ForcePerVolumeMeasure pressureGradientField; 
+        private bool pressureGradientSpecified = false; 
+
         /// <summary>
         /// bool to indicate if PressureGradient has been set. Used for serialization.
         /// </summary>
-        private bool pressureGradientSpecified = false; 
-         [XmlIgnore]
-         public bool PressureGradientSpecified
-         {
+        [XmlIgnore]
+        public bool PressureGradientSpecified
+        {
             get {
                 return pressureGradientSpecified;
-            } 
+            }
             set {
                 pressureGradientSpecified= value;
-            } 
-         }
+            }
+        }
 
 
 
@@ -28435,14 +28519,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if OpsReport has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool OpsReportSpecified
          {
-            get {
+             get {
              if(opsReportField!=null)
-                return opsReportField.Count>0?true:false;
+                 return opsReportField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<OpsReport> opsReportField; 
 
@@ -29051,7 +29138,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numPobField = value;
-             if(value!=null) 
                  this.NumPobSpecified = true;
                 NotifyPropertyChanged("NumPob");
             }
@@ -29090,7 +29176,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numContractField = value;
-             if(value!=null) 
                  this.NumContractSpecified = true;
                 NotifyPropertyChanged("NumContract");
             }
@@ -29129,7 +29214,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numOperatorField = value;
-             if(value!=null) 
                  this.NumOperatorSpecified = true;
                 NotifyPropertyChanged("NumOperator");
             }
@@ -29168,7 +29252,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numServiceField = value;
-             if(value!=null) 
                  this.NumServiceSpecified = true;
                 NotifyPropertyChanged("NumService");
             }
@@ -29211,14 +29294,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Activity has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ActivitySpecified
          {
-            get {
+             get {
              if(activityField!=null)
-                return activityField.Count>0?true:false;
+                 return activityField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Activity> activityField; 
 
@@ -29238,14 +29324,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if DrillingParams has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool DrillingParamsSpecified
          {
-            get {
+             get {
              if(drillingParamsField!=null)
-                return drillingParamsField.Count>0?true:false;
+                 return drillingParamsField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<DrillingParams> drillingParamsField; 
 
@@ -29283,14 +29372,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if DayCost has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool DayCostSpecified
          {
-            get {
+             get {
              if(dayCostField!=null)
-                return dayCostField.Count>0?true:false;
+                 return dayCostField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<DayCost> dayCostField; 
 
@@ -29310,14 +29402,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if TrajectoryStation has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool TrajectoryStationSpecified
          {
-            get {
+             get {
              if(trajectoryStationField!=null)
-                return trajectoryStationField.Count>0?true:false;
+                 return trajectoryStationField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<TrajectoryStation> trajectoryStationField; 
 
@@ -29337,14 +29432,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Fluid has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool FluidSpecified
          {
-            get {
+             get {
              if(fluidField!=null)
-                return fluidField.Count>0?true:false;
+                 return fluidField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Fluid> fluidField; 
 
@@ -29364,14 +29462,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Scr has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ScrSpecified
          {
-            get {
+             get {
              if(scrField!=null)
-                return scrField.Count>0?true:false;
+                 return scrField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Scr> scrField; 
 
@@ -29391,14 +29492,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if PitVolume has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool PitVolumeSpecified
          {
-            get {
+             get {
              if(pitVolumeField!=null)
-                return pitVolumeField.Count>0?true:false;
+                 return pitVolumeField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<PitVolume> pitVolumeField; 
 
@@ -29436,14 +29540,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if MudInventory has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool MudInventorySpecified
          {
-            get {
+             get {
              if(mudInventoryField!=null)
-                return mudInventoryField.Count>0?true:false;
+                 return mudInventoryField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Inventory> mudInventoryField; 
 
@@ -29463,14 +29570,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Bulk has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool BulkSpecified
          {
-            get {
+             get {
              if(bulkField!=null)
-                return bulkField.Count>0?true:false;
+                 return bulkField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Inventory> bulkField; 
 
@@ -29508,14 +29618,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if PumpOperating has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool PumpOperatingSpecified
          {
-            get {
+             get {
              if(pumpOpField!=null)
-                return pumpOpField.Count>0?true:false;
+                 return pumpOpField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<PumpOp> pumpOpField; 
 
@@ -29535,14 +29648,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ShakerOperating has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ShakerOperatingSpecified
          {
-            get {
+             get {
              if(shakerOpField!=null)
-                return shakerOpField.Count>0?true:false;
+                 return shakerOpField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ShakerOp> shakerOpField; 
 
@@ -29580,14 +29696,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Personnel has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool PersonnelSpecified
          {
-            get {
+             get {
              if(personnelField!=null)
-                return personnelField.Count>0?true:false;
+                 return personnelField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Personnel> personnelField; 
 
@@ -29607,14 +29726,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if SupportCraft has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool SupportCraftSpecified
          {
-            get {
+             get {
              if(supportCraftField!=null)
-                return supportCraftField.Count>0?true:false;
+                 return supportCraftField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<SupportCraft> supportCraftField; 
 
@@ -29634,14 +29756,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Weather has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool WeatherSpecified
          {
-            get {
+             get {
              if(weatherField!=null)
-                return weatherField.Count>0?true:false;
+                 return weatherField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Weather> weatherField; 
 
@@ -30133,7 +30258,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimStartField = value;
-             if(value!=null) 
                  this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
@@ -30172,7 +30296,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimEndField = value;
-             if(value!=null) 
                  this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
@@ -30503,7 +30626,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 optimumField = value;
-             if(value!=null) 
                  this.OptimumSpecified = true;
                 NotifyPropertyChanged("Optimum");
             }
@@ -30542,7 +30664,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 productiveField = value;
-             if(value!=null) 
                  this.ProductiveSpecified = true;
                 NotifyPropertyChanged("Productive");
             }
@@ -30845,7 +30966,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 itemSizeField = value;
-             if(value!=null) 
                  this.ItemSizeSpecified = true;
                 NotifyPropertyChanged("ItemSize");
             }
@@ -30884,7 +31004,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 qtyItemField = value;
-             if(value!=null) 
                  this.QtyItemSpecified = true;
                 NotifyPropertyChanged("QtyItem");
             }
@@ -30995,7 +31114,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 isCarryOverField = value;
-             if(value!=null) 
                  this.IsCarryOverSpecified = true;
                 NotifyPropertyChanged("IsCarryOver");
             }
@@ -31034,7 +31152,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 isRentalField = value;
-             if(value!=null) 
                  this.IsRentalSpecified = true;
                 NotifyPropertyChanged("IsRental");
             }
@@ -31077,14 +31194,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if NameTag has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool NameTagSpecified
          {
-            get {
+             get {
              if(nameTagField!=null)
-                return nameTagField.Count>0?true:false;
+                 return nameTagField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<NameTag> nameTagField; 
 
@@ -31172,7 +31292,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 estimatedField = value;
-             if(value!=null) 
                  this.EstimatedSpecified = true;
                 NotifyPropertyChanged("Estimated");
             }
@@ -31396,7 +31515,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimStnField = value;
-             if(value!=null) 
                  this.DateTimeStnSpecified = true;
                 NotifyPropertyChanged("DateTimeStn");
             }
@@ -31815,7 +31933,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 gravAccelCorUsedField = value;
-             if(value!=null) 
                  this.GravAccelCorUsedSpecified = true;
                 NotifyPropertyChanged("GravAccelCorUsed");
             }
@@ -31854,7 +31971,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 magXAxialCorUsedField = value;
-             if(value!=null) 
                  this.MagXAxialCorUsedSpecified = true;
                 NotifyPropertyChanged("MagXAxialCorUsed");
             }
@@ -31893,7 +32009,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 sagCorUsedField = value;
-             if(value!=null) 
                  this.SagCorUsedSpecified = true;
                 NotifyPropertyChanged("SagCorUsed");
             }
@@ -31932,7 +32047,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 magDrlstrCorUsedField = value;
-             if(value!=null) 
                  this.MagDrlstrCorUsedSpecified = true;
                 NotifyPropertyChanged("MagDrlstrCorUsed");
             }
@@ -32193,14 +32307,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Location has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool LocationSpecified
          {
-            get {
+             get {
              if(locationField!=null)
-                return locationField.Count>0?true:false;
+                 return locationField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Location> locationField; 
 
@@ -33038,13 +33155,13 @@ namespace Energistics.DataAccess.WITSML131
                 return latitudeField;
             } 
             set {
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property Latitude when property Easting is already set");
                 if (value != null && LocalXSpecified) throw new Exception("Cannot set property Latitude when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property Latitude when property LocalY is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property Latitude when property Westing is already set");
+                if (value != null && SouthingSpecified) throw new Exception("Cannot set property Latitude when property Southing is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property Latitude when property Easting is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property Latitude when property Northing is already set");
                 if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Latitude when property ProjectedX is already set");
-                if (value != null && SouthingSpecified) throw new Exception("Cannot set property Latitude when property Southing is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Latitude when property ProjectedY is already set");
                 latitudeField = value;
                 LatitudeSpecified = (value!=null);
@@ -33053,20 +33170,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private PlaneAngleMeasure latitudeField; 
+        private bool latitudeSpecified = false; 
+
         /// <summary>
         /// bool to indicate if Latitude has been set. Used for serialization.
         /// </summary>
-        private bool latitudeSpecified = false; 
-         [XmlIgnore]
-         public bool LatitudeSpecified
-         {
+        [XmlIgnore]
+        public bool LatitudeSpecified
+        {
             get {
                 return latitudeSpecified;
-            } 
+            }
             set {
                 latitudeSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// The longitude with east being positive. If you set this property, you must also set Latitude.
@@ -33077,13 +33195,13 @@ namespace Energistics.DataAccess.WITSML131
                 return longitudeField;
             } 
             set {
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property Longitude when property Easting is already set");
                 if (value != null && LocalXSpecified) throw new Exception("Cannot set property Longitude when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property Longitude when property LocalY is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property Longitude when property Westing is already set");
+                if (value != null && SouthingSpecified) throw new Exception("Cannot set property Longitude when property Southing is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property Longitude when property Easting is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property Longitude when property Northing is already set");
                 if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Longitude when property ProjectedX is already set");
-                if (value != null && SouthingSpecified) throw new Exception("Cannot set property Longitude when property Southing is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Longitude when property ProjectedY is already set");
                 longitudeField = value;
                 LongitudeSpecified = (value!=null);
@@ -33092,20 +33210,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private PlaneAngleMeasure longitudeField; 
+        private bool longitudeSpecified = false; 
+
         /// <summary>
         /// bool to indicate if Longitude has been set. Used for serialization.
         /// </summary>
-        private bool longitudeSpecified = false; 
-         [XmlIgnore]
-         public bool LongitudeSpecified
-         {
+        [XmlIgnore]
+        public bool LongitudeSpecified
+        {
             get {
                 return longitudeSpecified;
-            } 
+            }
             set {
                 longitudeSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// The projected coordinate with east being positive. This is the most common type of projected coordinates. UTM coordinates are expressed in Easting and Northing. If you set this property, you must also set Northing.
@@ -33116,13 +33235,13 @@ namespace Energistics.DataAccess.WITSML131
                 return eastingField;
             } 
             set {
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Easting when property Longitude is already set");
                 if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Easting when property Latitude is already set");
                 if (value != null && LocalXSpecified) throw new Exception("Cannot set property Easting when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property Easting when property LocalY is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property Easting when property Westing is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Easting when property ProjectedX is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Easting when property Longitude is already set");
                 if (value != null && SouthingSpecified) throw new Exception("Cannot set property Easting when property Southing is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Easting when property ProjectedX is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Easting when property ProjectedY is already set");
                 eastingField = value;
                 EastingSpecified = (value!=null);
@@ -33131,20 +33250,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private LengthMeasure eastingField; 
+        private bool eastingSpecified = false; 
+
         /// <summary>
         /// bool to indicate if Easting has been set. Used for serialization.
         /// </summary>
-        private bool eastingSpecified = false; 
-         [XmlIgnore]
-         public bool EastingSpecified
-         {
+        [XmlIgnore]
+        public bool EastingSpecified
+        {
             get {
                 return eastingSpecified;
-            } 
+            }
             set {
                 eastingSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// The projected coordinate with north being positive. This is the most common type of projected coordinates. UTM coordinates are expressed in Easting and Northing. If you set this property, you must also set Easting.
@@ -33155,13 +33275,13 @@ namespace Energistics.DataAccess.WITSML131
                 return northingField;
             } 
             set {
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Northing when property Longitude is already set");
                 if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Northing when property Latitude is already set");
                 if (value != null && LocalXSpecified) throw new Exception("Cannot set property Northing when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property Northing when property LocalY is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property Northing when property Westing is already set");
-                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Northing when property ProjectedX is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Northing when property Longitude is already set");
                 if (value != null && SouthingSpecified) throw new Exception("Cannot set property Northing when property Southing is already set");
+                if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Northing when property ProjectedX is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Northing when property ProjectedY is already set");
                 northingField = value;
                 NorthingSpecified = (value!=null);
@@ -33170,20 +33290,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private LengthMeasure northingField; 
+        private bool northingSpecified = false; 
+
         /// <summary>
         /// bool to indicate if Northing has been set. Used for serialization.
         /// </summary>
-        private bool northingSpecified = false; 
-         [XmlIgnore]
-         public bool NorthingSpecified
-         {
+        [XmlIgnore]
+        public bool NorthingSpecified
+        {
             get {
                 return northingSpecified;
-            } 
+            }
             set {
                 northingSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// The projected coordinate with west being positive. The positive directions are reversed from the usual Easting and Northing values. These values are generally located in the southern hemisphere, most notably in South Africa and Australia. If you set this property, you must also set Southing.
@@ -33194,11 +33315,11 @@ namespace Energistics.DataAccess.WITSML131
                 return westingField;
             } 
             set {
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Westing when property Longitude is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property Westing when property Easting is already set");
                 if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Westing when property Latitude is already set");
                 if (value != null && LocalXSpecified) throw new Exception("Cannot set property Westing when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property Westing when property LocalY is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Westing when property Longitude is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property Westing when property Easting is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property Westing when property Northing is already set");
                 if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Westing when property ProjectedX is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Westing when property ProjectedY is already set");
@@ -33209,20 +33330,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private LengthMeasure westingField; 
+        private bool westingSpecified = false; 
+
         /// <summary>
         /// bool to indicate if Westing has been set. Used for serialization.
         /// </summary>
-        private bool westingSpecified = false; 
-         [XmlIgnore]
-         public bool WestingSpecified
-         {
+        [XmlIgnore]
+        public bool WestingSpecified
+        {
             get {
                 return westingSpecified;
-            } 
+            }
             set {
                 westingSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// The projected coordinate with south being positive. The positive directions are reversed from the usual Easting and Northing values. These values are generally located in the southern hemisphere, most notably in South Africa and Australia. If you set this property, you must also set Westing.
@@ -33233,11 +33355,11 @@ namespace Energistics.DataAccess.WITSML131
                 return southingField;
             } 
             set {
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Southing when property Longitude is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property Southing when property Easting is already set");
                 if (value != null && LatitudeSpecified) throw new Exception("Cannot set property Southing when property Latitude is already set");
                 if (value != null && LocalXSpecified) throw new Exception("Cannot set property Southing when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property Southing when property LocalY is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property Southing when property Longitude is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property Southing when property Easting is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property Southing when property Northing is already set");
                 if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property Southing when property ProjectedX is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property Southing when property ProjectedY is already set");
@@ -33248,20 +33370,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private LengthMeasure southingField; 
+        private bool southingSpecified = false; 
+
         /// <summary>
         /// bool to indicate if Southing has been set. Used for serialization.
         /// </summary>
-        private bool southingSpecified = false; 
-         [XmlIgnore]
-         public bool SouthingSpecified
-         {
+        [XmlIgnore]
+        public bool SouthingSpecified
+        {
             get {
                 return southingSpecified;
-            } 
+            }
             set {
                 southingSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// The projected X coordinate with the positive direction unknown. ProjectedX and ProjectedY are used when it is not known what the meaning of the coordinates is. If the meaning is known, the Easting/Northing or Westing/Southing should be used. Use of this pair implies a lack of knowledge on the part of the sender. If you set this property, you must also set ProjectedY.
@@ -33272,14 +33395,14 @@ namespace Energistics.DataAccess.WITSML131
                 return projectedXField;
             } 
             set {
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property ProjectedX when property Longitude is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property ProjectedX when property Easting is already set");
                 if (value != null && LatitudeSpecified) throw new Exception("Cannot set property ProjectedX when property Latitude is already set");
                 if (value != null && LocalXSpecified) throw new Exception("Cannot set property ProjectedX when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property ProjectedX when property LocalY is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property ProjectedX when property Westing is already set");
-                if (value != null && NorthingSpecified) throw new Exception("Cannot set property ProjectedX when property Northing is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property ProjectedX when property Longitude is already set");
                 if (value != null && SouthingSpecified) throw new Exception("Cannot set property ProjectedX when property Southing is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property ProjectedX when property Easting is already set");
+                if (value != null && NorthingSpecified) throw new Exception("Cannot set property ProjectedX when property Northing is already set");
                 projectedXField = value;
                 ProjectedXSpecified = (value!=null);
                 NotifyPropertyChanged("ProjectedX");
@@ -33287,20 +33410,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private LengthMeasure projectedXField; 
+        private bool projectedXSpecified = false; 
+
         /// <summary>
         /// bool to indicate if ProjectedX has been set. Used for serialization.
         /// </summary>
-        private bool projectedXSpecified = false; 
-         [XmlIgnore]
-         public bool ProjectedXSpecified
-         {
+        [XmlIgnore]
+        public bool ProjectedXSpecified
+        {
             get {
                 return projectedXSpecified;
-            } 
+            }
             set {
                 projectedXSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// The projected Y coordinate with the positive direction unknown. ProjectedX and ProjectedY are used when it is not known what the meaning of the coordinates is. If the meaning is known, the Easting/Northing or Westing/Southing should be used. Use of this pair implies a lack of knowledge on the part of the sender. If you set this property, you must also set ProjectedX.
@@ -33311,14 +33435,14 @@ namespace Energistics.DataAccess.WITSML131
                 return projectedYField;
             } 
             set {
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property ProjectedY when property Longitude is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property ProjectedY when property Easting is already set");
                 if (value != null && LatitudeSpecified) throw new Exception("Cannot set property ProjectedY when property Latitude is already set");
                 if (value != null && LocalXSpecified) throw new Exception("Cannot set property ProjectedY when property LocalX is already set");
                 if (value != null && LocalYSpecified) throw new Exception("Cannot set property ProjectedY when property LocalY is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property ProjectedY when property Westing is already set");
-                if (value != null && NorthingSpecified) throw new Exception("Cannot set property ProjectedY when property Northing is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property ProjectedY when property Longitude is already set");
                 if (value != null && SouthingSpecified) throw new Exception("Cannot set property ProjectedY when property Southing is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property ProjectedY when property Easting is already set");
+                if (value != null && NorthingSpecified) throw new Exception("Cannot set property ProjectedY when property Northing is already set");
                 projectedYField = value;
                 ProjectedYSpecified = (value!=null);
                 NotifyPropertyChanged("ProjectedY");
@@ -33326,20 +33450,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private LengthMeasure projectedYField; 
+        private bool projectedYSpecified = false; 
+
         /// <summary>
         /// bool to indicate if ProjectedY has been set. Used for serialization.
         /// </summary>
-        private bool projectedYSpecified = false; 
-         [XmlIgnore]
-         public bool ProjectedYSpecified
-         {
+        [XmlIgnore]
+        public bool ProjectedYSpecified
+        {
             get {
                 return projectedYSpecified;
-            } 
+            }
             set {
                 projectedYSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// The local (engineering) X coordinate. The CRS will define the orientation of the axis. If you set this property, you must also set LocalY.
@@ -33350,13 +33475,13 @@ namespace Energistics.DataAccess.WITSML131
                 return localXField;
             } 
             set {
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property LocalX when property Longitude is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property LocalX when property Easting is already set");
                 if (value != null && LatitudeSpecified) throw new Exception("Cannot set property LocalX when property Latitude is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property LocalX when property Westing is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property LocalX when property Longitude is already set");
+                if (value != null && SouthingSpecified) throw new Exception("Cannot set property LocalX when property Southing is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property LocalX when property Easting is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property LocalX when property Northing is already set");
                 if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property LocalX when property ProjectedX is already set");
-                if (value != null && SouthingSpecified) throw new Exception("Cannot set property LocalX when property Southing is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property LocalX when property ProjectedY is already set");
                 localXField = value;
                 LocalXSpecified = (value!=null);
@@ -33365,20 +33490,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private LengthMeasure localXField; 
+        private bool localXSpecified = false; 
+
         /// <summary>
         /// bool to indicate if LocalX has been set. Used for serialization.
         /// </summary>
-        private bool localXSpecified = false; 
-         [XmlIgnore]
-         public bool LocalXSpecified
-         {
+        [XmlIgnore]
+        public bool LocalXSpecified
+        {
             get {
                 return localXSpecified;
-            } 
+            }
             set {
                 localXSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// The local (engineering) Y coordinate. The CRS will define the orientation of the axis. If you set this property, you must also set LocalX.
@@ -33389,13 +33515,13 @@ namespace Energistics.DataAccess.WITSML131
                 return localYField;
             } 
             set {
-                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property LocalY when property Longitude is already set");
-                if (value != null && EastingSpecified) throw new Exception("Cannot set property LocalY when property Easting is already set");
                 if (value != null && LatitudeSpecified) throw new Exception("Cannot set property LocalY when property Latitude is already set");
                 if (value != null && WestingSpecified) throw new Exception("Cannot set property LocalY when property Westing is already set");
+                if (value != null && LongitudeSpecified) throw new Exception("Cannot set property LocalY when property Longitude is already set");
+                if (value != null && SouthingSpecified) throw new Exception("Cannot set property LocalY when property Southing is already set");
+                if (value != null && EastingSpecified) throw new Exception("Cannot set property LocalY when property Easting is already set");
                 if (value != null && NorthingSpecified) throw new Exception("Cannot set property LocalY when property Northing is already set");
                 if (value != null && ProjectedXSpecified) throw new Exception("Cannot set property LocalY when property ProjectedX is already set");
-                if (value != null && SouthingSpecified) throw new Exception("Cannot set property LocalY when property Southing is already set");
                 if (value != null && ProjectedYSpecified) throw new Exception("Cannot set property LocalY when property ProjectedY is already set");
                 localYField = value;
                 LocalYSpecified = (value!=null);
@@ -33404,20 +33530,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private LengthMeasure localYField; 
+        private bool localYSpecified = false; 
+
         /// <summary>
         /// bool to indicate if LocalY has been set. Used for serialization.
         /// </summary>
-        private bool localYSpecified = false; 
-         [XmlIgnore]
-         public bool LocalYSpecified
-         {
+        [XmlIgnore]
+        public bool LocalYSpecified
+        {
             get {
                 return localYSpecified;
-            } 
+            }
             set {
                 localYSpecified= value;
-            } 
-         }
+            }
+        }
 
 
 
@@ -33437,14 +33564,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ItemsElementName has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ItemsElementNameSpecified
          {
-            get {
+             get {
              if(ItemsElementNameField!=null)
-                return ItemsElementNameField.Count>0?true:false;
+                 return ItemsElementNameField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ItemsChoiceType> ItemsElementNameField; 
 
@@ -33460,7 +33590,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 originalField = value;
-             if(value!=null) 
                  this.OriginalSpecified = true;
                 NotifyPropertyChanged("Original");
             }
@@ -33974,7 +34103,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimField = value;
-             if(value!=null) 
                  this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
@@ -34697,20 +34825,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private MassMeasure itemWtPerUnitField; 
+        private bool itemWeightPerUnitSpecified = false; 
+
         /// <summary>
         /// bool to indicate if ItemWeightPerUnit has been set. Used for serialization.
         /// </summary>
-        private bool itemWeightPerUnitSpecified = false; 
-         [XmlIgnore]
-         public bool ItemWeightPerUnitSpecified
-         {
+        [XmlIgnore]
+        public bool ItemWeightPerUnitSpecified
+        {
             get {
                 return itemWeightPerUnitSpecified;
-            } 
+            }
             set {
                 itemWeightPerUnitSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Volume per item unit. 
@@ -34729,20 +34858,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private VolumeMeasure itemVolPerUnitField; 
+        private bool itemVolPerUnitSpecified = false; 
+
         /// <summary>
         /// bool to indicate if ItemVolPerUnit has been set. Used for serialization.
         /// </summary>
-        private bool itemVolPerUnitSpecified = false; 
-         [XmlIgnore]
-         public bool ItemVolPerUnitSpecified
-         {
+        [XmlIgnore]
+        public bool ItemVolPerUnitSpecified
+        {
             get {
                 return itemVolPerUnitSpecified;
-            } 
+            }
             set {
                 itemVolPerUnitSpecified= value;
-            } 
-         }
+            }
+        }
 
 
 
@@ -34775,7 +34905,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 qtyStartField = value;
-             if(value!=null) 
                  this.QtyStartSpecified = true;
                 NotifyPropertyChanged("QtyStart");
             }
@@ -34814,7 +34943,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 qtyAdjustmentField = value;
-             if(value!=null) 
                  this.QtyAdjustmentSpecified = true;
                 NotifyPropertyChanged("QtyAdjustment");
             }
@@ -34853,7 +34981,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 qtyReceivedField = value;
-             if(value!=null) 
                  this.QtyReceivedSpecified = true;
                 NotifyPropertyChanged("QtyReceived");
             }
@@ -34892,7 +35019,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 qtyReturnedField = value;
-             if(value!=null) 
                  this.QtyReturnedSpecified = true;
                 NotifyPropertyChanged("QtyReturned");
             }
@@ -34931,7 +35057,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 qtyUsedField = value;
-             if(value!=null) 
                  this.QtyUsedSpecified = true;
                 NotifyPropertyChanged("QtyUsed");
             }
@@ -34988,7 +35113,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 qtyOnLocationField = value;
-             if(value!=null) 
                  this.QtyOnLocationSpecified = true;
                 NotifyPropertyChanged("QtyOnLocation");
             }
@@ -35095,14 +35219,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if AnchorTension has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool AnchorTensionSpecified
          {
-            get {
+             get {
              if(anchorTensionField!=null)
-                return anchorTensionField.Count>0?true:false;
+                 return anchorTensionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<IndexedObject> anchorTensionField; 
 
@@ -35122,14 +35249,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if AnchorAngle has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool AnchorAngleSpecified
          {
-            get {
+             get {
              if(anchorAngleField!=null)
-                return anchorAngleField.Count>0?true:false;
+                 return anchorAngleField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<IndexedObject> anchorAngleField; 
 
@@ -35605,7 +35735,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimField = value;
-             if(value!=null) 
                  this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
@@ -35926,7 +36055,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimField = value;
-             if(value!=null) 
                  this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
@@ -36083,7 +36211,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimStartField = value;
-             if(value!=null) 
                  this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
@@ -36122,7 +36249,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimEndField = value;
-             if(value!=null) 
                  this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
@@ -36161,7 +36287,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numDeckField = value;
-             if(value!=null) 
                  this.NumDeckSpecified = true;
                 NotifyPropertyChanged("NumDeck");
             }
@@ -36358,14 +36483,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Incident has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool IncidentSpecified
          {
-            get {
+             get {
              if(incidentField!=null)
-                return incidentField.Count>0?true:false;
+                 return incidentField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Incident> incidentField; 
 
@@ -36381,7 +36509,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 lastCsgPresTestField = value;
-             if(value!=null) 
                  this.LastCsgPresTestSpecified = true;
                 NotifyPropertyChanged("LastCsgPresTest");
             }
@@ -36438,7 +36565,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 lastBopPresTestField = value;
-             if(value!=null) 
                  this.LastBopPresTestSpecified = true;
                 NotifyPropertyChanged("LastBopPresTest");
             }
@@ -36477,7 +36603,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 nextBopPresTestField = value;
-             if(value!=null) 
                  this.NextBopPresTestSpecified = true;
                 NotifyPropertyChanged("NextBopPresTest");
             }
@@ -36642,7 +36767,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 lastFireBoatDrillField = value;
-             if(value!=null) 
                  this.LastFireBoatDrillSpecified = true;
                 NotifyPropertyChanged("LastFireBoatDrill");
             }
@@ -36681,7 +36805,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 lastAbandonDrillField = value;
-             if(value!=null) 
                  this.LastAbandonDrillSpecified = true;
                 NotifyPropertyChanged("LastAbandonDrill");
             }
@@ -36720,7 +36843,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 lastRigInspectionField = value;
-             if(value!=null) 
                  this.LastRigInspectionSpecified = true;
                 NotifyPropertyChanged("LastRigInspection");
             }
@@ -36759,7 +36881,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 lastSafetyMeetingField = value;
-             if(value!=null) 
                  this.LastSafetyMeetingSpecified = true;
                 NotifyPropertyChanged("LastSafetyMeeting");
             }
@@ -36798,7 +36919,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 lastSafetyInspectionField = value;
-             if(value!=null) 
                  this.LastSafetyInspectionSpecified = true;
                 NotifyPropertyChanged("LastSafetyInspection");
             }
@@ -36837,7 +36957,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 lastTripDrillField = value;
-             if(value!=null) 
                  this.LastTripDrillSpecified = true;
                 NotifyPropertyChanged("LastTripDrill");
             }
@@ -36876,7 +36995,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 lastDiverterDrillField = value;
-             if(value!=null) 
                  this.LastDiverterDrillSpecified = true;
                 NotifyPropertyChanged("LastDiverterDrill");
             }
@@ -36915,7 +37033,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 lastBopDrillField = value;
-             if(value!=null) 
                  this.LastBopDrillSpecified = true;
                 NotifyPropertyChanged("LastBopDrill");
             }
@@ -36954,7 +37071,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 regAgencyInspField = value;
-             if(value!=null) 
                  this.RegAgencyInspSpecified = true;
                 NotifyPropertyChanged("RegAgencyInsp");
             }
@@ -36993,7 +37109,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 nonComplianceIssuedField = value;
-             if(value!=null) 
                  this.NonComplianceIssuedSpecified = true;
                 NotifyPropertyChanged("NonComplianceIssued");
             }
@@ -37032,7 +37147,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numStopCardsField = value;
-             if(value!=null) 
                  this.NumStopCardsSpecified = true;
                 NotifyPropertyChanged("NumStopCards");
             }
@@ -37243,7 +37357,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numMinorInjuryField = value;
-             if(value!=null) 
                  this.NumMinorInjurySpecified = true;
                 NotifyPropertyChanged("NumMinorInjury");
             }
@@ -37282,7 +37395,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numMajorInjuryField = value;
-             if(value!=null) 
                  this.NumMajorInjurySpecified = true;
                 NotifyPropertyChanged("NumMajorInjury");
             }
@@ -37321,7 +37433,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numFatalityField = value;
-             if(value!=null) 
                  this.NumFatalitySpecified = true;
                 NotifyPropertyChanged("NumFatality");
             }
@@ -37360,7 +37471,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 isNearMissField = value;
-             if(value!=null) 
                  this.IsNearMissSpecified = true;
                 NotifyPropertyChanged("IsNearMiss");
             }
@@ -37625,7 +37735,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numPeopleField = value;
-             if(value!=null) 
                  this.NumPeopleSpecified = true;
                 NotifyPropertyChanged("NumPeople");
             }
@@ -37802,7 +37911,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimArrivedField = value;
-             if(value!=null) 
                  this.DateTimeArrivedSpecified = true;
                 NotifyPropertyChanged("DateTimeArrived");
             }
@@ -37841,7 +37949,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimDepartedField = value;
-             if(value!=null) 
                  this.DateTimeDepartedSpecified = true;
                 NotifyPropertyChanged("DateTimeDeparted");
             }
@@ -38016,7 +38123,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 beaufortScaleNumberField = value;
-             if(value!=null) 
                  this.BeaufortScaleNumberSpecified = true;
                 NotifyPropertyChanged("BeaufortScaleNumber");
             }
@@ -38481,14 +38587,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Realtime has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool RealtimeSpecified
          {
-            get {
+             get {
              if(realtimeField!=null)
-                return realtimeField.Count>0?true:false;
+                 return realtimeField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Realtime> realtimeField; 
 
@@ -38575,7 +38684,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimField = value;
-             if(value!=null) 
                  this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
@@ -38746,14 +38854,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Channel has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ChannelSpecified
          {
-            get {
+             get {
              if(channelField!=null)
-                return channelField.Count>0?true:false;
+                 return channelField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Channel> channelField; 
 
@@ -38773,14 +38884,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Record has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool RecordSpecified
          {
-            get {
+             get {
              if(recordField!=null)
-                return recordField.Count>0?true:false;
+                 return recordField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Record> recordField; 
 
@@ -39002,7 +39116,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 bhaRunNumberField = value;
-             if(value!=null) 
                  this.BhaRunNumberSpecified = true;
                 NotifyPropertyChanged("BhaRunNumber");
             }
@@ -39059,7 +39172,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 creationDateField = value;
-             if(value!=null) 
                  this.CreationDateSpecified = true;
                 NotifyPropertyChanged("CreationDate");
             }
@@ -39120,14 +39232,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if GroupDefinition has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool GroupDefinitionSpecified
          {
-            get {
+             get {
              if(groupDefinitionField!=null)
-                return groupDefinitionField.Count>0?true:false;
+                 return groupDefinitionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<GroupDefinition> groupDefinitionField; 
 
@@ -39249,20 +39364,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private RefNameString persistedAsLogField; 
+        private bool persistedAsLogSpecified = false; 
+
         /// <summary>
         /// bool to indicate if PersistedAsLog has been set. Used for serialization.
         /// </summary>
-        private bool persistedAsLogSpecified = false; 
-         [XmlIgnore]
-         public bool PersistedAsLogSpecified
-         {
+        [XmlIgnore]
+        public bool PersistedAsLogSpecified
+        {
             get {
                 return persistedAsLogSpecified;
-            } 
+            }
             set {
                 persistedAsLogSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// A pointer to the wellLog (within the context of the current wellbore) that will be used to persist this data.
@@ -39281,20 +39397,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private RefNameString persistedAsWellLogField; 
+        private bool persistedAsWellLogSpecified = false; 
+
         /// <summary>
         /// bool to indicate if PersistedAsWellLog has been set. Used for serialization.
         /// </summary>
-        private bool persistedAsWellLogSpecified = false; 
-         [XmlIgnore]
-         public bool PersistedAsWellLogSpecified
-         {
+        [XmlIgnore]
+        public bool PersistedAsWellLogSpecified
+        {
             get {
                 return persistedAsWellLogSpecified;
-            } 
+            }
             set {
                 persistedAsWellLogSpecified= value;
-            } 
-         }
+            }
+        }
 
 
 
@@ -39350,14 +39467,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ChannelDefinition has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ChannelDefinitionSpecified
          {
-            get {
+             get {
              if(channelDefinitionField!=null)
-                return channelDefinitionField.Count>0?true:false;
+                 return channelDefinitionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ChannelDefinition> channelDefinitionField; 
 
@@ -39461,20 +39581,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private TimeMeasure timeIntervalField; 
+        private bool timeIntervalSpecified = false; 
+
         /// <summary>
         /// bool to indicate if TimeInterval has been set. Used for serialization.
         /// </summary>
-        private bool timeIntervalSpecified = false; 
-         [XmlIgnore]
-         public bool TimeIntervalSpecified
-         {
+        [XmlIgnore]
+        public bool TimeIntervalSpecified
+        {
             get {
                 return timeIntervalSpecified;
-            } 
+            }
             set {
                 timeIntervalSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// The distance interval associated with the method.
@@ -39493,20 +39614,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private LengthMeasure distanceIntervalField; 
+        private bool distanceIntervalSpecified = false; 
+
         /// <summary>
         /// bool to indicate if DistanceInterval has been set. Used for serialization.
         /// </summary>
-        private bool distanceIntervalSpecified = false; 
-         [XmlIgnore]
-         public bool DistanceIntervalSpecified
-         {
+        [XmlIgnore]
+        public bool DistanceIntervalSpecified
+        {
             get {
                 return distanceIntervalSpecified;
-            } 
+            }
             set {
                 distanceIntervalSpecified= value;
-            } 
-         }
+            }
+        }
 
 
 
@@ -39661,7 +39783,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 columnIndexField = value;
-             if(value!=null) 
                  this.ColumnIndexSpecified = true;
                 NotifyPropertyChanged("ColumnIndex");
             }
@@ -39812,14 +39933,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if AxisDefinition has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool AxisDefinitionSpecified
          {
-            get {
+             get {
              if(axisDefinitionField!=null)
-                return axisDefinitionField.Count>0?true:false;
+                 return axisDefinitionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<AxisDefinition> axisDefinitionField; 
 
@@ -39917,7 +40041,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimField = value;
-             if(value!=null) 
                  this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
@@ -40233,7 +40356,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimField = value;
-             if(value!=null) 
                  this.DateTimeSpecified = true;
                 NotifyPropertyChanged("DateTime");
             }
@@ -40374,14 +40496,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Rig has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool RigSpecified
          {
-            get {
+             get {
              if(rigField!=null)
-                return rigField.Count>0?true:false;
+                 return rigField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Rig> rigField; 
 
@@ -40776,7 +40901,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 isOffshoreField = value;
-             if(value!=null) 
                  this.IsOffshoreSpecified = true;
                 NotifyPropertyChanged("IsOffshore");
             }
@@ -40833,7 +40957,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimStartOpField = value;
-             if(value!=null) 
                  this.DateTimeStartOperatingSpecified = true;
                 NotifyPropertyChanged("DateTimeStartOperating");
             }
@@ -40872,7 +40995,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimEndOpField = value;
-             if(value!=null) 
                  this.DateTimeEndOperatingSpecified = true;
                 NotifyPropertyChanged("DateTimeEndOperating");
             }
@@ -40933,14 +41055,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Pit has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool PitSpecified
          {
-            get {
+             get {
              if(pitField!=null)
-                return pitField.Count>0?true:false;
+                 return pitField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Pit> pitField; 
 
@@ -40960,14 +41085,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Pump has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool PumpSpecified
          {
-            get {
+             get {
              if(pumpField!=null)
-                return pumpField.Count>0?true:false;
+                 return pumpField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Pump> pumpField; 
 
@@ -40987,14 +41115,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Shaker has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ShakerSpecified
          {
-            get {
+             get {
              if(shakerField!=null)
-                return shakerField.Count>0?true:false;
+                 return shakerField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Shaker> shakerField; 
 
@@ -41014,14 +41145,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Centrifuge has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool CentrifugeSpecified
          {
-            get {
+             get {
              if(centrifugeField!=null)
-                return centrifugeField.Count>0?true:false;
+                 return centrifugeField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Centrifuge> centrifugeField; 
 
@@ -41041,14 +41175,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Hydrocyclone has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool HydrocycloneSpecified
          {
-            get {
+             get {
              if(hydrocycloneField!=null)
-                return hydrocycloneField.Count>0?true:false;
+                 return hydrocycloneField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Hydrocyclone> hydrocycloneField; 
 
@@ -41068,14 +41205,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Degasser has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool DegasserSpecified
          {
-            get {
+             get {
              if(degasserField!=null)
-                return degasserField.Count>0?true:false;
+                 return degasserField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Degasser> degasserField; 
 
@@ -41109,7 +41249,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numDerricksField = value;
-             if(value!=null) 
                  this.NumDerricksSpecified = true;
                 NotifyPropertyChanged("NumDerricks");
             }
@@ -41294,7 +41433,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numBlockLinesField = value;
-             if(value!=null) 
                  this.NumBlockLinesSpecified = true;
                 NotifyPropertyChanged("NumBlockLines");
             }
@@ -41841,7 +41979,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numBunksField = value;
-             if(value!=null) 
                  this.NumBunksSpecified = true;
                 NotifyPropertyChanged("NumBunks");
             }
@@ -41880,7 +42017,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 bunksPerRoomField = value;
-             if(value!=null) 
                  this.BunksPerRoomSpecified = true;
                 NotifyPropertyChanged("BunksPerRoom");
             }
@@ -41919,7 +42055,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numCranesField = value;
-             if(value!=null) 
                  this.NumCranesSpecified = true;
                 NotifyPropertyChanged("NumCranes");
             }
@@ -41958,7 +42093,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numAnchField = value;
-             if(value!=null) 
                  this.NumAnchSpecified = true;
                 NotifyPropertyChanged("NumAnch");
             }
@@ -42015,7 +42149,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numGuideTensField = value;
-             if(value!=null) 
                  this.NumGuideTensSpecified = true;
                 NotifyPropertyChanged("NumGuideTens");
             }
@@ -42054,7 +42187,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numRiserTensField = value;
-             if(value!=null) 
                  this.NumRiserTensSpecified = true;
                 NotifyPropertyChanged("NumRiserTens");
             }
@@ -42129,7 +42261,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numThrustersField = value;
-             if(value!=null) 
                  this.NumThrustersSpecified = true;
                 NotifyPropertyChanged("NumThrusters");
             }
@@ -42168,7 +42299,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 azimuthingField = value;
-             if(value!=null) 
                  this.AzimuthingSpecified = true;
                 NotifyPropertyChanged("Azimuthing");
             }
@@ -42503,7 +42633,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimInstallField = value;
-             if(value!=null) 
                  this.DateTimeInstallSpecified = true;
                 NotifyPropertyChanged("DateTimeInstall");
             }
@@ -42542,7 +42671,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimRemoveField = value;
-             if(value!=null) 
                  this.DateTimeRemoveSpecified = true;
                 NotifyPropertyChanged("DateTimeRemove");
             }
@@ -42585,14 +42713,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if NameTag has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool NameTagSpecified
          {
-            get {
+             get {
              if(nameTagField!=null)
-                return nameTagField.Count>0?true:false;
+                 return nameTagField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<NameTag> nameTagField; 
 
@@ -42680,7 +42811,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 rotBopField = value;
-             if(value!=null) 
                  this.RotBopSpecified = true;
                 NotifyPropertyChanged("RotBop");
             }
@@ -42939,14 +43069,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if BopComponent has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool BopComponentSpecified
          {
-            get {
+             get {
              if(bopComponentField!=null)
-                return bopComponentField.Count>0?true:false;
+                 return bopComponentField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<BopComponent> bopComponentField; 
 
@@ -43370,7 +43503,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 isVariableField = value;
-             if(value!=null) 
                  this.IsVariableSpecified = true;
                 NotifyPropertyChanged("IsVariable");
             }
@@ -43491,7 +43623,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimInstallField = value;
-             if(value!=null) 
                  this.DateTimeInstallSpecified = true;
                 NotifyPropertyChanged("DateTimeInstall");
             }
@@ -43530,7 +43661,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimRemoveField = value;
-             if(value!=null) 
                  this.DateTimeRemoveSpecified = true;
                 NotifyPropertyChanged("DateTimeRemove");
             }
@@ -43643,7 +43773,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 isActiveField = value;
-             if(value!=null) 
                  this.IsActiveSpecified = true;
                 NotifyPropertyChanged("IsActive");
             }
@@ -43686,14 +43815,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if NameTag has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool NameTagSpecified
          {
-            get {
+             get {
              if(nameTagField!=null)
-                return nameTagField.Count>0?true:false;
+                 return nameTagField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<NameTag> nameTagField; 
 
@@ -43827,7 +43959,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimInstallField = value;
-             if(value!=null) 
                  this.DateTimeInstallSpecified = true;
                 NotifyPropertyChanged("DateTimeInstall");
             }
@@ -43866,7 +43997,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimRemoveField = value;
-             if(value!=null) 
                  this.DateTimeRemoveSpecified = true;
                 NotifyPropertyChanged("DateTimeRemove");
             }
@@ -43961,7 +44091,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numCylField = value;
-             if(value!=null) 
                  this.NumCylSpecified = true;
                 NotifyPropertyChanged("NumCyl");
             }
@@ -44036,7 +44165,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 pumpActionField = value;
-             if(value!=null) 
                  this.PumpActionSpecified = true;
                 NotifyPropertyChanged("PumpAction");
             }
@@ -44241,14 +44369,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if NameTag has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool NameTagSpecified
          {
-            get {
+             get {
              if(nameTagField!=null)
-                return nameTagField.Count>0?true:false;
+                 return nameTagField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<NameTag> nameTagField; 
 
@@ -44382,7 +44513,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimInstallField = value;
-             if(value!=null) 
                  this.DateTimeInstallSpecified = true;
                 NotifyPropertyChanged("DateTimeInstall");
             }
@@ -44421,7 +44551,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimRemoveField = value;
-             if(value!=null) 
                  this.DateTimeRemoveSpecified = true;
                 NotifyPropertyChanged("DateTimeRemove");
             }
@@ -44496,7 +44625,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numDecksField = value;
-             if(value!=null) 
                  this.NumDecksSpecified = true;
                 NotifyPropertyChanged("NumDecks");
             }
@@ -44535,7 +44663,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numCascLevelField = value;
-             if(value!=null) 
                  this.NumCascLevelSpecified = true;
                 NotifyPropertyChanged("NumCascLevel");
             }
@@ -44574,7 +44701,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 mudCleanerField = value;
-             if(value!=null) 
                  this.MudCleanerSpecified = true;
                 NotifyPropertyChanged("MudCleaner");
             }
@@ -44671,14 +44797,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if NameTag has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool NameTagSpecified
          {
-            get {
+             get {
              if(nameTagField!=null)
-                return nameTagField.Count>0?true:false;
+                 return nameTagField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<NameTag> nameTagField; 
 
@@ -44794,7 +44923,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimInstallField = value;
-             if(value!=null) 
                  this.DateTimeInstallSpecified = true;
                 NotifyPropertyChanged("DateTimeInstall");
             }
@@ -44833,7 +44961,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimRemoveField = value;
-             if(value!=null) 
                  this.DateTimeRemoveSpecified = true;
                 NotifyPropertyChanged("DateTimeRemove");
             }
@@ -44930,14 +45057,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if NameTag has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool NameTagSpecified
          {
-            get {
+             get {
              if(nameTagField!=null)
-                return nameTagField.Count>0?true:false;
+                 return nameTagField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<NameTag> nameTagField; 
 
@@ -45053,7 +45183,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimInstallField = value;
-             if(value!=null) 
                  this.DateTimeInstallSpecified = true;
                 NotifyPropertyChanged("DateTimeInstall");
             }
@@ -45092,7 +45221,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimRemoveField = value;
-             if(value!=null) 
                  this.DateTimeRemoveSpecified = true;
                 NotifyPropertyChanged("DateTimeRemove");
             }
@@ -45189,14 +45317,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if NameTag has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool NameTagSpecified
          {
-            get {
+             get {
              if(nameTagField!=null)
-                return nameTagField.Count>0?true:false;
+                 return nameTagField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<NameTag> nameTagField; 
 
@@ -45312,7 +45443,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimInstallField = value;
-             if(value!=null) 
                  this.DateTimeInstallSpecified = true;
                 NotifyPropertyChanged("DateTimeInstall");
             }
@@ -45351,7 +45481,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimRemoveField = value;
-             if(value!=null) 
                  this.DateTimeRemoveSpecified = true;
                 NotifyPropertyChanged("DateTimeRemove");
             }
@@ -45664,14 +45793,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if NameTag has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool NameTagSpecified
          {
-            get {
+             get {
              if(nameTagField!=null)
-                return nameTagField.Count>0?true:false;
+                 return nameTagField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<NameTag> nameTagField; 
 
@@ -45805,7 +45937,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 usePumpDischargeField = value;
-             if(value!=null) 
                  this.UsePumpDischargeSpecified = true;
                 NotifyPropertyChanged("UsePumpDischarge");
             }
@@ -45844,7 +45975,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 useStandpipeField = value;
-             if(value!=null) 
                  this.UseStandpipeSpecified = true;
                 NotifyPropertyChanged("UseStandpipe");
             }
@@ -45883,7 +46013,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 useHoseField = value;
-             if(value!=null) 
                  this.UseHoseSpecified = true;
                 NotifyPropertyChanged("UseHose");
             }
@@ -45922,7 +46051,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 useSwivelField = value;
-             if(value!=null) 
                  this.UseSwivelSpecified = true;
                 NotifyPropertyChanged("UseSwivel");
             }
@@ -45961,7 +46089,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 useKellyField = value;
-             if(value!=null) 
                  this.UseKellySpecified = true;
                 NotifyPropertyChanged("UseKelly");
             }
@@ -46000,7 +46127,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 useTopStackField = value;
-             if(value!=null) 
                  this.UseTopStackSpecified = true;
                 NotifyPropertyChanged("UseTopStack");
             }
@@ -46039,7 +46165,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 useInjStackField = value;
-             if(value!=null) 
                  this.UseInjStackSpecified = true;
                 NotifyPropertyChanged("UseInjStack");
             }
@@ -46078,7 +46203,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 useSurfaceIronField = value;
-             if(value!=null) 
                  this.UseSurfaceIronSpecified = true;
                 NotifyPropertyChanged("UseSurfaceIron");
             }
@@ -46441,7 +46565,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 injStkUpField = value;
-             if(value!=null) 
                  this.InjStkUpSpecified = true;
                 NotifyPropertyChanged("InjStkUp");
             }
@@ -46498,7 +46621,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 umbInsideField = value;
-             if(value!=null) 
                  this.UmbInsideSpecified = true;
                 NotifyPropertyChanged("UmbInside");
             }
@@ -46693,14 +46815,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Risk has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool RiskSpecified
          {
-            get {
+             get {
              if(riskField!=null)
-                return riskField.Count>0?true:false;
+                 return riskField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Risk> riskField; 
 
@@ -46955,14 +47080,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if AffectedPersonnel has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool AffectedPersonnelSpecified
          {
-            get {
+             get {
              if(affectedPersonnelField!=null)
-                return affectedPersonnelField.Count>0?true:false;
+                 return affectedPersonnelField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<RiskAffectedPersonnel> affectedPersonnelField; 
 
@@ -46978,7 +47106,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimStartField = value;
-             if(value!=null) 
                  this.DateTimeStartSpecified = true;
                 NotifyPropertyChanged("DateTimeStart");
             }
@@ -47017,7 +47144,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimEndField = value;
-             if(value!=null) 
                  this.DateTimeEndSpecified = true;
                 NotifyPropertyChanged("DateTimeEnd");
             }
@@ -47182,7 +47308,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 severityLevelField = value;
-             if(value!=null) 
                  this.SeverityLevelSpecified = true;
                 NotifyPropertyChanged("SeverityLevel");
             }
@@ -47221,7 +47346,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 probabilityLevelField = value;
-             if(value!=null) 
                  this.ProbabilityLevelSpecified = true;
                 NotifyPropertyChanged("ProbabilityLevel");
             }
@@ -47336,14 +47460,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Mitigation has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool MitigationSpecified
          {
-            get {
+             get {
              if(mitigationField!=null)
-                return mitigationField.Count>0?true:false;
+                 return mitigationField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> mitigationField; 
 
@@ -47513,14 +47640,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if SidewallCore has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool SidewallCoreSpecified
          {
-            get {
+             get {
              if(sidewallCoreField!=null)
-                return sidewallCoreField.Count>0?true:false;
+                 return sidewallCoreField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<SidewallCore> sidewallCoreField; 
 
@@ -47661,7 +47791,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimToolRunField = value;
-             if(value!=null) 
                  this.DateTimeToolRunSpecified = true;
                 NotifyPropertyChanged("DateTimeToolRun");
             }
@@ -47700,7 +47829,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimToolPullField = value;
-             if(value!=null) 
                  this.DateTimeToolPullSpecified = true;
                 NotifyPropertyChanged("DateTimeToolPull");
             }
@@ -47901,7 +48029,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numPlugsShotField = value;
-             if(value!=null) 
                  this.NumPlugsShotSpecified = true;
                 NotifyPropertyChanged("NumPlugsShot");
             }
@@ -47940,7 +48067,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numRecPlugsField = value;
-             if(value!=null) 
                  this.NumRecPlugsSpecified = true;
                 NotifyPropertyChanged("NumRecPlugs");
             }
@@ -47979,7 +48105,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numMisfiredPlugsField = value;
-             if(value!=null) 
                  this.NumMisfiredPlugsSpecified = true;
                 NotifyPropertyChanged("NumMisfiredPlugs");
             }
@@ -48018,7 +48143,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numEmptyPlugsField = value;
-             if(value!=null) 
                  this.NumEmptyPlugsSpecified = true;
                 NotifyPropertyChanged("NumEmptyPlugs");
             }
@@ -48057,7 +48181,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numLostPlugsField = value;
-             if(value!=null) 
                  this.NumLostPlugsSpecified = true;
                 NotifyPropertyChanged("NumLostPlugs");
             }
@@ -48096,7 +48219,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numPaidPlugsField = value;
-             if(value!=null) 
                  this.NumPaidPlugsSpecified = true;
                 NotifyPropertyChanged("NumPaidPlugs");
             }
@@ -48139,14 +48261,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if SwcSample has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool SwcSampleSpecified
          {
-            get {
+             get {
              if(swcSampleField!=null)
-                return swcSampleField.Count>0?true:false;
+                 return swcSampleField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<SwcSample> swcSampleField; 
 
@@ -48470,14 +48595,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if SurveyProgram has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool SurveyProgramSpecified
          {
-            get {
+             get {
              if(surveyProgramField!=null)
-                return surveyProgramField.Count>0?true:false;
+                 return surveyProgramField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<SurveyProgram> surveyProgramField; 
 
@@ -48636,7 +48764,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimTrajProgField = value;
-             if(value!=null) 
                  this.DateTimeTrajProgSpecified = true;
                 NotifyPropertyChanged("DateTimeTrajProg");
             }
@@ -48715,14 +48842,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if SurveySection has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool SurveySectionSpecified
          {
-            get {
+             get {
              if(surveySectionField!=null)
-                return surveySectionField.Count>0?true:false;
+                 return surveySectionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<SurveySection> surveySectionField; 
 
@@ -49016,7 +49146,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 overwriteField = value;
-             if(value!=null) 
                  this.OverwriteSpecified = true;
                 NotifyPropertyChanged("Overwrite");
             }
@@ -49213,14 +49342,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Target has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool TargetSpecified
          {
-            get {
+             get {
              if(targetField!=null)
-                return targetField.Count>0?true:false;
+                 return targetField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Target> targetField; 
 
@@ -49749,14 +49881,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Location has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool LocationSpecified
          {
-            get {
+             get {
              if(locationField!=null)
-                return locationField.Count>0?true:false;
+                 return locationField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Location> locationField; 
 
@@ -49776,14 +49911,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if TargetSection has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool TargetSectionSpecified
          {
-            get {
+             get {
              if(targetSectionField!=null)
-                return targetSectionField.Count>0?true:false;
+                 return targetSectionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<TargetSection> targetSectionField; 
 
@@ -50045,14 +50183,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Location has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool LocationSpecified
          {
-            get {
+             get {
              if(locationField!=null)
-                return locationField.Count>0?true:false;
+                 return locationField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Location> locationField; 
 
@@ -50152,14 +50293,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Trajectory has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool TrajectorySpecified
          {
-            get {
+             get {
              if(trajectoryField!=null)
-                return trajectoryField.Count>0?true:false;
+                 return trajectoryField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Trajectory> trajectoryField; 
 
@@ -50300,7 +50444,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 objectGrowingField = value;
-             if(value!=null) 
                  this.ObjectGrowingSpecified = true;
                 NotifyPropertyChanged("ObjectGrowing");
             }
@@ -50357,7 +50500,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimTrajStartField = value;
-             if(value!=null) 
                  this.DateTimeTrajStartSpecified = true;
                 NotifyPropertyChanged("DateTimeTrajStart");
             }
@@ -50396,7 +50538,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimTrajEndField = value;
-             if(value!=null) 
                  this.DateTimeTrajEndSpecified = true;
                 NotifyPropertyChanged("DateTimeTrajEnd");
             }
@@ -50579,7 +50720,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 definitiveField = value;
-             if(value!=null) 
                  this.DefinitiveSpecified = true;
                 NotifyPropertyChanged("Definitive");
             }
@@ -50618,7 +50758,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 memoryField = value;
-             if(value!=null) 
                  this.MemorySpecified = true;
                 NotifyPropertyChanged("Memory");
             }
@@ -50657,7 +50796,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 finalTrajField = value;
-             if(value!=null) 
                  this.FinalTrajSpecified = true;
                 NotifyPropertyChanged("FinalTraj");
             }
@@ -50738,14 +50876,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if TrajectoryStation has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool TrajectoryStationSpecified
          {
-            get {
+             get {
              if(trajectoryStationField!=null)
-                return trajectoryStationField.Count>0?true:false;
+                 return trajectoryStationField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<TrajectoryStation> trajectoryStationField; 
 
@@ -50997,14 +51138,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if TrajectoryStation has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool TrajectoryStationSpecified
          {
-            get {
+             get {
              if(trajectoryStationField!=null)
-                return trajectoryStationField.Count>0?true:false;
+                 return trajectoryStationField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<StandAloneTrajectoryStation> trajectoryStationField; 
 
@@ -51163,7 +51307,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimStnField = value;
-             if(value!=null) 
                  this.DateTimeStnSpecified = true;
                 NotifyPropertyChanged("DateTimeStn");
             }
@@ -51582,7 +51725,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 gravAccelCorUsedField = value;
-             if(value!=null) 
                  this.GravAccelCorUsedSpecified = true;
                 NotifyPropertyChanged("GravAccelCorUsed");
             }
@@ -51621,7 +51763,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 magXAxialCorUsedField = value;
-             if(value!=null) 
                  this.MagXAxialCorUsedSpecified = true;
                 NotifyPropertyChanged("MagXAxialCorUsed");
             }
@@ -51660,7 +51801,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 sagCorUsedField = value;
-             if(value!=null) 
                  this.SagCorUsedSpecified = true;
                 NotifyPropertyChanged("SagCorUsed");
             }
@@ -51699,7 +51839,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 magDrlstrCorUsedField = value;
-             if(value!=null) 
                  this.MagDrlstrCorUsedSpecified = true;
                 NotifyPropertyChanged("MagDrlstrCorUsed");
             }
@@ -51960,14 +52099,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Location has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool LocationSpecified
          {
-            get {
+             get {
              if(locationField!=null)
-                return locationField.Count>0?true:false;
+                 return locationField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Location> locationField; 
 
@@ -52173,14 +52315,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Tubular has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool TubularSpecified
          {
-            get {
+             get {
              if(tubularField!=null)
-                return tubularField.Count>0?true:false;
+                 return tubularField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Tubular> tubularField; 
 
@@ -52339,7 +52484,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 valveFloatField = value;
-             if(value!=null) 
                  this.ValveFloatSpecified = true;
                 NotifyPropertyChanged("ValveFloat");
             }
@@ -52378,7 +52522,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 sourceNuclearField = value;
-             if(value!=null) 
                  this.SourceNuclearSpecified = true;
                 NotifyPropertyChanged("SourceNuclear");
             }
@@ -52439,14 +52582,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if TubularComponent has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool TubularComponentSpecified
          {
-            get {
+             get {
              if(tubularComponentField!=null)
-                return tubularComponentField.Count>0?true:false;
+                 return tubularComponentField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<TubularComponent> tubularComponentField; 
 
@@ -52740,7 +52886,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numJointStandField = value;
-             if(value!=null) 
                  this.NumJointStandSpecified = true;
                 NotifyPropertyChanged("NumJointStand");
             }
@@ -53237,14 +53382,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if NameTag has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool NameTagSpecified
          {
-            get {
+             get {
              if(nameTagField!=null)
-                return nameTagField.Count>0?true:false;
+                 return nameTagField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<NameTag> nameTagField; 
 
@@ -53300,14 +53448,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Nozzle has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool NozzleSpecified
          {
-            get {
+             get {
              if(nozzleField!=null)
-                return nozzleField.Count>0?true:false;
+                 return nozzleField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Nozzle> nozzleField; 
 
@@ -53327,14 +53478,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Connection has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ConnectionSpecified
          {
-            get {
+             get {
              if(connectionField!=null)
-                return connectionField.Count>0?true:false;
+                 return connectionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Connection> connectionField; 
 
@@ -53408,14 +53562,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Stabilizer has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool StabilizerSpecified
          {
-            get {
+             get {
              if(stabilizerField!=null)
-                return stabilizerField.Count>0?true:false;
+                 return stabilizerField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Stabilizer> stabilizerField; 
 
@@ -53435,14 +53592,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Bend has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool BendSpecified
          {
-            get {
+             get {
              if(bendField!=null)
-                return bendField.Count>0?true:false;
+                 return bendField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Bend> bendField; 
 
@@ -53740,7 +53900,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 condInitInnerField = value;
-             if(value!=null) 
                  this.CondInitInnerSpecified = true;
                 NotifyPropertyChanged("CondInitInner");
             }
@@ -53779,7 +53938,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 condInitOuterField = value;
-             if(value!=null) 
                  this.CondInitOuterSpecified = true;
                 NotifyPropertyChanged("CondInitOuter");
             }
@@ -53966,7 +54124,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 condFinalInnerField = value;
-             if(value!=null) 
                  this.CondFinalInnerSpecified = true;
                 NotifyPropertyChanged("CondFinalInner");
             }
@@ -54005,7 +54162,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 condFinalOuterField = value;
-             if(value!=null) 
                  this.CondFinalOuterSpecified = true;
                 NotifyPropertyChanged("CondFinalOuter");
             }
@@ -54292,7 +54448,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 indexField = value;
-             if(value!=null) 
                  this.IndexSpecified = true;
                 NotifyPropertyChanged("Index");
             }
@@ -55129,14 +55284,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Sensor has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool SensorSpecified
          {
-            get {
+             get {
              if(sensorField!=null)
-                return sensorField.Count>0?true:false;
+                 return sensorField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Sensor> sensorField; 
 
@@ -55390,7 +55548,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 presLossFactField = value;
-             if(value!=null) 
                  this.PresLossFactSpecified = true;
                 NotifyPropertyChanged("PresLossFact");
             }
@@ -55501,7 +55658,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 lobesRotorField = value;
-             if(value!=null) 
                  this.LobesRotorSpecified = true;
                 NotifyPropertyChanged("LobesRotor");
             }
@@ -55540,7 +55696,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 lobesStatorField = value;
-             if(value!=null) 
                  this.LobesStatorSpecified = true;
                 NotifyPropertyChanged("LobesStator");
             }
@@ -55635,7 +55790,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 rotorCatcherField = value;
-             if(value!=null) 
                  this.RotorCatcherSpecified = true;
                 NotifyPropertyChanged("RotorCatcher");
             }
@@ -55674,7 +55828,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dumpValveField = value;
-             if(value!=null) 
                  this.DumpValveSpecified = true;
                 NotifyPropertyChanged("DumpValve");
             }
@@ -55731,7 +55884,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 rotatableField = value;
-             if(value!=null) 
                  this.RotatableSpecified = true;
                 NotifyPropertyChanged("Rotatable");
             }
@@ -55998,7 +56150,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 factFricField = value;
-             if(value!=null) 
                  this.FactFricSpecified = true;
                 NotifyPropertyChanged("FactFric");
             }
@@ -56313,7 +56464,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 numCutterField = value;
-             if(value!=null) 
                  this.NumCutterSpecified = true;
                 NotifyPropertyChanged("NumCutter");
             }
@@ -56476,20 +56626,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private PlaneAngleMeasure bendAngleField; 
+        private bool bendAngleSpecified = false; 
+
         /// <summary>
         /// bool to indicate if BendAngle has been set. Used for serialization.
         /// </summary>
-        private bool bendAngleSpecified = false; 
-         [XmlIgnore]
-         public bool BendAngleSpecified
-         {
+        [XmlIgnore]
+        public bool BendAngleSpecified
+        {
             get {
                 return bendAngleSpecified;
-            } 
+            }
             set {
                 bendAngleSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Offset from bottom connection to bend.
@@ -56508,20 +56659,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private LengthMeasure bendOffsetField; 
+        private bool bendOffsetSpecified = false; 
+
         /// <summary>
         /// bool to indicate if BendOffset has been set. Used for serialization.
         /// </summary>
-        private bool bendOffsetSpecified = false; 
-         [XmlIgnore]
-         public bool BendOffsetSpecified
-         {
+        [XmlIgnore]
+        public bool BendOffsetSpecified
+        {
             get {
                 return bendOffsetSpecified;
-            } 
+            }
             set {
                 bendOffsetSpecified= value;
-            } 
-         }
+            }
+        }
 
 
 
@@ -56698,7 +56850,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 pressLossFactField = value;
-             if(value!=null) 
                  this.PressLossFactSpecified = true;
                 NotifyPropertyChanged("PressLossFact");
             }
@@ -56737,7 +56888,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 padCountField = value;
-             if(value!=null) 
                  this.PadCountSpecified = true;
                 NotifyPropertyChanged("PadCount");
             }
@@ -56870,14 +57020,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Sensor has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool SensorSpecified
          {
-            get {
+             get {
              if(sensorField!=null)
-                return sensorField.Count>0?true:false;
+                 return sensorField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Sensor> sensorField; 
 
@@ -56977,14 +57130,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if WellboreGeometry has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool WellboreGeometrySpecified
          {
-            get {
+             get {
              if(wbGeometryField!=null)
-                return wbGeometryField.Count>0?true:false;
+                 return wbGeometryField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<StandAloneWellboreGeometry> wbGeometryField; 
 
@@ -57201,14 +57357,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if WellboreGeometrySection has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool WellboreGeometrySectionSpecified
          {
-            get {
+             get {
              if(wbGeometrySectionField!=null)
-                return wbGeometrySectionField.Count>0?true:false;
+                 return wbGeometrySectionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<WellboreGeometrySection> wbGeometrySectionField; 
 
@@ -57378,14 +57537,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Well has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool WellSpecified
          {
-            get {
+             get {
              if(wellField!=null)
-                return wellField.Count>0?true:false;
+                 return wellField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Well> wellField; 
 
@@ -57544,7 +57706,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimLicenseField = value;
-             if(value!=null) 
                  this.DateTimeLicenseSpecified = true;
                 NotifyPropertyChanged("DateTimeLicense");
             }
@@ -57951,7 +58112,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimSpudField = value;
-             if(value!=null) 
                  this.DateTimeSpudSpecified = true;
                 NotifyPropertyChanged("DateTimeSpud");
             }
@@ -57990,7 +58150,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimPaField = value;
-             if(value!=null) 
                  this.DateTimePluggedAndAbandonedSpecified = true;
                 NotifyPropertyChanged("DateTimePluggedAndAbandoned");
             }
@@ -58051,14 +58210,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if WellDatum has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool WellDatumSpecified
          {
-            get {
+             get {
              if(wellDatumField!=null)
-                return wellDatumField.Count>0?true:false;
+                 return wellDatumField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<WellDatum> wellDatumField; 
 
@@ -58114,14 +58276,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if WellLocation has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool WellLocationSpecified
          {
-            get {
+             get {
              if(wellLocationField!=null)
-                return wellLocationField.Count>0?true:false;
+                 return wellLocationField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Location> wellLocationField; 
 
@@ -58141,14 +58306,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if ReferencePoint has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ReferencePointSpecified
          {
-            get {
+             get {
              if(referencePointField!=null)
-                return referencePointField.Count>0?true:false;
+                 return referencePointField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<ReferencePoint> referencePointField; 
 
@@ -58168,14 +58336,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if WellCRS has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool WellCRSSpecified
          {
-            get {
+             get {
              if(wellCRSField!=null)
-                return wellCRSField.Count>0?true:false;
+                 return wellCRSField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<WellCRS> wellCRSField; 
 
@@ -58367,14 +58538,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Kind has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool KindSpecified
          {
-            get {
+             get {
              if(kindField!=null)
-                return kindField.Count>0?true:false;
+                 return kindField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<String> kindField; 
 
@@ -58480,7 +58654,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 defaultMeasuredDepthField = value;
-             if(value!=null) 
                  this.DefaultMeasuredDepthSpecified = true;
                 NotifyPropertyChanged("DefaultMeasuredDepth");
             }
@@ -58519,7 +58692,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 defaultVerticalDepthField = value;
-             if(value!=null) 
                  this.DefaultVerticalDepthSpecified = true;
                 NotifyPropertyChanged("DefaultVerticalDepth");
             }
@@ -58558,7 +58730,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 defaultElevationField = value;
-             if(value!=null) 
                  this.DefaultElevationSpecified = true;
                 NotifyPropertyChanged("DefaultElevation");
             }
@@ -59040,14 +59211,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Location has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool LocationSpecified
          {
-            get {
+             get {
              if(locationField!=null)
-                return locationField.Count>0?true:false;
+                 return locationField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Location> locationField; 
 
@@ -59170,20 +59344,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private Projectionx mapProjectionField; 
+        private bool mapProjectionSpecified = false; 
+
         /// <summary>
         /// bool to indicate if MapProjection has been set. Used for serialization.
         /// </summary>
-        private bool mapProjectionSpecified = false; 
-         [XmlIgnore]
-         public bool MapProjectionSpecified
-         {
+        [XmlIgnore]
+        public bool MapProjectionSpecified
+        {
             get {
                 return mapProjectionSpecified;
-            } 
+            }
             set {
                 mapProjectionSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Geographic system. 
@@ -59203,20 +59378,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private GeodeticModel geographicField; 
+        private bool geographicSpecified = false; 
+
         /// <summary>
         /// bool to indicate if Geographic has been set. Used for serialization.
         /// </summary>
-        private bool geographicSpecified = false; 
-         [XmlIgnore]
-         public bool GeographicSpecified
-         {
+        [XmlIgnore]
+        public bool GeographicSpecified
+        {
             get {
                 return geographicSpecified;
-            } 
+            }
             set {
                 geographicSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Local (engineering) system. 
@@ -59236,20 +59412,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private LocalCRS localCRSField; 
+        private bool localCRSSpecified = false; 
+
         /// <summary>
         /// bool to indicate if LocalCRS has been set. Used for serialization.
         /// </summary>
-        private bool localCRSSpecified = false; 
-         [XmlIgnore]
-         public bool LocalCRSSpecified
-         {
+        [XmlIgnore]
+        public bool LocalCRSSpecified
+        {
             get {
                 return localCRSSpecified;
-            } 
+            }
             set {
                 localCRSSpecified= value;
-            } 
-         }
+            }
+        }
 
 
 
@@ -59510,7 +59687,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 scaleFactorField = value;
-             if(value!=null) 
                  this.ScaleFactorSpecified = true;
                 NotifyPropertyChanged("ScaleFactor");
             }
@@ -59605,7 +59781,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 ellipsoidInverseFlatteningField = value;
-             if(value!=null) 
                  this.EllipsoidInverseFlatteningSpecified = true;
                 NotifyPropertyChanged("EllipsoidInverseFlattening");
             }
@@ -59688,8 +59863,8 @@ namespace Energistics.DataAccess.WITSML131
                 return usesWellAsOriginField;
             } 
             set {
-                if (value != null && OriginSpecified) throw new Exception("Cannot set property UsesWellAsOrigin when property Origin is already set");
                 if (value != null && OriginDescriptionSpecified) throw new Exception("Cannot set property UsesWellAsOrigin when property OriginDescription is already set");
+                if (value != null && OriginSpecified) throw new Exception("Cannot set property UsesWellAsOrigin when property Origin is already set");
                 usesWellAsOriginField = value;
                 UsesWellAsOriginSpecified = (value!=null);
                 NotifyPropertyChanged("UsesWellAsOrigin");
@@ -59697,20 +59872,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private Boolean? usesWellAsOriginField; 
+        private bool usesWellAsOriginSpecified = false; 
+
         /// <summary>
         /// bool to indicate if UsesWellAsOrigin has been set. Used for serialization.
         /// </summary>
-        private bool usesWellAsOriginSpecified = false; 
-         [XmlIgnore]
-         public bool UsesWellAsOriginSpecified
-         {
+        [XmlIgnore]
+        public bool UsesWellAsOriginSpecified
+        {
             get {
                 return usesWellAsOriginSpecified;
-            } 
+            }
             set {
                 usesWellAsOriginSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// A pointer to the reference point that is the origin of this CRS.
@@ -59721,8 +59897,8 @@ namespace Energistics.DataAccess.WITSML131
                 return originField;
             } 
             set {
-                if (value != null && UsesWellAsOriginSpecified) throw new Exception("Cannot set property Origin when property UsesWellAsOrigin is already set");
                 if (value != null && OriginDescriptionSpecified) throw new Exception("Cannot set property Origin when property OriginDescription is already set");
+                if (value != null && UsesWellAsOriginSpecified) throw new Exception("Cannot set property Origin when property UsesWellAsOrigin is already set");
                 originField = value;
                 OriginSpecified = (value!=null);
                 NotifyPropertyChanged("Origin");
@@ -59730,20 +59906,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private RefNameString originField; 
+        private bool originSpecified = false; 
+
         /// <summary>
         /// bool to indicate if Origin has been set. Used for serialization.
         /// </summary>
-        private bool originSpecified = false; 
-         [XmlIgnore]
-         public bool OriginSpecified
-         {
+        [XmlIgnore]
+        public bool OriginSpecified
+        {
             get {
                 return originSpecified;
-            } 
+            }
             set {
                 originSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// A textual description of the origin.
@@ -59763,20 +59940,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private String originDescriptionField; 
+        private bool originDescriptionSpecified = false; 
+
         /// <summary>
         /// bool to indicate if OriginDescription has been set. Used for serialization.
         /// </summary>
-        private bool originDescriptionSpecified = false; 
-         [XmlIgnore]
-         public bool OriginDescriptionSpecified
-         {
+        [XmlIgnore]
+        public bool OriginDescriptionSpecified
+        {
             get {
                 return originDescriptionSpecified;
-            } 
+            }
             set {
                 originDescriptionSpecified= value;
-            } 
-         }
+            }
+        }
 
 
 
@@ -59827,7 +60005,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 xRotationCounterClockwiseField = value;
-             if(value!=null) 
                  this.XRotationCounterClockwiseSpecified = true;
                 NotifyPropertyChanged("XRotationCounterClockwise");
             }
@@ -60220,7 +60397,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 scaleFactorField = value;
-             if(value!=null) 
                  this.ScaleFactorSpecified = true;
                 NotifyPropertyChanged("ScaleFactor");
             }
@@ -60485,14 +60661,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Parameter has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool ParameterSpecified
          {
-            get {
+             get {
              if(parameterField!=null)
-                return parameterField.Count>0?true:false;
+                 return parameterField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<IndexedObject> parameterField; 
 
@@ -60574,14 +60753,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if Wellbore has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool WellboreSpecified
          {
-            get {
+             get {
              if(wellboreField!=null)
-                return wellboreField.Count>0?true:false;
+                 return wellboreField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<Wellbore> wellboreField; 
 
@@ -60928,7 +61110,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dTimKickoffField = value;
-             if(value!=null) 
                  this.DateTimeKickoffSpecified = true;
                 NotifyPropertyChanged("DateTimeKickoff");
             }
@@ -60967,7 +61148,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 achievedTDField = value;
-             if(value!=null) 
                  this.AchievedTDSpecified = true;
                 NotifyPropertyChanged("AchievedTD");
             }
@@ -61304,14 +61484,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if WellLog has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool WellLogSpecified
          {
-            get {
+             get {
              if(wellLogField!=null)
-                return wellLogField.Count>0?true:false;
+                 return wellLogField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<WellLog> wellLogField; 
 
@@ -61452,7 +61635,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 objectGrowingField = value;
-             if(value!=null) 
                  this.ObjectGrowingSpecified = true;
                 NotifyPropertyChanged("ObjectGrowing");
             }
@@ -61527,7 +61709,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 bhaRunNumberField = value;
-             if(value!=null) 
                  this.BhaRunNumberSpecified = true;
                 NotifyPropertyChanged("BhaRunNumber");
             }
@@ -61566,7 +61747,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 creationDateField = value;
-             if(value!=null) 
                  this.CreationDateSpecified = true;
                 NotifyPropertyChanged("CreationDate");
             }
@@ -61677,7 +61857,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 minDateTimeIndexField = value;
-             if(value!=null) 
                  this.MinDateTimeIndexSpecified = true;
                 NotifyPropertyChanged("MinDateTimeIndex");
             }
@@ -61716,7 +61895,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 maxDateTimeIndexField = value;
-             if(value!=null) 
                  this.MaxDateTimeIndexSpecified = true;
                 NotifyPropertyChanged("MaxDateTimeIndex");
             }
@@ -61777,14 +61955,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if LogParam has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool LogParamSpecified
          {
-            get {
+             get {
              if(logParamField!=null)
-                return logParamField.Count>0?true:false;
+                 return logParamField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<IndexedObject> logParamField; 
 
@@ -61804,14 +61985,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if LogCurveInfo has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool LogCurveInfoSpecified
          {
-            get {
+             get {
              if(logCurveInfoField!=null)
-                return logCurveInfoField.Count>0?true:false;
+                 return logCurveInfoField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<WellLogCurveInfo> logCurveInfoField; 
 
@@ -61831,14 +62015,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if BlockInfo has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool BlockInfoSpecified
          {
-            get {
+             get {
              if(blockInfoField!=null)
-                return blockInfoField.Count>0?true:false;
+                 return blockInfoField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<BlockInfo> blockInfoField; 
 
@@ -61859,14 +62046,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if LogData has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool LogDataSpecified
          {
-            get {
+             get {
              if(logDataField!=null)
-                return logDataField.Count>0?true:false;
+                 return logDataField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<LogCurveInfoData> logDataField; 
 
@@ -62126,7 +62316,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 alternateIndexField = value;
-             if(value!=null) 
                  this.AlternateIndexSpecified = true;
                 NotifyPropertyChanged("AlternateIndex");
             }
@@ -62337,20 +62526,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private LogDataType? typeLogDataField; 
+        private bool typeLogDataSpecified = false; 
+
         /// <summary>
         /// bool to indicate if TypeLogData has been set. Used for serialization.
         /// </summary>
-        private bool typeLogDataSpecified = false; 
-         [XmlIgnore]
-         public bool TypeLogDataSpecified
-         {
+        [XmlIgnore]
+        public bool TypeLogDataSpecified
+        {
             get {
                 return typeLogDataSpecified;
-            } 
+            }
             set {
                 typeLogDataSpecified= value;
-            } 
-         }
+            }
+        }
 
         /// <summary>
         /// Indicates that the channel is encoded using a Base64 representation of binary values, and defines the binary type of elements of the array. If absent and axisDefinition is given, implies space delimited values, whose elemental data type is given by typeLogData.
@@ -62369,20 +62559,21 @@ namespace Energistics.DataAccess.WITSML131
         }
 
         private ArrayElementDataType? encodingDefField; 
+        private bool encodingDefSpecified = false; 
+
         /// <summary>
         /// bool to indicate if EncodingDef has been set. Used for serialization.
         /// </summary>
-        private bool encodingDefSpecified = false; 
-         [XmlIgnore]
-         public bool EncodingDefSpecified
-         {
+        [XmlIgnore]
+        public bool EncodingDefSpecified
+        {
             get {
                 return encodingDefSpecified;
-            } 
+            }
             set {
                 encodingDefSpecified= value;
-            } 
-         }
+            }
+        }
 
 
 
@@ -62401,14 +62592,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if AxisDefinition has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool AxisDefinitionSpecified
          {
-            get {
+             get {
              if(axisDefinitionField!=null)
-                return axisDefinitionField.Count>0?true:false;
+                 return axisDefinitionField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<AxisDefinition> axisDefinitionField; 
 
@@ -62488,7 +62682,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 dataRowCountField = value;
-             if(value!=null) 
                  this.DataRowCountSpecified = true;
                 NotifyPropertyChanged("DataRowCount");
             }
@@ -62635,7 +62828,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 startDateTimeIndexField = value;
-             if(value!=null) 
                  this.StartDateTimeIndexSpecified = true;
                 NotifyPropertyChanged("StartDateTimeIndex");
             }
@@ -62674,7 +62866,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 endDateTimeIndexField = value;
-             if(value!=null) 
                  this.EndDateTimeIndexSpecified = true;
                 NotifyPropertyChanged("EndDateTimeIndex");
             }
@@ -62791,14 +62982,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if LogParam has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool LogParamSpecified
          {
-            get {
+             get {
              if(logParamField!=null)
-                return logParamField.Count>0?true:false;
+                 return logParamField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<IndexedObject> logParamField; 
 
@@ -62818,14 +63012,17 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
+         /// <summary>
+         /// bool to indicate if BlockCurveInfo has been set. Used for serialization.
+         /// </summary>
          [XmlIgnore]
          public bool BlockCurveInfoSpecified
          {
-            get {
+             get {
              if(blockCurveInfoField!=null)
-                return blockCurveInfoField.Count>0?true:false;
+                 return blockCurveInfoField.Count>0?true:false;
              else return false;
-            } 
+             }
          }
         private List<BlockCurveInfo> blockCurveInfoField; 
 
@@ -62977,7 +63174,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 minDateTimeIndexField = value;
-             if(value!=null) 
                  this.MinDateTimeIndexSpecified = true;
                 NotifyPropertyChanged("MinDateTimeIndex");
             }
@@ -63016,7 +63212,6 @@ namespace Energistics.DataAccess.WITSML131
             } 
             set {
                 maxDateTimeIndexField = value;
-             if(value!=null) 
                  this.MaxDateTimeIndexSpecified = true;
                 NotifyPropertyChanged("MaxDateTimeIndex");
             }

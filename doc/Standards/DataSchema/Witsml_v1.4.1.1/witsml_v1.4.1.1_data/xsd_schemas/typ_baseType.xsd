@@ -247,7 +247,7 @@
 			It should also be used for uncontrolled strings which are candidates to become enumerations at a future date.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="witsml:abstractString">
-			<xsd:maxLength value="40"/>
+			<xsd:maxLength value="50"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<!--                                                         -->

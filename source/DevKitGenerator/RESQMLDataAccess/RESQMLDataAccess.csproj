@@ -51,9 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RESQML200\DataObjects.cs" />
-    <Compile Include="RESQML201\DataObjects.cs" />
-    <Compile Include="RESQML201\GeneratedEnumValues.cs" />
+    <Compile Include="RESQML110\DataObjects.cs" />
+    <Compile Include="RESQML110\GeneratedEnumValues.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
