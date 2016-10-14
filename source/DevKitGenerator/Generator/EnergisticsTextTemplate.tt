@@ -23,6 +23,7 @@
 
 using System;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
@@ -30,6 +31,8 @@ using System.Xml.Serialization;
 
 using Energistics.DataAccess.<#=mlVersion#>.ComponentSchemas;
 using Energistics.DataAccess.<#=mlVersion#>.ReferenceData;
+using Energistics.DataAccess.Reflection;
+using Energistics.DataAccess.Validation;
 
 namespace Energistics.DataAccess.<#=mlVersion#>
 {
@@ -37,7 +40,7 @@ namespace Energistics.DataAccess.<#=mlVersion#>
 <#
     foreach (Type type in generator.Classes)
     {
-        if(!type.Name.StartsWith("obj_") && !type.Name.Equals("abstractObject"))
+        if(generator.IsComponentSchemaType(type))
         {
 #>
     namespace ComponentSchemas 
@@ -75,8 +78,8 @@ namespace Energistics.DataAccess.<#=mlVersion#>
 <#
     }
 #>
-    [Description("<#=generator.GetDescription(type).Replace("\"", "")#>")]
-    public<#=type.IsAbstract ? " abstract" : string.Empty#> partial class <#=generator.RenameClass(type)#> <#=type.BaseType.Equals(typeof(object)) ?  ": Object" : string.Format(": {0}", generator.RenameClass(type.BaseType))#> <#=generator.RenameClass(type).EndsWith("List") ? ", IEnergisticsCollection" : String.Empty#>, INotifyPropertyChanged
+	<#=generator.GetEnergisticsDataObjectAttribute(type)#>[Description("<#=generator.GetDescription(type).Replace("\"", "")#>")]
+    public<#=type.IsAbstract ? " abstract" : string.Empty#> partial class <#=generator.RenameClass(type)#> <#=type.BaseType.Equals(typeof(object)) ?  ": Object" : string.Format(": {0}", generator.RenameClass(type.BaseType))#><#=generator.RenameClass(type).EndsWith("List") ? ", IEnergisticsCollection" : generator.GetDataObjectInterface(type)#>, INotifyPropertyChanged
     {
 <#=generator.GetConstructor(type)#>
 <#        
@@ -87,16 +90,17 @@ namespace Energistics.DataAccess.<#=mlVersion#>
                 if(property.GetCustomAttributes(typeof(XmlIgnoreAttribute), false).Length > 0)
                 {
 #>
-		<#=generator.GetDescription(type, property.Name)#>
+        <#=generator.GetDescription(type, property.Name)#>
         [XmlIgnore]
-		[Browsable(false)]
+        [Browsable(false)]
 <#
                 }
                 else
                 if(property.GetCustomAttributes(typeof(XmlTextAttribute), false).Length > 0)
                 {
 #>
-		<#=generator.GetDescription(type, property.Name)#>
+        <#=generator.GetDescription(type, property.Name)#>
+        <#=generator.GetValidationAttributes(type, property)#>
         [XmlText]
 <#
                 }
@@ -116,6 +120,7 @@ namespace Energistics.DataAccess.<#=mlVersion#>
 					   XmlElementAttribute xmlElemAttr = (elementAttribute[0] as XmlElementAttribute);
 #>
         <#=generator.GetDescription(type, property.Name)#>
+		<#=generator.GetValidationAttributes(type, property)#>
 		<#=generator.GetXmlElementAttrTag(xmlElemAttr, property)#>
 <#
                     }
@@ -127,13 +132,16 @@ namespace Energistics.DataAccess.<#=mlVersion#>
                             XmlAttributeAttribute attribute = attributetAttributes[0] as XmlAttributeAttribute;
 #>
 		<#=generator.GetDescription(type, property.Name)#>
+		<#=generator.GetValidationAttributes(type, property)#>
         [XmlAttribute("<#=string.IsNullOrEmpty(attribute.AttributeName) ? property.Name : attribute.AttributeName#>"<#=attribute.Form.HasFlag(XmlSchemaForm.Qualified) ? ", Form = System.Xml.Schema.XmlSchemaForm.Qualified" : String.Empty#><#=string.IsNullOrEmpty(attribute.Namespace) ? String.Empty : String.Format(", Namespace = \"{0}\"", attribute.Namespace)#>)]
-<#=generator.GetSurrogate(type, property)#><#                      
+		<#=generator.GetSurrogate(type, property)#>
+<#                      
                         }
                         else
                         {
 #>
         <#=generator.GetDescription(type, property.Name)#>
+		<#=generator.GetValidationAttributes(type, property)#>
 		<#=generator.GetXmlElementOrXmlArray(type, property)#>
 <#						}
                     }
@@ -141,7 +149,7 @@ namespace Energistics.DataAccess.<#=mlVersion#>
 
 		        
 #>
-        public <#=generator.RenameClass(property.PropertyType)#><#=generator.MakePropertyNullable(property)#> <#=generator.RenameProperty(property)#> <#=generator.GetGetterSetter(null, type, property)#>
+        public <#=generator.GetPropertyType(property)#><#=generator.MakePropertyNullable(property)#> <#=generator.RenameProperty(property)#> <#=generator.GetGetterSetter(null, type, property)#>
 <#
                 if (generator.IsItemsList(type, property)) {
 #>
@@ -186,7 +194,7 @@ namespace Energistics.DataAccess.<#=mlVersion#>
 #>
     } //here
 <#
-        if(!type.Name.StartsWith("obj_") && !type.Name.Equals("abstractObject"))
+        if(generator.IsComponentSchemaType(type))
         {
 #>
     }

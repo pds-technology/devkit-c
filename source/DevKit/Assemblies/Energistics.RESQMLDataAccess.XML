@@ -690,44 +690,44 @@
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.DublinCoreString">
+        <member name="T:Energistics.DataAccess.RESQML110.DublinCoreString">
             <summary>
             This class represents the dublinCoreString xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.DublinCoreString.#ctor">
+        <member name="M:Energistics.DataAccess.RESQML110.DublinCoreString.#ctor">
             <summary>
             Initializes a new instance of the DublinCoreString class.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.DublinCoreString.#ctor(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.DublinCoreString.#ctor(System.String)">
             <summary>
             Initializes a new instance of the DublinCoreString class.
             </summary>
             <param name="value">Initial value</param>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.DublinCoreString.ToString">
+        <member name="M:Energistics.DataAccess.RESQML110.DublinCoreString.ToString">
             <summary>
             Returns a string that represents the current object.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.DublinCoreString.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.DublinCoreString.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.DublinCoreString.Lang">
+        <member name="P:Energistics.DataAccess.RESQML110.DublinCoreString.Lang">
             <summary>
             lang property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.DublinCoreString.Value">
+        <member name="P:Energistics.DataAccess.RESQML110.DublinCoreString.Value">
             <summary>
             Value property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.DublinCoreString.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.DublinCoreString.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
@@ -753,7 +753,7 @@
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractW3CDTF">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractW3CDTF">
             <summary>
             This class represents the abstractW3CDTF xsd type.
             </summary>
@@ -3953,48 +3953,48 @@
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractGMLType">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractGMLType">
             <summary>
             This class represents the AbstractGMLType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractGMLType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.AbstractGMLType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractGMLType.Description">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractGMLType.Description">
             <summary>
             description property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractGMLType.DescriptionReference">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractGMLType.DescriptionReference">
             <summary>
             descriptionReference property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractGMLType.Identifier">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractGMLType.Identifier">
             <summary>
             identifier property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractGMLType.Name">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractGMLType.Name">
             <summary>
             name property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractGMLType.NameSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractGMLType.NameSpecified">
             <summary>
             bool to indicate if Name has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractGMLType.Id">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractGMLType.Id">
             <summary>
             id property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractGMLType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.AbstractGMLType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
@@ -4004,12 +4004,12 @@
             This class represents the DefinitionBaseType xsd type.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.DefinitionType">
+        <member name="T:Energistics.DataAccess.RESQML110.DefinitionType">
             <summary>
             This class represents the DefinitionType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.DefinitionType.Remarks">
+        <member name="P:Energistics.DataAccess.RESQML110.DefinitionType.Remarks">
             <summary>
             remarks property
             </summary>
@@ -4019,315 +4019,315 @@
             This class represents the IdentifiedObjectType xsd type.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCRSType">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractCRSType">
             <summary>
             This class represents the AbstractCRSType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCRSType.DomainOfValidity">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractCRSType.DomainOfValidity">
             <summary>
             domainOfValidity property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCRSType.DomainOfValiditySpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractCRSType.DomainOfValiditySpecified">
             <summary>
             bool to indicate if DomainOfValidity has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCRSType.Scope">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractCRSType.Scope">
             <summary>
             scope property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCRSType.ScopeSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractCRSType.ScopeSpecified">
             <summary>
             bool to indicate if Scope has been set. Used for serialization.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.VerticalCRSType">
+        <member name="T:Energistics.DataAccess.RESQML110.VerticalCRSType">
             <summary>
             This class represents the VerticalCRSType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.VerticalCRSType.VerticalCS">
+        <member name="P:Energistics.DataAccess.RESQML110.VerticalCRSType.VerticalCS">
             <summary>
             verticalCS property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.VerticalCRSType.VerticalDatum">
+        <member name="P:Energistics.DataAccess.RESQML110.VerticalCRSType.VerticalDatum">
             <summary>
             verticalDatum property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.VerticalCSPropertyType">
+        <member name="T:Energistics.DataAccess.RESQML110.VerticalCSPropertyType">
             <summary>
             This class represents the VerticalCSPropertyType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.VerticalCSPropertyType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.VerticalCSPropertyType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.VerticalCSPropertyType.VerticalCS">
+        <member name="P:Energistics.DataAccess.RESQML110.VerticalCSPropertyType.VerticalCS">
             <summary>
             VerticalCS property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.VerticalCSPropertyType.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.VerticalCSPropertyType.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.VerticalCSPropertyType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.VerticalCSPropertyType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCoordinateSystemType">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractCoordinateSystemType">
             <summary>
             This class represents the AbstractCoordinateSystemType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCoordinateSystemType.Axis">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractCoordinateSystemType.Axis">
             <summary>
             axis property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCoordinateSystemType.AxisSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractCoordinateSystemType.AxisSpecified">
             <summary>
             bool to indicate if Axis has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCoordinateSystemType.AggregationType">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractCoordinateSystemType.AggregationType">
             <summary>
             aggregationType property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCoordinateSystemType.AggregationTypeSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractCoordinateSystemType.AggregationTypeSpecified">
             <summary>
             aggregationTypeSpecified property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.VerticalCSType">
+        <member name="T:Energistics.DataAccess.RESQML110.VerticalCSType">
             <summary>
             This class represents the VerticalCSType xsd type.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateSystemAxisPropertyType">
+        <member name="T:Energistics.DataAccess.RESQML110.CoordinateSystemAxisPropertyType">
             <summary>
             This class represents the CoordinateSystemAxisPropertyType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateSystemAxisPropertyType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.CoordinateSystemAxisPropertyType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateSystemAxisPropertyType.CoordinateSystemAxis">
+        <member name="P:Energistics.DataAccess.RESQML110.CoordinateSystemAxisPropertyType.CoordinateSystemAxis">
             <summary>
             CoordinateSystemAxis property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateSystemAxisPropertyType.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.CoordinateSystemAxisPropertyType.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateSystemAxisPropertyType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.CoordinateSystemAxisPropertyType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateSystemAxisType">
+        <member name="T:Energistics.DataAccess.RESQML110.CoordinateSystemAxisType">
             <summary>
             This class represents the CoordinateSystemAxisType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateSystemAxisType.AxisAbbrev">
+        <member name="P:Energistics.DataAccess.RESQML110.CoordinateSystemAxisType.AxisAbbrev">
             <summary>
             axisAbbrev property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateSystemAxisType.AxisDirection">
+        <member name="P:Energistics.DataAccess.RESQML110.CoordinateSystemAxisType.AxisDirection">
             <summary>
             axisDirection property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateSystemAxisType.MinimumValue">
+        <member name="P:Energistics.DataAccess.RESQML110.CoordinateSystemAxisType.MinimumValue">
             <summary>
             minimumValue property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateSystemAxisType.MinimumValueSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.CoordinateSystemAxisType.MinimumValueSpecified">
             <summary>
             minimumValueSpecified property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateSystemAxisType.MaximumValue">
+        <member name="P:Energistics.DataAccess.RESQML110.CoordinateSystemAxisType.MaximumValue">
             <summary>
             maximumValue property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateSystemAxisType.MaximumValueSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.CoordinateSystemAxisType.MaximumValueSpecified">
             <summary>
             maximumValueSpecified property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateSystemAxisType.RangeMeaning">
+        <member name="P:Energistics.DataAccess.RESQML110.CoordinateSystemAxisType.RangeMeaning">
             <summary>
             rangeMeaning property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeType">
+        <member name="T:Energistics.DataAccess.RESQML110.CodeType">
             <summary>
             This class represents the CodeType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeType.#ctor">
+        <member name="M:Energistics.DataAccess.RESQML110.CodeType.#ctor">
             <summary>
             Initializes a new instance of the CodeType class.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeType.#ctor(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.CodeType.#ctor(System.String)">
             <summary>
             Initializes a new instance of the CodeType class.
             </summary>
             <param name="value">Initial value</param>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeType.ToString">
+        <member name="M:Energistics.DataAccess.RESQML110.CodeType.ToString">
             <summary>
             Returns a string that represents the current object.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.CodeType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeType.CodeSpace">
+        <member name="P:Energistics.DataAccess.RESQML110.CodeType.CodeSpace">
             <summary>
             codeSpace property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeType.Value">
+        <member name="P:Energistics.DataAccess.RESQML110.CodeType.Value">
             <summary>
             Value property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.CodeType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeWithAuthorityType">
+        <member name="T:Energistics.DataAccess.RESQML110.CodeWithAuthorityType">
             <summary>
             This class represents the CodeWithAuthorityType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeWithAuthorityType.#ctor">
+        <member name="M:Energistics.DataAccess.RESQML110.CodeWithAuthorityType.#ctor">
             <summary>
             Initializes a new instance of the CodeWithAuthorityType class.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeWithAuthorityType.#ctor(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.CodeWithAuthorityType.#ctor(System.String)">
             <summary>
             Initializes a new instance of the CodeWithAuthorityType class.
             </summary>
             <param name="value">Initial value</param>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeWithAuthorityType.ToString">
+        <member name="M:Energistics.DataAccess.RESQML110.CodeWithAuthorityType.ToString">
             <summary>
             Returns a string that represents the current object.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.StringOrRefType">
+        <member name="T:Energistics.DataAccess.RESQML110.StringOrRefType">
             <summary>
             This class represents the StringOrRefType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.StringOrRefType.#ctor">
+        <member name="M:Energistics.DataAccess.RESQML110.StringOrRefType.#ctor">
             <summary>
             Initializes a new instance of the StringOrRefType class.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.StringOrRefType.#ctor(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.StringOrRefType.#ctor(System.String)">
             <summary>
             Initializes a new instance of the StringOrRefType class.
             </summary>
             <param name="value">Initial value</param>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.StringOrRefType.ToString">
+        <member name="M:Energistics.DataAccess.RESQML110.StringOrRefType.ToString">
             <summary>
             Returns a string that represents the current object.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.StringOrRefType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.StringOrRefType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.StringOrRefType.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.StringOrRefType.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.StringOrRefType.Value">
+        <member name="P:Energistics.DataAccess.RESQML110.StringOrRefType.Value">
             <summary>
             Value property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.StringOrRefType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.StringOrRefType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.ReferenceType">
+        <member name="T:Energistics.DataAccess.RESQML110.ReferenceType">
             <summary>
             This class represents the ReferenceType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.ReferenceType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.ReferenceType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.ReferenceType.Owns">
+        <member name="P:Energistics.DataAccess.RESQML110.ReferenceType.Owns">
             <summary>
             owns property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.ReferenceType.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.ReferenceType.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.ReferenceType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.ReferenceType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractTimeObjectType">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractTimeObjectType">
             <summary>
             This class represents the AbstractTimeObjectType xsd type.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractTimePrimitiveType">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractTimePrimitiveType">
             <summary>
             This class represents the AbstractTimePrimitiveType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractTimePrimitiveType.RelatedTime">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractTimePrimitiveType.RelatedTime">
             <summary>
             relatedTime property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractTimePrimitiveType.RelatedTimeSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractTimePrimitiveType.RelatedTimeSpecified">
             <summary>
             bool to indicate if RelatedTime has been set. Used for serialization.
             </summary>
@@ -4378,196 +4378,196 @@
             relativePositionSpecified property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractGeometryType">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractGeometryType">
             <summary>
             This class represents the AbstractGeometryType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractGeometryType.SrsName">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractGeometryType.SrsName">
             <summary>
             srsName property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractGeometryType.SrsDimension">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractGeometryType.SrsDimension">
             <summary>
             srsDimension property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractGeometricPrimitiveType">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractGeometricPrimitiveType">
             <summary>
             This class represents the AbstractGeometricPrimitiveType xsd type.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.PointType">
+        <member name="T:Energistics.DataAccess.RESQML110.PointType">
             <summary>
             This class represents the PointType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.PointType.Item">
+        <member name="P:Energistics.DataAccess.RESQML110.PointType.Item">
             <summary>
             Item property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.DirectPositionType">
+        <member name="T:Energistics.DataAccess.RESQML110.DirectPositionType">
             <summary>
             This class represents the DirectPositionType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.DirectPositionType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.DirectPositionType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.DirectPositionType.SrsName">
+        <member name="P:Energistics.DataAccess.RESQML110.DirectPositionType.SrsName">
             <summary>
             srsName property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.DirectPositionType.SrsDimension">
+        <member name="P:Energistics.DataAccess.RESQML110.DirectPositionType.SrsDimension">
             <summary>
             srsDimension property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.DirectPositionType.Text">
+        <member name="P:Energistics.DataAccess.RESQML110.DirectPositionType.Text">
             <summary>
             Text property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.DirectPositionType.TextSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.DirectPositionType.TextSpecified">
             <summary>
             bool to indicate if Text has been set. Used for serialization.
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.DirectPositionType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.DirectPositionType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractSurfaceType">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractSurfaceType">
             <summary>
             This class represents the AbstractSurfaceType xsd type.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.PolygonType">
+        <member name="T:Energistics.DataAccess.RESQML110.PolygonType">
             <summary>
             This class represents the PolygonType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.PolygonType.Exterior">
+        <member name="P:Energistics.DataAccess.RESQML110.PolygonType.Exterior">
             <summary>
             exterior property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.PolygonType.Interior">
+        <member name="P:Energistics.DataAccess.RESQML110.PolygonType.Interior">
             <summary>
             interior property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.PolygonType.InteriorSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.PolygonType.InteriorSpecified">
             <summary>
             bool to indicate if Interior has been set. Used for serialization.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractRingPropertyType">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractRingPropertyType">
             <summary>
             This class represents the AbstractRingPropertyType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractRingPropertyType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.AbstractRingPropertyType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractRingPropertyType.Item">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractRingPropertyType.Item">
             <summary>
             Item property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractRingPropertyType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.AbstractRingPropertyType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractRingType">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractRingType">
             <summary>
             This class represents the AbstractRingType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractRingType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.AbstractRingType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractRingType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.AbstractRingType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.LinearRingType">
+        <member name="T:Energistics.DataAccess.RESQML110.LinearRingType">
             <summary>
             This class represents the LinearRingType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.LinearRingType.Pos">
+        <member name="P:Energistics.DataAccess.RESQML110.LinearRingType.Pos">
             <summary>
             pos property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.LinearRingType.PosSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.LinearRingType.PosSpecified">
             <summary>
             bool to indicate if Pos has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.LinearRingType.PosList">
+        <member name="P:Energistics.DataAccess.RESQML110.LinearRingType.PosList">
             <summary>
             posList property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.LinearRingType.PosListSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.LinearRingType.PosListSpecified">
             <summary>
             bool to indicate if PosList has been set. Used for serialization.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.DirectPositionListType">
+        <member name="T:Energistics.DataAccess.RESQML110.DirectPositionListType">
             <summary>
             This class represents the DirectPositionListType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.DirectPositionListType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.DirectPositionListType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.DirectPositionListType.SrsName">
+        <member name="P:Energistics.DataAccess.RESQML110.DirectPositionListType.SrsName">
             <summary>
             srsName property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.DirectPositionListType.SrsDimension">
+        <member name="P:Energistics.DataAccess.RESQML110.DirectPositionListType.SrsDimension">
             <summary>
             srsDimension property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.DirectPositionListType.Count">
+        <member name="P:Energistics.DataAccess.RESQML110.DirectPositionListType.Count">
             <summary>
             count property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.DirectPositionListType.Text">
+        <member name="P:Energistics.DataAccess.RESQML110.DirectPositionListType.Text">
             <summary>
             Text property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.DirectPositionListType.TextSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.DirectPositionListType.TextSpecified">
             <summary>
             bool to indicate if Text has been set. Used for serialization.
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.DirectPositionListType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.DirectPositionListType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
@@ -4582,94 +4582,94 @@
             boundedBy property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.BoundingShapeType">
+        <member name="T:Energistics.DataAccess.RESQML110.BoundingShapeType">
             <summary>
             This class represents the BoundingShapeType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.BoundingShapeType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.BoundingShapeType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.BoundingShapeType.Item">
+        <member name="P:Energistics.DataAccess.RESQML110.BoundingShapeType.Item">
             <summary>
             Item property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.BoundingShapeType.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.BoundingShapeType.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.BoundingShapeType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.BoundingShapeType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.EnvelopeType">
+        <member name="T:Energistics.DataAccess.RESQML110.EnvelopeType">
             <summary>
             This class represents the EnvelopeType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.EnvelopeType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.EnvelopeType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EnvelopeType.UpperCorner">
+        <member name="P:Energistics.DataAccess.RESQML110.EnvelopeType.UpperCorner">
             <summary>
             upperCorner property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EnvelopeType.UpperCornerSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.EnvelopeType.UpperCornerSpecified">
             <summary>
             bool to indicate if UpperCorner has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EnvelopeType.LowerCorner">
+        <member name="P:Energistics.DataAccess.RESQML110.EnvelopeType.LowerCorner">
             <summary>
             lowerCorner property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EnvelopeType.LowerCornerSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.EnvelopeType.LowerCornerSpecified">
             <summary>
             bool to indicate if LowerCorner has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EnvelopeType.Pos">
+        <member name="P:Energistics.DataAccess.RESQML110.EnvelopeType.Pos">
             <summary>
             pos property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EnvelopeType.PosSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.EnvelopeType.PosSpecified">
             <summary>
             bool to indicate if Pos has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EnvelopeType.ItemsElementName">
+        <member name="P:Energistics.DataAccess.RESQML110.EnvelopeType.ItemsElementName">
             <summary>
             ItemsElementName property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EnvelopeType.ItemsElementNameSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.EnvelopeType.ItemsElementNameSpecified">
             <summary>
             bool to indicate if ItemsElementName has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EnvelopeType.SrsName">
+        <member name="P:Energistics.DataAccess.RESQML110.EnvelopeType.SrsName">
             <summary>
             srsName property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EnvelopeType.SrsDimension">
+        <member name="P:Energistics.DataAccess.RESQML110.EnvelopeType.SrsDimension">
             <summary>
             srsDimension property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.EnvelopeType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.EnvelopeType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
@@ -4705,54 +4705,54 @@
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.EllipsoidType">
+        <member name="T:Energistics.DataAccess.RESQML110.EllipsoidType">
             <summary>
             This class represents the EllipsoidType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EllipsoidType.SemiMajorAxis">
+        <member name="P:Energistics.DataAccess.RESQML110.EllipsoidType.SemiMajorAxis">
             <summary>
             semiMajorAxis property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EllipsoidType.SecondDefiningParameter">
+        <member name="P:Energistics.DataAccess.RESQML110.EllipsoidType.SecondDefiningParameter">
             <summary>
             secondDefiningParameter property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.MeasureType">
+        <member name="T:Energistics.DataAccess.RESQML110.MeasureType">
             <summary>
             This class represents the MeasureType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.MeasureType.#ctor">
+        <member name="M:Energistics.DataAccess.RESQML110.MeasureType.#ctor">
             <summary>
             Initializes a new instance of the MeasureType class.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.MeasureType.#ctor(System.Double)">
+        <member name="M:Energistics.DataAccess.RESQML110.MeasureType.#ctor(System.Double)">
             <summary>
             Initializes a new instance of the MeasureType class.
             </summary>
             <param name="value">Initial value</param>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.MeasureType.ToString">
+        <member name="M:Energistics.DataAccess.RESQML110.MeasureType.ToString">
             <summary>
             Returns a string that represents the current object.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.MeasureType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.MeasureType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.MeasureType.Value">
+        <member name="P:Energistics.DataAccess.RESQML110.MeasureType.Value">
             <summary>
             Value property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.MeasureType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.MeasureType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
@@ -4778,161 +4778,161 @@
             Returns a string that represents the current object.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AngleType">
+        <member name="T:Energistics.DataAccess.RESQML110.AngleType">
             <summary>
             This class represents the AngleType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.AngleType.#ctor">
+        <member name="M:Energistics.DataAccess.RESQML110.AngleType.#ctor">
             <summary>
             Initializes a new instance of the AngleType class.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.AngleType.#ctor(System.Double)">
+        <member name="M:Energistics.DataAccess.RESQML110.AngleType.#ctor(System.Double)">
             <summary>
             Initializes a new instance of the AngleType class.
             </summary>
             <param name="value">Initial value</param>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.AngleType.ToString">
+        <member name="M:Energistics.DataAccess.RESQML110.AngleType.ToString">
             <summary>
             Returns a string that represents the current object.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.StandAloneSecondDefiningParameter">
+        <member name="T:Energistics.DataAccess.RESQML110.StandAloneSecondDefiningParameter">
             <summary>
             This class represents the secondDefiningParameter xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.StandAloneSecondDefiningParameter.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.StandAloneSecondDefiningParameter.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.StandAloneSecondDefiningParameter.SecondDefiningParameter">
+        <member name="P:Energistics.DataAccess.RESQML110.StandAloneSecondDefiningParameter.SecondDefiningParameter">
             <summary>
             SecondDefiningParameter property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.StandAloneSecondDefiningParameter.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.StandAloneSecondDefiningParameter.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.SecondDefiningParameter">
+        <member name="T:Energistics.DataAccess.RESQML110.SecondDefiningParameter">
             <summary>
             This class represents the SecondDefiningParameter xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.SecondDefiningParameter.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.SecondDefiningParameter.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.SecondDefiningParameter.IsSphere">
+        <member name="P:Energistics.DataAccess.RESQML110.SecondDefiningParameter.IsSphere">
             <summary>
             isSphere property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.SecondDefiningParameter.IsSphereSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.SecondDefiningParameter.IsSphereSpecified">
             <summary>
             bool to indicate if IsSphere has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.SecondDefiningParameter.InverseFlattening">
+        <member name="P:Energistics.DataAccess.RESQML110.SecondDefiningParameter.InverseFlattening">
             <summary>
             inverseFlattening property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.SecondDefiningParameter.InverseFlatteningSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.SecondDefiningParameter.InverseFlatteningSpecified">
             <summary>
             bool to indicate if InverseFlattening has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.SecondDefiningParameter.SemiMinorAxis">
+        <member name="P:Energistics.DataAccess.RESQML110.SecondDefiningParameter.SemiMinorAxis">
             <summary>
             semiMinorAxis property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.SecondDefiningParameter.SemiMinorAxisSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.SecondDefiningParameter.SemiMinorAxisSpecified">
             <summary>
             bool to indicate if SemiMinorAxis has been set. Used for serialization.
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.SecondDefiningParameter.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.SecondDefiningParameter.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.PrimeMeridianType">
+        <member name="T:Energistics.DataAccess.RESQML110.PrimeMeridianType">
             <summary>
             This class represents the PrimeMeridianType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.PrimeMeridianType.GreenwichLongitude">
+        <member name="P:Energistics.DataAccess.RESQML110.PrimeMeridianType.GreenwichLongitude">
             <summary>
             greenwichLongitude property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDatumType">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractDatumType">
             <summary>
             This class represents the AbstractDatumType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDatumType.DomainOfValidity">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDatumType.DomainOfValidity">
             <summary>
             domainOfValidity property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDatumType.Scope">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDatumType.Scope">
             <summary>
             scope property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDatumType.ScopeSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDatumType.ScopeSpecified">
             <summary>
             bool to indicate if Scope has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDatumType.AnchorDefinition">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDatumType.AnchorDefinition">
             <summary>
             anchorDefinition property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDatumType.RealizationEpoch">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDatumType.RealizationEpoch">
             <summary>
             realizationEpoch property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDatumType.RealizationEpochSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDatumType.RealizationEpochSpecified">
             <summary>
             realizationEpochSpecified property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.DomainOfValidity">
+        <member name="T:Energistics.DataAccess.RESQML110.DomainOfValidity">
             <summary>
             This class represents the domainOfValidity xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.DomainOfValidity.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.DomainOfValidity.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.DomainOfValidity.EX_Extent">
+        <member name="P:Energistics.DataAccess.RESQML110.DomainOfValidity.EX_Extent">
             <summary>
             EX_Extent property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.DomainOfValidity.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.DomainOfValidity.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.DomainOfValidity.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.DomainOfValidity.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
@@ -4963,42 +4963,42 @@
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.EX_Extent_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.EX_Extent_Type">
             <summary>
             This class represents the EX_Extent_Type xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EX_Extent_Type.Description">
+        <member name="P:Energistics.DataAccess.RESQML110.EX_Extent_Type.Description">
             <summary>
             description property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EX_Extent_Type.GeographicElement">
+        <member name="P:Energistics.DataAccess.RESQML110.EX_Extent_Type.GeographicElement">
             <summary>
             geographicElement property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EX_Extent_Type.GeographicElementSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.EX_Extent_Type.GeographicElementSpecified">
             <summary>
             bool to indicate if GeographicElement has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EX_Extent_Type.TemporalElement">
+        <member name="P:Energistics.DataAccess.RESQML110.EX_Extent_Type.TemporalElement">
             <summary>
             temporalElement property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EX_Extent_Type.TemporalElementSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.EX_Extent_Type.TemporalElementSpecified">
             <summary>
             bool to indicate if TemporalElement has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EX_Extent_Type.VerticalElement">
+        <member name="P:Energistics.DataAccess.RESQML110.EX_Extent_Type.VerticalElement">
             <summary>
             verticalElement property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EX_Extent_Type.VerticalElementSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.EX_Extent_Type.VerticalElementSpecified">
             <summary>
             bool to indicate if VerticalElement has been set. Used for serialization.
             </summary>
@@ -5060,12 +5060,12 @@
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractEX_GeographicExtent_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractEX_GeographicExtent_Type">
             <summary>
             This class represents the AbstractEX_GeographicExtent_Type xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractEX_GeographicExtent_Type.ExtentTypeCode">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractEX_GeographicExtent_Type.ExtentTypeCode">
             <summary>
             extentTypeCode property
             </summary>
@@ -5096,62 +5096,62 @@
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDQ_Result_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractDQ_Result_Type">
             <summary>
             This class represents the AbstractDQ_Result_Type xsd type.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Series_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.CI_Series_Type">
             <summary>
             This class represents the CI_Series_Type xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Series_Type.Name">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Series_Type.Name">
             <summary>
             name property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Series_Type.IssueIdentification">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Series_Type.IssueIdentification">
             <summary>
             issueIdentification property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Series_Type.Page">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Series_Type.Page">
             <summary>
             page property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_OnlineResource_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.CI_OnlineResource_Type">
             <summary>
             This class represents the CI_OnlineResource_Type xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_OnlineResource_Type.Linkage">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_OnlineResource_Type.Linkage">
             <summary>
             linkage property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_OnlineResource_Type.Protocol">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_OnlineResource_Type.Protocol">
             <summary>
             protocol property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_OnlineResource_Type.ApplicationProfile">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_OnlineResource_Type.ApplicationProfile">
             <summary>
             applicationProfile property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_OnlineResource_Type.Name">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_OnlineResource_Type.Name">
             <summary>
             name property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_OnlineResource_Type.Description">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_OnlineResource_Type.Description">
             <summary>
             description property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_OnlineResource_Type.Function">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_OnlineResource_Type.Function">
             <summary>
             function property
             </summary>
@@ -5208,154 +5208,154 @@
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeListValue_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.CodeListValue_Type">
             <summary>
             This class represents the CodeListValue_Type xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeListValue_Type.#ctor">
+        <member name="M:Energistics.DataAccess.RESQML110.CodeListValue_Type.#ctor">
             <summary>
             Initializes a new instance of the CodeListValue_Type class.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeListValue_Type.#ctor(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.CodeListValue_Type.#ctor(System.String)">
             <summary>
             Initializes a new instance of the CodeListValue_Type class.
             </summary>
             <param name="value">Initial value</param>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeListValue_Type.ToString">
+        <member name="M:Energistics.DataAccess.RESQML110.CodeListValue_Type.ToString">
             <summary>
             Returns a string that represents the current object.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeListValue_Type.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.CodeListValue_Type.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeListValue_Type.CodeList">
+        <member name="P:Energistics.DataAccess.RESQML110.CodeListValue_Type.CodeList">
             <summary>
             codeList property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeListValue_Type.CodeListValue">
+        <member name="P:Energistics.DataAccess.RESQML110.CodeListValue_Type.CodeListValue">
             <summary>
             codeListValue property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeListValue_Type.CodeSpace">
+        <member name="P:Energistics.DataAccess.RESQML110.CodeListValue_Type.CodeSpace">
             <summary>
             codeSpace property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeListValue_Type.Value">
+        <member name="P:Energistics.DataAccess.RESQML110.CodeListValue_Type.Value">
             <summary>
             Value property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.CodeListValue_Type.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.CodeListValue_Type.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Address_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.CI_Address_Type">
             <summary>
             This class represents the CI_Address_Type xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Address_Type.DeliveryPoint">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Address_Type.DeliveryPoint">
             <summary>
             deliveryPoint property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Address_Type.DeliveryPointSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Address_Type.DeliveryPointSpecified">
             <summary>
             bool to indicate if DeliveryPoint has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Address_Type.City">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Address_Type.City">
             <summary>
             city property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Address_Type.AdministrativeArea">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Address_Type.AdministrativeArea">
             <summary>
             administrativeArea property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Address_Type.PostalCode">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Address_Type.PostalCode">
             <summary>
             postalCode property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Address_Type.Country">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Address_Type.Country">
             <summary>
             country property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Address_Type.ElectronicMailAddress">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Address_Type.ElectronicMailAddress">
             <summary>
             electronicMailAddress property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Address_Type.ElectronicMailAddressSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Address_Type.ElectronicMailAddressSpecified">
             <summary>
             bool to indicate if ElectronicMailAddress has been set. Used for serialization.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Telephone_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.CI_Telephone_Type">
             <summary>
             This class represents the CI_Telephone_Type xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Telephone_Type.Voice">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Telephone_Type.Voice">
             <summary>
             voice property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Telephone_Type.VoiceSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Telephone_Type.VoiceSpecified">
             <summary>
             bool to indicate if Voice has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Telephone_Type.Facsimile">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Telephone_Type.Facsimile">
             <summary>
             facsimile property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Telephone_Type.FacsimileSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Telephone_Type.FacsimileSpecified">
             <summary>
             bool to indicate if Facsimile has been set. Used for serialization.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Contact_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.CI_Contact_Type">
             <summary>
             This class represents the CI_Contact_Type xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Contact_Type.Phone">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Contact_Type.Phone">
             <summary>
             phone property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Contact_Type.Address">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Contact_Type.Address">
             <summary>
             address property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Contact_Type.OnlineResource">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Contact_Type.OnlineResource">
             <summary>
             onlineResource property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Contact_Type.HoursOfService">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Contact_Type.HoursOfService">
             <summary>
             hoursOfService property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Contact_Type.ContactInstructions">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Contact_Type.ContactInstructions">
             <summary>
             contactInstructions property
             </summary>
@@ -5453,32 +5453,32 @@
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_ResponsibleParty_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.CI_ResponsibleParty_Type">
             <summary>
             This class represents the CI_ResponsibleParty_Type xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_ResponsibleParty_Type.IndividualName">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_ResponsibleParty_Type.IndividualName">
             <summary>
             individualName property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_ResponsibleParty_Type.OrganisationName">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_ResponsibleParty_Type.OrganisationName">
             <summary>
             organisationName property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_ResponsibleParty_Type.PositionName">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_ResponsibleParty_Type.PositionName">
             <summary>
             positionName property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_ResponsibleParty_Type.ContactInfo">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_ResponsibleParty_Type.ContactInfo">
             <summary>
             contactInfo property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_ResponsibleParty_Type.Role">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_ResponsibleParty_Type.Role">
             <summary>
             role property
             </summary>
@@ -5540,17 +5540,17 @@
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Date_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.CI_Date_Type">
             <summary>
             This class represents the CI_Date_Type xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Date_Type.Date">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Date_Type.Date">
             <summary>
             date property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Date_Type.DateType">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Date_Type.DateType">
             <summary>
             dateType property
             </summary>
@@ -5622,97 +5622,97 @@
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.CI_Citation_Type">
             <summary>
             This class represents the CI_Citation_Type xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.Title">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.Title">
             <summary>
             title property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.AlternateTitle">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.AlternateTitle">
             <summary>
             alternateTitle property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.AlternateTitleSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.AlternateTitleSpecified">
             <summary>
             bool to indicate if AlternateTitle has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.Date">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.Date">
             <summary>
             date property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.DateSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.DateSpecified">
             <summary>
             bool to indicate if Date has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.Edition">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.Edition">
             <summary>
             edition property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.EditionDate">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.EditionDate">
             <summary>
             editionDate property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.Identifier">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.Identifier">
             <summary>
             identifier property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.IdentifierSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.IdentifierSpecified">
             <summary>
             bool to indicate if Identifier has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.CitedResponsibleParty">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.CitedResponsibleParty">
             <summary>
             citedResponsibleParty property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.CitedResponsiblePartySpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.CitedResponsiblePartySpecified">
             <summary>
             bool to indicate if CitedResponsibleParty has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.PresentationForm">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.PresentationForm">
             <summary>
             presentationForm property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.PresentationFormSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.PresentationFormSpecified">
             <summary>
             bool to indicate if PresentationForm has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.Series">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.Series">
             <summary>
             series property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.OtherCitationDetails">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.OtherCitationDetails">
             <summary>
             otherCitationDetails property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.CollectiveTitle">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.CollectiveTitle">
             <summary>
             collectiveTitle property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.ISBN">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.ISBN">
             <summary>
             ISBN property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CI_Citation_Type.ISSN">
+        <member name="P:Energistics.DataAccess.RESQML110.CI_Citation_Type.ISSN">
             <summary>
             ISSN property
             </summary>
@@ -5779,17 +5779,17 @@
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.MD_Identifier_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.MD_Identifier_Type">
             <summary>
             This class represents the MD_Identifier_Type xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.MD_Identifier_Type.Authority">
+        <member name="P:Energistics.DataAccess.RESQML110.MD_Identifier_Type.Authority">
             <summary>
             authority property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.MD_Identifier_Type.Code">
+        <member name="P:Energistics.DataAccess.RESQML110.MD_Identifier_Type.Code">
             <summary>
             code property
             </summary>
@@ -5913,62 +5913,62 @@
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDQ_Element_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractDQ_Element_Type">
             <summary>
             This class represents the AbstractDQ_Element_Type xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDQ_Element_Type.NameOfMeasure">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDQ_Element_Type.NameOfMeasure">
             <summary>
             nameOfMeasure property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDQ_Element_Type.NameOfMeasureSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDQ_Element_Type.NameOfMeasureSpecified">
             <summary>
             bool to indicate if NameOfMeasure has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDQ_Element_Type.MeasureIdentification">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDQ_Element_Type.MeasureIdentification">
             <summary>
             measureIdentification property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDQ_Element_Type.MeasureDescription">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDQ_Element_Type.MeasureDescription">
             <summary>
             measureDescription property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDQ_Element_Type.EvaluationMethodType">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDQ_Element_Type.EvaluationMethodType">
             <summary>
             evaluationMethodType property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDQ_Element_Type.EvaluationMethodDescription">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDQ_Element_Type.EvaluationMethodDescription">
             <summary>
             evaluationMethodDescription property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDQ_Element_Type.EvaluationProcedure">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDQ_Element_Type.EvaluationProcedure">
             <summary>
             evaluationProcedure property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDQ_Element_Type.DateTime">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDQ_Element_Type.DateTime">
             <summary>
             dateTime property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDQ_Element_Type.DateTimeSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDQ_Element_Type.DateTimeSpecified">
             <summary>
             bool to indicate if DateTime has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDQ_Element_Type.Result">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDQ_Element_Type.Result">
             <summary>
             result property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDQ_Element_Type.ResultSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractDQ_Element_Type.ResultSpecified">
             <summary>
             bool to indicate if Result has been set. Used for serialization.
             </summary>
@@ -6056,27 +6056,27 @@
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractDQ_PositionalAccuracy_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractDQ_PositionalAccuracy_Type">
             <summary>
             This class represents the AbstractDQ_PositionalAccuracy_Type xsd type.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.EX_VerticalExtent_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.EX_VerticalExtent_Type">
             <summary>
             This class represents the EX_VerticalExtent_Type xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EX_VerticalExtent_Type.MinimumValue">
+        <member name="P:Energistics.DataAccess.RESQML110.EX_VerticalExtent_Type.MinimumValue">
             <summary>
             minimumValue property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EX_VerticalExtent_Type.MaximumValue">
+        <member name="P:Energistics.DataAccess.RESQML110.EX_VerticalExtent_Type.MaximumValue">
             <summary>
             maximumValue property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EX_VerticalExtent_Type.VerticalCRS">
+        <member name="P:Energistics.DataAccess.RESQML110.EX_VerticalExtent_Type.VerticalCRS">
             <summary>
             verticalCRS property
             </summary>
@@ -6138,417 +6138,417 @@
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticCRSType">
+        <member name="T:Energistics.DataAccess.RESQML110.GeodeticCRSType">
             <summary>
             This class represents the GeodeticCRSType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticCRSType.SphericalCS">
+        <member name="P:Energistics.DataAccess.RESQML110.GeodeticCRSType.SphericalCS">
             <summary>
             sphericalCS property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticCRSType.SphericalCSSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.GeodeticCRSType.SphericalCSSpecified">
             <summary>
             bool to indicate if SphericalCS has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticCRSType.EllipsoidalCS">
+        <member name="P:Energistics.DataAccess.RESQML110.GeodeticCRSType.EllipsoidalCS">
             <summary>
             ellipsoidalCS property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticCRSType.EllipsoidalCSSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.GeodeticCRSType.EllipsoidalCSSpecified">
             <summary>
             bool to indicate if EllipsoidalCS has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticCRSType.CartesianCS">
+        <member name="P:Energistics.DataAccess.RESQML110.GeodeticCRSType.CartesianCS">
             <summary>
             cartesianCS property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticCRSType.CartesianCSSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.GeodeticCRSType.CartesianCSSpecified">
             <summary>
             bool to indicate if CartesianCS has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticCRSType.GeodeticDatum">
+        <member name="P:Energistics.DataAccess.RESQML110.GeodeticCRSType.GeodeticDatum">
             <summary>
             geodeticDatum property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CartesianCSPropertyType">
+        <member name="T:Energistics.DataAccess.RESQML110.CartesianCSPropertyType">
             <summary>
             This class represents the CartesianCSPropertyType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.CartesianCSPropertyType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.CartesianCSPropertyType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CartesianCSPropertyType.CartesianCS">
+        <member name="P:Energistics.DataAccess.RESQML110.CartesianCSPropertyType.CartesianCS">
             <summary>
             CartesianCS property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CartesianCSPropertyType.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.CartesianCSPropertyType.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.CartesianCSPropertyType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.CartesianCSPropertyType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CartesianCSType">
+        <member name="T:Energistics.DataAccess.RESQML110.CartesianCSType">
             <summary>
             This class represents the CartesianCSType xsd type.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.EllipsoidalCSPropertyType">
+        <member name="T:Energistics.DataAccess.RESQML110.EllipsoidalCSPropertyType">
             <summary>
             This class represents the EllipsoidalCSPropertyType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.EllipsoidalCSPropertyType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.EllipsoidalCSPropertyType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EllipsoidalCSPropertyType.EllipsoidalCS">
+        <member name="P:Energistics.DataAccess.RESQML110.EllipsoidalCSPropertyType.EllipsoidalCS">
             <summary>
             EllipsoidalCS property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EllipsoidalCSPropertyType.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.EllipsoidalCSPropertyType.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.EllipsoidalCSPropertyType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.EllipsoidalCSPropertyType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.EllipsoidalCSType">
+        <member name="T:Energistics.DataAccess.RESQML110.EllipsoidalCSType">
             <summary>
             This class represents the EllipsoidalCSType xsd type.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.SphericalCSPropertyType">
+        <member name="T:Energistics.DataAccess.RESQML110.SphericalCSPropertyType">
             <summary>
             This class represents the SphericalCSPropertyType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.SphericalCSPropertyType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.SphericalCSPropertyType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.SphericalCSPropertyType.SphericalCS">
+        <member name="P:Energistics.DataAccess.RESQML110.SphericalCSPropertyType.SphericalCS">
             <summary>
             SphericalCS property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.SphericalCSPropertyType.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.SphericalCSPropertyType.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.SphericalCSPropertyType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.SphericalCSPropertyType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.SphericalCSType">
+        <member name="T:Energistics.DataAccess.RESQML110.SphericalCSType">
             <summary>
             This class represents the SphericalCSType xsd type.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticDatumPropertyType">
+        <member name="T:Energistics.DataAccess.RESQML110.GeodeticDatumPropertyType">
             <summary>
             This class represents the GeodeticDatumPropertyType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticDatumPropertyType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.GeodeticDatumPropertyType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticDatumPropertyType.GeodeticDatum">
+        <member name="P:Energistics.DataAccess.RESQML110.GeodeticDatumPropertyType.GeodeticDatum">
             <summary>
             GeodeticDatum property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticDatumPropertyType.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.GeodeticDatumPropertyType.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticDatumPropertyType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.GeodeticDatumPropertyType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticDatumType">
+        <member name="T:Energistics.DataAccess.RESQML110.GeodeticDatumType">
             <summary>
             This class represents the GeodeticDatumType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticDatumType.PrimeMeridian">
+        <member name="P:Energistics.DataAccess.RESQML110.GeodeticDatumType.PrimeMeridian">
             <summary>
             primeMeridian property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticDatumType.Ellipsoid">
+        <member name="P:Energistics.DataAccess.RESQML110.GeodeticDatumType.Ellipsoid">
             <summary>
             ellipsoid property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.PrimeMeridianPropertyType">
+        <member name="T:Energistics.DataAccess.RESQML110.PrimeMeridianPropertyType">
             <summary>
             This class represents the PrimeMeridianPropertyType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.PrimeMeridianPropertyType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.PrimeMeridianPropertyType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.PrimeMeridianPropertyType.PrimeMeridian">
+        <member name="P:Energistics.DataAccess.RESQML110.PrimeMeridianPropertyType.PrimeMeridian">
             <summary>
             PrimeMeridian property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.PrimeMeridianPropertyType.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.PrimeMeridianPropertyType.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.PrimeMeridianPropertyType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.PrimeMeridianPropertyType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.EllipsoidPropertyType">
+        <member name="T:Energistics.DataAccess.RESQML110.EllipsoidPropertyType">
             <summary>
             This class represents the EllipsoidPropertyType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.EllipsoidPropertyType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.EllipsoidPropertyType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EllipsoidPropertyType.Ellipsoid">
+        <member name="P:Energistics.DataAccess.RESQML110.EllipsoidPropertyType.Ellipsoid">
             <summary>
             Ellipsoid property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EllipsoidPropertyType.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.EllipsoidPropertyType.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.EllipsoidPropertyType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.EllipsoidPropertyType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractGeneralDerivedCRSType">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractGeneralDerivedCRSType">
             <summary>
             This class represents the AbstractGeneralDerivedCRSType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractGeneralDerivedCRSType.Conversion">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractGeneralDerivedCRSType.Conversion">
             <summary>
             conversion property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.GeneralConversionPropertyType">
+        <member name="T:Energistics.DataAccess.RESQML110.GeneralConversionPropertyType">
             <summary>
             This class represents the GeneralConversionPropertyType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.GeneralConversionPropertyType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.GeneralConversionPropertyType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.GeneralConversionPropertyType.AbstractGeneralConversion">
+        <member name="P:Energistics.DataAccess.RESQML110.GeneralConversionPropertyType.AbstractGeneralConversion">
             <summary>
             AbstractGeneralConversion property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.GeneralConversionPropertyType.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.GeneralConversionPropertyType.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.GeneralConversionPropertyType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.GeneralConversionPropertyType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCoordinateOperationType">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractCoordinateOperationType">
             <summary>
             This class represents the AbstractCoordinateOperationType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCoordinateOperationType.DomainOfValidity">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractCoordinateOperationType.DomainOfValidity">
             <summary>
             domainOfValidity property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCoordinateOperationType.Scope">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractCoordinateOperationType.Scope">
             <summary>
             scope property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCoordinateOperationType.ScopeSpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractCoordinateOperationType.ScopeSpecified">
             <summary>
             bool to indicate if Scope has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCoordinateOperationType.OperationVersion">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractCoordinateOperationType.OperationVersion">
             <summary>
             operationVersion property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCoordinateOperationType.CoordinateOperationAccuracy">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractCoordinateOperationType.CoordinateOperationAccuracy">
             <summary>
             coordinateOperationAccuracy property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCoordinateOperationType.CoordinateOperationAccuracySpecified">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractCoordinateOperationType.CoordinateOperationAccuracySpecified">
             <summary>
             bool to indicate if CoordinateOperationAccuracy has been set. Used for serialization.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCoordinateOperationType.SourceCRS">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractCoordinateOperationType.SourceCRS">
             <summary>
             sourceCRS property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractCoordinateOperationType.TargetCRS">
+        <member name="P:Energistics.DataAccess.RESQML110.AbstractCoordinateOperationType.TargetCRS">
             <summary>
             targetCRS property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.AbstractGeneralConversionType">
+        <member name="T:Energistics.DataAccess.RESQML110.AbstractGeneralConversionType">
             <summary>
             This class represents the AbstractGeneralConversionType xsd type.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateOperationAccuracy">
+        <member name="T:Energistics.DataAccess.RESQML110.CoordinateOperationAccuracy">
             <summary>
             This class represents the coordinateOperationAccuracy xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateOperationAccuracy.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.CoordinateOperationAccuracy.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateOperationAccuracy.AbstractDQ_PositionalAccuracy">
+        <member name="P:Energistics.DataAccess.RESQML110.CoordinateOperationAccuracy.AbstractDQ_PositionalAccuracy">
             <summary>
             AbstractDQ_PositionalAccuracy property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateOperationAccuracy.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.CoordinateOperationAccuracy.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.CoordinateOperationAccuracy.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.CoordinateOperationAccuracy.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.CRSPropertyType">
+        <member name="T:Energistics.DataAccess.RESQML110.CRSPropertyType">
             <summary>
             This class represents the CRSPropertyType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.CRSPropertyType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.CRSPropertyType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CRSPropertyType.AbstractCRS">
+        <member name="P:Energistics.DataAccess.RESQML110.CRSPropertyType.AbstractCRS">
             <summary>
             AbstractCRS property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.CRSPropertyType.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.CRSPropertyType.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.CRSPropertyType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.CRSPropertyType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.ProjectedCRSType">
+        <member name="T:Energistics.DataAccess.RESQML110.ProjectedCRSType">
             <summary>
             This class represents the ProjectedCRSType xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.ProjectedCRSType.Item">
+        <member name="P:Energistics.DataAccess.RESQML110.ProjectedCRSType.Item">
             <summary>
             Item property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.ProjectedCRSType.CartesianCS">
+        <member name="P:Energistics.DataAccess.RESQML110.ProjectedCRSType.CartesianCS">
             <summary>
             cartesianCS property
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticCRSPropertyType">
+        <member name="T:Energistics.DataAccess.RESQML110.GeodeticCRSPropertyType">
             <summary>
             This class represents the GeodeticCRSPropertyType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticCRSPropertyType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.GeodeticCRSPropertyType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticCRSPropertyType.GeodeticCRS">
+        <member name="P:Energistics.DataAccess.RESQML110.GeodeticCRSPropertyType.GeodeticCRS">
             <summary>
             GeodeticCRS property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticCRSPropertyType.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.GeodeticCRSPropertyType.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.GeodeticCRSPropertyType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.GeodeticCRSPropertyType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.EX_TemporalExtent_Type">
+        <member name="T:Energistics.DataAccess.RESQML110.EX_TemporalExtent_Type">
             <summary>
             This class represents the EX_TemporalExtent_Type xsd type.
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.EX_TemporalExtent_Type.Extent">
+        <member name="P:Energistics.DataAccess.RESQML110.EX_TemporalExtent_Type.Extent">
             <summary>
             extent property
             </summary>
@@ -6646,33 +6646,33 @@
             Occurs when a property value changes. 
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.VerticalDatumType">
+        <member name="T:Energistics.DataAccess.RESQML110.VerticalDatumType">
             <summary>
             This class represents the VerticalDatumType xsd type.
             </summary>
         </member>
-        <member name="T:Energistics.DataAccess.RESQML110.ComponentSchemas.VerticalDatumPropertyType">
+        <member name="T:Energistics.DataAccess.RESQML110.VerticalDatumPropertyType">
             <summary>
             This class represents the VerticalDatumPropertyType xsd type.
             </summary>
         </member>
-        <member name="M:Energistics.DataAccess.RESQML110.ComponentSchemas.VerticalDatumPropertyType.NotifyPropertyChanged(System.String)">
+        <member name="M:Energistics.DataAccess.RESQML110.VerticalDatumPropertyType.NotifyPropertyChanged(System.String)">
             <summary>
             Triggers PropertyChanged Event
             </summary>
             <param name="info">Name of property changed</param>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.VerticalDatumPropertyType.VerticalDatum">
+        <member name="P:Energistics.DataAccess.RESQML110.VerticalDatumPropertyType.VerticalDatum">
             <summary>
             VerticalDatum property
             </summary>
         </member>
-        <member name="P:Energistics.DataAccess.RESQML110.ComponentSchemas.VerticalDatumPropertyType.NilReason">
+        <member name="P:Energistics.DataAccess.RESQML110.VerticalDatumPropertyType.NilReason">
             <summary>
             nilReason property
             </summary>
         </member>
-        <member name="E:Energistics.DataAccess.RESQML110.ComponentSchemas.VerticalDatumPropertyType.PropertyChanged">
+        <member name="E:Energistics.DataAccess.RESQML110.VerticalDatumPropertyType.PropertyChanged">
             <summary>
             Occurs when a property value changes. 
             </summary>

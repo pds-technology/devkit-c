@@ -1,4 +1,4 @@
-// 
+﻿// 
 // License notice
 //  
 // Standards DevKit, version 2.0
@@ -85,12 +85,12 @@
 namespace Energistics.Generator
 {
     using System;
-    
+
     /// <summary>
     /// Class to produce the template output
     /// </summary>
-    
-    #line 1 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+
+#line 1 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "11.0.0.0")]
     public partial class ResqmlHD5Template : ResqmlHD5TemplateBase
     {
@@ -99,19 +99,19 @@ namespace Energistics.Generator
         /// </summary>
         public virtual string TransformText(String Version)
         {
-            
-            #line 2 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+
+#line 2 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(SchemaSetClassCreator.GetLicenseText()));
-            
-            #line default
-            #line hidden
+
+#line default
+#line hidden
             this.Write("\r\n");
             this.Write("\r\nusing System;\r\n\r\nnamespace Energistics.DataAccess." + Version + ".ComponentSchemas\r\n{" +
                     "\r\n");
-            
-            #line 10 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
 
-string[,] classes = new string[,] { 
+#line 10 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+
+            string[,] classes = new string[,] { 
                                     { "ResqmlSplitNodeSet : Object", "Point3D", "[]", "IjkGridHdfGroup", "null" },
 									{ "ResqmlTriangulatedPatch : Object", "Point3D", "[]", "TriangulatedHdfGroup", "point3dSet" },
 									{ "ResqmlTriangulatedPatch : Object", "Triangle", "[]", "TriangulatedHdfGroup", "triangleNodeIndexSet" }, 
@@ -127,57 +127,58 @@ string[,] classes = new string[,] {
 									{ "ResqmlGrid2dPatch : Object", "double", "[,]", "Grid2dHdfGroup", "zValueSet" },
 									{ "ResqmlExplicitNodeSet : Object", "int", "[,,]", "IjkGridHdfGroup", "null" }
                                   };
-for (int i=0; i<classes.GetLength(0); i++) {
-    string name = classes[i,0];
-	string type = classes[i,1];
-	string array = classes[i,2];
-	string property = classes[i,3];
-	string oriddatasetname = classes[i,4];
-	string quotdatasetname = (oriddatasetname=="null") ? oriddatasetname : String.Format("\"{0}\"", oriddatasetname);    
-	string readname = (oriddatasetname=="null") ? property : oriddatasetname;
-	readname = readname.Substring(0,1).ToUpper() + readname.Substring(1);
-    
+            for (int i = 0; i < classes.GetLength(0); i++)
+            {
+                string name = classes[i, 0];
+                string type = classes[i, 1];
+                string array = classes[i, 2];
+                string property = classes[i, 3];
+                string oriddatasetname = classes[i, 4];
+                string quotdatasetname = (oriddatasetname == "null") ? oriddatasetname : String.Format("\"{0}\"", oriddatasetname);
+                string readname = (oriddatasetname == "null") ? property : oriddatasetname;
+                readname = readname.Substring(0, 1).ToUpper() + readname.Substring(1);
 
-            
-            #line default
-            #line hidden
-            this.Write("    public partial class ");
-            
-            #line 38 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(name));
-            
-            #line default
-            #line hidden
-            this.Write("\r\n    {\r\n        /// <summary>\r\n        /// Reads HDF5 data\r\n        /// </summar" +
-                    "y>\r\n        /// <param name=\"doc\">Parent ResqmlDocument</param>\r\n        /// <re" +
-                    "turns>The data returned from the HDF5 document</returns>\r\n        public ");
-            
-            #line 45 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(type));
-            
-            #line default
-            #line hidden
-            
-            #line 45 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(array));
-            
-            #line default
-            #line hidden
-            this.Write(" Read");
-            
-            #line 45 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(readname));
-            
-            #line default
-            #line hidden
-            this.Write("(ResqmlDocument doc)\r\n        {\r\n            return this.Read");
-            
-            #line 47 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(readname));
-            
-            #line default
-            #line hidden
-            this.Write(@"(doc, null, null);
+
+
+#line default
+#line hidden
+                this.Write("    public partial class ");
+
+#line 38 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(name));
+
+#line default
+#line hidden
+                this.Write("\r\n    {\r\n        /// <summary>\r\n        /// Reads HDF5 data\r\n        /// </summar" +
+                        "y>\r\n        /// <param name=\"doc\">Parent ResqmlDocument</param>\r\n        /// <re" +
+                        "turns>The data returned from the HDF5 document</returns>\r\n        public ");
+
+#line 45 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(type));
+
+#line default
+#line hidden
+
+#line 45 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(array));
+
+#line default
+#line hidden
+                this.Write(" Read");
+
+#line 45 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(readname));
+
+#line default
+#line hidden
+                this.Write("(ResqmlDocument doc)\r\n        {\r\n            return this.Read");
+
+#line 47 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(readname));
+
+#line default
+#line hidden
+                this.Write(@"(doc, null, null);
         }
 
         /// <summary>
@@ -188,90 +189,90 @@ for (int i=0; i<classes.GetLength(0); i++) {
         /// <param name=""count"">Number of blocks to include in selection, null if not hyperslabbing</param>
         /// <returns>The data returned from the HDF5 document</returns>
         public ");
-            
-            #line 57 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(type));
-            
-            #line default
-            #line hidden
-            
-            #line 57 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(array));
-            
-            #line default
-            #line hidden
-            this.Write(" Read");
-            
-            #line 57 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(readname));
-            
-            #line default
-            #line hidden
-            this.Write("(ResqmlDocument doc, long[] start, long[] count)\r\n        {\r\n            return (" +
-                    "");
-            
-            #line 59 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(type));
-            
-            #line default
-            #line hidden
-            
-            #line 59 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(array));
-            
-            #line default
-            #line hidden
-            this.Write(")this.");
-            
-            #line 59 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(property));
-            
-            #line default
-            #line hidden
-            this.Write(".Read<");
-            
-            #line 59 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(type));
-            
-            #line default
-            #line hidden
-            this.Write(">(doc, start, count, ");
-            
-            #line 59 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(quotdatasetname));
-            
-            #line default
-            #line hidden
-            this.Write(");\r\n        }\r\n\r\n\t\t/// <summary>\r\n        /// Writes HDF5 data\r\n        /// </sum" +
-                    "mary>\r\n        /// <param name=\"doc\">Parent ResqmlDocument</param>\r\n        /// " +
-                    "<param name=\"obj\">Object to write</param>        \r\n\t\tpublic void Write");
-            
-            #line 67 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(readname));
-            
-            #line default
-            #line hidden
-            this.Write("(ResqmlDocument doc, ");
-            
-            #line 67 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(type));
-            
-            #line default
-            #line hidden
-            
-            #line 67 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(array));
-            
-            #line default
-            #line hidden
-            this.Write(" obj)\r\n        {\r\n            this.Write");
-            
-            #line 69 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(readname));
-            
-            #line default
-            #line hidden
-            this.Write(@"(doc, obj, null, null);
+
+#line 57 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(type));
+
+#line default
+#line hidden
+
+#line 57 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(array));
+
+#line default
+#line hidden
+                this.Write(" Read");
+
+#line 57 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(readname));
+
+#line default
+#line hidden
+                this.Write("(ResqmlDocument doc, long[] start, long[] count)\r\n        {\r\n            return (" +
+                        "");
+
+#line 59 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(type));
+
+#line default
+#line hidden
+
+#line 59 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(array));
+
+#line default
+#line hidden
+                this.Write(")this.");
+
+#line 59 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(property));
+
+#line default
+#line hidden
+                this.Write(".Read<");
+
+#line 59 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(type));
+
+#line default
+#line hidden
+                this.Write(">(doc, start, count, ");
+
+#line 59 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(quotdatasetname));
+
+#line default
+#line hidden
+                this.Write(");\r\n        }\r\n\r\n\t\t/// <summary>\r\n        /// Writes HDF5 data\r\n        /// </sum" +
+                        "mary>\r\n        /// <param name=\"doc\">Parent ResqmlDocument</param>\r\n        /// " +
+                        "<param name=\"obj\">Object to write</param>        \r\n\t\tpublic void Write");
+
+#line 67 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(readname));
+
+#line default
+#line hidden
+                this.Write("(ResqmlDocument doc, ");
+
+#line 67 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(type));
+
+#line default
+#line hidden
+
+#line 67 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(array));
+
+#line default
+#line hidden
+                this.Write(" obj)\r\n        {\r\n            this.Write");
+
+#line 69 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(readname));
+
+#line default
+#line hidden
+                this.Write(@"(doc, obj, null, null);
         }
 
 		/// <summary>
@@ -282,61 +283,61 @@ for (int i=0; i<classes.GetLength(0); i++) {
         /// <param name=""start"">Offset of start of subsetting selection, null if not hyperslabbing</param>
         /// <param name=""filespace"">Total size to allot for the data within the HDF5 file</param>
 		public void Write");
-            
-            #line 79 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(readname));
-            
-            #line default
-            #line hidden
-            this.Write("(ResqmlDocument doc, ");
-            
-            #line 79 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(type));
-            
-            #line default
-            #line hidden
-            
-            #line 79 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(array));
-            
-            #line default
-            #line hidden
-            this.Write(" obj, long[] start, long[] filespace)\r\n        {\r\n\t\t    if (this.");
-            
-            #line 81 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(property));
-            
-            #line default
-            #line hidden
-            this.Write(" == null) \r\n\t\t\t{\r\n\t\t\t    this.");
-            
-            #line 83 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(property));
-            
-            #line default
-            #line hidden
-            this.Write(" = new ResqmlHdfGroup();\r\n\t\t\t}\r\n            this.");
-            
-            #line 85 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(property));
-            
-            #line default
-            #line hidden
-            this.Write(".Write<");
-            
-            #line 85 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(type));
-            
-            #line default
-            #line hidden
-            this.Write(">(doc, obj, start, filespace, ");
-            
-            #line 85 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(quotdatasetname));
-            
-            #line default
-            #line hidden
-            this.Write(@");
+
+#line 79 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(readname));
+
+#line default
+#line hidden
+                this.Write("(ResqmlDocument doc, ");
+
+#line 79 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(type));
+
+#line default
+#line hidden
+
+#line 79 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(array));
+
+#line default
+#line hidden
+                this.Write(" obj, long[] start, long[] filespace)\r\n        {\r\n\t\t    if (this.");
+
+#line 81 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(property));
+
+#line default
+#line hidden
+                this.Write(" == null) \r\n\t\t\t{\r\n\t\t\t    this.");
+
+#line 83 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(property));
+
+#line default
+#line hidden
+                this.Write(" = new ResqmlHdfGroup();\r\n\t\t\t}\r\n            this.");
+
+#line 85 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(property));
+
+#line default
+#line hidden
+                this.Write(".Write<");
+
+#line 85 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(type));
+
+#line default
+#line hidden
+                this.Write(">(doc, obj, start, filespace, ");
+
+#line 85 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(quotdatasetname));
+
+#line default
+#line hidden
+                this.Write(@");
         }
 
 		/// <summary>
@@ -345,44 +346,44 @@ for (int i=0; i<classes.GetLength(0); i++) {
         /// <param name=""doc"">Parent ResqmlDocument</param>
         /// <returns>True if the dataset exists, false if it does not</returns>
         public bool DoesExist");
-            
-            #line 93 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(readname));
-            
-            #line default
-            #line hidden
-            this.Write("(ResqmlDocument doc)\r\n        {\r\n            if (this.");
-            
-            #line 95 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(property));
-            
-            #line default
-            #line hidden
-            this.Write(" == null) return false;\r\n            HDF5DotNet.H5DataSetId dataId = this.");
-            
-            #line 96 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(property));
-            
-            #line default
-            #line hidden
-            this.Write(".GetDataSetId(doc, ");
-            
-            #line 96 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(quotdatasetname));
-            
-            #line default
-            #line hidden
-            this.Write(", HDF5DotNet.H5F.OpenMode.ACC_RDONLY, true);\r\n\r\n\t\t\tif (dataId == null) \r\n\t\t\t{\r\n\t\t" +
-                    "\t    return false;\r\n\t\t\t}\r\n\t\t\telse\r\n\t\t\t{\r\n\t\t\t\tHDF5DotNet.H5D.close(dataId);\r\n\t\t\t " +
-                    "   return true;\r\n\t\t\t}\r\n        }\r\n    }\r\n");
-            
-            #line 109 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
 
-}
+#line 93 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(readname));
 
-            
-            #line default
-            #line hidden
+#line default
+#line hidden
+                this.Write("(ResqmlDocument doc)\r\n        {\r\n            if (this.");
+
+#line 95 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(property));
+
+#line default
+#line hidden
+                this.Write(" == null) return false;\r\n            HDF5DotNet.H5DataSetId dataId = this.");
+
+#line 96 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(property));
+
+#line default
+#line hidden
+                this.Write(".GetDataSetId(doc, ");
+
+#line 96 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+                this.Write(this.ToStringHelper.ToStringWithCulture(quotdatasetname));
+
+#line default
+#line hidden
+                this.Write(", HDF5DotNet.H5F.OpenMode.ACC_RDONLY, true);\r\n\r\n\t\t\tif (dataId == null) \r\n\t\t\t{\r\n\t\t" +
+                        "\t    return false;\r\n\t\t\t}\r\n\t\t\telse\r\n\t\t\t{\r\n\t\t\t\tHDF5DotNet.H5D.close(dataId);\r\n\t\t\t " +
+                        "   return true;\r\n\t\t\t}\r\n        }\r\n    }\r\n");
+
+#line 109 "C:\TFS\ADI_COMMON\StdDevkit\Dev\RESQML\DevKitGenerator\Generator\ResqmlHD5Template.tt"
+
+            }
+
+
+#line default
+#line hidden
             this.Write("}");
             return this.GenerationEnvironment.ToString();
         }
@@ -402,9 +403,9 @@ for (int i=0; i<classes.GetLength(0); i++) {
             }
         }
     }
-    
-    #line default
-    #line hidden
+
+#line default
+#line hidden
     #region Base class
     /// <summary>
     /// Base class for this transformation
@@ -504,7 +505,7 @@ for (int i=0; i<classes.GetLength(0); i++) {
             }
             // If we're starting off, or if the previous text ended with a newline,
             // we have to append the current indent first.
-            if (((this.GenerationEnvironment.Length == 0) 
+            if (((this.GenerationEnvironment.Length == 0)
                         || this.endsWithNewline))
             {
                 this.GenerationEnvironment.Append(this.currentIndentField);
@@ -622,7 +623,7 @@ for (int i=0; i<classes.GetLength(0); i++) {
         /// </summary>
         public class ToStringInstanceHelper
         {
-            private System.IFormatProvider formatProviderField  = global::System.Globalization.CultureInfo.InvariantCulture;
+            private System.IFormatProvider formatProviderField = global::System.Globalization.CultureInfo.InvariantCulture;
             /// <summary>
             /// Gets or sets format provider to be used by ToStringWithCulture method.
             /// </summary>
@@ -630,13 +631,13 @@ for (int i=0; i<classes.GetLength(0); i++) {
             {
                 get
                 {
-                    return this.formatProviderField ;
+                    return this.formatProviderField;
                 }
                 set
                 {
                     if ((value != null))
                     {
-                        this.formatProviderField  = value;
+                        this.formatProviderField = value;
                     }
                 }
             }
