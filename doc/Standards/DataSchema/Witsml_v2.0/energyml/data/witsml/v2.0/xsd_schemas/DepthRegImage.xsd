@@ -32,7 +32,14 @@
 					<xs:documentation>Denotes the calibration being made on the right edge of the image</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="fraction"/>
+			<xs:enumeration value="fraction">
+				<xs:annotation>
+					<xs:documentation>An intermediate Point from left edge to right edge 
+					(required when role is "fraction", not allowed otherwise); 
+					used to extrapolate the rectified position of a track boundary which has 
+					wandered off the edge of the image.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="other">
 				<xs:annotation>
 					<xs:documentation>The value is not known. This value should not be used
@@ -120,7 +127,11 @@
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="main"/>
-			<xs:enumeration value="repeat"/>
+			<xs:enumeration value="repeat">
+				<xs:annotation>
+					<xs:documentation>An interval of log that has been recorded for a second time.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="calibration"/>
 			<xs:enumeration value="tie in"/>
 			<xs:enumeration value="going in hole"/>
@@ -243,7 +254,7 @@
 					<xs:documentation>Scale linearity</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CurveUnit" type="xs:string" minOccurs="1" maxOccurs="1">
+			<xs:element name="CurveUnit" type="eml:TypeEnum" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Unit of data represented</xs:documentation>
 				</xs:annotation>

@@ -15,13 +15,16 @@
 	<!--														-->
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
 	<!--														-->
-	<xs:include schemaLocation="DrillReport.xsd"/>
 	<xs:include schemaLocation="WitsmlCommon.xsd"/>
+	<xs:include schemaLocation="DrillReport.xsd"/>
 	<xs:include schemaLocation="Wellbore.xsd"/>
 	<xs:include schemaLocation="DownholeComponent.xsd"/>
 	<xs:include schemaLocation="OpsReport.xsd"/>
 	<xs:element name="WellCMLedger" type="witsml:WellCMLedger" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="WellCMLedger">
+		<xs:annotation>
+			<xs:documentation>Information regarding details of Jobs &amp; Events</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
@@ -146,7 +149,7 @@
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="eml:String64">
-				<xs:attribute name="Class" use="optional" type="xs:string">
+				<xs:attribute name="Class" use="optional" type="witsml:EventClassType">
 					<xs:annotation>
 						<xs:documentation>The type of the event (job, daily report, etc.)</xs:documentation>
 					</xs:annotation>
@@ -155,6 +158,9 @@
 		</xs:simpleContent>
 	</xs:complexType>
 	<xs:complexType name="DownholeComponentReference">
+		<xs:annotation>
+			<xs:documentation>Reference to a downhole component identifier</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="StringEquipmentReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
@@ -171,6 +177,9 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="BoreholeStringReference">
+		<xs:annotation>
+			<xs:documentation>Reference to a borehole string identifier</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="StringEquipmentReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
@@ -185,6 +194,9 @@
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="DownholeStringReference">
+		<xs:annotation>
+			<xs:documentation>Refernce to a downhole string identifier</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="StringEquipmentReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
@@ -585,7 +597,7 @@
 					<xs:documentation>Fluid level.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ConveyanceMethod" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="ConveyanceMethod" type="witsml:PerfConveyanceMethod" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The conveyance method</xs:documentation>
 				</xs:annotation>
@@ -800,7 +812,6 @@ The significance of this time is defined by the groupType.</xs:documentation>
 			<xs:element name="Sequence3" type="witsml:ObjectSequence" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="ObjectReference" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="Sequence1" type="witsml:ObjectSequence" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="Param" type="witsml:IndexedObject" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="Sequence2" type="witsml:ObjectSequence" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
@@ -854,6 +865,9 @@ the appropriate value. Use of this value may result in rejection in some situati
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="PerfConveyanceMethod">
+		<xs:annotation>
+			<xs:documentation>Information on how perforation is conveyed: slick line, wireline, tubing</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="slick line"/>
 			<xs:enumeration value="tubing conveyed"/>
@@ -868,6 +882,9 @@ the appropriate value. Use of this value may result in rejection in some situati
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="EventClassType">
+		<xs:annotation>
+			<xs:documentation>Qualifies the type of event: daily report, job, npt, etc.</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="daily cost"/>
 			<xs:enumeration value="daily report"/>

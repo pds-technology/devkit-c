@@ -20,9 +20,10 @@
 	<xs:include schemaLocation="Rig.xsd"/>
 	<xs:include schemaLocation="Risk.xsd"/>
 	<xs:include schemaLocation="StimJob.xsd"/>
+	<xs:include schemaLocation="SurveyProgram.xsd"/>
+	<xs:include schemaLocation="Trajectory.xsd"/>
 	<xs:include schemaLocation="ToolErrorModel.xsd"/>
 	<xs:include schemaLocation="ToolErrorTermSet.xsd"/>
-	<xs:include schemaLocation="Trajectory.xsd"/>
 	<xs:include schemaLocation="Tubular.xsd"/>
 	<xs:include schemaLocation="Well.xsd"/>
 	<xs:include schemaLocation="Wellbore.xsd"/>

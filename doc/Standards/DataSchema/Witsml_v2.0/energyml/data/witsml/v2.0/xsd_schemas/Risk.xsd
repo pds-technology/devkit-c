@@ -132,7 +132,7 @@ Values of 1 through 5 with 1 being the lowest.</xs:documentation>
 							<xs:documentation>Plan of action to ensure the risk does not materialize.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="ObjectReference" type="eml:DataObjectReference" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="ObjectReference" type="eml:DataObjectReference" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>

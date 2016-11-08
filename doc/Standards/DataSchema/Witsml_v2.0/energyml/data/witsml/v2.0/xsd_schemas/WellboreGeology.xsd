@@ -5,12 +5,6 @@
 	<!--														-->
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
 	<xs:include schemaLocation="Wellbore.xsd"/>
-	<xs:simpleType name="MatrixCementType">
-		<xs:annotation>
-			<xs:documentation>Lithology matrix/cement description. The list of standard values is contained in the WITSML enumValues.xml file.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
 	<xs:complexType name="CuttingsIntervalShow">
 		<xs:annotation>
 			<xs:documentation>WITSML Geology Show Component Schema</xs:documentation>
@@ -140,6 +134,9 @@
 	</xs:complexType>
 	<xs:element name="WellboreGeology" type="witsml:WellboreGeology" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="WellboreGeology">
+		<xs:annotation>
+			<xs:documentation>The transferrable class of the WellboreGeology object</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
@@ -180,9 +177,6 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:simpleType name="LithologyKind">
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
 	<xs:element name="InterpretedGeology" type="witsml:InterpretedGeology" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="InterpretedGeology">
 		<xs:annotation>
@@ -218,7 +212,7 @@
 						<xs:documentation>Person or collective body responsible for authorizing the information.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
-				<xs:attribute name="kind" use="optional" type="witsml:LithostratigraphicRank">
+				<xs:attribute name="kind" use="optional" type="eml:LithostratigraphicRank">
 					<xs:annotation>
 						<xs:documentation>Specifies the lithostratigraphic unit-hierarchy (Group, Formation, Member or Bed)</xs:documentation>
 					</xs:annotation>
@@ -231,7 +225,7 @@
 			<xs:documentation>WITSML - lithology qualifier Component Schema</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Kind" type="witsml:LithologyQualifierKind" minOccurs="1" maxOccurs="1">
+			<xs:element name="Kind" type="eml:LithologyQualifierKind" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The type of qualifier.</xs:documentation>
 				</xs:annotation>
@@ -269,7 +263,7 @@ i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., 
 			<xs:documentation>Container for Lithology items in this interval.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Kind" type="witsml:LithologyKind" minOccurs="1" maxOccurs="1">
+			<xs:element name="Kind" type="eml:LithologyKind" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The geological name for the type of lithology from the enum table listing a 
 					subset of the OneGeology / CGI defined formation types.</xs:documentation>
@@ -380,7 +374,7 @@ i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., 
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MatrixCement" type="witsml:MatrixCementType" minOccurs="0" maxOccurs="1">
+			<xs:element name="MatrixCement" type="eml:MatrixCementKind" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table.
 					eg. "calcite" (Common) "dolomite", "ankerite" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation,
@@ -421,10 +415,10 @@ i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., 
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
-	<xs:simpleType name="LithologyQualifierKind">
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
 	<xs:simpleType name="ShowFluorescence">
+		<xs:annotation>
+			<xs:documentation>Intensity and color of the show</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="faint"/>
 			<xs:enumeration value="bright"/>
@@ -439,6 +433,9 @@ i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., 
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ShowSpeed">
+		<xs:annotation>
+			<xs:documentation>This is an indication of both the solubility of the oil and the permeability of the show. The speed can vary from instantaneous to very slow.</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="slow"/>
 			<xs:enumeration value="moderately fast"/>
@@ -454,50 +451,49 @@ i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., 
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:element name="ShowEvaluationInterval" type="witsml:ShowEvaluationInterval" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="ShowEvaluationInterval">
 		<xs:annotation>
 			<xs:documentation>An interval in the wellbore for which data is manually entered by the wellsite geologist or mud logger as an interpretation of the hydrocarbon show along the wellbore, based on the raw readings from one or more show analyses of individual show tests on cuttings samples.</xs:documentation>
 		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The measured depth interval over which the show is evaluated.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Citation" type="eml:Citation" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the ShowEvaluationInterval</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="ShowFluid" type="witsml:ShowFluid" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="ShowRating" type="witsml:ShowRating" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Show Rating.  </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64">
-			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of ShowEvaluationInterval</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractObject">
+				<xs:sequence>
+					<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The measured depth interval over which the show is evaluated.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Citation" type="eml:Citation" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the ShowEvaluationInterval</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ShowFluid" type="witsml:ShowFluid" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Gas or oil exhibited at the show interval.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ShowRating" type="witsml:ShowRating" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Show Rating.  </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="uid" use="optional" type="eml:String64">
+					<xs:annotation>
+						<xs:documentation>Unique identifier for this instance of ShowEvaluationInterval</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
-	<xs:simpleType name="GeochronologicalRank">
-		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="eon"/>
-			<xs:enumeration value="era"/>
-			<xs:enumeration value="period"/>
-			<xs:enumeration value="epoch"/>
-			<xs:enumeration value="age"/>
-			<xs:enumeration value="chron"/>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:complexType name="InterpretedIntervalLithology">
 		<xs:annotation>
 			<xs:documentation>Container for Lithology items in this interval.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Kind" type="witsml:LithologyKind" minOccurs="1" maxOccurs="1">
+			<xs:element name="Kind" type="eml:LithologyKind" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The geological name for the type of lithology from the enum table listing a 
 					subset of the OneGeology / CGI defined formation types.</xs:documentation>
@@ -597,7 +593,7 @@ i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., 
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="MatrixCement" type="witsml:MatrixCementType" minOccurs="0" maxOccurs="1">
+			<xs:element name="MatrixCement" type="eml:MatrixCementKind" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>STRUCTURED DESCRIPTION USAGE. Lithology matrix/cement description. Terms will be as defined in the enumeration table.
 					eg. "calcite" (Common) "dolomite", "ankerite" (eg. North Sea HPHT reservoirs such as Elgin and Franklin have almost pure Ankerite cementation,
@@ -637,85 +633,94 @@ i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., 
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
+	<xs:element name="CuttingsGeologyInterval" type="witsml:CuttingsGeologyInterval" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="CuttingsGeologyInterval">
 		<xs:annotation>
 			<xs:documentation>Interval in the wellbore by which the mud logger at the wellsite takes regular samples of drilled cuttings while the well is being drilled and examines the cuttings to determine the rock types (lithologies) present in each sample. The cuttings samples will typically contain a mix of different lithologies in each sample because there may have been multiple rock types that were drilled within the sample depth interval and there can also be mixing of cuttings as they travel up the wellbore and are collected on the shakers. CuttingsGeology therefore will typically contain multiple lithology elements for each interval so that the percentages of each lithology in the sample along with the more detailed geological description can be recorded.</xs:documentation>
 		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The measured depth interval which is represented by the cuttings described here.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Citation" type="eml:Citation" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the CuttingsGeologyInterval</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="DensBulk" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Sample bulk density for the interval.  </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="DensShale" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Shale density for the interval. </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Calcite" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Calcimetry calcite percentage.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CalcStab" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Calcimetry stabilized percentage.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Cec" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Cuttings cationic exchange capacity. Temporarily calling this a DimensionlessMeasure</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Dolomite" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Calcimetry dolomite percentage.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SizeMin" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Minimum size.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SizeMax" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Maximum size.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Qft" type="eml:IlluminanceMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Fluorescence as measured using a device licensed for the Quantitative Fluorescence Technique.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CleaningMethod" type="eml:String64" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Sample treatment: cleaning method.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="DryingMethod" type="eml:String64" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Sample treatment: drying method.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CuttingsIntervalLithology" type="witsml:CuttingsIntervalLithology" minOccurs="0" maxOccurs="unbounded"/>
-		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64">
-			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of CuttingsGeologyInterval</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractObject">
+				<xs:sequence>
+					<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The measured depth interval which is represented by the cuttings described here.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Citation" type="eml:Citation" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the CuttingsGeologyInterval</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DensBulk" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Sample bulk density for the interval.  </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DensShale" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Shale density for the interval. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Calcite" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Calcimetry calcite percentage.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CalcStab" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Calcimetry stabilized percentage.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Cec" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Cuttings cationic exchange capacity. Temporarily calling this a DimensionlessMeasure</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Dolomite" type="eml:VolumePerVolumeMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Calcimetry dolomite percentage.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="SizeMin" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Minimum size.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="SizeMax" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Maximum size.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Qft" type="eml:IlluminanceMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Fluorescence as measured using a device licensed for the Quantitative Fluorescence Technique.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CleaningMethod" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Sample treatment: cleaning method.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DryingMethod" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Sample treatment: drying method.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CuttingsIntervalLithology" type="witsml:CuttingsIntervalLithology" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="uid" use="optional" type="eml:String64">
+					<xs:annotation>
+						<xs:documentation>Unique identifier for this instance of CuttingsGeologyInterval</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="part_EvaluatedIntervalShow" type="witsml:ShowEvaluationInterval"/>
+	<xs:element name="part_EvaluatedIntervalShow" type="witsml:ShowEvaluationInterval">
+		<xs:annotation>
+			<xs:documentation>Wrapper to transport evaluiated interval show across ETP</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:element name="CuttingsGeology" type="witsml:CuttingsGeology" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="CuttingsGeology">
 		<xs:annotation>
@@ -741,6 +746,9 @@ i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., 
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="GeochronologicalUnit">
+		<xs:annotation>
+			<xs:documentation>A unit of geological time that can be used as part of an interpretation of a geology sequence. Can be used for major units of geological time such as “Paleozoic”, “Mesozoic” or for more detailed time intervals such as ”Permian”, “Triassic”, “Jurassic” etc.</xs:documentation>
+		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="eml:String64">
 				<xs:attribute name="authority" use="optional" type="eml:String64">
@@ -748,7 +756,7 @@ i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., 
 						<xs:documentation>Person or collective body responsible for authorizing the information.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
-				<xs:attribute name="kind" use="optional" type="witsml:GeochronologicalRank">
+				<xs:attribute name="kind" use="optional" type="eml:GeochronologicalRank">
 					<xs:annotation>
 						<xs:documentation>Defines the time spans in Geochronology</xs:documentation>
 					</xs:annotation>
@@ -761,85 +769,48 @@ i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., 
 			<xs:documentation>Wrapper for sending individual intervals over ETP.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
+	<xs:element name="InterpretedGeologyInterval" type="witsml:InterpretedGeologyInterval" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="InterpretedGeologyInterval">
 		<xs:annotation>
 			<xs:documentation>Interval in the wellbore where data is manually entered per sample by the wellsite geologist or mud logger as an interpretation of the actual lithology sequence along the length of the wellbore by correlating the percentage lithologies observed in the cuttings samples along with other data (typically the drill rate and gamma ray curves), to estimate the location of the boundaries between the different lithology types. This analysis creates a sequence of individual lithologies along the entire wellbore. InterpretedGeology therefore will typically contain a single lithology element for each interval that captures the detailed geological description of the lithology.</xs:documentation>
 		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The measured depth interval which is described by this interpreted geology.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Citation" type="eml:Citation" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the InterpretedGeologyInterval</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="GeochronologicalUnit" type="witsml:GeochronologicalUnit" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>The name of a Geochronology, with the "kind" attribute specifying the geochronological time span</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="LithostratigraphicUnit" type="witsml:LithostratigraphicUnit" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Specifies the unit of lithostratigraphy.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="InterpretedLithology" type="witsml:InterpretedIntervalLithology" minOccurs="0" maxOccurs="1"/>
-		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64">
-			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of InterpretedGeologyInterval</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractObject">
+				<xs:sequence>
+					<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The measured depth interval which is described by this interpreted geology.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Citation" type="eml:Citation" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the InterpretedGeologyInterval</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="GeochronologicalUnit" type="witsml:GeochronologicalUnit" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The name of a Geochronology, with the "kind" attribute specifying the geochronological time span</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="LithostratigraphicUnit" type="witsml:LithostratigraphicUnit" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Specifies the unit of lithostratigraphy.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="InterpretedLithology" type="witsml:InterpretedIntervalLithology" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+				<xs:attribute name="uid" use="optional" type="eml:String64">
+					<xs:annotation>
+						<xs:documentation>Unique identifier for this instance of InterpretedGeologyInterval</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
-	<xs:simpleType name="LithostratigraphicRank">
-		<xs:annotation>
-			<xs:documentation>Specifies the unit of lithostratigraphy.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="group">
-				<xs:annotation>
-					<xs:documentation>A succession of two or more contiguous or associated formations with significant and diagnostic lithologic properties in common.
-Formations need not be aggregated into groups unless doing so provides a useful means of simplifying stratigraphic classification
-in certain regions or certain intervals.
-Thickness of a stratigraphic succession is not a valid reason for defining a unit as a group rather than a formation.
-The component formations of a group need not be everywhere the same.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="formation">
-				<xs:annotation>
-					<xs:documentation>The primary formal unit of lithostratigraphic classification.
-Formations are the only formal lithostratigraphic units into which the stratigraphic column everywhere
-should be divided completely on the basis of lithology.
-The contrast in lithology between formations required to justify their establishment varies with
-the complexity of the geology of a region and the detail needed for geologic mapping and to work out its geologic history.
-No formation is considered justifiable and useful that cannot be delineated at the scale of geologic mapping practiced in the region.
-The thickness of formations may range from less than a meter to several thousand meters.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="member">
-				<xs:annotation>
-					<xs:documentation>The formal lithostratigraphic unit next in rank below a formation.
-It possesses lithologic properties distinguishing it from adjacent parts of the formation.
-No fixed standard is required for the extent and thickness of a member.
-A formation need not be divided into members unless a useful purpose is thus served.
-Some formations may be completely divided into members; others may have only certain parts designated as members.
-A member may extend from one formation to another.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="bed">
-				<xs:annotation>
-					<xs:documentation>The smallest formal unit in the hierarchy of sedimentary lithostratigraphic units, e.g. a single stratum lithologically
-distinguishable from other layers above and below.
-Customarily only distinctive beds (key beds, marker beds) particularly useful for stratigraphic purposes
-are given proper names and considered formal lithostratigraphic units.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:simpleType name="ShowLevel">
+		<xs:annotation>
+			<xs:documentation>Another qualifier for the show: blooming or streaming</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="blooming"/>
 			<xs:enumeration value="streaming"/>

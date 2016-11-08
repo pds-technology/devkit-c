@@ -65,6 +65,9 @@
 	</xs:complexType>
 	<xs:element name="WellboreMarkerSet" type="witsml:WellboreMarkerSet" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="WellboreMarkerSet">
+		<xs:annotation>
+			<xs:documentation>A collection of wellbore markers</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>

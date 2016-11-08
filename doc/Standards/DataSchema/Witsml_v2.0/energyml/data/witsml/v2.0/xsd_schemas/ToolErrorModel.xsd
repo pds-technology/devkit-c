@@ -331,6 +331,9 @@ This should include information regarding the derivation of the information.</xs
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="AuthorizationStatus">
+		<xs:annotation>
+			<xs:documentation>Status of authorization: draft, authorized, superceded, etc.</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="draft">
 				<xs:annotation>

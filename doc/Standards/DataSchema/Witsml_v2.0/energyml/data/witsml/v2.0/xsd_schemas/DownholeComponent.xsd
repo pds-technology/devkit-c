@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema targetNamespace="http://www.energistics.org/energyml/data/witsmlv2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:witsml="http://www.energistics.org/energyml/data/witsmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" elementFormDefault="qualified" version="2.0">
+<xs:schema targetNamespace="http://www.energistics.org/energyml/data/witsmlv2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:witsml="http://www.energistics.org/energyml/data/witsmlv2" elementFormDefault="qualified" version="2.0">
 	<!--														-->
 	<!-- Energistics License Agreement
 			This file is distributed under the Energistics Product License Agreement at
@@ -20,6 +20,9 @@
 	<xs:include schemaLocation="Well.xsd"/>
 	<xs:element name="DownholeComponent" type="witsml:DownholeComponent" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="DownholeComponent">
+		<xs:annotation>
+			<xs:documentation>General downhole equipment information</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
@@ -44,14 +47,16 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="DownholeString">
+		<xs:annotation>
+			<xs:documentation>A section of the downhole component</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="StringType" type="xs:string" minOccurs="1" maxOccurs="1">
+			<xs:element name="StringType" type="witsml:DownholeStringType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>An enumeration type defined in equipmentCatelog, the "DownholeStringEnum"
-                    contains valid option of "case","rod","tubing", "otherString".</xs:documentation>
+					<xs:documentation>An enumeration type defined in equipmentCatelog, the "DownholeStringEnum"                     contains valid option of "case","rod","tubing", "otherString".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="SubStringType" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="SubStringType" type="witsml:SubStringType" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>An enumeration type define for express further string type etc. "SurfaceCasing", "IntermediaCasing", "productionCasing".</xs:documentation>
 				</xs:annotation>
@@ -107,6 +112,9 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="StringEquipment">
+		<xs:annotation>
+			<xs:documentation>Information regarding equipment found along a string</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="EquipmentType" type="witsml:EquipmentTypeExt" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
@@ -337,7 +345,7 @@
 							<xs:documentation>measurement of radial offset</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="ConnectionForm" type="xs:string" minOccurs="0" maxOccurs="1">
+					<xs:element name="ConnectionForm" type="witsml:ConnectionFormType" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The form of connection: Box or Pin</xs:documentation>
 						</xs:annotation>
@@ -387,6 +395,9 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="BoreholeString">
+		<xs:annotation>
+			<xs:documentation>A section of a borehole</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Name" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
@@ -414,7 +425,7 @@
 					<xs:documentation>The name of borehole</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TypeBorehole" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="TypeBorehole" type="witsml:BoreholeType" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Type of borehole. etc. Cavern, cavity, NormalBorehole,UnderReam</xs:documentation>
 				</xs:annotation>
@@ -462,7 +473,7 @@
 					<xs:documentation>Name of the feature</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="GeologyType" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="GeologyType" type="witsml:GeologyType" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Aquifer or reservoir</xs:documentation>
 				</xs:annotation>
@@ -506,6 +517,9 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="Equipment">
+		<xs:annotation>
+			<xs:documentation>Information on this piece of equipment</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="EquipmentName" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
@@ -577,9 +591,9 @@
 					<xs:documentation>Material that equipment is made from</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Grade" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="Grade" type="witsml:GradeType" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Grade level of this material.</xs:documentation>
+					<xs:documentation>Grade level of this piece of material.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="UnitWeight" type="eml:MassPerLengthMeasure" minOccurs="0" maxOccurs="1">
@@ -592,12 +606,12 @@
 					<xs:documentation>Flag indicating whether equipment has coating</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="OutsideCoating" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="OutsideCoating" type="witsml:Coating" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Equipment's outside coating based on enumeration value</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="InsideCoating" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="InsideCoating" type="witsml:Coating" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Equipment's inner coating based on enumeration value</xs:documentation>
 				</xs:annotation>
@@ -833,6 +847,9 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PerforationSet">
+		<xs:annotation>
+			<xs:documentation>Information regarding a perforation hole</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="BoreholeStringReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
@@ -895,7 +912,7 @@
 across a perforation set.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PerforationTool" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="PerforationTool" type="witsml:PerforationToolType" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The type of perforation tool.</xs:documentation>
 				</xs:annotation>
@@ -934,6 +951,9 @@ across a perforation set.</xs:documentation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="EquipmentTypeExt">
+		<xs:annotation>
+			<xs:documentation>An extension of possible equipment types</xs:documentation>
+		</xs:annotation>
 		<xs:union memberTypes="witsml:EquipmentType eml:EnumExtensionPattern"/>
 	</xs:simpleType>
 	<xs:simpleType name="CasingConnectionTypes">
@@ -990,6 +1010,9 @@ the appropriate value. Use of this value may result in rejection in some situati
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ConnectionFormType">
+		<xs:annotation>
+			<xs:documentation>A type of equipment to equipment connection, e.g., flange, mandrel, welded, etc.</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="box"/>
 			<xs:enumeration value="flange"/>
@@ -1037,6 +1060,9 @@ the appropriate value. Use of this value may result in rejection in some situati
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="RodConnectionType">
+		<xs:annotation>
+			<xs:documentation>A type of rod connection, e.g., latched, threaded, welded, etc.</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="witsml:AbstractConnectionType">
 				<xs:sequence>
@@ -1066,6 +1092,9 @@ the appropriate value. Use of this value may result in rejection in some situati
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:simpleType name="EquipmentType">
+		<xs:annotation>
+			<xs:documentation>Type of this equipment</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="bridge plug"/>
 			<xs:enumeration value="bull plug"/>
@@ -1188,6 +1217,9 @@ the appropriate value. Use of this value may result in rejection in some situati
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="GradeType">
+		<xs:annotation>
+			<xs:documentation>Grade level of this piece of equipment</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="13CR"/>
 			<xs:enumeration value="13CR- 80"/>
@@ -1327,6 +1359,9 @@ the appropriate value. Use of this value may result in rejection in some situati
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="BoreholeType">
+		<xs:annotation>
+			<xs:documentation>The type of borehole, e.g., cavern, normalborehole, etc.</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="cavern"/>
 			<xs:enumeration value="cavity"/>
@@ -1335,6 +1370,9 @@ the appropriate value. Use of this value may result in rejection in some situati
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="Coating">
+		<xs:annotation>
+			<xs:documentation>Type of inside or outside coating of this piece of equipment</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="bare"/>
 			<xs:enumeration value="carbonnitrided"/>
@@ -1424,6 +1462,9 @@ the appropriate value. Use of this value may result in rejection in some situati
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="DownholeStringType">
+		<xs:annotation>
+			<xs:documentation>A type of downhole component (casing, rod, tubing, etc.)</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="casing"/>
 			<xs:enumeration value="others"/>
@@ -1433,6 +1474,9 @@ the appropriate value. Use of this value may result in rejection in some situati
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="SubStringType">
+		<xs:annotation>
+			<xs:documentation>An enumeration to further qualify string type, e.g., surface casing, intermediate casing, production casing, etc.</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="abandoned junk/fish"/>
 			<xs:enumeration value="capillary string (inside tubing)"/>
@@ -1452,12 +1496,18 @@ the appropriate value. Use of this value may result in rejection in some situati
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="GeologyType">
+		<xs:annotation>
+			<xs:documentation>One of either aquifer or reservoir</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="aquifer"/>
 			<xs:enumeration value="reservoir"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="PerforationToolType">
+		<xs:annotation>
+			<xs:documentation>A type of perforation tool, e.g., casing gun, mandrel, slots-undercut, etc.</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="casing gun"/>
 			<xs:enumeration value="coiled tubing jet tool"/>

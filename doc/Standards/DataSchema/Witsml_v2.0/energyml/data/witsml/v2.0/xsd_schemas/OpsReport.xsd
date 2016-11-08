@@ -15,13 +15,13 @@
 	<!--														-->
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
 	<!--														-->
-	<xs:include schemaLocation="DrillReport.xsd"/>
-	<xs:include schemaLocation="FluidsReport.xsd"/>
-	<xs:include schemaLocation="BhaRun.xsd"/>
 	<xs:include schemaLocation="WitsmlCommon.xsd"/>
+	<xs:include schemaLocation="FluidsReport.xsd"/>
 	<xs:include schemaLocation="WellboreGeometry.xsd"/>
 	<xs:include schemaLocation="Trajectory.xsd"/>
+	<xs:include schemaLocation="DrillReport.xsd"/>
 	<xs:include schemaLocation="Wellbore.xsd"/>
+	<xs:include schemaLocation="BhaRun.xsd"/>
 	<xs:complexType name="ShakerScreen">
 		<xs:annotation>
 			<xs:documentation>WITSML - Operations Shaker Screen Component Schema</xs:documentation>
@@ -542,6 +542,68 @@ Values range from 0 (calm) to 12 (hurricane).</xs:documentation>
 			<xs:enumeration value="tug boat"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:complexType name="AbstractItemWtOrVolPerUnit" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Item weight or volume per unit.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="1"/>
+	</xs:complexType>
+	<xs:complexType name="ItemVolPerUnit">
+		<xs:annotation>
+			<xs:documentation>Item volume per unit.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="witsml:AbstractItemWtOrVolPerUnit">
+				<xs:sequence>
+					<xs:element name="ItemVolPerUnit" type="eml:VolumeMeasure" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Item volume per unit.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ItemWtPerUnit">
+		<xs:annotation>
+			<xs:documentation>Item weight per unit.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="witsml:AbstractItemWtOrVolPerUnit">
+				<xs:sequence>
+					<xs:element name="ItemWtPerUnit" type="eml:MassMeasure" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Item weight per unit.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AnchorState">
+		<xs:sequence>
+			<xs:element name="AnchorName" type="eml:String64" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The anchor number within a mooring system, or name if a name is used instead.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AnchorAngle" type="eml:PlaneAngleMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Angle of the anchor or mooring line.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AnchorTension" type="eml:ForceMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Tension on the mooring line represented by the named anchor.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Free-test description of the state of this anchor or mooring line.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:element name="OpsReport" type="witsml:OpsReport" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="OpsReport">
 		<xs:annotation>
@@ -1203,6 +1265,16 @@ the appropriate value. Use of this value may result in rejection in some situati
 					<xs:documentation>Name or type of inventory item.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="ItemWtOrVolPerUnit" type="witsml:AbstractItemWtOrVolPerUnit" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Item weight or volume per unit.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PricePerUnit" type="witsml:Cost" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Price per item unit, assume same currency for all items.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="QtyStart" type="xs:int" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Start quantity for report interval.</xs:documentation>
@@ -1228,6 +1300,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 					<xs:documentation>Quantity used for the report period</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="CostItem" type="witsml:Cost" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Cost for the product for the interval.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="QtyOnLocation" type="xs:int" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Amount of item remaining on location after all adjustments
@@ -1239,31 +1316,6 @@ for the report interval.</xs:documentation>
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CostItem" type="witsml:Cost" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Cost for the product for the interval.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PricePerUnit" type="witsml:Cost" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Price per item unit, assume same currency for all items.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:choice minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Choice Placeholder in Inventory</xs:documentation>
-				</xs:annotation>
-				<xs:element name="ItemWtPerUnit" type="eml:MassMeasure" minOccurs="1" maxOccurs="1">
-					<xs:annotation>
-						<xs:documentation>Weight per item unit.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element name="ItemVolPerUnit" type="eml:VolumeMeasure" minOccurs="1" maxOccurs="1">
-					<xs:annotation>
-						<xs:documentation>Volume per item unit.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-			</xs:choice>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
@@ -1393,8 +1445,7 @@ effects of wind and waves; measured as the angle from vertical</xs:documentation
 					<xs:documentation>Mean draft at mid-section.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AnchorTension" type="witsml:IndexedObject" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="AnchorAngle" type="witsml:IndexedObject" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="AnchorState" type="witsml:AnchorState" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PumpOp">
@@ -1465,6 +1516,9 @@ effects of wind and waves; measured as the angle from vertical</xs:documentation
 		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="PumpOpType">
+		<xs:annotation>
+			<xs:documentation>Type of pump operation: drilling, reaming, etc.</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="drilling"/>
 			<xs:enumeration value="reaming"/>

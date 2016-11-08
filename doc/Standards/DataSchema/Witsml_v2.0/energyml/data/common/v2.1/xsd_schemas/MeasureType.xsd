@@ -18,412 +18,6 @@
 	<!--														-->
 	<xs:include schemaLocation="QuantityClass.xsd"/>
 	<xs:include schemaLocation="BaseTypes.xsd"/>
-	<xs:complexType name="AreaPerVolumeMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AreaPerVolumeUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ThermodynamicTemperaturePerThermodynamicTemperatureMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ThermodynamicTemperaturePerThermodynamicTemperatureUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="DimensionlessMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:DimensionlessUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="VolumePerLengthMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumePerLengthUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ActivityOfRadioactivityMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ActivityOfRadioactivityUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="AmountOfSubstancePerAmountOfSubstanceMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstancePerAmountOfSubstanceUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="DiffusiveTimeOfFlightMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:DiffusiveTimeOfFlightUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="SolidAngleMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:SolidAngleUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ThermalConductivityMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ThermalConductivityUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ElectricCurrentMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricCurrentUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="CapacitanceMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:CapacitanceUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ElectromagneticMomentMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectromagneticMomentUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ElectricResistanceMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricResistanceUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="EnergyPerVolumeMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:EnergyPerVolumeUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ElectricChargePerVolumeMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricChargePerVolumeUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="VolumetricHeatTransferCoefficientMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumetricHeatTransferCoefficientUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="PressurePerVolumeMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:PressurePerVolumeUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="TimePerMassMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:TimePerMassUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ElectricChargePerMassMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricChargePerMassUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="SpecificHeatCapacityMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:SpecificHeatCapacityUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ReciprocalLengthMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ReciprocalLengthUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ElectricFieldStrengthMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricFieldStrengthUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="PowerPerAreaMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:PowerPerAreaUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MagneticFluxDensityPerLengthMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MagneticFluxDensityPerLengthUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MolecularWeightMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MolecularWeightUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="DiffusionCoefficientMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:DiffusionCoefficientUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="PressureMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:PressureUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MassPerTimeMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassPerTimeUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MassPerAreaMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassPerAreaUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="IsothermalCompressibilityMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:IsothermalCompressibilityUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ReciprocalTimeMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ReciprocalTimeUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ElectricResistancePerLengthMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricResistancePerLengthUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MolarEnergyMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MolarEnergyUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="FrequencyIntervalMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:FrequencyIntervalUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="LengthPerVolumeMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LengthPerVolumeUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="SecondMomentOfAreaMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:SecondMomentOfAreaUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="TimePerTimeMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:TimePerTimeUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="SecondMomentOfAreaMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:SecondMomentOfAreaUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MagneticFluxDensityMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MagneticFluxDensityUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="EnergyLengthPerAreaMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:EnergyLengthPerAreaUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="VolumePerVolumeMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumePerVolumeUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="DipoleMomentMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:DipoleMomentUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="EnergyPerMassPerTimeMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:EnergyPerMassPerTimeUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="HeatTransferCoefficientMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:HeatTransferCoefficientUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="VolumePerTimePerPressureLengthMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumePerTimePerPressureLengthUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="PressureSquaredPerForceTimePerAreaMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:PressureSquaredPerForceTimePerAreaUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MomentumMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MomentumUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="LuminousEfficacyMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LuminousEfficacyUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="DynamicViscosityMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:DynamicViscosityUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="LuminousIntensityMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LuminousIntensityUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="VolumePerTimePerVolumeMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumePerTimePerVolumeUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="SignalingEventPerTimeMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:SignalingEventPerTimeUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="PressureTimePerVolumeMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:PressureTimePerVolumeUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MomentOfForceMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MomentOfForceUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MassMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ThermalInsulanceMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ThermalInsulanceUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ReluctanceMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ReluctanceUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="LengthPerTimeMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LengthPerTimeUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
 	<xs:complexType name="EnergyPerLengthMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
@@ -442,6 +36,125 @@
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
 				<xs:attribute name="uom" use="required" type="eml:VolumePerTimePerPressureLengthUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ForceMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ForceUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MagneticFieldStrengthMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MagneticFieldStrengthUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="PermeabilityRockMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:PermeabilityRockUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="PressurePerTimeMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:PressurePerTimeUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="APIGravityMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:APIGravityUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="DoseEquivalentMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:DoseEquivalentUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MassPerTimePerAreaMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassPerTimePerAreaUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="VolumePerPressureMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:VolumePerPressureUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="PressurePerPressureMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:PressurePerPressureUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MassPerAreaMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassPerAreaUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AmountOfSubstancePerVolumeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstancePerVolumeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="TimePerTimeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:TimePerTimeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="HeatFlowRateMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:HeatFlowRateUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ReciprocalForceMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ReciprocalForceUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="TemperatureIntervalPerPressureMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:TemperatureIntervalPerPressureUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AnglePerVolumeMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AnglePerVolumeUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AreaPerVolumeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AreaPerVolumeUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -501,6 +214,13 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
+	<xs:complexType name="ThermodynamicTemperaturePerThermodynamicTemperatureMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ThermodynamicTemperaturePerThermodynamicTemperatureUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
 	<xs:complexType name="PowerMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
@@ -540,6 +260,111 @@
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
 				<xs:attribute name="uom" use="required" type="eml:ForceLengthPerLengthUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LightExposureMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LightExposureUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AmountOfSubstancePerTimePerAreaMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstancePerTimePerAreaUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="VolumePerTimePerAreaMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:VolumePerTimePerAreaUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LengthPerLengthMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LengthPerLengthUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="TemperatureIntervalMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:TemperatureIntervalUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="VolumePerTimePerLengthMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:VolumePerTimePerLengthUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LengthMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LengthUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="VolumePerTimePerTimeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:VolumePerTimePerTimeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AmountOfSubstanceMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstanceUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="PermeabilityLengthMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:PermeabilityLengthUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ThermalInsulanceMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ThermalInsulanceUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MassPerVolumePerLengthMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassPerVolumePerLengthUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ElectricConductivityMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ElectricConductivityUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="TemperatureIntervalMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:TemperatureIntervalUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ForceAreaMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ForceAreaUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -641,6 +466,13 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
+	<xs:complexType name="DimensionlessMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:DimensionlessUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
 	<xs:complexType name="DimensionlessMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
@@ -736,6 +568,216 @@
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
 				<xs:attribute name="uom" use="required" type="eml:ReciprocalMassUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MagneticFluxMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MagneticFluxUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="VolumetricThermalExpansionMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:VolumetricThermalExpansionUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="EnergyLengthPerTimeAreaTemperatureMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:EnergyLengthPerTimeAreaTemperatureUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AnglePerLengthMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AnglePerLengthUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="HeatFlowRateMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:HeatFlowRateUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ElectricChargeMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ElectricChargeUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ElectricalResistivityMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ElectricalResistivityUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AreaMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AreaUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MassPerTimeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassPerTimeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MobilityMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MobilityUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="VolumePerMassMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:VolumePerMassUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MolarVolumeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MolarVolumeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ElectricConductanceMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ElectricConductanceUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ReciprocalPressureMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ReciprocalPressureUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AreaPerAmountOfSubstanceMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AreaPerAmountOfSubstanceUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LengthMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LengthUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MassPerVolumeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassPerVolumeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ForcePerVolumeMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ForcePerVolumeUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AmountOfSubstancePerVolumeMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstancePerVolumeUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="TemperatureIntervalPerLengthMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:TemperatureIntervalPerLengthUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LengthPerMassMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LengthPerMassUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AmountOfSubstancePerAreaMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstancePerAreaUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MassLengthMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassLengthUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AmountOfSubstanceMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstanceUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="TimePerLengthMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:TimePerLengthUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ForceLengthPerLengthMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ForceLengthPerLengthUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ReciprocalMassTimeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ReciprocalMassTimeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MagneticFluxDensityMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MagneticFluxDensityUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="PressurePerPressureMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:PressurePerPressureUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LengthPerTemperatureMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LengthPerTemperatureUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -837,321 +879,6 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="EnergyPerAreaMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:EnergyPerAreaUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="AreaPerAreaMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AreaPerAreaUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="VolumeMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumeUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="EnergyPerMassMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:EnergyPerMassUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ReluctanceMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ReluctanceUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MassPerMassMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassPerMassUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="AmountOfSubstancePerTimePerAreaMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstancePerTimePerAreaUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="TemperatureIntervalPerLengthMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:TemperatureIntervalPerLengthUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="LogarithmicPowerRatioMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LogarithmicPowerRatioUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="APIGammaRayMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:APIGammaRayUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="DataTransferSpeedMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:DataTransferSpeedUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MagneticDipoleMomentMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MagneticDipoleMomentUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MassPerEnergyMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassPerEnergyUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MagneticPermeabilityMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MagneticPermeabilityUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="TimePerMassMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:TimePerMassUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="VolumePerAreaMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumePerAreaUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="QuantityOfLightMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:QuantityOfLightUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="QuantityOfLightMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:QuantityOfLightUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ReciprocalVolumeMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ReciprocalVolumeUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="LuminousEfficacyMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LuminousEfficacyUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="PressureMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:PressureUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="AreaPerTimeMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AreaPerTimeUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MagneticFluxMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MagneticFluxUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="VolumeFlowRatePerVolumeFlowRateMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumeFlowRatePerVolumeFlowRateUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MomentumMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MomentumUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="PowerPerVolumeMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:PowerPerVolumeUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ThermalDiffusivityMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ThermalDiffusivityUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="LogarithmicPowerRatioPerLengthMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LogarithmicPowerRatioPerLengthUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MagneticVectorPotentialMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MagneticVectorPotentialUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MagneticFieldStrengthMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MagneticFieldStrengthUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="NormalizedPowerMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:NormalizedPowerUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="VolumePerPressureMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumePerPressureUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="RadiantIntensityMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:RadiantIntensityUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="LogarithmicPowerRatioMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LogarithmicPowerRatioUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="AngularAccelerationMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AngularAccelerationUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ReciprocalMassMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ReciprocalMassUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ReciprocalForceMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ReciprocalForceUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="PlaneAngleMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:PlaneAngleUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="EnergyLengthPerAreaMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:EnergyLengthPerAreaUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MagneticDipoleMomentMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MagneticDipoleMomentUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="EnergyPerMassMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:EnergyPerMassUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="VolumePerMassMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumePerMassUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ForceMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ForceUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="LightExposureMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LightExposureUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MagneticFluxMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MagneticFluxUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
 	<xs:complexType name="VolumePerRotationMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
@@ -1170,6 +897,13 @@
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
 				<xs:attribute name="uom" use="required" type="eml:ElectricCurrentDensityUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ThermodynamicTemperaturePerThermodynamicTemperatureMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ThermodynamicTemperaturePerThermodynamicTemperatureUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1205,104 +939,6 @@
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
 				<xs:attribute name="uom" use="required" type="eml:DipoleMomentUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="VolumetricThermalExpansionMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumetricThermalExpansionUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="EnergyLengthPerTimeAreaTemperatureMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:EnergyLengthPerTimeAreaTemperatureUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="AnglePerLengthMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AnglePerLengthUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="HeatFlowRateMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:HeatFlowRateUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ElectricChargeMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricChargeUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ElectricalResistivityMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricalResistivityUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="AreaMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AreaUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MassPerTimeMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassPerTimeUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MobilityMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MobilityUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="VolumePerMassMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumePerMassUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MolarVolumeMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MolarVolumeUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ElectricConductanceMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricConductanceUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ReciprocalPressureMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ReciprocalPressureUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="AreaPerAmountOfSubstanceMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AreaPerAmountOfSubstanceUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1411,24 +1047,213 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
+	<xs:complexType name="LightExposureMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LightExposureUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ElectricCurrentMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ElectricCurrentUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LuminousFluxMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LuminousFluxUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LinearThermalExpansionMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LinearThermalExpansionUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="HeatCapacityMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:HeatCapacityUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ElectricResistancePerLengthMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ElectricResistancePerLengthUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AbsorbedDoseMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AbsorbedDoseUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="TemperatureIntervalPerPressureMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:TemperatureIntervalPerPressureUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AttenuationPerFrequencyIntervalMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AttenuationPerFrequencyIntervalUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ThermalResistanceMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ThermalResistanceUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MassMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ElectromagneticMomentMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ElectromagneticMomentUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AnglePerLengthMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AnglePerLengthUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LengthPerTimeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LengthPerTimeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MassPerLengthMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassPerLengthUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="EnergyPerAreaMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:EnergyPerAreaUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AreaPerAreaMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AreaPerAreaUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="VolumeMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:VolumeUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="EnergyPerMassMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:EnergyPerMassUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ReluctanceMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ReluctanceUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MassPerMassMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassPerMassUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AmountOfSubstancePerTimePerAreaMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstancePerTimePerAreaUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="TemperatureIntervalPerLengthMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:TemperatureIntervalPerLengthUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LogarithmicPowerRatioMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LogarithmicPowerRatioUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="APIGammaRayMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:APIGammaRayUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="DataTransferSpeedMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:DataTransferSpeedUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MagneticDipoleMomentMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MagneticDipoleMomentUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MassPerEnergyMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassPerEnergyUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MagneticPermeabilityMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MagneticPermeabilityUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
 	<xs:complexType name="MassPerEnergyMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
 				<xs:attribute name="uom" use="required" type="eml:MassPerEnergyUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ReciprocalTimeMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ReciprocalTimeUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ElectricChargePerAreaMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricChargePerAreaUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1450,6 +1275,13 @@
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
 				<xs:attribute name="uom" use="required" type="eml:VolumeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AreaPerCountMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AreaPerCountUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1523,276 +1355,10 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="SpecificHeatCapacityMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:SpecificHeatCapacityUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="PotentialDifferencePerPowerDropMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:PotentialDifferencePerPowerDropUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MomentOfInertiaMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MomentOfInertiaUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="LogarithmicPowerRatioPerLengthMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LogarithmicPowerRatioPerLengthUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="AmountOfSubstancePerAreaMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstancePerAreaUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MassPerTimePerLengthMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassPerTimePerLengthUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MolecularWeightMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MolecularWeightUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ActivityOfRadioactivityMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ActivityOfRadioactivityUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="SignalingEventPerTimeMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:SignalingEventPerTimeUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="AreaPerMassMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AreaPerMassUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="FrequencyMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:FrequencyUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="FrequencyIntervalMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:FrequencyIntervalUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="CapacitanceMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:CapacitanceUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ThermalConductivityMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ThermalConductivityUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="AttenuationPerFrequencyIntervalMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AttenuationPerFrequencyIntervalUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="DataTransferSpeedMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:DataTransferSpeedUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="PowerPerVolumeMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:PowerPerVolumeUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MassPerVolumeMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassPerVolumeUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ReciprocalAreaMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ReciprocalAreaUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ReciprocalPressureMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ReciprocalPressureUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="DigitalStorageMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:DigitalStorageUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="AreaPerAreaMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AreaPerAreaUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ReciprocalElectricPotentialDifferenceMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ReciprocalElectricPotentialDifferenceUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="AngularVelocityMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AngularVelocityUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ElectricConductivityMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricConductivityUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ElectricChargePerVolumeMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricChargePerVolumeUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ForcePerLengthMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ForcePerLengthUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
 	<xs:complexType name="IlluminanceMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
 				<xs:attribute name="uom" use="required" type="eml:IlluminanceUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ElectricalResistivityMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricalResistivityUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MassLengthMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassLengthUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="LengthPerVolumeMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LengthPerVolumeUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ReciprocalAreaMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ReciprocalAreaUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="MassPerTimePerLengthMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassPerTimePerLengthUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ForcePerForceMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ForcePerForceUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="KinematicViscosityMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:KinematicViscosityUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="APINeutronMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:APINeutronUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="InductanceMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:InductanceUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="TimePerVolumeMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:TimePerVolumeUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ForcePerLengthMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ForcePerLengthUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1891,6 +1457,489 @@
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
 				<xs:attribute name="uom" use="required" type="eml:TimeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MomentOfForceMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MomentOfForceUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="VolumePerTimePerPressureMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:VolumePerTimePerPressureUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LuminanceMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LuminanceUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ReciprocalMassTimeMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ReciprocalMassTimeUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LuminousFluxMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LuminousFluxUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ForcePerVolumeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ForcePerVolumeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MolarHeatCapacityMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MolarHeatCapacityUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="DigitalStorageMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:DigitalStorageUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="PowerPerPowerMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:PowerPerPowerUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ElectricChargeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ElectricChargeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LuminousIntensityMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LuminousIntensityUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="VolumeFlowRatePerVolumeFlowRateMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:VolumeFlowRatePerVolumeFlowRateUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ReciprocalTimeMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ReciprocalTimeUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ElectricResistancePerLengthMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ElectricResistancePerLengthUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MolarEnergyMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MolarEnergyUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="FrequencyIntervalMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:FrequencyIntervalUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="CationExchangeCapacityMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:CationExchangeCapacityUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="CationExchangeCapacityMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:CationExchangeCapacityUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LengthPerVolumeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LengthPerVolumeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="SecondMomentOfAreaMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:SecondMomentOfAreaUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="TimePerTimeMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:TimePerTimeUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="SecondMomentOfAreaMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:SecondMomentOfAreaUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MagneticFluxDensityMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MagneticFluxDensityUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="EnergyLengthPerAreaMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:EnergyLengthPerAreaUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="VolumePerVolumeMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:VolumePerVolumeUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="DipoleMomentMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:DipoleMomentUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="EnergyPerMassPerTimeMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:EnergyPerMassPerTimeUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="HeatTransferCoefficientMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:HeatTransferCoefficientUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="TimePerMassMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:TimePerMassUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="VolumePerAreaMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:VolumePerAreaUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="QuantityOfLightMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:QuantityOfLightUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="QuantityOfLightMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:QuantityOfLightUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ReciprocalVolumeMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ReciprocalVolumeUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LuminousEfficacyMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LuminousEfficacyUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="PressureMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:PressureUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AreaPerTimeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AreaPerTimeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MagneticFluxMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MagneticFluxUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="VolumeFlowRatePerVolumeFlowRateMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:VolumeFlowRatePerVolumeFlowRateUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MomentumMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MomentumUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="PowerPerVolumeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:PowerPerVolumeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ThermalDiffusivityMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ThermalDiffusivityUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="DiffusiveTimeOfFlightMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:DiffusiveTimeOfFlightUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LogarithmicPowerRatioPerLengthMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LogarithmicPowerRatioPerLengthUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ReciprocalTimeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ReciprocalTimeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="SpecificHeatCapacityMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:SpecificHeatCapacityUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="PotentialDifferencePerPowerDropMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:PotentialDifferencePerPowerDropUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MomentOfInertiaMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MomentOfInertiaUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LogarithmicPowerRatioPerLengthMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LogarithmicPowerRatioPerLengthUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AmountOfSubstancePerAreaMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstancePerAreaUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MassPerTimePerLengthMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassPerTimePerLengthUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MolecularWeightMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MolecularWeightUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ActivityOfRadioactivityMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ActivityOfRadioactivityUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="SignalingEventPerTimeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:SignalingEventPerTimeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AreaPerMassMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AreaPerMassUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AreaPerCountMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:AreaPerCountUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="FrequencyMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:FrequencyUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="FrequencyIntervalMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:FrequencyIntervalUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="CapacitanceMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:CapacitanceUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ElectricalResistivityMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ElectricalResistivityUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MassLengthMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassLengthUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="LengthPerVolumeMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:LengthPerVolumeUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ReciprocalAreaMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ReciprocalAreaUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MassPerTimePerLengthMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassPerTimePerLengthUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ForcePerForceMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ForcePerForceUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="KinematicViscosityMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:KinematicViscosityUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="APINeutronMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:APINeutronUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="InductanceMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:InductanceUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="TimePerVolumeMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:TimePerVolumeUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ForcePerLengthMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:ForcePerLengthUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1999,514 +2048,493 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="MomentOfForceMeasure">
+	<xs:complexType name="SolidAngleMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MomentOfForceUom"/>
+				<xs:attribute name="uom" use="required" type="eml:SolidAngleUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="VolumePerTimePerPressureMeasureExt">
+	<xs:complexType name="ThermalConductivityMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumePerTimePerPressureUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:ThermalConductivityUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="LuminanceMeasure">
+	<xs:complexType name="ElectricCurrentMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LuminanceUom"/>
+				<xs:attribute name="uom" use="required" type="eml:ElectricCurrentUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="ReciprocalMassTimeMeasureExt">
+	<xs:complexType name="CapacitanceMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ReciprocalMassTimeUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:CapacitanceUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="LuminousFluxMeasureExt">
+	<xs:complexType name="ElectromagneticMomentMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LuminousFluxUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:ElectromagneticMomentUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="ForcePerVolumeMeasure">
+	<xs:complexType name="ElectricResistanceMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ForcePerVolumeUom"/>
+				<xs:attribute name="uom" use="required" type="eml:ElectricResistanceUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="MolarHeatCapacityMeasure">
+	<xs:complexType name="EnergyPerVolumeMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MolarHeatCapacityUom"/>
+				<xs:attribute name="uom" use="required" type="eml:EnergyPerVolumeUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="DigitalStorageMeasure">
+	<xs:complexType name="ElectricChargePerVolumeMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:DigitalStorageUom"/>
+				<xs:attribute name="uom" use="required" type="eml:ElectricChargePerVolumeUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="PowerPerPowerMeasureExt">
+	<xs:complexType name="VolumetricHeatTransferCoefficientMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:PowerPerPowerUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:VolumetricHeatTransferCoefficientUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="ElectricChargeMeasure">
+	<xs:complexType name="PressurePerVolumeMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricChargeUom"/>
+				<xs:attribute name="uom" use="required" type="eml:PressurePerVolumeUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="LuminousIntensityMeasure">
+	<xs:complexType name="TimePerMassMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LuminousIntensityUom"/>
+				<xs:attribute name="uom" use="required" type="eml:TimePerMassUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="VolumeFlowRatePerVolumeFlowRateMeasureExt">
+	<xs:complexType name="ElectricChargePerMassMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumeFlowRatePerVolumeFlowRateUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:ElectricChargePerMassUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="LightExposureMeasure">
+	<xs:complexType name="SpecificHeatCapacityMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LightExposureUom"/>
+				<xs:attribute name="uom" use="required" type="eml:SpecificHeatCapacityUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="ElectricCurrentMeasure">
+	<xs:complexType name="ReciprocalLengthMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricCurrentUom"/>
+				<xs:attribute name="uom" use="required" type="eml:ReciprocalLengthUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="LuminousFluxMeasure">
+	<xs:complexType name="VolumePerTimePerPressureLengthMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LuminousFluxUom"/>
+				<xs:attribute name="uom" use="required" type="eml:VolumePerTimePerPressureLengthUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="LinearThermalExpansionMeasureExt">
+	<xs:complexType name="PressureSquaredPerForceTimePerAreaMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LinearThermalExpansionUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:PressureSquaredPerForceTimePerAreaUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="HeatCapacityMeasure">
+	<xs:complexType name="MomentumMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:HeatCapacityUom"/>
+				<xs:attribute name="uom" use="required" type="eml:MomentumUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="ElectricResistancePerLengthMeasure">
+	<xs:complexType name="LuminousEfficacyMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricResistancePerLengthUom"/>
+				<xs:attribute name="uom" use="required" type="eml:LuminousEfficacyUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="AbsorbedDoseMeasure">
+	<xs:complexType name="DynamicViscosityMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AbsorbedDoseUom"/>
+				<xs:attribute name="uom" use="required" type="eml:DynamicViscosityUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="TemperatureIntervalPerPressureMeasure">
+	<xs:complexType name="LuminousIntensityMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:TemperatureIntervalPerPressureUom"/>
+				<xs:attribute name="uom" use="required" type="eml:LuminousIntensityUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="AttenuationPerFrequencyIntervalMeasure">
+	<xs:complexType name="VolumePerTimePerVolumeMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AttenuationPerFrequencyIntervalUom"/>
+				<xs:attribute name="uom" use="required" type="eml:VolumePerTimePerVolumeUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="ThermalResistanceMeasure">
+	<xs:complexType name="SignalingEventPerTimeMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ThermalResistanceUom"/>
+				<xs:attribute name="uom" use="required" type="eml:SignalingEventPerTimeUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="MassMeasureExt">
+	<xs:complexType name="PressureTimePerVolumeMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:PressureTimePerVolumeUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="ElectromagneticMomentMeasureExt">
+	<xs:complexType name="MomentOfForceMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectromagneticMomentUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:MomentOfForceUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="AnglePerLengthMeasure">
+	<xs:complexType name="MassMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AnglePerLengthUom"/>
+				<xs:attribute name="uom" use="required" type="eml:MassUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="LengthPerTimeMeasure">
+	<xs:complexType name="ThermalInsulanceMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LengthPerTimeUom"/>
+				<xs:attribute name="uom" use="required" type="eml:ThermalInsulanceUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="MassPerLengthMeasure">
+	<xs:complexType name="ReluctanceMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassPerLengthUom"/>
+				<xs:attribute name="uom" use="required" type="eml:ReluctanceUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="MagneticFieldStrengthMeasure">
+	<xs:complexType name="DiffusiveTimeOfFlightMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MagneticFieldStrengthUom"/>
+				<xs:attribute name="uom" use="required" type="eml:DiffusiveTimeOfFlightUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="PermeabilityRockMeasure">
+	<xs:complexType name="LengthPerTimeMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:PermeabilityRockUom"/>
+				<xs:attribute name="uom" use="required" type="eml:LengthPerTimeUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="PressurePerTimeMeasureExt">
+	<xs:complexType name="MagneticVectorPotentialMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:PressurePerTimeUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:MagneticVectorPotentialUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="APIGravityMeasureExt">
+	<xs:complexType name="MagneticFieldStrengthMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:APIGravityUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:MagneticFieldStrengthUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="DoseEquivalentMeasure">
+	<xs:complexType name="NormalizedPowerMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:DoseEquivalentUom"/>
+				<xs:attribute name="uom" use="required" type="eml:NormalizedPowerUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="MassPerTimePerAreaMeasure">
+	<xs:complexType name="VolumePerPressureMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassPerTimePerAreaUom"/>
+				<xs:attribute name="uom" use="required" type="eml:VolumePerPressureUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="VolumePerPressureMeasure">
+	<xs:complexType name="RadiantIntensityMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumePerPressureUom"/>
+				<xs:attribute name="uom" use="required" type="eml:RadiantIntensityUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="MassPerAreaMeasure">
+	<xs:complexType name="LogarithmicPowerRatioMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassPerAreaUom"/>
+				<xs:attribute name="uom" use="required" type="eml:LogarithmicPowerRatioUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="AmountOfSubstancePerVolumeMeasure">
+	<xs:complexType name="AngularAccelerationMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstancePerVolumeUom"/>
+				<xs:attribute name="uom" use="required" type="eml:AngularAccelerationUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="TimePerTimeMeasure">
+	<xs:complexType name="ReciprocalMassMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:TimePerTimeUom"/>
+				<xs:attribute name="uom" use="required" type="eml:ReciprocalMassUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="HeatFlowRateMeasureExt">
+	<xs:complexType name="ReciprocalForceMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:HeatFlowRateUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:ReciprocalForceUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="ReciprocalForceMeasureExt">
+	<xs:complexType name="PlaneAngleMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ReciprocalForceUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:PlaneAngleUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="TemperatureIntervalPerPressureMeasureExt">
+	<xs:complexType name="EnergyLengthPerAreaMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:TemperatureIntervalPerPressureUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:EnergyLengthPerAreaUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="AnglePerVolumeMeasureExt">
+	<xs:complexType name="MagneticDipoleMomentMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AnglePerVolumeUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:MagneticDipoleMomentUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="AmountOfSubstancePerTimePerAreaMeasure">
+	<xs:complexType name="EnergyPerMassMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstancePerTimePerAreaUom"/>
+				<xs:attribute name="uom" use="required" type="eml:EnergyPerMassUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="VolumePerTimePerAreaMeasure">
+	<xs:complexType name="VolumePerMassMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumePerTimePerAreaUom"/>
+				<xs:attribute name="uom" use="required" type="eml:VolumePerMassUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="LengthPerLengthMeasure">
+	<xs:complexType name="ElectricChargePerAreaMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LengthPerLengthUom"/>
+				<xs:attribute name="uom" use="required" type="eml:ElectricChargePerAreaUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="TemperatureIntervalMeasure">
+	<xs:complexType name="ThermalConductivityMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:TemperatureIntervalUom"/>
+				<xs:attribute name="uom" use="required" type="eml:ThermalConductivityUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="VolumePerTimePerLengthMeasure">
+	<xs:complexType name="AttenuationPerFrequencyIntervalMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumePerTimePerLengthUom"/>
+				<xs:attribute name="uom" use="required" type="eml:AttenuationPerFrequencyIntervalUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="LengthMeasureExt">
+	<xs:complexType name="DataTransferSpeedMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LengthUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:DataTransferSpeedUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="VolumePerTimePerTimeMeasure">
+	<xs:complexType name="PowerPerVolumeMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:VolumePerTimePerTimeUom"/>
+				<xs:attribute name="uom" use="required" type="eml:PowerPerVolumeUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="AmountOfSubstanceMeasureExt">
+	<xs:complexType name="MassPerVolumeMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstanceUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:MassPerVolumeUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="PermeabilityLengthMeasure">
+	<xs:complexType name="ReciprocalAreaMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:PermeabilityLengthUom"/>
+				<xs:attribute name="uom" use="required" type="eml:ReciprocalAreaUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="ThermalInsulanceMeasure">
+	<xs:complexType name="ReciprocalPressureMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ThermalInsulanceUom"/>
+				<xs:attribute name="uom" use="required" type="eml:ReciprocalPressureUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="MassPerVolumePerLengthMeasureExt">
+	<xs:complexType name="DigitalStorageMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassPerVolumePerLengthUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:DigitalStorageUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="ElectricConductivityMeasureExt">
+	<xs:complexType name="AreaPerAreaMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ElectricConductivityUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:AreaPerAreaUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="TemperatureIntervalMeasureExt">
+	<xs:complexType name="ReciprocalElectricPotentialDifferenceMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:TemperatureIntervalUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:ReciprocalElectricPotentialDifferenceUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="ForceAreaMeasure">
+	<xs:complexType name="AngularVelocityMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ForceAreaUom"/>
+				<xs:attribute name="uom" use="required" type="eml:AngularVelocityUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="LengthMeasure">
+	<xs:complexType name="ElectricConductivityMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LengthUom"/>
+				<xs:attribute name="uom" use="required" type="eml:ElectricConductivityUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="MassPerVolumeMeasure">
+	<xs:complexType name="ElectricChargePerVolumeMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassPerVolumeUom"/>
+				<xs:attribute name="uom" use="required" type="eml:ElectricChargePerVolumeUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="ForcePerVolumeMeasureExt">
+	<xs:complexType name="ForcePerLengthMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ForcePerVolumeUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:ForcePerLengthUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="AmountOfSubstancePerVolumeMeasureExt">
+	<xs:complexType name="VolumePerLengthMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstancePerVolumeUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:VolumePerLengthUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="TemperatureIntervalPerLengthMeasure">
+	<xs:complexType name="ActivityOfRadioactivityMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:TemperatureIntervalPerLengthUom"/>
+				<xs:attribute name="uom" use="required" type="eml:ActivityOfRadioactivityUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="LengthPerMassMeasureExt">
+	<xs:complexType name="AmountOfSubstancePerAmountOfSubstanceMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LengthPerMassUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstancePerAmountOfSubstanceUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="AmountOfSubstancePerAreaMeasure">
+	<xs:complexType name="ElectricFieldStrengthMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstancePerAreaUom"/>
+				<xs:attribute name="uom" use="required" type="eml:ElectricFieldStrengthUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="MassLengthMeasureExt">
+	<xs:complexType name="PowerPerAreaMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MassLengthUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:PowerPerAreaUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="AmountOfSubstanceMeasure">
+	<xs:complexType name="MagneticFluxDensityPerLengthMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:AmountOfSubstanceUom"/>
+				<xs:attribute name="uom" use="required" type="eml:MagneticFluxDensityPerLengthUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="TimePerLengthMeasure">
+	<xs:complexType name="MolecularWeightMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:TimePerLengthUom"/>
+				<xs:attribute name="uom" use="required" type="eml:MolecularWeightUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="ForceLengthPerLengthMeasureExt">
+	<xs:complexType name="DiffusionCoefficientMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ForceLengthPerLengthUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:DiffusionCoefficientUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="ReciprocalMassTimeMeasure">
+	<xs:complexType name="PressureMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ReciprocalMassTimeUom"/>
+				<xs:attribute name="uom" use="required" type="eml:PressureUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="MagneticFluxDensityMeasureExt">
+	<xs:complexType name="MassPerTimeMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:MagneticFluxDensityUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:MassPerTimeUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="LengthPerTemperatureMeasureExt">
+	<xs:complexType name="MassPerAreaMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:LengthPerTemperatureUomExt"/>
+				<xs:attribute name="uom" use="required" type="eml:MassPerAreaUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:complexType name="PressurePerPressureMeasureExt">
+	<xs:complexType name="IsothermalCompressibilityMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:PressurePerPressureUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="ThermodynamicTemperaturePerThermodynamicTemperatureMeasureExt">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:ThermodynamicTemperaturePerThermodynamicTemperatureUomExt"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="PressurePerPressureMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:PressurePerPressureUom"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="DiffusiveTimeOfFlightMeasure">
-		<xs:simpleContent>
-			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="required" type="eml:DiffusiveTimeOfFlightUom"/>
+				<xs:attribute name="uom" use="required" type="eml:IsothermalCompressibilityUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>

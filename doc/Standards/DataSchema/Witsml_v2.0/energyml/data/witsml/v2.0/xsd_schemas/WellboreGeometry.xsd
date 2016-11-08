@@ -134,6 +134,9 @@ Source: www.glossary.oilfield.slb.com</xs:documentation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="HoleCasingType">
+		<xs:annotation>
+			<xs:documentation>Type of hole casing</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="blow out preventer"/>
 			<xs:enumeration value="casing"/>

@@ -6,6 +6,25 @@
 	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../../common/v2.1/xsd_schemas/gml/3.2.1/gml.xsd"/>
 	<xs:include schemaLocation="ObjectReference.xsd"/>
 	<xs:include schemaLocation="Abstract.xsd"/>
+	<xs:complexType name="IndexRange">
+		<xs:annotation>
+			<xs:documentation>In the case that the ReferencedData is indexed and the conformance with the DataAssurance policy applies to a range within that index space, this class represents that range.
+
+The elements are string types because the index could be of numerous data types, including integer, float and date.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="IndexMinimum" type="eml:String64" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The minimum index for the range over which the referenced data's conformance with the policy is being assessed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IndexMaximum" type="eml:String64" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The maximum index for the range over which the referenced data's conformance with the policy is being assessed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:element name="DataAssuranceRecord" type="eml:DataAssuranceRecord" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="DataAssuranceRecord">
 		<xs:annotation>
@@ -52,9 +71,9 @@ The name of the recurring element would be in the ReferencedElementName.</xs:doc
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Comment" type="xs:string" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="IndexRange" type="eml:IndexRange" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="FailingRules" type="eml:FailingRule" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="ReferencedData" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="FailingRules" type="eml:FailingRule" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="IndexRange" type="eml:IndexRange" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -86,25 +105,6 @@ The meaning of this field should be standardized within a company to maximize it
 					<xs:documentation>This allows extending the FailingRule class with as many arbitrary name-value pairs as is required at run-time.
 
 Uses for this might include why the rule failed or by how much.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="IndexRange">
-		<xs:annotation>
-			<xs:documentation>In the case that the ReferencedData is indexed and the conformance with the DataAssurance policy applies to a range within that index space, this class represents that range.
-
-The elements are string types because the index could be of numerous data types, including integer, float and date.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="IndexMinimum" type="eml:String64" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The minimum index for the range over which the referenced data's conformance with the policy is being assessed.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IndexMaximum" type="eml:String64" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The maximum index for the range over which the referenced data's conformance with the policy is being assessed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

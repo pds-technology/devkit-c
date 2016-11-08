@@ -10,6 +10,7 @@
 	-->
 	<!--                                                         -->
 	<xs:include schemaLocation="Abstract.xsd"/>
+	<xs:include schemaLocation="Activities.xsd"/>
 	<xs:include schemaLocation="BaseTypes.xsd"/>
 	<xs:include schemaLocation="CommonEnumerations.xsd"/>
 	<xs:include schemaLocation="CommonTypes.xsd"/>

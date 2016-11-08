@@ -17,6 +17,33 @@
 	<!--														-->
 	<xs:include schemaLocation="BaseTypes.xsd"/>
 	<xs:include schemaLocation="Abstract.xsd"/>
+	<xs:complexType name="ExternalDataset">
+		<xs:sequence>
+			<xs:element name="ExternalFileProxy" type="eml:ExternalDatasetPart" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="EpcExternalPartReference" type="eml:EpcExternalPartReference" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="EpcExternalPartReference">
+		<xs:annotation>
+			<xs:documentation>It defines a proxy for external part of the EPC package. It must be used at least for external HDF parts.
+
+Each EpcExternalPartReference represents a single operating system file</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractObject">
+				<xs:sequence>
+					<xs:element name="Filename" type="eml:String2000" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="MimeType" type="eml:String2000" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>IAMF registered, if one exists, or a free text field. Needs documentation on seismic especially.
+
+MIME type for HDF proxy is : application/x-hdf5 (by RESQML convention). </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:complexType name="ExternalDatasetPart">
 		<xs:sequence>
 			<xs:element name="Count" type="eml:PositiveLong" minOccurs="1" maxOccurs="1"/>
@@ -34,33 +61,6 @@ For a SEG-Y file this could be a list of trace headers.</xs:documentation>
 			<xs:element name="StartIndex" type="eml:NonNegativeLong" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="EpcExternalPartReference" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="ExternalDataset">
-		<xs:sequence>
-			<xs:element name="ExternalFileProxy" type="eml:ExternalDatasetPart" minOccurs="1" maxOccurs="unbounded"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:element name="EpcExternalPartReference" type="eml:EpcExternalPartReference" substitutionGroup="eml:AbstractDataObject"/>
-	<xs:complexType name="EpcExternalPartReference">
-		<xs:annotation>
-			<xs:documentation>It defines a proxy for external part of the EPC package. It must be used at least for external HDF parts.
-
-Each EpcExternalPartReference represents a single operating system file</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="eml:AbstractObject">
-				<xs:sequence>
-					<xs:element name="Filename" type="eml:String2000" minOccurs="1" maxOccurs="1"/>
-					<xs:element name="MimeType" type="eml:String2000" minOccurs="1" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>IAMF registered, if one exists, or a free text field. Needs documentation on seismic especially.
-
-MIME type for HDF proxy is : application/x-hdf5 (by RESQML convention). </xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="DataObjectReference">
 		<xs:annotation>

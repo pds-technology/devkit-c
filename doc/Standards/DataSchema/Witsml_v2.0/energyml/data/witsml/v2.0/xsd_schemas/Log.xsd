@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema targetNamespace="http://www.energistics.org/energyml/data/witsmlv2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:witsml="http://www.energistics.org/energyml/data/witsmlv2" elementFormDefault="qualified" version="2.0">
 	<!--														-->
-	<xs:include schemaLocation="Wellbore.xsd"/>
+	<!-- Energistics License Agreement
+			This file is distributed under the Energistics Product License Agreement at
+			http://www.energistics.org/product-license-agreement
+			Use of this file constitutes agreement with the Energistics Product License Agreement.
+			Copyright (c) 2016 Energistics. All rights reserved.
+			Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+			-->
+	<!--														-->
+	<xs:annotation>
+		<xs:documentation>Log Schema.</xs:documentation>
+	</xs:annotation>
 	<!--														-->
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
+	<!--														-->
+	<xs:include schemaLocation="Wellbore.xsd"/>
 	<xs:simpleType name="IndexDirection">
 		<xs:annotation>
 			<xs:documentation>The direction of the index, whether decreasing or increasing.</xs:documentation>
@@ -21,6 +33,93 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:group name="ChannelSetMetadata">
+		<xs:annotation>
+			<xs:documentation>Common metadata across all channel objects</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ChannelState" type="witsml:ChannelState" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines where the channel gets its data from, e.g., calculated from another source, or from archive, or raw real-time, etc. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TimeDepth" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Is this a time or depth log?</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ChannelClass" type="eml:ChannelClassKindExt" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.
+
+NOTE: This should turn into an extensible enumeration before WITSML is released.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RunNumber" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included. 
+
+The value here should match a bit run number for LWD data and a wireline run number for logging data.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PassNumber" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included. 
+
+The value here should match a wireline pass number for logging data.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StartIndex" type="witsml:AbstractIndexValue" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>When the log header defines the direction as "Increasing", the startIndex is the starting (minimum) index value at which the first non-null data point is located. When the log header defines the direction as "Decreasing", the startIndex is the starting (maximum) index value at which the first non-null data point is located.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EndIndex" type="witsml:AbstractIndexValue" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>When the log header defines the direction as "Increasing", the endIndex is the ending (maximum) index value at which the last non-null data point is located. When the log header defines the direction as Decreasing, the endIndex is the ending (minimum) index value at which the last non-null data point is located.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LoggingCompanyName" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Name of the logging company.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LoggingCompanyCode" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ToolName" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Name of the logging tool as given by the logging contractor.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ToolClass" type="eml:String64" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.
+
+NOTE: This should turn into an extensible enumeration before WITSML is released</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Derivation" type="witsml:ChannelDerivation" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Indicates that the channel is derived from one or more other channels</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LoggingMethod" type="witsml:LoggingMethod" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Defines where the log channel gets its data from: LWD, MWD, wireline; or whether it is computed, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NominalHoleSize" type="eml:LengthMeasureExt" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The nominal hole size at the time the measurement tool was in the hole. The size is "nominal" to indicate that this is not the result of a caliper reading or other direct measurement of the hoe size, but is just a name used to refer to the diameter. This is normally the bit size.
+
+In a case where there are more than one diameter hole being drilled at the same time (like where a reamer is behind the bit) this diameter is the one which was seen by the sensor which produced a particular log channel.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
 	<xs:group name="LogChannelMetadata">
 		<xs:annotation>
 			<xs:documentation>Common metadata across all channel objects</xs:documentation>
@@ -36,7 +135,7 @@
 					<xs:documentation>Is this a time or depth log?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="CurveClass" type="eml:String64" minOccurs="1" maxOccurs="1">
+			<xs:element name="ChannelClass" type="eml:ChannelClassKindExt" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.
 
@@ -119,7 +218,8 @@ In a case where there are more than one diameter hole being drilled at the same 
 					<xs:element name="Index" type="witsml:ChannelIndex" minOccurs="1" maxOccurs="unbounded"/>
 					<xs:element name="Channel" type="witsml:Channel" minOccurs="1" maxOccurs="unbounded"/>
 					<xs:element name="Data" type="witsml:ChannelData" minOccurs="0" maxOccurs="1"/>
-					<xs:group ref="witsml:LogChannelMetadata" minOccurs="1" maxOccurs="1"/>
+					<xs:group ref="witsml:ChannelSetMetadata" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="DataContext" type="witsml:AbstractLogDataContext" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
@@ -208,7 +308,7 @@ If a instance of PointMetadata is present for a Channel then the value for that 
 					<xs:documentation>The type of index (time, depth, etc)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Uom" type="eml:String64" minOccurs="1" maxOccurs="1">
+			<xs:element name="Uom" type="eml:UnitOfMeasureExt" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The units of the index. Must be one of the units allowed for the specified IndexType (i.e. time or distance).</xs:documentation>
 				</xs:annotation>
@@ -223,7 +323,7 @@ If a instance of PointMetadata is present for a Channel then the value for that 
 					<xs:documentation>The mnemonic for the index.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="DatumReference" type="eml:String64" minOccurs="1" maxOccurs="1">
+			<xs:element name="DatumReference" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>For depth indexes, this contains the uid of the datum, in the Channel's Well object, to which all of the index values are referenced.</xs:documentation>
 				</xs:annotation>
@@ -231,6 +331,9 @@ If a instance of PointMetadata is present for a Channel then the value for that 
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="LoggingMethod">
+		<xs:annotation>
+			<xs:documentation>Defines where the log channel gets its data from: LWD, MWD, wireline; or whether it is computed, etc.</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="computed">
 				<xs:annotation>
@@ -271,47 +374,50 @@ If a instance of PointMetadata is present for a Channel then the value for that 
 	</xs:simpleType>
 	<xs:simpleType name="ChannelIndexType">
 		<xs:annotation>
-			<xs:documentation>The type of index used by the channel</xs:documentation>
+			<xs:documentation>Specifies the type of index used by the channel.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="measured depth">
 				<xs:annotation>
-					<xs:documentation>The channel is indexed on measured depth</xs:documentation>
+					<xs:documentation>Measured depth.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="true vertical depth">
 				<xs:annotation>
-					<xs:documentation>The channel is indexed on true vertical depth</xs:documentation>
+					<xs:documentation>True vertical depth.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="pass indexed depth">
 				<xs:annotation>
-					<xs:documentation>An index value that included Pass, Direction, and Depth value. This can only refer to measured depths. See the description of the</xs:documentation>
+					<xs:documentation>An index value that includes pass, direction, and depth values This can only refer to measured depths. </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="date time">
 				<xs:annotation>
-					<xs:documentation>The channel is indexed on date with time</xs:documentation>
+					<xs:documentation>Date with time.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="elapsed time">
 				<xs:annotation>
-					<xs:documentation>The channel is indexed on time that has elapsed</xs:documentation>
+					<xs:documentation>Time that has elapsed</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="temperature">
 				<xs:annotation>
-					<xs:documentation>The channel is indexed on temperature</xs:documentation>
+					<xs:documentation>Temperature.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="pressure">
 				<xs:annotation>
-					<xs:documentation>The channel is indexed on pressure</xs:documentation>
+					<xs:documentation>Pressure.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ChannelState">
+		<xs:annotation>
+			<xs:documentation>Defines where the channel gets its data from, e.g., calculated from another source, or from archive, or raw real-time, etc.</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="calculated">
 				<xs:annotation>
@@ -348,7 +454,7 @@ If a instance of PointMetadata is present for a Channel then the value for that 
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
-					<xs:group ref="witsml:LogChannelMetadata" minOccurs="1" maxOccurs="1"/>
+					<xs:group ref="witsml:ChannelSetMetadata" minOccurs="1" maxOccurs="1"/>
 					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
 					<xs:element name="ChannelSet" type="witsml:ChannelSet" minOccurs="1" maxOccurs="unbounded"/>
 				</xs:sequence>
@@ -465,7 +571,7 @@ Channels are the fundamental unit of organization for WITSML logs.</xs:documenta
 							<xs:documentation>The underlying Etp data type of the value</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="Uom" type="eml:String64" minOccurs="1" maxOccurs="1">
+					<xs:element name="Uom" type="eml:UnitOfMeasureExt" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The underlying unit of measure of the value.</xs:documentation>
 						</xs:annotation>
@@ -530,7 +636,7 @@ Channels are the fundamental unit of organization for WITSML logs.</xs:documenta
 							<xs:documentation>The context object points to another Energistics object</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="Uid" type="eml:String64" minOccurs="1" maxOccurs="1">
+					<xs:element name="SubObjectReference" type="eml:String64" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>If the reference is to a sub object in a growing object  (e.g. a WbGeometry Section) then this must contain the uid of the growing part.</xs:documentation>
 						</xs:annotation>
@@ -569,7 +675,7 @@ Channels are the fundamental unit of organization for WITSML logs.</xs:documenta
 					<xs:documentation>The property type by which the array axis is classified. Like "measured depth" or "elapsed time".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="AxisUom" type="eml:String64" minOccurs="1" maxOccurs="1">
+			<xs:element name="AxisUom" type="eml:UnitOfMeasureExt" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>A string representing the units of measure of the axis values.</xs:documentation>
 				</xs:annotation>
@@ -582,6 +688,9 @@ Channels are the fundamental unit of organization for WITSML logs.</xs:documenta
 		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="ChannelStatus">
+		<xs:annotation>
+			<xs:documentation>Status of the growing object: active, inactive, closed</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="active">
 				<xs:annotation>
@@ -622,41 +731,35 @@ Channels are the fundamental unit of organization for WITSML logs.</xs:documenta
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:simpleType name="ChannelDerivation">
+		<xs:annotation>
+			<xs:documentation>Specifies  that the channel is derived from one or more other channels</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="raw">
 				<xs:annotation>
-					<xs:documentation>Channel is raw measured data, directly from sensors.</xs:documentation>
+					<xs:documentation>Raw measured data, directly from sensors.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="simulated">
 				<xs:annotation>
-					<xs:documentation>Channel values are simulated.</xs:documentation>
+					<xs:documentation>Simulated.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="spliced">
 				<xs:annotation>
-					<xs:documentation>Channel values are derived by splicing values from two or more other channels.</xs:documentation>
+					<xs:documentation>Derived by splicing values from two or more other channels.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="sampled">
 				<xs:annotation>
-					<xs:documentation>Channel values are derived by sampling values from one or more other channels.</xs:documentation>
+					<xs:documentation>Derived by sampling values from one or more other channels.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="model">
 				<xs:annotation>
-					<xs:documentation>Channel values are based on some modeled results of values in another one or more channels.</xs:documentation>
+					<xs:documentation>Based on some modeled results of values in another one or more channels.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<!--														-->
-	<!-- Energistics License Agreement
-			This file is distributed under the Energistics Product License Agreement at
-			http://www.energistics.org/product-license-agreement
-			Use of this file constitutes agreement with the Energistics Product License Agreement.
-			Copyright (c) 2016 Energistics. All rights reserved.
-			Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
-			-->
-	<!--														-->
-	</xs:schema>
+</xs:schema>

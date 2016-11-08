@@ -33,14 +33,6 @@
 							<xs:documentation>Describes the growing status of the trajectory, whether active, inactive or closed</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="ObjectGrowing" type="xs:boolean" minOccurs="0" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>The growing state of the object.
-This value is only relevant within the context of a server.
-This is an API server parameter releted to the "Special Handling of Change Information" within a server. 
-See the relevant API specification for the  behavior related to this element.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
 					<xs:element name="DTimTrajStart" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>Start date and time of trajectory station measurements.
@@ -144,6 +136,9 @@ that this always be specified.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:simpleType name="AziRef">
+		<xs:annotation>
+			<xs:documentation>Reference to the azimuth of the trajectory</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="magnetic north">
 				<xs:annotation>
@@ -694,13 +689,29 @@ the appropriate value. Use of this value may result in rejection in some situati
 		<xs:annotation>
 			<xs:documentation>Type of directional survey tool; a very generic classification. The list of standard values is contained in the WITSML enumValues.xml file.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="eml:TypeEnum"/>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="gyroscopic inertial"/>
+			<xs:enumeration value="gyroscopic MWD"/>
+			<xs:enumeration value="gyroscopic north seeking"/>
+			<xs:enumeration value="magnetic multiple-shot"/>
+			<xs:enumeration value="magnetic MWD"/>
+			<xs:enumeration value="magnetic single-shot"/>
+		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="TrajStnCalcAlgorithm">
 		<xs:annotation>
 			<xs:documentation>Trajectory Station Calculation Algorithm. The list of standard values is contained in the WITSML enumValues.xml file.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="eml:TypeEnum"/>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="average angle"/>
+			<xs:enumeration value="balanced tangential"/>
+			<xs:enumeration value="constant tool face"/>
+			<xs:enumeration value="custom"/>
+			<xs:enumeration value="inertial"/>
+			<xs:enumeration value="minimum curvature"/>
+			<xs:enumeration value="radius of curvature"/>
+			<xs:enumeration value="tangential"/>
+		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="TrajStationStatus">
 		<xs:annotation>

@@ -20,6 +20,9 @@
 	<xs:include schemaLocation="Wellbore.xsd"/>
 	<xs:element name="WellboreCompletion" type="witsml:WellboreCompletion" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="WellboreCompletion">
+		<xs:annotation>
+			<xs:documentation>The transferrable class of the WellboreCompletion object</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
@@ -63,7 +66,7 @@
 							<xs:documentation>Overall true vertical depth interval for this wellbore completion.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="CurrentStatus" type="xs:string" minOccurs="0" maxOccurs="1">
+					<xs:element name="CurrentStatus" type="witsml:CompletionStatus" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>Status (active, planned, suspended, testing, etc.) of the wellbore completion</xs:documentation>
 						</xs:annotation>
@@ -93,6 +96,9 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="GravelPackInterval">
+		<xs:annotation>
+			<xs:documentation>The location/interval of the gravel pack, as well as its history</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="DownholeStringReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
@@ -137,7 +143,7 @@
 			<xs:documentation>Information on the status history in the interval</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="PhysicalStatus" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="PhysicalStatus" type="witsml:PhysicalStatus" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The physical status of an interval (e.g., open, closed, proposed)</xs:documentation>
 				</xs:annotation>
@@ -184,6 +190,9 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="OpenHoleInterval">
+		<xs:annotation>
+			<xs:documentation>The location/interval of the open hole, as well as its history</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="BoreholeStringReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
@@ -224,6 +233,9 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="PerforationSetInterval">
+		<xs:annotation>
+			<xs:documentation>The location/interval of the perforation set, as well as its history</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PerforationSetReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
@@ -268,7 +280,7 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 			<xs:documentation>Information on collection of perforation status history</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="PerforationStatus" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="PerforationStatus" type="witsml:PerforationStatus" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>perforation status</xs:documentation>
 				</xs:annotation>
@@ -312,6 +324,9 @@ that is flowing through this interval whithin a wellbore</xs:documentation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="SlotsInterval">
+		<xs:annotation>
+			<xs:documentation>The location/interval of the slot, as well as its history</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="StringEquipmentReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>

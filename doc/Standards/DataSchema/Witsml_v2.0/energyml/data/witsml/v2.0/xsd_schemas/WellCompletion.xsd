@@ -18,6 +18,9 @@
 	<xs:include schemaLocation="Well.xsd"/>
 	<xs:element name="WellCompletion" type="witsml:WellCompletion" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="WellCompletion">
+		<xs:annotation>
+			<xs:documentation>Information regarding  a wellhead stream with one or more wellbore completions (completed zones) in the well</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
@@ -51,7 +54,7 @@
 							<xs:documentation>Documents exploration and production rights</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="CurrentStatus" type="xs:string" minOccurs="0" maxOccurs="1">
+					<xs:element name="CurrentStatus" type="witsml:CompletionStatus" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>Status (active, planned, suspended, testing, etc.) of the well completion</xs:documentation>
 						</xs:annotation>
@@ -72,7 +75,7 @@
 			<xs:documentation>Information on collection of Completion StatusHistory</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Status" type="xs:string" minOccurs="0" maxOccurs="1">
+			<xs:element name="Status" type="witsml:CompletionStatus" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>Completion status</xs:documentation>
 				</xs:annotation>

@@ -211,6 +211,9 @@ the appropriate value. Use of this value may result in rejection in some situati
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="EastOrWest">
+		<xs:annotation>
+			<xs:documentation>East or west direction</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="east">
 				<xs:annotation>
@@ -232,6 +235,9 @@ the appropriate value. Use of this value may result in rejection in some situati
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="NorthOrSouth">
+		<xs:annotation>
+			<xs:documentation>North or south direction</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="north">
 				<xs:annotation>
@@ -361,15 +367,18 @@ and a vertical well datum are at the same point.</xs:documentation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="GeodeticWellLocation">
+		<xs:annotation>
+			<xs:documentation>Location of the well by latitude and longitude</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="witsml:AbstractWellLocation">
 				<xs:sequence>
-					<xs:element name="Latitude" type="xs:double" minOccurs="1" maxOccurs="1">
+					<xs:element name="Latitude" type="eml:PlaneAngleMeasure" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The latitude with north being positive.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="Longitude" type="xs:double" minOccurs="1" maxOccurs="1">
+					<xs:element name="Longitude" type="eml:PlaneAngleMeasure" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>The longitude with east being positive.</xs:documentation>
 						</xs:annotation>
@@ -380,6 +389,9 @@ and a vertical well datum are at the same point.</xs:documentation>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="ProjectedWellLocation">
+		<xs:annotation>
+			<xs:documentation>Projected location of the well</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="witsml:AbstractWellLocation">
 				<xs:sequence>
@@ -461,12 +473,9 @@ and a vertical well datum are at the same point.</xs:documentation>
 							<xs:documentation>Block name in which well is located.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="TimeZone" type="witsml:TimeZone" minOccurs="1" maxOccurs="1">
+					<xs:element name="TimeZone" type="eml:TimeZone" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>The time zone in which well is located.  
-It is the deviation in hours and minutes from UTC.
-This should be the normal time zone at the well and not a seasonally 
-adjusted value such as daylight savings time.</xs:documentation>
+							<xs:documentation>The time zone in which well is located.  It is the deviation in hours and minutes from UTC. This should be the normal time zone at the well and not a seasonally adjusted value such as daylight savings time.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Operator" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -1102,6 +1111,9 @@ interpret the coordinates if the CRS and the chosen pair do not make them clear.
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="PublicLandSurveySystem">
+		<xs:annotation>
+			<xs:documentation>Land survey system that describes the well by range, township, section, etc.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PrincipalMeridian" type="witsml:PrincipalMeridian" minOccurs="0" maxOccurs="1">
 				<xs:annotation>

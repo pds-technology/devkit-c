@@ -125,71 +125,53 @@ description, code, or method.</xs:documentation>
 		<xs:annotation>
 			<xs:documentation>Defines the specifications for creating equipment tags.. The list of standard values is contained in the WITSML enumValues.xml file.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="eml:TypeEnum"/>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="ANSI/AIM-BC10"/>
+			<xs:enumeration value="ANSI/AIM-BC2"/>
+			<xs:enumeration value="ANSI/AIM-BC6"/>
+			<xs:enumeration value="EAN.UCC"/>
+			<xs:enumeration value="EPC64"/>
+			<xs:enumeration value="EPC96"/>
+			<xs:enumeration value="F2F"/>
+			<xs:enumeration value="MFM"/>
+			<xs:enumeration value="MSRCID"/>
+			<xs:enumeration value="serial number"/>
+		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="NameTagTechnology">
 		<xs:annotation>
 			<xs:documentation>Defines the mechanisms for attaching an equipment tag to an item.. The list of standard values is contained in the WITSML enumValues.xml file.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="eml:TypeEnum"/>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="intrinsic"/>
+			<xs:enumeration value="labeled"/>
+			<xs:enumeration value="painted"/>
+			<xs:enumeration value="stamped"/>
+			<xs:enumeration value="tagged"/>
+			<xs:enumeration value="temporary"/>
+		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="NameTagLocation">
 		<xs:annotation>
 			<xs:documentation>Defines the locations where an equipment tag might be found.. The list of standard values is contained in the WITSML enumValues.xml file.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="eml:TypeEnum"/>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="body"/>
+			<xs:enumeration value="box"/>
+			<xs:enumeration value="other"/>
+			<xs:enumeration value="pin"/>
+		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="Cost">
+		<xs:annotation>
+			<xs:documentation>The price of an item, with a currency indication.</xs:documentation>
+		</xs:annotation>
 		<xs:sequence/>
 		<xs:attribute name="currency" use="optional" type="eml:String64">
 			<xs:annotation>
 				<xs:documentation>Currency used for this Cost</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-	</xs:complexType>
-	<xs:simpleType name="TimeZone">
-		<xs:annotation>
-			<xs:documentation>A time zone conforming to the XSD:dateTime specification.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="witsml:AbstractTimeZone">
-			<xs:pattern value="[Z]|([\-+](([01][0-9])|(2[0-3])):[0-5][0-9])"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="AbstractTimeZone">
-		<xs:restriction base="eml:String64">
-			<xs:pattern value="[Z]|([\-+](([01][0-9])|(2[0-3])):[0-5][0-9])"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:complexType name="IndexedObject">
-		<xs:simpleContent>
-			<xs:extension base="eml:TypeEnum">
-				<xs:attribute name="index" use="optional" type="xs:int">
-					<xs:annotation>
-						<xs:documentation>Index used to qualify this indexed object</xs:documentation>
-					</xs:annotation>
-				</xs:attribute>
-				<xs:attribute name="name" use="optional" type="eml:String64">
-					<xs:annotation>
-						<xs:documentation>Name of this IndexedObject</xs:documentation>
-					</xs:annotation>
-				</xs:attribute>
-				<xs:attribute name="uom" use="optional" type="eml:UomEnum">
-					<xs:annotation>
-						<xs:documentation>Unit of measure used by this Indexed Object</xs:documentation>
-					</xs:annotation>
-				</xs:attribute>
-				<xs:attribute name="description" use="optional" type="eml:String2000">
-					<xs:annotation>
-						<xs:documentation>Description of this IndexedObject</xs:documentation>
-					</xs:annotation>
-				</xs:attribute>
-				<xs:attribute name="uid" use="required" type="eml:String64">
-					<xs:annotation>
-						<xs:documentation>Unique identifier for this instance of IndexedObject</xs:documentation>
-					</xs:annotation>
-				</xs:attribute>
-			</xs:extension>
-		</xs:simpleContent>
 	</xs:complexType>
 	<xs:complexType name="MeasuredDepthCoord">
 		<xs:annotation>
