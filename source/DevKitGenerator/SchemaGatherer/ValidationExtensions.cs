@@ -95,6 +95,7 @@ namespace Energistics.SchemaGatherer
     public static class ValidationExtensions
     {
         private static readonly bool UseCustomTimestamp = bool.Parse(SchemaGatherer.GetAppSetting("INCLUDE_CUSTOM_TIMESTAMP_USAGE"));
+        private const string EmlTimeStampPattern = ".+T.+[Z+\\-].*";
 
         /// <summary>
         /// Generates the data objects with code DOM.
@@ -467,16 +468,28 @@ namespace Energistics.SchemaGatherer
             {
                 if (memberProperty.Type.BaseType == typeof(string).FullName && !Has<RegularExpressionAttribute>(memberProperty))
                 {
-                    memberProperty.CustomAttributes.Add(new CodeAttributeDeclaration(typeof(RegularExpressionAttribute).FullName,
-                        new CodeAttributeArgument(new CodePrimitiveExpression(pattern.Value))));
+                    if (EmlTimeStampPattern.Equals(pattern.Value))
+                    {
+                        if (UseCustomTimestamp && !Has<XmlElementAttribute>(memberProperty) && !Has<XmlAttributeAttribute>(memberProperty))
+                        {
+                            SetTimestampType(typeDeclaration, memberProperty);
+                        }
+                        else
+                        {
+                            SetDateTimeType(typeDeclaration, memberProperty);
+                        }
+                    }
+                    else
+                    {
+                        memberProperty.CustomAttributes.Add(new CodeAttributeDeclaration(typeof(RegularExpressionAttribute).FullName,
+                            new CodeAttributeArgument(new CodePrimitiveExpression(pattern.Value))));
+                    }
                 }
                 else if (memberProperty.Type.BaseType == typeof(DateTime).FullName)
                 {
                     if (UseCustomTimestamp && !Has<XmlElementAttribute>(memberProperty) && !Has<XmlAttributeAttribute>(memberProperty))
                     {
-                        var memberField = GetMemberField(typeDeclaration, memberProperty.Name + "Field");
-                        memberField.Type = new CodeTypeReference("Energistics.SchemaGatherer.Timestamp");
-                        memberProperty.Type = memberField.Type;
+                        SetTimestampType(typeDeclaration, memberProperty);
                     }
                 }
             }
@@ -493,6 +506,20 @@ namespace Energistics.SchemaGatherer
                     new CodeAttributeArgument(new CodePrimitiveExpression(double.Parse(minInclusive.Value))),
                     new CodeAttributeArgument(new CodePrimitiveExpression(double.Parse(maxInclusive.Value)))));
             }
+        }
+
+        private static void SetDateTimeType(CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty)
+        {
+            var memberField = GetMemberField(typeDeclaration, memberProperty.Name + "Field");
+            memberField.Type = new CodeTypeReference("System.DateTime");
+            memberProperty.Type = memberField.Type;
+        }
+
+        private static void SetTimestampType(CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty)
+        {
+            var memberField = GetMemberField(typeDeclaration, memberProperty.Name + "Field");
+            memberField.Type = new CodeTypeReference("Energistics.SchemaGatherer.Timestamp");
+            memberProperty.Type = memberField.Type;
         }
 
         private static void AddDescriptionAttribute(CodeMemberProperty memberProperty, string description)
