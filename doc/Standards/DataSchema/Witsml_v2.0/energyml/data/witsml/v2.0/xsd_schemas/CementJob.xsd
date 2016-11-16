@@ -487,13 +487,6 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			<xs:enumeration value="primary"/>
 			<xs:enumeration value="plug"/>
 			<xs:enumeration value="squeeze"/>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. This value should not be used
-in normal situations. All reasonable attempts should be made to determine
-the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="AbstractCementStage" abstract="true">
@@ -1094,7 +1087,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 			<xs:element name="CementAdditive" type="witsml:CementAdditive" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="Rheometer" type="witsml:Rheometer" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64">
+		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
 				<xs:documentation>Unique identifier for this cementing fluid.</xs:documentation>
 			</xs:annotation>
@@ -1151,7 +1144,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64">
+		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
 				<xs:documentation>Unique identifier for this pump schedule step.</xs:documentation>
 			</xs:annotation>
@@ -1226,7 +1219,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="LocationType" type="witsml:WellboreFluidLocation" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64">
+		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
 				<xs:documentation>Unique identifier for this instance of FluidLocation.</xs:documentation>
 			</xs:annotation>
@@ -1259,31 +1252,6 @@ the appropriate value. Use of this value may result in rejection in some situati
 							<xs:documentation>Date and time when displacing of cement started.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="FlowrateDisplaceAv" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>Average displacement rate.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="FlowrateDisplaceMx" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>Maximum displacement rate.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="ETimMudCirculation" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>Elapsed time of mud circulation before the job/stage.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="FlowrateEnd" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>Final displacement pump rate.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="SqueezeObtained" type="xs:boolean" minOccurs="0" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>Squeeze obtained.  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
-						</xs:annotation>
-					</xs:element>
 					<xs:element name="PresBreakDown" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>Breakdown pressure.</xs:documentation>
@@ -1292,6 +1260,16 @@ the appropriate value. Use of this value may result in rejection in some situati
 					<xs:element name="FlowrateBreakDown" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>Breakdown rate.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="FlowrateDisplaceAv" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Average displacement rate.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="FlowrateDisplaceMx" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Maximum displacement rate.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="PresSqueezeAv" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
@@ -1309,6 +1287,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 							<xs:documentation>Squeeze pressure held.  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="ETimMudCirculation" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Elapsed time of mud circulation before the job/stage.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="PresSqueeze" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>Squeeze pressure left on pipe.</xs:documentation>
@@ -1322,6 +1305,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 					<xs:element name="FlowrateSqueezeMx" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>Squeeze job maximum rate.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="FlowrateEnd" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Final displacement pump rate.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="FlowratePumpStart" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
@@ -1344,6 +1332,11 @@ the appropriate value. Use of this value may result in rejection in some situati
 							<xs:documentation>Plug bumped? Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="SqueezeObtained" type="xs:boolean" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Squeeze obtained.  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="PresPriorBump" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>Pressure before bumping plug / pressure at the end of  the displacement.</xs:documentation>
@@ -1355,7 +1348,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
-				<xs:attribute name="uid" use="optional" type="eml:String64">
+				<xs:attribute name="uid" use="required" type="eml:String64">
 					<xs:annotation>
 						<xs:documentation>Unique identifier for this instance of CementStageReport</xs:documentation>
 					</xs:annotation>

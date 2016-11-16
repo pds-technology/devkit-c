@@ -455,7 +455,7 @@ to reach the phenolphthalein endpoint).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64">
+		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
 				<xs:documentation>Unique identifier for this instance of RheometerViscosity.</xs:documentation>
 			</xs:annotation>

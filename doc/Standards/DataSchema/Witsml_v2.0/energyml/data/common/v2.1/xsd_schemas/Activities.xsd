@@ -4,78 +4,10 @@
 	<xs:include schemaLocation="BaseTypes.xsd"/>
 	<!--														-->
 	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../../common/v2.1/xsd_schemas/gml/3.2.1/gml.xsd"/>
-	<xs:include schemaLocation="CommonEnumerations.xsd"/>
 	<xs:include schemaLocation="ObjectReference.xsd"/>
+	<xs:include schemaLocation="CommonEnumerations.xsd"/>
 	<xs:include schemaLocation="CommonTypes.xsd"/>
 	<xs:include schemaLocation="Abstract.xsd"/>
-	<xs:element name="ActivityTemplate" type="eml:ActivityTemplate" substitutionGroup="eml:AbstractDataObject"/>
-	<xs:complexType name="ActivityTemplate">
-		<xs:annotation>
-			<xs:documentation>Description of one type of activity.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="eml:AbstractObject">
-				<xs:sequence>
-					<xs:element name="Parameter" type="eml:ParameterTemplate" minOccurs="1" maxOccurs="unbounded"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="Activity" type="eml:Activity" substitutionGroup="eml:AbstractDataObject"/>
-	<xs:complexType name="Activity">
-		<xs:annotation>
-			<xs:documentation>Instance of a given activity</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="eml:AbstractObject">
-				<xs:sequence>
-					<xs:element name="Parameter" type="eml:AbstractActivityParameter" minOccurs="1" maxOccurs="unbounded"/>
-					<xs:element name="Parent" type="eml:DataObjectReference" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="ActivityDescriptor" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:simpleType name="ParameterKind">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="dataObject"/>
-			<xs:enumeration value="double"/>
-			<xs:enumeration value="integer"/>
-			<xs:enumeration value="string"/>
-			<xs:enumeration value="timestamp"/>
-			<xs:enumeration value="subActivity"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:complexType name="TimeIndexParameter">
-		<xs:annotation>
-			<xs:documentation>Parameter containing a time index value.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="eml:AbstractActivityParameter">
-				<xs:sequence>
-					<xs:element name="TimeIndex" type="eml:TimeIndex" minOccurs="1" maxOccurs="1"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="ObjectParameterKey">
-		<xs:complexContent>
-			<xs:extension base="eml:AbstractParameterKey">
-				<xs:sequence>
-					<xs:element name="DataObject" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="TimeIndexParameterKey">
-		<xs:complexContent>
-			<xs:extension base="eml:AbstractParameterKey">
-				<xs:sequence>
-					<xs:element name="TimeIndex" type="eml:TimeIndex" minOccurs="1" maxOccurs="1"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
 	<xs:complexType name="DoubleQuantityParameter">
 		<xs:annotation>
 			<xs:documentation>Parameter containing a double value.</xs:documentation>
@@ -98,56 +30,25 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="AbstractParameterKey" abstract="true">
-		<xs:annotation>
-			<xs:documentation>Abstract class describing a key used to identify a parameter value. When multiple values are provided for a given parameter, provides a way to identify the parameter through its association with an object, a time index... </xs:documentation>
-		</xs:annotation>
-		<xs:sequence/>
-	</xs:complexType>
-	<xs:complexType name="StringParameter">
-		<xs:annotation>
-			<xs:documentation>Parameter containing a string value.</xs:documentation>
-		</xs:annotation>
+	<xs:complexType name="TimeIndexParameterKey">
 		<xs:complexContent>
-			<xs:extension base="eml:AbstractActivityParameter">
+			<xs:extension base="eml:AbstractParameterKey">
 				<xs:sequence>
-					<xs:element name="Value" type="eml:String2000" minOccurs="1" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>String value</xs:documentation>
-						</xs:annotation>
-					</xs:element>
+					<xs:element name="TimeIndex" type="eml:TimeIndex" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="DataObjectParameter">
-		<xs:annotation>
-			<xs:documentation>Parameter referencing to a top level object.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="eml:AbstractActivityParameter">
-				<xs:sequence>
-					<xs:element name="DataObject" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="IntegerQuantityParameter">
-		<xs:annotation>
-			<xs:documentation>Parameter containing an integer value.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="eml:AbstractActivityParameter">
-				<xs:sequence>
-					<xs:element name="Value" type="xs:long" minOccurs="1" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>Integer value</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
+	<xs:simpleType name="ParameterKind">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="dataObject"/>
+			<xs:enumeration value="double"/>
+			<xs:enumeration value="integer"/>
+			<xs:enumeration value="string"/>
+			<xs:enumeration value="timestamp"/>
+			<xs:enumeration value="subActivity"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:complexType name="AbstractActivityParameter" abstract="true">
 		<xs:annotation>
 			<xs:documentation>General parameter value used in one instance of activity</xs:documentation>
@@ -170,6 +71,25 @@
 			</xs:element>
 			<xs:element name="Key" type="eml:AbstractParameterKey" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AbstractParameterKey" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Abstract class describing a key used to identify a parameter value. When multiple values are provided for a given parameter, provides a way to identify the parameter through its association with an object, a time index... </xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="ActivityTemplate" type="eml:ActivityTemplate" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="ActivityTemplate">
+		<xs:annotation>
+			<xs:documentation>Description of one type of activity.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractObject">
+				<xs:sequence>
+					<xs:element name="Parameter" type="eml:ParameterTemplate" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="ParameterTemplate">
 		<xs:annotation>
@@ -227,6 +147,86 @@ If the minimum number of parameters is infinite, use -1 value.</xs:documentation
 			</xs:element>
 			<xs:element name="DefaultValue" type="eml:AbstractActivityParameter" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StringParameter">
+		<xs:annotation>
+			<xs:documentation>Parameter containing a string value.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractActivityParameter">
+				<xs:sequence>
+					<xs:element name="Value" type="eml:String2000" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>String value</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TimeIndexParameter">
+		<xs:annotation>
+			<xs:documentation>Parameter containing a time index value.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractActivityParameter">
+				<xs:sequence>
+					<xs:element name="TimeIndex" type="eml:TimeIndex" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Activity" type="eml:Activity" substitutionGroup="eml:AbstractDataObject"/>
+	<xs:complexType name="Activity">
+		<xs:annotation>
+			<xs:documentation>Instance of a given activity</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractObject">
+				<xs:sequence>
+					<xs:element name="ActivityDescriptor" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Parameter" type="eml:AbstractActivityParameter" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element name="Parent" type="eml:DataObjectReference" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DataObjectParameter">
+		<xs:annotation>
+			<xs:documentation>Parameter referencing to a top level object.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractActivityParameter">
+				<xs:sequence>
+					<xs:element name="DataObject" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="IntegerQuantityParameter">
+		<xs:annotation>
+			<xs:documentation>Parameter containing an integer value.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractActivityParameter">
+				<xs:sequence>
+					<xs:element name="Value" type="xs:long" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Integer value</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ObjectParameterKey">
+		<xs:complexContent>
+			<xs:extension base="eml:AbstractParameterKey">
+				<xs:sequence>
+					<xs:element name="DataObject" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 	<!--														-->
 	<!-- Energistics License Agreement

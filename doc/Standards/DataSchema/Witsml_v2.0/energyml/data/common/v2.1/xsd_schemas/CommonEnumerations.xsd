@@ -1,20 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema targetNamespace="http://www.energistics.org/energyml/data/commonv2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" elementFormDefault="qualified" version="2.1">
 	<!--														-->
-	<xs:include schemaLocation="BaseTypes.xsd"/>
+	<!-- Energistics License Agreement
+			This file is distributed under the Energistics Product License Agreement at
+			http://www.energistics.org/product-license-agreement
+			Use of this file constitutes agreement with the Energistics Product License Agreement.
+			Copyright (c) 2016 Energistics. All rights reserved.
+			Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
+			-->
+	<!--														-->
+	<xs:annotation>
+		<xs:documentation>Enumerations shared across all Energistics ML standards. </xs:documentation>
+	</xs:annotation>
 	<!--														-->
 	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../../../common/v2.1/xsd_schemas/gml/3.2.1/gml.xsd"/>
-	<xs:simpleType name="GeochronologicalRank">
+	<!--														-->
+	<xs:include schemaLocation="BaseTypes.xsd"/>
+	<xs:simpleType name="ExistenceKind">
 		<xs:annotation>
-			<xs:documentation>Qualifier for the geological time denoted by the GeochronologicalUnit: eon, era, epoch, etc.</xs:documentation>
+			<xs:documentation>A list of lifecycle states like actual, required, planned, predicted, etc. These are used to qualify any top-level element (from Epicentre 2.1).</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="eon"/>
-			<xs:enumeration value="era"/>
-			<xs:enumeration value="period"/>
-			<xs:enumeration value="epoch"/>
-			<xs:enumeration value="age"/>
-			<xs:enumeration value="chron"/>
+			<xs:enumeration value="actual">
+				<xs:annotation>
+					<xs:documentation>The object actually exists (from Epicentre 2.1).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="planned">
+				<xs:annotation>
+					<xs:documentation>The object exists only in the planning stage (from Epicentre 2.1).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="simulated">
+				<xs:annotation>
+					<xs:documentation>Created, artificially, as an artifact of processing, to replace or to stand for one or more similar objects. Often referred to as model (from Epicentre 2.1).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="MatrixCementKind">
@@ -31,6 +52,363 @@
 			<xs:enumeration value="quartz"/>
 			<xs:enumeration value="siderite"/>
 			<xs:enumeration value="smectite"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LithologyKindExt">
+		<xs:union memberTypes="eml:LithologyKind eml:EnumExtensionPattern"/>
+	</xs:simpleType>
+	<xs:simpleType name="MeasureClass">
+		<xs:annotation>
+			<xs:documentation>Measure class values. The list of standard values is contained in the WITSML enumValues.xml file.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="absorbed dose"/>
+			<xs:enumeration value="activity of radioactivity"/>
+			<xs:enumeration value="amount of substance"/>
+			<xs:enumeration value="amount of substance per amount of substance"/>
+			<xs:enumeration value="amount of substance per area"/>
+			<xs:enumeration value="amount of substance per time"/>
+			<xs:enumeration value="amount of substance per time per area"/>
+			<xs:enumeration value="amount of substance per volume"/>
+			<xs:enumeration value="angle per length"/>
+			<xs:enumeration value="angle per volume"/>
+			<xs:enumeration value="angular acceleration"/>
+			<xs:enumeration value="angular velocity"/>
+			<xs:enumeration value="api gamma ray"/>
+			<xs:enumeration value="api gravity"/>
+			<xs:enumeration value="api neutron"/>
+			<xs:enumeration value="area"/>
+			<xs:enumeration value="area per amount of substance"/>
+			<xs:enumeration value="area per area"/>
+			<xs:enumeration value="area per count"/>
+			<xs:enumeration value="area per mass"/>
+			<xs:enumeration value="area per time"/>
+			<xs:enumeration value="area per volume"/>
+			<xs:enumeration value="attenuation per frequency interval"/>
+			<xs:enumeration value="capacitance"/>
+			<xs:enumeration value="cation exchange capacity"/>
+			<xs:enumeration value="data transfer speed"/>
+			<xs:enumeration value="diffusion coefficient"/>
+			<xs:enumeration value="diffusive time of flight"/>
+			<xs:enumeration value="digital storage"/>
+			<xs:enumeration value="dimensionless"/>
+			<xs:enumeration value="dipole moment"/>
+			<xs:enumeration value="dose equivalent"/>
+			<xs:enumeration value="dynamic viscosity"/>
+			<xs:enumeration value="electric charge"/>
+			<xs:enumeration value="electric charge per area"/>
+			<xs:enumeration value="electric charge per mass"/>
+			<xs:enumeration value="electric charge per volume"/>
+			<xs:enumeration value="electric conductance"/>
+			<xs:enumeration value="electric conductivity"/>
+			<xs:enumeration value="electric current"/>
+			<xs:enumeration value="electric current density"/>
+			<xs:enumeration value="electric field strength"/>
+			<xs:enumeration value="electric potential difference"/>
+			<xs:enumeration value="electric resistance"/>
+			<xs:enumeration value="electric resistance per length"/>
+			<xs:enumeration value="electrical resistivity"/>
+			<xs:enumeration value="electromagnetic moment"/>
+			<xs:enumeration value="energy"/>
+			<xs:enumeration value="energy length per area"/>
+			<xs:enumeration value="energy length per time area temperature"/>
+			<xs:enumeration value="energy per area"/>
+			<xs:enumeration value="energy per length"/>
+			<xs:enumeration value="energy per mass"/>
+			<xs:enumeration value="energy per mass per time"/>
+			<xs:enumeration value="energy per volume"/>
+			<xs:enumeration value="force"/>
+			<xs:enumeration value="force area"/>
+			<xs:enumeration value="force length per length"/>
+			<xs:enumeration value="force per force"/>
+			<xs:enumeration value="force per length"/>
+			<xs:enumeration value="force per volume"/>
+			<xs:enumeration value="frequency"/>
+			<xs:enumeration value="frequency interval"/>
+			<xs:enumeration value="heat capacity"/>
+			<xs:enumeration value="heat flow rate"/>
+			<xs:enumeration value="heat transfer coefficient"/>
+			<xs:enumeration value="illuminance"/>
+			<xs:enumeration value="inductance"/>
+			<xs:enumeration value="isothermal compressibility"/>
+			<xs:enumeration value="kinematic viscosity"/>
+			<xs:enumeration value="length"/>
+			<xs:enumeration value="length per length"/>
+			<xs:enumeration value="length per mass"/>
+			<xs:enumeration value="length per pressure"/>
+			<xs:enumeration value="length per temperature"/>
+			<xs:enumeration value="length per time"/>
+			<xs:enumeration value="length per volume"/>
+			<xs:enumeration value="light exposure"/>
+			<xs:enumeration value="linear acceleration"/>
+			<xs:enumeration value="linear thermal expansion"/>
+			<xs:enumeration value="logarithmic power ratio"/>
+			<xs:enumeration value="logarithmic power ratio per length"/>
+			<xs:enumeration value="luminance"/>
+			<xs:enumeration value="luminous efficacy"/>
+			<xs:enumeration value="luminous flux"/>
+			<xs:enumeration value="luminous intensity"/>
+			<xs:enumeration value="magnetic dipole moment"/>
+			<xs:enumeration value="magnetic field strength"/>
+			<xs:enumeration value="magnetic flux"/>
+			<xs:enumeration value="magnetic flux density"/>
+			<xs:enumeration value="magnetic flux density per length"/>
+			<xs:enumeration value="magnetic permeability"/>
+			<xs:enumeration value="magnetic vector potential"/>
+			<xs:enumeration value="mass"/>
+			<xs:enumeration value="mass length"/>
+			<xs:enumeration value="mass per area"/>
+			<xs:enumeration value="mass per energy"/>
+			<xs:enumeration value="mass per length"/>
+			<xs:enumeration value="mass per mass"/>
+			<xs:enumeration value="mass per time"/>
+			<xs:enumeration value="mass per time per area"/>
+			<xs:enumeration value="mass per time per length"/>
+			<xs:enumeration value="mass per volume"/>
+			<xs:enumeration value="mass per volume per length"/>
+			<xs:enumeration value="mass per volume per pressure"/>
+			<xs:enumeration value="mass per volume per temperature"/>
+			<xs:enumeration value="mobility"/>
+			<xs:enumeration value="molar energy"/>
+			<xs:enumeration value="molar heat capacity"/>
+			<xs:enumeration value="molar volume"/>
+			<xs:enumeration value="molecular weight"/>
+			<xs:enumeration value="moment of force"/>
+			<xs:enumeration value="moment of inertia"/>
+			<xs:enumeration value="momentum"/>
+			<xs:enumeration value="normalized power"/>
+			<xs:enumeration value="permeability length"/>
+			<xs:enumeration value="permeability rock"/>
+			<xs:enumeration value="permittivity"/>
+			<xs:enumeration value="plane angle"/>
+			<xs:enumeration value="potential difference per power drop"/>
+			<xs:enumeration value="power"/>
+			<xs:enumeration value="power per area"/>
+			<xs:enumeration value="power per power"/>
+			<xs:enumeration value="power per volume"/>
+			<xs:enumeration value="pressure"/>
+			<xs:enumeration value="pressure per pressure"/>
+			<xs:enumeration value="pressure per time"/>
+			<xs:enumeration value="pressure per volume"/>
+			<xs:enumeration value="pressure squared"/>
+			<xs:enumeration value="pressure squared per force time per area"/>
+			<xs:enumeration value="pressure time per volume"/>
+			<xs:enumeration value="quantity of light"/>
+			<xs:enumeration value="radiance"/>
+			<xs:enumeration value="radiant intensity"/>
+			<xs:enumeration value="reciprocal area"/>
+			<xs:enumeration value="reciprocal electric potential difference"/>
+			<xs:enumeration value="reciprocal force"/>
+			<xs:enumeration value="reciprocal length"/>
+			<xs:enumeration value="reciprocal mass"/>
+			<xs:enumeration value="reciprocal mass time"/>
+			<xs:enumeration value="reciprocal pressure"/>
+			<xs:enumeration value="reciprocal time"/>
+			<xs:enumeration value="reciprocal volume"/>
+			<xs:enumeration value="reluctance"/>
+			<xs:enumeration value="second moment of area"/>
+			<xs:enumeration value="signaling event per time"/>
+			<xs:enumeration value="solid angle"/>
+			<xs:enumeration value="specific heat capacity"/>
+			<xs:enumeration value="temperature interval"/>
+			<xs:enumeration value="temperature interval per length"/>
+			<xs:enumeration value="temperature interval per pressure"/>
+			<xs:enumeration value="temperature interval per time"/>
+			<xs:enumeration value="thermal conductance"/>
+			<xs:enumeration value="thermal conductivity"/>
+			<xs:enumeration value="thermal diffusivity"/>
+			<xs:enumeration value="thermal insulance"/>
+			<xs:enumeration value="thermal resistance"/>
+			<xs:enumeration value="thermodynamic temperature"/>
+			<xs:enumeration value="thermodynamic temperature per thermodynamic temperature"/>
+			<xs:enumeration value="time"/>
+			<xs:enumeration value="time per length"/>
+			<xs:enumeration value="time per mass"/>
+			<xs:enumeration value="time per time"/>
+			<xs:enumeration value="time per volume"/>
+			<xs:enumeration value="vertical coordinate"/>
+			<xs:enumeration value="volume"/>
+			<xs:enumeration value="volume flow rate per volume flow rate"/>
+			<xs:enumeration value="volume per area"/>
+			<xs:enumeration value="volume per length"/>
+			<xs:enumeration value="volume per mass"/>
+			<xs:enumeration value="volume per pressure"/>
+			<xs:enumeration value="volume per rotation"/>
+			<xs:enumeration value="volume per time"/>
+			<xs:enumeration value="volume per time length"/>
+			<xs:enumeration value="volume per time per area"/>
+			<xs:enumeration value="volume per time per length"/>
+			<xs:enumeration value="volume per time per pressure"/>
+			<xs:enumeration value="volume per time per pressure length"/>
+			<xs:enumeration value="volume per time per time"/>
+			<xs:enumeration value="volume per time per volume"/>
+			<xs:enumeration value="volume per volume"/>
+			<xs:enumeration value="volumetric heat transfer coefficient"/>
+			<xs:enumeration value="volumetric thermal expansion"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="GeochronologicalRank">
+		<xs:annotation>
+			<xs:documentation>Qualifier for the geological time denoted by the GeochronologicalUnit: eon, era, epoch, etc.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="eon"/>
+			<xs:enumeration value="era"/>
+			<xs:enumeration value="period"/>
+			<xs:enumeration value="epoch"/>
+			<xs:enumeration value="age"/>
+			<xs:enumeration value="chron"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ChannelClassKind">
+		<xs:restriction base="eml:TypeEnum"/>
+	</xs:simpleType>
+	<xs:simpleType name="LithologyKind">
+		<xs:annotation>
+			<xs:documentation>A description of minerals or accessories that constitute a fractional part of a lithology description</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="alkali feldspar rhyolite"/>
+			<xs:enumeration value="alkali olivine basalt"/>
+			<xs:enumeration value="amphibolite"/>
+			<xs:enumeration value="andesite"/>
+			<xs:enumeration value="anhydrite"/>
+			<xs:enumeration value="anorthositic rock"/>
+			<xs:enumeration value="anthracite"/>
+			<xs:enumeration value="aplite"/>
+			<xs:enumeration value="arenite"/>
+			<xs:enumeration value="argillaceous"/>
+			<xs:enumeration value="arkose"/>
+			<xs:enumeration value="basalt"/>
+			<xs:enumeration value="basanite"/>
+			<xs:enumeration value="bauxite"/>
+			<xs:enumeration value="bituminous coal"/>
+			<xs:enumeration value="blueschist metamorphic rock"/>
+			<xs:enumeration value="boninite"/>
+			<xs:enumeration value="breccia"/>
+			<xs:enumeration value="carbonate ooze"/>
+			<xs:enumeration value="carbonatite"/>
+			<xs:enumeration value="chalk"/>
+			<xs:enumeration value="chert"/>
+			<xs:enumeration value="clay"/>
+			<xs:enumeration value="claystone"/>
+			<xs:enumeration value="coal"/>
+			<xs:enumeration value="conglomerate"/>
+			<xs:enumeration value="dacite"/>
+			<xs:enumeration value="diabase"/>
+			<xs:enumeration value="diamictite"/>
+			<xs:enumeration value="diorite"/>
+			<xs:enumeration value="dioritoid"/>
+			<xs:enumeration value="doleritic rock"/>
+			<xs:enumeration value="dolomite"/>
+			<xs:enumeration value="dolomitic"/>
+			<xs:enumeration value="eclogite"/>
+			<xs:enumeration value="exotic alkaline rock"/>
+			<xs:enumeration value="feldspar"/>
+			<xs:enumeration value="feldspathic arenite"/>
+			<xs:enumeration value="fine grained igneous rock"/>
+			<xs:enumeration value="foid dioritoid"/>
+			<xs:enumeration value="foid gabbroid"/>
+			<xs:enumeration value="foid syenitoid"/>
+			<xs:enumeration value="foidite"/>
+			<xs:enumeration value="foiditoid"/>
+			<xs:enumeration value="foidolite"/>
+			<xs:enumeration value="foliated metamorphic rock"/>
+			<xs:enumeration value="fragmental igneous rock"/>
+			<xs:enumeration value="gabbro"/>
+			<xs:enumeration value="gabbroic rock"/>
+			<xs:enumeration value="gabbroid"/>
+			<xs:enumeration value="glauconite"/>
+			<xs:enumeration value="gneiss"/>
+			<xs:enumeration value="granite"/>
+			<xs:enumeration value="granodiorite"/>
+			<xs:enumeration value="granofels"/>
+			<xs:enumeration value="granulite"/>
+			<xs:enumeration value="gravel"/>
+			<xs:enumeration value="greenstone"/>
+			<xs:enumeration value="gumbo"/>
+			<xs:enumeration value="gypsum"/>
+			<xs:enumeration value="halite"/>
+			<xs:enumeration value="hornfels"/>
+			<xs:enumeration value="igneous rock"/>
+			<xs:enumeration value="impact generated material"/>
+			<xs:enumeration value="impure dolomite"/>
+			<xs:enumeration value="impure limestone"/>
+			<xs:enumeration value="intrusive rock (plutonic)"/>
+			<xs:enumeration value="iron rich sedimentary rock"/>
+			<xs:enumeration value="kalsilitic and melilitic rocks"/>
+			<xs:enumeration value="komatiitic rock"/>
+			<xs:enumeration value="latitic rock"/>
+			<xs:enumeration value="lignite"/>
+			<xs:enumeration value="lime boundstone"/>
+			<xs:enumeration value="lime framestone"/>
+			<xs:enumeration value="lime grainstone"/>
+			<xs:enumeration value="lime mudstone"/>
+			<xs:enumeration value="lime packstone"/>
+			<xs:enumeration value="lime wackestone"/>
+			<xs:enumeration value="limestone"/>
+			<xs:enumeration value="marble"/>
+			<xs:enumeration value="marl"/>
+			<xs:enumeration value="metamorphic rock"/>
+			<xs:enumeration value="mica schist"/>
+			<xs:enumeration value="migmatite"/>
+			<xs:enumeration value="monzogabbro"/>
+			<xs:enumeration value="mud"/>
+			<xs:enumeration value="mudstone"/>
+			<xs:enumeration value="mylonitic rock"/>
+			<xs:enumeration value="no description"/>
+			<xs:enumeration value="no sample"/>
+			<xs:enumeration value="ooze"/>
+			<xs:enumeration value="ophiolite"/>
+			<xs:enumeration value="organic bearing mudstone"/>
+			<xs:enumeration value="peat"/>
+			<xs:enumeration value="pegmatite"/>
+			<xs:enumeration value="peridotite"/>
+			<xs:enumeration value="phaneritic igneous rock"/>
+			<xs:enumeration value="phonolite"/>
+			<xs:enumeration value="phonolitoid"/>
+			<xs:enumeration value="phosphate"/>
+			<xs:enumeration value="phosphate rock"/>
+			<xs:enumeration value="phyllite"/>
+			<xs:enumeration value="porphyry"/>
+			<xs:enumeration value="potassium and magnesium salts"/>
+			<xs:enumeration value="pyroclastic breccia"/>
+			<xs:enumeration value="pyroclastic rock"/>
+			<xs:enumeration value="pyroxenite"/>
+			<xs:enumeration value="quartz arenite"/>
+			<xs:enumeration value="quartzite"/>
+			<xs:enumeration value="rhyolite"/>
+			<xs:enumeration value="rock salt"/>
+			<xs:enumeration value="sand"/>
+			<xs:enumeration value="sandstone"/>
+			<xs:enumeration value="sandy"/>
+			<xs:enumeration value="sapropel"/>
+			<xs:enumeration value="schist"/>
+			<xs:enumeration value="serpentinite"/>
+			<xs:enumeration value="shale"/>
+			<xs:enumeration value="siliceous ooze"/>
+			<xs:enumeration value="silt"/>
+			<xs:enumeration value="siltstone"/>
+			<xs:enumeration value="skarn"/>
+			<xs:enumeration value="slate"/>
+			<xs:enumeration value="spilite"/>
+			<xs:enumeration value="syenite"/>
+			<xs:enumeration value="syenitoid"/>
+			<xs:enumeration value="sylvite"/>
+			<xs:enumeration value="tephrite"/>
+			<xs:enumeration value="tephritoid"/>
+			<xs:enumeration value="tholeiitic basalt"/>
+			<xs:enumeration value="tonalite"/>
+			<xs:enumeration value="trachyte"/>
+			<xs:enumeration value="trachytic rock"/>
+			<xs:enumeration value="trachytoid"/>
+			<xs:enumeration value="travertine"/>
+			<xs:enumeration value="tuff"/>
+			<xs:enumeration value="tuffite"/>
+			<xs:enumeration value="ultrabasic"/>
+			<xs:enumeration value="undifferentiated"/>
+			<xs:enumeration value="unknown"/>
+			<xs:enumeration value="wacke"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="LithostratigraphicRank">
@@ -78,18 +456,6 @@ are given proper names and considered formal lithostratigraphic units.</xs:docum
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="LithologyKind">
-		<xs:annotation>
-			<xs:documentation>A description of minerals or accessories that constitute a fractional part of a CuttingsIntervalLithology</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
-	<xs:simpleType name="LithologyQualifierKind">
-		<xs:annotation>
-			<xs:documentation>A seondary qualifier of minerals or accessories that constitute a fractional part of a CuttingsIntervalLithology</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
 	<xs:simpleType name="UnitOfMeasureExt">
 		<xs:annotation>
 			<xs:documentation>A variant of UnitOfMeasure which has been extended to allow any user-defined unit of measure which follows an authority:unit pattern; the colon is mandatory.
@@ -98,139 +464,310 @@ This class is implemented in XML as a union between the list of valid units per 
 		</xs:annotation>
 		<xs:union memberTypes="eml:UnitOfMeasure eml:EnumExtensionPattern"/>
 	</xs:simpleType>
-	<xs:simpleType name="WellStatus">
-		<xs:annotation>
-			<xs:documentation>These values represent the status of a well or wellbore.</xs:documentation>
-		</xs:annotation>
+	<xs:simpleType name="LithologyQualifierKind">
 		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="abandoned">
-				<xs:annotation>
-					<xs:documentation>The status of a facility in which drilling, 
-completion, and production operations have been permanently 
-terminated.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="active">
-				<xs:annotation>
-					<xs:documentation>For a well to be active, at least one of its 
-wellbores must be active. For a wellbore to be active, at least 
-one of its completions must be actively producing or injecting 
-fluids.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="active -- injecting">
-				<xs:annotation>
-					<xs:documentation>Fluids are actively being injected into the 
-facility.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="active -- producing">
-				<xs:annotation>
-					<xs:documentation>Fluids are actively being produced from the 
-facility.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="completed">
-				<xs:annotation>
-					<xs:documentation>The completion has been installed, but the 
-facility is not yet active. This status is appropriate only 
-before the initial producing or injecting activity.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="drilling">
-				<xs:annotation>
-					<xs:documentation>The status of a well or wellbore in which drilling 
-operations have begun, but are not yet completed. The status ends 
-when another status becomes appropriate.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="partially plugged">
-				<xs:annotation>
-					<xs:documentation>The wellbore has been plugged from the bottom, 
-but only partially to the point where it intersects another wellbore.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="permitted">
-				<xs:annotation>
-					<xs:documentation>The facility has received regulatory approvel, 
-but drilling has not yet commenced. For a well, it has been spudded. 
-For a subsequent wellbore, the whipstock or similar device has not 
-yet been set.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="plugged and abandoned">
-				<xs:annotation>
-					<xs:documentation>An abandoned well (or wellbore) whose wellbores 
-have been plugged in such a manner as to prevent the migration of 
-oil, gas, salt water, or other substance from one stratum to another. 
-Generally the criteria for this status is controlled by regulatory 
-authorities.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="proposed">
-				<xs:annotation>
-					<xs:documentation>The status of a well or wellbore from conception 
-to either regulatory approval or commencement of drilling.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="sold">
-				<xs:annotation>
-					<xs:documentation>The facility has been sold, so it is no longer 
-appropriate to keep a close internal status value. Status values 
-may be added at later times without changing the sold status.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="suspended">
-				<xs:annotation>
-					<xs:documentation>Production or injection has been temporarily 
-suspended in a manner that will allow immediate resumption of 
-activities.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="temporarily abandoned">
-				<xs:annotation>
-					<xs:documentation>Production or injection has been temporarily 
-suspended in a manner that will not allow immediate resumption 
-of activities.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="testing">
-				<xs:annotation>
-					<xs:documentation>The facility operations are suspended while 
-tests are being conducted to determine formation and/or reservoir 
-properties. For example, a drillstem test. This status also 
-includes extended testing.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="tight">
-				<xs:annotation>
-					<xs:documentation>Information about the status of the well is 
-confidential. This is more explicit than unknown, since it gives 
-the reason that the status value is unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="working over">
-				<xs:annotation>
-					<xs:documentation>Maintenance or data acquisition on a well during 
-the production phase. This includes any relevant job which can be 
-done while the well is shut in. This includes many jobs that occur 
-when a well is re-entered.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. This value should not be used
-in normal situations. All reasonable attempts should be made to determine
-the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
+			<xs:enumeration value="alkali feldspar rhyolite"/>
+			<xs:enumeration value="alkali olivine basalt"/>
+			<xs:enumeration value="amphibolite"/>
+			<xs:enumeration value="amphibolitic"/>
+			<xs:enumeration value="andesite"/>
+			<xs:enumeration value="andesitic"/>
+			<xs:enumeration value="anhydrite"/>
+			<xs:enumeration value="anhydritic"/>
+			<xs:enumeration value="ankerite"/>
+			<xs:enumeration value="ankeritic"/>
+			<xs:enumeration value="anorthositic rock"/>
+			<xs:enumeration value="anthracite"/>
+			<xs:enumeration value="anthracitic"/>
+			<xs:enumeration value="aplite"/>
+			<xs:enumeration value="aplitic"/>
+			<xs:enumeration value="arenite"/>
+			<xs:enumeration value="arenitic"/>
+			<xs:enumeration value="argillaceous"/>
+			<xs:enumeration value="arkose"/>
+			<xs:enumeration value="arkosic"/>
+			<xs:enumeration value="barite"/>
+			<xs:enumeration value="baritic"/>
+			<xs:enumeration value="basalt"/>
+			<xs:enumeration value="basaltic"/>
+			<xs:enumeration value="basanite"/>
+			<xs:enumeration value="basanitic"/>
+			<xs:enumeration value="bauxite"/>
+			<xs:enumeration value="bauxitic"/>
+			<xs:enumeration value="belemnites"/>
+			<xs:enumeration value="belemnitic"/>
+			<xs:enumeration value="bioturbated"/>
+			<xs:enumeration value="bioturbation"/>
+			<xs:enumeration value="bitumen"/>
+			<xs:enumeration value="bituminous"/>
+			<xs:enumeration value="bituminous coal"/>
+			<xs:enumeration value="blueschist metamorphic rock"/>
+			<xs:enumeration value="boninite"/>
+			<xs:enumeration value="breccia"/>
+			<xs:enumeration value="brecciated"/>
+			<xs:enumeration value="bryozoan"/>
+			<xs:enumeration value="bryozoans"/>
+			<xs:enumeration value="burrowed"/>
+			<xs:enumeration value="burrows"/>
+			<xs:enumeration value="calcareous"/>
+			<xs:enumeration value="calcite"/>
+			<xs:enumeration value="calcite concretion"/>
+			<xs:enumeration value="calcitic"/>
+			<xs:enumeration value="carbonaceous"/>
+			<xs:enumeration value="carbonate ooze"/>
+			<xs:enumeration value="carbonatite"/>
+			<xs:enumeration value="carbonatitic"/>
+			<xs:enumeration value="chalk"/>
+			<xs:enumeration value="chalky"/>
+			<xs:enumeration value="chamosite"/>
+			<xs:enumeration value="chamositic"/>
+			<xs:enumeration value="chert"/>
+			<xs:enumeration value="cherty"/>
+			<xs:enumeration value="chlorite"/>
+			<xs:enumeration value="chloritic"/>
+			<xs:enumeration value="clay"/>
+			<xs:enumeration value="claystone"/>
+			<xs:enumeration value="coal"/>
+			<xs:enumeration value="concretionary"/>
+			<xs:enumeration value="concretions"/>
+			<xs:enumeration value="conglomerate"/>
+			<xs:enumeration value="conglomeratic"/>
+			<xs:enumeration value="coral fragments"/>
+			<xs:enumeration value="coralline"/>
+			<xs:enumeration value="crinoidal"/>
+			<xs:enumeration value="crinoids"/>
+			<xs:enumeration value="dacite"/>
+			<xs:enumeration value="dacitic"/>
+			<xs:enumeration value="diabase"/>
+			<xs:enumeration value="diabasic"/>
+			<xs:enumeration value="diamictite"/>
+			<xs:enumeration value="diamictitic"/>
+			<xs:enumeration value="diatomaceous"/>
+			<xs:enumeration value="diatoms"/>
+			<xs:enumeration value="diorite"/>
+			<xs:enumeration value="dioritic"/>
+			<xs:enumeration value="dioritoid"/>
+			<xs:enumeration value="dioritoidic"/>
+			<xs:enumeration value="doleritic rock"/>
+			<xs:enumeration value="dolomite"/>
+			<xs:enumeration value="dolomite concretion"/>
+			<xs:enumeration value="dolomite stringer"/>
+			<xs:enumeration value="dolomitic"/>
+			<xs:enumeration value="eclogite"/>
+			<xs:enumeration value="eclogitic"/>
+			<xs:enumeration value="exotic alkaline rock"/>
+			<xs:enumeration value="feldspar"/>
+			<xs:enumeration value="feldsparic"/>
+			<xs:enumeration value="feldspathic"/>
+			<xs:enumeration value="feldspathic arenite"/>
+			<xs:enumeration value="ferruginous"/>
+			<xs:enumeration value="fine grained igneous rock"/>
+			<xs:enumeration value="foid dioritoid"/>
+			<xs:enumeration value="foid gabbroid"/>
+			<xs:enumeration value="foid syenitoid"/>
+			<xs:enumeration value="foidite"/>
+			<xs:enumeration value="foiditic"/>
+			<xs:enumeration value="foiditoid"/>
+			<xs:enumeration value="foidolite"/>
+			<xs:enumeration value="foidolitic"/>
+			<xs:enumeration value="foliated metamorphic rock"/>
+			<xs:enumeration value="foraminifera"/>
+			<xs:enumeration value="foraminiferous"/>
+			<xs:enumeration value="forams"/>
+			<xs:enumeration value="fossil fragments"/>
+			<xs:enumeration value="fossiliferous"/>
+			<xs:enumeration value="fossils undifferentiated"/>
+			<xs:enumeration value="fragmental igneous rock"/>
+			<xs:enumeration value="gabbro"/>
+			<xs:enumeration value="gabbroic"/>
+			<xs:enumeration value="gabbroic rock"/>
+			<xs:enumeration value="gabbroid"/>
+			<xs:enumeration value="gabbroidic"/>
+			<xs:enumeration value="gilsonite"/>
+			<xs:enumeration value="gilsonitic"/>
+			<xs:enumeration value="glauconite"/>
+			<xs:enumeration value="glauconitic"/>
+			<xs:enumeration value="gneiss"/>
+			<xs:enumeration value="gneissic"/>
+			<xs:enumeration value="granite"/>
+			<xs:enumeration value="granitic"/>
+			<xs:enumeration value="granodiorite"/>
+			<xs:enumeration value="granodioritic"/>
+			<xs:enumeration value="granofels"/>
+			<xs:enumeration value="granulite"/>
+			<xs:enumeration value="granulitic"/>
+			<xs:enumeration value="gravel"/>
+			<xs:enumeration value="gravelly"/>
+			<xs:enumeration value="greenstone"/>
+			<xs:enumeration value="gumbo"/>
+			<xs:enumeration value="gypsiferous"/>
+			<xs:enumeration value="gypsum"/>
+			<xs:enumeration value="halite"/>
+			<xs:enumeration value="halitic"/>
+			<xs:enumeration value="hornfels"/>
+			<xs:enumeration value="hornfelsic"/>
+			<xs:enumeration value="igneous"/>
+			<xs:enumeration value="igneous rock"/>
+			<xs:enumeration value="illite"/>
+			<xs:enumeration value="illitic"/>
+			<xs:enumeration value="impact generated material"/>
+			<xs:enumeration value="impure dolomite"/>
+			<xs:enumeration value="impure limestone"/>
+			<xs:enumeration value="intrusive rock (plutonic)"/>
+			<xs:enumeration value="iron rich sedimentary rock"/>
+			<xs:enumeration value="kalsilitic and melilitic rocks"/>
+			<xs:enumeration value="kaolinite"/>
+			<xs:enumeration value="kaolinitic"/>
+			<xs:enumeration value="komatiitic rock"/>
+			<xs:enumeration value="latitic rock"/>
+			<xs:enumeration value="lignite"/>
+			<xs:enumeration value="lignitic"/>
+			<xs:enumeration value="lime boundstone"/>
+			<xs:enumeration value="lime framestone"/>
+			<xs:enumeration value="lime grainstone"/>
+			<xs:enumeration value="lime mudstone"/>
+			<xs:enumeration value="lime packstone"/>
+			<xs:enumeration value="lime wackestone"/>
+			<xs:enumeration value="limestone"/>
+			<xs:enumeration value="limestone stringer"/>
+			<xs:enumeration value="lithic"/>
+			<xs:enumeration value="lithic fragments"/>
+			<xs:enumeration value="marble"/>
+			<xs:enumeration value="marcasite"/>
+			<xs:enumeration value="marcasitic"/>
+			<xs:enumeration value="marl"/>
+			<xs:enumeration value="marly"/>
+			<xs:enumeration value="metamorphic rock"/>
+			<xs:enumeration value="mica"/>
+			<xs:enumeration value="mica schist"/>
+			<xs:enumeration value="micaceous"/>
+			<xs:enumeration value="microfossiliferous"/>
+			<xs:enumeration value="microfossils"/>
+			<xs:enumeration value="migmatite"/>
+			<xs:enumeration value="migmatitic"/>
+			<xs:enumeration value="monzogabbro"/>
+			<xs:enumeration value="monzogabbroic"/>
+			<xs:enumeration value="mud"/>
+			<xs:enumeration value="muddy"/>
+			<xs:enumeration value="mudstone"/>
+			<xs:enumeration value="mylonitic rock"/>
+			<xs:enumeration value="no sample"/>
+			<xs:enumeration value="oncolite"/>
+			<xs:enumeration value="oncoliths"/>
+			<xs:enumeration value="oncolitic"/>
+			<xs:enumeration value="ooids"/>
+			<xs:enumeration value="ooliths"/>
+			<xs:enumeration value="oolitic"/>
+			<xs:enumeration value="ooze"/>
+			<xs:enumeration value="ophiolite"/>
+			<xs:enumeration value="ophiolitic"/>
+			<xs:enumeration value="organic bearing mudstone"/>
+			<xs:enumeration value="ostracodal"/>
+			<xs:enumeration value="ostracods"/>
+			<xs:enumeration value="peat"/>
+			<xs:enumeration value="peaty"/>
+			<xs:enumeration value="pebble"/>
+			<xs:enumeration value="pebbly"/>
+			<xs:enumeration value="pegmatite"/>
+			<xs:enumeration value="pegmatitic"/>
+			<xs:enumeration value="pelletal"/>
+			<xs:enumeration value="pellets"/>
+			<xs:enumeration value="peloidal"/>
+			<xs:enumeration value="peloids"/>
+			<xs:enumeration value="peridotite"/>
+			<xs:enumeration value="peridotitic"/>
+			<xs:enumeration value="phaneritic igneous rock"/>
+			<xs:enumeration value="phonolite"/>
+			<xs:enumeration value="phonolitic"/>
+			<xs:enumeration value="phonolitoid"/>
+			<xs:enumeration value="phosphate"/>
+			<xs:enumeration value="phosphate rock"/>
+			<xs:enumeration value="phosphatic"/>
+			<xs:enumeration value="phyllite"/>
+			<xs:enumeration value="phyllitic"/>
+			<xs:enumeration value="pisolite"/>
+			<xs:enumeration value="pisoliths"/>
+			<xs:enumeration value="pisolitic"/>
+			<xs:enumeration value="plant remains"/>
+			<xs:enumeration value="porphyritic"/>
+			<xs:enumeration value="porphyry"/>
+			<xs:enumeration value="potassium and magnesium salts"/>
+			<xs:enumeration value="pyrite"/>
+			<xs:enumeration value="pyritic"/>
+			<xs:enumeration value="pyroclastic breccia"/>
+			<xs:enumeration value="pyroclastic rock"/>
+			<xs:enumeration value="pyroxenite"/>
+			<xs:enumeration value="pyroxenitic"/>
+			<xs:enumeration value="quartiferous"/>
+			<xs:enumeration value="quartz"/>
+			<xs:enumeration value="quartz arenite"/>
+			<xs:enumeration value="quartzite"/>
+			<xs:enumeration value="quartzitic"/>
+			<xs:enumeration value="radiolaria"/>
+			<xs:enumeration value="radiolarian"/>
+			<xs:enumeration value="rhyolite"/>
+			<xs:enumeration value="rhyolitic"/>
+			<xs:enumeration value="rock salt"/>
+			<xs:enumeration value="rootlets"/>
+			<xs:enumeration value="salty"/>
+			<xs:enumeration value="sand"/>
+			<xs:enumeration value="sandstone"/>
+			<xs:enumeration value="sandy"/>
+			<xs:enumeration value="sapropel"/>
+			<xs:enumeration value="sapropelic"/>
+			<xs:enumeration value="schist"/>
+			<xs:enumeration value="schisty"/>
+			<xs:enumeration value="sepentinitic"/>
+			<xs:enumeration value="serpentinite"/>
+			<xs:enumeration value="shale"/>
+			<xs:enumeration value="shaly"/>
+			<xs:enumeration value="shell fragments"/>
+			<xs:enumeration value="shelly"/>
+			<xs:enumeration value="siderite"/>
+			<xs:enumeration value="siderite concretion"/>
+			<xs:enumeration value="sideritic"/>
+			<xs:enumeration value="siliceous ooze"/>
+			<xs:enumeration value="silt"/>
+			<xs:enumeration value="siltstone"/>
+			<xs:enumeration value="silty"/>
+			<xs:enumeration value="skarn"/>
+			<xs:enumeration value="skarny"/>
+			<xs:enumeration value="slate"/>
+			<xs:enumeration value="slaty"/>
+			<xs:enumeration value="smectite"/>
+			<xs:enumeration value="smectitic"/>
+			<xs:enumeration value="spicular"/>
+			<xs:enumeration value="spicules"/>
+			<xs:enumeration value="spilite"/>
+			<xs:enumeration value="spilitic"/>
+			<xs:enumeration value="stylolites"/>
+			<xs:enumeration value="stylolitic"/>
+			<xs:enumeration value="syenite"/>
+			<xs:enumeration value="syenitic"/>
+			<xs:enumeration value="syenitoid"/>
+			<xs:enumeration value="sylvite"/>
+			<xs:enumeration value="sylvitic"/>
+			<xs:enumeration value="tarry"/>
+			<xs:enumeration value="tephrite"/>
+			<xs:enumeration value="tephritic"/>
+			<xs:enumeration value="tephritoid"/>
+			<xs:enumeration value="tholeiitic basalt"/>
+			<xs:enumeration value="tonalite"/>
+			<xs:enumeration value="tonalitic"/>
+			<xs:enumeration value="trachyte"/>
+			<xs:enumeration value="trachytic"/>
+			<xs:enumeration value="trachytic rock"/>
+			<xs:enumeration value="trachytoid"/>
+			<xs:enumeration value="travertine"/>
+			<xs:enumeration value="tuff"/>
+			<xs:enumeration value="tuffaceous"/>
+			<xs:enumeration value="tuffite"/>
+			<xs:enumeration value="tuffitic"/>
+			<xs:enumeration value="ultrabasic"/>
+			<xs:enumeration value="undifferentiated"/>
+			<xs:enumeration value="unknown"/>
+			<xs:enumeration value="wacke"/>
 		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="ChannelClassKindExt">
-		<xs:union memberTypes="eml:ChannelClassKind eml:EnumExtensionPattern"/>
-	</xs:simpleType>
-	<xs:simpleType name="LithologyKindExt">
-		<xs:union memberTypes="eml:LithologyKindNew eml:EnumExtensionPattern"/>
 	</xs:simpleType>
 	<xs:simpleType name="WellboreDatumReference">
 		<xs:annotation>
@@ -292,6 +829,9 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ReferenceConditionExt">
+		<xs:union memberTypes="eml:ReferenceCondition eml:EnumExtensionPattern"/>
 	</xs:simpleType>
 	<xs:simpleType name="UnitOfMeasure">
 		<xs:annotation>
@@ -479,8 +1019,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="atm/h"/>
 			<xs:enumeration value="atm/hm"/>
 			<xs:enumeration value="atm/m"/>
-			<xs:enumeration value="b"/>
 			<xs:enumeration value="B"/>
+			<xs:enumeration value="b"/>
 			<xs:enumeration value="B.W"/>
 			<xs:enumeration value="b/cm3"/>
 			<xs:enumeration value="B/m"/>
@@ -558,8 +1098,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="C/m3"/>
 			<xs:enumeration value="C/mm2"/>
 			<xs:enumeration value="C/mm3"/>
-			<xs:enumeration value="ca"/>
 			<xs:enumeration value="cA"/>
+			<xs:enumeration value="ca"/>
 			<xs:enumeration value="cal[IT]"/>
 			<xs:enumeration value="cal[th]"/>
 			<xs:enumeration value="cal[th]/(g.K)"/>
@@ -624,8 +1164,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="cP"/>
 			<xs:enumeration value="cPa"/>
 			<xs:enumeration value="crd"/>
-			<xs:enumeration value="cS"/>
 			<xs:enumeration value="cs"/>
+			<xs:enumeration value="cS"/>
 			<xs:enumeration value="cSt"/>
 			<xs:enumeration value="cT"/>
 			<xs:enumeration value="ct"/>
@@ -651,8 +1191,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="daN.m"/>
 			<xs:enumeration value="dAPI"/>
 			<xs:enumeration value="dB"/>
-			<xs:enumeration value="dB.mW"/>
 			<xs:enumeration value="dB.MW"/>
+			<xs:enumeration value="dB.mW"/>
 			<xs:enumeration value="dB.W"/>
 			<xs:enumeration value="dB/ft"/>
 			<xs:enumeration value="dB/km"/>
@@ -757,8 +1297,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="EWb"/>
 			<xs:enumeration value="F"/>
 			<xs:enumeration value="F/m"/>
-			<xs:enumeration value="fa"/>
 			<xs:enumeration value="fA"/>
+			<xs:enumeration value="fa"/>
 			<xs:enumeration value="fathom"/>
 			<xs:enumeration value="fC"/>
 			<xs:enumeration value="fcal[th]"/>
@@ -905,8 +1445,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="Gcal[th]"/>
 			<xs:enumeration value="GEuc"/>
 			<xs:enumeration value="GeV"/>
-			<xs:enumeration value="GF"/>
 			<xs:enumeration value="gf"/>
+			<xs:enumeration value="GF"/>
 			<xs:enumeration value="Gg"/>
 			<xs:enumeration value="Ggauss"/>
 			<xs:enumeration value="GGy"/>
@@ -914,8 +1454,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="GHz"/>
 			<xs:enumeration value="GJ"/>
 			<xs:enumeration value="Gm"/>
-			<xs:enumeration value="GN"/>
 			<xs:enumeration value="gn"/>
+			<xs:enumeration value="GN"/>
 			<xs:enumeration value="Gohm"/>
 			<xs:enumeration value="gon"/>
 			<xs:enumeration value="GP"/>
@@ -933,8 +1473,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="GW.h"/>
 			<xs:enumeration value="GWb"/>
 			<xs:enumeration value="Gy"/>
-			<xs:enumeration value="h"/>
 			<xs:enumeration value="H"/>
+			<xs:enumeration value="h"/>
 			<xs:enumeration value="h/ft3"/>
 			<xs:enumeration value="h/km"/>
 			<xs:enumeration value="H/m"/>
@@ -1284,8 +1824,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="mC"/>
 			<xs:enumeration value="MC"/>
 			<xs:enumeration value="mC/m2"/>
-			<xs:enumeration value="mcal[th]"/>
 			<xs:enumeration value="Mcal[th]"/>
+			<xs:enumeration value="mcal[th]"/>
 			<xs:enumeration value="mCi"/>
 			<xs:enumeration value="mD"/>
 			<xs:enumeration value="mD.ft"/>
@@ -1294,10 +1834,10 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="mD.m"/>
 			<xs:enumeration value="mD/(Pa.s)"/>
 			<xs:enumeration value="mD/cP"/>
-			<xs:enumeration value="MEuc"/>
 			<xs:enumeration value="mEuc"/>
-			<xs:enumeration value="MeV"/>
+			<xs:enumeration value="MEuc"/>
 			<xs:enumeration value="meV"/>
+			<xs:enumeration value="MeV"/>
 			<xs:enumeration value="MF"/>
 			<xs:enumeration value="mF"/>
 			<xs:enumeration value="Mg"/>
@@ -1323,10 +1863,10 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="mgn"/>
 			<xs:enumeration value="MGy"/>
 			<xs:enumeration value="mGy"/>
-			<xs:enumeration value="mH"/>
 			<xs:enumeration value="MH"/>
-			<xs:enumeration value="MHz"/>
+			<xs:enumeration value="mH"/>
 			<xs:enumeration value="mHz"/>
+			<xs:enumeration value="MHz"/>
 			<xs:enumeration value="mi"/>
 			<xs:enumeration value="mi/gal[UK]"/>
 			<xs:enumeration value="mi/gal[US]"/>
@@ -1346,8 +1886,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="min/ft"/>
 			<xs:enumeration value="min/m"/>
 			<xs:enumeration value="mina"/>
-			<xs:enumeration value="mJ"/>
 			<xs:enumeration value="MJ"/>
+			<xs:enumeration value="mJ"/>
 			<xs:enumeration value="MJ/a"/>
 			<xs:enumeration value="mJ/cm2"/>
 			<xs:enumeration value="MJ/kg"/>
@@ -1387,45 +1927,45 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="mol/s"/>
 			<xs:enumeration value="mP"/>
 			<xs:enumeration value="MP"/>
-			<xs:enumeration value="MPa"/>
 			<xs:enumeration value="mPa"/>
+			<xs:enumeration value="MPa"/>
 			<xs:enumeration value="mPa.s"/>
 			<xs:enumeration value="MPa.s/m"/>
 			<xs:enumeration value="MPa/h"/>
 			<xs:enumeration value="MPa/m"/>
 			<xs:enumeration value="Mpsi"/>
-			<xs:enumeration value="Mrad"/>
 			<xs:enumeration value="mrad"/>
+			<xs:enumeration value="Mrad"/>
 			<xs:enumeration value="mrd"/>
 			<xs:enumeration value="Mrd"/>
 			<xs:enumeration value="mrem"/>
 			<xs:enumeration value="mrem/h"/>
 			<xs:enumeration value="mS"/>
-			<xs:enumeration value="MS"/>
 			<xs:enumeration value="ms"/>
-			<xs:enumeration value="ms/cm"/>
+			<xs:enumeration value="MS"/>
 			<xs:enumeration value="mS/cm"/>
+			<xs:enumeration value="ms/cm"/>
 			<xs:enumeration value="ms/ft"/>
 			<xs:enumeration value="ms/in"/>
-			<xs:enumeration value="mS/m"/>
 			<xs:enumeration value="ms/m"/>
+			<xs:enumeration value="mS/m"/>
 			<xs:enumeration value="ms/s"/>
 			<xs:enumeration value="mSv"/>
 			<xs:enumeration value="mSv/h"/>
 			<xs:enumeration value="mT"/>
 			<xs:enumeration value="mT/dm"/>
-			<xs:enumeration value="mV"/>
 			<xs:enumeration value="MV"/>
+			<xs:enumeration value="mV"/>
 			<xs:enumeration value="mV/ft"/>
 			<xs:enumeration value="mV/m"/>
-			<xs:enumeration value="MW"/>
 			<xs:enumeration value="mW"/>
+			<xs:enumeration value="MW"/>
 			<xs:enumeration value="MW.h"/>
 			<xs:enumeration value="MW.h/kg"/>
 			<xs:enumeration value="MW.h/m3"/>
 			<xs:enumeration value="mW/m2"/>
-			<xs:enumeration value="MWb"/>
 			<xs:enumeration value="mWb"/>
+			<xs:enumeration value="MWb"/>
 			<xs:enumeration value="N"/>
 			<xs:enumeration value="N.m"/>
 			<xs:enumeration value="N.m/m"/>
@@ -1436,8 +1976,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="N/m3"/>
 			<xs:enumeration value="N/mm2"/>
 			<xs:enumeration value="N/N"/>
-			<xs:enumeration value="na"/>
 			<xs:enumeration value="nA"/>
+			<xs:enumeration value="na"/>
 			<xs:enumeration value="nAPI"/>
 			<xs:enumeration value="nC"/>
 			<xs:enumeration value="ncal[th]"/>
@@ -1462,8 +2002,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="nP"/>
 			<xs:enumeration value="nPa"/>
 			<xs:enumeration value="nrd"/>
-			<xs:enumeration value="ns"/>
 			<xs:enumeration value="nS"/>
+			<xs:enumeration value="ns"/>
 			<xs:enumeration value="ns/ft"/>
 			<xs:enumeration value="ns/m"/>
 			<xs:enumeration value="nT"/>
@@ -1481,8 +2021,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="ozm"/>
 			<xs:enumeration value="ozm[troy]"/>
 			<xs:enumeration value="P"/>
-			<xs:enumeration value="pA"/>
 			<xs:enumeration value="Pa"/>
+			<xs:enumeration value="pA"/>
 			<xs:enumeration value="Pa.s"/>
 			<xs:enumeration value="Pa.s.m3/kg"/>
 			<xs:enumeration value="Pa.s/m3"/>
@@ -1521,8 +2061,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="ppm[vol]/degC"/>
 			<xs:enumeration value="ppm[vol]/degF"/>
 			<xs:enumeration value="prd"/>
-			<xs:enumeration value="ps"/>
 			<xs:enumeration value="pS"/>
+			<xs:enumeration value="ps"/>
 			<xs:enumeration value="psi"/>
 			<xs:enumeration value="psi.d/bbl"/>
 			<xs:enumeration value="psi.s"/>
@@ -1561,16 +2101,16 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="rod[US]"/>
 			<xs:enumeration value="rpm"/>
 			<xs:enumeration value="rpm/s"/>
-			<xs:enumeration value="s"/>
 			<xs:enumeration value="S"/>
+			<xs:enumeration value="s"/>
 			<xs:enumeration value="s/cm"/>
 			<xs:enumeration value="s/ft"/>
 			<xs:enumeration value="s/ft3"/>
 			<xs:enumeration value="s/in"/>
 			<xs:enumeration value="s/kg"/>
 			<xs:enumeration value="s/L"/>
-			<xs:enumeration value="S/m"/>
 			<xs:enumeration value="s/m"/>
+			<xs:enumeration value="S/m"/>
 			<xs:enumeration value="s/m3"/>
 			<xs:enumeration value="s/qt[UK]"/>
 			<xs:enumeration value="s/qt[US]"/>
@@ -1688,8 +2228,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="upsi"/>
 			<xs:enumeration value="urad"/>
 			<xs:enumeration value="urd"/>
-			<xs:enumeration value="uS"/>
 			<xs:enumeration value="us"/>
+			<xs:enumeration value="uS"/>
 			<xs:enumeration value="us/ft"/>
 			<xs:enumeration value="us/in"/>
 			<xs:enumeration value="us/m"/>
@@ -1738,537 +2278,194 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="yd3"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="ChannelClassKind">
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
-	<xs:simpleType name="LithologyQualifierKindNew">
-		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="alkali feldspar rhyolite"/>
-			<xs:enumeration value="alkali olivine basalt"/>
-			<xs:enumeration value="amphibolite"/>
-			<xs:enumeration value="amphibolitic"/>
-			<xs:enumeration value="andesite"/>
-			<xs:enumeration value="andesitic"/>
-			<xs:enumeration value="anhydrite"/>
-			<xs:enumeration value="anhydritic"/>
-			<xs:enumeration value="ankerite"/>
-			<xs:enumeration value="ankeritic"/>
-			<xs:enumeration value="anorthositic rock"/>
-			<xs:enumeration value="anthracite"/>
-			<xs:enumeration value="anthracitic"/>
-			<xs:enumeration value="aplite"/>
-			<xs:enumeration value="aplitic"/>
-			<xs:enumeration value="arenite"/>
-			<xs:enumeration value="arenitic"/>
-			<xs:enumeration value="argillaceous"/>
-			<xs:enumeration value="arkose"/>
-			<xs:enumeration value="arkosic"/>
-			<xs:enumeration value="barite"/>
-			<xs:enumeration value="baritic"/>
-			<xs:enumeration value="basalt"/>
-			<xs:enumeration value="basaltic"/>
-			<xs:enumeration value="basanite"/>
-			<xs:enumeration value="basanitic"/>
-			<xs:enumeration value="bauxite"/>
-			<xs:enumeration value="bauxitic"/>
-			<xs:enumeration value="belemnites"/>
-			<xs:enumeration value="belemnitic"/>
-			<xs:enumeration value="bioturbated"/>
-			<xs:enumeration value="bioturbation"/>
-			<xs:enumeration value="bitumen"/>
-			<xs:enumeration value="bituminous"/>
-			<xs:enumeration value="bituminous coal"/>
-			<xs:enumeration value="blueschist metamorphic rock"/>
-			<xs:enumeration value="boninite"/>
-			<xs:enumeration value="breccia"/>
-			<xs:enumeration value="brecciated"/>
-			<xs:enumeration value="bryozoan"/>
-			<xs:enumeration value="bryozoans"/>
-			<xs:enumeration value="burrowed"/>
-			<xs:enumeration value="burrows"/>
-			<xs:enumeration value="calcareous"/>
-			<xs:enumeration value="calcite"/>
-			<xs:enumeration value="calcite concretion"/>
-			<xs:enumeration value="calcitic"/>
-			<xs:enumeration value="carbonaceous"/>
-			<xs:enumeration value="carbonate ooze"/>
-			<xs:enumeration value="carbonatite"/>
-			<xs:enumeration value="carbonatitic"/>
-			<xs:enumeration value="chalk"/>
-			<xs:enumeration value="chalky"/>
-			<xs:enumeration value="chamosite"/>
-			<xs:enumeration value="chamositic"/>
-			<xs:enumeration value="chert"/>
-			<xs:enumeration value="cherty"/>
-			<xs:enumeration value="chlorite"/>
-			<xs:enumeration value="chloritic"/>
-			<xs:enumeration value="clay"/>
-			<xs:enumeration value="claystone"/>
-			<xs:enumeration value="coal"/>
-			<xs:enumeration value="concretionary"/>
-			<xs:enumeration value="concretions"/>
-			<xs:enumeration value="conglomerate"/>
-			<xs:enumeration value="conglomeratic"/>
-			<xs:enumeration value="coral fragments"/>
-			<xs:enumeration value="coralline"/>
-			<xs:enumeration value="crinoidal"/>
-			<xs:enumeration value="crinoids"/>
-			<xs:enumeration value="dacite"/>
-			<xs:enumeration value="dacitic"/>
-			<xs:enumeration value="diabase"/>
-			<xs:enumeration value="diabasic"/>
-			<xs:enumeration value="diamictite"/>
-			<xs:enumeration value="diamictitic"/>
-			<xs:enumeration value="diatomaceous"/>
-			<xs:enumeration value="diatoms"/>
-			<xs:enumeration value="diorite"/>
-			<xs:enumeration value="dioritic"/>
-			<xs:enumeration value="dioritoid"/>
-			<xs:enumeration value="dioritoidic"/>
-			<xs:enumeration value="doleritic rock"/>
-			<xs:enumeration value="dolomite"/>
-			<xs:enumeration value="dolomite concretion"/>
-			<xs:enumeration value="dolomite stringer"/>
-			<xs:enumeration value="dolomitic"/>
-			<xs:enumeration value="eclogite"/>
-			<xs:enumeration value="eclogitic"/>
-			<xs:enumeration value="exotic alkaline rock"/>
-			<xs:enumeration value="feldspar"/>
-			<xs:enumeration value="feldsparic"/>
-			<xs:enumeration value="feldspathic"/>
-			<xs:enumeration value="feldspathic arenite"/>
-			<xs:enumeration value="ferruginous"/>
-			<xs:enumeration value="fine grained igneous rock"/>
-			<xs:enumeration value="foid dioritoid"/>
-			<xs:enumeration value="foid gabbroid"/>
-			<xs:enumeration value="foid syenitoid"/>
-			<xs:enumeration value="foidite"/>
-			<xs:enumeration value="foiditic"/>
-			<xs:enumeration value="foiditoid"/>
-			<xs:enumeration value="foidolite"/>
-			<xs:enumeration value="foidolitic"/>
-			<xs:enumeration value="foliated metamorphic rock"/>
-			<xs:enumeration value="foraminifera"/>
-			<xs:enumeration value="foraminiferous"/>
-			<xs:enumeration value="forams"/>
-			<xs:enumeration value="fossil fragments"/>
-			<xs:enumeration value="fossiliferous"/>
-			<xs:enumeration value="fossils undifferentiated"/>
-			<xs:enumeration value="fragmental igneous rock"/>
-			<xs:enumeration value="gabbro"/>
-			<xs:enumeration value="gabbroic"/>
-			<xs:enumeration value="gabbroic rock"/>
-			<xs:enumeration value="gabbroid"/>
-			<xs:enumeration value="gabbroidic"/>
-			<xs:enumeration value="gilsonite"/>
-			<xs:enumeration value="gilsonitic"/>
-			<xs:enumeration value="glauconite"/>
-			<xs:enumeration value="glauconitic"/>
-			<xs:enumeration value="gneiss"/>
-			<xs:enumeration value="gneissic"/>
-			<xs:enumeration value="granite"/>
-			<xs:enumeration value="granitic"/>
-			<xs:enumeration value="granodiorite"/>
-			<xs:enumeration value="granodioritic"/>
-			<xs:enumeration value="granofels"/>
-			<xs:enumeration value="granulite"/>
-			<xs:enumeration value="granulitic"/>
-			<xs:enumeration value="gravel"/>
-			<xs:enumeration value="gravelly"/>
-			<xs:enumeration value="greenstone"/>
-			<xs:enumeration value="gumbo"/>
-			<xs:enumeration value="gypsiferous"/>
-			<xs:enumeration value="gypsum"/>
-			<xs:enumeration value="halite"/>
-			<xs:enumeration value="halitic"/>
-			<xs:enumeration value="hornfels"/>
-			<xs:enumeration value="hornfelsic"/>
-			<xs:enumeration value="igneous"/>
-			<xs:enumeration value="igneous rock"/>
-			<xs:enumeration value="illite"/>
-			<xs:enumeration value="illitic"/>
-			<xs:enumeration value="impact generated material"/>
-			<xs:enumeration value="impure dolomite"/>
-			<xs:enumeration value="impure limestone"/>
-			<xs:enumeration value="intrusive rock (plutonic)"/>
-			<xs:enumeration value="iron rich sedimentary rock"/>
-			<xs:enumeration value="kalsilitic and melilitic rocks"/>
-			<xs:enumeration value="kaolinite"/>
-			<xs:enumeration value="kaolinitic"/>
-			<xs:enumeration value="komatiitic rock"/>
-			<xs:enumeration value="latitic rock"/>
-			<xs:enumeration value="lignite"/>
-			<xs:enumeration value="lignitic"/>
-			<xs:enumeration value="lime boundstone"/>
-			<xs:enumeration value="lime framestone"/>
-			<xs:enumeration value="lime grainstone"/>
-			<xs:enumeration value="lime mudstone"/>
-			<xs:enumeration value="lime packstone"/>
-			<xs:enumeration value="lime wackestone"/>
-			<xs:enumeration value="limestone"/>
-			<xs:enumeration value="limestone stringer"/>
-			<xs:enumeration value="lithic"/>
-			<xs:enumeration value="lithic fragments"/>
-			<xs:enumeration value="marble"/>
-			<xs:enumeration value="marcasite"/>
-			<xs:enumeration value="marcasitic"/>
-			<xs:enumeration value="marl"/>
-			<xs:enumeration value="marly"/>
-			<xs:enumeration value="metamorphic rock"/>
-			<xs:enumeration value="mica"/>
-			<xs:enumeration value="mica schist"/>
-			<xs:enumeration value="micaceous"/>
-			<xs:enumeration value="microfossiliferous"/>
-			<xs:enumeration value="microfossils"/>
-			<xs:enumeration value="migmatite"/>
-			<xs:enumeration value="migmatitic"/>
-			<xs:enumeration value="monzogabbro"/>
-			<xs:enumeration value="monzogabbroic"/>
-			<xs:enumeration value="mud"/>
-			<xs:enumeration value="muddy"/>
-			<xs:enumeration value="mudstone"/>
-			<xs:enumeration value="mylonitic rock"/>
-			<xs:enumeration value="no sample"/>
-			<xs:enumeration value="oncolite"/>
-			<xs:enumeration value="oncoliths"/>
-			<xs:enumeration value="oncolitic"/>
-			<xs:enumeration value="ooids"/>
-			<xs:enumeration value="ooliths"/>
-			<xs:enumeration value="oolitic"/>
-			<xs:enumeration value="ooze"/>
-			<xs:enumeration value="ophiolite"/>
-			<xs:enumeration value="ophiolitic"/>
-			<xs:enumeration value="organic bearing mudstone"/>
-			<xs:enumeration value="ostracodal"/>
-			<xs:enumeration value="ostracods"/>
-			<xs:enumeration value="peat"/>
-			<xs:enumeration value="peaty"/>
-			<xs:enumeration value="pebble"/>
-			<xs:enumeration value="pebbly"/>
-			<xs:enumeration value="pegmatite"/>
-			<xs:enumeration value="pegmatitic"/>
-			<xs:enumeration value="pelletal"/>
-			<xs:enumeration value="pellets"/>
-			<xs:enumeration value="peloidal"/>
-			<xs:enumeration value="peloids"/>
-			<xs:enumeration value="peridotite"/>
-			<xs:enumeration value="peridotitic"/>
-			<xs:enumeration value="phaneritic igneous rock"/>
-			<xs:enumeration value="phonolite"/>
-			<xs:enumeration value="phonolitic"/>
-			<xs:enumeration value="phonolitoid"/>
-			<xs:enumeration value="phosphate"/>
-			<xs:enumeration value="phosphate rock"/>
-			<xs:enumeration value="phosphatic"/>
-			<xs:enumeration value="phyllite"/>
-			<xs:enumeration value="phyllitic"/>
-			<xs:enumeration value="pisolite"/>
-			<xs:enumeration value="pisoliths"/>
-			<xs:enumeration value="pisolitic"/>
-			<xs:enumeration value="plant remains"/>
-			<xs:enumeration value="porphyritic"/>
-			<xs:enumeration value="porphyry"/>
-			<xs:enumeration value="potassium and magnesium salts"/>
-			<xs:enumeration value="pyrite"/>
-			<xs:enumeration value="pyritic"/>
-			<xs:enumeration value="pyroclastic breccia"/>
-			<xs:enumeration value="pyroclastic rock"/>
-			<xs:enumeration value="pyroxenite"/>
-			<xs:enumeration value="pyroxenitic"/>
-			<xs:enumeration value="quartiferous"/>
-			<xs:enumeration value="quartz"/>
-			<xs:enumeration value="quartz arenite"/>
-			<xs:enumeration value="quartzite"/>
-			<xs:enumeration value="quartzitic"/>
-			<xs:enumeration value="radiolaria"/>
-			<xs:enumeration value="radiolarian"/>
-			<xs:enumeration value="rhyolite"/>
-			<xs:enumeration value="rhyolitic"/>
-			<xs:enumeration value="rock salt"/>
-			<xs:enumeration value="rootlets"/>
-			<xs:enumeration value="salty"/>
-			<xs:enumeration value="sand"/>
-			<xs:enumeration value="sandstone"/>
-			<xs:enumeration value="sandy"/>
-			<xs:enumeration value="sapropel"/>
-			<xs:enumeration value="sapropelic"/>
-			<xs:enumeration value="schist"/>
-			<xs:enumeration value="schisty"/>
-			<xs:enumeration value="sepentinitic"/>
-			<xs:enumeration value="serpentinite"/>
-			<xs:enumeration value="shale"/>
-			<xs:enumeration value="shaly"/>
-			<xs:enumeration value="shell fragments"/>
-			<xs:enumeration value="shelly"/>
-			<xs:enumeration value="siderite"/>
-			<xs:enumeration value="siderite concretion"/>
-			<xs:enumeration value="sideritic"/>
-			<xs:enumeration value="siliceous ooze"/>
-			<xs:enumeration value="silt"/>
-			<xs:enumeration value="siltstone"/>
-			<xs:enumeration value="silty"/>
-			<xs:enumeration value="skarn"/>
-			<xs:enumeration value="skarny"/>
-			<xs:enumeration value="slate"/>
-			<xs:enumeration value="slaty"/>
-			<xs:enumeration value="smectite"/>
-			<xs:enumeration value="smectitic"/>
-			<xs:enumeration value="spicular"/>
-			<xs:enumeration value="spicules"/>
-			<xs:enumeration value="spilite"/>
-			<xs:enumeration value="spilitic"/>
-			<xs:enumeration value="stylolites"/>
-			<xs:enumeration value="stylolitic"/>
-			<xs:enumeration value="syenite"/>
-			<xs:enumeration value="syenitic"/>
-			<xs:enumeration value="syenitoid"/>
-			<xs:enumeration value="sylvite"/>
-			<xs:enumeration value="sylvitic"/>
-			<xs:enumeration value="tarry"/>
-			<xs:enumeration value="tephrite"/>
-			<xs:enumeration value="tephritic"/>
-			<xs:enumeration value="tephritoid"/>
-			<xs:enumeration value="tholeiitic basalt"/>
-			<xs:enumeration value="tonalite"/>
-			<xs:enumeration value="tonalitic"/>
-			<xs:enumeration value="trachyte"/>
-			<xs:enumeration value="trachytic"/>
-			<xs:enumeration value="trachytic rock"/>
-			<xs:enumeration value="trachytoid"/>
-			<xs:enumeration value="travertine"/>
-			<xs:enumeration value="tuff"/>
-			<xs:enumeration value="tuffaceous"/>
-			<xs:enumeration value="tuffite"/>
-			<xs:enumeration value="tuffitic"/>
-			<xs:enumeration value="ultrabasic"/>
-			<xs:enumeration value="undifferentiated"/>
-			<xs:enumeration value="unknown"/>
-			<xs:enumeration value="wacke"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="ExistenceKind">
+	<xs:simpleType name="WellStatus">
 		<xs:annotation>
-			<xs:documentation>A list of lifecycle states like actual, required, planned, predicted, etc. These are used to qualify any top-level element (from Epicentre 2.1).</xs:documentation>
+			<xs:documentation>These values represent the status of a well or wellbore.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="actual">
+			<xs:enumeration value="abandoned">
 				<xs:annotation>
-					<xs:documentation>The object actually exists (from Epicentre 2.1).</xs:documentation>
+					<xs:documentation>The status of a facility in which drilling, 
+completion, and production operations have been permanently 
+terminated.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="planned">
+			<xs:enumeration value="active">
 				<xs:annotation>
-					<xs:documentation>The object exists only in the planning stage (from Epicentre 2.1).</xs:documentation>
+					<xs:documentation>For a well to be active, at least one of its 
+wellbores must be active. For a wellbore to be active, at least 
+one of its completions must be actively producing or injecting 
+fluids.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="simulated">
+			<xs:enumeration value="active -- injecting">
 				<xs:annotation>
-					<xs:documentation>Created, artificially, as an artifact of processing, to replace or to stand for one or more similar objects. Often referred to as model (from Epicentre 2.1).</xs:documentation>
+					<xs:documentation>Fluids are actively being injected into the 
+facility.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="active -- producing">
+				<xs:annotation>
+					<xs:documentation>Fluids are actively being produced from the 
+facility.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="completed">
+				<xs:annotation>
+					<xs:documentation>The completion has been installed, but the 
+facility is not yet active. This status is appropriate only 
+before the initial producing or injecting activity.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="drilling">
+				<xs:annotation>
+					<xs:documentation>The status of a well or wellbore in which drilling 
+operations have begun, but are not yet completed. The status ends 
+when another status becomes appropriate.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="partially plugged">
+				<xs:annotation>
+					<xs:documentation>The wellbore has been plugged from the bottom, 
+but only partially to the point where it intersects another wellbore.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="permitted">
+				<xs:annotation>
+					<xs:documentation>The facility has received regulatory approvel, 
+but drilling has not yet commenced. For a well, it has been spudded. 
+For a subsequent wellbore, the whipstock or similar device has not 
+yet been set.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="plugged and abandoned">
+				<xs:annotation>
+					<xs:documentation>An abandoned well (or wellbore) whose wellbores 
+have been plugged in such a manner as to prevent the migration of 
+oil, gas, salt water, or other substance from one stratum to another. 
+Generally the criteria for this status is controlled by regulatory 
+authorities.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="proposed">
+				<xs:annotation>
+					<xs:documentation>The status of a well or wellbore from conception 
+to either regulatory approval or commencement of drilling.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="sold">
+				<xs:annotation>
+					<xs:documentation>The facility has been sold, so it is no longer 
+appropriate to keep a close internal status value. Status values 
+may be added at later times without changing the sold status.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="suspended">
+				<xs:annotation>
+					<xs:documentation>Production or injection has been temporarily 
+suspended in a manner that will allow immediate resumption of 
+activities.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="temporarily abandoned">
+				<xs:annotation>
+					<xs:documentation>Production or injection has been temporarily 
+suspended in a manner that will not allow immediate resumption 
+of activities.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="testing">
+				<xs:annotation>
+					<xs:documentation>The facility operations are suspended while 
+tests are being conducted to determine formation and/or reservoir 
+properties. For example, a drillstem test. This status also 
+includes extended testing.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="tight">
+				<xs:annotation>
+					<xs:documentation>Information about the status of the well is 
+confidential. This is more explicit than unknown, since it gives 
+the reason that the status value is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="working over">
+				<xs:annotation>
+					<xs:documentation>Maintenance or data acquisition on a well during 
+the production phase. This includes any relevant job which can be 
+done while the well is shut in. This includes many jobs that occur 
+when a well is re-entered.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="LithologyKindNew">
-		<xs:annotation>
-			<xs:documentation>A description of minerals or accessories that constitute a fractional part of a lithology description</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="alkali feldspar rhyolite"/>
-			<xs:enumeration value="alkali olivine basalt"/>
-			<xs:enumeration value="amphibolite"/>
-			<xs:enumeration value="andesite"/>
-			<xs:enumeration value="anhydrite"/>
-			<xs:enumeration value="anorthositic rock"/>
-			<xs:enumeration value="anthracite"/>
-			<xs:enumeration value="aplite"/>
-			<xs:enumeration value="arenite"/>
-			<xs:enumeration value="argillaceous"/>
-			<xs:enumeration value="arkose"/>
-			<xs:enumeration value="basalt"/>
-			<xs:enumeration value="basanite"/>
-			<xs:enumeration value="bauxite"/>
-			<xs:enumeration value="bituminous coal"/>
-			<xs:enumeration value="blueschist metamorphic rock"/>
-			<xs:enumeration value="boninite"/>
-			<xs:enumeration value="breccia"/>
-			<xs:enumeration value="carbonate ooze"/>
-			<xs:enumeration value="carbonatite"/>
-			<xs:enumeration value="chalk"/>
-			<xs:enumeration value="chert"/>
-			<xs:enumeration value="clay"/>
-			<xs:enumeration value="claystone"/>
-			<xs:enumeration value="coal"/>
-			<xs:enumeration value="conglomerate"/>
-			<xs:enumeration value="dacite"/>
-			<xs:enumeration value="diabase"/>
-			<xs:enumeration value="diamictite"/>
-			<xs:enumeration value="diorite"/>
-			<xs:enumeration value="dioritoid"/>
-			<xs:enumeration value="doleritic rock"/>
-			<xs:enumeration value="dolomite"/>
-			<xs:enumeration value="dolomitic"/>
-			<xs:enumeration value="eclogite"/>
-			<xs:enumeration value="exotic alkaline rock"/>
-			<xs:enumeration value="feldspar"/>
-			<xs:enumeration value="feldspathic arenite"/>
-			<xs:enumeration value="fine grained igneous rock"/>
-			<xs:enumeration value="foid dioritoid"/>
-			<xs:enumeration value="foid gabbroid"/>
-			<xs:enumeration value="foid syenitoid"/>
-			<xs:enumeration value="foidite"/>
-			<xs:enumeration value="foiditoid"/>
-			<xs:enumeration value="foidolite"/>
-			<xs:enumeration value="foliated metamorphic rock"/>
-			<xs:enumeration value="fragmental igneous rock"/>
-			<xs:enumeration value="gabbro"/>
-			<xs:enumeration value="gabbroic rock"/>
-			<xs:enumeration value="gabbroid"/>
-			<xs:enumeration value="glauconite"/>
-			<xs:enumeration value="gneiss"/>
-			<xs:enumeration value="granite"/>
-			<xs:enumeration value="granodiorite"/>
-			<xs:enumeration value="granofels"/>
-			<xs:enumeration value="granulite"/>
-			<xs:enumeration value="gravel"/>
-			<xs:enumeration value="greenstone"/>
-			<xs:enumeration value="gumbo"/>
-			<xs:enumeration value="gypsum"/>
-			<xs:enumeration value="halite"/>
-			<xs:enumeration value="hornfels"/>
-			<xs:enumeration value="igneous rock"/>
-			<xs:enumeration value="impact generated material"/>
-			<xs:enumeration value="impure dolomite"/>
-			<xs:enumeration value="impure limestone"/>
-			<xs:enumeration value="intrusive rock (plutonic)"/>
-			<xs:enumeration value="iron rich sedimentary rock"/>
-			<xs:enumeration value="kalsilitic and melilitic rocks"/>
-			<xs:enumeration value="komatiitic rock"/>
-			<xs:enumeration value="latitic rock"/>
-			<xs:enumeration value="lignite"/>
-			<xs:enumeration value="lime boundstone"/>
-			<xs:enumeration value="lime framestone"/>
-			<xs:enumeration value="lime grainstone"/>
-			<xs:enumeration value="lime mudstone"/>
-			<xs:enumeration value="lime packstone"/>
-			<xs:enumeration value="lime wackestone"/>
-			<xs:enumeration value="limestone"/>
-			<xs:enumeration value="marble"/>
-			<xs:enumeration value="marl"/>
-			<xs:enumeration value="metamorphic rock"/>
-			<xs:enumeration value="mica schist"/>
-			<xs:enumeration value="migmatite"/>
-			<xs:enumeration value="monzogabbro"/>
-			<xs:enumeration value="mud"/>
-			<xs:enumeration value="mudstone"/>
-			<xs:enumeration value="mylonitic rock"/>
-			<xs:enumeration value="no description"/>
-			<xs:enumeration value="no sample"/>
-			<xs:enumeration value="ooze"/>
-			<xs:enumeration value="ophiolite"/>
-			<xs:enumeration value="organic bearing mudstone"/>
-			<xs:enumeration value="peat"/>
-			<xs:enumeration value="pegmatite"/>
-			<xs:enumeration value="peridotite"/>
-			<xs:enumeration value="phaneritic igneous rock"/>
-			<xs:enumeration value="phonolite"/>
-			<xs:enumeration value="phonolitoid"/>
-			<xs:enumeration value="phosphate"/>
-			<xs:enumeration value="phosphate rock"/>
-			<xs:enumeration value="phyllite"/>
-			<xs:enumeration value="porphyry"/>
-			<xs:enumeration value="potassium and magnesium salts"/>
-			<xs:enumeration value="pyroclastic breccia"/>
-			<xs:enumeration value="pyroclastic rock"/>
-			<xs:enumeration value="pyroxenite"/>
-			<xs:enumeration value="quartz arenite"/>
-			<xs:enumeration value="quartzite"/>
-			<xs:enumeration value="rhyolite"/>
-			<xs:enumeration value="rock salt"/>
-			<xs:enumeration value="sand"/>
-			<xs:enumeration value="sandstone"/>
-			<xs:enumeration value="sandy"/>
-			<xs:enumeration value="sapropel"/>
-			<xs:enumeration value="schist"/>
-			<xs:enumeration value="serpentinite"/>
-			<xs:enumeration value="shale"/>
-			<xs:enumeration value="siliceous ooze"/>
-			<xs:enumeration value="silt"/>
-			<xs:enumeration value="siltstone"/>
-			<xs:enumeration value="skarn"/>
-			<xs:enumeration value="slate"/>
-			<xs:enumeration value="spilite"/>
-			<xs:enumeration value="syenite"/>
-			<xs:enumeration value="syenitoid"/>
-			<xs:enumeration value="sylvite"/>
-			<xs:enumeration value="tephrite"/>
-			<xs:enumeration value="tephritoid"/>
-			<xs:enumeration value="tholeiitic basalt"/>
-			<xs:enumeration value="tonalite"/>
-			<xs:enumeration value="trachyte"/>
-			<xs:enumeration value="trachytic rock"/>
-			<xs:enumeration value="trachytoid"/>
-			<xs:enumeration value="travertine"/>
-			<xs:enumeration value="tuff"/>
-			<xs:enumeration value="tuffite"/>
-			<xs:enumeration value="ultrabasic"/>
-			<xs:enumeration value="undifferentiated"/>
-			<xs:enumeration value="unknown"/>
-			<xs:enumeration value="wacke"/>
-		</xs:restriction>
+	<xs:simpleType name="LithologyQualifierKindExt">
+		<xs:union memberTypes="eml:LithologyQualifierKind eml:EnumExtensionPattern"/>
 	</xs:simpleType>
-	<xs:simpleType name="MeasureClass">
-		<xs:annotation>
-			<xs:documentation>Measure class values. The list of standard values is contained in the WITSML enumValues.xml file.</xs:documentation>
-		</xs:annotation>
+	<xs:simpleType name="QuantityClassKind">
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="absorbed dose"/>
-			<xs:enumeration value="acceleration linear"/>
-			<xs:enumeration value="activity (of radioactivity)"/>
+			<xs:enumeration value="activity of radioactivity"/>
 			<xs:enumeration value="amount of substance"/>
+			<xs:enumeration value="amount of substance per amount of substance"/>
+			<xs:enumeration value="amount of substance per area"/>
+			<xs:enumeration value="amount of substance per time"/>
+			<xs:enumeration value="amount of substance per time per area"/>
+			<xs:enumeration value="amount of substance per volume"/>
 			<xs:enumeration value="angle per length"/>
-			<xs:enumeration value="angle per time"/>
 			<xs:enumeration value="angle per volume"/>
 			<xs:enumeration value="angular acceleration"/>
+			<xs:enumeration value="angular velocity"/>
+			<xs:enumeration value="api gamma ray"/>
+			<xs:enumeration value="api gravity"/>
+			<xs:enumeration value="api neutron"/>
 			<xs:enumeration value="area"/>
+			<xs:enumeration value="area per amount of substance"/>
 			<xs:enumeration value="area per area"/>
+			<xs:enumeration value="area per count"/>
+			<xs:enumeration value="area per mass"/>
+			<xs:enumeration value="area per time"/>
 			<xs:enumeration value="area per volume"/>
-			<xs:enumeration value="attenuation"/>
-			<xs:enumeration value="attenuation per length"/>
+			<xs:enumeration value="attenuation per frequency interval"/>
 			<xs:enumeration value="capacitance"/>
-			<xs:enumeration value="charge density"/>
-			<xs:enumeration value="chemical potential"/>
-			<xs:enumeration value="compressibility"/>
-			<xs:enumeration value="concentration of B"/>
-			<xs:enumeration value="conductivity"/>
-			<xs:enumeration value="cross section absorption"/>
-			<xs:enumeration value="current density"/>
-			<xs:enumeration value="Darcy flow coefficient"/>
-			<xs:enumeration value="data transmission speed"/>
-			<xs:enumeration value="delta temperature"/>
-			<xs:enumeration value="density"/>
+			<xs:enumeration value="cation exchange capacity"/>
+			<xs:enumeration value="data transfer speed"/>
 			<xs:enumeration value="diffusion coefficient"/>
+			<xs:enumeration value="diffusive time of flight"/>
 			<xs:enumeration value="digital storage"/>
 			<xs:enumeration value="dimensionless"/>
+			<xs:enumeration value="dipole moment"/>
 			<xs:enumeration value="dose equivalent"/>
-			<xs:enumeration value="dose equivalent rate"/>
 			<xs:enumeration value="dynamic viscosity"/>
 			<xs:enumeration value="electric charge"/>
+			<xs:enumeration value="electric charge per area"/>
+			<xs:enumeration value="electric charge per mass"/>
+			<xs:enumeration value="electric charge per volume"/>
 			<xs:enumeration value="electric conductance"/>
+			<xs:enumeration value="electric conductivity"/>
 			<xs:enumeration value="electric current"/>
-			<xs:enumeration value="electric dipole moment"/>
+			<xs:enumeration value="electric current density"/>
 			<xs:enumeration value="electric field strength"/>
-			<xs:enumeration value="electric polarization"/>
-			<xs:enumeration value="electric potential"/>
+			<xs:enumeration value="electric potential difference"/>
+			<xs:enumeration value="electric resistance"/>
+			<xs:enumeration value="electric resistance per length"/>
 			<xs:enumeration value="electrical resistivity"/>
-			<xs:enumeration value="electrochemical equivalent"/>
 			<xs:enumeration value="electromagnetic moment"/>
+			<xs:enumeration value="energy"/>
 			<xs:enumeration value="energy length per area"/>
 			<xs:enumeration value="energy length per time area temperature"/>
 			<xs:enumeration value="energy per area"/>
 			<xs:enumeration value="energy per length"/>
-			<xs:enumeration value="equivalent per mass"/>
-			<xs:enumeration value="equivalent per volume"/>
-			<xs:enumeration value="exposure (radioactivity)"/>
+			<xs:enumeration value="energy per mass"/>
+			<xs:enumeration value="energy per mass per time"/>
+			<xs:enumeration value="energy per volume"/>
 			<xs:enumeration value="force"/>
 			<xs:enumeration value="force area"/>
 			<xs:enumeration value="force length per length"/>
@@ -2277,21 +2474,25 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="force per volume"/>
 			<xs:enumeration value="frequency"/>
 			<xs:enumeration value="frequency interval"/>
-			<xs:enumeration value="gamma ray API unit"/>
 			<xs:enumeration value="heat capacity"/>
 			<xs:enumeration value="heat flow rate"/>
 			<xs:enumeration value="heat transfer coefficient"/>
 			<xs:enumeration value="illuminance"/>
-			<xs:enumeration value="irradiance"/>
+			<xs:enumeration value="inductance"/>
 			<xs:enumeration value="isothermal compressibility"/>
 			<xs:enumeration value="kinematic viscosity"/>
 			<xs:enumeration value="length"/>
 			<xs:enumeration value="length per length"/>
+			<xs:enumeration value="length per mass"/>
+			<xs:enumeration value="length per pressure"/>
 			<xs:enumeration value="length per temperature"/>
+			<xs:enumeration value="length per time"/>
 			<xs:enumeration value="length per volume"/>
-			<xs:enumeration value="level of power intensity"/>
 			<xs:enumeration value="light exposure"/>
+			<xs:enumeration value="linear acceleration"/>
 			<xs:enumeration value="linear thermal expansion"/>
+			<xs:enumeration value="logarithmic power ratio"/>
+			<xs:enumeration value="logarithmic power ratio per length"/>
 			<xs:enumeration value="luminance"/>
 			<xs:enumeration value="luminous efficacy"/>
 			<xs:enumeration value="luminous flux"/>
@@ -2299,291 +2500,132 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="magnetic dipole moment"/>
 			<xs:enumeration value="magnetic field strength"/>
 			<xs:enumeration value="magnetic flux"/>
-			<xs:enumeration value="magnetic induction"/>
+			<xs:enumeration value="magnetic flux density"/>
+			<xs:enumeration value="magnetic flux density per length"/>
 			<xs:enumeration value="magnetic permeability"/>
 			<xs:enumeration value="magnetic vector potential"/>
 			<xs:enumeration value="mass"/>
-			<xs:enumeration value="mass attenuation coefficient"/>
-			<xs:enumeration value="mass concentration"/>
-			<xs:enumeration value="mass flow rate"/>
 			<xs:enumeration value="mass length"/>
+			<xs:enumeration value="mass per area"/>
 			<xs:enumeration value="mass per energy"/>
 			<xs:enumeration value="mass per length"/>
+			<xs:enumeration value="mass per mass"/>
+			<xs:enumeration value="mass per time"/>
 			<xs:enumeration value="mass per time per area"/>
 			<xs:enumeration value="mass per time per length"/>
+			<xs:enumeration value="mass per volume"/>
 			<xs:enumeration value="mass per volume per length"/>
+			<xs:enumeration value="mass per volume per pressure"/>
+			<xs:enumeration value="mass per volume per temperature"/>
 			<xs:enumeration value="mobility"/>
-			<xs:enumeration value="modulus of compression"/>
+			<xs:enumeration value="molar energy"/>
 			<xs:enumeration value="molar heat capacity"/>
 			<xs:enumeration value="molar volume"/>
-			<xs:enumeration value="mole per area"/>
-			<xs:enumeration value="mole per time"/>
-			<xs:enumeration value="mole per time per area"/>
+			<xs:enumeration value="molecular weight"/>
 			<xs:enumeration value="moment of force"/>
 			<xs:enumeration value="moment of inertia"/>
-			<xs:enumeration value="moment of section"/>
 			<xs:enumeration value="momentum"/>
-			<xs:enumeration value="neutron API unit"/>
-			<xs:enumeration value="nonDarcy flow coefficient"/>
-			<xs:enumeration value="operations per time"/>
-			<xs:enumeration value="parachor"/>
-			<xs:enumeration value="per area"/>
-			<xs:enumeration value="per electric potential"/>
-			<xs:enumeration value="per force"/>
-			<xs:enumeration value="per length"/>
-			<xs:enumeration value="per mass"/>
-			<xs:enumeration value="per volume"/>
+			<xs:enumeration value="normalized power"/>
 			<xs:enumeration value="permeability length"/>
 			<xs:enumeration value="permeability rock"/>
-			<xs:enumeration value="permeance"/>
 			<xs:enumeration value="permittivity"/>
-			<xs:enumeration value="pH"/>
 			<xs:enumeration value="plane angle"/>
 			<xs:enumeration value="potential difference per power drop"/>
 			<xs:enumeration value="power"/>
+			<xs:enumeration value="power per area"/>
+			<xs:enumeration value="power per power"/>
 			<xs:enumeration value="power per volume"/>
 			<xs:enumeration value="pressure"/>
+			<xs:enumeration value="pressure per pressure"/>
 			<xs:enumeration value="pressure per time"/>
+			<xs:enumeration value="pressure per volume"/>
 			<xs:enumeration value="pressure squared"/>
 			<xs:enumeration value="pressure squared per force time per area"/>
 			<xs:enumeration value="pressure time per volume"/>
-			<xs:enumeration value="productivity index"/>
 			<xs:enumeration value="quantity of light"/>
 			<xs:enumeration value="radiance"/>
 			<xs:enumeration value="radiant intensity"/>
-			<xs:enumeration value="relative power"/>
-			<xs:enumeration value="relative time"/>
+			<xs:enumeration value="reciprocal area"/>
+			<xs:enumeration value="reciprocal electric potential difference"/>
+			<xs:enumeration value="reciprocal force"/>
+			<xs:enumeration value="reciprocal length"/>
+			<xs:enumeration value="reciprocal mass"/>
+			<xs:enumeration value="reciprocal mass time"/>
+			<xs:enumeration value="reciprocal pressure"/>
+			<xs:enumeration value="reciprocal time"/>
+			<xs:enumeration value="reciprocal volume"/>
 			<xs:enumeration value="reluctance"/>
-			<xs:enumeration value="resistance"/>
-			<xs:enumeration value="resistivity per length"/>
 			<xs:enumeration value="second moment of area"/>
+			<xs:enumeration value="signaling event per time"/>
 			<xs:enumeration value="solid angle"/>
-			<xs:enumeration value="specific activity (of radioactivity)"/>
-			<xs:enumeration value="specific energy"/>
 			<xs:enumeration value="specific heat capacity"/>
-			<xs:enumeration value="specific productivity index"/>
-			<xs:enumeration value="specific volume"/>
-			<xs:enumeration value="standard volume"/>
-			<xs:enumeration value="standard volume per area"/>
-			<xs:enumeration value="standard volume per time"/>
-			<xs:enumeration value="standard volume per volume"/>
-			<xs:enumeration value="surface density"/>
-			<xs:enumeration value="temperature per length"/>
-			<xs:enumeration value="temperature per time"/>
+			<xs:enumeration value="temperature interval"/>
+			<xs:enumeration value="temperature interval per length"/>
+			<xs:enumeration value="temperature interval per pressure"/>
+			<xs:enumeration value="temperature interval per time"/>
 			<xs:enumeration value="thermal conductance"/>
 			<xs:enumeration value="thermal conductivity"/>
 			<xs:enumeration value="thermal diffusivity"/>
 			<xs:enumeration value="thermal insulance"/>
 			<xs:enumeration value="thermal resistance"/>
 			<xs:enumeration value="thermodynamic temperature"/>
+			<xs:enumeration value="thermodynamic temperature per thermodynamic temperature"/>
 			<xs:enumeration value="time"/>
 			<xs:enumeration value="time per length"/>
+			<xs:enumeration value="time per mass"/>
+			<xs:enumeration value="time per time"/>
 			<xs:enumeration value="time per volume"/>
-			<xs:enumeration value="unit productivity index"/>
-			<xs:enumeration value="velocity"/>
+			<xs:enumeration value="vertical coordinate"/>
 			<xs:enumeration value="volume"/>
-			<xs:enumeration value="volume flow rate"/>
-			<xs:enumeration value="volume length per time"/>
+			<xs:enumeration value="volume flow rate per volume flow rate"/>
 			<xs:enumeration value="volume per area"/>
 			<xs:enumeration value="volume per length"/>
-			<xs:enumeration value="volume per standard volume"/>
+			<xs:enumeration value="volume per mass"/>
+			<xs:enumeration value="volume per pressure"/>
+			<xs:enumeration value="volume per rotation"/>
+			<xs:enumeration value="volume per time"/>
+			<xs:enumeration value="volume per time length"/>
 			<xs:enumeration value="volume per time per area"/>
 			<xs:enumeration value="volume per time per length"/>
+			<xs:enumeration value="volume per time per pressure"/>
+			<xs:enumeration value="volume per time per pressure length"/>
 			<xs:enumeration value="volume per time per time"/>
 			<xs:enumeration value="volume per time per volume"/>
 			<xs:enumeration value="volume per volume"/>
 			<xs:enumeration value="volumetric heat transfer coefficient"/>
 			<xs:enumeration value="volumetric thermal expansion"/>
-			<xs:enumeration value="work"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="QuantityClassKind">
+	<xs:simpleType name="ChannelClassKindExt">
+		<xs:union memberTypes="eml:ChannelClassKind eml:EnumExtensionPattern"/>
+	</xs:simpleType>
+	<xs:simpleType name="ReferenceCondition">
+		<xs:annotation>
+			<xs:documentation>Combinations of standard temperature and pressure including "ambient". The list of standard values is contained in the enumValuesProdml.xml file.</xs:documentation>
+		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="AbsorbedDose"/>
-			<xs:enumeration value="ActivityOfRadioactivity"/>
-			<xs:enumeration value="AmountOfSubstance"/>
-			<xs:enumeration value="AmountOfSubstancePerAmountOfSubstance"/>
-			<xs:enumeration value="AmountOfSubstancePerArea"/>
-			<xs:enumeration value="AmountOfSubstancePerTime"/>
-			<xs:enumeration value="AmountOfSubstancePerTimePerArea"/>
-			<xs:enumeration value="AmountOfSubstancePerVolume"/>
-			<xs:enumeration value="AnglePerLength"/>
-			<xs:enumeration value="AnglePerVolume"/>
-			<xs:enumeration value="AngularAcceleration"/>
-			<xs:enumeration value="AngularVelocity"/>
-			<xs:enumeration value="APIGammaRay"/>
-			<xs:enumeration value="APIGravity"/>
-			<xs:enumeration value="APINeutron"/>
-			<xs:enumeration value="Area"/>
-			<xs:enumeration value="AreaPerAmountOfSubstance"/>
-			<xs:enumeration value="AreaPerArea"/>
-			<xs:enumeration value="AreaPerMass"/>
-			<xs:enumeration value="AreaPerTime"/>
-			<xs:enumeration value="AreaPerVolume"/>
-			<xs:enumeration value="AttenuationPerFrequencyInterval"/>
-			<xs:enumeration value="Capacitance"/>
-			<xs:enumeration value="DataTransferSpeed"/>
-			<xs:enumeration value="DiffusionCoefficient"/>
-			<xs:enumeration value="DigitalStorage"/>
-			<xs:enumeration value="Dimensionless"/>
-			<xs:enumeration value="DipoleMoment"/>
-			<xs:enumeration value="DoseEquivalent"/>
-			<xs:enumeration value="DynamicViscosity"/>
-			<xs:enumeration value="ElectricalResistivity"/>
-			<xs:enumeration value="ElectricCharge"/>
-			<xs:enumeration value="ElectricChargePerArea"/>
-			<xs:enumeration value="ElectricChargePerMass"/>
-			<xs:enumeration value="ElectricChargePerVolume"/>
-			<xs:enumeration value="ElectricConductance"/>
-			<xs:enumeration value="ElectricConductivity"/>
-			<xs:enumeration value="ElectricCurrent"/>
-			<xs:enumeration value="ElectricCurrentDensity"/>
-			<xs:enumeration value="ElectricFieldStrength"/>
-			<xs:enumeration value="ElectricPotentialDifference"/>
-			<xs:enumeration value="ElectricResistance"/>
-			<xs:enumeration value="ElectricResistancePerLength"/>
-			<xs:enumeration value="ElectromagneticMoment"/>
-			<xs:enumeration value="Energy"/>
-			<xs:enumeration value="EnergyLengthPerArea"/>
-			<xs:enumeration value="EnergyLengthPerTimeAreaTemperature"/>
-			<xs:enumeration value="EnergyPerArea"/>
-			<xs:enumeration value="EnergyPerLength"/>
-			<xs:enumeration value="EnergyPerMass"/>
-			<xs:enumeration value="EnergyPerMassPerTime"/>
-			<xs:enumeration value="EnergyPerVolume"/>
-			<xs:enumeration value="Force"/>
-			<xs:enumeration value="ForceArea"/>
-			<xs:enumeration value="ForceLengthPerLength"/>
-			<xs:enumeration value="ForcePerForce"/>
-			<xs:enumeration value="ForcePerLength"/>
-			<xs:enumeration value="ForcePerVolume"/>
-			<xs:enumeration value="Frequency"/>
-			<xs:enumeration value="FrequencyInterval"/>
-			<xs:enumeration value="HeatCapacity"/>
-			<xs:enumeration value="HeatFlowRate"/>
-			<xs:enumeration value="HeatTransferCoefficient"/>
-			<xs:enumeration value="Illuminance"/>
-			<xs:enumeration value="Inductance"/>
-			<xs:enumeration value="IsothermalCompressibility"/>
-			<xs:enumeration value="KinematicViscosity"/>
-			<xs:enumeration value="Length"/>
-			<xs:enumeration value="LengthPerLength"/>
-			<xs:enumeration value="LengthPerMass"/>
-			<xs:enumeration value="LengthPerPressure"/>
-			<xs:enumeration value="LengthPerTemperature"/>
-			<xs:enumeration value="LengthPerTime"/>
-			<xs:enumeration value="LengthPerVolume"/>
-			<xs:enumeration value="LightExposure"/>
-			<xs:enumeration value="LinearAcceleration"/>
-			<xs:enumeration value="LinearThermalExpansion"/>
-			<xs:enumeration value="LogarithmicPowerRatio"/>
-			<xs:enumeration value="LogarithmicPowerRatioPerLength"/>
-			<xs:enumeration value="Luminance"/>
-			<xs:enumeration value="LuminousEfficacy"/>
-			<xs:enumeration value="LuminousFlux"/>
-			<xs:enumeration value="LuminousIntensity"/>
-			<xs:enumeration value="MagneticDipoleMoment"/>
-			<xs:enumeration value="MagneticFieldStrength"/>
-			<xs:enumeration value="MagneticFlux"/>
-			<xs:enumeration value="MagneticFluxDensity"/>
-			<xs:enumeration value="MagneticFluxDensityPerLength"/>
-			<xs:enumeration value="MagneticPermeability"/>
-			<xs:enumeration value="MagneticVectorPotential"/>
-			<xs:enumeration value="Mass"/>
-			<xs:enumeration value="MassLength"/>
-			<xs:enumeration value="MassPerArea"/>
-			<xs:enumeration value="MassPerEnergy"/>
-			<xs:enumeration value="MassPerLength"/>
-			<xs:enumeration value="MassPerMass"/>
-			<xs:enumeration value="MassPerTime"/>
-			<xs:enumeration value="MassPerTimePerArea"/>
-			<xs:enumeration value="MassPerTimePerLength"/>
-			<xs:enumeration value="MassPerVolume"/>
-			<xs:enumeration value="MassPerVolumePerLength"/>
-			<xs:enumeration value="Mobility"/>
-			<xs:enumeration value="MolarEnergy"/>
-			<xs:enumeration value="MolarHeatCapacity"/>
-			<xs:enumeration value="MolarVolume"/>
-			<xs:enumeration value="MolecularWeight"/>
-			<xs:enumeration value="MomentOfForce"/>
-			<xs:enumeration value="MomentOfInertia"/>
-			<xs:enumeration value="Momentum"/>
-			<xs:enumeration value="NormalizedPower"/>
-			<xs:enumeration value="PermeabilityLength"/>
-			<xs:enumeration value="PermeabilityRock"/>
-			<xs:enumeration value="Permittivity"/>
-			<xs:enumeration value="PlaneAngle"/>
-			<xs:enumeration value="PotentialDifferencePerPowerDrop"/>
-			<xs:enumeration value="Power"/>
-			<xs:enumeration value="PowerPerArea"/>
-			<xs:enumeration value="PowerPerPower"/>
-			<xs:enumeration value="PowerPerVolume"/>
-			<xs:enumeration value="Pressure"/>
-			<xs:enumeration value="PressurePerTime"/>
-			<xs:enumeration value="PressurePerVolume"/>
-			<xs:enumeration value="PressureSquared"/>
-			<xs:enumeration value="PressureSquaredPerForceTimePerArea"/>
-			<xs:enumeration value="PressureTimePerVolume"/>
-			<xs:enumeration value="QuantityOfLight"/>
-			<xs:enumeration value="Radiance"/>
-			<xs:enumeration value="RadiantIntensity"/>
-			<xs:enumeration value="ReciprocalArea"/>
-			<xs:enumeration value="ReciprocalElectricPotentialDifference"/>
-			<xs:enumeration value="ReciprocalForce"/>
-			<xs:enumeration value="ReciprocalLength"/>
-			<xs:enumeration value="ReciprocalMass"/>
-			<xs:enumeration value="ReciprocalMassTime"/>
-			<xs:enumeration value="ReciprocalPressure"/>
-			<xs:enumeration value="ReciprocalTime"/>
-			<xs:enumeration value="ReciprocalVolume"/>
-			<xs:enumeration value="Reluctance"/>
-			<xs:enumeration value="SecondMomentOfArea"/>
-			<xs:enumeration value="SignalingEventPerTime"/>
-			<xs:enumeration value="SolidAngle"/>
-			<xs:enumeration value="SpecificHeatCapacity"/>
-			<xs:enumeration value="TemperatureInterval"/>
-			<xs:enumeration value="TemperatureIntervalPerLength"/>
-			<xs:enumeration value="TemperatureIntervalPerPressure"/>
-			<xs:enumeration value="TemperatureIntervalPerTime"/>
-			<xs:enumeration value="ThermalConductance"/>
-			<xs:enumeration value="ThermalConductivity"/>
-			<xs:enumeration value="ThermalDiffusivity"/>
-			<xs:enumeration value="ThermalInsulance"/>
-			<xs:enumeration value="ThermalResistance"/>
-			<xs:enumeration value="ThermodynamicTemperature"/>
-			<xs:enumeration value="Time"/>
-			<xs:enumeration value="TimePerLength"/>
-			<xs:enumeration value="TimePerMass"/>
-			<xs:enumeration value="TimePerTime"/>
-			<xs:enumeration value="TimePerVolume"/>
-			<xs:enumeration value="VerticalCoordinate"/>
-			<xs:enumeration value="Volume"/>
-			<xs:enumeration value="VolumeFlowRatePerVolumeFlowRate"/>
-			<xs:enumeration value="VolumePerArea"/>
-			<xs:enumeration value="VolumePerLength"/>
-			<xs:enumeration value="VolumePerMass"/>
-			<xs:enumeration value="VolumePerPressure"/>
-			<xs:enumeration value="VolumePerRotation"/>
-			<xs:enumeration value="VolumePerTime"/>
-			<xs:enumeration value="VolumePerTimeLength"/>
-			<xs:enumeration value="VolumePerTimePerArea"/>
-			<xs:enumeration value="VolumePerTimePerLength"/>
-			<xs:enumeration value="VolumePerTimePerPressure"/>
-			<xs:enumeration value="VolumePerTimePerPressureLength"/>
-			<xs:enumeration value="VolumePerTimePerTime"/>
-			<xs:enumeration value="VolumePerTimePerVolume"/>
-			<xs:enumeration value="VolumePerVolume"/>
-			<xs:enumeration value="VolumetricHeatTransferCoefficient"/>
-			<xs:enumeration value="VolumetricThermalExpansion"/>
+			<xs:enumeration value="0 degC 1 atm">
+				<xs:annotation>
+					<xs:documentation>0 degC and 1 standard atmosphere</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="0 degC 1 bar"/>
+			<xs:enumeration value="15 degC 1 atm">
+				<xs:annotation>
+					<xs:documentation>15 degC and 1 standard atmosphere</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="15 degC 1 bar"/>
+			<xs:enumeration value="20 degC 1 atm"/>
+			<xs:enumeration value="20 degC 1 bar"/>
+			<xs:enumeration value="25 degC 1 bar"/>
+			<xs:enumeration value="60 degF 1 atm">
+				<xs:annotation>
+					<xs:documentation>60 degF and 1 standard atmosphere</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="60 degF 30 in Hg"/>
+			<xs:enumeration value="ambient"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<!--														-->
-	<!-- Energistics License Agreement
-			This file is distributed under the Energistics Product License Agreement at
-			http://www.energistics.org/product-license-agreement
-			Use of this file constitutes agreement with the Energistics Product License Agreement.
-			Copyright (c) 2016 Energistics. All rights reserved.
-			Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
-			-->
-	<!--														-->
-	</xs:schema>
+</xs:schema>

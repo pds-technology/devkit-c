@@ -21,23 +21,51 @@
 	<xs:element name="RigUtilization" type="witsml:RigUtilization" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="RigUtilization">
 		<xs:annotation>
-			<xs:documentation>Used to capture information about a drilling rig. </xs:documentation>
+			<xs:documentation>Rig Utilization Schema. Used to capture information related to the usage of a specific rig. For information unique to the rig itself, see the Rig object. </xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
-					<xs:element name="StartOperationTime" type="eml:TimeStamp" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="EndOperationTime" type="eml:TimeStamp" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="StartHoleDepth" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="EndHoleDepth" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="Datum" type="eml:String64" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="AirGap" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+					<xs:element name="StartOperationTime" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Air gap from Rig Floor to ground or mean sea level depending on location.</xs:documentation>
+							<xs:documentation>Start time of the operation in which the rig was used. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="WtBlock" type="eml:ForceMeasure" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="RatingBlock" type="eml:ForceMeasure" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="EndOperationTime" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>End time of the operation in which the rig was used. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="StartHoleDepth" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Measured depth of the wellbore when operations performed with this rig started. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="EndHoleDepth" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Measured depth of the wellbore when operations performed with this rig ended. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Datum" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Datum for location reference.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="AirGap" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Air gap from the rig floor to the ground or mean sea level, depending on the rig location.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="WtBlock" type="eml:ForceMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Weight of the block. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="RatingBlock" type="eml:ForceMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Rating for the block. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="NumBlockLines" type="xs:int" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>Number of block lines.</xs:documentation>
@@ -45,12 +73,12 @@
 					</xs:element>
 					<xs:element name="TypeHook" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Type of hook.</xs:documentation>
+							<xs:documentation>Type of hook installed for this rig usage. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="RatingHook" type="eml:ForceMeasure" minOccurs="0" maxOccurs="1">
+					<xs:element name="RatingHkld" type="eml:ForceMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Weight rating of the hook.</xs:documentation>
+							<xs:documentation>Maximum weight rating of the hook as configured for this rig usage. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="SizeDrillLine" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
@@ -155,7 +183,7 @@
 					</xs:element>
 					<xs:element name="CapBulkCement" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Capacity of builk cement.</xs:documentation>
+							<xs:documentation>Capacity of bulk cement.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="MainEngine" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -170,7 +198,7 @@
 					</xs:element>
 					<xs:element name="CementUnit" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Name of cement unit on the rig.</xs:documentation>
+							<xs:documentation>Name of the cement unit on the rig.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="NumBunks" type="xs:int" minOccurs="0" maxOccurs="1">
@@ -220,7 +248,7 @@
 					</xs:element>
 					<xs:element name="Azimuthing" type="xs:boolean" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Are the thrusters azimuth.  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
+							<xs:documentation>Are the thrusters azimuth?  Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="MotionCompensationMn" type="eml:ForceMeasure" minOccurs="0" maxOccurs="1">
@@ -255,7 +283,7 @@
 					</xs:element>
 					<xs:element name="Flares" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Description of flare.</xs:documentation>
+							<xs:documentation>Description of flare(s). </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Shaker" type="witsml:Shaker" minOccurs="0" maxOccurs="unbounded"/>
@@ -317,7 +345,7 @@
 	</xs:simpleType>
 	<xs:complexType name="Bop">
 		<xs:annotation>
-			<xs:documentation>Rig blowout preventer (BOP) schema</xs:documentation>
+			<xs:documentation>Rig blowout preventer (BOP) schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Manufacturer" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -495,7 +523,7 @@
 	</xs:complexType>
 	<xs:complexType name="BopComponent">
 		<xs:annotation>
-			<xs:documentation>Blowout preventer schema.</xs:documentation>
+			<xs:documentation>Blowout Preventer Component Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="TypeBopComp" type="witsml:BopType" minOccurs="0" maxOccurs="1">
@@ -567,7 +595,7 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 	</xs:simpleType>
 	<xs:complexType name="Pit">
 		<xs:annotation>
-			<xs:documentation>Rig pit schema.</xs:documentation>
+			<xs:documentation>Rig Pit Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Index" type="xs:int" minOccurs="1" maxOccurs="1">
@@ -643,16 +671,11 @@ A serial number is a type of identification tag; however, some tags contain many
 			<xs:enumeration value="storage"/>
 			<xs:enumeration value="surge tank"/>
 			<xs:enumeration value="trip tank"/>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. </xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="MudPump">
 		<xs:annotation>
-			<xs:documentation>Rig pump schema.</xs:documentation>
+			<xs:documentation>Rig Mud Pump Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Index" type="xs:int" minOccurs="1" maxOccurs="1">
@@ -692,7 +715,7 @@ A serial number is a type of identification tag; however, some tags contain many
 			</xs:element>
 			<xs:element name="NumCyl" type="xs:int" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Number of cylinders (3=single acting, 2 = double acting)</xs:documentation>
+					<xs:documentation>Number of cylinders (3 = single acting, 2 = double acting)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OdRod" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
@@ -707,7 +730,7 @@ A serial number is a type of identification tag; however, some tags contain many
 			</xs:element>
 			<xs:element name="PumpAction" type="witsml:PumpActionIntegerCode" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Pump action. 1 = Single acting, 2 = double acting.</xs:documentation>
+					<xs:documentation>Pump action. 1 = single acting, 2 = double acting.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Eff" type="eml:PowerPerPowerMeasure" minOccurs="0" maxOccurs="1">
@@ -769,7 +792,7 @@ A serial number is a type of identification tag; however, some tags contain many
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of MudPump</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of MudPump.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -793,11 +816,6 @@ A serial number is a type of identification tag; however, some tags contain many
 					<xs:documentation>Triplex mud pump, three cylinders.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="PumpActionIntegerCode">
@@ -810,7 +828,7 @@ A serial number is a type of identification tag; however, some tags contain many
 	</xs:simpleType>
 	<xs:complexType name="Shaker">
 		<xs:annotation>
-			<xs:documentation>Rig shaker schema.</xs:documentation>
+			<xs:documentation>Rig Shaker Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Name" type="eml:String64" minOccurs="1" maxOccurs="1">
@@ -820,7 +838,7 @@ A serial number is a type of identification tag; however, some tags contain many
 			</xs:element>
 			<xs:element name="Manufacturer" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Manufacturer or  supplier of the item.</xs:documentation>
+					<xs:documentation>Manufacturer or supplier of the item.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Model" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -894,13 +912,13 @@ A serial number is a type of identification tag; however, some tags contain many
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of shaker</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of Shaker. </xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="Centrifuge">
 		<xs:annotation>
-			<xs:documentation>Rig centrifuge schema.</xs:documentation>
+			<xs:documentation>Rig Centrifuge Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Manufacturer" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -952,13 +970,13 @@ A serial number is a type of identification tag; however, some tags contain many
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of centrifuge</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of Centrifuge.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="Hydrocyclone">
 		<xs:annotation>
-			<xs:documentation>Rig hydrocyclones schema. A hydrocyclone is a cone-shaped device for separating fluids and the solids dispersed in fluids.</xs:documentation>
+			<xs:documentation>Rig Hydrocyclones Schema. A hydrocyclone is a cone-shaped device for separating fluids and the solids dispersed in fluids.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Manufacturer" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -988,7 +1006,7 @@ A serial number is a type of identification tag; however, some tags contain many
 			</xs:element>
 			<xs:element name="DescCone" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Cones description.</xs:documentation>
+					<xs:documentation>Cone description.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Owner" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -1010,13 +1028,13 @@ A serial number is a type of identification tag; however, some tags contain many
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of hydrocyclone</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of Hydrocyclone.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="Degasser">
 		<xs:annotation>
-			<xs:documentation>Rig degasser schema.</xs:documentation>
+			<xs:documentation>Rig Degasser Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Manufacturer" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -1133,7 +1151,7 @@ A serial number is a type of identification tag; however, some tags contain many
 	</xs:complexType>
 	<xs:complexType name="SurfaceEquipment">
 		<xs:annotation>
-			<xs:documentation>Rig surface equipment schema.</xs:documentation>
+			<xs:documentation>Rig Surface Equipment Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Description" type="eml:String2000" minOccurs="0" maxOccurs="1">
@@ -1231,12 +1249,12 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			</xs:element>
 			<xs:element name="IdKelly" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Inner diameter of the kelly.</xs:documentation>
+					<xs:documentation>Inner diameter of the kelly bushing.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LenKelly" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Length of the kelly.</xs:documentation>
+					<xs:documentation>Length of the kelly bushing.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IdSurfaceIron" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
@@ -1256,12 +1274,12 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			</xs:element>
 			<xs:element name="IdDischargeLine" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Coiled tubing: Inner diameter of the pump discharge line.</xs:documentation>
+					<xs:documentation>Coiled tubing: inner diameter of the pump discharge line.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LenDischargeLine" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Coiled tubing: Length of the pump discharge line.</xs:documentation>
+					<xs:documentation>Coiled tubing: length of the pump discharge line.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CtWrapType" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -1271,22 +1289,22 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			</xs:element>
 			<xs:element name="OdReel" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Coiled tubing: Outside diameter of the coiled tubing reel.</xs:documentation>
+					<xs:documentation>Coiled tubing: outside diameter of the coiled tubing reel.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OdCore" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Coiled tubing: Outer diameter of the reel core that the coiled tubing is wrapped around.</xs:documentation>
+					<xs:documentation>Coiled tubing: outside diameter of the reel core that the coiled tubing is wrapped around.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WidReelWrap" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Coiled tubing: Width of the reel core. This is the inside dimension.</xs:documentation>
+					<xs:documentation>Coiled tubing: width of the reel core. This is the inside dimension.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LenReel" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Coiled tubing: Length of the coiled tubing remaining on the reel.</xs:documentation>
+					<xs:documentation>Coiled tubing: length of the coiled tubing remaining on the reel.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InjStkUp" type="xs:boolean" minOccurs="0" maxOccurs="1">
@@ -1308,17 +1326,17 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			</xs:element>
 			<xs:element name="OdUmbilical" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Coiled tubing: Outer diameter of the umbilical.</xs:documentation>
+					<xs:documentation>Coiled tubing: outer diameter of the umbilical.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LenUmbilical" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Coiled tubing: Length of the umbilical.</xs:documentation>
+					<xs:documentation>Coiled tubing: length of the umbilical.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IdTopStk" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Top drive: Inner diameter of the top stack.</xs:documentation>
+					<xs:documentation>Top drive: inner diameter of the top stack.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HtTopStk" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
@@ -1411,31 +1429,107 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 	<xs:element name="Rig" type="witsml:Rig" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="Rig">
 		<xs:annotation>
-			<xs:documentation>Used to capture information about a drilling rig used to drill a wellbore. </xs:documentation>
+			<xs:documentation>Rig Schema. Used to capture information unique to a drilling rig. For information about the usage of a rig in a specific operation, see the RigUtilization object. </xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
-					<xs:element name="Owner" type="eml:String64" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="TypeRig" type="witsml:RigType" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="Manufacturer" type="eml:String64" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="YearEntService" type="xs:gYear" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="ClassRig" type="eml:String64" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="Approvals" type="eml:String64" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="Registration" type="eml:String64" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="TelNumber" type="eml:String64" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="FaxNumber" type="eml:String64" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="EmailAddress" type="eml:String64" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="NameContact" type="eml:String64" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="RatingDrillDepth" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="RatingWaterDepth" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="IsOffshore" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="TypeDerrick" type="witsml:DerrickType" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="RatingDerrick" type="eml:ForceMeasure" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="HtDerrick" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="RatingHkld" type="eml:ForceMeasure" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="CapWindDerrick" type="eml:LengthPerTimeMeasure" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="NumCranes" type="xs:int" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="Owner" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The name of the company that owns the rig.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="TypeRig" type="witsml:RigType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The type of rig (e.g., semi-submersible, jack-up, etc.) </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Manufacturer" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The company that manufactured the rig.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="YearEntService" type="xs:gYear" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>The year the rig entered service. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ClassRig" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Classification of the rig. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Approvals" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Rig approvals/certification.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Registration" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Rig registration location.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="TelNumber" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Telephone number on the rig.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="FaxNumber" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Fax number on the rig. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="EmailAddress" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Email address of the contact person. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="NameContact" type="eml:String64" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Name of the contact person. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="RatingDrillDepth" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Maximum hole depth rating for the rig.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="RatingWaterDepth" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Maximum water depth rating for the rig.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="IsOffshore" type="xs:boolean" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Flag to indicate that the rig is an offshore rig (drill ship, semi-submersible, jack-up, platform, TADU). 
+Values are "true" (or "1") and "false" (or "0").</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="TypeDerrick" type="witsml:DerrickType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Derrick type.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="RatingDerrick" type="eml:ForceMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Derrick rating. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="HtDerrick" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Height of the derrick.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CapWindDerrick" type="eml:LengthPerTimeMeasure" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Derrick wind capacity.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="NumCranes" type="xs:int" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Number of cranes on the rig. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>

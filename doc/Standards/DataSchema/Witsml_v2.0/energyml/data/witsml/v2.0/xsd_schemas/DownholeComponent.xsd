@@ -10,7 +10,7 @@
 			-->
 	<!--														-->
 	<xs:annotation>
-		<xs:documentation>DownholeComponent Schema</xs:documentation>
+		<xs:documentation>DownholeComponent Schema. Captures all information about the physical completion, all of the well equipment data.</xs:documentation>
 	</xs:annotation>
 	<!--														-->
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
@@ -21,19 +21,19 @@
 	<xs:element name="DownholeComponent" type="witsml:DownholeComponent" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="DownholeComponent">
 		<xs:annotation>
-			<xs:documentation>General downhole equipment information</xs:documentation>
+			<xs:documentation>General downhole equipment information.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
 					<xs:element name="StartDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>The date range specification: start date</xs:documentation>
+							<xs:documentation>The date this equipment was installed. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="EndDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>The date range specification: end date</xs:documentation>
+							<xs:documentation>The date the equipment was removed. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="DownholeStringSet" type="witsml:DownholeStringSet" minOccurs="0" maxOccurs="1"/>
@@ -48,27 +48,27 @@
 	</xs:complexType>
 	<xs:complexType name="DownholeString">
 		<xs:annotation>
-			<xs:documentation>A section of the downhole component</xs:documentation>
+			<xs:documentation>A section of the downhole component equipment.  Strings in the completion including casing, tubing, and rod strings .A completion may have multiple sets of strings, which may be nested each inside another, or run in parallel as in dual string completions; all strings are contained in a parent wellbore. Each string is composed of equipment, and may also contain accessories and/or assemblies. </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="StringType" type="witsml:DownholeStringType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>An enumeration type defined in equipmentCatelog, the "DownholeStringEnum"                     contains valid option of "case","rod","tubing", "otherString".</xs:documentation>
+					<xs:documentation>The type of string defined in the  enumeration DownholeStringType. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SubStringType" type="witsml:SubStringType" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>An enumeration type define for express further string type etc. "SurfaceCasing", "IntermediaCasing", "productionCasing".</xs:documentation>
+					<xs:documentation>The type of substring which can be SurfaceCasing, IntermediaCasing or ProductionCasing. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Name" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The name of downhole string.</xs:documentation>
+					<xs:documentation>The name of the downhole string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StringInstallDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The install date of downhole string.</xs:documentation>
+					<xs:documentation>The install date of the downhole string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ParentStringsName" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -83,7 +83,7 @@
 			</xs:element>
 			<xs:element name="AxisOffset" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>the distance from the sibling string.</xs:documentation>
+					<xs:documentation>The distance from a sibling string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
@@ -99,13 +99,13 @@
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of DownholeString</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of DownholeString.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="StringEquipmentSet">
 		<xs:annotation>
-			<xs:documentation>Information on collection of equipment attached to the string</xs:documentation>
+			<xs:documentation>Information on collection of set of equipment included in the string.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="StringEquipment" type="witsml:StringEquipment" minOccurs="1" maxOccurs="unbounded"/>
@@ -113,22 +113,22 @@
 	</xs:complexType>
 	<xs:complexType name="StringEquipment">
 		<xs:annotation>
-			<xs:documentation>Information regarding equipment found along a string</xs:documentation>
+			<xs:documentation>Information regarding equipment that composes (makes up) a string. </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="EquipmentType" type="witsml:EquipmentTypeExt" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The type of the equipment.  Enumeration is defined in cs_equipmentCatalog.xsd. "Optional" is for expansion purpose, strong suggest that only ignore it if the equipment type could not found from equipmentType definition.</xs:documentation>
+					<xs:documentation>The type of the equipment. See enumerated values. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Name" type="eml:String2000" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The name of the equipment.  Length of this element is 256 characters.</xs:documentation>
+					<xs:documentation>The name of the equipment.  </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EquipmentEventHistory" type="witsml:EventInfo" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>History of event tied to this equipment</xs:documentation>
+					<xs:documentation>History of events related to this equipment. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -138,7 +138,7 @@
 			</xs:element>
 			<xs:element name="RunNo" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The well run No</xs:documentation>
+					<xs:documentation>The well run number. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PreviousRunDays" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
@@ -148,12 +148,12 @@
 			</xs:element>
 			<xs:element name="ObjectCondition" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Object condition at installation</xs:documentation>
+					<xs:documentation>Object condition at installation.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SurfaceCondition" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Object surface condition</xs:documentation>
+					<xs:documentation>Object surface condition.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Count" type="xs:int" minOccurs="0" maxOccurs="1">
@@ -163,18 +163,17 @@
 			</xs:element>
 			<xs:element name="Length" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The total length of the equipment.  This is NOT length per unit.
-                    This is the length of unit stored at equipmentset's equipment information section.</xs:documentation>
+					<xs:documentation>The total length of the equipment.  This is NOT length per unit. This is the length of unit stored at equipmentset's equipment information section.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Measured depth interval in which the string equipment is installed.</xs:documentation>
+					<xs:documentation>Measured depth interval in which the equipment is installed in the string. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TvdInterval" type="eml:TvdInterval" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>True vertical depth interval in which the string equipment is installed.</xs:documentation>
+					<xs:documentation>True vertical depth interval in which the equipment is installed in the string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OutsideString" type="xs:boolean" minOccurs="0" maxOccurs="1">
@@ -184,37 +183,37 @@
 			</xs:element>
 			<xs:element name="TensileMax" type="eml:ForceMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Max Tensile Strength</xs:documentation>
+					<xs:documentation>Max tensile strength.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PresRating" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Pressure  Rating</xs:documentation>
+					<xs:documentation>Pressure  rating.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PresCollapse" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Collapse Pressure</xs:documentation>
+					<xs:documentation>Collapse pressure.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PresBurst" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Burst Pressure</xs:documentation>
+					<xs:documentation>Burst pressure.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HeatRating" type="eml:ThermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>heat rating</xs:documentation>
+					<xs:documentation>Heat rating.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IsLinetoSurface" type="xs:boolean" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Flag indicating the equipment has line connected to surface.</xs:documentation>
+					<xs:documentation>Flag indicating the equipment has a line connected to the surface.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IsCentralized" type="xs:boolean" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Flag indicating equipment is centralized</xs:documentation>
+					<xs:documentation>Flag indicating equipment is centralized.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HasScratchers" type="xs:boolean" minOccurs="0" maxOccurs="1">
@@ -224,7 +223,7 @@
 			</xs:element>
 			<xs:element name="PerforationSetRefId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>reference the perforated hole in equipment after perforation event.</xs:documentation>
+					<xs:documentation>Reference to the perforated hole in the equipment after a perforation event.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PermanentRemarks" type="eml:String2000" minOccurs="0" maxOccurs="1">
@@ -234,7 +233,7 @@
 			</xs:element>
 			<xs:element name="UsageComment" type="eml:String2000" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Remarks on usage of this equipment.</xs:documentation>
+					<xs:documentation>Remarks on the usage of this equipment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
@@ -250,18 +249,18 @@
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of StringEquipment</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of StringEquipment.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="equipmentReferenceUid" use="optional" type="eml:String64">
+		<xs:attribute name="equipmentReferenceUid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Reference to equipment</xs:documentation>
+				<xs:documentation>Reference to a piece of equipment.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="EventInfo">
 		<xs:annotation>
-			<xs:documentation>Event information type</xs:documentation>
+			<xs:documentation>Event information type.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
@@ -275,27 +274,27 @@
 	</xs:complexType>
 	<xs:complexType name="EventRefInfo">
 		<xs:annotation>
-			<xs:documentation>Event reference collection</xs:documentation>
+			<xs:documentation>Event reference information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="EventReferenceId" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The referencing eventledger ID</xs:documentation>
+					<xs:documentation>The referencing eventledger ID.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EventDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>install/pull date</xs:documentation>
+					<xs:documentation>Install/pull date.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="ObjectSequence">
 		<xs:annotation>
-			<xs:documentation>Defines a sequence number and with an optional description attribute.</xs:documentation>
+			<xs:documentation>Defines a sequence number with an optional description attribute.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence/>
-		<xs:attribute name="description" use="optional" type="eml:String2000">
+		<xs:attribute name="description" use="required" type="eml:String2000">
 			<xs:annotation>
 				<xs:documentation>The description of this object sequence.</xs:documentation>
 			</xs:annotation>
@@ -303,63 +302,63 @@
 	</xs:complexType>
 	<xs:complexType name="ReferenceContainer">
 		<xs:annotation>
-			<xs:documentation>Information on containing or contained component</xs:documentation>
+			<xs:documentation>Information on containing or contained components.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="StringReferenceId" type="eml:String64" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>DownholeString reference id</xs:documentation>
+					<xs:documentation>DownholeString reference ID.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EquipmentReferenceId" type="eml:String64" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Equipment reference id</xs:documentation>
+					<xs:documentation>Equipment reference ID.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AccesoryEquipmentReferenceId" type="eml:String64" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Reference to the equipment for this accessory</xs:documentation>
+					<xs:documentation>Reference to the equipment for this accessory.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Comment" type="eml:String2000" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Comment on this container reference</xs:documentation>
+					<xs:documentation>Comment or remarks on this container reference.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64">
+		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of ReferenceContainer</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of ReferenceContainer.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="EquipmentConnection">
 		<xs:annotation>
-			<xs:documentation>Information detailing the connection between 2 components</xs:documentation>
+			<xs:documentation>Information detailing the connection between two components.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="witsml:Connection">
 				<xs:sequence>
 					<xs:element name="RadialOffset" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>measurement of radial offset</xs:documentation>
+							<xs:documentation>Measurement of radial offset.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="ConnectionForm" type="witsml:ConnectionFormType" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>The form of connection: Box or Pin</xs:documentation>
+							<xs:documentation>The form of connection: box or pin.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="ConnectionUpset" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Connection upset</xs:documentation>
+							<xs:documentation>Connection upset.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="ConnectionType" type="witsml:AbstractConnectionType" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
-				<xs:attribute name="stringEquipmentReferenceUid" use="optional" type="eml:String64">
+				<xs:attribute name="stringEquipmentReferenceUid" use="required" type="eml:String64">
 					<xs:annotation>
-						<xs:documentation>Reference to the string equipment</xs:documentation>
+						<xs:documentation>Reference to the string equipment. </xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
@@ -367,7 +366,7 @@
 	</xs:complexType>
 	<xs:complexType name="Assembly">
 		<xs:annotation>
-			<xs:documentation>Container element for assemblies, or collection of all assembly information.</xs:documentation>
+			<xs:documentation>Container element for assemblies, or a collection of all assembly information.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Part" type="witsml:StringEquipment" minOccurs="0" maxOccurs="unbounded"/>
@@ -375,7 +374,7 @@
 	</xs:complexType>
 	<xs:complexType name="StringAccessory">
 		<xs:annotation>
-			<xs:documentation>StringAccessories contain the stringequipment's decorative components. An accessory is the stringEquipment or Strings’ decorative component.  An accessory is NOT directly screwed to the string. This part DOES NOT carry the weight of the rest of the String as opposed to the stringEquipment which does. An Accessory is UNLIKE an Assembly on which the stringEquipment is built out of.</xs:documentation>
+			<xs:documentation>StringAccessories contain the stringequipment's decorative components. An accessory is the stringEquipment or Strings’ decorative component.  An accessory is NOT directly screwed to the string. This part DOES NOT carry the weight of the rest of the String as opposed to the stringEquipment, which does. An Accessory is UNLIKE an Assembly on which the stringEquipment is built out of.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Accessory" type="witsml:StringEquipment" minOccurs="1" maxOccurs="unbounded"/>
@@ -388,7 +387,7 @@
 	</xs:simpleType>
 	<xs:complexType name="BoreholeStringSet">
 		<xs:annotation>
-			<xs:documentation>Assemblies container element, or a collection of all assembly information.</xs:documentation>
+			<xs:documentation>Borehole string container element, or a collection of all borehole strings.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="BoreholeString" type="witsml:BoreholeString" minOccurs="1" maxOccurs="unbounded"/>
@@ -396,12 +395,12 @@
 	</xs:complexType>
 	<xs:complexType name="BoreholeString">
 		<xs:annotation>
-			<xs:documentation>A section of a borehole</xs:documentation>
+			<xs:documentation>A section of a borehole. Used to define the drilled hole that corresponds to the wellbore. A collection of contiguous and non-overlapping borehole sections is allowed. Each section has depth range, diameter, and kind.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Name" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The name of the borehole String</xs:documentation>
+					<xs:documentation>The name of the borehole string.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Accessories" type="witsml:StringAccessory" minOccurs="0" maxOccurs="1"/>
@@ -411,23 +410,23 @@
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of BoreholeString</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of BoreholeString.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="Borehole">
 		<xs:annotation>
-			<xs:documentation>Information on the borehole</xs:documentation>
+			<xs:documentation>Information on the borehole.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Name" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The name of borehole</xs:documentation>
+					<xs:documentation>The name of the borehole.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TypeBorehole" type="witsml:BoreholeType" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Type of borehole. etc. Cavern, cavity, NormalBorehole,UnderReam</xs:documentation>
+					<xs:documentation>Type of borehole. etc. cavern, cavity, normal borehole, under ream, etc.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
@@ -442,7 +441,7 @@
 			</xs:element>
 			<xs:element name="BoreholeDiameter" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Borehole diameter</xs:documentation>
+					<xs:documentation>Borehole diameter.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DescriptionPermanent" type="eml:String2000" minOccurs="0" maxOccurs="1">
@@ -459,7 +458,7 @@
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of Borehole</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of Borehole.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -470,12 +469,12 @@
 		<xs:sequence>
 			<xs:element name="Name" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Name of the feature</xs:documentation>
+					<xs:documentation>Name of the feature.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GeologyType" type="witsml:GeologyType" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Aquifer or reservoir</xs:documentation>
+					<xs:documentation>Aquifer or reservoir.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FeatureMdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
@@ -496,7 +495,7 @@
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of GeologyFeature</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of GeologyFeature.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -510,7 +509,7 @@
 	</xs:complexType>
 	<xs:complexType name="EquipmentSet">
 		<xs:annotation>
-			<xs:documentation>Information on the collection of equipment</xs:documentation>
+			<xs:documentation>Information on the collection of equipment.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Equipment" type="witsml:Equipment" minOccurs="1" maxOccurs="unbounded"/>
@@ -518,7 +517,7 @@
 	</xs:complexType>
 	<xs:complexType name="Equipment">
 		<xs:annotation>
-			<xs:documentation>Information on this piece of equipment</xs:documentation>
+			<xs:documentation>Information on a piece of equipment. Each kind of equipment in the set has a type (what it is) and attributes common across all instances of that type of equipment. The String Equipment then references these common attributes. </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="EquipmentName" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -528,7 +527,7 @@
 			</xs:element>
 			<xs:element name="EquipmentType" type="witsml:EquipmentTypeExt" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The equipment type etc. bridge plug, bull plug. capillary tubing..</xs:documentation>
+					<xs:documentation>The equipment type etc. bridge plug, bull plug. capillary tubing.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Manufacturer" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -548,12 +547,12 @@
 			</xs:element>
 			<xs:element name="CatalogName" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Name of equipment as found in catalog.</xs:documentation>
+					<xs:documentation>Name of equipment as found in the catalog.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BrandName" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The equipment's brand name .</xs:documentation>
+					<xs:documentation>The equipment's brand name. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ModelType" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -563,17 +562,17 @@
 			</xs:element>
 			<xs:element name="Series" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Series number</xs:documentation>
+					<xs:documentation>Series number.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IsSerialized" type="xs:boolean" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>a flag indicates the equipment has serialNumber.</xs:documentation>
+					<xs:documentation>A flag that indicates the equipment has a serial number.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SerialNumber" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>serial number</xs:documentation>
+					<xs:documentation>Serial number.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PartNo" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -583,12 +582,12 @@
 			</xs:element>
 			<xs:element name="SurfaceCondition" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>surface condition.</xs:documentation>
+					<xs:documentation>Surface condition.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Material" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Material that equipment is made from</xs:documentation>
+					<xs:documentation>Material that the equipment is made from.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Grade" type="witsml:GradeType" minOccurs="0" maxOccurs="1">
@@ -603,17 +602,17 @@
 			</xs:element>
 			<xs:element name="CoatingLinerApplied" type="xs:boolean" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Flag indicating whether equipment has coating</xs:documentation>
+					<xs:documentation>Flag indicating whether equipment has a coating.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OutsideCoating" type="witsml:Coating" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Equipment's outside coating based on enumeration value</xs:documentation>
+					<xs:documentation>Equipment's outside coating based on enumeration value.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InsideCoating" type="witsml:Coating" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Equipment's inner coating based on enumeration value</xs:documentation>
+					<xs:documentation>Equipment's inner coating based on enumeration value.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="UnitLength" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
@@ -683,7 +682,7 @@
 			</xs:element>
 			<xs:element name="NameService" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>sweet or sour service.</xs:documentation>
+					<xs:documentation>Sweet or sour service.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="eml:String2000" minOccurs="0" maxOccurs="1">
@@ -713,13 +712,13 @@
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of Equipment</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of Equipment.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="ExtPropNameValue">
 		<xs:annotation>
-			<xs:documentation>Name-value extensions for the equipment property</xs:documentation>
+			<xs:documentation>Name-value extensions for the equipment property.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Name" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -733,40 +732,40 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64">
+		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of ExtPropNameValue</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of ExtPropNameValue.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="PerfSlot">
 		<xs:annotation>
-			<xs:documentation>Information on slot resulting from perforation</xs:documentation>
+			<xs:documentation>Information on slot resulting from a perforation.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="SlotHeight" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The height of slot</xs:documentation>
+					<xs:documentation>The height of slot.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SlotWidth" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The width of the slot</xs:documentation>
+					<xs:documentation>The width of the slot.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SlotCenterDistance" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Distance from center point</xs:documentation>
+					<xs:documentation>Distance from center point.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SlotCount" type="xs:int" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The number of the slot</xs:documentation>
+					<xs:documentation>The number of the slots.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Remarks" type="eml:String2000" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Remarks regarding this perforation slot</xs:documentation>
+					<xs:documentation>Remarks and comments about this perforation slot.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
@@ -775,15 +774,15 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64">
+		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of PerfSlot</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of PerfSlot.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="PerfHole">
 		<xs:annotation>
-			<xs:documentation>Information on the perforated hole</xs:documentation>
+			<xs:documentation>Information on the perforated hole.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
@@ -793,37 +792,27 @@
 			</xs:element>
 			<xs:element name="TvdInterval" type="eml:TvdInterval" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The true vertical depth that describes the hole</xs:documentation>
+					<xs:documentation>The true vertical depth that describes the hole.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HoleDiameter" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The diameter of the hole</xs:documentation>
+					<xs:documentation>The diameter of the hole.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HoleAngle" type="eml:PlaneAngleMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The angle of the holes</xs:documentation>
+					<xs:documentation>The angle of the holes.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HolePattern" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The pattern of the holes</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="HoleDensity" type="eml:ReciprocalLengthMeasure" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The density of the holes</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="HoleCount" type="xs:int" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The number of holes</xs:documentation>
+					<xs:documentation>The pattern of the holes.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Remarks" type="eml:String2000" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Remarks regarding this perforated hole</xs:documentation>
+					<xs:documentation>Remarks and comments about this perforated hole.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
@@ -831,16 +820,26 @@
 					<xs:documentation>Extensions to the schema based on a name-value construct.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="HoleDensity" type="eml:ReciprocalLengthMeasure" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The density of the holes.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HoleCount" type="xs:int" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The number of holes.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64">
+		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of PerfHole</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of PerfHole.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="PerforationSets">
 		<xs:annotation>
-			<xs:documentation>Information on collection of contact intervals</xs:documentation>
+			<xs:documentation>Information on the collection of perforation sets. </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PerforationSet" type="witsml:PerforationSet" minOccurs="1" maxOccurs="unbounded"/>
@@ -848,17 +847,17 @@
 	</xs:complexType>
 	<xs:complexType name="PerforationSet">
 		<xs:annotation>
-			<xs:documentation>Information regarding a perforation hole</xs:documentation>
+			<xs:documentation>Information regarding a collection of perforations.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="BoreholeStringReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Reference to borehole String</xs:documentation>
+					<xs:documentation>Reference to the borehole that contains the perf set. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DownholeStringReferenceId" type="eml:String64" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Contains downhole string reference ID</xs:documentation>
+					<xs:documentation>Reference to the downhole string. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MdInterval" type="eml:MdInterval" minOccurs="0" maxOccurs="1">
@@ -868,32 +867,32 @@
 			</xs:element>
 			<xs:element name="TvdInterval" type="eml:TvdInterval" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The true vertical depth of the entire perforation set</xs:documentation>
+					<xs:documentation>The true vertical depth of the entire perforation set.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HoleDiameter" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The diameter of the hole</xs:documentation>
+					<xs:documentation>The diameter of the perf holes.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HoleAngle" type="eml:PlaneAngleMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The angle of the holes</xs:documentation>
+					<xs:documentation>The angle of the holes.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HolePattern" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The pattern of the holes</xs:documentation>
+					<xs:documentation>The pattern of the holes.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HoleDensity" type="eml:ReciprocalLengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The density of the holes</xs:documentation>
+					<xs:documentation>The density of the holes.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HoleCount" type="xs:int" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The number of holes</xs:documentation>
+					<xs:documentation>The number of holes.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FrictionFactor" type="xs:double" minOccurs="0" maxOccurs="1">
@@ -919,46 +918,46 @@ across a perforation set.</xs:documentation>
 			</xs:element>
 			<xs:element name="PerforationPenetration" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The Penetration length of perforation.</xs:documentation>
+					<xs:documentation>The penetration length of perforation.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CrushZoneDiameter" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The diameter of crushed zone</xs:documentation>
+					<xs:documentation>The diameter of the crushed zone.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CrushDamageRatio" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The ratio value of cursh damage</xs:documentation>
+					<xs:documentation>The ratio value of crash damage.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PerforationDate" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The original perforation date</xs:documentation>
+					<xs:documentation>The original perforation date.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PermanentRemarks" type="eml:String2000" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Remarks regarding this perforationSet</xs:documentation>
+					<xs:documentation>Remarks regarding this perforation set.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EventHistory" type="witsml:EventInfo" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of PerforationSet</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of PerforationSet.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="EquipmentTypeExt">
 		<xs:annotation>
-			<xs:documentation>An extension of possible equipment types</xs:documentation>
+			<xs:documentation>An extension of possible equipment types.</xs:documentation>
 		</xs:annotation>
 		<xs:union memberTypes="witsml:EquipmentType eml:EnumExtensionPattern"/>
 	</xs:simpleType>
 	<xs:simpleType name="CasingConnectionTypes">
 		<xs:annotation>
-			<xs:documentation>The connection type of casing.</xs:documentation>
+			<xs:documentation>Specifies the values for connection type of casing.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="landed"/>
@@ -968,7 +967,7 @@ across a perforation set.</xs:documentation>
 	</xs:simpleType>
 	<xs:simpleType name="TubingConnectionTypes">
 		<xs:annotation>
-			<xs:documentation>The connection type of tubing.</xs:documentation>
+			<xs:documentation>Specifies the values for the connection types of tubing.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="dogscompressionfit-notsealed"/>
@@ -978,18 +977,11 @@ across a perforation set.</xs:documentation>
 			<xs:enumeration value="selfsealing-threaded"/>
 			<xs:enumeration value="slipfit-sealed"/>
 			<xs:enumeration value="threaded"/>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. This value should not be used
-in normal situations. All reasonable attempts should be made to determine
-the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="RodConnectionTypes">
 		<xs:annotation>
-			<xs:documentation>The connection type of rod.</xs:documentation>
+			<xs:documentation>Specifies the values for the connection type of rod.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="eating nipple-cup"/>
@@ -1002,7 +994,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:simpleType>
 	<xs:simpleType name="OtherConnectionTypes">
 		<xs:annotation>
-			<xs:documentation>The other connection type which is used for other tools.</xs:documentation>
+			<xs:documentation>Specifies the values for other types of connections. </xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="cemented-in-place"/>
@@ -1011,7 +1003,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:simpleType>
 	<xs:simpleType name="ConnectionFormType">
 		<xs:annotation>
-			<xs:documentation>A type of equipment to equipment connection, e.g., flange, mandrel, welded, etc.</xs:documentation>
+			<xs:documentation>Specifies the values for the type of equipment-to-equipment connection.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="box"/>
@@ -1023,20 +1015,20 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:simpleType>
 	<xs:complexType name="AbstractConnectionType" abstract="true">
 		<xs:annotation>
-			<xs:documentation>the choice of connection type</xs:documentation>
+			<xs:documentation>The choice of connection type.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence minOccurs="1" maxOccurs="1"/>
 	</xs:complexType>
 	<xs:complexType name="CasingConnectionType">
 		<xs:annotation>
-			<xs:documentation>Container element for assemblies, or collection of all assembly information.</xs:documentation>
+			<xs:documentation>Container element for casing connections or collection of all casing connections information.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="witsml:AbstractConnectionType">
 				<xs:sequence>
 					<xs:element name="CasingConnectionType" type="witsml:CasingConnectionTypes" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Connection of type casing</xs:documentation>
+							<xs:documentation>Connection of type casing.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -1045,14 +1037,14 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:complexType>
 	<xs:complexType name="TubingConnectionType">
 		<xs:annotation>
-			<xs:documentation>Container element for assemblies, or collection of all assembly information.</xs:documentation>
+			<xs:documentation>Container element for tubing connection types  or collection of tubing connection types.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="witsml:AbstractConnectionType">
 				<xs:sequence>
 					<xs:element name="TubingConnectionType" type="witsml:TubingConnectionTypes" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Tubing connection type</xs:documentation>
+							<xs:documentation>Tubing connection type.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -1068,7 +1060,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 				<xs:sequence>
 					<xs:element name="RodConnectionType" type="witsml:RodConnectionTypes" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Connection whose type is rod</xs:documentation>
+							<xs:documentation>Connection whose type is rod.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -1077,14 +1069,14 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:complexType>
 	<xs:complexType name="OtherConnectionType">
 		<xs:annotation>
-			<xs:documentation>Container element for assemblies, or collection of all assembly information.</xs:documentation>
+			<xs:documentation>Allows you to enter a connection type other than the ones in the standard list.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="witsml:AbstractConnectionType">
 				<xs:sequence>
 					<xs:element name="OtherConnectionType" type="witsml:OtherConnectionTypes" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Connection type other than rod, casing or tubing</xs:documentation>
+							<xs:documentation>Connection type other than rod, casing or tubing.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -1093,7 +1085,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:complexType>
 	<xs:simpleType name="EquipmentType">
 		<xs:annotation>
-			<xs:documentation>Type of this equipment</xs:documentation>
+			<xs:documentation>Specifies the values for type of equipment.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="bridge plug"/>
@@ -1218,7 +1210,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:simpleType>
 	<xs:simpleType name="GradeType">
 		<xs:annotation>
-			<xs:documentation>Grade level of this piece of equipment</xs:documentation>
+			<xs:documentation>Specifies the values for the grade level of this piece of equipment. </xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="13CR"/>
@@ -1339,7 +1331,6 @@ the appropriate value. Use of this value may result in rejection in some situati
 			<xs:enumeration value="T-D63"/>
 			<xs:enumeration value="T-K65"/>
 			<xs:enumeration value="UHS"/>
-			<xs:enumeration value="Unknown"/>
 			<xs:enumeration value="USS-125"/>
 			<xs:enumeration value="USS-140"/>
 			<xs:enumeration value="USS-50"/>
@@ -1360,7 +1351,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:simpleType>
 	<xs:simpleType name="BoreholeType">
 		<xs:annotation>
-			<xs:documentation>The type of borehole, e.g., cavern, normalborehole, etc.</xs:documentation>
+			<xs:documentation>Specifies the values for the type of borehole.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="cavern"/>
@@ -1371,7 +1362,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:simpleType>
 	<xs:simpleType name="Coating">
 		<xs:annotation>
-			<xs:documentation>Type of inside or outside coating of this piece of equipment</xs:documentation>
+			<xs:documentation>Specifies the values for the type of inside or outside coating of this piece of equipment.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="bare"/>
@@ -1463,7 +1454,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:simpleType>
 	<xs:simpleType name="DownholeStringType">
 		<xs:annotation>
-			<xs:documentation>A type of downhole component (casing, rod, tubing, etc.)</xs:documentation>
+			<xs:documentation>Specifies the values for the type of downhole strings.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="casing"/>
@@ -1475,7 +1466,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:simpleType>
 	<xs:simpleType name="SubStringType">
 		<xs:annotation>
-			<xs:documentation>An enumeration to further qualify string type, e.g., surface casing, intermediate casing, production casing, etc.</xs:documentation>
+			<xs:documentation>Specifies the values  to further qualify a string type.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="abandoned junk/fish"/>
@@ -1497,7 +1488,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:simpleType>
 	<xs:simpleType name="GeologyType">
 		<xs:annotation>
-			<xs:documentation>One of either aquifer or reservoir</xs:documentation>
+			<xs:documentation>Specifies the values for type of geology.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="aquifer"/>
@@ -1506,7 +1497,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:simpleType>
 	<xs:simpleType name="PerforationToolType">
 		<xs:annotation>
-			<xs:documentation>A type of perforation tool, e.g., casing gun, mandrel, slots-undercut, etc.</xs:documentation>
+			<xs:documentation>Species the values for the type of perforation tool used to create the perfs.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="casing gun"/>

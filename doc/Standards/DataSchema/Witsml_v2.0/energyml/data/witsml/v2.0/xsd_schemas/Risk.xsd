@@ -10,7 +10,7 @@
 			-->
 	<!--														-->
 	<xs:annotation>
-		<xs:documentation>Risk Schema</xs:documentation>
+		<xs:documentation>Risk Schema.</xs:documentation>
 	</xs:annotation>
 	<!--														-->
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
@@ -20,7 +20,7 @@
 	<xs:element name="Risk" type="witsml:Risk" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="Risk">
 		<xs:annotation>
-			<xs:documentation>The risk object is used to provide a central location for capturing risk information about other well related objects.</xs:documentation>
+			<xs:documentation>Risk Schema. Used to provide a central location for capturing risk information about the well design and other well-related data objects.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
@@ -47,47 +47,47 @@
 					</xs:element>
 					<xs:element name="AffectedPersonnel" type="witsml:RiskAffectedPersonnel" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>The personnel afected by the risk.</xs:documentation>
+							<xs:documentation>The personnel affected by the risk.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="DTimStart" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Date and time that activities started.</xs:documentation>
+							<xs:documentation>Date and time that activities (related to the risk) started.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="DTimEnd" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Date and time that activities were completed.</xs:documentation>
+							<xs:documentation>Date and time that activities (related to the risk) were completed.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="MdHoleStart" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Measured Depth at start of activity.</xs:documentation>
+							<xs:documentation>Measured Depth at the start of the activity.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="MdHoleEnd" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Measured Depth at end of activity.</xs:documentation>
+							<xs:documentation>Measured Depth at the end of the activity.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="TvdHoleStart" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>True Vertical Depth at start of activity.</xs:documentation>
+							<xs:documentation>True vertical depth at the start of the activity.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="TvdHoleEnd" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>True Vertical Depth at end of activity.</xs:documentation>
+							<xs:documentation>True vertical depth at the end of the activity.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="MdBitStart" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Measured depth of bit at start of activity.</xs:documentation>
+							<xs:documentation>Measured depth of the bit at the start of the activity.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="MdBitEnd" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Measured depth of bit at end of activity.</xs:documentation>
+							<xs:documentation>Measured depth of the bit at the end of the activity.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="DiaHole" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
@@ -97,34 +97,32 @@
 					</xs:element>
 					<xs:element name="SeverityLevel" type="witsml:LevelIntegerCode" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Severity Level of the Risk. 
-Values of 1 through 5 with 1 being the lowest.</xs:documentation>
+							<xs:documentation>Severity level of the risk. Values of 1 through 5, with 1 being the lowest risk level.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="ProbabilityLevel" type="witsml:LevelIntegerCode" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Probability Level of the Risk.
-Values of 1 through 5 with 1 being the lowest.</xs:documentation>
+							<xs:documentation>Probability level of the risk occurring. Values of 1 through 5, with 1 being the lowest probability.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Summary" type="eml:String2000" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>summary description of risk.</xs:documentation>
+							<xs:documentation>Summary description of the risk.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Details" type="eml:String2000" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Complete description of Risk.</xs:documentation>
+							<xs:documentation>Complete description of the risk. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Identification" type="eml:String2000" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Details for identifing the Risk.</xs:documentation>
+							<xs:documentation>Details for identifying the risk.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Contingency" type="eml:String2000" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Plan of action if the Risk materializes.</xs:documentation>
+							<xs:documentation>Plan of action if the risk materializes.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Mitigation" type="eml:String2000" minOccurs="0" maxOccurs="unbounded">
@@ -140,7 +138,7 @@ Values of 1 through 5 with 1 being the lowest.</xs:documentation>
 	</xs:complexType>
 	<xs:simpleType name="RiskType">
 		<xs:annotation>
-			<xs:documentation>Types of risk.</xs:documentation>
+			<xs:documentation>Specifies the type of risk. </xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="risk"/>
@@ -153,12 +151,16 @@ Values of 1 through 5 with 1 being the lowest.</xs:documentation>
 	</xs:simpleType>
 	<xs:simpleType name="RiskCategory">
 		<xs:annotation>
-			<xs:documentation>Type of slow circulation rate.</xs:documentation>
+			<xs:documentation>Specifies the category of risk. </xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="hydraulics"/>
 			<xs:enumeration value="mechanical"/>
-			<xs:enumeration value="time related"/>
+			<xs:enumeration value="time related">
+				<xs:annotation>
+					<xs:documentation>Specifies the category of risk. </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="wellbore stability"/>
 			<xs:enumeration value="directional drilling"/>
 			<xs:enumeration value="bit"/>
@@ -175,7 +177,7 @@ Values of 1 through 5 with 1 being the lowest.</xs:documentation>
 	</xs:simpleType>
 	<xs:simpleType name="RiskSubCategory">
 		<xs:annotation>
-			<xs:documentation>Risk Sub-Categories.</xs:documentation>
+			<xs:documentation>Specifies the sub-category of risk, in relation to value of Risk Category. </xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="gas kick"/>
@@ -381,7 +383,7 @@ Values of 1 through 5 with 1 being the lowest.</xs:documentation>
 			<xs:enumeration value="petrophysicist"/>
 			<xs:enumeration value="production engineer"/>
 			<xs:enumeration value="remotely operated vehicle engineer"/>
-			<xs:enumeration value="safety manger"/>
+			<xs:enumeration value="safety manager"/>
 			<xs:enumeration value="sales engineer"/>
 			<xs:enumeration value="service supervisor"/>
 			<xs:enumeration value="technical support"/>

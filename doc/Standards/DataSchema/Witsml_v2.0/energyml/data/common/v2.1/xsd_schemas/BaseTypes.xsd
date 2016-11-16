@@ -149,7 +149,7 @@ i.e., iStart + jStart*ni + kStart*ni*nj</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="datum" use="optional" type="eml:String64"/>
+		<xs:attribute name="datum" use="required" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="BooleanConstantArray">
 		<xs:annotation>
@@ -250,7 +250,7 @@ i.e., iStart + jStart*ni + kStart*ni*nj</xs:documentation>
 			<xs:element name="MdTop" type="eml:LengthMeasure" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="MdBase" type="eml:LengthMeasure" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="datum" use="optional" type="eml:String64"/>
+		<xs:attribute name="datum" use="required" type="eml:String64"/>
 	</xs:complexType>
 	<xs:complexType name="JaggedArray">
 		<xs:annotation>
@@ -296,7 +296,7 @@ captured elsewhere. For example, for a log curve.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="optional" type="eml:UomEnum"/>
+				<xs:attribute name="uom" use="required" type="eml:UomEnum"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -339,7 +339,7 @@ captured elsewhere. For example, for a log curve.</xs:documentation>
 	<xs:complexType name="AuthorityQualifiedName">
 		<xs:simpleContent>
 			<xs:extension base="eml:String64">
-				<xs:attribute name="authority" use="optional" type="eml:String64"/>
+				<xs:attribute name="authority" use="required" type="eml:String64"/>
 				<xs:attribute name="code" use="optional" type="eml:String64"/>
 			</xs:extension>
 		</xs:simpleContent>

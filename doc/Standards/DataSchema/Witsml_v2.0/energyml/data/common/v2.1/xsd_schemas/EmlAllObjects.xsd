@@ -12,10 +12,12 @@
 	<xs:include schemaLocation="Abstract.xsd"/>
 	<xs:include schemaLocation="Activities.xsd"/>
 	<xs:include schemaLocation="BaseTypes.xsd"/>
+	<xs:include schemaLocation="ValueTypes.xsd"/>
 	<xs:include schemaLocation="CommonEnumerations.xsd"/>
 	<xs:include schemaLocation="CommonTypes.xsd"/>
 	<xs:include schemaLocation="CRS.xsd"/>
 	<xs:include schemaLocation="DataAssurance.xsd"/>
+	<xs:include schemaLocation="GraphicalInformation.xsd"/>
 	<xs:include schemaLocation="MeasureType.xsd"/>
 	<xs:include schemaLocation="ObjectReference.xsd"/>
 	<xs:include schemaLocation="QuantityClass.xsd"/></xs:schema>

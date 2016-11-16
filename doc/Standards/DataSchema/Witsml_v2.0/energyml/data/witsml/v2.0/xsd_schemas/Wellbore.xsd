@@ -10,7 +10,7 @@
 			-->
 	<!--														-->
 	<xs:annotation>
-		<xs:documentation>Wellbore Schema</xs:documentation>
+		<xs:documentation>Wellbore Schema. To maximize operational efficiency and increase subsurface access, a well may contain multiple wellbores, which are the actual boreholes that comprise the well. A wellbore represents the path from surface to a unique bottomhole.</xs:documentation>
 	</xs:annotation>
 	<!--														-->
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
@@ -20,7 +20,7 @@
 	<xs:element name="Wellbore" type="witsml:Wellbore" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="Wellbore">
 		<xs:annotation>
-			<xs:documentation>The wellbore object is used to capture the general information about a wellbore. This might sometimes be called a wellbore header. A wellbore represents the path from surface to a unique bottom-hole location. The wellbore object is uniquely identified within the context of one well object.</xs:documentation>
+			<xs:documentation>Used to capture the general information about a wellbore. This information is sometimes called a "wellbore header". A wellbore represents the path from surface to a unique bottomhole location. The wellbore object is uniquely identified within the context of one well object.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
@@ -154,7 +154,7 @@ raw data provider at a site.</xs:documentation>
 	</xs:complexType>
 	<xs:simpleType name="WellboreType">
 		<xs:annotation>
-			<xs:documentation>The classification of a wellbore with respect to its parent well/wellbore.</xs:documentation>
+			<xs:documentation>Specifies the values for the classification of a wellbore with respect to its parent well/wellbore.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="bypass">
@@ -192,23 +192,14 @@ position).</xs:documentation>
 			</xs:enumeration>
 			<xs:enumeration value="sidetrack">
 				<xs:annotation>
-					<xs:documentation>The wellbore is a deviation from a given wellbore, 
-that produces a different borehole from the others, and whose bottomhole 
-differs from any previously extisting wellbore bottomholes.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. This value should not be used
-in normal situations. All reasonable attempts should be made to determine
-the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+					<xs:documentation>The wellbore is a deviation from a given wellbore that produces a different borehole from the others, and whose bottomhole differs from any previously existing wellbore bottomholes.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="WellboreShape">
 		<xs:annotation>
-			<xs:documentation>These values represent the classification of a wellbore based on its shape. The source of the values and the descriptions is the POSC V2.2 "facility class" standard instance values in classification system "POSC wellbore trajectory shape".</xs:documentation>
+			<xs:documentation>Specifies values to represent the classification of a wellbore based on its shape. The source of the values and the descriptions is the POSC V2.2 "facility class" standard instance values in classification system "POSC wellbore trajectory shape".</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="build and hold">
@@ -226,9 +217,7 @@ with respect to the surface location.</xs:documentation>
 			</xs:enumeration>
 			<xs:enumeration value="double kickoff">
 				<xs:annotation>
-					<xs:documentation>Incorporates two tangential (constant, non-zero 
-inclination) sections. The second of which must be at a higher 
-inclination than the first.</xs:documentation>
+					<xs:documentation>Incorporates two tangential (constant, non-zero inclination) sections, the second of which must be at a higher inclination than the first.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="horizontal">
@@ -247,13 +236,6 @@ deviated segment, and a return toward a vertical segment.</xs:documentation>
 				<xs:annotation>
 					<xs:documentation>A wellbore that is nearly vertical with 
 respect to the surface location.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. This value should not be used
-in normal situations. All reasonable attempts should be made to determine
-the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

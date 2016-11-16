@@ -10,7 +10,7 @@
 			-->
 	<!--														-->
 	<xs:annotation>
-		<xs:documentation>ToolErrorModel Schema</xs:documentation>
+		<xs:documentation>Tool Error Model Schema.</xs:documentation>
 	</xs:annotation>
 	<!--														-->
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
@@ -18,8 +18,7 @@
 	<xs:include schemaLocation="Trajectory.xsd"/>
 	<xs:complexType name="IscwsaSurveyToolOperatingCondition">
 		<xs:annotation>
-			<xs:documentation>Describes the survey acquisition context in which an error model 
-is valid as a sequence of constraints</xs:documentation>
+			<xs:documentation>Describes the survey acquisition context in which an error model is valid as a sequence of constraints.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Parameter" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -50,7 +49,7 @@ is valid as a sequence of constraints</xs:documentation>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of IscwsaSurveyToolOperatingCondition</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of IscwsaSurveyToolOperatingCondition.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -68,12 +67,12 @@ the entire valid range of the tool.</xs:documentation>
 			</xs:element>
 			<xs:element name="Start" type="eml:PlaneAngleMeasure" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Inclination at which mode commences.</xs:documentation>
+					<xs:documentation>Inclination at which the mode begins.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="End" type="eml:PlaneAngleMeasure" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Inclination at which mode terminates.</xs:documentation>
+					<xs:documentation>Inclination at which the mode terminates.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Speed" type="eml:LengthPerTimeMeasure" minOccurs="0" maxOccurs="1">
@@ -94,13 +93,13 @@ the entire valid range of the tool.</xs:documentation>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of IscwsaSurveyToolOperatingInterval</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of IscwsaSurveyToolOperatingInterval.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="SurveyToolOperatingMode">
 		<xs:annotation>
-			<xs:documentation>The codes for the iscwsa survey tool operating modes.</xs:documentation>
+			<xs:documentation>Specifies the codes for the ISCWSA survey tool operating modes.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="continuous xy"/>
@@ -109,7 +108,7 @@ the entire valid range of the tool.</xs:documentation>
 			<xs:enumeration value="unknown"/>
 			<xs:enumeration value="stationary">
 				<xs:annotation>
-					<xs:documentation>Tool is operating in a stationary mode</xs:documentation>
+					<xs:documentation>Tool is operating in a stationary mode.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -131,7 +130,7 @@ the entire valid range of the tool.</xs:documentation>
 			</xs:element>
 			<xs:element name="GyroReinitializationDistance" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Maximum length of continuous survey before re-initialisation.</xs:documentation>
+					<xs:documentation>Maximum length of continuous survey before re-initialization.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Switching" type="xs:boolean" minOccurs="0" maxOccurs="1">
@@ -141,43 +140,42 @@ the entire valid range of the tool.</xs:documentation>
 			</xs:element>
 			<xs:element name="NoiseReductionFactor" type="xs:double" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Factor applied to Random Noise error terms depending on mode of gyro initialisation. Values must be greater than zero and less than or equal to 1.</xs:documentation>
+					<xs:documentation>Factor applied to random noise error terms, depending on the mode of gyro initialization. Values must be greater than zero and less than or equal to 1.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GyroRunningSpeed" type="eml:LengthPerTimeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Speed at which the tool traverses the wellbore during continuous survey.</xs:documentation>
+					<xs:documentation>Speed at which the tool traverses the wellbore during a continuous survey.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="ErrorModelMisalignmentMode">
 		<xs:annotation>
-			<xs:documentation>The enums for the various misalignment maths.</xs:documentation>
+			<xs:documentation>Specifies the various misalignment maths.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="unknown"/>
 			<xs:enumeration value="1">
 				<xs:annotation>
-					<xs:documentation>Alternative 1 as described in SPE 90408</xs:documentation>
+					<xs:documentation>Alternative 1 as described in SPE 90408.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2">
 				<xs:annotation>
-					<xs:documentation>Alternative 2 as described in SPE 90408</xs:documentation>
+					<xs:documentation>Alternative 2 as described in SPE 90408.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3">
 				<xs:annotation>
-					<xs:documentation>Alternative 3 as described in SPE 90408</xs:documentation>
+					<xs:documentation>Alternative 3 as described in SPE 90408.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="IscwsaErrorTermValue">
 		<xs:annotation>
-			<xs:documentation>The instantiation of an error term in an error model.
-The content of this element (a number) is the variance scaling factor of the term in the model.</xs:documentation>
+			<xs:documentation>The instantiation of an error term in an error model.The content of this element (a number) is the variance scaling factor of the term in the model.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Term" type="eml:String64" minOccurs="1" maxOccurs="1">
@@ -189,7 +187,7 @@ The same term may only be referenced once in the model.</xs:documentation>
 			</xs:element>
 			<xs:element name="Prop" type="witsml:ErrorPropagationMode" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>This is the propagation mode for this term in this model.</xs:documentation>
+					<xs:documentation>The propagation mode for this term in this model.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Bias" type="xs:double" minOccurs="0" maxOccurs="1">
@@ -211,53 +209,51 @@ The same term may only be referenced once in the model.</xs:documentation>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of IscwsaErrorTermValue</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of IscwsaErrorTermValue.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="ErrorPropagationMode">
 		<xs:annotation>
-			<xs:documentation>The codes for the various propagation modes.</xs:documentation>
+			<xs:documentation>Specifies the codes for the various propagation modes.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="B">
 				<xs:annotation>
-					<xs:documentation>Bias</xs:documentation>
+					<xs:documentation>Bias.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="R">
 				<xs:annotation>
-					<xs:documentation>Random</xs:documentation>
+					<xs:documentation>Random.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="S">
 				<xs:annotation>
-					<xs:documentation>Systematic</xs:documentation>
+					<xs:documentation>Systematic.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="W">
 				<xs:annotation>
-					<xs:documentation>Well</xs:documentation>
+					<xs:documentation>Well.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="G">
 				<xs:annotation>
-					<xs:documentation>Global</xs:documentation>
+					<xs:documentation>Global.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="MeasureOrQuantity">
 		<xs:annotation>
-			<xs:documentation>A measure with a uom or a quantity (without a uom).
-This should not be used except in situations where the underlying class of data is 
-captured elsewhere. For example, via a measure class.</xs:documentation>
+			<xs:documentation>A measure with a UOM or a quantity (without a UOM). This should not be used except in situations where the underlying class of data is captured elsewhere, e.g., in a measure class.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
-				<xs:attribute name="uom" use="optional" type="eml:UomEnum">
+				<xs:attribute name="uom" use="required" type="eml:UomEnum">
 					<xs:annotation>
-						<xs:documentation>A measure with a uom or a quantity (without a uom). This should not be used except in situations where the underlying class of data is captured elsewhere. For example, via a measure class.</xs:documentation>
+						<xs:documentation>A measure with a UOM or a quantity (without a UOM). This should not be used except in situations where the underlying class of data is captured elsewhere, e.g., in a measure class.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
@@ -266,15 +262,14 @@ captured elsewhere. For example, via a measure class.</xs:documentation>
 	<xs:element name="ToolErrorModel" type="witsml:ToolErrorModel" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="ToolErrorModel">
 		<xs:annotation>
-			<xs:documentation>The toolErrorModel object is used to define a surveying tool error model. This object is globally unique.</xs:documentation>
+			<xs:documentation>Used to define a surveying tool error model. This object is globally unique.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
 				<xs:sequence>
 					<xs:element name="TypeSurveyTool" type="witsml:TypeSurveyTool" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>The type of tool used for the measurements.  
-This is the same list as defined for a trajectoryStation.</xs:documentation>
+							<xs:documentation>The type of tool used for the measurements. This is the same list as defined for a trajectoryStation.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="UseErrorTermSet" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -294,7 +289,7 @@ contains the error terms used in this model.</xs:documentation>
 	</xs:complexType>
 	<xs:complexType name="IscwsaAuthorizationData">
 		<xs:annotation>
-			<xs:documentation>Authorization state of some entity.</xs:documentation>
+			<xs:documentation>Authorization state of some entity. The main goal of the Industry Steering Committee on Wellbore Survey Accuracy (ISCWSA) is to to produce and maintain standards for the industry relating to wellbore survey accuracy.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Author" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -332,7 +327,7 @@ This should include information regarding the derivation of the information.</xs
 	</xs:complexType>
 	<xs:simpleType name="AuthorizationStatus">
 		<xs:annotation>
-			<xs:documentation>Status of authorization: draft, authorized, superceded, etc.</xs:documentation>
+			<xs:documentation>Specifies the status of the current tool error model. </xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="draft">
@@ -345,9 +340,9 @@ This should include information regarding the derivation of the information.</xs
 					<xs:documentation>Approved for use.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="superceded">
+			<xs:enumeration value="superseded">
 				<xs:annotation>
-					<xs:documentation>Obsolete; there is a newer version available.</xs:documentation>
+					<xs:documentation>Obsolete; a newer version is available.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="withdrawn">

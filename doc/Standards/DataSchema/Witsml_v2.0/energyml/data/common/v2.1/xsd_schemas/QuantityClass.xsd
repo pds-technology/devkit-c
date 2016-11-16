@@ -946,6 +946,13 @@
 	<xs:simpleType name="MomentumUomExt">
 		<xs:union memberTypes="eml:MomentumUom eml:EnumExtensionPattern"/>
 	</xs:simpleType>
+	<xs:simpleType name="MassPerVolumePerTemperatureUom">
+		<xs:restriction base="eml:UomEnum">
+			<xs:enumeration value="kg/m3.degC"/>
+			<xs:enumeration value="kg/m3.K"/>
+			<xs:enumeration value="lb/ft.degF"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="PressurePerPressureUomExt">
 		<xs:union memberTypes="eml:PressurePerPressureUom eml:EnumExtensionPattern"/>
 	</xs:simpleType>
@@ -1153,6 +1160,12 @@
 					<xs:documentation>steradian</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MassPerVolumePerPressureUom">
+		<xs:restriction base="eml:UomEnum">
+			<xs:enumeration value="kg/m3.kPa"/>
+			<xs:enumeration value="lb/ft.psi"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="AreaPerVolumeUomExt">
@@ -4809,6 +4822,9 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MassPerVolumePerTemperatureUomExt">
+		<xs:union memberTypes="eml:MassPerVolumePerTemperatureUom eml:EnumExtensionPattern"/>
 	</xs:simpleType>
 	<xs:simpleType name="ThermodynamicTemperatureUom">
 		<xs:restriction base="eml:UomEnum">
@@ -8763,6 +8779,9 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MassPerVolumePerPressureUomExt">
+		<xs:union memberTypes="eml:MassPerVolumePerPressureUom eml:EnumExtensionPattern"/>
 	</xs:simpleType>
 	<xs:simpleType name="LinearThermalExpansionUomExt">
 		<xs:union memberTypes="eml:LinearThermalExpansionUom eml:EnumExtensionPattern"/>

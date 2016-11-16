@@ -10,16 +10,16 @@
 			-->
 	<!--														-->
 	<xs:annotation>
-		<xs:documentation>WellCMLedger Schema</xs:documentation>
+		<xs:documentation>WellCMLedger Schema. The "event ledger" concept is this: each time an activity associated with a well happens, that event is recorded in the ledger. This collection of event history is what makes it possible to support the completion use cases (snapshot in time or the cumulative history of a completion).</xs:documentation>
 	</xs:annotation>
 	<!--														-->
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
 	<!--														-->
 	<xs:include schemaLocation="WitsmlCommon.xsd"/>
 	<xs:include schemaLocation="DrillReport.xsd"/>
-	<xs:include schemaLocation="Wellbore.xsd"/>
 	<xs:include schemaLocation="DownholeComponent.xsd"/>
 	<xs:include schemaLocation="OpsReport.xsd"/>
+	<xs:include schemaLocation="Wellbore.xsd"/>
 	<xs:element name="WellCMLedger" type="witsml:WellCMLedger" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="WellCMLedger">
 		<xs:annotation>
@@ -149,7 +149,7 @@
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="eml:String64">
-				<xs:attribute name="Class" use="optional" type="witsml:EventClassType">
+				<xs:attribute name="Class" use="required" type="witsml:EventClassType">
 					<xs:annotation>
 						<xs:documentation>The type of the event (job, daily report, etc.)</xs:documentation>
 					</xs:annotation>
@@ -187,7 +187,7 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="boreholeStringReferenceId" use="optional" type="eml:String64">
+		<xs:attribute name="boreholeStringReferenceId" use="required" type="eml:String64">
 			<xs:annotation>
 				<xs:documentation>Reference to borehole String</xs:documentation>
 			</xs:annotation>
@@ -204,7 +204,7 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="downholeStringReferenceId" use="optional" type="eml:String64">
+		<xs:attribute name="downholeStringReferenceId" use="required" type="eml:String64">
 			<xs:annotation>
 				<xs:documentation>Reference to downhole string</xs:documentation>
 			</xs:annotation>
@@ -212,7 +212,7 @@
 	</xs:complexType>
 	<xs:complexType name="AbstractEventExtension" abstract="true">
 		<xs:annotation>
-			<xs:documentation>WITSML - event extension schema</xs:documentation>
+			<xs:documentation>Event extension schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence/>
 	</xs:complexType>
@@ -340,7 +340,7 @@
 				<xs:sequence>
 					<xs:element name="StimJobID" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Reference to stimJob</xs:documentation>
+							<xs:documentation>Reference to a StimJob.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
@@ -698,7 +698,7 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="uid" use="optional" type="eml:String64">
+		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
 				<xs:documentation>Unique identifier for this instance of Perforating</xs:documentation>
 			</xs:annotation>
@@ -855,13 +855,6 @@ The significance of this time is defined by the groupType.</xs:documentation>
 					<xs:documentation>Any other index type for a log.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. This value should not be used
-in normal situations. All reasonable attempts should be made to determine
-the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="PerfConveyanceMethod">
@@ -872,13 +865,6 @@ the appropriate value. Use of this value may result in rejection in some situati
 			<xs:enumeration value="slick line"/>
 			<xs:enumeration value="tubing conveyed"/>
 			<xs:enumeration value="wireline"/>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. This value should not be used
-in normal situations. All reasonable attempts should be made to determine
-the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="EventClassType">

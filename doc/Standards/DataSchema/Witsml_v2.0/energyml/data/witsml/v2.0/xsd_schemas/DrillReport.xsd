@@ -16,9 +16,9 @@
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
 	<!--														-->
 	<xs:include schemaLocation="Tubular.xsd"/>
-	<xs:include schemaLocation="FluidsReport.xsd"/>
 	<xs:include schemaLocation="WitsmlCommon.xsd"/>
 	<xs:include schemaLocation="Wellbore.xsd"/>
+	<xs:include schemaLocation="FluidsReport.xsd"/>
 	<xs:include schemaLocation="Well.xsd"/>
 	<xs:simpleType name="GasPeakType">
 		<xs:annotation>
@@ -34,11 +34,6 @@
 			<xs:enumeration value="other"/>
 			<xs:enumeration value="shut down gas"/>
 			<xs:enumeration value="trip gas"/>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. </xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:element name="DrillReport" type="witsml:DrillReport" substitutionGroup="eml:AbstractDataObject"/>
@@ -123,11 +118,6 @@ This requirement only applies to this report, which is generally a copy of the s
 			<xs:enumeration value="final">
 				<xs:annotation>
 					<xs:documentation>A report that represents the final definitive status for the well. This report is typically issued some period of time (e.g., 6 months) after drilling has concluded.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -484,11 +474,6 @@ the pressure on the formation.</xs:documentation>
 					<xs:documentation>To avoid breaking down the formation, many operators perform a formation integrity test (FIT) at the casing seat to determine if the wellbore will tolerate the maximum mud weight anticipated while drilling the interval. If the casing seat holds pressure that is equivalent to the prescribed mud density, the test is considered successful and drilling resumes.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. </xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="Rheometer">
@@ -589,7 +574,7 @@ the pressure on the formation.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="eml:String2000">
-				<xs:attribute name="dTim" use="optional" type="eml:TimeStamp">
+				<xs:attribute name="dTim" use="required" type="eml:TimeStamp">
 					<xs:annotation>
 						<xs:documentation>The timestamp of the time-qualified comment.</xs:documentation>
 					</xs:annotation>
@@ -989,11 +974,6 @@ the pressure on the formation.</xs:documentation>
 			<xs:enumeration value="planned"/>
 			<xs:enumeration value="unplanned"/>
 			<xs:enumeration value="downtime"/>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="StateDetailActivity">
@@ -1047,11 +1027,6 @@ related operations.</xs:documentation>
 					<xs:documentation>Operation achieved  the objective.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. </xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ItemState">
@@ -1072,11 +1047,6 @@ related operations.</xs:documentation>
 			<xs:enumeration value="plan">
 				<xs:annotation>
 					<xs:documentation>A planned object. That is, one which is expected to be executed in the future.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1208,7 +1178,7 @@ bottom hole assembly number.</xs:documentation>
 			<xs:documentation>Core inner barrel type.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="undifferented">
+			<xs:enumeration value="undifferentiated">
 				<xs:annotation>
 					<xs:documentation>A pipe that is located inside a core barrel to hold the core sample.</xs:documentation>
 				</xs:annotation>
@@ -1227,11 +1197,6 @@ sample using gel as the sealing material.</xs:documentation>
 			<xs:enumeration value="fiberglass">
 				<xs:annotation>
 					<xs:documentation>An inner core barrel made of glass fiber reinforced plastic.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1389,11 +1354,6 @@ was disposed of.</xs:documentation>
 			<xs:enumeration value="production test">
 				<xs:annotation>
 					<xs:documentation>Determines the daily rate of oil, gas, and water production from a (potential) reservoir.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1720,11 +1680,6 @@ repaired and ready for production.</xs:documentation>
 					<xs:documentation>Gas is flowing incidentally into a well being drilled.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. </xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="WellKillingProcedureType">
@@ -1764,11 +1719,6 @@ repaired and ready for production.</xs:documentation>
 			<xs:enumeration value="reverse circulation">
 				<xs:annotation>
 					<xs:documentation>Prescribes circulating a drilling fluid down the completion annulus, workstring annulus, or pipe annulus and taking returns up the tubing, workstring, or pipe.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

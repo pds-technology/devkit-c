@@ -620,6 +620,13 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
+	<xs:complexType name="MassPerVolumePerTemperatureMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassPerVolumePerTemperatureUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
 	<xs:complexType name="AreaMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
@@ -1138,6 +1145,13 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
+	<xs:complexType name="MassPerVolumePerTemperatureMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassPerVolumePerTemperatureUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
 	<xs:complexType name="LengthPerTimeMeasure">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
@@ -1184,6 +1198,13 @@
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
 				<xs:attribute name="uom" use="required" type="eml:ReluctanceUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="VerticalCoordinateMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:VerticalCoordinateUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -1296,6 +1317,13 @@
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
 				<xs:attribute name="uom" use="required" type="eml:ReciprocalElectricPotentialDifferenceUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MassPerVolumePerPressureMeasureExt">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassPerVolumePerPressureUomExt"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -2419,6 +2447,13 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
+	<xs:complexType name="MassPerVolumePerPressureMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:MassPerVolumePerPressureUom"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
 	<xs:complexType name="ReciprocalElectricPotentialDifferenceMeasureExt">
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
@@ -2507,6 +2542,13 @@
 		<xs:simpleContent>
 			<xs:extension base="eml:AbstractMeasure">
 				<xs:attribute name="uom" use="required" type="eml:DiffusionCoefficientUomExt"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="VerticalCoordinateMeasure">
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure">
+				<xs:attribute name="uom" use="required" type="eml:VerticalCoordinateUom"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>

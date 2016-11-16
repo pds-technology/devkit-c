@@ -10,7 +10,7 @@
 			-->
 	<!--														-->
 	<xs:annotation>
-		<xs:documentation>ToolErrorTermSet Schema</xs:documentation>
+		<xs:documentation>Tool Error Term Set Schema.</xs:documentation>
 	</xs:annotation>
 	<!--														-->
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
@@ -18,12 +18,12 @@
 	<xs:include schemaLocation="ToolErrorModel.xsd"/>
 	<xs:complexType name="AbstractIscwsaErrorCoefficient" abstract="true">
 		<xs:annotation>
-			<xs:documentation>Describes what survey measurement or value the error term applies to.</xs:documentation>
+			<xs:documentation>Describes the survey measurement or value that the error term applies to.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence/>
-		<xs:attribute name="uid" use="optional" type="eml:String64">
+		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of AbstractIscwsaErrorCoefficient</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of AbstractIscwsaErrorCoefficient.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -36,7 +36,7 @@
 				<xs:sequence>
 					<xs:element name="Azi" type="eml:String2000" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Hole azimuth. Corrected to wells azimuth reference.</xs:documentation>
+							<xs:documentation>Hole azimuth. Corrected to the well’s azimuth reference.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -52,7 +52,7 @@
 				<xs:sequence>
 					<xs:element name="Inc" type="eml:String2000" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Measured deviation from vertical.</xs:documentation>
+							<xs:documentation>Inclination, measured deviation from vertical.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -92,8 +92,7 @@
 			</xs:element>
 			<xs:element name="Unit" type="eml:UomEnum" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The unit of measure of the constant.
-This value must match an acronym from the WITSML unit of measure dictionary.</xs:documentation>
+					<xs:documentation>The unit of measure of the constant. This value must match an acronym from the Energistics unit of measure dictionary.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="eml:String2000" minOccurs="1" maxOccurs="1">
@@ -109,20 +108,18 @@ This value must match an acronym from the WITSML unit of measure dictionary.</xs
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of IscwsaNomenclatureConstant</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of IscwsaNomenclatureConstant.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="IscwsaErrorTerm">
 		<xs:annotation>
-			<xs:documentation>WITSML - Error Term Component Schema.
-The reference error terms that are included in error models via ErrorTermValues.</xs:documentation>
+			<xs:documentation>Captures the reference error terms that are included in error models using ErrorTermValues.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Name" type="eml:String64" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>This is the unique mnemonic for this term. 
-For example, "ABIX" or "DECR".</xs:documentation>
+					<xs:documentation>This is the unique mnemonic for this term, e.g., "ABIX" or "DECR".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Type" type="witsml:ErrorTermSource" minOccurs="0" maxOccurs="1">
@@ -144,14 +141,12 @@ application software. E.g., "MWD: X-Acceleromter Bias with Z-Axis Corr."</xs:doc
 			</xs:element>
 			<xs:element name="Description" type="eml:String2000" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Human-readable name for the term, may be presented in 
-application software. E.g., "MWD: X-Acceleromter Bias with Z-Axis Corr."</xs:documentation>
+					<xs:documentation>Human-readable name for the term. It may be presented in application software, e.g., "MWD: X-Acceleromter Bias with Z-Axis Corr."</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OperatingMode" type="witsml:SurveyToolOperatingMode" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Operating mode that is valid for this error term.
-In the absence of this element assume Stationary.</xs:documentation>
+					<xs:documentation>Operating mode that is valid for this error term. In the absence of this element assume "stationary".</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
@@ -163,54 +158,48 @@ In the absence of this element assume Stationary.</xs:documentation>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of IscwsaErrorTerm</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of IscwsaErrorTerm.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="ErrorTermSource">
 		<xs:annotation>
-			<xs:documentation>The codes for the various classes of error source.</xs:documentation>
+			<xs:documentation>Specifies the codes for the various classes of error sources.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="sensor">
 				<xs:annotation>
-					<xs:documentation>Errors arising from sensors in the survey tool</xs:documentation>
+					<xs:documentation>Errors arising from sensors in the survey tool.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="azimuth reference">
 				<xs:annotation>
-					<xs:documentation>Errors arising from the adoption of a particular
-reference azimuth</xs:documentation>
+					<xs:documentation>Errors arising from the adoption of a particular reference azimuth.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="magnetic">
 				<xs:annotation>
-					<xs:documentation>Errors arising from external magnetic field
-influences</xs:documentation>
+					<xs:documentation>Errors arising from external magnetic field influences.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="alignment">
 				<xs:annotation>
-					<xs:documentation>Errors arising from the attitude of tool
-relative to borehole</xs:documentation>
+					<xs:documentation>Errors arising from the misalignment of the tool relative to the borehole.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="misalignment"/>
+			<xs:enumeration value="misalignment">
+				<xs:annotation>
+					<xs:documentation>Specifies the codes for the various classes of error source.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="depth">
 				<xs:annotation>
-					<xs:documentation>Errors arising from the measurement of depth</xs:documentation>
+					<xs:documentation>Errors arising from the measurement of depth. </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="reference">
 				<xs:annotation>
-					<xs:documentation>Errors arising from the measurement of depth</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. This value should not be used
-in normal situations. All reasonable attempts should be made to determine
-the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+					<xs:documentation>Errors arising from the measurement of depth.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -229,14 +218,14 @@ the appropriate value. Use of this value may result in rejection in some situati
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of IscwsaErrorCoefficient</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of IscwsaErrorCoefficient.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:element name="ToolErrorTermSet" type="witsml:ToolErrorTermSet" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="ToolErrorTermSet">
 		<xs:annotation>
-			<xs:documentation>The toolErrorTermSet object is used to define a set of surveying tool error terms which may be utilized in a toolErrorModel. This object is globally unique.</xs:documentation>
+			<xs:documentation>Captures a set of surveying tool error terms which may be used in a toolErrorModel. This object is globally unique.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
@@ -250,7 +239,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:complexType>
 	<xs:complexType name="IscwsaNomenclature">
 		<xs:annotation>
-			<xs:documentation>A nomenclature for the description of errror terms.</xs:documentation>
+			<xs:documentation>A nomenclature for the description of error terms.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Parameter" type="witsml:IscwsaNameAndDescription" minOccurs="0" maxOccurs="unbounded"/>
@@ -282,7 +271,7 @@ The semantics of the something is defined by the parent element.</xs:documentati
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of IscwsaNameAndDescription</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of IscwsaNameAndDescription.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
@@ -295,7 +284,7 @@ The semantics of the something is defined by the parent element.</xs:documentati
 				<xs:sequence>
 					<xs:element name="Tvd" type="eml:String2000" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>The true vertical depth covered by the tool error term set</xs:documentation>
+							<xs:documentation>The true vertical depth covered by the tool error term set.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>

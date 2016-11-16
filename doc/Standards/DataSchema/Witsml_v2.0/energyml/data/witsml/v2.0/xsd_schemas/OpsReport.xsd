@@ -16,15 +16,15 @@
 	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../common/v2.1/xsd_schemas/EmlAllObjects.xsd"/>
 	<!--														-->
 	<xs:include schemaLocation="WitsmlCommon.xsd"/>
+	<xs:include schemaLocation="DrillReport.xsd"/>
 	<xs:include schemaLocation="FluidsReport.xsd"/>
+	<xs:include schemaLocation="BhaRun.xsd"/>
 	<xs:include schemaLocation="WellboreGeometry.xsd"/>
 	<xs:include schemaLocation="Trajectory.xsd"/>
-	<xs:include schemaLocation="DrillReport.xsd"/>
 	<xs:include schemaLocation="Wellbore.xsd"/>
-	<xs:include schemaLocation="BhaRun.xsd"/>
 	<xs:complexType name="ShakerScreen">
 		<xs:annotation>
-			<xs:documentation>WITSML - Operations Shaker Screen Component Schema</xs:documentation>
+			<xs:documentation>Operations Shaker Screen Component Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="DTimStart" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
@@ -39,7 +39,7 @@
 			</xs:element>
 			<xs:element name="NumDeck" type="xs:int" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Deck number mesh installed on.</xs:documentation>
+					<xs:documentation>Deck number the mesh is installed on.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MeshX" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
@@ -54,7 +54,7 @@
 			</xs:element>
 			<xs:element name="Manufacturer" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Manufacturer / supplier of the item.</xs:documentation>
+					<xs:documentation>Manufacturer or supplier of the item.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Model" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -64,15 +64,14 @@
 			</xs:element>
 			<xs:element name="CutPoint" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Shaker screen cut point - the maximum size that 
-will pass through the screen.</xs:documentation>
+					<xs:documentation>Shaker screen cut point, which is the maximum size cuttings that will pass through the screen.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="Hse">
 		<xs:annotation>
-			<xs:documentation>WITSML - Operations Health, Safety and Environment Component Schema</xs:documentation>
+			<xs:documentation>Operations Health, Safety and Environment Schema. Captures data related to HSE events (e.g., tests, inspections, meetings, and drills), test values (e.g., pressure tested to), and/or incidents (e.g., discharges, non-compliance notices received, etc.).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="DaysIncFree" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
@@ -137,7 +136,7 @@ will pass through the screen.</xs:documentation>
 			</xs:element>
 			<xs:element name="LastFireBoatDrill" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Last fire or boat drill.</xs:documentation>
+					<xs:documentation>Last fire or life boat drill.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LastAbandonDrill" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
@@ -189,7 +188,7 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			</xs:element>
 			<xs:element name="NumStopCards" type="xs:int" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Number of Health, Safety and Environment incidents reported.</xs:documentation>
+					<xs:documentation>Number of health, safety and environment incidents reported.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FluidDischarged" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
@@ -222,7 +221,7 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 	</xs:complexType>
 	<xs:complexType name="Incident">
 		<xs:annotation>
-			<xs:documentation>WITSML - Operations HSE Component Schema</xs:documentation>
+			<xs:documentation>Operations HSE Schema. Captures data for a specific incident.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="1" maxOccurs="1">
@@ -232,7 +231,7 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			</xs:element>
 			<xs:element name="Reporter" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Name of person who prepared incident report.</xs:documentation>
+					<xs:documentation>Name of the person who prepared the incident report.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NumMinorInjury" type="xs:int" minOccurs="0" maxOccurs="1">
@@ -247,7 +246,7 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			</xs:element>
 			<xs:element name="NumFatality" type="xs:int" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Number of personnel killed in incident.</xs:documentation>
+					<xs:documentation>Number of personnel killed due to the incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IsNearMiss" type="xs:boolean" minOccurs="0" maxOccurs="1">
@@ -278,17 +277,17 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			</xs:element>
 			<xs:element name="ETimLostGross" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Number of hours lost due to incident.</xs:documentation>
+					<xs:documentation>Number of hours lost due to the incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CostLossGross" type="witsml:Cost" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Gross estimate of cost incurred due to incident.</xs:documentation>
+					<xs:documentation>Gross estimate of the cost incurred due to the incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ResponsibleCompany" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Name of company that caused incident.</xs:documentation>
+					<xs:documentation>Name of the company that caused the incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
@@ -305,17 +304,17 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 	</xs:complexType>
 	<xs:complexType name="Personnel">
 		<xs:annotation>
-			<xs:documentation>WITSML - Operations Personnel Component Schema</xs:documentation>
+			<xs:documentation>Operations Personnel Component Schema. List each company on the rig at the time of the report and key information about each company, for example, name, type of service, and number of personnel. </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Company" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Name of company.</xs:documentation>
+					<xs:documentation>Name of the company. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TypeService" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Service provided by the company.</xs:documentation>
+					<xs:documentation>Service provided by the company. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NumPeople" type="xs:int" minOccurs="0" maxOccurs="1">
@@ -336,33 +335,33 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of Personnel</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of Personnel.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="SupportCraft">
 		<xs:annotation>
-			<xs:documentation>WITSML - Operations Support Craft Component Schema</xs:documentation>
+			<xs:documentation>Operations Support Craft Component Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Name" type="eml:String64" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Human recognizable context for support craft.</xs:documentation>
+					<xs:documentation>Human-recognizable context for the support craft.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TypeSupportCraft" type="witsml:SupportCraftType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Type of support craft (eg. Barge, helicopter, tug boat)</xs:documentation>
+					<xs:documentation>Type of support craft (e.g., barge, helicopter, tug boat, etc.)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DTimArrived" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Date and time when vehicle arrived at rig site.</xs:documentation>
+					<xs:documentation>Date and time when the vehicle arrived at the rig site.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DTimDeparted" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Date and time when vehicle departed rig site.</xs:documentation>
+					<xs:documentation>Date and time when the vehicle departed from the rig site.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Comments" type="eml:String2000" minOccurs="0" maxOccurs="1">
@@ -378,13 +377,13 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of SupportCraft</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of SupportCraft.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="Weather">
 		<xs:annotation>
-			<xs:documentation>WITSML - Operations Weather Component Schema</xs:documentation>
+			<xs:documentation>Operations Weather Component Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="1" maxOccurs="1">
@@ -394,7 +393,7 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			</xs:element>
 			<xs:element name="Agency" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Name of company that supplied the data.</xs:documentation>
+					<xs:documentation>Name of company that supplied the weather data.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BarometricPressure" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
@@ -404,9 +403,7 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			</xs:element>
 			<xs:element name="BeaufortScaleNumber" type="witsml:BeaufortScaleIntegerCode" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>The Beaufort wind scale is a system used to estimate and report wind speeds 
-when no measuring apparatus is available. It was invented in the early 19th Century by Admiral 
-Sir Francis Beaufort of the British Navy as a way to interpret winds from conditions.</xs:documentation>
+					<xs:documentation>The Beaufort wind force scale is a system used to estimate and report wind speeds when no measuring apparatus is available. It was invented in the early 19th century by Admiral Sir Francis Beaufort of the British Navy as a way to interpret winds from conditions. Values range from 0 (calm) to 12 (hurricane force). </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TempSurfaceMn" type="eml:ThermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
@@ -421,9 +418,7 @@ Sir Francis Beaufort of the British Navy as a way to interpret winds from condit
 			</xs:element>
 			<xs:element name="TempWindChill" type="eml:ThermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>A measure of the combined chilling effect of wind and low temperature on 
-living things, also named chill factor, e.g., according to US weather service table, an air 
-temperature of 30 degF with a 10 mi/h corresponds to a windchill of 22 degF.</xs:documentation>
+					<xs:documentation>A measure of the combined chilling effect of wind and low temperature on living things, also named chill factor, e.g., according to the US weather service table, an air temperature of 30 degF with a 10 mph corresponds to a windchill of 22 degF.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Tempsea" type="eml:ThermodynamicTemperatureMeasure" minOccurs="0" maxOccurs="1">
@@ -448,8 +443,7 @@ temperature of 30 degF with a 10 mi/h corresponds to a windchill of 22 degF.</xs
 			</xs:element>
 			<xs:element name="SignificantWave" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>An average of the higher 1/3 of the wave heights passing during a  
-sample period (typically 20 to 30 minutes).</xs:documentation>
+					<xs:documentation>An average of the higher 1/3 of the wave heights passing during a  sample period (typically 20 to 30 minutes).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MaxWave" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
@@ -494,7 +488,7 @@ sample period (typically 20 to 30 minutes).</xs:documentation>
 			</xs:element>
 			<xs:element name="CurrentSea" type="eml:LengthPerTimeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Current speed.</xs:documentation>
+					<xs:documentation>The speed of the ocean current.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AziCurrentSea" type="eml:PlaneAngleMeasure" minOccurs="0" maxOccurs="1">
@@ -521,8 +515,7 @@ sample period (typically 20 to 30 minutes).</xs:documentation>
 	</xs:complexType>
 	<xs:simpleType name="BeaufortScaleIntegerCode">
 		<xs:annotation>
-			<xs:documentation>An estimate wind strength based on the Beaufort Wind Scale. 
-Values range from 0 (calm) to 12 (hurricane).</xs:documentation>
+			<xs:documentation>An estimated wind strength based on the Beaufort Wind Scale. Values range from 0 (calm) to 12 (hurricane).</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:short">
 			<xs:pattern value=".+"/>
@@ -530,7 +523,7 @@ Values range from 0 (calm) to 12 (hurricane).</xs:documentation>
 	</xs:simpleType>
 	<xs:simpleType name="SupportCraftType">
 		<xs:annotation>
-			<xs:documentation>Types of support crafts</xs:documentation>
+			<xs:documentation>Specifies the type of support craft. </xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="barge"/>
@@ -607,7 +600,7 @@ Values range from 0 (calm) to 12 (hurricane).</xs:documentation>
 	<xs:element name="OpsReport" type="witsml:OpsReport" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="OpsReport">
 		<xs:annotation>
-			<xs:documentation>The opsReport object is used to capture a daily drilling report focused on reporting from the service company to the operator. See the drillReport for a similar object whose focus is operator to partner or to governmental agency. This object is uniquely identified within the context of one wellbore object.</xs:documentation>
+			<xs:documentation>Used to capture a daily drilling report focused on reporting from the service company to the operator. For a similar object whose focus is operator to partner or to governmental agency, see DrillReport. This object is uniquely identified within the context of one wellbore object.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
@@ -619,17 +612,17 @@ Values range from 0 (calm) to 12 (hurricane).</xs:documentation>
 					</xs:element>
 					<xs:element name="CostDay" type="witsml:Cost" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Daily Cost.</xs:documentation>
+							<xs:documentation>Daily cost.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="CostDayMud" type="witsml:Cost" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Daily Mud Cost.</xs:documentation>
+							<xs:documentation>Daily mud cost.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="DiaCsgLast" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Diameter of last casing.</xs:documentation>
+							<xs:documentation>Diameter of the last casing installed.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="DiaHole" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
@@ -639,17 +632,17 @@ Values range from 0 (calm) to 12 (hurricane).</xs:documentation>
 					</xs:element>
 					<xs:element name="DistDrill" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Distance drilled since last report.</xs:documentation>
+							<xs:documentation>Distance drilled since the previous report.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="DistDrillRot" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Distance drilled - rotating.</xs:documentation>
+							<xs:documentation>Distance drilled: rotating.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="DistDrillSlid" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Distance drilled - sliding.</xs:documentation>
+							<xs:documentation>Distance drilled: sliding.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="DistHold" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
@@ -674,12 +667,12 @@ Values range from 0 (calm) to 12 (hurricane).</xs:documentation>
 					</xs:element>
 					<xs:element name="Engineer" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Nae of Engineer.</xs:documentation>
+							<xs:documentation>Name of the engineer. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="ETimCirc" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Time spent circulating from start of bit run.</xs:documentation>
+							<xs:documentation>Time spent circulating from start of the bit run.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="ETimDrill" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
@@ -689,57 +682,57 @@ Values range from 0 (calm) to 12 (hurricane).</xs:documentation>
 					</xs:element>
 					<xs:element name="ETimDrillRot" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Time spent rotary drilling for report interval.</xs:documentation>
+							<xs:documentation>Time spent rotary drilling for the report interval.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="ETimDrillSlid" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Time spent slide drilling from start of bit run.</xs:documentation>
+							<xs:documentation>Time spent slide drilling from start of the bit run.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="ETimHold" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Time spent with no DD work (commonly in hours).</xs:documentation>
+							<xs:documentation>Time spent with no directional drilling work (commonly in hours).</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="ETimLoc" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Time rig on location (commonly in days).</xs:documentation>
+							<xs:documentation>Time the rig has been on location (commonly in days).</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="ETimReam" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Time spent reaming from start of bit run.</xs:documentation>
+							<xs:documentation>Time spent reaming from start of the bit run.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="ETimSpud" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Time since bit broke ground (commonly in days).</xs:documentation>
+							<xs:documentation>Time since the bit broke ground (commonly in days).</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="ETimStart" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Time from start of Operations (commonly in days).</xs:documentation>
+							<xs:documentation>Time from the start of operations (commonly in days).</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="ETimSteering" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Time spent steering bottom hole assembly (commonly in hours).</xs:documentation>
+							<xs:documentation>Time spent steering the bottomhole assembly (commonly in hours).</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Forecast24Hr" type="eml:String2000" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Forecast for next 24 hrs.</xs:documentation>
+							<xs:documentation>Forecast of activities for the next 24 hrs.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Geologist" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Name of operator wellsite geologist.</xs:documentation>
+							<xs:documentation>Name of the operator's wellsite geologist.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Lithology" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Lithology for the Interval.</xs:documentation>
+							<xs:documentation>Description of the lithology for the interval.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Maasp" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
@@ -759,37 +752,37 @@ Values range from 0 (calm) to 12 (hurricane).</xs:documentation>
 					</xs:element>
 					<xs:element name="MdReport" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Wellbore Measured Depth.</xs:documentation>
+							<xs:documentation>The measured depth of the wellbore.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="NameFormation" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Name of formation.</xs:documentation>
+							<xs:documentation>Name of the formation.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="NumAFE" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>AFE (authorization for expenditure) number that this cost item applies to.</xs:documentation>
+							<xs:documentation>Authorization for expenditure (AFE) number that this cost item applies to.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="NumContract" type="xs:int" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Number of contractor personnel on board.</xs:documentation>
+							<xs:documentation>Number of contractor personnel on board the rig.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="NumOperator" type="xs:int" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Number of Operator personnel on board.</xs:documentation>
+							<xs:documentation>Number of operator personnel on board the rig.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="NumPob" type="xs:int" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Total number of personnel on board.</xs:documentation>
+							<xs:documentation>Total number of personnel on board the rig.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="NumService" type="xs:int" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Number of service company personnel on board.</xs:documentation>
+							<xs:documentation>Number of service company personnel on board the rig.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="PresKickTol" type="eml:PressureMeasure" minOccurs="0" maxOccurs="1">
@@ -804,12 +797,12 @@ Values range from 0 (calm) to 12 (hurricane).</xs:documentation>
 					</xs:element>
 					<xs:element name="Rig" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>A pointer to the rig utilized in this reporting period.</xs:documentation>
+							<xs:documentation>A pointer to the rig used in this reporting period.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="RopAv" type="eml:LengthPerTimeMeasure" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Average Rate of Penetration through Interval.</xs:documentation>
+							<xs:documentation>Average rate of penetration through the interval.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="RopCurrent" type="eml:LengthPerTimeMeasure" minOccurs="0" maxOccurs="1">
@@ -824,33 +817,32 @@ Values range from 0 (calm) to 12 (hurricane).</xs:documentation>
 					</xs:element>
 					<xs:element name="Sum24Hr" type="eml:String2000" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>24 hour summary description.</xs:documentation>
+							<xs:documentation>Summary of the operations and events for the reporting period (the previous 24 hours). </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Supervisor" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Name of operator rig supervisor.</xs:documentation>
+							<xs:documentation>Name of the operator's rig supervisor.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="Tubular" type="eml:String64" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>A pointer to the tubular (assembly) used in this report period.
-This represents a foreign key to tubular.</xs:documentation>
+							<xs:documentation>A pointer to the tubular assembly (as specified in the Tubular object) used in this report period.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="TvdCsgLast" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>True vertical depth of last casing.</xs:documentation>
+							<xs:documentation>True vertical depth of the last casing installed. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="TvdLot" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>True vertical depth of leak off test point.</xs:documentation>
+							<xs:documentation>True vertical depth of the leak-off test point.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="TvdReport" type="witsml:WellVerticalDepthCoord" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Wellbore True Vertical Depth.</xs:documentation>
+							<xs:documentation>True vertical depth of the wellbore. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="VolKickTol" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
@@ -883,7 +875,7 @@ This represents a foreign key to tubular.</xs:documentation>
 	</xs:complexType>
 	<xs:complexType name="DayCost">
 		<xs:annotation>
-			<xs:documentation>WITSML - Day Cost Component Schema</xs:documentation>
+			<xs:documentation>Day Cost SchemaSchema. Captures daily cost information for the object (cost item) to which it is attached. </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="NumAFE" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -913,7 +905,7 @@ This represents a foreign key to tubular.</xs:documentation>
 			</xs:element>
 			<xs:element name="CostItemDescription" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Description of cost item.</xs:documentation>
+					<xs:documentation>Description of the cost item.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ItemKind" type="eml:UomEnum" minOccurs="0" maxOccurs="1">
@@ -928,22 +920,22 @@ This represents a foreign key to tubular.</xs:documentation>
 			</xs:element>
 			<xs:element name="QtyItem" type="xs:int" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Number of cost items used that day e.g. 1 rig dayrate, 30 joints casing.</xs:documentation>
+					<xs:documentation>Number of cost items used that day, e.g., 1 rig dayrate, 30 joints of casing.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NumInvoice" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Invoice number for cost item, bill sent to Operator.</xs:documentation>
+					<xs:documentation>Invoice number for cost item; the  bill is sent to the operator.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NumPO" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Purchase order number, provided by Operator.</xs:documentation>
+					<xs:documentation>Purchase order number provided by the operator.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NumTicket" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Field Ticket number, issued by service company on location.</xs:documentation>
+					<xs:documentation>The field ticket number issued by the service company on location.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IsCarryOver" type="xs:boolean" minOccurs="0" maxOccurs="1">
@@ -960,10 +952,7 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			</xs:element>
 			<xs:element name="NameTag" type="witsml:NameTag" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>An identification tag for the item.
-A serial number is a type of identification tag however
-some tags contain many pieces of information.
-This structure just identifies the tag and does not describe the contents.</xs:documentation>
+					<xs:documentation>An identification tag for the item. A serial number is a type of identification tag; however, some tags contain many pieces of information. This element only identifies the tag and does not describe the contents.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NumSerial" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -973,7 +962,7 @@ This structure just identifies the tag and does not describe the contents.</xs:d
 			</xs:element>
 			<xs:element name="NameVendor" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Name of vendor.</xs:documentation>
+					<xs:documentation>Name of the vendor.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NumVendor" type="eml:String64" minOccurs="0" maxOccurs="1">
@@ -1004,7 +993,7 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			</xs:element>
 			<xs:element name="CostPerItem" type="witsml:Cost" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Cost per cost item, assume same currency.</xs:documentation>
+					<xs:documentation>Cost of each cost item, assume same currency.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -1016,7 +1005,7 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 	</xs:complexType>
 	<xs:complexType name="Scr">
 		<xs:annotation>
-			<xs:documentation>WITSML - Operations Slow Circulation Rates (SCR) Component Schema</xs:documentation>
+			<xs:documentation>Operations Slow Circulation Rates (SCR) Component Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="1" maxOccurs="1">
@@ -1026,7 +1015,7 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			</xs:element>
 			<xs:element name="Pump" type="xs:int" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>This is a pointer to the corresponding pump on the rig.</xs:documentation>
+					<xs:documentation>A pointer to the corresponding pump on the rig.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TypeScr" type="witsml:ScrType" minOccurs="1" maxOccurs="1">
@@ -1063,7 +1052,7 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 	</xs:complexType>
 	<xs:simpleType name="ScrType">
 		<xs:annotation>
-			<xs:documentation>Type of slow circulation rate.</xs:documentation>
+			<xs:documentation>Specifies the type of slow circulation rate.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="string annulus"/>
@@ -1071,21 +1060,19 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 			<xs:enumeration value="string choke line"/>
 			<xs:enumeration value="unknown">
 				<xs:annotation>
-					<xs:documentation>The value is not known. This value should not be used
-in normal situations. All reasonable attempts should be made to determine
-the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
+					<xs:documentation>The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="PitVolume">
 		<xs:annotation>
-			<xs:documentation>WITSML - Pit Volume Component Schema</xs:documentation>
+			<xs:documentation>Pit Volume Component Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Pit" type="xs:int" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>This is a pointer to the corresponding pit on the rig.</xs:documentation>
+					<xs:documentation>This is a pointer to the corresponding pit on the rig containing the volume being described. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
@@ -1095,22 +1082,22 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="VolPit" type="eml:VolumeMeasure" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Volume of fluid in pit.</xs:documentation>
+					<xs:documentation>Volume of fluid in the pit.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DensFluid" type="eml:MassPerVolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Density of fluid in pit.</xs:documentation>
+					<xs:documentation>Density of fluid in the pit.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DescFluid" type="eml:String64" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Fluid description.</xs:documentation>
+					<xs:documentation>Description of the fluid in the pit.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VisFunnel" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Funnel viscosity in seconds.</xs:documentation>
+					<xs:documentation>Funnel viscosity (in seconds).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
@@ -1121,13 +1108,13 @@ the appropriate value. Use of this value may result in rejection in some situati
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of PitVolume</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of PitVolume.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="MudVolume">
 		<xs:annotation>
-			<xs:documentation>WITSML - Operations Mud Volume Component Schema</xs:documentation>
+			<xs:documentation>Operations Mud Volume Component Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="VolTotMudStart" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
@@ -1167,7 +1154,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="VolMudHole" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Volume of mud contained in open hole annulus.</xs:documentation>
+					<xs:documentation>Volume of mud contained in the openhole annulus.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VolMudRiser" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
@@ -1185,7 +1172,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:complexType>
 	<xs:complexType name="MudLosses">
 		<xs:annotation>
-			<xs:documentation>WITSML - Operations Mud Losses Component Schema</xs:documentation>
+			<xs:documentation>Operations Mud Losses Schema.Captures volumes of mud lost for specific activities or onsite locations and total volumes for surface and down hole.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="VolLostShakerSurf" type="eml:VolumeMeasure" minOccurs="0" maxOccurs="1">
@@ -1257,7 +1244,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 	</xs:complexType>
 	<xs:complexType name="Inventory">
 		<xs:annotation>
-			<xs:documentation>WITSML - Inventory Component Schema</xs:documentation>
+			<xs:documentation>Inventory Component Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Name" type="eml:String64" minOccurs="1" maxOccurs="1">
@@ -1287,7 +1274,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="QtyReceived" type="xs:int" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Quantity received at site.</xs:documentation>
+					<xs:documentation>Quantity received at the site.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="QtyReturned" type="xs:int" minOccurs="0" maxOccurs="1">
@@ -1297,18 +1284,17 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="QtyUsed" type="xs:int" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Quantity used for the report period</xs:documentation>
+					<xs:documentation>Quantity used for the report interval.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CostItem" type="witsml:Cost" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Cost for the product for the interval.</xs:documentation>
+					<xs:documentation>Cost for the product for the report interval.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="QtyOnLocation" type="xs:int" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Amount of item remaining on location after all adjustments
-for the report interval.</xs:documentation>
+					<xs:documentation>Amount of the item remaining on location after all adjustments for the report interval.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
@@ -1319,13 +1305,13 @@ for the report interval.</xs:documentation>
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of Inventory</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of Inventory.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="RigResponse">
 		<xs:annotation>
-			<xs:documentation>WITSML - Operations Rig Response Component Schema</xs:documentation>
+			<xs:documentation>Operations Rig Response Component Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="RigHeading" type="eml:PlaneAngleMeasure" minOccurs="0" maxOccurs="1">
@@ -1340,14 +1326,12 @@ for the report interval.</xs:documentation>
 			</xs:element>
 			<xs:element name="RigPitchAngle" type="eml:PlaneAngleMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Measure of the fore-aft rotational movement of the rig due the combined 
-effects of wind and waves; measured as the angle from horizontal</xs:documentation>
+					<xs:documentation>Measure of the fore-aft rotational movement of the rig due to the combined effects of wind and waves; measured as the angle from horizontal.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RigRollAngle" type="eml:PlaneAngleMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Measure of the side-to-side rotational movement of the rig due the combined 
-effects of wind and waves; measured as the angle from vertical</xs:documentation>
+					<xs:documentation>Measure of the side-to-side rotational movement of the rig due to the combined effects of wind and waves; measured as the angle from vertical.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RiserAngle" type="eml:PlaneAngleMeasure" minOccurs="0" maxOccurs="1">
@@ -1382,7 +1366,7 @@ effects of wind and waves; measured as the angle from vertical</xs:documentation
 			</xs:element>
 			<xs:element name="BallJointAngle" type="eml:PlaneAngleMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Angle between riser and blow out preventer at the flex joint.</xs:documentation>
+					<xs:documentation>Angle between the riser and the blowout preventer (BOP) at the flex joint.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BallJointDirection" type="eml:PlaneAngleMeasure" minOccurs="0" maxOccurs="1">
@@ -1397,42 +1381,42 @@ effects of wind and waves; measured as the angle from vertical</xs:documentation
 			</xs:element>
 			<xs:element name="LoadLeg1" type="eml:ForceMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Load carried by leg of jackup.</xs:documentation>
+					<xs:documentation>Load carried by one leg of a jackup rig.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LoadLeg2" type="eml:ForceMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Load carried by leg of jackup.</xs:documentation>
+					<xs:documentation>Load carried by the second leg of a jackup rig.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LoadLeg3" type="eml:ForceMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Load carried by leg of jackup.</xs:documentation>
+					<xs:documentation>Load carried by the third leg of a jackup rig.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LoadLeg4" type="eml:ForceMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Load carried by leg of jackup.</xs:documentation>
+					<xs:documentation>Load carried by the fourth leg of a jackup rig.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PenetrationLeg1" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Penetration of leg into seabed.</xs:documentation>
+					<xs:documentation>Penetration of the first leg into the seabed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PenetrationLeg2" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Penetration of leg into seabed.</xs:documentation>
+					<xs:documentation>Penetration of the second leg into the seabed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PenetrationLeg3" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Penetration of leg into seabed</xs:documentation>
+					<xs:documentation>Penetration of the third leg into the seabed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PenetrationLeg4" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Penetration of leg into seabed</xs:documentation>
+					<xs:documentation>Penetration of the fourth leg into the seabed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DispRig" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
@@ -1442,7 +1426,7 @@ effects of wind and waves; measured as the angle from vertical</xs:documentation
 			</xs:element>
 			<xs:element name="MeanDraft" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Mean draft at mid-section.</xs:documentation>
+					<xs:documentation>Mean draft at mid-section of the vessel.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AnchorState" type="witsml:AnchorState" minOccurs="0" maxOccurs="unbounded"/>
@@ -1450,7 +1434,7 @@ effects of wind and waves; measured as the angle from vertical</xs:documentation
 	</xs:complexType>
 	<xs:complexType name="PumpOp">
 		<xs:annotation>
-			<xs:documentation>WITSML - Operations Pump Component Schema</xs:documentation>
+			<xs:documentation>Operations Pump Component Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
@@ -1460,7 +1444,7 @@ effects of wind and waves; measured as the angle from vertical</xs:documentation
 			</xs:element>
 			<xs:element name="Pump" type="xs:int" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>This is a pointer to the corresponding pump on the rig.</xs:documentation>
+					<xs:documentation>A pointer to the corresponding pump on the rig.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TypeOperation" type="witsml:PumpOpType" minOccurs="0" maxOccurs="1">
@@ -1470,17 +1454,17 @@ effects of wind and waves; measured as the angle from vertical</xs:documentation
 			</xs:element>
 			<xs:element name="IdLiner" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Liner size.</xs:documentation>
+					<xs:documentation>Liner inside diameter. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LenStroke" type="eml:LengthMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Stroke Length.</xs:documentation>
+					<xs:documentation>Stroke length.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RateStroke" type="eml:AngularVelocityMeasure" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Pump rate (Strokes per minute).</xs:documentation>
+					<xs:documentation>Pump rate (strokes per minute).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Pressure" type="eml:PressureMeasure" minOccurs="1" maxOccurs="1">
@@ -1495,12 +1479,12 @@ effects of wind and waves; measured as the angle from vertical</xs:documentation
 			</xs:element>
 			<xs:element name="PumpOutput" type="eml:VolumePerTimeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Pump output (incl. for efficiency).</xs:documentation>
+					<xs:documentation>Pump output (included for efficiency).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MdBit" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Along hole measured depth of measurement from the drill datum.</xs:documentation>
+					<xs:documentation>Along-hole measured depth of the measurement from the drill datum.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtensionNameValue" type="eml:ExtensionNameValue" minOccurs="0" maxOccurs="unbounded">
@@ -1511,31 +1495,24 @@ effects of wind and waves; measured as the angle from vertical</xs:documentation
 		</xs:sequence>
 		<xs:attribute name="uid" use="required" type="eml:String64">
 			<xs:annotation>
-				<xs:documentation>Unique identifier for this instance of PumpOp</xs:documentation>
+				<xs:documentation>Unique identifier for this instance of PumpOp.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:simpleType name="PumpOpType">
 		<xs:annotation>
-			<xs:documentation>Type of pump operation: drilling, reaming, etc.</xs:documentation>
+			<xs:documentation>Specifies type of well operation being conducted while this pump was in use.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
 			<xs:enumeration value="drilling"/>
 			<xs:enumeration value="reaming"/>
 			<xs:enumeration value="circulating"/>
 			<xs:enumeration value="slow pump"/>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. This value should not be used
-in normal situations. All reasonable attempts should be made to determine
-the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="ShakerOp">
 		<xs:annotation>
-			<xs:documentation>WITSML - Operations Shaker Component Schema</xs:documentation>
+			<xs:documentation>Operations Shaker Component Schema.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Shaker" type="eml:String64" minOccurs="1" maxOccurs="1">
@@ -1545,7 +1522,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="MdHole" type="witsml:MeasuredDepthCoord" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Hole measured depth at time of measurement.</xs:documentation>
+					<xs:documentation>Hole measured depth at the time of measurement.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
@@ -1555,7 +1532,7 @@ the appropriate value. Use of this value may result in rejection in some situati
 			</xs:element>
 			<xs:element name="HoursRun" type="eml:TimeMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Hours run for this operation.</xs:documentation>
+					<xs:documentation>Hours run the shaker has run for this operation.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PcScreenCovered" type="eml:AreaPerAreaMeasure" minOccurs="0" maxOccurs="1">
