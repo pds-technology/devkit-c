@@ -1301,7 +1301,7 @@ namespace Energistics.DataAccess.WITSML131
         /// Any property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("Any")]
+		[XmlAnyElement]
         public List<XmlElement> Any {
             get {
                 return AnyField;
@@ -7335,7 +7335,7 @@ namespace Energistics.DataAccess.WITSML131
         /// Any property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("Any")]
+		[XmlAnyElement]
         public List<XmlElement> Any {
             get {
                 return AnyField;

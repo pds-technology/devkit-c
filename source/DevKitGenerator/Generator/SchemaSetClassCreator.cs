@@ -1083,25 +1083,33 @@ namespace Energistics.Generator
             }
             else
             {
-                    object[] elementAttr = property.GetCustomAttributes(typeof(XmlElementAttribute), false);
-                    if(elementAttr.Length > 0)
+                object[] elementAttr = property.GetCustomAttributes(typeof(XmlElementAttribute), false);
+                if (elementAttr.Length > 0)
+                {
+                    XmlElementAttribute xmlElemAttr = (elementAttribute[0] as XmlElementAttribute);
+                    return GetXmlElementAttrTag(xmlElemAttr, property);
+                }
+                else
+                {
+                    var xmlElementAttrTag = "";
+                    if (property.Name.Equals("Any"))
                     {
-					   XmlElementAttribute xmlElemAttr = (elementAttribute[0] as XmlElementAttribute);
-                       return GetXmlElementAttrTag(xmlElemAttr, property);
+                        xmlElementAttrTag = String.Format("[XmlAnyElement]");
+
                     }
                     else
                     {
-                        var xmlElementAttrTag = String.Format("[XmlElement(\"{0}\"", property.Name);
+                        xmlElementAttrTag = String.Format("[XmlElement(\"{0}\"", property.Name);
+                    
+                    if (property.DeclaringType.Name.EndsWith("ChannelData") && property.Name == "Data")
+                    {
+                        xmlElementAttrTag += String.Format(", Type=typeof({0})", typeof(XmlCDataSection).Name);
+                    }
 
-                        if (property.DeclaringType.Name.EndsWith("ChannelData") && property.Name == "Data")
-                        {
-                            xmlElementAttrTag += String.Format(", Type=typeof({0})", typeof(XmlCDataSection).Name);
-                        }
-
-                        xmlElementAttrTag += ")]";
-
-                        return xmlElementAttrTag;
-                    } 
+                    xmlElementAttrTag += ")]";
+                    }
+                    return xmlElementAttrTag;
+                }
             }
         }
 
