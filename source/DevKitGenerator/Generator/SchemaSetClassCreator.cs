@@ -1092,15 +1092,23 @@ namespace Energistics.Generator
                 }
                 else
                 {
-                    var xmlElementAttrTag = String.Format("[XmlElement(\"{0}\"", property.Name);
+                    var xmlElementAttrTag = "";
+                    if (property.Name.Equals("Any"))
+                    {
+                        xmlElementAttrTag = String.Format("[XmlAnyElement]");
 
+                    }
+                    else
+                    {
+                        xmlElementAttrTag = String.Format("[XmlElement(\"{0}\"", property.Name);
+                    
                     if (property.DeclaringType.Name.EndsWith("ChannelData") && property.Name == "Data")
                     {
                         xmlElementAttrTag += String.Format(", Type=typeof({0})", typeof(XmlCDataSection).Name);
                     }
 
                     xmlElementAttrTag += ")]";
-
+                    }
                     return xmlElementAttrTag;
                 }
             }

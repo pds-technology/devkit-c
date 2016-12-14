@@ -6562,7 +6562,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Any property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("Any")]
+		[XmlAnyElement]
         public List<XmlElement> Any {
             get {
                 return AnyField;
@@ -6628,7 +6628,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Any property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("Any")]
+		[XmlAnyElement]
         public List<XmlElement> Any {
             get {
                 return AnyField;

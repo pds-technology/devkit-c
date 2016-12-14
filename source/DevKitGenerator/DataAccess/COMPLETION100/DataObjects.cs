@@ -4603,7 +4603,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Any property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("Any")]
+		[XmlAnyElement]
         public List<XmlElement> Any {
             get {
                 return AnyField;
@@ -5018,7 +5018,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// Any property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("Any")]
+		[XmlAnyElement]
         public List<XmlElement> Any {
             get {
                 return AnyField;

@@ -72,7 +72,7 @@ namespace Energistics.DataAccess.RESQML110
         /// Any property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("Any")]
+		[XmlAnyElement]
         public List<XmlElement> Any {
             get {
                 return AnyField;
@@ -4061,7 +4061,7 @@ namespace Energistics.DataAccess.RESQML110
         /// Any property
         /// </summary>
 		[RecurringElement]
-		[XmlElement("Any")]
+		[XmlAnyElement]
         public List<XmlElement> Any {
             get {
                 return AnyField;
