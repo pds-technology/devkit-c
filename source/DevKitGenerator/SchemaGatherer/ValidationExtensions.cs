@@ -134,6 +134,12 @@ namespace Energistics.SchemaGatherer
                 ImportXmlSchema(schema, importer, exporter);
             }
 
+            foreach (CodeTypeDeclaration typeDeclaration in codeNamespace.Types)
+            {
+                if (typeDeclaration.IsEnum && Has<XmlRootAttribute>(typeDeclaration))
+                    typeDeclaration.CustomAttributes.Remove(Get<XmlRootAttribute>(typeDeclaration));
+            }
+
             AddValidationAttributes(codeNamespace, schemas.ToList(), standardFamily, dataSchemaVersion, dataObjects);
 
             using (var writer = new StreamWriter(outputFile, false, Encoding.UTF8))
@@ -278,6 +284,7 @@ namespace Energistics.SchemaGatherer
             foreach (var topLevelSchema in topLevelSchemas)
             {
                 LoadIncludesFromSchema(topLevelSchema, loadedSchemas, dataSchemaRootFolder);
+                EnsureElementsForSimpleTypes(topLevelSchema);
             }
         }
 
@@ -333,6 +340,22 @@ namespace Energistics.SchemaGatherer
 
                 externalSchema.Schema = includedSchema;
                 externalSchema.SchemaLocation = null;
+            }
+        }
+
+        private static void EnsureElementsForSimpleTypes(XmlSchema topLevelSchema)
+        {
+            foreach (var schemaType in topLevelSchema.SchemaTypes.Values.OfType<XmlSchemaSimpleType>())
+            {
+                if (topLevelSchema.Elements.Values.Cast<XmlSchemaElement>()
+                    .Any(x => x.SchemaTypeName == schemaType.QualifiedName))
+                    continue;
+
+                topLevelSchema.Items.Add(new XmlSchemaElement
+                {
+                    Name = schemaType.Name,
+                    SchemaTypeName = schemaType.QualifiedName
+                });
             }
         }
 
@@ -424,6 +447,15 @@ namespace Energistics.SchemaGatherer
                 AddRequiredAttribute(memberProperty);
             }
 
+            var elementSchemaType = element.ElementSchemaType as XmlSchemaSimpleType;
+            var unionType = elementSchemaType?.Content as XmlSchemaSimpleTypeUnion;
+            var memberType = GetTypeDeclaration(codeNamespace, unionType?.MemberTypes[0].Name);
+
+            if (memberType != null)
+            {
+                SetMemberPropertyType(typeDeclaration, memberProperty, memberType.Name);
+            }
+
             AddRestrictionAttributes(codeNamespace, typeDeclaration, memberProperty, restrictions);
             AddDescriptionAttribute(memberProperty, GetAnnotation(element));
         }
@@ -510,15 +542,18 @@ namespace Energistics.SchemaGatherer
 
         private static void SetDateTimeType(CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty)
         {
-            var memberField = GetMemberField(typeDeclaration, memberProperty.Name + "Field");
-            memberField.Type = new CodeTypeReference("System.DateTime");
-            memberProperty.Type = memberField.Type;
+            SetMemberPropertyType(typeDeclaration, memberProperty, "System.DateTime");
         }
 
         private static void SetTimestampType(CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty)
         {
+            SetMemberPropertyType(typeDeclaration, memberProperty, "Energistics.SchemaGatherer.Timestamp");
+        }
+
+        private static void SetMemberPropertyType(CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty, string typeName)
+        {
             var memberField = GetMemberField(typeDeclaration, memberProperty.Name + "Field");
-            memberField.Type = new CodeTypeReference("Energistics.SchemaGatherer.Timestamp");
+            memberField.Type = new CodeTypeReference(typeName);
             memberProperty.Type = memberField.Type;
         }
 
@@ -532,11 +567,18 @@ namespace Energistics.SchemaGatherer
             memberProperty.Comments.Add(new CodeCommentStatement("<summary>" + description + "</summary>", true));
         }
 
-        private static bool Has<T>(CodeMemberProperty memberProperty)
+        private static bool Has<T>(CodeTypeMember member)
         {
-            return memberProperty.CustomAttributes
+            return member.CustomAttributes
                 .OfType<CodeAttributeDeclaration>()
                 .Any(x => x.Name == typeof(T).FullName);
+        }
+
+        private static CodeAttributeDeclaration Get<T>(CodeTypeMember member)
+        {
+            return member.CustomAttributes
+                .OfType<CodeAttributeDeclaration>()
+                .FirstOrDefault(x => x.Name == typeof(T).FullName);
         }
 
         private static CodeTypeDeclaration GetTypeDeclaration(CodeNamespace codeNamespace, string schemaTypeName)
