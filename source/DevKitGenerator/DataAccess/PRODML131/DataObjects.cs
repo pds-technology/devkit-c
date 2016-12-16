@@ -54840,6 +54840,76 @@ namespace Energistics.DataAccess.PRODML131
           [XmlEnum("single-ended")]
           singleended
         }
+        /// <summary>
+        /// This class represents the InterpretationMnemonicType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+        [Description("This class represents the InterpretationMnemonicType xsd enumeration.")]
+        public enum InterpretationMnemonicType 
+        {
+        /// <summary>
+        /// facilityDistanceadjustedTemperature property
+        /// </summary>
+          [XmlEnum("facilityDistance,adjustedTemperature")]
+          facilityDistanceadjustedTemperature
+        }
+        /// <summary>
+        /// This class represents the InterpretationUnitType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+        [Description("This class represents the InterpretationUnitType xsd enumeration.")]
+        public enum InterpretationUnitType 
+        {
+        /// <summary>
+        /// mdegC property
+        /// </summary>
+          [XmlEnum("m,degC")]
+          mdegC,
+        /// <summary>
+        /// ftdegF property
+        /// </summary>
+          [XmlEnum("ft,degF")]
+          ftdegF
+        }
+        /// <summary>
+        /// This class represents the MeasurementMnemonicType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+        [Description("This class represents the MeasurementMnemonicType xsd enumeration.")]
+        public enum MeasurementMnemonicType 
+        {
+        /// <summary>
+        /// fiberDistanceantistokesstokesreverseAntiStokesreverseStokesrayleigh1rayleigh2brillouinfrequencylosslossRatiocumulativeExcessLossfrequencyQualityMeasuremeasurementUncertaintybrillouinAmplitudeopticalPathTemperatureuncalibratedTemperature1uncalibratedTemperature2 property
+        /// </summary>
+          [XmlEnum("fiberDistance,antistokes,stokes,reverseAntiStokes,reverseStokes,rayleigh1,rayleigh2,brillouinfrequency,loss,lossRatio,cumulativeExcessLoss,frequencyQualityMeasure,measurementUncertainty,brillouinAmplitude,opticalPathTemperature,uncalibratedTemperature1,uncalibratedTemperature2,")]
+          fiberDistanceantistokesstokesreverseAntiStokesreverseStokesrayleigh1rayleigh2brillouinfrequencylosslossRatiocumulativeExcessLossfrequencyQualityMeasuremeasurementUncertaintybrillouinAmplitudeopticalPathTemperatureuncalibratedTemperature1uncalibratedTemperature2
+        }
+        /// <summary>
+        /// This class represents the MeasurementUnitType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+        [Description("This class represents the MeasurementUnitType xsd enumeration.")]
+        public enum MeasurementUnitType 
+        {
+        /// <summary>
+        /// mmWmWmWmWmWmWGHzdBKmdBKmdBdimensionlessdegCmWdegCdegCdegC property
+        /// </summary>
+          [XmlEnum("m,mW,mW,mW,mW,mW,mW,GHz,dB/Km,dB/Km,dB,dimensionless,degC,mW,degC,degC,degC,")]
+          mmWmWmWmWmWmWGHzdBKmdBKmdBdimensionlessdegCmWdegCdegCdegC,
+        /// <summary>
+        /// ftmWmWmWmWmWmWGHzdBKmdBKmdBdimensionlessdegFmWdegFdegFdegF property
+        /// </summary>
+          [XmlEnum("ft,mW,mW,mW,mW,mW,mW,GHz,dB/Km,dB/Km,dB,dimensionless,degF,mW,degF,degF,degF,")]
+          ftmWmWmWmWmWmWGHzdBKmdBKmdBdimensionlessdegFmWdegFdegFdegF
+        }
     }
     #endregion
 }

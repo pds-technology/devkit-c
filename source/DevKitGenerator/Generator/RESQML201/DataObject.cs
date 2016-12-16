@@ -23775,4 +23775,6166 @@ namespace Energistics.Generator.RESQML201 {
             }
         }
     }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LogarithmicPowerRatioUom {
+        
+        /// <remarks/>
+        B,
+        
+        /// <remarks/>
+        dB,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AmountOfSubstancePerTimeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kmol/h")]
+        kmolh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kmol/s")]
+        kmols,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbmol/h")]
+        lbmolh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbmol/s")]
+        lbmols,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mol/s")]
+        mols,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ElectricConductivityUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kS/m")]
+        kSm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mS/cm")]
+        mScm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mS/m")]
+        mSm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("S/m")]
+        Sm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumePerRotationUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/rad")]
+        ft3rad,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/rad")]
+        m3rad,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/rev")]
+        m3rev,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumePerTimePerAreaUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/(min.ft2)")]
+        ft3minft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/(s.ft2)")]
+        ft3sft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[UK]/(h.ft2)")]
+        galUKhft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[UK]/(h.in2)")]
+        galUKhin2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[UK]/(min.ft2)")]
+        galUKminft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/(h.ft2)")]
+        galUShft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/(h.in2)")]
+        galUShin2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/(min.ft2)")]
+        galUSminft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(s.m2)")]
+        m3sm2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MobilityUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("D/(Pa.s)")]
+        DPas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("D/cP")]
+        DcP,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mD.ft2/(lbf.s)")]
+        mDft2lbfs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mD.in2/(lbf.s)")]
+        mDin2lbfs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mD/(Pa.s)")]
+        mDPas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mD/cP")]
+        mDcP,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TD[API]/(Pa.s)")]
+        TDAPIPas,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum HeatTransferCoefficientUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/(h.ft2.deltaF)")]
+        BtuIThft2deltaF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/(h.ft2.deltaR)")]
+        BtuIThft2deltaR,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/(h.m2.deltaC)")]
+        BtuIThm2deltaC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/(s.ft2.deltaF)")]
+        BtuITsft2deltaF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]/(h.cm2.deltaC)")]
+        calthhcm2deltaC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]/(s.cm2.deltaC)")]
+        calthscm2deltaC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J/(s.m2.deltaC)")]
+        Jsm2deltaC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kcal[th]/(h.m2.deltaC)")]
+        kcalthhm2deltaC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kJ/(h.m2.deltaK)")]
+        kJhm2deltaK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kW/(m2.deltaK)")]
+        kWm2deltaK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("W/(m2.deltaK)")]
+        Wm2deltaK,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MassPerEnergyUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/(kW.h)")]
+        kgkWh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/J")]
+        kgJ,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/MJ")]
+        kgMJ,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/(hp.h)")]
+        lbmhph,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mg/J")]
+        mgJ,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MomentOfInertiaUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg.m2")]
+        kgm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm.ft2")]
+        lbmft2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum CapacitanceUom {
+        
+        /// <remarks/>
+        cF,
+        
+        /// <remarks/>
+        dF,
+        
+        /// <remarks/>
+        EF,
+        
+        /// <remarks/>
+        F,
+        
+        /// <remarks/>
+        fF,
+        
+        /// <remarks/>
+        GF,
+        
+        /// <remarks/>
+        kF,
+        
+        /// <remarks/>
+        mF,
+        
+        /// <remarks/>
+        MF,
+        
+        /// <remarks/>
+        nF,
+        
+        /// <remarks/>
+        pF,
+        
+        /// <remarks/>
+        TF,
+        
+        /// <remarks/>
+        uF,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MagneticFluxDensityPerLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gauss/cm")]
+        gausscm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mT/dm")]
+        mTdm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("T/m")]
+        Tm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LengthPerVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/bbl")]
+        ftbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/ft3")]
+        ftft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/gal[US]")]
+        ftgalUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("km/dm3")]
+        kmdm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("km/L")]
+        kmL,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/m3")]
+        mm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mi/gal[UK]")]
+        migalUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mi/gal[US]")]
+        migalUS,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MassPerTimeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E6 lbm/a")]
+        Item1E6lbma,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("g/s")]
+        gs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/d")]
+        kgd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/h")]
+        kgh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/min")]
+        kgmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/s")]
+        kgs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/d")]
+        lbmd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/h")]
+        lbmh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/min")]
+        lbmmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/s")]
+        lbms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mg/a")]
+        Mga,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mg/d")]
+        Mgd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mg/h")]
+        Mgh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mg/min")]
+        Mgmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("t/a")]
+        ta,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("t/d")]
+        td,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("t/h")]
+        th,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("t/min")]
+        tmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[UK]/a")]
+        tonUKa,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[UK]/d")]
+        tonUKd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[UK]/h")]
+        tonUKh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[UK]/min")]
+        tonUKmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[US]/a")]
+        tonUSa,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[US]/d")]
+        tonUSd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[US]/h")]
+        tonUSh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[US]/min")]
+        tonUSmin,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MolecularWeightUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("g/mol")]
+        gmol,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/mol")]
+        kgmol,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/lbmol")]
+        lbmlbmol,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MagneticFluxUom {
+        
+        /// <remarks/>
+        cWb,
+        
+        /// <remarks/>
+        dWb,
+        
+        /// <remarks/>
+        EWb,
+        
+        /// <remarks/>
+        fWb,
+        
+        /// <remarks/>
+        GWb,
+        
+        /// <remarks/>
+        kWb,
+        
+        /// <remarks/>
+        MWb,
+        
+        /// <remarks/>
+        mWb,
+        
+        /// <remarks/>
+        nWb,
+        
+        /// <remarks/>
+        pWb,
+        
+        /// <remarks/>
+        TWb,
+        
+        /// <remarks/>
+        uWb,
+        
+        /// <remarks/>
+        Wb,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ThermalConductanceUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("W/deltaK")]
+        WdeltaK,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum QuantityOfLightUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lm.s")]
+        lms,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LengthPerTimeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 ft/h")]
+        Item1000fth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 ft/s")]
+        Item1000fts,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm/a")]
+        cma,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm/s")]
+        cms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dm/s")]
+        dms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/d")]
+        ftd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/h")]
+        fth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/min")]
+        ftmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/ms")]
+        ftms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/s")]
+        fts,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/us")]
+        ftus,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in/a")]
+        ina,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in/min")]
+        inmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in/s")]
+        ins,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("km/h")]
+        kmh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("km/s")]
+        kms,
+        
+        /// <remarks/>
+        knot,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/d")]
+        md,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/h")]
+        mh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/min")]
+        mmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/ms")]
+        mms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/s")]
+        ms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mi/h")]
+        mih,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mil/a")]
+        mila,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mm/a")]
+        mma,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mm/s")]
+        mms1,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nm/s")]
+        nms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("um/s")]
+        ums,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ForceLengthPerLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kgf.m/m")]
+        kgfmm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf.ft/in")]
+        lbfftin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf.in/in")]
+        lbfinin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N.m/m")]
+        Nmm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[US].mi/ft")]
+        tonfUSmift,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum SolidAngleUom {
+        
+        /// <remarks/>
+        sr,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumePerTimePerVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/(d.acre.ft)")]
+        bbldacreft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(s.m3)")]
+        m3sm3,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MomentOfForceUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 lbf.ft")]
+        Item1000lbfft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("daN.m")]
+        daNm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dN.m")]
+        dNm,
+        
+        /// <remarks/>
+        J,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kgf.m")]
+        kgfm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kN.m")]
+        kNm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf.ft")]
+        lbfft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf.in")]
+        lbfin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm.ft2/s2")]
+        lbmft2s2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N.m")]
+        Nm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pdl.ft")]
+        pdlft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[US].ft")]
+        tonfUSft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[US].mi")]
+        tonfUSmi,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MassPerVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 lbm/bbl")]
+        Item0001lbmbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 lbm/gal[UK]")]
+        Item0001lbmgalUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 lbm/gal[US]")]
+        Item0001lbmgalUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.01 grain/ft3")]
+        Item001grainft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.1 lbm/bbl")]
+        Item01lbmbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("10 Mg/m3")]
+        Item10Mgm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("g/cm3")]
+        gcm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("g/dm3")]
+        gdm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("g/gal[UK]")]
+        ggalUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("g/gal[US]")]
+        ggalUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("g/L")]
+        gL,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("g/m3")]
+        gm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("grain/ft3")]
+        grainft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("grain/gal[US]")]
+        graingalUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/dm3")]
+        kgdm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/L")]
+        kgL,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/m3")]
+        kgm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/bbl")]
+        lbmbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/ft3")]
+        lbmft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/gal[UK]")]
+        lbmgalUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/gal[US]")]
+        lbmgalUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/in3")]
+        lbmin3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mg/dm3")]
+        mgdm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mg/gal[US]")]
+        mggalUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mg/L")]
+        mgL,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mg/m3")]
+        mgm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mg/m3")]
+        Mgm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("t/m3")]
+        tm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ug/cm3")]
+        ugcm3,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MolarVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dm3/kmol")]
+        dm3kmol,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/lbmol")]
+        ft3lbmol,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("L/kmol")]
+        Lkmol,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("L/mol")]
+        Lmol,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/kmol")]
+        m3kmol,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/mol")]
+        m3mol,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AmountOfSubstanceUom {
+        
+        /// <remarks/>
+        kmol,
+        
+        /// <remarks/>
+        lbmol,
+        
+        /// <remarks/>
+        mmol,
+        
+        /// <remarks/>
+        mol,
+        
+        /// <remarks/>
+        umol,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum DipoleMomentUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("C.m")]
+        Cm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum APINeutronUom {
+        
+        /// <remarks/>
+        nAPI,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ReciprocalTimeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/a")]
+        Item1a,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/d")]
+        Item1d,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/h")]
+        Item1h,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/min")]
+        Item1min,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/ms")]
+        Item1ms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/s")]
+        Item1s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/us")]
+        Item1us,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/wk")]
+        Item1wk,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum TemperatureIntervalPerPressureUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaC/kPa")]
+        deltaCkPa,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaF/psi")]
+        deltaFpsi,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaK/Pa")]
+        deltaKPa,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LengthPerLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%")]
+        Item,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.01 ft/ft")]
+        Item001ftft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/30 m/m")]
+        Item130mm,
+        
+        /// <remarks/>
+        Euc,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/ft")]
+        ftft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/in")]
+        ftin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/m")]
+        ftm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/mi")]
+        ftmi,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("km/cm")]
+        kmcm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/cm")]
+        mcm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/km")]
+        mkm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/m")]
+        mm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mi/in")]
+        miin,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AreaUom {
+        
+        /// <remarks/>
+        acre,
+        
+        /// <remarks/>
+        b,
+        
+        /// <remarks/>
+        cm2,
+        
+        /// <remarks/>
+        ft2,
+        
+        /// <remarks/>
+        ha,
+        
+        /// <remarks/>
+        in2,
+        
+        /// <remarks/>
+        km2,
+        
+        /// <remarks/>
+        m2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mi[US]2")]
+        miUS2,
+        
+        /// <remarks/>
+        mi2,
+        
+        /// <remarks/>
+        mm2,
+        
+        /// <remarks/>
+        section,
+        
+        /// <remarks/>
+        um2,
+        
+        /// <remarks/>
+        yd2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum APIGammaRayUom {
+        
+        /// <remarks/>
+        gAPI,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumetricThermalExpansionUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/deltaC")]
+        Item1deltaC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/deltaF")]
+        Item1deltaF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/deltaK")]
+        Item1deltaK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/deltaR")]
+        Item1deltaR,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E-6 m3/(m3.deltaC)")]
+        Item1E6m3m3deltaC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E-6 m3/(m3.deltaF)")]
+        Item1E6m3m3deltaF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(m3.deltaK)")]
+        m3m3deltaK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ppm[vol]/deltaC")]
+        ppmvoldeltaC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ppm[vol]/deltaF")]
+        ppmvoldeltaF,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ElectricCurrentDensityUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("A/cm2")]
+        Acm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("A/ft2")]
+        Aft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("A/m2")]
+        Am2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("A/mm2")]
+        Amm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mA/cm2")]
+        mAcm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mA/ft2")]
+        mAft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("uA/cm2")]
+        uAcm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("uA/in2")]
+        uAin2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ForceUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("10 kN")]
+        Item10kN,
+        
+        /// <remarks/>
+        cN,
+        
+        /// <remarks/>
+        daN,
+        
+        /// <remarks/>
+        dN,
+        
+        /// <remarks/>
+        dyne,
+        
+        /// <remarks/>
+        EN,
+        
+        /// <remarks/>
+        fN,
+        
+        /// <remarks/>
+        gf,
+        
+        /// <remarks/>
+        GN,
+        
+        /// <remarks/>
+        hN,
+        
+        /// <remarks/>
+        kdyne,
+        
+        /// <remarks/>
+        kgf,
+        
+        /// <remarks/>
+        klbf,
+        
+        /// <remarks/>
+        kN,
+        
+        /// <remarks/>
+        lbf,
+        
+        /// <remarks/>
+        Mgf,
+        
+        /// <remarks/>
+        mN,
+        
+        /// <remarks/>
+        MN,
+        
+        /// <remarks/>
+        N,
+        
+        /// <remarks/>
+        nN,
+        
+        /// <remarks/>
+        ozf,
+        
+        /// <remarks/>
+        pdl,
+        
+        /// <remarks/>
+        pN,
+        
+        /// <remarks/>
+        TN,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[UK]")]
+        tonfUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[US]")]
+        tonfUS,
+        
+        /// <remarks/>
+        uN,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumePerAreaUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E6 bbl/acre")]
+        Item1E6bblacre,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/acre")]
+        bblacre,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/ft2")]
+        ft3ft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/m2")]
+        m3m2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ReciprocalElectricPotentialDifferenceUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/uV")]
+        Item1uV,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/V")]
+        Item1V,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum TimePerLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 h/ft")]
+        Item0001hft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("h/km")]
+        hkm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("min/ft")]
+        minft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("min/m")]
+        minm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ms/cm")]
+        mscm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ms/ft")]
+        msft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ms/in")]
+        msin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ms/m")]
+        msm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ns/ft")]
+        nsft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ns/m")]
+        nsm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("s/cm")]
+        scm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("s/ft")]
+        sft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("s/in")]
+        sin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("s/m")]
+        sm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("us/ft")]
+        usft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("us/in")]
+        usin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("us/m")]
+        usm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumePerPressureUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/psi")]
+        bblpsi,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/kPa")]
+        m3kPa,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/Pa")]
+        m3Pa,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ElectricChargePerAreaUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("C/cm2")]
+        Ccm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("C/m2")]
+        Cm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("C/mm2")]
+        Cmm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mC/m2")]
+        mCm2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MassPerTimePerLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/(m.s)")]
+        kgms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/(ft.h)")]
+        lbmfth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/(ft.s)")]
+        lbmfts,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Pa.s")]
+        Pas,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MagneticFluxDensityUom {
+        
+        /// <remarks/>
+        cgauss,
+        
+        /// <remarks/>
+        cT,
+        
+        /// <remarks/>
+        dgauss,
+        
+        /// <remarks/>
+        dT,
+        
+        /// <remarks/>
+        Egauss,
+        
+        /// <remarks/>
+        ET,
+        
+        /// <remarks/>
+        fgauss,
+        
+        /// <remarks/>
+        fT,
+        
+        /// <remarks/>
+        gauss,
+        
+        /// <remarks/>
+        Ggauss,
+        
+        /// <remarks/>
+        GT,
+        
+        /// <remarks/>
+        kgauss,
+        
+        /// <remarks/>
+        kT,
+        
+        /// <remarks/>
+        mgauss,
+        
+        /// <remarks/>
+        Mgauss,
+        
+        /// <remarks/>
+        mT,
+        
+        /// <remarks/>
+        ngauss,
+        
+        /// <remarks/>
+        nT,
+        
+        /// <remarks/>
+        pgauss,
+        
+        /// <remarks/>
+        pT,
+        
+        /// <remarks/>
+        T,
+        
+        /// <remarks/>
+        Tgauss,
+        
+        /// <remarks/>
+        TT,
+        
+        /// <remarks/>
+        ugauss,
+        
+        /// <remarks/>
+        uT,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum SignalingEventPerTimeUom {
+        
+        /// <remarks/>
+        Bd,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum EnergyPerLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J/m")]
+        Jm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MJ/m")]
+        MJm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ElectricCurrentUom {
+        
+        /// <remarks/>
+        A,
+        
+        /// <remarks/>
+        cA,
+        
+        /// <remarks/>
+        dA,
+        
+        /// <remarks/>
+        EA,
+        
+        /// <remarks/>
+        fA,
+        
+        /// <remarks/>
+        GA,
+        
+        /// <remarks/>
+        kA,
+        
+        /// <remarks/>
+        mA,
+        
+        /// <remarks/>
+        MA,
+        
+        /// <remarks/>
+        nA,
+        
+        /// <remarks/>
+        pA,
+        
+        /// <remarks/>
+        TA,
+        
+        /// <remarks/>
+        uA,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PressureSquaredUom {
+        
+        /// <remarks/>
+        bar2,
+        
+        /// <remarks/>
+        GPa2,
+        
+        /// <remarks/>
+        kPa2,
+        
+        /// <remarks/>
+        kpsi2,
+        
+        /// <remarks/>
+        Pa2,
+        
+        /// <remarks/>
+        psi2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AngularAccelerationUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rad/s2")]
+        rads2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rpm/s")]
+        rpms,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ReciprocalMassTimeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/(kg.s)")]
+        Item1kgs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Bq/kg")]
+        Bqkg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pCi/g")]
+        pCig,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ThermalDiffusivityUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm2/s")]
+        cm2s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft2/h")]
+        ft2h,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft2/s")]
+        ft2s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in2/s")]
+        in2s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/h")]
+        m2h,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/s")]
+        m2s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mm2/s")]
+        mm2s,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumePerTimeLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 bbl.ft/d")]
+        Item1000bblftd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 m4/d")]
+        Item1000m4d,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m4/s")]
+        m4s,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PermeabilityRockUom {
+        
+        /// <remarks/>
+        D,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("D[API]")]
+        DAPI,
+        
+        /// <remarks/>
+        mD,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TD[API]")]
+        TDAPI,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum SecondMomentOfAreaUom {
+        
+        /// <remarks/>
+        cm4,
+        
+        /// <remarks/>
+        in4,
+        
+        /// <remarks/>
+        m4,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ForceAreaUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dyne.cm2")]
+        dynecm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kgf.m2")]
+        kgfm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kN.m2")]
+        kNm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf.in2")]
+        lbfin2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mN.m2")]
+        mNm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N.m2")]
+        Nm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pdl.cm2")]
+        pdlcm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[UK].ft2")]
+        tonfUKft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[US].ft2")]
+        tonfUSft2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ElectricFieldStrengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mV/ft")]
+        mVft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mV/m")]
+        mVm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("uV/ft")]
+        uVft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("uV/m")]
+        uVm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("V/m")]
+        Vm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AmountOfSubstancePerAreaUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mol/m2")]
+        molm2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ThermalConductivityUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/(h.ft.deltaF)")]
+        BtuIThftdeltaF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]/(h.cm.deltaC)")]
+        calthhcmdeltaC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]/(s.cm.deltaC)")]
+        calthscmdeltaC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kcal[th]/(h.m.deltaC)")]
+        kcalthhmdeltaC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("W/(m.deltaK)")]
+        WmdeltaK,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AreaPerAmountOfSubstanceUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/mol")]
+        m2mol,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LogarithmicPowerRatioPerLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("B/m")]
+        Bm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dB/ft")]
+        dBft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dB/km")]
+        dBkm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dB/m")]
+        dBm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ReciprocalLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/angstrom")]
+        Item1angstrom,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/cm")]
+        Item1cm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/ft")]
+        Item1ft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/in")]
+        Item1in,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/m")]
+        Item1m,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/mi")]
+        Item1mi,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/mm")]
+        Item1mm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/nm")]
+        Item1nm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/yd")]
+        Item1yd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E-9 1/ft")]
+        Item1E91ft,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LuminanceUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cd/m2")]
+        cdm2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumePerTimePerTimeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/d2")]
+        bbld2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/h2")]
+        bblh2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dm3/s2")]
+        dm3s2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/d2")]
+        ft3d2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/h2")]
+        ft3h2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/min2")]
+        ft3min2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/s2")]
+        ft3s2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[UK]/h2")]
+        galUKh2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[UK]/min2")]
+        galUKmin2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/h2")]
+        galUSh2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/min2")]
+        galUSmin2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("L/s2")]
+        Ls2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/d2")]
+        m3d2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/s2")]
+        m3s2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MolarHeatCapacityUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/(lbmol.deltaF)")]
+        BtuITlbmoldeltaF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]/(mol.deltaC)")]
+        calthmoldeltaC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J/(mol.deltaK)")]
+        JmoldeltaK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kJ/(kmol.deltaK)")]
+        kJkmoldeltaK,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumeFlowRatePerVolumeFlowRateUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%")]
+        Item,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("(bbl/d)/(bbl/d)")]
+        bbldbbld,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("(m3/d)/(m3/d)")]
+        m3dm3d,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("(m3/s)/(m3/s)")]
+        m3sm3s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E6 (ft3/d)/(bbl/d)")]
+        Item1E6ft3dbbld,
+        
+        /// <remarks/>
+        Euc,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum FrequencyIntervalUom {
+        
+        /// <remarks/>
+        O,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum TemperatureIntervalUom {
+        
+        /// <remarks/>
+        deltaC,
+        
+        /// <remarks/>
+        deltaF,
+        
+        /// <remarks/>
+        deltaK,
+        
+        /// <remarks/>
+        deltaR,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum RadiantIntensityUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("W/sr")]
+        Wsr,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PermeabilityLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("D.ft")]
+        Dft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("D.m")]
+        Dm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mD.ft")]
+        mDft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mD.m")]
+        mDm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TD[API].m")]
+        TDAPIm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum DataTransferSpeedUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bit/s")]
+        bits,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("byte/s")]
+        bytes,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum InductanceUom {
+        
+        /// <remarks/>
+        cH,
+        
+        /// <remarks/>
+        dH,
+        
+        /// <remarks/>
+        EH,
+        
+        /// <remarks/>
+        fH,
+        
+        /// <remarks/>
+        GH,
+        
+        /// <remarks/>
+        H,
+        
+        /// <remarks/>
+        kH,
+        
+        /// <remarks/>
+        MH,
+        
+        /// <remarks/>
+        mH,
+        
+        /// <remarks/>
+        nH,
+        
+        /// <remarks/>
+        TH,
+        
+        /// <remarks/>
+        uH,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum KinematicViscosityUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm2/s")]
+        cm2s,
+        
+        /// <remarks/>
+        cSt,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft2/h")]
+        ft2h,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft2/s")]
+        ft2s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in2/s")]
+        in2s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/h")]
+        m2h,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/s")]
+        m2s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mm2/s")]
+        mm2s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Pa.s.m3/kg")]
+        Pasm3kg,
+        
+        /// <remarks/>
+        St,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumePerTimePerPressureLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/(ft.psi.d)")]
+        bblftpsid,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/(ft.psi.d)")]
+        ft3ftpsid,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/(kPa.d)")]
+        m2kPad,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/(Pa.s)")]
+        m2Pas,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ReciprocalForceUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/lbf")]
+        Item1lbf,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/N")]
+        Item1N,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ReciprocalAreaUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/ft2")]
+        Item1ft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/km2")]
+        Item1km2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/m2")]
+        Item1m2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/mi2")]
+        Item1mi2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PressurePerTimeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("atm/h")]
+        atmh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bar/h")]
+        barh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kPa/h")]
+        kPah,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kPa/min")]
+        kPamin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MPa/h")]
+        MPah,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Pa/h")]
+        Pah,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Pa/s")]
+        Pas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("psi/h")]
+        psih,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("psi/min")]
+        psimin,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ElectricChargeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("A.h")]
+        Ah,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("A.s")]
+        As,
+        
+        /// <remarks/>
+        C,
+        
+        /// <remarks/>
+        cC,
+        
+        /// <remarks/>
+        dC,
+        
+        /// <remarks/>
+        EC,
+        
+        /// <remarks/>
+        fC,
+        
+        /// <remarks/>
+        GC,
+        
+        /// <remarks/>
+        kC,
+        
+        /// <remarks/>
+        MC,
+        
+        /// <remarks/>
+        mC,
+        
+        /// <remarks/>
+        nC,
+        
+        /// <remarks/>
+        pC,
+        
+        /// <remarks/>
+        TC,
+        
+        /// <remarks/>
+        uC,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LuminousEfficacyUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lm/W")]
+        lmW,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PowerUom {
+        
+        /// <remarks/>
+        cW,
+        
+        /// <remarks/>
+        dW,
+        
+        /// <remarks/>
+        EW,
+        
+        /// <remarks/>
+        fW,
+        
+        /// <remarks/>
+        GW,
+        
+        /// <remarks/>
+        hp,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hp[elec]")]
+        hpelec,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hp[hyd]")]
+        hphyd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hp[metric]")]
+        hpmetric,
+        
+        /// <remarks/>
+        kW,
+        
+        /// <remarks/>
+        MW,
+        
+        /// <remarks/>
+        mW,
+        
+        /// <remarks/>
+        nW,
+        
+        /// <remarks/>
+        pW,
+        
+        /// <remarks/>
+        tonRefrig,
+        
+        /// <remarks/>
+        TW,
+        
+        /// <remarks/>
+        uW,
+        
+        /// <remarks/>
+        W,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PressurePerVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Pa/m3")]
+        Pam3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("psi2.d/(cP.ft3)")]
+        psi2dcPft3,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ActivityOfRadioactivityUom {
+        
+        /// <remarks/>
+        Bq,
+        
+        /// <remarks/>
+        Ci,
+        
+        /// <remarks/>
+        GBq,
+        
+        /// <remarks/>
+        MBq,
+        
+        /// <remarks/>
+        mCi,
+        
+        /// <remarks/>
+        nCi,
+        
+        /// <remarks/>
+        pCi,
+        
+        /// <remarks/>
+        TBq,
+        
+        /// <remarks/>
+        uCi,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ElectricPotentialDifferenceUom {
+        
+        /// <remarks/>
+        cV,
+        
+        /// <remarks/>
+        dV,
+        
+        /// <remarks/>
+        fV,
+        
+        /// <remarks/>
+        GV,
+        
+        /// <remarks/>
+        kV,
+        
+        /// <remarks/>
+        mV,
+        
+        /// <remarks/>
+        MV,
+        
+        /// <remarks/>
+        nV,
+        
+        /// <remarks/>
+        pV,
+        
+        /// <remarks/>
+        TV,
+        
+        /// <remarks/>
+        uV,
+        
+        /// <remarks/>
+        V,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LengthPerPressureUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/psi")]
+        ftpsi,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/kPa")]
+        mkPa,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/Pa")]
+        mPa,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MagneticVectorPotentialUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Wb/m")]
+        Wbm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Wb/mm")]
+        Wbmm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MagneticFieldStrengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("A/m")]
+        Am,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("A/mm")]
+        Amm,
+        
+        /// <remarks/>
+        Oe,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumePerTimeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/30 cm3/min")]
+        Item130cm3min,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 bbl/d")]
+        Item1000bbld,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 ft3/d")]
+        Item1000ft3d,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 m3/d")]
+        Item1000m3d,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 m3/h")]
+        Item1000m3h,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E6 bbl/d")]
+        Item1E6bbld,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E6 ft3/d")]
+        Item1E6ft3d,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E6 m3/d")]
+        Item1E6m3d,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/d")]
+        bbld,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/h")]
+        bblh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/min")]
+        bblmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm3/h")]
+        cm3h,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm3/min")]
+        cm3min,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm3/s")]
+        cm3s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dm3/s")]
+        dm3s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/d")]
+        ft3d,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/h")]
+        ft3h,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/min")]
+        ft3min,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/s")]
+        ft3s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[UK]/d")]
+        galUKd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[UK]/h")]
+        galUKh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[UK]/min")]
+        galUKmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/d")]
+        galUSd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/h")]
+        galUSh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/min")]
+        galUSmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("L/h")]
+        Lh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("L/min")]
+        Lmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("L/s")]
+        Ls,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/d")]
+        m3d,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/h")]
+        m3h,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/min")]
+        m3min,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/s")]
+        m3s,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AreaPerMassUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm2/g")]
+        cm2g,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft2/lbm")]
+        ft2lbm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/g")]
+        m2g,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/kg")]
+        m2kg,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ThermalResistanceUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaK/W")]
+        deltaKW,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ForcePerForceUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%")]
+        Item,
+        
+        /// <remarks/>
+        Euc,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kgf/kgf")]
+        kgfkgf,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf/lbf")]
+        lbflbf,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N/N")]
+        NN,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MassUom {
+        
+        /// <remarks/>
+        ag,
+        
+        /// <remarks/>
+        cg,
+        
+        /// <remarks/>
+        ct,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cwt[UK]")]
+        cwtUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cwt[US]")]
+        cwtUS,
+        
+        /// <remarks/>
+        Eg,
+        
+        /// <remarks/>
+        fg,
+        
+        /// <remarks/>
+        g,
+        
+        /// <remarks/>
+        Gg,
+        
+        /// <remarks/>
+        grain,
+        
+        /// <remarks/>
+        hg,
+        
+        /// <remarks/>
+        kg,
+        
+        /// <remarks/>
+        klbm,
+        
+        /// <remarks/>
+        lbm,
+        
+        /// <remarks/>
+        mg,
+        
+        /// <remarks/>
+        Mg,
+        
+        /// <remarks/>
+        ng,
+        
+        /// <remarks/>
+        ozm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ozm[troy]")]
+        ozmtroy,
+        
+        /// <remarks/>
+        pg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sack[94lbm]")]
+        sack94lbm,
+        
+        /// <remarks/>
+        t,
+        
+        /// <remarks/>
+        Tg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[UK]")]
+        tonUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[US]")]
+        tonUS,
+        
+        /// <remarks/>
+        ug,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum SpecificHeatCapacityUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/(lbm.deltaF)")]
+        BtuITlbmdeltaF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/(lbm.deltaR)")]
+        BtuITlbmdeltaR,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]/(g.deltaK)")]
+        calthgdeltaK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J/(g.deltaK)")]
+        JgdeltaK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J/(kg.deltaK)")]
+        JkgdeltaK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kcal[th]/(kg.deltaC)")]
+        kcalthkgdeltaC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kJ/(kg.deltaK)")]
+        kJkgdeltaK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kW.h/(kg.deltaC)")]
+        kWhkgdeltaC,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LengthPerMassUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/lbm")]
+        ftlbm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/kg")]
+        mkg,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AmountOfSubstancePerTimePerAreaUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbmol/(h.ft2)")]
+        lbmolhft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbmol/(s.ft2)")]
+        lbmolsft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mol/(s.m2)")]
+        molsm2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ThermodynamicTemperatureUom {
+        
+        /// <remarks/>
+        degC,
+        
+        /// <remarks/>
+        degF,
+        
+        /// <remarks/>
+        degR,
+        
+        /// <remarks/>
+        K,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LinearThermalExpansionUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/deltaK")]
+        Item1deltaK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in/(in.deltaF)")]
+        inindeltaF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/(m.deltaK)")]
+        mmdeltaK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mm/(mm.deltaK)")]
+        mmmmdeltaK,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MassPerLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg.m/cm2")]
+        kgmcm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/m")]
+        kgm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("klbm/in")]
+        klbmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/ft")]
+        lbmft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mg/in")]
+        Mgin,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ElectricalResistivityUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kohm.m")]
+        kohmm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nohm.mil2/ft")]
+        nohmmil2ft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nohm.mm2/m")]
+        nohmmm2m,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ohm.cm")]
+        ohmcm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ohm.m")]
+        ohmm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ohm.m2/m")]
+        ohmm2m,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MassPerMassUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%")]
+        Item,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%[mass]")]
+        mass,
+        
+        /// <remarks/>
+        Euc,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("g/kg")]
+        gkg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("g/t")]
+        gt,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/kg")]
+        kgkg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/sack[94lbm]")]
+        kgsack94lbm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/t")]
+        kgt,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mg/g")]
+        mgg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mg/kg")]
+        mgkg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ng/g")]
+        ngg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ng/mg")]
+        ngmg,
+        
+        /// <remarks/>
+        ppk,
+        
+        /// <remarks/>
+        ppm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ppm[mass]")]
+        ppmmass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ug/g")]
+        ugg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ug/mg")]
+        ugmg,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PressureSquaredPerForceTimePerAreaUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 kPa2/cP")]
+        Item0001kPa2cP,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bar2/cP")]
+        bar2cP,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kPa2/cP")]
+        kPa2cP,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Pa2/(Pa.s)")]
+        Pa2Pas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("psi2/cP")]
+        psi2cP,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LuminousFluxUom {
+        
+        /// <remarks/>
+        lm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumePerTimePerPressureUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 ft3/(psi.d)")]
+        Item1000ft3psid,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/(kPa.d)")]
+        bblkPad,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/(psi.d)")]
+        bblpsid,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("L/(bar.min)")]
+        Lbarmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(bar.d)")]
+        m3bard,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(bar.h)")]
+        m3barh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(bar.min)")]
+        m3barmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(kPa.d)")]
+        m3kPad,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(kPa.h)")]
+        m3kPah,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(Pa.s)")]
+        m3Pas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(psi.d)")]
+        m3psid,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AmountOfSubstancePerVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kmol/m3")]
+        kmolm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbmol/ft3")]
+        lbmolft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbmol/gal[UK]")]
+        lbmolgalUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbmol/gal[US]")]
+        lbmolgalUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mol/m3")]
+        molm3,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum EnergyPerMassUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/lbm")]
+        BtuITlbm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]/g")]
+        calthg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]/kg")]
+        calthkg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]/lbm")]
+        calthlbm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("erg/g")]
+        ergg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("erg/kg")]
+        ergkg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hp.h/lbm")]
+        hphlbm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J/g")]
+        Jg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J/kg")]
+        Jkg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kcal[th]/g")]
+        kcalthg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kcal[th]/kg")]
+        kcalthkg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kJ/kg")]
+        kJkg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kW.h/kg")]
+        kWhkg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf.ft/lbm")]
+        lbfftlbm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MJ/kg")]
+        MJkg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MW.h/kg")]
+        MWhkg,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PermittivityUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("F/m")]
+        Fm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("uF/m")]
+        uFm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ElectromagneticMomentUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("A.m2")]
+        Am2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ThermalInsulanceUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaC.m2.h/kcal[th]")]
+        deltaCm2hkcalth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaF.ft2.h/Btu[IT]")]
+        deltaFft2hBtuIT,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaK.m2/kW")]
+        deltaKm2kW,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaK.m2/W")]
+        deltaKm2W,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PowerPerAreaUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/(h.ft2)")]
+        BtuIThft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/(s.ft2)")]
+        BtuITsft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]/(h.cm2)")]
+        calthhcm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hp/in2")]
+        hpin2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hp[hyd]/in2")]
+        hphydin2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kW/cm2")]
+        kWcm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kW/m2")]
+        kWm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mW/m2")]
+        mWm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ucal[th]/(s.cm2)")]
+        ucalthscm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("W/cm2")]
+        Wcm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("W/m2")]
+        Wm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("W/mm2")]
+        Wmm2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MassPerAreaUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.01 lbm/ft2")]
+        Item001lbmft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/m2")]
+        kgm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/ft2")]
+        lbmft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mg/m2")]
+        Mgm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ton[US]/ft2")]
+        tonUSft2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum IlluminanceUom {
+        
+        /// <remarks/>
+        footcandle,
+        
+        /// <remarks/>
+        klx,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lm/m2")]
+        lmm2,
+        
+        /// <remarks/>
+        lx,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AreaPerVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/m")]
+        Item1m,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("b/cm3")]
+        bcm3,
+        
+        /// <remarks/>
+        cu,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft2/in3")]
+        ft2in3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/cm3")]
+        m2cm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/m3")]
+        m2m3,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum TemperatureIntervalPerTimeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaC/h")]
+        deltaCh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaC/min")]
+        deltaCmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaC/s")]
+        deltaCs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaF/h")]
+        deltaFh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaF/min")]
+        deltaFmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaF/s")]
+        deltaFs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaK/s")]
+        deltaKs,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AmountOfSubstancePerAmountOfSubstanceUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%")]
+        Item,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%[molar]")]
+        molar,
+        
+        /// <remarks/>
+        Euc,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mol/mol")]
+        molmol,
+        
+        /// <remarks/>
+        nEuc,
+        
+        /// <remarks/>
+        ppk,
+        
+        /// <remarks/>
+        ppm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum RadianceUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("W/(m2.sr)")]
+        Wm2sr,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum HeatFlowRateUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E6 Btu[IT]/h")]
+        Item1E6BtuITh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/h")]
+        BtuITh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/min")]
+        BtuITmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/s")]
+        BtuITs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]/h")]
+        calthh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("EJ/a")]
+        EJa,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("erg/a")]
+        erga,
+        
+        /// <remarks/>
+        GW,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J/s")]
+        Js,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kcal[th]/h")]
+        kcalthh,
+        
+        /// <remarks/>
+        kW,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf.ft/min")]
+        lbfftmin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf.ft/s")]
+        lbffts,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MJ/a")]
+        MJa,
+        
+        /// <remarks/>
+        MW,
+        
+        /// <remarks/>
+        mW,
+        
+        /// <remarks/>
+        nW,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("quad/a")]
+        quada,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TJ/a")]
+        TJa,
+        
+        /// <remarks/>
+        TW,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ucal[th]/s")]
+        ucalths,
+        
+        /// <remarks/>
+        uW,
+        
+        /// <remarks/>
+        W,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum DoseEquivalentUom {
+        
+        /// <remarks/>
+        mrem,
+        
+        /// <remarks/>
+        mSv,
+        
+        /// <remarks/>
+        rem,
+        
+        /// <remarks/>
+        Sv,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PowerPerPowerUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%")]
+        Item,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/(hp.h)")]
+        BtuIThph,
+        
+        /// <remarks/>
+        Euc,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("W/kW")]
+        WkW,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("W/W")]
+        WW,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ElectricChargePerMassUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("A.s/kg")]
+        Askg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("C/g")]
+        Cg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("C/kg")]
+        Ckg,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MassPerVolumePerLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("g/cm4")]
+        gcm4,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/dm4")]
+        kgdm4,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/m4")]
+        kgm4,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/(gal[UK].ft)")]
+        lbmgalUKft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/(gal[US].ft)")]
+        lbmgalUSft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/ft4")]
+        lbmft4,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Pa.s2/m3")]
+        Pas2m3,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MassLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg.m")]
+        kgm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm.ft")]
+        lbmft,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ForcePerVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 psi/ft")]
+        Item0001psift,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.01 psi/ft")]
+        Item001psift,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("atm/ft")]
+        atmft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("atm/hm")]
+        atmhm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("atm/m")]
+        atmm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bar/km")]
+        barkm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bar/m")]
+        barm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("GPa/cm")]
+        GPacm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kPa/hm")]
+        kPahm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kPa/m")]
+        kPam,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf/ft3")]
+        lbfft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf/gal[US]")]
+        lbfgalUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MPa/m")]
+        MPam,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N/m3")]
+        Nm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Pa/m")]
+        Pam,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("psi/ft")]
+        psift,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("psi/m")]
+        psim,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ElectricChargePerVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("A.s/m3")]
+        Asm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("C/cm3")]
+        Ccm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("C/m3")]
+        Cm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("C/mm3")]
+        Cmm3,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum APIGravityUom {
+        
+        /// <remarks/>
+        dAPI,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ReluctanceUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/H")]
+        Item1H,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LengthPerTemperatureUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/deltaF")]
+        ftdeltaF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/deltaK")]
+        mdeltaK,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumePerTimePerLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 ft3/(d.ft)")]
+        Item1000ft3dft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 m3/(d.m)")]
+        Item1000m3dm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 m3/(h.m)")]
+        Item1000m3hm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/(d.ft)")]
+        bbldft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/(d.ft)")]
+        ft3dft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[UK]/(h.ft)")]
+        galUKhft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[UK]/(h.in)")]
+        galUKhin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[UK]/(min.ft)")]
+        galUKminft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/(h.ft)")]
+        galUShft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/(h.in)")]
+        galUShin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/(min.ft)")]
+        galUSminft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(d.m)")]
+        m3dm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(h.m)")]
+        m3hm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(s.ft)")]
+        m3sft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(s.m)")]
+        m3sm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LinearAccelerationUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm/s2")]
+        cms2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft/s2")]
+        fts2,
+        
+        /// <remarks/>
+        Gal,
+        
+        /// <remarks/>
+        gn,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in/s2")]
+        ins2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m/s2")]
+        ms2,
+        
+        /// <remarks/>
+        mGal,
+        
+        /// <remarks/>
+        mgn,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum DimensionlessUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%")]
+        Item,
+        
+        /// <remarks/>
+        cEuc,
+        
+        /// <remarks/>
+        dEuc,
+        
+        /// <remarks/>
+        EEuc,
+        
+        /// <remarks/>
+        Euc,
+        
+        /// <remarks/>
+        fEuc,
+        
+        /// <remarks/>
+        GEuc,
+        
+        /// <remarks/>
+        kEuc,
+        
+        /// <remarks/>
+        MEuc,
+        
+        /// <remarks/>
+        mEuc,
+        
+        /// <remarks/>
+        nEuc,
+        
+        /// <remarks/>
+        pEuc,
+        
+        /// <remarks/>
+        ppk,
+        
+        /// <remarks/>
+        ppm,
+        
+        /// <remarks/>
+        TEuc,
+        
+        /// <remarks/>
+        uEuc,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum EnergyUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E6 Btu[IT]")]
+        Item1E6BtuIT,
+        
+        /// <remarks/>
+        aJ,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]")]
+        BtuIT,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[th]")]
+        Btuth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[UK]")]
+        BtuUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[IT]")]
+        calIT,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]")]
+        calth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ccal[th]")]
+        ccalth,
+        
+        /// <remarks/>
+        ceV,
+        
+        /// <remarks/>
+        cJ,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dcal[th]")]
+        dcalth,
+        
+        /// <remarks/>
+        deV,
+        
+        /// <remarks/>
+        dJ,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Ecal[th]")]
+        Ecalth,
+        
+        /// <remarks/>
+        EeV,
+        
+        /// <remarks/>
+        EJ,
+        
+        /// <remarks/>
+        erg,
+        
+        /// <remarks/>
+        eV,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fcal[th]")]
+        fcalth,
+        
+        /// <remarks/>
+        feV,
+        
+        /// <remarks/>
+        fJ,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Gcal[th]")]
+        Gcalth,
+        
+        /// <remarks/>
+        GeV,
+        
+        /// <remarks/>
+        GJ,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("GW.h")]
+        GWh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hp.h")]
+        hph,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hp[metric].h")]
+        hpmetrich,
+        
+        /// <remarks/>
+        J,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kcal[th]")]
+        kcalth,
+        
+        /// <remarks/>
+        keV,
+        
+        /// <remarks/>
+        kJ,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kW.h")]
+        kWh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mcal[th]")]
+        Mcalth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mcal[th]")]
+        mcalth,
+        
+        /// <remarks/>
+        meV,
+        
+        /// <remarks/>
+        MeV,
+        
+        /// <remarks/>
+        MJ,
+        
+        /// <remarks/>
+        mJ,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MW.h")]
+        MWh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ncal[th]")]
+        ncalth,
+        
+        /// <remarks/>
+        neV,
+        
+        /// <remarks/>
+        nJ,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pcal[th]")]
+        pcalth,
+        
+        /// <remarks/>
+        peV,
+        
+        /// <remarks/>
+        pJ,
+        
+        /// <remarks/>
+        quad,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Tcal[th]")]
+        Tcalth,
+        
+        /// <remarks/>
+        TeV,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("therm[EC]")]
+        thermEC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("therm[UK]")]
+        thermUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("therm[US]")]
+        thermUS,
+        
+        /// <remarks/>
+        TJ,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("TW.h")]
+        TWh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ucal[th]")]
+        ucalth,
+        
+        /// <remarks/>
+        ueV,
+        
+        /// <remarks/>
+        uJ,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AnglePerLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.01 dega/ft")]
+        Item001degaft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/30 dega/ft")]
+        Item130degaft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/30 dega/m")]
+        Item130degam,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dega/ft")]
+        degaft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dega/m")]
+        degam,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rad/ft")]
+        radft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rad/m")]
+        radm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rev/ft")]
+        revft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rev/m")]
+        revm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VerticalCoordinateUom {
+        
+        /// <remarks/>
+        m,
+        
+        /// <remarks/>
+        ft,
+        
+        /// <remarks/>
+        ftUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ftBr(65)")]
+        ftBr65,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumePerLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.01 dm3/km")]
+        Item001dm3km,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.01 L/km")]
+        Item001Lkm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/ft")]
+        bblft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/in")]
+        bblin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/mi")]
+        bblmi,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dm3/m")]
+        dm3m,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/ft")]
+        ft3ft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[UK]/mi")]
+        galUKmi,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/ft")]
+        galUSft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/mi")]
+        galUSmi,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in3/ft")]
+        in3ft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("L/m")]
+        Lm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/km")]
+        m3km,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/m")]
+        m3m,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum EnergyPerVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/bbl")]
+        BtuITbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/ft3")]
+        BtuITft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/gal[UK]")]
+        BtuITgalUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/gal[US]")]
+        BtuITgalUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]/cm3")]
+        calthcm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]/mL")]
+        calthmL,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]/mm3")]
+        calthmm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("erg/cm3")]
+        ergcm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("erg/m3")]
+        ergm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hp.h/bbl")]
+        hphbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J/dm3")]
+        Jdm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J/m3")]
+        Jm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kcal[th]/cm3")]
+        kcalthcm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kcal[th]/m3")]
+        kcalthm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kJ/dm3")]
+        kJdm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kJ/m3")]
+        kJm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kW.h/dm3")]
+        kWhdm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kW.h/m3")]
+        kWhm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf.ft/bbl")]
+        lbfftbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf.ft/gal[US]")]
+        lbfftgalUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MJ/m3")]
+        MJm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MW.h/m3")]
+        MWhm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[US].mi/bbl")]
+        tonfUSmibbl,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MagneticPermeabilityUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("H/m")]
+        Hm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("uH/m")]
+        uHm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ReciprocalMassUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/g")]
+        Item1g,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/kg")]
+        Item1kg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/lbm")]
+        Item1lbm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum DynamicViscosityUom {
+        
+        /// <remarks/>
+        cP,
+        
+        /// <remarks/>
+        dP,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dyne.s/cm2")]
+        dynescm2,
+        
+        /// <remarks/>
+        EP,
+        
+        /// <remarks/>
+        fP,
+        
+        /// <remarks/>
+        GP,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kgf.s/m2")]
+        kgfsm2,
+        
+        /// <remarks/>
+        kP,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf.s/ft2")]
+        lbfsft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf.s/in2")]
+        lbfsin2,
+        
+        /// <remarks/>
+        mP,
+        
+        /// <remarks/>
+        MP,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mPa.s")]
+        mPas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N.s/m2")]
+        Nsm2,
+        
+        /// <remarks/>
+        nP,
+        
+        /// <remarks/>
+        P,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Pa.s")]
+        Pas,
+        
+        /// <remarks/>
+        pP,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("psi.s")]
+        psis,
+        
+        /// <remarks/>
+        TP,
+        
+        /// <remarks/>
+        uP,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PotentialDifferencePerPowerDropUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("V/B")]
+        VB,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("V/dB")]
+        VdB,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AreaPerTimeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm2/s")]
+        cm2s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft2/h")]
+        ft2h,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft2/s")]
+        ft2s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in2/s")]
+        in2s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/d")]
+        m2d,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/h")]
+        m2h,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/s")]
+        m2s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mm2/s")]
+        mm2s,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum HeatCapacityUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J/deltaK")]
+        JdeltaK,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MolarEnergyUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/lbmol")]
+        BtuITlbmol,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J/mol")]
+        Jmol,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kcal[th]/mol")]
+        kcalthmol,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kJ/kmol")]
+        kJkmol,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MJ/kmol")]
+        MJkmol,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ElectricConductanceUom {
+        
+        /// <remarks/>
+        cS,
+        
+        /// <remarks/>
+        dS,
+        
+        /// <remarks/>
+        ES,
+        
+        /// <remarks/>
+        fS,
+        
+        /// <remarks/>
+        GS,
+        
+        /// <remarks/>
+        kS,
+        
+        /// <remarks/>
+        mS,
+        
+        /// <remarks/>
+        MS,
+        
+        /// <remarks/>
+        nS,
+        
+        /// <remarks/>
+        pS,
+        
+        /// <remarks/>
+        S,
+        
+        /// <remarks/>
+        TS,
+        
+        /// <remarks/>
+        uS,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MomentumUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg.m/s")]
+        kgms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm.ft/s")]
+        lbmfts,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MassPerTimePerAreaUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("g.ft/(cm3.s)")]
+        gftcm3s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("g.m/(cm3.s)")]
+        gmcm3s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kg/(m2.s)")]
+        kgm2s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kPa.s/m")]
+        kPasm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/(ft2.h)")]
+        lbmft2h,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbm/(ft2.s)")]
+        lbmft2s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("MPa.s/m")]
+        MPasm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PowerPerVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/(h.ft3)")]
+        BtuIThft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/(s.ft3)")]
+        BtuITsft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]/(h.cm3)")]
+        calthhcm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cal[th]/(s.cm3)")]
+        calthscm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hp/ft3")]
+        hpft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kW/m3")]
+        kWm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("uW/m3")]
+        uWm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("W/m3")]
+        Wm3,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum FrequencyUom {
+        
+        /// <remarks/>
+        cHz,
+        
+        /// <remarks/>
+        dHz,
+        
+        /// <remarks/>
+        EHz,
+        
+        /// <remarks/>
+        fHz,
+        
+        /// <remarks/>
+        GHz,
+        
+        /// <remarks/>
+        Hz,
+        
+        /// <remarks/>
+        kHz,
+        
+        /// <remarks/>
+        mHz,
+        
+        /// <remarks/>
+        MHz,
+        
+        /// <remarks/>
+        nHz,
+        
+        /// <remarks/>
+        pHz,
+        
+        /// <remarks/>
+        THz,
+        
+        /// <remarks/>
+        uHz,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LuminousIntensityUom {
+        
+        /// <remarks/>
+        cd,
+        
+        /// <remarks/>
+        kcd,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AbsorbedDoseUom {
+        
+        /// <remarks/>
+        cGy,
+        
+        /// <remarks/>
+        crd,
+        
+        /// <remarks/>
+        dGy,
+        
+        /// <remarks/>
+        drd,
+        
+        /// <remarks/>
+        EGy,
+        
+        /// <remarks/>
+        Erd,
+        
+        /// <remarks/>
+        fGy,
+        
+        /// <remarks/>
+        frd,
+        
+        /// <remarks/>
+        GGy,
+        
+        /// <remarks/>
+        Grd,
+        
+        /// <remarks/>
+        Gy,
+        
+        /// <remarks/>
+        kGy,
+        
+        /// <remarks/>
+        krd,
+        
+        /// <remarks/>
+        mGy,
+        
+        /// <remarks/>
+        MGy,
+        
+        /// <remarks/>
+        Mrd,
+        
+        /// <remarks/>
+        mrd,
+        
+        /// <remarks/>
+        nGy,
+        
+        /// <remarks/>
+        nrd,
+        
+        /// <remarks/>
+        pGy,
+        
+        /// <remarks/>
+        prd,
+        
+        /// <remarks/>
+        rd,
+        
+        /// <remarks/>
+        TGy,
+        
+        /// <remarks/>
+        Trd,
+        
+        /// <remarks/>
+        uGy,
+        
+        /// <remarks/>
+        urd,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum TimePerMassUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("s/kg")]
+        skg,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumetricHeatTransferCoefficientUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/(h.ft3.deltaF)")]
+        BtuIThft3deltaF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT]/(s.ft3.deltaF)")]
+        BtuITsft3deltaF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kW/(m3.deltaK)")]
+        kWm3deltaK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("W/(m3.deltaK)")]
+        Wm3deltaK,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum NormalizedPowerUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("B.W")]
+        BW,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dB.MW")]
+        dBMW,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dB.mW")]
+        dBmW,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dB.W")]
+        dBW,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum EnergyLengthPerTimeAreaTemperatureUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Btu[IT].in/(h.ft2.deltaF)")]
+        BtuITinhft2deltaF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J.m/(s.m2.deltaK)")]
+        Jmsm2deltaK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kJ.m/(h.m2.deltaK)")]
+        kJmhm2deltaK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("W/(m.deltaK)")]
+        WmdeltaK,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PressureTimePerVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Pa.s/m3")]
+        Pasm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("psi.d/bbl")]
+        psidbbl,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumePerVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%")]
+        Item,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%[vol]")]
+        vol,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 bbl/ft3")]
+        Item0001bblft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 bbl/m3")]
+        Item0001bblm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 gal[UK]/bbl")]
+        Item0001galUKbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 gal[UK]/gal[UK]")]
+        Item0001galUKgalUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 gal[US]/bbl")]
+        Item0001galUSbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 gal[US]/ft3")]
+        Item0001galUSft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 gal[US]/gal[US]")]
+        Item0001galUSgalUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 pt[UK]/bbl")]
+        Item0001ptUKbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.01 bbl/bbl")]
+        Item001bblbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.1 gal[US]/bbl")]
+        Item01galUSbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.1 L/bbl")]
+        Item01Lbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.1 pt[US]/bbl")]
+        Item01ptUSbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 ft3/bbl")]
+        Item1000ft3bbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 m3/m3")]
+        Item1000m3m3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E-6 acre.ft/bbl")]
+        Item1E6acreftbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E-6 bbl/ft3")]
+        Item1E6bblft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E-6 bbl/m3")]
+        Item1E6bblm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E6 bbl/(acre.ft)")]
+        Item1E6bblacreft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E6 ft3/(acre.ft)")]
+        Item1E6ft3acreft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1E6 ft3/bbl")]
+        Item1E6ft3bbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/(acre.ft)")]
+        bblacreft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/bbl")]
+        bblbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/ft3")]
+        bblft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/m3")]
+        bblm3,
+        
+        /// <remarks/>
+        cEuc,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm3/cm3")]
+        cm3cm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm3/L")]
+        cm3L,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm3/m3")]
+        cm3m3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dm3/m3")]
+        dm3m3,
+        
+        /// <remarks/>
+        Euc,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/bbl")]
+        ft3bbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/ft3")]
+        ft3ft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[UK]/ft3")]
+        galUKft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/bbl")]
+        galUSbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/ft3")]
+        galUSft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("L/m3")]
+        Lm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(ha.m)")]
+        m3ham,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/bbl")]
+        m3bbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/m3")]
+        m3m3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mL/gal[UK]")]
+        mLgalUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mL/gal[US]")]
+        mLgalUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mL/mL")]
+        mLmL,
+        
+        /// <remarks/>
+        ppk,
+        
+        /// <remarks/>
+        ppm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ppm[vol]")]
+        ppmvol,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AnglePerVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rad/ft3")]
+        radft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rad/m3")]
+        radm3,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum DiffusionCoefficientUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/s")]
+        m2s,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum TimePerTimeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%")]
+        Item,
+        
+        /// <remarks/>
+        Euc,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ms/s")]
+        mss,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("s/s")]
+        ss,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum EnergyPerMassPerTimeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mrem/h")]
+        mremh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mSv/h")]
+        mSvh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rem/h")]
+        remh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Sv/h")]
+        Svh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Sv/s")]
+        Svs,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VolumePerMassUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.01 L/kg")]
+        Item001Lkg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/ton[UK]")]
+        bbltonUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bbl/ton[US]")]
+        bbltonUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cm3/g")]
+        cm3g,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dm3/kg")]
+        dm3kg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dm3/t")]
+        dm3t,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/kg")]
+        ft3kg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/lbm")]
+        ft3lbm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft3/sack[94lbm]")]
+        ft3sack94lbm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[UK]/lbm")]
+        galUKlbm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/lbm")]
+        galUSlbm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/sack[94lbm]")]
+        galUSsack94lbm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/ton[UK]")]
+        galUStonUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gal[US]/ton[US]")]
+        galUStonUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("L/kg")]
+        Lkg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("L/t")]
+        Lt,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("L/ton[UK]")]
+        LtonUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/g")]
+        m3g,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/kg")]
+        m3kg,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/t")]
+        m3t,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/ton[UK]")]
+        m3tonUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/ton[US]")]
+        m3tonUS,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum TemperatureIntervalPerLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.01 deltaF/ft")]
+        Item001deltaFft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaC/ft")]
+        deltaCft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaC/hm")]
+        deltaChm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaC/km")]
+        deltaCkm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaC/m")]
+        deltaCm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaF/ft")]
+        deltaFft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaF/m")]
+        deltaFm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaK/km")]
+        deltaKkm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("deltaK/m")]
+        deltaKm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AttenuationPerFrequencyIntervalUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("B/O")]
+        BO,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dB/O")]
+        dBO,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum IsothermalCompressibilityUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dm3/(kW.h)")]
+        dm3kWh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dm3/MJ")]
+        dm3MJ,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/(kW.h)")]
+        m3kWh,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m3/J")]
+        m3J,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mm3/J")]
+        mm3J,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pt[UK]/(hp.h)")]
+        ptUKhph,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ElectricResistanceUom {
+        
+        /// <remarks/>
+        cohm,
+        
+        /// <remarks/>
+        dohm,
+        
+        /// <remarks/>
+        Eohm,
+        
+        /// <remarks/>
+        fohm,
+        
+        /// <remarks/>
+        Gohm,
+        
+        /// <remarks/>
+        kohm,
+        
+        /// <remarks/>
+        Mohm,
+        
+        /// <remarks/>
+        mohm,
+        
+        /// <remarks/>
+        nohm,
+        
+        /// <remarks/>
+        ohm,
+        
+        /// <remarks/>
+        pohm,
+        
+        /// <remarks/>
+        Tohm,
+        
+        /// <remarks/>
+        uohm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ReciprocalVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/bbl")]
+        Item1bbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/ft3")]
+        Item1ft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/gal[UK]")]
+        Item1galUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/gal[US]")]
+        Item1galUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/L")]
+        Item1L,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/m3")]
+        Item1m3,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PressureUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.01 lbf/ft2")]
+        Item001lbfft2,
+        
+        /// <remarks/>
+        at,
+        
+        /// <remarks/>
+        atm,
+        
+        /// <remarks/>
+        bar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cmH2O[4degC]")]
+        cmH2O4degC,
+        
+        /// <remarks/>
+        cPa,
+        
+        /// <remarks/>
+        dPa,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dyne/cm2")]
+        dynecm2,
+        
+        /// <remarks/>
+        EPa,
+        
+        /// <remarks/>
+        fPa,
+        
+        /// <remarks/>
+        GPa,
+        
+        /// <remarks/>
+        hbar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("inH2O[39degF]")]
+        inH2O39degF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("inH2O[60degF]")]
+        inH2O60degF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("inHg[32degF]")]
+        inHg32degF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("inHg[60degF]")]
+        inHg60degF,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kgf/cm2")]
+        kgfcm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kgf/m2")]
+        kgfm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kgf/mm2")]
+        kgfmm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kN/m2")]
+        kNm2,
+        
+        /// <remarks/>
+        kPa,
+        
+        /// <remarks/>
+        kpsi,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf/ft2")]
+        lbfft2,
+        
+        /// <remarks/>
+        mbar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mmHg[0degC]")]
+        mmHg0degC,
+        
+        /// <remarks/>
+        mPa,
+        
+        /// <remarks/>
+        MPa,
+        
+        /// <remarks/>
+        Mpsi,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N/m2")]
+        Nm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N/mm2")]
+        Nmm2,
+        
+        /// <remarks/>
+        nPa,
+        
+        /// <remarks/>
+        Pa,
+        
+        /// <remarks/>
+        pPa,
+        
+        /// <remarks/>
+        psi,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[UK]/ft2")]
+        tonfUKft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[US]/ft2")]
+        tonfUSft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[US]/in2")]
+        tonfUSin2,
+        
+        /// <remarks/>
+        torr,
+        
+        /// <remarks/>
+        TPa,
+        
+        /// <remarks/>
+        ubar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("umHg[0degC]")]
+        umHg0degC,
+        
+        /// <remarks/>
+        uPa,
+        
+        /// <remarks/>
+        upsi,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AreaPerAreaUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%")]
+        Item,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("%[area]")]
+        area,
+        
+        /// <remarks/>
+        cEuc,
+        
+        /// <remarks/>
+        Euc,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in2/ft2")]
+        in2ft2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("in2/in2")]
+        in2in2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m2/m2")]
+        m2m2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mm2/mm2")]
+        mm2mm2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AngularVelocityUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dega/h")]
+        degah,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dega/min")]
+        degamin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dega/s")]
+        degas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rad/s")]
+        rads,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rev/s")]
+        revs,
+        
+        /// <remarks/>
+        rpm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum TimePerVolumeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 d/ft3")]
+        Item0001dft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("d/bbl")]
+        dbbl,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("d/ft3")]
+        dft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("d/m3")]
+        dm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("h/ft3")]
+        hft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("h/m3")]
+        hm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("s/ft3")]
+        sft3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("s/L")]
+        sL,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("s/m3")]
+        sm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("s/qt[UK]")]
+        sqtUK,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("s/qt[US]")]
+        sqtUS,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum EnergyLengthPerAreaUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J.m/m2")]
+        Jmm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kcal[th].m/cm2")]
+        kcalthmcm2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ElectricResistancePerLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ohm/m")]
+        ohmm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("uohm/ft")]
+        uohmft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("uohm/m")]
+        uohmm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ForcePerLengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.01 lbf/ft")]
+        Item001lbfft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/30 lbf/m")]
+        Item130lbfm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/30 N/m")]
+        Item130Nm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dyne/cm")]
+        dynecm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kgf/cm")]
+        kgfcm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kN/m")]
+        kNm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf/ft")]
+        lbfft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf/in")]
+        lbfin,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mN/km")]
+        mNkm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mN/m")]
+        mNm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N/m")]
+        Nm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pdl/cm")]
+        pdlcm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[UK]/ft")]
+        tonfUKft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tonf[US]/ft")]
+        tonfUSft,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ReciprocalPressureUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/bar")]
+        Item1bar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/kPa")]
+        Item1kPa,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/Pa")]
+        Item1Pa,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/pPa")]
+        Item1pPa,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/psi")]
+        Item1psi,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/upsi")]
+        Item1upsi,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LightExposureUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("footcandle.s")]
+        footcandles,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lx.s")]
+        lxs,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum EnergyPerAreaUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("erg/cm2")]
+        ergcm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J/cm2")]
+        Jcm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J/m2")]
+        Jm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kgf.m/cm2")]
+        kgfmcm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lbf.ft/in2")]
+        lbfftin2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mJ/cm2")]
+        mJcm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mJ/m2")]
+        mJm2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("N/m")]
+        Nm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum MagneticDipoleMomentUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Wb.m")]
+        Wbm,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum DigitalStorageUom {
+        
+        /// <remarks/>
+        bit,
+        
+        /// <remarks/>
+        @byte,
+        
+        /// <remarks/>
+        Kibyte,
+        
+        /// <remarks/>
+        Mibyte,
+    }
 }

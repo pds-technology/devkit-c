@@ -60869,6 +60869,6749 @@ namespace Energistics.DataAccess.WITSML131
     #region Enumerations
     namespace ReferenceData {
         /// <summary>
+        /// This class represents the ActivityClassType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the ActivityClassType xsd enumeration.")]
+        public enum ActivityClassType 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          planned,
+        /// <summary>
+        /// 
+        /// </summary>
+          unplanned,
+        /// <summary>
+        /// 
+        /// </summary>
+          downtime,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the AziRef xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the AziRef xsd enumeration.")]
+        public enum AziRef 
+        {
+        /// <summary>
+        /// magneticnorth property
+        /// </summary>
+          [XmlEnum("magnetic north")]
+          magneticnorth,
+        /// <summary>
+        /// gridnorth property
+        /// </summary>
+          [XmlEnum("grid north")]
+          gridnorth,
+        /// <summary>
+        /// truenorth property
+        /// </summary>
+          [XmlEnum("true north")]
+          truenorth,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the ArrayElementDataType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the ArrayElementDataType xsd enumeration.")]
+        public enum ArrayElementDataType 
+        {
+        /// <summary>
+        /// boolean property
+        /// </summary>
+          boolean,
+        /// <summary>
+        /// integer8bit property
+        /// </summary>
+          [XmlEnum("integer 8 bit")]
+          integer8bit,
+        /// <summary>
+        /// integer16bit property
+        /// </summary>
+          [XmlEnum("integer 16 bit")]
+          integer16bit,
+        /// <summary>
+        /// integer32bit property
+        /// </summary>
+          [XmlEnum("integer 32 bit")]
+          integer32bit,
+        /// <summary>
+        /// integer64bit property
+        /// </summary>
+          [XmlEnum("integer 64 bit")]
+          integer64bit,
+        /// <summary>
+        /// IEEEfloat32bit property
+        /// </summary>
+          [XmlEnum("IEEE float 32 bit")]
+          IEEEfloat32bit,
+        /// <summary>
+        /// IEEEfloat64bit property
+        /// </summary>
+          [XmlEnum("IEEE float 64 bit")]
+          IEEEfloat64bit
+        }
+        /// <summary>
+        /// This class represents the BearingType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the BearingType xsd enumeration.")]
+        public enum BearingType 
+        {
+        /// <summary>
+        /// oilseal property
+        /// </summary>
+          [XmlEnum("oil seal")]
+          oilseal,
+        /// <summary>
+        /// mudlube property
+        /// </summary>
+          [XmlEnum("mud lube")]
+          mudlube,
+        /// <summary>
+        /// 
+        /// </summary>
+          other,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the BitDullCode xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the BitDullCode xsd enumeration.")]
+        public enum BitDullCode 
+        {
+        /// <summary>
+        /// Broken Cone
+        /// </summary>
+          BC,
+        /// <summary>
+        /// Broken teeth/cutters
+        /// </summary>
+          BT,
+        /// <summary>
+        /// Balled Up
+        /// </summary>
+          BU,
+        /// <summary>
+        /// Cracked Cone
+        /// </summary>
+          CC,
+        /// <summary>
+        /// Cone Dragged
+        /// </summary>
+          CD,
+        /// <summary>
+        /// Cone Interference
+        /// </summary>
+          CI,
+        /// <summary>
+        /// Cored
+        /// </summary>
+          CR,
+        /// <summary>
+        /// Chipped Teeth
+        /// </summary>
+          CT,
+        /// <summary>
+        /// Erosion
+        /// </summary>
+          ER,
+        /// <summary>
+        /// Flat Crested Wear
+        /// </summary>
+          FC,
+        /// <summary>
+        /// Heat Checking
+        /// </summary>
+          HC,
+        /// <summary>
+        /// Junk Damage
+        /// </summary>
+          JD,
+        /// <summary>
+        /// Lost Nozzle
+        /// </summary>
+          LC,
+        /// <summary>
+        /// Lost Nozzle
+        /// </summary>
+          LN,
+        /// <summary>
+        /// Lost Teeth/Cutters
+        /// </summary>
+          LT,
+        /// <summary>
+        /// No Dull/No Other Wear
+        /// </summary>
+          NO,
+        /// <summary>
+        /// Off-Center Wear
+        /// </summary>
+          OC,
+        /// <summary>
+        /// Pinched Bit
+        /// </summary>
+          PB,
+        /// <summary>
+        /// Plugged Nozzle
+        /// </summary>
+          PN,
+        /// <summary>
+        /// Rounded Gauge
+        /// </summary>
+          RG,
+        /// <summary>
+        /// Ring Out
+        /// </summary>
+          RO,
+        /// <summary>
+        /// Shirttail Damage
+        /// </summary>
+          SD,
+        /// <summary>
+        /// Self-Sharpening Wear
+        /// </summary>
+          SS,
+        /// <summary>
+        /// Tracking
+        /// </summary>
+          TR,
+        /// <summary>
+        /// WashOut on Bit
+        /// </summary>
+          WO,
+        /// <summary>
+        /// Worn Teeth/Cutters
+        /// </summary>
+          WT,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the BitReasonPulled xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the BitReasonPulled xsd enumeration.")]
+        public enum BitReasonPulled 
+        {
+        /// <summary>
+        /// Change Bottom Hole Assembly
+        /// </summary>
+          BHA,
+        /// <summary>
+        /// Condition Mud
+        /// </summary>
+          CM,
+        /// <summary>
+        /// Core Point
+        /// </summary>
+          CP,
+        /// <summary>
+        /// Downhole Motor Failure
+        /// </summary>
+          DMF,
+        /// <summary>
+        /// Drill Plug
+        /// </summary>
+          DP,
+        /// <summary>
+        /// Drill Stem Test
+        /// </summary>
+          DST,
+        /// <summary>
+        /// Downhole Tool Failure
+        /// </summary>
+          DTF,
+        /// <summary>
+        /// Formation Change
+        /// </summary>
+          FM,
+        /// <summary>
+        /// Hole Problems
+        /// </summary>
+          HP,
+        /// <summary>
+        /// Hours on Bit
+        /// </summary>
+          HR,
+        /// <summary>
+        /// Run Logs
+        /// </summary>
+          LOG,
+        /// <summary>
+        /// Pump Pressure
+        /// </summary>
+          PP,
+        /// <summary>
+        /// Penetration Rate
+        /// </summary>
+          PR,
+        /// <summary>
+        /// Rig Repairs
+        /// </summary>
+          RIG,
+        /// <summary>
+        /// Total Depth/Casing Depth
+        /// </summary>
+          TD,
+        /// <summary>
+        /// Torque
+        /// </summary>
+          TQ,
+        /// <summary>
+        /// Twist Off
+        /// </summary>
+          TW,
+        /// <summary>
+        /// Weather Conditions
+        /// </summary>
+          WC,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the BitType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the BitType xsd enumeration.")]
+        public enum BitType 
+        {
+        /// <summary>
+        /// Diamond bit
+        /// </summary>
+          diamond,
+        /// <summary>
+        /// diamondcore property
+        /// </summary>
+          [XmlEnum("diamond core")]
+          diamondcore,
+        /// <summary>
+        /// insertrollercone property
+        /// </summary>
+          [XmlEnum("insert roller cone")]
+          insertrollercone,
+        /// <summary>
+        /// polycrystalline diamond compact fixed cutter bit
+        /// </summary>
+          PDC,
+        /// <summary>
+        /// PDCcore property
+        /// </summary>
+          [XmlEnum("PDC core")]
+          PDCcore,
+        /// <summary>
+        /// rollercone property
+        /// </summary>
+          [XmlEnum("roller cone")]
+          rollercone,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the BhaStatus xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the BhaStatus xsd enumeration.")]
+        public enum BhaStatus 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          final,
+        /// <summary>
+        /// 
+        /// </summary>
+          progress,
+        /// <summary>
+        /// 
+        /// </summary>
+          plan,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the BladeShapeType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the BladeShapeType xsd enumeration.")]
+        public enum BladeShapeType 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          dynamic,
+        /// <summary>
+        /// 
+        /// </summary>
+          melon,
+        /// <summary>
+        /// 
+        /// </summary>
+          spiral,
+        /// <summary>
+        /// 
+        /// </summary>
+          straight,
+        /// <summary>
+        /// 
+        /// </summary>
+          variable,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the BladeType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the BladeType xsd enumeration.")]
+        public enum BladeType 
+        {
+        /// <summary>
+        /// clampon property
+        /// </summary>
+          [XmlEnum("clamp-on")]
+          clampon,
+        /// <summary>
+        /// 
+        /// </summary>
+          integral,
+        /// <summary>
+        /// 
+        /// </summary>
+          sleeve,
+        /// <summary>
+        /// 
+        /// </summary>
+          welded,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the BopType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the BopType xsd enumeration.")]
+        public enum BopType 
+        {
+        /// <summary>
+        /// annularpreventer property
+        /// </summary>
+          [XmlEnum("annular preventer")]
+          annularpreventer,
+        /// <summary>
+        /// shearram property
+        /// </summary>
+          [XmlEnum("shear ram")]
+          shearram,
+        /// <summary>
+        /// blindram property
+        /// </summary>
+          [XmlEnum("blind ram")]
+          blindram,
+        /// <summary>
+        /// piperam property
+        /// </summary>
+          [XmlEnum("pipe ram")]
+          piperam,
+        /// <summary>
+        /// drillingspool property
+        /// </summary>
+          [XmlEnum("drilling spool")]
+          drillingspool,
+        /// <summary>
+        /// flexiblejoint property
+        /// </summary>
+          [XmlEnum("flexible joint")]
+          flexiblejoint,
+        /// <summary>
+        /// 
+        /// </summary>
+          connector,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the BoxPinConfig xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the BoxPinConfig xsd enumeration.")]
+        public enum BoxPinConfig 
+        {
+        /// <summary>
+        /// bottomboxtopbox property
+        /// </summary>
+          [XmlEnum("bottom box, top box")]
+          bottomboxtopbox,
+        /// <summary>
+        /// bottomboxtoppin property
+        /// </summary>
+          [XmlEnum("bottom box, top pin")]
+          bottomboxtoppin,
+        /// <summary>
+        /// bottompintopbox property
+        /// </summary>
+          [XmlEnum("bottom pin top box")]
+          bottompintopbox,
+        /// <summary>
+        /// bottompin property
+        /// </summary>
+          [XmlEnum("bottom pin")]
+          bottompin,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the CementJobType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the CementJobType xsd enumeration.")]
+        public enum CementJobType 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          primary,
+        /// <summary>
+        /// 
+        /// </summary>
+          plug,
+        /// <summary>
+        /// 
+        /// </summary>
+          squeeze,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the ConnectionPosition xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the ConnectionPosition xsd enumeration.")]
+        public enum ConnectionPosition 
+        {
+        /// <summary>
+        /// The connection is the same at both ends of the component
+        /// </summary>
+          both,
+        /// <summary>
+        /// This connection is only at the bottom of the component
+        /// </summary>
+          bottom,
+        /// <summary>
+        /// This connection is only at the top of the component
+        /// </summary>
+          top,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the DeflectionMethod xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the DeflectionMethod xsd enumeration.")]
+        public enum DeflectionMethod 
+        {
+        /// <summary>
+        /// pointbit property
+        /// </summary>
+          [XmlEnum("point bit")]
+          pointbit,
+        /// <summary>
+        /// pushbit property
+        /// </summary>
+          [XmlEnum("push bit")]
+          pushbit
+        }
+        /// <summary>
+        /// This class represents the DerrickType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the DerrickType xsd enumeration.")]
+        public enum DerrickType 
+        {
+        /// <summary>
+        /// 2 stand capacity derrick
+        /// </summary>
+          @double,
+        /// <summary>
+        /// 4 stand capacity derrick
+        /// </summary>
+          quadruple,
+        /// <summary>
+        /// Slant derrick
+        /// </summary>
+          slant,
+        /// <summary>
+        /// 3 stand capacity derrick
+        /// </summary>
+          triple,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the DrawWorksType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the DrawWorksType xsd enumeration.")]
+        public enum DrawWorksType 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          mechanical,
+        /// <summary>
+        /// standardelectric property
+        /// </summary>
+          [XmlEnum("standard electric")]
+          standardelectric,
+        /// <summary>
+        /// dieselelectric property
+        /// </summary>
+          [XmlEnum("diesel electric")]
+          dieselelectric,
+        /// <summary>
+        /// ramrig property
+        /// </summary>
+          [XmlEnum("ram rig")]
+          ramrig,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the DriveType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the DriveType xsd enumeration.")]
+        public enum DriveType 
+        {
+        /// <summary>
+        /// coiledtubing property
+        /// </summary>
+          [XmlEnum("coiled tubing")]
+          coiledtubing,
+        /// <summary>
+        /// rotarykellydrive property
+        /// </summary>
+          [XmlEnum("rotary kelly drive")]
+          rotarykellydrive,
+        /// <summary>
+        /// topdrive property
+        /// </summary>
+          [XmlEnum("top drive")]
+          topdrive,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the ElevCodeEnum xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the ElevCodeEnum xsd enumeration.")]
+        public enum ElevCodeEnum 
+        {
+        /// <summary>
+        /// casing flange: A flange affixed to the top of the casing string used to attach production equipment.
+        /// </summary>
+          CF,
+        /// <summary>
+        /// crown valve
+        /// </summary>
+          CV,
+        /// <summary>
+        /// derrick floor
+        /// </summary>
+          DF,
+        /// <summary>
+        /// ground level
+        /// </summary>
+          GL,
+        /// <summary>
+        /// kelly bushing
+        /// </summary>
+          KB,
+        /// <summary>
+        /// rotary bushing
+        /// </summary>
+          RB,
+        /// <summary>
+        /// rotary table
+        /// </summary>
+          RT,
+        /// <summary>
+        /// sea floor
+        /// </summary>
+          SF,
+        /// <summary>
+        /// Lowest Astronomical Tide. The lowest tide level over the duration of the National Tidal Datum Epoch (19 years).
+        /// </summary>
+          LAT,
+        /// <summary>
+        /// Mean Sea Level - A tidal datum. The arithmetic mean of hourly heights observed over the National Tidal Datum Epoch (19 years).
+        /// </summary>
+          SL,
+        /// <summary>
+        /// Mean Higher High Water - A tidal datum. The average of the higher high water height of each tidal day observed over the National Tidal Datum Epoch (19 years).
+        /// </summary>
+          MHHW,
+        /// <summary>
+        /// Mean High Water - A tidal datum. The average of all the high water heights observed over the National Tidal Datum Epoch (19 years).
+        /// </summary>
+          MHW,
+        /// <summary>
+        /// Mean Lower Low Water - A tidal datum. The average of the lower low water height of each tidal day observed over the National Tidal Datum Epoch (19 years ).
+        /// </summary>
+          MLLW,
+        /// <summary>
+        /// Mean Low Water - A tidal datum. The average of all the low water heights observed over the National Tidal Datum Epoch (19 years).
+        /// </summary>
+          MLW,
+        /// <summary>
+        /// Mean Tide Level - A tidal datum. The arithmetic mean of mean high water and mean low water. Same as half-tide level.
+        /// </summary>
+          MTL,
+        /// <summary>
+        /// kickoff point
+        /// </summary>
+          KO,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the Ellipsoid xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the Ellipsoid xsd enumeration.")]
+        public enum Ellipsoid 
+        {
+        /// <summary>
+        /// Australian Old
+        /// </summary>
+          AGD66,
+        /// <summary>
+        /// Modified Airy
+        /// </summary>
+          AIRY_MOD,
+        /// <summary>
+        /// Airy 1830
+        /// </summary>
+          AIRY30,
+        /// <summary>
+        /// Airy 1849
+        /// </summary>
+          AIRY49,
+        /// <summary>
+        /// Australian National Same as KAU63 and SA69
+        /// </summary>
+          AUST_NAT,
+        /// <summary>
+        /// BESLDHD property
+        /// </summary>
+          [XmlEnum("BESL-DHD")]
+          BESLDHD,
+        /// <summary>
+        /// BESLNGL property
+        /// </summary>
+          [XmlEnum("BESL-NGL")]
+          BESLNGL,
+        /// <summary>
+        /// BESLRT9 property
+        /// </summary>
+          [XmlEnum("BESL-RT9")]
+          BESLRT9,
+        /// <summary>
+        /// Bessel 1841
+        /// </summary>
+          BESS41,
+        /// <summary>
+        /// Bessel 1841 for Namibia
+        /// </summary>
+          BESSNAM,
+        /// <summary>
+        /// BOGOTA (International 1924)
+        /// </summary>
+          BOGOTA,
+        /// <summary>
+        /// Clarke 1858
+        /// </summary>
+          CL58,
+        /// <summary>
+        /// CL581 property
+        /// </summary>
+          [XmlEnum("CL58-1")]
+          CL581,
+        /// <summary>
+        /// Clarke 1866
+        /// </summary>
+          CL66,
+        /// <summary>
+        /// CL66M property
+        /// </summary>
+          [XmlEnum("CL66-M")]
+          CL66M,
+        /// <summary>
+        /// Clarke 1880
+        /// </summary>
+          CL80,
+        /// <summary>
+        /// CL80A property
+        /// </summary>
+          [XmlEnum("CL80-A")]
+          CL80A,
+        /// <summary>
+        /// CL80B property
+        /// </summary>
+          [XmlEnum("CL80-B")]
+          CL80B,
+        /// <summary>
+        /// CL80I property
+        /// </summary>
+          [XmlEnum("CL80-I")]
+          CL80I,
+        /// <summary>
+        /// CL80J property
+        /// </summary>
+          [XmlEnum("CL80-J")]
+          CL80J,
+        /// <summary>
+        /// CL80M property
+        /// </summary>
+          [XmlEnum("CL80-M")]
+          CL80M,
+        /// <summary>
+        /// CL80P property
+        /// </summary>
+          [XmlEnum("CL80-P")]
+          CL80P,
+        /// <summary>
+        /// CAMPO INCH (International 1924)
+        /// </summary>
+          CMPOINCH,
+        /// <summary>
+        /// Danish
+        /// </summary>
+          DAN,
+        /// <summary>
+        /// DELAMBRE 1810 
+        /// </summary>
+          DELA,
+        /// <summary>
+        /// ED50 (International 1924)
+        /// </summary>
+          ED50,
+        /// <summary>
+        /// EGYPT07 (Helmert 1906)
+        /// </summary>
+          EGYPT07,
+        /// <summary>
+        /// Everest 1830 - Indian
+        /// </summary>
+          EVER,
+        /// <summary>
+        /// Everest 1948
+        /// </summary>
+          EVER48,
+        /// <summary>
+        /// Everest 1956
+        /// </summary>
+          EVER56,
+        /// <summary>
+        /// Everest 1969
+        /// </summary>
+          EVER69,
+        /// <summary>
+        /// EVERBR property
+        /// </summary>
+          [XmlEnum("EVER-BR")]
+          EVERBR,
+        /// <summary>
+        /// Modified Everest
+        /// </summary>
+          EVERMOD,
+        /// <summary>
+        /// EVERP property
+        /// </summary>
+          [XmlEnum("EVER-P")]
+          EVERP,
+        /// <summary>
+        /// EVERTM property
+        /// </summary>
+          [XmlEnum("EVER-TM")]
+          EVERTM,
+        /// <summary>
+        /// Everest - Timbali 
+        /// </summary>
+          EVTM,
+        /// <summary>
+        /// "Fischer 1960 aka ""Mercury"""
+        /// </summary>
+          FISC60,
+        /// <summary>
+        /// Fischer 1960 Modified
+        /// </summary>
+          FISC60MOD,
+        /// <summary>
+        /// "Fischer 1968 aka ""Modified Mercury"""
+        /// </summary>
+          FISC68,
+        /// <summary>
+        /// "Modified Fischer 1960 aka ""South Asia"""
+        /// </summary>
+          FISCMOD,
+        /// <summary>
+        /// GDA94 - Australia
+        /// </summary>
+          GDA94,
+        /// <summary>
+        /// Geodetic Reference System 1967
+        /// </summary>
+          GRS67,
+        /// <summary>
+        /// Geodetic Reference System 1980
+        /// </summary>
+          GRS80,
+        /// <summary>
+        /// Hayford 1909
+        /// </summary>
+          HAY09,
+        /// <summary>
+        /// Heiskanen 1929
+        /// </summary>
+          HEIS,
+        /// <summary>
+        /// Helmert 1906
+        /// </summary>
+          HEL06,
+        /// <summary>
+        /// Helmert 1907 
+        /// </summary>
+          HEL07,
+        /// <summary>
+        /// Hough 1956 
+        /// </summary>
+          HOUG,
+        /// <summary>
+        /// IAG75 property
+        /// </summary>
+          [XmlEnum("IAG-75")]
+          IAG75,
+        /// <summary>
+        /// INDIAN75 (Everest 1930)
+        /// </summary>
+          INDIAN75,
+        /// <summary>
+        /// INDO74 property
+        /// </summary>
+          [XmlEnum("INDO-74")]
+          INDO74,
+        /// <summary>
+        /// International 1924
+        /// </summary>
+          INT24,
+        /// <summary>
+        /// IUGG 1967
+        /// </summary>
+          IUGG67,
+        /// <summary>
+        /// IUGG 1975
+        /// </summary>
+          IUGG75,
+        /// <summary>
+        /// Jeffreys 1948
+        /// </summary>
+          JEFF48,
+        /// <summary>
+        /// Kaula 1963 Same as AUST_NAT and SA69
+        /// </summary>
+          KAU63,
+        /// <summary>
+        /// Krassovsky
+        /// </summary>
+          KRSV,
+        /// <summary>
+        /// MERIT83
+        /// </summary>
+          MERIT83,
+        /// <summary>
+        /// NAD27 (Clarke 1866)
+        /// </summary>
+          NAD27,
+        /// <summary>
+        /// NAHRAN (Clarke 1880)
+        /// </summary>
+          NAHRAN,
+        /// <summary>
+        /// New International 1967
+        /// </summary>
+          NEWINT67,
+        /// <summary>
+        /// NWL10D property
+        /// </summary>
+          [XmlEnum("NWL-10D")]
+          NWL10D,
+        /// <summary>
+        /// NWL9D property
+        /// </summary>
+          [XmlEnum("NWL-9D")]
+          NWL9D,
+        /// <summary>
+        /// OSGB36 (Airy 1830)
+        /// </summary>
+          OSGB36,
+        /// <summary>
+        /// OSU86F
+        /// </summary>
+          OSU86F,
+        /// <summary>
+        /// OSU91A
+        /// </summary>
+          OSU91A,
+        /// <summary>
+        /// PLESSIS1817 property
+        /// </summary>
+          [XmlEnum("PLESSIS-1817")]
+          PLESSIS1817,
+        /// <summary>
+        /// PSAD56 (International 1924)
+        /// </summary>
+          PSAD56,
+        /// <summary>
+        /// Pointe Noire 1948
+        /// </summary>
+          PTNOIRE,
+        /// <summary>
+        /// South American 1969
+        /// </summary>
+          SA69,
+        /// <summary>
+        /// Sphere of radius 6370997
+        /// </summary>
+          SPHR,
+        /// <summary>
+        /// Struve 1860
+        /// </summary>
+          STRU,
+        /// <summary>
+        /// Walbeck
+        /// </summary>
+          WALB,
+        /// <summary>
+        /// War Office 1924
+        /// </summary>
+          WAR24,
+        /// <summary>
+        /// World Geodetic System 1960
+        /// </summary>
+          WGS60,
+        /// <summary>
+        /// World Geodetic System 1966
+        /// </summary>
+          WGS66,
+        /// <summary>
+        /// World Geodetic System 1972
+        /// </summary>
+          WGS72,
+        /// <summary>
+        /// World Geodetic System 1984
+        /// </summary>
+          WGS84,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the FiberMode xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the FiberMode xsd enumeration.")]
+        public enum FiberMode 
+        {
+        /// <summary>
+        /// A single, narrow, core of constant refractive index, surrounded by glass cladding. The core diameter is comparable to a wave length of the light (about 5 um).
+        /// </summary>
+          singlemode,
+        /// <summary>
+        /// The core has a graded refractive index. The core is generally about 50um in diameter.
+        /// </summary>
+          multimode,
+        /// <summary>
+        /// The fiber mode is neither singlemode or multimode.
+        /// </summary>
+          other,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the GasPeakType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the GasPeakType xsd enumeration.")]
+        public enum GasPeakType 
+        {
+        /// <summary>
+        /// circulatingbackgroundgas property
+        /// </summary>
+          [XmlEnum("circulating background gas")]
+          circulatingbackgroundgas,
+        /// <summary>
+        /// connectiongas property
+        /// </summary>
+          [XmlEnum("connection gas")]
+          connectiongas,
+        /// <summary>
+        /// drillingbackgroundgas property
+        /// </summary>
+          [XmlEnum("drilling background gas")]
+          drillingbackgroundgas,
+        /// <summary>
+        /// drillinggaspeak property
+        /// </summary>
+          [XmlEnum("drilling gas peak")]
+          drillinggaspeak,
+        /// <summary>
+        /// flowcheckgas property
+        /// </summary>
+          [XmlEnum("flow check gas")]
+          flowcheckgas,
+        /// <summary>
+        /// noreadings property
+        /// </summary>
+          [XmlEnum("no readings")]
+          noreadings,
+        /// <summary>
+        /// 
+        /// </summary>
+          other,
+        /// <summary>
+        /// shutdowngas property
+        /// </summary>
+          [XmlEnum("shut down gas")]
+          shutdowngas,
+        /// <summary>
+        /// tripgas property
+        /// </summary>
+          [XmlEnum("trip gas")]
+          tripgas,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the GeodeticDatum xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the GeodeticDatum xsd enumeration.")]
+        public enum GeodeticDatum 
+        {
+        /// <summary>
+        /// Adindian ellipsoid=CL80 region="Sudan, Ethiopia"
+        /// </summary>
+          ADND,
+        /// <summary>
+        /// ARC 1950 ellipsoid=CL80B region="Southern Africa"
+        /// </summary>
+          ARC50,
+        /// <summary>
+        /// Australian ellipsoid=GRS67 region="Australia Geodetic"
+        /// </summary>
+          AUSG,
+        /// <summary>
+        /// Camp Area Astro ellipsoid=INT24 region=Antarctica 
+        /// </summary>
+          CAA,
+        /// <summary>
+        /// Chau Astro ellipsoid=INT24 region=Paraguay 
+        /// </summary>
+          CHAS,
+        /// <summary>
+        /// Corrego Alegre ellipsoid=INT24 region=INT24 
+        /// </summary>
+          CORAL,
+        /// <summary>
+        /// European 1950 ellipsoid=INT24 region="Europe, Middle East, North Africa"
+        /// </summary>
+          ED50,
+        /// <summary>
+        /// European 1987 ellipsoid=INT24 region="Europe, Middle East, North Africa"
+        /// </summary>
+          ED87,
+        /// <summary>
+        /// Ireland 1965 ellipsoid=AIRY_MOD region=Ireland 
+        /// </summary>
+          ERIN65,
+        /// <summary>
+        /// Geodetic Datum 1949 ellipsoid=INT24 region="New Zealand"
+        /// </summary>
+          GD49,
+        /// <summary>
+        /// Ghana ellipsoid=WAR24 region=Ghana 
+        /// </summary>
+          GHANA,
+        /// <summary>
+        /// Guam 1963 ellipsoid=CL66 region="Marianas Islands"
+        /// </summary>
+          GUAM63,
+        /// <summary>
+        /// Hjorsey 1955 ellipsoid=INT24 region=Iceland 
+        /// </summary>
+          HJRS55,
+        /// <summary>
+        /// Hu-Tzu-Shan ellipsoid=INT24 region=Taiwan 
+        /// </summary>
+          HTS,
+        /// <summary>
+        /// Campo Inchauspe ellipsoid=INT24 region=Argentina 
+        /// </summary>
+          INCH,
+        /// <summary>
+        /// Indian 'Kalimpur' ellipsoid=EVER region=India 
+        /// </summary>
+          INDIA1,
+        /// <summary>
+        /// Indian 'Kalimpur' ellipsoid=INT24 region=India 
+        /// </summary>
+          INDIA2,
+        /// <summary>
+        /// Indonesia 1974 ellipsoid=GRS67 region=Indonesia 
+        /// </summary>
+          INDNS74,
+        /// <summary>
+        /// Liberia 1964 ellipsoid=CL80 region=Liberia 
+        /// </summary>
+          LIB64,
+        /// <summary>
+        /// Luzon ellipsoid=CL66 region=Philippines 
+        /// </summary>
+          LUZON,
+        /// <summary>
+        /// Merchich ellipsoid=CL80A region=Morocco 
+        /// </summary>
+          MRCH,
+        /// <summary>
+        /// North American 'Meades Ranch' ellipsoid=CL66 region="North America"
+        /// </summary>
+          NAD27,
+        /// <summary>
+        /// North American Datum of 1983 ellipsoid=GRS80 region="Canada, Cuba, U.S., Caribbean"
+        /// </summary>
+          NAD83,
+        /// <summary>
+        /// Nigeria ellipsoid=CL80 region=Nigeria 
+        /// </summary>
+          NGRA,
+        /// <summary>
+        /// 
+        /// </summary>
+          None,
+        /// <summary>
+        /// Naparima ellipsoid=INT24 region="Trinidad and Tobago"
+        /// </summary>
+          NPRM,
+        /// <summary>
+        /// Ordnance Survey of Great Britain 1936 ellipsoid=AIRY region="Great Britain, Northern Ireland"
+        /// </summary>
+          OSGB36,
+        /// <summary>
+        /// European 'Pelmert Tower, Potsdam' ellipsoid=INT24 region="Most of Eurasia, Africa"
+        /// </summary>
+          POTS1,
+        /// <summary>
+        /// Russian 'Pulkovo' ellipsoid=BESS41 
+        /// </summary>
+          PULK1,
+        /// <summary>
+        /// Russian 'Pulkovo' ellipsoid=KRSV 
+        /// </summary>
+          PULK2,
+        /// <summary>
+        /// Qornoq ellipsoid=INT24 region=Greenland 
+        /// </summary>
+          QRNQ,
+        /// <summary>
+        /// Provisional South American, 1956 ellipsoid=INT24 region="Bolivia, Chile, Colombia, Ecuador, Peru, Venezuela, the Guianas"
+        /// </summary>
+          SA56,
+        /// <summary>
+        /// Sierra Leone 1960 ellipsoid=CL80 region="Sierra Leone"
+        /// </summary>
+          SRL60,
+        /// <summary>
+        /// Tananarive (Antananarivo) Obsv. 1925T ellipsoid=INT24 region="Malagasy Republic"
+        /// </summary>
+          TNRV25,
+        /// <summary>
+        /// Tokyo ellipsoid=BESS41 region=Japan
+        /// </summary>
+          TOKYO,
+        /// <summary>
+        /// Datum defined elsewhere
+        /// </summary>
+          UserDefined,
+        /// <summary>
+        /// Voirol ellipsoid=CL80 region="Algeria, Tunisia"
+        /// </summary>
+          VROL,
+        /// <summary>
+        /// World Geodetic System 1972 ellipsoid=WGS72
+        /// </summary>
+          WGS72,
+        /// <summary>
+        /// World Geodetic System 1984 ellipsoid=WGS84 region="Sino-Soviet Bloc, SW Asia, Hydrographic, Aeronautical"
+        /// </summary>
+          WGS84,
+        /// <summary>
+        /// Yacare ellipsoid=INT24 region=Uruguay
+        /// </summary>
+          YACR,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the Hemispheres xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the Hemispheres xsd enumeration.")]
+        public enum HemisphereList 
+        {
+        /// <summary>
+        /// Northern hemisphere.
+        /// </summary>
+          northern,
+        /// <summary>
+        /// Southern hemisphere.
+        /// </summary>
+          southern,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the HoleCasingType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the HoleCasingType xsd enumeration.")]
+        public enum HoleCasingType 
+        {
+        /// <summary>
+        /// blowoutpreventer property
+        /// </summary>
+          [XmlEnum("blow out preventer")]
+          blowoutpreventer,
+        /// <summary>
+        /// 
+        /// </summary>
+          casing,
+        /// <summary>
+        /// 
+        /// </summary>
+          conductor,
+        /// <summary>
+        /// curvedconductor property
+        /// </summary>
+          [XmlEnum("curved conductor")]
+          curvedconductor,
+        /// <summary>
+        /// 
+        /// </summary>
+          liner,
+        /// <summary>
+        /// openhole property
+        /// </summary>
+          [XmlEnum("open hole")]
+          openhole,
+        /// <summary>
+        /// 
+        /// </summary>
+          riser,
+        /// <summary>
+        /// 
+        /// </summary>
+          tubing,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the HoleOpenerType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the HoleOpenerType xsd enumeration.")]
+        public enum HoleOpenerType 
+        {
+        /// <summary>
+        /// underreamer property
+        /// </summary>
+          [XmlEnum("under-reamer")]
+          underreamer,
+        /// <summary>
+        /// fixedblade property
+        /// </summary>
+          [XmlEnum("fixed blade")]
+          fixedblade,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the IntervalMethod xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the IntervalMethod xsd enumeration.")]
+        public enum IntervalMethod 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          average,
+        /// <summary>
+        /// 
+        /// </summary>
+          maximum,
+        /// <summary>
+        /// 
+        /// </summary>
+          minimum,
+        /// <summary>
+        /// 
+        /// </summary>
+          other,
+        /// <summary>
+        /// spotsample property
+        /// </summary>
+          [XmlEnum("spot sample")]
+          spotsample,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the IntervalType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the IntervalType xsd enumeration.")]
+        public enum IntervalType 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          time,
+        /// <summary>
+        /// 
+        /// </summary>
+          depth,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the ItemState xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the ItemState xsd enumeration.")]
+        public enum ItemState 
+        {
+        /// <summary>
+        /// Actual data measured or entered at the well site.
+        /// </summary>
+          actual,
+        /// <summary>
+        /// Model data used for "what if" calculations.
+        /// </summary>
+          model,
+        /// <summary>
+        /// A planned object. That is, one which is expected to be executed in the future.
+        /// </summary>
+          plan,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the InstalledFiberPoint xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the InstalledFiberPoint xsd enumeration.")]
+        public enum InstalledFiberPoint 
+        {
+        /// <summary>
+        /// A point at which a fiber is physically, and semi-permanently, connected to another length of fiber.
+        /// </summary>
+          splice,
+        /// <summary>
+        /// A point at which a cable connector is installed, which allows the fiber to be connected to another instrument or fiber length.
+        /// </summary>
+          connector,
+        /// <summary>
+        /// endoffiber property
+        /// </summary>
+          [XmlEnum("end of fiber")]
+          endoffiber,
+        /// <summary>
+        /// baseoffiber property
+        /// </summary>
+          [XmlEnum("base of fiber")]
+          baseoffiber,
+        /// <summary>
+        /// turnaroundpoint property
+        /// </summary>
+          [XmlEnum("turn around point")]
+          turnaroundpoint,
+        /// <summary>
+        /// startoffiber property
+        /// </summary>
+          [XmlEnum("start of fiber")]
+          startoffiber,
+        /// <summary>
+        /// ovenentrypoint property
+        /// </summary>
+          [XmlEnum("oven entry point")]
+          ovenentrypoint,
+        /// <summary>
+        /// ovenexitpoint property
+        /// </summary>
+          [XmlEnum("oven exit point")]
+          ovenexitpoint,
+        /// <summary>
+        /// downholegauge property
+        /// </summary>
+          [XmlEnum("downhole gauge")]
+          downholegauge,
+        /// <summary>
+        /// DTSlaserhead property
+        /// </summary>
+          [XmlEnum("DTS laser head")]
+          DTSlaserhead,
+        /// <summary>
+        /// DTSreferenceoven property
+        /// </summary>
+          [XmlEnum("DTS reference oven")]
+          DTSreferenceoven,
+        /// <summary>
+        /// splicebox property
+        /// </summary>
+          [XmlEnum("splice box")]
+          splicebox,
+        /// <summary>
+        /// wellheadjunctionbox property
+        /// </summary>
+          [XmlEnum("wellhead junction box")]
+          wellheadjunctionbox,
+        /// <summary>
+        /// basetubinghangerflange property
+        /// </summary>
+          [XmlEnum("base tubing hanger flange")]
+          basetubinghangerflange,
+        /// <summary>
+        /// PBRwetconnect property
+        /// </summary>
+          [XmlEnum("PBR wet connect")]
+          PBRwetconnect,
+        /// <summary>
+        /// topESPpump property
+        /// </summary>
+          [XmlEnum("top ESP pump")]
+          topESPpump,
+        /// <summary>
+        /// baseESPpump property
+        /// </summary>
+          [XmlEnum("base ESP pump")]
+          baseESPpump,
+        /// <summary>
+        /// wellheadtemperaturegauge property
+        /// </summary>
+          [XmlEnum("wellhead temperature gauge")]
+          wellheadtemperaturegauge,
+        /// <summary>
+        /// topcompletionzone property
+        /// </summary>
+          [XmlEnum("top completion zone")]
+          topcompletionzone,
+        /// <summary>
+        /// basecompletionzone property
+        /// </summary>
+          [XmlEnum("base completion zone")]
+          basecompletionzone,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the JarType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the JarType xsd enumeration.")]
+        public enum JarType 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          mechanical,
+        /// <summary>
+        /// 
+        /// </summary>
+          hydraulic,
+        /// <summary>
+        /// hydromechanical property
+        /// </summary>
+          [XmlEnum("hydro mechanical")]
+          hydromechanical,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the JarAction xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the JarAction xsd enumeration.")]
+        public enum JarAction 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          up,
+        /// <summary>
+        /// 
+        /// </summary>
+          down,
+        /// <summary>
+        /// 
+        /// </summary>
+          both,
+        /// <summary>
+        /// 
+        /// </summary>
+          vibrating,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the LithologySource xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the LithologySource xsd enumeration.")]
+        public enum LithologySource 
+        {
+        /// <summary>
+        /// The lithology has one overall interpretation based on several sources such as logs and cuttings or cores.
+        /// </summary>
+          interpreted,
+        /// <summary>
+        /// The lithology as based on a visual inspection of the core. A percentage is commonly assigned to each portion of the lithology.
+        /// </summary>
+          core,
+        /// <summary>
+        /// The lithology as based on a visual inspection of the cuttings. A percentage is commonly assigned to each portion of the lithology.
+        /// </summary>
+          cuttings,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the LogDataType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the LogDataType xsd enumeration.")]
+        public enum LogDataType 
+        {
+        /// <summary>
+        /// datetime property
+        /// </summary>
+          [XmlEnum("date time")]
+          datetime,
+        /// <summary>
+        /// Double precision floating point value.
+        /// </summary>
+          @double,
+        /// <summary>
+        /// Long integer data value.
+        /// </summary>
+          @long,
+        /// <summary>
+        /// Character string data.
+        /// </summary>
+          @string,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the LogIndexDirection xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the LogIndexDirection xsd enumeration.")]
+        public enum LogIndexDirection 
+        {
+        /// <summary>
+        /// Log items are in order of decreasing index values (e.g. wireline log logging while pulling out of hole)
+        /// </summary>
+          decreasing,
+        /// <summary>
+        /// Log items are in order of increasing index values (e.g. increasing depths or times)
+        /// </summary>
+          increasing,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the LogIndexType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the LogIndexType xsd enumeration.")]
+        public enum LogIndexType 
+        {
+        /// <summary>
+        /// datetime property
+        /// </summary>
+          [XmlEnum("date time")]
+          datetime,
+        /// <summary>
+        /// elapsedtime property
+        /// </summary>
+          [XmlEnum("elapsed time")]
+          elapsedtime,
+        /// <summary>
+        /// Log is indexed on length (not a depth).
+        /// </summary>
+          length,
+        /// <summary>
+        /// measureddepth property
+        /// </summary>
+          [XmlEnum("measured depth")]
+          measureddepth,
+        /// <summary>
+        /// verticaldepth property
+        /// </summary>
+          [XmlEnum("vertical depth")]
+          verticaldepth,
+        /// <summary>
+        /// Any other index type for a log.
+        /// </summary>
+          other,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the LogTraceOrigin xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the LogTraceOrigin xsd enumeration.")]
+        public enum LogTraceOrigin 
+        {
+        /// <summary>
+        /// The data were read from a realtime sensor stream.
+        /// </summary>
+          realtime,
+        /// <summary>
+        /// The data are synthetic.
+        /// </summary>
+          modeled,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the LogTraceState xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the LogTraceState xsd enumeration.")]
+        public enum LogTraceState 
+        {
+        /// <summary>
+        /// depthadjusted property
+        /// </summary>
+          [XmlEnum("depth adjusted")]
+          depthadjusted,
+        /// <summary>
+        /// 
+        /// </summary>
+          edited,
+        /// <summary>
+        /// 
+        /// </summary>
+          joined,
+        /// <summary>
+        /// 
+        /// </summary>
+          processed,
+        /// <summary>
+        /// 
+        /// </summary>
+          raw,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the MaterialType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the MaterialType xsd enumeration.")]
+        public enum MaterialType 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          aluminum,
+        /// <summary>
+        /// berylliumcopper property
+        /// </summary>
+          [XmlEnum("beryllium copper")]
+          berylliumcopper,
+        /// <summary>
+        /// chromealloy property
+        /// </summary>
+          [XmlEnum("chrome alloy")]
+          chromealloy,
+        /// <summary>
+        /// 
+        /// </summary>
+          composite,
+        /// <summary>
+        /// 
+        /// </summary>
+          other,
+        /// <summary>
+        /// nonmagneticsteel property
+        /// </summary>
+          [XmlEnum("non-magnetic steel")]
+          nonmagneticsteel,
+        /// <summary>
+        /// 
+        /// </summary>
+          plastic,
+        /// <summary>
+        /// 
+        /// </summary>
+          steel,
+        /// <summary>
+        /// steelalloy property
+        /// </summary>
+          [XmlEnum("steel alloy")]
+          steelalloy,
+        /// <summary>
+        /// 
+        /// </summary>
+          titanium,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the MeasurementType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the MeasurementType xsd enumeration.")]
+        public enum MeasurementType 
+        {
+        /// <summary>
+        /// Output from an accelerometer on a logging tool.
+        /// </summary>
+          acceleration,
+        /// <summary>
+        /// acousticcaliper property
+        /// </summary>
+          [XmlEnum("acoustic caliper")]
+          acousticcaliper,
+        /// <summary>
+        /// acousticcasingcollarlocator property
+        /// </summary>
+          [XmlEnum("acoustic casing collar locator")]
+          acousticcasingcollarlocator,
+        /// <summary>
+        /// acousticimpedance property
+        /// </summary>
+          [XmlEnum("acoustic impedance")]
+          acousticimpedance,
+        /// <summary>
+        /// acousticporosity property
+        /// </summary>
+          [XmlEnum("acoustic porosity")]
+          acousticporosity,
+        /// <summary>
+        /// acousticvelocity property
+        /// </summary>
+          [XmlEnum("acoustic velocity")]
+          acousticvelocity,
+        /// <summary>
+        /// acousticwavematrixtraveltime property
+        /// </summary>
+          [XmlEnum("acoustic wave matrix travel time")]
+          acousticwavematrixtraveltime,
+        /// <summary>
+        /// acousticwavetraveltime property
+        /// </summary>
+          [XmlEnum("acoustic wave travel time")]
+          acousticwavetraveltime,
+        /// <summary>
+        /// Any measurement of the maximum departure of a wave from an average value.
+        /// </summary>
+          amplitude,
+        /// <summary>
+        /// amplitudeofacousticwave property
+        /// </summary>
+          [XmlEnum("amplitude of acoustic wave")]
+          amplitudeofacousticwave,
+        /// <summary>
+        /// amplitudeofEMwave property
+        /// </summary>
+          [XmlEnum("amplitude of E-M wave")]
+          amplitudeofEMwave,
+        /// <summary>
+        /// amplituderatio property
+        /// </summary>
+          [XmlEnum("amplitude ratio")]
+          amplituderatio,
+        /// <summary>
+        /// A particular extent of space or surface.
+        /// </summary>
+          area,
+        /// <summary>
+        /// The amount of reduction in the amplitude of a wave.
+        /// </summary>
+          attenuation,
+        /// <summary>
+        /// attenuationofacousticwave property
+        /// </summary>
+          [XmlEnum("attenuation of acoustic wave")]
+          attenuationofacousticwave,
+        /// <summary>
+        /// attenuationofEMwave property
+        /// </summary>
+          [XmlEnum("attenuation of E-M wave")]
+          attenuationofEMwave,
+        /// <summary>
+        /// A general classification for measurements which are very specialized and not normally accessed by petrophysicists.
+        /// </summary>
+          auxiliary,
+        /// <summary>
+        /// averageporosity property
+        /// </summary>
+          [XmlEnum("average porosity")]
+          averageporosity,
+        /// <summary>
+        /// In the horizontal plane, it is the clockwise angle of departure from magnetic north (while looking down hole).
+        /// </summary>
+          azimuth,
+        /// <summary>
+        /// baritemudcorrection property
+        /// </summary>
+          [XmlEnum("barite mud correction")]
+          baritemudcorrection,
+        /// <summary>
+        /// bedthicknesscorrection property
+        /// </summary>
+          [XmlEnum("bed thickness correction")]
+          bedthicknesscorrection,
+        /// <summary>
+        /// bitsize property
+        /// </summary>
+          [XmlEnum("bit size")]
+          bitsize,
+        /// <summary>
+        /// A well log trace which has been edited to reflect sharp bed boundaries. The trace has a square wave appearance.
+        /// </summary>
+          blocked,
+        /// <summary>
+        /// boreholeenvironmentcorrection property
+        /// </summary>
+          [XmlEnum("borehole environment correction")]
+          boreholeenvironmentcorrection,
+        /// <summary>
+        /// boreholefluidcompositioncorrection property
+        /// </summary>
+          [XmlEnum("borehole fluid composition correction")]
+          boreholefluidcompositioncorrection,
+        /// <summary>
+        /// boreholefluidcorrection property
+        /// </summary>
+          [XmlEnum("borehole fluid correction")]
+          boreholefluidcorrection,
+        /// <summary>
+        /// boreholesizecorrection property
+        /// </summary>
+          [XmlEnum("borehole size correction")]
+          boreholesizecorrection,
+        /// <summary>
+        /// bromidemudcorrection property
+        /// </summary>
+          [XmlEnum("bromide mud correction")]
+          bromidemudcorrection,
+        /// <summary>
+        /// bulkcompressibility property
+        /// </summary>
+          [XmlEnum("bulk compressibility")]
+          bulkcompressibility,
+        /// <summary>
+        /// bulkdensity property
+        /// </summary>
+          [XmlEnum("bulk density")]
+          bulkdensity,
+        /// <summary>
+        /// bulkvolume property
+        /// </summary>
+          [XmlEnum("bulk volume")]
+          bulkvolume,
+        /// <summary>
+        /// bulkvolumegas property
+        /// </summary>
+          [XmlEnum("bulk volume gas")]
+          bulkvolumegas,
+        /// <summary>
+        /// bulkvolumehydrocarbon property
+        /// </summary>
+          [XmlEnum("bulk volume hydrocarbon")]
+          bulkvolumehydrocarbon,
+        /// <summary>
+        /// bulkvolumeoil property
+        /// </summary>
+          [XmlEnum("bulk volume oil")]
+          bulkvolumeoil,
+        /// <summary>
+        /// bulkvolumewater property
+        /// </summary>
+          [XmlEnum("bulk volume water")]
+          bulkvolumewater,
+        /// <summary>
+        /// COratio property
+        /// </summary>
+          [XmlEnum("C/O ratio")]
+          COratio,
+        /// <summary>
+        /// A well log used to record hole diameter (open or cased).
+        /// </summary>
+          caliper,
+        /// <summary>
+        /// casedholecorrection property
+        /// </summary>
+          [XmlEnum("cased hole correction")]
+          casedholecorrection,
+        /// <summary>
+        /// casingcollarlocator property
+        /// </summary>
+          [XmlEnum("casing collar locator")]
+          casingcollarlocator,
+        /// <summary>
+        /// casingcorrection property
+        /// </summary>
+          [XmlEnum("casing correction")]
+          casingcorrection,
+        /// <summary>
+        /// casingdiametercorrection property
+        /// </summary>
+          [XmlEnum("casing diameter correction")]
+          casingdiametercorrection,
+        /// <summary>
+        /// casinginspection property
+        /// </summary>
+          [XmlEnum("casing inspection")]
+          casinginspection,
+        /// <summary>
+        /// casingthicknesscorrection property
+        /// </summary>
+          [XmlEnum("casing thickness correction")]
+          casingthicknesscorrection,
+        /// <summary>
+        /// casingweightcorrection property
+        /// </summary>
+          [XmlEnum("casing weight correction")]
+          casingweightcorrection,
+        /// <summary>
+        /// cementcorrection property
+        /// </summary>
+          [XmlEnum("cement correction")]
+          cementcorrection,
+        /// <summary>
+        /// cementdensitycorrection property
+        /// </summary>
+          [XmlEnum("cement density correction")]
+          cementdensitycorrection,
+        /// <summary>
+        /// cementevaluation property
+        /// </summary>
+          [XmlEnum("cement evaluation")]
+          cementevaluation,
+        /// <summary>
+        /// cementthicknesscorrection property
+        /// </summary>
+          [XmlEnum("cement thickness correction")]
+          cementthicknesscorrection,
+        /// <summary>
+        /// cementtypecorrection property
+        /// </summary>
+          [XmlEnum("cement type correction")]
+          cementtypecorrection,
+        /// <summary>
+        /// CHdensityporosity property
+        /// </summary>
+          [XmlEnum("CH density porosity")]
+          CHdensityporosity,
+        /// <summary>
+        /// CHdolomitedensityporosity property
+        /// </summary>
+          [XmlEnum("CH dolomite density porosity")]
+          CHdolomitedensityporosity,
+        /// <summary>
+        /// CHdolomiteneutronporosity property
+        /// </summary>
+          [XmlEnum("CH dolomite neutron porosity")]
+          CHdolomiteneutronporosity,
+        /// <summary>
+        /// CHlimestonedensityporosity property
+        /// </summary>
+          [XmlEnum("CH limestone density porosity")]
+          CHlimestonedensityporosity,
+        /// <summary>
+        /// CHlimestoneneutronporosity property
+        /// </summary>
+          [XmlEnum("CH limestone neutron porosity")]
+          CHlimestoneneutronporosity,
+        /// <summary>
+        /// CHneutronporosity property
+        /// </summary>
+          [XmlEnum("CH neutron porosity")]
+          CHneutronporosity,
+        /// <summary>
+        /// CHsandstonedensityporosity property
+        /// </summary>
+          [XmlEnum("CH sandstone density porosity")]
+          CHsandstonedensityporosity,
+        /// <summary>
+        /// CHsandstoneneutronporosity property
+        /// </summary>
+          [XmlEnum("CH sandstone neutron porosity")]
+          CHsandstoneneutronporosity,
+        /// <summary>
+        /// compressionalwavedolomiteporosity property
+        /// </summary>
+          [XmlEnum("compressional wave dolomite porosity")]
+          compressionalwavedolomiteporosity,
+        /// <summary>
+        /// compressionalwavelimestoneporosity property
+        /// </summary>
+          [XmlEnum("compressional wave limestone porosity")]
+          compressionalwavelimestoneporosity,
+        /// <summary>
+        /// compressionalwavematrixtraveltime property
+        /// </summary>
+          [XmlEnum("compressional wave matrix travel time")]
+          compressionalwavematrixtraveltime,
+        /// <summary>
+        /// compressionalwavesandstoneporosity property
+        /// </summary>
+          [XmlEnum("compressional wave sandstone porosity")]
+          compressionalwavesandstoneporosity,
+        /// <summary>
+        /// compressionalwavetraveltime property
+        /// </summary>
+          [XmlEnum("compressional wave travel time")]
+          compressionalwavetraveltime,
+        /// <summary>
+        /// The property of a medium (solid or fluid) which allows the medium to conduct a form of energy; e.g., electrical conductivity or thermal conductivity.
+        /// </summary>
+          conductivity,
+        /// <summary>
+        /// conductivityfromattenuation property
+        /// </summary>
+          [XmlEnum("conductivity from attenuation")]
+          conductivityfromattenuation,
+        /// <summary>
+        /// conductivityfromphaseshift property
+        /// </summary>
+          [XmlEnum("conductivity from phase shift")]
+          conductivityfromphaseshift,
+        /// <summary>
+        /// connatewaterconductivity property
+        /// </summary>
+          [XmlEnum("connate water conductivity")]
+          connatewaterconductivity,
+        /// <summary>
+        /// connatewaterresistivity property
+        /// </summary>
+          [XmlEnum("connate water resistivity")]
+          connatewaterresistivity,
+        /// <summary>
+        /// conventionalcoreporosity property
+        /// </summary>
+          [XmlEnum("conventional core porosity")]
+          conventionalcoreporosity,
+        /// <summary>
+        /// corematrixdensity property
+        /// </summary>
+          [XmlEnum("core matrix density")]
+          corematrixdensity,
+        /// <summary>
+        /// corepermeability property
+        /// </summary>
+          [XmlEnum("core permeability")]
+          corepermeability,
+        /// <summary>
+        /// coreporosity property
+        /// </summary>
+          [XmlEnum("core porosity")]
+          coreporosity,
+        /// <summary>
+        /// A trace which has had corrections applied; e.g. environmental corrections.
+        /// </summary>
+          corrected,
+        /// <summary>
+        /// countrate property
+        /// </summary>
+          [XmlEnum("count rate")]
+          countrate,
+        /// <summary>
+        /// countrateratio property
+        /// </summary>
+          [XmlEnum("count rate ratio")]
+          countrateratio,
+        /// <summary>
+        /// crossplotporosity property
+        /// </summary>
+          [XmlEnum("cross plot porosity")]
+          crossplotporosity,
+        /// <summary>
+        /// decaytime property
+        /// </summary>
+          [XmlEnum("decay time")]
+          decaytime,
+        /// <summary>
+        /// deepconductivity property
+        /// </summary>
+          [XmlEnum("deep conductivity")]
+          deepconductivity,
+        /// <summary>
+        /// deepinductionconductivity property
+        /// </summary>
+          [XmlEnum("deep induction conductivity")]
+          deepinductionconductivity,
+        /// <summary>
+        /// deepinductionresistivity property
+        /// </summary>
+          [XmlEnum("deep induction resistivity")]
+          deepinductionresistivity,
+        /// <summary>
+        /// deeplaterologconductivity property
+        /// </summary>
+          [XmlEnum("deep laterolog conductivity")]
+          deeplaterologconductivity,
+        /// <summary>
+        /// deeplaterologresistivity property
+        /// </summary>
+          [XmlEnum("deep laterolog resistivity")]
+          deeplaterologresistivity,
+        /// <summary>
+        /// deepresistivity property
+        /// </summary>
+          [XmlEnum("deep resistivity")]
+          deepresistivity,
+        /// <summary>
+        /// Mass per unit Volume - well logging units are usually gm/cc.
+        /// </summary>
+          density,
+        /// <summary>
+        /// densityporosity property
+        /// </summary>
+          [XmlEnum("density porosity")]
+          densityporosity,
+        /// <summary>
+        /// The distance to a point in a wellbore.
+        /// </summary>
+          depth,
+        /// <summary>
+        /// depthadjusted property
+        /// </summary>
+          [XmlEnum("depth adjusted")]
+          depthadjusted,
+        /// <summary>
+        /// depthderivedfromvelocity property
+        /// </summary>
+          [XmlEnum("depth derived from velocity")]
+          depthderivedfromvelocity,
+        /// <summary>
+        /// Departure of a borehole from vertical. Also, the angle measured between the tool axis and vertical.
+        /// </summary>
+          deviation,
+        /// <summary>
+        /// Relative permittivity.
+        /// </summary>
+          dielectric,
+        /// <summary>
+        /// diffusioncorrection property
+        /// </summary>
+          [XmlEnum("diffusion correction")]
+          diffusioncorrection,
+        /// <summary>
+        /// The angle that a structural surface, e.g. a bedding or fault plane, makes with the horizontal, measured perpendicular to the strike of the structure.
+        /// </summary>
+          dip,
+        /// <summary>
+        /// Any of a number of measurements produced by a tool designed to measure formation dip and borehole characteristics through direct and indirect measurements.
+        /// </summary>
+          dipmeter,
+        /// <summary>
+        /// dipmeterconductivity property
+        /// </summary>
+          [XmlEnum("dipmeter conductivity")]
+          dipmeterconductivity,
+        /// <summary>
+        /// dipmeterresistivity property
+        /// </summary>
+          [XmlEnum("dipmeter resistivity")]
+          dipmeterresistivity,
+        /// <summary>
+        /// dolomiteacousticporosity property
+        /// </summary>
+          [XmlEnum("dolomite acoustic porosity")]
+          dolomiteacousticporosity,
+        /// <summary>
+        /// dolomitedensityporosity property
+        /// </summary>
+          [XmlEnum("dolomite density porosity")]
+          dolomitedensityporosity,
+        /// <summary>
+        /// dolomiteneutronporosity property
+        /// </summary>
+          [XmlEnum("dolomite neutron porosity")]
+          dolomiteneutronporosity,
+        /// <summary>
+        /// A well log trace which has been corrected or adjusted through an editing process.
+        /// </summary>
+          edited,
+        /// <summary>
+        /// effectiveporosity property
+        /// </summary>
+          [XmlEnum("effective porosity")]
+          effectiveporosity,
+        /// <summary>
+        /// electriccurrent property
+        /// </summary>
+          [XmlEnum("electric current")]
+          electriccurrent,
+        /// <summary>
+        /// electricpotential property
+        /// </summary>
+          [XmlEnum("electric potential")]
+          electricpotential,
+        /// <summary>
+        /// electromagneticwavematrixtraveltime property
+        /// </summary>
+          [XmlEnum("electromagnetic wave matrix travel time")]
+          electromagneticwavematrixtraveltime,
+        /// <summary>
+        /// electromagneticwavetraveltime property
+        /// </summary>
+          [XmlEnum("electromagnetic wave travel time")]
+          electromagneticwavetraveltime,
+        /// <summary>
+        /// The elemental composition, generally in weight percent, of a formation as calculated from information obtained from a geochemical logging pass; e.g., weight percent of Al, Si, Ca, Fe, etc.
+        /// </summary>
+          element,
+        /// <summary>
+        /// elementalratio property
+        /// </summary>
+          [XmlEnum("elemental ratio")]
+          elementalratio,
+        /// <summary>
+        /// A well log trace which has been filtered to improve its value; e.g. inverse filtering for better resolution.
+        /// </summary>
+          enhanced,
+        /// <summary>
+        /// A well log trace which has had a filter applied to it.
+        /// </summary>
+          filtered,
+        /// <summary>
+        /// A logging tool to measure the rate and/or direction of fluid flow in a wellbore.
+        /// </summary>
+          flowmeter,
+        /// <summary>
+        /// fluiddensity property
+        /// </summary>
+          [XmlEnum("fluid density")]
+          fluiddensity,
+        /// <summary>
+        /// fluidvelocity property
+        /// </summary>
+          [XmlEnum("fluid velocity")]
+          fluidvelocity,
+        /// <summary>
+        /// fluidviscosity property
+        /// </summary>
+          [XmlEnum("fluid viscosity")]
+          fluidviscosity,
+        /// <summary>
+        /// flushedzoneconductivity property
+        /// </summary>
+          [XmlEnum("flushed zone conductivity")]
+          flushedzoneconductivity,
+        /// <summary>
+        /// flushedzoneresistivity property
+        /// </summary>
+          [XmlEnum("flushed zone resistivity")]
+          flushedzoneresistivity,
+        /// <summary>
+        /// flushedzonesaturation property
+        /// </summary>
+          [XmlEnum("flushed zone saturation")]
+          flushedzonesaturation,
+        /// <summary>
+        /// Energy exerted or brought to bear.
+        /// </summary>
+          force,
+        /// <summary>
+        /// formationdensitycorrection property
+        /// </summary>
+          [XmlEnum("formation density correction")]
+          formationdensitycorrection,
+        /// <summary>
+        /// formationpropertiescorrection property
+        /// </summary>
+          [XmlEnum("formation properties correction")]
+          formationpropertiescorrection,
+        /// <summary>
+        /// formationsalinitycorrection property
+        /// </summary>
+          [XmlEnum("formation salinity correction")]
+          formationsalinitycorrection,
+        /// <summary>
+        /// formationsaturationcorrection property
+        /// </summary>
+          [XmlEnum("formation saturation correction")]
+          formationsaturationcorrection,
+        /// <summary>
+        /// formationvolumefactorcorrection property
+        /// </summary>
+          [XmlEnum("formation volume factor correction")]
+          formationvolumefactorcorrection,
+        /// <summary>
+        /// formationwaterdensitycorrection property
+        /// </summary>
+          [XmlEnum("formation water density correction")]
+          formationwaterdensitycorrection,
+        /// <summary>
+        /// formationwatersaturationcorrection property
+        /// </summary>
+          [XmlEnum("formation water saturation correction")]
+          formationwatersaturationcorrection,
+        /// <summary>
+        /// freefluidindex property
+        /// </summary>
+          [XmlEnum("free fluid index")]
+          freefluidindex,
+        /// <summary>
+        /// frictioneffectcorrection property
+        /// </summary>
+          [XmlEnum("friction effect correction")]
+          frictioneffectcorrection,
+        /// <summary>
+        /// gammaray property
+        /// </summary>
+          [XmlEnum("gamma ray")]
+          gammaray,
+        /// <summary>
+        /// gammarayminusuranium property
+        /// </summary>
+          [XmlEnum("gamma ray minus uranium")]
+          gammarayminusuranium,
+        /// <summary>
+        /// gassaturation property
+        /// </summary>
+          [XmlEnum("gas saturation")]
+          gassaturation,
+        /// <summary>
+        /// The measurement of the average density of fluids in a wellbore.
+        /// </summary>
+          gradiomanometer,
+        /// <summary>
+        /// highfrequencyconductivity property
+        /// </summary>
+          [XmlEnum("high frequency conductivity")]
+          highfrequencyconductivity,
+        /// <summary>
+        /// highfrequencyelectromagnetic property
+        /// </summary>
+          [XmlEnum("high frequency electromagnetic")]
+          highfrequencyelectromagnetic,
+        /// <summary>
+        /// highfrequencyelectromagneticporosity property
+        /// </summary>
+          [XmlEnum("high frequency electromagnetic porosity")]
+          highfrequencyelectromagneticporosity,
+        /// <summary>
+        /// highfrequencyEMphaseshift property
+        /// </summary>
+          [XmlEnum("high frequency E-M phase shift")]
+          highfrequencyEMphaseshift,
+        /// <summary>
+        /// highfrequencyresistivity property
+        /// </summary>
+          [XmlEnum("high frequency resistivity")]
+          highfrequencyresistivity,
+        /// <summary>
+        /// hydrocarboncorrection property
+        /// </summary>
+          [XmlEnum("hydrocarbon correction")]
+          hydrocarboncorrection,
+        /// <summary>
+        /// hydrocarbondensitycorrection property
+        /// </summary>
+          [XmlEnum("hydrocarbon density correction")]
+          hydrocarbondensitycorrection,
+        /// <summary>
+        /// hydrocarbongravitycorrection property
+        /// </summary>
+          [XmlEnum("hydrocarbon gravity correction")]
+          hydrocarbongravitycorrection,
+        /// <summary>
+        /// hydrocarbonsaturation property
+        /// </summary>
+          [XmlEnum("hydrocarbon saturation")]
+          hydrocarbonsaturation,
+        /// <summary>
+        /// hydrocarbonviscositycorrection property
+        /// </summary>
+          [XmlEnum("hydrocarbon viscosity correction")]
+          hydrocarbonviscositycorrection,
+        /// <summary>
+        /// The likeness of an object produced by an electrical device.
+        /// </summary>
+          image,
+        /// <summary>
+        /// interpretationvariable property
+        /// </summary>
+          [XmlEnum("interpretation variable")]
+          interpretationvariable,
+        /// <summary>
+        /// ironmudcorrection property
+        /// </summary>
+          [XmlEnum("iron mud correction")]
+          ironmudcorrection,
+        /// <summary>
+        /// A well log trace which has had two or more runs spliced together to make a single trace.
+        /// </summary>
+          joined,
+        /// <summary>
+        /// KClmudcorrection property
+        /// </summary>
+          [XmlEnum("KCl mud correction")]
+          KClmudcorrection,
+        /// <summary>
+        /// A measured distance or dimension.
+        /// </summary>
+          length,
+        /// <summary>
+        /// limestoneacousticporosity property
+        /// </summary>
+          [XmlEnum("limestone acoustic porosity")]
+          limestoneacousticporosity,
+        /// <summary>
+        /// limestonedensityporosity property
+        /// </summary>
+          [XmlEnum("limestone density porosity")]
+          limestonedensityporosity,
+        /// <summary>
+        /// limestoneneutronporosity property
+        /// </summary>
+          [XmlEnum("limestone neutron porosity")]
+          limestoneneutronporosity,
+        /// <summary>
+        /// lithologycorrection property
+        /// </summary>
+          [XmlEnum("lithology correction")]
+          lithologycorrection,
+        /// <summary>
+        /// logderivedpermeability property
+        /// </summary>
+          [XmlEnum("log derived permeability")]
+          logderivedpermeability,
+        /// <summary>
+        /// logmatrixdensity property
+        /// </summary>
+          [XmlEnum("log matrix density")]
+          logmatrixdensity,
+        /// <summary>
+        /// magneticcasingcollarlocator property
+        /// </summary>
+          [XmlEnum("magnetic casing collar locator")]
+          magneticcasingcollarlocator,
+        /// <summary>
+        /// matrixdensity property
+        /// </summary>
+          [XmlEnum("matrix density")]
+          matrixdensity,
+        /// <summary>
+        /// matrixtraveltime property
+        /// </summary>
+          [XmlEnum("matrix travel time")]
+          matrixtraveltime,
+        /// <summary>
+        /// measureddepth property
+        /// </summary>
+          [XmlEnum("measured depth")]
+          measureddepth,
+        /// <summary>
+        /// mechanicalcaliper property
+        /// </summary>
+          [XmlEnum("mechanical caliper")]
+          mechanicalcaliper,
+        /// <summary>
+        /// mechanicalcasingcollarlocator property
+        /// </summary>
+          [XmlEnum("mechanical casing collar locator")]
+          mechanicalcasingcollarlocator,
+        /// <summary>
+        /// mediumconductivity property
+        /// </summary>
+          [XmlEnum("medium conductivity")]
+          mediumconductivity,
+        /// <summary>
+        /// mediuminductionconductivity property
+        /// </summary>
+          [XmlEnum("medium induction conductivity")]
+          mediuminductionconductivity,
+        /// <summary>
+        /// mediuminductionresistivity property
+        /// </summary>
+          [XmlEnum("medium induction resistivity")]
+          mediuminductionresistivity,
+        /// <summary>
+        /// mediumlaterologconductivity property
+        /// </summary>
+          [XmlEnum("medium laterolog conductivity")]
+          mediumlaterologconductivity,
+        /// <summary>
+        /// mediumlaterologresistivity property
+        /// </summary>
+          [XmlEnum("medium laterolog resistivity")]
+          mediumlaterologresistivity,
+        /// <summary>
+        /// mediumresistivity property
+        /// </summary>
+          [XmlEnum("medium resistivity")]
+          mediumresistivity,
+        /// <summary>
+        /// microconductivity property
+        /// </summary>
+          [XmlEnum("micro conductivity")]
+          microconductivity,
+        /// <summary>
+        /// microinverseconductivity property
+        /// </summary>
+          [XmlEnum("micro inverse conductivity")]
+          microinverseconductivity,
+        /// <summary>
+        /// microinverseresistivity property
+        /// </summary>
+          [XmlEnum("micro inverse resistivity")]
+          microinverseresistivity,
+        /// <summary>
+        /// microlaterologconductivity property
+        /// </summary>
+          [XmlEnum("micro laterolog conductivity")]
+          microlaterologconductivity,
+        /// <summary>
+        /// microlaterologresistivity property
+        /// </summary>
+          [XmlEnum("micro laterolog resistivity")]
+          microlaterologresistivity,
+        /// <summary>
+        /// micronormalconductivity property
+        /// </summary>
+          [XmlEnum("micro normal conductivity")]
+          micronormalconductivity,
+        /// <summary>
+        /// micronormalresistivity property
+        /// </summary>
+          [XmlEnum("micro normal resistivity")]
+          micronormalresistivity,
+        /// <summary>
+        /// microresistivity property
+        /// </summary>
+          [XmlEnum("micro resistivity")]
+          microresistivity,
+        /// <summary>
+        /// microsphericallyfocusedconductivity property
+        /// </summary>
+          [XmlEnum("micro spherically focused conductivity")]
+          microsphericallyfocusedconductivity,
+        /// <summary>
+        /// microsphericallyfocusedresistivity property
+        /// </summary>
+          [XmlEnum("micro spherically focused resistivity")]
+          microsphericallyfocusedresistivity,
+        /// <summary>
+        /// The mineral composition, generally in weight percent, of a formation as calculated from elemental information obtained from a geochemical logging pass; e.g., weight percent of dolomite, calcite, illite, quartzite, etc.
+        /// </summary>
+          mineral,
+        /// <summary>
+        /// mudcakeconductivity property
+        /// </summary>
+          [XmlEnum("mud cake conductivity")]
+          mudcakeconductivity,
+        /// <summary>
+        /// mudcakecorrection property
+        /// </summary>
+          [XmlEnum("mud cake correction")]
+          mudcakecorrection,
+        /// <summary>
+        /// mudcakedensitycorrection property
+        /// </summary>
+          [XmlEnum("mud cake density correction")]
+          mudcakedensitycorrection,
+        /// <summary>
+        /// mudcakeresistivity property
+        /// </summary>
+          [XmlEnum("mud cake resistivity")]
+          mudcakeresistivity,
+        /// <summary>
+        /// mudcakeresistivitycorrection property
+        /// </summary>
+          [XmlEnum("mud cake resistivity correction")]
+          mudcakeresistivitycorrection,
+        /// <summary>
+        /// mudcakethicknesscorrection property
+        /// </summary>
+          [XmlEnum("mud cake thickness correction")]
+          mudcakethicknesscorrection,
+        /// <summary>
+        /// mudcompositioncorrection property
+        /// </summary>
+          [XmlEnum("mud composition correction")]
+          mudcompositioncorrection,
+        /// <summary>
+        /// mudconductivity property
+        /// </summary>
+          [XmlEnum("mud conductivity")]
+          mudconductivity,
+        /// <summary>
+        /// mudfiltrateconductivity property
+        /// </summary>
+          [XmlEnum("mud filtrate conductivity")]
+          mudfiltrateconductivity,
+        /// <summary>
+        /// mudfiltratecorrection property
+        /// </summary>
+          [XmlEnum("mud filtrate correction")]
+          mudfiltratecorrection,
+        /// <summary>
+        /// mudfiltratedensitycorrection property
+        /// </summary>
+          [XmlEnum("mud filtrate density correction")]
+          mudfiltratedensitycorrection,
+        /// <summary>
+        /// mudfiltrateresistivity property
+        /// </summary>
+          [XmlEnum("mud filtrate resistivity")]
+          mudfiltrateresistivity,
+        /// <summary>
+        /// mudfiltrateresistivitycorrection property
+        /// </summary>
+          [XmlEnum("mud filtrate resistivity correction")]
+          mudfiltrateresistivitycorrection,
+        /// <summary>
+        /// mudfiltratesalinitycorrection property
+        /// </summary>
+          [XmlEnum("mud filtrate salinity correction")]
+          mudfiltratesalinitycorrection,
+        /// <summary>
+        /// mudresistivity property
+        /// </summary>
+          [XmlEnum("mud resistivity")]
+          mudresistivity,
+        /// <summary>
+        /// mudsalinitycorrection property
+        /// </summary>
+          [XmlEnum("mud salinity correction")]
+          mudsalinitycorrection,
+        /// <summary>
+        /// mudviscositycorrection property
+        /// </summary>
+          [XmlEnum("mud viscosity correction")]
+          mudviscositycorrection,
+        /// <summary>
+        /// mudweightcorrection property
+        /// </summary>
+          [XmlEnum("mud weight correction")]
+          mudweightcorrection,
+        /// <summary>
+        /// neutrondieawaytime property
+        /// </summary>
+          [XmlEnum("neutron die away time")]
+          neutrondieawaytime,
+        /// <summary>
+        /// neutronporosity property
+        /// </summary>
+          [XmlEnum("neutron porosity")]
+          neutronporosity,
+        /// <summary>
+        /// nuclearcaliper property
+        /// </summary>
+          [XmlEnum("nuclear caliper")]
+          nuclearcaliper,
+        /// <summary>
+        /// nuclearmagneticdecaytime property
+        /// </summary>
+          [XmlEnum("nuclear magnetic decay time")]
+          nuclearmagneticdecaytime,
+        /// <summary>
+        /// nuclearmagnetismlogpermeability property
+        /// </summary>
+          [XmlEnum("nuclear magnetism log permeability")]
+          nuclearmagnetismlogpermeability,
+        /// <summary>
+        /// nuclearmagnetismporosity property
+        /// </summary>
+          [XmlEnum("nuclear magnetism porosity")]
+          nuclearmagnetismporosity,
+        /// <summary>
+        /// OHdensityporosity property
+        /// </summary>
+          [XmlEnum("OH density porosity")]
+          OHdensityporosity,
+        /// <summary>
+        /// OHdolomitedensityporosity property
+        /// </summary>
+          [XmlEnum("OH dolomite density porosity")]
+          OHdolomitedensityporosity,
+        /// <summary>
+        /// OHdolomiteneutronporosity property
+        /// </summary>
+          [XmlEnum("OH dolomite neutron porosity")]
+          OHdolomiteneutronporosity,
+        /// <summary>
+        /// OHlimestonedensityporosity property
+        /// </summary>
+          [XmlEnum("OH limestone density porosity")]
+          OHlimestonedensityporosity,
+        /// <summary>
+        /// OHlimestoneneutronporosity property
+        /// </summary>
+          [XmlEnum("OH limestone neutron porosity")]
+          OHlimestoneneutronporosity,
+        /// <summary>
+        /// OHneutronporosity property
+        /// </summary>
+          [XmlEnum("OH neutron porosity")]
+          OHneutronporosity,
+        /// <summary>
+        /// OHsandstonedensityporosity property
+        /// </summary>
+          [XmlEnum("OH sandstone density porosity")]
+          OHsandstonedensityporosity,
+        /// <summary>
+        /// OHsandstoneneutronporosity property
+        /// </summary>
+          [XmlEnum("OH sandstone neutron porosity")]
+          OHsandstoneneutronporosity,
+        /// <summary>
+        /// oilbasedmudcorrection property
+        /// </summary>
+          [XmlEnum("oil based mud correction")]
+          oilbasedmudcorrection,
+        /// <summary>
+        /// oilsaturation property
+        /// </summary>
+          [XmlEnum("oil saturation")]
+          oilsaturation,
+        /// <summary>
+        /// The procedure for introducing holes through casing into a formation so that formation fluids can enter into the casing.
+        /// </summary>
+          perforating,
+        /// <summary>
+        /// The permeability of the surrounding formation.
+        /// </summary>
+          permeability,
+        /// <summary>
+        /// phaseshift property
+        /// </summary>
+          [XmlEnum("phase shift")]
+          phaseshift,
+        /// <summary>
+        /// photoelectricabsorption property
+        /// </summary>
+          [XmlEnum("photoelectric absorption")]
+          photoelectricabsorption,
+        /// <summary>
+        /// photoelectricabsorptioncorrection property
+        /// </summary>
+          [XmlEnum("photoelectric absorption correction")]
+          photoelectricabsorptioncorrection,
+        /// <summary>
+        /// physicalmeasurementcorrection property
+        /// </summary>
+          [XmlEnum("physical measurement correction")]
+          physicalmeasurementcorrection,
+        /// <summary>
+        /// planeangle property
+        /// </summary>
+          [XmlEnum("plane angle")]
+          planeangle,
+        /// <summary>
+        /// The total pore volume occupied by fluid in a rock. Includes isolated nonconnecting pores and volume occupied by absorbed, immobile fluid.
+        /// </summary>
+          porosity,
+        /// <summary>
+        /// porositycorrection property
+        /// </summary>
+          [XmlEnum("porosity correction")]
+          porositycorrection,
+        /// <summary>
+        /// The measurement of gamma radiation emitted by potassium.
+        /// </summary>
+          potassium,
+        /// <summary>
+        /// The force or thrust exerted upon a surface divided by the area of the surface.
+        /// </summary>
+          pressure,
+        /// <summary>
+        /// pressurecorrection property
+        /// </summary>
+          [XmlEnum("pressure correction")]
+          pressurecorrection,
+        /// <summary>
+        /// A well log trace which has been processed in some way; e.g., depth adjusted or environmentally corrected.
+        /// </summary>
+          processed,
+        /// <summary>
+        /// pulsedneutronporosity property
+        /// </summary>
+          [XmlEnum("pulsed neutron porosity")]
+          pulsedneutronporosity,
+        /// <summary>
+        /// Degree of excellence.
+        /// </summary>
+          quality,
+        /// <summary>
+        /// A relationship between two values usually expressed as a fraction.
+        /// </summary>
+          ratio,
+        /// <summary>
+        /// A well log trace which has not had any processing. In other words, a trace which has not been depth adjusted or environmentally corrected.
+        /// </summary>
+          raw,
+        /// <summary>
+        /// relativebearing property
+        /// </summary>
+          [XmlEnum("relative bearing")]
+          relativebearing,
+        /// <summary>
+        /// The property measuring the resistance to flow of an electrical current.
+        /// </summary>
+          resistivity,
+        /// <summary>
+        /// resistivityfactorcorrection property
+        /// </summary>
+          [XmlEnum("resistivity factor correction")]
+          resistivityfactorcorrection,
+        /// <summary>
+        /// resistivityfromattenuation property
+        /// </summary>
+          [XmlEnum("resistivity from attenuation")]
+          resistivityfromattenuation,
+        /// <summary>
+        /// resistivityfromphaseshift property
+        /// </summary>
+          [XmlEnum("resistivity from phase shift")]
+          resistivityfromphaseshift,
+        /// <summary>
+        /// resistivityphaseshift property
+        /// </summary>
+          [XmlEnum("resistivity phase shift")]
+          resistivityphaseshift,
+        /// <summary>
+        /// resistivityratio property
+        /// </summary>
+          [XmlEnum("resistivity ratio")]
+          resistivityratio,
+        /// <summary>
+        /// The concentration of ions in solution.
+        /// </summary>
+          salinity,
+        /// <summary>
+        /// To take a sample of or from something.
+        /// </summary>
+          sampling,
+        /// <summary>
+        /// sandstoneacousticporosity property
+        /// </summary>
+          [XmlEnum("sandstone acoustic porosity")]
+          sandstoneacousticporosity,
+        /// <summary>
+        /// sandstonedensityporosity property
+        /// </summary>
+          [XmlEnum("sandstone density porosity")]
+          sandstonedensityporosity,
+        /// <summary>
+        /// sandstoneneutronporosity property
+        /// </summary>
+          [XmlEnum("sandstone neutron porosity")]
+          sandstoneneutronporosity,
+        /// <summary>
+        /// The fraction or percentage of the pore volume of a rock.
+        /// </summary>
+          saturation,
+        /// <summary>
+        /// shalevolume property
+        /// </summary>
+          [XmlEnum("shale volume")]
+          shalevolume,
+        /// <summary>
+        /// shallowconductivity property
+        /// </summary>
+          [XmlEnum("shallow conductivity")]
+          shallowconductivity,
+        /// <summary>
+        /// shallowinductionconductivity property
+        /// </summary>
+          [XmlEnum("shallow induction conductivity")]
+          shallowinductionconductivity,
+        /// <summary>
+        /// shallowinductionresistivity property
+        /// </summary>
+          [XmlEnum("shallow induction resistivity")]
+          shallowinductionresistivity,
+        /// <summary>
+        /// shallowlaterologconductivity property
+        /// </summary>
+          [XmlEnum("shallow laterolog conductivity")]
+          shallowlaterologconductivity,
+        /// <summary>
+        /// shallowlaterologresistivity property
+        /// </summary>
+          [XmlEnum("shallow laterolog resistivity")]
+          shallowlaterologresistivity,
+        /// <summary>
+        /// shallowresistivity property
+        /// </summary>
+          [XmlEnum("shallow resistivity")]
+          shallowresistivity,
+        /// <summary>
+        /// shearwavedolomiteporosity property
+        /// </summary>
+          [XmlEnum("shear wave dolomite porosity")]
+          shearwavedolomiteporosity,
+        /// <summary>
+        /// shearwavelimestoneporosity property
+        /// </summary>
+          [XmlEnum("shear wave limestone porosity")]
+          shearwavelimestoneporosity,
+        /// <summary>
+        /// shearwavematrixtraveltime property
+        /// </summary>
+          [XmlEnum("shear wave matrix travel time")]
+          shearwavematrixtraveltime,
+        /// <summary>
+        /// shearwavesandstoneporosity property
+        /// </summary>
+          [XmlEnum("shear wave sandstone porosity")]
+          shearwavesandstoneporosity,
+        /// <summary>
+        /// shearwavetraveltime property
+        /// </summary>
+          [XmlEnum("shear wave travel time")]
+          shearwavetraveltime,
+        /// <summary>
+        /// A well log trace which has had its original values shifted by some factor; e.g., added or multiplied by a constant.
+        /// </summary>
+          shifted,
+        /// <summary>
+        /// sidewallcoreporosity property
+        /// </summary>
+          [XmlEnum("sidewall core porosity")]
+          sidewallcoreporosity,
+        /// <summary>
+        /// The macroscopic capture cross section, i.e. the effective cross-sectional area per unit volume for the capture of neutrons.
+        /// </summary>
+          sigma,
+        /// <summary>
+        /// sigmaformation property
+        /// </summary>
+          [XmlEnum("sigma formation")]
+          sigmaformation,
+        /// <summary>
+        /// sigmagas property
+        /// </summary>
+          [XmlEnum("sigma gas")]
+          sigmagas,
+        /// <summary>
+        /// sigmahydrocarbon property
+        /// </summary>
+          [XmlEnum("sigma hydrocarbon")]
+          sigmahydrocarbon,
+        /// <summary>
+        /// sigmamatrix property
+        /// </summary>
+          [XmlEnum("sigma matrix")]
+          sigmamatrix,
+        /// <summary>
+        /// sigmaoil property
+        /// </summary>
+          [XmlEnum("sigma oil")]
+          sigmaoil,
+        /// <summary>
+        /// sigmawater property
+        /// </summary>
+          [XmlEnum("sigma water")]
+          sigmawater,
+        /// <summary>
+        /// slippagevelocitycorrection property
+        /// </summary>
+          [XmlEnum("slippage velocity correction")]
+          slippagevelocitycorrection,
+        /// <summary>
+        /// A well log trace which has been filtered to smooth, or average the trace.
+        /// </summary>
+          smoothed,
+        /// <summary>
+        /// spectralgammaray property
+        /// </summary>
+          [XmlEnum("spectral gamma ray")]
+          spectralgammaray,
+        /// <summary>
+        /// sphericallyfocusedconductivity property
+        /// </summary>
+          [XmlEnum("spherically focused conductivity")]
+          sphericallyfocusedconductivity,
+        /// <summary>
+        /// sphericallyfocusedresistivity property
+        /// </summary>
+          [XmlEnum("spherically focused resistivity")]
+          sphericallyfocusedresistivity,
+        /// <summary>
+        /// spontaneouspotential property
+        /// </summary>
+          [XmlEnum("spontaneous potential")]
+          spontaneouspotential,
+        /// <summary>
+        /// spreadinglosscorrection property
+        /// </summary>
+          [XmlEnum("spreading loss correction")]
+          spreadinglosscorrection,
+        /// <summary>
+        /// syntheticwelllogtrace property
+        /// </summary>
+          [XmlEnum("synthetic well log trace")]
+          syntheticwelllogtrace,
+        /// <summary>
+        /// A temperature measurement.
+        /// </summary>
+          temperature,
+        /// <summary>
+        /// temperaturecorrection property
+        /// </summary>
+          [XmlEnum("temperature correction")]
+          temperaturecorrection,
+        /// <summary>
+        /// The tension on the wireline cable while logging.
+        /// </summary>
+          tension,
+        /// <summary>
+        /// ThKratio property
+        /// </summary>
+          [XmlEnum("Th/K ratio")]
+          ThKratio,
+        /// <summary>
+        /// The measurement of gamma radiation emitted by thorium.
+        /// </summary>
+          thorium,
+        /// <summary>
+        /// A measured or measurable period.
+        /// </summary>
+          time,
+        /// <summary>
+        /// tooldiametercorrection property
+        /// </summary>
+          [XmlEnum("tool diameter correction")]
+          tooldiametercorrection,
+        /// <summary>
+        /// tooleccentricitycorrection property
+        /// </summary>
+          [XmlEnum("tool eccentricity correction")]
+          tooleccentricitycorrection,
+        /// <summary>
+        /// totalgammaray property
+        /// </summary>
+          [XmlEnum("total gamma ray")]
+          totalgammaray,
+        /// <summary>
+        /// totalporosity property
+        /// </summary>
+          [XmlEnum("total porosity")]
+          totalporosity,
+        /// <summary>
+        /// tracersurvey property
+        /// </summary>
+          [XmlEnum("tracer survey")]
+          tracersurvey,
+        /// <summary>
+        /// traveltime property
+        /// </summary>
+          [XmlEnum("travel time")]
+          traveltime,
+        /// <summary>
+        /// trueconductivity property
+        /// </summary>
+          [XmlEnum("true conductivity")]
+          trueconductivity,
+        /// <summary>
+        /// trueresistivity property
+        /// </summary>
+          [XmlEnum("true resistivity")]
+          trueresistivity,
+        /// <summary>
+        /// trueverticaldepth property
+        /// </summary>
+          [XmlEnum("true vertical depth")]
+          trueverticaldepth,
+        /// <summary>
+        /// tubewavedolomiteporosity property
+        /// </summary>
+          [XmlEnum("tube wave dolomite porosity")]
+          tubewavedolomiteporosity,
+        /// <summary>
+        /// tubewavelimestoneporosity property
+        /// </summary>
+          [XmlEnum("tube wave limestone porosity")]
+          tubewavelimestoneporosity,
+        /// <summary>
+        /// tubewavematrixtraveltime property
+        /// </summary>
+          [XmlEnum("tube wave matrix travel time")]
+          tubewavematrixtraveltime,
+        /// <summary>
+        /// tubewavesandstoneporosity property
+        /// </summary>
+          [XmlEnum("tube wave sandstone porosity")]
+          tubewavesandstoneporosity,
+        /// <summary>
+        /// tubewavetraveltime property
+        /// </summary>
+          [XmlEnum("tube wave travel time")]
+          tubewavetraveltime,
+        /// <summary>
+        /// The measurement of gamma radiation emitted by uranium.
+        /// </summary>
+          uranium,
+        /// <summary>
+        /// directional speed
+        /// </summary>
+          velocity,
+        /// <summary>
+        /// cubic capacity
+        /// </summary>
+          volume,
+        /// <summary>
+        /// waterbasedfluidcorrection property
+        /// </summary>
+          [XmlEnum("water based fluid correction")]
+          waterbasedfluidcorrection,
+        /// <summary>
+        /// waterholdupcorrection property
+        /// </summary>
+          [XmlEnum("water holdup correction")]
+          waterholdupcorrection,
+        /// <summary>
+        /// watersaturatedconductivity property
+        /// </summary>
+          [XmlEnum("water saturated conductivity")]
+          watersaturatedconductivity,
+        /// <summary>
+        /// watersaturatedresistivity property
+        /// </summary>
+          [XmlEnum("water saturated resistivity")]
+          watersaturatedresistivity,
+        /// <summary>
+        /// watersaturation property
+        /// </summary>
+          [XmlEnum("water saturation")]
+          watersaturation,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the MessageProbability xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the MessageProbability xsd enumeration.")]
+        public enum MessageProbability 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          low,
+        /// <summary>
+        /// 
+        /// </summary>
+          medium,
+        /// <summary>
+        /// 
+        /// </summary>
+          high,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the MessageSeverity xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the MessageSeverity xsd enumeration.")]
+        public enum MessageSeverity 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          catastrophic,
+        /// <summary>
+        /// 
+        /// </summary>
+          major,
+        /// <summary>
+        /// 
+        /// </summary>
+          minor,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the MessageType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the MessageType xsd enumeration.")]
+        public enum MessageType 
+        {
+        /// <summary>
+        /// An alarm condition when something has exceeded specified limits
+        /// </summary>
+          alarm,
+        /// <summary>
+        /// Information about a specific event
+        /// </summary>
+          @event,
+        /// <summary>
+        /// General information message
+        /// </summary>
+          informational,
+        /// <summary>
+        /// A cautionary message
+        /// </summary>
+          warning,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the MudLogParameterType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the MudLogParameterType xsd enumeration.")]
+        public enum MudLogParameterType 
+        {
+        /// <summary>
+        /// bitparameters property
+        /// </summary>
+          [XmlEnum("bit parameters")]
+          bitparameters,
+        /// <summary>
+        /// bittypecomment property
+        /// </summary>
+          [XmlEnum("bit type comment")]
+          bittypecomment,
+        /// <summary>
+        /// casingpointcomment property
+        /// </summary>
+          [XmlEnum("casing point comment")]
+          casingpointcomment,
+        /// <summary>
+        /// chromatographcomment property
+        /// </summary>
+          [XmlEnum("chromatograph comment")]
+          chromatographcomment,
+        /// <summary>
+        /// circulationsystemcomment property
+        /// </summary>
+          [XmlEnum("circulation system comment")]
+          circulationsystemcomment,
+        /// <summary>
+        /// coreintervalcomment property
+        /// </summary>
+          [XmlEnum("core interval comment")]
+          coreintervalcomment,
+        /// <summary>
+        /// cuttingsgas property
+        /// </summary>
+          [XmlEnum("cuttings gas")]
+          cuttingsgas,
+        /// <summary>
+        /// directfracturepressure property
+        /// </summary>
+          [XmlEnum("direct fracture pressure")]
+          directfracturepressure,
+        /// <summary>
+        /// directporepressuremeasurements property
+        /// </summary>
+          [XmlEnum("direct pore pressure measurements")]
+          directporepressuremeasurements,
+        /// <summary>
+        /// drillingdatacomment property
+        /// </summary>
+          [XmlEnum("drilling data comment")]
+          drillingdatacomment,
+        /// <summary>
+        /// fracturePGestimatemostlikely property
+        /// </summary>
+          [XmlEnum("fracture PG estimate most likely")]
+          fracturePGestimatemostlikely,
+        /// <summary>
+        /// gaspeakscomment property
+        /// </summary>
+          [XmlEnum("gas peaks comment")]
+          gaspeakscomment,
+        /// <summary>
+        /// gasratiocomment property
+        /// </summary>
+          [XmlEnum("gas ratio comment")]
+          gasratiocomment,
+        /// <summary>
+        /// generalengineeringcomment property
+        /// </summary>
+          [XmlEnum("general engineering comment")]
+          generalengineeringcomment,
+        /// <summary>
+        /// kicksandflows property
+        /// </summary>
+          [XmlEnum("kicks and flows")]
+          kicksandflows,
+        /// <summary>
+        /// lithlogcomment property
+        /// </summary>
+          [XmlEnum("lithlog comment")]
+          lithlogcomment,
+        /// <summary>
+        /// lostreturns property
+        /// </summary>
+          [XmlEnum("lost returns")]
+          lostreturns,
+        /// <summary>
+        /// LWDcomment property
+        /// </summary>
+          [XmlEnum("LWD comment")]
+          LWDcomment,
+        /// <summary>
+        /// markerorformationtopcomment property
+        /// </summary>
+          [XmlEnum("marker or formation top comment")]
+          markerorformationtopcomment,
+        /// <summary>
+        /// midnightdepthdate property
+        /// </summary>
+          [XmlEnum("midnight depth date")]
+          midnightdepthdate,
+        /// <summary>
+        /// mudcheckcomment property
+        /// </summary>
+          [XmlEnum("mud check comment")]
+          mudcheckcomment,
+        /// <summary>
+        /// muddatacomment property
+        /// </summary>
+          [XmlEnum("mud data comment")]
+          muddatacomment,
+        /// <summary>
+        /// mudlogcomment property
+        /// </summary>
+          [XmlEnum("mudlog comment")]
+          mudlogcomment,
+        /// <summary>
+        /// overburdengradient property
+        /// </summary>
+          [XmlEnum("overburden gradient")]
+          overburdengradient,
+        /// <summary>
+        /// overpullonconnection property
+        /// </summary>
+          [XmlEnum("overpull on connection")]
+          overpullonconnection,
+        /// <summary>
+        /// overpullontrip property
+        /// </summary>
+          [XmlEnum("overpull on trip")]
+          overpullontrip,
+        /// <summary>
+        /// porePGestimatemostlikely property
+        /// </summary>
+          [XmlEnum("pore PG estimate most likely")]
+          porePGestimatemostlikely,
+        /// <summary>
+        /// porepressureestimatewhiledrilling property
+        /// </summary>
+          [XmlEnum("pore pressure estimate while drilling")]
+          porepressureestimatewhiledrilling,
+        /// <summary>
+        /// pressuredatacomment property
+        /// </summary>
+          [XmlEnum("pressure data comment")]
+          pressuredatacomment,
+        /// <summary>
+        /// shaledensitycomment property
+        /// </summary>
+          [XmlEnum("shale density comment")]
+          shaledensitycomment,
+        /// <summary>
+        /// shorttripcomment property
+        /// </summary>
+          [XmlEnum("short trip comment")]
+          shorttripcomment,
+        /// <summary>
+        /// showreportcomment property
+        /// </summary>
+          [XmlEnum("show report comment")]
+          showreportcomment,
+        /// <summary>
+        /// sidewallcorecomment property
+        /// </summary>
+          [XmlEnum("sidewall core comment")]
+          sidewallcorecomment,
+        /// <summary>
+        /// slidingInterval property
+        /// </summary>
+          [XmlEnum("sliding Interval")]
+          slidingInterval,
+        /// <summary>
+        /// steamstillresultscomment property
+        /// </summary>
+          [XmlEnum("steam still results comment")]
+          steamstillresultscomment,
+        /// <summary>
+        /// surveycomment property
+        /// </summary>
+          [XmlEnum("survey comment")]
+          surveycomment,
+        /// <summary>
+        /// temperaturedatacomment property
+        /// </summary>
+          [XmlEnum("temperature data comment")]
+          temperaturedatacomment,
+        /// <summary>
+        /// temperaturetrendcomment property
+        /// </summary>
+          [XmlEnum("temperature trend comment")]
+          temperaturetrendcomment,
+        /// <summary>
+        /// wirelinelogcomment property
+        /// </summary>
+          [XmlEnum("wireline log comment")]
+          wirelinelogcomment,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the NADTypes xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the NADTypes xsd enumeration.")]
+        public enum NADTypeList 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          NAD27,
+        /// <summary>
+        /// 
+        /// </summary>
+          NAD83,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the NozzleType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the NozzleType xsd enumeration.")]
+        public enum NozzleType 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          extended,
+        /// <summary>
+        /// 
+        /// </summary>
+          normal,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the OTDRReason xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the OTDRReason xsd enumeration.")]
+        public enum OTDRReason 
+        {
+        /// <summary>
+        /// preinstallation property
+        /// </summary>
+          [XmlEnum("pre-installation")]
+          preinstallation,
+        /// <summary>
+        /// postinstallation property
+        /// </summary>
+          [XmlEnum("post-installation")]
+          postinstallation,
+        /// <summary>
+        /// DTSrun property
+        /// </summary>
+          [XmlEnum("DTS run")]
+          DTSrun,
+        /// <summary>
+        /// The OTDR was run for another reason.
+        /// </summary>
+          other,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the PitType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the PitType xsd enumeration.")]
+        public enum PitType 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          bulk,
+        /// <summary>
+        /// 
+        /// </summary>
+          chemical,
+        /// <summary>
+        /// 
+        /// </summary>
+          drilling,
+        /// <summary>
+        /// 
+        /// </summary>
+          mix,
+        /// <summary>
+        /// mudcleaning property
+        /// </summary>
+          [XmlEnum("mud cleaning")]
+          mudcleaning,
+        /// <summary>
+        /// sandtrap property
+        /// </summary>
+          [XmlEnum("sand trap")]
+          sandtrap,
+        /// <summary>
+        /// That pit in the active pit system located immediately downstream of the shale shakers, whose primary purpose is to allow the settling and disposal of the larger drilled cuttings not removed by the shale shakers. It is occasionally also called a settling tank.
+        /// </summary>
+          slug,
+        /// <summary>
+        /// 
+        /// </summary>
+          storage,
+        /// <summary>
+        /// surgetank property
+        /// </summary>
+          [XmlEnum("surge tank")]
+          surgetank,
+        /// <summary>
+        /// triptank property
+        /// </summary>
+          [XmlEnum("trip tank")]
+          triptank,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the Projection xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the Projection xsd enumeration.")]
+        public enum Projection 
+        {
+        /// <summary>
+        /// Albersequalarea property
+        /// </summary>
+          [XmlEnum("Albers equal area")]
+          Albersequalarea,
+        /// <summary>
+        /// azimuthalequidistant property
+        /// </summary>
+          [XmlEnum("azimuthal equidistant")]
+          azimuthalequidistant,
+        /// <summary>
+        /// 217-PARAMETERS-PROJECTION-CASSINI
+        /// </summary>
+          Cassini,
+        /// <summary>
+        /// equidistantconic property
+        /// </summary>
+          [XmlEnum("equidistant conic")]
+          equidistantconic,
+        /// <summary>
+        /// 217-PARAMETERS-PROJECTION-EQUIRECTANGULAR
+        /// </summary>
+          equirectangular,
+        /// <summary>
+        /// 217-PARAMETERS-PROJECTION-GNOMONIC
+        /// </summary>
+          gnomonic,
+        /// <summary>
+        /// Lambertazimuthal property
+        /// </summary>
+          [XmlEnum("Lambert azimuthal")]
+          Lambertazimuthal,
+        /// <summary>
+        /// Lambertconformalconic property
+        /// </summary>
+          [XmlEnum("Lambert conformal conic")]
+          Lambertconformalconic,
+        /// <summary>
+        /// 217-PARAMETERS-PROJECTION-MERCATOR
+        /// </summary>
+          Mercator,
+        /// <summary>
+        /// 217-PARAMETERS-PROJECTION-MILLER
+        /// </summary>
+          Miller,
+        /// <summary>
+        /// obliqueMercator property
+        /// </summary>
+          [XmlEnum("oblique Mercator")]
+          obliqueMercator,
+        /// <summary>
+        /// 217-PARAMETERS-PROJECTION-ORTHO
+        /// </summary>
+          orthographic,
+        /// <summary>
+        /// 217-PARAMETERS-PROJECTION-PERSPECTIVE
+        /// </summary>
+          perspective,
+        /// <summary>
+        /// polarstereographic property
+        /// </summary>
+          [XmlEnum("polar stereographic")]
+          polarstereographic,
+        /// <summary>
+        /// 217-PARAMETERS-PROJECTION-POLYCONIC
+        /// </summary>
+          polyconic,
+        /// <summary>
+        /// 217-PARAMETERS-PROJECTION-SINUSOIDAL
+        /// </summary>
+          sinusoidal,
+        /// <summary>
+        /// stateplane property
+        /// </summary>
+          [XmlEnum("state plane")]
+          stateplane,
+        /// <summary>
+        /// 217-PARAMETERS-PROJECTION-STEREO
+        /// </summary>
+          stereographic,
+        /// <summary>
+        /// transverseMercator property
+        /// </summary>
+          [XmlEnum("transverse Mercator")]
+          transverseMercator,
+        /// <summary>
+        /// universaltransverseMercator property
+        /// </summary>
+          [XmlEnum("universal transverse Mercator")]
+          universaltransverseMercator,
+        /// <summary>
+        /// userdefined property
+        /// </summary>
+          [XmlEnum("user defined")]
+          userdefined,
+        /// <summary>
+        /// VanderGrinten property
+        /// </summary>
+          [XmlEnum("Van der Grinten")]
+          VanderGrinten,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the ProjectionVariantsObliqueMercator xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the ProjectionVariantsObliqueMercator xsd enumeration.")]
+        public enum ProjectionVariantsObliqueMercator 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          @default,
+        /// <summary>
+        /// 
+        /// </summary>
+          rectified,
+        /// <summary>
+        /// rectifiedskew property
+        /// </summary>
+          [XmlEnum("rectified skew")]
+          rectifiedskew,
+        /// <summary>
+        /// rectifiedskewcenterorigin property
+        /// </summary>
+          [XmlEnum("rectified skew center origin")]
+          rectifiedskewcenterorigin,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the PumpType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the PumpType xsd enumeration.")]
+        public enum PumpType 
+        {
+        /// <summary>
+        /// Centrifugal mud pump
+        /// </summary>
+          centrifugal,
+        /// <summary>
+        /// Duplex mud mump, 2 cylinders
+        /// </summary>
+          duplex,
+        /// <summary>
+        /// Triplex mud pump, three cylinders
+        /// </summary>
+          triplex,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the PumpOpType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the PumpOpType xsd enumeration.")]
+        public enum PumpOpType 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          drilling,
+        /// <summary>
+        /// 
+        /// </summary>
+          reaming,
+        /// <summary>
+        /// 
+        /// </summary>
+          circulating,
+        /// <summary>
+        /// slowpump property
+        /// </summary>
+          [XmlEnum("slow pump")]
+          slowpump,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the RigType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the RigType xsd enumeration.")]
+        public enum RigType 
+        {
+        /// <summary>
+        /// Barge rig
+        /// </summary>
+          barge,
+        /// <summary>
+        /// coiledtubing property
+        /// </summary>
+          [XmlEnum("coiled tubing")]
+          coiledtubing,
+        /// <summary>
+        /// Floating rig
+        /// </summary>
+          floater,
+        /// <summary>
+        /// Jackup rig
+        /// </summary>
+          jackup,
+        /// <summary>
+        /// Land rig
+        /// </summary>
+          land,
+        /// <summary>
+        /// Fixed platform
+        /// </summary>
+          platform,
+        /// <summary>
+        /// semisubmersible property
+        /// </summary>
+          [XmlEnum("semi-submersible")]
+          semisubmersible,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the RiskAffectedPersonnel xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the RiskAffectedPersonnel xsd enumeration.")]
+        public enum RiskAffectedPersonnel 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          cementer,
+        /// <summary>
+        /// companyman property
+        /// </summary>
+          [XmlEnum("company man")]
+          companyman,
+        /// <summary>
+        /// 
+        /// </summary>
+          contractor,
+        /// <summary>
+        /// directionaldriller property
+        /// </summary>
+          [XmlEnum("directional driller")]
+          directionaldriller,
+        /// <summary>
+        /// 
+        /// </summary>
+          driller,
+        /// <summary>
+        /// drillingengineer property
+        /// </summary>
+          [XmlEnum("drilling engineer")]
+          drillingengineer,
+        /// <summary>
+        /// drillingsuperintendent property
+        /// </summary>
+          [XmlEnum("drilling superintendent")]
+          drillingsuperintendent,
+        /// <summary>
+        /// drillingteam property
+        /// </summary>
+          [XmlEnum("drilling team")]
+          drillingteam,
+        /// <summary>
+        /// facilityengineer property
+        /// </summary>
+          [XmlEnum("facility engineer")]
+          facilityengineer,
+        /// <summary>
+        /// fieldservicemanager property
+        /// </summary>
+          [XmlEnum("field service manager")]
+          fieldservicemanager,
+        /// <summary>
+        /// 
+        /// </summary>
+          foreman,
+        /// <summary>
+        /// generalservicesupervisor property
+        /// </summary>
+          [XmlEnum("general service supervisor")]
+          generalservicesupervisor,
+        /// <summary>
+        /// 
+        /// </summary>
+          geologist,
+        /// <summary>
+        /// 
+        /// </summary>
+          member,
+        /// <summary>
+        /// mudengineer property
+        /// </summary>
+          [XmlEnum("mud engineer")]
+          mudengineer,
+        /// <summary>
+        /// mudlogger property
+        /// </summary>
+          [XmlEnum("mud logger")]
+          mudlogger,
+        /// <summary>
+        /// MWDorLWDengineer property
+        /// </summary>
+          [XmlEnum("MWD or LWD engineer")]
+          MWDorLWDengineer,
+        /// <summary>
+        /// performengineer property
+        /// </summary>
+          [XmlEnum("perform engineer")]
+          performengineer,
+        /// <summary>
+        /// 
+        /// </summary>
+          petrophysicist,
+        /// <summary>
+        /// productionengineer property
+        /// </summary>
+          [XmlEnum("production engineer")]
+          productionengineer,
+        /// <summary>
+        /// remotelyoperatedvehicleengineer property
+        /// </summary>
+          [XmlEnum("remotely operated vehicle engineer")]
+          remotelyoperatedvehicleengineer,
+        /// <summary>
+        /// safetymanger property
+        /// </summary>
+          [XmlEnum("safety manger")]
+          safetymanger,
+        /// <summary>
+        /// salesengineer property
+        /// </summary>
+          [XmlEnum("sales engineer")]
+          salesengineer,
+        /// <summary>
+        /// servicesupervisor property
+        /// </summary>
+          [XmlEnum("service supervisor")]
+          servicesupervisor,
+        /// <summary>
+        /// technicalsupport property
+        /// </summary>
+          [XmlEnum("technical support")]
+          technicalsupport,
+        /// <summary>
+        /// toolpusher property
+        /// </summary>
+          [XmlEnum("tool pusher")]
+          toolpusher,
+        /// <summary>
+        /// wirelineengineer property
+        /// </summary>
+          [XmlEnum("wireline engineer")]
+          wirelineengineer
+        }
+        /// <summary>
+        /// This class represents the RiskCategory xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the RiskCategory xsd enumeration.")]
+        public enum RiskCategory 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          hydraulics,
+        /// <summary>
+        /// 
+        /// </summary>
+          mechanical,
+        /// <summary>
+        /// timerelated property
+        /// </summary>
+          [XmlEnum("time related")]
+          timerelated,
+        /// <summary>
+        /// wellborestability property
+        /// </summary>
+          [XmlEnum("wellbore stability")]
+          wellborestability,
+        /// <summary>
+        /// directionaldrilling property
+        /// </summary>
+          [XmlEnum("directional drilling")]
+          directionaldrilling,
+        /// <summary>
+        /// 
+        /// </summary>
+          bit,
+        /// <summary>
+        /// equipmentfailure property
+        /// </summary>
+          [XmlEnum("equipment failure")]
+          equipmentfailure,
+        /// <summary>
+        /// 
+        /// </summary>
+          completion,
+        /// <summary>
+        /// 
+        /// </summary>
+          casing,
+        /// <summary>
+        /// 
+        /// </summary>
+          other,
+        /// <summary>
+        /// health, safety and environmental
+        /// </summary>
+          HSE,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the RiskSubCategory xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the RiskSubCategory xsd enumeration.")]
+        public enum RiskSubCategory 
+        {
+        /// <summary>
+        /// gaskick property
+        /// </summary>
+          [XmlEnum("gas kick")]
+          gaskick,
+        /// <summary>
+        /// shallowwaterinflux property
+        /// </summary>
+          [XmlEnum("shallow water influx")]
+          shallowwaterinflux,
+        /// <summary>
+        /// otherinfluxorkicks property
+        /// </summary>
+          [XmlEnum("other influx or kicks")]
+          otherinfluxorkicks,
+        /// <summary>
+        /// losscirculation property
+        /// </summary>
+          [XmlEnum("loss circulation")]
+          losscirculation,
+        /// <summary>
+        /// poorholecleaning property
+        /// </summary>
+          [XmlEnum("poor hole cleaning")]
+          poorholecleaning,
+        /// <summary>
+        /// goodholecleaningathighROP property
+        /// </summary>
+          [XmlEnum("good hole cleaning at high ROP")]
+          goodholecleaningathighROP,
+        /// <summary>
+        /// highmudweight property
+        /// </summary>
+          [XmlEnum("high mud weight")]
+          highmudweight,
+        /// <summary>
+        /// specialadditivesneeded property
+        /// </summary>
+          [XmlEnum("special additives needed")]
+          specialadditivesneeded,
+        /// <summary>
+        /// gumboproblems property
+        /// </summary>
+          [XmlEnum("gumbo problems")]
+          gumboproblems,
+        /// <summary>
+        /// highECDrheologyrelated property
+        /// </summary>
+          [XmlEnum("high ECD - rheology related")]
+          highECDrheologyrelated,
+        /// <summary>
+        /// excessivecirculation property
+        /// </summary>
+          [XmlEnum("excessive circulation")]
+          excessivecirculation,
+        /// <summary>
+        /// performingakill property
+        /// </summary>
+          [XmlEnum("performing a kill")]
+          performingakill,
+        /// <summary>
+        /// mudweightchange property
+        /// </summary>
+          [XmlEnum("mud weight change")]
+          mudweightchange,
+        /// <summary>
+        /// excessivepipecementscaling property
+        /// </summary>
+          [XmlEnum("excessive pipe cement scaling")]
+          excessivepipecementscaling,
+        /// <summary>
+        /// pitgainorloss property
+        /// </summary>
+          [XmlEnum("pit gain or loss")]
+          pitgainorloss,
+        /// <summary>
+        /// mudstabilityproblems property
+        /// </summary>
+          [XmlEnum("mud stability problems")]
+          mudstabilityproblems,
+        /// <summary>
+        /// shallowgasflow property
+        /// </summary>
+          [XmlEnum("shallow gas flow")]
+          shallowgasflow,
+        /// <summary>
+        /// twistoff property
+        /// </summary>
+          [XmlEnum("twist off")]
+          twistoff,
+        /// <summary>
+        /// stuckpipe property
+        /// </summary>
+          [XmlEnum("stuck pipe")]
+          stuckpipe,
+        /// <summary>
+        /// wirelinestuckinhole property
+        /// </summary>
+          [XmlEnum("wireline stuck in hole")]
+          wirelinestuckinhole,
+        /// <summary>
+        /// stickandslip property
+        /// </summary>
+          [XmlEnum("stick and slip")]
+          stickandslip,
+        /// <summary>
+        /// vibrationaxial property
+        /// </summary>
+          [XmlEnum("vibration - axial")]
+          vibrationaxial,
+        /// <summary>
+        /// vibrationtorsional property
+        /// </summary>
+          [XmlEnum("vibration - torsional")]
+          vibrationtorsional,
+        /// <summary>
+        /// vibrationtransverse property
+        /// </summary>
+          [XmlEnum("vibration - transverse")]
+          vibrationtransverse,
+        /// <summary>
+        /// vibrationunknownorroughdrilling property
+        /// </summary>
+          [XmlEnum("vibration unknown or rough drilling")]
+          vibrationunknownorroughdrilling,
+        /// <summary>
+        /// unevenwearofBHA property
+        /// </summary>
+          [XmlEnum("uneven wear of BHA")]
+          unevenwearofBHA,
+        /// <summary>
+        /// unevenwearofdrillstring property
+        /// </summary>
+          [XmlEnum("uneven wear of drillstring")]
+          unevenwearofdrillstring,
+        /// <summary>
+        /// excessivetorque property
+        /// </summary>
+          [XmlEnum("excessive torque")]
+          excessivetorque,
+        /// <summary>
+        /// excessivedrag property
+        /// </summary>
+          [XmlEnum("excessive drag")]
+          excessivedrag,
+        /// <summary>
+        /// reaminggreaterthan2hours property
+        /// </summary>
+          [XmlEnum("reaming greater than 2 hours")]
+          reaminggreaterthan2hours,
+        /// <summary>
+        /// 
+        /// </summary>
+          washouts,
+        /// <summary>
+        /// tightholeoroverPull property
+        /// </summary>
+          [XmlEnum("tight hole or overPull")]
+          tightholeoroverPull,
+        /// <summary>
+        /// failedinspectionsorfatiguewear property
+        /// </summary>
+          [XmlEnum("failed inspections or fatigue wear")]
+          failedinspectionsorfatiguewear,
+        /// <summary>
+        /// 
+        /// </summary>
+          mechanical,
+        /// <summary>
+        /// drillinggreaterthan1000feetday property
+        /// </summary>
+          [XmlEnum("drilling greater than 1000 feet/day")]
+          drillinggreaterthan1000feetday,
+        /// <summary>
+        /// drillinggreaterthan2000feetday property
+        /// </summary>
+          [XmlEnum("drilling greater than 2000 feet/day")]
+          drillinggreaterthan2000feetday,
+        /// <summary>
+        /// drillinglessthan20feetday property
+        /// </summary>
+          [XmlEnum("drilling less than 20 feet/day")]
+          drillinglessthan20feetday,
+        /// <summary>
+        /// tripsgreaterthan24hours property
+        /// </summary>
+          [XmlEnum("trips greater than 24 hours")]
+          tripsgreaterthan24hours,
+        /// <summary>
+        /// excessivetimeforBHAmakeup property
+        /// </summary>
+          [XmlEnum("excessive time for BHA makeup")]
+          excessivetimeforBHAmakeup,
+        /// <summary>
+        /// waitingondecisions property
+        /// </summary>
+          [XmlEnum("waiting on decisions")]
+          waitingondecisions,
+        /// <summary>
+        /// waitingonweather property
+        /// </summary>
+          [XmlEnum("waiting on weather")]
+          waitingonweather,
+        /// <summary>
+        /// waitingontools property
+        /// </summary>
+          [XmlEnum("waiting on tools")]
+          waitingontools,
+        /// <summary>
+        /// sloughingorpackoffs property
+        /// </summary>
+          [XmlEnum("sloughing or packoffs")]
+          sloughingorpackoffs,
+        /// <summary>
+        /// 
+        /// </summary>
+          ballooning,
+        /// <summary>
+        /// fractureproblems property
+        /// </summary>
+          [XmlEnum("fracture problems")]
+          fractureproblems,
+        /// <summary>
+        /// unstablezones property
+        /// </summary>
+          [XmlEnum("unstable zones")]
+          unstablezones,
+        /// <summary>
+        /// formationintegritytest property
+        /// </summary>
+          [XmlEnum("formation integrity test")]
+          formationintegritytest,
+        /// <summary>
+        /// leakofftest property
+        /// </summary>
+          [XmlEnum("leak-off test")]
+          leakofftest,
+        /// <summary>
+        /// 
+        /// </summary>
+          tectonics,
+        /// <summary>
+        /// porepressure property
+        /// </summary>
+          [XmlEnum("pore pressure")]
+          porepressure,
+        /// <summary>
+        /// 
+        /// </summary>
+          breakouts,
+        /// <summary>
+        /// bedparallel property
+        /// </summary>
+          [XmlEnum("bed parallel")]
+          bedparallel,
+        /// <summary>
+        /// wellborestability property
+        /// </summary>
+          [XmlEnum("wellbore stability")]
+          wellborestability,
+        /// <summary>
+        /// excessivedoglegs property
+        /// </summary>
+          [XmlEnum("excessive doglegs")]
+          excessivedoglegs,
+        /// <summary>
+        /// 
+        /// </summary>
+          sidetrack,
+        /// <summary>
+        /// BHAchangefordirectional property
+        /// </summary>
+          [XmlEnum("BHA change for directional")]
+          BHAchangefordirectional,
+        /// <summary>
+        /// wrongtotalflowarea property
+        /// </summary>
+          [XmlEnum("wrong total flow area")]
+          wrongtotalflowarea,
+        /// <summary>
+        /// wellcollisionactual property
+        /// </summary>
+          [XmlEnum("well collision - actual")]
+          wellcollisionactual,
+        /// <summary>
+        /// wellcollisiontechnical property
+        /// </summary>
+          [XmlEnum("well collision - technical")]
+          wellcollisiontechnical,
+        /// <summary>
+        /// 
+        /// </summary>
+          geosteering,
+        /// <summary>
+        /// abnormaltendencychanges property
+        /// </summary>
+          [XmlEnum("abnormal tendency changes")]
+          abnormaltendencychanges,
+        /// <summary>
+        /// 
+        /// </summary>
+          resurveying,
+        /// <summary>
+        /// infieldreferencingIFRactions property
+        /// </summary>
+          [XmlEnum("in-field referencing (IFR) actions")]
+          infieldreferencingIFRactions,
+        /// <summary>
+        /// bitorBHAperformance property
+        /// </summary>
+          [XmlEnum("bit or BHA performance")]
+          bitorBHAperformance,
+        /// <summary>
+        /// drillingoptimization property
+        /// </summary>
+          [XmlEnum("drilling optimization")]
+          drillingoptimization,
+        /// <summary>
+        /// bitballing property
+        /// </summary>
+          [XmlEnum("bit balling")]
+          bitballing,
+        /// <summary>
+        /// lostconesorbrokencutters property
+        /// </summary>
+          [XmlEnum("lost cones or broken cutters")]
+          lostconesorbrokencutters,
+        /// <summary>
+        /// excessivebitwearorgauge property
+        /// </summary>
+          [XmlEnum("excessive bit wear or gauge")]
+          excessivebitwearorgauge,
+        /// <summary>
+        /// lowrateofbitpenetration property
+        /// </summary>
+          [XmlEnum("low rate of bit penetration")]
+          lowrateofbitpenetration,
+        /// <summary>
+        /// highrateofbitpenetration property
+        /// </summary>
+          [XmlEnum("high rate of bit penetration")]
+          highrateofbitpenetration,
+        /// <summary>
+        /// downholetool property
+        /// </summary>
+          [XmlEnum("downhole tool")]
+          downholetool,
+        /// <summary>
+        /// surfacesystem property
+        /// </summary>
+          [XmlEnum("surface system")]
+          surfacesystem,
+        /// <summary>
+        /// motororrotarysteerablesystemfailure property
+        /// </summary>
+          [XmlEnum("motor or rotary steerable system failure")]
+          motororrotarysteerablesystemfailure,
+        /// <summary>
+        /// topdrivefailure property
+        /// </summary>
+          [XmlEnum("topdrive failure")]
+          topdrivefailure,
+        /// <summary>
+        /// hoistingequipmentfailure property
+        /// </summary>
+          [XmlEnum("hoisting equipment failure")]
+          hoistingequipmentfailure,
+        /// <summary>
+        /// circulatingequipmentfailure property
+        /// </summary>
+          [XmlEnum("circulating equipment failure")]
+          circulatingequipmentfailure,
+        /// <summary>
+        /// electricalsystemfailure property
+        /// </summary>
+          [XmlEnum("electrical system failure")]
+          electricalsystemfailure,
+        /// <summary>
+        /// blowoutpreventerevents property
+        /// </summary>
+          [XmlEnum("blow out preventer events")]
+          blowoutpreventerevents,
+        /// <summary>
+        /// surfaceinstrumentationproblems property
+        /// </summary>
+          [XmlEnum("surface instrumentation problems")]
+          surfaceinstrumentationproblems,
+        /// <summary>
+        /// rigcommunications property
+        /// </summary>
+          [XmlEnum("rig communications")]
+          rigcommunications,
+        /// <summary>
+        /// completionequipmentfailure property
+        /// </summary>
+          [XmlEnum("completion equipment failure")]
+          completionequipmentfailure,
+        /// <summary>
+        /// miscellaneousrigequipment property
+        /// </summary>
+          [XmlEnum("miscellaneous rig equipment")]
+          miscellaneousrigequipment,
+        /// <summary>
+        /// toolorequipmentfailure property
+        /// </summary>
+          [XmlEnum("tool or equipment failure")]
+          toolorequipmentfailure,
+        /// <summary>
+        /// squeezejobs property
+        /// </summary>
+          [XmlEnum("squeeze jobs")]
+          squeezejobs,
+        /// <summary>
+        /// casingsurgelosses property
+        /// </summary>
+          [XmlEnum("casing surge losses")]
+          casingsurgelosses,
+        /// <summary>
+        /// stuckcasingorcompletion property
+        /// </summary>
+          [XmlEnum("stuck casing or completion")]
+          stuckcasingorcompletion,
+        /// <summary>
+        /// shoefailures property
+        /// </summary>
+          [XmlEnum("shoe failures")]
+          shoefailures,
+        /// <summary>
+        /// earlycementsetup property
+        /// </summary>
+          [XmlEnum("early cement setup")]
+          earlycementsetup,
+        /// <summary>
+        /// casingcollapse property
+        /// </summary>
+          [XmlEnum("casing collapse")]
+          casingcollapse,
+        /// <summary>
+        /// 
+        /// </summary>
+          milling,
+        /// <summary>
+        /// excessivecasingwearorcuttings property
+        /// </summary>
+          [XmlEnum("excessive casing wear or cuttings")]
+          excessivecasingwearorcuttings,
+        /// <summary>
+        /// excessiveformationdamageorskin property
+        /// </summary>
+          [XmlEnum("excessive formation damage or skin")]
+          excessiveformationdamageorskin,
+        /// <summary>
+        /// casingrotationorreciprocationrqd property
+        /// </summary>
+          [XmlEnum("casing rotation or reciprocation rqd")]
+          casingrotationorreciprocationrqd,
+        /// <summary>
+        /// 
+        /// </summary>
+          broaching,
+        /// <summary>
+        /// completionorcasing property
+        /// </summary>
+          [XmlEnum("completion or casing")]
+          completionorcasing,
+        /// <summary>
+        /// 
+        /// </summary>
+          stratigraphy,
+        /// <summary>
+        /// 
+        /// </summary>
+          fishing,
+        /// <summary>
+        /// junkinhole property
+        /// </summary>
+          [XmlEnum("junk in hole")]
+          junkinhole,
+        /// <summary>
+        /// delayduetopoliticalunrest property
+        /// </summary>
+          [XmlEnum("delay due to political unrest")]
+          delayduetopoliticalunrest,
+        /// <summary>
+        /// rigmove property
+        /// </summary>
+          [XmlEnum("rig move")]
+          rigmove,
+        /// <summary>
+        /// gashydrates property
+        /// </summary>
+          [XmlEnum("gas hydrates")]
+          gashydrates,
+        /// <summary>
+        /// pendinganalysis property
+        /// </summary>
+          [XmlEnum("pending analysis")]
+          pendinganalysis,
+        /// <summary>
+        /// riserdisconnect property
+        /// </summary>
+          [XmlEnum("riser disconnect")]
+          riserdisconnect,
+        /// <summary>
+        /// 
+        /// </summary>
+          other,
+        /// <summary>
+        /// 
+        /// </summary>
+          personnel,
+        /// <summary>
+        /// 
+        /// </summary>
+          environmental,
+        /// <summary>
+        /// 
+        /// </summary>
+          automotive,
+        /// <summary>
+        /// 
+        /// </summary>
+          asset,
+        /// <summary>
+        /// 
+        /// </summary>
+          information,
+        /// <summary>
+        /// 
+        /// </summary>
+          time,
+        /// <summary>
+        /// health, safety and environmental
+        /// </summary>
+          HSE
+        }
+        /// <summary>
+        /// This class represents the RiskType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the RiskType xsd enumeration.")]
+        public enum RiskType 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          risk,
+        /// <summary>
+        /// 
+        /// </summary>
+          @event,
+        /// <summary>
+        /// nearmiss property
+        /// </summary>
+          [XmlEnum("near miss")]
+          nearmiss,
+        /// <summary>
+        /// bestpractice property
+        /// </summary>
+          [XmlEnum("best practice")]
+          bestpractice,
+        /// <summary>
+        /// lessonslearned property
+        /// </summary>
+          [XmlEnum("lessons learned")]
+          lessonslearned,
+        /// <summary>
+        /// 
+        /// </summary>
+          other,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the ScrType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the ScrType xsd enumeration.")]
+        public enum ScrType 
+        {
+        /// <summary>
+        /// stringannulus property
+        /// </summary>
+          [XmlEnum("string annulus")]
+          stringannulus,
+        /// <summary>
+        /// stringkillline property
+        /// </summary>
+          [XmlEnum("string kill line")]
+          stringkillline,
+        /// <summary>
+        /// stringchokeline property
+        /// </summary>
+          [XmlEnum("string choke line")]
+          stringchokeline,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the ShowFluorescence xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the ShowFluorescence xsd enumeration.")]
+        public enum ShowFluorescence 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          faint,
+        /// <summary>
+        /// 
+        /// </summary>
+          bright,
+        /// <summary>
+        /// 
+        /// </summary>
+          none,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the ShowLevel xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the ShowLevel xsd enumeration.")]
+        public enum ShowLevel 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          blooming,
+        /// <summary>
+        /// 
+        /// </summary>
+          streaming,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the ShowRating xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the ShowRating xsd enumeration.")]
+        public enum ShowRating 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          none,
+        /// <summary>
+        /// verypoor property
+        /// </summary>
+          [XmlEnum("very poor")]
+          verypoor,
+        /// <summary>
+        /// 
+        /// </summary>
+          poor,
+        /// <summary>
+        /// 
+        /// </summary>
+          fair,
+        /// <summary>
+        /// 
+        /// </summary>
+          good,
+        /// <summary>
+        /// verygood property
+        /// </summary>
+          [XmlEnum("very good")]
+          verygood,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the ShowSpeed xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the ShowSpeed xsd enumeration.")]
+        public enum ShowSpeed 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          slow,
+        /// <summary>
+        /// moderatelyfast property
+        /// </summary>
+          [XmlEnum("moderately fast")]
+          moderatelyfast,
+        /// <summary>
+        /// 
+        /// </summary>
+          fast,
+        /// <summary>
+        /// 
+        /// </summary>
+          instantaneous,
+        /// <summary>
+        /// 
+        /// </summary>
+          none,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the SupportCraft xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the SupportCraft xsd enumeration.")]
+        public enum SupportCraftType 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          barge,
+        /// <summary>
+        /// standbyboat property
+        /// </summary>
+          [XmlEnum("standby boat")]
+          standbyboat,
+        /// <summary>
+        /// 
+        /// </summary>
+          helicopter,
+        /// <summary>
+        /// supplyboat property
+        /// </summary>
+          [XmlEnum("supply boat")]
+          supplyboat,
+        /// <summary>
+        /// 
+        /// </summary>
+          truck,
+        /// <summary>
+        /// crewvehicle property
+        /// </summary>
+          [XmlEnum("crew vehicle")]
+          crewvehicle,
+        /// <summary>
+        /// tugboat property
+        /// </summary>
+          [XmlEnum("tug boat")]
+          tugboat,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the SurfEquipType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the SurfEquipType xsd enumeration.")]
+        public enum SurfEquipType 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          IADC,
+        /// <summary>
+        /// 
+        /// </summary>
+          custom,
+        /// <summary>
+        /// coiledtubing property
+        /// </summary>
+          [XmlEnum("coiled tubing")]
+          coiledtubing,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the TargetCategory xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the TargetCategory xsd enumeration.")]
+        public enum TargetCategory 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          geological,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the TargetScope xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the TargetScope xsd enumeration.")]
+        public enum TargetScope 
+        {
+        /// <summary>
+        /// Item3Dvolume property
+        /// </summary>
+          [XmlEnum("3D volume")]
+          Item3Dvolume,
+        /// <summary>
+        /// 
+        /// </summary>
+          ellipsoid,
+        /// <summary>
+        /// Elliptical targets. Includes circle (semi-major = semi-minor axis). Any sections present are ignored.
+        /// </summary>
+          elliptical,
+        /// <summary>
+        /// Boundary Conditions. Use sections to describe, length and width ignore.
+        /// </summary>
+          hardLine,
+        /// <summary>
+        /// Includes half circle and polygon. Use sections to describe, length and width ignored. 
+        /// </summary>
+          irregular,
+        /// <summary>
+        /// leaseline property
+        /// </summary>
+          [XmlEnum("lease line")]
+          leaseline,
+        /// <summary>
+        /// Line target
+        /// </summary>
+          line,
+        /// <summary>
+        /// Plane target. Used for horizontal wells. Any sections present are ignored.
+        /// </summary>
+          plane,
+        /// <summary>
+        /// Point Target. Any sections present are ignored.
+        /// </summary>
+          point,
+        /// <summary>
+        /// Rectangular Targets. Includes square (length = width). Any sections present are ignored.
+        /// </summary>
+          rectangular,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the TargetSectionScope xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the TargetSectionScope xsd enumeration.")]
+        public enum TargetSectionScope 
+        {
+        /// <summary>
+        /// continuous curve
+        /// </summary>
+          arc,
+        /// <summary>
+        /// straight line
+        /// </summary>
+          line,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the TrajStationStatus xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the TrajStationStatus xsd enumeration.")]
+        public enum TrajStationStatus 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          locked,
+        /// <summary>
+        /// 
+        /// </summary>
+          open,
+        /// <summary>
+        /// 
+        /// </summary>
+          rejected,
+        /// <summary>
+        /// 
+        /// </summary>
+          valid,
+        /// <summary>
+        /// 
+        /// </summary>
+          position,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the TrajStationType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the TrajStationType xsd enumeration.")]
+        public enum TrajStationType 
+        {
+        /// <summary>
+        /// azimuthonplane property
+        /// </summary>
+          [XmlEnum("azimuth on plane")]
+          azimuthonplane,
+        /// <summary>
+        /// buildratetodeltaMD property
+        /// </summary>
+          [XmlEnum("buildrate to delta-MD")]
+          buildratetodeltaMD,
+        /// <summary>
+        /// buildratetoINCL property
+        /// </summary>
+          [XmlEnum("buildrate to INCL")]
+          buildratetoINCL,
+        /// <summary>
+        /// buildratetoMD property
+        /// </summary>
+          [XmlEnum("buildrate to MD")]
+          buildratetoMD,
+        /// <summary>
+        /// buildrateandturnratetoAZI property
+        /// </summary>
+          [XmlEnum("buildrate and turnrate to AZI")]
+          buildrateandturnratetoAZI,
+        /// <summary>
+        /// buildrateandturnratetodeltaMD property
+        /// </summary>
+          [XmlEnum("buildrate and turnrate to delta-MD")]
+          buildrateandturnratetodeltaMD,
+        /// <summary>
+        /// buildrateandturnratetoINCL property
+        /// </summary>
+          [XmlEnum("buildrate and turnrate to INCL")]
+          buildrateandturnratetoINCL,
+        /// <summary>
+        /// buildrateandturnratetoINCLandAZI property
+        /// </summary>
+          [XmlEnum("buildrate and turnrate to INCL and AZI")]
+          buildrateandturnratetoINCLandAZI,
+        /// <summary>
+        /// buildrateandturnratetoMD property
+        /// </summary>
+          [XmlEnum("buildrate and turnrate to MD")]
+          buildrateandturnratetoMD,
+        /// <summary>
+        /// buildrateandturnratetoTVD property
+        /// </summary>
+          [XmlEnum("buildrate and turnrate to TVD")]
+          buildrateandturnratetoTVD,
+        /// <summary>
+        /// buildrateTVD property
+        /// </summary>
+          [XmlEnum("buildrate TVD")]
+          buildrateTVD,
+        /// <summary>
+        /// casingMD property
+        /// </summary>
+          [XmlEnum("casing MD")]
+          casingMD,
+        /// <summary>
+        /// casingTVD property
+        /// </summary>
+          [XmlEnum("casing TVD")]
+          casingTVD,
+        /// <summary>
+        /// Section follows a given dogleg severity 
+        /// </summary>
+          DLS,
+        /// <summary>
+        /// DLStoAZIandMD property
+        /// </summary>
+          [XmlEnum("DLS to AZI and MD")]
+          DLStoAZIandMD,
+        /// <summary>
+        /// DLStoAZITVD property
+        /// </summary>
+          [XmlEnum("DLS to AZI-TVD")]
+          DLStoAZITVD,
+        /// <summary>
+        /// DLStoINCL property
+        /// </summary>
+          [XmlEnum("DLS to INCL")]
+          DLStoINCL,
+        /// <summary>
+        /// DLStoINCLandAZI property
+        /// </summary>
+          [XmlEnum("DLS to INCL and AZI")]
+          DLStoINCLandAZI,
+        /// <summary>
+        /// DLStoINCLandMD property
+        /// </summary>
+          [XmlEnum("DLS to INCL and MD")]
+          DLStoINCLandMD,
+        /// <summary>
+        /// DLStoINCLandTVD property
+        /// </summary>
+          [XmlEnum("DLS to INCL and TVD")]
+          DLStoINCLandTVD,
+        /// <summary>
+        /// DLStoNSEWandTVD property
+        /// </summary>
+          [XmlEnum("DLS to NS, EW and TVD")]
+          DLStoNSEWandTVD,
+        /// <summary>
+        /// DLSandtoolfacetoAZI property
+        /// </summary>
+          [XmlEnum("DLS and toolface to AZI")]
+          DLSandtoolfacetoAZI,
+        /// <summary>
+        /// DLSandtoolfacetodeltaMD property
+        /// </summary>
+          [XmlEnum("DLS and toolface to delta-MD")]
+          DLSandtoolfacetodeltaMD,
+        /// <summary>
+        /// DLSandtoolfacetoINCL property
+        /// </summary>
+          [XmlEnum("DLS and toolface to INCL")]
+          DLSandtoolfacetoINCL,
+        /// <summary>
+        /// DLSandtoolfacetoINCLAZI property
+        /// </summary>
+          [XmlEnum("DLS and toolface to INCL-AZI")]
+          DLSandtoolfacetoINCLAZI,
+        /// <summary>
+        /// DLSandtoolfacetoMD property
+        /// </summary>
+          [XmlEnum("DLS and toolface to MD")]
+          DLSandtoolfacetoMD,
+        /// <summary>
+        /// DLSandtoolfacetoTVD property
+        /// </summary>
+          [XmlEnum("DLS and toolface to TVD")]
+          DLSandtoolfacetoTVD,
+        /// <summary>
+        /// formationMD property
+        /// </summary>
+          [XmlEnum("formation MD")]
+          formationMD,
+        /// <summary>
+        /// formationTVD property
+        /// </summary>
+          [XmlEnum("formation TVD")]
+          formationTVD,
+        /// <summary>
+        /// gyroinertial property
+        /// </summary>
+          [XmlEnum("gyro inertial")]
+          gyroinertial,
+        /// <summary>
+        /// gyroMWD property
+        /// </summary>
+          [XmlEnum("gyro MWD")]
+          gyroMWD,
+        /// <summary>
+        /// gyronorthseeking property
+        /// </summary>
+          [XmlEnum("gyro north seeking")]
+          gyronorthseeking,
+        /// <summary>
+        /// holdtodeltaMD property
+        /// </summary>
+          [XmlEnum("hold to delta-MD")]
+          holdtodeltaMD,
+        /// <summary>
+        /// holdtoMD property
+        /// </summary>
+          [XmlEnum("hold to MD")]
+          holdtoMD,
+        /// <summary>
+        /// holdtoTVD property
+        /// </summary>
+          [XmlEnum("hold to TVD")]
+          holdtoTVD,
+        /// <summary>
+        /// INCLAZIandTVD property
+        /// </summary>
+          [XmlEnum("INCL, AZI and TVD")]
+          INCLAZIandTVD,
+        /// <summary>
+        /// magneticmultishot property
+        /// </summary>
+          [XmlEnum("magnetic multi-shot")]
+          magneticmultishot,
+        /// <summary>
+        /// magneticMWD property
+        /// </summary>
+          [XmlEnum("magnetic MWD")]
+          magneticMWD,
+        /// <summary>
+        /// magneticsingleshot property
+        /// </summary>
+          [XmlEnum("magnetic single shot")]
+          magneticsingleshot,
+        /// <summary>
+        /// markerMD property
+        /// </summary>
+          [XmlEnum("marker MD")]
+          markerMD,
+        /// <summary>
+        /// markerTVD property
+        /// </summary>
+          [XmlEnum("marker TVD")]
+          markerTVD,
+        /// <summary>
+        /// NSEWandTVD property
+        /// </summary>
+          [XmlEnum("NS, EW and TVD")]
+          NSEWandTVD,
+        /// <summary>
+        /// targetcenter property
+        /// </summary>
+          [XmlEnum("target center")]
+          targetcenter,
+        /// <summary>
+        /// targetoffset property
+        /// </summary>
+          [XmlEnum("target offset")]
+          targetoffset,
+        /// <summary>
+        /// tieinpoint property
+        /// </summary>
+          [XmlEnum("tie in point")]
+          tieinpoint,
+        /// <summary>
+        /// turnratetoAZI property
+        /// </summary>
+          [XmlEnum("turnrate to AZI")]
+          turnratetoAZI,
+        /// <summary>
+        /// turnratetodeltaMD property
+        /// </summary>
+          [XmlEnum("turnrate to delta-MD")]
+          turnratetodeltaMD,
+        /// <summary>
+        /// turnratetoMD property
+        /// </summary>
+          [XmlEnum("turnrate to MD")]
+          turnratetoMD,
+        /// <summary>
+        /// turnratetoTVD property
+        /// </summary>
+          [XmlEnum("turnrate to TVD")]
+          turnratetoTVD,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the TubularAssembly xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the TubularAssembly xsd enumeration.")]
+        public enum TubularAssembly 
+        {
+        /// <summary>
+        /// 
+        /// </summary>
+          drilling,
+        /// <summary>
+        /// directionaldrilling property
+        /// </summary>
+          [XmlEnum("directional drilling")]
+          directionaldrilling,
+        /// <summary>
+        /// 
+        /// </summary>
+          fishing,
+        /// <summary>
+        /// conditionmud property
+        /// </summary>
+          [XmlEnum("condition mud")]
+          conditionmud,
+        /// <summary>
+        /// tubingconveyedlogging property
+        /// </summary>
+          [XmlEnum("tubing conveyed logging")]
+          tubingconveyedlogging,
+        /// <summary>
+        /// 
+        /// </summary>
+          cementing,
+        /// <summary>
+        /// 
+        /// </summary>
+          casing,
+        /// <summary>
+        /// cleanout property
+        /// </summary>
+          [XmlEnum("clean out")]
+          cleanout,
+        /// <summary>
+        /// completionortesting property
+        /// </summary>
+          [XmlEnum("completion or testing")]
+          completionortesting,
+        /// <summary>
+        /// 
+        /// </summary>
+          coring,
+        /// <summary>
+        /// holeopeningorunderreaming property
+        /// </summary>
+          [XmlEnum("hole opening or underreaming")]
+          holeopeningorunderreaming,
+        /// <summary>
+        /// millingordressingorcutting property
+        /// </summary>
+          [XmlEnum("milling or dressing or cutting")]
+          millingordressingorcutting,
+        /// <summary>
+        /// wiperorcheckorreaming property
+        /// </summary>
+          [XmlEnum("wiper or check or reaming")]
+          wiperorcheckorreaming,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the TubularComponent xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the TubularComponent xsd enumeration.")]
+        public enum TubularComponentType 
+        {
+        /// <summary>
+        /// nonmagneticstabilizer property
+        /// </summary>
+          [XmlEnum("non-magnetic stabilizer")]
+          nonmagneticstabilizer,
+        /// <summary>
+        /// nonmagneticcollar property
+        /// </summary>
+          [XmlEnum("non-magnetic collar")]
+          nonmagneticcollar,
+        /// <summary>
+        /// Drill string component with blades that help keep the drill string away from the sides of the hole.
+        /// </summary>
+          stabilizer,
+        /// <summary>
+        /// adjustablekickoff property
+        /// </summary>
+          [XmlEnum("adjustable kickoff")]
+          adjustablekickoff,
+        /// <summary>
+        /// A downhole tool used in conjunction with a jar that stores energy for rapid release when the jar is fired. Depending on the operating mode, the energy in tension or compression is stored by means of a mechanical spring or compressible fluid such as nitrogen gas.
+        /// </summary>
+          accelerator,
+        /// <summary>
+        /// rotarysteeringtool property
+        /// </summary>
+          [XmlEnum("rotary steering tool")]
+          rotarysteeringtool,
+        /// <summary>
+        /// subbarcatcher property
+        /// </summary>
+          [XmlEnum("sub-bar catcher")]
+          subbarcatcher,
+        /// <summary>
+        /// subbent property
+        /// </summary>
+          [XmlEnum("sub-bent")]
+          subbent,
+        /// <summary>
+        /// bitcorediamond property
+        /// </summary>
+          [XmlEnum("bit core diamond")]
+          bitcorediamond,
+        /// <summary>
+        /// bitcorePDC property
+        /// </summary>
+          [XmlEnum("bit core PDC")]
+          bitcorePDC,
+        /// <summary>
+        /// bitdiamondfixedcut property
+        /// </summary>
+          [XmlEnum("bit diamond fixed cut")]
+          bitdiamondfixedcut,
+        /// <summary>
+        /// bitinsertrollercone property
+        /// </summary>
+          [XmlEnum("bit insert roller cone")]
+          bitinsertrollercone,
+        /// <summary>
+        /// bitmilltoothrollercone property
+        /// </summary>
+          [XmlEnum("bit mill tooth roller cone")]
+          bitmilltoothrollercone,
+        /// <summary>
+        /// bitPDCfixedcutter property
+        /// </summary>
+          [XmlEnum("bit PDC fixed cutter")]
+          bitPDCfixedcutter,
+        /// <summary>
+        /// subbit property
+        /// </summary>
+          [XmlEnum("sub-bit")]
+          subbit,
+        /// <summary>
+        /// bridgeplug property
+        /// </summary>
+          [XmlEnum("bridge plug")]
+          bridgeplug,
+        /// <summary>
+        /// A blank end component substituting for a bit, when re entering an already existing hole to guide the BHA, to avoid inadvertent sidetracks, such as when run below a hole opener in an existing hole.
+        /// </summary>
+          bullnose,
+        /// <summary>
+        /// bullplug property
+        /// </summary>
+          [XmlEnum("bull plug")]
+          bullplug,
+        /// <summary>
+        /// subbumper property
+        /// </summary>
+          [XmlEnum("sub-bumper")]
+          subbumper,
+        /// <summary>
+        /// Tubing used to line the wellbore and protect against pressure differences between the wellbore fluids and the formation.
+        /// </summary>
+          casing,
+        /// <summary>
+        /// casingcutter property
+        /// </summary>
+          [XmlEnum("casing cutter")]
+          casingcutter,
+        /// <summary>
+        /// hangercasingsubsea property
+        /// </summary>
+          [XmlEnum("hanger casing subsea")]
+          hangercasingsubsea,
+        /// <summary>
+        /// hangercasingsurface property
+        /// </summary>
+          [XmlEnum("hanger casing surface")]
+          hangercasingsurface,
+        /// <summary>
+        /// casinghead property
+        /// </summary>
+          [XmlEnum("casing head")]
+          casinghead,
+        /// <summary>
+        /// catchassembly property
+        /// </summary>
+          [XmlEnum("catch assembly")]
+          catchassembly,
+        /// <summary>
+        /// subcatcher property
+        /// </summary>
+          [XmlEnum("sub-catcher")]
+          subcatcher,
+        /// <summary>
+        /// subcirculation property
+        /// </summary>
+          [XmlEnum("sub-circulation")]
+          subcirculation,
+        /// <summary>
+        /// coiledtubinginhole property
+        /// </summary>
+          [XmlEnum("coiled tubing in hole")]
+          coiledtubinginhole,
+        /// <summary>
+        /// coiledtubingoncoil property
+        /// </summary>
+          [XmlEnum("coiled tubing on coil")]
+          coiledtubingoncoil,
+        /// <summary>
+        /// drillpipecompressive property
+        /// </summary>
+          [XmlEnum("drill pipe compressive")]
+          drillpipecompressive,
+        /// <summary>
+        /// subcone property
+        /// </summary>
+          [XmlEnum("sub-cone")]
+          subcone,
+        /// <summary>
+        /// corebarrel property
+        /// </summary>
+          [XmlEnum("core barrel")]
+          corebarrel,
+        /// <summary>
+        /// coreorientationbarrel property
+        /// </summary>
+          [XmlEnum("core orientation barrel")]
+          coreorientationbarrel,
+        /// <summary>
+        /// subcrossover property
+        /// </summary>
+          [XmlEnum("sub-crossover")]
+          subcrossover,
+        /// <summary>
+        /// casingcrossover property
+        /// </summary>
+          [XmlEnum("casing crossover")]
+          casingcrossover,
+        /// <summary>
+        /// subdart property
+        /// </summary>
+          [XmlEnum("sub-dart")]
+          subdart,
+        /// <summary>
+        /// diecollar property
+        /// </summary>
+          [XmlEnum("die collar")]
+          diecollar,
+        /// <summary>
+        /// diecollarLH property
+        /// </summary>
+          [XmlEnum("die collar LH")]
+          diecollarLH,
+        /// <summary>
+        /// directionalguidancesystem property
+        /// </summary>
+          [XmlEnum("directional guidance system")]
+          directionalguidancesystem,
+        /// <summary>
+        /// drillcollar property
+        /// </summary>
+          [XmlEnum("drill collar")]
+          drillcollar,
+        /// <summary>
+        /// drillpipe property
+        /// </summary>
+          [XmlEnum("drill pipe")]
+          drillpipe,
+        /// <summary>
+        /// drillpipeLH property
+        /// </summary>
+          [XmlEnum("drill pipe LH")]
+          drillpipeLH,
+        /// <summary>
+        /// drillstemtestBHA property
+        /// </summary>
+          [XmlEnum("drill stem test BHA")]
+          drillstemtestBHA,
+        /// <summary>
+        /// drivepipe property
+        /// </summary>
+          [XmlEnum("drive pipe")]
+          drivepipe,
+        /// <summary>
+        /// dualcatchassembly property
+        /// </summary>
+          [XmlEnum("dual catch assembly")]
+          dualcatchassembly,
+        /// <summary>
+        /// extensionbowlovershot property
+        /// </summary>
+          [XmlEnum("extension bowl overshot")]
+          extensionbowlovershot,
+        /// <summary>
+        /// extensionsubovershot property
+        /// </summary>
+          [XmlEnum("extension sub-overshot")]
+          extensionsubovershot,
+        /// <summary>
+        /// floatcollar property
+        /// </summary>
+          [XmlEnum("float collar")]
+          floatcollar,
+        /// <summary>
+        /// floatshoe property
+        /// </summary>
+          [XmlEnum("float shoe")]
+          floatshoe,
+        /// <summary>
+        /// subfloat property
+        /// </summary>
+          [XmlEnum("sub-float")]
+          subfloat,
+        /// <summary>
+        /// flowhead property
+        /// </summary>
+          [XmlEnum("flow head")]
+          flowhead,
+        /// <summary>
+        /// guideshoe property
+        /// </summary>
+          [XmlEnum("guide shoe")]
+          guideshoe,
+        /// <summary>
+        /// MWDhangoffsub property
+        /// </summary>
+          [XmlEnum("MWD hang off sub")]
+          MWDhangoffsub,
+        /// <summary>
+        /// heavyweightdrillpipe property
+        /// </summary>
+          [XmlEnum("heavy weight drill pipe")]
+          heavyweightdrillpipe,
+        /// <summary>
+        /// heavyweightdrillpipeLH property
+        /// </summary>
+          [XmlEnum("heavy weight drill pipe LH")]
+          heavyweightdrillpipeLH,
+        /// <summary>
+        /// riserhighpressure property
+        /// </summary>
+          [XmlEnum("riser high pressure")]
+          riserhighpressure,
+        /// <summary>
+        /// bitholeopener property
+        /// </summary>
+          [XmlEnum("bit hole opener")]
+          bitholeopener,
+        /// <summary>
+        /// casinginflatablepacker property
+        /// </summary>
+          [XmlEnum("casing inflatable packer")]
+          casinginflatablepacker,
+        /// <summary>
+        /// motorinstrumented property
+        /// </summary>
+          [XmlEnum("motor instrumented")]
+          motorinstrumented,
+        /// <summary>
+        /// Hydraulic or spring-loaded component used to free stuck pipe.
+        /// </summary>
+          jar,
+        /// <summary>
+        /// subjetting property
+        /// </summary>
+          [XmlEnum("sub-jetting")]
+          subjetting,
+        /// <summary>
+        /// junkbasket property
+        /// </summary>
+          [XmlEnum("junk basket")]
+          junkbasket,
+        /// <summary>
+        /// junkbasketreversecirculation property
+        /// </summary>
+          [XmlEnum("junk basket reverse circulation")]
+          junkbasketreversecirculation,
+        /// <summary>
+        /// subjunk property
+        /// </summary>
+          [XmlEnum("sub-junk")]
+          subjunk,
+        /// <summary>
+        /// Hexagonal or square pipe used to rotate the drill string from the rig floor.
+        /// </summary>
+          kelly,
+        /// <summary>
+        /// keyseatwipertool property
+        /// </summary>
+          [XmlEnum("keyseat wiper tool")]
+          keyseatwipertool,
+        /// <summary>
+        /// landingfloatcollar property
+        /// </summary>
+          [XmlEnum("landing float collar")]
+          landingfloatcollar,
+        /// <summary>
+        /// leadimpressionblock property
+        /// </summary>
+          [XmlEnum("lead impression block")]
+          leadimpressionblock,
+        /// <summary>
+        /// Casing or tubing that is hung from the inside of existing casing rather than from the sea bed or surface.
+        /// </summary>
+          liner,
+        /// <summary>
+        /// hangerliner property
+        /// </summary>
+          [XmlEnum("hanger liner")]
+          hangerliner,
+        /// <summary>
+        /// Magnet used to retrieve magnetic debris from the hole.
+        /// </summary>
+          magnet,
+        /// <summary>
+        /// risermarine property
+        /// </summary>
+          [XmlEnum("riser marine")]
+          risermarine,
+        /// <summary>
+        /// milldress property
+        /// </summary>
+          [XmlEnum("mill dress")]
+          milldress,
+        /// <summary>
+        /// millflatbottom property
+        /// </summary>
+          [XmlEnum("mill flat bottom")]
+          millflatbottom,
+        /// <summary>
+        /// millhollow property
+        /// </summary>
+          [XmlEnum("mill hollow")]
+          millhollow,
+        /// <summary>
+        /// millpolish property
+        /// </summary>
+          [XmlEnum("mill polish")]
+          millpolish,
+        /// <summary>
+        /// millsection property
+        /// </summary>
+          [XmlEnum("mill section")]
+          millsection,
+        /// <summary>
+        /// milltaper property
+        /// </summary>
+          [XmlEnum("mill taper")]
+          milltaper,
+        /// <summary>
+        /// millwashover property
+        /// </summary>
+          [XmlEnum("mill washover")]
+          millwashover,
+        /// <summary>
+        /// millpackerpickerassembly property
+        /// </summary>
+          [XmlEnum("mill packer picker assembly")]
+          millpackerpickerassembly,
+        /// <summary>
+        /// milloutextension property
+        /// </summary>
+          [XmlEnum("millout extension")]
+          milloutextension,
+        /// <summary>
+        /// multilateralhangerrunningtool property
+        /// </summary>
+          [XmlEnum("multilateral hanger running tool")]
+          multilateralhangerrunningtool,
+        /// <summary>
+        /// hangermudline property
+        /// </summary>
+          [XmlEnum("hanger mud line")]
+          hangermudline,
+        /// <summary>
+        /// Downhole tool, usually powered by fluid flow, that rotates the drill bit.
+        /// </summary>
+          motor,
+        /// <summary>
+        /// muleshoe property
+        /// </summary>
+          [XmlEnum("mule shoe")]
+          muleshoe,
+        /// <summary>
+        /// loggingwhiledrillingtool property
+        /// </summary>
+          [XmlEnum("logging while drilling tool")]
+          loggingwhiledrillingtool,
+        /// <summary>
+        /// stabilizernearbitrollerreamer property
+        /// </summary>
+          [XmlEnum("stabilizer near bit roller reamer")]
+          stabilizernearbitrollerreamer,
+        /// <summary>
+        /// stabilizernearbit property
+        /// </summary>
+          [XmlEnum("stabilizer near bit")]
+          stabilizernearbit,
+        /// <summary>
+        /// stabilizernonrotating property
+        /// </summary>
+          [XmlEnum("stabilizer non-rotating")]
+          stabilizernonrotating,
+        /// <summary>
+        /// suborienting property
+        /// </summary>
+          [XmlEnum("sub-orienting")]
+          suborienting,
+        /// <summary>
+        /// 
+        /// </summary>
+          other,
+        /// <summary>
+        /// Tool used for retrieving pipe that has been lost in the hole.
+        /// </summary>
+          overshot,
+        /// <summary>
+        /// overshotLH property
+        /// </summary>
+          [XmlEnum("overshot LH")]
+          overshotLH,
+        /// <summary>
+        /// oversizelipguideovershot property
+        /// </summary>
+          [XmlEnum("oversize lip guide overshot")]
+          oversizelipguideovershot,
+        /// <summary>
+        /// Component that can be inflated so that it seals off a section of the wellbore, typically for formation testing.
+        /// </summary>
+          packer,
+        /// <summary>
+        /// polishedborereceptacle property
+        /// </summary>
+          [XmlEnum("polished bore receptacle")]
+          polishedborereceptacle,
+        /// <summary>
+        /// millpilot property
+        /// </summary>
+          [XmlEnum("mill pilot")]
+          millpilot,
+        /// <summary>
+        /// pipecutter property
+        /// </summary>
+          [XmlEnum("pipe cutter")]
+          pipecutter,
+        /// <summary>
+        /// portedstinger property
+        /// </summary>
+          [XmlEnum("ported stinger")]
+          portedstinger,
+        /// <summary>
+        /// subported property
+        /// </summary>
+          [XmlEnum("sub-ported")]
+          subported,
+        /// <summary>
+        /// prepackedscreens property
+        /// </summary>
+          [XmlEnum("prepacked screens")]
+          prepackedscreens,
+        /// <summary>
+        /// subpressurerelief property
+        /// </summary>
+          [XmlEnum("sub-pressure relief")]
+          subpressurerelief,
+        /// <summary>
+        /// riserproduction property
+        /// </summary>
+          [XmlEnum("riser production")]
+          riserproduction,
+        /// <summary>
+        /// MWDpulser property
+        /// </summary>
+          [XmlEnum("MWD pulser")]
+          MWDpulser,
+        /// <summary>
+        /// subpumpout property
+        /// </summary>
+          [XmlEnum("sub-pump out")]
+          subpumpout,
+        /// <summary>
+        /// subrestrictor property
+        /// </summary>
+          [XmlEnum("sub-restrictor")]
+          subrestrictor,
+        /// <summary>
+        /// packerretrieveTTsqueeze property
+        /// </summary>
+          [XmlEnum("packer retrieve TT squeeze")]
+          packerretrieveTTsqueeze,
+        /// <summary>
+        /// reversingtool property
+        /// </summary>
+          [XmlEnum("reversing tool")]
+          reversingtool,
+        /// <summary>
+        /// stabilizerstringrollerreamer property
+        /// </summary>
+          [XmlEnum("stabilizer string roller reamer")]
+          stabilizerstringrollerreamer,
+        /// <summary>
+        /// packerRTTS property
+        /// </summary>
+          [XmlEnum("packer RTTS")]
+          packerRTTS,
+        /// <summary>
+        /// runningtool property
+        /// </summary>
+          [XmlEnum("running tool")]
+          runningtool,
+        /// <summary>
+        /// safetyjoint property
+        /// </summary>
+          [XmlEnum("safety joint")]
+          safetyjoint,
+        /// <summary>
+        /// safetyjointLH property
+        /// </summary>
+          [XmlEnum("safety joint LH")]
+          safetyjointLH,
+        /// <summary>
+        /// subsaver property
+        /// </summary>
+          [XmlEnum("sub-saver")]
+          subsaver,
+        /// <summary>
+        /// scablinerbitguide property
+        /// </summary>
+          [XmlEnum("scab liner bit guide")]
+          scablinerbitguide,
+        /// <summary>
+        /// 
+        /// </summary>
+          scraper,
+        /// <summary>
+        /// A device for cleaning mud and mud filter cake off of the wellbore wall when cementing casing in the hole to ensure good contact and bonding between the cement and the wellbore wall.
+        /// </summary>
+          scratchers,
+        /// <summary>
+        /// casingshoescrewin property
+        /// </summary>
+          [XmlEnum("casing shoe screw-in")]
+          casingshoescrewin,
+        /// <summary>
+        /// subshock property
+        /// </summary>
+          [XmlEnum("sub-shock")]
+          subshock,
+        /// <summary>
+        /// drillcollarshort property
+        /// </summary>
+          [XmlEnum("drill collar short")]
+          drillcollarshort,
+        /// <summary>
+        /// subsideentry property
+        /// </summary>
+          [XmlEnum("sub-side entry")]
+          subsideentry,
+        /// <summary>
+        /// slottedliner property
+        /// </summary>
+          [XmlEnum("slotted liner")]
+          slottedliner,
+        /// <summary>
+        /// Fishing tool that attaches to the inside of the stuck pipe by threads or grapples.
+        /// </summary>
+          spear,
+        /// <summary>
+        /// stagecementcollar property
+        /// </summary>
+          [XmlEnum("stage cement collar")]
+          stagecementcollar,
+        /// <summary>
+        /// motorsteerable property
+        /// </summary>
+          [XmlEnum("motor steerable")]
+          motorsteerable,
+        /// <summary>
+        /// packerstormvalveRTTS property
+        /// </summary>
+          [XmlEnum("packer storm valve RTTS")]
+          packerstormvalveRTTS,
+        /// <summary>
+        /// stabilizerstring property
+        /// </summary>
+          [XmlEnum("stabilizer string")]
+          stabilizerstring,
+        /// <summary>
+        /// surfacepipe property
+        /// </summary>
+          [XmlEnum("surface pipe")]
+          surfacepipe,
+        /// <summary>
+        /// tapertap property
+        /// </summary>
+          [XmlEnum("taper tap")]
+          tapertap,
+        /// <summary>
+        /// tapertapLH property
+        /// </summary>
+          [XmlEnum("taper tap LH")]
+          tapertapLH,
+        /// <summary>
+        /// tubingconveyedperforatinggun property
+        /// </summary>
+          [XmlEnum("tubing-conveyed perforating gun")]
+          tubingconveyedperforatinggun,
+        /// <summary>
+        /// Drilling tool used to maintain weight on bit.
+        /// </summary>
+          thruster,
+        /// <summary>
+        /// tiebackpolishedborereceptacle property
+        /// </summary>
+          [XmlEnum("tieback polished bore receptacle")]
+          tiebackpolishedborereceptacle,
+        /// <summary>
+        /// tiebackstinger property
+        /// </summary>
+          [XmlEnum("tieback stinger")]
+          tiebackstinger,
+        /// <summary>
+        /// Small diameter pipe that is run inside casing or tubing as part of the well completion.
+        /// </summary>
+          tubing,
+        /// <summary>
+        /// hangertubing property
+        /// </summary>
+          [XmlEnum("hanger tubing")]
+          hangertubing,
+        /// <summary>
+        /// Downhole device used for directional drilling, powered by mud circulation that rotates the drill bit while the drill string remains non-rotating
+        /// </summary>
+          turbine,
+        /// <summary>
+        /// bitunderreamer property
+        /// </summary>
+          [XmlEnum("bit under reamer")]
+          bitunderreamer,
+        /// <summary>
+        /// stabilizervariableblade property
+        /// </summary>
+          [XmlEnum("stabilizer variable blade")]
+          stabilizervariableblade,
+        /// <summary>
+        /// washoverpipe property
+        /// </summary>
+          [XmlEnum("washover pipe")]
+          washoverpipe,
+        /// <summary>
+        /// millwatermelon property
+        /// </summary>
+          [XmlEnum("mill watermelon")]
+          millwatermelon,
+        /// <summary>
+        /// Wedge shaped tool used to drill off in a different direction.
+        /// </summary>
+          whipstock,
+        /// <summary>
+        /// whipstockanchor property
+        /// </summary>
+          [XmlEnum("whipstock anchor")]
+          whipstockanchor,
+        /// <summary>
+        /// stabilizerturboback property
+        /// </summary>
+          [XmlEnum("stabilizer turbo back")]
+          stabilizerturboback,
+        /// <summary>
+        /// stabilizerinline property
+        /// </summary>
+          [XmlEnum("stabilizer inline")]
+          stabilizerinline,
+        /// <summary>
+        /// stabilizersteerable property
+        /// </summary>
+          [XmlEnum("stabilizer steerable")]
+          stabilizersteerable,
+        /// <summary>
+        /// substop property
+        /// </summary>
+          [XmlEnum("sub-stop")]
+          substop,
+        /// <summary>
+        /// subfilter property
+        /// </summary>
+          [XmlEnum("sub-filter")]
+          subfilter,
+        /// <summary>
+        /// millcasingcutting property
+        /// </summary>
+          [XmlEnum("mill casing cutting")]
+          millcasingcutting,
+        /// <summary>
+        /// Tool used to enlarge the hole.
+        /// </summary>
+          reamer,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the TypeSurveyTool xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the TypeSurveyTool xsd enumeration.")]
+        public enum TypeSurveyTool 
+        {
+        /// <summary>
+        /// magneticMWD property
+        /// </summary>
+          [XmlEnum("magnetic MWD")]
+          magneticMWD,
+        /// <summary>
+        /// gyroscopicMWD property
+        /// </summary>
+          [XmlEnum("gyroscopic  MWD")]
+          gyroscopicMWD,
+        /// <summary>
+        /// gyroscopicnorthseeking property
+        /// </summary>
+          [XmlEnum("gyroscopic north seeking")]
+          gyroscopicnorthseeking,
+        /// <summary>
+        /// gyroscopicinertial property
+        /// </summary>
+          [XmlEnum("gyroscopic inertial")]
+          gyroscopicinertial,
+        /// <summary>
+        /// magneticsingleshot property
+        /// </summary>
+          [XmlEnum("magnetic single-shot")]
+          magneticsingleshot,
+        /// <summary>
+        /// magneticmultipleshot property
+        /// </summary>
+          [XmlEnum("magnetic multiple-shot")]
+          magneticmultipleshot,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the WellDirection xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the WellDirection xsd enumeration.")]
+        public enum WellDirection 
+        {
+        /// <summary>
+        /// huffnpuff property
+        /// </summary>
+          [XmlEnum("huff-n-puff")]
+          huffnpuff,
+        /// <summary>
+        /// The well facility is injecting fluids into the subsurface.
+        /// </summary>
+          injector,
+        /// <summary>
+        /// The well facility is producing fluids from the subsurface.
+        /// </summary>
+          producer,
+        /// <summary>
+        /// The flow direction of the fluids is variable, but not on a regular basis as is the case with the huff-n-puff flow.
+        /// </summary>
+          uncertain,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the WellFluid xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the WellFluid xsd enumeration.")]
+        public enum WellFluid 
+        {
+        /// <summary>
+        /// This is generally an injected fluid.
+        /// </summary>
+          air,
+        /// <summary>
+        /// Liquid hydrocarbons produced with natural gas that are separated from the gas by cooling and various other means. Condensate generally has an API gravity of 50 degrees to 120 degrees and is water white, straw, or bluish in color. It is the liquid recovery from a well classified as a gas well. It is generally dissolved in the gaseous state under reservoir conditions but separates as a liquid either in passing up the hole or at the surface. These hydrocarbons, from associated and nonassociated gas well gas, normally are recovered from lease separators or field facilities by mechanical separation.
+        /// </summary>
+          condensate,
+        /// <summary>
+        /// The well facility is classified as a dry well. It has not been, nor will it be used to produce or inject any fluids.
+        /// </summary>
+          dry,
+        /// <summary>
+        /// The well is classified as a gas well, producing or injecting a hydrocarbon gas. The gas is generally methane, but may have a mixture of other gases also.
+        /// </summary>
+          gas,
+        /// <summary>
+        /// gaswater property
+        /// </summary>
+          [XmlEnum("gas-water")]
+          gaswater,
+        /// <summary>
+        /// nonHCgas property
+        /// </summary>
+          [XmlEnum("non HC gas")]
+          nonHCgas,
+        /// <summary>
+        /// nonHCgasCO2 property
+        /// </summary>
+          [XmlEnum("non HC gas -- CO2")]
+          nonHCgasCO2,
+        /// <summary>
+        /// The liquid hydrocarbon, generally referred to as crude oil.
+        /// </summary>
+          oil,
+        /// <summary>
+        /// oilgas property
+        /// </summary>
+          [XmlEnum("oil-gas")]
+          oilgas,
+        /// <summary>
+        /// oilwater property
+        /// </summary>
+          [XmlEnum("oil-water")]
+          oilwater,
+        /// <summary>
+        /// The gaseous state of water. This is generally an injected fluid, but it is possible that some hydrothermal wells produce steam.
+        /// </summary>
+          steam,
+        /// <summary>
+        /// The well is classified as a water well without distinguishing between brine or fresh water.
+        /// </summary>
+          water,
+        /// <summary>
+        /// waterbrine property
+        /// </summary>
+          [XmlEnum("water -- brine")]
+          waterbrine,
+        /// <summary>
+        /// waterfreshwater property
+        /// </summary>
+          [XmlEnum("water -- fresh water")]
+          waterfreshwater,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the WellboreShape xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the WellboreShape xsd enumeration.")]
+        public enum WellboreShape 
+        {
+        /// <summary>
+        /// buildandhold property
+        /// </summary>
+          [XmlEnum("build and hold")]
+          buildandhold,
+        /// <summary>
+        /// A wellbore that significantly departs from vertical with respect to the surface location.
+        /// </summary>
+          deviated,
+        /// <summary>
+        /// doublekickoff property
+        /// </summary>
+          [XmlEnum("double kickoff")]
+          doublekickoff,
+        /// <summary>
+        /// A wellbore whose path deviates from the vertical by at least 75 degrees.
+        /// </summary>
+          horizontal,
+        /// <summary>
+        /// Sshaped property
+        /// </summary>
+          [XmlEnum("S-shaped")]
+          Sshaped,
+        /// <summary>
+        /// A wellbore that is nearly vertical with respect to the surface location.
+        /// </summary>
+          vertical,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the WellboreType xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the WellboreType xsd enumeration.")]
+        public enum WellboreType 
+        {
+        /// <summary>
+        /// The original wellbore had to be abandoned before its final usage. This wellbore is being drilled as a different wellbore, but one which has the same target as the one that was abandoned.
+        /// </summary>
+          bypass,
+        /// <summary>
+        /// This is the first wellbore that has been drilled, or attempted, in a given well.
+        /// </summary>
+          initial,
+        /// <summary>
+        /// The wellbore is being redrilled.
+        /// </summary>
+          redrill,
+        /// <summary>
+        /// The wellbore is being reentered after a period of abandonment.
+        /// </summary>
+          reentry,
+        /// <summary>
+        /// The wellbore is part of an existing regulatory well. The original borehole did not reach the target depth. This borehole required the well to be respudded (drilled from a different surface position).
+        /// </summary>
+          respud,
+        /// <summary>
+        /// The wellbore is a deviation from a given wellbore, that produces a different borehole from the others, and whose bottomhole differs from any previously extisting wellbore bottomholes.
+        /// </summary>
+          sidetrack,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the WellPurpose xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the WellPurpose xsd enumeration.")]
+        public enum WellPurpose 
+        {
+        /// <summary>
+        /// A well drilled into a formation shown to be potentially productive of oil or gas by an earlier well for the purpose of obtaining more information about the reservoir. Also known as a delineation well.
+        /// </summary>
+          appraisal,
+        /// <summary>
+        /// appraisalconfirmationappraisal property
+        /// </summary>
+          [XmlEnum("appraisal -- confirmation appraisal")]
+          appraisalconfirmationappraisal,
+        /// <summary>
+        /// appraisalexploratoryappraisal property
+        /// </summary>
+          [XmlEnum("appraisal -- exploratory appraisal")]
+          appraisalexploratoryappraisal,
+        /// <summary>
+        /// An exploratory well drilled in an unproved area to test for a new field, a new pay, a deeper reservoir, or a shallower reservoir. Also known as a wildcat.
+        /// </summary>
+          exploration,
+        /// <summary>
+        /// explorationdeeperpoolwildcat property
+        /// </summary>
+          [XmlEnum("exploration -- deeper-pool wildcat")]
+          explorationdeeperpoolwildcat,
+        /// <summary>
+        /// explorationnewfieldwildcat property
+        /// </summary>
+          [XmlEnum("exploration -- new-field wildcat")]
+          explorationnewfieldwildcat,
+        /// <summary>
+        /// explorationnewpoolwildcat property
+        /// </summary>
+          [XmlEnum("exploration -- new-pool wildcat")]
+          explorationnewpoolwildcat,
+        /// <summary>
+        /// explorationoutpostwildcat property
+        /// </summary>
+          [XmlEnum("exploration -- outpost wildcat")]
+          explorationoutpostwildcat,
+        /// <summary>
+        /// explorationshallowerpoolwildcat property
+        /// </summary>
+          [XmlEnum("exploration -- shallower-pool wildcat")]
+          explorationshallowerpoolwildcat,
+        /// <summary>
+        /// A well drilled in a zone in an area already proved productive.
+        /// </summary>
+          development,
+        /// <summary>
+        /// developmentinfilldevelopment property
+        /// </summary>
+          [XmlEnum("development -- infill development")]
+          developmentinfilldevelopment,
+        /// <summary>
+        /// developmentinjector property
+        /// </summary>
+          [XmlEnum("development -- injector")]
+          developmentinjector,
+        /// <summary>
+        /// developmentproducer property
+        /// </summary>
+          [XmlEnum("development -- producer")]
+          developmentproducer,
+        /// <summary>
+        /// fluidstorage property
+        /// </summary>
+          [XmlEnum("fluid storage")]
+          fluidstorage,
+        /// <summary>
+        /// fluidstoragegasstorage property
+        /// </summary>
+          [XmlEnum("fluid storage -- gas storage")]
+          fluidstoragegasstorage,
+        /// <summary>
+        /// generalsrvc property
+        /// </summary>
+          [XmlEnum("general srvc")]
+          generalsrvc,
+        /// <summary>
+        /// generalsrvcboreholereacquisition property
+        /// </summary>
+          [XmlEnum("general srvc -- borehole re-acquisition")]
+          generalsrvcboreholereacquisition,
+        /// <summary>
+        /// generalsrvcobservation property
+        /// </summary>
+          [XmlEnum("general srvc -- observation")]
+          generalsrvcobservation,
+        /// <summary>
+        /// generalsrvcrelief property
+        /// </summary>
+          [XmlEnum("general srvc -- relief")]
+          generalsrvcrelief,
+        /// <summary>
+        /// generalsrvcresearch property
+        /// </summary>
+          [XmlEnum("general srvc -- research")]
+          generalsrvcresearch,
+        /// <summary>
+        /// generalsrvcresearchdrilltest property
+        /// </summary>
+          [XmlEnum("general srvc -- research -- drill test")]
+          generalsrvcresearchdrilltest,
+        /// <summary>
+        /// generalsrvcresearchstrattest property
+        /// </summary>
+          [XmlEnum("general srvc -- research -- strat test")]
+          generalsrvcresearchstrattest,
+        /// <summary>
+        /// generalsrvcwastedisposal property
+        /// </summary>
+          [XmlEnum("general srvc -- waste disposal")]
+          generalsrvcwastedisposal,
+        /// <summary>
+        /// A non-oil and gas E and P well drilled for the purpose of locating and/or extracting a mineral from the subsurface, usually through the injection and/or extraction of mineral-bearing fluids.
+        /// </summary>
+          mineral,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
+        /// This class represents the WellStatus xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
+        [Description("This class represents the WellStatus xsd enumeration.")]
+        public enum WellStatus 
+        {
+        /// <summary>
+        /// The status of a facility in which drilling, completion, and production operations have been permanently terminated.
+        /// </summary>
+          abandoned,
+        /// <summary>
+        /// For a well to be active, at least one of its wellbores must be active. For a wellbore to be active, at least one of its completions must be actively producing or injecting fluids.
+        /// </summary>
+          active,
+        /// <summary>
+        /// activeinjecting property
+        /// </summary>
+          [XmlEnum("active -- injecting")]
+          activeinjecting,
+        /// <summary>
+        /// activeproducing property
+        /// </summary>
+          [XmlEnum("active -- producing")]
+          activeproducing,
+        /// <summary>
+        /// The completion has been installed, but the facility is not yet active. This status is appropriate only before the initial producing or injecting activity.
+        /// </summary>
+          completed,
+        /// <summary>
+        /// The status of a well or wellbore in which drilling operations have begun, but are not yet completed. The status ends when another status becomes appropriate.
+        /// </summary>
+          drilling,
+        /// <summary>
+        /// partiallyplugged property
+        /// </summary>
+          [XmlEnum("partially plugged")]
+          partiallyplugged,
+        /// <summary>
+        /// The facility has received regulatory approvel, but drilling has not yet commenced. For a well, it has been spudded. For a subsequent wellbore, the whipstock or similar device has not yet been set.
+        /// </summary>
+          permitted,
+        /// <summary>
+        /// pluggedandabandoned property
+        /// </summary>
+          [XmlEnum("plugged and abandoned")]
+          pluggedandabandoned,
+        /// <summary>
+        /// The status of a well or wellbore from conception to either regulatory approval or commencement of drilling.
+        /// </summary>
+          proposed,
+        /// <summary>
+        /// The facility has been sold, so it is no longer appropriate to keep a close internal status value. Status values may be added at later times without changing the sold status.
+        /// </summary>
+          sold,
+        /// <summary>
+        /// Production or injection has been temporarily suspended in a manner that will allow immediate resumption of activities.
+        /// </summary>
+          suspended,
+        /// <summary>
+        /// temporarilyabandoned property
+        /// </summary>
+          [XmlEnum("temporarily abandoned")]
+          temporarilyabandoned,
+        /// <summary>
+        /// The facility operations are suspended while tests are being conducted to determine formation and/or reservoir properties. For example, a drillstem test. This status also includes extended testing.
+        /// </summary>
+          testing,
+        /// <summary>
+        /// Information about the status of the well is confidential. This is more explicit than unknown, since it gives the reason that the status value is unknown.
+        /// </summary>
+          tight,
+        /// <summary>
+        /// workingover property
+        /// </summary>
+          [XmlEnum("working over")]
+          workingover,
+        /// <summary>
+        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
+        /// </summary>
+          unknown
+        }
+        /// <summary>
         /// This class represents the SubscriptionAction xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -61076,35 +67819,6 @@ namespace Energistics.DataAccess.WITSML131
         /// urad property
         /// </summary>
           urad
-        }
-        /// <summary>
-        /// This class represents the AziRef xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the AziRef xsd enumeration.")]
-        public enum AziRef 
-        {
-        /// <summary>
-        /// magneticnorth property
-        /// </summary>
-          [XmlEnum("magnetic north")]
-          magneticnorth,
-        /// <summary>
-        /// gridnorth property
-        /// </summary>
-          [XmlEnum("grid north")]
-          gridnorth,
-        /// <summary>
-        /// truenorth property
-        /// </summary>
-          [XmlEnum("true north")]
-          truenorth,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
         }
         /// <summary>
         /// This class represents the volumePerVolumeUom xsd enumeration.
@@ -63953,1316 +70667,6 @@ namespace Energistics.DataAccess.WITSML131
           mGal
         }
         /// <summary>
-        /// This class represents the BhaStatus xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the BhaStatus xsd enumeration.")]
-        public enum BhaStatus 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          final,
-        /// <summary>
-        /// 
-        /// </summary>
-          progress,
-        /// <summary>
-        /// 
-        /// </summary>
-          plan,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the ItemState xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the ItemState xsd enumeration.")]
-        public enum ItemState 
-        {
-        /// <summary>
-        /// Actual data measured or entered at the well site.
-        /// </summary>
-          actual,
-        /// <summary>
-        /// Model data used for "what if" calculations.
-        /// </summary>
-          model,
-        /// <summary>
-        /// A planned object. That is, one which is expected to be executed in the future.
-        /// </summary>
-          plan,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the CementJobType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the CementJobType xsd enumeration.")]
-        public enum CementJobType 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          primary,
-        /// <summary>
-        /// 
-        /// </summary>
-          plug,
-        /// <summary>
-        /// 
-        /// </summary>
-          squeeze,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the HoleCasingType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the HoleCasingType xsd enumeration.")]
-        public enum HoleCasingType 
-        {
-        /// <summary>
-        /// blowoutpreventer property
-        /// </summary>
-          [XmlEnum("blow out preventer")]
-          blowoutpreventer,
-        /// <summary>
-        /// 
-        /// </summary>
-          casing,
-        /// <summary>
-        /// 
-        /// </summary>
-          conductor,
-        /// <summary>
-        /// curvedconductor property
-        /// </summary>
-          [XmlEnum("curved conductor")]
-          curvedconductor,
-        /// <summary>
-        /// 
-        /// </summary>
-          liner,
-        /// <summary>
-        /// openhole property
-        /// </summary>
-          [XmlEnum("open hole")]
-          openhole,
-        /// <summary>
-        /// 
-        /// </summary>
-          riser,
-        /// <summary>
-        /// 
-        /// </summary>
-          tubing,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the LithologySource xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the LithologySource xsd enumeration.")]
-        public enum LithologySource 
-        {
-        /// <summary>
-        /// The lithology has one overall interpretation based on several sources such as logs and cuttings or cores.
-        /// </summary>
-          interpreted,
-        /// <summary>
-        /// The lithology as based on a visual inspection of the core. A percentage is commonly assigned to each portion of the lithology.
-        /// </summary>
-          core,
-        /// <summary>
-        /// The lithology as based on a visual inspection of the cuttings. A percentage is commonly assigned to each portion of the lithology.
-        /// </summary>
-          cuttings,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the ShowRating xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the ShowRating xsd enumeration.")]
-        public enum ShowRating 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          none,
-        /// <summary>
-        /// verypoor property
-        /// </summary>
-          [XmlEnum("very poor")]
-          verypoor,
-        /// <summary>
-        /// 
-        /// </summary>
-          poor,
-        /// <summary>
-        /// 
-        /// </summary>
-          fair,
-        /// <summary>
-        /// 
-        /// </summary>
-          good,
-        /// <summary>
-        /// verygood property
-        /// </summary>
-          [XmlEnum("very good")]
-          verygood,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the ShowFluorescence xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the ShowFluorescence xsd enumeration.")]
-        public enum ShowFluorescence 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          faint,
-        /// <summary>
-        /// 
-        /// </summary>
-          bright,
-        /// <summary>
-        /// 
-        /// </summary>
-          none,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the ShowSpeed xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the ShowSpeed xsd enumeration.")]
-        public enum ShowSpeed 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          slow,
-        /// <summary>
-        /// moderatelyfast property
-        /// </summary>
-          [XmlEnum("moderately fast")]
-          moderatelyfast,
-        /// <summary>
-        /// 
-        /// </summary>
-          fast,
-        /// <summary>
-        /// 
-        /// </summary>
-          instantaneous,
-        /// <summary>
-        /// 
-        /// </summary>
-          none,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the ShowLevel xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the ShowLevel xsd enumeration.")]
-        public enum ShowLevel 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          blooming,
-        /// <summary>
-        /// 
-        /// </summary>
-          streaming,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the GasPeakType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the GasPeakType xsd enumeration.")]
-        public enum GasPeakType 
-        {
-        /// <summary>
-        /// circulatingbackgroundgas property
-        /// </summary>
-          [XmlEnum("circulating background gas")]
-          circulatingbackgroundgas,
-        /// <summary>
-        /// connectiongas property
-        /// </summary>
-          [XmlEnum("connection gas")]
-          connectiongas,
-        /// <summary>
-        /// drillingbackgroundgas property
-        /// </summary>
-          [XmlEnum("drilling background gas")]
-          drillingbackgroundgas,
-        /// <summary>
-        /// drillinggaspeak property
-        /// </summary>
-          [XmlEnum("drilling gas peak")]
-          drillinggaspeak,
-        /// <summary>
-        /// flowcheckgas property
-        /// </summary>
-          [XmlEnum("flow check gas")]
-          flowcheckgas,
-        /// <summary>
-        /// noreadings property
-        /// </summary>
-          [XmlEnum("no readings")]
-          noreadings,
-        /// <summary>
-        /// 
-        /// </summary>
-          other,
-        /// <summary>
-        /// shutdowngas property
-        /// </summary>
-          [XmlEnum("shut down gas")]
-          shutdowngas,
-        /// <summary>
-        /// tripgas property
-        /// </summary>
-          [XmlEnum("trip gas")]
-          tripgas,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the FiberMode xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the FiberMode xsd enumeration.")]
-        public enum FiberMode 
-        {
-        /// <summary>
-        /// A single, narrow, core of constant refractive index, surrounded by glass cladding. The core diameter is comparable to a wave length of the light (about 5 um).
-        /// </summary>
-          singlemode,
-        /// <summary>
-        /// The core has a graded refractive index. The core is generally about 50um in diameter.
-        /// </summary>
-          multimode,
-        /// <summary>
-        /// The fiber mode is neither singlemode or multimode.
-        /// </summary>
-          other,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the InstalledFiberPoint xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the InstalledFiberPoint xsd enumeration.")]
-        public enum InstalledFiberPoint 
-        {
-        /// <summary>
-        /// A point at which a fiber is physically, and semi-permanently, connected to another length of fiber.
-        /// </summary>
-          splice,
-        /// <summary>
-        /// A point at which a cable connector is installed, which allows the fiber to be connected to another instrument or fiber length.
-        /// </summary>
-          connector,
-        /// <summary>
-        /// endoffiber property
-        /// </summary>
-          [XmlEnum("end of fiber")]
-          endoffiber,
-        /// <summary>
-        /// baseoffiber property
-        /// </summary>
-          [XmlEnum("base of fiber")]
-          baseoffiber,
-        /// <summary>
-        /// turnaroundpoint property
-        /// </summary>
-          [XmlEnum("turn around point")]
-          turnaroundpoint,
-        /// <summary>
-        /// startoffiber property
-        /// </summary>
-          [XmlEnum("start of fiber")]
-          startoffiber,
-        /// <summary>
-        /// ovenentrypoint property
-        /// </summary>
-          [XmlEnum("oven entry point")]
-          ovenentrypoint,
-        /// <summary>
-        /// ovenexitpoint property
-        /// </summary>
-          [XmlEnum("oven exit point")]
-          ovenexitpoint,
-        /// <summary>
-        /// downholegauge property
-        /// </summary>
-          [XmlEnum("downhole gauge")]
-          downholegauge,
-        /// <summary>
-        /// DTSlaserhead property
-        /// </summary>
-          [XmlEnum("DTS laser head")]
-          DTSlaserhead,
-        /// <summary>
-        /// DTSreferenceoven property
-        /// </summary>
-          [XmlEnum("DTS reference oven")]
-          DTSreferenceoven,
-        /// <summary>
-        /// splicebox property
-        /// </summary>
-          [XmlEnum("splice box")]
-          splicebox,
-        /// <summary>
-        /// wellheadjunctionbox property
-        /// </summary>
-          [XmlEnum("wellhead junction box")]
-          wellheadjunctionbox,
-        /// <summary>
-        /// basetubinghangerflange property
-        /// </summary>
-          [XmlEnum("base tubing hanger flange")]
-          basetubinghangerflange,
-        /// <summary>
-        /// PBRwetconnect property
-        /// </summary>
-          [XmlEnum("PBR wet connect")]
-          PBRwetconnect,
-        /// <summary>
-        /// topESPpump property
-        /// </summary>
-          [XmlEnum("top ESP pump")]
-          topESPpump,
-        /// <summary>
-        /// baseESPpump property
-        /// </summary>
-          [XmlEnum("base ESP pump")]
-          baseESPpump,
-        /// <summary>
-        /// wellheadtemperaturegauge property
-        /// </summary>
-          [XmlEnum("wellhead temperature gauge")]
-          wellheadtemperaturegauge,
-        /// <summary>
-        /// topcompletionzone property
-        /// </summary>
-          [XmlEnum("top completion zone")]
-          topcompletionzone,
-        /// <summary>
-        /// basecompletionzone property
-        /// </summary>
-          [XmlEnum("base completion zone")]
-          basecompletionzone,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the OTDRReason xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the OTDRReason xsd enumeration.")]
-        public enum OTDRReason 
-        {
-        /// <summary>
-        /// preinstallation property
-        /// </summary>
-          [XmlEnum("pre-installation")]
-          preinstallation,
-        /// <summary>
-        /// postinstallation property
-        /// </summary>
-          [XmlEnum("post-installation")]
-          postinstallation,
-        /// <summary>
-        /// DTSrun property
-        /// </summary>
-          [XmlEnum("DTS run")]
-          DTSrun,
-        /// <summary>
-        /// The OTDR was run for another reason.
-        /// </summary>
-          other,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the LogIndexType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the LogIndexType xsd enumeration.")]
-        public enum LogIndexType 
-        {
-        /// <summary>
-        /// datetime property
-        /// </summary>
-          [XmlEnum("date time")]
-          datetime,
-        /// <summary>
-        /// elapsedtime property
-        /// </summary>
-          [XmlEnum("elapsed time")]
-          elapsedtime,
-        /// <summary>
-        /// Log is indexed on length (not a depth).
-        /// </summary>
-          length,
-        /// <summary>
-        /// measureddepth property
-        /// </summary>
-          [XmlEnum("measured depth")]
-          measureddepth,
-        /// <summary>
-        /// verticaldepth property
-        /// </summary>
-          [XmlEnum("vertical depth")]
-          verticaldepth,
-        /// <summary>
-        /// Any other index type for a log.
-        /// </summary>
-          other,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the LogIndexDirection xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the LogIndexDirection xsd enumeration.")]
-        public enum LogIndexDirection 
-        {
-        /// <summary>
-        /// Log items are in order of decreasing index values (e.g. wireline log logging while pulling out of hole)
-        /// </summary>
-          decreasing,
-        /// <summary>
-        /// Log items are in order of increasing index values (e.g. increasing depths or times)
-        /// </summary>
-          increasing,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the LogTraceState xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the LogTraceState xsd enumeration.")]
-        public enum LogTraceState 
-        {
-        /// <summary>
-        /// depthadjusted property
-        /// </summary>
-          [XmlEnum("depth adjusted")]
-          depthadjusted,
-        /// <summary>
-        /// 
-        /// </summary>
-          edited,
-        /// <summary>
-        /// 
-        /// </summary>
-          joined,
-        /// <summary>
-        /// 
-        /// </summary>
-          processed,
-        /// <summary>
-        /// 
-        /// </summary>
-          raw,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the LogTraceOrigin xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the LogTraceOrigin xsd enumeration.")]
-        public enum LogTraceOrigin 
-        {
-        /// <summary>
-        /// The data were read from a realtime sensor stream.
-        /// </summary>
-          realtime,
-        /// <summary>
-        /// The data are synthetic.
-        /// </summary>
-          modeled,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the LogDataType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the LogDataType xsd enumeration.")]
-        public enum LogDataType 
-        {
-        /// <summary>
-        /// datetime property
-        /// </summary>
-          [XmlEnum("date time")]
-          datetime,
-        /// <summary>
-        /// Double precision floating point value.
-        /// </summary>
-          @double,
-        /// <summary>
-        /// Long integer data value.
-        /// </summary>
-          @long,
-        /// <summary>
-        /// Character string data.
-        /// </summary>
-          @string,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the MessageType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the MessageType xsd enumeration.")]
-        public enum MessageType 
-        {
-        /// <summary>
-        /// An alarm condition when something has exceeded specified limits
-        /// </summary>
-          alarm,
-        /// <summary>
-        /// Information about a specific event
-        /// </summary>
-          @event,
-        /// <summary>
-        /// General information message
-        /// </summary>
-          informational,
-        /// <summary>
-        /// A cautionary message
-        /// </summary>
-          warning,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the MessageSeverity xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the MessageSeverity xsd enumeration.")]
-        public enum MessageSeverity 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          catastrophic,
-        /// <summary>
-        /// 
-        /// </summary>
-          major,
-        /// <summary>
-        /// 
-        /// </summary>
-          minor,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the MessageProbability xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the MessageProbability xsd enumeration.")]
-        public enum MessageProbability 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          low,
-        /// <summary>
-        /// 
-        /// </summary>
-          medium,
-        /// <summary>
-        /// 
-        /// </summary>
-          high,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the MudLogParameterType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the MudLogParameterType xsd enumeration.")]
-        public enum MudLogParameterType 
-        {
-        /// <summary>
-        /// bitparameters property
-        /// </summary>
-          [XmlEnum("bit parameters")]
-          bitparameters,
-        /// <summary>
-        /// bittypecomment property
-        /// </summary>
-          [XmlEnum("bit type comment")]
-          bittypecomment,
-        /// <summary>
-        /// casingpointcomment property
-        /// </summary>
-          [XmlEnum("casing point comment")]
-          casingpointcomment,
-        /// <summary>
-        /// chromatographcomment property
-        /// </summary>
-          [XmlEnum("chromatograph comment")]
-          chromatographcomment,
-        /// <summary>
-        /// circulationsystemcomment property
-        /// </summary>
-          [XmlEnum("circulation system comment")]
-          circulationsystemcomment,
-        /// <summary>
-        /// coreintervalcomment property
-        /// </summary>
-          [XmlEnum("core interval comment")]
-          coreintervalcomment,
-        /// <summary>
-        /// cuttingsgas property
-        /// </summary>
-          [XmlEnum("cuttings gas")]
-          cuttingsgas,
-        /// <summary>
-        /// directfracturepressure property
-        /// </summary>
-          [XmlEnum("direct fracture pressure")]
-          directfracturepressure,
-        /// <summary>
-        /// directporepressuremeasurements property
-        /// </summary>
-          [XmlEnum("direct pore pressure measurements")]
-          directporepressuremeasurements,
-        /// <summary>
-        /// drillingdatacomment property
-        /// </summary>
-          [XmlEnum("drilling data comment")]
-          drillingdatacomment,
-        /// <summary>
-        /// fracturePGestimatemostlikely property
-        /// </summary>
-          [XmlEnum("fracture PG estimate most likely")]
-          fracturePGestimatemostlikely,
-        /// <summary>
-        /// gaspeakscomment property
-        /// </summary>
-          [XmlEnum("gas peaks comment")]
-          gaspeakscomment,
-        /// <summary>
-        /// gasratiocomment property
-        /// </summary>
-          [XmlEnum("gas ratio comment")]
-          gasratiocomment,
-        /// <summary>
-        /// generalengineeringcomment property
-        /// </summary>
-          [XmlEnum("general engineering comment")]
-          generalengineeringcomment,
-        /// <summary>
-        /// kicksandflows property
-        /// </summary>
-          [XmlEnum("kicks and flows")]
-          kicksandflows,
-        /// <summary>
-        /// lithlogcomment property
-        /// </summary>
-          [XmlEnum("lithlog comment")]
-          lithlogcomment,
-        /// <summary>
-        /// lostreturns property
-        /// </summary>
-          [XmlEnum("lost returns")]
-          lostreturns,
-        /// <summary>
-        /// LWDcomment property
-        /// </summary>
-          [XmlEnum("LWD comment")]
-          LWDcomment,
-        /// <summary>
-        /// markerorformationtopcomment property
-        /// </summary>
-          [XmlEnum("marker or formation top comment")]
-          markerorformationtopcomment,
-        /// <summary>
-        /// midnightdepthdate property
-        /// </summary>
-          [XmlEnum("midnight depth date")]
-          midnightdepthdate,
-        /// <summary>
-        /// mudcheckcomment property
-        /// </summary>
-          [XmlEnum("mud check comment")]
-          mudcheckcomment,
-        /// <summary>
-        /// muddatacomment property
-        /// </summary>
-          [XmlEnum("mud data comment")]
-          muddatacomment,
-        /// <summary>
-        /// mudlogcomment property
-        /// </summary>
-          [XmlEnum("mudlog comment")]
-          mudlogcomment,
-        /// <summary>
-        /// overburdengradient property
-        /// </summary>
-          [XmlEnum("overburden gradient")]
-          overburdengradient,
-        /// <summary>
-        /// overpullonconnection property
-        /// </summary>
-          [XmlEnum("overpull on connection")]
-          overpullonconnection,
-        /// <summary>
-        /// overpullontrip property
-        /// </summary>
-          [XmlEnum("overpull on trip")]
-          overpullontrip,
-        /// <summary>
-        /// porePGestimatemostlikely property
-        /// </summary>
-          [XmlEnum("pore PG estimate most likely")]
-          porePGestimatemostlikely,
-        /// <summary>
-        /// porepressureestimatewhiledrilling property
-        /// </summary>
-          [XmlEnum("pore pressure estimate while drilling")]
-          porepressureestimatewhiledrilling,
-        /// <summary>
-        /// pressuredatacomment property
-        /// </summary>
-          [XmlEnum("pressure data comment")]
-          pressuredatacomment,
-        /// <summary>
-        /// shaledensitycomment property
-        /// </summary>
-          [XmlEnum("shale density comment")]
-          shaledensitycomment,
-        /// <summary>
-        /// shorttripcomment property
-        /// </summary>
-          [XmlEnum("short trip comment")]
-          shorttripcomment,
-        /// <summary>
-        /// showreportcomment property
-        /// </summary>
-          [XmlEnum("show report comment")]
-          showreportcomment,
-        /// <summary>
-        /// sidewallcorecomment property
-        /// </summary>
-          [XmlEnum("sidewall core comment")]
-          sidewallcorecomment,
-        /// <summary>
-        /// slidingInterval property
-        /// </summary>
-          [XmlEnum("sliding Interval")]
-          slidingInterval,
-        /// <summary>
-        /// steamstillresultscomment property
-        /// </summary>
-          [XmlEnum("steam still results comment")]
-          steamstillresultscomment,
-        /// <summary>
-        /// surveycomment property
-        /// </summary>
-          [XmlEnum("survey comment")]
-          surveycomment,
-        /// <summary>
-        /// temperaturedatacomment property
-        /// </summary>
-          [XmlEnum("temperature data comment")]
-          temperaturedatacomment,
-        /// <summary>
-        /// temperaturetrendcomment property
-        /// </summary>
-          [XmlEnum("temperature trend comment")]
-          temperaturetrendcomment,
-        /// <summary>
-        /// wirelinelogcomment property
-        /// </summary>
-          [XmlEnum("wireline log comment")]
-          wirelinelogcomment,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the ActivityClassType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the ActivityClassType xsd enumeration.")]
-        public enum ActivityClassType 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          planned,
-        /// <summary>
-        /// 
-        /// </summary>
-          unplanned,
-        /// <summary>
-        /// 
-        /// </summary>
-          downtime,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the TrajStationType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the TrajStationType xsd enumeration.")]
-        public enum TrajStationType 
-        {
-        /// <summary>
-        /// azimuthonplane property
-        /// </summary>
-          [XmlEnum("azimuth on plane")]
-          azimuthonplane,
-        /// <summary>
-        /// buildratetodeltaMD property
-        /// </summary>
-          [XmlEnum("buildrate to delta-MD")]
-          buildratetodeltaMD,
-        /// <summary>
-        /// buildratetoINCL property
-        /// </summary>
-          [XmlEnum("buildrate to INCL")]
-          buildratetoINCL,
-        /// <summary>
-        /// buildratetoMD property
-        /// </summary>
-          [XmlEnum("buildrate to MD")]
-          buildratetoMD,
-        /// <summary>
-        /// buildrateandturnratetoAZI property
-        /// </summary>
-          [XmlEnum("buildrate and turnrate to AZI")]
-          buildrateandturnratetoAZI,
-        /// <summary>
-        /// buildrateandturnratetodeltaMD property
-        /// </summary>
-          [XmlEnum("buildrate and turnrate to delta-MD")]
-          buildrateandturnratetodeltaMD,
-        /// <summary>
-        /// buildrateandturnratetoINCL property
-        /// </summary>
-          [XmlEnum("buildrate and turnrate to INCL")]
-          buildrateandturnratetoINCL,
-        /// <summary>
-        /// buildrateandturnratetoINCLandAZI property
-        /// </summary>
-          [XmlEnum("buildrate and turnrate to INCL and AZI")]
-          buildrateandturnratetoINCLandAZI,
-        /// <summary>
-        /// buildrateandturnratetoMD property
-        /// </summary>
-          [XmlEnum("buildrate and turnrate to MD")]
-          buildrateandturnratetoMD,
-        /// <summary>
-        /// buildrateandturnratetoTVD property
-        /// </summary>
-          [XmlEnum("buildrate and turnrate to TVD")]
-          buildrateandturnratetoTVD,
-        /// <summary>
-        /// buildrateTVD property
-        /// </summary>
-          [XmlEnum("buildrate TVD")]
-          buildrateTVD,
-        /// <summary>
-        /// casingMD property
-        /// </summary>
-          [XmlEnum("casing MD")]
-          casingMD,
-        /// <summary>
-        /// casingTVD property
-        /// </summary>
-          [XmlEnum("casing TVD")]
-          casingTVD,
-        /// <summary>
-        /// Section follows a given dogleg severity 
-        /// </summary>
-          DLS,
-        /// <summary>
-        /// DLStoAZIandMD property
-        /// </summary>
-          [XmlEnum("DLS to AZI and MD")]
-          DLStoAZIandMD,
-        /// <summary>
-        /// DLStoAZITVD property
-        /// </summary>
-          [XmlEnum("DLS to AZI-TVD")]
-          DLStoAZITVD,
-        /// <summary>
-        /// DLStoINCL property
-        /// </summary>
-          [XmlEnum("DLS to INCL")]
-          DLStoINCL,
-        /// <summary>
-        /// DLStoINCLandAZI property
-        /// </summary>
-          [XmlEnum("DLS to INCL and AZI")]
-          DLStoINCLandAZI,
-        /// <summary>
-        /// DLStoINCLandMD property
-        /// </summary>
-          [XmlEnum("DLS to INCL and MD")]
-          DLStoINCLandMD,
-        /// <summary>
-        /// DLStoINCLandTVD property
-        /// </summary>
-          [XmlEnum("DLS to INCL and TVD")]
-          DLStoINCLandTVD,
-        /// <summary>
-        /// DLStoNSEWandTVD property
-        /// </summary>
-          [XmlEnum("DLS to NS, EW and TVD")]
-          DLStoNSEWandTVD,
-        /// <summary>
-        /// DLSandtoolfacetoAZI property
-        /// </summary>
-          [XmlEnum("DLS and toolface to AZI")]
-          DLSandtoolfacetoAZI,
-        /// <summary>
-        /// DLSandtoolfacetodeltaMD property
-        /// </summary>
-          [XmlEnum("DLS and toolface to delta-MD")]
-          DLSandtoolfacetodeltaMD,
-        /// <summary>
-        /// DLSandtoolfacetoINCL property
-        /// </summary>
-          [XmlEnum("DLS and toolface to INCL")]
-          DLSandtoolfacetoINCL,
-        /// <summary>
-        /// DLSandtoolfacetoINCLAZI property
-        /// </summary>
-          [XmlEnum("DLS and toolface to INCL-AZI")]
-          DLSandtoolfacetoINCLAZI,
-        /// <summary>
-        /// DLSandtoolfacetoMD property
-        /// </summary>
-          [XmlEnum("DLS and toolface to MD")]
-          DLSandtoolfacetoMD,
-        /// <summary>
-        /// DLSandtoolfacetoTVD property
-        /// </summary>
-          [XmlEnum("DLS and toolface to TVD")]
-          DLSandtoolfacetoTVD,
-        /// <summary>
-        /// formationMD property
-        /// </summary>
-          [XmlEnum("formation MD")]
-          formationMD,
-        /// <summary>
-        /// formationTVD property
-        /// </summary>
-          [XmlEnum("formation TVD")]
-          formationTVD,
-        /// <summary>
-        /// gyroinertial property
-        /// </summary>
-          [XmlEnum("gyro inertial")]
-          gyroinertial,
-        /// <summary>
-        /// gyroMWD property
-        /// </summary>
-          [XmlEnum("gyro MWD")]
-          gyroMWD,
-        /// <summary>
-        /// gyronorthseeking property
-        /// </summary>
-          [XmlEnum("gyro north seeking")]
-          gyronorthseeking,
-        /// <summary>
-        /// holdtodeltaMD property
-        /// </summary>
-          [XmlEnum("hold to delta-MD")]
-          holdtodeltaMD,
-        /// <summary>
-        /// holdtoMD property
-        /// </summary>
-          [XmlEnum("hold to MD")]
-          holdtoMD,
-        /// <summary>
-        /// holdtoTVD property
-        /// </summary>
-          [XmlEnum("hold to TVD")]
-          holdtoTVD,
-        /// <summary>
-        /// INCLAZIandTVD property
-        /// </summary>
-          [XmlEnum("INCL, AZI and TVD")]
-          INCLAZIandTVD,
-        /// <summary>
-        /// magneticmultishot property
-        /// </summary>
-          [XmlEnum("magnetic multi-shot")]
-          magneticmultishot,
-        /// <summary>
-        /// magneticMWD property
-        /// </summary>
-          [XmlEnum("magnetic MWD")]
-          magneticMWD,
-        /// <summary>
-        /// magneticsingleshot property
-        /// </summary>
-          [XmlEnum("magnetic single shot")]
-          magneticsingleshot,
-        /// <summary>
-        /// markerMD property
-        /// </summary>
-          [XmlEnum("marker MD")]
-          markerMD,
-        /// <summary>
-        /// markerTVD property
-        /// </summary>
-          [XmlEnum("marker TVD")]
-          markerTVD,
-        /// <summary>
-        /// NSEWandTVD property
-        /// </summary>
-          [XmlEnum("NS, EW and TVD")]
-          NSEWandTVD,
-        /// <summary>
-        /// targetcenter property
-        /// </summary>
-          [XmlEnum("target center")]
-          targetcenter,
-        /// <summary>
-        /// targetoffset property
-        /// </summary>
-          [XmlEnum("target offset")]
-          targetoffset,
-        /// <summary>
-        /// tieinpoint property
-        /// </summary>
-          [XmlEnum("tie in point")]
-          tieinpoint,
-        /// <summary>
-        /// turnratetoAZI property
-        /// </summary>
-          [XmlEnum("turnrate to AZI")]
-          turnratetoAZI,
-        /// <summary>
-        /// turnratetodeltaMD property
-        /// </summary>
-          [XmlEnum("turnrate to delta-MD")]
-          turnratetodeltaMD,
-        /// <summary>
-        /// turnratetoMD property
-        /// </summary>
-          [XmlEnum("turnrate to MD")]
-          turnratetoMD,
-        /// <summary>
-        /// turnratetoTVD property
-        /// </summary>
-          [XmlEnum("turnrate to TVD")]
-          turnratetoTVD,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the TypeSurveyTool xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the TypeSurveyTool xsd enumeration.")]
-        public enum TypeSurveyTool 
-        {
-        /// <summary>
-        /// magneticMWD property
-        /// </summary>
-          [XmlEnum("magnetic MWD")]
-          magneticMWD,
-        /// <summary>
-        /// gyroscopicMWD property
-        /// </summary>
-          [XmlEnum("gyroscopic  MWD")]
-          gyroscopicMWD,
-        /// <summary>
-        /// gyroscopicnorthseeking property
-        /// </summary>
-          [XmlEnum("gyroscopic north seeking")]
-          gyroscopicnorthseeking,
-        /// <summary>
-        /// gyroscopicinertial property
-        /// </summary>
-          [XmlEnum("gyroscopic inertial")]
-          gyroscopicinertial,
-        /// <summary>
-        /// magneticsingleshot property
-        /// </summary>
-          [XmlEnum("magnetic single-shot")]
-          magneticsingleshot,
-        /// <summary>
-        /// magneticmultipleshot property
-        /// </summary>
-          [XmlEnum("magnetic multiple-shot")]
-          magneticmultipleshot,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the TrajStationStatus xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the TrajStationStatus xsd enumeration.")]
-        public enum TrajStationStatus 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          locked,
-        /// <summary>
-        /// 
-        /// </summary>
-          open,
-        /// <summary>
-        /// 
-        /// </summary>
-          rejected,
-        /// <summary>
-        /// 
-        /// </summary>
-          valid,
-        /// <summary>
-        /// 
-        /// </summary>
-          position,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
         /// This class represents the ItemsChoiceType xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -65313,169 +70717,6 @@ namespace Energistics.DataAccess.WITSML131
           westing
         }
         /// <summary>
-        /// This class represents the ScrType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the ScrType xsd enumeration.")]
-        public enum ScrType 
-        {
-        /// <summary>
-        /// stringannulus property
-        /// </summary>
-          [XmlEnum("string annulus")]
-          stringannulus,
-        /// <summary>
-        /// stringkillline property
-        /// </summary>
-          [XmlEnum("string kill line")]
-          stringkillline,
-        /// <summary>
-        /// stringchokeline property
-        /// </summary>
-          [XmlEnum("string choke line")]
-          stringchokeline,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the PumpOpType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the PumpOpType xsd enumeration.")]
-        public enum PumpOpType 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          drilling,
-        /// <summary>
-        /// 
-        /// </summary>
-          reaming,
-        /// <summary>
-        /// 
-        /// </summary>
-          circulating,
-        /// <summary>
-        /// slowpump property
-        /// </summary>
-          [XmlEnum("slow pump")]
-          slowpump,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the SupportCraft xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the SupportCraft xsd enumeration.")]
-        public enum SupportCraftType 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          barge,
-        /// <summary>
-        /// standbyboat property
-        /// </summary>
-          [XmlEnum("standby boat")]
-          standbyboat,
-        /// <summary>
-        /// 
-        /// </summary>
-          helicopter,
-        /// <summary>
-        /// supplyboat property
-        /// </summary>
-          [XmlEnum("supply boat")]
-          supplyboat,
-        /// <summary>
-        /// 
-        /// </summary>
-          truck,
-        /// <summary>
-        /// crewvehicle property
-        /// </summary>
-          [XmlEnum("crew vehicle")]
-          crewvehicle,
-        /// <summary>
-        /// tugboat property
-        /// </summary>
-          [XmlEnum("tug boat")]
-          tugboat,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the IntervalType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the IntervalType xsd enumeration.")]
-        public enum IntervalType 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          time,
-        /// <summary>
-        /// 
-        /// </summary>
-          depth,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the IntervalMethod xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the IntervalMethod xsd enumeration.")]
-        public enum IntervalMethod 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          average,
-        /// <summary>
-        /// 
-        /// </summary>
-          maximum,
-        /// <summary>
-        /// 
-        /// </summary>
-          minimum,
-        /// <summary>
-        /// 
-        /// </summary>
-          other,
-        /// <summary>
-        /// spotsample property
-        /// </summary>
-          [XmlEnum("spot sample")]
-          spotsample,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
         /// This class represents the ItemChoiceType xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -65492,5247 +70733,6 @@ namespace Energistics.DataAccess.WITSML131
         /// persistedAsWellLog property
         /// </summary>
           persistedAsWellLog
-        }
-        /// <summary>
-        /// This class represents the RigType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the RigType xsd enumeration.")]
-        public enum RigType 
-        {
-        /// <summary>
-        /// Barge rig
-        /// </summary>
-          barge,
-        /// <summary>
-        /// coiledtubing property
-        /// </summary>
-          [XmlEnum("coiled tubing")]
-          coiledtubing,
-        /// <summary>
-        /// Floating rig
-        /// </summary>
-          floater,
-        /// <summary>
-        /// Jackup rig
-        /// </summary>
-          jackup,
-        /// <summary>
-        /// Land rig
-        /// </summary>
-          land,
-        /// <summary>
-        /// Fixed platform
-        /// </summary>
-          platform,
-        /// <summary>
-        /// semisubmersible property
-        /// </summary>
-          [XmlEnum("semi-submersible")]
-          semisubmersible,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the BopType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the BopType xsd enumeration.")]
-        public enum BopType 
-        {
-        /// <summary>
-        /// annularpreventer property
-        /// </summary>
-          [XmlEnum("annular preventer")]
-          annularpreventer,
-        /// <summary>
-        /// shearram property
-        /// </summary>
-          [XmlEnum("shear ram")]
-          shearram,
-        /// <summary>
-        /// blindram property
-        /// </summary>
-          [XmlEnum("blind ram")]
-          blindram,
-        /// <summary>
-        /// piperam property
-        /// </summary>
-          [XmlEnum("pipe ram")]
-          piperam,
-        /// <summary>
-        /// drillingspool property
-        /// </summary>
-          [XmlEnum("drilling spool")]
-          drillingspool,
-        /// <summary>
-        /// flexiblejoint property
-        /// </summary>
-          [XmlEnum("flexible joint")]
-          flexiblejoint,
-        /// <summary>
-        /// 
-        /// </summary>
-          connector,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the PitType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the PitType xsd enumeration.")]
-        public enum PitType 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          bulk,
-        /// <summary>
-        /// 
-        /// </summary>
-          chemical,
-        /// <summary>
-        /// 
-        /// </summary>
-          drilling,
-        /// <summary>
-        /// 
-        /// </summary>
-          mix,
-        /// <summary>
-        /// mudcleaning property
-        /// </summary>
-          [XmlEnum("mud cleaning")]
-          mudcleaning,
-        /// <summary>
-        /// sandtrap property
-        /// </summary>
-          [XmlEnum("sand trap")]
-          sandtrap,
-        /// <summary>
-        /// That pit in the active pit system located immediately downstream of the shale shakers, whose primary purpose is to allow the settling and disposal of the larger drilled cuttings not removed by the shale shakers. It is occasionally also called a settling tank.
-        /// </summary>
-          slug,
-        /// <summary>
-        /// 
-        /// </summary>
-          storage,
-        /// <summary>
-        /// surgetank property
-        /// </summary>
-          [XmlEnum("surge tank")]
-          surgetank,
-        /// <summary>
-        /// triptank property
-        /// </summary>
-          [XmlEnum("trip tank")]
-          triptank,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the PumpType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the PumpType xsd enumeration.")]
-        public enum PumpType 
-        {
-        /// <summary>
-        /// Centrifugal mud pump
-        /// </summary>
-          centrifugal,
-        /// <summary>
-        /// Duplex mud mump, 2 cylinders
-        /// </summary>
-          duplex,
-        /// <summary>
-        /// Triplex mud pump, three cylinders
-        /// </summary>
-          triplex,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the SurfEquipType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the SurfEquipType xsd enumeration.")]
-        public enum SurfEquipType 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          IADC,
-        /// <summary>
-        /// 
-        /// </summary>
-          custom,
-        /// <summary>
-        /// coiledtubing property
-        /// </summary>
-          [XmlEnum("coiled tubing")]
-          coiledtubing,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the DerrickType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the DerrickType xsd enumeration.")]
-        public enum DerrickType 
-        {
-        /// <summary>
-        /// 2 stand capacity derrick
-        /// </summary>
-          @double,
-        /// <summary>
-        /// 4 stand capacity derrick
-        /// </summary>
-          quadruple,
-        /// <summary>
-        /// Slant derrick
-        /// </summary>
-          slant,
-        /// <summary>
-        /// 3 stand capacity derrick
-        /// </summary>
-          triple,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the DrawWorksType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the DrawWorksType xsd enumeration.")]
-        public enum DrawWorksType 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          mechanical,
-        /// <summary>
-        /// standardelectric property
-        /// </summary>
-          [XmlEnum("standard electric")]
-          standardelectric,
-        /// <summary>
-        /// dieselelectric property
-        /// </summary>
-          [XmlEnum("diesel electric")]
-          dieselelectric,
-        /// <summary>
-        /// ramrig property
-        /// </summary>
-          [XmlEnum("ram rig")]
-          ramrig,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the DriveType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the DriveType xsd enumeration.")]
-        public enum DriveType 
-        {
-        /// <summary>
-        /// coiledtubing property
-        /// </summary>
-          [XmlEnum("coiled tubing")]
-          coiledtubing,
-        /// <summary>
-        /// rotarykellydrive property
-        /// </summary>
-          [XmlEnum("rotary kelly drive")]
-          rotarykellydrive,
-        /// <summary>
-        /// topdrive property
-        /// </summary>
-          [XmlEnum("top drive")]
-          topdrive,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the RiskType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the RiskType xsd enumeration.")]
-        public enum RiskType 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          risk,
-        /// <summary>
-        /// 
-        /// </summary>
-          @event,
-        /// <summary>
-        /// nearmiss property
-        /// </summary>
-          [XmlEnum("near miss")]
-          nearmiss,
-        /// <summary>
-        /// bestpractice property
-        /// </summary>
-          [XmlEnum("best practice")]
-          bestpractice,
-        /// <summary>
-        /// lessonslearned property
-        /// </summary>
-          [XmlEnum("lessons learned")]
-          lessonslearned,
-        /// <summary>
-        /// 
-        /// </summary>
-          other,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the RiskCategory xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the RiskCategory xsd enumeration.")]
-        public enum RiskCategory 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          hydraulics,
-        /// <summary>
-        /// 
-        /// </summary>
-          mechanical,
-        /// <summary>
-        /// timerelated property
-        /// </summary>
-          [XmlEnum("time related")]
-          timerelated,
-        /// <summary>
-        /// wellborestability property
-        /// </summary>
-          [XmlEnum("wellbore stability")]
-          wellborestability,
-        /// <summary>
-        /// directionaldrilling property
-        /// </summary>
-          [XmlEnum("directional drilling")]
-          directionaldrilling,
-        /// <summary>
-        /// 
-        /// </summary>
-          bit,
-        /// <summary>
-        /// equipmentfailure property
-        /// </summary>
-          [XmlEnum("equipment failure")]
-          equipmentfailure,
-        /// <summary>
-        /// 
-        /// </summary>
-          completion,
-        /// <summary>
-        /// 
-        /// </summary>
-          casing,
-        /// <summary>
-        /// 
-        /// </summary>
-          other,
-        /// <summary>
-        /// health, safety and environmental
-        /// </summary>
-          HSE,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the RiskSubCategory xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the RiskSubCategory xsd enumeration.")]
-        public enum RiskSubCategory 
-        {
-        /// <summary>
-        /// gaskick property
-        /// </summary>
-          [XmlEnum("gas kick")]
-          gaskick,
-        /// <summary>
-        /// shallowwaterinflux property
-        /// </summary>
-          [XmlEnum("shallow water influx")]
-          shallowwaterinflux,
-        /// <summary>
-        /// otherinfluxorkicks property
-        /// </summary>
-          [XmlEnum("other influx or kicks")]
-          otherinfluxorkicks,
-        /// <summary>
-        /// losscirculation property
-        /// </summary>
-          [XmlEnum("loss circulation")]
-          losscirculation,
-        /// <summary>
-        /// poorholecleaning property
-        /// </summary>
-          [XmlEnum("poor hole cleaning")]
-          poorholecleaning,
-        /// <summary>
-        /// goodholecleaningathighROP property
-        /// </summary>
-          [XmlEnum("good hole cleaning at high ROP")]
-          goodholecleaningathighROP,
-        /// <summary>
-        /// highmudweight property
-        /// </summary>
-          [XmlEnum("high mud weight")]
-          highmudweight,
-        /// <summary>
-        /// specialadditivesneeded property
-        /// </summary>
-          [XmlEnum("special additives needed")]
-          specialadditivesneeded,
-        /// <summary>
-        /// gumboproblems property
-        /// </summary>
-          [XmlEnum("gumbo problems")]
-          gumboproblems,
-        /// <summary>
-        /// highECDrheologyrelated property
-        /// </summary>
-          [XmlEnum("high ECD - rheology related")]
-          highECDrheologyrelated,
-        /// <summary>
-        /// excessivecirculation property
-        /// </summary>
-          [XmlEnum("excessive circulation")]
-          excessivecirculation,
-        /// <summary>
-        /// performingakill property
-        /// </summary>
-          [XmlEnum("performing a kill")]
-          performingakill,
-        /// <summary>
-        /// mudweightchange property
-        /// </summary>
-          [XmlEnum("mud weight change")]
-          mudweightchange,
-        /// <summary>
-        /// excessivepipecementscaling property
-        /// </summary>
-          [XmlEnum("excessive pipe cement scaling")]
-          excessivepipecementscaling,
-        /// <summary>
-        /// pitgainorloss property
-        /// </summary>
-          [XmlEnum("pit gain or loss")]
-          pitgainorloss,
-        /// <summary>
-        /// mudstabilityproblems property
-        /// </summary>
-          [XmlEnum("mud stability problems")]
-          mudstabilityproblems,
-        /// <summary>
-        /// shallowgasflow property
-        /// </summary>
-          [XmlEnum("shallow gas flow")]
-          shallowgasflow,
-        /// <summary>
-        /// twistoff property
-        /// </summary>
-          [XmlEnum("twist off")]
-          twistoff,
-        /// <summary>
-        /// stuckpipe property
-        /// </summary>
-          [XmlEnum("stuck pipe")]
-          stuckpipe,
-        /// <summary>
-        /// wirelinestuckinhole property
-        /// </summary>
-          [XmlEnum("wireline stuck in hole")]
-          wirelinestuckinhole,
-        /// <summary>
-        /// stickandslip property
-        /// </summary>
-          [XmlEnum("stick and slip")]
-          stickandslip,
-        /// <summary>
-        /// vibrationaxial property
-        /// </summary>
-          [XmlEnum("vibration - axial")]
-          vibrationaxial,
-        /// <summary>
-        /// vibrationtorsional property
-        /// </summary>
-          [XmlEnum("vibration - torsional")]
-          vibrationtorsional,
-        /// <summary>
-        /// vibrationtransverse property
-        /// </summary>
-          [XmlEnum("vibration - transverse")]
-          vibrationtransverse,
-        /// <summary>
-        /// vibrationunknownorroughdrilling property
-        /// </summary>
-          [XmlEnum("vibration unknown or rough drilling")]
-          vibrationunknownorroughdrilling,
-        /// <summary>
-        /// unevenwearofBHA property
-        /// </summary>
-          [XmlEnum("uneven wear of BHA")]
-          unevenwearofBHA,
-        /// <summary>
-        /// unevenwearofdrillstring property
-        /// </summary>
-          [XmlEnum("uneven wear of drillstring")]
-          unevenwearofdrillstring,
-        /// <summary>
-        /// excessivetorque property
-        /// </summary>
-          [XmlEnum("excessive torque")]
-          excessivetorque,
-        /// <summary>
-        /// excessivedrag property
-        /// </summary>
-          [XmlEnum("excessive drag")]
-          excessivedrag,
-        /// <summary>
-        /// reaminggreaterthan2hours property
-        /// </summary>
-          [XmlEnum("reaming greater than 2 hours")]
-          reaminggreaterthan2hours,
-        /// <summary>
-        /// 
-        /// </summary>
-          washouts,
-        /// <summary>
-        /// tightholeoroverPull property
-        /// </summary>
-          [XmlEnum("tight hole or overPull")]
-          tightholeoroverPull,
-        /// <summary>
-        /// failedinspectionsorfatiguewear property
-        /// </summary>
-          [XmlEnum("failed inspections or fatigue wear")]
-          failedinspectionsorfatiguewear,
-        /// <summary>
-        /// 
-        /// </summary>
-          mechanical,
-        /// <summary>
-        /// drillinggreaterthan1000feetday property
-        /// </summary>
-          [XmlEnum("drilling greater than 1000 feet/day")]
-          drillinggreaterthan1000feetday,
-        /// <summary>
-        /// drillinggreaterthan2000feetday property
-        /// </summary>
-          [XmlEnum("drilling greater than 2000 feet/day")]
-          drillinggreaterthan2000feetday,
-        /// <summary>
-        /// drillinglessthan20feetday property
-        /// </summary>
-          [XmlEnum("drilling less than 20 feet/day")]
-          drillinglessthan20feetday,
-        /// <summary>
-        /// tripsgreaterthan24hours property
-        /// </summary>
-          [XmlEnum("trips greater than 24 hours")]
-          tripsgreaterthan24hours,
-        /// <summary>
-        /// excessivetimeforBHAmakeup property
-        /// </summary>
-          [XmlEnum("excessive time for BHA makeup")]
-          excessivetimeforBHAmakeup,
-        /// <summary>
-        /// waitingondecisions property
-        /// </summary>
-          [XmlEnum("waiting on decisions")]
-          waitingondecisions,
-        /// <summary>
-        /// waitingonweather property
-        /// </summary>
-          [XmlEnum("waiting on weather")]
-          waitingonweather,
-        /// <summary>
-        /// waitingontools property
-        /// </summary>
-          [XmlEnum("waiting on tools")]
-          waitingontools,
-        /// <summary>
-        /// sloughingorpackoffs property
-        /// </summary>
-          [XmlEnum("sloughing or packoffs")]
-          sloughingorpackoffs,
-        /// <summary>
-        /// 
-        /// </summary>
-          ballooning,
-        /// <summary>
-        /// fractureproblems property
-        /// </summary>
-          [XmlEnum("fracture problems")]
-          fractureproblems,
-        /// <summary>
-        /// unstablezones property
-        /// </summary>
-          [XmlEnum("unstable zones")]
-          unstablezones,
-        /// <summary>
-        /// formationintegritytest property
-        /// </summary>
-          [XmlEnum("formation integrity test")]
-          formationintegritytest,
-        /// <summary>
-        /// leakofftest property
-        /// </summary>
-          [XmlEnum("leak-off test")]
-          leakofftest,
-        /// <summary>
-        /// 
-        /// </summary>
-          tectonics,
-        /// <summary>
-        /// porepressure property
-        /// </summary>
-          [XmlEnum("pore pressure")]
-          porepressure,
-        /// <summary>
-        /// 
-        /// </summary>
-          breakouts,
-        /// <summary>
-        /// bedparallel property
-        /// </summary>
-          [XmlEnum("bed parallel")]
-          bedparallel,
-        /// <summary>
-        /// wellborestability property
-        /// </summary>
-          [XmlEnum("wellbore stability")]
-          wellborestability,
-        /// <summary>
-        /// excessivedoglegs property
-        /// </summary>
-          [XmlEnum("excessive doglegs")]
-          excessivedoglegs,
-        /// <summary>
-        /// 
-        /// </summary>
-          sidetrack,
-        /// <summary>
-        /// BHAchangefordirectional property
-        /// </summary>
-          [XmlEnum("BHA change for directional")]
-          BHAchangefordirectional,
-        /// <summary>
-        /// wrongtotalflowarea property
-        /// </summary>
-          [XmlEnum("wrong total flow area")]
-          wrongtotalflowarea,
-        /// <summary>
-        /// wellcollisionactual property
-        /// </summary>
-          [XmlEnum("well collision - actual")]
-          wellcollisionactual,
-        /// <summary>
-        /// wellcollisiontechnical property
-        /// </summary>
-          [XmlEnum("well collision - technical")]
-          wellcollisiontechnical,
-        /// <summary>
-        /// 
-        /// </summary>
-          geosteering,
-        /// <summary>
-        /// abnormaltendencychanges property
-        /// </summary>
-          [XmlEnum("abnormal tendency changes")]
-          abnormaltendencychanges,
-        /// <summary>
-        /// 
-        /// </summary>
-          resurveying,
-        /// <summary>
-        /// infieldreferencingIFRactions property
-        /// </summary>
-          [XmlEnum("in-field referencing (IFR) actions")]
-          infieldreferencingIFRactions,
-        /// <summary>
-        /// bitorBHAperformance property
-        /// </summary>
-          [XmlEnum("bit or BHA performance")]
-          bitorBHAperformance,
-        /// <summary>
-        /// drillingoptimization property
-        /// </summary>
-          [XmlEnum("drilling optimization")]
-          drillingoptimization,
-        /// <summary>
-        /// bitballing property
-        /// </summary>
-          [XmlEnum("bit balling")]
-          bitballing,
-        /// <summary>
-        /// lostconesorbrokencutters property
-        /// </summary>
-          [XmlEnum("lost cones or broken cutters")]
-          lostconesorbrokencutters,
-        /// <summary>
-        /// excessivebitwearorgauge property
-        /// </summary>
-          [XmlEnum("excessive bit wear or gauge")]
-          excessivebitwearorgauge,
-        /// <summary>
-        /// lowrateofbitpenetration property
-        /// </summary>
-          [XmlEnum("low rate of bit penetration")]
-          lowrateofbitpenetration,
-        /// <summary>
-        /// highrateofbitpenetration property
-        /// </summary>
-          [XmlEnum("high rate of bit penetration")]
-          highrateofbitpenetration,
-        /// <summary>
-        /// downholetool property
-        /// </summary>
-          [XmlEnum("downhole tool")]
-          downholetool,
-        /// <summary>
-        /// surfacesystem property
-        /// </summary>
-          [XmlEnum("surface system")]
-          surfacesystem,
-        /// <summary>
-        /// motororrotarysteerablesystemfailure property
-        /// </summary>
-          [XmlEnum("motor or rotary steerable system failure")]
-          motororrotarysteerablesystemfailure,
-        /// <summary>
-        /// topdrivefailure property
-        /// </summary>
-          [XmlEnum("topdrive failure")]
-          topdrivefailure,
-        /// <summary>
-        /// hoistingequipmentfailure property
-        /// </summary>
-          [XmlEnum("hoisting equipment failure")]
-          hoistingequipmentfailure,
-        /// <summary>
-        /// circulatingequipmentfailure property
-        /// </summary>
-          [XmlEnum("circulating equipment failure")]
-          circulatingequipmentfailure,
-        /// <summary>
-        /// electricalsystemfailure property
-        /// </summary>
-          [XmlEnum("electrical system failure")]
-          electricalsystemfailure,
-        /// <summary>
-        /// blowoutpreventerevents property
-        /// </summary>
-          [XmlEnum("blow out preventer events")]
-          blowoutpreventerevents,
-        /// <summary>
-        /// surfaceinstrumentationproblems property
-        /// </summary>
-          [XmlEnum("surface instrumentation problems")]
-          surfaceinstrumentationproblems,
-        /// <summary>
-        /// rigcommunications property
-        /// </summary>
-          [XmlEnum("rig communications")]
-          rigcommunications,
-        /// <summary>
-        /// completionequipmentfailure property
-        /// </summary>
-          [XmlEnum("completion equipment failure")]
-          completionequipmentfailure,
-        /// <summary>
-        /// miscellaneousrigequipment property
-        /// </summary>
-          [XmlEnum("miscellaneous rig equipment")]
-          miscellaneousrigequipment,
-        /// <summary>
-        /// toolorequipmentfailure property
-        /// </summary>
-          [XmlEnum("tool or equipment failure")]
-          toolorequipmentfailure,
-        /// <summary>
-        /// squeezejobs property
-        /// </summary>
-          [XmlEnum("squeeze jobs")]
-          squeezejobs,
-        /// <summary>
-        /// casingsurgelosses property
-        /// </summary>
-          [XmlEnum("casing surge losses")]
-          casingsurgelosses,
-        /// <summary>
-        /// stuckcasingorcompletion property
-        /// </summary>
-          [XmlEnum("stuck casing or completion")]
-          stuckcasingorcompletion,
-        /// <summary>
-        /// shoefailures property
-        /// </summary>
-          [XmlEnum("shoe failures")]
-          shoefailures,
-        /// <summary>
-        /// earlycementsetup property
-        /// </summary>
-          [XmlEnum("early cement setup")]
-          earlycementsetup,
-        /// <summary>
-        /// casingcollapse property
-        /// </summary>
-          [XmlEnum("casing collapse")]
-          casingcollapse,
-        /// <summary>
-        /// 
-        /// </summary>
-          milling,
-        /// <summary>
-        /// excessivecasingwearorcuttings property
-        /// </summary>
-          [XmlEnum("excessive casing wear or cuttings")]
-          excessivecasingwearorcuttings,
-        /// <summary>
-        /// excessiveformationdamageorskin property
-        /// </summary>
-          [XmlEnum("excessive formation damage or skin")]
-          excessiveformationdamageorskin,
-        /// <summary>
-        /// casingrotationorreciprocationrqd property
-        /// </summary>
-          [XmlEnum("casing rotation or reciprocation rqd")]
-          casingrotationorreciprocationrqd,
-        /// <summary>
-        /// 
-        /// </summary>
-          broaching,
-        /// <summary>
-        /// completionorcasing property
-        /// </summary>
-          [XmlEnum("completion or casing")]
-          completionorcasing,
-        /// <summary>
-        /// 
-        /// </summary>
-          stratigraphy,
-        /// <summary>
-        /// 
-        /// </summary>
-          fishing,
-        /// <summary>
-        /// junkinhole property
-        /// </summary>
-          [XmlEnum("junk in hole")]
-          junkinhole,
-        /// <summary>
-        /// delayduetopoliticalunrest property
-        /// </summary>
-          [XmlEnum("delay due to political unrest")]
-          delayduetopoliticalunrest,
-        /// <summary>
-        /// rigmove property
-        /// </summary>
-          [XmlEnum("rig move")]
-          rigmove,
-        /// <summary>
-        /// gashydrates property
-        /// </summary>
-          [XmlEnum("gas hydrates")]
-          gashydrates,
-        /// <summary>
-        /// pendinganalysis property
-        /// </summary>
-          [XmlEnum("pending analysis")]
-          pendinganalysis,
-        /// <summary>
-        /// riserdisconnect property
-        /// </summary>
-          [XmlEnum("riser disconnect")]
-          riserdisconnect,
-        /// <summary>
-        /// 
-        /// </summary>
-          other,
-        /// <summary>
-        /// 
-        /// </summary>
-          personnel,
-        /// <summary>
-        /// 
-        /// </summary>
-          environmental,
-        /// <summary>
-        /// 
-        /// </summary>
-          automotive,
-        /// <summary>
-        /// 
-        /// </summary>
-          asset,
-        /// <summary>
-        /// 
-        /// </summary>
-          information,
-        /// <summary>
-        /// 
-        /// </summary>
-          time,
-        /// <summary>
-        /// health, safety and environmental
-        /// </summary>
-          HSE
-        }
-        /// <summary>
-        /// This class represents the RiskAffectedPersonnel xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the RiskAffectedPersonnel xsd enumeration.")]
-        public enum RiskAffectedPersonnel 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          cementer,
-        /// <summary>
-        /// companyman property
-        /// </summary>
-          [XmlEnum("company man")]
-          companyman,
-        /// <summary>
-        /// 
-        /// </summary>
-          contractor,
-        /// <summary>
-        /// directionaldriller property
-        /// </summary>
-          [XmlEnum("directional driller")]
-          directionaldriller,
-        /// <summary>
-        /// 
-        /// </summary>
-          driller,
-        /// <summary>
-        /// drillingengineer property
-        /// </summary>
-          [XmlEnum("drilling engineer")]
-          drillingengineer,
-        /// <summary>
-        /// drillingsuperintendent property
-        /// </summary>
-          [XmlEnum("drilling superintendent")]
-          drillingsuperintendent,
-        /// <summary>
-        /// drillingteam property
-        /// </summary>
-          [XmlEnum("drilling team")]
-          drillingteam,
-        /// <summary>
-        /// facilityengineer property
-        /// </summary>
-          [XmlEnum("facility engineer")]
-          facilityengineer,
-        /// <summary>
-        /// fieldservicemanager property
-        /// </summary>
-          [XmlEnum("field service manager")]
-          fieldservicemanager,
-        /// <summary>
-        /// 
-        /// </summary>
-          foreman,
-        /// <summary>
-        /// generalservicesupervisor property
-        /// </summary>
-          [XmlEnum("general service supervisor")]
-          generalservicesupervisor,
-        /// <summary>
-        /// 
-        /// </summary>
-          geologist,
-        /// <summary>
-        /// 
-        /// </summary>
-          member,
-        /// <summary>
-        /// mudengineer property
-        /// </summary>
-          [XmlEnum("mud engineer")]
-          mudengineer,
-        /// <summary>
-        /// mudlogger property
-        /// </summary>
-          [XmlEnum("mud logger")]
-          mudlogger,
-        /// <summary>
-        /// MWDorLWDengineer property
-        /// </summary>
-          [XmlEnum("MWD or LWD engineer")]
-          MWDorLWDengineer,
-        /// <summary>
-        /// performengineer property
-        /// </summary>
-          [XmlEnum("perform engineer")]
-          performengineer,
-        /// <summary>
-        /// 
-        /// </summary>
-          petrophysicist,
-        /// <summary>
-        /// productionengineer property
-        /// </summary>
-          [XmlEnum("production engineer")]
-          productionengineer,
-        /// <summary>
-        /// remotelyoperatedvehicleengineer property
-        /// </summary>
-          [XmlEnum("remotely operated vehicle engineer")]
-          remotelyoperatedvehicleengineer,
-        /// <summary>
-        /// safetymanger property
-        /// </summary>
-          [XmlEnum("safety manger")]
-          safetymanger,
-        /// <summary>
-        /// salesengineer property
-        /// </summary>
-          [XmlEnum("sales engineer")]
-          salesengineer,
-        /// <summary>
-        /// servicesupervisor property
-        /// </summary>
-          [XmlEnum("service supervisor")]
-          servicesupervisor,
-        /// <summary>
-        /// technicalsupport property
-        /// </summary>
-          [XmlEnum("technical support")]
-          technicalsupport,
-        /// <summary>
-        /// toolpusher property
-        /// </summary>
-          [XmlEnum("tool pusher")]
-          toolpusher,
-        /// <summary>
-        /// wirelineengineer property
-        /// </summary>
-          [XmlEnum("wireline engineer")]
-          wirelineengineer
-        }
-        /// <summary>
-        /// This class represents the TargetScope xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the TargetScope xsd enumeration.")]
-        public enum TargetScope 
-        {
-        /// <summary>
-        /// Item3Dvolume property
-        /// </summary>
-          [XmlEnum("3D volume")]
-          Item3Dvolume,
-        /// <summary>
-        /// 
-        /// </summary>
-          ellipsoid,
-        /// <summary>
-        /// Elliptical targets. Includes circle (semi-major = semi-minor axis). Any sections present are ignored.
-        /// </summary>
-          elliptical,
-        /// <summary>
-        /// Boundary Conditions. Use sections to describe, length and width ignore.
-        /// </summary>
-          hardLine,
-        /// <summary>
-        /// Includes half circle and polygon. Use sections to describe, length and width ignored. 
-        /// </summary>
-          irregular,
-        /// <summary>
-        /// leaseline property
-        /// </summary>
-          [XmlEnum("lease line")]
-          leaseline,
-        /// <summary>
-        /// Line target
-        /// </summary>
-          line,
-        /// <summary>
-        /// Plane target. Used for horizontal wells. Any sections present are ignored.
-        /// </summary>
-          plane,
-        /// <summary>
-        /// Point Target. Any sections present are ignored.
-        /// </summary>
-          point,
-        /// <summary>
-        /// Rectangular Targets. Includes square (length = width). Any sections present are ignored.
-        /// </summary>
-          rectangular,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the TargetCategory xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the TargetCategory xsd enumeration.")]
-        public enum TargetCategory 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          geological,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the TargetSectionScope xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the TargetSectionScope xsd enumeration.")]
-        public enum TargetSectionScope 
-        {
-        /// <summary>
-        /// continuous curve
-        /// </summary>
-          arc,
-        /// <summary>
-        /// straight line
-        /// </summary>
-          line,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the TubularAssembly xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the TubularAssembly xsd enumeration.")]
-        public enum TubularAssembly 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          drilling,
-        /// <summary>
-        /// directionaldrilling property
-        /// </summary>
-          [XmlEnum("directional drilling")]
-          directionaldrilling,
-        /// <summary>
-        /// 
-        /// </summary>
-          fishing,
-        /// <summary>
-        /// conditionmud property
-        /// </summary>
-          [XmlEnum("condition mud")]
-          conditionmud,
-        /// <summary>
-        /// tubingconveyedlogging property
-        /// </summary>
-          [XmlEnum("tubing conveyed logging")]
-          tubingconveyedlogging,
-        /// <summary>
-        /// 
-        /// </summary>
-          cementing,
-        /// <summary>
-        /// 
-        /// </summary>
-          casing,
-        /// <summary>
-        /// cleanout property
-        /// </summary>
-          [XmlEnum("clean out")]
-          cleanout,
-        /// <summary>
-        /// completionortesting property
-        /// </summary>
-          [XmlEnum("completion or testing")]
-          completionortesting,
-        /// <summary>
-        /// 
-        /// </summary>
-          coring,
-        /// <summary>
-        /// holeopeningorunderreaming property
-        /// </summary>
-          [XmlEnum("hole opening or underreaming")]
-          holeopeningorunderreaming,
-        /// <summary>
-        /// millingordressingorcutting property
-        /// </summary>
-          [XmlEnum("milling or dressing or cutting")]
-          millingordressingorcutting,
-        /// <summary>
-        /// wiperorcheckorreaming property
-        /// </summary>
-          [XmlEnum("wiper or check or reaming")]
-          wiperorcheckorreaming,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the TubularComponent xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the TubularComponent xsd enumeration.")]
-        public enum TubularComponentType 
-        {
-        /// <summary>
-        /// nonmagneticstabilizer property
-        /// </summary>
-          [XmlEnum("non-magnetic stabilizer")]
-          nonmagneticstabilizer,
-        /// <summary>
-        /// nonmagneticcollar property
-        /// </summary>
-          [XmlEnum("non-magnetic collar")]
-          nonmagneticcollar,
-        /// <summary>
-        /// Drill string component with blades that help keep the drill string away from the sides of the hole.
-        /// </summary>
-          stabilizer,
-        /// <summary>
-        /// adjustablekickoff property
-        /// </summary>
-          [XmlEnum("adjustable kickoff")]
-          adjustablekickoff,
-        /// <summary>
-        /// A downhole tool used in conjunction with a jar that stores energy for rapid release when the jar is fired. Depending on the operating mode, the energy in tension or compression is stored by means of a mechanical spring or compressible fluid such as nitrogen gas.
-        /// </summary>
-          accelerator,
-        /// <summary>
-        /// rotarysteeringtool property
-        /// </summary>
-          [XmlEnum("rotary steering tool")]
-          rotarysteeringtool,
-        /// <summary>
-        /// subbarcatcher property
-        /// </summary>
-          [XmlEnum("sub-bar catcher")]
-          subbarcatcher,
-        /// <summary>
-        /// subbent property
-        /// </summary>
-          [XmlEnum("sub-bent")]
-          subbent,
-        /// <summary>
-        /// bitcorediamond property
-        /// </summary>
-          [XmlEnum("bit core diamond")]
-          bitcorediamond,
-        /// <summary>
-        /// bitcorePDC property
-        /// </summary>
-          [XmlEnum("bit core PDC")]
-          bitcorePDC,
-        /// <summary>
-        /// bitdiamondfixedcut property
-        /// </summary>
-          [XmlEnum("bit diamond fixed cut")]
-          bitdiamondfixedcut,
-        /// <summary>
-        /// bitinsertrollercone property
-        /// </summary>
-          [XmlEnum("bit insert roller cone")]
-          bitinsertrollercone,
-        /// <summary>
-        /// bitmilltoothrollercone property
-        /// </summary>
-          [XmlEnum("bit mill tooth roller cone")]
-          bitmilltoothrollercone,
-        /// <summary>
-        /// bitPDCfixedcutter property
-        /// </summary>
-          [XmlEnum("bit PDC fixed cutter")]
-          bitPDCfixedcutter,
-        /// <summary>
-        /// subbit property
-        /// </summary>
-          [XmlEnum("sub-bit")]
-          subbit,
-        /// <summary>
-        /// bridgeplug property
-        /// </summary>
-          [XmlEnum("bridge plug")]
-          bridgeplug,
-        /// <summary>
-        /// A blank end component substituting for a bit, when re entering an already existing hole to guide the BHA, to avoid inadvertent sidetracks, such as when run below a hole opener in an existing hole.
-        /// </summary>
-          bullnose,
-        /// <summary>
-        /// bullplug property
-        /// </summary>
-          [XmlEnum("bull plug")]
-          bullplug,
-        /// <summary>
-        /// subbumper property
-        /// </summary>
-          [XmlEnum("sub-bumper")]
-          subbumper,
-        /// <summary>
-        /// Tubing used to line the wellbore and protect against pressure differences between the wellbore fluids and the formation.
-        /// </summary>
-          casing,
-        /// <summary>
-        /// casingcutter property
-        /// </summary>
-          [XmlEnum("casing cutter")]
-          casingcutter,
-        /// <summary>
-        /// hangercasingsubsea property
-        /// </summary>
-          [XmlEnum("hanger casing subsea")]
-          hangercasingsubsea,
-        /// <summary>
-        /// hangercasingsurface property
-        /// </summary>
-          [XmlEnum("hanger casing surface")]
-          hangercasingsurface,
-        /// <summary>
-        /// casinghead property
-        /// </summary>
-          [XmlEnum("casing head")]
-          casinghead,
-        /// <summary>
-        /// catchassembly property
-        /// </summary>
-          [XmlEnum("catch assembly")]
-          catchassembly,
-        /// <summary>
-        /// subcatcher property
-        /// </summary>
-          [XmlEnum("sub-catcher")]
-          subcatcher,
-        /// <summary>
-        /// subcirculation property
-        /// </summary>
-          [XmlEnum("sub-circulation")]
-          subcirculation,
-        /// <summary>
-        /// coiledtubinginhole property
-        /// </summary>
-          [XmlEnum("coiled tubing in hole")]
-          coiledtubinginhole,
-        /// <summary>
-        /// coiledtubingoncoil property
-        /// </summary>
-          [XmlEnum("coiled tubing on coil")]
-          coiledtubingoncoil,
-        /// <summary>
-        /// drillpipecompressive property
-        /// </summary>
-          [XmlEnum("drill pipe compressive")]
-          drillpipecompressive,
-        /// <summary>
-        /// subcone property
-        /// </summary>
-          [XmlEnum("sub-cone")]
-          subcone,
-        /// <summary>
-        /// corebarrel property
-        /// </summary>
-          [XmlEnum("core barrel")]
-          corebarrel,
-        /// <summary>
-        /// coreorientationbarrel property
-        /// </summary>
-          [XmlEnum("core orientation barrel")]
-          coreorientationbarrel,
-        /// <summary>
-        /// subcrossover property
-        /// </summary>
-          [XmlEnum("sub-crossover")]
-          subcrossover,
-        /// <summary>
-        /// casingcrossover property
-        /// </summary>
-          [XmlEnum("casing crossover")]
-          casingcrossover,
-        /// <summary>
-        /// subdart property
-        /// </summary>
-          [XmlEnum("sub-dart")]
-          subdart,
-        /// <summary>
-        /// diecollar property
-        /// </summary>
-          [XmlEnum("die collar")]
-          diecollar,
-        /// <summary>
-        /// diecollarLH property
-        /// </summary>
-          [XmlEnum("die collar LH")]
-          diecollarLH,
-        /// <summary>
-        /// directionalguidancesystem property
-        /// </summary>
-          [XmlEnum("directional guidance system")]
-          directionalguidancesystem,
-        /// <summary>
-        /// drillcollar property
-        /// </summary>
-          [XmlEnum("drill collar")]
-          drillcollar,
-        /// <summary>
-        /// drillpipe property
-        /// </summary>
-          [XmlEnum("drill pipe")]
-          drillpipe,
-        /// <summary>
-        /// drillpipeLH property
-        /// </summary>
-          [XmlEnum("drill pipe LH")]
-          drillpipeLH,
-        /// <summary>
-        /// drillstemtestBHA property
-        /// </summary>
-          [XmlEnum("drill stem test BHA")]
-          drillstemtestBHA,
-        /// <summary>
-        /// drivepipe property
-        /// </summary>
-          [XmlEnum("drive pipe")]
-          drivepipe,
-        /// <summary>
-        /// dualcatchassembly property
-        /// </summary>
-          [XmlEnum("dual catch assembly")]
-          dualcatchassembly,
-        /// <summary>
-        /// extensionbowlovershot property
-        /// </summary>
-          [XmlEnum("extension bowl overshot")]
-          extensionbowlovershot,
-        /// <summary>
-        /// extensionsubovershot property
-        /// </summary>
-          [XmlEnum("extension sub-overshot")]
-          extensionsubovershot,
-        /// <summary>
-        /// floatcollar property
-        /// </summary>
-          [XmlEnum("float collar")]
-          floatcollar,
-        /// <summary>
-        /// floatshoe property
-        /// </summary>
-          [XmlEnum("float shoe")]
-          floatshoe,
-        /// <summary>
-        /// subfloat property
-        /// </summary>
-          [XmlEnum("sub-float")]
-          subfloat,
-        /// <summary>
-        /// flowhead property
-        /// </summary>
-          [XmlEnum("flow head")]
-          flowhead,
-        /// <summary>
-        /// guideshoe property
-        /// </summary>
-          [XmlEnum("guide shoe")]
-          guideshoe,
-        /// <summary>
-        /// MWDhangoffsub property
-        /// </summary>
-          [XmlEnum("MWD hang off sub")]
-          MWDhangoffsub,
-        /// <summary>
-        /// heavyweightdrillpipe property
-        /// </summary>
-          [XmlEnum("heavy weight drill pipe")]
-          heavyweightdrillpipe,
-        /// <summary>
-        /// heavyweightdrillpipeLH property
-        /// </summary>
-          [XmlEnum("heavy weight drill pipe LH")]
-          heavyweightdrillpipeLH,
-        /// <summary>
-        /// riserhighpressure property
-        /// </summary>
-          [XmlEnum("riser high pressure")]
-          riserhighpressure,
-        /// <summary>
-        /// bitholeopener property
-        /// </summary>
-          [XmlEnum("bit hole opener")]
-          bitholeopener,
-        /// <summary>
-        /// casinginflatablepacker property
-        /// </summary>
-          [XmlEnum("casing inflatable packer")]
-          casinginflatablepacker,
-        /// <summary>
-        /// motorinstrumented property
-        /// </summary>
-          [XmlEnum("motor instrumented")]
-          motorinstrumented,
-        /// <summary>
-        /// Hydraulic or spring-loaded component used to free stuck pipe.
-        /// </summary>
-          jar,
-        /// <summary>
-        /// subjetting property
-        /// </summary>
-          [XmlEnum("sub-jetting")]
-          subjetting,
-        /// <summary>
-        /// junkbasket property
-        /// </summary>
-          [XmlEnum("junk basket")]
-          junkbasket,
-        /// <summary>
-        /// junkbasketreversecirculation property
-        /// </summary>
-          [XmlEnum("junk basket reverse circulation")]
-          junkbasketreversecirculation,
-        /// <summary>
-        /// subjunk property
-        /// </summary>
-          [XmlEnum("sub-junk")]
-          subjunk,
-        /// <summary>
-        /// Hexagonal or square pipe used to rotate the drill string from the rig floor.
-        /// </summary>
-          kelly,
-        /// <summary>
-        /// keyseatwipertool property
-        /// </summary>
-          [XmlEnum("keyseat wiper tool")]
-          keyseatwipertool,
-        /// <summary>
-        /// landingfloatcollar property
-        /// </summary>
-          [XmlEnum("landing float collar")]
-          landingfloatcollar,
-        /// <summary>
-        /// leadimpressionblock property
-        /// </summary>
-          [XmlEnum("lead impression block")]
-          leadimpressionblock,
-        /// <summary>
-        /// Casing or tubing that is hung from the inside of existing casing rather than from the sea bed or surface.
-        /// </summary>
-          liner,
-        /// <summary>
-        /// hangerliner property
-        /// </summary>
-          [XmlEnum("hanger liner")]
-          hangerliner,
-        /// <summary>
-        /// Magnet used to retrieve magnetic debris from the hole.
-        /// </summary>
-          magnet,
-        /// <summary>
-        /// risermarine property
-        /// </summary>
-          [XmlEnum("riser marine")]
-          risermarine,
-        /// <summary>
-        /// milldress property
-        /// </summary>
-          [XmlEnum("mill dress")]
-          milldress,
-        /// <summary>
-        /// millflatbottom property
-        /// </summary>
-          [XmlEnum("mill flat bottom")]
-          millflatbottom,
-        /// <summary>
-        /// millhollow property
-        /// </summary>
-          [XmlEnum("mill hollow")]
-          millhollow,
-        /// <summary>
-        /// millpolish property
-        /// </summary>
-          [XmlEnum("mill polish")]
-          millpolish,
-        /// <summary>
-        /// millsection property
-        /// </summary>
-          [XmlEnum("mill section")]
-          millsection,
-        /// <summary>
-        /// milltaper property
-        /// </summary>
-          [XmlEnum("mill taper")]
-          milltaper,
-        /// <summary>
-        /// millwashover property
-        /// </summary>
-          [XmlEnum("mill washover")]
-          millwashover,
-        /// <summary>
-        /// millpackerpickerassembly property
-        /// </summary>
-          [XmlEnum("mill packer picker assembly")]
-          millpackerpickerassembly,
-        /// <summary>
-        /// milloutextension property
-        /// </summary>
-          [XmlEnum("millout extension")]
-          milloutextension,
-        /// <summary>
-        /// multilateralhangerrunningtool property
-        /// </summary>
-          [XmlEnum("multilateral hanger running tool")]
-          multilateralhangerrunningtool,
-        /// <summary>
-        /// hangermudline property
-        /// </summary>
-          [XmlEnum("hanger mud line")]
-          hangermudline,
-        /// <summary>
-        /// Downhole tool, usually powered by fluid flow, that rotates the drill bit.
-        /// </summary>
-          motor,
-        /// <summary>
-        /// muleshoe property
-        /// </summary>
-          [XmlEnum("mule shoe")]
-          muleshoe,
-        /// <summary>
-        /// loggingwhiledrillingtool property
-        /// </summary>
-          [XmlEnum("logging while drilling tool")]
-          loggingwhiledrillingtool,
-        /// <summary>
-        /// stabilizernearbitrollerreamer property
-        /// </summary>
-          [XmlEnum("stabilizer near bit roller reamer")]
-          stabilizernearbitrollerreamer,
-        /// <summary>
-        /// stabilizernearbit property
-        /// </summary>
-          [XmlEnum("stabilizer near bit")]
-          stabilizernearbit,
-        /// <summary>
-        /// stabilizernonrotating property
-        /// </summary>
-          [XmlEnum("stabilizer non-rotating")]
-          stabilizernonrotating,
-        /// <summary>
-        /// suborienting property
-        /// </summary>
-          [XmlEnum("sub-orienting")]
-          suborienting,
-        /// <summary>
-        /// 
-        /// </summary>
-          other,
-        /// <summary>
-        /// Tool used for retrieving pipe that has been lost in the hole.
-        /// </summary>
-          overshot,
-        /// <summary>
-        /// overshotLH property
-        /// </summary>
-          [XmlEnum("overshot LH")]
-          overshotLH,
-        /// <summary>
-        /// oversizelipguideovershot property
-        /// </summary>
-          [XmlEnum("oversize lip guide overshot")]
-          oversizelipguideovershot,
-        /// <summary>
-        /// Component that can be inflated so that it seals off a section of the wellbore, typically for formation testing.
-        /// </summary>
-          packer,
-        /// <summary>
-        /// polishedborereceptacle property
-        /// </summary>
-          [XmlEnum("polished bore receptacle")]
-          polishedborereceptacle,
-        /// <summary>
-        /// millpilot property
-        /// </summary>
-          [XmlEnum("mill pilot")]
-          millpilot,
-        /// <summary>
-        /// pipecutter property
-        /// </summary>
-          [XmlEnum("pipe cutter")]
-          pipecutter,
-        /// <summary>
-        /// portedstinger property
-        /// </summary>
-          [XmlEnum("ported stinger")]
-          portedstinger,
-        /// <summary>
-        /// subported property
-        /// </summary>
-          [XmlEnum("sub-ported")]
-          subported,
-        /// <summary>
-        /// prepackedscreens property
-        /// </summary>
-          [XmlEnum("prepacked screens")]
-          prepackedscreens,
-        /// <summary>
-        /// subpressurerelief property
-        /// </summary>
-          [XmlEnum("sub-pressure relief")]
-          subpressurerelief,
-        /// <summary>
-        /// riserproduction property
-        /// </summary>
-          [XmlEnum("riser production")]
-          riserproduction,
-        /// <summary>
-        /// MWDpulser property
-        /// </summary>
-          [XmlEnum("MWD pulser")]
-          MWDpulser,
-        /// <summary>
-        /// subpumpout property
-        /// </summary>
-          [XmlEnum("sub-pump out")]
-          subpumpout,
-        /// <summary>
-        /// subrestrictor property
-        /// </summary>
-          [XmlEnum("sub-restrictor")]
-          subrestrictor,
-        /// <summary>
-        /// packerretrieveTTsqueeze property
-        /// </summary>
-          [XmlEnum("packer retrieve TT squeeze")]
-          packerretrieveTTsqueeze,
-        /// <summary>
-        /// reversingtool property
-        /// </summary>
-          [XmlEnum("reversing tool")]
-          reversingtool,
-        /// <summary>
-        /// stabilizerstringrollerreamer property
-        /// </summary>
-          [XmlEnum("stabilizer string roller reamer")]
-          stabilizerstringrollerreamer,
-        /// <summary>
-        /// packerRTTS property
-        /// </summary>
-          [XmlEnum("packer RTTS")]
-          packerRTTS,
-        /// <summary>
-        /// runningtool property
-        /// </summary>
-          [XmlEnum("running tool")]
-          runningtool,
-        /// <summary>
-        /// safetyjoint property
-        /// </summary>
-          [XmlEnum("safety joint")]
-          safetyjoint,
-        /// <summary>
-        /// safetyjointLH property
-        /// </summary>
-          [XmlEnum("safety joint LH")]
-          safetyjointLH,
-        /// <summary>
-        /// subsaver property
-        /// </summary>
-          [XmlEnum("sub-saver")]
-          subsaver,
-        /// <summary>
-        /// scablinerbitguide property
-        /// </summary>
-          [XmlEnum("scab liner bit guide")]
-          scablinerbitguide,
-        /// <summary>
-        /// 
-        /// </summary>
-          scraper,
-        /// <summary>
-        /// A device for cleaning mud and mud filter cake off of the wellbore wall when cementing casing in the hole to ensure good contact and bonding between the cement and the wellbore wall.
-        /// </summary>
-          scratchers,
-        /// <summary>
-        /// casingshoescrewin property
-        /// </summary>
-          [XmlEnum("casing shoe screw-in")]
-          casingshoescrewin,
-        /// <summary>
-        /// subshock property
-        /// </summary>
-          [XmlEnum("sub-shock")]
-          subshock,
-        /// <summary>
-        /// drillcollarshort property
-        /// </summary>
-          [XmlEnum("drill collar short")]
-          drillcollarshort,
-        /// <summary>
-        /// subsideentry property
-        /// </summary>
-          [XmlEnum("sub-side entry")]
-          subsideentry,
-        /// <summary>
-        /// slottedliner property
-        /// </summary>
-          [XmlEnum("slotted liner")]
-          slottedliner,
-        /// <summary>
-        /// Fishing tool that attaches to the inside of the stuck pipe by threads or grapples.
-        /// </summary>
-          spear,
-        /// <summary>
-        /// stagecementcollar property
-        /// </summary>
-          [XmlEnum("stage cement collar")]
-          stagecementcollar,
-        /// <summary>
-        /// motorsteerable property
-        /// </summary>
-          [XmlEnum("motor steerable")]
-          motorsteerable,
-        /// <summary>
-        /// packerstormvalveRTTS property
-        /// </summary>
-          [XmlEnum("packer storm valve RTTS")]
-          packerstormvalveRTTS,
-        /// <summary>
-        /// stabilizerstring property
-        /// </summary>
-          [XmlEnum("stabilizer string")]
-          stabilizerstring,
-        /// <summary>
-        /// surfacepipe property
-        /// </summary>
-          [XmlEnum("surface pipe")]
-          surfacepipe,
-        /// <summary>
-        /// tapertap property
-        /// </summary>
-          [XmlEnum("taper tap")]
-          tapertap,
-        /// <summary>
-        /// tapertapLH property
-        /// </summary>
-          [XmlEnum("taper tap LH")]
-          tapertapLH,
-        /// <summary>
-        /// tubingconveyedperforatinggun property
-        /// </summary>
-          [XmlEnum("tubing-conveyed perforating gun")]
-          tubingconveyedperforatinggun,
-        /// <summary>
-        /// Drilling tool used to maintain weight on bit.
-        /// </summary>
-          thruster,
-        /// <summary>
-        /// tiebackpolishedborereceptacle property
-        /// </summary>
-          [XmlEnum("tieback polished bore receptacle")]
-          tiebackpolishedborereceptacle,
-        /// <summary>
-        /// tiebackstinger property
-        /// </summary>
-          [XmlEnum("tieback stinger")]
-          tiebackstinger,
-        /// <summary>
-        /// Small diameter pipe that is run inside casing or tubing as part of the well completion.
-        /// </summary>
-          tubing,
-        /// <summary>
-        /// hangertubing property
-        /// </summary>
-          [XmlEnum("hanger tubing")]
-          hangertubing,
-        /// <summary>
-        /// Downhole device used for directional drilling, powered by mud circulation that rotates the drill bit while the drill string remains non-rotating
-        /// </summary>
-          turbine,
-        /// <summary>
-        /// bitunderreamer property
-        /// </summary>
-          [XmlEnum("bit under reamer")]
-          bitunderreamer,
-        /// <summary>
-        /// stabilizervariableblade property
-        /// </summary>
-          [XmlEnum("stabilizer variable blade")]
-          stabilizervariableblade,
-        /// <summary>
-        /// washoverpipe property
-        /// </summary>
-          [XmlEnum("washover pipe")]
-          washoverpipe,
-        /// <summary>
-        /// millwatermelon property
-        /// </summary>
-          [XmlEnum("mill watermelon")]
-          millwatermelon,
-        /// <summary>
-        /// Wedge shaped tool used to drill off in a different direction.
-        /// </summary>
-          whipstock,
-        /// <summary>
-        /// whipstockanchor property
-        /// </summary>
-          [XmlEnum("whipstock anchor")]
-          whipstockanchor,
-        /// <summary>
-        /// stabilizerturboback property
-        /// </summary>
-          [XmlEnum("stabilizer turbo back")]
-          stabilizerturboback,
-        /// <summary>
-        /// stabilizerinline property
-        /// </summary>
-          [XmlEnum("stabilizer inline")]
-          stabilizerinline,
-        /// <summary>
-        /// stabilizersteerable property
-        /// </summary>
-          [XmlEnum("stabilizer steerable")]
-          stabilizersteerable,
-        /// <summary>
-        /// substop property
-        /// </summary>
-          [XmlEnum("sub-stop")]
-          substop,
-        /// <summary>
-        /// subfilter property
-        /// </summary>
-          [XmlEnum("sub-filter")]
-          subfilter,
-        /// <summary>
-        /// millcasingcutting property
-        /// </summary>
-          [XmlEnum("mill casing cutting")]
-          millcasingcutting,
-        /// <summary>
-        /// Tool used to enlarge the hole.
-        /// </summary>
-          reamer,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the BoxPinConfig xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the BoxPinConfig xsd enumeration.")]
-        public enum BoxPinConfig 
-        {
-        /// <summary>
-        /// bottomboxtopbox property
-        /// </summary>
-          [XmlEnum("bottom box, top box")]
-          bottomboxtopbox,
-        /// <summary>
-        /// bottomboxtoppin property
-        /// </summary>
-          [XmlEnum("bottom box, top pin")]
-          bottomboxtoppin,
-        /// <summary>
-        /// bottompintopbox property
-        /// </summary>
-          [XmlEnum("bottom pin top box")]
-          bottompintopbox,
-        /// <summary>
-        /// bottompin property
-        /// </summary>
-          [XmlEnum("bottom pin")]
-          bottompin,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the MaterialType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the MaterialType xsd enumeration.")]
-        public enum MaterialType 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          aluminum,
-        /// <summary>
-        /// berylliumcopper property
-        /// </summary>
-          [XmlEnum("beryllium copper")]
-          berylliumcopper,
-        /// <summary>
-        /// chromealloy property
-        /// </summary>
-          [XmlEnum("chrome alloy")]
-          chromealloy,
-        /// <summary>
-        /// 
-        /// </summary>
-          composite,
-        /// <summary>
-        /// 
-        /// </summary>
-          other,
-        /// <summary>
-        /// nonmagneticsteel property
-        /// </summary>
-          [XmlEnum("non-magnetic steel")]
-          nonmagneticsteel,
-        /// <summary>
-        /// 
-        /// </summary>
-          plastic,
-        /// <summary>
-        /// 
-        /// </summary>
-          steel,
-        /// <summary>
-        /// steelalloy property
-        /// </summary>
-          [XmlEnum("steel alloy")]
-          steelalloy,
-        /// <summary>
-        /// 
-        /// </summary>
-          titanium,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the BitType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the BitType xsd enumeration.")]
-        public enum BitType 
-        {
-        /// <summary>
-        /// Diamond bit
-        /// </summary>
-          diamond,
-        /// <summary>
-        /// diamondcore property
-        /// </summary>
-          [XmlEnum("diamond core")]
-          diamondcore,
-        /// <summary>
-        /// insertrollercone property
-        /// </summary>
-          [XmlEnum("insert roller cone")]
-          insertrollercone,
-        /// <summary>
-        /// polycrystalline diamond compact fixed cutter bit
-        /// </summary>
-          PDC,
-        /// <summary>
-        /// PDCcore property
-        /// </summary>
-          [XmlEnum("PDC core")]
-          PDCcore,
-        /// <summary>
-        /// rollercone property
-        /// </summary>
-          [XmlEnum("roller cone")]
-          rollercone,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the BitDullCode xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the BitDullCode xsd enumeration.")]
-        public enum BitDullCode 
-        {
-        /// <summary>
-        /// Broken Cone
-        /// </summary>
-          BC,
-        /// <summary>
-        /// Broken teeth/cutters
-        /// </summary>
-          BT,
-        /// <summary>
-        /// Balled Up
-        /// </summary>
-          BU,
-        /// <summary>
-        /// Cracked Cone
-        /// </summary>
-          CC,
-        /// <summary>
-        /// Cone Dragged
-        /// </summary>
-          CD,
-        /// <summary>
-        /// Cone Interference
-        /// </summary>
-          CI,
-        /// <summary>
-        /// Cored
-        /// </summary>
-          CR,
-        /// <summary>
-        /// Chipped Teeth
-        /// </summary>
-          CT,
-        /// <summary>
-        /// Erosion
-        /// </summary>
-          ER,
-        /// <summary>
-        /// Flat Crested Wear
-        /// </summary>
-          FC,
-        /// <summary>
-        /// Heat Checking
-        /// </summary>
-          HC,
-        /// <summary>
-        /// Junk Damage
-        /// </summary>
-          JD,
-        /// <summary>
-        /// Lost Nozzle
-        /// </summary>
-          LC,
-        /// <summary>
-        /// Lost Nozzle
-        /// </summary>
-          LN,
-        /// <summary>
-        /// Lost Teeth/Cutters
-        /// </summary>
-          LT,
-        /// <summary>
-        /// No Dull/No Other Wear
-        /// </summary>
-          NO,
-        /// <summary>
-        /// Off-Center Wear
-        /// </summary>
-          OC,
-        /// <summary>
-        /// Pinched Bit
-        /// </summary>
-          PB,
-        /// <summary>
-        /// Plugged Nozzle
-        /// </summary>
-          PN,
-        /// <summary>
-        /// Rounded Gauge
-        /// </summary>
-          RG,
-        /// <summary>
-        /// Ring Out
-        /// </summary>
-          RO,
-        /// <summary>
-        /// Shirttail Damage
-        /// </summary>
-          SD,
-        /// <summary>
-        /// Self-Sharpening Wear
-        /// </summary>
-          SS,
-        /// <summary>
-        /// Tracking
-        /// </summary>
-          TR,
-        /// <summary>
-        /// WashOut on Bit
-        /// </summary>
-          WO,
-        /// <summary>
-        /// Worn Teeth/Cutters
-        /// </summary>
-          WT,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the BitReasonPulled xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the BitReasonPulled xsd enumeration.")]
-        public enum BitReasonPulled 
-        {
-        /// <summary>
-        /// Change Bottom Hole Assembly
-        /// </summary>
-          BHA,
-        /// <summary>
-        /// Condition Mud
-        /// </summary>
-          CM,
-        /// <summary>
-        /// Core Point
-        /// </summary>
-          CP,
-        /// <summary>
-        /// Downhole Motor Failure
-        /// </summary>
-          DMF,
-        /// <summary>
-        /// Drill Plug
-        /// </summary>
-          DP,
-        /// <summary>
-        /// Drill Stem Test
-        /// </summary>
-          DST,
-        /// <summary>
-        /// Downhole Tool Failure
-        /// </summary>
-          DTF,
-        /// <summary>
-        /// Formation Change
-        /// </summary>
-          FM,
-        /// <summary>
-        /// Hole Problems
-        /// </summary>
-          HP,
-        /// <summary>
-        /// Hours on Bit
-        /// </summary>
-          HR,
-        /// <summary>
-        /// Run Logs
-        /// </summary>
-          LOG,
-        /// <summary>
-        /// Pump Pressure
-        /// </summary>
-          PP,
-        /// <summary>
-        /// Penetration Rate
-        /// </summary>
-          PR,
-        /// <summary>
-        /// Rig Repairs
-        /// </summary>
-          RIG,
-        /// <summary>
-        /// Total Depth/Casing Depth
-        /// </summary>
-          TD,
-        /// <summary>
-        /// Torque
-        /// </summary>
-          TQ,
-        /// <summary>
-        /// Twist Off
-        /// </summary>
-          TW,
-        /// <summary>
-        /// Weather Conditions
-        /// </summary>
-          WC,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the NozzleType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the NozzleType xsd enumeration.")]
-        public enum NozzleType 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          extended,
-        /// <summary>
-        /// 
-        /// </summary>
-          normal,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the ConnectionPosition xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the ConnectionPosition xsd enumeration.")]
-        public enum ConnectionPosition 
-        {
-        /// <summary>
-        /// The connection is the same at both ends of the component
-        /// </summary>
-          both,
-        /// <summary>
-        /// This connection is only at the bottom of the component
-        /// </summary>
-          bottom,
-        /// <summary>
-        /// This connection is only at the top of the component
-        /// </summary>
-          top,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the JarType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the JarType xsd enumeration.")]
-        public enum JarType 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          mechanical,
-        /// <summary>
-        /// 
-        /// </summary>
-          hydraulic,
-        /// <summary>
-        /// hydromechanical property
-        /// </summary>
-          [XmlEnum("hydro mechanical")]
-          hydromechanical,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the JarAction xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the JarAction xsd enumeration.")]
-        public enum JarAction 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          up,
-        /// <summary>
-        /// 
-        /// </summary>
-          down,
-        /// <summary>
-        /// 
-        /// </summary>
-          both,
-        /// <summary>
-        /// 
-        /// </summary>
-          vibrating,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the MeasurementType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the MeasurementType xsd enumeration.")]
-        public enum MeasurementType 
-        {
-        /// <summary>
-        /// Output from an accelerometer on a logging tool.
-        /// </summary>
-          acceleration,
-        /// <summary>
-        /// acousticcaliper property
-        /// </summary>
-          [XmlEnum("acoustic caliper")]
-          acousticcaliper,
-        /// <summary>
-        /// acousticcasingcollarlocator property
-        /// </summary>
-          [XmlEnum("acoustic casing collar locator")]
-          acousticcasingcollarlocator,
-        /// <summary>
-        /// acousticimpedance property
-        /// </summary>
-          [XmlEnum("acoustic impedance")]
-          acousticimpedance,
-        /// <summary>
-        /// acousticporosity property
-        /// </summary>
-          [XmlEnum("acoustic porosity")]
-          acousticporosity,
-        /// <summary>
-        /// acousticvelocity property
-        /// </summary>
-          [XmlEnum("acoustic velocity")]
-          acousticvelocity,
-        /// <summary>
-        /// acousticwavematrixtraveltime property
-        /// </summary>
-          [XmlEnum("acoustic wave matrix travel time")]
-          acousticwavematrixtraveltime,
-        /// <summary>
-        /// acousticwavetraveltime property
-        /// </summary>
-          [XmlEnum("acoustic wave travel time")]
-          acousticwavetraveltime,
-        /// <summary>
-        /// Any measurement of the maximum departure of a wave from an average value.
-        /// </summary>
-          amplitude,
-        /// <summary>
-        /// amplitudeofacousticwave property
-        /// </summary>
-          [XmlEnum("amplitude of acoustic wave")]
-          amplitudeofacousticwave,
-        /// <summary>
-        /// amplitudeofEMwave property
-        /// </summary>
-          [XmlEnum("amplitude of E-M wave")]
-          amplitudeofEMwave,
-        /// <summary>
-        /// amplituderatio property
-        /// </summary>
-          [XmlEnum("amplitude ratio")]
-          amplituderatio,
-        /// <summary>
-        /// A particular extent of space or surface.
-        /// </summary>
-          area,
-        /// <summary>
-        /// The amount of reduction in the amplitude of a wave.
-        /// </summary>
-          attenuation,
-        /// <summary>
-        /// attenuationofacousticwave property
-        /// </summary>
-          [XmlEnum("attenuation of acoustic wave")]
-          attenuationofacousticwave,
-        /// <summary>
-        /// attenuationofEMwave property
-        /// </summary>
-          [XmlEnum("attenuation of E-M wave")]
-          attenuationofEMwave,
-        /// <summary>
-        /// A general classification for measurements which are very specialized and not normally accessed by petrophysicists.
-        /// </summary>
-          auxiliary,
-        /// <summary>
-        /// averageporosity property
-        /// </summary>
-          [XmlEnum("average porosity")]
-          averageporosity,
-        /// <summary>
-        /// In the horizontal plane, it is the clockwise angle of departure from magnetic north (while looking down hole).
-        /// </summary>
-          azimuth,
-        /// <summary>
-        /// baritemudcorrection property
-        /// </summary>
-          [XmlEnum("barite mud correction")]
-          baritemudcorrection,
-        /// <summary>
-        /// bedthicknesscorrection property
-        /// </summary>
-          [XmlEnum("bed thickness correction")]
-          bedthicknesscorrection,
-        /// <summary>
-        /// bitsize property
-        /// </summary>
-          [XmlEnum("bit size")]
-          bitsize,
-        /// <summary>
-        /// A well log trace which has been edited to reflect sharp bed boundaries. The trace has a square wave appearance.
-        /// </summary>
-          blocked,
-        /// <summary>
-        /// boreholeenvironmentcorrection property
-        /// </summary>
-          [XmlEnum("borehole environment correction")]
-          boreholeenvironmentcorrection,
-        /// <summary>
-        /// boreholefluidcompositioncorrection property
-        /// </summary>
-          [XmlEnum("borehole fluid composition correction")]
-          boreholefluidcompositioncorrection,
-        /// <summary>
-        /// boreholefluidcorrection property
-        /// </summary>
-          [XmlEnum("borehole fluid correction")]
-          boreholefluidcorrection,
-        /// <summary>
-        /// boreholesizecorrection property
-        /// </summary>
-          [XmlEnum("borehole size correction")]
-          boreholesizecorrection,
-        /// <summary>
-        /// bromidemudcorrection property
-        /// </summary>
-          [XmlEnum("bromide mud correction")]
-          bromidemudcorrection,
-        /// <summary>
-        /// bulkcompressibility property
-        /// </summary>
-          [XmlEnum("bulk compressibility")]
-          bulkcompressibility,
-        /// <summary>
-        /// bulkdensity property
-        /// </summary>
-          [XmlEnum("bulk density")]
-          bulkdensity,
-        /// <summary>
-        /// bulkvolume property
-        /// </summary>
-          [XmlEnum("bulk volume")]
-          bulkvolume,
-        /// <summary>
-        /// bulkvolumegas property
-        /// </summary>
-          [XmlEnum("bulk volume gas")]
-          bulkvolumegas,
-        /// <summary>
-        /// bulkvolumehydrocarbon property
-        /// </summary>
-          [XmlEnum("bulk volume hydrocarbon")]
-          bulkvolumehydrocarbon,
-        /// <summary>
-        /// bulkvolumeoil property
-        /// </summary>
-          [XmlEnum("bulk volume oil")]
-          bulkvolumeoil,
-        /// <summary>
-        /// bulkvolumewater property
-        /// </summary>
-          [XmlEnum("bulk volume water")]
-          bulkvolumewater,
-        /// <summary>
-        /// COratio property
-        /// </summary>
-          [XmlEnum("C/O ratio")]
-          COratio,
-        /// <summary>
-        /// A well log used to record hole diameter (open or cased).
-        /// </summary>
-          caliper,
-        /// <summary>
-        /// casedholecorrection property
-        /// </summary>
-          [XmlEnum("cased hole correction")]
-          casedholecorrection,
-        /// <summary>
-        /// casingcollarlocator property
-        /// </summary>
-          [XmlEnum("casing collar locator")]
-          casingcollarlocator,
-        /// <summary>
-        /// casingcorrection property
-        /// </summary>
-          [XmlEnum("casing correction")]
-          casingcorrection,
-        /// <summary>
-        /// casingdiametercorrection property
-        /// </summary>
-          [XmlEnum("casing diameter correction")]
-          casingdiametercorrection,
-        /// <summary>
-        /// casinginspection property
-        /// </summary>
-          [XmlEnum("casing inspection")]
-          casinginspection,
-        /// <summary>
-        /// casingthicknesscorrection property
-        /// </summary>
-          [XmlEnum("casing thickness correction")]
-          casingthicknesscorrection,
-        /// <summary>
-        /// casingweightcorrection property
-        /// </summary>
-          [XmlEnum("casing weight correction")]
-          casingweightcorrection,
-        /// <summary>
-        /// cementcorrection property
-        /// </summary>
-          [XmlEnum("cement correction")]
-          cementcorrection,
-        /// <summary>
-        /// cementdensitycorrection property
-        /// </summary>
-          [XmlEnum("cement density correction")]
-          cementdensitycorrection,
-        /// <summary>
-        /// cementevaluation property
-        /// </summary>
-          [XmlEnum("cement evaluation")]
-          cementevaluation,
-        /// <summary>
-        /// cementthicknesscorrection property
-        /// </summary>
-          [XmlEnum("cement thickness correction")]
-          cementthicknesscorrection,
-        /// <summary>
-        /// cementtypecorrection property
-        /// </summary>
-          [XmlEnum("cement type correction")]
-          cementtypecorrection,
-        /// <summary>
-        /// CHdensityporosity property
-        /// </summary>
-          [XmlEnum("CH density porosity")]
-          CHdensityporosity,
-        /// <summary>
-        /// CHdolomitedensityporosity property
-        /// </summary>
-          [XmlEnum("CH dolomite density porosity")]
-          CHdolomitedensityporosity,
-        /// <summary>
-        /// CHdolomiteneutronporosity property
-        /// </summary>
-          [XmlEnum("CH dolomite neutron porosity")]
-          CHdolomiteneutronporosity,
-        /// <summary>
-        /// CHlimestonedensityporosity property
-        /// </summary>
-          [XmlEnum("CH limestone density porosity")]
-          CHlimestonedensityporosity,
-        /// <summary>
-        /// CHlimestoneneutronporosity property
-        /// </summary>
-          [XmlEnum("CH limestone neutron porosity")]
-          CHlimestoneneutronporosity,
-        /// <summary>
-        /// CHneutronporosity property
-        /// </summary>
-          [XmlEnum("CH neutron porosity")]
-          CHneutronporosity,
-        /// <summary>
-        /// CHsandstonedensityporosity property
-        /// </summary>
-          [XmlEnum("CH sandstone density porosity")]
-          CHsandstonedensityporosity,
-        /// <summary>
-        /// CHsandstoneneutronporosity property
-        /// </summary>
-          [XmlEnum("CH sandstone neutron porosity")]
-          CHsandstoneneutronporosity,
-        /// <summary>
-        /// compressionalwavedolomiteporosity property
-        /// </summary>
-          [XmlEnum("compressional wave dolomite porosity")]
-          compressionalwavedolomiteporosity,
-        /// <summary>
-        /// compressionalwavelimestoneporosity property
-        /// </summary>
-          [XmlEnum("compressional wave limestone porosity")]
-          compressionalwavelimestoneporosity,
-        /// <summary>
-        /// compressionalwavematrixtraveltime property
-        /// </summary>
-          [XmlEnum("compressional wave matrix travel time")]
-          compressionalwavematrixtraveltime,
-        /// <summary>
-        /// compressionalwavesandstoneporosity property
-        /// </summary>
-          [XmlEnum("compressional wave sandstone porosity")]
-          compressionalwavesandstoneporosity,
-        /// <summary>
-        /// compressionalwavetraveltime property
-        /// </summary>
-          [XmlEnum("compressional wave travel time")]
-          compressionalwavetraveltime,
-        /// <summary>
-        /// The property of a medium (solid or fluid) which allows the medium to conduct a form of energy; e.g., electrical conductivity or thermal conductivity.
-        /// </summary>
-          conductivity,
-        /// <summary>
-        /// conductivityfromattenuation property
-        /// </summary>
-          [XmlEnum("conductivity from attenuation")]
-          conductivityfromattenuation,
-        /// <summary>
-        /// conductivityfromphaseshift property
-        /// </summary>
-          [XmlEnum("conductivity from phase shift")]
-          conductivityfromphaseshift,
-        /// <summary>
-        /// connatewaterconductivity property
-        /// </summary>
-          [XmlEnum("connate water conductivity")]
-          connatewaterconductivity,
-        /// <summary>
-        /// connatewaterresistivity property
-        /// </summary>
-          [XmlEnum("connate water resistivity")]
-          connatewaterresistivity,
-        /// <summary>
-        /// conventionalcoreporosity property
-        /// </summary>
-          [XmlEnum("conventional core porosity")]
-          conventionalcoreporosity,
-        /// <summary>
-        /// corematrixdensity property
-        /// </summary>
-          [XmlEnum("core matrix density")]
-          corematrixdensity,
-        /// <summary>
-        /// corepermeability property
-        /// </summary>
-          [XmlEnum("core permeability")]
-          corepermeability,
-        /// <summary>
-        /// coreporosity property
-        /// </summary>
-          [XmlEnum("core porosity")]
-          coreporosity,
-        /// <summary>
-        /// A trace which has had corrections applied; e.g. environmental corrections.
-        /// </summary>
-          corrected,
-        /// <summary>
-        /// countrate property
-        /// </summary>
-          [XmlEnum("count rate")]
-          countrate,
-        /// <summary>
-        /// countrateratio property
-        /// </summary>
-          [XmlEnum("count rate ratio")]
-          countrateratio,
-        /// <summary>
-        /// crossplotporosity property
-        /// </summary>
-          [XmlEnum("cross plot porosity")]
-          crossplotporosity,
-        /// <summary>
-        /// decaytime property
-        /// </summary>
-          [XmlEnum("decay time")]
-          decaytime,
-        /// <summary>
-        /// deepconductivity property
-        /// </summary>
-          [XmlEnum("deep conductivity")]
-          deepconductivity,
-        /// <summary>
-        /// deepinductionconductivity property
-        /// </summary>
-          [XmlEnum("deep induction conductivity")]
-          deepinductionconductivity,
-        /// <summary>
-        /// deepinductionresistivity property
-        /// </summary>
-          [XmlEnum("deep induction resistivity")]
-          deepinductionresistivity,
-        /// <summary>
-        /// deeplaterologconductivity property
-        /// </summary>
-          [XmlEnum("deep laterolog conductivity")]
-          deeplaterologconductivity,
-        /// <summary>
-        /// deeplaterologresistivity property
-        /// </summary>
-          [XmlEnum("deep laterolog resistivity")]
-          deeplaterologresistivity,
-        /// <summary>
-        /// deepresistivity property
-        /// </summary>
-          [XmlEnum("deep resistivity")]
-          deepresistivity,
-        /// <summary>
-        /// Mass per unit Volume - well logging units are usually gm/cc.
-        /// </summary>
-          density,
-        /// <summary>
-        /// densityporosity property
-        /// </summary>
-          [XmlEnum("density porosity")]
-          densityporosity,
-        /// <summary>
-        /// The distance to a point in a wellbore.
-        /// </summary>
-          depth,
-        /// <summary>
-        /// depthadjusted property
-        /// </summary>
-          [XmlEnum("depth adjusted")]
-          depthadjusted,
-        /// <summary>
-        /// depthderivedfromvelocity property
-        /// </summary>
-          [XmlEnum("depth derived from velocity")]
-          depthderivedfromvelocity,
-        /// <summary>
-        /// Departure of a borehole from vertical. Also, the angle measured between the tool axis and vertical.
-        /// </summary>
-          deviation,
-        /// <summary>
-        /// Relative permittivity.
-        /// </summary>
-          dielectric,
-        /// <summary>
-        /// diffusioncorrection property
-        /// </summary>
-          [XmlEnum("diffusion correction")]
-          diffusioncorrection,
-        /// <summary>
-        /// The angle that a structural surface, e.g. a bedding or fault plane, makes with the horizontal, measured perpendicular to the strike of the structure.
-        /// </summary>
-          dip,
-        /// <summary>
-        /// Any of a number of measurements produced by a tool designed to measure formation dip and borehole characteristics through direct and indirect measurements.
-        /// </summary>
-          dipmeter,
-        /// <summary>
-        /// dipmeterconductivity property
-        /// </summary>
-          [XmlEnum("dipmeter conductivity")]
-          dipmeterconductivity,
-        /// <summary>
-        /// dipmeterresistivity property
-        /// </summary>
-          [XmlEnum("dipmeter resistivity")]
-          dipmeterresistivity,
-        /// <summary>
-        /// dolomiteacousticporosity property
-        /// </summary>
-          [XmlEnum("dolomite acoustic porosity")]
-          dolomiteacousticporosity,
-        /// <summary>
-        /// dolomitedensityporosity property
-        /// </summary>
-          [XmlEnum("dolomite density porosity")]
-          dolomitedensityporosity,
-        /// <summary>
-        /// dolomiteneutronporosity property
-        /// </summary>
-          [XmlEnum("dolomite neutron porosity")]
-          dolomiteneutronporosity,
-        /// <summary>
-        /// A well log trace which has been corrected or adjusted through an editing process.
-        /// </summary>
-          edited,
-        /// <summary>
-        /// effectiveporosity property
-        /// </summary>
-          [XmlEnum("effective porosity")]
-          effectiveporosity,
-        /// <summary>
-        /// electriccurrent property
-        /// </summary>
-          [XmlEnum("electric current")]
-          electriccurrent,
-        /// <summary>
-        /// electricpotential property
-        /// </summary>
-          [XmlEnum("electric potential")]
-          electricpotential,
-        /// <summary>
-        /// electromagneticwavematrixtraveltime property
-        /// </summary>
-          [XmlEnum("electromagnetic wave matrix travel time")]
-          electromagneticwavematrixtraveltime,
-        /// <summary>
-        /// electromagneticwavetraveltime property
-        /// </summary>
-          [XmlEnum("electromagnetic wave travel time")]
-          electromagneticwavetraveltime,
-        /// <summary>
-        /// The elemental composition, generally in weight percent, of a formation as calculated from information obtained from a geochemical logging pass; e.g., weight percent of Al, Si, Ca, Fe, etc.
-        /// </summary>
-          element,
-        /// <summary>
-        /// elementalratio property
-        /// </summary>
-          [XmlEnum("elemental ratio")]
-          elementalratio,
-        /// <summary>
-        /// A well log trace which has been filtered to improve its value; e.g. inverse filtering for better resolution.
-        /// </summary>
-          enhanced,
-        /// <summary>
-        /// A well log trace which has had a filter applied to it.
-        /// </summary>
-          filtered,
-        /// <summary>
-        /// A logging tool to measure the rate and/or direction of fluid flow in a wellbore.
-        /// </summary>
-          flowmeter,
-        /// <summary>
-        /// fluiddensity property
-        /// </summary>
-          [XmlEnum("fluid density")]
-          fluiddensity,
-        /// <summary>
-        /// fluidvelocity property
-        /// </summary>
-          [XmlEnum("fluid velocity")]
-          fluidvelocity,
-        /// <summary>
-        /// fluidviscosity property
-        /// </summary>
-          [XmlEnum("fluid viscosity")]
-          fluidviscosity,
-        /// <summary>
-        /// flushedzoneconductivity property
-        /// </summary>
-          [XmlEnum("flushed zone conductivity")]
-          flushedzoneconductivity,
-        /// <summary>
-        /// flushedzoneresistivity property
-        /// </summary>
-          [XmlEnum("flushed zone resistivity")]
-          flushedzoneresistivity,
-        /// <summary>
-        /// flushedzonesaturation property
-        /// </summary>
-          [XmlEnum("flushed zone saturation")]
-          flushedzonesaturation,
-        /// <summary>
-        /// Energy exerted or brought to bear.
-        /// </summary>
-          force,
-        /// <summary>
-        /// formationdensitycorrection property
-        /// </summary>
-          [XmlEnum("formation density correction")]
-          formationdensitycorrection,
-        /// <summary>
-        /// formationpropertiescorrection property
-        /// </summary>
-          [XmlEnum("formation properties correction")]
-          formationpropertiescorrection,
-        /// <summary>
-        /// formationsalinitycorrection property
-        /// </summary>
-          [XmlEnum("formation salinity correction")]
-          formationsalinitycorrection,
-        /// <summary>
-        /// formationsaturationcorrection property
-        /// </summary>
-          [XmlEnum("formation saturation correction")]
-          formationsaturationcorrection,
-        /// <summary>
-        /// formationvolumefactorcorrection property
-        /// </summary>
-          [XmlEnum("formation volume factor correction")]
-          formationvolumefactorcorrection,
-        /// <summary>
-        /// formationwaterdensitycorrection property
-        /// </summary>
-          [XmlEnum("formation water density correction")]
-          formationwaterdensitycorrection,
-        /// <summary>
-        /// formationwatersaturationcorrection property
-        /// </summary>
-          [XmlEnum("formation water saturation correction")]
-          formationwatersaturationcorrection,
-        /// <summary>
-        /// freefluidindex property
-        /// </summary>
-          [XmlEnum("free fluid index")]
-          freefluidindex,
-        /// <summary>
-        /// frictioneffectcorrection property
-        /// </summary>
-          [XmlEnum("friction effect correction")]
-          frictioneffectcorrection,
-        /// <summary>
-        /// gammaray property
-        /// </summary>
-          [XmlEnum("gamma ray")]
-          gammaray,
-        /// <summary>
-        /// gammarayminusuranium property
-        /// </summary>
-          [XmlEnum("gamma ray minus uranium")]
-          gammarayminusuranium,
-        /// <summary>
-        /// gassaturation property
-        /// </summary>
-          [XmlEnum("gas saturation")]
-          gassaturation,
-        /// <summary>
-        /// The measurement of the average density of fluids in a wellbore.
-        /// </summary>
-          gradiomanometer,
-        /// <summary>
-        /// highfrequencyconductivity property
-        /// </summary>
-          [XmlEnum("high frequency conductivity")]
-          highfrequencyconductivity,
-        /// <summary>
-        /// highfrequencyelectromagnetic property
-        /// </summary>
-          [XmlEnum("high frequency electromagnetic")]
-          highfrequencyelectromagnetic,
-        /// <summary>
-        /// highfrequencyelectromagneticporosity property
-        /// </summary>
-          [XmlEnum("high frequency electromagnetic porosity")]
-          highfrequencyelectromagneticporosity,
-        /// <summary>
-        /// highfrequencyEMphaseshift property
-        /// </summary>
-          [XmlEnum("high frequency E-M phase shift")]
-          highfrequencyEMphaseshift,
-        /// <summary>
-        /// highfrequencyresistivity property
-        /// </summary>
-          [XmlEnum("high frequency resistivity")]
-          highfrequencyresistivity,
-        /// <summary>
-        /// hydrocarboncorrection property
-        /// </summary>
-          [XmlEnum("hydrocarbon correction")]
-          hydrocarboncorrection,
-        /// <summary>
-        /// hydrocarbondensitycorrection property
-        /// </summary>
-          [XmlEnum("hydrocarbon density correction")]
-          hydrocarbondensitycorrection,
-        /// <summary>
-        /// hydrocarbongravitycorrection property
-        /// </summary>
-          [XmlEnum("hydrocarbon gravity correction")]
-          hydrocarbongravitycorrection,
-        /// <summary>
-        /// hydrocarbonsaturation property
-        /// </summary>
-          [XmlEnum("hydrocarbon saturation")]
-          hydrocarbonsaturation,
-        /// <summary>
-        /// hydrocarbonviscositycorrection property
-        /// </summary>
-          [XmlEnum("hydrocarbon viscosity correction")]
-          hydrocarbonviscositycorrection,
-        /// <summary>
-        /// The likeness of an object produced by an electrical device.
-        /// </summary>
-          image,
-        /// <summary>
-        /// interpretationvariable property
-        /// </summary>
-          [XmlEnum("interpretation variable")]
-          interpretationvariable,
-        /// <summary>
-        /// ironmudcorrection property
-        /// </summary>
-          [XmlEnum("iron mud correction")]
-          ironmudcorrection,
-        /// <summary>
-        /// A well log trace which has had two or more runs spliced together to make a single trace.
-        /// </summary>
-          joined,
-        /// <summary>
-        /// KClmudcorrection property
-        /// </summary>
-          [XmlEnum("KCl mud correction")]
-          KClmudcorrection,
-        /// <summary>
-        /// A measured distance or dimension.
-        /// </summary>
-          length,
-        /// <summary>
-        /// limestoneacousticporosity property
-        /// </summary>
-          [XmlEnum("limestone acoustic porosity")]
-          limestoneacousticporosity,
-        /// <summary>
-        /// limestonedensityporosity property
-        /// </summary>
-          [XmlEnum("limestone density porosity")]
-          limestonedensityporosity,
-        /// <summary>
-        /// limestoneneutronporosity property
-        /// </summary>
-          [XmlEnum("limestone neutron porosity")]
-          limestoneneutronporosity,
-        /// <summary>
-        /// lithologycorrection property
-        /// </summary>
-          [XmlEnum("lithology correction")]
-          lithologycorrection,
-        /// <summary>
-        /// logderivedpermeability property
-        /// </summary>
-          [XmlEnum("log derived permeability")]
-          logderivedpermeability,
-        /// <summary>
-        /// logmatrixdensity property
-        /// </summary>
-          [XmlEnum("log matrix density")]
-          logmatrixdensity,
-        /// <summary>
-        /// magneticcasingcollarlocator property
-        /// </summary>
-          [XmlEnum("magnetic casing collar locator")]
-          magneticcasingcollarlocator,
-        /// <summary>
-        /// matrixdensity property
-        /// </summary>
-          [XmlEnum("matrix density")]
-          matrixdensity,
-        /// <summary>
-        /// matrixtraveltime property
-        /// </summary>
-          [XmlEnum("matrix travel time")]
-          matrixtraveltime,
-        /// <summary>
-        /// measureddepth property
-        /// </summary>
-          [XmlEnum("measured depth")]
-          measureddepth,
-        /// <summary>
-        /// mechanicalcaliper property
-        /// </summary>
-          [XmlEnum("mechanical caliper")]
-          mechanicalcaliper,
-        /// <summary>
-        /// mechanicalcasingcollarlocator property
-        /// </summary>
-          [XmlEnum("mechanical casing collar locator")]
-          mechanicalcasingcollarlocator,
-        /// <summary>
-        /// mediumconductivity property
-        /// </summary>
-          [XmlEnum("medium conductivity")]
-          mediumconductivity,
-        /// <summary>
-        /// mediuminductionconductivity property
-        /// </summary>
-          [XmlEnum("medium induction conductivity")]
-          mediuminductionconductivity,
-        /// <summary>
-        /// mediuminductionresistivity property
-        /// </summary>
-          [XmlEnum("medium induction resistivity")]
-          mediuminductionresistivity,
-        /// <summary>
-        /// mediumlaterologconductivity property
-        /// </summary>
-          [XmlEnum("medium laterolog conductivity")]
-          mediumlaterologconductivity,
-        /// <summary>
-        /// mediumlaterologresistivity property
-        /// </summary>
-          [XmlEnum("medium laterolog resistivity")]
-          mediumlaterologresistivity,
-        /// <summary>
-        /// mediumresistivity property
-        /// </summary>
-          [XmlEnum("medium resistivity")]
-          mediumresistivity,
-        /// <summary>
-        /// microconductivity property
-        /// </summary>
-          [XmlEnum("micro conductivity")]
-          microconductivity,
-        /// <summary>
-        /// microinverseconductivity property
-        /// </summary>
-          [XmlEnum("micro inverse conductivity")]
-          microinverseconductivity,
-        /// <summary>
-        /// microinverseresistivity property
-        /// </summary>
-          [XmlEnum("micro inverse resistivity")]
-          microinverseresistivity,
-        /// <summary>
-        /// microlaterologconductivity property
-        /// </summary>
-          [XmlEnum("micro laterolog conductivity")]
-          microlaterologconductivity,
-        /// <summary>
-        /// microlaterologresistivity property
-        /// </summary>
-          [XmlEnum("micro laterolog resistivity")]
-          microlaterologresistivity,
-        /// <summary>
-        /// micronormalconductivity property
-        /// </summary>
-          [XmlEnum("micro normal conductivity")]
-          micronormalconductivity,
-        /// <summary>
-        /// micronormalresistivity property
-        /// </summary>
-          [XmlEnum("micro normal resistivity")]
-          micronormalresistivity,
-        /// <summary>
-        /// microresistivity property
-        /// </summary>
-          [XmlEnum("micro resistivity")]
-          microresistivity,
-        /// <summary>
-        /// microsphericallyfocusedconductivity property
-        /// </summary>
-          [XmlEnum("micro spherically focused conductivity")]
-          microsphericallyfocusedconductivity,
-        /// <summary>
-        /// microsphericallyfocusedresistivity property
-        /// </summary>
-          [XmlEnum("micro spherically focused resistivity")]
-          microsphericallyfocusedresistivity,
-        /// <summary>
-        /// The mineral composition, generally in weight percent, of a formation as calculated from elemental information obtained from a geochemical logging pass; e.g., weight percent of dolomite, calcite, illite, quartzite, etc.
-        /// </summary>
-          mineral,
-        /// <summary>
-        /// mudcakeconductivity property
-        /// </summary>
-          [XmlEnum("mud cake conductivity")]
-          mudcakeconductivity,
-        /// <summary>
-        /// mudcakecorrection property
-        /// </summary>
-          [XmlEnum("mud cake correction")]
-          mudcakecorrection,
-        /// <summary>
-        /// mudcakedensitycorrection property
-        /// </summary>
-          [XmlEnum("mud cake density correction")]
-          mudcakedensitycorrection,
-        /// <summary>
-        /// mudcakeresistivity property
-        /// </summary>
-          [XmlEnum("mud cake resistivity")]
-          mudcakeresistivity,
-        /// <summary>
-        /// mudcakeresistivitycorrection property
-        /// </summary>
-          [XmlEnum("mud cake resistivity correction")]
-          mudcakeresistivitycorrection,
-        /// <summary>
-        /// mudcakethicknesscorrection property
-        /// </summary>
-          [XmlEnum("mud cake thickness correction")]
-          mudcakethicknesscorrection,
-        /// <summary>
-        /// mudcompositioncorrection property
-        /// </summary>
-          [XmlEnum("mud composition correction")]
-          mudcompositioncorrection,
-        /// <summary>
-        /// mudconductivity property
-        /// </summary>
-          [XmlEnum("mud conductivity")]
-          mudconductivity,
-        /// <summary>
-        /// mudfiltrateconductivity property
-        /// </summary>
-          [XmlEnum("mud filtrate conductivity")]
-          mudfiltrateconductivity,
-        /// <summary>
-        /// mudfiltratecorrection property
-        /// </summary>
-          [XmlEnum("mud filtrate correction")]
-          mudfiltratecorrection,
-        /// <summary>
-        /// mudfiltratedensitycorrection property
-        /// </summary>
-          [XmlEnum("mud filtrate density correction")]
-          mudfiltratedensitycorrection,
-        /// <summary>
-        /// mudfiltrateresistivity property
-        /// </summary>
-          [XmlEnum("mud filtrate resistivity")]
-          mudfiltrateresistivity,
-        /// <summary>
-        /// mudfiltrateresistivitycorrection property
-        /// </summary>
-          [XmlEnum("mud filtrate resistivity correction")]
-          mudfiltrateresistivitycorrection,
-        /// <summary>
-        /// mudfiltratesalinitycorrection property
-        /// </summary>
-          [XmlEnum("mud filtrate salinity correction")]
-          mudfiltratesalinitycorrection,
-        /// <summary>
-        /// mudresistivity property
-        /// </summary>
-          [XmlEnum("mud resistivity")]
-          mudresistivity,
-        /// <summary>
-        /// mudsalinitycorrection property
-        /// </summary>
-          [XmlEnum("mud salinity correction")]
-          mudsalinitycorrection,
-        /// <summary>
-        /// mudviscositycorrection property
-        /// </summary>
-          [XmlEnum("mud viscosity correction")]
-          mudviscositycorrection,
-        /// <summary>
-        /// mudweightcorrection property
-        /// </summary>
-          [XmlEnum("mud weight correction")]
-          mudweightcorrection,
-        /// <summary>
-        /// neutrondieawaytime property
-        /// </summary>
-          [XmlEnum("neutron die away time")]
-          neutrondieawaytime,
-        /// <summary>
-        /// neutronporosity property
-        /// </summary>
-          [XmlEnum("neutron porosity")]
-          neutronporosity,
-        /// <summary>
-        /// nuclearcaliper property
-        /// </summary>
-          [XmlEnum("nuclear caliper")]
-          nuclearcaliper,
-        /// <summary>
-        /// nuclearmagneticdecaytime property
-        /// </summary>
-          [XmlEnum("nuclear magnetic decay time")]
-          nuclearmagneticdecaytime,
-        /// <summary>
-        /// nuclearmagnetismlogpermeability property
-        /// </summary>
-          [XmlEnum("nuclear magnetism log permeability")]
-          nuclearmagnetismlogpermeability,
-        /// <summary>
-        /// nuclearmagnetismporosity property
-        /// </summary>
-          [XmlEnum("nuclear magnetism porosity")]
-          nuclearmagnetismporosity,
-        /// <summary>
-        /// OHdensityporosity property
-        /// </summary>
-          [XmlEnum("OH density porosity")]
-          OHdensityporosity,
-        /// <summary>
-        /// OHdolomitedensityporosity property
-        /// </summary>
-          [XmlEnum("OH dolomite density porosity")]
-          OHdolomitedensityporosity,
-        /// <summary>
-        /// OHdolomiteneutronporosity property
-        /// </summary>
-          [XmlEnum("OH dolomite neutron porosity")]
-          OHdolomiteneutronporosity,
-        /// <summary>
-        /// OHlimestonedensityporosity property
-        /// </summary>
-          [XmlEnum("OH limestone density porosity")]
-          OHlimestonedensityporosity,
-        /// <summary>
-        /// OHlimestoneneutronporosity property
-        /// </summary>
-          [XmlEnum("OH limestone neutron porosity")]
-          OHlimestoneneutronporosity,
-        /// <summary>
-        /// OHneutronporosity property
-        /// </summary>
-          [XmlEnum("OH neutron porosity")]
-          OHneutronporosity,
-        /// <summary>
-        /// OHsandstonedensityporosity property
-        /// </summary>
-          [XmlEnum("OH sandstone density porosity")]
-          OHsandstonedensityporosity,
-        /// <summary>
-        /// OHsandstoneneutronporosity property
-        /// </summary>
-          [XmlEnum("OH sandstone neutron porosity")]
-          OHsandstoneneutronporosity,
-        /// <summary>
-        /// oilbasedmudcorrection property
-        /// </summary>
-          [XmlEnum("oil based mud correction")]
-          oilbasedmudcorrection,
-        /// <summary>
-        /// oilsaturation property
-        /// </summary>
-          [XmlEnum("oil saturation")]
-          oilsaturation,
-        /// <summary>
-        /// The procedure for introducing holes through casing into a formation so that formation fluids can enter into the casing.
-        /// </summary>
-          perforating,
-        /// <summary>
-        /// The permeability of the surrounding formation.
-        /// </summary>
-          permeability,
-        /// <summary>
-        /// phaseshift property
-        /// </summary>
-          [XmlEnum("phase shift")]
-          phaseshift,
-        /// <summary>
-        /// photoelectricabsorption property
-        /// </summary>
-          [XmlEnum("photoelectric absorption")]
-          photoelectricabsorption,
-        /// <summary>
-        /// photoelectricabsorptioncorrection property
-        /// </summary>
-          [XmlEnum("photoelectric absorption correction")]
-          photoelectricabsorptioncorrection,
-        /// <summary>
-        /// physicalmeasurementcorrection property
-        /// </summary>
-          [XmlEnum("physical measurement correction")]
-          physicalmeasurementcorrection,
-        /// <summary>
-        /// planeangle property
-        /// </summary>
-          [XmlEnum("plane angle")]
-          planeangle,
-        /// <summary>
-        /// The total pore volume occupied by fluid in a rock. Includes isolated nonconnecting pores and volume occupied by absorbed, immobile fluid.
-        /// </summary>
-          porosity,
-        /// <summary>
-        /// porositycorrection property
-        /// </summary>
-          [XmlEnum("porosity correction")]
-          porositycorrection,
-        /// <summary>
-        /// The measurement of gamma radiation emitted by potassium.
-        /// </summary>
-          potassium,
-        /// <summary>
-        /// The force or thrust exerted upon a surface divided by the area of the surface.
-        /// </summary>
-          pressure,
-        /// <summary>
-        /// pressurecorrection property
-        /// </summary>
-          [XmlEnum("pressure correction")]
-          pressurecorrection,
-        /// <summary>
-        /// A well log trace which has been processed in some way; e.g., depth adjusted or environmentally corrected.
-        /// </summary>
-          processed,
-        /// <summary>
-        /// pulsedneutronporosity property
-        /// </summary>
-          [XmlEnum("pulsed neutron porosity")]
-          pulsedneutronporosity,
-        /// <summary>
-        /// Degree of excellence.
-        /// </summary>
-          quality,
-        /// <summary>
-        /// A relationship between two values usually expressed as a fraction.
-        /// </summary>
-          ratio,
-        /// <summary>
-        /// A well log trace which has not had any processing. In other words, a trace which has not been depth adjusted or environmentally corrected.
-        /// </summary>
-          raw,
-        /// <summary>
-        /// relativebearing property
-        /// </summary>
-          [XmlEnum("relative bearing")]
-          relativebearing,
-        /// <summary>
-        /// The property measuring the resistance to flow of an electrical current.
-        /// </summary>
-          resistivity,
-        /// <summary>
-        /// resistivityfactorcorrection property
-        /// </summary>
-          [XmlEnum("resistivity factor correction")]
-          resistivityfactorcorrection,
-        /// <summary>
-        /// resistivityfromattenuation property
-        /// </summary>
-          [XmlEnum("resistivity from attenuation")]
-          resistivityfromattenuation,
-        /// <summary>
-        /// resistivityfromphaseshift property
-        /// </summary>
-          [XmlEnum("resistivity from phase shift")]
-          resistivityfromphaseshift,
-        /// <summary>
-        /// resistivityphaseshift property
-        /// </summary>
-          [XmlEnum("resistivity phase shift")]
-          resistivityphaseshift,
-        /// <summary>
-        /// resistivityratio property
-        /// </summary>
-          [XmlEnum("resistivity ratio")]
-          resistivityratio,
-        /// <summary>
-        /// The concentration of ions in solution.
-        /// </summary>
-          salinity,
-        /// <summary>
-        /// To take a sample of or from something.
-        /// </summary>
-          sampling,
-        /// <summary>
-        /// sandstoneacousticporosity property
-        /// </summary>
-          [XmlEnum("sandstone acoustic porosity")]
-          sandstoneacousticporosity,
-        /// <summary>
-        /// sandstonedensityporosity property
-        /// </summary>
-          [XmlEnum("sandstone density porosity")]
-          sandstonedensityporosity,
-        /// <summary>
-        /// sandstoneneutronporosity property
-        /// </summary>
-          [XmlEnum("sandstone neutron porosity")]
-          sandstoneneutronporosity,
-        /// <summary>
-        /// The fraction or percentage of the pore volume of a rock.
-        /// </summary>
-          saturation,
-        /// <summary>
-        /// shalevolume property
-        /// </summary>
-          [XmlEnum("shale volume")]
-          shalevolume,
-        /// <summary>
-        /// shallowconductivity property
-        /// </summary>
-          [XmlEnum("shallow conductivity")]
-          shallowconductivity,
-        /// <summary>
-        /// shallowinductionconductivity property
-        /// </summary>
-          [XmlEnum("shallow induction conductivity")]
-          shallowinductionconductivity,
-        /// <summary>
-        /// shallowinductionresistivity property
-        /// </summary>
-          [XmlEnum("shallow induction resistivity")]
-          shallowinductionresistivity,
-        /// <summary>
-        /// shallowlaterologconductivity property
-        /// </summary>
-          [XmlEnum("shallow laterolog conductivity")]
-          shallowlaterologconductivity,
-        /// <summary>
-        /// shallowlaterologresistivity property
-        /// </summary>
-          [XmlEnum("shallow laterolog resistivity")]
-          shallowlaterologresistivity,
-        /// <summary>
-        /// shallowresistivity property
-        /// </summary>
-          [XmlEnum("shallow resistivity")]
-          shallowresistivity,
-        /// <summary>
-        /// shearwavedolomiteporosity property
-        /// </summary>
-          [XmlEnum("shear wave dolomite porosity")]
-          shearwavedolomiteporosity,
-        /// <summary>
-        /// shearwavelimestoneporosity property
-        /// </summary>
-          [XmlEnum("shear wave limestone porosity")]
-          shearwavelimestoneporosity,
-        /// <summary>
-        /// shearwavematrixtraveltime property
-        /// </summary>
-          [XmlEnum("shear wave matrix travel time")]
-          shearwavematrixtraveltime,
-        /// <summary>
-        /// shearwavesandstoneporosity property
-        /// </summary>
-          [XmlEnum("shear wave sandstone porosity")]
-          shearwavesandstoneporosity,
-        /// <summary>
-        /// shearwavetraveltime property
-        /// </summary>
-          [XmlEnum("shear wave travel time")]
-          shearwavetraveltime,
-        /// <summary>
-        /// A well log trace which has had its original values shifted by some factor; e.g., added or multiplied by a constant.
-        /// </summary>
-          shifted,
-        /// <summary>
-        /// sidewallcoreporosity property
-        /// </summary>
-          [XmlEnum("sidewall core porosity")]
-          sidewallcoreporosity,
-        /// <summary>
-        /// The macroscopic capture cross section, i.e. the effective cross-sectional area per unit volume for the capture of neutrons.
-        /// </summary>
-          sigma,
-        /// <summary>
-        /// sigmaformation property
-        /// </summary>
-          [XmlEnum("sigma formation")]
-          sigmaformation,
-        /// <summary>
-        /// sigmagas property
-        /// </summary>
-          [XmlEnum("sigma gas")]
-          sigmagas,
-        /// <summary>
-        /// sigmahydrocarbon property
-        /// </summary>
-          [XmlEnum("sigma hydrocarbon")]
-          sigmahydrocarbon,
-        /// <summary>
-        /// sigmamatrix property
-        /// </summary>
-          [XmlEnum("sigma matrix")]
-          sigmamatrix,
-        /// <summary>
-        /// sigmaoil property
-        /// </summary>
-          [XmlEnum("sigma oil")]
-          sigmaoil,
-        /// <summary>
-        /// sigmawater property
-        /// </summary>
-          [XmlEnum("sigma water")]
-          sigmawater,
-        /// <summary>
-        /// slippagevelocitycorrection property
-        /// </summary>
-          [XmlEnum("slippage velocity correction")]
-          slippagevelocitycorrection,
-        /// <summary>
-        /// A well log trace which has been filtered to smooth, or average the trace.
-        /// </summary>
-          smoothed,
-        /// <summary>
-        /// spectralgammaray property
-        /// </summary>
-          [XmlEnum("spectral gamma ray")]
-          spectralgammaray,
-        /// <summary>
-        /// sphericallyfocusedconductivity property
-        /// </summary>
-          [XmlEnum("spherically focused conductivity")]
-          sphericallyfocusedconductivity,
-        /// <summary>
-        /// sphericallyfocusedresistivity property
-        /// </summary>
-          [XmlEnum("spherically focused resistivity")]
-          sphericallyfocusedresistivity,
-        /// <summary>
-        /// spontaneouspotential property
-        /// </summary>
-          [XmlEnum("spontaneous potential")]
-          spontaneouspotential,
-        /// <summary>
-        /// spreadinglosscorrection property
-        /// </summary>
-          [XmlEnum("spreading loss correction")]
-          spreadinglosscorrection,
-        /// <summary>
-        /// syntheticwelllogtrace property
-        /// </summary>
-          [XmlEnum("synthetic well log trace")]
-          syntheticwelllogtrace,
-        /// <summary>
-        /// A temperature measurement.
-        /// </summary>
-          temperature,
-        /// <summary>
-        /// temperaturecorrection property
-        /// </summary>
-          [XmlEnum("temperature correction")]
-          temperaturecorrection,
-        /// <summary>
-        /// The tension on the wireline cable while logging.
-        /// </summary>
-          tension,
-        /// <summary>
-        /// ThKratio property
-        /// </summary>
-          [XmlEnum("Th/K ratio")]
-          ThKratio,
-        /// <summary>
-        /// The measurement of gamma radiation emitted by thorium.
-        /// </summary>
-          thorium,
-        /// <summary>
-        /// A measured or measurable period.
-        /// </summary>
-          time,
-        /// <summary>
-        /// tooldiametercorrection property
-        /// </summary>
-          [XmlEnum("tool diameter correction")]
-          tooldiametercorrection,
-        /// <summary>
-        /// tooleccentricitycorrection property
-        /// </summary>
-          [XmlEnum("tool eccentricity correction")]
-          tooleccentricitycorrection,
-        /// <summary>
-        /// totalgammaray property
-        /// </summary>
-          [XmlEnum("total gamma ray")]
-          totalgammaray,
-        /// <summary>
-        /// totalporosity property
-        /// </summary>
-          [XmlEnum("total porosity")]
-          totalporosity,
-        /// <summary>
-        /// tracersurvey property
-        /// </summary>
-          [XmlEnum("tracer survey")]
-          tracersurvey,
-        /// <summary>
-        /// traveltime property
-        /// </summary>
-          [XmlEnum("travel time")]
-          traveltime,
-        /// <summary>
-        /// trueconductivity property
-        /// </summary>
-          [XmlEnum("true conductivity")]
-          trueconductivity,
-        /// <summary>
-        /// trueresistivity property
-        /// </summary>
-          [XmlEnum("true resistivity")]
-          trueresistivity,
-        /// <summary>
-        /// trueverticaldepth property
-        /// </summary>
-          [XmlEnum("true vertical depth")]
-          trueverticaldepth,
-        /// <summary>
-        /// tubewavedolomiteporosity property
-        /// </summary>
-          [XmlEnum("tube wave dolomite porosity")]
-          tubewavedolomiteporosity,
-        /// <summary>
-        /// tubewavelimestoneporosity property
-        /// </summary>
-          [XmlEnum("tube wave limestone porosity")]
-          tubewavelimestoneporosity,
-        /// <summary>
-        /// tubewavematrixtraveltime property
-        /// </summary>
-          [XmlEnum("tube wave matrix travel time")]
-          tubewavematrixtraveltime,
-        /// <summary>
-        /// tubewavesandstoneporosity property
-        /// </summary>
-          [XmlEnum("tube wave sandstone porosity")]
-          tubewavesandstoneporosity,
-        /// <summary>
-        /// tubewavetraveltime property
-        /// </summary>
-          [XmlEnum("tube wave travel time")]
-          tubewavetraveltime,
-        /// <summary>
-        /// The measurement of gamma radiation emitted by uranium.
-        /// </summary>
-          uranium,
-        /// <summary>
-        /// directional speed
-        /// </summary>
-          velocity,
-        /// <summary>
-        /// cubic capacity
-        /// </summary>
-          volume,
-        /// <summary>
-        /// waterbasedfluidcorrection property
-        /// </summary>
-          [XmlEnum("water based fluid correction")]
-          waterbasedfluidcorrection,
-        /// <summary>
-        /// waterholdupcorrection property
-        /// </summary>
-          [XmlEnum("water holdup correction")]
-          waterholdupcorrection,
-        /// <summary>
-        /// watersaturatedconductivity property
-        /// </summary>
-          [XmlEnum("water saturated conductivity")]
-          watersaturatedconductivity,
-        /// <summary>
-        /// watersaturatedresistivity property
-        /// </summary>
-          [XmlEnum("water saturated resistivity")]
-          watersaturatedresistivity,
-        /// <summary>
-        /// watersaturation property
-        /// </summary>
-          [XmlEnum("water saturation")]
-          watersaturation,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the BearingType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the BearingType xsd enumeration.")]
-        public enum BearingType 
-        {
-        /// <summary>
-        /// oilseal property
-        /// </summary>
-          [XmlEnum("oil seal")]
-          oilseal,
-        /// <summary>
-        /// mudlube property
-        /// </summary>
-          [XmlEnum("mud lube")]
-          mudlube,
-        /// <summary>
-        /// 
-        /// </summary>
-          other,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the BladeShapeType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the BladeShapeType xsd enumeration.")]
-        public enum BladeShapeType 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          dynamic,
-        /// <summary>
-        /// 
-        /// </summary>
-          melon,
-        /// <summary>
-        /// 
-        /// </summary>
-          spiral,
-        /// <summary>
-        /// 
-        /// </summary>
-          straight,
-        /// <summary>
-        /// 
-        /// </summary>
-          variable,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the BladeType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the BladeType xsd enumeration.")]
-        public enum BladeType 
-        {
-        /// <summary>
-        /// clampon property
-        /// </summary>
-          [XmlEnum("clamp-on")]
-          clampon,
-        /// <summary>
-        /// 
-        /// </summary>
-          integral,
-        /// <summary>
-        /// 
-        /// </summary>
-          sleeve,
-        /// <summary>
-        /// 
-        /// </summary>
-          welded,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the HoleOpenerType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the HoleOpenerType xsd enumeration.")]
-        public enum HoleOpenerType 
-        {
-        /// <summary>
-        /// underreamer property
-        /// </summary>
-          [XmlEnum("under-reamer")]
-          underreamer,
-        /// <summary>
-        /// fixedblade property
-        /// </summary>
-          [XmlEnum("fixed blade")]
-          fixedblade,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the DeflectionMethod xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the DeflectionMethod xsd enumeration.")]
-        public enum DeflectionMethod 
-        {
-        /// <summary>
-        /// pointbit property
-        /// </summary>
-          [XmlEnum("point bit")]
-          pointbit,
-        /// <summary>
-        /// pushbit property
-        /// </summary>
-          [XmlEnum("push bit")]
-          pushbit
-        }
-        /// <summary>
-        /// This class represents the WellStatus xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the WellStatus xsd enumeration.")]
-        public enum WellStatus 
-        {
-        /// <summary>
-        /// The status of a facility in which drilling, completion, and production operations have been permanently terminated.
-        /// </summary>
-          abandoned,
-        /// <summary>
-        /// For a well to be active, at least one of its wellbores must be active. For a wellbore to be active, at least one of its completions must be actively producing or injecting fluids.
-        /// </summary>
-          active,
-        /// <summary>
-        /// activeinjecting property
-        /// </summary>
-          [XmlEnum("active -- injecting")]
-          activeinjecting,
-        /// <summary>
-        /// activeproducing property
-        /// </summary>
-          [XmlEnum("active -- producing")]
-          activeproducing,
-        /// <summary>
-        /// The completion has been installed, but the facility is not yet active. This status is appropriate only before the initial producing or injecting activity.
-        /// </summary>
-          completed,
-        /// <summary>
-        /// The status of a well or wellbore in which drilling operations have begun, but are not yet completed. The status ends when another status becomes appropriate.
-        /// </summary>
-          drilling,
-        /// <summary>
-        /// partiallyplugged property
-        /// </summary>
-          [XmlEnum("partially plugged")]
-          partiallyplugged,
-        /// <summary>
-        /// The facility has received regulatory approvel, but drilling has not yet commenced. For a well, it has been spudded. For a subsequent wellbore, the whipstock or similar device has not yet been set.
-        /// </summary>
-          permitted,
-        /// <summary>
-        /// pluggedandabandoned property
-        /// </summary>
-          [XmlEnum("plugged and abandoned")]
-          pluggedandabandoned,
-        /// <summary>
-        /// The status of a well or wellbore from conception to either regulatory approval or commencement of drilling.
-        /// </summary>
-          proposed,
-        /// <summary>
-        /// The facility has been sold, so it is no longer appropriate to keep a close internal status value. Status values may be added at later times without changing the sold status.
-        /// </summary>
-          sold,
-        /// <summary>
-        /// Production or injection has been temporarily suspended in a manner that will allow immediate resumption of activities.
-        /// </summary>
-          suspended,
-        /// <summary>
-        /// temporarilyabandoned property
-        /// </summary>
-          [XmlEnum("temporarily abandoned")]
-          temporarilyabandoned,
-        /// <summary>
-        /// The facility operations are suspended while tests are being conducted to determine formation and/or reservoir properties. For example, a drillstem test. This status also includes extended testing.
-        /// </summary>
-          testing,
-        /// <summary>
-        /// Information about the status of the well is confidential. This is more explicit than unknown, since it gives the reason that the status value is unknown.
-        /// </summary>
-          tight,
-        /// <summary>
-        /// workingover property
-        /// </summary>
-          [XmlEnum("working over")]
-          workingover,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the WellPurpose xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the WellPurpose xsd enumeration.")]
-        public enum WellPurpose 
-        {
-        /// <summary>
-        /// A well drilled into a formation shown to be potentially productive of oil or gas by an earlier well for the purpose of obtaining more information about the reservoir. Also known as a delineation well.
-        /// </summary>
-          appraisal,
-        /// <summary>
-        /// appraisalconfirmationappraisal property
-        /// </summary>
-          [XmlEnum("appraisal -- confirmation appraisal")]
-          appraisalconfirmationappraisal,
-        /// <summary>
-        /// appraisalexploratoryappraisal property
-        /// </summary>
-          [XmlEnum("appraisal -- exploratory appraisal")]
-          appraisalexploratoryappraisal,
-        /// <summary>
-        /// An exploratory well drilled in an unproved area to test for a new field, a new pay, a deeper reservoir, or a shallower reservoir. Also known as a wildcat.
-        /// </summary>
-          exploration,
-        /// <summary>
-        /// explorationdeeperpoolwildcat property
-        /// </summary>
-          [XmlEnum("exploration -- deeper-pool wildcat")]
-          explorationdeeperpoolwildcat,
-        /// <summary>
-        /// explorationnewfieldwildcat property
-        /// </summary>
-          [XmlEnum("exploration -- new-field wildcat")]
-          explorationnewfieldwildcat,
-        /// <summary>
-        /// explorationnewpoolwildcat property
-        /// </summary>
-          [XmlEnum("exploration -- new-pool wildcat")]
-          explorationnewpoolwildcat,
-        /// <summary>
-        /// explorationoutpostwildcat property
-        /// </summary>
-          [XmlEnum("exploration -- outpost wildcat")]
-          explorationoutpostwildcat,
-        /// <summary>
-        /// explorationshallowerpoolwildcat property
-        /// </summary>
-          [XmlEnum("exploration -- shallower-pool wildcat")]
-          explorationshallowerpoolwildcat,
-        /// <summary>
-        /// A well drilled in a zone in an area already proved productive.
-        /// </summary>
-          development,
-        /// <summary>
-        /// developmentinfilldevelopment property
-        /// </summary>
-          [XmlEnum("development -- infill development")]
-          developmentinfilldevelopment,
-        /// <summary>
-        /// developmentinjector property
-        /// </summary>
-          [XmlEnum("development -- injector")]
-          developmentinjector,
-        /// <summary>
-        /// developmentproducer property
-        /// </summary>
-          [XmlEnum("development -- producer")]
-          developmentproducer,
-        /// <summary>
-        /// fluidstorage property
-        /// </summary>
-          [XmlEnum("fluid storage")]
-          fluidstorage,
-        /// <summary>
-        /// fluidstoragegasstorage property
-        /// </summary>
-          [XmlEnum("fluid storage -- gas storage")]
-          fluidstoragegasstorage,
-        /// <summary>
-        /// generalsrvc property
-        /// </summary>
-          [XmlEnum("general srvc")]
-          generalsrvc,
-        /// <summary>
-        /// generalsrvcboreholereacquisition property
-        /// </summary>
-          [XmlEnum("general srvc -- borehole re-acquisition")]
-          generalsrvcboreholereacquisition,
-        /// <summary>
-        /// generalsrvcobservation property
-        /// </summary>
-          [XmlEnum("general srvc -- observation")]
-          generalsrvcobservation,
-        /// <summary>
-        /// generalsrvcrelief property
-        /// </summary>
-          [XmlEnum("general srvc -- relief")]
-          generalsrvcrelief,
-        /// <summary>
-        /// generalsrvcresearch property
-        /// </summary>
-          [XmlEnum("general srvc -- research")]
-          generalsrvcresearch,
-        /// <summary>
-        /// generalsrvcresearchdrilltest property
-        /// </summary>
-          [XmlEnum("general srvc -- research -- drill test")]
-          generalsrvcresearchdrilltest,
-        /// <summary>
-        /// generalsrvcresearchstrattest property
-        /// </summary>
-          [XmlEnum("general srvc -- research -- strat test")]
-          generalsrvcresearchstrattest,
-        /// <summary>
-        /// generalsrvcwastedisposal property
-        /// </summary>
-          [XmlEnum("general srvc -- waste disposal")]
-          generalsrvcwastedisposal,
-        /// <summary>
-        /// A non-oil and gas E and P well drilled for the purpose of locating and/or extracting a mineral from the subsurface, usually through the injection and/or extraction of mineral-bearing fluids.
-        /// </summary>
-          mineral,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the WellFluid xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the WellFluid xsd enumeration.")]
-        public enum WellFluid 
-        {
-        /// <summary>
-        /// This is generally an injected fluid.
-        /// </summary>
-          air,
-        /// <summary>
-        /// Liquid hydrocarbons produced with natural gas that are separated from the gas by cooling and various other means. Condensate generally has an API gravity of 50 degrees to 120 degrees and is water white, straw, or bluish in color. It is the liquid recovery from a well classified as a gas well. It is generally dissolved in the gaseous state under reservoir conditions but separates as a liquid either in passing up the hole or at the surface. These hydrocarbons, from associated and nonassociated gas well gas, normally are recovered from lease separators or field facilities by mechanical separation.
-        /// </summary>
-          condensate,
-        /// <summary>
-        /// The well facility is classified as a dry well. It has not been, nor will it be used to produce or inject any fluids.
-        /// </summary>
-          dry,
-        /// <summary>
-        /// The well is classified as a gas well, producing or injecting a hydrocarbon gas. The gas is generally methane, but may have a mixture of other gases also.
-        /// </summary>
-          gas,
-        /// <summary>
-        /// gaswater property
-        /// </summary>
-          [XmlEnum("gas-water")]
-          gaswater,
-        /// <summary>
-        /// nonHCgas property
-        /// </summary>
-          [XmlEnum("non HC gas")]
-          nonHCgas,
-        /// <summary>
-        /// nonHCgasCO2 property
-        /// </summary>
-          [XmlEnum("non HC gas -- CO2")]
-          nonHCgasCO2,
-        /// <summary>
-        /// The liquid hydrocarbon, generally referred to as crude oil.
-        /// </summary>
-          oil,
-        /// <summary>
-        /// oilgas property
-        /// </summary>
-          [XmlEnum("oil-gas")]
-          oilgas,
-        /// <summary>
-        /// oilwater property
-        /// </summary>
-          [XmlEnum("oil-water")]
-          oilwater,
-        /// <summary>
-        /// The gaseous state of water. This is generally an injected fluid, but it is possible that some hydrothermal wells produce steam.
-        /// </summary>
-          steam,
-        /// <summary>
-        /// The well is classified as a water well without distinguishing between brine or fresh water.
-        /// </summary>
-          water,
-        /// <summary>
-        /// waterbrine property
-        /// </summary>
-          [XmlEnum("water -- brine")]
-          waterbrine,
-        /// <summary>
-        /// waterfreshwater property
-        /// </summary>
-          [XmlEnum("water -- fresh water")]
-          waterfreshwater,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the WellDirection xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the WellDirection xsd enumeration.")]
-        public enum WellDirection 
-        {
-        /// <summary>
-        /// huffnpuff property
-        /// </summary>
-          [XmlEnum("huff-n-puff")]
-          huffnpuff,
-        /// <summary>
-        /// The well facility is injecting fluids into the subsurface.
-        /// </summary>
-          injector,
-        /// <summary>
-        /// The well facility is producing fluids from the subsurface.
-        /// </summary>
-          producer,
-        /// <summary>
-        /// The flow direction of the fluids is variable, but not on a regular basis as is the case with the huff-n-puff flow.
-        /// </summary>
-          uncertain,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the ElevCodeEnum xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the ElevCodeEnum xsd enumeration.")]
-        public enum ElevCodeEnum 
-        {
-        /// <summary>
-        /// casing flange: A flange affixed to the top of the casing string used to attach production equipment.
-        /// </summary>
-          CF,
-        /// <summary>
-        /// crown valve
-        /// </summary>
-          CV,
-        /// <summary>
-        /// derrick floor
-        /// </summary>
-          DF,
-        /// <summary>
-        /// ground level
-        /// </summary>
-          GL,
-        /// <summary>
-        /// kelly bushing
-        /// </summary>
-          KB,
-        /// <summary>
-        /// rotary bushing
-        /// </summary>
-          RB,
-        /// <summary>
-        /// rotary table
-        /// </summary>
-          RT,
-        /// <summary>
-        /// sea floor
-        /// </summary>
-          SF,
-        /// <summary>
-        /// Lowest Astronomical Tide. The lowest tide level over the duration of the National Tidal Datum Epoch (19 years).
-        /// </summary>
-          LAT,
-        /// <summary>
-        /// Mean Sea Level - A tidal datum. The arithmetic mean of hourly heights observed over the National Tidal Datum Epoch (19 years).
-        /// </summary>
-          SL,
-        /// <summary>
-        /// Mean Higher High Water - A tidal datum. The average of the higher high water height of each tidal day observed over the National Tidal Datum Epoch (19 years).
-        /// </summary>
-          MHHW,
-        /// <summary>
-        /// Mean High Water - A tidal datum. The average of all the high water heights observed over the National Tidal Datum Epoch (19 years).
-        /// </summary>
-          MHW,
-        /// <summary>
-        /// Mean Lower Low Water - A tidal datum. The average of the lower low water height of each tidal day observed over the National Tidal Datum Epoch (19 years ).
-        /// </summary>
-          MLLW,
-        /// <summary>
-        /// Mean Low Water - A tidal datum. The average of all the low water heights observed over the National Tidal Datum Epoch (19 years).
-        /// </summary>
-          MLW,
-        /// <summary>
-        /// Mean Tide Level - A tidal datum. The arithmetic mean of mean high water and mean low water. Same as half-tide level.
-        /// </summary>
-          MTL,
-        /// <summary>
-        /// kickoff point
-        /// </summary>
-          KO,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the GeodeticDatum xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the GeodeticDatum xsd enumeration.")]
-        public enum GeodeticDatum 
-        {
-        /// <summary>
-        /// Adindian ellipsoid=CL80 region="Sudan, Ethiopia"
-        /// </summary>
-          ADND,
-        /// <summary>
-        /// ARC 1950 ellipsoid=CL80B region="Southern Africa"
-        /// </summary>
-          ARC50,
-        /// <summary>
-        /// Australian ellipsoid=GRS67 region="Australia Geodetic"
-        /// </summary>
-          AUSG,
-        /// <summary>
-        /// Camp Area Astro ellipsoid=INT24 region=Antarctica 
-        /// </summary>
-          CAA,
-        /// <summary>
-        /// Chau Astro ellipsoid=INT24 region=Paraguay 
-        /// </summary>
-          CHAS,
-        /// <summary>
-        /// Corrego Alegre ellipsoid=INT24 region=INT24 
-        /// </summary>
-          CORAL,
-        /// <summary>
-        /// European 1950 ellipsoid=INT24 region="Europe, Middle East, North Africa"
-        /// </summary>
-          ED50,
-        /// <summary>
-        /// European 1987 ellipsoid=INT24 region="Europe, Middle East, North Africa"
-        /// </summary>
-          ED87,
-        /// <summary>
-        /// Ireland 1965 ellipsoid=AIRY_MOD region=Ireland 
-        /// </summary>
-          ERIN65,
-        /// <summary>
-        /// Geodetic Datum 1949 ellipsoid=INT24 region="New Zealand"
-        /// </summary>
-          GD49,
-        /// <summary>
-        /// Ghana ellipsoid=WAR24 region=Ghana 
-        /// </summary>
-          GHANA,
-        /// <summary>
-        /// Guam 1963 ellipsoid=CL66 region="Marianas Islands"
-        /// </summary>
-          GUAM63,
-        /// <summary>
-        /// Hjorsey 1955 ellipsoid=INT24 region=Iceland 
-        /// </summary>
-          HJRS55,
-        /// <summary>
-        /// Hu-Tzu-Shan ellipsoid=INT24 region=Taiwan 
-        /// </summary>
-          HTS,
-        /// <summary>
-        /// Campo Inchauspe ellipsoid=INT24 region=Argentina 
-        /// </summary>
-          INCH,
-        /// <summary>
-        /// Indian 'Kalimpur' ellipsoid=EVER region=India 
-        /// </summary>
-          INDIA1,
-        /// <summary>
-        /// Indian 'Kalimpur' ellipsoid=INT24 region=India 
-        /// </summary>
-          INDIA2,
-        /// <summary>
-        /// Indonesia 1974 ellipsoid=GRS67 region=Indonesia 
-        /// </summary>
-          INDNS74,
-        /// <summary>
-        /// Liberia 1964 ellipsoid=CL80 region=Liberia 
-        /// </summary>
-          LIB64,
-        /// <summary>
-        /// Luzon ellipsoid=CL66 region=Philippines 
-        /// </summary>
-          LUZON,
-        /// <summary>
-        /// Merchich ellipsoid=CL80A region=Morocco 
-        /// </summary>
-          MRCH,
-        /// <summary>
-        /// North American 'Meades Ranch' ellipsoid=CL66 region="North America"
-        /// </summary>
-          NAD27,
-        /// <summary>
-        /// North American Datum of 1983 ellipsoid=GRS80 region="Canada, Cuba, U.S., Caribbean"
-        /// </summary>
-          NAD83,
-        /// <summary>
-        /// Nigeria ellipsoid=CL80 region=Nigeria 
-        /// </summary>
-          NGRA,
-        /// <summary>
-        /// 
-        /// </summary>
-          None,
-        /// <summary>
-        /// Naparima ellipsoid=INT24 region="Trinidad and Tobago"
-        /// </summary>
-          NPRM,
-        /// <summary>
-        /// Ordnance Survey of Great Britain 1936 ellipsoid=AIRY region="Great Britain, Northern Ireland"
-        /// </summary>
-          OSGB36,
-        /// <summary>
-        /// European 'Pelmert Tower, Potsdam' ellipsoid=INT24 region="Most of Eurasia, Africa"
-        /// </summary>
-          POTS1,
-        /// <summary>
-        /// Russian 'Pulkovo' ellipsoid=BESS41 
-        /// </summary>
-          PULK1,
-        /// <summary>
-        /// Russian 'Pulkovo' ellipsoid=KRSV 
-        /// </summary>
-          PULK2,
-        /// <summary>
-        /// Qornoq ellipsoid=INT24 region=Greenland 
-        /// </summary>
-          QRNQ,
-        /// <summary>
-        /// Provisional South American, 1956 ellipsoid=INT24 region="Bolivia, Chile, Colombia, Ecuador, Peru, Venezuela, the Guianas"
-        /// </summary>
-          SA56,
-        /// <summary>
-        /// Sierra Leone 1960 ellipsoid=CL80 region="Sierra Leone"
-        /// </summary>
-          SRL60,
-        /// <summary>
-        /// Tananarive (Antananarivo) Obsv. 1925T ellipsoid=INT24 region="Malagasy Republic"
-        /// </summary>
-          TNRV25,
-        /// <summary>
-        /// Tokyo ellipsoid=BESS41 region=Japan
-        /// </summary>
-          TOKYO,
-        /// <summary>
-        /// Datum defined elsewhere
-        /// </summary>
-          UserDefined,
-        /// <summary>
-        /// Voirol ellipsoid=CL80 region="Algeria, Tunisia"
-        /// </summary>
-          VROL,
-        /// <summary>
-        /// World Geodetic System 1972 ellipsoid=WGS72
-        /// </summary>
-          WGS72,
-        /// <summary>
-        /// World Geodetic System 1984 ellipsoid=WGS84 region="Sino-Soviet Bloc, SW Asia, Hydrographic, Aeronautical"
-        /// </summary>
-          WGS84,
-        /// <summary>
-        /// Yacare ellipsoid=INT24 region=Uruguay
-        /// </summary>
-          YACR,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the Ellipsoid xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the Ellipsoid xsd enumeration.")]
-        public enum Ellipsoid 
-        {
-        /// <summary>
-        /// Australian Old
-        /// </summary>
-          AGD66,
-        /// <summary>
-        /// Modified Airy
-        /// </summary>
-          AIRY_MOD,
-        /// <summary>
-        /// Airy 1830
-        /// </summary>
-          AIRY30,
-        /// <summary>
-        /// Airy 1849
-        /// </summary>
-          AIRY49,
-        /// <summary>
-        /// Australian National Same as KAU63 and SA69
-        /// </summary>
-          AUST_NAT,
-        /// <summary>
-        /// BESLDHD property
-        /// </summary>
-          [XmlEnum("BESL-DHD")]
-          BESLDHD,
-        /// <summary>
-        /// BESLNGL property
-        /// </summary>
-          [XmlEnum("BESL-NGL")]
-          BESLNGL,
-        /// <summary>
-        /// BESLRT9 property
-        /// </summary>
-          [XmlEnum("BESL-RT9")]
-          BESLRT9,
-        /// <summary>
-        /// Bessel 1841
-        /// </summary>
-          BESS41,
-        /// <summary>
-        /// Bessel 1841 for Namibia
-        /// </summary>
-          BESSNAM,
-        /// <summary>
-        /// BOGOTA (International 1924)
-        /// </summary>
-          BOGOTA,
-        /// <summary>
-        /// Clarke 1858
-        /// </summary>
-          CL58,
-        /// <summary>
-        /// CL581 property
-        /// </summary>
-          [XmlEnum("CL58-1")]
-          CL581,
-        /// <summary>
-        /// Clarke 1866
-        /// </summary>
-          CL66,
-        /// <summary>
-        /// CL66M property
-        /// </summary>
-          [XmlEnum("CL66-M")]
-          CL66M,
-        /// <summary>
-        /// Clarke 1880
-        /// </summary>
-          CL80,
-        /// <summary>
-        /// CL80A property
-        /// </summary>
-          [XmlEnum("CL80-A")]
-          CL80A,
-        /// <summary>
-        /// CL80B property
-        /// </summary>
-          [XmlEnum("CL80-B")]
-          CL80B,
-        /// <summary>
-        /// CL80I property
-        /// </summary>
-          [XmlEnum("CL80-I")]
-          CL80I,
-        /// <summary>
-        /// CL80J property
-        /// </summary>
-          [XmlEnum("CL80-J")]
-          CL80J,
-        /// <summary>
-        /// CL80M property
-        /// </summary>
-          [XmlEnum("CL80-M")]
-          CL80M,
-        /// <summary>
-        /// CL80P property
-        /// </summary>
-          [XmlEnum("CL80-P")]
-          CL80P,
-        /// <summary>
-        /// CAMPO INCH (International 1924)
-        /// </summary>
-          CMPOINCH,
-        /// <summary>
-        /// Danish
-        /// </summary>
-          DAN,
-        /// <summary>
-        /// DELAMBRE 1810 
-        /// </summary>
-          DELA,
-        /// <summary>
-        /// ED50 (International 1924)
-        /// </summary>
-          ED50,
-        /// <summary>
-        /// EGYPT07 (Helmert 1906)
-        /// </summary>
-          EGYPT07,
-        /// <summary>
-        /// Everest 1830 - Indian
-        /// </summary>
-          EVER,
-        /// <summary>
-        /// Everest 1948
-        /// </summary>
-          EVER48,
-        /// <summary>
-        /// Everest 1956
-        /// </summary>
-          EVER56,
-        /// <summary>
-        /// Everest 1969
-        /// </summary>
-          EVER69,
-        /// <summary>
-        /// EVERBR property
-        /// </summary>
-          [XmlEnum("EVER-BR")]
-          EVERBR,
-        /// <summary>
-        /// Modified Everest
-        /// </summary>
-          EVERMOD,
-        /// <summary>
-        /// EVERP property
-        /// </summary>
-          [XmlEnum("EVER-P")]
-          EVERP,
-        /// <summary>
-        /// EVERTM property
-        /// </summary>
-          [XmlEnum("EVER-TM")]
-          EVERTM,
-        /// <summary>
-        /// Everest - Timbali 
-        /// </summary>
-          EVTM,
-        /// <summary>
-        /// "Fischer 1960 aka ""Mercury"""
-        /// </summary>
-          FISC60,
-        /// <summary>
-        /// Fischer 1960 Modified
-        /// </summary>
-          FISC60MOD,
-        /// <summary>
-        /// "Fischer 1968 aka ""Modified Mercury"""
-        /// </summary>
-          FISC68,
-        /// <summary>
-        /// "Modified Fischer 1960 aka ""South Asia"""
-        /// </summary>
-          FISCMOD,
-        /// <summary>
-        /// GDA94 - Australia
-        /// </summary>
-          GDA94,
-        /// <summary>
-        /// Geodetic Reference System 1967
-        /// </summary>
-          GRS67,
-        /// <summary>
-        /// Geodetic Reference System 1980
-        /// </summary>
-          GRS80,
-        /// <summary>
-        /// Hayford 1909
-        /// </summary>
-          HAY09,
-        /// <summary>
-        /// Heiskanen 1929
-        /// </summary>
-          HEIS,
-        /// <summary>
-        /// Helmert 1906
-        /// </summary>
-          HEL06,
-        /// <summary>
-        /// Helmert 1907 
-        /// </summary>
-          HEL07,
-        /// <summary>
-        /// Hough 1956 
-        /// </summary>
-          HOUG,
-        /// <summary>
-        /// IAG75 property
-        /// </summary>
-          [XmlEnum("IAG-75")]
-          IAG75,
-        /// <summary>
-        /// INDIAN75 (Everest 1930)
-        /// </summary>
-          INDIAN75,
-        /// <summary>
-        /// INDO74 property
-        /// </summary>
-          [XmlEnum("INDO-74")]
-          INDO74,
-        /// <summary>
-        /// International 1924
-        /// </summary>
-          INT24,
-        /// <summary>
-        /// IUGG 1967
-        /// </summary>
-          IUGG67,
-        /// <summary>
-        /// IUGG 1975
-        /// </summary>
-          IUGG75,
-        /// <summary>
-        /// Jeffreys 1948
-        /// </summary>
-          JEFF48,
-        /// <summary>
-        /// Kaula 1963 Same as AUST_NAT and SA69
-        /// </summary>
-          KAU63,
-        /// <summary>
-        /// Krassovsky
-        /// </summary>
-          KRSV,
-        /// <summary>
-        /// MERIT83
-        /// </summary>
-          MERIT83,
-        /// <summary>
-        /// NAD27 (Clarke 1866)
-        /// </summary>
-          NAD27,
-        /// <summary>
-        /// NAHRAN (Clarke 1880)
-        /// </summary>
-          NAHRAN,
-        /// <summary>
-        /// New International 1967
-        /// </summary>
-          NEWINT67,
-        /// <summary>
-        /// NWL10D property
-        /// </summary>
-          [XmlEnum("NWL-10D")]
-          NWL10D,
-        /// <summary>
-        /// NWL9D property
-        /// </summary>
-          [XmlEnum("NWL-9D")]
-          NWL9D,
-        /// <summary>
-        /// OSGB36 (Airy 1830)
-        /// </summary>
-          OSGB36,
-        /// <summary>
-        /// OSU86F
-        /// </summary>
-          OSU86F,
-        /// <summary>
-        /// OSU91A
-        /// </summary>
-          OSU91A,
-        /// <summary>
-        /// PLESSIS1817 property
-        /// </summary>
-          [XmlEnum("PLESSIS-1817")]
-          PLESSIS1817,
-        /// <summary>
-        /// PSAD56 (International 1924)
-        /// </summary>
-          PSAD56,
-        /// <summary>
-        /// Pointe Noire 1948
-        /// </summary>
-          PTNOIRE,
-        /// <summary>
-        /// South American 1969
-        /// </summary>
-          SA69,
-        /// <summary>
-        /// Sphere of radius 6370997
-        /// </summary>
-          SPHR,
-        /// <summary>
-        /// Struve 1860
-        /// </summary>
-          STRU,
-        /// <summary>
-        /// Walbeck
-        /// </summary>
-          WALB,
-        /// <summary>
-        /// War Office 1924
-        /// </summary>
-          WAR24,
-        /// <summary>
-        /// World Geodetic System 1960
-        /// </summary>
-          WGS60,
-        /// <summary>
-        /// World Geodetic System 1966
-        /// </summary>
-          WGS66,
-        /// <summary>
-        /// World Geodetic System 1972
-        /// </summary>
-          WGS72,
-        /// <summary>
-        /// World Geodetic System 1984
-        /// </summary>
-          WGS84,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the Projection xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the Projection xsd enumeration.")]
-        public enum Projection 
-        {
-        /// <summary>
-        /// Albersequalarea property
-        /// </summary>
-          [XmlEnum("Albers equal area")]
-          Albersequalarea,
-        /// <summary>
-        /// azimuthalequidistant property
-        /// </summary>
-          [XmlEnum("azimuthal equidistant")]
-          azimuthalequidistant,
-        /// <summary>
-        /// 217-PARAMETERS-PROJECTION-CASSINI
-        /// </summary>
-          Cassini,
-        /// <summary>
-        /// equidistantconic property
-        /// </summary>
-          [XmlEnum("equidistant conic")]
-          equidistantconic,
-        /// <summary>
-        /// 217-PARAMETERS-PROJECTION-EQUIRECTANGULAR
-        /// </summary>
-          equirectangular,
-        /// <summary>
-        /// 217-PARAMETERS-PROJECTION-GNOMONIC
-        /// </summary>
-          gnomonic,
-        /// <summary>
-        /// Lambertazimuthal property
-        /// </summary>
-          [XmlEnum("Lambert azimuthal")]
-          Lambertazimuthal,
-        /// <summary>
-        /// Lambertconformalconic property
-        /// </summary>
-          [XmlEnum("Lambert conformal conic")]
-          Lambertconformalconic,
-        /// <summary>
-        /// 217-PARAMETERS-PROJECTION-MERCATOR
-        /// </summary>
-          Mercator,
-        /// <summary>
-        /// 217-PARAMETERS-PROJECTION-MILLER
-        /// </summary>
-          Miller,
-        /// <summary>
-        /// obliqueMercator property
-        /// </summary>
-          [XmlEnum("oblique Mercator")]
-          obliqueMercator,
-        /// <summary>
-        /// 217-PARAMETERS-PROJECTION-ORTHO
-        /// </summary>
-          orthographic,
-        /// <summary>
-        /// 217-PARAMETERS-PROJECTION-PERSPECTIVE
-        /// </summary>
-          perspective,
-        /// <summary>
-        /// polarstereographic property
-        /// </summary>
-          [XmlEnum("polar stereographic")]
-          polarstereographic,
-        /// <summary>
-        /// 217-PARAMETERS-PROJECTION-POLYCONIC
-        /// </summary>
-          polyconic,
-        /// <summary>
-        /// 217-PARAMETERS-PROJECTION-SINUSOIDAL
-        /// </summary>
-          sinusoidal,
-        /// <summary>
-        /// stateplane property
-        /// </summary>
-          [XmlEnum("state plane")]
-          stateplane,
-        /// <summary>
-        /// 217-PARAMETERS-PROJECTION-STEREO
-        /// </summary>
-          stereographic,
-        /// <summary>
-        /// transverseMercator property
-        /// </summary>
-          [XmlEnum("transverse Mercator")]
-          transverseMercator,
-        /// <summary>
-        /// universaltransverseMercator property
-        /// </summary>
-          [XmlEnum("universal transverse Mercator")]
-          universaltransverseMercator,
-        /// <summary>
-        /// userdefined property
-        /// </summary>
-          [XmlEnum("user defined")]
-          userdefined,
-        /// <summary>
-        /// VanderGrinten property
-        /// </summary>
-          [XmlEnum("Van der Grinten")]
-          VanderGrinten,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the ProjectionVariantsObliqueMercator xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the ProjectionVariantsObliqueMercator xsd enumeration.")]
-        public enum ProjectionVariantsObliqueMercator 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          @default,
-        /// <summary>
-        /// 
-        /// </summary>
-          rectified,
-        /// <summary>
-        /// rectifiedskew property
-        /// </summary>
-          [XmlEnum("rectified skew")]
-          rectifiedskew,
-        /// <summary>
-        /// rectifiedskewcenterorigin property
-        /// </summary>
-          [XmlEnum("rectified skew center origin")]
-          rectifiedskewcenterorigin,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the NADTypes xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the NADTypes xsd enumeration.")]
-        public enum NADTypeList 
-        {
-        /// <summary>
-        /// 
-        /// </summary>
-          NAD27,
-        /// <summary>
-        /// 
-        /// </summary>
-          NAD83,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the Hemispheres xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the Hemispheres xsd enumeration.")]
-        public enum HemisphereList 
-        {
-        /// <summary>
-        /// Northern hemisphere.
-        /// </summary>
-          northern,
-        /// <summary>
-        /// Southern hemisphere.
-        /// </summary>
-          southern,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the WellboreType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the WellboreType xsd enumeration.")]
-        public enum WellboreType 
-        {
-        /// <summary>
-        /// The original wellbore had to be abandoned before its final usage. This wellbore is being drilled as a different wellbore, but one which has the same target as the one that was abandoned.
-        /// </summary>
-          bypass,
-        /// <summary>
-        /// This is the first wellbore that has been drilled, or attempted, in a given well.
-        /// </summary>
-          initial,
-        /// <summary>
-        /// The wellbore is being redrilled.
-        /// </summary>
-          redrill,
-        /// <summary>
-        /// The wellbore is being reentered after a period of abandonment.
-        /// </summary>
-          reentry,
-        /// <summary>
-        /// The wellbore is part of an existing regulatory well. The original borehole did not reach the target depth. This borehole required the well to be respudded (drilled from a different surface position).
-        /// </summary>
-          respud,
-        /// <summary>
-        /// The wellbore is a deviation from a given wellbore, that produces a different borehole from the others, and whose bottomhole differs from any previously extisting wellbore bottomholes.
-        /// </summary>
-          sidetrack,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the WellboreShape xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the WellboreShape xsd enumeration.")]
-        public enum WellboreShape 
-        {
-        /// <summary>
-        /// buildandhold property
-        /// </summary>
-          [XmlEnum("build and hold")]
-          buildandhold,
-        /// <summary>
-        /// A wellbore that significantly departs from vertical with respect to the surface location.
-        /// </summary>
-          deviated,
-        /// <summary>
-        /// doublekickoff property
-        /// </summary>
-          [XmlEnum("double kickoff")]
-          doublekickoff,
-        /// <summary>
-        /// A wellbore whose path deviates from the vertical by at least 75 degrees.
-        /// </summary>
-          horizontal,
-        /// <summary>
-        /// Sshaped property
-        /// </summary>
-          [XmlEnum("S-shaped")]
-          Sshaped,
-        /// <summary>
-        /// A wellbore that is nearly vertical with respect to the surface location.
-        /// </summary>
-          vertical,
-        /// <summary>
-        /// The value is not known. This value should not be used in normal situations. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the ArrayElementDataType xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/131")]
-        [Description("This class represents the ArrayElementDataType xsd enumeration.")]
-        public enum ArrayElementDataType 
-        {
-        /// <summary>
-        /// boolean property
-        /// </summary>
-          boolean,
-        /// <summary>
-        /// integer8bit property
-        /// </summary>
-          [XmlEnum("integer 8 bit")]
-          integer8bit,
-        /// <summary>
-        /// integer16bit property
-        /// </summary>
-          [XmlEnum("integer 16 bit")]
-          integer16bit,
-        /// <summary>
-        /// integer32bit property
-        /// </summary>
-          [XmlEnum("integer 32 bit")]
-          integer32bit,
-        /// <summary>
-        /// integer64bit property
-        /// </summary>
-          [XmlEnum("integer 64 bit")]
-          integer64bit,
-        /// <summary>
-        /// IEEEfloat32bit property
-        /// </summary>
-          [XmlEnum("IEEE float 32 bit")]
-          IEEEfloat32bit,
-        /// <summary>
-        /// IEEEfloat64bit property
-        /// </summary>
-          [XmlEnum("IEEE float 64 bit")]
-          IEEEfloat64bit
         }
     }
     #endregion

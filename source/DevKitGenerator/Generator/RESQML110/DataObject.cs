@@ -13401,7 +13401,6 @@ namespace Energistics.Generator.RESQML110 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://purl.org/dc/terms/")]
-    [System.Xml.Serialization.XmlRootAttribute("format", Namespace="http://purl.org/dc/terms/", IsNullable=false)]
     public enum ResqmlFormat {
         
         /// <remarks/>

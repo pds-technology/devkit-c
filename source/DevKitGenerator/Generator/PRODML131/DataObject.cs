@@ -37744,4 +37744,239 @@ namespace Energistics.Generator.PRODML131 {
             }
         }
     }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    public enum NameTagLocation {
+        
+        /// <remarks/>
+        body,
+        
+        /// <remarks/>
+        box,
+        
+        /// <remarks/>
+        pin,
+        
+        /// <remarks/>
+        other,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    public enum NameTagNumberingScheme {
+        
+        /// <remarks/>
+        EPC64,
+        
+        /// <remarks/>
+        EPC96,
+        
+        /// <remarks/>
+        MSRCID,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ANSI/AIM-BC2")]
+        ANSIAIMBC2,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ANSI/AIM-BC6")]
+        ANSIAIMBC6,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ANSI/AIM-BC10")]
+        ANSIAIMBC10,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("EAN.UCC")]
+        EANUCC,
+        
+        /// <remarks/>
+        F2F,
+        
+        /// <remarks/>
+        MFM,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("serial number")]
+        serialnumber,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    public enum NameTagTechnology {
+        
+        /// <remarks/>
+        tagged,
+        
+        /// <remarks/>
+        labeled,
+        
+        /// <remarks/>
+        intrinsic,
+        
+        /// <remarks/>
+        stamped,
+        
+        /// <remarks/>
+        painted,
+        
+        /// <remarks/>
+        temporary,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    public enum InstalledFiberPoint {
+        
+        /// <remarks/>
+        splice,
+        
+        /// <remarks/>
+        connector,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("end of fiber")]
+        endoffiber,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("base of fiber")]
+        baseoffiber,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("turn around point")]
+        turnaroundpoint,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("start of fiber")]
+        startoffiber,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("oven entry point")]
+        ovenentrypoint,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("oven exit point")]
+        ovenexitpoint,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("downhole gauge")]
+        downholegauge,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DTS laser head")]
+        DTSlaserhead,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("DTS reference oven")]
+        DTSreferenceoven,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("splice box")]
+        splicebox,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wellhead junction box")]
+        wellheadjunctionbox,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("base tubing hanger flange")]
+        basetubinghangerflange,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("PBR wet connect")]
+        PBRwetconnect,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("top ESP pump")]
+        topESPpump,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("base ESP pump")]
+        baseESPpump,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("wellhead temperature gauge")]
+        wellheadtemperaturegauge,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("top completion zone")]
+        topcompletionzone,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("base completion zone")]
+        basecompletionzone,
+        
+        /// <remarks/>
+        unknown,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    public enum InterpretationMnemonicType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("facilityDistance,adjustedTemperature")]
+        facilityDistanceadjustedTemperature,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    public enum InterpretationUnitType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m,degC")]
+        mdegC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft,degF")]
+        ftdegF,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    public enum MeasurementMnemonicType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute(@"fiberDistance,antistokes,stokes,reverseAntiStokes,reverseStokes,rayleigh1,rayleigh2,brillouinfrequency,loss,lossRatio,cumulativeExcessLoss,frequencyQualityMeasure,measurementUncertainty,brillouinAmplitude,opticalPathTemperature,uncalibratedTemperature1,uncalibratedTemperature2,")]
+        fiberDistanceantistokesstokesreverseAntiStokesreverseStokesrayleigh1rayleigh2brillouinfrequencylosslossRatiocumulativeExcessLossfrequencyQualityMeasuremeasurementUncertaintybrillouinAmplitudeopticalPathTemperatureuncalibratedTemperature1uncalibratedTemperature2,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
+    public enum MeasurementUnitType {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("m,mW,mW,mW,mW,mW,mW,GHz,dB/Km,dB/Km,dB,dimensionless,degC,mW,degC,degC,degC,")]
+        mmWmWmWmWmWmWGHzdBKmdBKmdBdimensionlessdegCmWdegCdegCdegC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft,mW,mW,mW,mW,mW,mW,GHz,dB/Km,dB/Km,dB,dimensionless,degF,mW,degF,degF,degF,")]
+        ftmWmWmWmWmWmWGHzdBKmdBKmdBdimensionlessdegFmWdegFdegFdegF,
+    }
 }

@@ -9,4 +9,3 @@ C:\projects\source_master\source\DevKitGenerator\SchemaGatherer\bin\Debug\Energi
 C:\projects\source_master\source\DevKitGenerator\SchemaGatherer\bin\Debug\Energistics.SchemaGatherer.pdb
 C:\projects\source_master\source\DevKitGenerator\SchemaGatherer\obj\x86\Debug\Energistics.SchemaGatherer.exe
 C:\projects\source_master\source\DevKitGenerator\SchemaGatherer\obj\x86\Debug\Energistics.SchemaGatherer.pdb
-C:\Projects\source\DevKitGenerator\SchemaGatherer\obj\x86\Debug\SchemaGatherer.csprojResolveAssemblyReference.cache
