@@ -17,6 +17,66 @@
 	<!--														-->
 	<xs:include schemaLocation="CommonEnumerations.xsd"/>
 	<xs:include schemaLocation="BaseTypes.xsd"/>
+	<xs:complexType name="ExtensionNameValue">
+		<xs:annotation>
+			<xs:documentation>WITSML - Extension values Schema. The intent is to allow standard WITSML "named" 
+extensions without having to modify the schema. A client or server can ignore any name that it 
+does not recognize but certain meta data is required in order to allow 
+generic clients or servers to process the value.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Name" type="eml:String64" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The name of the extension.
+Each standard name should document the expected measure class.
+Each standard name should document the expected maximum size. 
+For numeric values the size should be in terms of xsd types
+such as int, long, short, byte, float or double.
+For strings, the maximum length should be defined in number of characters.
+Local extensions to the list of standard names are allowed but it is strongly
+recommended that the names and definitions be approved by the 
+respective SIG Technical Team before use.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Value" type="eml:StringMeasure" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The value of the extension. This may also include a uom attribute. The content should conform to constraints defined by the data type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MeasureClass" type="eml:MeasureClass" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The kind of the measure. For example, "length".
+This should be specified if the value requires a unit of measure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The date-time associated with the value.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Index" type="xs:int" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Indexes things with the same name. 
+That is, 1 indicates the first one, 2 indicates the second one, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Description" type="eml:String2000" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A textual description of the extension.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="AbstractDataObject" type="eml:AbstractObject">
+		<xs:annotation>
+			<xs:documentation>Substitution group for normative data objects.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="AbstractContextualObject" type="eml:AbstractObject">
+		<xs:annotation>
+			<xs:documentation>Substitution group for contextual data objects.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="AbstractObject" abstract="true">
 		<xs:annotation>
 			<xs:documentation>The parent class for all top-level elements across the Energistics MLs. </xs:documentation>
@@ -151,64 +211,4 @@ Legacy DCGroup - subject</xs:documentation>
 		</xs:sequence>
 		<xs:attribute name="authority" use="required" type="eml:String64"/>
 	</xs:complexType>
-	<xs:element name="AbstractDataObject" type="eml:AbstractObject">
-		<xs:annotation>
-			<xs:documentation>Substitution group for normative data objects.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:complexType name="ExtensionNameValue">
-		<xs:annotation>
-			<xs:documentation>WITSML - Extension values Schema. The intent is to allow standard WITSML "named" 
-extensions without having to modify the schema. A client or server can ignore any name that it 
-does not recognize but certain meta data is required in order to allow 
-generic clients or servers to process the value.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Name" type="eml:String64" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The name of the extension.
-Each standard name should document the expected measure class.
-Each standard name should document the expected maximum size. 
-For numeric values the size should be in terms of xsd types
-such as int, long, short, byte, float or double.
-For strings, the maximum length should be defined in number of characters.
-Local extensions to the list of standard names are allowed but it is strongly
-recommended that the names and definitions be approved by the 
-respective SIG Technical Team before use.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Value" type="eml:StringMeasure" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The value of the extension. This may also include a uom attribute. The content should conform to constraints defined by the data type.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MeasureClass" type="eml:MeasureClass" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The kind of the measure. For example, "length".
-This should be specified if the value requires a unit of measure.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="DTim" type="eml:TimeStamp" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>The date-time associated with the value.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Index" type="xs:int" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Indexes things with the same name. 
-That is, 1 indicates the first one, 2 indicates the second one, etc.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Description" type="eml:String2000" minOccurs="0" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>A textual description of the extension.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:element name="AbstractContextualObject" type="eml:AbstractObject">
-		<xs:annotation>
-			<xs:documentation>Substitution group for contextual data objects.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 </xs:schema>

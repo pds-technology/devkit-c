@@ -48,7 +48,7 @@
 					<xs:documentation>Use to indicate if this is a time or depth log.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ChannelClass" type="eml:PropertyKind" minOccurs="0" maxOccurs="1">
+			<xs:element name="ChannelClass" type="eml:DataObjectReference" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.</xs:documentation>
 				</xs:annotation>
@@ -121,7 +121,7 @@ When more than one diameter holes are being drilled at the same time (e.g., wher
 			</xs:element>
 		</xs:sequence>
 	</xs:group>
-	<xs:group name="LogChannelMetadata">
+	<xs:group name="ChannelMetadata">
 		<xs:annotation>
 			<xs:documentation>Common metadata across all channel objects</xs:documentation>
 		</xs:annotation>
@@ -136,7 +136,7 @@ When more than one diameter holes are being drilled at the same time (e.g., wher
 					<xs:documentation>Is this a time or depth log?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ChannelClass" type="eml:PropertyKind" minOccurs="1" maxOccurs="1">
+			<xs:element name="ChannelClass" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.
 
@@ -591,7 +591,7 @@ Closed: A channel will never produce points again. The rules for when a channel 
 					</xs:element>
 					<xs:element name="Wellbore" type="eml:DataObjectReference" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="AxisDefinition" type="witsml:LogChannelAxis" minOccurs="0" maxOccurs="unbounded"/>
-					<xs:group ref="witsml:LogChannelMetadata" minOccurs="1" maxOccurs="1"/>
+					<xs:group ref="witsml:ChannelMetadata" minOccurs="1" maxOccurs="1"/>
 					<xs:element name="PointMetadata" type="witsml:PointMetadata" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="DerivedFrom" type="eml:DataObjectReference" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="Index" type="witsml:ChannelIndex" minOccurs="1" maxOccurs="unbounded"/>

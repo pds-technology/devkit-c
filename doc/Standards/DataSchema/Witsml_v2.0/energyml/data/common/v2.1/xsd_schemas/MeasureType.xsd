@@ -2580,4 +2580,14 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
+	<xs:complexType name="UnitlessMeasure">
+		<xs:annotation>
+			<xs:documentation>A unitless measure is a measure which has no unit of measure symbol, but could be a real physical measurement. Examples would be pH, wire gauge (AWG and BWG) and shoe size.
+
+This is different from a dimensionless measure which represents a ratio whose units of measure have cancelled each other. DImensionless measures can have units of measure (like ppm or %) or may not have a displayable unit of measure symbol (in which case the units symbol Euc is used in a data transfer).</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="eml:AbstractMeasure"/>
+		</xs:simpleContent>
+	</xs:complexType>
 </xs:schema>

@@ -444,7 +444,7 @@ Values are "true" (or "1") and "false" (or "0").</xs:documentation>
 					<xs:documentation>Viscosity of stimulation fluid.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="PH" type="eml:DimensionlessMeasure" minOccurs="0" maxOccurs="1">
+			<xs:element name="pH" type="eml:UnitlessMeasure" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>The pH of the fluid.</xs:documentation>
 				</xs:annotation>

@@ -500,7 +500,7 @@
 		<xs:union memberTypes="eml:EnergyPerMassUom eml:EnumExtensionPattern"/>
 	</xs:simpleType>
 	<xs:simpleType name="CationExchangeCapacityUom">
-		<xs:restriction base="xs:string">
+		<xs:restriction base="eml:UomEnum">
 			<xs:enumeration value=".01 meq/g"/>
 		</xs:restriction>
 	</xs:simpleType>
@@ -3888,7 +3888,7 @@
 		<xs:union memberTypes="eml:ThermalResistanceUom eml:EnumExtensionPattern"/>
 	</xs:simpleType>
 	<xs:simpleType name="AreaPerCountUom">
-		<xs:restriction base="xs:string">
+		<xs:restriction base="eml:UomEnum">
 			<xs:enumeration value="b/electron"/>
 		</xs:restriction>
 	</xs:simpleType>

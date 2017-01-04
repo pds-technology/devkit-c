@@ -245,170 +245,7 @@
 			<xs:enumeration value="volume per volume"/>
 			<xs:enumeration value="volumetric heat transfer coefficient"/>
 			<xs:enumeration value="volumetric thermal expansion"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="GeochronologicalRank">
-		<xs:annotation>
-			<xs:documentation>Qualifier for the geological time denoted by the GeochronologicalUnit: eon, era, epoch, etc.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="eon"/>
-			<xs:enumeration value="era"/>
-			<xs:enumeration value="period"/>
-			<xs:enumeration value="epoch"/>
-			<xs:enumeration value="age"/>
-			<xs:enumeration value="chron"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="ChannelClassKind">
-		<xs:restriction base="eml:TypeEnum"/>
-	</xs:simpleType>
-	<xs:simpleType name="LithologyKind">
-		<xs:annotation>
-			<xs:documentation>A description of minerals or accessories that constitute a fractional part of a lithology description</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="alkali feldspar rhyolite"/>
-			<xs:enumeration value="alkali olivine basalt"/>
-			<xs:enumeration value="amphibolite"/>
-			<xs:enumeration value="andesite"/>
-			<xs:enumeration value="anhydrite"/>
-			<xs:enumeration value="anorthositic rock"/>
-			<xs:enumeration value="anthracite"/>
-			<xs:enumeration value="aplite"/>
-			<xs:enumeration value="arenite"/>
-			<xs:enumeration value="argillaceous"/>
-			<xs:enumeration value="arkose"/>
-			<xs:enumeration value="basalt"/>
-			<xs:enumeration value="basanite"/>
-			<xs:enumeration value="bauxite"/>
-			<xs:enumeration value="bituminous coal"/>
-			<xs:enumeration value="blueschist metamorphic rock"/>
-			<xs:enumeration value="boninite"/>
-			<xs:enumeration value="breccia"/>
-			<xs:enumeration value="carbonate ooze"/>
-			<xs:enumeration value="carbonatite"/>
-			<xs:enumeration value="chalk"/>
-			<xs:enumeration value="chert"/>
-			<xs:enumeration value="clay"/>
-			<xs:enumeration value="claystone"/>
-			<xs:enumeration value="coal"/>
-			<xs:enumeration value="conglomerate"/>
-			<xs:enumeration value="dacite"/>
-			<xs:enumeration value="diabase"/>
-			<xs:enumeration value="diamictite"/>
-			<xs:enumeration value="diorite"/>
-			<xs:enumeration value="dioritoid"/>
-			<xs:enumeration value="doleritic rock"/>
-			<xs:enumeration value="dolomite"/>
-			<xs:enumeration value="dolomitic"/>
-			<xs:enumeration value="eclogite"/>
-			<xs:enumeration value="exotic alkaline rock"/>
-			<xs:enumeration value="feldspar"/>
-			<xs:enumeration value="feldspathic arenite"/>
-			<xs:enumeration value="fine grained igneous rock"/>
-			<xs:enumeration value="foid dioritoid"/>
-			<xs:enumeration value="foid gabbroid"/>
-			<xs:enumeration value="foid syenitoid"/>
-			<xs:enumeration value="foidite"/>
-			<xs:enumeration value="foiditoid"/>
-			<xs:enumeration value="foidolite"/>
-			<xs:enumeration value="foliated metamorphic rock"/>
-			<xs:enumeration value="fragmental igneous rock"/>
-			<xs:enumeration value="gabbro"/>
-			<xs:enumeration value="gabbroic rock"/>
-			<xs:enumeration value="gabbroid"/>
-			<xs:enumeration value="glauconite"/>
-			<xs:enumeration value="gneiss"/>
-			<xs:enumeration value="granite"/>
-			<xs:enumeration value="granodiorite"/>
-			<xs:enumeration value="granofels"/>
-			<xs:enumeration value="granulite"/>
-			<xs:enumeration value="gravel"/>
-			<xs:enumeration value="greenstone"/>
-			<xs:enumeration value="gumbo"/>
-			<xs:enumeration value="gypsum"/>
-			<xs:enumeration value="halite"/>
-			<xs:enumeration value="hornfels"/>
-			<xs:enumeration value="igneous rock"/>
-			<xs:enumeration value="impact generated material"/>
-			<xs:enumeration value="impure dolomite"/>
-			<xs:enumeration value="impure limestone"/>
-			<xs:enumeration value="intrusive rock (plutonic)"/>
-			<xs:enumeration value="iron rich sedimentary rock"/>
-			<xs:enumeration value="kalsilitic and melilitic rocks"/>
-			<xs:enumeration value="komatiitic rock"/>
-			<xs:enumeration value="latitic rock"/>
-			<xs:enumeration value="lignite"/>
-			<xs:enumeration value="lime boundstone"/>
-			<xs:enumeration value="lime framestone"/>
-			<xs:enumeration value="lime grainstone"/>
-			<xs:enumeration value="lime mudstone"/>
-			<xs:enumeration value="lime packstone"/>
-			<xs:enumeration value="lime wackestone"/>
-			<xs:enumeration value="limestone"/>
-			<xs:enumeration value="marble"/>
-			<xs:enumeration value="marl"/>
-			<xs:enumeration value="metamorphic rock"/>
-			<xs:enumeration value="mica schist"/>
-			<xs:enumeration value="migmatite"/>
-			<xs:enumeration value="monzogabbro"/>
-			<xs:enumeration value="mud"/>
-			<xs:enumeration value="mudstone"/>
-			<xs:enumeration value="mylonitic rock"/>
-			<xs:enumeration value="no description"/>
-			<xs:enumeration value="no sample"/>
-			<xs:enumeration value="ooze"/>
-			<xs:enumeration value="ophiolite"/>
-			<xs:enumeration value="organic bearing mudstone"/>
-			<xs:enumeration value="peat"/>
-			<xs:enumeration value="pegmatite"/>
-			<xs:enumeration value="peridotite"/>
-			<xs:enumeration value="phaneritic igneous rock"/>
-			<xs:enumeration value="phonolite"/>
-			<xs:enumeration value="phonolitoid"/>
-			<xs:enumeration value="phosphate"/>
-			<xs:enumeration value="phosphate rock"/>
-			<xs:enumeration value="phyllite"/>
-			<xs:enumeration value="porphyry"/>
-			<xs:enumeration value="potassium and magnesium salts"/>
-			<xs:enumeration value="pyroclastic breccia"/>
-			<xs:enumeration value="pyroclastic rock"/>
-			<xs:enumeration value="pyroxenite"/>
-			<xs:enumeration value="quartz arenite"/>
-			<xs:enumeration value="quartzite"/>
-			<xs:enumeration value="rhyolite"/>
-			<xs:enumeration value="rock salt"/>
-			<xs:enumeration value="sand"/>
-			<xs:enumeration value="sandstone"/>
-			<xs:enumeration value="sandy"/>
-			<xs:enumeration value="sapropel"/>
-			<xs:enumeration value="schist"/>
-			<xs:enumeration value="serpentinite"/>
-			<xs:enumeration value="shale"/>
-			<xs:enumeration value="siliceous ooze"/>
-			<xs:enumeration value="silt"/>
-			<xs:enumeration value="siltstone"/>
-			<xs:enumeration value="skarn"/>
-			<xs:enumeration value="slate"/>
-			<xs:enumeration value="spilite"/>
-			<xs:enumeration value="syenite"/>
-			<xs:enumeration value="syenitoid"/>
-			<xs:enumeration value="sylvite"/>
-			<xs:enumeration value="tephrite"/>
-			<xs:enumeration value="tephritoid"/>
-			<xs:enumeration value="tholeiitic basalt"/>
-			<xs:enumeration value="tonalite"/>
-			<xs:enumeration value="trachyte"/>
-			<xs:enumeration value="trachytic rock"/>
-			<xs:enumeration value="trachytoid"/>
-			<xs:enumeration value="travertine"/>
-			<xs:enumeration value="tuff"/>
-			<xs:enumeration value="tuffite"/>
-			<xs:enumeration value="ultrabasic"/>
-			<xs:enumeration value="undifferentiated"/>
-			<xs:enumeration value="unknown"/>
-			<xs:enumeration value="wacke"/>
+			<xs:enumeration value="unitless"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="LithostratigraphicRank">
@@ -456,6 +293,9 @@ are given proper names and considered formal lithostratigraphic units.</xs:docum
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="QuantityClassKindExt">
+		<xs:union memberTypes="eml:QuantityClassKind eml:EnumExtensionPattern"/>
+	</xs:simpleType>
 	<xs:simpleType name="UnitOfMeasureExt">
 		<xs:annotation>
 			<xs:documentation>A variant of UnitOfMeasure which has been extended to allow any user-defined unit of measure which follows an authority:unit pattern; the colon is mandatory.
@@ -463,6 +303,300 @@ are given proper names and considered formal lithostratigraphic units.</xs:docum
 This class is implemented in XML as a union between the list of valid units per the prevailing Energistics Units of Measure Specification and an XML pattern which mandates the central colon.</xs:documentation>
 		</xs:annotation>
 		<xs:union memberTypes="eml:UnitOfMeasure eml:EnumExtensionPattern"/>
+	</xs:simpleType>
+	<xs:simpleType name="WellboreDatumReference">
+		<xs:annotation>
+			<xs:documentation>Reference location for the measured depth datum (MdDatum).
+
+The type of local or permanent reference datum for vertical gravity based (i.e., elevation and vertical depth) and measured depth coordinates within the context of a well. This list includes local points (e.g., kelly bushing) used as a datum and vertical reference datums (e.g., mean sea level).</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="ground level"/>
+			<xs:enumeration value="kelly bushing"/>
+			<xs:enumeration value="mean sea level">
+				<xs:annotation>
+					<xs:documentation>A tidal datum. The arithmetic mean of hourly heights observed over the National Tidal Datum Epoch (19 years).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="derrick floor"/>
+			<xs:enumeration value="casing flange">
+				<xs:annotation>
+					<xs:documentation>A flange affixed to the top of the casing string used to attach production equipment.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="crown valve"/>
+			<xs:enumeration value="rotary bushing"/>
+			<xs:enumeration value="rotary table"/>
+			<xs:enumeration value="sea floor"/>
+			<xs:enumeration value="lowest astronomical tide">
+				<xs:annotation>
+					<xs:documentation>The lowest tide level over the duration of the National Tidal Datum Epoch (19 years).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mean higher high water">
+				<xs:annotation>
+					<xs:documentation>A tidal datum. The average of the higher high water height of each tidal day observed over the National Tidal Datum Epoch (19 years).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mean high water">
+				<xs:annotation>
+					<xs:documentation>A tidal datum. The average of all the high water heights observed over the National Tidal Datum Epoch (19 years).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mean lower low water">
+				<xs:annotation>
+					<xs:documentation>A tidal datum. The average of the lower low water height of each tidal day observed over the National Tidal Datum Epoch (19 years).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mean low water">
+				<xs:annotation>
+					<xs:documentation>A tidal datum. The average of all the low water heights observed over the National Tidal Datum Epoch (19 years).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mean tide level">
+				<xs:annotation>
+					<xs:documentation>A tidal datum. The arithmetic mean of mean high water and mean low water. Same as half-tide level.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="kickoff point">
+				<xs:annotation>
+					<xs:documentation>This value is not expected to be used in most typical situations. All reasonable attempts should be made to determine the appropriate value.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LithologyQualifierKindExt">
+		<xs:union memberTypes="eml:LithologyQualifierKind eml:EnumExtensionPattern"/>
+	</xs:simpleType>
+	<xs:simpleType name="QuantityClassKind">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="absorbed dose"/>
+			<xs:enumeration value="activity of radioactivity"/>
+			<xs:enumeration value="amount of substance"/>
+			<xs:enumeration value="amount of substance per amount of substance"/>
+			<xs:enumeration value="amount of substance per area"/>
+			<xs:enumeration value="amount of substance per time"/>
+			<xs:enumeration value="amount of substance per time per area"/>
+			<xs:enumeration value="amount of substance per volume"/>
+			<xs:enumeration value="angle per length"/>
+			<xs:enumeration value="angle per volume"/>
+			<xs:enumeration value="angular acceleration"/>
+			<xs:enumeration value="angular velocity"/>
+			<xs:enumeration value="api gamma ray"/>
+			<xs:enumeration value="api gravity"/>
+			<xs:enumeration value="api neutron"/>
+			<xs:enumeration value="area"/>
+			<xs:enumeration value="area per amount of substance"/>
+			<xs:enumeration value="area per area"/>
+			<xs:enumeration value="area per count"/>
+			<xs:enumeration value="area per mass"/>
+			<xs:enumeration value="area per time"/>
+			<xs:enumeration value="area per volume"/>
+			<xs:enumeration value="attenuation per frequency interval"/>
+			<xs:enumeration value="capacitance"/>
+			<xs:enumeration value="cation exchange capacity"/>
+			<xs:enumeration value="data transfer speed"/>
+			<xs:enumeration value="diffusion coefficient"/>
+			<xs:enumeration value="diffusive time of flight"/>
+			<xs:enumeration value="digital storage"/>
+			<xs:enumeration value="dimensionless"/>
+			<xs:enumeration value="dipole moment"/>
+			<xs:enumeration value="dose equivalent"/>
+			<xs:enumeration value="dynamic viscosity"/>
+			<xs:enumeration value="electric charge"/>
+			<xs:enumeration value="electric charge per area"/>
+			<xs:enumeration value="electric charge per mass"/>
+			<xs:enumeration value="electric charge per volume"/>
+			<xs:enumeration value="electric conductance"/>
+			<xs:enumeration value="electric conductivity"/>
+			<xs:enumeration value="electric current"/>
+			<xs:enumeration value="electric current density"/>
+			<xs:enumeration value="electric field strength"/>
+			<xs:enumeration value="electric potential difference"/>
+			<xs:enumeration value="electric resistance"/>
+			<xs:enumeration value="electric resistance per length"/>
+			<xs:enumeration value="electrical resistivity"/>
+			<xs:enumeration value="electromagnetic moment"/>
+			<xs:enumeration value="energy"/>
+			<xs:enumeration value="energy length per area"/>
+			<xs:enumeration value="energy length per time area temperature"/>
+			<xs:enumeration value="energy per area"/>
+			<xs:enumeration value="energy per length"/>
+			<xs:enumeration value="energy per mass"/>
+			<xs:enumeration value="energy per mass per time"/>
+			<xs:enumeration value="energy per volume"/>
+			<xs:enumeration value="force"/>
+			<xs:enumeration value="force area"/>
+			<xs:enumeration value="force length per length"/>
+			<xs:enumeration value="force per force"/>
+			<xs:enumeration value="force per length"/>
+			<xs:enumeration value="force per volume"/>
+			<xs:enumeration value="frequency"/>
+			<xs:enumeration value="frequency interval"/>
+			<xs:enumeration value="heat capacity"/>
+			<xs:enumeration value="heat flow rate"/>
+			<xs:enumeration value="heat transfer coefficient"/>
+			<xs:enumeration value="illuminance"/>
+			<xs:enumeration value="inductance"/>
+			<xs:enumeration value="isothermal compressibility"/>
+			<xs:enumeration value="kinematic viscosity"/>
+			<xs:enumeration value="length"/>
+			<xs:enumeration value="length per length"/>
+			<xs:enumeration value="length per mass"/>
+			<xs:enumeration value="length per pressure"/>
+			<xs:enumeration value="length per temperature"/>
+			<xs:enumeration value="length per time"/>
+			<xs:enumeration value="length per volume"/>
+			<xs:enumeration value="light exposure"/>
+			<xs:enumeration value="linear acceleration"/>
+			<xs:enumeration value="linear thermal expansion"/>
+			<xs:enumeration value="logarithmic power ratio"/>
+			<xs:enumeration value="logarithmic power ratio per length"/>
+			<xs:enumeration value="luminance"/>
+			<xs:enumeration value="luminous efficacy"/>
+			<xs:enumeration value="luminous flux"/>
+			<xs:enumeration value="luminous intensity"/>
+			<xs:enumeration value="magnetic dipole moment"/>
+			<xs:enumeration value="magnetic field strength"/>
+			<xs:enumeration value="magnetic flux"/>
+			<xs:enumeration value="magnetic flux density"/>
+			<xs:enumeration value="magnetic flux density per length"/>
+			<xs:enumeration value="magnetic permeability"/>
+			<xs:enumeration value="magnetic vector potential"/>
+			<xs:enumeration value="mass"/>
+			<xs:enumeration value="mass length"/>
+			<xs:enumeration value="mass per area"/>
+			<xs:enumeration value="mass per energy"/>
+			<xs:enumeration value="mass per length"/>
+			<xs:enumeration value="mass per mass"/>
+			<xs:enumeration value="mass per time"/>
+			<xs:enumeration value="mass per time per area"/>
+			<xs:enumeration value="mass per time per length"/>
+			<xs:enumeration value="mass per volume"/>
+			<xs:enumeration value="mass per volume per length"/>
+			<xs:enumeration value="mass per volume per pressure"/>
+			<xs:enumeration value="mass per volume per temperature"/>
+			<xs:enumeration value="mobility"/>
+			<xs:enumeration value="molar energy"/>
+			<xs:enumeration value="molar heat capacity"/>
+			<xs:enumeration value="molar volume"/>
+			<xs:enumeration value="molecular weight"/>
+			<xs:enumeration value="moment of force"/>
+			<xs:enumeration value="moment of inertia"/>
+			<xs:enumeration value="momentum"/>
+			<xs:enumeration value="normalized power"/>
+			<xs:enumeration value="permeability length"/>
+			<xs:enumeration value="permeability rock"/>
+			<xs:enumeration value="permittivity"/>
+			<xs:enumeration value="plane angle"/>
+			<xs:enumeration value="potential difference per power drop"/>
+			<xs:enumeration value="power"/>
+			<xs:enumeration value="power per area"/>
+			<xs:enumeration value="power per power"/>
+			<xs:enumeration value="power per volume"/>
+			<xs:enumeration value="pressure"/>
+			<xs:enumeration value="pressure per pressure"/>
+			<xs:enumeration value="pressure per time"/>
+			<xs:enumeration value="pressure per volume"/>
+			<xs:enumeration value="pressure squared"/>
+			<xs:enumeration value="pressure squared per force time per area"/>
+			<xs:enumeration value="pressure time per volume"/>
+			<xs:enumeration value="quantity of light"/>
+			<xs:enumeration value="radiance"/>
+			<xs:enumeration value="radiant intensity"/>
+			<xs:enumeration value="reciprocal area"/>
+			<xs:enumeration value="reciprocal electric potential difference"/>
+			<xs:enumeration value="reciprocal force"/>
+			<xs:enumeration value="reciprocal length"/>
+			<xs:enumeration value="reciprocal mass"/>
+			<xs:enumeration value="reciprocal mass time"/>
+			<xs:enumeration value="reciprocal pressure"/>
+			<xs:enumeration value="reciprocal time"/>
+			<xs:enumeration value="reciprocal volume"/>
+			<xs:enumeration value="reluctance"/>
+			<xs:enumeration value="second moment of area"/>
+			<xs:enumeration value="signaling event per time"/>
+			<xs:enumeration value="solid angle"/>
+			<xs:enumeration value="specific heat capacity"/>
+			<xs:enumeration value="temperature interval"/>
+			<xs:enumeration value="temperature interval per length"/>
+			<xs:enumeration value="temperature interval per pressure"/>
+			<xs:enumeration value="temperature interval per time"/>
+			<xs:enumeration value="thermal conductance"/>
+			<xs:enumeration value="thermal conductivity"/>
+			<xs:enumeration value="thermal diffusivity"/>
+			<xs:enumeration value="thermal insulance"/>
+			<xs:enumeration value="thermal resistance"/>
+			<xs:enumeration value="thermodynamic temperature"/>
+			<xs:enumeration value="thermodynamic temperature per thermodynamic temperature"/>
+			<xs:enumeration value="time"/>
+			<xs:enumeration value="time per length"/>
+			<xs:enumeration value="time per mass"/>
+			<xs:enumeration value="time per time"/>
+			<xs:enumeration value="time per volume"/>
+			<xs:enumeration value="vertical coordinate"/>
+			<xs:enumeration value="volume"/>
+			<xs:enumeration value="volume flow rate per volume flow rate"/>
+			<xs:enumeration value="volume per area"/>
+			<xs:enumeration value="volume per length"/>
+			<xs:enumeration value="volume per mass"/>
+			<xs:enumeration value="volume per pressure"/>
+			<xs:enumeration value="volume per rotation"/>
+			<xs:enumeration value="volume per time"/>
+			<xs:enumeration value="volume per time length"/>
+			<xs:enumeration value="volume per time per area"/>
+			<xs:enumeration value="volume per time per length"/>
+			<xs:enumeration value="volume per time per pressure"/>
+			<xs:enumeration value="volume per time per pressure length"/>
+			<xs:enumeration value="volume per time per time"/>
+			<xs:enumeration value="volume per time per volume"/>
+			<xs:enumeration value="volume per volume"/>
+			<xs:enumeration value="volumetric heat transfer coefficient"/>
+			<xs:enumeration value="volumetric thermal expansion"/>
+			<xs:enumeration value="unitless">
+				<xs:annotation>
+					<xs:documentation>A unitless quantity is a quantity which has no unit of measure symbol, but could be a real physical measurement. Examples would be a count, pH, wire gauge (AWG and BWG) and shoe size.
+
+This is different from a dimensionless quantity which represents a ratio whose units of measure have cancelled each other. DImensionless quantities can have units of measure (like ppm or %) or may not have a displayable unit of measure symbol (in which case the units symbol Euc is used in a data transfer).
+
+Units derived from a unitless number simply ignore the unitless part. For example, the unit for counts per hour is just inverse hours (1/hr).</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="not a measure">
+				<xs:annotation>
+					<xs:documentation>The "not a measure" quantity class represents data values which are not measures at all. This would include strings, ordinal numbers, index values and other things for which the concept of units of measure is irrelevant.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ReferenceCondition">
+		<xs:annotation>
+			<xs:documentation>Combinations of standard temperature and pressure including "ambient". The list of standard values is contained in the enumValuesProdml.xml file.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="0 degC 1 atm">
+				<xs:annotation>
+					<xs:documentation>0 degC and 1 standard atmosphere</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="0 degC 1 bar"/>
+			<xs:enumeration value="15 degC 1 atm">
+				<xs:annotation>
+					<xs:documentation>15 degC and 1 standard atmosphere</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="15 degC 1 bar"/>
+			<xs:enumeration value="20 degC 1 atm"/>
+			<xs:enumeration value="20 degC 1 bar"/>
+			<xs:enumeration value="25 degC 1 bar"/>
+			<xs:enumeration value="60 degF 1 atm">
+				<xs:annotation>
+					<xs:documentation>60 degF and 1 standard atmosphere</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="60 degF 30 in Hg"/>
+			<xs:enumeration value="ambient"/>
+		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="LithologyQualifierKind">
 		<xs:restriction base="eml:TypeEnum">
@@ -769,75 +903,139 @@ This class is implemented in XML as a union between the list of valid units per 
 			<xs:enumeration value="wacke"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="WellboreDatumReference">
+	<xs:simpleType name="WellStatus">
 		<xs:annotation>
-			<xs:documentation>Reference location for the measured depth datum (MdDatum).
-
-The type of local or permanent reference datum for vertical gravity based (i.e., elevation and vertical depth) and measured depth coordinates within the context of a well. This list includes local points (e.g., kelly bushing) used as a datum and vertical reference datums (e.g., mean sea level).</xs:documentation>
+			<xs:documentation>These values represent the status of a well or wellbore.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="ground level"/>
-			<xs:enumeration value="kelly bushing"/>
-			<xs:enumeration value="mean sea level">
+		<xs:restriction base="eml:TypeEnum">
+			<xs:enumeration value="abandoned">
 				<xs:annotation>
-					<xs:documentation>A tidal datum. The arithmetic mean of hourly heights observed over the National Tidal Datum Epoch (19 years).</xs:documentation>
+					<xs:documentation>The status of a facility in which drilling, 
+completion, and production operations have been permanently 
+terminated.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="derrick floor"/>
-			<xs:enumeration value="casing flange">
+			<xs:enumeration value="active">
 				<xs:annotation>
-					<xs:documentation>A flange affixed to the top of the casing string used to attach production equipment.</xs:documentation>
+					<xs:documentation>For a well to be active, at least one of its 
+wellbores must be active. For a wellbore to be active, at least 
+one of its completions must be actively producing or injecting 
+fluids.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="crown valve"/>
-			<xs:enumeration value="rotary bushing"/>
-			<xs:enumeration value="rotary table"/>
-			<xs:enumeration value="sea floor"/>
-			<xs:enumeration value="lowest astronomical tide">
+			<xs:enumeration value="active -- injecting">
 				<xs:annotation>
-					<xs:documentation>The lowest tide level over the duration of the National Tidal Datum Epoch (19 years).</xs:documentation>
+					<xs:documentation>Fluids are actively being injected into the 
+facility.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="mean higher high water">
+			<xs:enumeration value="active -- producing">
 				<xs:annotation>
-					<xs:documentation>A tidal datum. The average of the higher high water height of each tidal day observed over the National Tidal Datum Epoch (19 years).</xs:documentation>
+					<xs:documentation>Fluids are actively being produced from the 
+facility.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="mean high water">
+			<xs:enumeration value="completed">
 				<xs:annotation>
-					<xs:documentation>A tidal datum. The average of all the high water heights observed over the National Tidal Datum Epoch (19 years).</xs:documentation>
+					<xs:documentation>The completion has been installed, but the 
+facility is not yet active. This status is appropriate only 
+before the initial producing or injecting activity.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="mean lower low water">
+			<xs:enumeration value="drilling">
 				<xs:annotation>
-					<xs:documentation>A tidal datum. The average of the lower low water height of each tidal day observed over the National Tidal Datum Epoch (19 years).</xs:documentation>
+					<xs:documentation>The status of a well or wellbore in which drilling 
+operations have begun, but are not yet completed. The status ends 
+when another status becomes appropriate.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="mean low water">
+			<xs:enumeration value="partially plugged">
 				<xs:annotation>
-					<xs:documentation>A tidal datum. The average of all the low water heights observed over the National Tidal Datum Epoch (19 years).</xs:documentation>
+					<xs:documentation>The wellbore has been plugged from the bottom, 
+but only partially to the point where it intersects another wellbore.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="mean tide level">
+			<xs:enumeration value="permitted">
 				<xs:annotation>
-					<xs:documentation>A tidal datum. The arithmetic mean of mean high water and mean low water. Same as half-tide level.</xs:documentation>
+					<xs:documentation>The facility has received regulatory approvel, 
+but drilling has not yet commenced. For a well, it has been spudded. 
+For a subsequent wellbore, the whipstock or similar device has not 
+yet been set.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="kickoff point">
+			<xs:enumeration value="plugged and abandoned">
 				<xs:annotation>
-					<xs:documentation>This value is not expected to be used in most typical situations. All reasonable attempts should be made to determine the appropriate value.</xs:documentation>
+					<xs:documentation>An abandoned well (or wellbore) whose wellbores 
+have been plugged in such a manner as to prevent the migration of 
+oil, gas, salt water, or other substance from one stratum to another. 
+Generally the criteria for this status is controlled by regulatory 
+authorities.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="proposed">
+				<xs:annotation>
+					<xs:documentation>The status of a well or wellbore from conception 
+to either regulatory approval or commencement of drilling.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="sold">
+				<xs:annotation>
+					<xs:documentation>The facility has been sold, so it is no longer 
+appropriate to keep a close internal status value. Status values 
+may be added at later times without changing the sold status.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="suspended">
+				<xs:annotation>
+					<xs:documentation>Production or injection has been temporarily 
+suspended in a manner that will allow immediate resumption of 
+activities.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="temporarily abandoned">
+				<xs:annotation>
+					<xs:documentation>Production or injection has been temporarily 
+suspended in a manner that will not allow immediate resumption 
+of activities.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="testing">
+				<xs:annotation>
+					<xs:documentation>The facility operations are suspended while 
+tests are being conducted to determine formation and/or reservoir 
+properties. For example, a drillstem test. This status also 
+includes extended testing.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="tight">
+				<xs:annotation>
+					<xs:documentation>Information about the status of the well is 
+confidential. This is more explicit than unknown, since it gives 
+the reason that the status value is unknown.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="working over">
+				<xs:annotation>
+					<xs:documentation>Maintenance or data acquisition on a well during 
+the production phase. This includes any relevant job which can be 
+done while the well is shut in. This includes many jobs that occur 
+when a well is re-entered.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>The value is not known. This value should not be used
+in normal situations. All reasonable attempts should be made to determine
+the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="ReferenceConditionExt">
-		<xs:union memberTypes="eml:ReferenceCondition eml:EnumExtensionPattern"/>
 	</xs:simpleType>
 	<xs:simpleType name="UnitOfMeasure">
 		<xs:annotation>
 			<xs:documentation>This is a list of the valid units of measure across all the measure classes. Its intended use is to ensure that a valid unit of measure string is used in cases where the measure class is not known in advance or is otherwise not explicitly modeled in the XML schema.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
+		<xs:restriction base="eml:UomEnum">
 			<xs:enumeration value="%"/>
 			<xs:enumeration value="%[area]"/>
 			<xs:enumeration value="%[mass]"/>
@@ -909,8 +1107,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="1/g"/>
 			<xs:enumeration value="1/gal[UK]"/>
 			<xs:enumeration value="1/gal[US]"/>
-			<xs:enumeration value="1/H"/>
 			<xs:enumeration value="1/h"/>
+			<xs:enumeration value="1/H"/>
 			<xs:enumeration value="1/in"/>
 			<xs:enumeration value="1/K"/>
 			<xs:enumeration value="1/kg"/>
@@ -994,8 +1192,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="1E9 ft3"/>
 			<xs:enumeration value="30 ft"/>
 			<xs:enumeration value="30 m"/>
-			<xs:enumeration value="a"/>
 			<xs:enumeration value="A"/>
+			<xs:enumeration value="a"/>
 			<xs:enumeration value="A.h"/>
 			<xs:enumeration value="A.m2"/>
 			<xs:enumeration value="A.s"/>
@@ -1019,8 +1217,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="atm/h"/>
 			<xs:enumeration value="atm/hm"/>
 			<xs:enumeration value="atm/m"/>
-			<xs:enumeration value="B"/>
 			<xs:enumeration value="b"/>
+			<xs:enumeration value="B"/>
 			<xs:enumeration value="B.W"/>
 			<xs:enumeration value="b/cm3"/>
 			<xs:enumeration value="B/m"/>
@@ -1098,8 +1296,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="C/m3"/>
 			<xs:enumeration value="C/mm2"/>
 			<xs:enumeration value="C/mm3"/>
-			<xs:enumeration value="cA"/>
 			<xs:enumeration value="ca"/>
+			<xs:enumeration value="cA"/>
 			<xs:enumeration value="cal[IT]"/>
 			<xs:enumeration value="cal[th]"/>
 			<xs:enumeration value="cal[th]/(g.K)"/>
@@ -1164,11 +1362,11 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="cP"/>
 			<xs:enumeration value="cPa"/>
 			<xs:enumeration value="crd"/>
-			<xs:enumeration value="cs"/>
 			<xs:enumeration value="cS"/>
+			<xs:enumeration value="cs"/>
 			<xs:enumeration value="cSt"/>
-			<xs:enumeration value="cT"/>
 			<xs:enumeration value="ct"/>
+			<xs:enumeration value="cT"/>
 			<xs:enumeration value="cu"/>
 			<xs:enumeration value="cV"/>
 			<xs:enumeration value="cW"/>
@@ -1191,8 +1389,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="daN.m"/>
 			<xs:enumeration value="dAPI"/>
 			<xs:enumeration value="dB"/>
-			<xs:enumeration value="dB.MW"/>
 			<xs:enumeration value="dB.mW"/>
+			<xs:enumeration value="dB.MW"/>
 			<xs:enumeration value="dB.W"/>
 			<xs:enumeration value="dB/ft"/>
 			<xs:enumeration value="dB/km"/>
@@ -1297,8 +1495,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="EWb"/>
 			<xs:enumeration value="F"/>
 			<xs:enumeration value="F/m"/>
-			<xs:enumeration value="fA"/>
 			<xs:enumeration value="fa"/>
+			<xs:enumeration value="fA"/>
 			<xs:enumeration value="fathom"/>
 			<xs:enumeration value="fC"/>
 			<xs:enumeration value="fcal[th]"/>
@@ -1454,8 +1652,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="GHz"/>
 			<xs:enumeration value="GJ"/>
 			<xs:enumeration value="Gm"/>
-			<xs:enumeration value="gn"/>
 			<xs:enumeration value="GN"/>
+			<xs:enumeration value="gn"/>
 			<xs:enumeration value="Gohm"/>
 			<xs:enumeration value="gon"/>
 			<xs:enumeration value="GP"/>
@@ -1814,8 +2012,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="m3/ton[US]"/>
 			<xs:enumeration value="m4"/>
 			<xs:enumeration value="m4/s"/>
-			<xs:enumeration value="MA"/>
 			<xs:enumeration value="mA"/>
+			<xs:enumeration value="MA"/>
 			<xs:enumeration value="mA/cm2"/>
 			<xs:enumeration value="mA/ft2"/>
 			<xs:enumeration value="Ma[t]"/>
@@ -1824,8 +2022,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="mC"/>
 			<xs:enumeration value="MC"/>
 			<xs:enumeration value="mC/m2"/>
-			<xs:enumeration value="Mcal[th]"/>
 			<xs:enumeration value="mcal[th]"/>
+			<xs:enumeration value="Mcal[th]"/>
 			<xs:enumeration value="mCi"/>
 			<xs:enumeration value="mD"/>
 			<xs:enumeration value="mD.ft"/>
@@ -1834,14 +2032,14 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="mD.m"/>
 			<xs:enumeration value="mD/(Pa.s)"/>
 			<xs:enumeration value="mD/cP"/>
-			<xs:enumeration value="mEuc"/>
 			<xs:enumeration value="MEuc"/>
+			<xs:enumeration value="mEuc"/>
 			<xs:enumeration value="meV"/>
 			<xs:enumeration value="MeV"/>
 			<xs:enumeration value="MF"/>
 			<xs:enumeration value="mF"/>
-			<xs:enumeration value="Mg"/>
 			<xs:enumeration value="mg"/>
+			<xs:enumeration value="Mg"/>
 			<xs:enumeration value="Mg/a"/>
 			<xs:enumeration value="Mg/d"/>
 			<xs:enumeration value="mg/dm3"/>
@@ -1853,18 +2051,18 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="mg/kg"/>
 			<xs:enumeration value="mg/L"/>
 			<xs:enumeration value="Mg/m2"/>
-			<xs:enumeration value="Mg/m3"/>
 			<xs:enumeration value="mg/m3"/>
+			<xs:enumeration value="Mg/m3"/>
 			<xs:enumeration value="Mg/min"/>
 			<xs:enumeration value="mGal"/>
-			<xs:enumeration value="Mgauss"/>
 			<xs:enumeration value="mgauss"/>
+			<xs:enumeration value="Mgauss"/>
 			<xs:enumeration value="Mgf"/>
 			<xs:enumeration value="mgn"/>
 			<xs:enumeration value="MGy"/>
 			<xs:enumeration value="mGy"/>
-			<xs:enumeration value="MH"/>
 			<xs:enumeration value="mH"/>
+			<xs:enumeration value="MH"/>
 			<xs:enumeration value="mHz"/>
 			<xs:enumeration value="MHz"/>
 			<xs:enumeration value="mi"/>
@@ -1886,8 +2084,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="min/ft"/>
 			<xs:enumeration value="min/m"/>
 			<xs:enumeration value="mina"/>
-			<xs:enumeration value="MJ"/>
 			<xs:enumeration value="mJ"/>
+			<xs:enumeration value="MJ"/>
 			<xs:enumeration value="MJ/a"/>
 			<xs:enumeration value="mJ/cm2"/>
 			<xs:enumeration value="MJ/kg"/>
@@ -1916,8 +2114,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="mN.m2"/>
 			<xs:enumeration value="mN/km"/>
 			<xs:enumeration value="mN/m"/>
-			<xs:enumeration value="mohm"/>
 			<xs:enumeration value="Mohm"/>
+			<xs:enumeration value="mohm"/>
 			<xs:enumeration value="mol"/>
 			<xs:enumeration value="mol.m2/(mol.s)"/>
 			<xs:enumeration value="mol/(s.m2)"/>
@@ -1925,8 +2123,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="mol/m3"/>
 			<xs:enumeration value="mol/mol"/>
 			<xs:enumeration value="mol/s"/>
-			<xs:enumeration value="mP"/>
 			<xs:enumeration value="MP"/>
+			<xs:enumeration value="mP"/>
 			<xs:enumeration value="mPa"/>
 			<xs:enumeration value="MPa"/>
 			<xs:enumeration value="mPa.s"/>
@@ -1934,21 +2132,21 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="MPa/h"/>
 			<xs:enumeration value="MPa/m"/>
 			<xs:enumeration value="Mpsi"/>
-			<xs:enumeration value="mrad"/>
 			<xs:enumeration value="Mrad"/>
+			<xs:enumeration value="mrad"/>
 			<xs:enumeration value="mrd"/>
 			<xs:enumeration value="Mrd"/>
 			<xs:enumeration value="mrem"/>
 			<xs:enumeration value="mrem/h"/>
-			<xs:enumeration value="mS"/>
 			<xs:enumeration value="ms"/>
 			<xs:enumeration value="MS"/>
+			<xs:enumeration value="mS"/>
 			<xs:enumeration value="mS/cm"/>
 			<xs:enumeration value="ms/cm"/>
 			<xs:enumeration value="ms/ft"/>
 			<xs:enumeration value="ms/in"/>
-			<xs:enumeration value="ms/m"/>
 			<xs:enumeration value="mS/m"/>
+			<xs:enumeration value="ms/m"/>
 			<xs:enumeration value="ms/s"/>
 			<xs:enumeration value="mSv"/>
 			<xs:enumeration value="mSv/h"/>
@@ -1964,8 +2162,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="MW.h/kg"/>
 			<xs:enumeration value="MW.h/m3"/>
 			<xs:enumeration value="mW/m2"/>
-			<xs:enumeration value="mWb"/>
 			<xs:enumeration value="MWb"/>
+			<xs:enumeration value="mWb"/>
 			<xs:enumeration value="N"/>
 			<xs:enumeration value="N.m"/>
 			<xs:enumeration value="N.m/m"/>
@@ -1976,8 +2174,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="N/m3"/>
 			<xs:enumeration value="N/mm2"/>
 			<xs:enumeration value="N/N"/>
-			<xs:enumeration value="nA"/>
 			<xs:enumeration value="na"/>
+			<xs:enumeration value="nA"/>
 			<xs:enumeration value="nAPI"/>
 			<xs:enumeration value="nC"/>
 			<xs:enumeration value="ncal[th]"/>
@@ -2002,8 +2200,8 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="nP"/>
 			<xs:enumeration value="nPa"/>
 			<xs:enumeration value="nrd"/>
-			<xs:enumeration value="nS"/>
 			<xs:enumeration value="ns"/>
+			<xs:enumeration value="nS"/>
 			<xs:enumeration value="ns/ft"/>
 			<xs:enumeration value="ns/m"/>
 			<xs:enumeration value="nT"/>
@@ -2278,354 +2476,168 @@ The type of local or permanent reference datum for vertical gravity based (i.e.,
 			<xs:enumeration value="yd3"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="WellStatus">
+	<xs:simpleType name="ReferenceConditionExt">
+		<xs:union memberTypes="eml:ReferenceCondition eml:EnumExtensionPattern"/>
+	</xs:simpleType>
+	<xs:simpleType name="GeochronologicalRank">
 		<xs:annotation>
-			<xs:documentation>These values represent the status of a well or wellbore.</xs:documentation>
+			<xs:documentation>Qualifier for the geological time denoted by the GeochronologicalUnit: eon, era, epoch, etc.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="abandoned">
-				<xs:annotation>
-					<xs:documentation>The status of a facility in which drilling, 
-completion, and production operations have been permanently 
-terminated.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="active">
-				<xs:annotation>
-					<xs:documentation>For a well to be active, at least one of its 
-wellbores must be active. For a wellbore to be active, at least 
-one of its completions must be actively producing or injecting 
-fluids.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="active -- injecting">
-				<xs:annotation>
-					<xs:documentation>Fluids are actively being injected into the 
-facility.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="active -- producing">
-				<xs:annotation>
-					<xs:documentation>Fluids are actively being produced from the 
-facility.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="completed">
-				<xs:annotation>
-					<xs:documentation>The completion has been installed, but the 
-facility is not yet active. This status is appropriate only 
-before the initial producing or injecting activity.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="drilling">
-				<xs:annotation>
-					<xs:documentation>The status of a well or wellbore in which drilling 
-operations have begun, but are not yet completed. The status ends 
-when another status becomes appropriate.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="partially plugged">
-				<xs:annotation>
-					<xs:documentation>The wellbore has been plugged from the bottom, 
-but only partially to the point where it intersects another wellbore.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="permitted">
-				<xs:annotation>
-					<xs:documentation>The facility has received regulatory approvel, 
-but drilling has not yet commenced. For a well, it has been spudded. 
-For a subsequent wellbore, the whipstock or similar device has not 
-yet been set.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="plugged and abandoned">
-				<xs:annotation>
-					<xs:documentation>An abandoned well (or wellbore) whose wellbores 
-have been plugged in such a manner as to prevent the migration of 
-oil, gas, salt water, or other substance from one stratum to another. 
-Generally the criteria for this status is controlled by regulatory 
-authorities.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="proposed">
-				<xs:annotation>
-					<xs:documentation>The status of a well or wellbore from conception 
-to either regulatory approval or commencement of drilling.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="sold">
-				<xs:annotation>
-					<xs:documentation>The facility has been sold, so it is no longer 
-appropriate to keep a close internal status value. Status values 
-may be added at later times without changing the sold status.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="suspended">
-				<xs:annotation>
-					<xs:documentation>Production or injection has been temporarily 
-suspended in a manner that will allow immediate resumption of 
-activities.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="temporarily abandoned">
-				<xs:annotation>
-					<xs:documentation>Production or injection has been temporarily 
-suspended in a manner that will not allow immediate resumption 
-of activities.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="testing">
-				<xs:annotation>
-					<xs:documentation>The facility operations are suspended while 
-tests are being conducted to determine formation and/or reservoir 
-properties. For example, a drillstem test. This status also 
-includes extended testing.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="tight">
-				<xs:annotation>
-					<xs:documentation>Information about the status of the well is 
-confidential. This is more explicit than unknown, since it gives 
-the reason that the status value is unknown.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="working over">
-				<xs:annotation>
-					<xs:documentation>Maintenance or data acquisition on a well during 
-the production phase. This includes any relevant job which can be 
-done while the well is shut in. This includes many jobs that occur 
-when a well is re-entered.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="unknown">
-				<xs:annotation>
-					<xs:documentation>The value is not known. This value should not be used
-in normal situations. All reasonable attempts should be made to determine
-the appropriate value. Use of this value may result in rejection in some situations.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
+			<xs:enumeration value="eon"/>
+			<xs:enumeration value="era"/>
+			<xs:enumeration value="period"/>
+			<xs:enumeration value="epoch"/>
+			<xs:enumeration value="age"/>
+			<xs:enumeration value="chron"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="LithologyQualifierKindExt">
-		<xs:union memberTypes="eml:LithologyQualifierKind eml:EnumExtensionPattern"/>
-	</xs:simpleType>
-	<xs:simpleType name="QuantityClassKind">
-		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="absorbed dose"/>
-			<xs:enumeration value="activity of radioactivity"/>
-			<xs:enumeration value="amount of substance"/>
-			<xs:enumeration value="amount of substance per amount of substance"/>
-			<xs:enumeration value="amount of substance per area"/>
-			<xs:enumeration value="amount of substance per time"/>
-			<xs:enumeration value="amount of substance per time per area"/>
-			<xs:enumeration value="amount of substance per volume"/>
-			<xs:enumeration value="angle per length"/>
-			<xs:enumeration value="angle per volume"/>
-			<xs:enumeration value="angular acceleration"/>
-			<xs:enumeration value="angular velocity"/>
-			<xs:enumeration value="api gamma ray"/>
-			<xs:enumeration value="api gravity"/>
-			<xs:enumeration value="api neutron"/>
-			<xs:enumeration value="area"/>
-			<xs:enumeration value="area per amount of substance"/>
-			<xs:enumeration value="area per area"/>
-			<xs:enumeration value="area per count"/>
-			<xs:enumeration value="area per mass"/>
-			<xs:enumeration value="area per time"/>
-			<xs:enumeration value="area per volume"/>
-			<xs:enumeration value="attenuation per frequency interval"/>
-			<xs:enumeration value="capacitance"/>
-			<xs:enumeration value="cation exchange capacity"/>
-			<xs:enumeration value="data transfer speed"/>
-			<xs:enumeration value="diffusion coefficient"/>
-			<xs:enumeration value="diffusive time of flight"/>
-			<xs:enumeration value="digital storage"/>
-			<xs:enumeration value="dimensionless"/>
-			<xs:enumeration value="dipole moment"/>
-			<xs:enumeration value="dose equivalent"/>
-			<xs:enumeration value="dynamic viscosity"/>
-			<xs:enumeration value="electric charge"/>
-			<xs:enumeration value="electric charge per area"/>
-			<xs:enumeration value="electric charge per mass"/>
-			<xs:enumeration value="electric charge per volume"/>
-			<xs:enumeration value="electric conductance"/>
-			<xs:enumeration value="electric conductivity"/>
-			<xs:enumeration value="electric current"/>
-			<xs:enumeration value="electric current density"/>
-			<xs:enumeration value="electric field strength"/>
-			<xs:enumeration value="electric potential difference"/>
-			<xs:enumeration value="electric resistance"/>
-			<xs:enumeration value="electric resistance per length"/>
-			<xs:enumeration value="electrical resistivity"/>
-			<xs:enumeration value="electromagnetic moment"/>
-			<xs:enumeration value="energy"/>
-			<xs:enumeration value="energy length per area"/>
-			<xs:enumeration value="energy length per time area temperature"/>
-			<xs:enumeration value="energy per area"/>
-			<xs:enumeration value="energy per length"/>
-			<xs:enumeration value="energy per mass"/>
-			<xs:enumeration value="energy per mass per time"/>
-			<xs:enumeration value="energy per volume"/>
-			<xs:enumeration value="force"/>
-			<xs:enumeration value="force area"/>
-			<xs:enumeration value="force length per length"/>
-			<xs:enumeration value="force per force"/>
-			<xs:enumeration value="force per length"/>
-			<xs:enumeration value="force per volume"/>
-			<xs:enumeration value="frequency"/>
-			<xs:enumeration value="frequency interval"/>
-			<xs:enumeration value="heat capacity"/>
-			<xs:enumeration value="heat flow rate"/>
-			<xs:enumeration value="heat transfer coefficient"/>
-			<xs:enumeration value="illuminance"/>
-			<xs:enumeration value="inductance"/>
-			<xs:enumeration value="isothermal compressibility"/>
-			<xs:enumeration value="kinematic viscosity"/>
-			<xs:enumeration value="length"/>
-			<xs:enumeration value="length per length"/>
-			<xs:enumeration value="length per mass"/>
-			<xs:enumeration value="length per pressure"/>
-			<xs:enumeration value="length per temperature"/>
-			<xs:enumeration value="length per time"/>
-			<xs:enumeration value="length per volume"/>
-			<xs:enumeration value="light exposure"/>
-			<xs:enumeration value="linear acceleration"/>
-			<xs:enumeration value="linear thermal expansion"/>
-			<xs:enumeration value="logarithmic power ratio"/>
-			<xs:enumeration value="logarithmic power ratio per length"/>
-			<xs:enumeration value="luminance"/>
-			<xs:enumeration value="luminous efficacy"/>
-			<xs:enumeration value="luminous flux"/>
-			<xs:enumeration value="luminous intensity"/>
-			<xs:enumeration value="magnetic dipole moment"/>
-			<xs:enumeration value="magnetic field strength"/>
-			<xs:enumeration value="magnetic flux"/>
-			<xs:enumeration value="magnetic flux density"/>
-			<xs:enumeration value="magnetic flux density per length"/>
-			<xs:enumeration value="magnetic permeability"/>
-			<xs:enumeration value="magnetic vector potential"/>
-			<xs:enumeration value="mass"/>
-			<xs:enumeration value="mass length"/>
-			<xs:enumeration value="mass per area"/>
-			<xs:enumeration value="mass per energy"/>
-			<xs:enumeration value="mass per length"/>
-			<xs:enumeration value="mass per mass"/>
-			<xs:enumeration value="mass per time"/>
-			<xs:enumeration value="mass per time per area"/>
-			<xs:enumeration value="mass per time per length"/>
-			<xs:enumeration value="mass per volume"/>
-			<xs:enumeration value="mass per volume per length"/>
-			<xs:enumeration value="mass per volume per pressure"/>
-			<xs:enumeration value="mass per volume per temperature"/>
-			<xs:enumeration value="mobility"/>
-			<xs:enumeration value="molar energy"/>
-			<xs:enumeration value="molar heat capacity"/>
-			<xs:enumeration value="molar volume"/>
-			<xs:enumeration value="molecular weight"/>
-			<xs:enumeration value="moment of force"/>
-			<xs:enumeration value="moment of inertia"/>
-			<xs:enumeration value="momentum"/>
-			<xs:enumeration value="normalized power"/>
-			<xs:enumeration value="permeability length"/>
-			<xs:enumeration value="permeability rock"/>
-			<xs:enumeration value="permittivity"/>
-			<xs:enumeration value="plane angle"/>
-			<xs:enumeration value="potential difference per power drop"/>
-			<xs:enumeration value="power"/>
-			<xs:enumeration value="power per area"/>
-			<xs:enumeration value="power per power"/>
-			<xs:enumeration value="power per volume"/>
-			<xs:enumeration value="pressure"/>
-			<xs:enumeration value="pressure per pressure"/>
-			<xs:enumeration value="pressure per time"/>
-			<xs:enumeration value="pressure per volume"/>
-			<xs:enumeration value="pressure squared"/>
-			<xs:enumeration value="pressure squared per force time per area"/>
-			<xs:enumeration value="pressure time per volume"/>
-			<xs:enumeration value="quantity of light"/>
-			<xs:enumeration value="radiance"/>
-			<xs:enumeration value="radiant intensity"/>
-			<xs:enumeration value="reciprocal area"/>
-			<xs:enumeration value="reciprocal electric potential difference"/>
-			<xs:enumeration value="reciprocal force"/>
-			<xs:enumeration value="reciprocal length"/>
-			<xs:enumeration value="reciprocal mass"/>
-			<xs:enumeration value="reciprocal mass time"/>
-			<xs:enumeration value="reciprocal pressure"/>
-			<xs:enumeration value="reciprocal time"/>
-			<xs:enumeration value="reciprocal volume"/>
-			<xs:enumeration value="reluctance"/>
-			<xs:enumeration value="second moment of area"/>
-			<xs:enumeration value="signaling event per time"/>
-			<xs:enumeration value="solid angle"/>
-			<xs:enumeration value="specific heat capacity"/>
-			<xs:enumeration value="temperature interval"/>
-			<xs:enumeration value="temperature interval per length"/>
-			<xs:enumeration value="temperature interval per pressure"/>
-			<xs:enumeration value="temperature interval per time"/>
-			<xs:enumeration value="thermal conductance"/>
-			<xs:enumeration value="thermal conductivity"/>
-			<xs:enumeration value="thermal diffusivity"/>
-			<xs:enumeration value="thermal insulance"/>
-			<xs:enumeration value="thermal resistance"/>
-			<xs:enumeration value="thermodynamic temperature"/>
-			<xs:enumeration value="thermodynamic temperature per thermodynamic temperature"/>
-			<xs:enumeration value="time"/>
-			<xs:enumeration value="time per length"/>
-			<xs:enumeration value="time per mass"/>
-			<xs:enumeration value="time per time"/>
-			<xs:enumeration value="time per volume"/>
-			<xs:enumeration value="vertical coordinate"/>
-			<xs:enumeration value="volume"/>
-			<xs:enumeration value="volume flow rate per volume flow rate"/>
-			<xs:enumeration value="volume per area"/>
-			<xs:enumeration value="volume per length"/>
-			<xs:enumeration value="volume per mass"/>
-			<xs:enumeration value="volume per pressure"/>
-			<xs:enumeration value="volume per rotation"/>
-			<xs:enumeration value="volume per time"/>
-			<xs:enumeration value="volume per time length"/>
-			<xs:enumeration value="volume per time per area"/>
-			<xs:enumeration value="volume per time per length"/>
-			<xs:enumeration value="volume per time per pressure"/>
-			<xs:enumeration value="volume per time per pressure length"/>
-			<xs:enumeration value="volume per time per time"/>
-			<xs:enumeration value="volume per time per volume"/>
-			<xs:enumeration value="volume per volume"/>
-			<xs:enumeration value="volumetric heat transfer coefficient"/>
-			<xs:enumeration value="volumetric thermal expansion"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="ChannelClassKindExt">
-		<xs:union memberTypes="eml:ChannelClassKind eml:EnumExtensionPattern"/>
-	</xs:simpleType>
-	<xs:simpleType name="ReferenceCondition">
+	<xs:simpleType name="LithologyKind">
 		<xs:annotation>
-			<xs:documentation>Combinations of standard temperature and pressure including "ambient". The list of standard values is contained in the enumValuesProdml.xml file.</xs:documentation>
+			<xs:documentation>A description of minerals or accessories that constitute a fractional part of a lithology description</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="eml:TypeEnum">
-			<xs:enumeration value="0 degC 1 atm">
-				<xs:annotation>
-					<xs:documentation>0 degC and 1 standard atmosphere</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="0 degC 1 bar"/>
-			<xs:enumeration value="15 degC 1 atm">
-				<xs:annotation>
-					<xs:documentation>15 degC and 1 standard atmosphere</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="15 degC 1 bar"/>
-			<xs:enumeration value="20 degC 1 atm"/>
-			<xs:enumeration value="20 degC 1 bar"/>
-			<xs:enumeration value="25 degC 1 bar"/>
-			<xs:enumeration value="60 degF 1 atm">
-				<xs:annotation>
-					<xs:documentation>60 degF and 1 standard atmosphere</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="60 degF 30 in Hg"/>
-			<xs:enumeration value="ambient"/>
+			<xs:enumeration value="alkali feldspar rhyolite"/>
+			<xs:enumeration value="alkali olivine basalt"/>
+			<xs:enumeration value="amphibolite"/>
+			<xs:enumeration value="andesite"/>
+			<xs:enumeration value="anhydrite"/>
+			<xs:enumeration value="anorthositic rock"/>
+			<xs:enumeration value="anthracite"/>
+			<xs:enumeration value="aplite"/>
+			<xs:enumeration value="arenite"/>
+			<xs:enumeration value="argillaceous"/>
+			<xs:enumeration value="arkose"/>
+			<xs:enumeration value="basalt"/>
+			<xs:enumeration value="basanite"/>
+			<xs:enumeration value="bauxite"/>
+			<xs:enumeration value="bituminous coal"/>
+			<xs:enumeration value="blueschist metamorphic rock"/>
+			<xs:enumeration value="boninite"/>
+			<xs:enumeration value="breccia"/>
+			<xs:enumeration value="carbonate ooze"/>
+			<xs:enumeration value="carbonatite"/>
+			<xs:enumeration value="chalk"/>
+			<xs:enumeration value="chert"/>
+			<xs:enumeration value="clay"/>
+			<xs:enumeration value="claystone"/>
+			<xs:enumeration value="coal"/>
+			<xs:enumeration value="conglomerate"/>
+			<xs:enumeration value="dacite"/>
+			<xs:enumeration value="diabase"/>
+			<xs:enumeration value="diamictite"/>
+			<xs:enumeration value="diorite"/>
+			<xs:enumeration value="dioritoid"/>
+			<xs:enumeration value="doleritic rock"/>
+			<xs:enumeration value="dolomite"/>
+			<xs:enumeration value="dolomitic"/>
+			<xs:enumeration value="eclogite"/>
+			<xs:enumeration value="exotic alkaline rock"/>
+			<xs:enumeration value="feldspar"/>
+			<xs:enumeration value="feldspathic arenite"/>
+			<xs:enumeration value="fine grained igneous rock"/>
+			<xs:enumeration value="foid dioritoid"/>
+			<xs:enumeration value="foid gabbroid"/>
+			<xs:enumeration value="foid syenitoid"/>
+			<xs:enumeration value="foidite"/>
+			<xs:enumeration value="foiditoid"/>
+			<xs:enumeration value="foidolite"/>
+			<xs:enumeration value="foliated metamorphic rock"/>
+			<xs:enumeration value="fragmental igneous rock"/>
+			<xs:enumeration value="gabbro"/>
+			<xs:enumeration value="gabbroic rock"/>
+			<xs:enumeration value="gabbroid"/>
+			<xs:enumeration value="glauconite"/>
+			<xs:enumeration value="gneiss"/>
+			<xs:enumeration value="granite"/>
+			<xs:enumeration value="granodiorite"/>
+			<xs:enumeration value="granofels"/>
+			<xs:enumeration value="granulite"/>
+			<xs:enumeration value="gravel"/>
+			<xs:enumeration value="greenstone"/>
+			<xs:enumeration value="gumbo"/>
+			<xs:enumeration value="gypsum"/>
+			<xs:enumeration value="halite"/>
+			<xs:enumeration value="hornfels"/>
+			<xs:enumeration value="igneous rock"/>
+			<xs:enumeration value="impact generated material"/>
+			<xs:enumeration value="impure dolomite"/>
+			<xs:enumeration value="impure limestone"/>
+			<xs:enumeration value="intrusive rock (plutonic)"/>
+			<xs:enumeration value="iron rich sedimentary rock"/>
+			<xs:enumeration value="kalsilitic and melilitic rocks"/>
+			<xs:enumeration value="komatiitic rock"/>
+			<xs:enumeration value="latitic rock"/>
+			<xs:enumeration value="lignite"/>
+			<xs:enumeration value="lime boundstone"/>
+			<xs:enumeration value="lime framestone"/>
+			<xs:enumeration value="lime grainstone"/>
+			<xs:enumeration value="lime mudstone"/>
+			<xs:enumeration value="lime packstone"/>
+			<xs:enumeration value="lime wackestone"/>
+			<xs:enumeration value="limestone"/>
+			<xs:enumeration value="marble"/>
+			<xs:enumeration value="marl"/>
+			<xs:enumeration value="metamorphic rock"/>
+			<xs:enumeration value="mica schist"/>
+			<xs:enumeration value="migmatite"/>
+			<xs:enumeration value="monzogabbro"/>
+			<xs:enumeration value="mud"/>
+			<xs:enumeration value="mudstone"/>
+			<xs:enumeration value="mylonitic rock"/>
+			<xs:enumeration value="no description"/>
+			<xs:enumeration value="no sample"/>
+			<xs:enumeration value="ooze"/>
+			<xs:enumeration value="ophiolite"/>
+			<xs:enumeration value="organic bearing mudstone"/>
+			<xs:enumeration value="peat"/>
+			<xs:enumeration value="pegmatite"/>
+			<xs:enumeration value="peridotite"/>
+			<xs:enumeration value="phaneritic igneous rock"/>
+			<xs:enumeration value="phonolite"/>
+			<xs:enumeration value="phonolitoid"/>
+			<xs:enumeration value="phosphate"/>
+			<xs:enumeration value="phosphate rock"/>
+			<xs:enumeration value="phyllite"/>
+			<xs:enumeration value="porphyry"/>
+			<xs:enumeration value="potassium and magnesium salts"/>
+			<xs:enumeration value="pyroclastic breccia"/>
+			<xs:enumeration value="pyroclastic rock"/>
+			<xs:enumeration value="pyroxenite"/>
+			<xs:enumeration value="quartz arenite"/>
+			<xs:enumeration value="quartzite"/>
+			<xs:enumeration value="rhyolite"/>
+			<xs:enumeration value="rock salt"/>
+			<xs:enumeration value="sand"/>
+			<xs:enumeration value="sandstone"/>
+			<xs:enumeration value="sandy"/>
+			<xs:enumeration value="sapropel"/>
+			<xs:enumeration value="schist"/>
+			<xs:enumeration value="serpentinite"/>
+			<xs:enumeration value="shale"/>
+			<xs:enumeration value="siliceous ooze"/>
+			<xs:enumeration value="silt"/>
+			<xs:enumeration value="siltstone"/>
+			<xs:enumeration value="skarn"/>
+			<xs:enumeration value="slate"/>
+			<xs:enumeration value="spilite"/>
+			<xs:enumeration value="syenite"/>
+			<xs:enumeration value="syenitoid"/>
+			<xs:enumeration value="sylvite"/>
+			<xs:enumeration value="tephrite"/>
+			<xs:enumeration value="tephritoid"/>
+			<xs:enumeration value="tholeiitic basalt"/>
+			<xs:enumeration value="tonalite"/>
+			<xs:enumeration value="trachyte"/>
+			<xs:enumeration value="trachytic rock"/>
+			<xs:enumeration value="trachytoid"/>
+			<xs:enumeration value="travertine"/>
+			<xs:enumeration value="tuff"/>
+			<xs:enumeration value="tuffite"/>
+			<xs:enumeration value="ultrabasic"/>
+			<xs:enumeration value="undifferentiated"/>
+			<xs:enumeration value="unknown"/>
+			<xs:enumeration value="wacke"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

@@ -17,24 +17,6 @@
 	<!--														-->
 	<xs:include schemaLocation="BaseTypes.xsd"/>
 	<xs:include schemaLocation="Abstract.xsd"/>
-	<xs:complexType name="ExternalDatasetPart">
-		<xs:sequence>
-			<xs:element name="Count" type="eml:PositiveLong" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="PathInExternalFile" type="eml:String2000" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>A string which is meaningful to the API which will store and retrieve data from the external file.
-
-For an HDF file this is the path of the referenced dataset in the external file. The separator between groups and final dataset is a slash '/' in an hdf file.
-
-For a LAS file this could be the list of mnemonics in the ~A block.
-
-For a SEG-Y file this could be a list of trace headers.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="StartIndex" type="eml:NonNegativeLong" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="EpcExternalPartReference" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="ExternalDataset">
 		<xs:sequence>
 			<xs:element name="ExternalFileProxy" type="eml:ExternalDatasetPart" minOccurs="1" maxOccurs="unbounded"/>
@@ -61,6 +43,24 @@ MIME type for HDF proxy is : application/x-hdf5 (by convention). </xs:documentat
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ExternalDatasetPart">
+		<xs:sequence>
+			<xs:element name="Count" type="eml:PositiveLong" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="PathInExternalFile" type="eml:String2000" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A string which is meaningful to the API which will store and retrieve data from the external file.
+
+For an HDF file this is the path of the referenced dataset in the external file. The separator between groups and final dataset is a slash '/' in an hdf file.
+
+For a LAS file this could be the list of mnemonics in the ~A block.
+
+For a SEG-Y file this could be a list of trace headers.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StartIndex" type="eml:NonNegativeLong" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="EpcExternalPartReference" type="eml:DataObjectReference" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="DataObjectReference">
 		<xs:annotation>

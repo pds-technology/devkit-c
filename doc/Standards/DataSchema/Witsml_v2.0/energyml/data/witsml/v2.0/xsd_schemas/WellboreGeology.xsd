@@ -433,8 +433,7 @@ In the future, these values would benefit from quantification, e.g., tight, slig
 	<xs:element name="ShowEvaluationInterval" type="witsml:ShowEvaluationInterval" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="ShowEvaluationInterval">
 		<xs:annotation>
-			<xs:documentation>An interpretation of the overall hydrocarbon show derived from analysis of individual show tests on cuttings samples. An interval in the wellbore for which data is manually entered by the wellsite geologist or mud logger as an interpretation of the hydrocarbon show along the wellbore, based on the raw readings from one or more show analyses of individual show tests on cuttings samples.
-ShowEvaluationInterval can be sent as an ETP channel data in a part_EvaluatedIntervalShow wrapper.</xs:documentation>
+			<xs:documentation>An interpretation of the overall hydrocarbon show derived from analysis of individual show tests on cuttings samples. An interval in the wellbore for which data is manually entered by the wellsite geologist or mud logger as an interpretation of the hydrocarbon show along the wellbore, based on the raw readings from one or more show analyses of individual show tests on cuttings samples.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
@@ -671,11 +670,6 @@ In the future, these values would benefit from quantification, e.g., tight, slig
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="part_EvaluatedIntervalShow" type="witsml:ShowEvaluationInterval">
-		<xs:annotation>
-			<xs:documentation>Wrapper for sending individual evaluated interval shows using ETP.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:element name="CuttingsGeology" type="witsml:CuttingsGeology" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="CuttingsGeology">
 		<xs:annotation>
@@ -719,20 +713,13 @@ In the future, these values would benefit from quantification, e.g., tight, slig
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<xs:element name="part_InterpretedGeologyInterval" type="witsml:InterpretedGeologyInterval">
-		<xs:annotation>
-			<xs:documentation>Wrapper for sending individual interpreted geology intervals using ETP.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:element name="InterpretedGeologyInterval" type="witsml:InterpretedGeologyInterval" substitutionGroup="eml:AbstractDataObject"/>
 	<xs:complexType name="InterpretedGeologyInterval">
 		<xs:annotation>
 			<xs:documentation>Represents a depth interval along the wellbore which contains a single interpreted lithology type. It can be used to:
 
 	- carry information about geochronology and lithostratigraphy
-	- create a pre-well geological prognosis with chronostratigraphic, lithostratigraphic, and lithology entries. 
-
-InterpretedGeologyInterval can be sent as an ETP channel data in a part_InterpretedGeologyInterval wrapper.</xs:documentation>
+	- create a pre-well geological prognosis with chronostratigraphic, lithostratigraphic, and lithology entries. </xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="eml:AbstractObject">
@@ -798,9 +785,4 @@ InterpretedGeologyInterval can be sent as an ETP channel data in a part_Interpre
 			<xs:enumeration value="oil"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:element name="part_CuttingsInterval" type="witsml:CuttingsGeologyInterval">
-		<xs:annotation>
-			<xs:documentation>Wrapper for sending individual intervals using ETP.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 </xs:schema>
