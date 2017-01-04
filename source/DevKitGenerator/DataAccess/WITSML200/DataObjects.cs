@@ -62,14 +62,14 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Well))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GraphicalInformationSet))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DataAssuranceRecord))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Activity))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ActivityTemplate))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyKindDictionary))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Activity))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSeries))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyKind))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyKindDictionary))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EpcExternalPartReference))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -7997,6 +7997,81 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
+    /// This class represents the UnitlessMeasure xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="UnitlessMeasure", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the UnitlessMeasure xsd type.")]
+    public partial class UnitlessMeasure : Object, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the UnitlessMeasure class.
+        /// </summary>
+        public UnitlessMeasure() {}
+
+        /// <summary>
+        /// Initializes a new instance of the UnitlessMeasure class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public UnitlessMeasure(Double value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
     /// This class represents the StimFluid xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -8312,22 +8387,21 @@ namespace Energistics.DataAccess.WITSML200
         private DynamicViscosityMeasure ViscosityField; 
 
         /// <summary>
-        /// PH property
+        /// pH property
         /// </summary>
 		[Description("The pH of the fluid.")]
-        [ComponentElement]
-		[XmlElement("PH")]
-        public DimensionlessMeasure PH {
+		[XmlElement("pH")]
+        public UnitlessMeasure PH {
             get {
-                return PHField;
+                return pHField;
             } 
             set {
-                PHField = value;
+                pHField = value;
                 NotifyPropertyChanged("PH");
             }
         }
 
-        private DimensionlessMeasure PHField; 
+        private UnitlessMeasure pHField; 
 
         /// <summary>
         /// AdditiveConcentration property
@@ -36991,11 +37065,11 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AbstractProjectedCrs xsd type.
     /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedEpsgCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedLocalAuthorityCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedGmlCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedWktCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedUnknownCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedWktCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedEpsgCrs))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -37025,41 +37099,6 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
         #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the ProjectedEpsgCrs xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedEpsgCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the ProjectedEpsgCrs xsd type.")]
-    public partial class ProjectedEpsgCrs : AbstractProjectedCrs, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// EpsgCode property
-        /// </summary>
-		[Required]
-		[XmlElement("EpsgCode")]
-        public Int64? EpsgCode {
-            get {
-                return EpsgCodeField;
-            } 
-            set {
-                EpsgCodeField = value;
-                NotifyPropertyChanged("EpsgCode");
-            }
-        }
-
-        private Int64? EpsgCodeField; 
-
-
     } //here
     }
 
@@ -44289,6 +44328,42 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
+    /// This class represents the ProjectedUnknownCrs xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedUnknownCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the ProjectedUnknownCrs xsd type.")]
+    public partial class ProjectedUnknownCrs : AbstractProjectedCrs, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Unknown property
+        /// </summary>
+		[Required]
+        [StringLength(2000)]
+		[XmlElement("Unknown")]
+        public String Unknown {
+            get {
+                return UnknownField;
+            } 
+            set {
+                UnknownField = value;
+                NotifyPropertyChanged("Unknown");
+            }
+        }
+
+        private String UnknownField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
     /// This class represents the ProjectedWktCrs xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -44325,34 +44400,33 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the ProjectedUnknownCrs xsd type.
+    /// This class represents the ProjectedEpsgCrs xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedUnknownCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the ProjectedUnknownCrs xsd type.")]
-    public partial class ProjectedUnknownCrs : AbstractProjectedCrs, INotifyPropertyChanged
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ProjectedEpsgCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the ProjectedEpsgCrs xsd type.")]
+    public partial class ProjectedEpsgCrs : AbstractProjectedCrs, INotifyPropertyChanged
     {
 
         /// <summary>
-        /// Unknown property
+        /// EpsgCode property
         /// </summary>
 		[Required]
-        [StringLength(2000)]
-		[XmlElement("Unknown")]
-        public String Unknown {
+		[XmlElement("EpsgCode")]
+        public Int64? EpsgCode {
             get {
-                return UnknownField;
+                return EpsgCodeField;
             } 
             set {
-                UnknownField = value;
-                NotifyPropertyChanged("Unknown");
+                EpsgCodeField = value;
+                NotifyPropertyChanged("EpsgCode");
             }
         }
 
-        private String UnknownField; 
+        private Int64? EpsgCodeField; 
 
 
     } //here
@@ -44436,11 +44510,11 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AbstractGeodeticCrs xsd type.
     /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticUnknownCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticLocalAuthorityCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticWktCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticGmlCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticEpsgCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticWktCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticLocalAuthorityCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticUnknownCrs))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -44476,70 +44550,34 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the GeodeticUnknownCrs xsd type.
+    /// This class represents the GeodeticWktCrs xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GeodeticUnknownCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the GeodeticUnknownCrs xsd type.")]
-    public partial class GeodeticUnknownCrs : AbstractGeodeticCrs, INotifyPropertyChanged
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GeodeticWktCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the GeodeticWktCrs xsd type.")]
+    public partial class GeodeticWktCrs : AbstractGeodeticCrs, INotifyPropertyChanged
     {
 
         /// <summary>
-        /// Unknown property
+        /// WellKnownText property
         /// </summary>
 		[Required]
-        [StringLength(2000)]
-		[XmlElement("Unknown")]
-        public String Unknown {
+        [Description("ISO 19162 compliant well known text of the CRS")]
+		[XmlElement("WellKnownText")]
+        public String WellKnownText {
             get {
-                return UnknownField;
+                return WellKnownTextField;
             } 
             set {
-                UnknownField = value;
-                NotifyPropertyChanged("Unknown");
+                WellKnownTextField = value;
+                NotifyPropertyChanged("WellKnownText");
             }
         }
 
-        private String UnknownField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the GeodeticLocalAuthorityCrs xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GeodeticLocalAuthorityCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the GeodeticLocalAuthorityCrs xsd type.")]
-    public partial class GeodeticLocalAuthorityCrs : AbstractGeodeticCrs, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// LocalAuthorityCrsName property
-        /// </summary>
-		[Required]
-        [ComponentElement]
-		[XmlElement("LocalAuthorityCrsName")]
-        public AuthorityQualifiedName LocalAuthorityCrsName {
-            get {
-                return LocalAuthorityCrsNameField;
-            } 
-            set {
-                LocalAuthorityCrsNameField = value;
-                NotifyPropertyChanged("LocalAuthorityCrsName");
-            }
-        }
-
-        private AuthorityQualifiedName LocalAuthorityCrsNameField; 
+        private String WellKnownTextField; 
 
 
     } //here
@@ -44619,34 +44657,70 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the GeodeticWktCrs xsd type.
+    /// This class represents the GeodeticLocalAuthorityCrs xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GeodeticWktCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the GeodeticWktCrs xsd type.")]
-    public partial class GeodeticWktCrs : AbstractGeodeticCrs, INotifyPropertyChanged
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GeodeticLocalAuthorityCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the GeodeticLocalAuthorityCrs xsd type.")]
+    public partial class GeodeticLocalAuthorityCrs : AbstractGeodeticCrs, INotifyPropertyChanged
     {
 
         /// <summary>
-        /// WellKnownText property
+        /// LocalAuthorityCrsName property
         /// </summary>
 		[Required]
-        [Description("ISO 19162 compliant well known text of the CRS")]
-		[XmlElement("WellKnownText")]
-        public String WellKnownText {
+        [ComponentElement]
+		[XmlElement("LocalAuthorityCrsName")]
+        public AuthorityQualifiedName LocalAuthorityCrsName {
             get {
-                return WellKnownTextField;
+                return LocalAuthorityCrsNameField;
             } 
             set {
-                WellKnownTextField = value;
-                NotifyPropertyChanged("WellKnownText");
+                LocalAuthorityCrsNameField = value;
+                NotifyPropertyChanged("LocalAuthorityCrsName");
             }
         }
 
-        private String WellKnownTextField; 
+        private AuthorityQualifiedName LocalAuthorityCrsNameField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the GeodeticUnknownCrs xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="GeodeticUnknownCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the GeodeticUnknownCrs xsd type.")]
+    public partial class GeodeticUnknownCrs : AbstractGeodeticCrs, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Unknown property
+        /// </summary>
+		[Required]
+        [StringLength(2000)]
+		[XmlElement("Unknown")]
+        public String Unknown {
+            get {
+                return UnknownField;
+            } 
+            set {
+                UnknownField = value;
+                NotifyPropertyChanged("Unknown");
+            }
+        }
+
+        private String UnknownField; 
 
 
     } //here
@@ -69403,8 +69477,8 @@ namespace Energistics.DataAccess.WITSML200
     /// This class represents the AbstractVerticalCrs xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalWktCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalLocalAuthorityCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalGmlCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalLocalAuthorityCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalEpsgCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalUnknownCrs))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -69478,42 +69552,6 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the VerticalLocalAuthorityCrs xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalLocalAuthorityCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the VerticalLocalAuthorityCrs xsd type.")]
-    public partial class VerticalLocalAuthorityCrs : AbstractVerticalCrs, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// LocalAuthorityCrsName property
-        /// </summary>
-		[Required]
-        [ComponentElement]
-		[XmlElement("LocalAuthorityCrsName")]
-        public AuthorityQualifiedName LocalAuthorityCrsName {
-            get {
-                return LocalAuthorityCrsNameField;
-            } 
-            set {
-                LocalAuthorityCrsNameField = value;
-                NotifyPropertyChanged("LocalAuthorityCrsName");
-            }
-        }
-
-        private AuthorityQualifiedName LocalAuthorityCrsNameField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
     /// This class represents the VerticalGmlCrs xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -69542,6 +69580,42 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         private VerticalCRSType GmlVerticalCrsDefinitionField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the VerticalLocalAuthorityCrs xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalLocalAuthorityCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the VerticalLocalAuthorityCrs xsd type.")]
+    public partial class VerticalLocalAuthorityCrs : AbstractVerticalCrs, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// LocalAuthorityCrsName property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("LocalAuthorityCrsName")]
+        public AuthorityQualifiedName LocalAuthorityCrsName {
+            get {
+                return LocalAuthorityCrsNameField;
+            } 
+            set {
+                LocalAuthorityCrsNameField = value;
+                NotifyPropertyChanged("LocalAuthorityCrsName");
+            }
+        }
+
+        private AuthorityQualifiedName LocalAuthorityCrsNameField; 
 
 
     } //here
@@ -70416,6 +70490,81 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
+    /// This class represents the IndexRange xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="IndexRange", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the IndexRange xsd type.")]
+    public partial class IndexRange : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// IndexMinimum property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("The minimum index for the range over which the referenced data's conformance with the policy is being assessed.")]
+		[XmlElement("IndexMinimum")]
+        public String IndexMinimum {
+            get {
+                return IndexMinimumField;
+            } 
+            set {
+                IndexMinimumField = value;
+                NotifyPropertyChanged("IndexMinimum");
+            }
+        }
+
+        private String IndexMinimumField; 
+
+        /// <summary>
+        /// IndexMaximum property
+        /// </summary>
+		[Required]
+        [StringLength(64)]
+        [Description("The maximum index for the range over which the referenced data's conformance with the policy is being assessed.")]
+		[XmlElement("IndexMaximum")]
+        public String IndexMaximum {
+            get {
+                return IndexMaximumField;
+            } 
+            set {
+                IndexMaximumField = value;
+                NotifyPropertyChanged("IndexMaximum");
+            }
+        }
+
+        private String IndexMaximumField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
     /// This class represents the FailingRule xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -70532,687 +70681,6 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
         #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the IndexRange xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="IndexRange", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the IndexRange xsd type.")]
-    public partial class IndexRange : Object, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// IndexMinimum property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("The minimum index for the range over which the referenced data's conformance with the policy is being assessed.")]
-		[XmlElement("IndexMinimum")]
-        public String IndexMinimum {
-            get {
-                return IndexMinimumField;
-            } 
-            set {
-                IndexMinimumField = value;
-                NotifyPropertyChanged("IndexMinimum");
-            }
-        }
-
-        private String IndexMinimumField; 
-
-        /// <summary>
-        /// IndexMaximum property
-        /// </summary>
-		[Required]
-        [StringLength(64)]
-        [Description("The maximum index for the range over which the referenced data's conformance with the policy is being assessed.")]
-		[XmlElement("IndexMaximum")]
-        public String IndexMaximum {
-            get {
-                return IndexMaximumField;
-            } 
-            set {
-                IndexMaximumField = value;
-                NotifyPropertyChanged("IndexMaximum");
-            }
-        }
-
-        private String IndexMaximumField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the AbstractParameterKey xsd type.
-    /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ObjectParameterKey))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeIndexParameterKey))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractParameterKey", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the AbstractParameterKey xsd type.")]
-    public abstract partial class AbstractParameterKey : Object, INotifyPropertyChanged
-    {
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the ObjectParameterKey xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ObjectParameterKey", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the ObjectParameterKey xsd type.")]
-    public partial class ObjectParameterKey : AbstractParameterKey, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// DataObject property
-        /// </summary>
-		[Required]
-        [ComponentElement]
-		[XmlElement("DataObject")]
-        public DataObjectReference DataObject {
-            get {
-                return DataObjectField;
-            } 
-            set {
-                DataObjectField = value;
-                NotifyPropertyChanged("DataObject");
-            }
-        }
-
-        private DataObjectReference DataObjectField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the TimeIndexParameterKey xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TimeIndexParameterKey", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the TimeIndexParameterKey xsd type.")]
-    public partial class TimeIndexParameterKey : AbstractParameterKey, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// TimeIndex property
-        /// </summary>
-		[Required]
-        [ComponentElement]
-		[XmlElement("TimeIndex")]
-        public TimeIndex TimeIndex {
-            get {
-                return TimeIndexField;
-            } 
-            set {
-                TimeIndexField = value;
-                NotifyPropertyChanged("TimeIndex");
-            }
-        }
-
-        private TimeIndex TimeIndexField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the TimeIndex xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TimeIndex", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the TimeIndex xsd type.")]
-    public partial class TimeIndex : Object, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Index property
-        /// </summary>
-		[Required]
-        [Description("The index of the time in the time series.")]
-		[XmlElement("Index")]
-        public Int64? Index {
-            get {
-                return IndexField;
-            } 
-            set {
-                IndexField = value;
-                NotifyPropertyChanged("Index");
-            }
-        }
-
-        private Int64? IndexField; 
-
-        /// <summary>
-        /// TimeSeries property
-        /// </summary>
-		[Required]
-        [ComponentElement]
-		[XmlElement("TimeSeries")]
-        public DataObjectReference TimeSeries {
-            get {
-                return TimeSeriesField;
-            } 
-            set {
-                TimeSeriesField = value;
-                NotifyPropertyChanged("TimeSeries");
-            }
-        }
-
-        private DataObjectReference TimeSeriesField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the AbstractActivityParameter xsd type.
-    /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerQuantityParameter))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DataObjectParameter))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeIndexParameter))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StringParameter))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleQuantityParameter))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractActivityParameter", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the AbstractActivityParameter xsd type.")]
-    public abstract partial class AbstractActivityParameter : Object, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Title property
-        /// </summary>
-		[Required]
-        [StringLength(2000)]
-        [Description("Name of the parameter, used to identify it in the activity. Must have an equivalent in the activity descriptor parameters.")]
-		[XmlElement("Title")]
-        public String Title {
-            get {
-                return TitleField;
-            } 
-            set {
-                TitleField = value;
-                NotifyPropertyChanged("Title");
-            }
-        }
-
-        private String TitleField; 
-
-        /// <summary>
-        /// Index property
-        /// </summary>
-		[Description("When parameter is an array, used to indicate the index in the array")]
-		[XmlElement("Index")]
-        public Int64? Index {
-            get {
-                return IndexField;
-            } 
-            set {
-                IndexField = value;
-                 this.IndexSpecified = true;
-                NotifyPropertyChanged("Index");
-            }
-        }
-
-        private Int64? IndexField; 
-
-        /// <summary>
-        /// IndexSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean IndexSpecified {
-            get {
-                return IndexSpecifiedField;
-            } 
-            set {
-                IndexSpecifiedField = value;
-                NotifyPropertyChanged("IndexSpecified");
-            }
-        }
-
-        private Boolean IndexSpecifiedField; 
-
-        /// <summary>
-        /// Selection property
-        /// </summary>
-		[StringLength(2000)]
-        [Description("Textual description about how this parameter was selected.")]
-		[XmlElement("Selection")]
-        public String Selection {
-            get {
-                return SelectionField;
-            } 
-            set {
-                SelectionField = value;
-                NotifyPropertyChanged("Selection");
-            }
-        }
-
-        private String SelectionField; 
-
-        /// <summary>
-        /// Key property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("Key")]
-        public List<AbstractParameterKey> Key {
-            get {
-                return KeyField;
-            } 
-            set {
-                KeyField = value;
-                NotifyPropertyChanged("Key");
-            }
-        }
-
-         /// <summary>
-         /// bool to indicate if Key has been set. Used for serialization.
-         /// </summary>
-         [XmlIgnore]
-         public bool KeySpecified
-         {
-             get {
-             if(KeyField!=null)
-                 return KeyField.Count>0?true:false;
-             else return false;
-             }
-         }
-        private List<AbstractParameterKey> KeyField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the IntegerQuantityParameter xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="IntegerQuantityParameter", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the IntegerQuantityParameter xsd type.")]
-    public partial class IntegerQuantityParameter : AbstractActivityParameter, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the IntegerQuantityParameter class.
-        /// </summary>
-        public IntegerQuantityParameter() {}
-
-        /// <summary>
-        /// Initializes a new instance of the IntegerQuantityParameter class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        public IntegerQuantityParameter(Int64 value)
-        {
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value.ToString();
-        }
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-		[Required]
-        [Description("Integer value")]
-		[XmlElement("Value")]
-        public Int64? Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Int64? ValueField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the DataObjectParameter xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DataObjectParameter", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the DataObjectParameter xsd type.")]
-    public partial class DataObjectParameter : AbstractActivityParameter, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// DataObject property
-        /// </summary>
-		[Required]
-        [ComponentElement]
-		[XmlElement("DataObject")]
-        public DataObjectReference DataObject {
-            get {
-                return DataObjectField;
-            } 
-            set {
-                DataObjectField = value;
-                NotifyPropertyChanged("DataObject");
-            }
-        }
-
-        private DataObjectReference DataObjectField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the TimeIndexParameter xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TimeIndexParameter", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the TimeIndexParameter xsd type.")]
-    public partial class TimeIndexParameter : AbstractActivityParameter, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// TimeIndex property
-        /// </summary>
-		[Required]
-        [ComponentElement]
-		[XmlElement("TimeIndex")]
-        public TimeIndex TimeIndex {
-            get {
-                return TimeIndexField;
-            } 
-            set {
-                TimeIndexField = value;
-                NotifyPropertyChanged("TimeIndex");
-            }
-        }
-
-        private TimeIndex TimeIndexField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the StringParameter xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="StringParameter", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the StringParameter xsd type.")]
-    public partial class StringParameter : AbstractActivityParameter, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the StringParameter class.
-        /// </summary>
-        public StringParameter() {}
-
-        /// <summary>
-        /// Initializes a new instance of the StringParameter class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        public StringParameter(String value)
-        {
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value.ToString();
-        }
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-		[Required]
-        [StringLength(2000)]
-        [Description("String value")]
-		[XmlElement("Value")]
-        public String Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private String ValueField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the DoubleQuantityParameter xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DoubleQuantityParameter", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the DoubleQuantityParameter xsd type.")]
-    public partial class DoubleQuantityParameter : AbstractActivityParameter, INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Initializes a new instance of the DoubleQuantityParameter class.
-        /// </summary>
-        public DoubleQuantityParameter() {}
-
-        /// <summary>
-        /// Initializes a new instance of the DoubleQuantityParameter class.
-        /// </summary>
-        /// <param name="value">Initial value</param>
-        public DoubleQuantityParameter(Double value)
-        {
-            this.Value = value;
-        }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return Value.ToString();
-        }
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-		[Required]
-        [Description("Double value")]
-		[XmlElement("Value")]
-        public Double? Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double? ValueField; 
-
-        /// <summary>
-        /// Uom property
-        /// </summary>
-		[Required]
-        [Description("Unit of measure associated with the value")]
-		[XmlElement("Uom")]
-        public UnitOfMeasure? Uom {
-            get {
-                return UomField;
-            } 
-            set {
-                UomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private UnitOfMeasure? UomField; 
-
-        /// <summary>
-        /// CustomUnitDictionary property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("CustomUnitDictionary")]
-        public DataObjectReference CustomUnitDictionary {
-            get {
-                return CustomUnitDictionaryField;
-            } 
-            set {
-                CustomUnitDictionaryField = value;
-                NotifyPropertyChanged("CustomUnitDictionary");
-            }
-        }
-
-        private DataObjectReference CustomUnitDictionaryField; 
-
-
     } //here
     }
 
@@ -71466,6 +70934,612 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
         #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the AbstractActivityParameter xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DataObjectParameter))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StringParameter))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerQuantityParameter))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleQuantityParameter))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeIndexParameter))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractActivityParameter", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the AbstractActivityParameter xsd type.")]
+    public abstract partial class AbstractActivityParameter : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Title property
+        /// </summary>
+		[Required]
+        [StringLength(2000)]
+        [Description("Name of the parameter, used to identify it in the activity. Must have an equivalent in the activity descriptor parameters.")]
+		[XmlElement("Title")]
+        public String Title {
+            get {
+                return TitleField;
+            } 
+            set {
+                TitleField = value;
+                NotifyPropertyChanged("Title");
+            }
+        }
+
+        private String TitleField; 
+
+        /// <summary>
+        /// Index property
+        /// </summary>
+		[Description("When parameter is an array, used to indicate the index in the array")]
+		[XmlElement("Index")]
+        public Int64? Index {
+            get {
+                return IndexField;
+            } 
+            set {
+                IndexField = value;
+                 this.IndexSpecified = true;
+                NotifyPropertyChanged("Index");
+            }
+        }
+
+        private Int64? IndexField; 
+
+        /// <summary>
+        /// IndexSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean IndexSpecified {
+            get {
+                return IndexSpecifiedField;
+            } 
+            set {
+                IndexSpecifiedField = value;
+                NotifyPropertyChanged("IndexSpecified");
+            }
+        }
+
+        private Boolean IndexSpecifiedField; 
+
+        /// <summary>
+        /// Selection property
+        /// </summary>
+		[StringLength(2000)]
+        [Description("Textual description about how this parameter was selected.")]
+		[XmlElement("Selection")]
+        public String Selection {
+            get {
+                return SelectionField;
+            } 
+            set {
+                SelectionField = value;
+                NotifyPropertyChanged("Selection");
+            }
+        }
+
+        private String SelectionField; 
+
+        /// <summary>
+        /// Key property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("Key")]
+        public List<AbstractParameterKey> Key {
+            get {
+                return KeyField;
+            } 
+            set {
+                KeyField = value;
+                NotifyPropertyChanged("Key");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Key has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool KeySpecified
+         {
+             get {
+             if(KeyField!=null)
+                 return KeyField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<AbstractParameterKey> KeyField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the AbstractParameterKey xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ObjectParameterKey))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeIndexParameterKey))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractParameterKey", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the AbstractParameterKey xsd type.")]
+    public abstract partial class AbstractParameterKey : Object, INotifyPropertyChanged
+    {
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the ObjectParameterKey xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ObjectParameterKey", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the ObjectParameterKey xsd type.")]
+    public partial class ObjectParameterKey : AbstractParameterKey, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// DataObject property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("DataObject")]
+        public DataObjectReference DataObject {
+            get {
+                return DataObjectField;
+            } 
+            set {
+                DataObjectField = value;
+                NotifyPropertyChanged("DataObject");
+            }
+        }
+
+        private DataObjectReference DataObjectField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the TimeIndexParameterKey xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TimeIndexParameterKey", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the TimeIndexParameterKey xsd type.")]
+    public partial class TimeIndexParameterKey : AbstractParameterKey, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// TimeIndex property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("TimeIndex")]
+        public TimeIndex TimeIndex {
+            get {
+                return TimeIndexField;
+            } 
+            set {
+                TimeIndexField = value;
+                NotifyPropertyChanged("TimeIndex");
+            }
+        }
+
+        private TimeIndex TimeIndexField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the TimeIndex xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TimeIndex", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the TimeIndex xsd type.")]
+    public partial class TimeIndex : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Index property
+        /// </summary>
+		[Required]
+        [Description("The index of the time in the time series.")]
+		[XmlElement("Index")]
+        public Int64? Index {
+            get {
+                return IndexField;
+            } 
+            set {
+                IndexField = value;
+                NotifyPropertyChanged("Index");
+            }
+        }
+
+        private Int64? IndexField; 
+
+        /// <summary>
+        /// TimeSeries property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("TimeSeries")]
+        public DataObjectReference TimeSeries {
+            get {
+                return TimeSeriesField;
+            } 
+            set {
+                TimeSeriesField = value;
+                NotifyPropertyChanged("TimeSeries");
+            }
+        }
+
+        private DataObjectReference TimeSeriesField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the DataObjectParameter xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DataObjectParameter", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the DataObjectParameter xsd type.")]
+    public partial class DataObjectParameter : AbstractActivityParameter, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// DataObject property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("DataObject")]
+        public DataObjectReference DataObject {
+            get {
+                return DataObjectField;
+            } 
+            set {
+                DataObjectField = value;
+                NotifyPropertyChanged("DataObject");
+            }
+        }
+
+        private DataObjectReference DataObjectField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the StringParameter xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="StringParameter", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the StringParameter xsd type.")]
+    public partial class StringParameter : AbstractActivityParameter, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the StringParameter class.
+        /// </summary>
+        public StringParameter() {}
+
+        /// <summary>
+        /// Initializes a new instance of the StringParameter class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public StringParameter(String value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+		[Required]
+        [StringLength(2000)]
+        [Description("String value")]
+		[XmlElement("Value")]
+        public String Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private String ValueField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the IntegerQuantityParameter xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="IntegerQuantityParameter", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the IntegerQuantityParameter xsd type.")]
+    public partial class IntegerQuantityParameter : AbstractActivityParameter, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the IntegerQuantityParameter class.
+        /// </summary>
+        public IntegerQuantityParameter() {}
+
+        /// <summary>
+        /// Initializes a new instance of the IntegerQuantityParameter class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public IntegerQuantityParameter(Int64 value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+		[Required]
+        [Description("Integer value")]
+		[XmlElement("Value")]
+        public Int64? Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Int64? ValueField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the DoubleQuantityParameter xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DoubleQuantityParameter", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the DoubleQuantityParameter xsd type.")]
+    public partial class DoubleQuantityParameter : AbstractActivityParameter, INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Initializes a new instance of the DoubleQuantityParameter class.
+        /// </summary>
+        public DoubleQuantityParameter() {}
+
+        /// <summary>
+        /// Initializes a new instance of the DoubleQuantityParameter class.
+        /// </summary>
+        /// <param name="value">Initial value</param>
+        public DoubleQuantityParameter(Double value)
+        {
+            this.Value = value;
+        }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+		[Required]
+        [Description("Double value")]
+		[XmlElement("Value")]
+        public Double? Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double? ValueField; 
+
+        /// <summary>
+        /// Uom property
+        /// </summary>
+		[Required]
+        [Description("Unit of measure associated with the value")]
+		[XmlElement("Uom")]
+        public UnitOfMeasure? Uom {
+            get {
+                return UomField;
+            } 
+            set {
+                UomField = value;
+                NotifyPropertyChanged("Uom");
+            }
+        }
+
+        private UnitOfMeasure? UomField; 
+
+        /// <summary>
+        /// CustomUnitDictionary property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("CustomUnitDictionary")]
+        public DataObjectReference CustomUnitDictionary {
+            get {
+                return CustomUnitDictionaryField;
+            } 
+            set {
+                CustomUnitDictionaryField = value;
+                NotifyPropertyChanged("CustomUnitDictionary");
+            }
+        }
+
+        private DataObjectReference CustomUnitDictionaryField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the TimeIndexParameter xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TimeIndexParameter", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the TimeIndexParameter xsd type.")]
+    public partial class TimeIndexParameter : AbstractActivityParameter, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// TimeIndex property
+        /// </summary>
+		[Required]
+        [ComponentElement]
+		[XmlElement("TimeIndex")]
+        public TimeIndex TimeIndex {
+            get {
+                return TimeIndexField;
+            } 
+            set {
+                TimeIndexField = value;
+                NotifyPropertyChanged("TimeIndex");
+            }
+        }
+
+        private TimeIndex TimeIndexField; 
+
+
     } //here
     }
 
@@ -78117,7 +78191,7 @@ namespace Energistics.DataAccess.WITSML200
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("part_InterpretedGeologyInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
 	[Description("This class represents the InterpretedGeologyInterval xsd type.")]
     public partial class InterpretedGeologyInterval : AbstractObject, IUniqueId, INotifyPropertyChanged
     {
@@ -83484,7 +83558,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.")]
         [ComponentElement]
 		[XmlElement("ChannelClass")]
-        public PropertyKind ChannelClass {
+        public DataObjectReference ChannelClass {
             get {
                 return ChannelClassField;
             } 
@@ -83494,7 +83568,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private PropertyKind ChannelClassField; 
+        private DataObjectReference ChannelClassField; 
 
         /// <summary>
         /// RunNumber property
@@ -83778,58 +83852,6 @@ namespace Energistics.DataAccess.WITSML200
     } //here
 
     /// <summary>
-    /// This class represents the PropertyKind xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-	[Description("This class represents the PropertyKind xsd type.")]
-    public partial class PropertyKind : AbstractObject, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// QuantityClass property
-        /// </summary>
-		[Required]
-        [Description("A reference to the name of a quantity class in the Energistics Unit of Measure Dictionary. If there is no match in the Energistics Unit of Measure Dictionary, then this attribute is purely for human information.")]
-		[XmlElement("QuantityClass")]
-        public QuantityClassKind? QuantityClass {
-            get {
-                return QuantityClassField;
-            } 
-            set {
-                QuantityClassField = value;
-                NotifyPropertyChanged("QuantityClass");
-            }
-        }
-
-        private QuantityClassKind? QuantityClassField; 
-
-        /// <summary>
-        /// Parent property
-        /// </summary>
-		[Description("Indicates the parent of this property kind. BUSINESS RULE : Only the top root abstract property kind has not to define a parent property kind.")]
-        [ComponentElement]
-		[XmlElement("Parent")]
-        public DataObjectReference Parent {
-            get {
-                return ParentField;
-            } 
-            set {
-                ParentField = value;
-                NotifyPropertyChanged("Parent");
-            }
-        }
-
-        private DataObjectReference ParentField; 
-
-
-    } //here
-
-    /// <summary>
     /// This class represents the ChannelSet xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -83978,7 +84000,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.")]
         [ComponentElement]
 		[XmlElement("ChannelClass")]
-        public PropertyKind ChannelClass {
+        public DataObjectReference ChannelClass {
             get {
                 return ChannelClassField;
             } 
@@ -83988,7 +84010,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private PropertyKind ChannelClassField; 
+        private DataObjectReference ChannelClassField; 
 
         /// <summary>
         /// RunNumber property
@@ -84468,7 +84490,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released.")]
         [ComponentElement]
 		[XmlElement("ChannelClass")]
-        public PropertyKind ChannelClass {
+        public DataObjectReference ChannelClass {
             get {
                 return ChannelClassField;
             } 
@@ -84478,7 +84500,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private PropertyKind ChannelClassField; 
+        private DataObjectReference ChannelClassField; 
 
         /// <summary>
         /// RunNumber property
@@ -87811,6 +87833,35 @@ namespace Energistics.DataAccess.WITSML200
         private String CommentField; 
 
         /// <summary>
+        /// FailingRules property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("FailingRules")]
+        public List<FailingRule> FailingRules {
+            get {
+                return FailingRulesField;
+            } 
+            set {
+                FailingRulesField = value;
+                NotifyPropertyChanged("FailingRules");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if FailingRules has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool FailingRulesSpecified
+         {
+             get {
+             if(FailingRulesField!=null)
+                 return FailingRulesField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<FailingRule> FailingRulesField; 
+
+        /// <summary>
         /// IndexRange property
         /// </summary>
 		[ComponentElement]
@@ -87845,107 +87896,8 @@ namespace Energistics.DataAccess.WITSML200
 
         private DataObjectReference ReferencedDataField; 
 
-        /// <summary>
-        /// FailingRules property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("FailingRules")]
-        public List<FailingRule> FailingRules {
-            get {
-                return FailingRulesField;
-            } 
-            set {
-                FailingRulesField = value;
-                NotifyPropertyChanged("FailingRules");
-            }
-        }
-
-         /// <summary>
-         /// bool to indicate if FailingRules has been set. Used for serialization.
-         /// </summary>
-         [XmlIgnore]
-         public bool FailingRulesSpecified
-         {
-             get {
-             if(FailingRulesField!=null)
-                 return FailingRulesField.Count>0?true:false;
-             else return false;
-             }
-         }
-        private List<FailingRule> FailingRulesField; 
-
 
     } //here
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the VerticalCrs xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
-	[Description("This class represents the VerticalCrs xsd type.")]
-    public partial class VerticalCrs : AbstractObject, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Direction property
-        /// </summary>
-		[Required]
-		[XmlElement("Direction")]
-        public VerticalDirection? Direction {
-            get {
-                return DirectionField;
-            } 
-            set {
-                DirectionField = value;
-                NotifyPropertyChanged("Direction");
-            }
-        }
-
-        private VerticalDirection? DirectionField; 
-
-        /// <summary>
-        /// AbstractVerticalCrs property
-        /// </summary>
-		[Required]
-		[XmlElement("AbstractVerticalCrs")]
-        public AbstractVerticalCrs AbstractVerticalCrs {
-            get {
-                return AbstractVerticalCrsField;
-            } 
-            set {
-                AbstractVerticalCrsField = value;
-                NotifyPropertyChanged("AbstractVerticalCrs");
-            }
-        }
-
-        private AbstractVerticalCrs AbstractVerticalCrsField; 
-
-		/// <summary>
-        /// uom property
-        /// </summary>
-		[Required]
-        [XmlAttribute("uom")]
-		
-        public String Uom {
-            get {
-                return uomField;
-            } 
-            set {
-                uomField = value;
-                NotifyPropertyChanged("Uom");
-            }
-        }
-
-        private String uomField; 
-
-
-    } //here
-    }
 
     namespace ComponentSchemas 
     {
@@ -88052,86 +88004,75 @@ namespace Energistics.DataAccess.WITSML200
     } //here
     }
 
+    namespace ComponentSchemas 
+    {
     /// <summary>
-    /// This class represents the Activity xsd type.
+    /// This class represents the VerticalCrs xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-	[Description("This class represents the Activity xsd type.")]
-    public partial class Activity : AbstractObject, INotifyPropertyChanged
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="VerticalCrs", Namespace="http://www.energistics.org/energyml/data/commonv2")]
+	[Description("This class represents the VerticalCrs xsd type.")]
+    public partial class VerticalCrs : AbstractObject, INotifyPropertyChanged
     {
 
         /// <summary>
-        /// ActivityDescriptor property
+        /// Direction property
         /// </summary>
 		[Required]
-        [ComponentElement]
-		[XmlElement("ActivityDescriptor")]
-        public DataObjectReference ActivityDescriptor {
+		[XmlElement("Direction")]
+        public VerticalDirection? Direction {
             get {
-                return ActivityDescriptorField;
+                return DirectionField;
             } 
             set {
-                ActivityDescriptorField = value;
-                NotifyPropertyChanged("ActivityDescriptor");
+                DirectionField = value;
+                NotifyPropertyChanged("Direction");
             }
         }
 
-        private DataObjectReference ActivityDescriptorField; 
+        private VerticalDirection? DirectionField; 
 
         /// <summary>
-        /// Parameter property
+        /// AbstractVerticalCrs property
         /// </summary>
 		[Required]
-        [RecurringElement]
-		[XmlElement("Parameter")]
-        public List<AbstractActivityParameter> Parameter {
+		[XmlElement("AbstractVerticalCrs")]
+        public AbstractVerticalCrs AbstractVerticalCrs {
             get {
-                return ParameterField;
+                return AbstractVerticalCrsField;
             } 
             set {
-                ParameterField = value;
-                NotifyPropertyChanged("Parameter");
+                AbstractVerticalCrsField = value;
+                NotifyPropertyChanged("AbstractVerticalCrs");
             }
         }
 
-         /// <summary>
-         /// bool to indicate if Parameter has been set. Used for serialization.
-         /// </summary>
-         [XmlIgnore]
-         public bool ParameterSpecified
-         {
-             get {
-             if(ParameterField!=null)
-                 return ParameterField.Count>0?true:false;
-             else return false;
-             }
-         }
-        private List<AbstractActivityParameter> ParameterField; 
+        private AbstractVerticalCrs AbstractVerticalCrsField; 
 
-        /// <summary>
-        /// Parent property
+		/// <summary>
+        /// uom property
         /// </summary>
-		[ComponentElement]
-		[XmlElement("Parent")]
-        public DataObjectReference Parent {
+		[Required]
+        [XmlAttribute("uom")]
+		
+        public String Uom {
             get {
-                return ParentField;
+                return uomField;
             } 
             set {
-                ParentField = value;
-                NotifyPropertyChanged("Parent");
+                uomField = value;
+                NotifyPropertyChanged("Uom");
             }
         }
 
-        private DataObjectReference ParentField; 
+        private String uomField; 
 
 
     } //here
+    }
 
     /// <summary>
     /// This class represents the ActivityTemplate xsd type.
@@ -88180,7 +88121,7 @@ namespace Energistics.DataAccess.WITSML200
     } //here
 
     /// <summary>
-    /// This class represents the PropertyKindDictionary xsd type.
+    /// This class represents the Activity xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
@@ -88188,40 +88129,74 @@ namespace Energistics.DataAccess.WITSML200
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-	[Description("This class represents the PropertyKindDictionary xsd type.")]
-    public partial class PropertyKindDictionary : AbstractObject, INotifyPropertyChanged
+	[Description("This class represents the Activity xsd type.")]
+    public partial class Activity : AbstractObject, INotifyPropertyChanged
     {
 
         /// <summary>
-        /// PropertyKind property
+        /// ActivityDescriptor property
         /// </summary>
 		[Required]
-        [Description("Defines which property kind are contained into a property kind dictionary.")]
-        [RecurringElement]
-		[XmlElement("PropertyKind")]
-        public List<PropertyKind> PropertyKind {
+        [ComponentElement]
+		[XmlElement("ActivityDescriptor")]
+        public DataObjectReference ActivityDescriptor {
             get {
-                return PropertyKindField;
+                return ActivityDescriptorField;
             } 
             set {
-                PropertyKindField = value;
-                NotifyPropertyChanged("PropertyKind");
+                ActivityDescriptorField = value;
+                NotifyPropertyChanged("ActivityDescriptor");
+            }
+        }
+
+        private DataObjectReference ActivityDescriptorField; 
+
+        /// <summary>
+        /// Parent property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("Parent")]
+        public DataObjectReference Parent {
+            get {
+                return ParentField;
+            } 
+            set {
+                ParentField = value;
+                NotifyPropertyChanged("Parent");
+            }
+        }
+
+        private DataObjectReference ParentField; 
+
+        /// <summary>
+        /// Parameter property
+        /// </summary>
+		[Required]
+        [RecurringElement]
+		[XmlElement("Parameter")]
+        public List<AbstractActivityParameter> Parameter {
+            get {
+                return ParameterField;
+            } 
+            set {
+                ParameterField = value;
+                NotifyPropertyChanged("Parameter");
             }
         }
 
          /// <summary>
-         /// bool to indicate if PropertyKind has been set. Used for serialization.
+         /// bool to indicate if Parameter has been set. Used for serialization.
          /// </summary>
          [XmlIgnore]
-         public bool PropertyKindSpecified
+         public bool ParameterSpecified
          {
              get {
-             if(PropertyKindField!=null)
-                 return PropertyKindField.Count>0?true:false;
+             if(ParameterField!=null)
+                 return ParameterField.Count>0?true:false;
              else return false;
              }
          }
-        private List<PropertyKind> PropertyKindField; 
+        private List<AbstractActivityParameter> ParameterField; 
 
 
     } //here
@@ -88291,6 +88266,140 @@ namespace Energistics.DataAccess.WITSML200
     } //here
 
     /// <summary>
+    /// This class represents the PropertyKind xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+	[Description("This class represents the PropertyKind xsd type.")]
+    public partial class PropertyKind : AbstractObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// IsAbstract property
+        /// </summary>
+		[Required]
+        [Description("This boolean indicates whether the PropertyKind should be used as a real property or not.  If the Is Abstract flag is set, then this entry should be used only as the parent of a real property. For example, the PropertyKind of \"force per length\" shouldn't be used directly, as it is really just a description of some units of measure. This entry should only be used as the parent of the real physical property \"surface tension\".")]
+		[XmlElement("IsAbstract")]
+        public Boolean? IsAbstract {
+            get {
+                return IsAbstractField;
+            } 
+            set {
+                IsAbstractField = value;
+                NotifyPropertyChanged("IsAbstract");
+            }
+        }
+
+        private Boolean? IsAbstractField; 
+
+        /// <summary>
+        /// DeprecationDate property
+        /// </summary>
+		[Description("Date at which this property dictionary entry must no longer be used. Files generated before this date would have used this entry so it is left here for reference.   A null value means the property kind is still valid.")]
+		[XmlElement("DeprecationDate")]
+        public Timestamp? DeprecationDate {
+            get {
+                return DeprecationDateField;
+            } 
+            set {
+                DeprecationDateField = value;
+                NotifyPropertyChanged("DeprecationDate");
+            }
+        }
+
+        private Timestamp? DeprecationDateField; 
+
+        /// <summary>
+        /// QuantityClass property
+        /// </summary>
+		[Required]
+        [Description("A reference to the name of a quantity class in the Energistics Unit of Measure Dictionary. If there is no match in the Energistics Unit of Measure Dictionary, then this attribute is purely for human information.")]
+		[XmlElement("QuantityClass")]
+        public QuantityClassKind? QuantityClass {
+            get {
+                return QuantityClassField;
+            } 
+            set {
+                QuantityClassField = value;
+                NotifyPropertyChanged("QuantityClass");
+            }
+        }
+
+        private QuantityClassKind? QuantityClassField; 
+
+        /// <summary>
+        /// Parent property
+        /// </summary>
+		[Description("Indicates the parent of this property kind. BUSINESS RULE : Only the top root abstract property kind has not to define a parent property kind.")]
+        [ComponentElement]
+		[XmlElement("Parent")]
+        public DataObjectReference Parent {
+            get {
+                return ParentField;
+            } 
+            set {
+                ParentField = value;
+                NotifyPropertyChanged("Parent");
+            }
+        }
+
+        private DataObjectReference ParentField; 
+
+
+    } //here
+
+    /// <summary>
+    /// This class represents the PropertyKindDictionary xsd type.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    [System.Xml.Serialization.XmlRootAttribute("", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+	[Description("This class represents the PropertyKindDictionary xsd type.")]
+    public partial class PropertyKindDictionary : AbstractObject, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// PropertyKind property
+        /// </summary>
+		[Required]
+        [Description("Defines which property kind are contained into a property kind dictionary.")]
+        [RecurringElement]
+		[XmlElement("PropertyKind")]
+        public List<PropertyKind> PropertyKind {
+            get {
+                return PropertyKindField;
+            } 
+            set {
+                PropertyKindField = value;
+                NotifyPropertyChanged("PropertyKind");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if PropertyKind has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool PropertyKindSpecified
+         {
+             get {
+             if(PropertyKindField!=null)
+                 return PropertyKindField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<PropertyKind> PropertyKindField; 
+
+
+    } //here
+
+    /// <summary>
     /// This class represents the EpcExternalPartReference xsd type.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
@@ -88346,405 +88455,3425 @@ namespace Energistics.DataAccess.WITSML200
     #region Enumerations
     namespace ReferenceData {
         /// <summary>
-        /// This class represents the LengthUom xsd enumeration.
+        /// This class represents the ExistenceKind xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the LengthUom xsd enumeration.")]
-        public enum LengthUom 
+        [Description("This class represents the ExistenceKind xsd enumeration.")]
+        public enum ExistenceKind 
         {
         /// <summary>
-        /// Item01ft property
+        /// actual property
         /// </summary>
-          [XmlEnum("0.1 ft")]
-          Item01ft,
+          actual,
         /// <summary>
-        /// Item01ftUS property
+        /// planned property
         /// </summary>
-          [XmlEnum("0.1 ft[US]")]
-          Item01ftUS,
+          planned,
         /// <summary>
-        /// Item01in property
+        /// simulated property
         /// </summary>
-          [XmlEnum("0.1 in")]
-          Item01in,
+          simulated
+        }
         /// <summary>
-        /// Item01yd property
+        /// This class represents the MatrixCementKind xsd enumeration.
         /// </summary>
-          [XmlEnum("0.1 yd")]
-          Item01yd,
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the MatrixCementKind xsd enumeration.")]
+        public enum MatrixCementKind 
+        {
         /// <summary>
-        /// Item116in property
+        /// ankerite property
         /// </summary>
-          [XmlEnum("1/16 in")]
-          Item116in,
+          ankerite,
         /// <summary>
-        /// Item12ft property
+        /// calcite property
         /// </summary>
-          [XmlEnum("1/2 ft")]
-          Item12ft,
+          calcite,
         /// <summary>
-        /// Item132in property
+        /// chlorite property
         /// </summary>
-          [XmlEnum("1/32 in")]
-          Item132in,
+          chlorite,
         /// <summary>
-        /// Item164in property
+        /// dolomite property
         /// </summary>
-          [XmlEnum("1/64 in")]
-          Item164in,
+          dolomite,
         /// <summary>
-        /// Item10ft property
+        /// illite property
         /// </summary>
-          [XmlEnum("10 ft")]
-          Item10ft,
+          illite,
         /// <summary>
-        /// Item10in property
+        /// kaolinite property
         /// </summary>
-          [XmlEnum("10 in")]
-          Item10in,
+          kaolinite,
         /// <summary>
-        /// Item10km property
+        /// quartz property
         /// </summary>
-          [XmlEnum("10 km")]
-          Item10km,
+          quartz,
         /// <summary>
-        /// Item100ft property
+        /// siderite property
         /// </summary>
-          [XmlEnum("100 ft")]
-          Item100ft,
+          siderite,
         /// <summary>
-        /// Item100km property
+        /// smectite property
         /// </summary>
-          [XmlEnum("100 km")]
-          Item100km,
+          smectite
+        }
         /// <summary>
-        /// Item1000ft property
+        /// This class represents the MeasureClass xsd enumeration.
         /// </summary>
-          [XmlEnum("1000 ft")]
-          Item1000ft,
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the MeasureClass xsd enumeration.")]
+        public enum MeasureClass 
+        {
         /// <summary>
-        /// Item30ft property
+        /// absorbeddose property
         /// </summary>
-          [XmlEnum("30 ft")]
-          Item30ft,
+          [XmlEnum("absorbed dose")]
+          absorbeddose,
         /// <summary>
-        /// Item30m property
+        /// activityofradioactivity property
         /// </summary>
-          [XmlEnum("30 m")]
-          Item30m,
+          [XmlEnum("activity of radioactivity")]
+          activityofradioactivity,
         /// <summary>
-        /// angstrom property
+        /// amountofsubstance property
         /// </summary>
-          angstrom,
+          [XmlEnum("amount of substance")]
+          amountofsubstance,
         /// <summary>
-        /// chain property
+        /// amountofsubstanceperamountofsubstance property
         /// </summary>
-          chain,
+          [XmlEnum("amount of substance per amount of substance")]
+          amountofsubstanceperamountofsubstance,
         /// <summary>
-        /// chainBnA property
+        /// amountofsubstanceperarea property
         /// </summary>
-          [XmlEnum("chain[BnA]")]
-          chainBnA,
+          [XmlEnum("amount of substance per area")]
+          amountofsubstanceperarea,
         /// <summary>
-        /// chainBnB property
+        /// amountofsubstancepertime property
         /// </summary>
-          [XmlEnum("chain[BnB]")]
-          chainBnB,
+          [XmlEnum("amount of substance per time")]
+          amountofsubstancepertime,
         /// <summary>
-        /// chainCla property
+        /// amountofsubstancepertimeperarea property
         /// </summary>
-          [XmlEnum("chain[Cla]")]
-          chainCla,
+          [XmlEnum("amount of substance per time per area")]
+          amountofsubstancepertimeperarea,
         /// <summary>
-        /// chainInd37 property
+        /// amountofsubstancepervolume property
         /// </summary>
-          [XmlEnum("chain[Ind37]")]
-          chainInd37,
+          [XmlEnum("amount of substance per volume")]
+          amountofsubstancepervolume,
         /// <summary>
-        /// chainSe property
+        /// angleperlength property
         /// </summary>
-          [XmlEnum("chain[Se]")]
-          chainSe,
+          [XmlEnum("angle per length")]
+          angleperlength,
         /// <summary>
-        /// chainSeT property
+        /// anglepervolume property
         /// </summary>
-          [XmlEnum("chain[SeT]")]
-          chainSeT,
+          [XmlEnum("angle per volume")]
+          anglepervolume,
         /// <summary>
-        /// chainUS property
+        /// angularacceleration property
         /// </summary>
-          [XmlEnum("chain[US]")]
-          chainUS,
+          [XmlEnum("angular acceleration")]
+          angularacceleration,
         /// <summary>
-        /// cm property
+        /// angularvelocity property
         /// </summary>
-          cm,
+          [XmlEnum("angular velocity")]
+          angularvelocity,
         /// <summary>
-        /// dam property
+        /// apigammaray property
         /// </summary>
-          dam,
+          [XmlEnum("api gamma ray")]
+          apigammaray,
         /// <summary>
-        /// dm property
+        /// apigravity property
         /// </summary>
-          dm,
+          [XmlEnum("api gravity")]
+          apigravity,
         /// <summary>
-        /// Em property
+        /// apineutron property
         /// </summary>
-          Em,
+          [XmlEnum("api neutron")]
+          apineutron,
         /// <summary>
-        /// fathom property
+        /// area property
         /// </summary>
-          fathom,
+          area,
         /// <summary>
-        /// fm property
+        /// areaperamountofsubstance property
         /// </summary>
-          fm,
+          [XmlEnum("area per amount of substance")]
+          areaperamountofsubstance,
         /// <summary>
-        /// ft property
+        /// areaperarea property
         /// </summary>
-          ft,
+          [XmlEnum("area per area")]
+          areaperarea,
         /// <summary>
-        /// ftBnA property
+        /// areapercount property
         /// </summary>
-          [XmlEnum("ft[BnA]")]
-          ftBnA,
+          [XmlEnum("area per count")]
+          areapercount,
         /// <summary>
-        /// ftBnB property
+        /// areapermass property
         /// </summary>
-          [XmlEnum("ft[BnB]")]
-          ftBnB,
+          [XmlEnum("area per mass")]
+          areapermass,
         /// <summary>
-        /// ftBr36 property
+        /// areapertime property
         /// </summary>
-          [XmlEnum("ft[Br36]")]
-          ftBr36,
+          [XmlEnum("area per time")]
+          areapertime,
         /// <summary>
-        /// ftBr65 property
+        /// areapervolume property
         /// </summary>
-          [XmlEnum("ft[Br65]")]
-          ftBr65,
+          [XmlEnum("area per volume")]
+          areapervolume,
         /// <summary>
-        /// ftCla property
+        /// attenuationperfrequencyinterval property
         /// </summary>
-          [XmlEnum("ft[Cla]")]
-          ftCla,
+          [XmlEnum("attenuation per frequency interval")]
+          attenuationperfrequencyinterval,
         /// <summary>
-        /// ftGC property
+        /// capacitance property
         /// </summary>
-          [XmlEnum("ft[GC]")]
-          ftGC,
+          capacitance,
         /// <summary>
-        /// ftInd property
+        /// cationexchangecapacity property
         /// </summary>
-          [XmlEnum("ft[Ind]")]
-          ftInd,
+          [XmlEnum("cation exchange capacity")]
+          cationexchangecapacity,
         /// <summary>
-        /// ftInd37 property
+        /// datatransferspeed property
         /// </summary>
-          [XmlEnum("ft[Ind37]")]
-          ftInd37,
+          [XmlEnum("data transfer speed")]
+          datatransferspeed,
         /// <summary>
-        /// ftInd62 property
+        /// diffusioncoefficient property
         /// </summary>
-          [XmlEnum("ft[Ind62]")]
-          ftInd62,
+          [XmlEnum("diffusion coefficient")]
+          diffusioncoefficient,
         /// <summary>
-        /// ftInd75 property
+        /// diffusivetimeofflight property
         /// </summary>
-          [XmlEnum("ft[Ind75]")]
-          ftInd75,
+          [XmlEnum("diffusive time of flight")]
+          diffusivetimeofflight,
         /// <summary>
-        /// ftSe property
+        /// digitalstorage property
         /// </summary>
-          [XmlEnum("ft[Se]")]
-          ftSe,
+          [XmlEnum("digital storage")]
+          digitalstorage,
         /// <summary>
-        /// ftSeT property
+        /// dimensionless property
         /// </summary>
-          [XmlEnum("ft[SeT]")]
-          ftSeT,
+          dimensionless,
         /// <summary>
-        /// ftUS property
+        /// dipolemoment property
         /// </summary>
-          [XmlEnum("ft[US]")]
-          ftUS,
+          [XmlEnum("dipole moment")]
+          dipolemoment,
         /// <summary>
-        /// furUS property
+        /// doseequivalent property
         /// </summary>
-          [XmlEnum("fur[US]")]
-          furUS,
+          [XmlEnum("dose equivalent")]
+          doseequivalent,
         /// <summary>
-        /// Gm property
+        /// dynamicviscosity property
         /// </summary>
-          Gm,
+          [XmlEnum("dynamic viscosity")]
+          dynamicviscosity,
         /// <summary>
-        /// hm property
+        /// electriccharge property
         /// </summary>
-          hm,
+          [XmlEnum("electric charge")]
+          electriccharge,
         /// <summary>
-        /// in property
+        /// electricchargeperarea property
         /// </summary>
-          @in,
+          [XmlEnum("electric charge per area")]
+          electricchargeperarea,
         /// <summary>
-        /// inUS property
+        /// electricchargepermass property
         /// </summary>
-          [XmlEnum("in[US]")]
-          inUS,
+          [XmlEnum("electric charge per mass")]
+          electricchargepermass,
         /// <summary>
-        /// km property
+        /// electricchargepervolume property
         /// </summary>
-          km,
+          [XmlEnum("electric charge per volume")]
+          electricchargepervolume,
         /// <summary>
-        /// link property
+        /// electricconductance property
         /// </summary>
-          link,
+          [XmlEnum("electric conductance")]
+          electricconductance,
         /// <summary>
-        /// linkBnA property
+        /// electricconductivity property
         /// </summary>
-          [XmlEnum("link[BnA]")]
-          linkBnA,
+          [XmlEnum("electric conductivity")]
+          electricconductivity,
         /// <summary>
-        /// linkBnB property
+        /// electriccurrent property
         /// </summary>
-          [XmlEnum("link[BnB]")]
-          linkBnB,
+          [XmlEnum("electric current")]
+          electriccurrent,
         /// <summary>
-        /// linkCla property
+        /// electriccurrentdensity property
         /// </summary>
-          [XmlEnum("link[Cla]")]
-          linkCla,
+          [XmlEnum("electric current density")]
+          electriccurrentdensity,
         /// <summary>
-        /// linkSe property
+        /// electricfieldstrength property
         /// </summary>
-          [XmlEnum("link[Se]")]
-          linkSe,
+          [XmlEnum("electric field strength")]
+          electricfieldstrength,
         /// <summary>
-        /// linkSeT property
+        /// electricpotentialdifference property
         /// </summary>
-          [XmlEnum("link[SeT]")]
-          linkSeT,
+          [XmlEnum("electric potential difference")]
+          electricpotentialdifference,
         /// <summary>
-        /// linkUS property
+        /// electricresistance property
         /// </summary>
-          [XmlEnum("link[US]")]
-          linkUS,
+          [XmlEnum("electric resistance")]
+          electricresistance,
         /// <summary>
-        /// m property
+        /// electricresistanceperlength property
         /// </summary>
-          m,
+          [XmlEnum("electric resistance per length")]
+          electricresistanceperlength,
         /// <summary>
-        /// mGer property
+        /// electricalresistivity property
         /// </summary>
-          [XmlEnum("m[Ger]")]
-          mGer,
+          [XmlEnum("electrical resistivity")]
+          electricalresistivity,
         /// <summary>
-        /// mi property
+        /// electromagneticmoment property
         /// </summary>
-          mi,
+          [XmlEnum("electromagnetic moment")]
+          electromagneticmoment,
         /// <summary>
-        /// minaut property
+        /// energy property
         /// </summary>
-          [XmlEnum("mi[naut]")]
-          minaut,
+          energy,
         /// <summary>
-        /// minautUK property
+        /// energylengthperarea property
         /// </summary>
-          [XmlEnum("mi[nautUK]")]
-          minautUK,
+          [XmlEnum("energy length per area")]
+          energylengthperarea,
         /// <summary>
-        /// miUS property
+        /// energylengthpertimeareatemperature property
         /// </summary>
-          [XmlEnum("mi[US]")]
-          miUS,
+          [XmlEnum("energy length per time area temperature")]
+          energylengthpertimeareatemperature,
         /// <summary>
-        /// mil property
+        /// energyperarea property
         /// </summary>
-          mil,
+          [XmlEnum("energy per area")]
+          energyperarea,
         /// <summary>
-        /// mm property
+        /// energyperlength property
         /// </summary>
-          mm,
+          [XmlEnum("energy per length")]
+          energyperlength,
         /// <summary>
-        /// Mm property
+        /// energypermass property
         /// </summary>
-          Mm,
+          [XmlEnum("energy per mass")]
+          energypermass,
         /// <summary>
-        /// nm property
+        /// energypermasspertime property
         /// </summary>
-          nm,
+          [XmlEnum("energy per mass per time")]
+          energypermasspertime,
         /// <summary>
-        /// pm property
+        /// energypervolume property
         /// </summary>
-          pm,
+          [XmlEnum("energy per volume")]
+          energypervolume,
         /// <summary>
-        /// rodUS property
+        /// force property
         /// </summary>
-          [XmlEnum("rod[US]")]
-          rodUS,
+          force,
         /// <summary>
-        /// Tm property
+        /// forcearea property
         /// </summary>
-          Tm,
+          [XmlEnum("force area")]
+          forcearea,
         /// <summary>
-        /// um property
+        /// forcelengthperlength property
         /// </summary>
-          um,
+          [XmlEnum("force length per length")]
+          forcelengthperlength,
         /// <summary>
-        /// yd property
+        /// forceperforce property
         /// </summary>
-          yd,
+          [XmlEnum("force per force")]
+          forceperforce,
         /// <summary>
-        /// ydBnA property
+        /// forceperlength property
         /// </summary>
-          [XmlEnum("yd[BnA]")]
-          ydBnA,
+          [XmlEnum("force per length")]
+          forceperlength,
         /// <summary>
-        /// ydBnB property
+        /// forcepervolume property
         /// </summary>
-          [XmlEnum("yd[BnB]")]
-          ydBnB,
+          [XmlEnum("force per volume")]
+          forcepervolume,
         /// <summary>
-        /// ydCla property
+        /// frequency property
         /// </summary>
-          [XmlEnum("yd[Cla]")]
-          ydCla,
+          frequency,
         /// <summary>
-        /// ydInd property
+        /// frequencyinterval property
         /// </summary>
-          [XmlEnum("yd[Ind]")]
-          ydInd,
+          [XmlEnum("frequency interval")]
+          frequencyinterval,
         /// <summary>
-        /// ydInd37 property
+        /// heatcapacity property
         /// </summary>
-          [XmlEnum("yd[Ind37]")]
-          ydInd37,
+          [XmlEnum("heat capacity")]
+          heatcapacity,
         /// <summary>
-        /// ydInd62 property
+        /// heatflowrate property
         /// </summary>
-          [XmlEnum("yd[Ind62]")]
-          ydInd62,
+          [XmlEnum("heat flow rate")]
+          heatflowrate,
         /// <summary>
-        /// ydInd75 property
+        /// heattransfercoefficient property
         /// </summary>
-          [XmlEnum("yd[Ind75]")]
-          ydInd75,
+          [XmlEnum("heat transfer coefficient")]
+          heattransfercoefficient,
         /// <summary>
-        /// ydSe property
+        /// illuminance property
         /// </summary>
-          [XmlEnum("yd[Se]")]
-          ydSe,
+          illuminance,
         /// <summary>
-        /// ydSeT property
+        /// inductance property
         /// </summary>
-          [XmlEnum("yd[SeT]")]
-          ydSeT,
+          inductance,
         /// <summary>
-        /// ydUS property
+        /// isothermalcompressibility property
         /// </summary>
-          [XmlEnum("yd[US]")]
-          ydUS
+          [XmlEnum("isothermal compressibility")]
+          isothermalcompressibility,
+        /// <summary>
+        /// kinematicviscosity property
+        /// </summary>
+          [XmlEnum("kinematic viscosity")]
+          kinematicviscosity,
+        /// <summary>
+        /// length property
+        /// </summary>
+          length,
+        /// <summary>
+        /// lengthperlength property
+        /// </summary>
+          [XmlEnum("length per length")]
+          lengthperlength,
+        /// <summary>
+        /// lengthpermass property
+        /// </summary>
+          [XmlEnum("length per mass")]
+          lengthpermass,
+        /// <summary>
+        /// lengthperpressure property
+        /// </summary>
+          [XmlEnum("length per pressure")]
+          lengthperpressure,
+        /// <summary>
+        /// lengthpertemperature property
+        /// </summary>
+          [XmlEnum("length per temperature")]
+          lengthpertemperature,
+        /// <summary>
+        /// lengthpertime property
+        /// </summary>
+          [XmlEnum("length per time")]
+          lengthpertime,
+        /// <summary>
+        /// lengthpervolume property
+        /// </summary>
+          [XmlEnum("length per volume")]
+          lengthpervolume,
+        /// <summary>
+        /// lightexposure property
+        /// </summary>
+          [XmlEnum("light exposure")]
+          lightexposure,
+        /// <summary>
+        /// linearacceleration property
+        /// </summary>
+          [XmlEnum("linear acceleration")]
+          linearacceleration,
+        /// <summary>
+        /// linearthermalexpansion property
+        /// </summary>
+          [XmlEnum("linear thermal expansion")]
+          linearthermalexpansion,
+        /// <summary>
+        /// logarithmicpowerratio property
+        /// </summary>
+          [XmlEnum("logarithmic power ratio")]
+          logarithmicpowerratio,
+        /// <summary>
+        /// logarithmicpowerratioperlength property
+        /// </summary>
+          [XmlEnum("logarithmic power ratio per length")]
+          logarithmicpowerratioperlength,
+        /// <summary>
+        /// luminance property
+        /// </summary>
+          luminance,
+        /// <summary>
+        /// luminousefficacy property
+        /// </summary>
+          [XmlEnum("luminous efficacy")]
+          luminousefficacy,
+        /// <summary>
+        /// luminousflux property
+        /// </summary>
+          [XmlEnum("luminous flux")]
+          luminousflux,
+        /// <summary>
+        /// luminousintensity property
+        /// </summary>
+          [XmlEnum("luminous intensity")]
+          luminousintensity,
+        /// <summary>
+        /// magneticdipolemoment property
+        /// </summary>
+          [XmlEnum("magnetic dipole moment")]
+          magneticdipolemoment,
+        /// <summary>
+        /// magneticfieldstrength property
+        /// </summary>
+          [XmlEnum("magnetic field strength")]
+          magneticfieldstrength,
+        /// <summary>
+        /// magneticflux property
+        /// </summary>
+          [XmlEnum("magnetic flux")]
+          magneticflux,
+        /// <summary>
+        /// magneticfluxdensity property
+        /// </summary>
+          [XmlEnum("magnetic flux density")]
+          magneticfluxdensity,
+        /// <summary>
+        /// magneticfluxdensityperlength property
+        /// </summary>
+          [XmlEnum("magnetic flux density per length")]
+          magneticfluxdensityperlength,
+        /// <summary>
+        /// magneticpermeability property
+        /// </summary>
+          [XmlEnum("magnetic permeability")]
+          magneticpermeability,
+        /// <summary>
+        /// magneticvectorpotential property
+        /// </summary>
+          [XmlEnum("magnetic vector potential")]
+          magneticvectorpotential,
+        /// <summary>
+        /// mass property
+        /// </summary>
+          mass,
+        /// <summary>
+        /// masslength property
+        /// </summary>
+          [XmlEnum("mass length")]
+          masslength,
+        /// <summary>
+        /// massperarea property
+        /// </summary>
+          [XmlEnum("mass per area")]
+          massperarea,
+        /// <summary>
+        /// massperenergy property
+        /// </summary>
+          [XmlEnum("mass per energy")]
+          massperenergy,
+        /// <summary>
+        /// massperlength property
+        /// </summary>
+          [XmlEnum("mass per length")]
+          massperlength,
+        /// <summary>
+        /// masspermass property
+        /// </summary>
+          [XmlEnum("mass per mass")]
+          masspermass,
+        /// <summary>
+        /// masspertime property
+        /// </summary>
+          [XmlEnum("mass per time")]
+          masspertime,
+        /// <summary>
+        /// masspertimeperarea property
+        /// </summary>
+          [XmlEnum("mass per time per area")]
+          masspertimeperarea,
+        /// <summary>
+        /// masspertimeperlength property
+        /// </summary>
+          [XmlEnum("mass per time per length")]
+          masspertimeperlength,
+        /// <summary>
+        /// masspervolume property
+        /// </summary>
+          [XmlEnum("mass per volume")]
+          masspervolume,
+        /// <summary>
+        /// masspervolumeperlength property
+        /// </summary>
+          [XmlEnum("mass per volume per length")]
+          masspervolumeperlength,
+        /// <summary>
+        /// masspervolumeperpressure property
+        /// </summary>
+          [XmlEnum("mass per volume per pressure")]
+          masspervolumeperpressure,
+        /// <summary>
+        /// masspervolumepertemperature property
+        /// </summary>
+          [XmlEnum("mass per volume per temperature")]
+          masspervolumepertemperature,
+        /// <summary>
+        /// mobility property
+        /// </summary>
+          mobility,
+        /// <summary>
+        /// molarenergy property
+        /// </summary>
+          [XmlEnum("molar energy")]
+          molarenergy,
+        /// <summary>
+        /// molarheatcapacity property
+        /// </summary>
+          [XmlEnum("molar heat capacity")]
+          molarheatcapacity,
+        /// <summary>
+        /// molarvolume property
+        /// </summary>
+          [XmlEnum("molar volume")]
+          molarvolume,
+        /// <summary>
+        /// molecularweight property
+        /// </summary>
+          [XmlEnum("molecular weight")]
+          molecularweight,
+        /// <summary>
+        /// momentofforce property
+        /// </summary>
+          [XmlEnum("moment of force")]
+          momentofforce,
+        /// <summary>
+        /// momentofinertia property
+        /// </summary>
+          [XmlEnum("moment of inertia")]
+          momentofinertia,
+        /// <summary>
+        /// momentum property
+        /// </summary>
+          momentum,
+        /// <summary>
+        /// normalizedpower property
+        /// </summary>
+          [XmlEnum("normalized power")]
+          normalizedpower,
+        /// <summary>
+        /// permeabilitylength property
+        /// </summary>
+          [XmlEnum("permeability length")]
+          permeabilitylength,
+        /// <summary>
+        /// permeabilityrock property
+        /// </summary>
+          [XmlEnum("permeability rock")]
+          permeabilityrock,
+        /// <summary>
+        /// permittivity property
+        /// </summary>
+          permittivity,
+        /// <summary>
+        /// planeangle property
+        /// </summary>
+          [XmlEnum("plane angle")]
+          planeangle,
+        /// <summary>
+        /// potentialdifferenceperpowerdrop property
+        /// </summary>
+          [XmlEnum("potential difference per power drop")]
+          potentialdifferenceperpowerdrop,
+        /// <summary>
+        /// power property
+        /// </summary>
+          power,
+        /// <summary>
+        /// powerperarea property
+        /// </summary>
+          [XmlEnum("power per area")]
+          powerperarea,
+        /// <summary>
+        /// powerperpower property
+        /// </summary>
+          [XmlEnum("power per power")]
+          powerperpower,
+        /// <summary>
+        /// powerpervolume property
+        /// </summary>
+          [XmlEnum("power per volume")]
+          powerpervolume,
+        /// <summary>
+        /// pressure property
+        /// </summary>
+          pressure,
+        /// <summary>
+        /// pressureperpressure property
+        /// </summary>
+          [XmlEnum("pressure per pressure")]
+          pressureperpressure,
+        /// <summary>
+        /// pressurepertime property
+        /// </summary>
+          [XmlEnum("pressure per time")]
+          pressurepertime,
+        /// <summary>
+        /// pressurepervolume property
+        /// </summary>
+          [XmlEnum("pressure per volume")]
+          pressurepervolume,
+        /// <summary>
+        /// pressuresquared property
+        /// </summary>
+          [XmlEnum("pressure squared")]
+          pressuresquared,
+        /// <summary>
+        /// pressuresquaredperforcetimeperarea property
+        /// </summary>
+          [XmlEnum("pressure squared per force time per area")]
+          pressuresquaredperforcetimeperarea,
+        /// <summary>
+        /// pressuretimepervolume property
+        /// </summary>
+          [XmlEnum("pressure time per volume")]
+          pressuretimepervolume,
+        /// <summary>
+        /// quantityoflight property
+        /// </summary>
+          [XmlEnum("quantity of light")]
+          quantityoflight,
+        /// <summary>
+        /// radiance property
+        /// </summary>
+          radiance,
+        /// <summary>
+        /// radiantintensity property
+        /// </summary>
+          [XmlEnum("radiant intensity")]
+          radiantintensity,
+        /// <summary>
+        /// reciprocalarea property
+        /// </summary>
+          [XmlEnum("reciprocal area")]
+          reciprocalarea,
+        /// <summary>
+        /// reciprocalelectricpotentialdifference property
+        /// </summary>
+          [XmlEnum("reciprocal electric potential difference")]
+          reciprocalelectricpotentialdifference,
+        /// <summary>
+        /// reciprocalforce property
+        /// </summary>
+          [XmlEnum("reciprocal force")]
+          reciprocalforce,
+        /// <summary>
+        /// reciprocallength property
+        /// </summary>
+          [XmlEnum("reciprocal length")]
+          reciprocallength,
+        /// <summary>
+        /// reciprocalmass property
+        /// </summary>
+          [XmlEnum("reciprocal mass")]
+          reciprocalmass,
+        /// <summary>
+        /// reciprocalmasstime property
+        /// </summary>
+          [XmlEnum("reciprocal mass time")]
+          reciprocalmasstime,
+        /// <summary>
+        /// reciprocalpressure property
+        /// </summary>
+          [XmlEnum("reciprocal pressure")]
+          reciprocalpressure,
+        /// <summary>
+        /// reciprocaltime property
+        /// </summary>
+          [XmlEnum("reciprocal time")]
+          reciprocaltime,
+        /// <summary>
+        /// reciprocalvolume property
+        /// </summary>
+          [XmlEnum("reciprocal volume")]
+          reciprocalvolume,
+        /// <summary>
+        /// reluctance property
+        /// </summary>
+          reluctance,
+        /// <summary>
+        /// secondmomentofarea property
+        /// </summary>
+          [XmlEnum("second moment of area")]
+          secondmomentofarea,
+        /// <summary>
+        /// signalingeventpertime property
+        /// </summary>
+          [XmlEnum("signaling event per time")]
+          signalingeventpertime,
+        /// <summary>
+        /// solidangle property
+        /// </summary>
+          [XmlEnum("solid angle")]
+          solidangle,
+        /// <summary>
+        /// specificheatcapacity property
+        /// </summary>
+          [XmlEnum("specific heat capacity")]
+          specificheatcapacity,
+        /// <summary>
+        /// temperatureinterval property
+        /// </summary>
+          [XmlEnum("temperature interval")]
+          temperatureinterval,
+        /// <summary>
+        /// temperatureintervalperlength property
+        /// </summary>
+          [XmlEnum("temperature interval per length")]
+          temperatureintervalperlength,
+        /// <summary>
+        /// temperatureintervalperpressure property
+        /// </summary>
+          [XmlEnum("temperature interval per pressure")]
+          temperatureintervalperpressure,
+        /// <summary>
+        /// temperatureintervalpertime property
+        /// </summary>
+          [XmlEnum("temperature interval per time")]
+          temperatureintervalpertime,
+        /// <summary>
+        /// thermalconductance property
+        /// </summary>
+          [XmlEnum("thermal conductance")]
+          thermalconductance,
+        /// <summary>
+        /// thermalconductivity property
+        /// </summary>
+          [XmlEnum("thermal conductivity")]
+          thermalconductivity,
+        /// <summary>
+        /// thermaldiffusivity property
+        /// </summary>
+          [XmlEnum("thermal diffusivity")]
+          thermaldiffusivity,
+        /// <summary>
+        /// thermalinsulance property
+        /// </summary>
+          [XmlEnum("thermal insulance")]
+          thermalinsulance,
+        /// <summary>
+        /// thermalresistance property
+        /// </summary>
+          [XmlEnum("thermal resistance")]
+          thermalresistance,
+        /// <summary>
+        /// thermodynamictemperature property
+        /// </summary>
+          [XmlEnum("thermodynamic temperature")]
+          thermodynamictemperature,
+        /// <summary>
+        /// thermodynamictemperatureperthermodynamictemperature property
+        /// </summary>
+          [XmlEnum("thermodynamic temperature per thermodynamic temperature")]
+          thermodynamictemperatureperthermodynamictemperature,
+        /// <summary>
+        /// time property
+        /// </summary>
+          time,
+        /// <summary>
+        /// timeperlength property
+        /// </summary>
+          [XmlEnum("time per length")]
+          timeperlength,
+        /// <summary>
+        /// timepermass property
+        /// </summary>
+          [XmlEnum("time per mass")]
+          timepermass,
+        /// <summary>
+        /// timepertime property
+        /// </summary>
+          [XmlEnum("time per time")]
+          timepertime,
+        /// <summary>
+        /// timepervolume property
+        /// </summary>
+          [XmlEnum("time per volume")]
+          timepervolume,
+        /// <summary>
+        /// verticalcoordinate property
+        /// </summary>
+          [XmlEnum("vertical coordinate")]
+          verticalcoordinate,
+        /// <summary>
+        /// volume property
+        /// </summary>
+          volume,
+        /// <summary>
+        /// volumeflowratepervolumeflowrate property
+        /// </summary>
+          [XmlEnum("volume flow rate per volume flow rate")]
+          volumeflowratepervolumeflowrate,
+        /// <summary>
+        /// volumeperarea property
+        /// </summary>
+          [XmlEnum("volume per area")]
+          volumeperarea,
+        /// <summary>
+        /// volumeperlength property
+        /// </summary>
+          [XmlEnum("volume per length")]
+          volumeperlength,
+        /// <summary>
+        /// volumepermass property
+        /// </summary>
+          [XmlEnum("volume per mass")]
+          volumepermass,
+        /// <summary>
+        /// volumeperpressure property
+        /// </summary>
+          [XmlEnum("volume per pressure")]
+          volumeperpressure,
+        /// <summary>
+        /// volumeperrotation property
+        /// </summary>
+          [XmlEnum("volume per rotation")]
+          volumeperrotation,
+        /// <summary>
+        /// volumepertime property
+        /// </summary>
+          [XmlEnum("volume per time")]
+          volumepertime,
+        /// <summary>
+        /// volumepertimelength property
+        /// </summary>
+          [XmlEnum("volume per time length")]
+          volumepertimelength,
+        /// <summary>
+        /// volumepertimeperarea property
+        /// </summary>
+          [XmlEnum("volume per time per area")]
+          volumepertimeperarea,
+        /// <summary>
+        /// volumepertimeperlength property
+        /// </summary>
+          [XmlEnum("volume per time per length")]
+          volumepertimeperlength,
+        /// <summary>
+        /// volumepertimeperpressure property
+        /// </summary>
+          [XmlEnum("volume per time per pressure")]
+          volumepertimeperpressure,
+        /// <summary>
+        /// volumepertimeperpressurelength property
+        /// </summary>
+          [XmlEnum("volume per time per pressure length")]
+          volumepertimeperpressurelength,
+        /// <summary>
+        /// volumepertimepertime property
+        /// </summary>
+          [XmlEnum("volume per time per time")]
+          volumepertimepertime,
+        /// <summary>
+        /// volumepertimepervolume property
+        /// </summary>
+          [XmlEnum("volume per time per volume")]
+          volumepertimepervolume,
+        /// <summary>
+        /// volumepervolume property
+        /// </summary>
+          [XmlEnum("volume per volume")]
+          volumepervolume,
+        /// <summary>
+        /// volumetricheattransfercoefficient property
+        /// </summary>
+          [XmlEnum("volumetric heat transfer coefficient")]
+          volumetricheattransfercoefficient,
+        /// <summary>
+        /// volumetricthermalexpansion property
+        /// </summary>
+          [XmlEnum("volumetric thermal expansion")]
+          volumetricthermalexpansion,
+        /// <summary>
+        /// unitless property
+        /// </summary>
+          unitless
+        }
+        /// <summary>
+        /// This class represents the LithostratigraphicRank xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the LithostratigraphicRank xsd enumeration.")]
+        public enum LithostratigraphicRank 
+        {
+        /// <summary>
+        /// group property
+        /// </summary>
+          group,
+        /// <summary>
+        /// formation property
+        /// </summary>
+          formation,
+        /// <summary>
+        /// member property
+        /// </summary>
+          member,
+        /// <summary>
+        /// bed property
+        /// </summary>
+          bed
+        }
+        /// <summary>
+        /// This class represents the WellboreDatumReference xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the WellboreDatumReference xsd enumeration.")]
+        public enum WellboreDatumReference 
+        {
+        /// <summary>
+        /// groundlevel property
+        /// </summary>
+          [XmlEnum("ground level")]
+          groundlevel,
+        /// <summary>
+        /// kellybushing property
+        /// </summary>
+          [XmlEnum("kelly bushing")]
+          kellybushing,
+        /// <summary>
+        /// meansealevel property
+        /// </summary>
+          [XmlEnum("mean sea level")]
+          meansealevel,
+        /// <summary>
+        /// derrickfloor property
+        /// </summary>
+          [XmlEnum("derrick floor")]
+          derrickfloor,
+        /// <summary>
+        /// casingflange property
+        /// </summary>
+          [XmlEnum("casing flange")]
+          casingflange,
+        /// <summary>
+        /// crownvalve property
+        /// </summary>
+          [XmlEnum("crown valve")]
+          crownvalve,
+        /// <summary>
+        /// rotarybushing property
+        /// </summary>
+          [XmlEnum("rotary bushing")]
+          rotarybushing,
+        /// <summary>
+        /// rotarytable property
+        /// </summary>
+          [XmlEnum("rotary table")]
+          rotarytable,
+        /// <summary>
+        /// seafloor property
+        /// </summary>
+          [XmlEnum("sea floor")]
+          seafloor,
+        /// <summary>
+        /// lowestastronomicaltide property
+        /// </summary>
+          [XmlEnum("lowest astronomical tide")]
+          lowestastronomicaltide,
+        /// <summary>
+        /// meanhigherhighwater property
+        /// </summary>
+          [XmlEnum("mean higher high water")]
+          meanhigherhighwater,
+        /// <summary>
+        /// meanhighwater property
+        /// </summary>
+          [XmlEnum("mean high water")]
+          meanhighwater,
+        /// <summary>
+        /// meanlowerlowwater property
+        /// </summary>
+          [XmlEnum("mean lower low water")]
+          meanlowerlowwater,
+        /// <summary>
+        /// meanlowwater property
+        /// </summary>
+          [XmlEnum("mean low water")]
+          meanlowwater,
+        /// <summary>
+        /// meantidelevel property
+        /// </summary>
+          [XmlEnum("mean tide level")]
+          meantidelevel,
+        /// <summary>
+        /// kickoffpoint property
+        /// </summary>
+          [XmlEnum("kickoff point")]
+          kickoffpoint
+        }
+        /// <summary>
+        /// This class represents the QuantityClassKind xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the QuantityClassKind xsd enumeration.")]
+        public enum QuantityClassKind 
+        {
+        /// <summary>
+        /// absorbeddose property
+        /// </summary>
+          [XmlEnum("absorbed dose")]
+          absorbeddose,
+        /// <summary>
+        /// activityofradioactivity property
+        /// </summary>
+          [XmlEnum("activity of radioactivity")]
+          activityofradioactivity,
+        /// <summary>
+        /// amountofsubstance property
+        /// </summary>
+          [XmlEnum("amount of substance")]
+          amountofsubstance,
+        /// <summary>
+        /// amountofsubstanceperamountofsubstance property
+        /// </summary>
+          [XmlEnum("amount of substance per amount of substance")]
+          amountofsubstanceperamountofsubstance,
+        /// <summary>
+        /// amountofsubstanceperarea property
+        /// </summary>
+          [XmlEnum("amount of substance per area")]
+          amountofsubstanceperarea,
+        /// <summary>
+        /// amountofsubstancepertime property
+        /// </summary>
+          [XmlEnum("amount of substance per time")]
+          amountofsubstancepertime,
+        /// <summary>
+        /// amountofsubstancepertimeperarea property
+        /// </summary>
+          [XmlEnum("amount of substance per time per area")]
+          amountofsubstancepertimeperarea,
+        /// <summary>
+        /// amountofsubstancepervolume property
+        /// </summary>
+          [XmlEnum("amount of substance per volume")]
+          amountofsubstancepervolume,
+        /// <summary>
+        /// angleperlength property
+        /// </summary>
+          [XmlEnum("angle per length")]
+          angleperlength,
+        /// <summary>
+        /// anglepervolume property
+        /// </summary>
+          [XmlEnum("angle per volume")]
+          anglepervolume,
+        /// <summary>
+        /// angularacceleration property
+        /// </summary>
+          [XmlEnum("angular acceleration")]
+          angularacceleration,
+        /// <summary>
+        /// angularvelocity property
+        /// </summary>
+          [XmlEnum("angular velocity")]
+          angularvelocity,
+        /// <summary>
+        /// apigammaray property
+        /// </summary>
+          [XmlEnum("api gamma ray")]
+          apigammaray,
+        /// <summary>
+        /// apigravity property
+        /// </summary>
+          [XmlEnum("api gravity")]
+          apigravity,
+        /// <summary>
+        /// apineutron property
+        /// </summary>
+          [XmlEnum("api neutron")]
+          apineutron,
+        /// <summary>
+        /// area property
+        /// </summary>
+          area,
+        /// <summary>
+        /// areaperamountofsubstance property
+        /// </summary>
+          [XmlEnum("area per amount of substance")]
+          areaperamountofsubstance,
+        /// <summary>
+        /// areaperarea property
+        /// </summary>
+          [XmlEnum("area per area")]
+          areaperarea,
+        /// <summary>
+        /// areapercount property
+        /// </summary>
+          [XmlEnum("area per count")]
+          areapercount,
+        /// <summary>
+        /// areapermass property
+        /// </summary>
+          [XmlEnum("area per mass")]
+          areapermass,
+        /// <summary>
+        /// areapertime property
+        /// </summary>
+          [XmlEnum("area per time")]
+          areapertime,
+        /// <summary>
+        /// areapervolume property
+        /// </summary>
+          [XmlEnum("area per volume")]
+          areapervolume,
+        /// <summary>
+        /// attenuationperfrequencyinterval property
+        /// </summary>
+          [XmlEnum("attenuation per frequency interval")]
+          attenuationperfrequencyinterval,
+        /// <summary>
+        /// capacitance property
+        /// </summary>
+          capacitance,
+        /// <summary>
+        /// cationexchangecapacity property
+        /// </summary>
+          [XmlEnum("cation exchange capacity")]
+          cationexchangecapacity,
+        /// <summary>
+        /// datatransferspeed property
+        /// </summary>
+          [XmlEnum("data transfer speed")]
+          datatransferspeed,
+        /// <summary>
+        /// diffusioncoefficient property
+        /// </summary>
+          [XmlEnum("diffusion coefficient")]
+          diffusioncoefficient,
+        /// <summary>
+        /// diffusivetimeofflight property
+        /// </summary>
+          [XmlEnum("diffusive time of flight")]
+          diffusivetimeofflight,
+        /// <summary>
+        /// digitalstorage property
+        /// </summary>
+          [XmlEnum("digital storage")]
+          digitalstorage,
+        /// <summary>
+        /// dimensionless property
+        /// </summary>
+          dimensionless,
+        /// <summary>
+        /// dipolemoment property
+        /// </summary>
+          [XmlEnum("dipole moment")]
+          dipolemoment,
+        /// <summary>
+        /// doseequivalent property
+        /// </summary>
+          [XmlEnum("dose equivalent")]
+          doseequivalent,
+        /// <summary>
+        /// dynamicviscosity property
+        /// </summary>
+          [XmlEnum("dynamic viscosity")]
+          dynamicviscosity,
+        /// <summary>
+        /// electriccharge property
+        /// </summary>
+          [XmlEnum("electric charge")]
+          electriccharge,
+        /// <summary>
+        /// electricchargeperarea property
+        /// </summary>
+          [XmlEnum("electric charge per area")]
+          electricchargeperarea,
+        /// <summary>
+        /// electricchargepermass property
+        /// </summary>
+          [XmlEnum("electric charge per mass")]
+          electricchargepermass,
+        /// <summary>
+        /// electricchargepervolume property
+        /// </summary>
+          [XmlEnum("electric charge per volume")]
+          electricchargepervolume,
+        /// <summary>
+        /// electricconductance property
+        /// </summary>
+          [XmlEnum("electric conductance")]
+          electricconductance,
+        /// <summary>
+        /// electricconductivity property
+        /// </summary>
+          [XmlEnum("electric conductivity")]
+          electricconductivity,
+        /// <summary>
+        /// electriccurrent property
+        /// </summary>
+          [XmlEnum("electric current")]
+          electriccurrent,
+        /// <summary>
+        /// electriccurrentdensity property
+        /// </summary>
+          [XmlEnum("electric current density")]
+          electriccurrentdensity,
+        /// <summary>
+        /// electricfieldstrength property
+        /// </summary>
+          [XmlEnum("electric field strength")]
+          electricfieldstrength,
+        /// <summary>
+        /// electricpotentialdifference property
+        /// </summary>
+          [XmlEnum("electric potential difference")]
+          electricpotentialdifference,
+        /// <summary>
+        /// electricresistance property
+        /// </summary>
+          [XmlEnum("electric resistance")]
+          electricresistance,
+        /// <summary>
+        /// electricresistanceperlength property
+        /// </summary>
+          [XmlEnum("electric resistance per length")]
+          electricresistanceperlength,
+        /// <summary>
+        /// electricalresistivity property
+        /// </summary>
+          [XmlEnum("electrical resistivity")]
+          electricalresistivity,
+        /// <summary>
+        /// electromagneticmoment property
+        /// </summary>
+          [XmlEnum("electromagnetic moment")]
+          electromagneticmoment,
+        /// <summary>
+        /// energy property
+        /// </summary>
+          energy,
+        /// <summary>
+        /// energylengthperarea property
+        /// </summary>
+          [XmlEnum("energy length per area")]
+          energylengthperarea,
+        /// <summary>
+        /// energylengthpertimeareatemperature property
+        /// </summary>
+          [XmlEnum("energy length per time area temperature")]
+          energylengthpertimeareatemperature,
+        /// <summary>
+        /// energyperarea property
+        /// </summary>
+          [XmlEnum("energy per area")]
+          energyperarea,
+        /// <summary>
+        /// energyperlength property
+        /// </summary>
+          [XmlEnum("energy per length")]
+          energyperlength,
+        /// <summary>
+        /// energypermass property
+        /// </summary>
+          [XmlEnum("energy per mass")]
+          energypermass,
+        /// <summary>
+        /// energypermasspertime property
+        /// </summary>
+          [XmlEnum("energy per mass per time")]
+          energypermasspertime,
+        /// <summary>
+        /// energypervolume property
+        /// </summary>
+          [XmlEnum("energy per volume")]
+          energypervolume,
+        /// <summary>
+        /// force property
+        /// </summary>
+          force,
+        /// <summary>
+        /// forcearea property
+        /// </summary>
+          [XmlEnum("force area")]
+          forcearea,
+        /// <summary>
+        /// forcelengthperlength property
+        /// </summary>
+          [XmlEnum("force length per length")]
+          forcelengthperlength,
+        /// <summary>
+        /// forceperforce property
+        /// </summary>
+          [XmlEnum("force per force")]
+          forceperforce,
+        /// <summary>
+        /// forceperlength property
+        /// </summary>
+          [XmlEnum("force per length")]
+          forceperlength,
+        /// <summary>
+        /// forcepervolume property
+        /// </summary>
+          [XmlEnum("force per volume")]
+          forcepervolume,
+        /// <summary>
+        /// frequency property
+        /// </summary>
+          frequency,
+        /// <summary>
+        /// frequencyinterval property
+        /// </summary>
+          [XmlEnum("frequency interval")]
+          frequencyinterval,
+        /// <summary>
+        /// heatcapacity property
+        /// </summary>
+          [XmlEnum("heat capacity")]
+          heatcapacity,
+        /// <summary>
+        /// heatflowrate property
+        /// </summary>
+          [XmlEnum("heat flow rate")]
+          heatflowrate,
+        /// <summary>
+        /// heattransfercoefficient property
+        /// </summary>
+          [XmlEnum("heat transfer coefficient")]
+          heattransfercoefficient,
+        /// <summary>
+        /// illuminance property
+        /// </summary>
+          illuminance,
+        /// <summary>
+        /// inductance property
+        /// </summary>
+          inductance,
+        /// <summary>
+        /// isothermalcompressibility property
+        /// </summary>
+          [XmlEnum("isothermal compressibility")]
+          isothermalcompressibility,
+        /// <summary>
+        /// kinematicviscosity property
+        /// </summary>
+          [XmlEnum("kinematic viscosity")]
+          kinematicviscosity,
+        /// <summary>
+        /// length property
+        /// </summary>
+          length,
+        /// <summary>
+        /// lengthperlength property
+        /// </summary>
+          [XmlEnum("length per length")]
+          lengthperlength,
+        /// <summary>
+        /// lengthpermass property
+        /// </summary>
+          [XmlEnum("length per mass")]
+          lengthpermass,
+        /// <summary>
+        /// lengthperpressure property
+        /// </summary>
+          [XmlEnum("length per pressure")]
+          lengthperpressure,
+        /// <summary>
+        /// lengthpertemperature property
+        /// </summary>
+          [XmlEnum("length per temperature")]
+          lengthpertemperature,
+        /// <summary>
+        /// lengthpertime property
+        /// </summary>
+          [XmlEnum("length per time")]
+          lengthpertime,
+        /// <summary>
+        /// lengthpervolume property
+        /// </summary>
+          [XmlEnum("length per volume")]
+          lengthpervolume,
+        /// <summary>
+        /// lightexposure property
+        /// </summary>
+          [XmlEnum("light exposure")]
+          lightexposure,
+        /// <summary>
+        /// linearacceleration property
+        /// </summary>
+          [XmlEnum("linear acceleration")]
+          linearacceleration,
+        /// <summary>
+        /// linearthermalexpansion property
+        /// </summary>
+          [XmlEnum("linear thermal expansion")]
+          linearthermalexpansion,
+        /// <summary>
+        /// logarithmicpowerratio property
+        /// </summary>
+          [XmlEnum("logarithmic power ratio")]
+          logarithmicpowerratio,
+        /// <summary>
+        /// logarithmicpowerratioperlength property
+        /// </summary>
+          [XmlEnum("logarithmic power ratio per length")]
+          logarithmicpowerratioperlength,
+        /// <summary>
+        /// luminance property
+        /// </summary>
+          luminance,
+        /// <summary>
+        /// luminousefficacy property
+        /// </summary>
+          [XmlEnum("luminous efficacy")]
+          luminousefficacy,
+        /// <summary>
+        /// luminousflux property
+        /// </summary>
+          [XmlEnum("luminous flux")]
+          luminousflux,
+        /// <summary>
+        /// luminousintensity property
+        /// </summary>
+          [XmlEnum("luminous intensity")]
+          luminousintensity,
+        /// <summary>
+        /// magneticdipolemoment property
+        /// </summary>
+          [XmlEnum("magnetic dipole moment")]
+          magneticdipolemoment,
+        /// <summary>
+        /// magneticfieldstrength property
+        /// </summary>
+          [XmlEnum("magnetic field strength")]
+          magneticfieldstrength,
+        /// <summary>
+        /// magneticflux property
+        /// </summary>
+          [XmlEnum("magnetic flux")]
+          magneticflux,
+        /// <summary>
+        /// magneticfluxdensity property
+        /// </summary>
+          [XmlEnum("magnetic flux density")]
+          magneticfluxdensity,
+        /// <summary>
+        /// magneticfluxdensityperlength property
+        /// </summary>
+          [XmlEnum("magnetic flux density per length")]
+          magneticfluxdensityperlength,
+        /// <summary>
+        /// magneticpermeability property
+        /// </summary>
+          [XmlEnum("magnetic permeability")]
+          magneticpermeability,
+        /// <summary>
+        /// magneticvectorpotential property
+        /// </summary>
+          [XmlEnum("magnetic vector potential")]
+          magneticvectorpotential,
+        /// <summary>
+        /// mass property
+        /// </summary>
+          mass,
+        /// <summary>
+        /// masslength property
+        /// </summary>
+          [XmlEnum("mass length")]
+          masslength,
+        /// <summary>
+        /// massperarea property
+        /// </summary>
+          [XmlEnum("mass per area")]
+          massperarea,
+        /// <summary>
+        /// massperenergy property
+        /// </summary>
+          [XmlEnum("mass per energy")]
+          massperenergy,
+        /// <summary>
+        /// massperlength property
+        /// </summary>
+          [XmlEnum("mass per length")]
+          massperlength,
+        /// <summary>
+        /// masspermass property
+        /// </summary>
+          [XmlEnum("mass per mass")]
+          masspermass,
+        /// <summary>
+        /// masspertime property
+        /// </summary>
+          [XmlEnum("mass per time")]
+          masspertime,
+        /// <summary>
+        /// masspertimeperarea property
+        /// </summary>
+          [XmlEnum("mass per time per area")]
+          masspertimeperarea,
+        /// <summary>
+        /// masspertimeperlength property
+        /// </summary>
+          [XmlEnum("mass per time per length")]
+          masspertimeperlength,
+        /// <summary>
+        /// masspervolume property
+        /// </summary>
+          [XmlEnum("mass per volume")]
+          masspervolume,
+        /// <summary>
+        /// masspervolumeperlength property
+        /// </summary>
+          [XmlEnum("mass per volume per length")]
+          masspervolumeperlength,
+        /// <summary>
+        /// masspervolumeperpressure property
+        /// </summary>
+          [XmlEnum("mass per volume per pressure")]
+          masspervolumeperpressure,
+        /// <summary>
+        /// masspervolumepertemperature property
+        /// </summary>
+          [XmlEnum("mass per volume per temperature")]
+          masspervolumepertemperature,
+        /// <summary>
+        /// mobility property
+        /// </summary>
+          mobility,
+        /// <summary>
+        /// molarenergy property
+        /// </summary>
+          [XmlEnum("molar energy")]
+          molarenergy,
+        /// <summary>
+        /// molarheatcapacity property
+        /// </summary>
+          [XmlEnum("molar heat capacity")]
+          molarheatcapacity,
+        /// <summary>
+        /// molarvolume property
+        /// </summary>
+          [XmlEnum("molar volume")]
+          molarvolume,
+        /// <summary>
+        /// molecularweight property
+        /// </summary>
+          [XmlEnum("molecular weight")]
+          molecularweight,
+        /// <summary>
+        /// momentofforce property
+        /// </summary>
+          [XmlEnum("moment of force")]
+          momentofforce,
+        /// <summary>
+        /// momentofinertia property
+        /// </summary>
+          [XmlEnum("moment of inertia")]
+          momentofinertia,
+        /// <summary>
+        /// momentum property
+        /// </summary>
+          momentum,
+        /// <summary>
+        /// normalizedpower property
+        /// </summary>
+          [XmlEnum("normalized power")]
+          normalizedpower,
+        /// <summary>
+        /// permeabilitylength property
+        /// </summary>
+          [XmlEnum("permeability length")]
+          permeabilitylength,
+        /// <summary>
+        /// permeabilityrock property
+        /// </summary>
+          [XmlEnum("permeability rock")]
+          permeabilityrock,
+        /// <summary>
+        /// permittivity property
+        /// </summary>
+          permittivity,
+        /// <summary>
+        /// planeangle property
+        /// </summary>
+          [XmlEnum("plane angle")]
+          planeangle,
+        /// <summary>
+        /// potentialdifferenceperpowerdrop property
+        /// </summary>
+          [XmlEnum("potential difference per power drop")]
+          potentialdifferenceperpowerdrop,
+        /// <summary>
+        /// power property
+        /// </summary>
+          power,
+        /// <summary>
+        /// powerperarea property
+        /// </summary>
+          [XmlEnum("power per area")]
+          powerperarea,
+        /// <summary>
+        /// powerperpower property
+        /// </summary>
+          [XmlEnum("power per power")]
+          powerperpower,
+        /// <summary>
+        /// powerpervolume property
+        /// </summary>
+          [XmlEnum("power per volume")]
+          powerpervolume,
+        /// <summary>
+        /// pressure property
+        /// </summary>
+          pressure,
+        /// <summary>
+        /// pressureperpressure property
+        /// </summary>
+          [XmlEnum("pressure per pressure")]
+          pressureperpressure,
+        /// <summary>
+        /// pressurepertime property
+        /// </summary>
+          [XmlEnum("pressure per time")]
+          pressurepertime,
+        /// <summary>
+        /// pressurepervolume property
+        /// </summary>
+          [XmlEnum("pressure per volume")]
+          pressurepervolume,
+        /// <summary>
+        /// pressuresquared property
+        /// </summary>
+          [XmlEnum("pressure squared")]
+          pressuresquared,
+        /// <summary>
+        /// pressuresquaredperforcetimeperarea property
+        /// </summary>
+          [XmlEnum("pressure squared per force time per area")]
+          pressuresquaredperforcetimeperarea,
+        /// <summary>
+        /// pressuretimepervolume property
+        /// </summary>
+          [XmlEnum("pressure time per volume")]
+          pressuretimepervolume,
+        /// <summary>
+        /// quantityoflight property
+        /// </summary>
+          [XmlEnum("quantity of light")]
+          quantityoflight,
+        /// <summary>
+        /// radiance property
+        /// </summary>
+          radiance,
+        /// <summary>
+        /// radiantintensity property
+        /// </summary>
+          [XmlEnum("radiant intensity")]
+          radiantintensity,
+        /// <summary>
+        /// reciprocalarea property
+        /// </summary>
+          [XmlEnum("reciprocal area")]
+          reciprocalarea,
+        /// <summary>
+        /// reciprocalelectricpotentialdifference property
+        /// </summary>
+          [XmlEnum("reciprocal electric potential difference")]
+          reciprocalelectricpotentialdifference,
+        /// <summary>
+        /// reciprocalforce property
+        /// </summary>
+          [XmlEnum("reciprocal force")]
+          reciprocalforce,
+        /// <summary>
+        /// reciprocallength property
+        /// </summary>
+          [XmlEnum("reciprocal length")]
+          reciprocallength,
+        /// <summary>
+        /// reciprocalmass property
+        /// </summary>
+          [XmlEnum("reciprocal mass")]
+          reciprocalmass,
+        /// <summary>
+        /// reciprocalmasstime property
+        /// </summary>
+          [XmlEnum("reciprocal mass time")]
+          reciprocalmasstime,
+        /// <summary>
+        /// reciprocalpressure property
+        /// </summary>
+          [XmlEnum("reciprocal pressure")]
+          reciprocalpressure,
+        /// <summary>
+        /// reciprocaltime property
+        /// </summary>
+          [XmlEnum("reciprocal time")]
+          reciprocaltime,
+        /// <summary>
+        /// reciprocalvolume property
+        /// </summary>
+          [XmlEnum("reciprocal volume")]
+          reciprocalvolume,
+        /// <summary>
+        /// reluctance property
+        /// </summary>
+          reluctance,
+        /// <summary>
+        /// secondmomentofarea property
+        /// </summary>
+          [XmlEnum("second moment of area")]
+          secondmomentofarea,
+        /// <summary>
+        /// signalingeventpertime property
+        /// </summary>
+          [XmlEnum("signaling event per time")]
+          signalingeventpertime,
+        /// <summary>
+        /// solidangle property
+        /// </summary>
+          [XmlEnum("solid angle")]
+          solidangle,
+        /// <summary>
+        /// specificheatcapacity property
+        /// </summary>
+          [XmlEnum("specific heat capacity")]
+          specificheatcapacity,
+        /// <summary>
+        /// temperatureinterval property
+        /// </summary>
+          [XmlEnum("temperature interval")]
+          temperatureinterval,
+        /// <summary>
+        /// temperatureintervalperlength property
+        /// </summary>
+          [XmlEnum("temperature interval per length")]
+          temperatureintervalperlength,
+        /// <summary>
+        /// temperatureintervalperpressure property
+        /// </summary>
+          [XmlEnum("temperature interval per pressure")]
+          temperatureintervalperpressure,
+        /// <summary>
+        /// temperatureintervalpertime property
+        /// </summary>
+          [XmlEnum("temperature interval per time")]
+          temperatureintervalpertime,
+        /// <summary>
+        /// thermalconductance property
+        /// </summary>
+          [XmlEnum("thermal conductance")]
+          thermalconductance,
+        /// <summary>
+        /// thermalconductivity property
+        /// </summary>
+          [XmlEnum("thermal conductivity")]
+          thermalconductivity,
+        /// <summary>
+        /// thermaldiffusivity property
+        /// </summary>
+          [XmlEnum("thermal diffusivity")]
+          thermaldiffusivity,
+        /// <summary>
+        /// thermalinsulance property
+        /// </summary>
+          [XmlEnum("thermal insulance")]
+          thermalinsulance,
+        /// <summary>
+        /// thermalresistance property
+        /// </summary>
+          [XmlEnum("thermal resistance")]
+          thermalresistance,
+        /// <summary>
+        /// thermodynamictemperature property
+        /// </summary>
+          [XmlEnum("thermodynamic temperature")]
+          thermodynamictemperature,
+        /// <summary>
+        /// thermodynamictemperatureperthermodynamictemperature property
+        /// </summary>
+          [XmlEnum("thermodynamic temperature per thermodynamic temperature")]
+          thermodynamictemperatureperthermodynamictemperature,
+        /// <summary>
+        /// time property
+        /// </summary>
+          time,
+        /// <summary>
+        /// timeperlength property
+        /// </summary>
+          [XmlEnum("time per length")]
+          timeperlength,
+        /// <summary>
+        /// timepermass property
+        /// </summary>
+          [XmlEnum("time per mass")]
+          timepermass,
+        /// <summary>
+        /// timepertime property
+        /// </summary>
+          [XmlEnum("time per time")]
+          timepertime,
+        /// <summary>
+        /// timepervolume property
+        /// </summary>
+          [XmlEnum("time per volume")]
+          timepervolume,
+        /// <summary>
+        /// verticalcoordinate property
+        /// </summary>
+          [XmlEnum("vertical coordinate")]
+          verticalcoordinate,
+        /// <summary>
+        /// volume property
+        /// </summary>
+          volume,
+        /// <summary>
+        /// volumeflowratepervolumeflowrate property
+        /// </summary>
+          [XmlEnum("volume flow rate per volume flow rate")]
+          volumeflowratepervolumeflowrate,
+        /// <summary>
+        /// volumeperarea property
+        /// </summary>
+          [XmlEnum("volume per area")]
+          volumeperarea,
+        /// <summary>
+        /// volumeperlength property
+        /// </summary>
+          [XmlEnum("volume per length")]
+          volumeperlength,
+        /// <summary>
+        /// volumepermass property
+        /// </summary>
+          [XmlEnum("volume per mass")]
+          volumepermass,
+        /// <summary>
+        /// volumeperpressure property
+        /// </summary>
+          [XmlEnum("volume per pressure")]
+          volumeperpressure,
+        /// <summary>
+        /// volumeperrotation property
+        /// </summary>
+          [XmlEnum("volume per rotation")]
+          volumeperrotation,
+        /// <summary>
+        /// volumepertime property
+        /// </summary>
+          [XmlEnum("volume per time")]
+          volumepertime,
+        /// <summary>
+        /// volumepertimelength property
+        /// </summary>
+          [XmlEnum("volume per time length")]
+          volumepertimelength,
+        /// <summary>
+        /// volumepertimeperarea property
+        /// </summary>
+          [XmlEnum("volume per time per area")]
+          volumepertimeperarea,
+        /// <summary>
+        /// volumepertimeperlength property
+        /// </summary>
+          [XmlEnum("volume per time per length")]
+          volumepertimeperlength,
+        /// <summary>
+        /// volumepertimeperpressure property
+        /// </summary>
+          [XmlEnum("volume per time per pressure")]
+          volumepertimeperpressure,
+        /// <summary>
+        /// volumepertimeperpressurelength property
+        /// </summary>
+          [XmlEnum("volume per time per pressure length")]
+          volumepertimeperpressurelength,
+        /// <summary>
+        /// volumepertimepertime property
+        /// </summary>
+          [XmlEnum("volume per time per time")]
+          volumepertimepertime,
+        /// <summary>
+        /// volumepertimepervolume property
+        /// </summary>
+          [XmlEnum("volume per time per volume")]
+          volumepertimepervolume,
+        /// <summary>
+        /// volumepervolume property
+        /// </summary>
+          [XmlEnum("volume per volume")]
+          volumepervolume,
+        /// <summary>
+        /// volumetricheattransfercoefficient property
+        /// </summary>
+          [XmlEnum("volumetric heat transfer coefficient")]
+          volumetricheattransfercoefficient,
+        /// <summary>
+        /// volumetricthermalexpansion property
+        /// </summary>
+          [XmlEnum("volumetric thermal expansion")]
+          volumetricthermalexpansion,
+        /// <summary>
+        /// unitless property
+        /// </summary>
+          unitless,
+        /// <summary>
+        /// notameasure property
+        /// </summary>
+          [XmlEnum("not a measure")]
+          notameasure
+        }
+        /// <summary>
+        /// This class represents the ReferenceCondition xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the ReferenceCondition xsd enumeration.")]
+        public enum ReferenceCondition 
+        {
+        /// <summary>
+        /// Item0degC1atm property
+        /// </summary>
+          [XmlEnum("0 degC 1 atm")]
+          Item0degC1atm,
+        /// <summary>
+        /// Item0degC1bar property
+        /// </summary>
+          [XmlEnum("0 degC 1 bar")]
+          Item0degC1bar,
+        /// <summary>
+        /// Item15degC1atm property
+        /// </summary>
+          [XmlEnum("15 degC 1 atm")]
+          Item15degC1atm,
+        /// <summary>
+        /// Item15degC1bar property
+        /// </summary>
+          [XmlEnum("15 degC 1 bar")]
+          Item15degC1bar,
+        /// <summary>
+        /// Item20degC1atm property
+        /// </summary>
+          [XmlEnum("20 degC 1 atm")]
+          Item20degC1atm,
+        /// <summary>
+        /// Item20degC1bar property
+        /// </summary>
+          [XmlEnum("20 degC 1 bar")]
+          Item20degC1bar,
+        /// <summary>
+        /// Item25degC1bar property
+        /// </summary>
+          [XmlEnum("25 degC 1 bar")]
+          Item25degC1bar,
+        /// <summary>
+        /// Item60degF1atm property
+        /// </summary>
+          [XmlEnum("60 degF 1 atm")]
+          Item60degF1atm,
+        /// <summary>
+        /// Item60degF30inHg property
+        /// </summary>
+          [XmlEnum("60 degF 30 in Hg")]
+          Item60degF30inHg,
+        /// <summary>
+        /// ambient property
+        /// </summary>
+          ambient
+        }
+        /// <summary>
+        /// This class represents the LithologyQualifierKind xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the LithologyQualifierKind xsd enumeration.")]
+        public enum LithologyQualifierKind 
+        {
+        /// <summary>
+        /// alkalifeldsparrhyolite property
+        /// </summary>
+          [XmlEnum("alkali feldspar rhyolite")]
+          alkalifeldsparrhyolite,
+        /// <summary>
+        /// alkaliolivinebasalt property
+        /// </summary>
+          [XmlEnum("alkali olivine basalt")]
+          alkaliolivinebasalt,
+        /// <summary>
+        /// amphibolite property
+        /// </summary>
+          amphibolite,
+        /// <summary>
+        /// amphibolitic property
+        /// </summary>
+          amphibolitic,
+        /// <summary>
+        /// andesite property
+        /// </summary>
+          andesite,
+        /// <summary>
+        /// andesitic property
+        /// </summary>
+          andesitic,
+        /// <summary>
+        /// anhydrite property
+        /// </summary>
+          anhydrite,
+        /// <summary>
+        /// anhydritic property
+        /// </summary>
+          anhydritic,
+        /// <summary>
+        /// ankerite property
+        /// </summary>
+          ankerite,
+        /// <summary>
+        /// ankeritic property
+        /// </summary>
+          ankeritic,
+        /// <summary>
+        /// anorthositicrock property
+        /// </summary>
+          [XmlEnum("anorthositic rock")]
+          anorthositicrock,
+        /// <summary>
+        /// anthracite property
+        /// </summary>
+          anthracite,
+        /// <summary>
+        /// anthracitic property
+        /// </summary>
+          anthracitic,
+        /// <summary>
+        /// aplite property
+        /// </summary>
+          aplite,
+        /// <summary>
+        /// aplitic property
+        /// </summary>
+          aplitic,
+        /// <summary>
+        /// arenite property
+        /// </summary>
+          arenite,
+        /// <summary>
+        /// arenitic property
+        /// </summary>
+          arenitic,
+        /// <summary>
+        /// argillaceous property
+        /// </summary>
+          argillaceous,
+        /// <summary>
+        /// arkose property
+        /// </summary>
+          arkose,
+        /// <summary>
+        /// arkosic property
+        /// </summary>
+          arkosic,
+        /// <summary>
+        /// barite property
+        /// </summary>
+          barite,
+        /// <summary>
+        /// baritic property
+        /// </summary>
+          baritic,
+        /// <summary>
+        /// basalt property
+        /// </summary>
+          basalt,
+        /// <summary>
+        /// basaltic property
+        /// </summary>
+          basaltic,
+        /// <summary>
+        /// basanite property
+        /// </summary>
+          basanite,
+        /// <summary>
+        /// basanitic property
+        /// </summary>
+          basanitic,
+        /// <summary>
+        /// bauxite property
+        /// </summary>
+          bauxite,
+        /// <summary>
+        /// bauxitic property
+        /// </summary>
+          bauxitic,
+        /// <summary>
+        /// belemnites property
+        /// </summary>
+          belemnites,
+        /// <summary>
+        /// belemnitic property
+        /// </summary>
+          belemnitic,
+        /// <summary>
+        /// bioturbated property
+        /// </summary>
+          bioturbated,
+        /// <summary>
+        /// bioturbation property
+        /// </summary>
+          bioturbation,
+        /// <summary>
+        /// bitumen property
+        /// </summary>
+          bitumen,
+        /// <summary>
+        /// bituminous property
+        /// </summary>
+          bituminous,
+        /// <summary>
+        /// bituminouscoal property
+        /// </summary>
+          [XmlEnum("bituminous coal")]
+          bituminouscoal,
+        /// <summary>
+        /// blueschistmetamorphicrock property
+        /// </summary>
+          [XmlEnum("blueschist metamorphic rock")]
+          blueschistmetamorphicrock,
+        /// <summary>
+        /// boninite property
+        /// </summary>
+          boninite,
+        /// <summary>
+        /// breccia property
+        /// </summary>
+          breccia,
+        /// <summary>
+        /// brecciated property
+        /// </summary>
+          brecciated,
+        /// <summary>
+        /// bryozoan property
+        /// </summary>
+          bryozoan,
+        /// <summary>
+        /// bryozoans property
+        /// </summary>
+          bryozoans,
+        /// <summary>
+        /// burrowed property
+        /// </summary>
+          burrowed,
+        /// <summary>
+        /// burrows property
+        /// </summary>
+          burrows,
+        /// <summary>
+        /// calcareous property
+        /// </summary>
+          calcareous,
+        /// <summary>
+        /// calcite property
+        /// </summary>
+          calcite,
+        /// <summary>
+        /// calciteconcretion property
+        /// </summary>
+          [XmlEnum("calcite concretion")]
+          calciteconcretion,
+        /// <summary>
+        /// calcitic property
+        /// </summary>
+          calcitic,
+        /// <summary>
+        /// carbonaceous property
+        /// </summary>
+          carbonaceous,
+        /// <summary>
+        /// carbonateooze property
+        /// </summary>
+          [XmlEnum("carbonate ooze")]
+          carbonateooze,
+        /// <summary>
+        /// carbonatite property
+        /// </summary>
+          carbonatite,
+        /// <summary>
+        /// carbonatitic property
+        /// </summary>
+          carbonatitic,
+        /// <summary>
+        /// chalk property
+        /// </summary>
+          chalk,
+        /// <summary>
+        /// chalky property
+        /// </summary>
+          chalky,
+        /// <summary>
+        /// chamosite property
+        /// </summary>
+          chamosite,
+        /// <summary>
+        /// chamositic property
+        /// </summary>
+          chamositic,
+        /// <summary>
+        /// chert property
+        /// </summary>
+          chert,
+        /// <summary>
+        /// cherty property
+        /// </summary>
+          cherty,
+        /// <summary>
+        /// chlorite property
+        /// </summary>
+          chlorite,
+        /// <summary>
+        /// chloritic property
+        /// </summary>
+          chloritic,
+        /// <summary>
+        /// clay property
+        /// </summary>
+          clay,
+        /// <summary>
+        /// claystone property
+        /// </summary>
+          claystone,
+        /// <summary>
+        /// coal property
+        /// </summary>
+          coal,
+        /// <summary>
+        /// concretionary property
+        /// </summary>
+          concretionary,
+        /// <summary>
+        /// concretions property
+        /// </summary>
+          concretions,
+        /// <summary>
+        /// conglomerate property
+        /// </summary>
+          conglomerate,
+        /// <summary>
+        /// conglomeratic property
+        /// </summary>
+          conglomeratic,
+        /// <summary>
+        /// coralfragments property
+        /// </summary>
+          [XmlEnum("coral fragments")]
+          coralfragments,
+        /// <summary>
+        /// coralline property
+        /// </summary>
+          coralline,
+        /// <summary>
+        /// crinoidal property
+        /// </summary>
+          crinoidal,
+        /// <summary>
+        /// crinoids property
+        /// </summary>
+          crinoids,
+        /// <summary>
+        /// dacite property
+        /// </summary>
+          dacite,
+        /// <summary>
+        /// dacitic property
+        /// </summary>
+          dacitic,
+        /// <summary>
+        /// diabase property
+        /// </summary>
+          diabase,
+        /// <summary>
+        /// diabasic property
+        /// </summary>
+          diabasic,
+        /// <summary>
+        /// diamictite property
+        /// </summary>
+          diamictite,
+        /// <summary>
+        /// diamictitic property
+        /// </summary>
+          diamictitic,
+        /// <summary>
+        /// diatomaceous property
+        /// </summary>
+          diatomaceous,
+        /// <summary>
+        /// diatoms property
+        /// </summary>
+          diatoms,
+        /// <summary>
+        /// diorite property
+        /// </summary>
+          diorite,
+        /// <summary>
+        /// dioritic property
+        /// </summary>
+          dioritic,
+        /// <summary>
+        /// dioritoid property
+        /// </summary>
+          dioritoid,
+        /// <summary>
+        /// dioritoidic property
+        /// </summary>
+          dioritoidic,
+        /// <summary>
+        /// doleriticrock property
+        /// </summary>
+          [XmlEnum("doleritic rock")]
+          doleriticrock,
+        /// <summary>
+        /// dolomite property
+        /// </summary>
+          dolomite,
+        /// <summary>
+        /// dolomiteconcretion property
+        /// </summary>
+          [XmlEnum("dolomite concretion")]
+          dolomiteconcretion,
+        /// <summary>
+        /// dolomitestringer property
+        /// </summary>
+          [XmlEnum("dolomite stringer")]
+          dolomitestringer,
+        /// <summary>
+        /// dolomitic property
+        /// </summary>
+          dolomitic,
+        /// <summary>
+        /// eclogite property
+        /// </summary>
+          eclogite,
+        /// <summary>
+        /// eclogitic property
+        /// </summary>
+          eclogitic,
+        /// <summary>
+        /// exoticalkalinerock property
+        /// </summary>
+          [XmlEnum("exotic alkaline rock")]
+          exoticalkalinerock,
+        /// <summary>
+        /// feldspar property
+        /// </summary>
+          feldspar,
+        /// <summary>
+        /// feldsparic property
+        /// </summary>
+          feldsparic,
+        /// <summary>
+        /// feldspathic property
+        /// </summary>
+          feldspathic,
+        /// <summary>
+        /// feldspathicarenite property
+        /// </summary>
+          [XmlEnum("feldspathic arenite")]
+          feldspathicarenite,
+        /// <summary>
+        /// ferruginous property
+        /// </summary>
+          ferruginous,
+        /// <summary>
+        /// finegrainedigneousrock property
+        /// </summary>
+          [XmlEnum("fine grained igneous rock")]
+          finegrainedigneousrock,
+        /// <summary>
+        /// foiddioritoid property
+        /// </summary>
+          [XmlEnum("foid dioritoid")]
+          foiddioritoid,
+        /// <summary>
+        /// foidgabbroid property
+        /// </summary>
+          [XmlEnum("foid gabbroid")]
+          foidgabbroid,
+        /// <summary>
+        /// foidsyenitoid property
+        /// </summary>
+          [XmlEnum("foid syenitoid")]
+          foidsyenitoid,
+        /// <summary>
+        /// foidite property
+        /// </summary>
+          foidite,
+        /// <summary>
+        /// foiditic property
+        /// </summary>
+          foiditic,
+        /// <summary>
+        /// foiditoid property
+        /// </summary>
+          foiditoid,
+        /// <summary>
+        /// foidolite property
+        /// </summary>
+          foidolite,
+        /// <summary>
+        /// foidolitic property
+        /// </summary>
+          foidolitic,
+        /// <summary>
+        /// foliatedmetamorphicrock property
+        /// </summary>
+          [XmlEnum("foliated metamorphic rock")]
+          foliatedmetamorphicrock,
+        /// <summary>
+        /// foraminifera property
+        /// </summary>
+          foraminifera,
+        /// <summary>
+        /// foraminiferous property
+        /// </summary>
+          foraminiferous,
+        /// <summary>
+        /// forams property
+        /// </summary>
+          forams,
+        /// <summary>
+        /// fossilfragments property
+        /// </summary>
+          [XmlEnum("fossil fragments")]
+          fossilfragments,
+        /// <summary>
+        /// fossiliferous property
+        /// </summary>
+          fossiliferous,
+        /// <summary>
+        /// fossilsundifferentiated property
+        /// </summary>
+          [XmlEnum("fossils undifferentiated")]
+          fossilsundifferentiated,
+        /// <summary>
+        /// fragmentaligneousrock property
+        /// </summary>
+          [XmlEnum("fragmental igneous rock")]
+          fragmentaligneousrock,
+        /// <summary>
+        /// gabbro property
+        /// </summary>
+          gabbro,
+        /// <summary>
+        /// gabbroic property
+        /// </summary>
+          gabbroic,
+        /// <summary>
+        /// gabbroicrock property
+        /// </summary>
+          [XmlEnum("gabbroic rock")]
+          gabbroicrock,
+        /// <summary>
+        /// gabbroid property
+        /// </summary>
+          gabbroid,
+        /// <summary>
+        /// gabbroidic property
+        /// </summary>
+          gabbroidic,
+        /// <summary>
+        /// gilsonite property
+        /// </summary>
+          gilsonite,
+        /// <summary>
+        /// gilsonitic property
+        /// </summary>
+          gilsonitic,
+        /// <summary>
+        /// glauconite property
+        /// </summary>
+          glauconite,
+        /// <summary>
+        /// glauconitic property
+        /// </summary>
+          glauconitic,
+        /// <summary>
+        /// gneiss property
+        /// </summary>
+          gneiss,
+        /// <summary>
+        /// gneissic property
+        /// </summary>
+          gneissic,
+        /// <summary>
+        /// granite property
+        /// </summary>
+          granite,
+        /// <summary>
+        /// granitic property
+        /// </summary>
+          granitic,
+        /// <summary>
+        /// granodiorite property
+        /// </summary>
+          granodiorite,
+        /// <summary>
+        /// granodioritic property
+        /// </summary>
+          granodioritic,
+        /// <summary>
+        /// granofels property
+        /// </summary>
+          granofels,
+        /// <summary>
+        /// granulite property
+        /// </summary>
+          granulite,
+        /// <summary>
+        /// granulitic property
+        /// </summary>
+          granulitic,
+        /// <summary>
+        /// gravel property
+        /// </summary>
+          gravel,
+        /// <summary>
+        /// gravelly property
+        /// </summary>
+          gravelly,
+        /// <summary>
+        /// greenstone property
+        /// </summary>
+          greenstone,
+        /// <summary>
+        /// gumbo property
+        /// </summary>
+          gumbo,
+        /// <summary>
+        /// gypsiferous property
+        /// </summary>
+          gypsiferous,
+        /// <summary>
+        /// gypsum property
+        /// </summary>
+          gypsum,
+        /// <summary>
+        /// halite property
+        /// </summary>
+          halite,
+        /// <summary>
+        /// halitic property
+        /// </summary>
+          halitic,
+        /// <summary>
+        /// hornfels property
+        /// </summary>
+          hornfels,
+        /// <summary>
+        /// hornfelsic property
+        /// </summary>
+          hornfelsic,
+        /// <summary>
+        /// igneous property
+        /// </summary>
+          igneous,
+        /// <summary>
+        /// igneousrock property
+        /// </summary>
+          [XmlEnum("igneous rock")]
+          igneousrock,
+        /// <summary>
+        /// illite property
+        /// </summary>
+          illite,
+        /// <summary>
+        /// illitic property
+        /// </summary>
+          illitic,
+        /// <summary>
+        /// impactgeneratedmaterial property
+        /// </summary>
+          [XmlEnum("impact generated material")]
+          impactgeneratedmaterial,
+        /// <summary>
+        /// impuredolomite property
+        /// </summary>
+          [XmlEnum("impure dolomite")]
+          impuredolomite,
+        /// <summary>
+        /// impurelimestone property
+        /// </summary>
+          [XmlEnum("impure limestone")]
+          impurelimestone,
+        /// <summary>
+        /// intrusiverockplutonic property
+        /// </summary>
+          [XmlEnum("intrusive rock (plutonic)")]
+          intrusiverockplutonic,
+        /// <summary>
+        /// ironrichsedimentaryrock property
+        /// </summary>
+          [XmlEnum("iron rich sedimentary rock")]
+          ironrichsedimentaryrock,
+        /// <summary>
+        /// kalsiliticandmeliliticrocks property
+        /// </summary>
+          [XmlEnum("kalsilitic and melilitic rocks")]
+          kalsiliticandmeliliticrocks,
+        /// <summary>
+        /// kaolinite property
+        /// </summary>
+          kaolinite,
+        /// <summary>
+        /// kaolinitic property
+        /// </summary>
+          kaolinitic,
+        /// <summary>
+        /// komatiiticrock property
+        /// </summary>
+          [XmlEnum("komatiitic rock")]
+          komatiiticrock,
+        /// <summary>
+        /// latiticrock property
+        /// </summary>
+          [XmlEnum("latitic rock")]
+          latiticrock,
+        /// <summary>
+        /// lignite property
+        /// </summary>
+          lignite,
+        /// <summary>
+        /// lignitic property
+        /// </summary>
+          lignitic,
+        /// <summary>
+        /// limeboundstone property
+        /// </summary>
+          [XmlEnum("lime boundstone")]
+          limeboundstone,
+        /// <summary>
+        /// limeframestone property
+        /// </summary>
+          [XmlEnum("lime framestone")]
+          limeframestone,
+        /// <summary>
+        /// limegrainstone property
+        /// </summary>
+          [XmlEnum("lime grainstone")]
+          limegrainstone,
+        /// <summary>
+        /// limemudstone property
+        /// </summary>
+          [XmlEnum("lime mudstone")]
+          limemudstone,
+        /// <summary>
+        /// limepackstone property
+        /// </summary>
+          [XmlEnum("lime packstone")]
+          limepackstone,
+        /// <summary>
+        /// limewackestone property
+        /// </summary>
+          [XmlEnum("lime wackestone")]
+          limewackestone,
+        /// <summary>
+        /// limestone property
+        /// </summary>
+          limestone,
+        /// <summary>
+        /// limestonestringer property
+        /// </summary>
+          [XmlEnum("limestone stringer")]
+          limestonestringer,
+        /// <summary>
+        /// lithic property
+        /// </summary>
+          lithic,
+        /// <summary>
+        /// lithicfragments property
+        /// </summary>
+          [XmlEnum("lithic fragments")]
+          lithicfragments,
+        /// <summary>
+        /// marble property
+        /// </summary>
+          marble,
+        /// <summary>
+        /// marcasite property
+        /// </summary>
+          marcasite,
+        /// <summary>
+        /// marcasitic property
+        /// </summary>
+          marcasitic,
+        /// <summary>
+        /// marl property
+        /// </summary>
+          marl,
+        /// <summary>
+        /// marly property
+        /// </summary>
+          marly,
+        /// <summary>
+        /// metamorphicrock property
+        /// </summary>
+          [XmlEnum("metamorphic rock")]
+          metamorphicrock,
+        /// <summary>
+        /// mica property
+        /// </summary>
+          mica,
+        /// <summary>
+        /// micaschist property
+        /// </summary>
+          [XmlEnum("mica schist")]
+          micaschist,
+        /// <summary>
+        /// micaceous property
+        /// </summary>
+          micaceous,
+        /// <summary>
+        /// microfossiliferous property
+        /// </summary>
+          microfossiliferous,
+        /// <summary>
+        /// microfossils property
+        /// </summary>
+          microfossils,
+        /// <summary>
+        /// migmatite property
+        /// </summary>
+          migmatite,
+        /// <summary>
+        /// migmatitic property
+        /// </summary>
+          migmatitic,
+        /// <summary>
+        /// monzogabbro property
+        /// </summary>
+          monzogabbro,
+        /// <summary>
+        /// monzogabbroic property
+        /// </summary>
+          monzogabbroic,
+        /// <summary>
+        /// mud property
+        /// </summary>
+          mud,
+        /// <summary>
+        /// muddy property
+        /// </summary>
+          muddy,
+        /// <summary>
+        /// mudstone property
+        /// </summary>
+          mudstone,
+        /// <summary>
+        /// myloniticrock property
+        /// </summary>
+          [XmlEnum("mylonitic rock")]
+          myloniticrock,
+        /// <summary>
+        /// nosample property
+        /// </summary>
+          [XmlEnum("no sample")]
+          nosample,
+        /// <summary>
+        /// oncolite property
+        /// </summary>
+          oncolite,
+        /// <summary>
+        /// oncoliths property
+        /// </summary>
+          oncoliths,
+        /// <summary>
+        /// oncolitic property
+        /// </summary>
+          oncolitic,
+        /// <summary>
+        /// ooids property
+        /// </summary>
+          ooids,
+        /// <summary>
+        /// ooliths property
+        /// </summary>
+          ooliths,
+        /// <summary>
+        /// oolitic property
+        /// </summary>
+          oolitic,
+        /// <summary>
+        /// ooze property
+        /// </summary>
+          ooze,
+        /// <summary>
+        /// ophiolite property
+        /// </summary>
+          ophiolite,
+        /// <summary>
+        /// ophiolitic property
+        /// </summary>
+          ophiolitic,
+        /// <summary>
+        /// organicbearingmudstone property
+        /// </summary>
+          [XmlEnum("organic bearing mudstone")]
+          organicbearingmudstone,
+        /// <summary>
+        /// ostracodal property
+        /// </summary>
+          ostracodal,
+        /// <summary>
+        /// ostracods property
+        /// </summary>
+          ostracods,
+        /// <summary>
+        /// peat property
+        /// </summary>
+          peat,
+        /// <summary>
+        /// peaty property
+        /// </summary>
+          peaty,
+        /// <summary>
+        /// pebble property
+        /// </summary>
+          pebble,
+        /// <summary>
+        /// pebbly property
+        /// </summary>
+          pebbly,
+        /// <summary>
+        /// pegmatite property
+        /// </summary>
+          pegmatite,
+        /// <summary>
+        /// pegmatitic property
+        /// </summary>
+          pegmatitic,
+        /// <summary>
+        /// pelletal property
+        /// </summary>
+          pelletal,
+        /// <summary>
+        /// pellets property
+        /// </summary>
+          pellets,
+        /// <summary>
+        /// peloidal property
+        /// </summary>
+          peloidal,
+        /// <summary>
+        /// peloids property
+        /// </summary>
+          peloids,
+        /// <summary>
+        /// peridotite property
+        /// </summary>
+          peridotite,
+        /// <summary>
+        /// peridotitic property
+        /// </summary>
+          peridotitic,
+        /// <summary>
+        /// phaneriticigneousrock property
+        /// </summary>
+          [XmlEnum("phaneritic igneous rock")]
+          phaneriticigneousrock,
+        /// <summary>
+        /// phonolite property
+        /// </summary>
+          phonolite,
+        /// <summary>
+        /// phonolitic property
+        /// </summary>
+          phonolitic,
+        /// <summary>
+        /// phonolitoid property
+        /// </summary>
+          phonolitoid,
+        /// <summary>
+        /// phosphate property
+        /// </summary>
+          phosphate,
+        /// <summary>
+        /// phosphaterock property
+        /// </summary>
+          [XmlEnum("phosphate rock")]
+          phosphaterock,
+        /// <summary>
+        /// phosphatic property
+        /// </summary>
+          phosphatic,
+        /// <summary>
+        /// phyllite property
+        /// </summary>
+          phyllite,
+        /// <summary>
+        /// phyllitic property
+        /// </summary>
+          phyllitic,
+        /// <summary>
+        /// pisolite property
+        /// </summary>
+          pisolite,
+        /// <summary>
+        /// pisoliths property
+        /// </summary>
+          pisoliths,
+        /// <summary>
+        /// pisolitic property
+        /// </summary>
+          pisolitic,
+        /// <summary>
+        /// plantremains property
+        /// </summary>
+          [XmlEnum("plant remains")]
+          plantremains,
+        /// <summary>
+        /// porphyritic property
+        /// </summary>
+          porphyritic,
+        /// <summary>
+        /// porphyry property
+        /// </summary>
+          porphyry,
+        /// <summary>
+        /// potassiumandmagnesiumsalts property
+        /// </summary>
+          [XmlEnum("potassium and magnesium salts")]
+          potassiumandmagnesiumsalts,
+        /// <summary>
+        /// pyrite property
+        /// </summary>
+          pyrite,
+        /// <summary>
+        /// pyritic property
+        /// </summary>
+          pyritic,
+        /// <summary>
+        /// pyroclasticbreccia property
+        /// </summary>
+          [XmlEnum("pyroclastic breccia")]
+          pyroclasticbreccia,
+        /// <summary>
+        /// pyroclasticrock property
+        /// </summary>
+          [XmlEnum("pyroclastic rock")]
+          pyroclasticrock,
+        /// <summary>
+        /// pyroxenite property
+        /// </summary>
+          pyroxenite,
+        /// <summary>
+        /// pyroxenitic property
+        /// </summary>
+          pyroxenitic,
+        /// <summary>
+        /// quartiferous property
+        /// </summary>
+          quartiferous,
+        /// <summary>
+        /// quartz property
+        /// </summary>
+          quartz,
+        /// <summary>
+        /// quartzarenite property
+        /// </summary>
+          [XmlEnum("quartz arenite")]
+          quartzarenite,
+        /// <summary>
+        /// quartzite property
+        /// </summary>
+          quartzite,
+        /// <summary>
+        /// quartzitic property
+        /// </summary>
+          quartzitic,
+        /// <summary>
+        /// radiolaria property
+        /// </summary>
+          radiolaria,
+        /// <summary>
+        /// radiolarian property
+        /// </summary>
+          radiolarian,
+        /// <summary>
+        /// rhyolite property
+        /// </summary>
+          rhyolite,
+        /// <summary>
+        /// rhyolitic property
+        /// </summary>
+          rhyolitic,
+        /// <summary>
+        /// rocksalt property
+        /// </summary>
+          [XmlEnum("rock salt")]
+          rocksalt,
+        /// <summary>
+        /// rootlets property
+        /// </summary>
+          rootlets,
+        /// <summary>
+        /// salty property
+        /// </summary>
+          salty,
+        /// <summary>
+        /// sand property
+        /// </summary>
+          sand,
+        /// <summary>
+        /// sandstone property
+        /// </summary>
+          sandstone,
+        /// <summary>
+        /// sandy property
+        /// </summary>
+          sandy,
+        /// <summary>
+        /// sapropel property
+        /// </summary>
+          sapropel,
+        /// <summary>
+        /// sapropelic property
+        /// </summary>
+          sapropelic,
+        /// <summary>
+        /// schist property
+        /// </summary>
+          schist,
+        /// <summary>
+        /// schisty property
+        /// </summary>
+          schisty,
+        /// <summary>
+        /// sepentinitic property
+        /// </summary>
+          sepentinitic,
+        /// <summary>
+        /// serpentinite property
+        /// </summary>
+          serpentinite,
+        /// <summary>
+        /// shale property
+        /// </summary>
+          shale,
+        /// <summary>
+        /// shaly property
+        /// </summary>
+          shaly,
+        /// <summary>
+        /// shellfragments property
+        /// </summary>
+          [XmlEnum("shell fragments")]
+          shellfragments,
+        /// <summary>
+        /// shelly property
+        /// </summary>
+          shelly,
+        /// <summary>
+        /// siderite property
+        /// </summary>
+          siderite,
+        /// <summary>
+        /// sideriteconcretion property
+        /// </summary>
+          [XmlEnum("siderite concretion")]
+          sideriteconcretion,
+        /// <summary>
+        /// sideritic property
+        /// </summary>
+          sideritic,
+        /// <summary>
+        /// siliceousooze property
+        /// </summary>
+          [XmlEnum("siliceous ooze")]
+          siliceousooze,
+        /// <summary>
+        /// silt property
+        /// </summary>
+          silt,
+        /// <summary>
+        /// siltstone property
+        /// </summary>
+          siltstone,
+        /// <summary>
+        /// silty property
+        /// </summary>
+          silty,
+        /// <summary>
+        /// skarn property
+        /// </summary>
+          skarn,
+        /// <summary>
+        /// skarny property
+        /// </summary>
+          skarny,
+        /// <summary>
+        /// slate property
+        /// </summary>
+          slate,
+        /// <summary>
+        /// slaty property
+        /// </summary>
+          slaty,
+        /// <summary>
+        /// smectite property
+        /// </summary>
+          smectite,
+        /// <summary>
+        /// smectitic property
+        /// </summary>
+          smectitic,
+        /// <summary>
+        /// spicular property
+        /// </summary>
+          spicular,
+        /// <summary>
+        /// spicules property
+        /// </summary>
+          spicules,
+        /// <summary>
+        /// spilite property
+        /// </summary>
+          spilite,
+        /// <summary>
+        /// spilitic property
+        /// </summary>
+          spilitic,
+        /// <summary>
+        /// stylolites property
+        /// </summary>
+          stylolites,
+        /// <summary>
+        /// stylolitic property
+        /// </summary>
+          stylolitic,
+        /// <summary>
+        /// syenite property
+        /// </summary>
+          syenite,
+        /// <summary>
+        /// syenitic property
+        /// </summary>
+          syenitic,
+        /// <summary>
+        /// syenitoid property
+        /// </summary>
+          syenitoid,
+        /// <summary>
+        /// sylvite property
+        /// </summary>
+          sylvite,
+        /// <summary>
+        /// sylvitic property
+        /// </summary>
+          sylvitic,
+        /// <summary>
+        /// tarry property
+        /// </summary>
+          tarry,
+        /// <summary>
+        /// tephrite property
+        /// </summary>
+          tephrite,
+        /// <summary>
+        /// tephritic property
+        /// </summary>
+          tephritic,
+        /// <summary>
+        /// tephritoid property
+        /// </summary>
+          tephritoid,
+        /// <summary>
+        /// tholeiiticbasalt property
+        /// </summary>
+          [XmlEnum("tholeiitic basalt")]
+          tholeiiticbasalt,
+        /// <summary>
+        /// tonalite property
+        /// </summary>
+          tonalite,
+        /// <summary>
+        /// tonalitic property
+        /// </summary>
+          tonalitic,
+        /// <summary>
+        /// trachyte property
+        /// </summary>
+          trachyte,
+        /// <summary>
+        /// trachytic property
+        /// </summary>
+          trachytic,
+        /// <summary>
+        /// trachyticrock property
+        /// </summary>
+          [XmlEnum("trachytic rock")]
+          trachyticrock,
+        /// <summary>
+        /// trachytoid property
+        /// </summary>
+          trachytoid,
+        /// <summary>
+        /// travertine property
+        /// </summary>
+          travertine,
+        /// <summary>
+        /// tuff property
+        /// </summary>
+          tuff,
+        /// <summary>
+        /// tuffaceous property
+        /// </summary>
+          tuffaceous,
+        /// <summary>
+        /// tuffite property
+        /// </summary>
+          tuffite,
+        /// <summary>
+        /// tuffitic property
+        /// </summary>
+          tuffitic,
+        /// <summary>
+        /// ultrabasic property
+        /// </summary>
+          ultrabasic,
+        /// <summary>
+        /// undifferentiated property
+        /// </summary>
+          undifferentiated,
+        /// <summary>
+        /// unknown property
+        /// </summary>
+          unknown,
+        /// <summary>
+        /// wacke property
+        /// </summary>
+          wacke
+        }
+        /// <summary>
+        /// This class represents the WellStatus xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the WellStatus xsd enumeration.")]
+        public enum WellStatus 
+        {
+        /// <summary>
+        /// abandoned property
+        /// </summary>
+          abandoned,
+        /// <summary>
+        /// active property
+        /// </summary>
+          active,
+        /// <summary>
+        /// activeinjecting property
+        /// </summary>
+          [XmlEnum("active -- injecting")]
+          activeinjecting,
+        /// <summary>
+        /// activeproducing property
+        /// </summary>
+          [XmlEnum("active -- producing")]
+          activeproducing,
+        /// <summary>
+        /// completed property
+        /// </summary>
+          completed,
+        /// <summary>
+        /// drilling property
+        /// </summary>
+          drilling,
+        /// <summary>
+        /// partiallyplugged property
+        /// </summary>
+          [XmlEnum("partially plugged")]
+          partiallyplugged,
+        /// <summary>
+        /// permitted property
+        /// </summary>
+          permitted,
+        /// <summary>
+        /// pluggedandabandoned property
+        /// </summary>
+          [XmlEnum("plugged and abandoned")]
+          pluggedandabandoned,
+        /// <summary>
+        /// proposed property
+        /// </summary>
+          proposed,
+        /// <summary>
+        /// sold property
+        /// </summary>
+          sold,
+        /// <summary>
+        /// suspended property
+        /// </summary>
+          suspended,
+        /// <summary>
+        /// temporarilyabandoned property
+        /// </summary>
+          [XmlEnum("temporarily abandoned")]
+          temporarilyabandoned,
+        /// <summary>
+        /// testing property
+        /// </summary>
+          testing,
+        /// <summary>
+        /// tight property
+        /// </summary>
+          tight,
+        /// <summary>
+        /// workingover property
+        /// </summary>
+          [XmlEnum("working over")]
+          workingover,
+        /// <summary>
+        /// unknown property
+        /// </summary>
+          unknown
         }
         /// <summary>
         /// This class represents the UnitOfMeasure xsd enumeration.
@@ -89111,15 +92240,15 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("1/gal[US]")]
           Item1galUS,
         /// <summary>
-        /// Item1H property
-        /// </summary>
-          [XmlEnum("1/H")]
-          Item1H,
-        /// <summary>
         /// Item1h property
         /// </summary>
           [XmlEnum("1/h")]
           Item1h,
+        /// <summary>
+        /// Item1H property
+        /// </summary>
+          [XmlEnum("1/H")]
+          Item1H,
         /// <summary>
         /// Item1in property
         /// </summary>
@@ -89536,13 +92665,13 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("30 m")]
           Item30m,
         /// <summary>
-        /// a property
-        /// </summary>
-          a,
-        /// <summary>
         /// A property
         /// </summary>
           A,
+        /// <summary>
+        /// a property
+        /// </summary>
+          a,
         /// <summary>
         /// Ah property
         /// </summary>
@@ -89654,13 +92783,13 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("atm/m")]
           atmm,
         /// <summary>
-        /// B property
-        /// </summary>
-          B,
-        /// <summary>
         /// b property
         /// </summary>
           b,
+        /// <summary>
+        /// B property
+        /// </summary>
+          B,
         /// <summary>
         /// BW property
         /// </summary>
@@ -90039,13 +93168,13 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("C/mm3")]
           Cmm3,
         /// <summary>
-        /// cA property
-        /// </summary>
-          cA,
-        /// <summary>
         /// ca property
         /// </summary>
           ca,
+        /// <summary>
+        /// cA property
+        /// </summary>
+          cA,
         /// <summary>
         /// calIT property
         /// </summary>
@@ -90343,25 +93472,25 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           crd,
         /// <summary>
-        /// cs property
-        /// </summary>
-          cs,
-        /// <summary>
         /// cS property
         /// </summary>
           cS,
+        /// <summary>
+        /// cs property
+        /// </summary>
+          cs,
         /// <summary>
         /// cSt property
         /// </summary>
           cSt,
         /// <summary>
-        /// cT property
-        /// </summary>
-          cT,
-        /// <summary>
         /// ct property
         /// </summary>
           ct,
+        /// <summary>
+        /// cT property
+        /// </summary>
+          cT,
         /// <summary>
         /// cu property
         /// </summary>
@@ -90462,15 +93591,15 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           dB,
         /// <summary>
-        /// dBMW property
-        /// </summary>
-          [XmlEnum("dB.MW")]
-          dBMW,
-        /// <summary>
         /// dBmW property
         /// </summary>
           [XmlEnum("dB.mW")]
           dBmW,
+        /// <summary>
+        /// dBMW property
+        /// </summary>
+          [XmlEnum("dB.MW")]
+          dBMW,
         /// <summary>
         /// dBW property
         /// </summary>
@@ -90941,13 +94070,13 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("F/m")]
           Fm,
         /// <summary>
-        /// fA property
-        /// </summary>
-          fA,
-        /// <summary>
         /// fa property
         /// </summary>
           fa,
+        /// <summary>
+        /// fA property
+        /// </summary>
+          fA,
         /// <summary>
         /// fathom property
         /// </summary>
@@ -91680,13 +94809,13 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           Gm,
         /// <summary>
-        /// gn property
-        /// </summary>
-          gn,
-        /// <summary>
         /// GN property
         /// </summary>
           GN,
+        /// <summary>
+        /// gn property
+        /// </summary>
+          gn,
         /// <summary>
         /// Gohm property
         /// </summary>
@@ -93400,13 +96529,13 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("m4/s")]
           m4s,
         /// <summary>
-        /// MA property
-        /// </summary>
-          MA,
-        /// <summary>
         /// mA property
         /// </summary>
           mA,
+        /// <summary>
+        /// MA property
+        /// </summary>
+          MA,
         /// <summary>
         /// mAcm2 property
         /// </summary>
@@ -93444,15 +96573,15 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("mC/m2")]
           mCm2,
         /// <summary>
-        /// Mcalth property
-        /// </summary>
-          [XmlEnum("Mcal[th]")]
-          Mcalth,
-        /// <summary>
         /// mcalth property
         /// </summary>
           [XmlEnum("mcal[th]")]
           mcalth,
+        /// <summary>
+        /// Mcalth property
+        /// </summary>
+          [XmlEnum("Mcal[th]")]
+          Mcalth,
         /// <summary>
         /// mCi property
         /// </summary>
@@ -93492,13 +96621,13 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("mD/cP")]
           mDcP,
         /// <summary>
-        /// mEuc property
-        /// </summary>
-          mEuc,
-        /// <summary>
         /// MEuc property
         /// </summary>
           MEuc,
+        /// <summary>
+        /// mEuc property
+        /// </summary>
+          mEuc,
         /// <summary>
         /// meV property
         /// </summary>
@@ -93516,13 +96645,13 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           mF,
         /// <summary>
-        /// Mg property
-        /// </summary>
-          Mg,
-        /// <summary>
         /// mg property
         /// </summary>
           mg,
+        /// <summary>
+        /// Mg property
+        /// </summary>
+          Mg,
         /// <summary>
         /// Mga property
         /// </summary>
@@ -93579,15 +96708,15 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("Mg/m2")]
           Mgm2,
         /// <summary>
-        /// Mgm3 property
-        /// </summary>
-          [XmlEnum("Mg/m3")]
-          Mgm3,
-        /// <summary>
         /// mgm3 property
         /// </summary>
           [XmlEnum("mg/m3")]
           mgm3,
+        /// <summary>
+        /// Mgm3 property
+        /// </summary>
+          [XmlEnum("Mg/m3")]
+          Mgm3,
         /// <summary>
         /// Mgmin property
         /// </summary>
@@ -93598,13 +96727,13 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           mGal,
         /// <summary>
-        /// Mgauss property
-        /// </summary>
-          Mgauss,
-        /// <summary>
         /// mgauss property
         /// </summary>
           mgauss,
+        /// <summary>
+        /// Mgauss property
+        /// </summary>
+          Mgauss,
         /// <summary>
         /// Mgf property
         /// </summary>
@@ -93622,13 +96751,13 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           mGy,
         /// <summary>
-        /// MH property
-        /// </summary>
-          MH,
-        /// <summary>
         /// mH property
         /// </summary>
           mH,
+        /// <summary>
+        /// MH property
+        /// </summary>
+          MH,
         /// <summary>
         /// mHz property
         /// </summary>
@@ -93726,13 +96855,13 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           mina,
         /// <summary>
-        /// MJ property
-        /// </summary>
-          MJ,
-        /// <summary>
         /// mJ property
         /// </summary>
           mJ,
+        /// <summary>
+        /// MJ property
+        /// </summary>
+          MJ,
         /// <summary>
         /// MJa property
         /// </summary>
@@ -93868,13 +96997,13 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("mN/m")]
           mNm,
         /// <summary>
-        /// mohm property
-        /// </summary>
-          mohm,
-        /// <summary>
         /// Mohm property
         /// </summary>
           Mohm,
+        /// <summary>
+        /// mohm property
+        /// </summary>
+          mohm,
         /// <summary>
         /// mol property
         /// </summary>
@@ -93910,13 +97039,13 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("mol/s")]
           mols,
         /// <summary>
-        /// mP property
-        /// </summary>
-          mP,
-        /// <summary>
         /// MP property
         /// </summary>
           MP,
+        /// <summary>
+        /// mP property
+        /// </summary>
+          mP,
         /// <summary>
         /// mPa1 property
         /// </summary>
@@ -93951,13 +97080,13 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           Mpsi,
         /// <summary>
-        /// mrad property
-        /// </summary>
-          mrad,
-        /// <summary>
         /// Mrad property
         /// </summary>
           Mrad,
+        /// <summary>
+        /// mrad property
+        /// </summary>
+          mrad,
         /// <summary>
         /// mrd property
         /// </summary>
@@ -93976,10 +97105,6 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("mrem/h")]
           mremh,
         /// <summary>
-        /// mS property
-        /// </summary>
-          mS,
-        /// <summary>
         /// ms1 property
         /// </summary>
           [XmlEnum("ms")]
@@ -93988,6 +97113,10 @@ namespace Energistics.DataAccess.WITSML200
         /// MS property
         /// </summary>
           MS,
+        /// <summary>
+        /// mS property
+        /// </summary>
+          mS,
         /// <summary>
         /// mScm property
         /// </summary>
@@ -94009,15 +97138,15 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("ms/in")]
           msin,
         /// <summary>
-        /// msm property
-        /// </summary>
-          [XmlEnum("ms/m")]
-          msm,
-        /// <summary>
         /// mSm property
         /// </summary>
           [XmlEnum("mS/m")]
           mSm,
+        /// <summary>
+        /// msm property
+        /// </summary>
+          [XmlEnum("ms/m")]
+          msm,
         /// <summary>
         /// mss property
         /// </summary>
@@ -94088,13 +97217,13 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("mW/m2")]
           mWm2,
         /// <summary>
-        /// mWb property
-        /// </summary>
-          mWb,
-        /// <summary>
         /// MWb property
         /// </summary>
           MWb,
+        /// <summary>
+        /// mWb property
+        /// </summary>
+          mWb,
         /// <summary>
         /// N property
         /// </summary>
@@ -94145,13 +97274,13 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("N/N")]
           NN,
         /// <summary>
-        /// nA property
-        /// </summary>
-          nA,
-        /// <summary>
         /// na property
         /// </summary>
           na,
+        /// <summary>
+        /// nA property
+        /// </summary>
+          nA,
         /// <summary>
         /// nAPI property
         /// </summary>
@@ -94255,13 +97384,13 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           nrd,
         /// <summary>
-        /// nS property
-        /// </summary>
-          nS,
-        /// <summary>
         /// ns property
         /// </summary>
           ns,
+        /// <summary>
+        /// nS property
+        /// </summary>
+          nS,
         /// <summary>
         /// nsft property
         /// </summary>
@@ -95509,909 +98638,1060 @@ namespace Energistics.DataAccess.WITSML200
           yd3
         }
         /// <summary>
-        /// This class represents the MeasureClass xsd enumeration.
+        /// This class represents the GeochronologicalRank xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the MeasureClass xsd enumeration.")]
-        public enum MeasureClass 
+        [Description("This class represents the GeochronologicalRank xsd enumeration.")]
+        public enum GeochronologicalRank 
         {
         /// <summary>
-        /// absorbeddose property
+        /// eon property
         /// </summary>
-          [XmlEnum("absorbed dose")]
-          absorbeddose,
+          eon,
         /// <summary>
-        /// activityofradioactivity property
+        /// era property
         /// </summary>
-          [XmlEnum("activity of radioactivity")]
-          activityofradioactivity,
+          era,
         /// <summary>
-        /// amountofsubstance property
+        /// period property
         /// </summary>
-          [XmlEnum("amount of substance")]
-          amountofsubstance,
+          period,
         /// <summary>
-        /// amountofsubstanceperamountofsubstance property
+        /// epoch property
         /// </summary>
-          [XmlEnum("amount of substance per amount of substance")]
-          amountofsubstanceperamountofsubstance,
+          epoch,
         /// <summary>
-        /// amountofsubstanceperarea property
+        /// age property
         /// </summary>
-          [XmlEnum("amount of substance per area")]
-          amountofsubstanceperarea,
+          age,
         /// <summary>
-        /// amountofsubstancepertime property
+        /// chron property
         /// </summary>
-          [XmlEnum("amount of substance per time")]
-          amountofsubstancepertime,
+          chron
+        }
         /// <summary>
-        /// amountofsubstancepertimeperarea property
+        /// This class represents the LithologyKind xsd enumeration.
         /// </summary>
-          [XmlEnum("amount of substance per time per area")]
-          amountofsubstancepertimeperarea,
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the LithologyKind xsd enumeration.")]
+        public enum LithologyKind 
+        {
         /// <summary>
-        /// amountofsubstancepervolume property
+        /// alkalifeldsparrhyolite property
         /// </summary>
-          [XmlEnum("amount of substance per volume")]
-          amountofsubstancepervolume,
+          [XmlEnum("alkali feldspar rhyolite")]
+          alkalifeldsparrhyolite,
         /// <summary>
-        /// angleperlength property
+        /// alkaliolivinebasalt property
         /// </summary>
-          [XmlEnum("angle per length")]
-          angleperlength,
+          [XmlEnum("alkali olivine basalt")]
+          alkaliolivinebasalt,
         /// <summary>
-        /// anglepervolume property
+        /// amphibolite property
         /// </summary>
-          [XmlEnum("angle per volume")]
-          anglepervolume,
+          amphibolite,
         /// <summary>
-        /// angularacceleration property
+        /// andesite property
         /// </summary>
-          [XmlEnum("angular acceleration")]
-          angularacceleration,
+          andesite,
         /// <summary>
-        /// angularvelocity property
+        /// anhydrite property
         /// </summary>
-          [XmlEnum("angular velocity")]
-          angularvelocity,
+          anhydrite,
         /// <summary>
-        /// apigammaray property
+        /// anorthositicrock property
         /// </summary>
-          [XmlEnum("api gamma ray")]
-          apigammaray,
+          [XmlEnum("anorthositic rock")]
+          anorthositicrock,
         /// <summary>
-        /// apigravity property
+        /// anthracite property
         /// </summary>
-          [XmlEnum("api gravity")]
-          apigravity,
+          anthracite,
         /// <summary>
-        /// apineutron property
+        /// aplite property
         /// </summary>
-          [XmlEnum("api neutron")]
-          apineutron,
+          aplite,
         /// <summary>
-        /// area property
+        /// arenite property
         /// </summary>
-          area,
+          arenite,
         /// <summary>
-        /// areaperamountofsubstance property
+        /// argillaceous property
         /// </summary>
-          [XmlEnum("area per amount of substance")]
-          areaperamountofsubstance,
+          argillaceous,
         /// <summary>
-        /// areaperarea property
+        /// arkose property
         /// </summary>
-          [XmlEnum("area per area")]
-          areaperarea,
+          arkose,
         /// <summary>
-        /// areapercount property
+        /// basalt property
         /// </summary>
-          [XmlEnum("area per count")]
-          areapercount,
+          basalt,
         /// <summary>
-        /// areapermass property
+        /// basanite property
         /// </summary>
-          [XmlEnum("area per mass")]
-          areapermass,
+          basanite,
         /// <summary>
-        /// areapertime property
+        /// bauxite property
         /// </summary>
-          [XmlEnum("area per time")]
-          areapertime,
+          bauxite,
         /// <summary>
-        /// areapervolume property
+        /// bituminouscoal property
         /// </summary>
-          [XmlEnum("area per volume")]
-          areapervolume,
+          [XmlEnum("bituminous coal")]
+          bituminouscoal,
         /// <summary>
-        /// attenuationperfrequencyinterval property
+        /// blueschistmetamorphicrock property
         /// </summary>
-          [XmlEnum("attenuation per frequency interval")]
-          attenuationperfrequencyinterval,
+          [XmlEnum("blueschist metamorphic rock")]
+          blueschistmetamorphicrock,
         /// <summary>
-        /// capacitance property
+        /// boninite property
         /// </summary>
-          capacitance,
+          boninite,
         /// <summary>
-        /// cationexchangecapacity property
+        /// breccia property
         /// </summary>
-          [XmlEnum("cation exchange capacity")]
-          cationexchangecapacity,
+          breccia,
         /// <summary>
-        /// datatransferspeed property
+        /// carbonateooze property
         /// </summary>
-          [XmlEnum("data transfer speed")]
-          datatransferspeed,
+          [XmlEnum("carbonate ooze")]
+          carbonateooze,
         /// <summary>
-        /// diffusioncoefficient property
+        /// carbonatite property
         /// </summary>
-          [XmlEnum("diffusion coefficient")]
-          diffusioncoefficient,
+          carbonatite,
         /// <summary>
-        /// diffusivetimeofflight property
+        /// chalk property
         /// </summary>
-          [XmlEnum("diffusive time of flight")]
-          diffusivetimeofflight,
+          chalk,
         /// <summary>
-        /// digitalstorage property
+        /// chert property
         /// </summary>
-          [XmlEnum("digital storage")]
-          digitalstorage,
+          chert,
         /// <summary>
-        /// dimensionless property
+        /// clay property
         /// </summary>
-          dimensionless,
+          clay,
         /// <summary>
-        /// dipolemoment property
+        /// claystone property
         /// </summary>
-          [XmlEnum("dipole moment")]
-          dipolemoment,
+          claystone,
         /// <summary>
-        /// doseequivalent property
+        /// coal property
         /// </summary>
-          [XmlEnum("dose equivalent")]
-          doseequivalent,
+          coal,
         /// <summary>
-        /// dynamicviscosity property
+        /// conglomerate property
         /// </summary>
-          [XmlEnum("dynamic viscosity")]
-          dynamicviscosity,
+          conglomerate,
         /// <summary>
-        /// electriccharge property
+        /// dacite property
         /// </summary>
-          [XmlEnum("electric charge")]
-          electriccharge,
+          dacite,
         /// <summary>
-        /// electricchargeperarea property
+        /// diabase property
         /// </summary>
-          [XmlEnum("electric charge per area")]
-          electricchargeperarea,
+          diabase,
         /// <summary>
-        /// electricchargepermass property
+        /// diamictite property
         /// </summary>
-          [XmlEnum("electric charge per mass")]
-          electricchargepermass,
+          diamictite,
         /// <summary>
-        /// electricchargepervolume property
+        /// diorite property
         /// </summary>
-          [XmlEnum("electric charge per volume")]
-          electricchargepervolume,
+          diorite,
         /// <summary>
-        /// electricconductance property
+        /// dioritoid property
         /// </summary>
-          [XmlEnum("electric conductance")]
-          electricconductance,
+          dioritoid,
         /// <summary>
-        /// electricconductivity property
+        /// doleriticrock property
         /// </summary>
-          [XmlEnum("electric conductivity")]
-          electricconductivity,
+          [XmlEnum("doleritic rock")]
+          doleriticrock,
         /// <summary>
-        /// electriccurrent property
+        /// dolomite property
         /// </summary>
-          [XmlEnum("electric current")]
-          electriccurrent,
+          dolomite,
         /// <summary>
-        /// electriccurrentdensity property
+        /// dolomitic property
         /// </summary>
-          [XmlEnum("electric current density")]
-          electriccurrentdensity,
+          dolomitic,
         /// <summary>
-        /// electricfieldstrength property
+        /// eclogite property
         /// </summary>
-          [XmlEnum("electric field strength")]
-          electricfieldstrength,
+          eclogite,
         /// <summary>
-        /// electricpotentialdifference property
+        /// exoticalkalinerock property
         /// </summary>
-          [XmlEnum("electric potential difference")]
-          electricpotentialdifference,
+          [XmlEnum("exotic alkaline rock")]
+          exoticalkalinerock,
         /// <summary>
-        /// electricresistance property
+        /// feldspar property
         /// </summary>
-          [XmlEnum("electric resistance")]
-          electricresistance,
+          feldspar,
         /// <summary>
-        /// electricresistanceperlength property
+        /// feldspathicarenite property
         /// </summary>
-          [XmlEnum("electric resistance per length")]
-          electricresistanceperlength,
+          [XmlEnum("feldspathic arenite")]
+          feldspathicarenite,
         /// <summary>
-        /// electricalresistivity property
+        /// finegrainedigneousrock property
         /// </summary>
-          [XmlEnum("electrical resistivity")]
-          electricalresistivity,
+          [XmlEnum("fine grained igneous rock")]
+          finegrainedigneousrock,
         /// <summary>
-        /// electromagneticmoment property
+        /// foiddioritoid property
         /// </summary>
-          [XmlEnum("electromagnetic moment")]
-          electromagneticmoment,
+          [XmlEnum("foid dioritoid")]
+          foiddioritoid,
         /// <summary>
-        /// energy property
+        /// foidgabbroid property
         /// </summary>
-          energy,
+          [XmlEnum("foid gabbroid")]
+          foidgabbroid,
         /// <summary>
-        /// energylengthperarea property
+        /// foidsyenitoid property
         /// </summary>
-          [XmlEnum("energy length per area")]
-          energylengthperarea,
+          [XmlEnum("foid syenitoid")]
+          foidsyenitoid,
         /// <summary>
-        /// energylengthpertimeareatemperature property
+        /// foidite property
         /// </summary>
-          [XmlEnum("energy length per time area temperature")]
-          energylengthpertimeareatemperature,
+          foidite,
         /// <summary>
-        /// energyperarea property
+        /// foiditoid property
         /// </summary>
-          [XmlEnum("energy per area")]
-          energyperarea,
+          foiditoid,
         /// <summary>
-        /// energyperlength property
+        /// foidolite property
         /// </summary>
-          [XmlEnum("energy per length")]
-          energyperlength,
+          foidolite,
         /// <summary>
-        /// energypermass property
+        /// foliatedmetamorphicrock property
         /// </summary>
-          [XmlEnum("energy per mass")]
-          energypermass,
+          [XmlEnum("foliated metamorphic rock")]
+          foliatedmetamorphicrock,
         /// <summary>
-        /// energypermasspertime property
+        /// fragmentaligneousrock property
         /// </summary>
-          [XmlEnum("energy per mass per time")]
-          energypermasspertime,
+          [XmlEnum("fragmental igneous rock")]
+          fragmentaligneousrock,
         /// <summary>
-        /// energypervolume property
+        /// gabbro property
         /// </summary>
-          [XmlEnum("energy per volume")]
-          energypervolume,
+          gabbro,
         /// <summary>
-        /// force property
+        /// gabbroicrock property
         /// </summary>
-          force,
+          [XmlEnum("gabbroic rock")]
+          gabbroicrock,
         /// <summary>
-        /// forcearea property
+        /// gabbroid property
         /// </summary>
-          [XmlEnum("force area")]
-          forcearea,
+          gabbroid,
         /// <summary>
-        /// forcelengthperlength property
+        /// glauconite property
         /// </summary>
-          [XmlEnum("force length per length")]
-          forcelengthperlength,
+          glauconite,
         /// <summary>
-        /// forceperforce property
+        /// gneiss property
         /// </summary>
-          [XmlEnum("force per force")]
-          forceperforce,
+          gneiss,
         /// <summary>
-        /// forceperlength property
+        /// granite property
         /// </summary>
-          [XmlEnum("force per length")]
-          forceperlength,
+          granite,
         /// <summary>
-        /// forcepervolume property
+        /// granodiorite property
         /// </summary>
-          [XmlEnum("force per volume")]
-          forcepervolume,
+          granodiorite,
         /// <summary>
-        /// frequency property
+        /// granofels property
         /// </summary>
-          frequency,
+          granofels,
         /// <summary>
-        /// frequencyinterval property
+        /// granulite property
         /// </summary>
-          [XmlEnum("frequency interval")]
-          frequencyinterval,
+          granulite,
         /// <summary>
-        /// heatcapacity property
+        /// gravel property
         /// </summary>
-          [XmlEnum("heat capacity")]
-          heatcapacity,
+          gravel,
         /// <summary>
-        /// heatflowrate property
+        /// greenstone property
         /// </summary>
-          [XmlEnum("heat flow rate")]
-          heatflowrate,
+          greenstone,
         /// <summary>
-        /// heattransfercoefficient property
+        /// gumbo property
         /// </summary>
-          [XmlEnum("heat transfer coefficient")]
-          heattransfercoefficient,
+          gumbo,
         /// <summary>
-        /// illuminance property
+        /// gypsum property
         /// </summary>
-          illuminance,
+          gypsum,
         /// <summary>
-        /// inductance property
+        /// halite property
         /// </summary>
-          inductance,
+          halite,
         /// <summary>
-        /// isothermalcompressibility property
+        /// hornfels property
         /// </summary>
-          [XmlEnum("isothermal compressibility")]
-          isothermalcompressibility,
+          hornfels,
         /// <summary>
-        /// kinematicviscosity property
+        /// igneousrock property
         /// </summary>
-          [XmlEnum("kinematic viscosity")]
-          kinematicviscosity,
+          [XmlEnum("igneous rock")]
+          igneousrock,
         /// <summary>
-        /// length property
+        /// impactgeneratedmaterial property
         /// </summary>
-          length,
+          [XmlEnum("impact generated material")]
+          impactgeneratedmaterial,
         /// <summary>
-        /// lengthperlength property
+        /// impuredolomite property
         /// </summary>
-          [XmlEnum("length per length")]
-          lengthperlength,
+          [XmlEnum("impure dolomite")]
+          impuredolomite,
         /// <summary>
-        /// lengthpermass property
+        /// impurelimestone property
         /// </summary>
-          [XmlEnum("length per mass")]
-          lengthpermass,
+          [XmlEnum("impure limestone")]
+          impurelimestone,
         /// <summary>
-        /// lengthperpressure property
+        /// intrusiverockplutonic property
         /// </summary>
-          [XmlEnum("length per pressure")]
-          lengthperpressure,
+          [XmlEnum("intrusive rock (plutonic)")]
+          intrusiverockplutonic,
         /// <summary>
-        /// lengthpertemperature property
+        /// ironrichsedimentaryrock property
         /// </summary>
-          [XmlEnum("length per temperature")]
-          lengthpertemperature,
+          [XmlEnum("iron rich sedimentary rock")]
+          ironrichsedimentaryrock,
         /// <summary>
-        /// lengthpertime property
+        /// kalsiliticandmeliliticrocks property
         /// </summary>
-          [XmlEnum("length per time")]
-          lengthpertime,
+          [XmlEnum("kalsilitic and melilitic rocks")]
+          kalsiliticandmeliliticrocks,
         /// <summary>
-        /// lengthpervolume property
+        /// komatiiticrock property
         /// </summary>
-          [XmlEnum("length per volume")]
-          lengthpervolume,
+          [XmlEnum("komatiitic rock")]
+          komatiiticrock,
         /// <summary>
-        /// lightexposure property
+        /// latiticrock property
         /// </summary>
-          [XmlEnum("light exposure")]
-          lightexposure,
+          [XmlEnum("latitic rock")]
+          latiticrock,
         /// <summary>
-        /// linearacceleration property
+        /// lignite property
         /// </summary>
-          [XmlEnum("linear acceleration")]
-          linearacceleration,
+          lignite,
         /// <summary>
-        /// linearthermalexpansion property
+        /// limeboundstone property
         /// </summary>
-          [XmlEnum("linear thermal expansion")]
-          linearthermalexpansion,
+          [XmlEnum("lime boundstone")]
+          limeboundstone,
         /// <summary>
-        /// logarithmicpowerratio property
+        /// limeframestone property
         /// </summary>
-          [XmlEnum("logarithmic power ratio")]
-          logarithmicpowerratio,
+          [XmlEnum("lime framestone")]
+          limeframestone,
         /// <summary>
-        /// logarithmicpowerratioperlength property
+        /// limegrainstone property
         /// </summary>
-          [XmlEnum("logarithmic power ratio per length")]
-          logarithmicpowerratioperlength,
+          [XmlEnum("lime grainstone")]
+          limegrainstone,
         /// <summary>
-        /// luminance property
+        /// limemudstone property
         /// </summary>
-          luminance,
+          [XmlEnum("lime mudstone")]
+          limemudstone,
         /// <summary>
-        /// luminousefficacy property
+        /// limepackstone property
         /// </summary>
-          [XmlEnum("luminous efficacy")]
-          luminousefficacy,
+          [XmlEnum("lime packstone")]
+          limepackstone,
         /// <summary>
-        /// luminousflux property
+        /// limewackestone property
         /// </summary>
-          [XmlEnum("luminous flux")]
-          luminousflux,
+          [XmlEnum("lime wackestone")]
+          limewackestone,
         /// <summary>
-        /// luminousintensity property
+        /// limestone property
         /// </summary>
-          [XmlEnum("luminous intensity")]
-          luminousintensity,
+          limestone,
         /// <summary>
-        /// magneticdipolemoment property
+        /// marble property
         /// </summary>
-          [XmlEnum("magnetic dipole moment")]
-          magneticdipolemoment,
+          marble,
         /// <summary>
-        /// magneticfieldstrength property
+        /// marl property
         /// </summary>
-          [XmlEnum("magnetic field strength")]
-          magneticfieldstrength,
+          marl,
         /// <summary>
-        /// magneticflux property
+        /// metamorphicrock property
         /// </summary>
-          [XmlEnum("magnetic flux")]
-          magneticflux,
+          [XmlEnum("metamorphic rock")]
+          metamorphicrock,
         /// <summary>
-        /// magneticfluxdensity property
+        /// micaschist property
         /// </summary>
-          [XmlEnum("magnetic flux density")]
-          magneticfluxdensity,
+          [XmlEnum("mica schist")]
+          micaschist,
         /// <summary>
-        /// magneticfluxdensityperlength property
+        /// migmatite property
         /// </summary>
-          [XmlEnum("magnetic flux density per length")]
-          magneticfluxdensityperlength,
+          migmatite,
         /// <summary>
-        /// magneticpermeability property
+        /// monzogabbro property
         /// </summary>
-          [XmlEnum("magnetic permeability")]
-          magneticpermeability,
+          monzogabbro,
         /// <summary>
-        /// magneticvectorpotential property
+        /// mud property
         /// </summary>
-          [XmlEnum("magnetic vector potential")]
-          magneticvectorpotential,
+          mud,
         /// <summary>
-        /// mass property
+        /// mudstone property
         /// </summary>
-          mass,
+          mudstone,
         /// <summary>
-        /// masslength property
+        /// myloniticrock property
         /// </summary>
-          [XmlEnum("mass length")]
-          masslength,
+          [XmlEnum("mylonitic rock")]
+          myloniticrock,
         /// <summary>
-        /// massperarea property
+        /// nodescription property
         /// </summary>
-          [XmlEnum("mass per area")]
-          massperarea,
+          [XmlEnum("no description")]
+          nodescription,
         /// <summary>
-        /// massperenergy property
+        /// nosample property
         /// </summary>
-          [XmlEnum("mass per energy")]
-          massperenergy,
+          [XmlEnum("no sample")]
+          nosample,
         /// <summary>
-        /// massperlength property
+        /// ooze property
         /// </summary>
-          [XmlEnum("mass per length")]
-          massperlength,
+          ooze,
         /// <summary>
-        /// masspermass property
+        /// ophiolite property
         /// </summary>
-          [XmlEnum("mass per mass")]
-          masspermass,
+          ophiolite,
         /// <summary>
-        /// masspertime property
+        /// organicbearingmudstone property
         /// </summary>
-          [XmlEnum("mass per time")]
-          masspertime,
+          [XmlEnum("organic bearing mudstone")]
+          organicbearingmudstone,
         /// <summary>
-        /// masspertimeperarea property
+        /// peat property
         /// </summary>
-          [XmlEnum("mass per time per area")]
-          masspertimeperarea,
+          peat,
         /// <summary>
-        /// masspertimeperlength property
+        /// pegmatite property
         /// </summary>
-          [XmlEnum("mass per time per length")]
-          masspertimeperlength,
+          pegmatite,
         /// <summary>
-        /// masspervolume property
+        /// peridotite property
         /// </summary>
-          [XmlEnum("mass per volume")]
-          masspervolume,
+          peridotite,
         /// <summary>
-        /// masspervolumeperlength property
+        /// phaneriticigneousrock property
         /// </summary>
-          [XmlEnum("mass per volume per length")]
-          masspervolumeperlength,
+          [XmlEnum("phaneritic igneous rock")]
+          phaneriticigneousrock,
         /// <summary>
-        /// masspervolumeperpressure property
+        /// phonolite property
         /// </summary>
-          [XmlEnum("mass per volume per pressure")]
-          masspervolumeperpressure,
+          phonolite,
         /// <summary>
-        /// masspervolumepertemperature property
+        /// phonolitoid property
         /// </summary>
-          [XmlEnum("mass per volume per temperature")]
-          masspervolumepertemperature,
+          phonolitoid,
         /// <summary>
-        /// mobility property
+        /// phosphate property
         /// </summary>
-          mobility,
+          phosphate,
         /// <summary>
-        /// molarenergy property
+        /// phosphaterock property
         /// </summary>
-          [XmlEnum("molar energy")]
-          molarenergy,
+          [XmlEnum("phosphate rock")]
+          phosphaterock,
         /// <summary>
-        /// molarheatcapacity property
+        /// phyllite property
         /// </summary>
-          [XmlEnum("molar heat capacity")]
-          molarheatcapacity,
+          phyllite,
         /// <summary>
-        /// molarvolume property
+        /// porphyry property
         /// </summary>
-          [XmlEnum("molar volume")]
-          molarvolume,
+          porphyry,
         /// <summary>
-        /// molecularweight property
+        /// potassiumandmagnesiumsalts property
         /// </summary>
-          [XmlEnum("molecular weight")]
-          molecularweight,
+          [XmlEnum("potassium and magnesium salts")]
+          potassiumandmagnesiumsalts,
         /// <summary>
-        /// momentofforce property
+        /// pyroclasticbreccia property
         /// </summary>
-          [XmlEnum("moment of force")]
-          momentofforce,
+          [XmlEnum("pyroclastic breccia")]
+          pyroclasticbreccia,
         /// <summary>
-        /// momentofinertia property
+        /// pyroclasticrock property
         /// </summary>
-          [XmlEnum("moment of inertia")]
-          momentofinertia,
+          [XmlEnum("pyroclastic rock")]
+          pyroclasticrock,
         /// <summary>
-        /// momentum property
+        /// pyroxenite property
         /// </summary>
-          momentum,
+          pyroxenite,
         /// <summary>
-        /// normalizedpower property
+        /// quartzarenite property
         /// </summary>
-          [XmlEnum("normalized power")]
-          normalizedpower,
+          [XmlEnum("quartz arenite")]
+          quartzarenite,
         /// <summary>
-        /// permeabilitylength property
+        /// quartzite property
         /// </summary>
-          [XmlEnum("permeability length")]
-          permeabilitylength,
+          quartzite,
         /// <summary>
-        /// permeabilityrock property
+        /// rhyolite property
         /// </summary>
-          [XmlEnum("permeability rock")]
-          permeabilityrock,
+          rhyolite,
         /// <summary>
-        /// permittivity property
+        /// rocksalt property
         /// </summary>
-          permittivity,
+          [XmlEnum("rock salt")]
+          rocksalt,
         /// <summary>
-        /// planeangle property
+        /// sand property
         /// </summary>
-          [XmlEnum("plane angle")]
-          planeangle,
+          sand,
         /// <summary>
-        /// potentialdifferenceperpowerdrop property
+        /// sandstone property
         /// </summary>
-          [XmlEnum("potential difference per power drop")]
-          potentialdifferenceperpowerdrop,
+          sandstone,
         /// <summary>
-        /// power property
+        /// sandy property
         /// </summary>
-          power,
+          sandy,
         /// <summary>
-        /// powerperarea property
+        /// sapropel property
         /// </summary>
-          [XmlEnum("power per area")]
-          powerperarea,
+          sapropel,
         /// <summary>
-        /// powerperpower property
+        /// schist property
         /// </summary>
-          [XmlEnum("power per power")]
-          powerperpower,
+          schist,
         /// <summary>
-        /// powerpervolume property
+        /// serpentinite property
         /// </summary>
-          [XmlEnum("power per volume")]
-          powerpervolume,
+          serpentinite,
         /// <summary>
-        /// pressure property
+        /// shale property
         /// </summary>
-          pressure,
+          shale,
         /// <summary>
-        /// pressureperpressure property
+        /// siliceousooze property
         /// </summary>
-          [XmlEnum("pressure per pressure")]
-          pressureperpressure,
+          [XmlEnum("siliceous ooze")]
+          siliceousooze,
         /// <summary>
-        /// pressurepertime property
+        /// silt property
         /// </summary>
-          [XmlEnum("pressure per time")]
-          pressurepertime,
+          silt,
         /// <summary>
-        /// pressurepervolume property
+        /// siltstone property
         /// </summary>
-          [XmlEnum("pressure per volume")]
-          pressurepervolume,
+          siltstone,
         /// <summary>
-        /// pressuresquared property
+        /// skarn property
         /// </summary>
-          [XmlEnum("pressure squared")]
-          pressuresquared,
+          skarn,
         /// <summary>
-        /// pressuresquaredperforcetimeperarea property
+        /// slate property
         /// </summary>
-          [XmlEnum("pressure squared per force time per area")]
-          pressuresquaredperforcetimeperarea,
+          slate,
         /// <summary>
-        /// pressuretimepervolume property
+        /// spilite property
         /// </summary>
-          [XmlEnum("pressure time per volume")]
-          pressuretimepervolume,
+          spilite,
         /// <summary>
-        /// quantityoflight property
+        /// syenite property
         /// </summary>
-          [XmlEnum("quantity of light")]
-          quantityoflight,
+          syenite,
         /// <summary>
-        /// radiance property
+        /// syenitoid property
         /// </summary>
-          radiance,
+          syenitoid,
         /// <summary>
-        /// radiantintensity property
+        /// sylvite property
         /// </summary>
-          [XmlEnum("radiant intensity")]
-          radiantintensity,
+          sylvite,
         /// <summary>
-        /// reciprocalarea property
+        /// tephrite property
         /// </summary>
-          [XmlEnum("reciprocal area")]
-          reciprocalarea,
+          tephrite,
         /// <summary>
-        /// reciprocalelectricpotentialdifference property
+        /// tephritoid property
         /// </summary>
-          [XmlEnum("reciprocal electric potential difference")]
-          reciprocalelectricpotentialdifference,
+          tephritoid,
         /// <summary>
-        /// reciprocalforce property
+        /// tholeiiticbasalt property
         /// </summary>
-          [XmlEnum("reciprocal force")]
-          reciprocalforce,
+          [XmlEnum("tholeiitic basalt")]
+          tholeiiticbasalt,
         /// <summary>
-        /// reciprocallength property
+        /// tonalite property
         /// </summary>
-          [XmlEnum("reciprocal length")]
-          reciprocallength,
+          tonalite,
         /// <summary>
-        /// reciprocalmass property
+        /// trachyte property
         /// </summary>
-          [XmlEnum("reciprocal mass")]
-          reciprocalmass,
+          trachyte,
         /// <summary>
-        /// reciprocalmasstime property
+        /// trachyticrock property
         /// </summary>
-          [XmlEnum("reciprocal mass time")]
-          reciprocalmasstime,
+          [XmlEnum("trachytic rock")]
+          trachyticrock,
         /// <summary>
-        /// reciprocalpressure property
+        /// trachytoid property
         /// </summary>
-          [XmlEnum("reciprocal pressure")]
-          reciprocalpressure,
+          trachytoid,
         /// <summary>
-        /// reciprocaltime property
+        /// travertine property
         /// </summary>
-          [XmlEnum("reciprocal time")]
-          reciprocaltime,
+          travertine,
         /// <summary>
-        /// reciprocalvolume property
+        /// tuff property
         /// </summary>
-          [XmlEnum("reciprocal volume")]
-          reciprocalvolume,
+          tuff,
         /// <summary>
-        /// reluctance property
+        /// tuffite property
         /// </summary>
-          reluctance,
+          tuffite,
         /// <summary>
-        /// secondmomentofarea property
+        /// ultrabasic property
         /// </summary>
-          [XmlEnum("second moment of area")]
-          secondmomentofarea,
+          ultrabasic,
         /// <summary>
-        /// signalingeventpertime property
+        /// undifferentiated property
         /// </summary>
-          [XmlEnum("signaling event per time")]
-          signalingeventpertime,
+          undifferentiated,
         /// <summary>
-        /// solidangle property
+        /// unknown property
         /// </summary>
-          [XmlEnum("solid angle")]
-          solidangle,
+          unknown,
         /// <summary>
-        /// specificheatcapacity property
+        /// wacke property
         /// </summary>
-          [XmlEnum("specific heat capacity")]
-          specificheatcapacity,
+          wacke
+        }
         /// <summary>
-        /// temperatureinterval property
+        /// This class represents the LengthUom xsd enumeration.
         /// </summary>
-          [XmlEnum("temperature interval")]
-          temperatureinterval,
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the LengthUom xsd enumeration.")]
+        public enum LengthUom 
+        {
         /// <summary>
-        /// temperatureintervalperlength property
+        /// Item01ft property
         /// </summary>
-          [XmlEnum("temperature interval per length")]
-          temperatureintervalperlength,
+          [XmlEnum("0.1 ft")]
+          Item01ft,
         /// <summary>
-        /// temperatureintervalperpressure property
+        /// Item01ftUS property
         /// </summary>
-          [XmlEnum("temperature interval per pressure")]
-          temperatureintervalperpressure,
+          [XmlEnum("0.1 ft[US]")]
+          Item01ftUS,
         /// <summary>
-        /// temperatureintervalpertime property
+        /// Item01in property
         /// </summary>
-          [XmlEnum("temperature interval per time")]
-          temperatureintervalpertime,
+          [XmlEnum("0.1 in")]
+          Item01in,
         /// <summary>
-        /// thermalconductance property
+        /// Item01yd property
         /// </summary>
-          [XmlEnum("thermal conductance")]
-          thermalconductance,
+          [XmlEnum("0.1 yd")]
+          Item01yd,
         /// <summary>
-        /// thermalconductivity property
+        /// Item116in property
         /// </summary>
-          [XmlEnum("thermal conductivity")]
-          thermalconductivity,
+          [XmlEnum("1/16 in")]
+          Item116in,
         /// <summary>
-        /// thermaldiffusivity property
+        /// Item12ft property
         /// </summary>
-          [XmlEnum("thermal diffusivity")]
-          thermaldiffusivity,
+          [XmlEnum("1/2 ft")]
+          Item12ft,
         /// <summary>
-        /// thermalinsulance property
+        /// Item132in property
         /// </summary>
-          [XmlEnum("thermal insulance")]
-          thermalinsulance,
+          [XmlEnum("1/32 in")]
+          Item132in,
         /// <summary>
-        /// thermalresistance property
+        /// Item164in property
         /// </summary>
-          [XmlEnum("thermal resistance")]
-          thermalresistance,
+          [XmlEnum("1/64 in")]
+          Item164in,
         /// <summary>
-        /// thermodynamictemperature property
+        /// Item10ft property
         /// </summary>
-          [XmlEnum("thermodynamic temperature")]
-          thermodynamictemperature,
+          [XmlEnum("10 ft")]
+          Item10ft,
         /// <summary>
-        /// thermodynamictemperatureperthermodynamictemperature property
+        /// Item10in property
         /// </summary>
-          [XmlEnum("thermodynamic temperature per thermodynamic temperature")]
-          thermodynamictemperatureperthermodynamictemperature,
+          [XmlEnum("10 in")]
+          Item10in,
         /// <summary>
-        /// time property
+        /// Item10km property
         /// </summary>
-          time,
+          [XmlEnum("10 km")]
+          Item10km,
         /// <summary>
-        /// timeperlength property
+        /// Item100ft property
         /// </summary>
-          [XmlEnum("time per length")]
-          timeperlength,
+          [XmlEnum("100 ft")]
+          Item100ft,
         /// <summary>
-        /// timepermass property
+        /// Item100km property
         /// </summary>
-          [XmlEnum("time per mass")]
-          timepermass,
+          [XmlEnum("100 km")]
+          Item100km,
         /// <summary>
-        /// timepertime property
+        /// Item1000ft property
         /// </summary>
-          [XmlEnum("time per time")]
-          timepertime,
+          [XmlEnum("1000 ft")]
+          Item1000ft,
         /// <summary>
-        /// timepervolume property
+        /// Item30ft property
         /// </summary>
-          [XmlEnum("time per volume")]
-          timepervolume,
+          [XmlEnum("30 ft")]
+          Item30ft,
         /// <summary>
-        /// verticalcoordinate property
+        /// Item30m property
         /// </summary>
-          [XmlEnum("vertical coordinate")]
-          verticalcoordinate,
+          [XmlEnum("30 m")]
+          Item30m,
         /// <summary>
-        /// volume property
+        /// angstrom property
         /// </summary>
-          volume,
+          angstrom,
         /// <summary>
-        /// volumeflowratepervolumeflowrate property
+        /// chain property
         /// </summary>
-          [XmlEnum("volume flow rate per volume flow rate")]
-          volumeflowratepervolumeflowrate,
+          chain,
         /// <summary>
-        /// volumeperarea property
+        /// chainBnA property
         /// </summary>
-          [XmlEnum("volume per area")]
-          volumeperarea,
+          [XmlEnum("chain[BnA]")]
+          chainBnA,
         /// <summary>
-        /// volumeperlength property
+        /// chainBnB property
         /// </summary>
-          [XmlEnum("volume per length")]
-          volumeperlength,
+          [XmlEnum("chain[BnB]")]
+          chainBnB,
         /// <summary>
-        /// volumepermass property
+        /// chainCla property
         /// </summary>
-          [XmlEnum("volume per mass")]
-          volumepermass,
+          [XmlEnum("chain[Cla]")]
+          chainCla,
         /// <summary>
-        /// volumeperpressure property
+        /// chainInd37 property
         /// </summary>
-          [XmlEnum("volume per pressure")]
-          volumeperpressure,
+          [XmlEnum("chain[Ind37]")]
+          chainInd37,
         /// <summary>
-        /// volumeperrotation property
+        /// chainSe property
         /// </summary>
-          [XmlEnum("volume per rotation")]
-          volumeperrotation,
+          [XmlEnum("chain[Se]")]
+          chainSe,
         /// <summary>
-        /// volumepertime property
+        /// chainSeT property
         /// </summary>
-          [XmlEnum("volume per time")]
-          volumepertime,
+          [XmlEnum("chain[SeT]")]
+          chainSeT,
         /// <summary>
-        /// volumepertimelength property
+        /// chainUS property
         /// </summary>
-          [XmlEnum("volume per time length")]
-          volumepertimelength,
+          [XmlEnum("chain[US]")]
+          chainUS,
         /// <summary>
-        /// volumepertimeperarea property
+        /// cm property
         /// </summary>
-          [XmlEnum("volume per time per area")]
-          volumepertimeperarea,
+          cm,
         /// <summary>
-        /// volumepertimeperlength property
+        /// dam property
         /// </summary>
-          [XmlEnum("volume per time per length")]
-          volumepertimeperlength,
+          dam,
         /// <summary>
-        /// volumepertimeperpressure property
+        /// dm property
         /// </summary>
-          [XmlEnum("volume per time per pressure")]
-          volumepertimeperpressure,
+          dm,
         /// <summary>
-        /// volumepertimeperpressurelength property
+        /// Em property
         /// </summary>
-          [XmlEnum("volume per time per pressure length")]
-          volumepertimeperpressurelength,
+          Em,
         /// <summary>
-        /// volumepertimepertime property
+        /// fathom property
         /// </summary>
-          [XmlEnum("volume per time per time")]
-          volumepertimepertime,
+          fathom,
         /// <summary>
-        /// volumepertimepervolume property
+        /// fm property
         /// </summary>
-          [XmlEnum("volume per time per volume")]
-          volumepertimepervolume,
+          fm,
         /// <summary>
-        /// volumepervolume property
+        /// ft property
         /// </summary>
-          [XmlEnum("volume per volume")]
-          volumepervolume,
+          ft,
         /// <summary>
-        /// volumetricheattransfercoefficient property
+        /// ftBnA property
         /// </summary>
-          [XmlEnum("volumetric heat transfer coefficient")]
-          volumetricheattransfercoefficient,
+          [XmlEnum("ft[BnA]")]
+          ftBnA,
         /// <summary>
-        /// volumetricthermalexpansion property
+        /// ftBnB property
         /// </summary>
-          [XmlEnum("volumetric thermal expansion")]
-          volumetricthermalexpansion
+          [XmlEnum("ft[BnB]")]
+          ftBnB,
+        /// <summary>
+        /// ftBr36 property
+        /// </summary>
+          [XmlEnum("ft[Br36]")]
+          ftBr36,
+        /// <summary>
+        /// ftBr65 property
+        /// </summary>
+          [XmlEnum("ft[Br65]")]
+          ftBr65,
+        /// <summary>
+        /// ftCla property
+        /// </summary>
+          [XmlEnum("ft[Cla]")]
+          ftCla,
+        /// <summary>
+        /// ftGC property
+        /// </summary>
+          [XmlEnum("ft[GC]")]
+          ftGC,
+        /// <summary>
+        /// ftInd property
+        /// </summary>
+          [XmlEnum("ft[Ind]")]
+          ftInd,
+        /// <summary>
+        /// ftInd37 property
+        /// </summary>
+          [XmlEnum("ft[Ind37]")]
+          ftInd37,
+        /// <summary>
+        /// ftInd62 property
+        /// </summary>
+          [XmlEnum("ft[Ind62]")]
+          ftInd62,
+        /// <summary>
+        /// ftInd75 property
+        /// </summary>
+          [XmlEnum("ft[Ind75]")]
+          ftInd75,
+        /// <summary>
+        /// ftSe property
+        /// </summary>
+          [XmlEnum("ft[Se]")]
+          ftSe,
+        /// <summary>
+        /// ftSeT property
+        /// </summary>
+          [XmlEnum("ft[SeT]")]
+          ftSeT,
+        /// <summary>
+        /// ftUS property
+        /// </summary>
+          [XmlEnum("ft[US]")]
+          ftUS,
+        /// <summary>
+        /// furUS property
+        /// </summary>
+          [XmlEnum("fur[US]")]
+          furUS,
+        /// <summary>
+        /// Gm property
+        /// </summary>
+          Gm,
+        /// <summary>
+        /// hm property
+        /// </summary>
+          hm,
+        /// <summary>
+        /// in property
+        /// </summary>
+          @in,
+        /// <summary>
+        /// inUS property
+        /// </summary>
+          [XmlEnum("in[US]")]
+          inUS,
+        /// <summary>
+        /// km property
+        /// </summary>
+          km,
+        /// <summary>
+        /// link property
+        /// </summary>
+          link,
+        /// <summary>
+        /// linkBnA property
+        /// </summary>
+          [XmlEnum("link[BnA]")]
+          linkBnA,
+        /// <summary>
+        /// linkBnB property
+        /// </summary>
+          [XmlEnum("link[BnB]")]
+          linkBnB,
+        /// <summary>
+        /// linkCla property
+        /// </summary>
+          [XmlEnum("link[Cla]")]
+          linkCla,
+        /// <summary>
+        /// linkSe property
+        /// </summary>
+          [XmlEnum("link[Se]")]
+          linkSe,
+        /// <summary>
+        /// linkSeT property
+        /// </summary>
+          [XmlEnum("link[SeT]")]
+          linkSeT,
+        /// <summary>
+        /// linkUS property
+        /// </summary>
+          [XmlEnum("link[US]")]
+          linkUS,
+        /// <summary>
+        /// m property
+        /// </summary>
+          m,
+        /// <summary>
+        /// mGer property
+        /// </summary>
+          [XmlEnum("m[Ger]")]
+          mGer,
+        /// <summary>
+        /// mi property
+        /// </summary>
+          mi,
+        /// <summary>
+        /// minaut property
+        /// </summary>
+          [XmlEnum("mi[naut]")]
+          minaut,
+        /// <summary>
+        /// minautUK property
+        /// </summary>
+          [XmlEnum("mi[nautUK]")]
+          minautUK,
+        /// <summary>
+        /// miUS property
+        /// </summary>
+          [XmlEnum("mi[US]")]
+          miUS,
+        /// <summary>
+        /// mil property
+        /// </summary>
+          mil,
+        /// <summary>
+        /// mm property
+        /// </summary>
+          mm,
+        /// <summary>
+        /// Mm property
+        /// </summary>
+          Mm,
+        /// <summary>
+        /// nm property
+        /// </summary>
+          nm,
+        /// <summary>
+        /// pm property
+        /// </summary>
+          pm,
+        /// <summary>
+        /// rodUS property
+        /// </summary>
+          [XmlEnum("rod[US]")]
+          rodUS,
+        /// <summary>
+        /// Tm property
+        /// </summary>
+          Tm,
+        /// <summary>
+        /// um property
+        /// </summary>
+          um,
+        /// <summary>
+        /// yd property
+        /// </summary>
+          yd,
+        /// <summary>
+        /// ydBnA property
+        /// </summary>
+          [XmlEnum("yd[BnA]")]
+          ydBnA,
+        /// <summary>
+        /// ydBnB property
+        /// </summary>
+          [XmlEnum("yd[BnB]")]
+          ydBnB,
+        /// <summary>
+        /// ydCla property
+        /// </summary>
+          [XmlEnum("yd[Cla]")]
+          ydCla,
+        /// <summary>
+        /// ydInd property
+        /// </summary>
+          [XmlEnum("yd[Ind]")]
+          ydInd,
+        /// <summary>
+        /// ydInd37 property
+        /// </summary>
+          [XmlEnum("yd[Ind37]")]
+          ydInd37,
+        /// <summary>
+        /// ydInd62 property
+        /// </summary>
+          [XmlEnum("yd[Ind62]")]
+          ydInd62,
+        /// <summary>
+        /// ydInd75 property
+        /// </summary>
+          [XmlEnum("yd[Ind75]")]
+          ydInd75,
+        /// <summary>
+        /// ydSe property
+        /// </summary>
+          [XmlEnum("yd[Se]")]
+          ydSe,
+        /// <summary>
+        /// ydSeT property
+        /// </summary>
+          [XmlEnum("yd[SeT]")]
+          ydSeT,
+        /// <summary>
+        /// ydUS property
+        /// </summary>
+          [XmlEnum("yd[US]")]
+          ydUS
         }
         /// <summary>
         /// This class represents the PhysicalStatus xsd enumeration.
@@ -96568,28 +99848,6 @@ namespace Energistics.DataAccess.WITSML200
         /// stationary property
         /// </summary>
           stationary
-        }
-        /// <summary>
-        /// This class represents the ExistenceKind xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the ExistenceKind xsd enumeration.")]
-        public enum ExistenceKind 
-        {
-        /// <summary>
-        /// actual property
-        /// </summary>
-          actual,
-        /// <summary>
-        /// planned property
-        /// </summary>
-          planned,
-        /// <summary>
-        /// simulated property
-        /// </summary>
-          simulated
         }
         /// <summary>
         /// This class represents the PermeabilityLengthUom xsd enumeration.
@@ -100561,52 +103819,6 @@ namespace Energistics.DataAccess.WITSML200
           none
         }
         /// <summary>
-        /// This class represents the MatrixCementKind xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the MatrixCementKind xsd enumeration.")]
-        public enum MatrixCementKind 
-        {
-        /// <summary>
-        /// ankerite property
-        /// </summary>
-          ankerite,
-        /// <summary>
-        /// calcite property
-        /// </summary>
-          calcite,
-        /// <summary>
-        /// chlorite property
-        /// </summary>
-          chlorite,
-        /// <summary>
-        /// dolomite property
-        /// </summary>
-          dolomite,
-        /// <summary>
-        /// illite property
-        /// </summary>
-          illite,
-        /// <summary>
-        /// kaolinite property
-        /// </summary>
-          kaolinite,
-        /// <summary>
-        /// quartz property
-        /// </summary>
-          quartz,
-        /// <summary>
-        /// siderite property
-        /// </summary>
-          siderite,
-        /// <summary>
-        /// smectite property
-        /// </summary>
-          smectite
-        }
-        /// <summary>
         /// This class represents the IlluminanceUom xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -100632,66 +103844,6 @@ namespace Energistics.DataAccess.WITSML200
         /// lx property
         /// </summary>
           lx
-        }
-        /// <summary>
-        /// This class represents the LithostratigraphicRank xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the LithostratigraphicRank xsd enumeration.")]
-        public enum LithostratigraphicRank 
-        {
-        /// <summary>
-        /// group property
-        /// </summary>
-          group,
-        /// <summary>
-        /// formation property
-        /// </summary>
-          formation,
-        /// <summary>
-        /// member property
-        /// </summary>
-          member,
-        /// <summary>
-        /// bed property
-        /// </summary>
-          bed
-        }
-        /// <summary>
-        /// This class represents the GeochronologicalRank xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the GeochronologicalRank xsd enumeration.")]
-        public enum GeochronologicalRank 
-        {
-        /// <summary>
-        /// eon property
-        /// </summary>
-          eon,
-        /// <summary>
-        /// era property
-        /// </summary>
-          era,
-        /// <summary>
-        /// period property
-        /// </summary>
-          period,
-        /// <summary>
-        /// epoch property
-        /// </summary>
-          epoch,
-        /// <summary>
-        /// age property
-        /// </summary>
-          age,
-        /// <summary>
-        /// chron property
-        /// </summary>
-          chron
         }
         /// <summary>
         /// This class represents the LineStyle xsd enumeration.
@@ -100897,96 +104049,6 @@ namespace Energistics.DataAccess.WITSML200
         /// other property
         /// </summary>
           other
-        }
-        /// <summary>
-        /// This class represents the WellboreDatumReference xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the WellboreDatumReference xsd enumeration.")]
-        public enum WellboreDatumReference 
-        {
-        /// <summary>
-        /// groundlevel property
-        /// </summary>
-          [XmlEnum("ground level")]
-          groundlevel,
-        /// <summary>
-        /// kellybushing property
-        /// </summary>
-          [XmlEnum("kelly bushing")]
-          kellybushing,
-        /// <summary>
-        /// meansealevel property
-        /// </summary>
-          [XmlEnum("mean sea level")]
-          meansealevel,
-        /// <summary>
-        /// derrickfloor property
-        /// </summary>
-          [XmlEnum("derrick floor")]
-          derrickfloor,
-        /// <summary>
-        /// casingflange property
-        /// </summary>
-          [XmlEnum("casing flange")]
-          casingflange,
-        /// <summary>
-        /// crownvalve property
-        /// </summary>
-          [XmlEnum("crown valve")]
-          crownvalve,
-        /// <summary>
-        /// rotarybushing property
-        /// </summary>
-          [XmlEnum("rotary bushing")]
-          rotarybushing,
-        /// <summary>
-        /// rotarytable property
-        /// </summary>
-          [XmlEnum("rotary table")]
-          rotarytable,
-        /// <summary>
-        /// seafloor property
-        /// </summary>
-          [XmlEnum("sea floor")]
-          seafloor,
-        /// <summary>
-        /// lowestastronomicaltide property
-        /// </summary>
-          [XmlEnum("lowest astronomical tide")]
-          lowestastronomicaltide,
-        /// <summary>
-        /// meanhigherhighwater property
-        /// </summary>
-          [XmlEnum("mean higher high water")]
-          meanhigherhighwater,
-        /// <summary>
-        /// meanhighwater property
-        /// </summary>
-          [XmlEnum("mean high water")]
-          meanhighwater,
-        /// <summary>
-        /// meanlowerlowwater property
-        /// </summary>
-          [XmlEnum("mean lower low water")]
-          meanlowerlowwater,
-        /// <summary>
-        /// meanlowwater property
-        /// </summary>
-          [XmlEnum("mean low water")]
-          meanlowwater,
-        /// <summary>
-        /// meantidelevel property
-        /// </summary>
-          [XmlEnum("mean tide level")]
-          meantidelevel,
-        /// <summary>
-        /// kickoffpoint property
-        /// </summary>
-          [XmlEnum("kickoff point")]
-          kickoffpoint
         }
         /// <summary>
         /// This class represents the LogRectangleType xsd enumeration.
@@ -109850,911 +112912,6 @@ namespace Energistics.DataAccess.WITSML200
           realtime
         }
         /// <summary>
-        /// This class represents the QuantityClassKind xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the QuantityClassKind xsd enumeration.")]
-        public enum QuantityClassKind 
-        {
-        /// <summary>
-        /// absorbeddose property
-        /// </summary>
-          [XmlEnum("absorbed dose")]
-          absorbeddose,
-        /// <summary>
-        /// activityofradioactivity property
-        /// </summary>
-          [XmlEnum("activity of radioactivity")]
-          activityofradioactivity,
-        /// <summary>
-        /// amountofsubstance property
-        /// </summary>
-          [XmlEnum("amount of substance")]
-          amountofsubstance,
-        /// <summary>
-        /// amountofsubstanceperamountofsubstance property
-        /// </summary>
-          [XmlEnum("amount of substance per amount of substance")]
-          amountofsubstanceperamountofsubstance,
-        /// <summary>
-        /// amountofsubstanceperarea property
-        /// </summary>
-          [XmlEnum("amount of substance per area")]
-          amountofsubstanceperarea,
-        /// <summary>
-        /// amountofsubstancepertime property
-        /// </summary>
-          [XmlEnum("amount of substance per time")]
-          amountofsubstancepertime,
-        /// <summary>
-        /// amountofsubstancepertimeperarea property
-        /// </summary>
-          [XmlEnum("amount of substance per time per area")]
-          amountofsubstancepertimeperarea,
-        /// <summary>
-        /// amountofsubstancepervolume property
-        /// </summary>
-          [XmlEnum("amount of substance per volume")]
-          amountofsubstancepervolume,
-        /// <summary>
-        /// angleperlength property
-        /// </summary>
-          [XmlEnum("angle per length")]
-          angleperlength,
-        /// <summary>
-        /// anglepervolume property
-        /// </summary>
-          [XmlEnum("angle per volume")]
-          anglepervolume,
-        /// <summary>
-        /// angularacceleration property
-        /// </summary>
-          [XmlEnum("angular acceleration")]
-          angularacceleration,
-        /// <summary>
-        /// angularvelocity property
-        /// </summary>
-          [XmlEnum("angular velocity")]
-          angularvelocity,
-        /// <summary>
-        /// apigammaray property
-        /// </summary>
-          [XmlEnum("api gamma ray")]
-          apigammaray,
-        /// <summary>
-        /// apigravity property
-        /// </summary>
-          [XmlEnum("api gravity")]
-          apigravity,
-        /// <summary>
-        /// apineutron property
-        /// </summary>
-          [XmlEnum("api neutron")]
-          apineutron,
-        /// <summary>
-        /// area property
-        /// </summary>
-          area,
-        /// <summary>
-        /// areaperamountofsubstance property
-        /// </summary>
-          [XmlEnum("area per amount of substance")]
-          areaperamountofsubstance,
-        /// <summary>
-        /// areaperarea property
-        /// </summary>
-          [XmlEnum("area per area")]
-          areaperarea,
-        /// <summary>
-        /// areapercount property
-        /// </summary>
-          [XmlEnum("area per count")]
-          areapercount,
-        /// <summary>
-        /// areapermass property
-        /// </summary>
-          [XmlEnum("area per mass")]
-          areapermass,
-        /// <summary>
-        /// areapertime property
-        /// </summary>
-          [XmlEnum("area per time")]
-          areapertime,
-        /// <summary>
-        /// areapervolume property
-        /// </summary>
-          [XmlEnum("area per volume")]
-          areapervolume,
-        /// <summary>
-        /// attenuationperfrequencyinterval property
-        /// </summary>
-          [XmlEnum("attenuation per frequency interval")]
-          attenuationperfrequencyinterval,
-        /// <summary>
-        /// capacitance property
-        /// </summary>
-          capacitance,
-        /// <summary>
-        /// cationexchangecapacity property
-        /// </summary>
-          [XmlEnum("cation exchange capacity")]
-          cationexchangecapacity,
-        /// <summary>
-        /// datatransferspeed property
-        /// </summary>
-          [XmlEnum("data transfer speed")]
-          datatransferspeed,
-        /// <summary>
-        /// diffusioncoefficient property
-        /// </summary>
-          [XmlEnum("diffusion coefficient")]
-          diffusioncoefficient,
-        /// <summary>
-        /// diffusivetimeofflight property
-        /// </summary>
-          [XmlEnum("diffusive time of flight")]
-          diffusivetimeofflight,
-        /// <summary>
-        /// digitalstorage property
-        /// </summary>
-          [XmlEnum("digital storage")]
-          digitalstorage,
-        /// <summary>
-        /// dimensionless property
-        /// </summary>
-          dimensionless,
-        /// <summary>
-        /// dipolemoment property
-        /// </summary>
-          [XmlEnum("dipole moment")]
-          dipolemoment,
-        /// <summary>
-        /// doseequivalent property
-        /// </summary>
-          [XmlEnum("dose equivalent")]
-          doseequivalent,
-        /// <summary>
-        /// dynamicviscosity property
-        /// </summary>
-          [XmlEnum("dynamic viscosity")]
-          dynamicviscosity,
-        /// <summary>
-        /// electriccharge property
-        /// </summary>
-          [XmlEnum("electric charge")]
-          electriccharge,
-        /// <summary>
-        /// electricchargeperarea property
-        /// </summary>
-          [XmlEnum("electric charge per area")]
-          electricchargeperarea,
-        /// <summary>
-        /// electricchargepermass property
-        /// </summary>
-          [XmlEnum("electric charge per mass")]
-          electricchargepermass,
-        /// <summary>
-        /// electricchargepervolume property
-        /// </summary>
-          [XmlEnum("electric charge per volume")]
-          electricchargepervolume,
-        /// <summary>
-        /// electricconductance property
-        /// </summary>
-          [XmlEnum("electric conductance")]
-          electricconductance,
-        /// <summary>
-        /// electricconductivity property
-        /// </summary>
-          [XmlEnum("electric conductivity")]
-          electricconductivity,
-        /// <summary>
-        /// electriccurrent property
-        /// </summary>
-          [XmlEnum("electric current")]
-          electriccurrent,
-        /// <summary>
-        /// electriccurrentdensity property
-        /// </summary>
-          [XmlEnum("electric current density")]
-          electriccurrentdensity,
-        /// <summary>
-        /// electricfieldstrength property
-        /// </summary>
-          [XmlEnum("electric field strength")]
-          electricfieldstrength,
-        /// <summary>
-        /// electricpotentialdifference property
-        /// </summary>
-          [XmlEnum("electric potential difference")]
-          electricpotentialdifference,
-        /// <summary>
-        /// electricresistance property
-        /// </summary>
-          [XmlEnum("electric resistance")]
-          electricresistance,
-        /// <summary>
-        /// electricresistanceperlength property
-        /// </summary>
-          [XmlEnum("electric resistance per length")]
-          electricresistanceperlength,
-        /// <summary>
-        /// electricalresistivity property
-        /// </summary>
-          [XmlEnum("electrical resistivity")]
-          electricalresistivity,
-        /// <summary>
-        /// electromagneticmoment property
-        /// </summary>
-          [XmlEnum("electromagnetic moment")]
-          electromagneticmoment,
-        /// <summary>
-        /// energy property
-        /// </summary>
-          energy,
-        /// <summary>
-        /// energylengthperarea property
-        /// </summary>
-          [XmlEnum("energy length per area")]
-          energylengthperarea,
-        /// <summary>
-        /// energylengthpertimeareatemperature property
-        /// </summary>
-          [XmlEnum("energy length per time area temperature")]
-          energylengthpertimeareatemperature,
-        /// <summary>
-        /// energyperarea property
-        /// </summary>
-          [XmlEnum("energy per area")]
-          energyperarea,
-        /// <summary>
-        /// energyperlength property
-        /// </summary>
-          [XmlEnum("energy per length")]
-          energyperlength,
-        /// <summary>
-        /// energypermass property
-        /// </summary>
-          [XmlEnum("energy per mass")]
-          energypermass,
-        /// <summary>
-        /// energypermasspertime property
-        /// </summary>
-          [XmlEnum("energy per mass per time")]
-          energypermasspertime,
-        /// <summary>
-        /// energypervolume property
-        /// </summary>
-          [XmlEnum("energy per volume")]
-          energypervolume,
-        /// <summary>
-        /// force property
-        /// </summary>
-          force,
-        /// <summary>
-        /// forcearea property
-        /// </summary>
-          [XmlEnum("force area")]
-          forcearea,
-        /// <summary>
-        /// forcelengthperlength property
-        /// </summary>
-          [XmlEnum("force length per length")]
-          forcelengthperlength,
-        /// <summary>
-        /// forceperforce property
-        /// </summary>
-          [XmlEnum("force per force")]
-          forceperforce,
-        /// <summary>
-        /// forceperlength property
-        /// </summary>
-          [XmlEnum("force per length")]
-          forceperlength,
-        /// <summary>
-        /// forcepervolume property
-        /// </summary>
-          [XmlEnum("force per volume")]
-          forcepervolume,
-        /// <summary>
-        /// frequency property
-        /// </summary>
-          frequency,
-        /// <summary>
-        /// frequencyinterval property
-        /// </summary>
-          [XmlEnum("frequency interval")]
-          frequencyinterval,
-        /// <summary>
-        /// heatcapacity property
-        /// </summary>
-          [XmlEnum("heat capacity")]
-          heatcapacity,
-        /// <summary>
-        /// heatflowrate property
-        /// </summary>
-          [XmlEnum("heat flow rate")]
-          heatflowrate,
-        /// <summary>
-        /// heattransfercoefficient property
-        /// </summary>
-          [XmlEnum("heat transfer coefficient")]
-          heattransfercoefficient,
-        /// <summary>
-        /// illuminance property
-        /// </summary>
-          illuminance,
-        /// <summary>
-        /// inductance property
-        /// </summary>
-          inductance,
-        /// <summary>
-        /// isothermalcompressibility property
-        /// </summary>
-          [XmlEnum("isothermal compressibility")]
-          isothermalcompressibility,
-        /// <summary>
-        /// kinematicviscosity property
-        /// </summary>
-          [XmlEnum("kinematic viscosity")]
-          kinematicviscosity,
-        /// <summary>
-        /// length property
-        /// </summary>
-          length,
-        /// <summary>
-        /// lengthperlength property
-        /// </summary>
-          [XmlEnum("length per length")]
-          lengthperlength,
-        /// <summary>
-        /// lengthpermass property
-        /// </summary>
-          [XmlEnum("length per mass")]
-          lengthpermass,
-        /// <summary>
-        /// lengthperpressure property
-        /// </summary>
-          [XmlEnum("length per pressure")]
-          lengthperpressure,
-        /// <summary>
-        /// lengthpertemperature property
-        /// </summary>
-          [XmlEnum("length per temperature")]
-          lengthpertemperature,
-        /// <summary>
-        /// lengthpertime property
-        /// </summary>
-          [XmlEnum("length per time")]
-          lengthpertime,
-        /// <summary>
-        /// lengthpervolume property
-        /// </summary>
-          [XmlEnum("length per volume")]
-          lengthpervolume,
-        /// <summary>
-        /// lightexposure property
-        /// </summary>
-          [XmlEnum("light exposure")]
-          lightexposure,
-        /// <summary>
-        /// linearacceleration property
-        /// </summary>
-          [XmlEnum("linear acceleration")]
-          linearacceleration,
-        /// <summary>
-        /// linearthermalexpansion property
-        /// </summary>
-          [XmlEnum("linear thermal expansion")]
-          linearthermalexpansion,
-        /// <summary>
-        /// logarithmicpowerratio property
-        /// </summary>
-          [XmlEnum("logarithmic power ratio")]
-          logarithmicpowerratio,
-        /// <summary>
-        /// logarithmicpowerratioperlength property
-        /// </summary>
-          [XmlEnum("logarithmic power ratio per length")]
-          logarithmicpowerratioperlength,
-        /// <summary>
-        /// luminance property
-        /// </summary>
-          luminance,
-        /// <summary>
-        /// luminousefficacy property
-        /// </summary>
-          [XmlEnum("luminous efficacy")]
-          luminousefficacy,
-        /// <summary>
-        /// luminousflux property
-        /// </summary>
-          [XmlEnum("luminous flux")]
-          luminousflux,
-        /// <summary>
-        /// luminousintensity property
-        /// </summary>
-          [XmlEnum("luminous intensity")]
-          luminousintensity,
-        /// <summary>
-        /// magneticdipolemoment property
-        /// </summary>
-          [XmlEnum("magnetic dipole moment")]
-          magneticdipolemoment,
-        /// <summary>
-        /// magneticfieldstrength property
-        /// </summary>
-          [XmlEnum("magnetic field strength")]
-          magneticfieldstrength,
-        /// <summary>
-        /// magneticflux property
-        /// </summary>
-          [XmlEnum("magnetic flux")]
-          magneticflux,
-        /// <summary>
-        /// magneticfluxdensity property
-        /// </summary>
-          [XmlEnum("magnetic flux density")]
-          magneticfluxdensity,
-        /// <summary>
-        /// magneticfluxdensityperlength property
-        /// </summary>
-          [XmlEnum("magnetic flux density per length")]
-          magneticfluxdensityperlength,
-        /// <summary>
-        /// magneticpermeability property
-        /// </summary>
-          [XmlEnum("magnetic permeability")]
-          magneticpermeability,
-        /// <summary>
-        /// magneticvectorpotential property
-        /// </summary>
-          [XmlEnum("magnetic vector potential")]
-          magneticvectorpotential,
-        /// <summary>
-        /// mass property
-        /// </summary>
-          mass,
-        /// <summary>
-        /// masslength property
-        /// </summary>
-          [XmlEnum("mass length")]
-          masslength,
-        /// <summary>
-        /// massperarea property
-        /// </summary>
-          [XmlEnum("mass per area")]
-          massperarea,
-        /// <summary>
-        /// massperenergy property
-        /// </summary>
-          [XmlEnum("mass per energy")]
-          massperenergy,
-        /// <summary>
-        /// massperlength property
-        /// </summary>
-          [XmlEnum("mass per length")]
-          massperlength,
-        /// <summary>
-        /// masspermass property
-        /// </summary>
-          [XmlEnum("mass per mass")]
-          masspermass,
-        /// <summary>
-        /// masspertime property
-        /// </summary>
-          [XmlEnum("mass per time")]
-          masspertime,
-        /// <summary>
-        /// masspertimeperarea property
-        /// </summary>
-          [XmlEnum("mass per time per area")]
-          masspertimeperarea,
-        /// <summary>
-        /// masspertimeperlength property
-        /// </summary>
-          [XmlEnum("mass per time per length")]
-          masspertimeperlength,
-        /// <summary>
-        /// masspervolume property
-        /// </summary>
-          [XmlEnum("mass per volume")]
-          masspervolume,
-        /// <summary>
-        /// masspervolumeperlength property
-        /// </summary>
-          [XmlEnum("mass per volume per length")]
-          masspervolumeperlength,
-        /// <summary>
-        /// masspervolumeperpressure property
-        /// </summary>
-          [XmlEnum("mass per volume per pressure")]
-          masspervolumeperpressure,
-        /// <summary>
-        /// masspervolumepertemperature property
-        /// </summary>
-          [XmlEnum("mass per volume per temperature")]
-          masspervolumepertemperature,
-        /// <summary>
-        /// mobility property
-        /// </summary>
-          mobility,
-        /// <summary>
-        /// molarenergy property
-        /// </summary>
-          [XmlEnum("molar energy")]
-          molarenergy,
-        /// <summary>
-        /// molarheatcapacity property
-        /// </summary>
-          [XmlEnum("molar heat capacity")]
-          molarheatcapacity,
-        /// <summary>
-        /// molarvolume property
-        /// </summary>
-          [XmlEnum("molar volume")]
-          molarvolume,
-        /// <summary>
-        /// molecularweight property
-        /// </summary>
-          [XmlEnum("molecular weight")]
-          molecularweight,
-        /// <summary>
-        /// momentofforce property
-        /// </summary>
-          [XmlEnum("moment of force")]
-          momentofforce,
-        /// <summary>
-        /// momentofinertia property
-        /// </summary>
-          [XmlEnum("moment of inertia")]
-          momentofinertia,
-        /// <summary>
-        /// momentum property
-        /// </summary>
-          momentum,
-        /// <summary>
-        /// normalizedpower property
-        /// </summary>
-          [XmlEnum("normalized power")]
-          normalizedpower,
-        /// <summary>
-        /// permeabilitylength property
-        /// </summary>
-          [XmlEnum("permeability length")]
-          permeabilitylength,
-        /// <summary>
-        /// permeabilityrock property
-        /// </summary>
-          [XmlEnum("permeability rock")]
-          permeabilityrock,
-        /// <summary>
-        /// permittivity property
-        /// </summary>
-          permittivity,
-        /// <summary>
-        /// planeangle property
-        /// </summary>
-          [XmlEnum("plane angle")]
-          planeangle,
-        /// <summary>
-        /// potentialdifferenceperpowerdrop property
-        /// </summary>
-          [XmlEnum("potential difference per power drop")]
-          potentialdifferenceperpowerdrop,
-        /// <summary>
-        /// power property
-        /// </summary>
-          power,
-        /// <summary>
-        /// powerperarea property
-        /// </summary>
-          [XmlEnum("power per area")]
-          powerperarea,
-        /// <summary>
-        /// powerperpower property
-        /// </summary>
-          [XmlEnum("power per power")]
-          powerperpower,
-        /// <summary>
-        /// powerpervolume property
-        /// </summary>
-          [XmlEnum("power per volume")]
-          powerpervolume,
-        /// <summary>
-        /// pressure property
-        /// </summary>
-          pressure,
-        /// <summary>
-        /// pressureperpressure property
-        /// </summary>
-          [XmlEnum("pressure per pressure")]
-          pressureperpressure,
-        /// <summary>
-        /// pressurepertime property
-        /// </summary>
-          [XmlEnum("pressure per time")]
-          pressurepertime,
-        /// <summary>
-        /// pressurepervolume property
-        /// </summary>
-          [XmlEnum("pressure per volume")]
-          pressurepervolume,
-        /// <summary>
-        /// pressuresquared property
-        /// </summary>
-          [XmlEnum("pressure squared")]
-          pressuresquared,
-        /// <summary>
-        /// pressuresquaredperforcetimeperarea property
-        /// </summary>
-          [XmlEnum("pressure squared per force time per area")]
-          pressuresquaredperforcetimeperarea,
-        /// <summary>
-        /// pressuretimepervolume property
-        /// </summary>
-          [XmlEnum("pressure time per volume")]
-          pressuretimepervolume,
-        /// <summary>
-        /// quantityoflight property
-        /// </summary>
-          [XmlEnum("quantity of light")]
-          quantityoflight,
-        /// <summary>
-        /// radiance property
-        /// </summary>
-          radiance,
-        /// <summary>
-        /// radiantintensity property
-        /// </summary>
-          [XmlEnum("radiant intensity")]
-          radiantintensity,
-        /// <summary>
-        /// reciprocalarea property
-        /// </summary>
-          [XmlEnum("reciprocal area")]
-          reciprocalarea,
-        /// <summary>
-        /// reciprocalelectricpotentialdifference property
-        /// </summary>
-          [XmlEnum("reciprocal electric potential difference")]
-          reciprocalelectricpotentialdifference,
-        /// <summary>
-        /// reciprocalforce property
-        /// </summary>
-          [XmlEnum("reciprocal force")]
-          reciprocalforce,
-        /// <summary>
-        /// reciprocallength property
-        /// </summary>
-          [XmlEnum("reciprocal length")]
-          reciprocallength,
-        /// <summary>
-        /// reciprocalmass property
-        /// </summary>
-          [XmlEnum("reciprocal mass")]
-          reciprocalmass,
-        /// <summary>
-        /// reciprocalmasstime property
-        /// </summary>
-          [XmlEnum("reciprocal mass time")]
-          reciprocalmasstime,
-        /// <summary>
-        /// reciprocalpressure property
-        /// </summary>
-          [XmlEnum("reciprocal pressure")]
-          reciprocalpressure,
-        /// <summary>
-        /// reciprocaltime property
-        /// </summary>
-          [XmlEnum("reciprocal time")]
-          reciprocaltime,
-        /// <summary>
-        /// reciprocalvolume property
-        /// </summary>
-          [XmlEnum("reciprocal volume")]
-          reciprocalvolume,
-        /// <summary>
-        /// reluctance property
-        /// </summary>
-          reluctance,
-        /// <summary>
-        /// secondmomentofarea property
-        /// </summary>
-          [XmlEnum("second moment of area")]
-          secondmomentofarea,
-        /// <summary>
-        /// signalingeventpertime property
-        /// </summary>
-          [XmlEnum("signaling event per time")]
-          signalingeventpertime,
-        /// <summary>
-        /// solidangle property
-        /// </summary>
-          [XmlEnum("solid angle")]
-          solidangle,
-        /// <summary>
-        /// specificheatcapacity property
-        /// </summary>
-          [XmlEnum("specific heat capacity")]
-          specificheatcapacity,
-        /// <summary>
-        /// temperatureinterval property
-        /// </summary>
-          [XmlEnum("temperature interval")]
-          temperatureinterval,
-        /// <summary>
-        /// temperatureintervalperlength property
-        /// </summary>
-          [XmlEnum("temperature interval per length")]
-          temperatureintervalperlength,
-        /// <summary>
-        /// temperatureintervalperpressure property
-        /// </summary>
-          [XmlEnum("temperature interval per pressure")]
-          temperatureintervalperpressure,
-        /// <summary>
-        /// temperatureintervalpertime property
-        /// </summary>
-          [XmlEnum("temperature interval per time")]
-          temperatureintervalpertime,
-        /// <summary>
-        /// thermalconductance property
-        /// </summary>
-          [XmlEnum("thermal conductance")]
-          thermalconductance,
-        /// <summary>
-        /// thermalconductivity property
-        /// </summary>
-          [XmlEnum("thermal conductivity")]
-          thermalconductivity,
-        /// <summary>
-        /// thermaldiffusivity property
-        /// </summary>
-          [XmlEnum("thermal diffusivity")]
-          thermaldiffusivity,
-        /// <summary>
-        /// thermalinsulance property
-        /// </summary>
-          [XmlEnum("thermal insulance")]
-          thermalinsulance,
-        /// <summary>
-        /// thermalresistance property
-        /// </summary>
-          [XmlEnum("thermal resistance")]
-          thermalresistance,
-        /// <summary>
-        /// thermodynamictemperature property
-        /// </summary>
-          [XmlEnum("thermodynamic temperature")]
-          thermodynamictemperature,
-        /// <summary>
-        /// thermodynamictemperatureperthermodynamictemperature property
-        /// </summary>
-          [XmlEnum("thermodynamic temperature per thermodynamic temperature")]
-          thermodynamictemperatureperthermodynamictemperature,
-        /// <summary>
-        /// time property
-        /// </summary>
-          time,
-        /// <summary>
-        /// timeperlength property
-        /// </summary>
-          [XmlEnum("time per length")]
-          timeperlength,
-        /// <summary>
-        /// timepermass property
-        /// </summary>
-          [XmlEnum("time per mass")]
-          timepermass,
-        /// <summary>
-        /// timepertime property
-        /// </summary>
-          [XmlEnum("time per time")]
-          timepertime,
-        /// <summary>
-        /// timepervolume property
-        /// </summary>
-          [XmlEnum("time per volume")]
-          timepervolume,
-        /// <summary>
-        /// verticalcoordinate property
-        /// </summary>
-          [XmlEnum("vertical coordinate")]
-          verticalcoordinate,
-        /// <summary>
-        /// volume property
-        /// </summary>
-          volume,
-        /// <summary>
-        /// volumeflowratepervolumeflowrate property
-        /// </summary>
-          [XmlEnum("volume flow rate per volume flow rate")]
-          volumeflowratepervolumeflowrate,
-        /// <summary>
-        /// volumeperarea property
-        /// </summary>
-          [XmlEnum("volume per area")]
-          volumeperarea,
-        /// <summary>
-        /// volumeperlength property
-        /// </summary>
-          [XmlEnum("volume per length")]
-          volumeperlength,
-        /// <summary>
-        /// volumepermass property
-        /// </summary>
-          [XmlEnum("volume per mass")]
-          volumepermass,
-        /// <summary>
-        /// volumeperpressure property
-        /// </summary>
-          [XmlEnum("volume per pressure")]
-          volumeperpressure,
-        /// <summary>
-        /// volumeperrotation property
-        /// </summary>
-          [XmlEnum("volume per rotation")]
-          volumeperrotation,
-        /// <summary>
-        /// volumepertime property
-        /// </summary>
-          [XmlEnum("volume per time")]
-          volumepertime,
-        /// <summary>
-        /// volumepertimelength property
-        /// </summary>
-          [XmlEnum("volume per time length")]
-          volumepertimelength,
-        /// <summary>
-        /// volumepertimeperarea property
-        /// </summary>
-          [XmlEnum("volume per time per area")]
-          volumepertimeperarea,
-        /// <summary>
-        /// volumepertimeperlength property
-        /// </summary>
-          [XmlEnum("volume per time per length")]
-          volumepertimeperlength,
-        /// <summary>
-        /// volumepertimeperpressure property
-        /// </summary>
-          [XmlEnum("volume per time per pressure")]
-          volumepertimeperpressure,
-        /// <summary>
-        /// volumepertimeperpressurelength property
-        /// </summary>
-          [XmlEnum("volume per time per pressure length")]
-          volumepertimeperpressurelength,
-        /// <summary>
-        /// volumepertimepertime property
-        /// </summary>
-          [XmlEnum("volume per time per time")]
-          volumepertimepertime,
-        /// <summary>
-        /// volumepertimepervolume property
-        /// </summary>
-          [XmlEnum("volume per time per volume")]
-          volumepertimepervolume,
-        /// <summary>
-        /// volumepervolume property
-        /// </summary>
-          [XmlEnum("volume per volume")]
-          volumepervolume,
-        /// <summary>
-        /// volumetricheattransfercoefficient property
-        /// </summary>
-          [XmlEnum("volumetric heat transfer coefficient")]
-          volumetricheattransfercoefficient,
-        /// <summary>
-        /// volumetricthermalexpansion property
-        /// </summary>
-          [XmlEnum("volumetric thermal expansion")]
-          volumetricthermalexpansion
-        }
-        /// <summary>
         /// This class represents the ChannelDerivation xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -110935,90 +113092,6 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           [XmlEnum("wiper or check or reaming")]
           wiperorcheckorreaming,
-        /// <summary>
-        /// unknown property
-        /// </summary>
-          unknown
-        }
-        /// <summary>
-        /// This class represents the WellStatus xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the WellStatus xsd enumeration.")]
-        public enum WellStatus 
-        {
-        /// <summary>
-        /// abandoned property
-        /// </summary>
-          abandoned,
-        /// <summary>
-        /// active property
-        /// </summary>
-          active,
-        /// <summary>
-        /// activeinjecting property
-        /// </summary>
-          [XmlEnum("active -- injecting")]
-          activeinjecting,
-        /// <summary>
-        /// activeproducing property
-        /// </summary>
-          [XmlEnum("active -- producing")]
-          activeproducing,
-        /// <summary>
-        /// completed property
-        /// </summary>
-          completed,
-        /// <summary>
-        /// drilling property
-        /// </summary>
-          drilling,
-        /// <summary>
-        /// partiallyplugged property
-        /// </summary>
-          [XmlEnum("partially plugged")]
-          partiallyplugged,
-        /// <summary>
-        /// permitted property
-        /// </summary>
-          permitted,
-        /// <summary>
-        /// pluggedandabandoned property
-        /// </summary>
-          [XmlEnum("plugged and abandoned")]
-          pluggedandabandoned,
-        /// <summary>
-        /// proposed property
-        /// </summary>
-          proposed,
-        /// <summary>
-        /// sold property
-        /// </summary>
-          sold,
-        /// <summary>
-        /// suspended property
-        /// </summary>
-          suspended,
-        /// <summary>
-        /// temporarilyabandoned property
-        /// </summary>
-          [XmlEnum("temporarily abandoned")]
-          temporarilyabandoned,
-        /// <summary>
-        /// testing property
-        /// </summary>
-          testing,
-        /// <summary>
-        /// tight property
-        /// </summary>
-          tight,
-        /// <summary>
-        /// workingover property
-        /// </summary>
-          [XmlEnum("working over")]
-          workingover,
         /// <summary>
         /// unknown property
         /// </summary>
@@ -111288,24 +113361,6 @@ namespace Energistics.DataAccess.WITSML200
           uncertain
         }
         /// <summary>
-        /// This class represents the VerticalDirection xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the VerticalDirection xsd enumeration.")]
-        public enum VerticalDirection 
-        {
-        /// <summary>
-        /// up property
-        /// </summary>
-          up,
-        /// <summary>
-        /// down property
-        /// </summary>
-          down
-        }
-        /// <summary>
         /// This class represents the AxisOrder2d xsd enumeration.
         /// </summary>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -111344,6 +113399,24 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           [XmlEnum("westing northing")]
           westingnorthing
+        }
+        /// <summary>
+        /// This class represents the VerticalDirection xsd enumeration.
+        /// </summary>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+        [Description("This class represents the VerticalDirection xsd enumeration.")]
+        public enum VerticalDirection 
+        {
+        /// <summary>
+        /// up property
+        /// </summary>
+          up,
+        /// <summary>
+        /// down property
+        /// </summary>
+          down
         }
         /// <summary>
         /// This class represents the LogarithmicPowerRatioUom xsd enumeration.
@@ -116402,1957 +118475,6 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           [XmlEnum("Wb.m")]
           Wbm
-        }
-        /// <summary>
-        /// This class represents the LithologyKind xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the LithologyKind xsd enumeration.")]
-        public enum LithologyKind 
-        {
-        /// <summary>
-        /// alkalifeldsparrhyolite property
-        /// </summary>
-          [XmlEnum("alkali feldspar rhyolite")]
-          alkalifeldsparrhyolite,
-        /// <summary>
-        /// alkaliolivinebasalt property
-        /// </summary>
-          [XmlEnum("alkali olivine basalt")]
-          alkaliolivinebasalt,
-        /// <summary>
-        /// amphibolite property
-        /// </summary>
-          amphibolite,
-        /// <summary>
-        /// andesite property
-        /// </summary>
-          andesite,
-        /// <summary>
-        /// anhydrite property
-        /// </summary>
-          anhydrite,
-        /// <summary>
-        /// anorthositicrock property
-        /// </summary>
-          [XmlEnum("anorthositic rock")]
-          anorthositicrock,
-        /// <summary>
-        /// anthracite property
-        /// </summary>
-          anthracite,
-        /// <summary>
-        /// aplite property
-        /// </summary>
-          aplite,
-        /// <summary>
-        /// arenite property
-        /// </summary>
-          arenite,
-        /// <summary>
-        /// argillaceous property
-        /// </summary>
-          argillaceous,
-        /// <summary>
-        /// arkose property
-        /// </summary>
-          arkose,
-        /// <summary>
-        /// basalt property
-        /// </summary>
-          basalt,
-        /// <summary>
-        /// basanite property
-        /// </summary>
-          basanite,
-        /// <summary>
-        /// bauxite property
-        /// </summary>
-          bauxite,
-        /// <summary>
-        /// bituminouscoal property
-        /// </summary>
-          [XmlEnum("bituminous coal")]
-          bituminouscoal,
-        /// <summary>
-        /// blueschistmetamorphicrock property
-        /// </summary>
-          [XmlEnum("blueschist metamorphic rock")]
-          blueschistmetamorphicrock,
-        /// <summary>
-        /// boninite property
-        /// </summary>
-          boninite,
-        /// <summary>
-        /// breccia property
-        /// </summary>
-          breccia,
-        /// <summary>
-        /// carbonateooze property
-        /// </summary>
-          [XmlEnum("carbonate ooze")]
-          carbonateooze,
-        /// <summary>
-        /// carbonatite property
-        /// </summary>
-          carbonatite,
-        /// <summary>
-        /// chalk property
-        /// </summary>
-          chalk,
-        /// <summary>
-        /// chert property
-        /// </summary>
-          chert,
-        /// <summary>
-        /// clay property
-        /// </summary>
-          clay,
-        /// <summary>
-        /// claystone property
-        /// </summary>
-          claystone,
-        /// <summary>
-        /// coal property
-        /// </summary>
-          coal,
-        /// <summary>
-        /// conglomerate property
-        /// </summary>
-          conglomerate,
-        /// <summary>
-        /// dacite property
-        /// </summary>
-          dacite,
-        /// <summary>
-        /// diabase property
-        /// </summary>
-          diabase,
-        /// <summary>
-        /// diamictite property
-        /// </summary>
-          diamictite,
-        /// <summary>
-        /// diorite property
-        /// </summary>
-          diorite,
-        /// <summary>
-        /// dioritoid property
-        /// </summary>
-          dioritoid,
-        /// <summary>
-        /// doleriticrock property
-        /// </summary>
-          [XmlEnum("doleritic rock")]
-          doleriticrock,
-        /// <summary>
-        /// dolomite property
-        /// </summary>
-          dolomite,
-        /// <summary>
-        /// dolomitic property
-        /// </summary>
-          dolomitic,
-        /// <summary>
-        /// eclogite property
-        /// </summary>
-          eclogite,
-        /// <summary>
-        /// exoticalkalinerock property
-        /// </summary>
-          [XmlEnum("exotic alkaline rock")]
-          exoticalkalinerock,
-        /// <summary>
-        /// feldspar property
-        /// </summary>
-          feldspar,
-        /// <summary>
-        /// feldspathicarenite property
-        /// </summary>
-          [XmlEnum("feldspathic arenite")]
-          feldspathicarenite,
-        /// <summary>
-        /// finegrainedigneousrock property
-        /// </summary>
-          [XmlEnum("fine grained igneous rock")]
-          finegrainedigneousrock,
-        /// <summary>
-        /// foiddioritoid property
-        /// </summary>
-          [XmlEnum("foid dioritoid")]
-          foiddioritoid,
-        /// <summary>
-        /// foidgabbroid property
-        /// </summary>
-          [XmlEnum("foid gabbroid")]
-          foidgabbroid,
-        /// <summary>
-        /// foidsyenitoid property
-        /// </summary>
-          [XmlEnum("foid syenitoid")]
-          foidsyenitoid,
-        /// <summary>
-        /// foidite property
-        /// </summary>
-          foidite,
-        /// <summary>
-        /// foiditoid property
-        /// </summary>
-          foiditoid,
-        /// <summary>
-        /// foidolite property
-        /// </summary>
-          foidolite,
-        /// <summary>
-        /// foliatedmetamorphicrock property
-        /// </summary>
-          [XmlEnum("foliated metamorphic rock")]
-          foliatedmetamorphicrock,
-        /// <summary>
-        /// fragmentaligneousrock property
-        /// </summary>
-          [XmlEnum("fragmental igneous rock")]
-          fragmentaligneousrock,
-        /// <summary>
-        /// gabbro property
-        /// </summary>
-          gabbro,
-        /// <summary>
-        /// gabbroicrock property
-        /// </summary>
-          [XmlEnum("gabbroic rock")]
-          gabbroicrock,
-        /// <summary>
-        /// gabbroid property
-        /// </summary>
-          gabbroid,
-        /// <summary>
-        /// glauconite property
-        /// </summary>
-          glauconite,
-        /// <summary>
-        /// gneiss property
-        /// </summary>
-          gneiss,
-        /// <summary>
-        /// granite property
-        /// </summary>
-          granite,
-        /// <summary>
-        /// granodiorite property
-        /// </summary>
-          granodiorite,
-        /// <summary>
-        /// granofels property
-        /// </summary>
-          granofels,
-        /// <summary>
-        /// granulite property
-        /// </summary>
-          granulite,
-        /// <summary>
-        /// gravel property
-        /// </summary>
-          gravel,
-        /// <summary>
-        /// greenstone property
-        /// </summary>
-          greenstone,
-        /// <summary>
-        /// gumbo property
-        /// </summary>
-          gumbo,
-        /// <summary>
-        /// gypsum property
-        /// </summary>
-          gypsum,
-        /// <summary>
-        /// halite property
-        /// </summary>
-          halite,
-        /// <summary>
-        /// hornfels property
-        /// </summary>
-          hornfels,
-        /// <summary>
-        /// igneousrock property
-        /// </summary>
-          [XmlEnum("igneous rock")]
-          igneousrock,
-        /// <summary>
-        /// impactgeneratedmaterial property
-        /// </summary>
-          [XmlEnum("impact generated material")]
-          impactgeneratedmaterial,
-        /// <summary>
-        /// impuredolomite property
-        /// </summary>
-          [XmlEnum("impure dolomite")]
-          impuredolomite,
-        /// <summary>
-        /// impurelimestone property
-        /// </summary>
-          [XmlEnum("impure limestone")]
-          impurelimestone,
-        /// <summary>
-        /// intrusiverockplutonic property
-        /// </summary>
-          [XmlEnum("intrusive rock (plutonic)")]
-          intrusiverockplutonic,
-        /// <summary>
-        /// ironrichsedimentaryrock property
-        /// </summary>
-          [XmlEnum("iron rich sedimentary rock")]
-          ironrichsedimentaryrock,
-        /// <summary>
-        /// kalsiliticandmeliliticrocks property
-        /// </summary>
-          [XmlEnum("kalsilitic and melilitic rocks")]
-          kalsiliticandmeliliticrocks,
-        /// <summary>
-        /// komatiiticrock property
-        /// </summary>
-          [XmlEnum("komatiitic rock")]
-          komatiiticrock,
-        /// <summary>
-        /// latiticrock property
-        /// </summary>
-          [XmlEnum("latitic rock")]
-          latiticrock,
-        /// <summary>
-        /// lignite property
-        /// </summary>
-          lignite,
-        /// <summary>
-        /// limeboundstone property
-        /// </summary>
-          [XmlEnum("lime boundstone")]
-          limeboundstone,
-        /// <summary>
-        /// limeframestone property
-        /// </summary>
-          [XmlEnum("lime framestone")]
-          limeframestone,
-        /// <summary>
-        /// limegrainstone property
-        /// </summary>
-          [XmlEnum("lime grainstone")]
-          limegrainstone,
-        /// <summary>
-        /// limemudstone property
-        /// </summary>
-          [XmlEnum("lime mudstone")]
-          limemudstone,
-        /// <summary>
-        /// limepackstone property
-        /// </summary>
-          [XmlEnum("lime packstone")]
-          limepackstone,
-        /// <summary>
-        /// limewackestone property
-        /// </summary>
-          [XmlEnum("lime wackestone")]
-          limewackestone,
-        /// <summary>
-        /// limestone property
-        /// </summary>
-          limestone,
-        /// <summary>
-        /// marble property
-        /// </summary>
-          marble,
-        /// <summary>
-        /// marl property
-        /// </summary>
-          marl,
-        /// <summary>
-        /// metamorphicrock property
-        /// </summary>
-          [XmlEnum("metamorphic rock")]
-          metamorphicrock,
-        /// <summary>
-        /// micaschist property
-        /// </summary>
-          [XmlEnum("mica schist")]
-          micaschist,
-        /// <summary>
-        /// migmatite property
-        /// </summary>
-          migmatite,
-        /// <summary>
-        /// monzogabbro property
-        /// </summary>
-          monzogabbro,
-        /// <summary>
-        /// mud property
-        /// </summary>
-          mud,
-        /// <summary>
-        /// mudstone property
-        /// </summary>
-          mudstone,
-        /// <summary>
-        /// myloniticrock property
-        /// </summary>
-          [XmlEnum("mylonitic rock")]
-          myloniticrock,
-        /// <summary>
-        /// nodescription property
-        /// </summary>
-          [XmlEnum("no description")]
-          nodescription,
-        /// <summary>
-        /// nosample property
-        /// </summary>
-          [XmlEnum("no sample")]
-          nosample,
-        /// <summary>
-        /// ooze property
-        /// </summary>
-          ooze,
-        /// <summary>
-        /// ophiolite property
-        /// </summary>
-          ophiolite,
-        /// <summary>
-        /// organicbearingmudstone property
-        /// </summary>
-          [XmlEnum("organic bearing mudstone")]
-          organicbearingmudstone,
-        /// <summary>
-        /// peat property
-        /// </summary>
-          peat,
-        /// <summary>
-        /// pegmatite property
-        /// </summary>
-          pegmatite,
-        /// <summary>
-        /// peridotite property
-        /// </summary>
-          peridotite,
-        /// <summary>
-        /// phaneriticigneousrock property
-        /// </summary>
-          [XmlEnum("phaneritic igneous rock")]
-          phaneriticigneousrock,
-        /// <summary>
-        /// phonolite property
-        /// </summary>
-          phonolite,
-        /// <summary>
-        /// phonolitoid property
-        /// </summary>
-          phonolitoid,
-        /// <summary>
-        /// phosphate property
-        /// </summary>
-          phosphate,
-        /// <summary>
-        /// phosphaterock property
-        /// </summary>
-          [XmlEnum("phosphate rock")]
-          phosphaterock,
-        /// <summary>
-        /// phyllite property
-        /// </summary>
-          phyllite,
-        /// <summary>
-        /// porphyry property
-        /// </summary>
-          porphyry,
-        /// <summary>
-        /// potassiumandmagnesiumsalts property
-        /// </summary>
-          [XmlEnum("potassium and magnesium salts")]
-          potassiumandmagnesiumsalts,
-        /// <summary>
-        /// pyroclasticbreccia property
-        /// </summary>
-          [XmlEnum("pyroclastic breccia")]
-          pyroclasticbreccia,
-        /// <summary>
-        /// pyroclasticrock property
-        /// </summary>
-          [XmlEnum("pyroclastic rock")]
-          pyroclasticrock,
-        /// <summary>
-        /// pyroxenite property
-        /// </summary>
-          pyroxenite,
-        /// <summary>
-        /// quartzarenite property
-        /// </summary>
-          [XmlEnum("quartz arenite")]
-          quartzarenite,
-        /// <summary>
-        /// quartzite property
-        /// </summary>
-          quartzite,
-        /// <summary>
-        /// rhyolite property
-        /// </summary>
-          rhyolite,
-        /// <summary>
-        /// rocksalt property
-        /// </summary>
-          [XmlEnum("rock salt")]
-          rocksalt,
-        /// <summary>
-        /// sand property
-        /// </summary>
-          sand,
-        /// <summary>
-        /// sandstone property
-        /// </summary>
-          sandstone,
-        /// <summary>
-        /// sandy property
-        /// </summary>
-          sandy,
-        /// <summary>
-        /// sapropel property
-        /// </summary>
-          sapropel,
-        /// <summary>
-        /// schist property
-        /// </summary>
-          schist,
-        /// <summary>
-        /// serpentinite property
-        /// </summary>
-          serpentinite,
-        /// <summary>
-        /// shale property
-        /// </summary>
-          shale,
-        /// <summary>
-        /// siliceousooze property
-        /// </summary>
-          [XmlEnum("siliceous ooze")]
-          siliceousooze,
-        /// <summary>
-        /// silt property
-        /// </summary>
-          silt,
-        /// <summary>
-        /// siltstone property
-        /// </summary>
-          siltstone,
-        /// <summary>
-        /// skarn property
-        /// </summary>
-          skarn,
-        /// <summary>
-        /// slate property
-        /// </summary>
-          slate,
-        /// <summary>
-        /// spilite property
-        /// </summary>
-          spilite,
-        /// <summary>
-        /// syenite property
-        /// </summary>
-          syenite,
-        /// <summary>
-        /// syenitoid property
-        /// </summary>
-          syenitoid,
-        /// <summary>
-        /// sylvite property
-        /// </summary>
-          sylvite,
-        /// <summary>
-        /// tephrite property
-        /// </summary>
-          tephrite,
-        /// <summary>
-        /// tephritoid property
-        /// </summary>
-          tephritoid,
-        /// <summary>
-        /// tholeiiticbasalt property
-        /// </summary>
-          [XmlEnum("tholeiitic basalt")]
-          tholeiiticbasalt,
-        /// <summary>
-        /// tonalite property
-        /// </summary>
-          tonalite,
-        /// <summary>
-        /// trachyte property
-        /// </summary>
-          trachyte,
-        /// <summary>
-        /// trachyticrock property
-        /// </summary>
-          [XmlEnum("trachytic rock")]
-          trachyticrock,
-        /// <summary>
-        /// trachytoid property
-        /// </summary>
-          trachytoid,
-        /// <summary>
-        /// travertine property
-        /// </summary>
-          travertine,
-        /// <summary>
-        /// tuff property
-        /// </summary>
-          tuff,
-        /// <summary>
-        /// tuffite property
-        /// </summary>
-          tuffite,
-        /// <summary>
-        /// ultrabasic property
-        /// </summary>
-          ultrabasic,
-        /// <summary>
-        /// undifferentiated property
-        /// </summary>
-          undifferentiated,
-        /// <summary>
-        /// unknown property
-        /// </summary>
-          unknown,
-        /// <summary>
-        /// wacke property
-        /// </summary>
-          wacke
-        }
-        /// <summary>
-        /// This class represents the LithologyQualifierKind xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the LithologyQualifierKind xsd enumeration.")]
-        public enum LithologyQualifierKind 
-        {
-        /// <summary>
-        /// alkalifeldsparrhyolite property
-        /// </summary>
-          [XmlEnum("alkali feldspar rhyolite")]
-          alkalifeldsparrhyolite,
-        /// <summary>
-        /// alkaliolivinebasalt property
-        /// </summary>
-          [XmlEnum("alkali olivine basalt")]
-          alkaliolivinebasalt,
-        /// <summary>
-        /// amphibolite property
-        /// </summary>
-          amphibolite,
-        /// <summary>
-        /// amphibolitic property
-        /// </summary>
-          amphibolitic,
-        /// <summary>
-        /// andesite property
-        /// </summary>
-          andesite,
-        /// <summary>
-        /// andesitic property
-        /// </summary>
-          andesitic,
-        /// <summary>
-        /// anhydrite property
-        /// </summary>
-          anhydrite,
-        /// <summary>
-        /// anhydritic property
-        /// </summary>
-          anhydritic,
-        /// <summary>
-        /// ankerite property
-        /// </summary>
-          ankerite,
-        /// <summary>
-        /// ankeritic property
-        /// </summary>
-          ankeritic,
-        /// <summary>
-        /// anorthositicrock property
-        /// </summary>
-          [XmlEnum("anorthositic rock")]
-          anorthositicrock,
-        /// <summary>
-        /// anthracite property
-        /// </summary>
-          anthracite,
-        /// <summary>
-        /// anthracitic property
-        /// </summary>
-          anthracitic,
-        /// <summary>
-        /// aplite property
-        /// </summary>
-          aplite,
-        /// <summary>
-        /// aplitic property
-        /// </summary>
-          aplitic,
-        /// <summary>
-        /// arenite property
-        /// </summary>
-          arenite,
-        /// <summary>
-        /// arenitic property
-        /// </summary>
-          arenitic,
-        /// <summary>
-        /// argillaceous property
-        /// </summary>
-          argillaceous,
-        /// <summary>
-        /// arkose property
-        /// </summary>
-          arkose,
-        /// <summary>
-        /// arkosic property
-        /// </summary>
-          arkosic,
-        /// <summary>
-        /// barite property
-        /// </summary>
-          barite,
-        /// <summary>
-        /// baritic property
-        /// </summary>
-          baritic,
-        /// <summary>
-        /// basalt property
-        /// </summary>
-          basalt,
-        /// <summary>
-        /// basaltic property
-        /// </summary>
-          basaltic,
-        /// <summary>
-        /// basanite property
-        /// </summary>
-          basanite,
-        /// <summary>
-        /// basanitic property
-        /// </summary>
-          basanitic,
-        /// <summary>
-        /// bauxite property
-        /// </summary>
-          bauxite,
-        /// <summary>
-        /// bauxitic property
-        /// </summary>
-          bauxitic,
-        /// <summary>
-        /// belemnites property
-        /// </summary>
-          belemnites,
-        /// <summary>
-        /// belemnitic property
-        /// </summary>
-          belemnitic,
-        /// <summary>
-        /// bioturbated property
-        /// </summary>
-          bioturbated,
-        /// <summary>
-        /// bioturbation property
-        /// </summary>
-          bioturbation,
-        /// <summary>
-        /// bitumen property
-        /// </summary>
-          bitumen,
-        /// <summary>
-        /// bituminous property
-        /// </summary>
-          bituminous,
-        /// <summary>
-        /// bituminouscoal property
-        /// </summary>
-          [XmlEnum("bituminous coal")]
-          bituminouscoal,
-        /// <summary>
-        /// blueschistmetamorphicrock property
-        /// </summary>
-          [XmlEnum("blueschist metamorphic rock")]
-          blueschistmetamorphicrock,
-        /// <summary>
-        /// boninite property
-        /// </summary>
-          boninite,
-        /// <summary>
-        /// breccia property
-        /// </summary>
-          breccia,
-        /// <summary>
-        /// brecciated property
-        /// </summary>
-          brecciated,
-        /// <summary>
-        /// bryozoan property
-        /// </summary>
-          bryozoan,
-        /// <summary>
-        /// bryozoans property
-        /// </summary>
-          bryozoans,
-        /// <summary>
-        /// burrowed property
-        /// </summary>
-          burrowed,
-        /// <summary>
-        /// burrows property
-        /// </summary>
-          burrows,
-        /// <summary>
-        /// calcareous property
-        /// </summary>
-          calcareous,
-        /// <summary>
-        /// calcite property
-        /// </summary>
-          calcite,
-        /// <summary>
-        /// calciteconcretion property
-        /// </summary>
-          [XmlEnum("calcite concretion")]
-          calciteconcretion,
-        /// <summary>
-        /// calcitic property
-        /// </summary>
-          calcitic,
-        /// <summary>
-        /// carbonaceous property
-        /// </summary>
-          carbonaceous,
-        /// <summary>
-        /// carbonateooze property
-        /// </summary>
-          [XmlEnum("carbonate ooze")]
-          carbonateooze,
-        /// <summary>
-        /// carbonatite property
-        /// </summary>
-          carbonatite,
-        /// <summary>
-        /// carbonatitic property
-        /// </summary>
-          carbonatitic,
-        /// <summary>
-        /// chalk property
-        /// </summary>
-          chalk,
-        /// <summary>
-        /// chalky property
-        /// </summary>
-          chalky,
-        /// <summary>
-        /// chamosite property
-        /// </summary>
-          chamosite,
-        /// <summary>
-        /// chamositic property
-        /// </summary>
-          chamositic,
-        /// <summary>
-        /// chert property
-        /// </summary>
-          chert,
-        /// <summary>
-        /// cherty property
-        /// </summary>
-          cherty,
-        /// <summary>
-        /// chlorite property
-        /// </summary>
-          chlorite,
-        /// <summary>
-        /// chloritic property
-        /// </summary>
-          chloritic,
-        /// <summary>
-        /// clay property
-        /// </summary>
-          clay,
-        /// <summary>
-        /// claystone property
-        /// </summary>
-          claystone,
-        /// <summary>
-        /// coal property
-        /// </summary>
-          coal,
-        /// <summary>
-        /// concretionary property
-        /// </summary>
-          concretionary,
-        /// <summary>
-        /// concretions property
-        /// </summary>
-          concretions,
-        /// <summary>
-        /// conglomerate property
-        /// </summary>
-          conglomerate,
-        /// <summary>
-        /// conglomeratic property
-        /// </summary>
-          conglomeratic,
-        /// <summary>
-        /// coralfragments property
-        /// </summary>
-          [XmlEnum("coral fragments")]
-          coralfragments,
-        /// <summary>
-        /// coralline property
-        /// </summary>
-          coralline,
-        /// <summary>
-        /// crinoidal property
-        /// </summary>
-          crinoidal,
-        /// <summary>
-        /// crinoids property
-        /// </summary>
-          crinoids,
-        /// <summary>
-        /// dacite property
-        /// </summary>
-          dacite,
-        /// <summary>
-        /// dacitic property
-        /// </summary>
-          dacitic,
-        /// <summary>
-        /// diabase property
-        /// </summary>
-          diabase,
-        /// <summary>
-        /// diabasic property
-        /// </summary>
-          diabasic,
-        /// <summary>
-        /// diamictite property
-        /// </summary>
-          diamictite,
-        /// <summary>
-        /// diamictitic property
-        /// </summary>
-          diamictitic,
-        /// <summary>
-        /// diatomaceous property
-        /// </summary>
-          diatomaceous,
-        /// <summary>
-        /// diatoms property
-        /// </summary>
-          diatoms,
-        /// <summary>
-        /// diorite property
-        /// </summary>
-          diorite,
-        /// <summary>
-        /// dioritic property
-        /// </summary>
-          dioritic,
-        /// <summary>
-        /// dioritoid property
-        /// </summary>
-          dioritoid,
-        /// <summary>
-        /// dioritoidic property
-        /// </summary>
-          dioritoidic,
-        /// <summary>
-        /// doleriticrock property
-        /// </summary>
-          [XmlEnum("doleritic rock")]
-          doleriticrock,
-        /// <summary>
-        /// dolomite property
-        /// </summary>
-          dolomite,
-        /// <summary>
-        /// dolomiteconcretion property
-        /// </summary>
-          [XmlEnum("dolomite concretion")]
-          dolomiteconcretion,
-        /// <summary>
-        /// dolomitestringer property
-        /// </summary>
-          [XmlEnum("dolomite stringer")]
-          dolomitestringer,
-        /// <summary>
-        /// dolomitic property
-        /// </summary>
-          dolomitic,
-        /// <summary>
-        /// eclogite property
-        /// </summary>
-          eclogite,
-        /// <summary>
-        /// eclogitic property
-        /// </summary>
-          eclogitic,
-        /// <summary>
-        /// exoticalkalinerock property
-        /// </summary>
-          [XmlEnum("exotic alkaline rock")]
-          exoticalkalinerock,
-        /// <summary>
-        /// feldspar property
-        /// </summary>
-          feldspar,
-        /// <summary>
-        /// feldsparic property
-        /// </summary>
-          feldsparic,
-        /// <summary>
-        /// feldspathic property
-        /// </summary>
-          feldspathic,
-        /// <summary>
-        /// feldspathicarenite property
-        /// </summary>
-          [XmlEnum("feldspathic arenite")]
-          feldspathicarenite,
-        /// <summary>
-        /// ferruginous property
-        /// </summary>
-          ferruginous,
-        /// <summary>
-        /// finegrainedigneousrock property
-        /// </summary>
-          [XmlEnum("fine grained igneous rock")]
-          finegrainedigneousrock,
-        /// <summary>
-        /// foiddioritoid property
-        /// </summary>
-          [XmlEnum("foid dioritoid")]
-          foiddioritoid,
-        /// <summary>
-        /// foidgabbroid property
-        /// </summary>
-          [XmlEnum("foid gabbroid")]
-          foidgabbroid,
-        /// <summary>
-        /// foidsyenitoid property
-        /// </summary>
-          [XmlEnum("foid syenitoid")]
-          foidsyenitoid,
-        /// <summary>
-        /// foidite property
-        /// </summary>
-          foidite,
-        /// <summary>
-        /// foiditic property
-        /// </summary>
-          foiditic,
-        /// <summary>
-        /// foiditoid property
-        /// </summary>
-          foiditoid,
-        /// <summary>
-        /// foidolite property
-        /// </summary>
-          foidolite,
-        /// <summary>
-        /// foidolitic property
-        /// </summary>
-          foidolitic,
-        /// <summary>
-        /// foliatedmetamorphicrock property
-        /// </summary>
-          [XmlEnum("foliated metamorphic rock")]
-          foliatedmetamorphicrock,
-        /// <summary>
-        /// foraminifera property
-        /// </summary>
-          foraminifera,
-        /// <summary>
-        /// foraminiferous property
-        /// </summary>
-          foraminiferous,
-        /// <summary>
-        /// forams property
-        /// </summary>
-          forams,
-        /// <summary>
-        /// fossilfragments property
-        /// </summary>
-          [XmlEnum("fossil fragments")]
-          fossilfragments,
-        /// <summary>
-        /// fossiliferous property
-        /// </summary>
-          fossiliferous,
-        /// <summary>
-        /// fossilsundifferentiated property
-        /// </summary>
-          [XmlEnum("fossils undifferentiated")]
-          fossilsundifferentiated,
-        /// <summary>
-        /// fragmentaligneousrock property
-        /// </summary>
-          [XmlEnum("fragmental igneous rock")]
-          fragmentaligneousrock,
-        /// <summary>
-        /// gabbro property
-        /// </summary>
-          gabbro,
-        /// <summary>
-        /// gabbroic property
-        /// </summary>
-          gabbroic,
-        /// <summary>
-        /// gabbroicrock property
-        /// </summary>
-          [XmlEnum("gabbroic rock")]
-          gabbroicrock,
-        /// <summary>
-        /// gabbroid property
-        /// </summary>
-          gabbroid,
-        /// <summary>
-        /// gabbroidic property
-        /// </summary>
-          gabbroidic,
-        /// <summary>
-        /// gilsonite property
-        /// </summary>
-          gilsonite,
-        /// <summary>
-        /// gilsonitic property
-        /// </summary>
-          gilsonitic,
-        /// <summary>
-        /// glauconite property
-        /// </summary>
-          glauconite,
-        /// <summary>
-        /// glauconitic property
-        /// </summary>
-          glauconitic,
-        /// <summary>
-        /// gneiss property
-        /// </summary>
-          gneiss,
-        /// <summary>
-        /// gneissic property
-        /// </summary>
-          gneissic,
-        /// <summary>
-        /// granite property
-        /// </summary>
-          granite,
-        /// <summary>
-        /// granitic property
-        /// </summary>
-          granitic,
-        /// <summary>
-        /// granodiorite property
-        /// </summary>
-          granodiorite,
-        /// <summary>
-        /// granodioritic property
-        /// </summary>
-          granodioritic,
-        /// <summary>
-        /// granofels property
-        /// </summary>
-          granofels,
-        /// <summary>
-        /// granulite property
-        /// </summary>
-          granulite,
-        /// <summary>
-        /// granulitic property
-        /// </summary>
-          granulitic,
-        /// <summary>
-        /// gravel property
-        /// </summary>
-          gravel,
-        /// <summary>
-        /// gravelly property
-        /// </summary>
-          gravelly,
-        /// <summary>
-        /// greenstone property
-        /// </summary>
-          greenstone,
-        /// <summary>
-        /// gumbo property
-        /// </summary>
-          gumbo,
-        /// <summary>
-        /// gypsiferous property
-        /// </summary>
-          gypsiferous,
-        /// <summary>
-        /// gypsum property
-        /// </summary>
-          gypsum,
-        /// <summary>
-        /// halite property
-        /// </summary>
-          halite,
-        /// <summary>
-        /// halitic property
-        /// </summary>
-          halitic,
-        /// <summary>
-        /// hornfels property
-        /// </summary>
-          hornfels,
-        /// <summary>
-        /// hornfelsic property
-        /// </summary>
-          hornfelsic,
-        /// <summary>
-        /// igneous property
-        /// </summary>
-          igneous,
-        /// <summary>
-        /// igneousrock property
-        /// </summary>
-          [XmlEnum("igneous rock")]
-          igneousrock,
-        /// <summary>
-        /// illite property
-        /// </summary>
-          illite,
-        /// <summary>
-        /// illitic property
-        /// </summary>
-          illitic,
-        /// <summary>
-        /// impactgeneratedmaterial property
-        /// </summary>
-          [XmlEnum("impact generated material")]
-          impactgeneratedmaterial,
-        /// <summary>
-        /// impuredolomite property
-        /// </summary>
-          [XmlEnum("impure dolomite")]
-          impuredolomite,
-        /// <summary>
-        /// impurelimestone property
-        /// </summary>
-          [XmlEnum("impure limestone")]
-          impurelimestone,
-        /// <summary>
-        /// intrusiverockplutonic property
-        /// </summary>
-          [XmlEnum("intrusive rock (plutonic)")]
-          intrusiverockplutonic,
-        /// <summary>
-        /// ironrichsedimentaryrock property
-        /// </summary>
-          [XmlEnum("iron rich sedimentary rock")]
-          ironrichsedimentaryrock,
-        /// <summary>
-        /// kalsiliticandmeliliticrocks property
-        /// </summary>
-          [XmlEnum("kalsilitic and melilitic rocks")]
-          kalsiliticandmeliliticrocks,
-        /// <summary>
-        /// kaolinite property
-        /// </summary>
-          kaolinite,
-        /// <summary>
-        /// kaolinitic property
-        /// </summary>
-          kaolinitic,
-        /// <summary>
-        /// komatiiticrock property
-        /// </summary>
-          [XmlEnum("komatiitic rock")]
-          komatiiticrock,
-        /// <summary>
-        /// latiticrock property
-        /// </summary>
-          [XmlEnum("latitic rock")]
-          latiticrock,
-        /// <summary>
-        /// lignite property
-        /// </summary>
-          lignite,
-        /// <summary>
-        /// lignitic property
-        /// </summary>
-          lignitic,
-        /// <summary>
-        /// limeboundstone property
-        /// </summary>
-          [XmlEnum("lime boundstone")]
-          limeboundstone,
-        /// <summary>
-        /// limeframestone property
-        /// </summary>
-          [XmlEnum("lime framestone")]
-          limeframestone,
-        /// <summary>
-        /// limegrainstone property
-        /// </summary>
-          [XmlEnum("lime grainstone")]
-          limegrainstone,
-        /// <summary>
-        /// limemudstone property
-        /// </summary>
-          [XmlEnum("lime mudstone")]
-          limemudstone,
-        /// <summary>
-        /// limepackstone property
-        /// </summary>
-          [XmlEnum("lime packstone")]
-          limepackstone,
-        /// <summary>
-        /// limewackestone property
-        /// </summary>
-          [XmlEnum("lime wackestone")]
-          limewackestone,
-        /// <summary>
-        /// limestone property
-        /// </summary>
-          limestone,
-        /// <summary>
-        /// limestonestringer property
-        /// </summary>
-          [XmlEnum("limestone stringer")]
-          limestonestringer,
-        /// <summary>
-        /// lithic property
-        /// </summary>
-          lithic,
-        /// <summary>
-        /// lithicfragments property
-        /// </summary>
-          [XmlEnum("lithic fragments")]
-          lithicfragments,
-        /// <summary>
-        /// marble property
-        /// </summary>
-          marble,
-        /// <summary>
-        /// marcasite property
-        /// </summary>
-          marcasite,
-        /// <summary>
-        /// marcasitic property
-        /// </summary>
-          marcasitic,
-        /// <summary>
-        /// marl property
-        /// </summary>
-          marl,
-        /// <summary>
-        /// marly property
-        /// </summary>
-          marly,
-        /// <summary>
-        /// metamorphicrock property
-        /// </summary>
-          [XmlEnum("metamorphic rock")]
-          metamorphicrock,
-        /// <summary>
-        /// mica property
-        /// </summary>
-          mica,
-        /// <summary>
-        /// micaschist property
-        /// </summary>
-          [XmlEnum("mica schist")]
-          micaschist,
-        /// <summary>
-        /// micaceous property
-        /// </summary>
-          micaceous,
-        /// <summary>
-        /// microfossiliferous property
-        /// </summary>
-          microfossiliferous,
-        /// <summary>
-        /// microfossils property
-        /// </summary>
-          microfossils,
-        /// <summary>
-        /// migmatite property
-        /// </summary>
-          migmatite,
-        /// <summary>
-        /// migmatitic property
-        /// </summary>
-          migmatitic,
-        /// <summary>
-        /// monzogabbro property
-        /// </summary>
-          monzogabbro,
-        /// <summary>
-        /// monzogabbroic property
-        /// </summary>
-          monzogabbroic,
-        /// <summary>
-        /// mud property
-        /// </summary>
-          mud,
-        /// <summary>
-        /// muddy property
-        /// </summary>
-          muddy,
-        /// <summary>
-        /// mudstone property
-        /// </summary>
-          mudstone,
-        /// <summary>
-        /// myloniticrock property
-        /// </summary>
-          [XmlEnum("mylonitic rock")]
-          myloniticrock,
-        /// <summary>
-        /// nosample property
-        /// </summary>
-          [XmlEnum("no sample")]
-          nosample,
-        /// <summary>
-        /// oncolite property
-        /// </summary>
-          oncolite,
-        /// <summary>
-        /// oncoliths property
-        /// </summary>
-          oncoliths,
-        /// <summary>
-        /// oncolitic property
-        /// </summary>
-          oncolitic,
-        /// <summary>
-        /// ooids property
-        /// </summary>
-          ooids,
-        /// <summary>
-        /// ooliths property
-        /// </summary>
-          ooliths,
-        /// <summary>
-        /// oolitic property
-        /// </summary>
-          oolitic,
-        /// <summary>
-        /// ooze property
-        /// </summary>
-          ooze,
-        /// <summary>
-        /// ophiolite property
-        /// </summary>
-          ophiolite,
-        /// <summary>
-        /// ophiolitic property
-        /// </summary>
-          ophiolitic,
-        /// <summary>
-        /// organicbearingmudstone property
-        /// </summary>
-          [XmlEnum("organic bearing mudstone")]
-          organicbearingmudstone,
-        /// <summary>
-        /// ostracodal property
-        /// </summary>
-          ostracodal,
-        /// <summary>
-        /// ostracods property
-        /// </summary>
-          ostracods,
-        /// <summary>
-        /// peat property
-        /// </summary>
-          peat,
-        /// <summary>
-        /// peaty property
-        /// </summary>
-          peaty,
-        /// <summary>
-        /// pebble property
-        /// </summary>
-          pebble,
-        /// <summary>
-        /// pebbly property
-        /// </summary>
-          pebbly,
-        /// <summary>
-        /// pegmatite property
-        /// </summary>
-          pegmatite,
-        /// <summary>
-        /// pegmatitic property
-        /// </summary>
-          pegmatitic,
-        /// <summary>
-        /// pelletal property
-        /// </summary>
-          pelletal,
-        /// <summary>
-        /// pellets property
-        /// </summary>
-          pellets,
-        /// <summary>
-        /// peloidal property
-        /// </summary>
-          peloidal,
-        /// <summary>
-        /// peloids property
-        /// </summary>
-          peloids,
-        /// <summary>
-        /// peridotite property
-        /// </summary>
-          peridotite,
-        /// <summary>
-        /// peridotitic property
-        /// </summary>
-          peridotitic,
-        /// <summary>
-        /// phaneriticigneousrock property
-        /// </summary>
-          [XmlEnum("phaneritic igneous rock")]
-          phaneriticigneousrock,
-        /// <summary>
-        /// phonolite property
-        /// </summary>
-          phonolite,
-        /// <summary>
-        /// phonolitic property
-        /// </summary>
-          phonolitic,
-        /// <summary>
-        /// phonolitoid property
-        /// </summary>
-          phonolitoid,
-        /// <summary>
-        /// phosphate property
-        /// </summary>
-          phosphate,
-        /// <summary>
-        /// phosphaterock property
-        /// </summary>
-          [XmlEnum("phosphate rock")]
-          phosphaterock,
-        /// <summary>
-        /// phosphatic property
-        /// </summary>
-          phosphatic,
-        /// <summary>
-        /// phyllite property
-        /// </summary>
-          phyllite,
-        /// <summary>
-        /// phyllitic property
-        /// </summary>
-          phyllitic,
-        /// <summary>
-        /// pisolite property
-        /// </summary>
-          pisolite,
-        /// <summary>
-        /// pisoliths property
-        /// </summary>
-          pisoliths,
-        /// <summary>
-        /// pisolitic property
-        /// </summary>
-          pisolitic,
-        /// <summary>
-        /// plantremains property
-        /// </summary>
-          [XmlEnum("plant remains")]
-          plantremains,
-        /// <summary>
-        /// porphyritic property
-        /// </summary>
-          porphyritic,
-        /// <summary>
-        /// porphyry property
-        /// </summary>
-          porphyry,
-        /// <summary>
-        /// potassiumandmagnesiumsalts property
-        /// </summary>
-          [XmlEnum("potassium and magnesium salts")]
-          potassiumandmagnesiumsalts,
-        /// <summary>
-        /// pyrite property
-        /// </summary>
-          pyrite,
-        /// <summary>
-        /// pyritic property
-        /// </summary>
-          pyritic,
-        /// <summary>
-        /// pyroclasticbreccia property
-        /// </summary>
-          [XmlEnum("pyroclastic breccia")]
-          pyroclasticbreccia,
-        /// <summary>
-        /// pyroclasticrock property
-        /// </summary>
-          [XmlEnum("pyroclastic rock")]
-          pyroclasticrock,
-        /// <summary>
-        /// pyroxenite property
-        /// </summary>
-          pyroxenite,
-        /// <summary>
-        /// pyroxenitic property
-        /// </summary>
-          pyroxenitic,
-        /// <summary>
-        /// quartiferous property
-        /// </summary>
-          quartiferous,
-        /// <summary>
-        /// quartz property
-        /// </summary>
-          quartz,
-        /// <summary>
-        /// quartzarenite property
-        /// </summary>
-          [XmlEnum("quartz arenite")]
-          quartzarenite,
-        /// <summary>
-        /// quartzite property
-        /// </summary>
-          quartzite,
-        /// <summary>
-        /// quartzitic property
-        /// </summary>
-          quartzitic,
-        /// <summary>
-        /// radiolaria property
-        /// </summary>
-          radiolaria,
-        /// <summary>
-        /// radiolarian property
-        /// </summary>
-          radiolarian,
-        /// <summary>
-        /// rhyolite property
-        /// </summary>
-          rhyolite,
-        /// <summary>
-        /// rhyolitic property
-        /// </summary>
-          rhyolitic,
-        /// <summary>
-        /// rocksalt property
-        /// </summary>
-          [XmlEnum("rock salt")]
-          rocksalt,
-        /// <summary>
-        /// rootlets property
-        /// </summary>
-          rootlets,
-        /// <summary>
-        /// salty property
-        /// </summary>
-          salty,
-        /// <summary>
-        /// sand property
-        /// </summary>
-          sand,
-        /// <summary>
-        /// sandstone property
-        /// </summary>
-          sandstone,
-        /// <summary>
-        /// sandy property
-        /// </summary>
-          sandy,
-        /// <summary>
-        /// sapropel property
-        /// </summary>
-          sapropel,
-        /// <summary>
-        /// sapropelic property
-        /// </summary>
-          sapropelic,
-        /// <summary>
-        /// schist property
-        /// </summary>
-          schist,
-        /// <summary>
-        /// schisty property
-        /// </summary>
-          schisty,
-        /// <summary>
-        /// sepentinitic property
-        /// </summary>
-          sepentinitic,
-        /// <summary>
-        /// serpentinite property
-        /// </summary>
-          serpentinite,
-        /// <summary>
-        /// shale property
-        /// </summary>
-          shale,
-        /// <summary>
-        /// shaly property
-        /// </summary>
-          shaly,
-        /// <summary>
-        /// shellfragments property
-        /// </summary>
-          [XmlEnum("shell fragments")]
-          shellfragments,
-        /// <summary>
-        /// shelly property
-        /// </summary>
-          shelly,
-        /// <summary>
-        /// siderite property
-        /// </summary>
-          siderite,
-        /// <summary>
-        /// sideriteconcretion property
-        /// </summary>
-          [XmlEnum("siderite concretion")]
-          sideriteconcretion,
-        /// <summary>
-        /// sideritic property
-        /// </summary>
-          sideritic,
-        /// <summary>
-        /// siliceousooze property
-        /// </summary>
-          [XmlEnum("siliceous ooze")]
-          siliceousooze,
-        /// <summary>
-        /// silt property
-        /// </summary>
-          silt,
-        /// <summary>
-        /// siltstone property
-        /// </summary>
-          siltstone,
-        /// <summary>
-        /// silty property
-        /// </summary>
-          silty,
-        /// <summary>
-        /// skarn property
-        /// </summary>
-          skarn,
-        /// <summary>
-        /// skarny property
-        /// </summary>
-          skarny,
-        /// <summary>
-        /// slate property
-        /// </summary>
-          slate,
-        /// <summary>
-        /// slaty property
-        /// </summary>
-          slaty,
-        /// <summary>
-        /// smectite property
-        /// </summary>
-          smectite,
-        /// <summary>
-        /// smectitic property
-        /// </summary>
-          smectitic,
-        /// <summary>
-        /// spicular property
-        /// </summary>
-          spicular,
-        /// <summary>
-        /// spicules property
-        /// </summary>
-          spicules,
-        /// <summary>
-        /// spilite property
-        /// </summary>
-          spilite,
-        /// <summary>
-        /// spilitic property
-        /// </summary>
-          spilitic,
-        /// <summary>
-        /// stylolites property
-        /// </summary>
-          stylolites,
-        /// <summary>
-        /// stylolitic property
-        /// </summary>
-          stylolitic,
-        /// <summary>
-        /// syenite property
-        /// </summary>
-          syenite,
-        /// <summary>
-        /// syenitic property
-        /// </summary>
-          syenitic,
-        /// <summary>
-        /// syenitoid property
-        /// </summary>
-          syenitoid,
-        /// <summary>
-        /// sylvite property
-        /// </summary>
-          sylvite,
-        /// <summary>
-        /// sylvitic property
-        /// </summary>
-          sylvitic,
-        /// <summary>
-        /// tarry property
-        /// </summary>
-          tarry,
-        /// <summary>
-        /// tephrite property
-        /// </summary>
-          tephrite,
-        /// <summary>
-        /// tephritic property
-        /// </summary>
-          tephritic,
-        /// <summary>
-        /// tephritoid property
-        /// </summary>
-          tephritoid,
-        /// <summary>
-        /// tholeiiticbasalt property
-        /// </summary>
-          [XmlEnum("tholeiitic basalt")]
-          tholeiiticbasalt,
-        /// <summary>
-        /// tonalite property
-        /// </summary>
-          tonalite,
-        /// <summary>
-        /// tonalitic property
-        /// </summary>
-          tonalitic,
-        /// <summary>
-        /// trachyte property
-        /// </summary>
-          trachyte,
-        /// <summary>
-        /// trachytic property
-        /// </summary>
-          trachytic,
-        /// <summary>
-        /// trachyticrock property
-        /// </summary>
-          [XmlEnum("trachytic rock")]
-          trachyticrock,
-        /// <summary>
-        /// trachytoid property
-        /// </summary>
-          trachytoid,
-        /// <summary>
-        /// travertine property
-        /// </summary>
-          travertine,
-        /// <summary>
-        /// tuff property
-        /// </summary>
-          tuff,
-        /// <summary>
-        /// tuffaceous property
-        /// </summary>
-          tuffaceous,
-        /// <summary>
-        /// tuffite property
-        /// </summary>
-          tuffite,
-        /// <summary>
-        /// tuffitic property
-        /// </summary>
-          tuffitic,
-        /// <summary>
-        /// ultrabasic property
-        /// </summary>
-          ultrabasic,
-        /// <summary>
-        /// undifferentiated property
-        /// </summary>
-          undifferentiated,
-        /// <summary>
-        /// unknown property
-        /// </summary>
-          unknown,
-        /// <summary>
-        /// wacke property
-        /// </summary>
-          wacke
-        }
-        /// <summary>
-        /// This class represents the ReferenceCondition xsd enumeration.
-        /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-        [System.SerializableAttribute()]
-        [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-        [Description("This class represents the ReferenceCondition xsd enumeration.")]
-        public enum ReferenceCondition 
-        {
-        /// <summary>
-        /// Item0degC1atm property
-        /// </summary>
-          [XmlEnum("0 degC 1 atm")]
-          Item0degC1atm,
-        /// <summary>
-        /// Item0degC1bar property
-        /// </summary>
-          [XmlEnum("0 degC 1 bar")]
-          Item0degC1bar,
-        /// <summary>
-        /// Item15degC1atm property
-        /// </summary>
-          [XmlEnum("15 degC 1 atm")]
-          Item15degC1atm,
-        /// <summary>
-        /// Item15degC1bar property
-        /// </summary>
-          [XmlEnum("15 degC 1 bar")]
-          Item15degC1bar,
-        /// <summary>
-        /// Item20degC1atm property
-        /// </summary>
-          [XmlEnum("20 degC 1 atm")]
-          Item20degC1atm,
-        /// <summary>
-        /// Item20degC1bar property
-        /// </summary>
-          [XmlEnum("20 degC 1 bar")]
-          Item20degC1bar,
-        /// <summary>
-        /// Item25degC1bar property
-        /// </summary>
-          [XmlEnum("25 degC 1 bar")]
-          Item25degC1bar,
-        /// <summary>
-        /// Item60degF1atm property
-        /// </summary>
-          [XmlEnum("60 degF 1 atm")]
-          Item60degF1atm,
-        /// <summary>
-        /// Item60degF30inHg property
-        /// </summary>
-          [XmlEnum("60 degF 30 in Hg")]
-          Item60degF30inHg,
-        /// <summary>
-        /// ambient property
-        /// </summary>
-          ambient
         }
         /// <summary>
         /// This class represents the ReferencePressureKind xsd enumeration.

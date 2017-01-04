@@ -16,1039 +16,2668 @@ namespace Energistics.Generator.WITSML200 {
     
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreMarkerSet))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreMarker))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreCompletion))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCompletion))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToolErrorTermSet))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurveyProgram))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimJobStage))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimJob))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimPerforationCluster))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Risk))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Rig))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RigUtilization))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MudLogReport))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CuttingsGeologyInterval))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CuttingsGeology))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InterpretedGeologyInterval))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InterpretedGeology))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ShowEvaluationInterval))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ShowEvaluation))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreGeology))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DepthRegImage))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCMLedger))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpsReport))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Trajectory))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToolErrorModel))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DownholeComponent))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementJob))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementJobEvaluation))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreGeometry))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Log))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Channel))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChannelSet))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BhaRun))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidsReport))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DrillReport))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Tubular))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Attachment))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Wellbore))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Well))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GraphicalInformationSet))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DataAssuranceRecord))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Activity))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ActivityTemplate))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyKindDictionary))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSeries))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyKind))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EpcExternalPartReference))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    [System.Xml.Serialization.XmlRootAttribute("AbstractDataObject", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-    public abstract partial class AbstractObject {
-        
-        private ObjectAlias[] aliasesField;
-        
-        private Citation citationField;
-        
-        private CustomData customDataField;
-        
-        private ExtensionNameValue[] extensionNameValueField;
-        
-        private string objectVersionField;
-        
-        private string schemaVersionField;
-        
-        private string uuidField;
-        
-        private ExistenceKind existenceKindField;
-        
-        private bool existenceKindFieldSpecified;
+    public enum ExistenceKind {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Aliases")]
-        public ObjectAlias[] Aliases {
-            get {
-                return this.aliasesField;
-            }
-            set {
-                this.aliasesField = value;
-            }
-        }
+        actual,
         
         /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public Citation Citation {
-            get {
-                return this.citationField;
-            }
-            set {
-                this.citationField = value;
-            }
-        }
+        planned,
         
         /// <remarks/>
-        public CustomData CustomData {
-            get {
-                return this.customDataField;
-            }
-            set {
-                this.customDataField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
-        public ExtensionNameValue[] ExtensionNameValue {
-            get {
-                return this.extensionNameValueField;
-            }
-            set {
-                this.extensionNameValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string objectVersion {
-            get {
-                return this.objectVersionField;
-            }
-            set {
-                this.objectVersionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string schemaVersion {
-            get {
-                return this.schemaVersionField;
-            }
-            set {
-                this.schemaVersionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
-        public string uuid {
-            get {
-                return this.uuidField;
-            }
-            set {
-                this.uuidField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A lifecycle state like actual, required, planned, predicted, etc. This is used to qualify any top-level element (from Epicentre 2.1).</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DescriptionAttribute("A lifecycle state like actual, required, planned, predicted, etc. This is used to" +
-            " qualify any top-level element (from Epicentre 2.1).")]
-        public ExistenceKind existenceKind {
-            get {
-                return this.existenceKindField;
-            }
-            set {
-                this.existenceKindField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool existenceKindSpecified {
-            get {
-                return this.existenceKindFieldSpecified;
-            }
-            set {
-                this.existenceKindFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class ObjectAlias {
-        
-        private string identifierField;
-        
-        private string descriptionField;
-        
-        private string authorityField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string Identifier {
-            get {
-                return this.identifierField;
-            }
-            set {
-                this.identifierField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string authority {
-            get {
-                return this.authorityField;
-            }
-            set {
-                this.authorityField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class GravelPackInterval {
-        
-        private string downholeStringReferenceIdField;
-        
-        private MdInterval gravelPackMdIntervalField;
-        
-        private TvdInterval gravelPackTvdIntervalField;
-        
-        private EventInfo eventHistoryField;
-        
-        private string[] geologyFeatureReferenceIdField;
-        
-        private ExtensionNameValue[] extensionNameValueField;
-        
-        private IntervalStatusHistory[] statusHistoryField;
-        
-        private string uidField;
-        
-        /// <remarks/>
-        /// <summary>Reference to the downhole string that denotes the interval of the gravel pack.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Reference to the downhole string that denotes the interval of the gravel pack.")]
-        public string DownholeStringReferenceId {
-            get {
-                return this.downholeStringReferenceIdField;
-            }
-            set {
-                this.downholeStringReferenceIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Gravel packed measured depth interval for this completion.</summary>
-        [System.ComponentModel.DescriptionAttribute("Gravel packed measured depth interval for this completion.")]
-        public MdInterval GravelPackMdInterval {
-            get {
-                return this.gravelPackMdIntervalField;
-            }
-            set {
-                this.gravelPackMdIntervalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Gravel packed true vertical depth interval for this completion.</summary>
-        [System.ComponentModel.DescriptionAttribute("Gravel packed true vertical depth interval for this completion.")]
-        public TvdInterval GravelPackTvdInterval {
-            get {
-                return this.gravelPackTvdIntervalField;
-            }
-            set {
-                this.gravelPackTvdIntervalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The contactInterval event information.</summary>
-        [System.ComponentModel.DescriptionAttribute("The contactInterval event information.")]
-        public EventInfo EventHistory {
-            get {
-                return this.eventHistoryField;
-            }
-            set {
-                this.eventHistoryField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Reference to a geology feature.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("GeologyFeatureReferenceId")]
-        [System.ComponentModel.DescriptionAttribute("Reference to a geology feature.")]
-        public string[] GeologyFeatureReferenceId {
-            get {
-                return this.geologyFeatureReferenceIdField;
-            }
-            set {
-                this.geologyFeatureReferenceIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
-        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
-        public ExtensionNameValue[] ExtensionNameValue {
-            get {
-                return this.extensionNameValueField;
-            }
-            set {
-                this.extensionNameValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("StatusHistory")]
-        public IntervalStatusHistory[] StatusHistory {
-            get {
-                return this.statusHistoryField;
-            }
-            set {
-                this.statusHistoryField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Unique identifier for this instance of GravelPackInterval.</summary>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of GravelPackInterval.")]
-        public string uid {
-            get {
-                return this.uidField;
-            }
-            set {
-                this.uidField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class MdInterval {
-        
-        private LengthMeasure mdTopField;
-        
-        private LengthMeasure mdBaseField;
-        
-        private string datumField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public LengthMeasure MdTop {
-            get {
-                return this.mdTopField;
-            }
-            set {
-                this.mdTopField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public LengthMeasure MdBase {
-            get {
-                return this.mdBaseField;
-            }
-            set {
-                this.mdBaseField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string datum {
-            get {
-                return this.datumField;
-            }
-            set {
-                this.datumField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class LengthMeasure {
-        
-        private LengthUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public LengthUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
+        simulated,
     }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum LengthUom {
+    public enum MatrixCementKind {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.1 ft")]
-        Item01ft,
+        ankerite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.1 ft[US]")]
-        Item01ftUS,
+        calcite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.1 in")]
-        Item01in,
+        chlorite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.1 yd")]
-        Item01yd,
+        dolomite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1/16 in")]
-        Item116in,
+        illite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1/2 ft")]
-        Item12ft,
+        kaolinite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1/32 in")]
-        Item132in,
+        quartz,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1/64 in")]
-        Item164in,
+        siderite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("10 ft")]
-        Item10ft,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("10 in")]
-        Item10in,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("10 km")]
-        Item10km,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("100 ft")]
-        Item100ft,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("100 km")]
-        Item100km,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1000 ft")]
-        Item1000ft,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("30 ft")]
-        Item30ft,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("30 m")]
-        Item30m,
-        
-        /// <remarks/>
-        angstrom,
-        
-        /// <remarks/>
-        chain,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("chain[BnA]")]
-        chainBnA,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("chain[BnB]")]
-        chainBnB,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("chain[Cla]")]
-        chainCla,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("chain[Ind37]")]
-        chainInd37,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("chain[Se]")]
-        chainSe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("chain[SeT]")]
-        chainSeT,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("chain[US]")]
-        chainUS,
-        
-        /// <remarks/>
-        cm,
-        
-        /// <remarks/>
-        dam,
-        
-        /// <remarks/>
-        dm,
-        
-        /// <remarks/>
-        Em,
-        
-        /// <remarks/>
-        fathom,
-        
-        /// <remarks/>
-        fm,
-        
-        /// <remarks/>
-        ft,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft[BnA]")]
-        ftBnA,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft[BnB]")]
-        ftBnB,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft[Br36]")]
-        ftBr36,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft[Br65]")]
-        ftBr65,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft[Cla]")]
-        ftCla,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft[GC]")]
-        ftGC,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft[Ind]")]
-        ftInd,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft[Ind37]")]
-        ftInd37,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft[Ind62]")]
-        ftInd62,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft[Ind75]")]
-        ftInd75,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft[Se]")]
-        ftSe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft[SeT]")]
-        ftSeT,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ft[US]")]
-        ftUS,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fur[US]")]
-        furUS,
-        
-        /// <remarks/>
-        Gm,
-        
-        /// <remarks/>
-        hm,
-        
-        /// <remarks/>
-        @in,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("in[US]")]
-        inUS,
-        
-        /// <remarks/>
-        km,
-        
-        /// <remarks/>
-        link,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("link[BnA]")]
-        linkBnA,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("link[BnB]")]
-        linkBnB,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("link[Cla]")]
-        linkCla,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("link[Se]")]
-        linkSe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("link[SeT]")]
-        linkSeT,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("link[US]")]
-        linkUS,
-        
-        /// <remarks/>
-        m,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("m[Ger]")]
-        mGer,
-        
-        /// <remarks/>
-        mi,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mi[naut]")]
-        minaut,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mi[nautUK]")]
-        minautUK,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mi[US]")]
-        miUS,
-        
-        /// <remarks/>
-        mil,
-        
-        /// <remarks/>
-        mm,
-        
-        /// <remarks/>
-        Mm,
-        
-        /// <remarks/>
-        nm,
-        
-        /// <remarks/>
-        pm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rod[US]")]
-        rodUS,
-        
-        /// <remarks/>
-        Tm,
-        
-        /// <remarks/>
-        um,
-        
-        /// <remarks/>
-        yd,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("yd[BnA]")]
-        ydBnA,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("yd[BnB]")]
-        ydBnB,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("yd[Cla]")]
-        ydCla,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("yd[Ind]")]
-        ydInd,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("yd[Ind37]")]
-        ydInd37,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("yd[Ind62]")]
-        ydInd62,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("yd[Ind75]")]
-        ydInd75,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("yd[Se]")]
-        ydSe,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("yd[SeT]")]
-        ydSeT,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("yd[US]")]
-        ydUS,
+        smectite,
     }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class TvdInterval {
-        
-        private LengthMeasure tvdTopField;
-        
-        private LengthMeasure tvdBaseField;
-        
-        private string datumField;
+    public enum MeasureClass {
         
         /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public LengthMeasure TvdTop {
-            get {
-                return this.tvdTopField;
-            }
-            set {
-                this.tvdTopField = value;
-            }
-        }
+        [System.Xml.Serialization.XmlEnumAttribute("absorbed dose")]
+        absorbeddose,
         
         /// <remarks/>
-        /// <summary>True vertical depth at the base of the interval</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("True vertical depth at the base of the interval")]
-        public LengthMeasure TvdBase {
-            get {
-                return this.tvdBaseField;
-            }
-            set {
-                this.tvdBaseField = value;
-            }
-        }
+        [System.Xml.Serialization.XmlEnumAttribute("activity of radioactivity")]
+        activityofradioactivity,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        public string datum {
-            get {
-                return this.datumField;
-            }
-            set {
-                this.datumField = value;
-            }
-        }
+        [System.Xml.Serialization.XmlEnumAttribute("amount of substance")]
+        amountofsubstance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per amount of substance")]
+        amountofsubstanceperamountofsubstance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per area")]
+        amountofsubstanceperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per time")]
+        amountofsubstancepertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per time per area")]
+        amountofsubstancepertimeperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per volume")]
+        amountofsubstancepervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("angle per length")]
+        angleperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("angle per volume")]
+        anglepervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("angular acceleration")]
+        angularacceleration,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("angular velocity")]
+        angularvelocity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("api gamma ray")]
+        apigammaray,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("api gravity")]
+        apigravity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("api neutron")]
+        apineutron,
+        
+        /// <remarks/>
+        area,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("area per amount of substance")]
+        areaperamountofsubstance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("area per area")]
+        areaperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("area per count")]
+        areapercount,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("area per mass")]
+        areapermass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("area per time")]
+        areapertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("area per volume")]
+        areapervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("attenuation per frequency interval")]
+        attenuationperfrequencyinterval,
+        
+        /// <remarks/>
+        capacitance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cation exchange capacity")]
+        cationexchangecapacity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("data transfer speed")]
+        datatransferspeed,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("diffusion coefficient")]
+        diffusioncoefficient,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("diffusive time of flight")]
+        diffusivetimeofflight,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("digital storage")]
+        digitalstorage,
+        
+        /// <remarks/>
+        dimensionless,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dipole moment")]
+        dipolemoment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dose equivalent")]
+        doseequivalent,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dynamic viscosity")]
+        dynamicviscosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric charge")]
+        electriccharge,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric charge per area")]
+        electricchargeperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric charge per mass")]
+        electricchargepermass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric charge per volume")]
+        electricchargepervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric conductance")]
+        electricconductance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric conductivity")]
+        electricconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric current")]
+        electriccurrent,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric current density")]
+        electriccurrentdensity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric field strength")]
+        electricfieldstrength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric potential difference")]
+        electricpotentialdifference,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric resistance")]
+        electricresistance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric resistance per length")]
+        electricresistanceperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electrical resistivity")]
+        electricalresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electromagnetic moment")]
+        electromagneticmoment,
+        
+        /// <remarks/>
+        energy,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("energy length per area")]
+        energylengthperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("energy length per time area temperature")]
+        energylengthpertimeareatemperature,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("energy per area")]
+        energyperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("energy per length")]
+        energyperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("energy per mass")]
+        energypermass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("energy per mass per time")]
+        energypermasspertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("energy per volume")]
+        energypervolume,
+        
+        /// <remarks/>
+        force,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("force area")]
+        forcearea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("force length per length")]
+        forcelengthperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("force per force")]
+        forceperforce,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("force per length")]
+        forceperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("force per volume")]
+        forcepervolume,
+        
+        /// <remarks/>
+        frequency,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("frequency interval")]
+        frequencyinterval,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("heat capacity")]
+        heatcapacity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("heat flow rate")]
+        heatflowrate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("heat transfer coefficient")]
+        heattransfercoefficient,
+        
+        /// <remarks/>
+        illuminance,
+        
+        /// <remarks/>
+        inductance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("isothermal compressibility")]
+        isothermalcompressibility,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kinematic viscosity")]
+        kinematicviscosity,
+        
+        /// <remarks/>
+        length,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("length per length")]
+        lengthperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("length per mass")]
+        lengthpermass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("length per pressure")]
+        lengthperpressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("length per temperature")]
+        lengthpertemperature,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("length per time")]
+        lengthpertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("length per volume")]
+        lengthpervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("light exposure")]
+        lightexposure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("linear acceleration")]
+        linearacceleration,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("linear thermal expansion")]
+        linearthermalexpansion,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("logarithmic power ratio")]
+        logarithmicpowerratio,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("logarithmic power ratio per length")]
+        logarithmicpowerratioperlength,
+        
+        /// <remarks/>
+        luminance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("luminous efficacy")]
+        luminousefficacy,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("luminous flux")]
+        luminousflux,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("luminous intensity")]
+        luminousintensity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic dipole moment")]
+        magneticdipolemoment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic field strength")]
+        magneticfieldstrength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic flux")]
+        magneticflux,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic flux density")]
+        magneticfluxdensity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic flux density per length")]
+        magneticfluxdensityperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic permeability")]
+        magneticpermeability,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic vector potential")]
+        magneticvectorpotential,
+        
+        /// <remarks/>
+        mass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass length")]
+        masslength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per area")]
+        massperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per energy")]
+        massperenergy,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per length")]
+        massperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per mass")]
+        masspermass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per time")]
+        masspertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per time per area")]
+        masspertimeperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per time per length")]
+        masspertimeperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per volume")]
+        masspervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per volume per length")]
+        masspervolumeperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per volume per pressure")]
+        masspervolumeperpressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per volume per temperature")]
+        masspervolumepertemperature,
+        
+        /// <remarks/>
+        mobility,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("molar energy")]
+        molarenergy,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("molar heat capacity")]
+        molarheatcapacity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("molar volume")]
+        molarvolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("molecular weight")]
+        molecularweight,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("moment of force")]
+        momentofforce,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("moment of inertia")]
+        momentofinertia,
+        
+        /// <remarks/>
+        momentum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("normalized power")]
+        normalizedpower,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("permeability length")]
+        permeabilitylength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("permeability rock")]
+        permeabilityrock,
+        
+        /// <remarks/>
+        permittivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("plane angle")]
+        planeangle,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("potential difference per power drop")]
+        potentialdifferenceperpowerdrop,
+        
+        /// <remarks/>
+        power,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("power per area")]
+        powerperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("power per power")]
+        powerperpower,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("power per volume")]
+        powerpervolume,
+        
+        /// <remarks/>
+        pressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure per pressure")]
+        pressureperpressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure per time")]
+        pressurepertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure per volume")]
+        pressurepervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure squared")]
+        pressuresquared,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure squared per force time per area")]
+        pressuresquaredperforcetimeperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure time per volume")]
+        pressuretimepervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("quantity of light")]
+        quantityoflight,
+        
+        /// <remarks/>
+        radiance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("radiant intensity")]
+        radiantintensity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal area")]
+        reciprocalarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal electric potential difference")]
+        reciprocalelectricpotentialdifference,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal force")]
+        reciprocalforce,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal length")]
+        reciprocallength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal mass")]
+        reciprocalmass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal mass time")]
+        reciprocalmasstime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal pressure")]
+        reciprocalpressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal time")]
+        reciprocaltime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal volume")]
+        reciprocalvolume,
+        
+        /// <remarks/>
+        reluctance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("second moment of area")]
+        secondmomentofarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("signaling event per time")]
+        signalingeventpertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("solid angle")]
+        solidangle,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("specific heat capacity")]
+        specificheatcapacity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("temperature interval")]
+        temperatureinterval,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("temperature interval per length")]
+        temperatureintervalperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("temperature interval per pressure")]
+        temperatureintervalperpressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("temperature interval per time")]
+        temperatureintervalpertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("thermal conductance")]
+        thermalconductance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("thermal conductivity")]
+        thermalconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("thermal diffusivity")]
+        thermaldiffusivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("thermal insulance")]
+        thermalinsulance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("thermal resistance")]
+        thermalresistance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("thermodynamic temperature")]
+        thermodynamictemperature,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("thermodynamic temperature per thermodynamic temperature")]
+        thermodynamictemperatureperthermodynamictemperature,
+        
+        /// <remarks/>
+        time,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("time per length")]
+        timeperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("time per mass")]
+        timepermass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("time per time")]
+        timepertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("time per volume")]
+        timepervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("vertical coordinate")]
+        verticalcoordinate,
+        
+        /// <remarks/>
+        volume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume flow rate per volume flow rate")]
+        volumeflowratepervolumeflowrate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per area")]
+        volumeperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per length")]
+        volumeperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per mass")]
+        volumepermass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per pressure")]
+        volumeperpressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per rotation")]
+        volumeperrotation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per time")]
+        volumepertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per time length")]
+        volumepertimelength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per time per area")]
+        volumepertimeperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per time per length")]
+        volumepertimeperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per time per pressure")]
+        volumepertimeperpressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per time per pressure length")]
+        volumepertimeperpressurelength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per time per time")]
+        volumepertimepertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per time per volume")]
+        volumepertimepervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per volume")]
+        volumepervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volumetric heat transfer coefficient")]
+        volumetricheattransfercoefficient,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volumetric thermal expansion")]
+        volumetricthermalexpansion,
+        
+        /// <remarks/>
+        unitless,
     }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    public partial class EventInfo {
-        
-        private ExtensionNameValue[] extensionNameValueField;
-        
-        private EventRefInfo beginEventField;
-        
-        private EventRefInfo endEventField;
-        
-        /// <remarks/>
-        /// <summary>Extensions to the schema based on a name-value construct.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
-        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
-        public ExtensionNameValue[] ExtensionNameValue {
-            get {
-                return this.extensionNameValueField;
-            }
-            set {
-                this.extensionNameValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public EventRefInfo BeginEvent {
-            get {
-                return this.beginEventField;
-            }
-            set {
-                this.beginEventField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public EventRefInfo EndEvent {
-            get {
-                return this.endEventField;
-            }
-            set {
-                this.endEventField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class ExtensionNameValue {
-        
-        private string nameField;
-        
-        private StringMeasure valueField;
-        
-        private MeasureClass measureClassField;
-        
-        private bool measureClassFieldSpecified;
-        
-        private Energistics.SchemaGatherer.Timestamp dTimField;
-        
-        private int indexField;
-        
-        private bool indexFieldSpecified;
-        
-        private string descriptionField;
+    public enum LithostratigraphicRank {
         
         /// <remarks/>
-        /// <summary>The name of the extension. Each standard name should document the expected measure class. Each standard name should document the expected maximum size.  For numeric values the size should be in terms of xsd types such as int, long, short, byte, float or double. For strings, the maximum length should be defined in number of characters. Local extensions to the list of standard names are allowed but it is strongly recommended that the names and definitions be approved by the  respective SIG Technical Team before use.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute(@"The name of the extension. Each standard name should document the expected measure class. Each standard name should document the expected maximum size.  For numeric values the size should be in terms of xsd types such as int, long, short, byte, float or double. For strings, the maximum length should be defined in number of characters. Local extensions to the list of standard names are allowed but it is strongly recommended that the names and definitions be approved by the  respective SIG Technical Team before use.")]
-        public string Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-            }
-        }
+        group,
         
         /// <remarks/>
-        /// <summary>The value of the extension. This may also include a uom attribute. The content should conform to constraints defined by the data type.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The value of the extension. This may also include a uom attribute. The content sh" +
-            "ould conform to constraints defined by the data type.")]
-        public StringMeasure Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
+        formation,
         
         /// <remarks/>
-        /// <summary>The kind of the measure. For example, "length". This should be specified if the value requires a unit of measure.</summary>
-        [System.ComponentModel.DescriptionAttribute("The kind of the measure. For example, \"length\". This should be specified if the v" +
-            "alue requires a unit of measure.")]
-        public MeasureClass MeasureClass {
-            get {
-                return this.measureClassField;
-            }
-            set {
-                this.measureClassField = value;
-            }
-        }
+        member,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool MeasureClassSpecified {
-            get {
-                return this.measureClassFieldSpecified;
-            }
-            set {
-                this.measureClassFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The date-time associated with the value.</summary>
-        [System.ComponentModel.DescriptionAttribute("The date-time associated with the value.")]
-        public Energistics.SchemaGatherer.Timestamp DTim {
-            get {
-                return this.dTimField;
-            }
-            set {
-                this.dTimField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Indexes things with the same name.  That is, 1 indicates the first one, 2 indicates the second one, etc.</summary>
-        [System.ComponentModel.DescriptionAttribute("Indexes things with the same name.  That is, 1 indicates the first one, 2 indicat" +
-            "es the second one, etc.")]
-        public int Index {
-            get {
-                return this.indexField;
-            }
-            set {
-                this.indexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool IndexSpecified {
-            get {
-                return this.indexFieldSpecified;
-            }
-            set {
-                this.indexFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>A textual description of the extension.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("A textual description of the extension.")]
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
+        bed,
     }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class StringMeasure {
-        
-        private UnitOfMeasure uomField;
-        
-        private bool uomFieldSpecified;
-        
-        private string valueField;
+    public enum WellboreDatumReference {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public UnitOfMeasure uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
+        [System.Xml.Serialization.XmlEnumAttribute("ground level")]
+        groundlevel,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool uomSpecified {
-            get {
-                return this.uomFieldSpecified;
-            }
-            set {
-                this.uomFieldSpecified = value;
-            }
-        }
+        [System.Xml.Serialization.XmlEnumAttribute("kelly bushing")]
+        kellybushing,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
+        [System.Xml.Serialization.XmlEnumAttribute("mean sea level")]
+        meansealevel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("derrick floor")]
+        derrickfloor,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("casing flange")]
+        casingflange,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("crown valve")]
+        crownvalve,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rotary bushing")]
+        rotarybushing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rotary table")]
+        rotarytable,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("sea floor")]
+        seafloor,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lowest astronomical tide")]
+        lowestastronomicaltide,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mean higher high water")]
+        meanhigherhighwater,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mean high water")]
+        meanhighwater,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mean lower low water")]
+        meanlowerlowwater,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mean low water")]
+        meanlowwater,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mean tide level")]
+        meantidelevel,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kickoff point")]
+        kickoffpoint,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum QuantityClassKind {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("absorbed dose")]
+        absorbeddose,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("activity of radioactivity")]
+        activityofradioactivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("amount of substance")]
+        amountofsubstance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per amount of substance")]
+        amountofsubstanceperamountofsubstance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per area")]
+        amountofsubstanceperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per time")]
+        amountofsubstancepertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per time per area")]
+        amountofsubstancepertimeperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per volume")]
+        amountofsubstancepervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("angle per length")]
+        angleperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("angle per volume")]
+        anglepervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("angular acceleration")]
+        angularacceleration,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("angular velocity")]
+        angularvelocity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("api gamma ray")]
+        apigammaray,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("api gravity")]
+        apigravity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("api neutron")]
+        apineutron,
+        
+        /// <remarks/>
+        area,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("area per amount of substance")]
+        areaperamountofsubstance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("area per area")]
+        areaperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("area per count")]
+        areapercount,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("area per mass")]
+        areapermass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("area per time")]
+        areapertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("area per volume")]
+        areapervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("attenuation per frequency interval")]
+        attenuationperfrequencyinterval,
+        
+        /// <remarks/>
+        capacitance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("cation exchange capacity")]
+        cationexchangecapacity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("data transfer speed")]
+        datatransferspeed,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("diffusion coefficient")]
+        diffusioncoefficient,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("diffusive time of flight")]
+        diffusivetimeofflight,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("digital storage")]
+        digitalstorage,
+        
+        /// <remarks/>
+        dimensionless,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dipole moment")]
+        dipolemoment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dose equivalent")]
+        doseequivalent,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dynamic viscosity")]
+        dynamicviscosity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric charge")]
+        electriccharge,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric charge per area")]
+        electricchargeperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric charge per mass")]
+        electricchargepermass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric charge per volume")]
+        electricchargepervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric conductance")]
+        electricconductance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric conductivity")]
+        electricconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric current")]
+        electriccurrent,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric current density")]
+        electriccurrentdensity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric field strength")]
+        electricfieldstrength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric potential difference")]
+        electricpotentialdifference,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric resistance")]
+        electricresistance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electric resistance per length")]
+        electricresistanceperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electrical resistivity")]
+        electricalresistivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("electromagnetic moment")]
+        electromagneticmoment,
+        
+        /// <remarks/>
+        energy,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("energy length per area")]
+        energylengthperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("energy length per time area temperature")]
+        energylengthpertimeareatemperature,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("energy per area")]
+        energyperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("energy per length")]
+        energyperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("energy per mass")]
+        energypermass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("energy per mass per time")]
+        energypermasspertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("energy per volume")]
+        energypervolume,
+        
+        /// <remarks/>
+        force,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("force area")]
+        forcearea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("force length per length")]
+        forcelengthperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("force per force")]
+        forceperforce,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("force per length")]
+        forceperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("force per volume")]
+        forcepervolume,
+        
+        /// <remarks/>
+        frequency,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("frequency interval")]
+        frequencyinterval,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("heat capacity")]
+        heatcapacity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("heat flow rate")]
+        heatflowrate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("heat transfer coefficient")]
+        heattransfercoefficient,
+        
+        /// <remarks/>
+        illuminance,
+        
+        /// <remarks/>
+        inductance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("isothermal compressibility")]
+        isothermalcompressibility,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kinematic viscosity")]
+        kinematicviscosity,
+        
+        /// <remarks/>
+        length,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("length per length")]
+        lengthperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("length per mass")]
+        lengthpermass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("length per pressure")]
+        lengthperpressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("length per temperature")]
+        lengthpertemperature,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("length per time")]
+        lengthpertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("length per volume")]
+        lengthpervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("light exposure")]
+        lightexposure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("linear acceleration")]
+        linearacceleration,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("linear thermal expansion")]
+        linearthermalexpansion,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("logarithmic power ratio")]
+        logarithmicpowerratio,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("logarithmic power ratio per length")]
+        logarithmicpowerratioperlength,
+        
+        /// <remarks/>
+        luminance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("luminous efficacy")]
+        luminousefficacy,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("luminous flux")]
+        luminousflux,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("luminous intensity")]
+        luminousintensity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic dipole moment")]
+        magneticdipolemoment,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic field strength")]
+        magneticfieldstrength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic flux")]
+        magneticflux,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic flux density")]
+        magneticfluxdensity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic flux density per length")]
+        magneticfluxdensityperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic permeability")]
+        magneticpermeability,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("magnetic vector potential")]
+        magneticvectorpotential,
+        
+        /// <remarks/>
+        mass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass length")]
+        masslength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per area")]
+        massperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per energy")]
+        massperenergy,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per length")]
+        massperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per mass")]
+        masspermass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per time")]
+        masspertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per time per area")]
+        masspertimeperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per time per length")]
+        masspertimeperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per volume")]
+        masspervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per volume per length")]
+        masspervolumeperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per volume per pressure")]
+        masspervolumeperpressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mass per volume per temperature")]
+        masspervolumepertemperature,
+        
+        /// <remarks/>
+        mobility,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("molar energy")]
+        molarenergy,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("molar heat capacity")]
+        molarheatcapacity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("molar volume")]
+        molarvolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("molecular weight")]
+        molecularweight,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("moment of force")]
+        momentofforce,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("moment of inertia")]
+        momentofinertia,
+        
+        /// <remarks/>
+        momentum,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("normalized power")]
+        normalizedpower,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("permeability length")]
+        permeabilitylength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("permeability rock")]
+        permeabilityrock,
+        
+        /// <remarks/>
+        permittivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("plane angle")]
+        planeangle,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("potential difference per power drop")]
+        potentialdifferenceperpowerdrop,
+        
+        /// <remarks/>
+        power,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("power per area")]
+        powerperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("power per power")]
+        powerperpower,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("power per volume")]
+        powerpervolume,
+        
+        /// <remarks/>
+        pressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure per pressure")]
+        pressureperpressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure per time")]
+        pressurepertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure per volume")]
+        pressurepervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure squared")]
+        pressuresquared,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure squared per force time per area")]
+        pressuresquaredperforcetimeperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pressure time per volume")]
+        pressuretimepervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("quantity of light")]
+        quantityoflight,
+        
+        /// <remarks/>
+        radiance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("radiant intensity")]
+        radiantintensity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal area")]
+        reciprocalarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal electric potential difference")]
+        reciprocalelectricpotentialdifference,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal force")]
+        reciprocalforce,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal length")]
+        reciprocallength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal mass")]
+        reciprocalmass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal mass time")]
+        reciprocalmasstime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal pressure")]
+        reciprocalpressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal time")]
+        reciprocaltime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("reciprocal volume")]
+        reciprocalvolume,
+        
+        /// <remarks/>
+        reluctance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("second moment of area")]
+        secondmomentofarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("signaling event per time")]
+        signalingeventpertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("solid angle")]
+        solidangle,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("specific heat capacity")]
+        specificheatcapacity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("temperature interval")]
+        temperatureinterval,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("temperature interval per length")]
+        temperatureintervalperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("temperature interval per pressure")]
+        temperatureintervalperpressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("temperature interval per time")]
+        temperatureintervalpertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("thermal conductance")]
+        thermalconductance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("thermal conductivity")]
+        thermalconductivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("thermal diffusivity")]
+        thermaldiffusivity,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("thermal insulance")]
+        thermalinsulance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("thermal resistance")]
+        thermalresistance,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("thermodynamic temperature")]
+        thermodynamictemperature,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("thermodynamic temperature per thermodynamic temperature")]
+        thermodynamictemperatureperthermodynamictemperature,
+        
+        /// <remarks/>
+        time,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("time per length")]
+        timeperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("time per mass")]
+        timepermass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("time per time")]
+        timepertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("time per volume")]
+        timepervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("vertical coordinate")]
+        verticalcoordinate,
+        
+        /// <remarks/>
+        volume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume flow rate per volume flow rate")]
+        volumeflowratepervolumeflowrate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per area")]
+        volumeperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per length")]
+        volumeperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per mass")]
+        volumepermass,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per pressure")]
+        volumeperpressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per rotation")]
+        volumeperrotation,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per time")]
+        volumepertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per time length")]
+        volumepertimelength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per time per area")]
+        volumepertimeperarea,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per time per length")]
+        volumepertimeperlength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per time per pressure")]
+        volumepertimeperpressure,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per time per pressure length")]
+        volumepertimeperpressurelength,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per time per time")]
+        volumepertimepertime,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per time per volume")]
+        volumepertimepervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volume per volume")]
+        volumepervolume,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volumetric heat transfer coefficient")]
+        volumetricheattransfercoefficient,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("volumetric thermal expansion")]
+        volumetricthermalexpansion,
+        
+        /// <remarks/>
+        unitless,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("not a measure")]
+        notameasure,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum ReferenceCondition {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0 degC 1 atm")]
+        Item0degC1atm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0 degC 1 bar")]
+        Item0degC1bar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("15 degC 1 atm")]
+        Item15degC1atm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("15 degC 1 bar")]
+        Item15degC1bar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("20 degC 1 atm")]
+        Item20degC1atm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("20 degC 1 bar")]
+        Item20degC1bar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("25 degC 1 bar")]
+        Item25degC1bar,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("60 degF 1 atm")]
+        Item60degF1atm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("60 degF 30 in Hg")]
+        Item60degF30inHg,
+        
+        /// <remarks/>
+        ambient,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LithologyQualifierKind {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("alkali feldspar rhyolite")]
+        alkalifeldsparrhyolite,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("alkali olivine basalt")]
+        alkaliolivinebasalt,
+        
+        /// <remarks/>
+        amphibolite,
+        
+        /// <remarks/>
+        amphibolitic,
+        
+        /// <remarks/>
+        andesite,
+        
+        /// <remarks/>
+        andesitic,
+        
+        /// <remarks/>
+        anhydrite,
+        
+        /// <remarks/>
+        anhydritic,
+        
+        /// <remarks/>
+        ankerite,
+        
+        /// <remarks/>
+        ankeritic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("anorthositic rock")]
+        anorthositicrock,
+        
+        /// <remarks/>
+        anthracite,
+        
+        /// <remarks/>
+        anthracitic,
+        
+        /// <remarks/>
+        aplite,
+        
+        /// <remarks/>
+        aplitic,
+        
+        /// <remarks/>
+        arenite,
+        
+        /// <remarks/>
+        arenitic,
+        
+        /// <remarks/>
+        argillaceous,
+        
+        /// <remarks/>
+        arkose,
+        
+        /// <remarks/>
+        arkosic,
+        
+        /// <remarks/>
+        barite,
+        
+        /// <remarks/>
+        baritic,
+        
+        /// <remarks/>
+        basalt,
+        
+        /// <remarks/>
+        basaltic,
+        
+        /// <remarks/>
+        basanite,
+        
+        /// <remarks/>
+        basanitic,
+        
+        /// <remarks/>
+        bauxite,
+        
+        /// <remarks/>
+        bauxitic,
+        
+        /// <remarks/>
+        belemnites,
+        
+        /// <remarks/>
+        belemnitic,
+        
+        /// <remarks/>
+        bioturbated,
+        
+        /// <remarks/>
+        bioturbation,
+        
+        /// <remarks/>
+        bitumen,
+        
+        /// <remarks/>
+        bituminous,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("bituminous coal")]
+        bituminouscoal,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("blueschist metamorphic rock")]
+        blueschistmetamorphicrock,
+        
+        /// <remarks/>
+        boninite,
+        
+        /// <remarks/>
+        breccia,
+        
+        /// <remarks/>
+        brecciated,
+        
+        /// <remarks/>
+        bryozoan,
+        
+        /// <remarks/>
+        bryozoans,
+        
+        /// <remarks/>
+        burrowed,
+        
+        /// <remarks/>
+        burrows,
+        
+        /// <remarks/>
+        calcareous,
+        
+        /// <remarks/>
+        calcite,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("calcite concretion")]
+        calciteconcretion,
+        
+        /// <remarks/>
+        calcitic,
+        
+        /// <remarks/>
+        carbonaceous,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("carbonate ooze")]
+        carbonateooze,
+        
+        /// <remarks/>
+        carbonatite,
+        
+        /// <remarks/>
+        carbonatitic,
+        
+        /// <remarks/>
+        chalk,
+        
+        /// <remarks/>
+        chalky,
+        
+        /// <remarks/>
+        chamosite,
+        
+        /// <remarks/>
+        chamositic,
+        
+        /// <remarks/>
+        chert,
+        
+        /// <remarks/>
+        cherty,
+        
+        /// <remarks/>
+        chlorite,
+        
+        /// <remarks/>
+        chloritic,
+        
+        /// <remarks/>
+        clay,
+        
+        /// <remarks/>
+        claystone,
+        
+        /// <remarks/>
+        coal,
+        
+        /// <remarks/>
+        concretionary,
+        
+        /// <remarks/>
+        concretions,
+        
+        /// <remarks/>
+        conglomerate,
+        
+        /// <remarks/>
+        conglomeratic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("coral fragments")]
+        coralfragments,
+        
+        /// <remarks/>
+        coralline,
+        
+        /// <remarks/>
+        crinoidal,
+        
+        /// <remarks/>
+        crinoids,
+        
+        /// <remarks/>
+        dacite,
+        
+        /// <remarks/>
+        dacitic,
+        
+        /// <remarks/>
+        diabase,
+        
+        /// <remarks/>
+        diabasic,
+        
+        /// <remarks/>
+        diamictite,
+        
+        /// <remarks/>
+        diamictitic,
+        
+        /// <remarks/>
+        diatomaceous,
+        
+        /// <remarks/>
+        diatoms,
+        
+        /// <remarks/>
+        diorite,
+        
+        /// <remarks/>
+        dioritic,
+        
+        /// <remarks/>
+        dioritoid,
+        
+        /// <remarks/>
+        dioritoidic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("doleritic rock")]
+        doleriticrock,
+        
+        /// <remarks/>
+        dolomite,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dolomite concretion")]
+        dolomiteconcretion,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dolomite stringer")]
+        dolomitestringer,
+        
+        /// <remarks/>
+        dolomitic,
+        
+        /// <remarks/>
+        eclogite,
+        
+        /// <remarks/>
+        eclogitic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("exotic alkaline rock")]
+        exoticalkalinerock,
+        
+        /// <remarks/>
+        feldspar,
+        
+        /// <remarks/>
+        feldsparic,
+        
+        /// <remarks/>
+        feldspathic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("feldspathic arenite")]
+        feldspathicarenite,
+        
+        /// <remarks/>
+        ferruginous,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fine grained igneous rock")]
+        finegrainedigneousrock,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("foid dioritoid")]
+        foiddioritoid,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("foid gabbroid")]
+        foidgabbroid,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("foid syenitoid")]
+        foidsyenitoid,
+        
+        /// <remarks/>
+        foidite,
+        
+        /// <remarks/>
+        foiditic,
+        
+        /// <remarks/>
+        foiditoid,
+        
+        /// <remarks/>
+        foidolite,
+        
+        /// <remarks/>
+        foidolitic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("foliated metamorphic rock")]
+        foliatedmetamorphicrock,
+        
+        /// <remarks/>
+        foraminifera,
+        
+        /// <remarks/>
+        foraminiferous,
+        
+        /// <remarks/>
+        forams,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fossil fragments")]
+        fossilfragments,
+        
+        /// <remarks/>
+        fossiliferous,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fossils undifferentiated")]
+        fossilsundifferentiated,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("fragmental igneous rock")]
+        fragmentaligneousrock,
+        
+        /// <remarks/>
+        gabbro,
+        
+        /// <remarks/>
+        gabbroic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gabbroic rock")]
+        gabbroicrock,
+        
+        /// <remarks/>
+        gabbroid,
+        
+        /// <remarks/>
+        gabbroidic,
+        
+        /// <remarks/>
+        gilsonite,
+        
+        /// <remarks/>
+        gilsonitic,
+        
+        /// <remarks/>
+        glauconite,
+        
+        /// <remarks/>
+        glauconitic,
+        
+        /// <remarks/>
+        gneiss,
+        
+        /// <remarks/>
+        gneissic,
+        
+        /// <remarks/>
+        granite,
+        
+        /// <remarks/>
+        granitic,
+        
+        /// <remarks/>
+        granodiorite,
+        
+        /// <remarks/>
+        granodioritic,
+        
+        /// <remarks/>
+        granofels,
+        
+        /// <remarks/>
+        granulite,
+        
+        /// <remarks/>
+        granulitic,
+        
+        /// <remarks/>
+        gravel,
+        
+        /// <remarks/>
+        gravelly,
+        
+        /// <remarks/>
+        greenstone,
+        
+        /// <remarks/>
+        gumbo,
+        
+        /// <remarks/>
+        gypsiferous,
+        
+        /// <remarks/>
+        gypsum,
+        
+        /// <remarks/>
+        halite,
+        
+        /// <remarks/>
+        halitic,
+        
+        /// <remarks/>
+        hornfels,
+        
+        /// <remarks/>
+        hornfelsic,
+        
+        /// <remarks/>
+        igneous,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("igneous rock")]
+        igneousrock,
+        
+        /// <remarks/>
+        illite,
+        
+        /// <remarks/>
+        illitic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("impact generated material")]
+        impactgeneratedmaterial,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("impure dolomite")]
+        impuredolomite,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("impure limestone")]
+        impurelimestone,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("intrusive rock (plutonic)")]
+        intrusiverockplutonic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("iron rich sedimentary rock")]
+        ironrichsedimentaryrock,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("kalsilitic and melilitic rocks")]
+        kalsiliticandmeliliticrocks,
+        
+        /// <remarks/>
+        kaolinite,
+        
+        /// <remarks/>
+        kaolinitic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("komatiitic rock")]
+        komatiiticrock,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("latitic rock")]
+        latiticrock,
+        
+        /// <remarks/>
+        lignite,
+        
+        /// <remarks/>
+        lignitic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lime boundstone")]
+        limeboundstone,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lime framestone")]
+        limeframestone,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lime grainstone")]
+        limegrainstone,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lime mudstone")]
+        limemudstone,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lime packstone")]
+        limepackstone,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lime wackestone")]
+        limewackestone,
+        
+        /// <remarks/>
+        limestone,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("limestone stringer")]
+        limestonestringer,
+        
+        /// <remarks/>
+        lithic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("lithic fragments")]
+        lithicfragments,
+        
+        /// <remarks/>
+        marble,
+        
+        /// <remarks/>
+        marcasite,
+        
+        /// <remarks/>
+        marcasitic,
+        
+        /// <remarks/>
+        marl,
+        
+        /// <remarks/>
+        marly,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("metamorphic rock")]
+        metamorphicrock,
+        
+        /// <remarks/>
+        mica,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mica schist")]
+        micaschist,
+        
+        /// <remarks/>
+        micaceous,
+        
+        /// <remarks/>
+        microfossiliferous,
+        
+        /// <remarks/>
+        microfossils,
+        
+        /// <remarks/>
+        migmatite,
+        
+        /// <remarks/>
+        migmatitic,
+        
+        /// <remarks/>
+        monzogabbro,
+        
+        /// <remarks/>
+        monzogabbroic,
+        
+        /// <remarks/>
+        mud,
+        
+        /// <remarks/>
+        muddy,
+        
+        /// <remarks/>
+        mudstone,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("mylonitic rock")]
+        myloniticrock,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("no sample")]
+        nosample,
+        
+        /// <remarks/>
+        oncolite,
+        
+        /// <remarks/>
+        oncoliths,
+        
+        /// <remarks/>
+        oncolitic,
+        
+        /// <remarks/>
+        ooids,
+        
+        /// <remarks/>
+        ooliths,
+        
+        /// <remarks/>
+        oolitic,
+        
+        /// <remarks/>
+        ooze,
+        
+        /// <remarks/>
+        ophiolite,
+        
+        /// <remarks/>
+        ophiolitic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("organic bearing mudstone")]
+        organicbearingmudstone,
+        
+        /// <remarks/>
+        ostracodal,
+        
+        /// <remarks/>
+        ostracods,
+        
+        /// <remarks/>
+        peat,
+        
+        /// <remarks/>
+        peaty,
+        
+        /// <remarks/>
+        pebble,
+        
+        /// <remarks/>
+        pebbly,
+        
+        /// <remarks/>
+        pegmatite,
+        
+        /// <remarks/>
+        pegmatitic,
+        
+        /// <remarks/>
+        pelletal,
+        
+        /// <remarks/>
+        pellets,
+        
+        /// <remarks/>
+        peloidal,
+        
+        /// <remarks/>
+        peloids,
+        
+        /// <remarks/>
+        peridotite,
+        
+        /// <remarks/>
+        peridotitic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("phaneritic igneous rock")]
+        phaneriticigneousrock,
+        
+        /// <remarks/>
+        phonolite,
+        
+        /// <remarks/>
+        phonolitic,
+        
+        /// <remarks/>
+        phonolitoid,
+        
+        /// <remarks/>
+        phosphate,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("phosphate rock")]
+        phosphaterock,
+        
+        /// <remarks/>
+        phosphatic,
+        
+        /// <remarks/>
+        phyllite,
+        
+        /// <remarks/>
+        phyllitic,
+        
+        /// <remarks/>
+        pisolite,
+        
+        /// <remarks/>
+        pisoliths,
+        
+        /// <remarks/>
+        pisolitic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("plant remains")]
+        plantremains,
+        
+        /// <remarks/>
+        porphyritic,
+        
+        /// <remarks/>
+        porphyry,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("potassium and magnesium salts")]
+        potassiumandmagnesiumsalts,
+        
+        /// <remarks/>
+        pyrite,
+        
+        /// <remarks/>
+        pyritic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pyroclastic breccia")]
+        pyroclasticbreccia,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("pyroclastic rock")]
+        pyroclasticrock,
+        
+        /// <remarks/>
+        pyroxenite,
+        
+        /// <remarks/>
+        pyroxenitic,
+        
+        /// <remarks/>
+        quartiferous,
+        
+        /// <remarks/>
+        quartz,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("quartz arenite")]
+        quartzarenite,
+        
+        /// <remarks/>
+        quartzite,
+        
+        /// <remarks/>
+        quartzitic,
+        
+        /// <remarks/>
+        radiolaria,
+        
+        /// <remarks/>
+        radiolarian,
+        
+        /// <remarks/>
+        rhyolite,
+        
+        /// <remarks/>
+        rhyolitic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("rock salt")]
+        rocksalt,
+        
+        /// <remarks/>
+        rootlets,
+        
+        /// <remarks/>
+        salty,
+        
+        /// <remarks/>
+        sand,
+        
+        /// <remarks/>
+        sandstone,
+        
+        /// <remarks/>
+        sandy,
+        
+        /// <remarks/>
+        sapropel,
+        
+        /// <remarks/>
+        sapropelic,
+        
+        /// <remarks/>
+        schist,
+        
+        /// <remarks/>
+        schisty,
+        
+        /// <remarks/>
+        sepentinitic,
+        
+        /// <remarks/>
+        serpentinite,
+        
+        /// <remarks/>
+        shale,
+        
+        /// <remarks/>
+        shaly,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("shell fragments")]
+        shellfragments,
+        
+        /// <remarks/>
+        shelly,
+        
+        /// <remarks/>
+        siderite,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("siderite concretion")]
+        sideriteconcretion,
+        
+        /// <remarks/>
+        sideritic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("siliceous ooze")]
+        siliceousooze,
+        
+        /// <remarks/>
+        silt,
+        
+        /// <remarks/>
+        siltstone,
+        
+        /// <remarks/>
+        silty,
+        
+        /// <remarks/>
+        skarn,
+        
+        /// <remarks/>
+        skarny,
+        
+        /// <remarks/>
+        slate,
+        
+        /// <remarks/>
+        slaty,
+        
+        /// <remarks/>
+        smectite,
+        
+        /// <remarks/>
+        smectitic,
+        
+        /// <remarks/>
+        spicular,
+        
+        /// <remarks/>
+        spicules,
+        
+        /// <remarks/>
+        spilite,
+        
+        /// <remarks/>
+        spilitic,
+        
+        /// <remarks/>
+        stylolites,
+        
+        /// <remarks/>
+        stylolitic,
+        
+        /// <remarks/>
+        syenite,
+        
+        /// <remarks/>
+        syenitic,
+        
+        /// <remarks/>
+        syenitoid,
+        
+        /// <remarks/>
+        sylvite,
+        
+        /// <remarks/>
+        sylvitic,
+        
+        /// <remarks/>
+        tarry,
+        
+        /// <remarks/>
+        tephrite,
+        
+        /// <remarks/>
+        tephritic,
+        
+        /// <remarks/>
+        tephritoid,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("tholeiitic basalt")]
+        tholeiiticbasalt,
+        
+        /// <remarks/>
+        tonalite,
+        
+        /// <remarks/>
+        tonalitic,
+        
+        /// <remarks/>
+        trachyte,
+        
+        /// <remarks/>
+        trachytic,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("trachytic rock")]
+        trachyticrock,
+        
+        /// <remarks/>
+        trachytoid,
+        
+        /// <remarks/>
+        travertine,
+        
+        /// <remarks/>
+        tuff,
+        
+        /// <remarks/>
+        tuffaceous,
+        
+        /// <remarks/>
+        tuffite,
+        
+        /// <remarks/>
+        tuffitic,
+        
+        /// <remarks/>
+        ultrabasic,
+        
+        /// <remarks/>
+        undifferentiated,
+        
+        /// <remarks/>
+        unknown,
+        
+        /// <remarks/>
+        wacke,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum WellStatus {
+        
+        /// <remarks/>
+        abandoned,
+        
+        /// <remarks/>
+        active,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("active -- injecting")]
+        activeinjecting,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("active -- producing")]
+        activeproducing,
+        
+        /// <remarks/>
+        completed,
+        
+        /// <remarks/>
+        drilling,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("partially plugged")]
+        partiallyplugged,
+        
+        /// <remarks/>
+        permitted,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("plugged and abandoned")]
+        pluggedandabandoned,
+        
+        /// <remarks/>
+        proposed,
+        
+        /// <remarks/>
+        sold,
+        
+        /// <remarks/>
+        suspended,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("temporarily abandoned")]
+        temporarilyabandoned,
+        
+        /// <remarks/>
+        testing,
+        
+        /// <remarks/>
+        tight,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("working over")]
+        workingover,
+        
+        /// <remarks/>
+        unknown,
     }
     
     /// <remarks/>
@@ -1342,12 +2971,12 @@ namespace Energistics.Generator.WITSML200 {
         Item1galUS,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1/H")]
-        Item1H,
-        
-        /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1/h")]
         Item1h,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/H")]
+        Item1H,
         
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1/in")]
@@ -1682,10 +3311,10 @@ namespace Energistics.Generator.WITSML200 {
         Item30m,
         
         /// <remarks/>
-        a,
+        A,
         
         /// <remarks/>
-        A,
+        a,
         
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("A.h")]
@@ -1775,10 +3404,10 @@ namespace Energistics.Generator.WITSML200 {
         atmm,
         
         /// <remarks/>
-        B,
+        b,
         
         /// <remarks/>
-        b,
+        B,
         
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("B.W")]
@@ -2081,10 +3710,10 @@ namespace Energistics.Generator.WITSML200 {
         Cmm3,
         
         /// <remarks/>
-        cA,
+        ca,
         
         /// <remarks/>
-        ca,
+        cA,
         
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("cal[IT]")]
@@ -2319,19 +3948,19 @@ namespace Energistics.Generator.WITSML200 {
         crd,
         
         /// <remarks/>
-        cs,
+        cS,
         
         /// <remarks/>
-        cS,
+        cs,
         
         /// <remarks/>
         cSt,
         
         /// <remarks/>
-        cT,
+        ct,
         
         /// <remarks/>
-        ct,
+        cT,
         
         /// <remarks/>
         cu,
@@ -2411,12 +4040,12 @@ namespace Energistics.Generator.WITSML200 {
         dB,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dB.MW")]
-        dBMW,
-        
-        /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("dB.mW")]
         dBmW,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("dB.MW")]
+        dBMW,
         
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("dB.W")]
@@ -2784,10 +4413,10 @@ namespace Energistics.Generator.WITSML200 {
         Fm,
         
         /// <remarks/>
-        fA,
+        fa,
         
         /// <remarks/>
-        fa,
+        fA,
         
         /// <remarks/>
         fathom,
@@ -3366,10 +4995,10 @@ namespace Energistics.Generator.WITSML200 {
         Gm,
         
         /// <remarks/>
-        gn,
+        GN,
         
         /// <remarks/>
-        GN,
+        gn,
         
         /// <remarks/>
         Gohm,
@@ -4726,10 +6355,10 @@ namespace Energistics.Generator.WITSML200 {
         m4s,
         
         /// <remarks/>
-        MA,
+        mA,
         
         /// <remarks/>
-        mA,
+        MA,
         
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("mA/cm2")]
@@ -4760,12 +6389,12 @@ namespace Energistics.Generator.WITSML200 {
         mCm2,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Mcal[th]")]
-        Mcalth,
-        
-        /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("mcal[th]")]
         mcalth,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mcal[th]")]
+        Mcalth,
         
         /// <remarks/>
         mCi,
@@ -4798,10 +6427,10 @@ namespace Energistics.Generator.WITSML200 {
         mDcP,
         
         /// <remarks/>
-        mEuc,
+        MEuc,
         
         /// <remarks/>
-        MEuc,
+        mEuc,
         
         /// <remarks/>
         meV,
@@ -4816,10 +6445,10 @@ namespace Energistics.Generator.WITSML200 {
         mF,
         
         /// <remarks/>
-        Mg,
+        mg,
         
         /// <remarks/>
-        mg,
+        Mg,
         
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("Mg/a")]
@@ -4866,12 +6495,12 @@ namespace Energistics.Generator.WITSML200 {
         Mgm2,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Mg/m3")]
-        Mgm3,
-        
-        /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("mg/m3")]
         mgm3,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mg/m3")]
+        Mgm3,
         
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("Mg/min")]
@@ -4881,10 +6510,10 @@ namespace Energistics.Generator.WITSML200 {
         mGal,
         
         /// <remarks/>
-        Mgauss,
+        mgauss,
         
         /// <remarks/>
-        mgauss,
+        Mgauss,
         
         /// <remarks/>
         Mgf,
@@ -4899,10 +6528,10 @@ namespace Energistics.Generator.WITSML200 {
         mGy,
         
         /// <remarks/>
-        MH,
+        mH,
         
         /// <remarks/>
-        mH,
+        MH,
         
         /// <remarks/>
         mHz,
@@ -4980,10 +6609,10 @@ namespace Energistics.Generator.WITSML200 {
         mina,
         
         /// <remarks/>
-        MJ,
+        mJ,
         
         /// <remarks/>
-        mJ,
+        MJ,
         
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("MJ/a")]
@@ -5092,10 +6721,10 @@ namespace Energistics.Generator.WITSML200 {
         mNm,
         
         /// <remarks/>
-        mohm,
+        Mohm,
         
         /// <remarks/>
-        Mohm,
+        mohm,
         
         /// <remarks/>
         mol,
@@ -5125,10 +6754,10 @@ namespace Energistics.Generator.WITSML200 {
         mols,
         
         /// <remarks/>
-        mP,
+        MP,
         
         /// <remarks/>
-        MP,
+        mP,
         
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("mPa")]
@@ -5157,10 +6786,10 @@ namespace Energistics.Generator.WITSML200 {
         Mpsi,
         
         /// <remarks/>
-        mrad,
+        Mrad,
         
         /// <remarks/>
-        Mrad,
+        mrad,
         
         /// <remarks/>
         mrd,
@@ -5176,14 +6805,14 @@ namespace Energistics.Generator.WITSML200 {
         mremh,
         
         /// <remarks/>
-        mS,
-        
-        /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("ms")]
         ms1,
         
         /// <remarks/>
         MS,
+        
+        /// <remarks/>
+        mS,
         
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("mS/cm")]
@@ -5202,12 +6831,12 @@ namespace Energistics.Generator.WITSML200 {
         msin,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ms/m")]
-        msm,
-        
-        /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("mS/m")]
         mSm,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ms/m")]
+        msm,
         
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("ms/s")]
@@ -5264,10 +6893,10 @@ namespace Energistics.Generator.WITSML200 {
         mWm2,
         
         /// <remarks/>
-        mWb,
+        MWb,
         
         /// <remarks/>
-        MWb,
+        mWb,
         
         /// <remarks/>
         N,
@@ -5309,10 +6938,10 @@ namespace Energistics.Generator.WITSML200 {
         NN,
         
         /// <remarks/>
-        nA,
+        na,
         
         /// <remarks/>
-        na,
+        nA,
         
         /// <remarks/>
         nAPI,
@@ -5393,10 +7022,10 @@ namespace Energistics.Generator.WITSML200 {
         nrd,
         
         /// <remarks/>
-        nS,
+        ns,
         
         /// <remarks/>
-        ns,
+        nS,
         
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("ns/ft")]
@@ -6376,719 +8005,1538 @@ namespace Energistics.Generator.WITSML200 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum MeasureClass {
+    public enum GeochronologicalRank {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("absorbed dose")]
-        absorbeddose,
+        eon,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("activity of radioactivity")]
-        activityofradioactivity,
+        era,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("amount of substance")]
-        amountofsubstance,
+        period,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per amount of substance")]
-        amountofsubstanceperamountofsubstance,
+        epoch,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per area")]
-        amountofsubstanceperarea,
+        age,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per time")]
-        amountofsubstancepertime,
+        chron,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LithologyKind {
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per time per area")]
-        amountofsubstancepertimeperarea,
+        [System.Xml.Serialization.XmlEnumAttribute("alkali feldspar rhyolite")]
+        alkalifeldsparrhyolite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per volume")]
-        amountofsubstancepervolume,
+        [System.Xml.Serialization.XmlEnumAttribute("alkali olivine basalt")]
+        alkaliolivinebasalt,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("angle per length")]
-        angleperlength,
+        amphibolite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("angle per volume")]
-        anglepervolume,
+        andesite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("angular acceleration")]
-        angularacceleration,
+        anhydrite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("angular velocity")]
-        angularvelocity,
+        [System.Xml.Serialization.XmlEnumAttribute("anorthositic rock")]
+        anorthositicrock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("api gamma ray")]
-        apigammaray,
+        anthracite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("api gravity")]
-        apigravity,
+        aplite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("api neutron")]
-        apineutron,
+        arenite,
         
         /// <remarks/>
-        area,
+        argillaceous,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("area per amount of substance")]
-        areaperamountofsubstance,
+        arkose,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("area per area")]
-        areaperarea,
+        basalt,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("area per count")]
-        areapercount,
+        basanite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("area per mass")]
-        areapermass,
+        bauxite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("area per time")]
-        areapertime,
+        [System.Xml.Serialization.XmlEnumAttribute("bituminous coal")]
+        bituminouscoal,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("area per volume")]
-        areapervolume,
+        [System.Xml.Serialization.XmlEnumAttribute("blueschist metamorphic rock")]
+        blueschistmetamorphicrock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("attenuation per frequency interval")]
-        attenuationperfrequencyinterval,
+        boninite,
         
         /// <remarks/>
-        capacitance,
+        breccia,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cation exchange capacity")]
-        cationexchangecapacity,
+        [System.Xml.Serialization.XmlEnumAttribute("carbonate ooze")]
+        carbonateooze,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("data transfer speed")]
-        datatransferspeed,
+        carbonatite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("diffusion coefficient")]
-        diffusioncoefficient,
+        chalk,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("diffusive time of flight")]
-        diffusivetimeofflight,
+        chert,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("digital storage")]
-        digitalstorage,
+        clay,
         
         /// <remarks/>
-        dimensionless,
+        claystone,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dipole moment")]
-        dipolemoment,
+        coal,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dose equivalent")]
-        doseequivalent,
+        conglomerate,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dynamic viscosity")]
-        dynamicviscosity,
+        dacite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric charge")]
-        electriccharge,
+        diabase,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric charge per area")]
-        electricchargeperarea,
+        diamictite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric charge per mass")]
-        electricchargepermass,
+        diorite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric charge per volume")]
-        electricchargepervolume,
+        dioritoid,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric conductance")]
-        electricconductance,
+        [System.Xml.Serialization.XmlEnumAttribute("doleritic rock")]
+        doleriticrock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric conductivity")]
-        electricconductivity,
+        dolomite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric current")]
-        electriccurrent,
+        dolomitic,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric current density")]
-        electriccurrentdensity,
+        eclogite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric field strength")]
-        electricfieldstrength,
+        [System.Xml.Serialization.XmlEnumAttribute("exotic alkaline rock")]
+        exoticalkalinerock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric potential difference")]
-        electricpotentialdifference,
+        feldspar,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric resistance")]
-        electricresistance,
+        [System.Xml.Serialization.XmlEnumAttribute("feldspathic arenite")]
+        feldspathicarenite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric resistance per length")]
-        electricresistanceperlength,
+        [System.Xml.Serialization.XmlEnumAttribute("fine grained igneous rock")]
+        finegrainedigneousrock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electrical resistivity")]
-        electricalresistivity,
+        [System.Xml.Serialization.XmlEnumAttribute("foid dioritoid")]
+        foiddioritoid,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electromagnetic moment")]
-        electromagneticmoment,
+        [System.Xml.Serialization.XmlEnumAttribute("foid gabbroid")]
+        foidgabbroid,
         
         /// <remarks/>
-        energy,
+        [System.Xml.Serialization.XmlEnumAttribute("foid syenitoid")]
+        foidsyenitoid,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("energy length per area")]
-        energylengthperarea,
+        foidite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("energy length per time area temperature")]
-        energylengthpertimeareatemperature,
+        foiditoid,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("energy per area")]
-        energyperarea,
+        foidolite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("energy per length")]
-        energyperlength,
+        [System.Xml.Serialization.XmlEnumAttribute("foliated metamorphic rock")]
+        foliatedmetamorphicrock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("energy per mass")]
-        energypermass,
+        [System.Xml.Serialization.XmlEnumAttribute("fragmental igneous rock")]
+        fragmentaligneousrock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("energy per mass per time")]
-        energypermasspertime,
+        gabbro,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("energy per volume")]
-        energypervolume,
+        [System.Xml.Serialization.XmlEnumAttribute("gabbroic rock")]
+        gabbroicrock,
         
         /// <remarks/>
-        force,
+        gabbroid,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("force area")]
-        forcearea,
+        glauconite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("force length per length")]
-        forcelengthperlength,
+        gneiss,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("force per force")]
-        forceperforce,
+        granite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("force per length")]
-        forceperlength,
+        granodiorite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("force per volume")]
-        forcepervolume,
+        granofels,
         
         /// <remarks/>
-        frequency,
+        granulite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("frequency interval")]
-        frequencyinterval,
+        gravel,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("heat capacity")]
-        heatcapacity,
+        greenstone,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("heat flow rate")]
-        heatflowrate,
+        gumbo,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("heat transfer coefficient")]
-        heattransfercoefficient,
+        gypsum,
         
         /// <remarks/>
-        illuminance,
+        halite,
         
         /// <remarks/>
-        inductance,
+        hornfels,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("isothermal compressibility")]
-        isothermalcompressibility,
+        [System.Xml.Serialization.XmlEnumAttribute("igneous rock")]
+        igneousrock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kinematic viscosity")]
-        kinematicviscosity,
+        [System.Xml.Serialization.XmlEnumAttribute("impact generated material")]
+        impactgeneratedmaterial,
         
         /// <remarks/>
-        length,
+        [System.Xml.Serialization.XmlEnumAttribute("impure dolomite")]
+        impuredolomite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("length per length")]
-        lengthperlength,
+        [System.Xml.Serialization.XmlEnumAttribute("impure limestone")]
+        impurelimestone,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("length per mass")]
-        lengthpermass,
+        [System.Xml.Serialization.XmlEnumAttribute("intrusive rock (plutonic)")]
+        intrusiverockplutonic,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("length per pressure")]
-        lengthperpressure,
+        [System.Xml.Serialization.XmlEnumAttribute("iron rich sedimentary rock")]
+        ironrichsedimentaryrock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("length per temperature")]
-        lengthpertemperature,
+        [System.Xml.Serialization.XmlEnumAttribute("kalsilitic and melilitic rocks")]
+        kalsiliticandmeliliticrocks,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("length per time")]
-        lengthpertime,
+        [System.Xml.Serialization.XmlEnumAttribute("komatiitic rock")]
+        komatiiticrock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("length per volume")]
-        lengthpervolume,
+        [System.Xml.Serialization.XmlEnumAttribute("latitic rock")]
+        latiticrock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("light exposure")]
-        lightexposure,
+        lignite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("linear acceleration")]
-        linearacceleration,
+        [System.Xml.Serialization.XmlEnumAttribute("lime boundstone")]
+        limeboundstone,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("linear thermal expansion")]
-        linearthermalexpansion,
+        [System.Xml.Serialization.XmlEnumAttribute("lime framestone")]
+        limeframestone,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("logarithmic power ratio")]
-        logarithmicpowerratio,
+        [System.Xml.Serialization.XmlEnumAttribute("lime grainstone")]
+        limegrainstone,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("logarithmic power ratio per length")]
-        logarithmicpowerratioperlength,
+        [System.Xml.Serialization.XmlEnumAttribute("lime mudstone")]
+        limemudstone,
         
         /// <remarks/>
-        luminance,
+        [System.Xml.Serialization.XmlEnumAttribute("lime packstone")]
+        limepackstone,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("luminous efficacy")]
-        luminousefficacy,
+        [System.Xml.Serialization.XmlEnumAttribute("lime wackestone")]
+        limewackestone,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("luminous flux")]
-        luminousflux,
+        limestone,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("luminous intensity")]
-        luminousintensity,
+        marble,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic dipole moment")]
-        magneticdipolemoment,
+        marl,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic field strength")]
-        magneticfieldstrength,
+        [System.Xml.Serialization.XmlEnumAttribute("metamorphic rock")]
+        metamorphicrock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic flux")]
-        magneticflux,
+        [System.Xml.Serialization.XmlEnumAttribute("mica schist")]
+        micaschist,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic flux density")]
-        magneticfluxdensity,
+        migmatite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic flux density per length")]
-        magneticfluxdensityperlength,
+        monzogabbro,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic permeability")]
-        magneticpermeability,
+        mud,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic vector potential")]
-        magneticvectorpotential,
+        mudstone,
         
         /// <remarks/>
-        mass,
+        [System.Xml.Serialization.XmlEnumAttribute("mylonitic rock")]
+        myloniticrock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass length")]
-        masslength,
+        [System.Xml.Serialization.XmlEnumAttribute("no description")]
+        nodescription,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per area")]
-        massperarea,
+        [System.Xml.Serialization.XmlEnumAttribute("no sample")]
+        nosample,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per energy")]
-        massperenergy,
+        ooze,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per length")]
-        massperlength,
+        ophiolite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per mass")]
-        masspermass,
+        [System.Xml.Serialization.XmlEnumAttribute("organic bearing mudstone")]
+        organicbearingmudstone,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per time")]
-        masspertime,
+        peat,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per time per area")]
-        masspertimeperarea,
+        pegmatite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per time per length")]
-        masspertimeperlength,
+        peridotite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per volume")]
-        masspervolume,
+        [System.Xml.Serialization.XmlEnumAttribute("phaneritic igneous rock")]
+        phaneriticigneousrock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per volume per length")]
-        masspervolumeperlength,
+        phonolite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per volume per pressure")]
-        masspervolumeperpressure,
+        phonolitoid,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per volume per temperature")]
-        masspervolumepertemperature,
+        phosphate,
         
         /// <remarks/>
-        mobility,
+        [System.Xml.Serialization.XmlEnumAttribute("phosphate rock")]
+        phosphaterock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("molar energy")]
-        molarenergy,
+        phyllite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("molar heat capacity")]
-        molarheatcapacity,
+        porphyry,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("molar volume")]
-        molarvolume,
+        [System.Xml.Serialization.XmlEnumAttribute("potassium and magnesium salts")]
+        potassiumandmagnesiumsalts,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("molecular weight")]
-        molecularweight,
+        [System.Xml.Serialization.XmlEnumAttribute("pyroclastic breccia")]
+        pyroclasticbreccia,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("moment of force")]
-        momentofforce,
+        [System.Xml.Serialization.XmlEnumAttribute("pyroclastic rock")]
+        pyroclasticrock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("moment of inertia")]
-        momentofinertia,
+        pyroxenite,
         
         /// <remarks/>
-        momentum,
+        [System.Xml.Serialization.XmlEnumAttribute("quartz arenite")]
+        quartzarenite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("normalized power")]
-        normalizedpower,
+        quartzite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("permeability length")]
-        permeabilitylength,
+        rhyolite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("permeability rock")]
-        permeabilityrock,
+        [System.Xml.Serialization.XmlEnumAttribute("rock salt")]
+        rocksalt,
         
         /// <remarks/>
-        permittivity,
+        sand,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("plane angle")]
-        planeangle,
+        sandstone,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("potential difference per power drop")]
-        potentialdifferenceperpowerdrop,
+        sandy,
         
         /// <remarks/>
-        power,
+        sapropel,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("power per area")]
-        powerperarea,
+        schist,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("power per power")]
-        powerperpower,
+        serpentinite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("power per volume")]
-        powerpervolume,
+        shale,
         
         /// <remarks/>
-        pressure,
+        [System.Xml.Serialization.XmlEnumAttribute("siliceous ooze")]
+        siliceousooze,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure per pressure")]
-        pressureperpressure,
+        silt,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure per time")]
-        pressurepertime,
+        siltstone,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure per volume")]
-        pressurepervolume,
+        skarn,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure squared")]
-        pressuresquared,
+        slate,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure squared per force time per area")]
-        pressuresquaredperforcetimeperarea,
+        spilite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure time per volume")]
-        pressuretimepervolume,
+        syenite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("quantity of light")]
-        quantityoflight,
+        syenitoid,
         
         /// <remarks/>
-        radiance,
+        sylvite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("radiant intensity")]
-        radiantintensity,
+        tephrite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal area")]
-        reciprocalarea,
+        tephritoid,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal electric potential difference")]
-        reciprocalelectricpotentialdifference,
+        [System.Xml.Serialization.XmlEnumAttribute("tholeiitic basalt")]
+        tholeiiticbasalt,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal force")]
-        reciprocalforce,
+        tonalite,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal length")]
-        reciprocallength,
+        trachyte,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal mass")]
-        reciprocalmass,
+        [System.Xml.Serialization.XmlEnumAttribute("trachytic rock")]
+        trachyticrock,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal mass time")]
-        reciprocalmasstime,
+        trachytoid,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal pressure")]
-        reciprocalpressure,
+        travertine,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal time")]
-        reciprocaltime,
+        tuff,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal volume")]
-        reciprocalvolume,
+        tuffite,
         
         /// <remarks/>
-        reluctance,
+        ultrabasic,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("second moment of area")]
-        secondmomentofarea,
+        undifferentiated,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("signaling event per time")]
-        signalingeventpertime,
+        unknown,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("solid angle")]
-        solidangle,
+        wacke,
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreMarkerSet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreMarker))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreCompletion))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCompletion))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToolErrorTermSet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurveyProgram))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimJobStage))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimJob))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimPerforationCluster))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Risk))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Rig))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RigUtilization))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MudLogReport))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CuttingsGeologyInterval))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CuttingsGeology))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InterpretedGeologyInterval))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InterpretedGeology))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ShowEvaluationInterval))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ShowEvaluation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreGeology))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DepthRegImage))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCMLedger))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpsReport))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Trajectory))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToolErrorModel))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DownholeComponent))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementJob))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementJobEvaluation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreGeometry))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Log))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Channel))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChannelSet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BhaRun))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidsReport))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DrillReport))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Tubular))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Attachment))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Wellbore))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Well))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GraphicalInformationSet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DataAssuranceRecord))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ActivityTemplate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Activity))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeSeries))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyKind))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyKindDictionary))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EpcExternalPartReference))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractDataObject", Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    public abstract partial class AbstractObject {
         
+        private ObjectAlias[] aliasesField;
+        
+        private Citation citationField;
+        
+        private CustomData customDataField;
+        
+        private ExtensionNameValue[] extensionNameValueField;
+        
+        private string objectVersionField;
+        
+        private string schemaVersionField;
+        
+        private string uuidField;
+        
+        private ExistenceKind existenceKindField;
+        
+        private bool existenceKindFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Aliases")]
+        public ObjectAlias[] Aliases {
+            get {
+                return this.aliasesField;
+            }
+            set {
+                this.aliasesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public Citation Citation {
+            get {
+                return this.citationField;
+            }
+            set {
+                this.citationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CustomData CustomData {
+            get {
+                return this.customDataField;
+            }
+            set {
+                this.customDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
+        public ExtensionNameValue[] ExtensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        public string objectVersion {
+            get {
+                return this.objectVersionField;
+            }
+            set {
+                this.objectVersionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        public string schemaVersion {
+            get {
+                return this.schemaVersionField;
+            }
+            set {
+                this.schemaVersionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
+        public string uuid {
+            get {
+                return this.uuidField;
+            }
+            set {
+                this.uuidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A lifecycle state like actual, required, planned, predicted, etc. This is used to qualify any top-level element (from Epicentre 2.1).</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DescriptionAttribute("A lifecycle state like actual, required, planned, predicted, etc. This is used to" +
+            " qualify any top-level element (from Epicentre 2.1).")]
+        public ExistenceKind existenceKind {
+            get {
+                return this.existenceKindField;
+            }
+            set {
+                this.existenceKindField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool existenceKindSpecified {
+            get {
+                return this.existenceKindFieldSpecified;
+            }
+            set {
+                this.existenceKindFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class ObjectAlias {
+        
+        private string identifierField;
+        
+        private string descriptionField;
+        
+        private string authorityField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        public string Identifier {
+            get {
+                return this.identifierField;
+            }
+            set {
+                this.identifierField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        public string authority {
+            get {
+                return this.authorityField;
+            }
+            set {
+                this.authorityField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class GravelPackInterval {
+        
+        private string downholeStringReferenceIdField;
+        
+        private MdInterval gravelPackMdIntervalField;
+        
+        private TvdInterval gravelPackTvdIntervalField;
+        
+        private EventInfo eventHistoryField;
+        
+        private string[] geologyFeatureReferenceIdField;
+        
+        private ExtensionNameValue[] extensionNameValueField;
+        
+        private IntervalStatusHistory[] statusHistoryField;
+        
+        private string uidField;
+        
+        /// <remarks/>
+        /// <summary>Reference to the downhole string that denotes the interval of the gravel pack.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Reference to the downhole string that denotes the interval of the gravel pack.")]
+        public string DownholeStringReferenceId {
+            get {
+                return this.downholeStringReferenceIdField;
+            }
+            set {
+                this.downholeStringReferenceIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Gravel packed measured depth interval for this completion.</summary>
+        [System.ComponentModel.DescriptionAttribute("Gravel packed measured depth interval for this completion.")]
+        public MdInterval GravelPackMdInterval {
+            get {
+                return this.gravelPackMdIntervalField;
+            }
+            set {
+                this.gravelPackMdIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Gravel packed true vertical depth interval for this completion.</summary>
+        [System.ComponentModel.DescriptionAttribute("Gravel packed true vertical depth interval for this completion.")]
+        public TvdInterval GravelPackTvdInterval {
+            get {
+                return this.gravelPackTvdIntervalField;
+            }
+            set {
+                this.gravelPackTvdIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The contactInterval event information.</summary>
+        [System.ComponentModel.DescriptionAttribute("The contactInterval event information.")]
+        public EventInfo EventHistory {
+            get {
+                return this.eventHistoryField;
+            }
+            set {
+                this.eventHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Reference to a geology feature.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("GeologyFeatureReferenceId")]
+        [System.ComponentModel.DescriptionAttribute("Reference to a geology feature.")]
+        public string[] GeologyFeatureReferenceId {
+            get {
+                return this.geologyFeatureReferenceIdField;
+            }
+            set {
+                this.geologyFeatureReferenceIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public ExtensionNameValue[] ExtensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("StatusHistory")]
+        public IntervalStatusHistory[] StatusHistory {
+            get {
+                return this.statusHistoryField;
+            }
+            set {
+                this.statusHistoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unique identifier for this instance of GravelPackInterval.</summary>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Unique identifier for this instance of GravelPackInterval.")]
+        public string uid {
+            get {
+                return this.uidField;
+            }
+            set {
+                this.uidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class MdInterval {
+        
+        private LengthMeasure mdTopField;
+        
+        private LengthMeasure mdBaseField;
+        
+        private string datumField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public LengthMeasure MdTop {
+            get {
+                return this.mdTopField;
+            }
+            set {
+                this.mdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public LengthMeasure MdBase {
+            get {
+                return this.mdBaseField;
+            }
+            set {
+                this.mdBaseField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        public string datum {
+            get {
+                return this.datumField;
+            }
+            set {
+                this.datumField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class LengthMeasure {
+        
+        private LengthUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public LengthUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum LengthUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.1 ft")]
+        Item01ft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.1 ft[US]")]
+        Item01ftUS,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.1 in")]
+        Item01in,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.1 yd")]
+        Item01yd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/16 in")]
+        Item116in,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/2 ft")]
+        Item12ft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/32 in")]
+        Item132in,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/64 in")]
+        Item164in,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("10 ft")]
+        Item10ft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("10 in")]
+        Item10in,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("10 km")]
+        Item10km,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("100 ft")]
+        Item100ft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("100 km")]
+        Item100km,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1000 ft")]
+        Item1000ft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("30 ft")]
+        Item30ft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("30 m")]
+        Item30m,
+        
+        /// <remarks/>
+        angstrom,
+        
+        /// <remarks/>
+        chain,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("chain[BnA]")]
+        chainBnA,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("chain[BnB]")]
+        chainBnB,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("chain[Cla]")]
+        chainCla,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("chain[Ind37]")]
+        chainInd37,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("chain[Se]")]
+        chainSe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("chain[SeT]")]
+        chainSeT,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("chain[US]")]
+        chainUS,
+        
+        /// <remarks/>
+        cm,
+        
+        /// <remarks/>
+        dam,
+        
+        /// <remarks/>
+        dm,
+        
+        /// <remarks/>
+        Em,
+        
+        /// <remarks/>
+        fathom,
+        
+        /// <remarks/>
+        fm,
+        
+        /// <remarks/>
+        ft,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft[BnA]")]
+        ftBnA,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft[BnB]")]
+        ftBnB,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft[Br36]")]
+        ftBr36,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft[Br65]")]
+        ftBr65,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft[Cla]")]
+        ftCla,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft[GC]")]
+        ftGC,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft[Ind]")]
+        ftInd,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft[Ind37]")]
+        ftInd37,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft[Ind62]")]
+        ftInd62,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft[Ind75]")]
+        ftInd75,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft[Se]")]
+        ftSe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft[SeT]")]
+        ftSeT,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ft[US]")]
+        ftUS,
+        
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("specific heat capacity")]
-        specificheatcapacity,
+        [System.Xml.Serialization.XmlEnumAttribute("fur[US]")]
+        furUS,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("temperature interval")]
-        temperatureinterval,
+        Gm,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("temperature interval per length")]
-        temperatureintervalperlength,
+        hm,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("temperature interval per pressure")]
-        temperatureintervalperpressure,
+        @in,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("temperature interval per time")]
-        temperatureintervalpertime,
+        [System.Xml.Serialization.XmlEnumAttribute("in[US]")]
+        inUS,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("thermal conductance")]
-        thermalconductance,
+        km,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("thermal conductivity")]
-        thermalconductivity,
+        link,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("thermal diffusivity")]
-        thermaldiffusivity,
+        [System.Xml.Serialization.XmlEnumAttribute("link[BnA]")]
+        linkBnA,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("thermal insulance")]
-        thermalinsulance,
+        [System.Xml.Serialization.XmlEnumAttribute("link[BnB]")]
+        linkBnB,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("thermal resistance")]
-        thermalresistance,
+        [System.Xml.Serialization.XmlEnumAttribute("link[Cla]")]
+        linkCla,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("thermodynamic temperature")]
-        thermodynamictemperature,
+        [System.Xml.Serialization.XmlEnumAttribute("link[Se]")]
+        linkSe,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("thermodynamic temperature per thermodynamic temperature")]
-        thermodynamictemperatureperthermodynamictemperature,
+        [System.Xml.Serialization.XmlEnumAttribute("link[SeT]")]
+        linkSeT,
         
         /// <remarks/>
-        time,
+        [System.Xml.Serialization.XmlEnumAttribute("link[US]")]
+        linkUS,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("time per length")]
-        timeperlength,
+        m,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("time per mass")]
-        timepermass,
+        [System.Xml.Serialization.XmlEnumAttribute("m[Ger]")]
+        mGer,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("time per time")]
-        timepertime,
+        mi,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("time per volume")]
-        timepervolume,
+        [System.Xml.Serialization.XmlEnumAttribute("mi[naut]")]
+        minaut,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("vertical coordinate")]
-        verticalcoordinate,
+        [System.Xml.Serialization.XmlEnumAttribute("mi[nautUK]")]
+        minautUK,
         
         /// <remarks/>
-        volume,
+        [System.Xml.Serialization.XmlEnumAttribute("mi[US]")]
+        miUS,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume flow rate per volume flow rate")]
-        volumeflowratepervolumeflowrate,
+        mil,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per area")]
-        volumeperarea,
+        mm,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per length")]
-        volumeperlength,
+        Mm,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per mass")]
-        volumepermass,
+        nm,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per pressure")]
-        volumeperpressure,
+        pm,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per rotation")]
-        volumeperrotation,
+        [System.Xml.Serialization.XmlEnumAttribute("rod[US]")]
+        rodUS,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per time")]
-        volumepertime,
+        Tm,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per time length")]
-        volumepertimelength,
+        um,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per time per area")]
-        volumepertimeperarea,
+        yd,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per time per length")]
-        volumepertimeperlength,
+        [System.Xml.Serialization.XmlEnumAttribute("yd[BnA]")]
+        ydBnA,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per time per pressure")]
-        volumepertimeperpressure,
+        [System.Xml.Serialization.XmlEnumAttribute("yd[BnB]")]
+        ydBnB,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per time per pressure length")]
-        volumepertimeperpressurelength,
+        [System.Xml.Serialization.XmlEnumAttribute("yd[Cla]")]
+        ydCla,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per time per time")]
-        volumepertimepertime,
+        [System.Xml.Serialization.XmlEnumAttribute("yd[Ind]")]
+        ydInd,
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per time per volume")]
-        volumepertimepervolume,
+        [System.Xml.Serialization.XmlEnumAttribute("yd[Ind37]")]
+        ydInd37,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("yd[Ind62]")]
+        ydInd62,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("yd[Ind75]")]
+        ydInd75,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("yd[Se]")]
+        ydSe,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("yd[SeT]")]
+        ydSeT,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("yd[US]")]
+        ydUS,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class TvdInterval {
+        
+        private LengthMeasure tvdTopField;
+        
+        private LengthMeasure tvdBaseField;
+        
+        private string datumField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public LengthMeasure TvdTop {
+            get {
+                return this.tvdTopField;
+            }
+            set {
+                this.tvdTopField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>True vertical depth at the base of the interval</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("True vertical depth at the base of the interval")]
+        public LengthMeasure TvdBase {
+            get {
+                return this.tvdBaseField;
+            }
+            set {
+                this.tvdBaseField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        public string datum {
+            get {
+                return this.datumField;
+            }
+            set {
+                this.datumField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
+    public partial class EventInfo {
+        
+        private ExtensionNameValue[] extensionNameValueField;
+        
+        private EventRefInfo beginEventField;
+        
+        private EventRefInfo endEventField;
+        
+        /// <remarks/>
+        /// <summary>Extensions to the schema based on a name-value construct.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("ExtensionNameValue")]
+        [System.ComponentModel.DescriptionAttribute("Extensions to the schema based on a name-value construct.")]
+        public ExtensionNameValue[] ExtensionNameValue {
+            get {
+                return this.extensionNameValueField;
+            }
+            set {
+                this.extensionNameValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public EventRefInfo BeginEvent {
+            get {
+                return this.beginEventField;
+            }
+            set {
+                this.beginEventField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public EventRefInfo EndEvent {
+            get {
+                return this.endEventField;
+            }
+            set {
+                this.endEventField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class ExtensionNameValue {
+        
+        private string nameField;
+        
+        private StringMeasure valueField;
+        
+        private MeasureClass measureClassField;
+        
+        private bool measureClassFieldSpecified;
+        
+        private Energistics.SchemaGatherer.Timestamp dTimField;
+        
+        private int indexField;
+        
+        private bool indexFieldSpecified;
+        
+        private string descriptionField;
+        
+        /// <remarks/>
+        /// <summary>The name of the extension. Each standard name should document the expected measure class. Each standard name should document the expected maximum size.  For numeric values the size should be in terms of xsd types such as int, long, short, byte, float or double. For strings, the maximum length should be defined in number of characters. Local extensions to the list of standard names are allowed but it is strongly recommended that the names and definitions be approved by the  respective SIG Technical Team before use.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute(@"The name of the extension. Each standard name should document the expected measure class. Each standard name should document the expected maximum size.  For numeric values the size should be in terms of xsd types such as int, long, short, byte, float or double. For strings, the maximum length should be defined in number of characters. Local extensions to the list of standard names are allowed but it is strongly recommended that the names and definitions be approved by the  respective SIG Technical Team before use.")]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The value of the extension. This may also include a uom attribute. The content should conform to constraints defined by the data type.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The value of the extension. This may also include a uom attribute. The content sh" +
+            "ould conform to constraints defined by the data type.")]
+        public StringMeasure Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The kind of the measure. For example, "length". This should be specified if the value requires a unit of measure.</summary>
+        [System.ComponentModel.DescriptionAttribute("The kind of the measure. For example, \"length\". This should be specified if the v" +
+            "alue requires a unit of measure.")]
+        public MeasureClass MeasureClass {
+            get {
+                return this.measureClassField;
+            }
+            set {
+                this.measureClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool MeasureClassSpecified {
+            get {
+                return this.measureClassFieldSpecified;
+            }
+            set {
+                this.measureClassFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The date-time associated with the value.</summary>
+        [System.ComponentModel.DescriptionAttribute("The date-time associated with the value.")]
+        public Energistics.SchemaGatherer.Timestamp DTim {
+            get {
+                return this.dTimField;
+            }
+            set {
+                this.dTimField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Indexes things with the same name.  That is, 1 indicates the first one, 2 indicates the second one, etc.</summary>
+        [System.ComponentModel.DescriptionAttribute("Indexes things with the same name.  That is, 1 indicates the first one, 2 indicat" +
+            "es the second one, etc.")]
+        public int Index {
+            get {
+                return this.indexField;
+            }
+            set {
+                this.indexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool IndexSpecified {
+            get {
+                return this.indexFieldSpecified;
+            }
+            set {
+                this.indexFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A textual description of the extension.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("A textual description of the extension.")]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class StringMeasure {
+        
+        private UnitOfMeasure uomField;
+        
+        private bool uomFieldSpecified;
+        
+        private string valueField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per volume")]
-        volumepervolume,
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public UnitOfMeasure uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volumetric heat transfer coefficient")]
-        volumetricheattransfercoefficient,
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool uomSpecified {
+            get {
+                return this.uomFieldSpecified;
+            }
+            set {
+                this.uomFieldSpecified = value;
+            }
+        }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volumetric thermal expansion")]
-        volumetricthermalexpansion,
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -8890,22 +11338,6 @@ namespace Energistics.Generator.WITSML200 {
                 this.uidField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum ExistenceKind {
-        
-        /// <remarks/>
-        actual,
-        
-        /// <remarks/>
-        planned,
-        
-        /// <remarks/>
-        simulated,
     }
     
     /// <remarks/>
@@ -12293,6 +14725,28 @@ namespace Energistics.Generator.WITSML200 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class UnitlessMeasure {
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class StimFluid {
         
@@ -12330,7 +14784,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private DynamicViscosityMeasure viscosityField;
         
-        private DimensionlessMeasure phField;
+        private UnitlessMeasure phField;
         
         private StimMaterialQuantity[] additiveConcentrationField;
         
@@ -12544,7 +14998,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The pH of the fluid.</summary>
         [System.ComponentModel.DescriptionAttribute("The pH of the fluid.")]
-        public DimensionlessMeasure PH {
+        public UnitlessMeasure pH {
             get {
                 return this.phField;
             }
@@ -23985,40 +26439,6 @@ namespace Energistics.Generator.WITSML200 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum MatrixCementKind {
-        
-        /// <remarks/>
-        ankerite,
-        
-        /// <remarks/>
-        calcite,
-        
-        /// <remarks/>
-        chlorite,
-        
-        /// <remarks/>
-        dolomite,
-        
-        /// <remarks/>
-        illite,
-        
-        /// <remarks/>
-        kaolinite,
-        
-        /// <remarks/>
-        quartz,
-        
-        /// <remarks/>
-        siderite,
-        
-        /// <remarks/>
-        smectite,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
@@ -24506,25 +26926,6 @@ namespace Energistics.Generator.WITSML200 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum LithostratigraphicRank {
-        
-        /// <remarks/>
-        group,
-        
-        /// <remarks/>
-        formation,
-        
-        /// <remarks/>
-        member,
-        
-        /// <remarks/>
-        bed,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
@@ -24575,31 +26976,6 @@ namespace Energistics.Generator.WITSML200 {
                 this.valueField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum GeochronologicalRank {
-        
-        /// <remarks/>
-        eon,
-        
-        /// <remarks/>
-        era,
-        
-        /// <remarks/>
-        period,
-        
-        /// <remarks/>
-        epoch,
-        
-        /// <remarks/>
-        age,
-        
-        /// <remarks/>
-        chron,
     }
     
     /// <remarks/>
@@ -25946,77 +28322,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         other,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum WellboreDatumReference {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ground level")]
-        groundlevel,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kelly bushing")]
-        kellybushing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mean sea level")]
-        meansealevel,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("derrick floor")]
-        derrickfloor,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("casing flange")]
-        casingflange,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("crown valve")]
-        crownvalve,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rotary bushing")]
-        rotarybushing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rotary table")]
-        rotarytable,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("sea floor")]
-        seafloor,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lowest astronomical tide")]
-        lowestastronomicaltide,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mean higher high water")]
-        meanhigherhighwater,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mean high water")]
-        meanhighwater,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mean lower low water")]
-        meanlowerlowwater,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mean low water")]
-        meanlowwater,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mean tide level")]
-        meantidelevel,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kickoff point")]
-        kickoffpoint,
     }
     
     /// <remarks/>
@@ -34226,39 +36531,17 @@ namespace Energistics.Generator.WITSML200 {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedEpsgCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedLocalAuthorityCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedGmlCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedWktCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedUnknownCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedWktCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedEpsgCrs))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     public abstract partial class AbstractProjectedCrs {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class ProjectedEpsgCrs : AbstractProjectedCrs {
-        
-        private long epsgCodeField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public long EpsgCode {
-            get {
-                return this.epsgCodeField;
-            }
-            set {
-                this.epsgCodeField = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -38201,6 +40484,29 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class ProjectedUnknownCrs : AbstractProjectedCrs {
+        
+        private string unknownField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        public string Unknown {
+            get {
+                return this.unknownField;
+            }
+            set {
+                this.unknownField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     public partial class ProjectedWktCrs : AbstractProjectedCrs {
         
         private string wellKnownTextField;
@@ -38225,19 +40531,18 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class ProjectedUnknownCrs : AbstractProjectedCrs {
+    public partial class ProjectedEpsgCrs : AbstractProjectedCrs {
         
-        private string unknownField;
+        private long epsgCodeField;
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        public string Unknown {
+        public long EpsgCode {
             get {
-                return this.unknownField;
+                return this.epsgCodeField;
             }
             set {
-                this.unknownField = value;
+                this.epsgCodeField = value;
             }
         }
     }
@@ -38295,11 +40600,11 @@ namespace Energistics.Generator.WITSML200 {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticUnknownCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticLocalAuthorityCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticWktCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticGmlCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticEpsgCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticWktCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticLocalAuthorityCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticUnknownCrs))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -38314,41 +40619,20 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class GeodeticUnknownCrs : AbstractGeodeticCrs {
+    public partial class GeodeticWktCrs : AbstractGeodeticCrs {
         
-        private string unknownField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        public string Unknown {
-            get {
-                return this.unknownField;
-            }
-            set {
-                this.unknownField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class GeodeticLocalAuthorityCrs : AbstractGeodeticCrs {
-        
-        private AuthorityQualifiedName localAuthorityCrsNameField;
+        private string wellKnownTextField;
         
         /// <remarks/>
+        /// <summary>ISO 19162 compliant well known text of the CRS</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public AuthorityQualifiedName LocalAuthorityCrsName {
+        [System.ComponentModel.DescriptionAttribute("ISO 19162 compliant well known text of the CRS")]
+        public string WellKnownText {
             get {
-                return this.localAuthorityCrsNameField;
+                return this.wellKnownTextField;
             }
             set {
-                this.localAuthorityCrsNameField = value;
+                this.wellKnownTextField = value;
             }
         }
     }
@@ -38403,20 +40687,41 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class GeodeticWktCrs : AbstractGeodeticCrs {
+    public partial class GeodeticLocalAuthorityCrs : AbstractGeodeticCrs {
         
-        private string wellKnownTextField;
+        private AuthorityQualifiedName localAuthorityCrsNameField;
         
         /// <remarks/>
-        /// <summary>ISO 19162 compliant well known text of the CRS</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("ISO 19162 compliant well known text of the CRS")]
-        public string WellKnownText {
+        public AuthorityQualifiedName LocalAuthorityCrsName {
             get {
-                return this.wellKnownTextField;
+                return this.localAuthorityCrsNameField;
             }
             set {
-                this.wellKnownTextField = value;
+                this.localAuthorityCrsNameField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class GeodeticUnknownCrs : AbstractGeodeticCrs {
+        
+        private string unknownField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        public string Unknown {
+            get {
+                return this.unknownField;
+            }
+            set {
+                this.unknownField = value;
             }
         }
     }
@@ -60539,8 +62844,8 @@ namespace Energistics.Generator.WITSML200 {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalWktCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalLocalAuthorityCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalGmlCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalLocalAuthorityCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalEpsgCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalUnknownCrs))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
@@ -60581,28 +62886,6 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class VerticalLocalAuthorityCrs : AbstractVerticalCrs {
-        
-        private AuthorityQualifiedName localAuthorityCrsNameField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public AuthorityQualifiedName LocalAuthorityCrsName {
-            get {
-                return this.localAuthorityCrsNameField;
-            }
-            set {
-                this.localAuthorityCrsNameField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     public partial class VerticalGmlCrs : AbstractVerticalCrs {
         
         private VerticalCRSType gmlVerticalCrsDefinitionField;
@@ -60615,6 +62898,28 @@ namespace Energistics.Generator.WITSML200 {
             }
             set {
                 this.gmlVerticalCrsDefinitionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class VerticalLocalAuthorityCrs : AbstractVerticalCrs {
+        
+        private AuthorityQualifiedName localAuthorityCrsNameField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public AuthorityQualifiedName LocalAuthorityCrsName {
+            get {
+                return this.localAuthorityCrsNameField;
+            }
+            set {
+                this.localAuthorityCrsNameField = value;
             }
         }
     }
@@ -61321,6 +63626,49 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class IndexRange {
+        
+        private string indexMinimumField;
+        
+        private string indexMaximumField;
+        
+        /// <remarks/>
+        /// <summary>The minimum index for the range over which the referenced data's conformance with the policy is being assessed.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The minimum index for the range over which the referenced data\'s conformance with" +
+            " the policy is being assessed.")]
+        public string IndexMinimum {
+            get {
+                return this.indexMinimumField;
+            }
+            set {
+                this.indexMinimumField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The maximum index for the range over which the referenced data's conformance with the policy is being assessed.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("The maximum index for the range over which the referenced data\'s conformance with" +
+            " the policy is being assessed.")]
+        public string IndexMaximum {
+            get {
+                return this.indexMaximumField;
+            }
+            set {
+                this.indexMaximumField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     public partial class FailingRule {
         
         private string ruleIdField;
@@ -61383,371 +63731,6 @@ namespace Energistics.Generator.WITSML200 {
             }
             set {
                 this.failingRuleExtensionsField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class IndexRange {
-        
-        private string indexMinimumField;
-        
-        private string indexMaximumField;
-        
-        /// <remarks/>
-        /// <summary>The minimum index for the range over which the referenced data's conformance with the policy is being assessed.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The minimum index for the range over which the referenced data\'s conformance with" +
-            " the policy is being assessed.")]
-        public string IndexMinimum {
-            get {
-                return this.indexMinimumField;
-            }
-            set {
-                this.indexMinimumField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The maximum index for the range over which the referenced data's conformance with the policy is being assessed.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("The maximum index for the range over which the referenced data\'s conformance with" +
-            " the policy is being assessed.")]
-        public string IndexMaximum {
-            get {
-                return this.indexMaximumField;
-            }
-            set {
-                this.indexMaximumField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ObjectParameterKey))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeIndexParameterKey))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public abstract partial class AbstractParameterKey {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class ObjectParameterKey : AbstractParameterKey {
-        
-        private DataObjectReference dataObjectField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference DataObject {
-            get {
-                return this.dataObjectField;
-            }
-            set {
-                this.dataObjectField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class TimeIndexParameterKey : AbstractParameterKey {
-        
-        private TimeIndex timeIndexField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public TimeIndex TimeIndex {
-            get {
-                return this.timeIndexField;
-            }
-            set {
-                this.timeIndexField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class TimeIndex {
-        
-        private long indexField;
-        
-        private DataObjectReference timeSeriesField;
-        
-        /// <remarks/>
-        /// <summary>The index of the time in the time series.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The index of the time in the time series.")]
-        public long Index {
-            get {
-                return this.indexField;
-            }
-            set {
-                this.indexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference TimeSeries {
-            get {
-                return this.timeSeriesField;
-            }
-            set {
-                this.timeSeriesField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerQuantityParameter))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DataObjectParameter))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeIndexParameter))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StringParameter))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleQuantityParameter))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public abstract partial class AbstractActivityParameter {
-        
-        private string titleField;
-        
-        private long indexField;
-        
-        private bool indexFieldSpecified;
-        
-        private string selectionField;
-        
-        private AbstractParameterKey[] keyField;
-        
-        /// <remarks/>
-        /// <summary>Name of the parameter, used to identify it in the activity. Must have an equivalent in the activity descriptor parameters.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("Name of the parameter, used to identify it in the activity. Must have an equivale" +
-            "nt in the activity descriptor parameters.")]
-        public string Title {
-            get {
-                return this.titleField;
-            }
-            set {
-                this.titleField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>When parameter is an array, used to indicate the index in the array</summary>
-        [System.ComponentModel.DescriptionAttribute("When parameter is an array, used to indicate the index in the array")]
-        public long Index {
-            get {
-                return this.indexField;
-            }
-            set {
-                this.indexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool IndexSpecified {
-            get {
-                return this.indexFieldSpecified;
-            }
-            set {
-                this.indexFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Textual description about how this parameter was selected.</summary>
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("Textual description about how this parameter was selected.")]
-        public string Selection {
-            get {
-                return this.selectionField;
-            }
-            set {
-                this.selectionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Key")]
-        public AbstractParameterKey[] Key {
-            get {
-                return this.keyField;
-            }
-            set {
-                this.keyField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class IntegerQuantityParameter : AbstractActivityParameter {
-        
-        private long valueField;
-        
-        /// <remarks/>
-        /// <summary>Integer value</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Integer value")]
-        public long Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class DataObjectParameter : AbstractActivityParameter {
-        
-        private DataObjectReference dataObjectField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference DataObject {
-            get {
-                return this.dataObjectField;
-            }
-            set {
-                this.dataObjectField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class TimeIndexParameter : AbstractActivityParameter {
-        
-        private TimeIndex timeIndexField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public TimeIndex TimeIndex {
-            get {
-                return this.timeIndexField;
-            }
-            set {
-                this.timeIndexField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class StringParameter : AbstractActivityParameter {
-        
-        private string valueField;
-        
-        /// <remarks/>
-        /// <summary>String value</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
-        [System.ComponentModel.DescriptionAttribute("String value")]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class DoubleQuantityParameter : AbstractActivityParameter {
-        
-        private double valueField;
-        
-        private UnitOfMeasure uomField;
-        
-        private DataObjectReference customUnitDictionaryField;
-        
-        /// <remarks/>
-        /// <summary>Double value</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Double value")]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Unit of measure associated with the value</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Unit of measure associated with the value")]
-        public UnitOfMeasure Uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public DataObjectReference CustomUnitDictionary {
-            get {
-                return this.customUnitDictionaryField;
-            }
-            set {
-                this.customUnitDictionaryField = value;
             }
         }
     }
@@ -61938,6 +63921,328 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         subActivity,
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DataObjectParameter))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StringParameter))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerQuantityParameter))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleQuantityParameter))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeIndexParameter))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public abstract partial class AbstractActivityParameter {
+        
+        private string titleField;
+        
+        private long indexField;
+        
+        private bool indexFieldSpecified;
+        
+        private string selectionField;
+        
+        private AbstractParameterKey[] keyField;
+        
+        /// <remarks/>
+        /// <summary>Name of the parameter, used to identify it in the activity. Must have an equivalent in the activity descriptor parameters.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("Name of the parameter, used to identify it in the activity. Must have an equivale" +
+            "nt in the activity descriptor parameters.")]
+        public string Title {
+            get {
+                return this.titleField;
+            }
+            set {
+                this.titleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>When parameter is an array, used to indicate the index in the array</summary>
+        [System.ComponentModel.DescriptionAttribute("When parameter is an array, used to indicate the index in the array")]
+        public long Index {
+            get {
+                return this.indexField;
+            }
+            set {
+                this.indexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool IndexSpecified {
+            get {
+                return this.indexFieldSpecified;
+            }
+            set {
+                this.indexFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Textual description about how this parameter was selected.</summary>
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("Textual description about how this parameter was selected.")]
+        public string Selection {
+            get {
+                return this.selectionField;
+            }
+            set {
+                this.selectionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Key")]
+        public AbstractParameterKey[] Key {
+            get {
+                return this.keyField;
+            }
+            set {
+                this.keyField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ObjectParameterKey))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeIndexParameterKey))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public abstract partial class AbstractParameterKey {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class ObjectParameterKey : AbstractParameterKey {
+        
+        private DataObjectReference dataObjectField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference DataObject {
+            get {
+                return this.dataObjectField;
+            }
+            set {
+                this.dataObjectField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class TimeIndexParameterKey : AbstractParameterKey {
+        
+        private TimeIndex timeIndexField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public TimeIndex TimeIndex {
+            get {
+                return this.timeIndexField;
+            }
+            set {
+                this.timeIndexField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class TimeIndex {
+        
+        private long indexField;
+        
+        private DataObjectReference timeSeriesField;
+        
+        /// <remarks/>
+        /// <summary>The index of the time in the time series.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The index of the time in the time series.")]
+        public long Index {
+            get {
+                return this.indexField;
+            }
+            set {
+                this.indexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference TimeSeries {
+            get {
+                return this.timeSeriesField;
+            }
+            set {
+                this.timeSeriesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class DataObjectParameter : AbstractActivityParameter {
+        
+        private DataObjectReference dataObjectField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference DataObject {
+            get {
+                return this.dataObjectField;
+            }
+            set {
+                this.dataObjectField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class StringParameter : AbstractActivityParameter {
+        
+        private string valueField;
+        
+        /// <remarks/>
+        /// <summary>String value</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
+        [System.ComponentModel.DescriptionAttribute("String value")]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class IntegerQuantityParameter : AbstractActivityParameter {
+        
+        private long valueField;
+        
+        /// <remarks/>
+        /// <summary>Integer value</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Integer value")]
+        public long Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class DoubleQuantityParameter : AbstractActivityParameter {
+        
+        private double valueField;
+        
+        private UnitOfMeasure uomField;
+        
+        private DataObjectReference customUnitDictionaryField;
+        
+        /// <remarks/>
+        /// <summary>Double value</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Double value")]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unit of measure associated with the value</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Unit of measure associated with the value")]
+        public UnitOfMeasure Uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public DataObjectReference CustomUnitDictionary {
+            get {
+                return this.customUnitDictionaryField;
+            }
+            set {
+                this.customUnitDictionaryField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class TimeIndexParameter : AbstractActivityParameter {
+        
+        private TimeIndex timeIndexField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public TimeIndex TimeIndex {
+            get {
+                return this.timeIndexField;
+            }
+            set {
+                this.timeIndexField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -67583,7 +69888,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("part_InterpretedGeologyInterval", Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2", IsNullable=false)]
     public partial class InterpretedGeologyInterval : AbstractObject {
         
         private MdInterval mdIntervalField;
@@ -71524,7 +73829,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private string timeDepthField;
         
-        private PropertyKind channelClassField;
+        private DataObjectReference channelClassField;
         
         private string runNumberField;
         
@@ -71597,7 +73902,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.</summary>
         [System.ComponentModel.DescriptionAttribute("A mandatory value categorizing a log channel. The classification system used in W" +
             "ITSML is the one from the PWLS group.")]
-        public PropertyKind ChannelClass {
+        public DataObjectReference ChannelClass {
             get {
                 return this.channelClassField;
             }
@@ -71825,767 +74130,6 @@ namespace Energistics.Generator.WITSML200 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-    public partial class PropertyKind : AbstractObject {
-        
-        private QuantityClassKind quantityClassField;
-        
-        private DataObjectReference parentField;
-        
-        /// <remarks/>
-        /// <summary>A reference to the name of a quantity class in the Energistics Unit of Measure Dictionary. If there is no match in the Energistics Unit of Measure Dictionary, then this attribute is purely for human information.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("A reference to the name of a quantity class in the Energistics Unit of Measure Di" +
-            "ctionary. If there is no match in the Energistics Unit of Measure Dictionary, th" +
-            "en this attribute is purely for human information.")]
-        public QuantityClassKind QuantityClass {
-            get {
-                return this.quantityClassField;
-            }
-            set {
-                this.quantityClassField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Indicates the parent of this property kind. BUSINESS RULE : Only the top root abstract property kind has not to define a parent property kind.</summary>
-        [System.ComponentModel.DescriptionAttribute("Indicates the parent of this property kind. BUSINESS RULE : Only the top root abs" +
-            "tract property kind has not to define a parent property kind.")]
-        public DataObjectReference Parent {
-            get {
-                return this.parentField;
-            }
-            set {
-                this.parentField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum QuantityClassKind {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("absorbed dose")]
-        absorbeddose,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("activity of radioactivity")]
-        activityofradioactivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("amount of substance")]
-        amountofsubstance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per amount of substance")]
-        amountofsubstanceperamountofsubstance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per area")]
-        amountofsubstanceperarea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per time")]
-        amountofsubstancepertime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per time per area")]
-        amountofsubstancepertimeperarea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("amount of substance per volume")]
-        amountofsubstancepervolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("angle per length")]
-        angleperlength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("angle per volume")]
-        anglepervolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("angular acceleration")]
-        angularacceleration,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("angular velocity")]
-        angularvelocity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("api gamma ray")]
-        apigammaray,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("api gravity")]
-        apigravity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("api neutron")]
-        apineutron,
-        
-        /// <remarks/>
-        area,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("area per amount of substance")]
-        areaperamountofsubstance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("area per area")]
-        areaperarea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("area per count")]
-        areapercount,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("area per mass")]
-        areapermass,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("area per time")]
-        areapertime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("area per volume")]
-        areapervolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("attenuation per frequency interval")]
-        attenuationperfrequencyinterval,
-        
-        /// <remarks/>
-        capacitance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("cation exchange capacity")]
-        cationexchangecapacity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("data transfer speed")]
-        datatransferspeed,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("diffusion coefficient")]
-        diffusioncoefficient,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("diffusive time of flight")]
-        diffusivetimeofflight,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("digital storage")]
-        digitalstorage,
-        
-        /// <remarks/>
-        dimensionless,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dipole moment")]
-        dipolemoment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dose equivalent")]
-        doseequivalent,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dynamic viscosity")]
-        dynamicviscosity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric charge")]
-        electriccharge,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric charge per area")]
-        electricchargeperarea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric charge per mass")]
-        electricchargepermass,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric charge per volume")]
-        electricchargepervolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric conductance")]
-        electricconductance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric conductivity")]
-        electricconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric current")]
-        electriccurrent,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric current density")]
-        electriccurrentdensity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric field strength")]
-        electricfieldstrength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric potential difference")]
-        electricpotentialdifference,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric resistance")]
-        electricresistance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electric resistance per length")]
-        electricresistanceperlength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electrical resistivity")]
-        electricalresistivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("electromagnetic moment")]
-        electromagneticmoment,
-        
-        /// <remarks/>
-        energy,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("energy length per area")]
-        energylengthperarea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("energy length per time area temperature")]
-        energylengthpertimeareatemperature,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("energy per area")]
-        energyperarea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("energy per length")]
-        energyperlength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("energy per mass")]
-        energypermass,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("energy per mass per time")]
-        energypermasspertime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("energy per volume")]
-        energypervolume,
-        
-        /// <remarks/>
-        force,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("force area")]
-        forcearea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("force length per length")]
-        forcelengthperlength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("force per force")]
-        forceperforce,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("force per length")]
-        forceperlength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("force per volume")]
-        forcepervolume,
-        
-        /// <remarks/>
-        frequency,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("frequency interval")]
-        frequencyinterval,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("heat capacity")]
-        heatcapacity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("heat flow rate")]
-        heatflowrate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("heat transfer coefficient")]
-        heattransfercoefficient,
-        
-        /// <remarks/>
-        illuminance,
-        
-        /// <remarks/>
-        inductance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("isothermal compressibility")]
-        isothermalcompressibility,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kinematic viscosity")]
-        kinematicviscosity,
-        
-        /// <remarks/>
-        length,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("length per length")]
-        lengthperlength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("length per mass")]
-        lengthpermass,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("length per pressure")]
-        lengthperpressure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("length per temperature")]
-        lengthpertemperature,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("length per time")]
-        lengthpertime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("length per volume")]
-        lengthpervolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("light exposure")]
-        lightexposure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("linear acceleration")]
-        linearacceleration,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("linear thermal expansion")]
-        linearthermalexpansion,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("logarithmic power ratio")]
-        logarithmicpowerratio,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("logarithmic power ratio per length")]
-        logarithmicpowerratioperlength,
-        
-        /// <remarks/>
-        luminance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("luminous efficacy")]
-        luminousefficacy,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("luminous flux")]
-        luminousflux,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("luminous intensity")]
-        luminousintensity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic dipole moment")]
-        magneticdipolemoment,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic field strength")]
-        magneticfieldstrength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic flux")]
-        magneticflux,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic flux density")]
-        magneticfluxdensity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic flux density per length")]
-        magneticfluxdensityperlength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic permeability")]
-        magneticpermeability,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("magnetic vector potential")]
-        magneticvectorpotential,
-        
-        /// <remarks/>
-        mass,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass length")]
-        masslength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per area")]
-        massperarea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per energy")]
-        massperenergy,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per length")]
-        massperlength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per mass")]
-        masspermass,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per time")]
-        masspertime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per time per area")]
-        masspertimeperarea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per time per length")]
-        masspertimeperlength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per volume")]
-        masspervolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per volume per length")]
-        masspervolumeperlength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per volume per pressure")]
-        masspervolumeperpressure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mass per volume per temperature")]
-        masspervolumepertemperature,
-        
-        /// <remarks/>
-        mobility,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("molar energy")]
-        molarenergy,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("molar heat capacity")]
-        molarheatcapacity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("molar volume")]
-        molarvolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("molecular weight")]
-        molecularweight,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("moment of force")]
-        momentofforce,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("moment of inertia")]
-        momentofinertia,
-        
-        /// <remarks/>
-        momentum,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("normalized power")]
-        normalizedpower,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("permeability length")]
-        permeabilitylength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("permeability rock")]
-        permeabilityrock,
-        
-        /// <remarks/>
-        permittivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("plane angle")]
-        planeangle,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("potential difference per power drop")]
-        potentialdifferenceperpowerdrop,
-        
-        /// <remarks/>
-        power,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("power per area")]
-        powerperarea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("power per power")]
-        powerperpower,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("power per volume")]
-        powerpervolume,
-        
-        /// <remarks/>
-        pressure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure per pressure")]
-        pressureperpressure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure per time")]
-        pressurepertime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure per volume")]
-        pressurepervolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure squared")]
-        pressuresquared,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure squared per force time per area")]
-        pressuresquaredperforcetimeperarea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pressure time per volume")]
-        pressuretimepervolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("quantity of light")]
-        quantityoflight,
-        
-        /// <remarks/>
-        radiance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("radiant intensity")]
-        radiantintensity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal area")]
-        reciprocalarea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal electric potential difference")]
-        reciprocalelectricpotentialdifference,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal force")]
-        reciprocalforce,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal length")]
-        reciprocallength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal mass")]
-        reciprocalmass,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal mass time")]
-        reciprocalmasstime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal pressure")]
-        reciprocalpressure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal time")]
-        reciprocaltime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("reciprocal volume")]
-        reciprocalvolume,
-        
-        /// <remarks/>
-        reluctance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("second moment of area")]
-        secondmomentofarea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("signaling event per time")]
-        signalingeventpertime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("solid angle")]
-        solidangle,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("specific heat capacity")]
-        specificheatcapacity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("temperature interval")]
-        temperatureinterval,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("temperature interval per length")]
-        temperatureintervalperlength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("temperature interval per pressure")]
-        temperatureintervalperpressure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("temperature interval per time")]
-        temperatureintervalpertime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("thermal conductance")]
-        thermalconductance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("thermal conductivity")]
-        thermalconductivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("thermal diffusivity")]
-        thermaldiffusivity,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("thermal insulance")]
-        thermalinsulance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("thermal resistance")]
-        thermalresistance,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("thermodynamic temperature")]
-        thermodynamictemperature,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("thermodynamic temperature per thermodynamic temperature")]
-        thermodynamictemperatureperthermodynamictemperature,
-        
-        /// <remarks/>
-        time,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("time per length")]
-        timeperlength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("time per mass")]
-        timepermass,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("time per time")]
-        timepertime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("time per volume")]
-        timepervolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("vertical coordinate")]
-        verticalcoordinate,
-        
-        /// <remarks/>
-        volume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume flow rate per volume flow rate")]
-        volumeflowratepervolumeflowrate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per area")]
-        volumeperarea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per length")]
-        volumeperlength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per mass")]
-        volumepermass,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per pressure")]
-        volumeperpressure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per rotation")]
-        volumeperrotation,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per time")]
-        volumepertime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per time length")]
-        volumepertimelength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per time per area")]
-        volumepertimeperarea,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per time per length")]
-        volumepertimeperlength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per time per pressure")]
-        volumepertimeperpressure,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per time per pressure length")]
-        volumepertimeperpressurelength,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per time per time")]
-        volumepertimepertime,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per time per volume")]
-        volumepertimepervolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volume per volume")]
-        volumepervolume,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volumetric heat transfer coefficient")]
-        volumetricheattransfercoefficient,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("volumetric thermal expansion")]
-        volumetricthermalexpansion,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public enum ChannelDerivation {
         
@@ -72654,7 +74198,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private string timeDepthField;
         
-        private PropertyKind channelClassField;
+        private DataObjectReference channelClassField;
         
         private string runNumberField;
         
@@ -72761,7 +74305,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>A mandatory value categorizing a log channel. The classification system used in WITSML is the one from the PWLS group.</summary>
         [System.ComponentModel.DescriptionAttribute("A mandatory value categorizing a log channel. The classification system used in W" +
             "ITSML is the one from the PWLS group.")]
-        public PropertyKind ChannelClass {
+        public DataObjectReference ChannelClass {
             get {
                 return this.channelClassField;
             }
@@ -72989,7 +74533,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private string timeDepthField;
         
-        private PropertyKind channelClassField;
+        private DataObjectReference channelClassField;
         
         private string runNumberField;
         
@@ -73157,7 +74701,7 @@ namespace Energistics.Generator.WITSML200 {
         [System.ComponentModel.DescriptionAttribute("A mandatory value categorizing a log channel. The classification system used in W" +
             "ITSML is the one from the PWLS group.  NOTE: This should turn into an extensible" +
             " enumeration before WITSML is released.")]
-        public PropertyKind ChannelClass {
+        public DataObjectReference ChannelClass {
             get {
                 return this.channelClassField;
             }
@@ -74923,70 +76467,6 @@ namespace Energistics.Generator.WITSML200 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum WellStatus {
-        
-        /// <remarks/>
-        abandoned,
-        
-        /// <remarks/>
-        active,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("active -- injecting")]
-        activeinjecting,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("active -- producing")]
-        activeproducing,
-        
-        /// <remarks/>
-        completed,
-        
-        /// <remarks/>
-        drilling,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("partially plugged")]
-        partiallyplugged,
-        
-        /// <remarks/>
-        permitted,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("plugged and abandoned")]
-        pluggedandabandoned,
-        
-        /// <remarks/>
-        proposed,
-        
-        /// <remarks/>
-        sold,
-        
-        /// <remarks/>
-        suspended,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("temporarily abandoned")]
-        temporarilyabandoned,
-        
-        /// <remarks/>
-        testing,
-        
-        /// <remarks/>
-        tight,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("working over")]
-        workingover,
-        
-        /// <remarks/>
-        unknown,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public enum WellPurpose {
         
@@ -75745,11 +77225,11 @@ namespace Energistics.Generator.WITSML200 {
         
         private string commentField;
         
+        private FailingRule[] failingRulesField;
+        
         private IndexRange indexRangeField;
         
         private DataObjectReference referencedDataField;
-        
-        private FailingRule[] failingRulesField;
         
         /// <remarks/>
         /// <summary>Identifier of the policy whose conformance is being described.</summary>
@@ -75860,6 +77340,17 @@ namespace Energistics.Generator.WITSML200 {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("FailingRules")]
+        public FailingRule[] FailingRules {
+            get {
+                return this.failingRulesField;
+            }
+            set {
+                this.failingRulesField = value;
+            }
+        }
+        
+        /// <remarks/>
         public IndexRange IndexRange {
             get {
                 return this.indexRangeField;
@@ -75879,79 +77370,6 @@ namespace Energistics.Generator.WITSML200 {
                 this.referencedDataField = value;
             }
         }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("FailingRules")]
-        public FailingRule[] FailingRules {
-            get {
-                return this.failingRulesField;
-            }
-            set {
-                this.failingRulesField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class VerticalCrs : AbstractObject {
-        
-        private VerticalDirection directionField;
-        
-        private AbstractVerticalCrs abstractVerticalCrsField;
-        
-        private string uomField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public VerticalDirection Direction {
-            get {
-                return this.directionField;
-            }
-            set {
-                this.directionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public AbstractVerticalCrs AbstractVerticalCrs {
-            get {
-                return this.abstractVerticalCrsField;
-            }
-            set {
-                this.abstractVerticalCrsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public string uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum VerticalDirection {
-        
-        /// <remarks/>
-        up,
-        
-        /// <remarks/>
-        down,
     }
     
     /// <remarks/>
@@ -76061,47 +77479,60 @@ namespace Energistics.Generator.WITSML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-    public partial class Activity : AbstractObject {
+    public partial class VerticalCrs : AbstractObject {
         
-        private DataObjectReference activityDescriptorField;
+        private VerticalDirection directionField;
         
-        private AbstractActivityParameter[] parameterField;
+        private AbstractVerticalCrs abstractVerticalCrsField;
         
-        private DataObjectReference parentField;
+        private string uomField;
         
         /// <remarks/>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference ActivityDescriptor {
+        public VerticalDirection Direction {
             get {
-                return this.activityDescriptorField;
+                return this.directionField;
             }
             set {
-                this.activityDescriptorField = value;
+                this.directionField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Parameter")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public AbstractActivityParameter[] Parameter {
+        public AbstractVerticalCrs AbstractVerticalCrs {
             get {
-                return this.parameterField;
+                return this.abstractVerticalCrsField;
             }
             set {
-                this.parameterField = value;
+                this.abstractVerticalCrsField = value;
             }
         }
         
         /// <remarks/>
-        public DataObjectReference Parent {
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public string uom {
             get {
-                return this.parentField;
+                return this.uomField;
             }
             set {
-                this.parentField = value;
+                this.uomField = value;
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum VerticalDirection {
+        
+        /// <remarks/>
+        up,
+        
+        /// <remarks/>
+        down,
     }
     
     /// <remarks/>
@@ -76135,21 +77566,44 @@ namespace Energistics.Generator.WITSML200 {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
-    public partial class PropertyKindDictionary : AbstractObject {
+    public partial class Activity : AbstractObject {
         
-        private PropertyKind[] propertyKindField;
+        private DataObjectReference activityDescriptorField;
+        
+        private DataObjectReference parentField;
+        
+        private AbstractActivityParameter[] parameterField;
         
         /// <remarks/>
-        /// <summary>Defines which property kind are contained into a property kind dictionary.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("PropertyKind")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Defines which property kind are contained into a property kind dictionary.")]
-        public PropertyKind[] PropertyKind {
+        public DataObjectReference ActivityDescriptor {
             get {
-                return this.propertyKindField;
+                return this.activityDescriptorField;
             }
             set {
-                this.propertyKindField = value;
+                this.activityDescriptorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public DataObjectReference Parent {
+            get {
+                return this.parentField;
+            }
+            set {
+                this.parentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Parameter")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public AbstractActivityParameter[] Parameter {
+            get {
+                return this.parameterField;
+            }
+            set {
+                this.parameterField = value;
             }
         }
     }
@@ -76189,6 +77643,105 @@ namespace Energistics.Generator.WITSML200 {
             }
             set {
                 this.timeSeriesParentageField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    public partial class PropertyKind : AbstractObject {
+        
+        private bool isAbstractField;
+        
+        private Energistics.SchemaGatherer.Timestamp deprecationDateField;
+        
+        private QuantityClassKind quantityClassField;
+        
+        private DataObjectReference parentField;
+        
+        /// <remarks/>
+        /// <summary>This boolean indicates whether the PropertyKind should be used as a real property or not.  If the Is Abstract flag is set, then this entry should be used only as the parent of a real property. For example, the PropertyKind of "force per length" shouldn't be used directly, as it is really just a description of some units of measure. This entry should only be used as the parent of the real physical property "surface tension".</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"This boolean indicates whether the PropertyKind should be used as a real property or not.  If the Is Abstract flag is set, then this entry should be used only as the parent of a real property. For example, the PropertyKind of ""force per length"" shouldn't be used directly, as it is really just a description of some units of measure. This entry should only be used as the parent of the real physical property ""surface tension"".")]
+        public bool IsAbstract {
+            get {
+                return this.isAbstractField;
+            }
+            set {
+                this.isAbstractField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Date at which this property dictionary entry must no longer be used. Files generated before this date would have used this entry so it is left here for reference.   A null value means the property kind is still valid.</summary>
+        [System.ComponentModel.DescriptionAttribute("Date at which this property dictionary entry must no longer be used. Files genera" +
+            "ted before this date would have used this entry so it is left here for reference" +
+            ".   A null value means the property kind is still valid.")]
+        public Energistics.SchemaGatherer.Timestamp DeprecationDate {
+            get {
+                return this.deprecationDateField;
+            }
+            set {
+                this.deprecationDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>A reference to the name of a quantity class in the Energistics Unit of Measure Dictionary. If there is no match in the Energistics Unit of Measure Dictionary, then this attribute is purely for human information.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("A reference to the name of a quantity class in the Energistics Unit of Measure Di" +
+            "ctionary. If there is no match in the Energistics Unit of Measure Dictionary, th" +
+            "en this attribute is purely for human information.")]
+        public QuantityClassKind QuantityClass {
+            get {
+                return this.quantityClassField;
+            }
+            set {
+                this.quantityClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Indicates the parent of this property kind. BUSINESS RULE : Only the top root abstract property kind has not to define a parent property kind.</summary>
+        [System.ComponentModel.DescriptionAttribute("Indicates the parent of this property kind. BUSINESS RULE : Only the top root abs" +
+            "tract property kind has not to define a parent property kind.")]
+        public DataObjectReference Parent {
+            get {
+                return this.parentField;
+            }
+            set {
+                this.parentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2", IsNullable=false)]
+    public partial class PropertyKindDictionary : AbstractObject {
+        
+        private PropertyKind[] propertyKindField;
+        
+        /// <remarks/>
+        /// <summary>Defines which property kind are contained into a property kind dictionary.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("PropertyKind")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Defines which property kind are contained into a property kind dictionary.")]
+        public PropertyKind[] PropertyKind {
+            get {
+                return this.propertyKindField;
+            }
+            set {
+                this.propertyKindField = value;
             }
         }
     }
@@ -80095,1496 +81648,6 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("Wb.m")]
         Wbm,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum LithologyKind {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("alkali feldspar rhyolite")]
-        alkalifeldsparrhyolite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("alkali olivine basalt")]
-        alkaliolivinebasalt,
-        
-        /// <remarks/>
-        amphibolite,
-        
-        /// <remarks/>
-        andesite,
-        
-        /// <remarks/>
-        anhydrite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("anorthositic rock")]
-        anorthositicrock,
-        
-        /// <remarks/>
-        anthracite,
-        
-        /// <remarks/>
-        aplite,
-        
-        /// <remarks/>
-        arenite,
-        
-        /// <remarks/>
-        argillaceous,
-        
-        /// <remarks/>
-        arkose,
-        
-        /// <remarks/>
-        basalt,
-        
-        /// <remarks/>
-        basanite,
-        
-        /// <remarks/>
-        bauxite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bituminous coal")]
-        bituminouscoal,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("blueschist metamorphic rock")]
-        blueschistmetamorphicrock,
-        
-        /// <remarks/>
-        boninite,
-        
-        /// <remarks/>
-        breccia,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("carbonate ooze")]
-        carbonateooze,
-        
-        /// <remarks/>
-        carbonatite,
-        
-        /// <remarks/>
-        chalk,
-        
-        /// <remarks/>
-        chert,
-        
-        /// <remarks/>
-        clay,
-        
-        /// <remarks/>
-        claystone,
-        
-        /// <remarks/>
-        coal,
-        
-        /// <remarks/>
-        conglomerate,
-        
-        /// <remarks/>
-        dacite,
-        
-        /// <remarks/>
-        diabase,
-        
-        /// <remarks/>
-        diamictite,
-        
-        /// <remarks/>
-        diorite,
-        
-        /// <remarks/>
-        dioritoid,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("doleritic rock")]
-        doleriticrock,
-        
-        /// <remarks/>
-        dolomite,
-        
-        /// <remarks/>
-        dolomitic,
-        
-        /// <remarks/>
-        eclogite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("exotic alkaline rock")]
-        exoticalkalinerock,
-        
-        /// <remarks/>
-        feldspar,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("feldspathic arenite")]
-        feldspathicarenite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fine grained igneous rock")]
-        finegrainedigneousrock,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("foid dioritoid")]
-        foiddioritoid,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("foid gabbroid")]
-        foidgabbroid,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("foid syenitoid")]
-        foidsyenitoid,
-        
-        /// <remarks/>
-        foidite,
-        
-        /// <remarks/>
-        foiditoid,
-        
-        /// <remarks/>
-        foidolite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("foliated metamorphic rock")]
-        foliatedmetamorphicrock,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fragmental igneous rock")]
-        fragmentaligneousrock,
-        
-        /// <remarks/>
-        gabbro,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gabbroic rock")]
-        gabbroicrock,
-        
-        /// <remarks/>
-        gabbroid,
-        
-        /// <remarks/>
-        glauconite,
-        
-        /// <remarks/>
-        gneiss,
-        
-        /// <remarks/>
-        granite,
-        
-        /// <remarks/>
-        granodiorite,
-        
-        /// <remarks/>
-        granofels,
-        
-        /// <remarks/>
-        granulite,
-        
-        /// <remarks/>
-        gravel,
-        
-        /// <remarks/>
-        greenstone,
-        
-        /// <remarks/>
-        gumbo,
-        
-        /// <remarks/>
-        gypsum,
-        
-        /// <remarks/>
-        halite,
-        
-        /// <remarks/>
-        hornfels,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("igneous rock")]
-        igneousrock,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("impact generated material")]
-        impactgeneratedmaterial,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("impure dolomite")]
-        impuredolomite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("impure limestone")]
-        impurelimestone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("intrusive rock (plutonic)")]
-        intrusiverockplutonic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("iron rich sedimentary rock")]
-        ironrichsedimentaryrock,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kalsilitic and melilitic rocks")]
-        kalsiliticandmeliliticrocks,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("komatiitic rock")]
-        komatiiticrock,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("latitic rock")]
-        latiticrock,
-        
-        /// <remarks/>
-        lignite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lime boundstone")]
-        limeboundstone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lime framestone")]
-        limeframestone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lime grainstone")]
-        limegrainstone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lime mudstone")]
-        limemudstone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lime packstone")]
-        limepackstone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lime wackestone")]
-        limewackestone,
-        
-        /// <remarks/>
-        limestone,
-        
-        /// <remarks/>
-        marble,
-        
-        /// <remarks/>
-        marl,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("metamorphic rock")]
-        metamorphicrock,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mica schist")]
-        micaschist,
-        
-        /// <remarks/>
-        migmatite,
-        
-        /// <remarks/>
-        monzogabbro,
-        
-        /// <remarks/>
-        mud,
-        
-        /// <remarks/>
-        mudstone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mylonitic rock")]
-        myloniticrock,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("no description")]
-        nodescription,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("no sample")]
-        nosample,
-        
-        /// <remarks/>
-        ooze,
-        
-        /// <remarks/>
-        ophiolite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("organic bearing mudstone")]
-        organicbearingmudstone,
-        
-        /// <remarks/>
-        peat,
-        
-        /// <remarks/>
-        pegmatite,
-        
-        /// <remarks/>
-        peridotite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("phaneritic igneous rock")]
-        phaneriticigneousrock,
-        
-        /// <remarks/>
-        phonolite,
-        
-        /// <remarks/>
-        phonolitoid,
-        
-        /// <remarks/>
-        phosphate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("phosphate rock")]
-        phosphaterock,
-        
-        /// <remarks/>
-        phyllite,
-        
-        /// <remarks/>
-        porphyry,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("potassium and magnesium salts")]
-        potassiumandmagnesiumsalts,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pyroclastic breccia")]
-        pyroclasticbreccia,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pyroclastic rock")]
-        pyroclasticrock,
-        
-        /// <remarks/>
-        pyroxenite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("quartz arenite")]
-        quartzarenite,
-        
-        /// <remarks/>
-        quartzite,
-        
-        /// <remarks/>
-        rhyolite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rock salt")]
-        rocksalt,
-        
-        /// <remarks/>
-        sand,
-        
-        /// <remarks/>
-        sandstone,
-        
-        /// <remarks/>
-        sandy,
-        
-        /// <remarks/>
-        sapropel,
-        
-        /// <remarks/>
-        schist,
-        
-        /// <remarks/>
-        serpentinite,
-        
-        /// <remarks/>
-        shale,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("siliceous ooze")]
-        siliceousooze,
-        
-        /// <remarks/>
-        silt,
-        
-        /// <remarks/>
-        siltstone,
-        
-        /// <remarks/>
-        skarn,
-        
-        /// <remarks/>
-        slate,
-        
-        /// <remarks/>
-        spilite,
-        
-        /// <remarks/>
-        syenite,
-        
-        /// <remarks/>
-        syenitoid,
-        
-        /// <remarks/>
-        sylvite,
-        
-        /// <remarks/>
-        tephrite,
-        
-        /// <remarks/>
-        tephritoid,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tholeiitic basalt")]
-        tholeiiticbasalt,
-        
-        /// <remarks/>
-        tonalite,
-        
-        /// <remarks/>
-        trachyte,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("trachytic rock")]
-        trachyticrock,
-        
-        /// <remarks/>
-        trachytoid,
-        
-        /// <remarks/>
-        travertine,
-        
-        /// <remarks/>
-        tuff,
-        
-        /// <remarks/>
-        tuffite,
-        
-        /// <remarks/>
-        ultrabasic,
-        
-        /// <remarks/>
-        undifferentiated,
-        
-        /// <remarks/>
-        unknown,
-        
-        /// <remarks/>
-        wacke,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum LithologyQualifierKind {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("alkali feldspar rhyolite")]
-        alkalifeldsparrhyolite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("alkali olivine basalt")]
-        alkaliolivinebasalt,
-        
-        /// <remarks/>
-        amphibolite,
-        
-        /// <remarks/>
-        amphibolitic,
-        
-        /// <remarks/>
-        andesite,
-        
-        /// <remarks/>
-        andesitic,
-        
-        /// <remarks/>
-        anhydrite,
-        
-        /// <remarks/>
-        anhydritic,
-        
-        /// <remarks/>
-        ankerite,
-        
-        /// <remarks/>
-        ankeritic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("anorthositic rock")]
-        anorthositicrock,
-        
-        /// <remarks/>
-        anthracite,
-        
-        /// <remarks/>
-        anthracitic,
-        
-        /// <remarks/>
-        aplite,
-        
-        /// <remarks/>
-        aplitic,
-        
-        /// <remarks/>
-        arenite,
-        
-        /// <remarks/>
-        arenitic,
-        
-        /// <remarks/>
-        argillaceous,
-        
-        /// <remarks/>
-        arkose,
-        
-        /// <remarks/>
-        arkosic,
-        
-        /// <remarks/>
-        barite,
-        
-        /// <remarks/>
-        baritic,
-        
-        /// <remarks/>
-        basalt,
-        
-        /// <remarks/>
-        basaltic,
-        
-        /// <remarks/>
-        basanite,
-        
-        /// <remarks/>
-        basanitic,
-        
-        /// <remarks/>
-        bauxite,
-        
-        /// <remarks/>
-        bauxitic,
-        
-        /// <remarks/>
-        belemnites,
-        
-        /// <remarks/>
-        belemnitic,
-        
-        /// <remarks/>
-        bioturbated,
-        
-        /// <remarks/>
-        bioturbation,
-        
-        /// <remarks/>
-        bitumen,
-        
-        /// <remarks/>
-        bituminous,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("bituminous coal")]
-        bituminouscoal,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("blueschist metamorphic rock")]
-        blueschistmetamorphicrock,
-        
-        /// <remarks/>
-        boninite,
-        
-        /// <remarks/>
-        breccia,
-        
-        /// <remarks/>
-        brecciated,
-        
-        /// <remarks/>
-        bryozoan,
-        
-        /// <remarks/>
-        bryozoans,
-        
-        /// <remarks/>
-        burrowed,
-        
-        /// <remarks/>
-        burrows,
-        
-        /// <remarks/>
-        calcareous,
-        
-        /// <remarks/>
-        calcite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("calcite concretion")]
-        calciteconcretion,
-        
-        /// <remarks/>
-        calcitic,
-        
-        /// <remarks/>
-        carbonaceous,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("carbonate ooze")]
-        carbonateooze,
-        
-        /// <remarks/>
-        carbonatite,
-        
-        /// <remarks/>
-        carbonatitic,
-        
-        /// <remarks/>
-        chalk,
-        
-        /// <remarks/>
-        chalky,
-        
-        /// <remarks/>
-        chamosite,
-        
-        /// <remarks/>
-        chamositic,
-        
-        /// <remarks/>
-        chert,
-        
-        /// <remarks/>
-        cherty,
-        
-        /// <remarks/>
-        chlorite,
-        
-        /// <remarks/>
-        chloritic,
-        
-        /// <remarks/>
-        clay,
-        
-        /// <remarks/>
-        claystone,
-        
-        /// <remarks/>
-        coal,
-        
-        /// <remarks/>
-        concretionary,
-        
-        /// <remarks/>
-        concretions,
-        
-        /// <remarks/>
-        conglomerate,
-        
-        /// <remarks/>
-        conglomeratic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("coral fragments")]
-        coralfragments,
-        
-        /// <remarks/>
-        coralline,
-        
-        /// <remarks/>
-        crinoidal,
-        
-        /// <remarks/>
-        crinoids,
-        
-        /// <remarks/>
-        dacite,
-        
-        /// <remarks/>
-        dacitic,
-        
-        /// <remarks/>
-        diabase,
-        
-        /// <remarks/>
-        diabasic,
-        
-        /// <remarks/>
-        diamictite,
-        
-        /// <remarks/>
-        diamictitic,
-        
-        /// <remarks/>
-        diatomaceous,
-        
-        /// <remarks/>
-        diatoms,
-        
-        /// <remarks/>
-        diorite,
-        
-        /// <remarks/>
-        dioritic,
-        
-        /// <remarks/>
-        dioritoid,
-        
-        /// <remarks/>
-        dioritoidic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("doleritic rock")]
-        doleriticrock,
-        
-        /// <remarks/>
-        dolomite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dolomite concretion")]
-        dolomiteconcretion,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("dolomite stringer")]
-        dolomitestringer,
-        
-        /// <remarks/>
-        dolomitic,
-        
-        /// <remarks/>
-        eclogite,
-        
-        /// <remarks/>
-        eclogitic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("exotic alkaline rock")]
-        exoticalkalinerock,
-        
-        /// <remarks/>
-        feldspar,
-        
-        /// <remarks/>
-        feldsparic,
-        
-        /// <remarks/>
-        feldspathic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("feldspathic arenite")]
-        feldspathicarenite,
-        
-        /// <remarks/>
-        ferruginous,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fine grained igneous rock")]
-        finegrainedigneousrock,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("foid dioritoid")]
-        foiddioritoid,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("foid gabbroid")]
-        foidgabbroid,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("foid syenitoid")]
-        foidsyenitoid,
-        
-        /// <remarks/>
-        foidite,
-        
-        /// <remarks/>
-        foiditic,
-        
-        /// <remarks/>
-        foiditoid,
-        
-        /// <remarks/>
-        foidolite,
-        
-        /// <remarks/>
-        foidolitic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("foliated metamorphic rock")]
-        foliatedmetamorphicrock,
-        
-        /// <remarks/>
-        foraminifera,
-        
-        /// <remarks/>
-        foraminiferous,
-        
-        /// <remarks/>
-        forams,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fossil fragments")]
-        fossilfragments,
-        
-        /// <remarks/>
-        fossiliferous,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fossils undifferentiated")]
-        fossilsundifferentiated,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("fragmental igneous rock")]
-        fragmentaligneousrock,
-        
-        /// <remarks/>
-        gabbro,
-        
-        /// <remarks/>
-        gabbroic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gabbroic rock")]
-        gabbroicrock,
-        
-        /// <remarks/>
-        gabbroid,
-        
-        /// <remarks/>
-        gabbroidic,
-        
-        /// <remarks/>
-        gilsonite,
-        
-        /// <remarks/>
-        gilsonitic,
-        
-        /// <remarks/>
-        glauconite,
-        
-        /// <remarks/>
-        glauconitic,
-        
-        /// <remarks/>
-        gneiss,
-        
-        /// <remarks/>
-        gneissic,
-        
-        /// <remarks/>
-        granite,
-        
-        /// <remarks/>
-        granitic,
-        
-        /// <remarks/>
-        granodiorite,
-        
-        /// <remarks/>
-        granodioritic,
-        
-        /// <remarks/>
-        granofels,
-        
-        /// <remarks/>
-        granulite,
-        
-        /// <remarks/>
-        granulitic,
-        
-        /// <remarks/>
-        gravel,
-        
-        /// <remarks/>
-        gravelly,
-        
-        /// <remarks/>
-        greenstone,
-        
-        /// <remarks/>
-        gumbo,
-        
-        /// <remarks/>
-        gypsiferous,
-        
-        /// <remarks/>
-        gypsum,
-        
-        /// <remarks/>
-        halite,
-        
-        /// <remarks/>
-        halitic,
-        
-        /// <remarks/>
-        hornfels,
-        
-        /// <remarks/>
-        hornfelsic,
-        
-        /// <remarks/>
-        igneous,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("igneous rock")]
-        igneousrock,
-        
-        /// <remarks/>
-        illite,
-        
-        /// <remarks/>
-        illitic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("impact generated material")]
-        impactgeneratedmaterial,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("impure dolomite")]
-        impuredolomite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("impure limestone")]
-        impurelimestone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("intrusive rock (plutonic)")]
-        intrusiverockplutonic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("iron rich sedimentary rock")]
-        ironrichsedimentaryrock,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("kalsilitic and melilitic rocks")]
-        kalsiliticandmeliliticrocks,
-        
-        /// <remarks/>
-        kaolinite,
-        
-        /// <remarks/>
-        kaolinitic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("komatiitic rock")]
-        komatiiticrock,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("latitic rock")]
-        latiticrock,
-        
-        /// <remarks/>
-        lignite,
-        
-        /// <remarks/>
-        lignitic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lime boundstone")]
-        limeboundstone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lime framestone")]
-        limeframestone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lime grainstone")]
-        limegrainstone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lime mudstone")]
-        limemudstone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lime packstone")]
-        limepackstone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lime wackestone")]
-        limewackestone,
-        
-        /// <remarks/>
-        limestone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("limestone stringer")]
-        limestonestringer,
-        
-        /// <remarks/>
-        lithic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("lithic fragments")]
-        lithicfragments,
-        
-        /// <remarks/>
-        marble,
-        
-        /// <remarks/>
-        marcasite,
-        
-        /// <remarks/>
-        marcasitic,
-        
-        /// <remarks/>
-        marl,
-        
-        /// <remarks/>
-        marly,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("metamorphic rock")]
-        metamorphicrock,
-        
-        /// <remarks/>
-        mica,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mica schist")]
-        micaschist,
-        
-        /// <remarks/>
-        micaceous,
-        
-        /// <remarks/>
-        microfossiliferous,
-        
-        /// <remarks/>
-        microfossils,
-        
-        /// <remarks/>
-        migmatite,
-        
-        /// <remarks/>
-        migmatitic,
-        
-        /// <remarks/>
-        monzogabbro,
-        
-        /// <remarks/>
-        monzogabbroic,
-        
-        /// <remarks/>
-        mud,
-        
-        /// <remarks/>
-        muddy,
-        
-        /// <remarks/>
-        mudstone,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("mylonitic rock")]
-        myloniticrock,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("no sample")]
-        nosample,
-        
-        /// <remarks/>
-        oncolite,
-        
-        /// <remarks/>
-        oncoliths,
-        
-        /// <remarks/>
-        oncolitic,
-        
-        /// <remarks/>
-        ooids,
-        
-        /// <remarks/>
-        ooliths,
-        
-        /// <remarks/>
-        oolitic,
-        
-        /// <remarks/>
-        ooze,
-        
-        /// <remarks/>
-        ophiolite,
-        
-        /// <remarks/>
-        ophiolitic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("organic bearing mudstone")]
-        organicbearingmudstone,
-        
-        /// <remarks/>
-        ostracodal,
-        
-        /// <remarks/>
-        ostracods,
-        
-        /// <remarks/>
-        peat,
-        
-        /// <remarks/>
-        peaty,
-        
-        /// <remarks/>
-        pebble,
-        
-        /// <remarks/>
-        pebbly,
-        
-        /// <remarks/>
-        pegmatite,
-        
-        /// <remarks/>
-        pegmatitic,
-        
-        /// <remarks/>
-        pelletal,
-        
-        /// <remarks/>
-        pellets,
-        
-        /// <remarks/>
-        peloidal,
-        
-        /// <remarks/>
-        peloids,
-        
-        /// <remarks/>
-        peridotite,
-        
-        /// <remarks/>
-        peridotitic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("phaneritic igneous rock")]
-        phaneriticigneousrock,
-        
-        /// <remarks/>
-        phonolite,
-        
-        /// <remarks/>
-        phonolitic,
-        
-        /// <remarks/>
-        phonolitoid,
-        
-        /// <remarks/>
-        phosphate,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("phosphate rock")]
-        phosphaterock,
-        
-        /// <remarks/>
-        phosphatic,
-        
-        /// <remarks/>
-        phyllite,
-        
-        /// <remarks/>
-        phyllitic,
-        
-        /// <remarks/>
-        pisolite,
-        
-        /// <remarks/>
-        pisoliths,
-        
-        /// <remarks/>
-        pisolitic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("plant remains")]
-        plantremains,
-        
-        /// <remarks/>
-        porphyritic,
-        
-        /// <remarks/>
-        porphyry,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("potassium and magnesium salts")]
-        potassiumandmagnesiumsalts,
-        
-        /// <remarks/>
-        pyrite,
-        
-        /// <remarks/>
-        pyritic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pyroclastic breccia")]
-        pyroclasticbreccia,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("pyroclastic rock")]
-        pyroclasticrock,
-        
-        /// <remarks/>
-        pyroxenite,
-        
-        /// <remarks/>
-        pyroxenitic,
-        
-        /// <remarks/>
-        quartiferous,
-        
-        /// <remarks/>
-        quartz,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("quartz arenite")]
-        quartzarenite,
-        
-        /// <remarks/>
-        quartzite,
-        
-        /// <remarks/>
-        quartzitic,
-        
-        /// <remarks/>
-        radiolaria,
-        
-        /// <remarks/>
-        radiolarian,
-        
-        /// <remarks/>
-        rhyolite,
-        
-        /// <remarks/>
-        rhyolitic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("rock salt")]
-        rocksalt,
-        
-        /// <remarks/>
-        rootlets,
-        
-        /// <remarks/>
-        salty,
-        
-        /// <remarks/>
-        sand,
-        
-        /// <remarks/>
-        sandstone,
-        
-        /// <remarks/>
-        sandy,
-        
-        /// <remarks/>
-        sapropel,
-        
-        /// <remarks/>
-        sapropelic,
-        
-        /// <remarks/>
-        schist,
-        
-        /// <remarks/>
-        schisty,
-        
-        /// <remarks/>
-        sepentinitic,
-        
-        /// <remarks/>
-        serpentinite,
-        
-        /// <remarks/>
-        shale,
-        
-        /// <remarks/>
-        shaly,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("shell fragments")]
-        shellfragments,
-        
-        /// <remarks/>
-        shelly,
-        
-        /// <remarks/>
-        siderite,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("siderite concretion")]
-        sideriteconcretion,
-        
-        /// <remarks/>
-        sideritic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("siliceous ooze")]
-        siliceousooze,
-        
-        /// <remarks/>
-        silt,
-        
-        /// <remarks/>
-        siltstone,
-        
-        /// <remarks/>
-        silty,
-        
-        /// <remarks/>
-        skarn,
-        
-        /// <remarks/>
-        skarny,
-        
-        /// <remarks/>
-        slate,
-        
-        /// <remarks/>
-        slaty,
-        
-        /// <remarks/>
-        smectite,
-        
-        /// <remarks/>
-        smectitic,
-        
-        /// <remarks/>
-        spicular,
-        
-        /// <remarks/>
-        spicules,
-        
-        /// <remarks/>
-        spilite,
-        
-        /// <remarks/>
-        spilitic,
-        
-        /// <remarks/>
-        stylolites,
-        
-        /// <remarks/>
-        stylolitic,
-        
-        /// <remarks/>
-        syenite,
-        
-        /// <remarks/>
-        syenitic,
-        
-        /// <remarks/>
-        syenitoid,
-        
-        /// <remarks/>
-        sylvite,
-        
-        /// <remarks/>
-        sylvitic,
-        
-        /// <remarks/>
-        tarry,
-        
-        /// <remarks/>
-        tephrite,
-        
-        /// <remarks/>
-        tephritic,
-        
-        /// <remarks/>
-        tephritoid,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("tholeiitic basalt")]
-        tholeiiticbasalt,
-        
-        /// <remarks/>
-        tonalite,
-        
-        /// <remarks/>
-        tonalitic,
-        
-        /// <remarks/>
-        trachyte,
-        
-        /// <remarks/>
-        trachytic,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("trachytic rock")]
-        trachyticrock,
-        
-        /// <remarks/>
-        trachytoid,
-        
-        /// <remarks/>
-        travertine,
-        
-        /// <remarks/>
-        tuff,
-        
-        /// <remarks/>
-        tuffaceous,
-        
-        /// <remarks/>
-        tuffite,
-        
-        /// <remarks/>
-        tuffitic,
-        
-        /// <remarks/>
-        ultrabasic,
-        
-        /// <remarks/>
-        undifferentiated,
-        
-        /// <remarks/>
-        unknown,
-        
-        /// <remarks/>
-        wacke,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum ReferenceCondition {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0 degC 1 atm")]
-        Item0degC1atm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0 degC 1 bar")]
-        Item0degC1bar,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("15 degC 1 atm")]
-        Item15degC1atm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("15 degC 1 bar")]
-        Item15degC1bar,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("20 degC 1 atm")]
-        Item20degC1atm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("20 degC 1 bar")]
-        Item20degC1bar,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("25 degC 1 bar")]
-        Item25degC1bar,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("60 degF 1 atm")]
-        Item60degF1atm,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("60 degF 30 in Hg")]
-        Item60degF30inHg,
-        
-        /// <remarks/>
-        ambient,
     }
     
     /// <remarks/>
