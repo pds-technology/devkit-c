@@ -6,8 +6,10 @@
 Download the code from BitBucket.  It is suggested that the destination directory be C:\Projects.  The App.Config configuration file defines a Key named "ROOT_FOLDER" which has the value "C:\Projects".  Change this value if you prefer a different folder, but it is highly-recommended not to alter the other file linkages. 
 
 ###The created source_master folder contains the following sub-folders:
-* Doc - Contains the Energistics schemas 
-* Source: Contains the following folders:
+
+Doc - Contains the Energistics schemas.
+
+Source - Contains the following folders:
 
 *  Devkit:  The original Devkit. 
 *  DevKitGenerator: This is where the Devkit java classes can be found.    
