@@ -15,7 +15,7 @@ Source - Contains the following folders:
 *  DevKitGenerator: This is where the Devkit java classes can be found.    
 *  DevkitTest: This is the folder containing the unit tests. 
 *  DemoXML: This is folder that contains the generated sample xml files which support DevkitTest.   
-*  EnergisticsAPIService: This is webservice API project.   
+*  EnergisticsAPIService: This is the webservice API project.   
 
 ##   Configuration.    
 * App.Config: Contains the project's configuration mappings.  
