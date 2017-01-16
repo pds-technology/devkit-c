@@ -1,11 +1,10 @@
 ##  What is this repository for? 
-  The devkit provides developing kit to the c# developer.
+  The devkit is a C# development environment.
 
 ##   How do I get set up?   
 ###   Summary of set up  
-Download the code for BitBucket.  
-Restore to the directory which will be used in app.config. In our default, we restore files to c:\projects. For your convenience, please don't change the internal structure, then your only need to modify the root folder which point to c:\projects. as   
-  <add key="ROOT_FOLDER" value="C:\Projects" />  
+Download the code from BitBucket.  It is suggested that the destination directory be C:\Projects.  The App.Config configuration file defines a Key named "ROOT_FOLDER" which has the value "C:\Projects".  Change this value if you prefer a different folder, but it is highly-recommended not to alter the other file linkages. 
+
  in projects folder we will have:   
  doc: document contains the all supported energistics xsd for user's convenience.   
  source: contains project:   
