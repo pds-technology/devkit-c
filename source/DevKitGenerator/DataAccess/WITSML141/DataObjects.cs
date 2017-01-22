@@ -8048,7 +8048,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Geodetic datum code. This defines a system in the Geoshare naming system and should probably not be used with CRSName. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Geodetic datum code. This defines a system in the Geoshare naming system and should probably not be used with CRSName.")]
 		[XmlElement("geodeticDatumCode")]
         public GeodeticDatum? GeodeticDatumCode {
@@ -8084,7 +8083,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Ellipsoid translation (3). Units are meters by convention. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Ellipsoid translation (3). Units are meters by convention.")]
         [ComponentElement]
 		[XmlElement("xTranslation")]
@@ -8103,7 +8101,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Ellipsoid translation (3). Units are meters by convention. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Ellipsoid translation (3). Units are meters by convention.")]
         [ComponentElement]
 		[XmlElement("yTranslation")]
@@ -8122,7 +8119,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Ellipsoid translation (3). Units are meters by convention. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Ellipsoid translation (3). Units are meters by convention.")]
         [ComponentElement]
 		[XmlElement("zTranslation")]
@@ -8141,7 +8137,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Ellipsoid rotation (3). Seconds of arc by convention. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Ellipsoid rotation (3). Seconds of arc by convention.")]
         [ComponentElement]
 		[XmlElement("xRotation")]
@@ -8160,7 +8155,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Ellipsoid rotation (3). Seconds of arc by convention. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Ellipsoid rotation (3). Seconds of arc by convention.")]
         [ComponentElement]
 		[XmlElement("yRotation")]
@@ -8179,7 +8173,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Ellipsoid rotation (3). Seconds of arc by convention. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Ellipsoid rotation (3). Seconds of arc by convention.")]
         [ComponentElement]
 		[XmlElement("zRotation")]
@@ -8198,7 +8191,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Ellipsoid scale factor. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Ellipsoid scale factor.")]
 		[XmlElement("scaleFactor")]
         public Double? ScaleFactor {
@@ -8234,7 +8226,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Ellipsoid code (spheroid) defining geographic or planar coordinates. Implied if geodeticDatumCode is specified (and is not user defined). 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Ellipsoid code (spheroid) defining geographic or planar coordinates.  Implied if geodeticDatumCode is specified (and is not user defined).")]
 		[XmlElement("ellipsoidCode")]
         public Ellipsoid? EllipsoidCode {
@@ -8270,7 +8261,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Ellipsoid semi-major axis size. Implied if geodeticDatumCode or ellipsoidCode specified. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Ellipsoid semi-major axis size. Implied if geodeticDatumCode or ellipsoidCode  specified.")]
         [ComponentElement]
 		[XmlElement("ellipsoidSemiMajorAxis")]
@@ -8289,7 +8279,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Ellipsoid inverse flattening value (ie. 1/x). Implied if geodeticDatumCode or ellipsoidCode specified. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Ellipsoid inverse flattening value (ie. 1/x). Implied if geodeticDatumCode  or ellipsoidCode specified.")]
 		[XmlElement("ellipsoidInverseFlattening")]
         public Double? EllipsoidInverseFlattening {
@@ -8627,7 +8616,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. A code to identify the type of projection. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. A code to identify the type of projection.")]
 		[XmlElement("projectionCode")]
         public Projection? ProjectionCode {
@@ -8663,7 +8651,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. A pointer to the wellCRS that represents the geographic system from which this system was projected.
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. A pointer to the wellCRS that represents the geographic system from which this system was projected.")]
         [ComponentElement]
 		[XmlElement("projectedFrom")]
@@ -8682,7 +8669,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Latitude of first standard parallel. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Latitude of first standard parallel.")]
         [ComponentElement]
 		[XmlElement("stdParallel1")]
@@ -8701,7 +8687,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Latitude of second standard parallel, if used. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Latitude of second standard parallel, if used.")]
         [ComponentElement]
 		[XmlElement("stdParallel2")]
@@ -8720,7 +8705,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Longitude of the Y axis of the resulting map. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Longitude of the Y axis of the resulting map.")]
         [ComponentElement]
 		[XmlElement("centralMeridian")]
@@ -8739,7 +8723,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Latitude at which the X axis intersects the central meridian. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Latitude at which the X axis intersects the central meridian.")]
         [ComponentElement]
 		[XmlElement("originLatitude")]
@@ -8758,7 +8741,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Longitude of the central meridian. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Longitude of the central meridian.")]
         [ComponentElement]
 		[XmlElement("originLongitude")]
@@ -8777,7 +8759,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Latitude of the first point if the two-point specification of the central line is used. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Latitude of the first point if the two-point specification  of the central line is used.")]
         [ComponentElement]
 		[XmlElement("latitude1")]
@@ -8796,7 +8777,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Longitude of the first point if the two-point specification of the central line is used. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Longitude of the first point if the two-point specification  of the central line is used.")]
         [ComponentElement]
 		[XmlElement("longitude1")]
@@ -8815,7 +8795,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Latitude of the second point if the two-point specification of the central line is used. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Latitude of the second point if the two-point specification  of the central line is used.")]
         [ComponentElement]
 		[XmlElement("latitude2")]
@@ -8834,7 +8813,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Longitude of the second point if the two-point specification of the central line is used. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Longitude of the second point if the two-point specification  of the central line is used.")]
         [ComponentElement]
 		[XmlElement("longitude2")]
@@ -8853,7 +8831,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Latitude of a point for which the scale factor is specified exactly. Default to origin. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Latitude of a point for which the scale factor is specified exactly.  Default to origin.")]
         [ComponentElement]
 		[XmlElement("latitudeForScale")]
@@ -8872,7 +8849,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Longitude of a point for which the scale factor is specified exactly. Default to origin. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Longitude of a point for which the scale factor is specified exactly.  Default to origin.")]
         [ComponentElement]
 		[XmlElement("longitudeForScale")]
@@ -8891,7 +8867,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Latitude at which the scale on the map is exact. If none is provided, scale is assumed to be exact at the equator. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Latitude at which the scale on the map is exact. If none is provided,  scale is assumed to be exact at the equator.")]
         [ComponentElement]
 		[XmlElement("trueScaleLatitude")]
@@ -8910,7 +8885,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Spheroid radius. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Spheroid radius.")]
         [ComponentElement]
 		[XmlElement("spheroidRadius")]
@@ -8929,7 +8903,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Ellipsoid scale factor. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Ellipsoid scale factor.")]
 		[XmlElement("scaleFactor")]
         public Double? ScaleFactor {
@@ -8965,7 +8938,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Projection method variant - establishes minor variations of the projection. Geoshare proposal. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Projection method variant - establishes minor variations of the projection.  Geoshare proposal.")]
 		[XmlElement("methodVariant")]
         public ProjectionVariantsObliqueMercator? MethodVariant {
@@ -9001,7 +8973,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Height above the surface origin location from which the perspective is taken. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Height above the surface origin location from which the perspective is taken.")]
         [ComponentElement]
 		[XmlElement("perspectiveHeight")]
@@ -9020,7 +8991,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Zone for the type of projection. Zones have values from 1 to 60 with a required direction of "N" (North) or "S" (South). For example, "21N". 
         /// </summary>
-        [Obsolete()]
 		[RegularExpression("([1-9]|[1-5][0-9]|60)[NS]")]
         [StringLength(3)]
         [Description("DEPRECATED. Zone for the type of projection. Zones have values from 1 to 60 with a required direction of \"N\" (North) or \"S\" (South). For example, \"21N\".")]
@@ -9040,7 +9010,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. North American Datum type. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. North American Datum type.")]
 		[XmlElement("NADType")]
         public NADTypeList? NADType {
@@ -9076,7 +9045,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Artificial value added to the X axis. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Artificial value added to the X axis.")]
         [ComponentElement]
 		[XmlElement("falseEasting")]
@@ -9095,7 +9063,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Artificial value added to the Y axis. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Artificial value added to the Y axis.")]
         [ComponentElement]
 		[XmlElement("falseNorthing")]
@@ -9114,7 +9081,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Bearing angle of the great circle with respect to north at the central point. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Bearing angle of the great circle with respect to north at the central  point.")]
         [ComponentElement]
 		[XmlElement("bearing")]
@@ -9133,7 +9099,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Is the projection in the northern hemisphere or the southern hemisphere. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Is the projection in the northern hemisphere or the southern hemisphere.")]
 		[XmlElement("hemisphere")]
         public HemisphereList? Hemisphere {
@@ -9169,7 +9134,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Description of item and details. 
         /// </summary>
-        [Obsolete()]
 		[StringLength(4000)]
         [Description("DEPRECATED. Description of item and details.")]
 		[XmlElement("description")]
@@ -9188,7 +9152,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Parameter describing the user-defined projection. For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Parameter describing the user-defined projection.   For this usage the name attribute MUST be specified because it represents the meaning of the data. While the index attribute is mandatory, it is only significant if the same name repeats.")]
         [RecurringElement]
 		[XmlElement("parameter")]
@@ -16467,7 +16430,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Tool error model used to compute covariance matrix. 
         /// </summary>
-        [Obsolete()]
 		[StringLength(4000)]
         [Description("DEPRECATED. Tool error model used to compute covariance matrix.")]
 		[XmlElement("modelToolError")]
@@ -31699,7 +31661,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Lithology classification description. (In the past this was intended to distinguish between alternative classification schemes such as Dunham or Folk. This is no longer necessary with the classifications included in Lithology Type)
         /// </summary>
-        [Obsolete()]
 		[StringLength(32)]
         [Description("DEPRECATED. Lithology classification description. (In the past this was intended to distinguish between alternative classification schemes such as Dunham or Folk. This is no longer necessary with the classifications included in Lithology Type)")]
 		[XmlElement("lithClass")]
@@ -31718,7 +31679,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Use sizeGrain below. Granulometry.
         /// </summary>
-        [Obsolete()]
 		[StringLength(32)]
         [Description("DEPRECATED. Use sizeGrain below. Granulometry.")]
 		[XmlElement("grainType")]
@@ -31737,7 +31697,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Dunham / Embry and Klovan limestone classification. No longer used, as the terms are available as alternates for carbonates within the Lithology type. i.e. A Dunham defined lithology will be plotted graphically as a limestone, but the Dunham terminology will be available to use in a structured description. 
         /// </summary>
-        [Obsolete()]
 		[StringLength(32)]
         [Description("DEPRECATED. Dunham / Embry and Klovan limestone classification. No longer used, as the terms are available as alternates for carbonates within the Lithology type. i.e. A Dunham defined lithology will be plotted graphically as a limestone, but the Dunham terminology will be available to use in a structured description.")]
 		[XmlElement("dunhamClass")]
@@ -31989,7 +31948,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. This entry for shale density should not be used. Shale densities should be entered in the Shale Density in cs_geologyInterval.
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. This entry for shale density should not be used.  Shale densities should be entered in the Shale Density in cs_geologyInterval.")]
         [ComponentElement]
 		[XmlElement("densShale")]
@@ -32199,7 +32157,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. This prior useage for a specific terminology is suggested to no longer be used, as the intent should be to avoid encoding proprietary terms. But, for the sake of interoperability, proprietary descriptive use of a specific term for a percentage, should be derived from the abundance % by the end users' visualization application, using the end users' terminology. (i.e. if 1 less than or equal to 1% = Rare Trace or equivalent terminology for the specific operator; this can be mapped in the end user application, but is redundant to be encoded in the standard.)
         /// </summary>
-        [Obsolete()]
 		[StringLength(50)]
         [Description("DEPRECATED. This prior useage for a specific terminology is suggested to no longer be used, as the intent should be to avoid encoding proprietary terms. But, for the sake of interoperability, proprietary descriptive use of a specific term for a percentage, should be derived from the abundance % by the end users' visualization application, using the end users' terminology. (i.e. if 1 less than or equal to  1% = Rare Trace or equivalent terminology for the specific operator; this can be mapped in the end user application, but is redundant to be encoded in the standard.)")]
 		[XmlElement("abundanceCode")]
@@ -53401,7 +53358,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to be replaced by lithostratigraphic with kind=formation. 
         /// </summary>
-        [Obsolete()]
 		[Description("DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to be replaced by lithostratigraphic with kind=formation.")]
         [RecurringElement]
 		[XmlElement("nameFormation")]
@@ -57574,7 +57530,6 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to be replaced by lithostratigraphic with kind=formation. 
         /// </summary>
-        [Obsolete()]
 		[StringLength(64)]
         [Description("DEPRECATED. Formerly defined as name of formation penetrated, now deprecated to be replaced by lithostratigraphic with kind=formation.")]
 		[XmlElement("nameFormation")]

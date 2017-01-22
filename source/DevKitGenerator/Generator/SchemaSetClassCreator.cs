@@ -723,10 +723,10 @@ namespace Energistics.Generator
                     sb.Append("\n        /// </summary>");
 
                     string result = sb.ToString();
-                    if (result.Contains("/// DEPRECATED."))
-                    {
-                        result += "\n        [Obsolete()]";
-                    }
+                    //if (result.Contains("/// DEPRECATED."))
+                    //{
+                    //    result += "\n        [Obsolete()]";
+                    //}
                     return result;
                 }
             }

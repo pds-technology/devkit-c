@@ -391,7 +391,8 @@ namespace Energistics.DataAccess
             string oldNamespace = typeof(T).Namespace;
             string newNamespace = typeof(TU).Namespace;
 
-            if (oldNamespace == "Energistics.DataAccess.WITSML131" && newNamespace == "Energistics.DataAccess.WITSML141")
+            if ((oldNamespace == "Energistics.DataAccess.WITSML131" && newNamespace == "Energistics.DataAccess.WITSML141") ||
+                (oldNamespace == "Energistics.DataAccess.WITSML141" && newNamespace == "Energistics.DataAccess.WITSML131"))
             {
                 return UpgradeVersion<T, TU>(oldObject, "Energistics.DataAccess.WITSML141.WITSML_conversion_v1311-v141_vers07.xml");
             }
