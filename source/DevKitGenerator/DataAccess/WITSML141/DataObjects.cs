@@ -89,7 +89,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellbore", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Wellbore object.")]
-    public partial class Wellbore : Object, IWellObject, INotifyPropertyChanged
+    public partial class Wellbore : Object, ICommonDataObject, IWellObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -720,6 +720,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -6257,7 +6271,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_well", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Well object.")]
-    public partial class Well : Object, IDataObject, INotifyPropertyChanged
+    public partial class Well : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -7042,6 +7056,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -9382,7 +9410,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wbGeometry", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("WITSML - Wellbore Geometry Component Schema ")]
-    public partial class StandAloneWellboreGeometry : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class StandAloneWellboreGeometry : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -9639,6 +9667,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -15024,7 +15066,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_tubular", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML tubular object.")]
-    public partial class Tubular : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class Tubular : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -15315,6 +15357,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -15421,7 +15477,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_trajectory", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Trajectory object.")]
-    public partial class Trajectory : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class Trajectory : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -16031,6 +16087,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -18996,7 +19066,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_toolErrorTermSet", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML error term set object.")]
-    public partial class ToolErrorTermSet : Object, IDataObject, INotifyPropertyChanged
+    public partial class ToolErrorTermSet : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -19139,6 +19209,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -20030,7 +20114,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_toolErrorModel", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Tool Error Model object.")]
-    public partial class ToolErrorModel : Object, IDataObject, INotifyPropertyChanged
+    public partial class ToolErrorModel : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -20270,6 +20354,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -20527,7 +20625,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_target", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Target object.")]
-    public partial class Target : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class Target : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21117,6 +21215,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -21491,7 +21603,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_surveyProgram", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Survey Program object.")]
-    public partial class SurveyProgram : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class SurveyProgram : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -21765,6 +21877,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -30530,7 +30656,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_stimJob", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML well stimulation Job.")]
-    public partial class StimJob : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class StimJob : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -31372,6 +31498,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -32825,7 +32965,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_sidewallCore", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Sidewall Core object.")]
-    public partial class SidewallCore : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class SidewallCore : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -33453,6 +33593,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -33485,7 +33639,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_risk", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Risk object.")]
-    public partial class Risk : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class Risk : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -34147,6 +34301,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -38537,7 +38705,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_rig", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Rig object.")]
-    public partial class Rig : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class Rig : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -40475,6 +40643,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -45903,7 +46085,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_opsReport", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Operations Report object.")]
-    public partial class OpsReport : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class OpsReport : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -47499,6 +47681,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -51600,7 +51796,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_objectGroup", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML objectGroup object.")]
-    public partial class ObjectGroup : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class ObjectGroup : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -51906,6 +52102,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -52399,7 +52609,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_mudLog", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Mud Log object.")]
-    public partial class MudLog : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class MudLog : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -52786,6 +52996,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -54972,7 +55196,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_message", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Message object.")]
-    public partial class Message : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class Message : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -55406,6 +55630,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -56458,7 +56696,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_log", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Log.")]
-    public partial class Log : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class Log : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -57200,6 +57438,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -57232,7 +57484,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_formationMarker", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Formation Marker.")]
-    public partial class FormationMarker : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class FormationMarker : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -57658,6 +57910,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -57690,7 +57956,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_fluidsReport", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Fluids Report.")]
-    public partial class FluidsReport : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class FluidsReport : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -57965,6 +58231,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -63796,7 +64076,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_drillReport", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Drilling Report object.")]
-    public partial class DrillReport : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class DrillReport : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -64681,6 +64961,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -64713,7 +65007,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_convCore", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Conventional Core.")]
-    public partial class ConvCore : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class ConvCore : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -65386,6 +65680,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -65753,7 +66061,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_changeLog", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML attachment object.")]
-    public partial class ChangeLog : Object, IUniqueId, INotifyPropertyChanged
+    public partial class ChangeLog : Object, ICommonDataObject, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -66030,6 +66338,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -70305,7 +70627,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_cementJob", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML Cement Job.")]
-    public partial class CementJob : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class CementJob : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -71520,6 +71842,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -71552,7 +71888,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_bhaRun", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML bottom hole assembly run object.")]
-    public partial class BhaRun : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class BhaRun : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -72074,6 +72410,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -72106,7 +72456,7 @@ namespace Energistics.DataAccess.WITSML141
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_attachment", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.WITSML, "1.4.1.1")]
     [Description("The non-contextual content of a WITSML attachment object.")]
-    public partial class Attachment : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class Attachment : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -72446,6 +72796,20 @@ namespace Energistics.DataAccess.WITSML141
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members

@@ -443,28 +443,34 @@ namespace Energistics.Generator
                 .Select(x => x.Name.ToLowerInvariant())
                 .ToList();
 
+            var interfaces = string.Empty;
+
+            if (t.GetProperty("commonData") != null && t.GetProperty("customData") != null)
+            {
+                interfaces = ", ICommonDataObject";
+            }
+
             if (properties.Contains("uid") && properties.Contains("name")
                 && properties.Contains("uidwell") && properties.Contains("namewell")
                 && properties.Contains("uidwellbore") && properties.Contains("namewellbore"))
             {
-                return ", IWellboreObject";
+                return interfaces + ", IWellboreObject";
             }
-            else if (properties.Contains("uid") && properties.Contains("name")
+            if (properties.Contains("uid") && properties.Contains("name")
                 && properties.Contains("uidwell") && properties.Contains("namewell"))
             {
-                return ", IWellObject";
+                return interfaces + ", IWellObject";
             }
-            else if (properties.Contains("uid") && properties.Contains("name"))
+            if (properties.Contains("uid") && properties.Contains("name"))
             {
-                return ", IDataObject";
+                return interfaces + ", IDataObject";
+            }
+            if (properties.Contains("uid"))
+            {
+                return interfaces + ", IUniqueId";
             }
 
-            else if (properties.Contains("uid"))
-            {
-                return ", IUniqueId";
-            }
-
-            return string.Empty;
+            return interfaces;
         }
 
         public string GetPropertyType(PropertyInfo property)

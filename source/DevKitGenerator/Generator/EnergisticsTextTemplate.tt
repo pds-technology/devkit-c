@@ -1,7 +1,6 @@
-﻿<#@ template debug="true" hostSpecific ="true" #>
+﻿<#@ template debug="true" hostSpecific ="true" language="C#" #>
 <#@ output extension=".cs" encoding="UTF-8" #>
 <#=SchemaSetClassCreator.GetLicenseText()#>
-<#@ template debug="true" hostspecific="true" language="C#" #>
 <#@ assembly name="System"#>
 <#@ assembly name="System.Core"#>
 <#@ assembly name="System.Xml"#>
@@ -166,6 +165,25 @@ namespace Energistics.DataAccess.<#=mlVersion#>
 				}
             }
         }
+
+        if (type.GetProperty("commonData") != null && type.GetProperty("customData") != null) {
+#>
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
+<#
+        }
 #>
 
 <#
@@ -194,7 +212,7 @@ namespace Energistics.DataAccess.<#=mlVersion#>
 #>
     } //here
 <#
-        if(generator.IsComponentSchemaType(type))
+        if (generator.IsComponentSchemaType(type))
         {
 #>
     }

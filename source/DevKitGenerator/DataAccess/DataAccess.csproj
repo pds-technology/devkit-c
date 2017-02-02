@@ -83,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractWebServiceConnection.cs" />
+    <Compile Include="COMPLETION100\CommonData.cs" />
     <Compile Include="COMPLETION100\DataObjects.cs" />
     <Compile Include="COMPLETION100\GeneratedEnumValues.cs" />
     <Compile Include="Documentation\Generating.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="IEnergisticsCollection.cs" />
     <Compile Include="IH5Document.cs" />
     <Compile Include="IWitsmlClient.cs" />
+    <Compile Include="PRODML122\CommonData.cs" />
     <Compile Include="PRODML122\DataObjects.cs">
       <SubType>code</SubType>
     </Compile>
@@ -111,6 +113,7 @@
       <SubType>code</SubType>
     </Compile>
     <Compile Include="PRODML122\PROD_GenericDataProcessor.cs" />
+    <Compile Include="PRODML131\CommonData.cs" />
     <Compile Include="PRODML131\DataObjects.cs" />
     <Compile Include="PRODML131\GeneratedEnumValues.cs">
       <SubType>Code</SubType>
@@ -131,13 +134,16 @@
     <Compile Include="Validation\WitsmlValidationResult.cs" />
     <Compile Include="Validation\DataObjectValidator.cs" />
     <Compile Include="Validation\RecurringElementAttribute.cs" />
+    <Compile Include="WITSML131\CommonData.cs" />
     <Compile Include="WITSML131\DataObjects.cs" />
     <Compile Include="WITSML131\GeneratedEnumValues.cs" />
     <Compile Include="WITSML131\WMLP.cs" />
     <Compile Include="WITSML131\WMLS.cs" />
     <Compile Include="WITSML131\WMLS.custom.cs" />
+    <Compile Include="WITSML141\CommonData.cs" />
     <Compile Include="WITSML141\DataObjects.cs" />
     <Compile Include="WITSML141\GeneratedEnumValues.cs" />
+    <Compile Include="ICommonData.cs" />
     <Compile Include="WITSML141\WMLS.cs" />
     <Compile Include="WITSML141\WMLS.custom.cs" />
     <Compile Include="WITSML200\DataObjects.cs" />

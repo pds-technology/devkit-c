@@ -67,7 +67,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellCompletion", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.COMPLETION, "1.0")]
     [Description("The non-contextual content of a well completion object.")]
-    public partial class WellCompletion : Object, IWellObject, INotifyPropertyChanged
+    public partial class WellCompletion : Object, ICommonDataObject, IWellObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -424,6 +424,20 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -10251,7 +10265,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellCMLedger", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.COMPLETION, "1.0")]
     [Description("This class represents the obj_wellCMLedger xsd type.")]
-    public partial class WellCMLedger : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class WellCMLedger : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -11091,6 +11105,20 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -12994,7 +13022,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_wellboreCompletion", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.COMPLETION, "1.0")]
     [Description("This class represents the obj_wellboreCompletion xsd type.")]
-    public partial class WellboreCompletion : Object, IWellboreObject, INotifyPropertyChanged
+    public partial class WellboreCompletion : Object, ICommonDataObject, IWellboreObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -13494,6 +13522,20 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -16209,7 +16251,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_stringEquipment", Namespace="http://www.witsml.org/schemas/1series")]
 	[Description("This class represents the cs_stringEquipment xsd type.")]
-    public partial class StringEquipment : Object, IDataObject, INotifyPropertyChanged
+    public partial class StringEquipment : Object, ICommonDataObject, IDataObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -17068,6 +17110,20 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String equipmentRefUIDField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
@@ -18176,7 +18232,7 @@ namespace Energistics.DataAccess.COMPLETION100
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="obj_downholeComponent", Namespace="http://www.witsml.org/schemas/1series")]
 	[EnergisticsDataObjectAttribute(StandardFamily.COMPLETION, "1.0")]
     [Description("The non-contextual content of a WITSML downhole component object.")]
-    public partial class DownholeComponent : Object, IWellObject, INotifyPropertyChanged
+    public partial class DownholeComponent : Object, ICommonDataObject, IWellObject, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -18504,6 +18560,20 @@ namespace Energistics.DataAccess.COMPLETION100
 
         private String uidField; 
 
+        
+        #region ICommonDataObject Members
+
+        ICommonData ICommonDataObject.CommonData
+        {
+            get { return CommonData; }
+        }
+
+        ICustomData ICommonDataObject.CustomData
+        {
+            get { return CustomData; }
+        }
+
+        #endregion
 
         
 		#region INotifyPropertyChanged Members
