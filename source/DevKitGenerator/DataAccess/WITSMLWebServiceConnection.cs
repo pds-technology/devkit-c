@@ -109,13 +109,13 @@ namespace Energistics.DataAccess
         /// Gets or sets a value indicating whether compression is enabled.
         /// </summary>
         /// <value><c>true</c> if compression is enabled; otherwise, <c>false</c>.</value>
-        bool IsCompressionEnabled { get; set; }
+        public bool IsCompressionEnabled { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether pre-authentication is enabled.
         /// </summary>
         /// <value><c>true</c> if pre-authentication is enabled; otherwise, <c>false</c>.</value>
-        bool IsPreAuthenticationEnabled { get; set; }
+        public bool IsPreAuthenticationEnabled { get; set; }
 
         /// <summary>
         /// Reads an object of type T from the WITSML web service
