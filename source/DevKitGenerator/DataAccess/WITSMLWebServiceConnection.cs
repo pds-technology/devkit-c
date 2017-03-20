@@ -112,6 +112,12 @@ namespace Energistics.DataAccess
         bool IsCompressionEnabled { get; set; }
 
         /// <summary>
+        /// Gets or sets a value indicating whether pre-authentication is enabled.
+        /// </summary>
+        /// <value><c>true</c> if pre-authentication is enabled; otherwise, <c>false</c>.</value>
+        bool IsPreAuthenticationEnabled { get; set; }
+
+        /// <summary>
         /// Reads an object of type T from the WITSML web service
         /// </summary>
         /// <typeparam name="T">The type of the Energistic object to read</typeparam>
@@ -320,6 +326,7 @@ namespace Energistics.DataAccess
             service.Timeout = Timeout;
             service.Proxy = Proxy;
             service.Credentials = GetNetworkCredential();
+            service.PreAuthenticate = IsPreAuthenticationEnabled;
 
             var client = service as IWitsmlClient;
             if (client != null)
