@@ -74,6 +74,7 @@
 // (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
 using System;
+using System.Collections.Generic;
 using System.Net;
 
 namespace Energistics.DataAccess.WITSML141.WMLS
@@ -91,6 +92,12 @@ namespace Energistics.DataAccess.WITSML141.WMLS
         public bool IsCompressionEnabled { get; set; }
 
         /// <summary>
+        /// Gets or sets the collection of name/value pairs to include as HTTP headers.
+        /// </summary>
+        /// <value>The collection of name/value pairs.</value>
+        public IDictionary<string, string> Headers { get; set; }
+
+        /// <summary>
         /// Creates a <see cref="T:System.Net.WebRequest" /> for the specified <paramref name="uri" />.
         /// </summary>
         /// <param name="uri">The <see cref="T:System.Uri" /> to use when creating the <see cref="T:System.Net.WebRequest" />.</param>
@@ -100,10 +107,21 @@ namespace Energistics.DataAccess.WITSML141.WMLS
             var request = base.GetWebRequest(uri);
             var httpRequest = request as HttpWebRequest;
 
-            if (httpRequest != null && IsCompressionEnabled)
+            if (httpRequest == null)
+                return request;
+
+            if (IsCompressionEnabled)
             {
                 httpRequest.Headers.Add("Accept-Encoding", "gzip");
                 httpRequest.AutomaticDecompression = DecompressionMethods.GZip;
+            }
+
+            if (Headers != null)
+            {
+                foreach (var header in Headers)
+                {
+                    httpRequest.Headers[header.Key] = header.Value;
+                }
             }
 
             return request;

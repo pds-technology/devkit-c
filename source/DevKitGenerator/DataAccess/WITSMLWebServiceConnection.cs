@@ -75,14 +75,11 @@
 // 
 using System;
 using System.Collections.Generic;
-using System.Net;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Web.Services.Protocols;
 using System.Xml;
 using System.Xml.Serialization;
-using System.Security;
-using System.Runtime.InteropServices;
 using System.Text;
 
 namespace Energistics.DataAccess
@@ -92,7 +89,7 @@ namespace Energistics.DataAccess
     /// </summary>
     public class WITSMLWebServiceConnection : AbstractWebServiceConnection
     {
-        private string capabilitiesIn = String.Empty;
+        private string capabilitiesIn = string.Empty;
         private WMLSVersion ver;
 
         /// <summary>
@@ -116,6 +113,12 @@ namespace Energistics.DataAccess
         /// </summary>
         /// <value><c>true</c> if pre-authentication is enabled; otherwise, <c>false</c>.</value>
         public bool IsPreAuthenticationEnabled { get; set; }
+
+        /// <summary>
+        /// Gets or sets the collection of name/value pairs to include as HTTP headers.
+        /// </summary>
+        /// <value>The collection of name/value pairs.</value>
+        public IDictionary<string, string> Headers { get; set; }
 
         /// <summary>
         /// Reads an object of type T from the WITSML web service
@@ -332,6 +335,7 @@ namespace Energistics.DataAccess
             if (client != null)
             {
                 client.IsCompressionEnabled = IsCompressionEnabled;
+                client.Headers = Headers;
             }
 
             return service;

@@ -73,6 +73,9 @@
 // Illinois, Fortner Software, Unidata Program Center (netCDF), The Independent JPEG Group
 // (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
+
+using System.Collections.Generic;
+
 namespace Energistics.DataAccess
 {
     /// <summary>
@@ -85,6 +88,12 @@ namespace Energistics.DataAccess
         /// </summary>
         /// <value><c>true</c> if compression is enabled; otherwise, <c>false</c>.</value>
         bool IsCompressionEnabled { get; set; }
+
+        /// <summary>
+        /// Gets or sets the collection of name/value pairs to include as HTTP headers.
+        /// </summary>
+        /// <value>The collection of name/value pairs.</value>
+        IDictionary<string, string> Headers { get; set; }
 
         /// <summary>
         /// Returns a string containing the Data Schema Version(s) that a server supports.
