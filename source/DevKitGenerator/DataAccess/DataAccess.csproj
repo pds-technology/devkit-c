@@ -83,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractWebServiceConnection.cs" />
+    <Compile Include="BaseEnumExtension.cs" />
     <Compile Include="COMPLETION100\CommonData.cs" />
     <Compile Include="COMPLETION100\DataObjects.cs" />
     <Compile Include="COMPLETION100\GeneratedEnumValues.cs" />
@@ -124,11 +125,13 @@
     <Compile Include="PRODML131\PROD_GenericDataAccess.cs">
       <SubType>code</SubType>
     </Compile>
+    <Compile Include="PRODML200\DataAccess.cs" />
     <Compile Include="PRODMLWebServiceConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EnergisticsConverter.cs" />
     <Compile Include="Reflection\EnergisticsDataObjectAttribute.cs" />
     <Compile Include="Reflection\StandardFamily.cs" />
+    <Compile Include="RESQML210\DataAccess.cs" />
     <Compile Include="Timestamp.cs" />
     <Compile Include="Validation\ComponentElementAttribute.cs" />
     <Compile Include="Validation\WitsmlValidationResult.cs" />
