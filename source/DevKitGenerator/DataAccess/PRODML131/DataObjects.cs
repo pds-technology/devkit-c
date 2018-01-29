@@ -9314,6 +9314,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The latitude with north being positive. If you set this property, you must also set Longitude.
         /// </summary>
+        [ComponentElement]
         [XmlElement("latitude")]
         public PlaneAngleMeasure Latitude {
             get {
@@ -9354,6 +9355,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The longitude with east being positive. If you set this property, you must also set Latitude.
         /// </summary>
+        [ComponentElement]
         [XmlElement("longitude")]
         public PlaneAngleMeasure Longitude {
             get {
@@ -9394,6 +9396,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The projected coordinate with east being positive. This is the most common type of projected coordinates. UTM coordinates are expressed in Easting and Northing. If you set this property, you must also set Northing.
         /// </summary>
+        [ComponentElement]
         [XmlElement("easting")]
         public LengthMeasure Easting {
             get {
@@ -9434,6 +9437,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The projected coordinate with north being positive. This is the most common type of projected coordinates. UTM coordinates are expressed in Easting and Northing. If you set this property, you must also set Easting.
         /// </summary>
+        [ComponentElement]
         [XmlElement("northing")]
         public LengthMeasure Northing {
             get {
@@ -9474,6 +9478,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The projected coordinate with west being positive. The positive directions are reversed from the usual Easting and Northing values. These values are generally located in the southern hemisphere, most notably in South Africa and Australia. If you set this property, you must also set Southing.
         /// </summary>
+        [ComponentElement]
         [XmlElement("westing")]
         public LengthMeasure Westing {
             get {
@@ -9514,6 +9519,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The projected coordinate with south being positive. The positive directions are reversed from the usual Easting and Northing values. These values are generally located in the southern hemisphere, most notably in South Africa and Australia. If you set this property, you must also set Westing.
         /// </summary>
+        [ComponentElement]
         [XmlElement("southing")]
         public LengthMeasure Southing {
             get {
@@ -9554,6 +9560,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The projected X coordinate with the positive direction unknown. ProjectedX and ProjectedY are used when it is not known what the meaning of the coordinates is. If the meaning is known, the Easting/Northing or Westing/Southing should be used. Use of this pair implies a lack of knowledge on the part of the sender. If you set this property, you must also set ProjectedY.
         /// </summary>
+        [ComponentElement]
         [XmlElement("projectedX")]
         public LengthMeasure ProjectedX {
             get {
@@ -9594,6 +9601,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The projected Y coordinate with the positive direction unknown. ProjectedX and ProjectedY are used when it is not known what the meaning of the coordinates is. If the meaning is known, the Easting/Northing or Westing/Southing should be used. Use of this pair implies a lack of knowledge on the part of the sender. If you set this property, you must also set ProjectedX.
         /// </summary>
+        [ComponentElement]
         [XmlElement("projectedY")]
         public LengthMeasure ProjectedY {
             get {
@@ -9634,6 +9642,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The local (engineering) X coordinate. The CRS will define the orientation of the axis. If you set this property, you must also set LocalY.
         /// </summary>
+        [ComponentElement]
         [XmlElement("localX")]
         public LengthMeasure LocalX {
             get {
@@ -9674,6 +9683,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The local (engineering) Y coordinate. The CRS will define the orientation of the axis. If you set this property, you must also set LocalX.
         /// </summary>
+        [ComponentElement]
         [XmlElement("localY")]
         public LengthMeasure LocalY {
             get {
@@ -10217,6 +10227,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The name of the vertical reference datum in a particular naming system. This should only be specified if the above 'code' represents some variation of sea level. An optional short name (code) can also be specified. Specifying a well known datum is highly desired if the above code is a variant of sea level because sea level varies over time and space. An example would be to specify a name of 'Caspian Sea' with a code of '5106' in the 'EPSG' naming system.
         /// </summary>
+        [ComponentElement]
         [XmlElement("datumName")]
         public WellKnownNameStruct DatumName {
             get {
@@ -10250,6 +10261,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A reference to the coordinateReferenceSystem object representing the vertical reference datum (i.e., this wellDatum). This should only be specified if the above 'code' represents some variation of sea level. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("datumCRS")]
         public RefNameString DatumCRS {
             get {
@@ -11352,6 +11364,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Data from a fluid level test.
         /// </summary>
+        [ComponentElement]
         [XmlElement("fluidLevelTest")]
         public WellTestFluidLevelTest FluidLevelTest {
             get {
@@ -11386,6 +11399,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Data from a production test. Multiple tests generally indicate that there are multiple components of a single overall test. For example, for multi-zoned wells.
         /// </summary>
+        [ComponentElement]
         [XmlElement("productionTest")]
         public WellTestProductionTestData[] ProductionTest {
             get {
@@ -11420,6 +11434,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Data from an injection test. Multiple tests generally indicate that there are multiple components of the overall test. For example, for multi-zoned wells.
         /// </summary>
+        [ComponentElement]
         [XmlElement("injectionTest")]
         public WellTestInjectionTestData[] InjectionTest {
             get {
@@ -13064,6 +13079,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A single double value in the time series.
         /// </summary>
+        [ComponentElement]
         [XmlElement("doubleValue")]
         public TimeSeriesDoubleSample[] DoubleValue {
             get {
@@ -13097,6 +13113,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A single string value in the time series.
         /// </summary>
+        [ComponentElement]
         [XmlElement("stringValue")]
         public TimeSeriesStringSample[] StringValue {
             get {
@@ -13678,6 +13695,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The temperature to which the volume has been corrected. If given, then a pressure must also be given. Common standard temperatures are: 0 degC, 15 degC, 60 degF. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Pres.
         /// </summary>
+        [ComponentElement]
         [XmlElement("temp")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
@@ -13711,6 +13729,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The pressure to which the volume has been corrected. If given, then a temperature must also be given. Common standard pressures are: 1 atm and 14.696 psi (which are equivalent). If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Temp.
         /// </summary>
+        [ComponentElement]
         [XmlElement("pres")]
         public PressureMeasure Pres {
             get {
@@ -14792,6 +14811,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The temperature to which the flowRate has been corrected. If given, then a pressure must also be given. Common standard temperatures are: 0 degC, 15 degC, 60 degF. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Pres.
         /// </summary>
+        [ComponentElement]
         [XmlElement("temp")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
@@ -14825,6 +14845,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The pressure to which the flowRate has been corrected. If given, then a temperature must also be given. Common standard pressures are: 1 atm and 14.696 psi (which are equivalent). If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Temp.
         /// </summary>
+        [ComponentElement]
         [XmlElement("pres")]
         public PressureMeasure Pres {
             get {
@@ -15176,6 +15197,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The temperature to which the density has been corrected. If given, then a pressure must also be given. Common standard temperatures are: 0 degC, 15 degC, 60 degF. If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Pres.
         /// </summary>
+        [ComponentElement]
         [XmlElement("temp")]
         public ThermodynamicTemperatureMeasure Temp {
             get {
@@ -15209,6 +15231,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The pressure to which the density has been corrected. If given, then a temperature must also be given. Common standard pressures are: 1 atm and 14.696 psi (which are equivalent). If neither standardTempPres nor temp,pres are specified then the standard condition is defined by standardTempPres at the productVolume root. If you set this property, you must also set Temp.
         /// </summary>
+        [ComponentElement]
         [XmlElement("pres")]
         public PressureMeasure Pres {
             get {
@@ -20376,6 +20399,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A measure value. Unless the parameter is defined as a tuple, only one value should be specified. The measure class is defined by measureClass in the parent set. The unit of measure must conform to the units allowed by the measure class in the unit dictionary file. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless a status is also specified to explain why it is null.
         /// </summary>
+        [ComponentElement]
         [XmlElement("measureValue")]
         public GeneralQualifiedMeasure[] MeasureValue {
             get {
@@ -20411,6 +20435,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The values in one row of a curve. The aggregate of the curve rows represent the curve.
         /// </summary>
+        [ComponentElement]
         [XmlElement("curveValue")]
         public CurveData[] CurveValue {
             get {
@@ -20446,6 +20471,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A string value. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless a status is also specified to explain why it is null.
         /// </summary>
+        [ComponentElement]
         [XmlElement("stringValue")]
         public KindQualifiedString StringValue {
             get {
@@ -20481,6 +20507,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// An integer value. If the 'status' attribute is absent and the value is not "NaN", the data value can be assumed to be good with no restrictions. A value of "NaN" should be interpreted as null and should be not be given unless a status is also specified to explain why it is null.
         /// </summary>
+        [ComponentElement]
         [XmlElement("integerValue")]
         public IntegerQualifiedCount IntegerValue {
             get {
@@ -24398,6 +24425,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Defines the ownership share in the parent unit at a point in time. This commonly applies at a parent source unit (e.g., a field or platform).
         /// </summary>
+        [ComponentElement]
         [XmlElement("ownershipShare")]
         public ProductVolumeBusinessOwnershipShare[] OwnershipShare {
             get {
@@ -24431,6 +24459,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Defines account information in the parent unit. This commonly applies at a parent terminus unit (e.g., a terminal),
         /// </summary>
+        [ComponentElement]
         [XmlElement("accountInformation")]
         public ProductVolumeBusinessAccountInfo[] AccountInformation {
             get {
@@ -30861,6 +30890,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Defines the expected flow and product pairs to be assigned to this unit by a Product Volume report. A set of expected qualifiers can also be defined for each pair. Each unique combination of product, flow and qualifier represents an expected variation of the specified property. This element should only be specified for properties tha represent a flow stream (e.g., volume, pressure).
         /// </summary>
+        [ComponentElement]
         [XmlElement("expectedFlowProduct")]
         public ProductFlowQualifierExpected[] ExpectedFlowProduct {
             get {
@@ -33289,6 +33319,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// bubblePointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
@@ -33322,6 +33353,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// retrogradeDewPointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
@@ -33373,6 +33405,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// oilAPIGravity property
         /// </summary>
+        [ComponentElement]
         [XmlElement("oilAPIGravity")]
         public DensityMeasure OilAPIGravity {
             get {
@@ -33491,6 +33524,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// oilVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("oilVolume")]
         public VolumeMeasure OilVolume {
             get {
@@ -33525,6 +33559,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// gasVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("gasVolume")]
         public StandardVolumeMeasure GasVolume {
             get {
@@ -33559,6 +33594,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// oilShrinkageFactor property
         /// </summary>
+        [ComponentElement]
         [XmlElement("oilShrinkageFactor")]
         public VolumePerVolumeMeasure OilShrinkageFactor {
             get {
@@ -33593,6 +33629,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// stageSeparatorGORStd property
         /// </summary>
+        [ComponentElement]
         [XmlElement("stageSeparatorGORStd")]
         public StandardVolumePerVolumeMeasure StageSeparatorGORStd {
             get {
@@ -34728,6 +34765,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// bubblePointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
@@ -34761,6 +34799,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// retrogradeDewPointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
@@ -34898,6 +34937,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// oilAPIGravity property
         /// </summary>
+        [ComponentElement]
         [XmlElement("oilAPIGravity")]
         public DensityMeasure OilAPIGravity {
             get {
@@ -35702,6 +35742,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// liquidVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("liquidVolume")]
         public VolumeMeasure LiquidVolume {
             get {
@@ -35735,6 +35776,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// liquidDropoutPercent property
         /// </summary>
+        [ComponentElement]
         [XmlElement("liquidDropoutPercent")]
         public VolumePerVolumeMeasurePercent LiquidDropoutPercent {
             get {
@@ -35908,6 +35950,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// cumulativeGasProducedVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("cumulativeGasProducedVolume")]
         public StandardVolumeMeasure CumulativeGasProducedVolume {
             get {
@@ -35941,6 +35984,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// cumulativeGasProducedRatioStd property
         /// </summary>
+        [ComponentElement]
         [XmlElement("cumulativeGasProducedRatioStd")]
         public StandardVolumePerStandardVolumeMeasure CumulativeGasProducedRatioStd {
             get {
@@ -36349,6 +36393,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// bubblePointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
@@ -36382,6 +36427,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// retrogradeDewPointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
@@ -36743,6 +36789,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// oilVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("oilVolume")]
         public VolumeMeasure OilVolume {
             get {
@@ -36776,6 +36823,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// oilShrinkageFactor property
         /// </summary>
+        [ComponentElement]
         [XmlElement("oilShrinkageFactor")]
         public VolumePerVolumeMeasure OilShrinkageFactor {
             get {
@@ -37391,6 +37439,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// bubblePointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
@@ -37424,6 +37473,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// retrogradeDewPointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
@@ -37649,6 +37699,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// liquidVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("liquidVolume")]
         public VolumeMeasure LiquidVolume {
             get {
@@ -37682,6 +37733,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// liquidDropoutPercent property
         /// </summary>
+        [ComponentElement]
         [XmlElement("liquidDropoutPercent")]
         public VolumePerVolumeMeasurePercent LiquidDropoutPercent {
             get {
@@ -37855,6 +37907,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// cumulativeGasProducedVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("cumulativeGasProducedVolume")]
         public StandardVolumeMeasure CumulativeGasProducedVolume {
             get {
@@ -37888,6 +37941,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// cumulativeGasProducedRatioStd property
         /// </summary>
+        [ComponentElement]
         [XmlElement("cumulativeGasProducedRatioStd")]
         public StandardVolumePerStandardVolumeMeasure CumulativeGasProducedRatioStd {
             get {
@@ -38262,6 +38316,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// bubblePointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
@@ -38295,6 +38350,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// retrogradeDewPointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
@@ -38572,6 +38628,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// totalVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("totalVolume")]
         public VolumeMeasure TotalVolume {
             get {
@@ -38605,6 +38662,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// liquidVolume property
         /// </summary>
+        [ComponentElement]
         [XmlElement("liquidVolume")]
         public VolumeMeasure LiquidVolume {
             get {
@@ -38638,6 +38696,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// liquidDropoutPercent property
         /// </summary>
+        [ComponentElement]
         [XmlElement("liquidDropoutPercent")]
         public VolumePerVolumeMeasurePercent LiquidDropoutPercent {
             get {
@@ -39180,6 +39239,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// bubblePointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
@@ -39213,6 +39273,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// retrogradeDewPointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
@@ -39438,6 +39499,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// bubblePointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("bubblePointPressure")]
         public PressureMeasure BubblePointPressure {
             get {
@@ -39471,6 +39533,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// retrogradeDewPointPressure property
         /// </summary>
+        [ComponentElement]
         [XmlElement("retrogradeDewPointPressure")]
         public PressureMeasure RetrogradeDewPointPressure {
             get {
@@ -41162,6 +41225,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+        [ComponentElement]
         [XmlElement("constantCompositionExpansionTest")]
         public FluidResultConstantCompositionExpansionTest ConstantCompositionExpansionTest {
             get {
@@ -41194,6 +41258,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+        [ComponentElement]
         [XmlElement("constantVolumeDepletionTest")]
         public FluidResultConstantVolumeDepletionTest ConstantVolumeDepletionTest {
             get {
@@ -41226,6 +41291,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+        [ComponentElement]
         [XmlElement("differentialLiberationTest")]
         public FluidResultDifferentialLiberationTest DifferentialLiberationTest {
             get {
@@ -41258,6 +41324,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+        [ComponentElement]
         [XmlElement("jCurveTest")]
         public FluidResultJCurveTest JCurveTest {
             get {
@@ -41290,6 +41357,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+        [ComponentElement]
         [XmlElement("saturationTest")]
         public FluidResultSaturationTest SaturationTest {
             get {
@@ -41322,6 +41390,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+        [ComponentElement]
         [XmlElement("separatorTest")]
         public FluidResultSeparatorTest SeparatorTest {
             get {
@@ -41354,6 +41423,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// xxxxxxxxxxxxxxxx
         /// </summary>
+        [ComponentElement]
         [XmlElement("transportPropertiesTest")]
         public FluidResultTransportPropertiesTest TransportPropertiesTest {
             get {
@@ -43600,6 +43670,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The frequency for which the one way loss is measured. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("frequency")]
         public FrequencyMeasure Frequency {
             get {
@@ -43633,6 +43704,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The wavelength for which the one way loss is measured. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("wavelength")]
         public LengthMeasure Wavelength {
             get {
@@ -43724,6 +43796,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Information on type of intervention conveyance used by the optical path. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("intervention")]
         public InterventionConveyance Intervention {
             get {
@@ -43758,6 +43831,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Information on type of permanent conveyance used by the optical path. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("permanent")]
         public PermanentCable Permanent {
             get {
@@ -43792,6 +43866,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Information regarding the control line into which a fiber cable may be pumped in order to measure a facility. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("fiberControlLine")]
         public FiberControlLine FiberControlLine {
             get {
@@ -45603,6 +45678,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Choice where the facility mapping is inside a well.
         /// </summary>
+        [ComponentElement]
         [XmlElement("well")]
         public FiberFacilityWell Well {
             get {
@@ -45636,6 +45712,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Choice where the facility mapping is a pipeline.
         /// </summary>
+        [ComponentElement]
         [XmlElement("pipeline")]
         public FiberFacilityPipeline Pipeline {
             get {

@@ -17354,6 +17354,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// cartesianCS property
         /// </summary>
+        [ComponentElement]
         [XmlElement("cartesianCS")]
         public CartesianCSPropertyType CartesianCS {
             get {
@@ -17386,6 +17387,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// ellipsoidalCS property
         /// </summary>
+        [ComponentElement]
         [XmlElement("ellipsoidalCS")]
         public EllipsoidalCSPropertyType EllipsoidalCS {
             get {
@@ -17418,6 +17420,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// sphericalCS property
         /// </summary>
+        [ComponentElement]
         [XmlElement("sphericalCS")]
         public SphericalCSPropertyType SphericalCS {
             get {

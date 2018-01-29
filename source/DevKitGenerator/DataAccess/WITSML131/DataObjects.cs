@@ -12527,6 +12527,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Concentration Amount: unit type depends of typeConc. . If you set this property, you must also set TypeConc.
         /// </summary>
+        [ComponentElement]
         [XmlElement("concentration")]
         public MassConcentrationMeasure Concentration {
             get {
@@ -12561,6 +12562,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Concentration in terms of weight per sack.
         /// </summary>
+        [ComponentElement]
         [XmlElement("wtSack")]
         public MassMeasure WeightSack {
             get {
@@ -12596,6 +12598,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Concentration in terms of volume per sack.
         /// </summary>
+        [ComponentElement]
         [XmlElement("volSack")]
         public VolumeMeasure VolSack {
             get {
@@ -20640,6 +20643,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// A reference to the OTDR that was run. If an OTDR was run, but there is not instance of the OTDR to reference, choose the wasDriftRunPerformed element, and set it to True.
         /// </summary>
+        [ComponentElement]
         [XmlElement("OTDRPerformed")]
         public RefNameString[] OTDRPerformed {
             get {
@@ -27139,6 +27143,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// A force value (e.g., hookload) that represents the parameter.
         /// </summary>
+        [ComponentElement]
         [XmlElement("force")]
         public ForceMeasure Force {
             get {
@@ -27174,6 +27179,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// A concentration value that represents the parameter.
         /// </summary>
+        [ComponentElement]
         [XmlElement("concentration")]
         public VolumePerVolumeMeasure Concentration {
             get {
@@ -27209,6 +27215,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// A equivalent mud weight value that represents the parameter. This commonly used for pressure gradient parameters and pressure parameters.
         /// </summary>
+        [ComponentElement]
         [XmlElement("equivalentMudWeight")]
         public DensityMeasure EquivalentMudWeight {
             get {
@@ -27244,6 +27251,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// A pressure gradient value that represents the parameter. This is sometimes specified instead of an equivalent mud weight.
         /// </summary>
+        [ComponentElement]
         [XmlElement("pressureGradient")]
         public ForcePerVolumeMeasure PressureGradient {
             get {
@@ -31888,6 +31896,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The latitude with north being positive. If you set this property, you must also set Longitude.
         /// </summary>
+        [ComponentElement]
         [XmlElement("latitude")]
         public PlaneAngleMeasure Latitude {
             get {
@@ -31928,6 +31937,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The longitude with east being positive. If you set this property, you must also set Latitude.
         /// </summary>
+        [ComponentElement]
         [XmlElement("longitude")]
         public PlaneAngleMeasure Longitude {
             get {
@@ -31968,6 +31978,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The projected coordinate with east being positive. This is the most common type of projected coordinates. UTM coordinates are expressed in Easting and Northing. If you set this property, you must also set Northing.
         /// </summary>
+        [ComponentElement]
         [XmlElement("easting")]
         public LengthMeasure Easting {
             get {
@@ -32008,6 +32019,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The projected coordinate with north being positive. This is the most common type of projected coordinates. UTM coordinates are expressed in Easting and Northing. If you set this property, you must also set Easting.
         /// </summary>
+        [ComponentElement]
         [XmlElement("northing")]
         public LengthMeasure Northing {
             get {
@@ -32048,6 +32060,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The projected coordinate with west being positive. The positive directions are reversed from the usual Easting and Northing values. These values are generally located in the southern hemisphere, most notably in South Africa and Australia. If you set this property, you must also set Southing.
         /// </summary>
+        [ComponentElement]
         [XmlElement("westing")]
         public LengthMeasure Westing {
             get {
@@ -32088,6 +32101,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The projected coordinate with south being positive. The positive directions are reversed from the usual Easting and Northing values. These values are generally located in the southern hemisphere, most notably in South Africa and Australia. If you set this property, you must also set Westing.
         /// </summary>
+        [ComponentElement]
         [XmlElement("southing")]
         public LengthMeasure Southing {
             get {
@@ -32128,6 +32142,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The projected X coordinate with the positive direction unknown. ProjectedX and ProjectedY are used when it is not known what the meaning of the coordinates is. If the meaning is known, the Easting/Northing or Westing/Southing should be used. Use of this pair implies a lack of knowledge on the part of the sender. If you set this property, you must also set ProjectedY.
         /// </summary>
+        [ComponentElement]
         [XmlElement("projectedX")]
         public LengthMeasure ProjectedX {
             get {
@@ -32168,6 +32183,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The projected Y coordinate with the positive direction unknown. ProjectedX and ProjectedY are used when it is not known what the meaning of the coordinates is. If the meaning is known, the Easting/Northing or Westing/Southing should be used. Use of this pair implies a lack of knowledge on the part of the sender. If you set this property, you must also set ProjectedX.
         /// </summary>
+        [ComponentElement]
         [XmlElement("projectedY")]
         public LengthMeasure ProjectedY {
             get {
@@ -32208,6 +32224,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The local (engineering) X coordinate. The CRS will define the orientation of the axis. If you set this property, you must also set LocalY.
         /// </summary>
+        [ComponentElement]
         [XmlElement("localX")]
         public LengthMeasure LocalX {
             get {
@@ -32248,6 +32265,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The local (engineering) Y coordinate. The CRS will define the orientation of the axis. If you set this property, you must also set LocalX.
         /// </summary>
+        [ComponentElement]
         [XmlElement("localY")]
         public LengthMeasure LocalY {
             get {
@@ -33493,6 +33511,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Weight per item unit. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("itemWtPerUnit")]
         public MassMeasure ItemWeightPerUnit {
             get {
@@ -33526,6 +33545,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Volume per item unit. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("itemVolPerUnit")]
         public VolumeMeasure ItemVolPerUnit {
             get {
@@ -37846,6 +37866,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// A pointer to the log (within the context of the current wellbore) that will be used to persist this data.
         /// </summary>
+        [ComponentElement]
         [XmlElement("persistedAsLog")]
         public RefNameString PersistedAsLog {
             get {
@@ -37879,6 +37900,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// A pointer to the wellLog (within the context of the current wellbore) that will be used to persist this data.
         /// </summary>
+        [ComponentElement]
         [XmlElement("persistedAsWellLog")]
         public RefNameString PersistedAsWellLog {
             get {
@@ -38052,6 +38074,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The time interval associated with the method.
         /// </summary>
+        [ComponentElement]
         [XmlElement("timeInterval")]
         public TimeMeasure TimeInterval {
             get {
@@ -38085,6 +38108,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The distance interval associated with the method.
         /// </summary>
+        [ComponentElement]
         [XmlElement("distanceInterval")]
         public LengthMeasure DistanceInterval {
             get {
@@ -54614,6 +54638,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Used with PointTheBit type RSS tools, describes the angle of the bit.
         /// </summary>
+        [ComponentElement]
         [XmlElement("bendAngle")]
         public PlaneAngleMeasure BendAngle {
             get {
@@ -54647,6 +54672,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Offset from bottom connection to bend.
         /// </summary>
+        [ComponentElement]
         [XmlElement("bendOffset")]
         public LengthMeasure BendOffset {
             get {
@@ -57268,6 +57294,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Map projection system. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("mapProjection")]
         public Projectionx MapProjection {
             get {
@@ -57336,6 +57363,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// Local (engineering) system. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("localCRS")]
         public LocalCRS LocalCRS {
             get {
@@ -57801,6 +57829,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// A pointer to the reference point that is the origin of this CRS.
         /// </summary>
+        [ComponentElement]
         [XmlElement("origin")]
         public RefNameString Origin {
             get {

@@ -303,6 +303,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines the index locations of one referenced split node. The reference value refers to the order in point3dSet. If you set this property, you must also set SplitNodeSet.
         /// </summary>
+        [ComponentElement]
         [XmlElement("splitNodeReference")]
         public ResqmlSplitNodeReference[] SplitNodeReference {
             get {
@@ -336,6 +337,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A set of points that are split. There must be splitNodeCount points in the aggregate. If you set this property, you must also set SplitNodeReference.
         /// </summary>
+        [ComponentElement]
         [XmlElement("splitNodeSet")]
         public ResqmlPoint3dSet SplitNodeSet {
             get {
@@ -369,6 +371,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("ijkGridHdfGroup")]
         public ResqmlHdfGroup IjkGridHdfGroup {
             get {
@@ -785,6 +788,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines the index locations of one additional (split) coordinate line. The reference value refers to the order in the lineSet aggregate. If you set this property, you must also set LineSet.
         /// </summary>
+        [ComponentElement]
         [XmlElement("splitLineReference")]
         public ResqmlSplitLineReference[] SplitLineReference {
             get {
@@ -818,6 +822,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a set of node points on coordinate lines, organized by layer. There are "nk+gapCount+1" layers of nodes. Each layer has "(NI+1)*(NJ+1)+splitLineCount" node points. Here gapCount is the number of k layer gaps and splitLineCount is the number of additional DISTINCT lines. This data ordering facilitates K-slabbing of data sets and is shared between the XML and the HDF representations. In a layer, the first "(NI+1)*(NJ+1)" nodes are shared between columns of adjacent cells unless otherwise indicated. The lines are ordered according to a zero-based line_index defined by: (I-startIndexI)+(NI+1)*(J-startIndexJ) where I = I direction line coordinate for a column of cells. Minimum value=startIndexI, count=NI+1. J = J direction line coordinate for a column of cells. Minimum value=startIndexJ, count=NJ+1. The line I corresponds to the ICORN=0 side of cell I, and so the count of I is NI+1; Similarly for J. The next splitLineCount nodes are placed on the additional lines as indicated by the splitLineReferences in the order defined by the reference element in splitLineReference. The first additional line will be located at (NI+1)*(NJ+1) (assuming a zero-based index). There must be nk+gapCount+1 nodes on each line. For a line whose kind is "null" the values should be "NaN". For the additional lines, the line kind will never be "null". . If you set this property, you must also set SplitLineReference.
         /// </summary>
+        [ComponentElement]
         [XmlElement("lineSet")]
         public ResqmlPoint3dSet LineSet {
             get {
@@ -851,6 +856,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("ijkGridHdfGroup")]
         public ResqmlHdfGroup IjkGridHdfGroup {
             get {
@@ -1721,6 +1727,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// An encoded array of boolean flags which indicate cell node identity without the need for any floating point comparison The underlying type of each item is an integer. Each integer value represents the sum of integer components where:: 1=cellGeometryDefined, 2=iPinch, 4=jPinch, 8=kPinch, 16=iStandardAdjacency, 32=jStandardAdjacency, 64=kStandardAdjacency. This creates a bit encoded array within one integer value. Example: A "standard" cell has a value of 1+16+32+64 = 113 (hex 0x71 binary 1110001). A non-zero value for cellGeometryDefined indicates that the apparent geometry in a cell is well defined. A non-zero value for kPinch indicates that the top four nodes of a cell are identical to the corresponding bottom four nodes of the same cell. Similar for iPinch and jPinch. A non-zero value for iStandardAdjacency indicates that the four "I+" face nodes of cell (I,J,K) are identical to the four corresponding "I-" face nodes of cell (I+1,J,K). iStandardAdjacency=0 indicates that the only kind of adjacency you can expect will be described in the nonStandardAdjacency list. Similar for jStandardAdjacency and kStandardAdjacency. Consistent with this definition, standardAdjacency=0 off the edge of a grid.
         /// </summary>
+        [ComponentElement]
         [XmlElement("gridTopologyFlags")]
         public ShortValueList GridTopologyFlags {
             get {
@@ -1754,6 +1761,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the gridTopologyFlags array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("ijkGridHdfGroup")]
         public ResqmlHdfGroup IjkGridHdfGroup {
             get {
@@ -2583,6 +2591,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("hdfRepresentation")]
         public ResqmlHdfGroup HdfRepresentation {
             get {
@@ -2615,6 +2624,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Captures the array of values in an XML representation.
         /// </summary>
+        [ComponentElement]
         [XmlElement("xmlRepresentation")]
         public ResqmlContinuousValues XmlRepresentation {
             get {
@@ -2666,6 +2676,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of byte values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("byteValues")]
         public ByteValueList ByteValues {
             get {
@@ -2698,6 +2709,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of double values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("doubleValues")]
         public DoubleValueList DoubleValues {
             get {
@@ -2730,6 +2742,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of float values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("floatValues")]
         public FloatValueList FloatValues {
             get {
@@ -2762,6 +2775,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of int values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("intValues")]
         public IntValueList IntValues {
             get {
@@ -2794,6 +2808,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of long values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("longValues")]
         public LongValueList LongValues {
             get {
@@ -2826,6 +2841,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of short values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("shortValues")]
         public ShortValueList ShortValues {
             get {
@@ -3414,6 +3430,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of byte values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("byteValues")]
         public ByteValueList ByteValues {
             get {
@@ -3446,6 +3463,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of int values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("intValues")]
         public IntValueList IntValues {
             get {
@@ -3478,6 +3496,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of long values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("longValues")]
         public LongValueList LongValues {
             get {
@@ -3510,6 +3529,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines a space delimited list of short values.
         /// </summary>
+        [ComponentElement]
         [XmlElement("shortValues")]
         public ShortValueList ShortValues {
             get {
@@ -3762,6 +3782,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A pointer to the locally defined property which represents these values. Note that all local kinds must directly or indirectly be specialized from a standard RESQML kind.
         /// </summary>
+        [ComponentElement]
         [XmlElement("localKind")]
         public RefGlobalNameString LocalKind {
             get {
@@ -3847,6 +3868,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// The date and time related to the property.
         /// </summary>
+        [ComponentElement]
         [XmlElement("timeStep")]
         public ResqmlRefTimeStep TimeStep {
             get {
@@ -4418,6 +4440,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("hdfRepresentation")]
         public ResqmlHdfGroup HdfRepresentation {
             get {
@@ -4450,6 +4473,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Captures the array of values in an XML representation.
         /// </summary>
+        [ComponentElement]
         [XmlElement("xmlRepresentation")]
         public ResqmlDiscreteValues XmlRepresentation {
             get {
@@ -4631,6 +4655,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("hdfRepresentation")]
         public ResqmlHdfGroup HdfRepresentation {
             get {
@@ -4663,6 +4688,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Captures the array of values in an XML representation.
         /// </summary>
+        [ComponentElement]
         [XmlElement("xmlRepresentation")]
         public ResqmlDiscreteValues XmlRepresentation {
             get {
@@ -4908,6 +4934,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A 3D corner point grid representation using explicit nodes on coordinate lines.
         /// </summary>
+        [ComponentElement]
         [XmlElement("explicitCornerPointGrid")]
         public ResqmlExplicitCornerPointGridRepresentation ExplicitCornerPointGrid {
             get {
@@ -4940,6 +4967,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Structured IJK grid refinement.
         /// </summary>
+        [ComponentElement]
         [XmlElement("ijkGridRefinement")]
         public ResqmlIJKGridRefinement IjkGridRefinement {
             get {
@@ -5393,6 +5421,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A cell-face-pair that defines non-standard-adjacency. The order of the aggregate must be retained. Properties will be assigned to the pair based on the order. An index of zero will represent the first pair.
         /// </summary>
+        [ComponentElement]
         [XmlElement("gridIJKCellFacePair")]
         public ResqmlGridIJKCellFacePair[] GridIJKCellFacePair {
             get {
@@ -5426,6 +5455,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the cell-face-pair array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("hdfRepresentation")]
         public ResqmlHdfGroup HdfRepresentation {
             get {
@@ -6931,6 +6961,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A list of points representing all the nodes of all the pillars. The first nodeCountPerPillar points represent the nodes of the first pillar, the second nodeCountPerPillar points represent the nodes of the second pillar, and so on. A point defined by with NaN values shall be ignored.
         /// </summary>
+        [ComponentElement]
         [XmlElement("pillarSet")]
         public ResqmlPoint3dSet PillarSet {
             get {
@@ -6964,6 +6995,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("pillarSetHdfGroup")]
         public ResqmlHdfGroup PillarSetHdfGroup {
             get {
@@ -7510,6 +7542,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines the set of points that represents a nominal surface. The order of the points in the aggregate is not significant relative to the surface. The order represents the "point index" which is used for assigning properties.
         /// </summary>
+        [ComponentElement]
         [XmlElement("point3dSet")]
         public ResqmlPoint3dSet Point3dSet {
             get {
@@ -7543,6 +7576,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("pointSetHdfGroup")]
         public ResqmlHdfGroup PointSetHdfGroup {
             get {
@@ -7952,6 +7986,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A set of coordinate triplets which locates the nodes in the mesh. A value of "NaN" shall NOT exist in any of the points. There is no semantic meaning to the point order except that properties are assigned to the vertices based on the order. This order is called the "vertex index". The first vertex has an index of zero. If you set this property, you must also set TriangleNodeIndexSet, SplitEdgeNodeIndexSet.
         /// </summary>
+        [ComponentElement]
         [XmlElement("point3dSet")]
         public ResqmlPoint3dSet Point3dSet {
             get {
@@ -7985,6 +8020,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A set of triangles in the mesh. A triangle is defined by specifying the "vertex index" of each corner. A corner shall not be defined as "NaN". The aggregate of triangles defines the mesh. There is no semantic meaning to the triangle sequence order except that properties are assigned to the triangles based on the order. This order is called the "face index". The first triangle has an index of zero. If you set this property, you must also set Point3dSet, SplitEdgeNodeIndexSet.
         /// </summary>
+        [ComponentElement]
         [XmlElement("triangleNodeIndexSet")]
         public ResqmlTriangleSet TriangleNodeIndexSet {
             get {
@@ -8018,6 +8054,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A set of split edges. There is no semantics assigned to the order of the edges. If you set this property, you must also set Point3dSet, TriangleNodeIndexSet.
         /// </summary>
+        [ComponentElement]
         [XmlElement("splitEdgeNodeIndexSet")]
         public ResqmlSplitEdgeSet SplitEdgeNodeIndexSet {
             get {
@@ -8051,6 +8088,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("triangulatedHdfGroup")]
         public ResqmlHdfGroup TriangulatedHdfGroup {
             get {
@@ -8289,6 +8327,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A space delimited list of ni*nj space delimited vertical coordinates which defines the vertical coordinate at each node of the grid. The order of the items in the list is I varies fastest. I=1,J=1 represents the first value while I=2,J=1 represents the second value, etc.
         /// </summary>
+        [ComponentElement]
         [XmlElement("zValueDataset")]
         public DoubleValueList ZValueDataset {
             get {
@@ -8322,6 +8361,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
+        [ComponentElement]
         [XmlElement("grid2dHdfGroup")]
         public ResqmlHdfGroup Grid2dHdfGroup {
             get {
@@ -11163,6 +11203,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// A pointer to parent locally defined property. The semantics of this property is a specialization of the specified local property. Note that all local kinds must directly or indirectly be related to a standard RESQML standard kind.
         /// </summary>
+        [ComponentElement]
         [XmlElement("parentLocalKind")]
         public RefGlobalNameString ParentLocalKind {
             get {
@@ -12009,6 +12050,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// VerticalCRS property
         /// </summary>
+        [ComponentElement]
         [XmlElement("VerticalCRS", Namespace="http://www.opengis.net/gml/3.2")]
         public VerticalCRSType VerticalCRS {
             get {
@@ -13668,6 +13710,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// pos property
         /// </summary>
+        [ComponentElement]
         [XmlElement("pos")]
         public DirectPositionType Pos {
             get {
@@ -13700,6 +13743,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// posList property
         /// </summary>
+        [ComponentElement]
         [XmlElement("posList")]
         public DirectPositionListType PosList {
             get {
@@ -14009,6 +14053,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// lowerCorner property
         /// </summary>
+        [ComponentElement]
         [XmlElement("lowerCorner")]
         public DirectPositionType LowerCorner {
             get {
@@ -14041,6 +14086,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// pos property
         /// </summary>
+        [ComponentElement]
         [XmlElement("pos")]
         public DirectPositionType Pos {
             get {
@@ -14073,6 +14119,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// upperCorner property
         /// </summary>
+        [ComponentElement]
         [XmlElement("upperCorner")]
         public DirectPositionType UpperCorner {
             get {
@@ -18566,6 +18613,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// cartesianCS property
         /// </summary>
+        [ComponentElement]
         [XmlElement("cartesianCS")]
         public CartesianCSPropertyType CartesianCS {
             get {
@@ -18598,6 +18646,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// ellipsoidalCS property
         /// </summary>
+        [ComponentElement]
         [XmlElement("ellipsoidalCS")]
         public EllipsoidalCSPropertyType EllipsoidalCS {
             get {
@@ -18630,6 +18679,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// sphericalCS property
         /// </summary>
+        [ComponentElement]
         [XmlElement("sphericalCS")]
         public SphericalCSPropertyType SphericalCS {
             get {
@@ -20161,6 +20211,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// ProjectedCRS property
         /// </summary>
+        [ComponentElement]
         [XmlElement("ProjectedCRS", Namespace="http://www.opengis.net/gml/3.2")]
         public ProjectedCRSType ProjectedCRS {
             get {

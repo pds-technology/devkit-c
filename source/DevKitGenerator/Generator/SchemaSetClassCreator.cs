@@ -1196,10 +1196,7 @@ namespace Energistics.Generator
             }
 
             var propType = property.PropertyType;
-            var nested = propType.GetProperties()
-                .Any(p => p.IsDefined(typeof(XmlElementAttribute), false) || 
-                          p.IsDefined(typeof(XmlAttributeAttribute), false) ||
-                          p.IsDefined(typeof(ValidationAttribute), false));
+            var nested = IsNested(propType);
 
             if (nested)
             {
@@ -1246,6 +1243,14 @@ namespace Energistics.Generator
             string array = GetArrayString(type, attr);
            
             sb.AppendLine("        " + GetDescription(type, attr.ElementName, extraDesc));
+
+            var nested = IsNested(attr.Type);
+
+            if (nested)
+            {
+                sb.AppendLine("        [ComponentElement]");
+            }
+
             //make sure the type is specify in xmlelement annoatation , otherwise the xml output is invalidate.
             sb.AppendLine("        " + GetXmlElementAttrTag(attr, property));
            // sb.AppendLine("        [XmlElement(\"" + attr.ElementName + "\")]");
@@ -1264,6 +1269,14 @@ namespace Energistics.Generator
             {
                 return false;
             }
+        }
+
+        private bool IsNested(Type type)
+        {
+            return type.GetProperties()
+                .Any(p => p.IsDefined(typeof(XmlElementAttribute), false) ||
+                          p.IsDefined(typeof(XmlAttributeAttribute), false) ||
+                          p.IsDefined(typeof(ValidationAttribute), false));
         }
 
         private string GetArrayString(Type type, XmlElementAttribute attr)

@@ -9284,6 +9284,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extension event for cement
         /// </summary>
+        [ComponentElement]
         [XmlElement("cementExtension")]
         public CementExtension CementExtension {
             get {
@@ -9327,6 +9328,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extension event for clean fill
         /// </summary>
+        [ComponentElement]
         [XmlElement("cleanFillExtension")]
         public CleanFillExtension CleanFillExtension {
             get {
@@ -9370,6 +9372,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extension event for directional survey
         /// </summary>
+        [ComponentElement]
         [XmlElement("directionalSurveyExtension")]
         public DirectionalSurveyExtension DirectionalSurveyExtension {
             get {
@@ -9413,6 +9416,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extension event for lost circulation
         /// </summary>
+        [ComponentElement]
         [XmlElement("lostCirculationExtension")]
         public LostCirculationExtension LostCirculationExtension {
             get {
@@ -9456,6 +9460,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extension event for bottom hole pressure
         /// </summary>
+        [ComponentElement]
         [XmlElement("BHPExtension")]
         public BHPExtension BHPExtension {
             get {
@@ -9499,6 +9504,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extension event for acidizing and fracturing
         /// </summary>
+        [ComponentElement]
         [XmlElement("acidizeFracExtension")]
         public AcidizefracExtension AcidizeFracExtension {
             get {
@@ -9542,6 +9548,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extension event for job
         /// </summary>
+        [ComponentElement]
         [XmlElement("jobExtension")]
         public JobExtension JobExtension {
             get {
@@ -9585,6 +9592,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extension event for pressure test
         /// </summary>
+        [ComponentElement]
         [XmlElement("pressureTestExtension")]
         public PressureTestExtension PressureTestExtension {
             get {
@@ -9628,6 +9636,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extension event for waiting on
         /// </summary>
+        [ComponentElement]
         [XmlElement("waitingOnExtension")]
         public WaitingOnExtension WaitingOnExtension {
             get {
@@ -9671,6 +9680,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extension event for perforating event
         /// </summary>
+        [ComponentElement]
         [XmlElement("perforationExtension")]
         public PerforatingExtension PerforationExtension {
             get {
@@ -9714,6 +9724,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extension event for fluid report
         /// </summary>
+        [ComponentElement]
         [XmlElement("fluidReportExtension")]
         public FluidReportExtension FluidReportExtension {
             get {
@@ -9757,6 +9768,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Extension event for downhole component
         /// </summary>
+        [ComponentElement]
         [XmlElement("downholeExtension")]
         public DownholeExtension DownholeExtension {
             get {
