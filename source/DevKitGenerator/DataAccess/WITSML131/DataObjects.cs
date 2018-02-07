@@ -25670,7 +25670,7 @@ namespace Energistics.DataAccess.WITSML131
         /// The serialziation of the axis positions of an array as a whitespace-delimited list values of type xsd:double. If the length of this list is less than 'count' then the difference in the last two values represents the increment to be used to fill out the list. For example, the list '2 4' with count=4 represents the list '2 4 6 8'.
         /// </summary>
         [XmlElement("doubleValues")]
-        public Double? DoubleValues {
+        public String DoubleValues {
             get {
                 return doubleValuesField;
             } 
@@ -25682,7 +25682,7 @@ namespace Energistics.DataAccess.WITSML131
             }
         }
 
-        private Double? doubleValuesField; 
+        private String doubleValuesField; 
         private bool doubleValuesSpecified = false; 
 
         /// <summary>

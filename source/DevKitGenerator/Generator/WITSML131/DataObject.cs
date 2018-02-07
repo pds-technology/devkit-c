@@ -27228,7 +27228,7 @@ namespace Energistics.Generator.WITSML131 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("doubleValues", typeof(double))]
+        [System.Xml.Serialization.XmlElementAttribute("doubleValues", typeof(string))]
         [System.Xml.Serialization.XmlElementAttribute("stringValues", typeof(string))]
         public object Item {
             get {
