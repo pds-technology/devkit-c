@@ -85,6 +85,7 @@ namespace Energistics.DataAccess.EnumValue
     /// <summary>
     /// Base class for Enumeration values that are definied in EnumValues.xml
     /// </summary>
+    [Serializable]
     public abstract class EnumValue
     {
         /// <summary>

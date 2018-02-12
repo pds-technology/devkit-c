@@ -7,6 +7,7 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Activity codes.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ActivityCode : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -3647,6 +3648,7 @@ namespace Energistics.DataAccess.COMPLETION100
     ///		For string types, the maximum length must be defined in number of characters.
     ///		For measures, the expected measure class must be defined.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ExtensionName : Energistics.DataAccess.EnumValue.ExtensionDataEnumValue
     {
         /// <summary>
@@ -3763,6 +3765,7 @@ namespace Energistics.DataAccess.COMPLETION100
     /// These values represent the lithological terminology used in descriptions of rock cuttings in mud
     ///		logs.
     /// </summary>
+    [System.SerializableAttribute()]
     public class LithologyType : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -6747,6 +6750,7 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Lithology matrix/cement description.
     /// </summary>
+    [System.SerializableAttribute()]
     public class MatrixCementType : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -6994,6 +6998,7 @@ namespace Energistics.DataAccess.COMPLETION100
     ///		These are copied from the Energistics (POSC) Units Classes v2.2.
     ///		The units of measure map to the POSC Units of Measure Dictionary v2.2.
     /// </summary>
+    [System.SerializableAttribute()]
     public class MeasureClass : Energistics.DataAccess.EnumValue.MeasureUOMEnumValue
     {
         /// <summary>
@@ -10558,6 +10563,7 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Mud Subtype at event occurrence.
     /// </summary>
+    [System.SerializableAttribute()]
     public class MudSubClass : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -11352,6 +11358,7 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Defines the locations where an equipment tag might be found.
     /// </summary>
+    [System.SerializableAttribute()]
     public class NameTagLocation : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -11495,6 +11502,7 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Defines the specifications for creating equipment tags.
     /// </summary>
+    [System.SerializableAttribute()]
     public class NameTagNumberingScheme : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -11746,6 +11754,7 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Defines the mechanisms for attaching an equipment tag to an item.
     /// </summary>
+    [System.SerializableAttribute()]
     public class NameTagTechnology : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -11925,6 +11934,7 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Defines the kind of objectGroup.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ObjectGroupKind : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -12149,6 +12159,7 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// These values represent the type of qualifier in lithology.
     /// </summary>
+    [System.SerializableAttribute()]
     public class QualifierType : Energistics.DataAccess.EnumValue.LithoTypeEnumValue
     {
         /// <summary>
@@ -18942,6 +18953,7 @@ namespace Energistics.DataAccess.COMPLETION100
     ///		See API Bulletin D20 "BULLETIN ON DIRECTIONAL DRILLING SURVEY CALCULATION METHODS AND TERMINOLOGY", 
     ///		First Edition December 31, 1985.
     /// </summary>
+    [System.SerializableAttribute()]
     public class TrajStnCalcAlgorithm : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -19157,6 +19169,7 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     ///  Type of directional survey tool; a very generic classification.
     /// </summary>
+    [System.SerializableAttribute()]
     public class TypeSurveyTool : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>

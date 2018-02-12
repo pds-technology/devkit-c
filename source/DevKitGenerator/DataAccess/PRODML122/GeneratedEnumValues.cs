@@ -12,6 +12,7 @@ namespace Energistics.DataAccess.PRODML122
     ///		For string types, the maximum length must be defined in number of characters.
     ///		For measures, the expected measure class must be defined.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ExtensionName : Energistics.DataAccess.EnumValue.ExtensionDataEnumValue
     {
         /// <summary>
@@ -131,6 +132,7 @@ namespace Energistics.DataAccess.PRODML122
     ///		These are copied from the Energistics (POSC) Units Classes v2.2.
     ///		The units of measure map to the POSC Units of Measure Dictionary v2.2.
     /// </summary>
+    [System.SerializableAttribute()]
     public class MeasureClass : Energistics.DataAccess.EnumValue.MeasureUOMEnumValue
     {
         /// <summary>
@@ -3695,6 +3697,7 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Defines the locations where an equipment tag might be found.
     /// </summary>
+    [System.SerializableAttribute()]
     public class NameTagLocation : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -3838,6 +3841,7 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Defines the specifications for creating equipment tags.
     /// </summary>
+    [System.SerializableAttribute()]
     public class NameTagNumberingScheme : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>
@@ -4089,6 +4093,7 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Defines the mechanisms for attaching an equipment tag to an item.
     /// </summary>
+    [System.SerializableAttribute()]
     public class NameTagTechnology : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>

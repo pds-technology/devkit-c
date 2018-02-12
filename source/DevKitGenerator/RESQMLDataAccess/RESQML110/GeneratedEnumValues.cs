@@ -12,6 +12,7 @@ namespace Energistics.DataAccess.RESQML110
     ///		For string types, the maximum length must be defined in number of characters.
     ///		For measures, the expected measure class must be defined.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ExtensionName : Energistics.DataAccess.EnumValue.ExtensionDataEnumValue
     {
         /// <summary>
@@ -127,6 +128,7 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Defines classes of measures and their allowed units of measures. For a value whose underlying meaning conforms to one of these classes, any specified unit of measure must conform to the defined list. These are copied from the Energistics (POSC) Units Classes v2.2.
     /// </summary>
+    [System.SerializableAttribute()]
     public class MeasureClass : Energistics.DataAccess.EnumValue.MeasureUOMEnumValue
     {
         /// <summary>
@@ -3343,6 +3345,7 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Defines classes of properties. A property inherents the underlying characteristis of its parent but specializes its meaning.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ResqmlPropertyKind : Energistics.DataAccess.EnumValue.ResqmlPropertyKindEnumValue
     {
         /// <summary>
@@ -7789,6 +7792,7 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Defines the allowed units of measure.
     /// </summary>
+    [System.SerializableAttribute()]
     public class ResqmlUnitOfMeasure : Energistics.DataAccess.EnumValue.EnumValue
     {
         /// <summary>

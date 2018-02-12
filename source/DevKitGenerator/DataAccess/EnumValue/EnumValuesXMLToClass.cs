@@ -140,6 +140,7 @@ namespace Energistics.DataAccess.EnumValue
                     sb.AppendLine("    /// <summary>");
                     sb.AppendLine("    /// " + description.Replace("\n", "\n    ///"));
                     sb.AppendLine("    /// </summary>");
+                    sb.AppendLine("    [System.SerializableAttribute()]");
                     if (extensionClass)
                     {
                         sb.AppendLine("    public class " + name + "Extension : " + name);
