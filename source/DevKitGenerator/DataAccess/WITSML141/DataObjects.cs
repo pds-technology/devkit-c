@@ -7804,6 +7804,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Geographic system. Note that these structures do not truly define a CRS but rather specify information that could be used to describe a CRS. 
         /// </summary>
+        [ComponentElement]
         [XmlElement("geographic")]
         public GeodeticModel Geographic {
             get {
@@ -13681,6 +13682,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Jar object. 
         /// </summary>
 		[Description("Jar object.")]
+        [ComponentElement]
 		[XmlElement("jar")]
         public Jar Jar {
             get {
@@ -13716,6 +13718,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Motor object. 
         /// </summary>
 		[Description("Motor object.")]
+        [ComponentElement]
 		[XmlElement("motor")]
         public Motor Motor {
             get {
@@ -17103,6 +17106,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Applies only to measured magnetic stations. 
         /// </summary>
 		[Description("Applies only to measured magnetic stations.")]
+        [ComponentElement]
 		[XmlElement("rawData")]
         public StnTrajRawData RawData {
             get {
@@ -17120,6 +17124,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Applies only to measured magnetic stations. 
         /// </summary>
 		[Description("Applies only to measured magnetic stations.")]
+        [ComponentElement]
 		[XmlElement("corUsed")]
         public StnTrajCorUsed CorUsed {
             get {
@@ -17137,6 +17142,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Applies only to measured magnetic stations. 
         /// </summary>
 		[Description("Applies only to measured magnetic stations.")]
+        [ComponentElement]
 		[XmlElement("valid")]
         public StnTrajValid Valid {
             get {
@@ -17154,6 +17160,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Covariance matrix for error model. 
         /// </summary>
 		[Description("Covariance matrix for error model.")]
+        [ComponentElement]
 		[XmlElement("matrixCov")]
         public StnTrajMatrixCov MatrixCov {
             get {
@@ -44957,6 +44964,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Mud losses detailed breakdown between Surface and Down Hole. 
         /// </summary>
 		[Description("Mud losses detailed breakdown between Surface and Down Hole.")]
+        [ComponentElement]
 		[XmlElement("mudLosses")]
         public MudLosses MudLosses {
             get {
@@ -47006,6 +47014,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Description of mud built, received, etc. 
         /// </summary>
 		[Description("Description of mud built, received, etc.")]
+        [ComponentElement]
 		[XmlElement("mudVolume")]
         public MudVolume MudVolume {
             get {
@@ -53465,6 +53474,7 @@ namespace Energistics.DataAccess.WITSML141
         /// Total gas readings associated with this interval. 
         /// </summary>
 		[Description("Total gas readings associated with this interval.")]
+        [ComponentElement]
 		[XmlElement("mudGas")]
         public MudGas MudGas {
             get {

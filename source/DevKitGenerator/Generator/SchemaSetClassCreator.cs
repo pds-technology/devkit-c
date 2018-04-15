@@ -1271,12 +1271,13 @@ namespace Energistics.Generator
             }
         }
 
-        private bool IsNested(Type type)
+        private bool IsNested(Type type, bool recursive = false)
         {
             return type.GetProperties()
-                .Any(p => p.IsDefined(typeof(XmlElementAttribute), false) ||
-                          p.IsDefined(typeof(XmlAttributeAttribute), false) ||
-                          p.IsDefined(typeof(ValidationAttribute), false));
+                .Any(p => p.IsDefined(typeof(XmlElementAttribute), true) ||
+                          p.IsDefined(typeof(XmlAttributeAttribute), true) ||
+                          p.IsDefined(typeof(ValidationAttribute), true) ||
+                          !recursive && IsNested(p.PropertyType, true));
         }
 
         private string GetArrayString(Type type, XmlElementAttribute attr)

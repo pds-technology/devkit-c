@@ -20824,6 +20824,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Rop property
         /// </summary>
 		[Description("Rate of penetration through the interval.")]
+        [ComponentElement]
 		[XmlElement("Rop")]
         public RopStatistics Rop {
             get {
@@ -31287,7 +31288,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// MudLosses property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("MudLosses")]
         public MudLosses MudLosses {
             get {
@@ -36582,7 +36583,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Valid property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Valid")]
         public StnTrajValid Valid {
             get {
@@ -36599,7 +36600,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// MatrixCov property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("MatrixCov")]
         public StnTrajMatrixCov MatrixCov {
             get {
@@ -36662,7 +36663,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// RawData property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("RawData")]
         public StnTrajRawData RawData {
             get {
@@ -36679,7 +36680,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// CorUsed property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("CorUsed")]
         public StnTrajCorUsed CorUsed {
             get {
@@ -43321,7 +43322,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// secondDefiningParameter property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("secondDefiningParameter")]
         public SecondDefParameter SecondDefiningParameter {
             get {
@@ -68769,7 +68770,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Jar property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Jar")]
         public Jar Jar {
             get {
@@ -68820,7 +68821,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Motor property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("Motor")]
         public Motor Motor {
             get {
@@ -80933,7 +80934,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// MudVolume property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("MudVolume")]
         public MudVolume MudVolume {
             get {

@@ -7142,6 +7142,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The cumulative volumes of fluids at the time of the well test. The fluids are oil, gas, and water.
         /// </summary>
 		[Description("The cumulative volumes of fluids at the time of the  well test. The fluids are oil, gas, and water.")]
+        [ComponentElement]
 		[XmlElement("wellTestCumulative")]
         public WellTestCumulative WellTestCumulative {
             get {
@@ -7249,6 +7250,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The production results of the test.
         /// </summary>
 		[Description("The production results of the test.")]
+        [ComponentElement]
 		[XmlElement("injectionTestResults")]
         public WellTestInjectionTestResults InjectionTestResults {
             get {
@@ -8816,6 +8818,7 @@ namespace Energistics.DataAccess.PRODML131
         /// This element records measurements made and settings made at the wellhead.
         /// </summary>
 		[Description("This element records measurements made and settings made at the wellhead.")]
+        [ComponentElement]
 		[XmlElement("wellheadData")]
         public WellTestWellheadData WellheadData {
             get {
@@ -8833,6 +8836,7 @@ namespace Energistics.DataAccess.PRODML131
         /// DEPRECATED - Use pointData instead. This element records measurements made at the bottomhole.
         /// </summary>
 		[Description("DEPRECATED - Use pointData instead. This element records measurements made at the bottomhole.")]
+        [ComponentElement]
 		[XmlElement("bottomholeData")]
         public WellTestBottomholeData BottomholeData {
             get {
@@ -8850,6 +8854,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Frequency and electric current measured during the well test for electric submersible pump (ESP) wells. The presumption is that only one pump per well is operational during each test.
         /// </summary>
 		[Description("Frequency and electric current measured during the  well test for electric submersible pump (ESP) wells. The presumption is that only one pump per well is operational during each test.")]
+        [ComponentElement]
 		[XmlElement("espData")]
         public WellTestElectricSubmersiblePumpData EspData {
             get {
@@ -8897,6 +8902,7 @@ namespace Energistics.DataAccess.PRODML131
         /// This element records the measurements (pressure and temperature) at the separator.
         /// </summary>
 		[Description("This element records the measurements (pressure and temperature) at the separator.")]
+        [ComponentElement]
 		[XmlElement("separatorData")]
         public WellTestSeparatorData SeparatorData {
             get {
@@ -8932,6 +8938,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The cumulative volumes of fluids at the time of the well test. The fluids are oil, gas, and water.
         /// </summary>
 		[Description("The cumulative volumes of fluids at the time of the well test. The fluids are oil, gas, and water.")]
+        [ComponentElement]
 		[XmlElement("wellTestCumulative")]
         public WellTestCumulative WellTestCumulative {
             get {
@@ -8949,6 +8956,7 @@ namespace Energistics.DataAccess.PRODML131
         /// The production results of the test.
         /// </summary>
 		[Description("The production results of the test.")]
+        [ComponentElement]
 		[XmlElement("productionTestResults")]
         public WellTestProductionTestResults ProductionTestResults {
             get {
@@ -30703,6 +30711,7 @@ namespace Energistics.DataAccess.PRODML131
         /// Defines the relative coordinate of the unit on a display screen. This is not intended for detailed diagrams. Rather it is intended to allow different applications to present a user view which has a consistent layout.
         /// </summary>
 		[Description("Defines the relative coordinate of the unit on a display screen. This is not intended for detailed diagrams. Rather it is intended to allow different applications to present a user view which has a consistent layout.")]
+        [ComponentElement]
 		[XmlElement("relativeCoordinate")]
         public RelativeCoordinate RelativeCoordinate {
             get {
@@ -33953,6 +33962,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// stockTank property
         /// </summary>
+        [ComponentElement]
         [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
@@ -35344,6 +35354,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// stockTank property
         /// </summary>
+        [ComponentElement]
         [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
@@ -36134,6 +36145,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// stockTank property
         /// </summary>
+        [ComponentElement]
         [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
@@ -37180,6 +37192,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// stockTank property
         /// </summary>
+        [ComponentElement]
         [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
@@ -38057,6 +38070,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// stockTank property
         /// </summary>
+        [ComponentElement]
         [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
@@ -38980,6 +38994,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// stockTank property
         /// </summary>
+        [ComponentElement]
         [XmlElement("stockTank")]
         public FluidResultStockTank StockTank {
             get {
@@ -49423,6 +49438,7 @@ namespace Energistics.DataAccess.PRODML131
         /// WITSML query parameters.
         /// </summary>
 		[Description("WITSML query parameters.")]
+        [ComponentElement]
 		[XmlElement("queryParam")]
         public DocumentInfoQueryParam QueryParam {
             get {

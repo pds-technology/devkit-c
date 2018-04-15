@@ -10505,7 +10505,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// AdditionalGridTopology property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("AdditionalGridTopology")]
         public AdditionalGridTopology AdditionalGridTopology {
             get {
@@ -18206,7 +18206,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// secondDefiningParameter property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("secondDefiningParameter")]
         public SecondDefParameter SecondDefiningParameter {
             get {
@@ -22444,7 +22444,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// AdditionalGridTopology property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("AdditionalGridTopology")]
         public AdditionalGridTopology AdditionalGridTopology {
             get {
@@ -23055,7 +23055,7 @@ namespace Energistics.DataAccess.RESQML201
         /// <summary>
         /// ParentWindow property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("ParentWindow")]
         public AbstractParentWindow ParentWindow {
             get {

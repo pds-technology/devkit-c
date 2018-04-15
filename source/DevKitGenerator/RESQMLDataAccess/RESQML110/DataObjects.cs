@@ -14360,7 +14360,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// secondDefiningParameter property
         /// </summary>
-		
+		[ComponentElement]
 		[XmlElement("secondDefiningParameter")]
         public StandAloneSecondDefiningParameter SecondDefiningParameter {
             get {
