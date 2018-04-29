@@ -19816,8 +19816,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Average property
         /// </summary>
-		[Required]
-        [Description("Corrected drilling exponent calculated for the interval.")]
+		[Description("Corrected drilling exponent calculated for the interval.")]
         [ComponentElement]
 		[XmlElement("Average")]
         public DimensionlessMeasure Average {
@@ -19890,8 +19889,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Average property
         /// </summary>
-		[Required]
-        [Description("Average equivalent circulating density at TD through the interval.")]
+		[Description("Average equivalent circulating density at TD through the interval.")]
         [ComponentElement]
 		[XmlElement("Average")]
         public MassPerVolumeMeasure Average {
@@ -19964,8 +19962,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Average property
         /// </summary>
-		[Required]
-        [Description("Average mud density through the interval.")]
+		[Description("Average mud density through the interval.")]
         [ComponentElement]
 		[XmlElement("Average")]
         public MassPerVolumeMeasure Average {
@@ -20038,8 +20035,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Average property
         /// </summary>
-		[Required]
-        [Description("Average bit turn rate through the interval.")]
+		[Description("Average bit turn rate through the interval.")]
         [ComponentElement]
 		[XmlElement("Average")]
         public AngularVelocityMeasure Average {
@@ -20207,8 +20203,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Average property
         /// </summary>
-		[Required]
-        [Description("Average electric current through the interval")]
+		[Description("Average electric current through the interval")]
         [ComponentElement]
 		[XmlElement("Average")]
         public ElectricCurrentMeasure Average {
@@ -20281,8 +20276,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Average property
         /// </summary>
-		[Required]
-        [Description("Average torque through the interval.")]
+		[Description("Average torque through the interval.")]
         [ComponentElement]
 		[XmlElement("Average")]
         public MomentOfForceMeasure Average {
@@ -20450,8 +20444,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// Average property
         /// </summary>
-		[Required]
-        [Description("Average weight on bit through the interval.")]
+		[Description("Average weight on bit through the interval.")]
         [ComponentElement]
 		[XmlElement("Average")]
         public ForceMeasure Average {
@@ -63733,8 +63726,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// BottomHoleTemperature property
         /// </summary>
-		[Required]
-        [Description("Bottomhole temperature for the job or reporting period.")]
+		[Description("Bottomhole temperature for the job or reporting period.")]
         [ComponentElement]
 		[XmlElement("BottomHoleTemperature")]
         public ThermodynamicTemperatureMeasure BottomHoleTemperature {
@@ -63789,8 +63781,7 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// eTimStatic property
         /// </summary>
-		[Required]
-        [Description("Elapsed time since circulation stopped.")]
+		[Description("Elapsed time since circulation stopped.")]
         [ComponentElement]
 		[XmlElement("eTimStatic")]
         public TimeMeasure ETimeStatic {

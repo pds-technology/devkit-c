@@ -6123,7 +6123,6 @@ namespace Energistics.Generator.COMPLETION100 {
         
         /// <remarks/>
         /// <summary>Defines primary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Defines primary numeric ordering of this object within the group. The meaning of " +
             "this order will be defined by the groupType.")]
         public objectSequence sequence1 {

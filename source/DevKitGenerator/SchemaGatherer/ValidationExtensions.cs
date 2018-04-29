@@ -449,7 +449,10 @@ namespace Energistics.SchemaGatherer
 
             if (memberProperty == null) return;
 
-            if (element.MinOccurs > 0)
+            var parentSequence = element.Parent as XmlSchemaSequence;
+            var inOptionalSequence = parentSequence != null && parentSequence.MinOccurs == 0;
+
+            if (element.MinOccurs > 0 && !inOptionalSequence)
             {
                 AddRequiredAttribute(memberProperty);
             }

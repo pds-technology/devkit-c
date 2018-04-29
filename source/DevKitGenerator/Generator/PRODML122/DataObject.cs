@@ -14643,7 +14643,6 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The name of the facility. The name can be qualified by a naming system.  This can also define the kind of facility.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The name of the facility. The name can be qualified by a naming system.  This can" +
             " also define the kind of facility.")]
         public facilityIdentifierStruct name {
@@ -14708,7 +14707,6 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The Product Flow Port associated with the Product Flow Unit.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The Product Flow Port associated with the Product Flow Unit.")]
         public refNameString port {
             get {
@@ -14721,7 +14719,6 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The Product Flow Unit representing the facility.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The Product Flow Unit representing the facility.")]
         public refNameString unit {
             get {
@@ -18039,7 +18036,6 @@ namespace Energistics.Generator.PRODML122 {
         
         /// <remarks/>
         /// <summary>The Product Flow Unit representing the facility. This must be unique within the context of the Product Flow Network.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The Product Flow Unit representing the facility. This must be unique within the c" +
             "ontext of the Product Flow Network.")]
         public refNameString unit {

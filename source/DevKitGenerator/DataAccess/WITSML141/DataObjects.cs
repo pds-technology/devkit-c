@@ -32267,8 +32267,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The measured depth at the top of the interval represented by the qualifier. This must be within the range of the parent geologic interval. If mdTop and mdBottom are not given then the qualifier is deemed to exist over the depth range of the parent geologyInterval.
         /// </summary>
-		[Required]
-        [Description("The measured depth at the top of the interval represented  by the qualifier. This must be within the range of the parent geologic interval. If mdTop and mdBottom are not given then the qualifier is deemed to exist over the  depth range of the parent geologyInterval.")]
+		[Description("The measured depth at the top of the interval represented  by the qualifier. This must be within the range of the parent geologic interval. If mdTop and mdBottom are not given then the qualifier is deemed to exist over the  depth range of the parent geologyInterval.")]
         [ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
@@ -32286,8 +32285,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// The measured depth at the bottom of the interval represented by the qualifier. A point can be indicated by specifying bottom=top. This must be within the range of the parent geologic interval.
         /// </summary>
-		[Required]
-        [Description("The measured depth at the bottom of the interval represented by the qualifier.  A point can be indicated by specifying bottom=top. This must be within the range of the parent geologic interval.")]
+		[Description("The measured depth at the bottom of the interval represented by the qualifier.  A point can be indicated by specifying bottom=top. This must be within the range of the parent geologic interval.")]
         [ComponentElement]
 		[XmlElement("mdBottom")]
         public MeasuredDepthCoord MDBottom {
@@ -51487,8 +51485,7 @@ namespace Energistics.DataAccess.WITSML141
         /// <summary>
         /// Defines primary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType.
         /// </summary>
-		[Required]
-        [Description("Defines primary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType.")]
+		[Description("Defines primary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType.")]
         [ComponentElement]
 		[XmlElement("sequence1")]
         public ObjectSequence Sequence1 {

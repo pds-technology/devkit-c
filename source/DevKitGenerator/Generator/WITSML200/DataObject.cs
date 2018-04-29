@@ -23860,7 +23860,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Corrected drilling exponent calculated for the interval.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Corrected drilling exponent calculated for the interval.")]
         public DimensionlessMeasure Average {
             get {
@@ -23898,7 +23897,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Average equivalent circulating density at TD through the interval.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Average equivalent circulating density at TD through the interval.")]
         public MassPerVolumeMeasure Average {
             get {
@@ -23937,7 +23935,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Average mud density through the interval.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Average mud density through the interval.")]
         public MassPerVolumeMeasure Average {
             get {
@@ -23975,7 +23972,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Average bit turn rate through the interval.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Average bit turn rate through the interval.")]
         public AngularVelocityMeasure Average {
             get {
@@ -24095,7 +24091,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Average electric current through the interval</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Average electric current through the interval")]
         public ElectricCurrentMeasure Average {
             get {
@@ -24133,7 +24128,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Average torque through the interval.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Average torque through the interval.")]
         public MomentOfForceMeasure Average {
             get {
@@ -24265,7 +24259,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Average weight on bit through the interval.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Average weight on bit through the interval.")]
         public ForceMeasure Average {
             get {
@@ -56549,7 +56542,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Bottomhole temperature for the job or reporting period.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Bottomhole temperature for the job or reporting period.")]
         public ThermodynamicTemperatureMeasure BottomHoleTemperature {
             get {
@@ -56573,7 +56565,6 @@ namespace Energistics.Generator.WITSML200 {
         
         /// <remarks/>
         /// <summary>Elapsed time since circulation stopped.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Elapsed time since circulation stopped.")]
         public TimeMeasure eTimStatic {
             get {

@@ -18324,8 +18324,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The name of the facility. The name can be qualified by a naming system. This can also define the kind of facility.
         /// </summary>
-		[Required]
-        [Description("The name of the facility. The name can be qualified by a naming system.  This can also define the kind of facility.")]
+		[Description("The name of the facility. The name can be qualified by a naming system.  This can also define the kind of facility.")]
         [ComponentElement]
 		[XmlElement("name")]
         public FacilityIdentifierStruct Name {
@@ -18414,8 +18413,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The Product Flow Port associated with the Product Flow Unit.
         /// </summary>
-		[Required]
-        [Description("The Product Flow Port associated with the Product Flow Unit.")]
+		[Description("The Product Flow Port associated with the Product Flow Unit.")]
         [ComponentElement]
 		[XmlElement("port")]
         public RefNameString Port {
@@ -18433,8 +18431,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The Product Flow Unit representing the facility.
         /// </summary>
-		[Required]
-        [Description("The Product Flow Unit representing the facility.")]
+		[Description("The Product Flow Unit representing the facility.")]
         [ComponentElement]
 		[XmlElement("unit")]
         public RefNameString Unit {
@@ -21377,8 +21374,7 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// The Product Flow Unit representing the facility. This must be unique within the context of the Product Flow Network.
         /// </summary>
-		[Required]
-        [Description("The Product Flow Unit representing the facility. This must be unique within the context of the Product Flow Network.")]
+		[Description("The Product Flow Unit representing the facility. This must be unique within the context of the Product Flow Network.")]
         [ComponentElement]
 		[XmlElement("unit")]
         public RefNameString Unit {

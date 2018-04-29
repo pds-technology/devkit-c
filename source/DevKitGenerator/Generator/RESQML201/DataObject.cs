@@ -10487,7 +10487,6 @@ namespace Energistics.Generator.RESQML201 {
         /// <remarks/>
         /// <summary>Number of split pillars in the model. Count must be positive.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Number of split pillars in the model. Count must be positive.")]
         public string SplitPillarCount {
             get {
@@ -10500,7 +10499,6 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         /// <summary>Parent pillar index for each of the split pillars. This information is used to infer the grid cell geometry.  BUSINESS RULE: Array length must match splitPillarCount.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Parent pillar index for each of the split pillars. This information is used to in" +
             "fer the grid cell geometry.  BUSINESS RULE: Array length must match splitPillarC" +
             "ount.")]
@@ -10515,7 +10513,6 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         /// <summary>List of columns for each of the split pillars. This information is used to infer the grid cell geometry.  BUSINESS RULE: The length of the first list-of-lists array must match the splitPillarCount.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("List of columns for each of the split pillars. This information is used to infer " +
             "the grid cell geometry.  BUSINESS RULE: The length of the first list-of-lists ar" +
             "ray must match the splitPillarCount.")]
@@ -12158,7 +12155,6 @@ namespace Energistics.Generator.RESQML201 {
         /// <remarks/>
         /// <summary>Number of gaps between layers. Must be positive.  Number of INTERVALS = gapCount + NK.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Number of gaps between layers. Must be positive.  Number of INTERVALS = gapCount " +
             "+ NK.")]
         public string Count {
@@ -12172,7 +12168,6 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         /// <summary>Boolean array of length NK-1. TRUE if there is a gap after the corresponding layer.  NKL = NK + gapCount + 1  BUSINESS RULE: gapCount must be consistent with the number of gaps specified by the gapAfterLayer array.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Boolean array of length NK-1. TRUE if there is a gap after the corresponding laye" +
             "r.  NKL = NK + gapCount + 1  BUSINESS RULE: gapCount must be consistent with the" +
             " number of gaps specified by the gapAfterLayer array.")]
@@ -12411,7 +12406,6 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         /// <summary>Units of measure for the overlapVolume.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Units of measure for the overlapVolume.")]
         public VolumeUom VolumeUom {
             get {
@@ -12424,7 +12418,6 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         /// <summary>Parent-child cell volume overlap.  BUSINESS RULE: Length of array must equal the cell overlap count.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Parent-child cell volume overlap.  BUSINESS RULE: Length of array must equal the " +
             "cell overlap count.")]
         public AbstractDoubleArray OverlapVolumes {
@@ -12592,7 +12585,6 @@ namespace Energistics.Generator.RESQML201 {
         /// <remarks/>
         /// <summary>Number of parent-child cell overlaps. Must be positive.</summary>
         [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Number of parent-child cell overlaps. Must be positive.")]
         public string Count {
             get {
@@ -12605,7 +12597,6 @@ namespace Energistics.Generator.RESQML201 {
         
         /// <remarks/>
         /// <summary>(Parent cell index, Child cell index) pair for each overlap.  BUSINESS RULE: Length of array must equal 2 x overlapCount.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("(Parent cell index, Child cell index) pair for each overlap.  BUSINESS RULE: Leng" +
             "th of array must equal 2 x overlapCount.")]
         public AbstractIntegerArray ParentChildCellPairs {

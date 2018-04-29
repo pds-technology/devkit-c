@@ -18386,8 +18386,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The name of the facility. The name can be qualified by a naming system. This can also define the kind of facility.
         /// </summary>
-		[Required]
-        [Description("The name of the facility. The name can be qualified by a naming system.  This can also define the kind of facility.")]
+		[Description("The name of the facility. The name can be qualified by a naming system.  This can also define the kind of facility.")]
         [ComponentElement]
 		[XmlElement("name")]
         public FacilityIdentifierStruct Name {
@@ -18476,8 +18475,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The Product Flow Port associated with the Product Flow Unit.
         /// </summary>
-		[Required]
-        [Description("The Product Flow Port associated with the Product Flow Unit.")]
+		[Description("The Product Flow Port associated with the Product Flow Unit.")]
         [ComponentElement]
 		[XmlElement("port")]
         public RefNameString Port {
@@ -18495,8 +18493,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The Product Flow Unit representing the facility.
         /// </summary>
-		[Required]
-        [Description("The Product Flow Unit representing the facility.")]
+		[Description("The Product Flow Unit representing the facility.")]
         [ComponentElement]
 		[XmlElement("unit")]
         public RefNameString Unit {
@@ -21439,8 +21436,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// The Product Flow Unit representing the facility. This must be unique within the context of the Product Flow Network.
         /// </summary>
-		[Required]
-        [Description("The Product Flow Unit representing the facility. This must be unique within the context of the Product Flow Network.")]
+		[Description("The Product Flow Unit representing the facility. This must be unique within the context of the Product Flow Network.")]
         [ComponentElement]
 		[XmlElement("unit")]
         public RefNameString Unit {
@@ -45203,8 +45199,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// A textual description of the patch cord
         /// </summary>
-		[Required]
-        [StringLength(4000)]
+		[StringLength(4000)]
         [Description("A textual description of the patch cord")]
 		[XmlElement("description")]
         public String Description {
@@ -45539,8 +45534,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Distance between the beginning of the optical path to the distance where the mapping with the facility takes place.
         /// </summary>
-		[Required]
-        [Description("Distance between the beginning of the optical path to the distance where the mapping with the facility takes place.")]
+		[Description("Distance between the beginning of the optical path to the distance where the mapping with the facility takes place.")]
         [RecurringElement]
 		[XmlElement("opticalPathDistanceStart")]
         public List<LengthMeasure> OpticalPathDistanceStart {
@@ -45570,8 +45564,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Distance between the beginning of the optical path to the distance where the mapping with the facility ends.
         /// </summary>
-		[Required]
-        [Description("Distance between the beginning of the optical path to the distance where the mapping with the facility ends.")]
+		[Description("Distance between the beginning of the optical path to the distance where the mapping with the facility ends.")]
         [RecurringElement]
 		[XmlElement("opticalPathDistanceEnd")]
         public List<LengthMeasure> OpticalPathDistanceEnd {
@@ -45601,8 +45594,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Distance between the facility datum and the distance where the mapping with the optical path takes place
         /// </summary>
-		[Required]
-        [Description("Distance between the facility datum and the distance where the mapping with the optical path takes place")]
+		[Description("Distance between the facility datum and the distance where the mapping with the optical path takes place")]
         [RecurringElement]
 		[XmlElement("facilityLengthStart")]
         public List<LengthMeasure> FacilityLengthStart {
@@ -45632,8 +45624,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Distance between the facility datum and the distance where the mapping with the optical path ends.
         /// </summary>
-		[Required]
-        [Description("Distance between the facility datum and the distance where the mapping with the optical path ends.")]
+		[Description("Distance between the facility datum and the distance where the mapping with the optical path ends.")]
         [RecurringElement]
 		[XmlElement("facilityLengthEnd")]
         public List<LengthMeasure> FacilityLengthEnd {
@@ -45980,8 +45971,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Starting point of the detected defect as distance in the optical path from the lightbox
         /// </summary>
-		[Required]
-        [Description("Starting point of the detected defect as distance in the optical path from the lightbox")]
+		[Description("Starting point of the detected defect as distance in the optical path from the lightbox")]
         [RecurringElement]
 		[XmlElement("opticalPathDistanceStart")]
         public List<LengthMeasure> OpticalPathDistanceStart {
@@ -46041,8 +46031,7 @@ namespace Energistics.DataAccess.PRODML131
         /// <summary>
         /// Enum. The type of defect on the optical path.
         /// </summary>
-		[Required]
-        [Description("Enum.  The type of defect on the optical path.")]
+		[Description("Enum.  The type of defect on the optical path.")]
         [RecurringElement]
 		[XmlElement("defectType")]
         public List<PathDefectTypeList> DefectType {

@@ -5302,8 +5302,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// SplitPillarCount property
         /// </summary>
-		[Required]
-        [Description("Number of split pillars in the model. Count must be positive.")]
+		[Description("Number of split pillars in the model. Count must be positive.")]
 		[XmlElement("SplitPillarCount", DataType="positiveInteger")]
         public String SplitPillarCount {
             get {
@@ -5320,8 +5319,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ParentPillarIndices property
         /// </summary>
-		[Required]
-        [Description("Parent pillar index for each of the split pillars. This information is used to infer the grid cell geometry.  BUSINESS RULE: Array length must match splitPillarCount.")]
+		[Description("Parent pillar index for each of the split pillars. This information is used to infer the grid cell geometry.  BUSINESS RULE: Array length must match splitPillarCount.")]
 		[XmlElement("ParentPillarIndices")]
         public AbstractIntegerArray ParentPillarIndices {
             get {
@@ -5338,8 +5336,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ColumnsPerSplitPillar property
         /// </summary>
-		[Required]
-        [Description("List of columns for each of the split pillars. This information is used to infer the grid cell geometry.  BUSINESS RULE: The length of the first list-of-lists array must match the splitPillarCount.")]
+		[Description("List of columns for each of the split pillars. This information is used to infer the grid cell geometry.  BUSINESS RULE: The length of the first list-of-lists array must match the splitPillarCount.")]
         [ComponentElement]
 		[XmlElement("ColumnsPerSplitPillar")]
         public ResqmlJaggedArray ColumnsPerSplitPillar {
@@ -7899,8 +7896,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Count property
         /// </summary>
-		[Required]
-        [Description("Number of gaps between layers. Must be positive.  Number of INTERVALS = gapCount + NK.")]
+		[Description("Number of gaps between layers. Must be positive.  Number of INTERVALS = gapCount + NK.")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public String Count {
             get {
@@ -7917,8 +7913,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// GapAfterLayer property
         /// </summary>
-		[Required]
-        [Description("Boolean array of length NK-1. TRUE if there is a gap after the corresponding layer.  NKL = NK + gapCount + 1  BUSINESS RULE: gapCount must be consistent with the number of gaps specified by the gapAfterLayer array.")]
+		[Description("Boolean array of length NK-1. TRUE if there is a gap after the corresponding layer.  NKL = NK + gapCount + 1  BUSINESS RULE: gapCount must be consistent with the number of gaps specified by the gapAfterLayer array.")]
 		[XmlElement("GapAfterLayer")]
         public AbstractBooleanArray GapAfterLayer {
             get {
@@ -8355,8 +8350,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// VolumeUom property
         /// </summary>
-		[Required]
-        [Description("Units of measure for the overlapVolume.")]
+		[Description("Units of measure for the overlapVolume.")]
 		[XmlElement("VolumeUom")]
         public VolumeUom? VolumeUom {
             get {
@@ -8373,8 +8367,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// OverlapVolumes property
         /// </summary>
-		[Required]
-        [Description("Parent-child cell volume overlap.  BUSINESS RULE: Length of array must equal the cell overlap count.")]
+		[Description("Parent-child cell volume overlap.  BUSINESS RULE: Length of array must equal the cell overlap count.")]
 		[XmlElement("OverlapVolumes")]
         public AbstractDoubleArray OverlapVolumes {
             get {
@@ -8428,8 +8421,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// Count property
         /// </summary>
-		[Required]
-        [Description("Number of parent-child cell overlaps. Must be positive.")]
+		[Description("Number of parent-child cell overlaps. Must be positive.")]
 		[XmlElement("Count", DataType="positiveInteger")]
         public String Count {
             get {
@@ -8446,8 +8438,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// ParentChildCellPairs property
         /// </summary>
-		[Required]
-        [Description("(Parent cell index, Child cell index) pair for each overlap.  BUSINESS RULE: Length of array must equal 2 x overlapCount.")]
+		[Description("(Parent cell index, Child cell index) pair for each overlap.  BUSINESS RULE: Length of array must equal 2 x overlapCount.")]
 		[XmlElement("ParentChildCellPairs")]
         public AbstractIntegerArray ParentChildCellPairs {
             get {
@@ -8464,7 +8455,7 @@ namespace Energistics.DataAccess.RESQML200
         /// <summary>
         /// OverlapVolume property
         /// </summary>
-		[ComponentElement]
+		
 		[XmlElement("OverlapVolume")]
         public OverlapVolume OverlapVolume {
             get {

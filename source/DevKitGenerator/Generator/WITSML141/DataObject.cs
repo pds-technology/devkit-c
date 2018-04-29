@@ -29759,7 +29759,6 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The measured depth at the top of the interval represented  by the qualifier. This must be within the range of the parent geologic interval. If mdTop and mdBottom are not given then the qualifier is deemed to exist over the  depth range of the parent geologyInterval.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"The measured depth at the top of the interval represented  by the qualifier. This must be within the range of the parent geologic interval. If mdTop and mdBottom are not given then the qualifier is deemed to exist over the  depth range of the parent geologyInterval.")]
         public measuredDepthCoord mdTop {
             get {
@@ -29772,7 +29771,6 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>The measured depth at the bottom of the interval represented by the qualifier.  A point can be indicated by specifying bottom=top. This must be within the range of the parent geologic interval.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The measured depth at the bottom of the interval represented by the qualifier.  A" +
             " point can be indicated by specifying bottom=top. This must be within the range " +
             "of the parent geologic interval.")]
@@ -46667,7 +46665,6 @@ namespace Energistics.Generator.WITSML141 {
         
         /// <remarks/>
         /// <summary>Defines primary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Defines primary numeric ordering of this object within the group. The meaning of " +
             "this order will be defined by the groupType.")]
         public objectSequence sequence1 {

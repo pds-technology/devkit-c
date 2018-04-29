@@ -5436,8 +5436,7 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// Defines primary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType.
         /// </summary>
-		[Required]
-        [Description("Defines primary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType.")]
+		[Description("Defines primary numeric ordering of this object within the group. The meaning of this order will be defined by the groupType.")]
         [ComponentElement]
 		[XmlElement("sequence1")]
         public ObjectSequence Sequence1 {

@@ -14676,7 +14676,6 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         /// <summary>The name of the facility. The name can be qualified by a naming system.  This can also define the kind of facility.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The name of the facility. The name can be qualified by a naming system.  This can" +
             " also define the kind of facility.")]
         public facilityIdentifierStruct name {
@@ -14741,7 +14740,6 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         /// <summary>The Product Flow Port associated with the Product Flow Unit.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The Product Flow Port associated with the Product Flow Unit.")]
         public refNameString port {
             get {
@@ -14754,7 +14752,6 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         /// <summary>The Product Flow Unit representing the facility.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The Product Flow Unit representing the facility.")]
         public refNameString unit {
             get {
@@ -18072,7 +18069,6 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         /// <summary>The Product Flow Unit representing the facility. This must be unique within the context of the Product Flow Network.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The Product Flow Unit representing the facility. This must be unique within the c" +
             "ontext of the Product Flow Network.")]
         public refNameString unit {
@@ -33741,7 +33737,6 @@ namespace Energistics.Generator.PRODML131 {
         
         /// <remarks/>
         /// <summary>A textual description of the patch cord</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DataAnnotations.StringLengthAttribute(4000)]
         [System.ComponentModel.DescriptionAttribute("A textual description of the patch cord")]
         public string description {
@@ -33988,7 +33983,6 @@ namespace Energistics.Generator.PRODML131 {
         /// <remarks/>
         /// <summary>Distance between the beginning of the optical path to the distance where the mapping with the facility takes place.</summary>
         [System.Xml.Serialization.XmlElementAttribute("opticalPathDistanceStart")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Distance between the beginning of the optical path to the distance where the mapp" +
             "ing with the facility takes place.")]
         public lengthMeasure[] opticalPathDistanceStart {
@@ -34003,7 +33997,6 @@ namespace Energistics.Generator.PRODML131 {
         /// <remarks/>
         /// <summary>Distance between the beginning of the optical path to the distance where the mapping with the facility ends.</summary>
         [System.Xml.Serialization.XmlElementAttribute("opticalPathDistanceEnd")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Distance between the beginning of the optical path to the distance where the mapp" +
             "ing with the facility ends.")]
         public lengthMeasure[] opticalPathDistanceEnd {
@@ -34018,7 +34011,6 @@ namespace Energistics.Generator.PRODML131 {
         /// <remarks/>
         /// <summary>Distance between the facility datum and the distance where the mapping with the optical path takes place</summary>
         [System.Xml.Serialization.XmlElementAttribute("facilityLengthStart")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Distance between the facility datum and the distance where the mapping with the o" +
             "ptical path takes place")]
         public lengthMeasure[] facilityLengthStart {
@@ -34033,7 +34025,6 @@ namespace Energistics.Generator.PRODML131 {
         /// <remarks/>
         /// <summary>Distance between the facility datum and the distance where the mapping with the optical path ends.</summary>
         [System.Xml.Serialization.XmlElementAttribute("facilityLengthEnd")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Distance between the facility datum and the distance where the mapping with the o" +
             "ptical path ends.")]
         public lengthMeasure[] facilityLengthEnd {
@@ -34215,7 +34206,6 @@ namespace Energistics.Generator.PRODML131 {
         /// <remarks/>
         /// <summary>Starting point of the detected defect as distance in the optical path from the lightbox</summary>
         [System.Xml.Serialization.XmlElementAttribute("opticalPathDistanceStart")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Starting point of the detected defect as distance in the optical path from the li" +
             "ghtbox")]
         public lengthMeasure[] opticalPathDistanceStart {
@@ -34245,7 +34235,6 @@ namespace Energistics.Generator.PRODML131 {
         /// <remarks/>
         /// <summary>Enum.  The type of defect on the optical path.</summary>
         [System.Xml.Serialization.XmlElementAttribute("defectType")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Enum.  The type of defect on the optical path.")]
         public PathDefectTypes[] defectType {
             get {

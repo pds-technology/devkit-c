@@ -15528,8 +15528,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The measured depth at the top of the interval represented by the qualifier. This must be within the range of the parent geologic interval.
         /// </summary>
-		[Required]
-        [Description("The measured depth at the top of the interval represented  by the qualifier. This must be within the range of the parent geologic interval.")]
+		[Description("The measured depth at the top of the interval represented  by the qualifier. This must be within the range of the parent geologic interval.")]
         [ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
@@ -27107,8 +27106,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The measured depth at a point or at the top of an interval. If it represents the top of an interval then bottom measured depth must also be given. At least one of dTime or mdTop must be given.
         /// </summary>
-		[Required]
-        [Description("The measured depth at a point or at the top of an interval.  If it represents the top of an interval then bottom measured depth must also be given. At least one of dTime or mdTop must be given.")]
+		[Description("The measured depth at a point or at the top of an interval.  If it represents the top of an interval then bottom measured depth must also be given. At least one of dTime or mdTop must be given.")]
         [ComponentElement]
 		[XmlElement("mdTop")]
         public MeasuredDepthCoord MDTop {
@@ -38063,8 +38061,7 @@ namespace Energistics.DataAccess.WITSML131
         /// <summary>
         /// The interval method. Not appropriate for a SpotSample.
         /// </summary>
-		[Required]
-        [Description("The interval method. Not appropriate for a SpotSample.")]
+		[Description("The interval method. Not appropriate for a SpotSample.")]
 		[XmlElement("method")]
         public IntervalMethod? Method {
             get {

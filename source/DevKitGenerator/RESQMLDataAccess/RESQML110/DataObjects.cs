@@ -6748,8 +6748,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// True ("true" or "1") indicates that the inlines are parallel to the i-axis which means that each inline represents a constant value of j and each crossline represents a constant value of i. False ("false" or "0") indicates that the inlines are parallel to the j-axis which means that each inline represents a constant value of i and each crossline represents a constant value of j.
         /// </summary>
-		[Required]
-        [Description("True (\"true\" or \"1\") indicates that the inlines are parallel to the i-axis which means that each inline represents a constant value of j and  each crossline represents a constant value of i. False (\"false\" or \"0\") indicates that the inlines are parallel to the j-axis which means that each inline represents a constant value of i and  each crossline represents a constant value of j.")]
+		[Description("True (\"true\" or \"1\") indicates that the inlines are parallel to the i-axis which means that each inline represents a constant value of j and  each crossline represents a constant value of i. False (\"false\" or \"0\") indicates that the inlines are parallel to the j-axis which means that each inline represents a constant value of i and  each crossline represents a constant value of j.")]
 		[XmlElement("inlineParallelToIAxis")]
         public Boolean? InlineParallelToIAxis {
             get {
@@ -6766,8 +6765,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// The index of the first inline beginning at i=0, j=0.
         /// </summary>
-		[Required]
-        [Description("The index of the first inline beginning at i=0, j=0.")]
+		[Description("The index of the first inline beginning at i=0, j=0.")]
 		[XmlElement("originInline")]
         public Int32? OriginInline {
             get {
@@ -6784,8 +6782,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// The index of the first crosslineline beginning at i=0, j=0.
         /// </summary>
-		[Required]
-        [Description("The index of the first crosslineline beginning at i=0, j=0.")]
+		[Description("The index of the first crosslineline beginning at i=0, j=0.")]
 		[XmlElement("originCrossline")]
         public Int32? OriginCrossline {
             get {
@@ -6802,8 +6799,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// The inline increment increment. If inlines are parallel to the i-axis the inline increment will be the difference in the inline number from node i=0, j=0 to node i=1, j=0. If inlines are parallel to the j-axis the inline increment will be the difference in the inline number from node i=0, j=0 to node i=0, j=1. The increment can be a positive or negative integer, but not zero.
         /// </summary>
-		[Required]
-        [Description("The inline increment increment. If inlines are parallel to the i-axis the inline increment will be the difference  in the inline number from node i=0, j=0 to node i=1, j=0. If inlines are parallel to the j-axis the inline increment will be the difference  in the inline number from node i=0, j=0 to node i=0, j=1.  The increment can be a positive or negative integer, but not zero.")]
+		[Description("The inline increment increment. If inlines are parallel to the i-axis the inline increment will be the difference  in the inline number from node i=0, j=0 to node i=1, j=0. If inlines are parallel to the j-axis the inline increment will be the difference  in the inline number from node i=0, j=0 to node i=0, j=1.  The increment can be a positive or negative integer, but not zero.")]
 		[XmlElement("inlineIncrement")]
         public Int32? InlineIncrement {
             get {
@@ -6820,8 +6816,7 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// The crossline increment. The increment can be a positive or negative integer, but not zero.
         /// </summary>
-		[Required]
-        [Description("The crossline increment. The increment can be a positive or negative integer, but not zero.")]
+		[Description("The crossline increment. The increment can be a positive or negative integer, but not zero.")]
 		[XmlElement("crosslineIncrement")]
         public Int32? CrosslineIncrement {
             get {
