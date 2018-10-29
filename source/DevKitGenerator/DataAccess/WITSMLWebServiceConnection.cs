@@ -81,6 +81,8 @@ using System.Web.Services.Protocols;
 using System.Xml;
 using System.Xml.Serialization;
 using System.Text;
+using System.IO;
+using System.IO.Compression;
 
 namespace Energistics.DataAccess
 {
@@ -103,10 +105,27 @@ namespace Energistics.DataAccess
         }
 
         /// <summary>
-        /// Gets or sets a value indicating whether compression is enabled.
+        /// Gets or sets a value indicating whether server compression is enabled.
         /// </summary>
-        /// <value><c>true</c> if compression is enabled; otherwise, <c>false</c>.</value>
-        public bool IsCompressionEnabled { get; set; }
+        /// <value><c>true</c> if server compression is enabled; otherwise, <c>false</c>.</value>
+        [Obsolete("Use IsServerCompressionEnabled instead.")]
+        public bool IsCompressionEnabled { get { return AcceptCompressedResponses; } set { AcceptCompressedResponses = value; } }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether compressed responses from the server are accepted.
+        /// </summary>
+        /// <value><c>true</c> if compressed responses are accepted; otherwise, <c>false</c>.</value>
+        /// <remarks>If enabled, WITSML API calls will inform the server that compressed responses are accepted and handle any compressed responses.</remarks>
+        public bool AcceptCompressedResponses { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether requests from the client should be compressed.
+        /// </summary>
+        /// <value><c>true</c> if client requests should be compressed; otherwise, <c>false</c>.</value>
+        /// <remarks>
+        /// If <c>true</c>, client applications should compress XML input sent to the server for GetFromStore, AddToStore and UpdateInStore.
+        /// </remarks>
+        public bool CompressRequests { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether pre-authentication is enabled.
@@ -334,7 +353,8 @@ namespace Energistics.DataAccess
             var client = service as IWitsmlClient;
             if (client != null)
             {
-                client.IsCompressionEnabled = IsCompressionEnabled;
+                client.AcceptCompressedResponses = AcceptCompressedResponses;
+                client.CompressRequests = CompressRequests;
                 client.Headers = Headers;
             }
 

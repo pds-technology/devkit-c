@@ -84,6 +84,7 @@
   <ItemGroup>
     <Compile Include="AbstractWebServiceConnection.cs" />
     <Compile Include="BaseEnumExtension.cs" />
+    <Compile Include="ClientCompression.cs" />
     <Compile Include="COMPLETION100\CommonData.cs" />
     <Compile Include="COMPLETION100\DataObjects.cs" />
     <Compile Include="COMPLETION100\GeneratedEnumValues.cs" />

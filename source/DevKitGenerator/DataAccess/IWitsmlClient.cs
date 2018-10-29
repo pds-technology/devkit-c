@@ -85,10 +85,27 @@ namespace Energistics.DataAccess
     public interface IWitsmlClient
     {
         /// <summary>
-        /// Gets or sets a value indicating whether compression is enabled.
+        /// Equivalent to AcceptCompressedResponses
         /// </summary>
-        /// <value><c>true</c> if compression is enabled; otherwise, <c>false</c>.</value>
+        [Obsolete("Use AcceptCompressedResponses instead.")]
         bool IsCompressionEnabled { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether compressed responses from the server are accepted.
+        /// </summary>
+        /// <value><c>true</c> if compressed responses are accepted; otherwise, <c>false</c>.</value>
+        /// <remarks>If enabled, WITSML API calls will inform the server that compressed responses are accepted and handle any compressed responses.</remarks>
+        bool AcceptCompressedResponses { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether requests from the client should be compressed.
+        /// </summary>
+        /// <value><c>true</c> if client requests should be compressed; otherwise, <c>false</c>.</value>
+        /// <remarks>
+        /// If <c>true</c>, client applications should call <see cref="CompressRequests"/> to
+        /// compress XML input sent to the server for GetFromStore, AddToStore and UpdateInStore.
+        /// </remarks>
+        bool CompressRequests { get; set; }
 
         /// <summary>
         /// Gets or sets the collection of name/value pairs to include as HTTP headers.
