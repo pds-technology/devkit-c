@@ -87,7 +87,7 @@ namespace Energistics.DataAccess
     /// </summary>
     public static class ClientCompression
     {
-        private static readonly Regex Base64Regex = new Regex(@"^[+/0-9A-Za-z]+={0,2}$", RegexOptions.Compiled);
+        private static readonly Regex Base64Regex = new Regex(@"^[+/0-9A-Za-z]+={0,2}$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
         private static readonly string CompressionMethod = "compressionMethod";
         private static readonly string CompressionMethodGZip = "compressionMethod=gzip";
                     
