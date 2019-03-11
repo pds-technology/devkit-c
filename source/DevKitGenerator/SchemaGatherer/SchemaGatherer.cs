@@ -74,6 +74,7 @@
 // (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
 
+using Mono.Options;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -89,8 +90,23 @@ namespace Energistics.SchemaGatherer
 {
     public class SchemaGatherer
     {
+        private static OptionSet options;
+
         static int Main(string[] args)
         {
+            options = new OptionSet()
+                .Add("?|help|h", "Displays this help", option => ShowHelp())
+                .Add("r=|root-folder=", "The root folder for the schemas.  If not set, the ${{ROOT_FOLDER}} application configuration setting will be used.", option => ConfigurationManager.AppSettings["ROOT_FOLDER"] = option);
+
+            try
+            {
+                options.Parse(args);
+            }
+            catch (OptionException)
+            {
+                ShowHelp();
+            }
+
             try
             {
                 VerifyAppConfig();
@@ -108,7 +124,12 @@ namespace Energistics.SchemaGatherer
             return 0;
         }
 
-        private static void VerifyAppConfig()
+        private static void ShowHelp()
+        {
+            options.WriteOptionDescriptions(Console.Out);
+        }
+
+        public static void VerifyAppConfig()
         {
             VerifySetting("SETS");
             VerifyPath("ROOT_FOLDER");
@@ -151,6 +172,10 @@ namespace Energistics.SchemaGatherer
                 String message = String.Format("Path '{0}' defined by setting '{1}' in app.config does not exist. Please edit your app.config file.", value, settingName);
                 MessageBox.Show(message, "BUILD ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw new Exception(message);
+            }
+            else if (!String.IsNullOrEmpty(value))
+            {
+                ConfigurationManager.AppSettings[settingName] = Path.GetFullPath(value);
             }
         }
 

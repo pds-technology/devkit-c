@@ -75,6 +75,7 @@
 // Illinois, Fortner Software, Unidata Program Center (netCDF), The Independent JPEG Group
 // (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
+using Mono.Options;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -83,6 +84,8 @@ using Energistics.DataAccess.EnumValue;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Security.AccessControl;
+using System.Configuration;
+
 namespace Energistics.Generator
 {   
     partial class EnergisticsTextTemplate
@@ -103,14 +106,43 @@ namespace Energistics.Generator
 
     class Generator
     {
+        private static OptionSet options;
+
         [STAThread]
         static void Main(string[] args)        
         {
+            options = new OptionSet()
+                .Add("?|help|h", "Displays this help", option => ShowHelp())
+                .Add("r=|root-folder=", "The root folder for the schemas.  If not set, the ${{ROOT_FOLDER}} application configuration setting will be used.", option => ConfigurationManager.AppSettings["ROOT_FOLDER"] = option);
+
+            try
+            {
+                options.Parse(args);
+            }
+            catch (OptionException)
+            {
+                ShowHelp();
+            }
+
+            try
+            {
+                Energistics.SchemaGatherer.SchemaGatherer.VerifyAppConfig();
+            }
+            catch (Exception)
+            {
+                return;
+            }
+
             string currentPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             foreach (string set in Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting("SETS").Split(new Char[] { ',' }))
             { 
                 GenerateClasses(set, currentPath);
             }
+        }
+
+        private static void ShowHelp()
+        {
+            options.WriteOptionDescriptions(Console.Out);
         }
 
         private static void GenerateClasses(string setName, string currentPath)
