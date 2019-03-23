@@ -85,6 +85,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Security.AccessControl;
 using System.Configuration;
+using System.Linq;
 
 namespace Energistics.Generator
 {   
@@ -111,9 +112,14 @@ namespace Energistics.Generator
         [STAThread]
         static void Main(string[] args)        
         {
+            bool haveRootFolder = false;
             options = new OptionSet()
                 .Add("?|help|h", "Displays this help", option => ShowHelp())
-                .Add("r=|root-folder=", "The root folder for the schemas.  If not set, the ${{ROOT_FOLDER}} application configuration setting will be used.", option => ConfigurationManager.AppSettings["ROOT_FOLDER"] = option);
+                .Add("r=|root-folder=", "The root folder for the schemas.  If not set, the ${{ROOT_FOLDER}} application configuration setting will be used.", option => { ConfigurationManager.AppSettings["ROOT_FOLDER"] = option; haveRootFolder = true; });
+
+            // Hard code default to simplify debugging.
+            if (!haveRootFolder && !ConfigurationManager.AppSettings.AllKeys.Contains("ROOT_FOLDER"))
+                ConfigurationManager.AppSettings["ROOT_FOLDER"] = @"..\..\..\..\..\";
 
             try
             {
