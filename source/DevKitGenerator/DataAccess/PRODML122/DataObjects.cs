@@ -34,7 +34,6 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FluidAnalysisList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DtsMeasurementList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DtsInstalledSystemList))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -71,7 +70,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Information about a single formation tester sample acquistion.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -552,7 +550,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the refNameString xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -647,7 +644,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the generalMeasureType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -747,7 +743,6 @@ namespace Energistics.DataAccess.PRODML122
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FrequencyMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompressibilityMeasure))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AmountOfSubstanceMeasure))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -801,7 +796,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the volumeQualifiedMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -912,7 +906,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the volumeFlowRateQualifiedMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1023,7 +1016,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the temperatureSlopeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1082,7 +1074,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the measureOrQuantity xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1142,7 +1133,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the lostVolumeAndReason xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1236,7 +1226,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the generalQualifiedMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1368,7 +1357,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the wellElevationCoord xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1448,7 +1436,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the measuredDepthCoord xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1528,7 +1515,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the volumePerVolumeMeasurePercent xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1587,7 +1573,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the volumePerVolumeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1646,7 +1631,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the volumeFlowRateMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1705,7 +1689,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the volumeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1764,7 +1747,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the velocityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1823,7 +1805,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the timeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1882,7 +1863,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the thermodynamicTemperatureMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1941,7 +1921,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the pressureMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2000,7 +1979,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the planeAngleMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2059,7 +2037,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the massMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2118,7 +2095,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the massConcentrationMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2177,7 +2153,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the lengthPerLengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2236,7 +2211,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the lengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2295,7 +2269,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the electricCurrentMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2354,7 +2327,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the dynamicViscosityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2413,7 +2385,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the dimensionlessMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2472,7 +2443,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the densityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2531,7 +2501,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the workMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2590,7 +2559,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the volumePerStandardVolumeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2649,7 +2617,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the standardVolumePerVolumeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2708,7 +2675,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the standardVolumePerStandardVolumeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2767,7 +2733,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the standardVolumeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2826,7 +2791,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the thermalConductivityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2885,7 +2849,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the productivityIndexMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2944,7 +2907,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the molarVolumeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3003,7 +2965,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the molarFractionMeasurePercent xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3062,7 +3023,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the modulusOfCompressionMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3121,7 +3081,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the massFlowRateMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3180,7 +3139,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the massConcentrationMeasurePercent xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3239,7 +3197,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the frequencyMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3298,7 +3255,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the compressibilityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3357,7 +3313,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the amountOfSubstanceMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3416,7 +3371,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A single result derived from analysis of formation tester data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3698,7 +3652,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A reference to a set of formation tester data that was recorded.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3863,7 +3816,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Points to an interval on a curve in a log (or wellLog).
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4058,7 +4010,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the refObjectString xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4173,7 +4124,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Extension values Schema. The intent is to allow standard WITSML "named" extensions without having to modify the schema. A client or server can ignore any name that it does not recognize but certain meta data is required in order to allow generic clients or servers to process the value.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4426,7 +4376,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the extensionvalue xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4522,7 +4471,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Defines a parameter which may have been used for input or output depending on the parent node.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4682,7 +4630,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This defines a set of pointers which collectively identify a particular outputParameter beginning at a point in the hierarchy. Which combination of pointers is needed depends on the starting point.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4831,7 +4778,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Information about a single formation tester test.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5036,7 +4982,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Captures information about an event that occurred.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5196,7 +5141,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Information about a single station in a wireline formation tester run.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5629,7 +5573,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The non-contextual content of a WITSML Wireline Formation Test (WFT) object.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6117,7 +6060,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     ///  WITSML - Common Data Component Schema 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6390,7 +6332,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the timestampedTimeZone xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6501,7 +6442,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Extension Schema. The intent is to allow standard WITSML schema extensions which will validate in older clients or servers. A client or server can ignore any schema that it does not recognize. New versions will modify specific elements to replace this type with a type that adds new elements, including another element with this type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6567,7 +6507,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_customData xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6633,7 +6572,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Oil, gas, and water volumes and rates measured during the well test. The volumes allow either actual volumes or standard (corrected) volumes. The densities are also recorded with the volumes.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6778,7 +6716,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The following sequence of four elements can be used for reporting of most production fluids.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6905,7 +6842,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_wellTestFluidRate xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6996,7 +6932,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_wellTestInjectionTestData xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7250,7 +7185,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_wellTestInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7411,7 +7345,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The cumulative amounts of the fluids at the time of the well test. The fluids are oil, gas, and water.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7502,7 +7435,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Oil, gas, and water volumes and rates measured during the well test. The volumes allow either actual volumes or standard (corrected) volumes. The densities are also recorded with the volumes.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7988,7 +7920,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Well test data gathered at the separator.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8061,7 +7992,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Well test data gathered at points in the wellbore.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8278,7 +8208,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_wellTestElectricSubmersiblePumpData xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8351,7 +8280,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Well test data gathered at the bottomhole.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8478,7 +8406,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Basic measurements at the wellhead, during the well test.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8695,7 +8622,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_wellTestProductionTestData xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8956,7 +8882,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_wellTestFluidLevelTest xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9048,7 +8973,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_wellTestValidationOperation xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9228,7 +9152,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The non-contextual content of a WITSML Well Test object.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9917,7 +9840,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the endpointQualifiedDateTime xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10044,7 +9966,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Within the context of a WITSML Server, this data should duplicate the equivalent information in the well object.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10229,7 +10150,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the nameStruct xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10323,7 +10243,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Defines the vertical datums associated with elevation, vertical depth and measured depth coordinates within the context of a well. 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10778,7 +10697,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the wellKnownNameStruct xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10892,7 +10810,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Data that represents a foreign key to a wellbore. The wellbore may be defined within the context of another well.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10966,7 +10883,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A reference to a rig within a wellbore. The wellbore may be defined within the context of another well. This value represents a foreign key from one node to another.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11058,7 +10974,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML Location Component Schema This is a location that is expressed in terms of 2D coordinates. In order that the location be understood, the coordinate reference system (CRS) must be known. The survey location is given by a pair of tagged values. The pairs may be: (1) latitude/longitude, (2) easting/northing, (3) westing/southing, (4) projectedX/projectedY, or (5) localX/localY. The appropriate pair must be chosen for the data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11656,7 +11571,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the endpointQuantity xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11766,7 +11680,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Defines a value threshold window and the cumulative time duration that the data was within that window.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11858,7 +11771,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the endpointDateTime xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11966,7 +11878,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The non-contextual content of WITSML statistics about a range of time series data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12458,7 +12369,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the keywordValueStruct xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12568,7 +12478,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the timeSeriesStringSample xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12731,7 +12640,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the timeSeriesDoubleSample xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12892,7 +12800,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The non-contextual content of a PRODML Time Series Data object.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13155,7 +13062,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Captures information about an event related to a product balance.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13278,7 +13184,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Volume Balance Detail Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13558,7 +13463,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A possibly temperature and pressure corrected volume value.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13785,7 +13689,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Volume Component Content Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14692,7 +14595,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A possibly temperature and pressure corrected flow rate value.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14901,7 +14803,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_productVolumePortDifference xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15078,7 +14979,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A possibly temperature and pressure corrected desity value.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15287,7 +15187,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Flow Sales Destination Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15395,7 +15294,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Flow Balance Set Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15636,7 +15534,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Volume Period Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16881,7 +16778,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Alert Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16990,7 +16886,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A general timestamped comment structure.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -17202,7 +17097,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_refProductFlow xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -17277,7 +17171,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Volume Product Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18312,7 +18205,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Report Facility Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18492,7 +18384,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the facilityIdentifierStruct xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18677,7 +18568,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Volume Flow Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19887,7 +19777,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the integerQualifiedCount xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20014,7 +19903,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the kindQualifiedString xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20141,7 +20029,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_curveData xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20260,7 +20147,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Parameter Value Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20616,7 +20502,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The definition of a curve.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20812,7 +20697,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Volume Facility Parameter Set Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -21277,7 +21161,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Report Facility Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -21846,7 +21729,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Volume component schema for defining account information.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -21987,7 +21869,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Volume component schema for defining ownership shares.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -22163,7 +22044,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Volume component schema for defining ownership shares of business units.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -22338,7 +22218,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Volume component schema for defining business units.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -22507,7 +22386,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The non-contextual content of a WITSML Product Volume object.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -23319,7 +23197,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The business associate describes any company, person, group, consultant, etc, which is associated within a context (e.g., a well). The information contained in this module is: (1) contact information, such as address, phone numbers, email, (2) alternate name, or aliases, and (3) associations, such as the business associate that this one is associated  with, or a contact who is associated with this business associate. 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -23674,7 +23551,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_personName xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -23815,7 +23691,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// An general address structure. This form is appropriate for most countries. 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -24178,7 +24053,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the phoneNumberStruct xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -24359,7 +24233,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the emailQualifierStruct xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -24486,7 +24359,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A geographic context of a report.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -24613,7 +24485,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A generic type of offshore location. This allows an offshore location to be given by an Area Name, and up to four block names. A comment is also allowed.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -24736,7 +24607,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A type of offshore location that captures the North Sea Offshore terminology.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -24828,7 +24698,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Operational Comments Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -25050,7 +24919,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Infomation about a cargo ship operation.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -25506,7 +25374,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Infomation about a marine operation.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -25837,7 +25704,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A structure to record informaion about a single alarm.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -26031,7 +25897,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Infomation about a shutdown event.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -26308,7 +26173,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Information about the contaminants in water, and the general water quality. The values are measured from a sample, which is described below. Values measured from other samples should be given in different instances of the type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -26693,7 +26557,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Production losses due to Third Party Processing.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -26834,7 +26697,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Lost Production Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -26931,7 +26793,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Production Activity Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -27184,7 +27045,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Operations Weather Component Schema
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -27721,7 +27581,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the safetyCount xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -27900,7 +27759,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Safety Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -28065,7 +27923,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Operational Health, Safety and Environment Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -28424,7 +28281,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the crewCount xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -28551,7 +28407,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML -Installation Report Component Schema
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -28821,7 +28676,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The non-contextual content of a WITSML Production Operation object.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -29403,7 +29257,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A plan to extend an actual network.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -29575,7 +29428,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Documents the point in time where changes were made.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -29717,7 +29569,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Flow Expected Property Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -30006,7 +29857,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Defines an expected combination of kinds.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -30176,7 +30026,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Flow Connected Node Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -30388,7 +30237,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Flow Port Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -30722,7 +30570,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Flow Connected Node Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -30813,7 +30660,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Defines expected properties of a facility represented by a unit.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -31087,7 +30933,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Flow Unit Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -31439,7 +31284,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Product Flow Network External Port Component Schema.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -31635,7 +31479,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The non-contextual content of a WITSML Product Flow Network object.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -31934,7 +31777,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A reference to an external port within a different Product Flow Model. This value represents a foreign key from one element to another.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -32094,7 +31936,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The non-contextual content of a WITSML Product Flow Model object.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -32468,7 +32309,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the obj_fluidSample xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -33050,7 +32890,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultContaminant xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -33179,7 +33018,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultSeparatorTestStep xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -34091,7 +33929,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultStockTank xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -34145,7 +33982,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultPhaseComposition xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -34255,7 +34091,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultCompositeComposition xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -34399,7 +34234,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultSeparatorTest xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -34538,7 +34372,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultVolumeReference xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -34626,7 +34459,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultTransportTestStep xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -35483,7 +35315,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultTransportPropertiesTest xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -35605,7 +35436,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultJCurveTestStep xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -36274,7 +36104,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultJCurveTest xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -36602,7 +36431,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultDifferentialLiberationTestStep xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -37321,7 +37149,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultDifferentialLiberationTest xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -37564,7 +37391,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultCvdTestStep xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -38199,7 +38025,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultConstantVolumeDepletionTest xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -38460,7 +38285,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultCceTestStep xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39123,7 +38947,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultConstantCompositionExpansionTest xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39383,7 +39206,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultSaturationTestStep xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39613,7 +39435,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultSaturationTest xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39735,7 +39556,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the binaryInteractionCoefficient xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39829,7 +39649,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultComposition xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -40491,7 +40310,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the cs_fluidResultDataQuality xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -40577,7 +40395,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the obj_fluidAnalysisResult xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -41567,7 +41384,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the obj_fluidAnalysis xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -41937,7 +41753,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Captures information about one processed wellLog.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42110,7 +41925,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A simple structure that allows an error report to be exchanged. The strucutre will allow for an error name, error id (generally a numerical code), and a description.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42249,7 +42063,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The information content of a DTS temperature run is captured in the following elements, and in the referenced dtsInstalledFiber (for context) and the reference well log (captures the table of data).
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42746,7 +42559,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A set of points recorded during the installation process. The information can include the length along the fiber, the measured depth, and a type of point.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42905,7 +42717,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This records the result arrays, along with context information, from an Optical Time Domain Reflectometry (OTDR) run. The arrays will define the relative scattered power from the Rayleigh scattering vs distance along the fiber. The actual data values are recorded in a wellLog object, which is referenced in a subelement.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43100,7 +42911,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The pump log row are elements defined in the sequence below.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43313,7 +43123,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The activity of pumping the fiber downhole.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43747,7 +43556,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A fiber installed in a "U" configuration has two end points that a cable may hook to. When making a measurement, it is useful to be able to say which end was hooked to the input from the instrument box. In order to do this, the fiber ends must be identified. The identifier is a name, along with a description to further aid the interpreter in determining which end was used as the input.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43871,7 +43679,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Calibration parameters vary from vendor to vendor, depending on the calibration method being used. This is an extension of the general cs_dtsCalibration, and allows for specific parameters associated with an instrument box. The two additional parameters are the offset temperature calibration, and the slope calibration. These allow for a linear shift in temperature vs measurements. Additional offset and slope calibrations may be performed at measurement time.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44113,7 +43920,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the calibrationParameter xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44229,7 +44035,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// WITSML - Equipment NameTag Schema
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44512,7 +44317,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The instrument box used for distributed temperature surveys
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44886,7 +44690,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the indexedObject xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -45036,7 +44839,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The instrument box used for distributed temperature surveys
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -45209,7 +45011,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Calibration parameters vary from vendor to vendor, depending on the calibration method being used. This is a general type that allows a calibration date, business associate, and many name/value pairs.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -45415,7 +45216,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The The power loss for one way travel of a beam of light, usually measured in decibels per unit length. It is necessary to include both the value (and its unit) and the wavelength. The wavelength varies with the refractive index, while the frequency remains constant. The wavelength given to specify this type is the wavelength in a vacuum (refractive index = 1).
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -45557,7 +45357,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The refractive index of a material depends on the frequency or wavelength of the light. Hence it is necessary to include both the value (a unitless number) and the frequency or wavelength. The frequency will be a quantity type with a frequency unit, such as Hz, kHz, or MHz. The wavelength will be a quantity type with a length unit, such as m, cm, um, in, or ft.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -45698,7 +45497,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the typeOptionalClassString xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -45792,7 +45590,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The optical fiber used for distributed temperature surveys
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -46292,7 +46089,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The optical fiber used for distributed temperature surveys
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -46465,7 +46261,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the endpointQualifiedDate xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -46590,7 +46385,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// The optical fiber is installed in a wellbore and attached to an instrument box. Calibrations are performed. In general, this should be a subelement of a DTS object.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -47164,7 +46958,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A structure for WITSML query parameters. The intent is to allow a query for all objects within an index range (whether or not the object is growing). These would typically be something like a daily report.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -47237,7 +47030,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// An event type captures the basic information about an event that has affected the data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -47396,7 +47188,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// Information about the security classification of the document. This is intended as a documentation of the security so that the file will not inadvertently be sent to someone who is not allowed access to the data. This block also carries a date that the security classification expires. For example, a well log is confidential for a period of time, and then becomes open. All security classes are characterized by their classification systems.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -47572,7 +47363,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A block of information about the creation of the XML file. This is different than the creation of the data that is included within the file.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -47681,7 +47471,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -47981,7 +47770,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the obj_wftRuns xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -48077,7 +47865,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the obj_wellTests xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -48173,7 +47960,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the obj_timeSeriesStatistics xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -48269,7 +48055,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the obj_timeSeriesDatas xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -48347,7 +48132,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the obj_report xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -48802,7 +48586,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the obj_productVolumes xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -48898,7 +48681,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the obj_productionOperations xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -48995,7 +48777,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the obj_productFlowModels xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -49091,7 +48872,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the obj_fluidSamples xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -49187,7 +48967,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the obj_fluidAnalysisResults xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -49283,7 +49062,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the obj_fluidAnalysiss xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -49379,7 +49157,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the obj_dtsMeasurements xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -49476,7 +49253,6 @@ namespace Energistics.DataAccess.PRODML122
     /// <summary>
     /// This class represents the obj_dtsInstalledSystems xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -49577,7 +49353,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the VolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the VolumeUom xsd enumeration.")]
@@ -49721,7 +49496,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the VolumeFlowRateUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the VolumeFlowRateUom xsd enumeration.")]
@@ -49891,7 +49665,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the WellVerticalCoordinateUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the WellVerticalCoordinateUom xsd enumeration.")]
@@ -49918,7 +49691,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the MeasuredDepthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the MeasuredDepthUom xsd enumeration.")]
@@ -49940,7 +49712,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the PercentUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the PercentUom xsd enumeration.")]
@@ -49955,7 +49726,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the VolumePerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the VolumePerVolumeUom xsd enumeration.")]
@@ -50204,7 +49974,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the VelocityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the VelocityUom xsd enumeration.")]
@@ -50353,7 +50122,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the TimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the TimeUom xsd enumeration.")]
@@ -50430,7 +50198,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ThermodynamicTemperatureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ThermodynamicTemperatureUom xsd enumeration.")]
@@ -50456,7 +50223,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the PressureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the PressureUom xsd enumeration.")]
@@ -50633,7 +50399,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the PlaneAngleUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the PlaneAngleUom xsd enumeration.")]
@@ -50707,7 +50472,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the MassUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the MassUom xsd enumeration.")]
@@ -50795,7 +50559,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the MassConcentrationUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the MassConcentrationUom xsd enumeration.")]
@@ -50850,7 +50613,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the LengthPerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the LengthPerLengthUom xsd enumeration.")]
@@ -50920,7 +50682,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the LengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the LengthUom xsd enumeration.")]
@@ -51165,7 +50926,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ElectricCurrentUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ElectricCurrentUom xsd enumeration.")]
@@ -51203,7 +50963,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the DynamicViscosityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the DynamicViscosityUom xsd enumeration.")]
@@ -51261,7 +51020,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the DimensionlessUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the DimensionlessUom xsd enumeration.")]
@@ -51296,7 +51054,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the DensityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the DensityUom xsd enumeration.")]
@@ -51450,7 +51207,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the WorkUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the WorkUom xsd enumeration.")]
@@ -51583,7 +51339,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ThermalConductivityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ThermalConductivityUom xsd enumeration.")]
@@ -51618,7 +51373,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ProductivityIndexUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ProductivityIndexUom xsd enumeration.")]
@@ -51688,7 +51442,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the MolarVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the MolarVolumeUom xsd enumeration.")]
@@ -51728,7 +51481,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ModulusOfCompressionUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ModulusOfCompressionUom xsd enumeration.")]
@@ -51868,7 +51620,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the MassFlowRateUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the MassFlowRateUom xsd enumeration.")]
@@ -52003,7 +51754,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the FrequencyUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the FrequencyUom xsd enumeration.")]
@@ -52077,7 +51827,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the CompressibilityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the CompressibilityUom xsd enumeration.")]
@@ -52117,7 +51866,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the AmountOfSubstanceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the AmountOfSubstanceUom xsd enumeration.")]
@@ -52157,7 +51905,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the PrimitiveType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the PrimitiveType xsd enumeration.")]
@@ -52231,7 +51978,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemState xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemState xsd enumeration.")]
@@ -52257,7 +52003,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ElevCodeEnum xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ElevCodeEnum xsd enumeration.")]
@@ -52335,7 +52080,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemsChoiceType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemsChoiceType xsd enumeration.")]
@@ -52385,7 +52129,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the WellFluid xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the WellFluid xsd enumeration.")]
@@ -52462,7 +52205,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the WellDirection xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the WellDirection xsd enumeration.")]
@@ -52493,7 +52235,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemsChoiceType8 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemsChoiceType8 xsd enumeration.")]
@@ -52527,7 +52268,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the WellStatus xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the WellStatus xsd enumeration.")]
@@ -52611,7 +52351,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemsChoiceType7 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemsChoiceType7 xsd enumeration.")]
@@ -52641,7 +52380,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemChoiceType7 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemChoiceType7 xsd enumeration.")]
@@ -52663,7 +52401,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemsChoiceType6 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemsChoiceType6 xsd enumeration.")]
@@ -52689,7 +52426,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemChoiceType6 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemChoiceType6 xsd enumeration.")]
@@ -52707,7 +52443,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the Items1ChoiceType1 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the Items1ChoiceType1 xsd enumeration.")]
@@ -52729,7 +52464,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemChoiceType5 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemChoiceType5 xsd enumeration.")]
@@ -52747,7 +52481,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemsChoiceType5 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemsChoiceType5 xsd enumeration.")]
@@ -52769,7 +52502,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemsChoiceType4 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemsChoiceType4 xsd enumeration.")]
@@ -52791,7 +52523,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemChoiceType4 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemChoiceType4 xsd enumeration.")]
@@ -52809,7 +52540,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemsChoiceType3 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemsChoiceType3 xsd enumeration.")]
@@ -52831,7 +52561,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemChoiceType3 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemChoiceType3 xsd enumeration.")]
@@ -52849,7 +52578,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemsChoiceType2 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemsChoiceType2 xsd enumeration.")]
@@ -52871,7 +52599,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemChoiceType2 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemChoiceType2 xsd enumeration.")]
@@ -52889,7 +52616,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemsChoiceType1 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemsChoiceType1 xsd enumeration.")]
@@ -52911,7 +52637,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the Items1ChoiceType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the Items1ChoiceType xsd enumeration.")]
@@ -52933,7 +52658,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemChoiceType1 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemChoiceType1 xsd enumeration.")]
@@ -52951,7 +52675,6 @@ namespace Energistics.DataAccess.PRODML122
         /// <summary>
         /// This class represents the ItemChoiceType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.prodml.org/schemas/1series")]
         [Description("This class represents the ItemChoiceType xsd enumeration.")]

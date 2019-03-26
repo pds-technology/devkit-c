@@ -160,6 +160,7 @@ namespace Energistics.Generator
             if (!setName.Contains("ML2"))
             {               
                 string csCode = EnumValuesXMLToClass.Convert(Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENUMVAL_PATH"), "Energistics.DataAccess." + setName, enumClassNames, false, null);
+                csCode = SchemaGatherer.SchemaGatherer.CleanUpGeneratedText(csCode);
 
                 if (targetFilename.Contains(".cs"))
                 {
@@ -176,7 +177,9 @@ namespace Energistics.Generator
                 if (!String.IsNullOrEmpty(prodMLPath))
                 {
                     targetFilename = String.Format(@"{0}\{1}\GeneratedProdmlEnumValues.cs", Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENERGY_ML_DATA_ACCESS_PROJ_PATH"), setName);
-                    File.WriteAllText(targetFilename, EnumValuesXMLToClass.Convert(prodMLPath, "Energistics.DataAccess." + setName, enumClassNames, false, null));
+                    var text = EnumValuesXMLToClass.Convert(prodMLPath, "Energistics.DataAccess." + setName, enumClassNames, false, null);
+                    text = SchemaGatherer.SchemaGatherer.CleanUpGeneratedText(text);
+                    File.WriteAllText(targetFilename, text);
                 }
             }
 
@@ -185,6 +188,7 @@ namespace Energistics.Generator
             {
                 ResqmlHD5Template resqmlTextTemplate = new ResqmlHD5Template();
                 string resmltext = resqmlTextTemplate.TransformText(setName);
+                resmltext = SchemaGatherer.SchemaGatherer.CleanUpGeneratedText(resmltext);
                 File.WriteAllText(String.Format(@"{0}\{1}\GeneratedResqmlHDF5PartialClasses.cs", Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENERGY_ML_DATA_ACCESS_PROJ_PATH"), setName), resmltext);
             }
 
@@ -192,6 +196,7 @@ namespace Energistics.Generator
             
             EnergisticsTextTemplate textTemplate = new EnergisticsTextTemplate(mlPath, setName, enumClassNames, versionString);
             String contents = textTemplate.TransformText();
+            contents = SchemaGatherer.SchemaGatherer.CleanUpGeneratedText(contents);
             File.WriteAllText(String.Format("{0}\\{1}\\DataObjects.cs", Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENERGY_ML_DATA_ACCESS_PROJ_PATH"), setName), contents);
 
             string wsdlPath = Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_WSDL");
@@ -245,6 +250,11 @@ namespace Energistics.Generator
                         prodGDAText = prodGDAText.Replace("abstractObject", "AbstractObject");
 
                         File.WriteAllText(filename, prodGDAText);
+                    }
+                    foreach (Match m in Regex.Matches(output, @"Writing file '(.*?)'."))
+                    {
+                        string outputFile = m.Groups[1].Value;
+                        SchemaGatherer.SchemaGatherer.CleanUpGeneratedCode(outputFile);
                     }
                 }
             }

@@ -71,7 +71,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyKind))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyKindDictionary))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EpcExternalPartReference))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -293,7 +292,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ObjectAlias xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -384,7 +382,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GravelPackInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -602,7 +599,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MdInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -694,7 +690,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the LengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -789,7 +784,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the TvdInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -882,7 +876,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the EventInfo xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -983,7 +976,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ExtensionNameValue xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1184,7 +1176,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StringMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1297,7 +1288,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the EventRefInfo xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1369,7 +1359,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the IntervalStatusHistory xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1566,7 +1555,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PerforationStatusHistory xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1781,7 +1769,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PerforationSetInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1999,7 +1986,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the OpenHoleInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2217,7 +2203,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the SlotsInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2435,7 +2420,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ContactIntervalSet xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2588,7 +2572,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CompletionStatusHistory xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2754,7 +2737,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Depth))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Inc))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Azi))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2811,7 +2793,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Tvd xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2846,7 +2827,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Depth xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2881,7 +2861,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Inc xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2916,7 +2895,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Azi xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2951,7 +2929,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the IscwsaErrorCoefficient xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3068,7 +3045,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the IscwsaErrorTerm xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3341,7 +3317,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the IscwsaNomenclatureConstant xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3524,7 +3499,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the IscwsaNameAndDescription xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3649,7 +3623,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the IscwsaNomenclature xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3773,7 +3746,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the SurveySection xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4095,7 +4067,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PermeabilityLengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4190,7 +4161,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimISO13503_5Point xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4323,7 +4293,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ThermodynamicTemperatureMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4418,7 +4387,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PermeabilityRockMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4513,7 +4481,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PressureMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4608,7 +4575,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ISO13503_2SieveAnalysisData xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4702,7 +4668,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MassPerMassMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4797,7 +4762,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ISO13503_2CrushTestData xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4892,7 +4856,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimISO13503_2Properties xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5326,7 +5289,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MassPerVolumeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5421,7 +5383,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DimensionlessMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5516,7 +5477,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AreaPerMassMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5613,7 +5573,6 @@ namespace Energistics.DataAccess.WITSML200
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimAdditive))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StimProppantAgent))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5771,7 +5730,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimAdditive xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5862,7 +5820,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimProppantAgent xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6149,7 +6106,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimJobMaterialCatalog xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6246,7 +6202,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimJobDiversion xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6372,7 +6327,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimReservoirInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6801,7 +6755,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the IsothermalCompressibilityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6896,7 +6849,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DynamicViscosityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6991,7 +6943,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VolumePerVolumeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7086,7 +7037,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VolumePerLengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7181,7 +7131,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimTubular xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7394,7 +7343,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MassPerLengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7489,7 +7437,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimFlowPath xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7788,7 +7735,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MeasuredDepthCoord xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7904,7 +7850,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ForcePerVolumeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7999,7 +7944,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the UnitlessMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8074,7 +8018,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimFluid xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8460,7 +8403,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VolumeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8555,7 +8497,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimMaterialQuantity xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8787,7 +8728,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MassMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8882,7 +8822,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MassPerTimeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8977,7 +8916,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VolumePerTimeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9072,7 +9010,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimJobStep xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10437,7 +10374,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PowerMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10532,7 +10468,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the TimeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10627,7 +10562,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimEvent xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10802,7 +10736,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimShutInPressure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10927,7 +10860,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimPumpFlowBackTest xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11167,7 +11099,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimPumpFlowBackTestStep xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11451,7 +11382,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimPressureFlowRate xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11574,7 +11504,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimStepTest xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11709,7 +11638,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimStepDownTest xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11968,7 +11896,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimFetTest xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12353,7 +12280,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VolumetricThermalExpansionMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12448,7 +12374,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ThermalConductivityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12543,7 +12468,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the SpecificHeatCapacityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12638,7 +12562,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimJobDiagnosticSession xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13594,7 +13517,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the WellVerticalDepthCoord xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13710,7 +13632,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the SurfaceEquipment xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14583,7 +14504,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Degasser xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15040,7 +14960,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AreaMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15135,7 +15054,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the NameTag xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15400,7 +15318,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Hydrocyclone xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15641,7 +15558,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Centrifuge xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15882,7 +15798,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MudPump xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16410,7 +16325,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PowerPerPowerMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16505,7 +16419,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AngularVelocityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16600,7 +16513,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Pit xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16876,7 +16788,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the BopComponent xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -17141,7 +17052,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Bop xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -17848,7 +17758,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Shaker xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18249,7 +18158,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VolumePerVolumeMeasureExt xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18344,7 +18252,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ForcePerVolumeMeasureExt xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18439,7 +18346,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PressureMeasureExt xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18534,7 +18440,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ForceMeasureExt xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18634,7 +18539,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MudLogPressureGradientParameter))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MudLogPressureParameter))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MudLogForceParameter))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18747,7 +18651,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Citation xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18965,7 +18868,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MudLogConcentrationParameter xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19039,7 +18941,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MudLogStringParameter xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19114,7 +19015,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MudLogPressureGradientParameter xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19189,7 +19089,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MudLogPressureParameter xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19264,7 +19163,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MudLogForceParameter xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19338,7 +19236,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GasPeak xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19483,7 +19380,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DataObjectReference xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19630,7 +19526,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GasInMud xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19721,7 +19616,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MudGas xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19804,7 +19698,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DxcStatistics xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19877,7 +19770,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the EcdStatistics xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19950,7 +19842,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MudDensityStatistics xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20023,7 +19914,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the RpmStatistics xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20096,7 +19986,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ElectricCurrentMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20191,7 +20080,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the TorqueCurrentStatistics xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20264,7 +20152,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the TorqueStatistics xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20337,7 +20224,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MomentOfForceMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20432,7 +20318,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the WobStatistics xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20505,7 +20390,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ForceMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20600,7 +20484,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the RopStatistics xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20709,7 +20592,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the LengthPerTimeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20804,7 +20686,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillingParameters xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20985,7 +20866,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Chromatograph xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -21827,7 +21707,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MudlogReportInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -22032,7 +21911,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CuttingsIntervalShow xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -22622,7 +22500,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AreaPerAreaMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -22717,7 +22594,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CuttingsIntervalLithology xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -23137,7 +23013,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the LithologyQualifier xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -23266,7 +23141,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the IlluminanceMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -23361,7 +23235,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the InterpretedIntervalLithology xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -23733,7 +23606,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the LithostratigraphicUnit xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -23847,7 +23719,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GeochronologicalUnit xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -23960,7 +23831,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DepthRegTrackCurve xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -24231,7 +24101,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DepthRegRectangle xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -24390,7 +24259,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DepthRegPoint xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -24463,7 +24331,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DepthRegTrack xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -24681,7 +24548,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DepthRegParameter xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -24899,7 +24765,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GenericMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -24995,7 +24860,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DepthRegCalibrationPoint xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -25251,7 +25115,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DepthRegLogSection xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -25853,7 +25716,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DepthRegLogRect xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -26010,7 +25872,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DigitalStorageMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -26105,7 +25966,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MemberObject xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -26421,7 +26281,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ObjectSequence xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -26478,7 +26337,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Participant xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -26574,7 +26432,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DownholeStringReference xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -26661,7 +26518,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the BoreholeStringReference xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -26748,7 +26604,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DownholeComponentReference xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -26903,7 +26758,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Perforating xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -27561,7 +27415,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ReciprocalLengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -27668,7 +27521,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DirectionalSurveyExtension))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CleanFillExtension))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementExtension))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -27705,7 +27557,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DownholeExtension xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -27788,7 +27639,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CustomData xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -27854,7 +27704,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the FluidReportExtension xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -27937,7 +27786,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PerforatingExtension xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -28020,7 +27868,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the WaitingOnExtension xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -28174,7 +28021,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PressureTestExtension xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -28597,7 +28443,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the JobExtension xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -28716,7 +28561,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AcidizefracExtension xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -28799,7 +28643,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the BHPExtension xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -28882,7 +28725,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the LostCirculationExtension xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -28965,7 +28807,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DirectionalSurveyExtension xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -29048,7 +28889,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CleanFillExtension xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -29149,7 +28989,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CementExtension xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -29232,7 +29071,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the EventType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -29326,7 +29164,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PumpOp xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -29611,7 +29448,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PitVolume xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -29806,7 +29642,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Scr xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -30003,7 +29838,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DayCost xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -30585,7 +30419,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Cost xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -30642,7 +30475,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Personnel xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -30818,7 +30650,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MudLosses xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -31089,7 +30920,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MudVolume xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -31325,7 +31155,6 @@ namespace Energistics.DataAccess.WITSML200
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ItemWtPerUnit))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ItemVolPerUnit))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -31362,7 +31191,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ItemWtPerUnit xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -31397,7 +31225,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ItemVolPerUnit xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -31432,7 +31259,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Inventory xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -31802,7 +31628,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Weather xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -32320,7 +32145,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PlaneAngleMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -32415,7 +32239,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the SupportCraft xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -32591,7 +32414,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Incident xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -32980,7 +32802,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Hse xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -33590,7 +33411,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ShakerScreen xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -33786,7 +33606,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ShakerOp xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -33980,7 +33799,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AnchorState xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -34090,7 +33908,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the RigResponse xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -34570,7 +34387,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StnTrajCorUsed xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -34859,7 +34675,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the LinearAccelerationMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -34954,7 +34769,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MagneticFluxDensityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -35049,7 +34863,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StnTrajRawData xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -35194,7 +35007,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the RefWellboreTrajectoryStation xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -35287,7 +35099,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StnTrajMatrixCov xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -35486,7 +35297,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StnTrajValid xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -35575,7 +35385,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the TrajectoryStation xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -36751,7 +36560,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AnglePerLengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -36848,7 +36656,6 @@ namespace Energistics.DataAccess.WITSML200
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedWellLocation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticWellLocation))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -36988,7 +36795,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ProjectedWellLocation xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -37064,7 +36870,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedUnknownCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedWktCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedEpsgCrs))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -37101,7 +36906,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ProjectedLocalAuthorityCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -37137,7 +36941,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AuthorityQualifiedName xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -37249,7 +37052,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ProjectedGmlCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -37283,7 +37085,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ProjectedCRSType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -37333,7 +37134,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GeodeticCRSPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -37403,7 +37203,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GeodeticCRSType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -37536,7 +37335,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CartesianCSPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -37606,7 +37404,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CartesianCSType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -37626,7 +37423,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -37707,7 +37503,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CoordinateSystemAxisPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -37777,7 +37572,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CoordinateSystemAxisType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -37915,7 +37709,6 @@ namespace Energistics.DataAccess.WITSML200
     /// This class represents the CodeType xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CodeWithAuthorityType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -38006,7 +37799,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CodeWithAuthorityType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -38063,7 +37855,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -38098,7 +37889,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -38153,7 +37943,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -38192,7 +37981,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -38325,7 +38113,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StringOrRefType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -38416,7 +38203,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ReferenceType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -38488,7 +38274,6 @@ namespace Energistics.DataAccess.WITSML200
     /// This class represents the AbstractTimeObjectType xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimePrimitiveType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -38504,7 +38289,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AbstractTimePrimitiveType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -38551,7 +38335,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the RelatedTimeType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -38606,7 +38389,6 @@ namespace Energistics.DataAccess.WITSML200
     /// This class represents the TimePrimitivePropertyType xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RelatedTimeType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -38695,7 +38477,6 @@ namespace Energistics.DataAccess.WITSML200
     /// This class represents the AbstractCoordinateOperationType xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -38837,7 +38618,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the domainOfValidity xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -38907,7 +38687,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the EX_Extent_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39029,7 +38808,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CharacterString_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39101,7 +38879,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the EX_GeographicExtent_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39189,7 +38966,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AbstractEX_GeographicExtent_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39224,7 +39000,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Boolean_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39312,7 +39087,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_TemporalExtent_Type))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractEX_GeographicExtent_Type))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_Extent_Type))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39383,7 +39157,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AbstractDQ_Result_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39399,7 +39172,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_Series_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39466,7 +39238,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_OnlineResource_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39587,7 +39358,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the URL_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39659,7 +39429,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_OnLineFunctionCode_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39729,7 +39498,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CodeListValue_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39856,7 +39624,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_Address_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -39998,7 +39765,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_Telephone_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -40072,7 +39838,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_Contact_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -40175,7 +39940,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_Telephone_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -40265,7 +40029,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_Address_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -40355,7 +40118,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_OnlineResource_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -40443,7 +40205,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_ResponsibleParty_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -40547,7 +40308,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_Contact_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -40637,7 +40397,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_RoleCode_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -40707,7 +40466,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_Date_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -40761,7 +40519,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Date_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -40881,7 +40638,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_DateTypeCode_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -40951,7 +40707,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_Citation_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -41252,7 +41007,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_Date_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -41342,7 +41096,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MD_Identifier_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -41430,7 +41183,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MD_Identifier_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -41483,7 +41235,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_Citation_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -41573,7 +41324,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_ResponsibleParty_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -41663,7 +41413,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_PresentationFormCode_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -41735,7 +41484,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CI_Series_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -41824,7 +41572,6 @@ namespace Energistics.DataAccess.WITSML200
     /// This class represents the AbstractDQ_Element_Type xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_PositionalAccuracy_Type))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42015,7 +41762,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DQ_EvaluationMethodTypeCode_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42087,7 +41833,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DateTime_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42159,7 +41904,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DQ_Result_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42247,7 +41991,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AbstractDQ_PositionalAccuracy_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42263,7 +42006,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the EX_VerticalExtent_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42335,7 +42077,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Real_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42407,7 +42148,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the SC_CRS_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42499,7 +42239,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42573,7 +42312,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VerticalCRSType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42623,7 +42361,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VerticalCSPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42693,7 +42430,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VerticalCSType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42709,7 +42445,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VerticalDatumPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42779,7 +42514,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VerticalDatumType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42797,7 +42531,6 @@ namespace Energistics.DataAccess.WITSML200
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42911,7 +42644,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GeodeticDatumType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -42961,7 +42693,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PrimeMeridianPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43031,7 +42762,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PrimeMeridianType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43064,7 +42794,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AngleType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43103,7 +42832,6 @@ namespace Energistics.DataAccess.WITSML200
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngleType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43178,7 +42906,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the LengthType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43215,7 +42942,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the EllipsoidPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43285,7 +43011,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the EllipsoidType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43335,7 +43060,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the secondDefiningParameter xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43387,7 +43111,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the SecondDefiningParameter xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43520,7 +43243,6 @@ namespace Energistics.DataAccess.WITSML200
     /// This class represents the AbstractGeneralDerivedCRSType xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43553,7 +43275,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GeneralConversionPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43623,7 +43344,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AbstractGeneralConversionType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43639,7 +43359,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the EX_TemporalExtent_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43675,7 +43394,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the TM_Primitive_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43765,7 +43483,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the EX_TemporalExtent_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43855,7 +43572,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the EX_VerticalExtent_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43943,7 +43659,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the coordinateOperationAccuracy xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44013,7 +43728,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CRSPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44083,7 +43797,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the SphericalCSType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44099,7 +43812,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the EllipsoidalCSType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44115,7 +43827,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the EllipsoidalCSPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44185,7 +43896,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the SphericalCSPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44255,7 +43965,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GeodeticDatumPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44327,7 +44036,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ProjectedUnknownCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44363,7 +44071,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ProjectedWktCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44399,7 +44106,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ProjectedEpsgCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44434,7 +44140,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GeodeticWellLocation xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44512,7 +44217,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticEpsgCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticLocalAuthorityCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticUnknownCrs))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44549,7 +44253,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GeodeticWktCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44585,7 +44288,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GeodeticGmlCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44621,7 +44323,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GeodeticEpsgCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44656,7 +44357,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GeodeticLocalAuthorityCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44692,7 +44392,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GeodeticUnknownCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44728,7 +44427,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MeasureOrQuantity xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44825,7 +44523,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the IscwsaErrorTermValue xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -45041,7 +44738,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the IscwsaModelParameters xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -45220,7 +44916,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the IscwsaSurveyToolOperatingInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -45399,7 +45094,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the IscwsaSurveyToolOperatingCondition xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -45579,7 +45273,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the IscwsaAuthorizationData xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -45725,7 +45418,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GeologyFeature xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -45901,7 +45593,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Borehole xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -46130,7 +45821,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the BoreholeString xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -46311,7 +46001,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StringEquipment xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -47092,7 +46781,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ReferenceContainer xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -47225,7 +46913,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the EquipmentConnection xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -47355,7 +47042,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RodConnectionType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TubingConnectionType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CasingConnectionType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -47392,7 +47078,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the OtherConnectionType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -47427,7 +47112,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the RodConnectionType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -47462,7 +47146,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the TubingConnectionType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -47497,7 +47180,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CasingConnectionType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -47533,7 +47215,6 @@ namespace Energistics.DataAccess.WITSML200
     /// This class represents the Connection xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EquipmentConnection))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -47852,7 +47533,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PerfHole xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -48100,7 +47780,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PerfSlot xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -48294,7 +47973,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ExtPropNameValue xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -48408,7 +48086,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Equipment xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -49332,7 +49009,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PerforationSet xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -49821,7 +49497,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DownholeString xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -50162,7 +49837,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CementAdditive xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -50341,7 +50015,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VolumePerMassMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -50436,7 +50109,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CementingFluid xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -51755,7 +51427,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Rheometer xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -51907,7 +51578,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the RheometerViscosity xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -52001,7 +51671,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CementPumpScheduleStep xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -52238,7 +51907,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the FluidLocation xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -52391,7 +52059,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementStageReport))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementDesignStage))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementStageDesign))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -53582,7 +53249,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CementStageReport xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -54098,7 +53764,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CementDesignStage xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -54116,7 +53781,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CementStageDesign xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -54136,7 +53800,6 @@ namespace Energistics.DataAccess.WITSML200
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementJobDesign))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CementJobReport))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -54442,7 +54105,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CementJobDesign xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -54490,7 +54152,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CementJobReport xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -54742,7 +54403,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the WellboreGeometrySection xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -55110,7 +54770,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChannelValueContext))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ObjectContext))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IndexRangeContext))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -55147,7 +54806,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ChannelValueContext xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -55202,7 +54860,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ObjectContext xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -55258,7 +54915,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the IndexRangeContext xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -55315,7 +54971,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DepthIndexValue))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeIndexValue))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PassIndexedDepth))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -55352,7 +55007,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DepthIndexValue xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -55388,7 +55042,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the TimeIndexValue xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -55424,7 +55077,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PassIndexedDepth xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -55496,7 +55148,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ChannelData xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -55567,7 +55218,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PointMetadata xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -55660,7 +55310,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the LengthMeasureExt xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -55755,7 +55404,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the LogChannelAxis xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -55921,7 +55569,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ChannelIndex xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -56049,7 +55696,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillingParams xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -57233,7 +56879,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillReportSurveyStation xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -57476,7 +57121,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the TimestampedCommentString xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -57570,7 +57214,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillReportPorePressure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -57747,7 +57390,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ElectricPotentialDifferenceMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -57842,7 +57484,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Fluid xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -59448,7 +59089,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillReportStatusInfo xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -60724,7 +60364,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the WellElevationCoord xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -60840,7 +60479,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillReportWellboreInfo xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -61011,7 +60649,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillReportGasReadingInfo xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -61330,7 +60967,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillReportPerfInfo xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -61487,7 +61123,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillReportStratInfo xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -61645,7 +61280,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillReportControlIncidentInfo xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -62225,7 +61859,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillReportEquipFailureInfo xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -62436,7 +62069,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillReportLithShowInfo xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -62612,7 +62244,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillReportFormTestInfo xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -62895,7 +62526,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillReportWellTestInfo xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -63447,7 +63077,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillReportCoreInfo xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -63714,7 +63343,6 @@ namespace Energistics.DataAccess.WITSML200
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BottomHoleStaticTemperature))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BottomHoleCirculatingTemperature))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -63769,7 +63397,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the BottomHoleStaticTemperature xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -63805,7 +63432,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the BottomHoleCirculatingTemperature xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -63823,7 +63449,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillReportLogInfo xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -64070,7 +63695,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillActivity xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -64646,7 +64270,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Nozzle xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -64876,7 +64499,6 @@ namespace Energistics.DataAccess.WITSML200
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BendOffset))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BendAngle))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -64913,7 +64535,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the BendOffset xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -64948,7 +64569,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the BendAngle xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -64983,7 +64603,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the RotarySteerableTool xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -65423,7 +65042,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Sensor xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -65598,7 +65216,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the HoleOpener xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -65758,7 +65375,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Bend xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -65898,7 +65514,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Stabilizer xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -66197,7 +65812,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Motor xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -66658,7 +66272,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the BitRecord xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -67435,7 +67048,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MwdTool xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -67590,7 +67202,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Jar xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -67822,7 +67433,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ForcePerLengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -67917,7 +67527,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the LengthPerLengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -68012,7 +67621,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the TubularComponent xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -69012,7 +68620,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the RefWellboreRig xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -69104,7 +68711,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the RefWellbore xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -69178,7 +68784,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the WellDatum xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -69476,7 +69081,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalLocalAuthorityCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalEpsgCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalUnknownCrs))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -69513,7 +69117,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VerticalWktCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -69549,7 +69152,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VerticalGmlCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -69585,7 +69187,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VerticalLocalAuthorityCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -69621,7 +69222,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VerticalEpsgCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -69656,7 +69256,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VerticalUnknownCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -69692,7 +69291,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ReferencePoint xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -69899,7 +69497,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DistanceEastWest xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -70014,7 +69611,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DistanceNorthSouth xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -70129,7 +69725,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PublicLandSurveySystem xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -70432,7 +70027,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the AbstractGraphicalInformation xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -70487,7 +70081,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the IndexRange xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -70562,7 +70155,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the FailingRule xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -70684,7 +70276,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ParameterTemplate xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -70942,7 +70533,6 @@ namespace Energistics.DataAccess.WITSML200
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerQuantityParameter))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleQuantityParameter))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeIndexParameter))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -71082,7 +70672,6 @@ namespace Energistics.DataAccess.WITSML200
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ObjectParameterKey))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeIndexParameterKey))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -71119,7 +70708,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ObjectParameterKey xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -71155,7 +70743,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the TimeIndexParameterKey xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -71191,7 +70778,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the TimeIndex xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -71264,7 +70850,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DataObjectParameter xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -71300,7 +70885,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StringParameter xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -71358,7 +70942,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the IntegerQuantityParameter xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -71415,7 +70998,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DoubleQuantityParameter xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -71507,7 +71089,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the TimeIndexParameter xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -71543,7 +71124,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the TimeSeriesParentage xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -71616,7 +71196,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GeologicTime xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -71704,7 +71283,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the WellboreMarkerSet xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -71785,7 +71363,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the WellboreMarker xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -71944,7 +71521,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the WellboreCompletion xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -72251,7 +71827,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the WellCompletion xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -72473,7 +72048,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ToolErrorTermSet xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -72553,7 +72127,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the SurveyProgram xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -72671,7 +72244,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimJobStage xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -74331,7 +73903,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimPerforationCluster xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -74578,7 +74149,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the StimJob xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -75217,7 +74787,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Risk xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -75734,7 +75303,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Rig xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -76160,7 +75728,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the RigUtilization xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -77553,7 +77120,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the MudLogReport xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -77782,7 +77348,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CuttingsGeologyInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -78081,7 +77646,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CuttingsGeology xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -78181,7 +77745,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the InterpretedGeologyInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -78330,7 +77893,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the InterpretedGeology xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -78430,7 +77992,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ShowEvaluationInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -78555,7 +78116,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ShowEvaluation xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -78655,7 +78215,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the WellboreGeology xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -78760,7 +78319,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DepthRegImage xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -79142,7 +78700,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the WellCMLedger xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -79793,7 +79350,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the OpsReport xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -81252,7 +80808,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Trajectory xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -81669,7 +81224,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ToolErrorModel xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -81861,7 +81415,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DownholeComponent xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -82067,7 +81620,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CementJob xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -82592,7 +82144,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the CementJobEvaluation xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -83318,7 +82869,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the WellboreGeometry xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -83483,7 +83033,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Log xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -83849,7 +83398,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ChannelSet xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -84277,7 +83825,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Channel xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -84839,7 +84386,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the BhaRun xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -85183,7 +84729,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the FluidsReport xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -85337,7 +84882,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DrillReport xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -86035,7 +85579,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Tubular xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -86205,7 +85748,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Attachment xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -86426,7 +85968,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Wellbore xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -86957,7 +86498,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Well xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -87628,7 +87168,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GraphicalInformationSet xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -87673,7 +87212,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the DataAssuranceRecord xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -87899,7 +87437,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the GeodeticCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -87934,7 +87471,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ProjectedCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -88004,7 +87540,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the VerticalCrs xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -88072,7 +87607,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the ActivityTemplate xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -88118,7 +87652,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the Activity xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -88199,7 +87732,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the TimeSeries xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -88263,7 +87795,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PropertyKind xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -88350,7 +87881,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the PropertyKindDictionary xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -88397,7 +87927,6 @@ namespace Energistics.DataAccess.WITSML200
     /// <summary>
     /// This class represents the EpcExternalPartReference xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -88452,7 +87981,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ExistenceKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ExistenceKind xsd enumeration.")]
@@ -88474,7 +88002,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MatrixCementKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MatrixCementKind xsd enumeration.")]
@@ -88520,7 +88047,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MeasureClass xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MeasureClass xsd enumeration.")]
@@ -89429,7 +88955,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LithostratigraphicRank xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LithostratigraphicRank xsd enumeration.")]
@@ -89455,7 +88980,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the WellboreDatumReference xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the WellboreDatumReference xsd enumeration.")]
@@ -89545,7 +89069,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the QuantityClassKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the QuantityClassKind xsd enumeration.")]
@@ -90459,7 +89982,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ReferenceCondition xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ReferenceCondition xsd enumeration.")]
@@ -90518,7 +90040,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LithologyQualifierKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LithologyQualifierKind xsd enumeration.")]
@@ -91789,7 +91310,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the WellStatus xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the WellStatus xsd enumeration.")]
@@ -91873,7 +91393,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the UnitOfMeasure xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the UnitOfMeasure xsd enumeration.")]
@@ -98635,7 +98154,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the GeochronologicalRank xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the GeochronologicalRank xsd enumeration.")]
@@ -98669,7 +98187,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LithologyKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LithologyKind xsd enumeration.")]
@@ -99290,7 +98807,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LengthUom xsd enumeration.")]
@@ -99691,7 +99207,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PhysicalStatus xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the PhysicalStatus xsd enumeration.")]
@@ -99713,7 +99228,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PerforationStatus xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the PerforationStatus xsd enumeration.")]
@@ -99735,7 +99249,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the CompletionStatus xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the CompletionStatus xsd enumeration.")]
@@ -99775,7 +99288,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ErrorTermSource xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ErrorTermSource xsd enumeration.")]
@@ -99814,7 +99326,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the SurveyToolOperatingMode xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the SurveyToolOperatingMode xsd enumeration.")]
@@ -99847,7 +99358,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PermeabilityLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the PermeabilityLengthUom xsd enumeration.")]
@@ -99882,7 +99392,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ThermodynamicTemperatureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ThermodynamicTemperatureUom xsd enumeration.")]
@@ -99908,7 +99417,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PermeabilityRockUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the PermeabilityRockUom xsd enumeration.")]
@@ -99936,7 +99444,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PressureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the PressureUom xsd enumeration.")]
@@ -100137,7 +99644,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MassPerMassUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MassPerMassUom xsd enumeration.")]
@@ -100229,7 +99735,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MassPerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MassPerVolumeUom xsd enumeration.")]
@@ -100384,7 +99889,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the DimensionlessUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the DimensionlessUom xsd enumeration.")]
@@ -100459,7 +99963,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AreaPerMassUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AreaPerMassUom xsd enumeration.")]
@@ -100489,7 +99992,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the StimMaterialKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the StimMaterialKind xsd enumeration.")]
@@ -100532,7 +100034,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the StimAdditiveKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the StimAdditiveKind xsd enumeration.")]
@@ -100636,7 +100137,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ProppantAgentKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ProppantAgentKind xsd enumeration.")]
@@ -100664,7 +100164,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the StimJobDiversionMethod xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the StimJobDiversionMethod xsd enumeration.")]
@@ -100709,7 +100208,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the IsothermalCompressibilityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the IsothermalCompressibilityUom xsd enumeration.")]
@@ -100749,7 +100247,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the DynamicViscosityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the DynamicViscosityUom xsd enumeration.")]
@@ -100851,7 +100348,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumePerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumePerVolumeUom xsd enumeration.")]
@@ -101092,7 +100588,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumePerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumePerLengthUom xsd enumeration.")]
@@ -101172,7 +100667,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MassPerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MassPerLengthUom xsd enumeration.")]
@@ -101207,7 +100701,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ForcePerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ForcePerVolumeUom xsd enumeration.")]
@@ -101302,7 +100795,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the StimFlowPathType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the StimFlowPathType xsd enumeration.")]
@@ -101339,7 +100831,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the StimFluidKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the StimFluidKind xsd enumeration.")]
@@ -101368,7 +100859,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the StimFluidSubtype xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the StimFluidSubtype xsd enumeration.")]
@@ -101524,7 +101014,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumeUom xsd enumeration.")]
@@ -101701,7 +101190,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MassUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MassUom xsd enumeration.")]
@@ -101821,7 +101309,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MassPerTimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MassPerTimeUom xsd enumeration.")]
@@ -101961,7 +101448,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumePerTimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumePerTimeUom xsd enumeration.")]
@@ -102131,7 +101617,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PowerUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the PowerUom xsd enumeration.")]
@@ -102216,7 +101701,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the TimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the TimeUom xsd enumeration.")]
@@ -102330,7 +101814,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the StimFetTestAnalysisMethod xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the StimFetTestAnalysisMethod xsd enumeration.")]
@@ -102410,7 +101893,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumetricThermalExpansionUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumetricThermalExpansionUom xsd enumeration.")]
@@ -102465,7 +101947,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ThermalConductivityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ThermalConductivityUom xsd enumeration.")]
@@ -102500,7 +101981,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the SpecificHeatCapacityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the SpecificHeatCapacityUom xsd enumeration.")]
@@ -102550,7 +102030,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the SurfEquipType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the SurfEquipType xsd enumeration.")]
@@ -102577,7 +102056,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AreaUom xsd enumeration.")]
@@ -102644,7 +102122,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the NameTagNumberingScheme xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the NameTagNumberingScheme xsd enumeration.")]
@@ -102699,7 +102176,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the NameTagTechnology xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the NameTagTechnology xsd enumeration.")]
@@ -102733,7 +102209,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the NameTagLocation xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the NameTagLocation xsd enumeration.")]
@@ -102759,7 +102234,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PumpType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the PumpType xsd enumeration.")]
@@ -102781,7 +102255,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PowerPerPowerUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the PowerPerPowerUom xsd enumeration.")]
@@ -102815,7 +102288,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AngularVelocityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AngularVelocityUom xsd enumeration.")]
@@ -102854,7 +102326,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PitType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the PitType xsd enumeration.")]
@@ -102908,7 +102379,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the BopType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the BopType xsd enumeration.")]
@@ -102952,7 +102422,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ConcentrationParameterKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ConcentrationParameterKind xsd enumeration.")]
@@ -102967,7 +102436,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MudLogStringParameterKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the MudLogStringParameterKind xsd enumeration.")]
@@ -103121,7 +102589,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PressureGradientParameterKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the PressureGradientParameterKind xsd enumeration.")]
@@ -103161,7 +102628,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PressureParameterKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the PressureParameterKind xsd enumeration.")]
@@ -103181,7 +102647,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ForceParameterKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ForceParameterKind xsd enumeration.")]
@@ -103201,7 +102666,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the GasPeakType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the GasPeakType xsd enumeration.")]
@@ -103255,7 +102719,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ElectricCurrentUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ElectricCurrentUom xsd enumeration.")]
@@ -103317,7 +102780,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MomentOfForceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MomentOfForceUom xsd enumeration.")]
@@ -103391,7 +102853,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ForceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ForceUom xsd enumeration.")]
@@ -103512,7 +102973,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LengthPerTimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LengthPerTimeUom xsd enumeration.")]
@@ -103661,7 +103121,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ShowRating xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ShowRating xsd enumeration.")]
@@ -103697,7 +103156,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AreaPerAreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AreaPerAreaUom xsd enumeration.")]
@@ -103745,7 +103203,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ShowSpeed xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ShowSpeed xsd enumeration.")]
@@ -103776,7 +103233,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ShowLevel xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ShowLevel xsd enumeration.")]
@@ -103794,7 +103250,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ShowFluorescence xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ShowFluorescence xsd enumeration.")]
@@ -103816,7 +103271,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the IlluminanceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the IlluminanceUom xsd enumeration.")]
@@ -103843,7 +103297,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LineStyle xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the LineStyle xsd enumeration.")]
@@ -103875,7 +103328,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ScaleType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ScaleType xsd enumeration.")]
@@ -103893,7 +103345,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the BackupScaleType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the BackupScaleType xsd enumeration.")]
@@ -103916,7 +103367,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LogTrackType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the LogTrackType xsd enumeration.")]
@@ -103946,7 +103396,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the CalibrationPointRole xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the CalibrationPointRole xsd enumeration.")]
@@ -103974,7 +103423,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LogSectionType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the LogSectionType xsd enumeration.")]
@@ -104010,7 +103458,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LogIndexType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the LogIndexType xsd enumeration.")]
@@ -104048,7 +103495,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LogRectangleType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the LogRectangleType xsd enumeration.")]
@@ -104066,7 +103512,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the DigitalStorageUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the DigitalStorageUom xsd enumeration.")]
@@ -104092,7 +103537,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PerfConveyanceMethod xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the PerfConveyanceMethod xsd enumeration.")]
@@ -104116,7 +103560,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ReciprocalLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ReciprocalLengthUom xsd enumeration.")]
@@ -104176,7 +103619,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the EventClassType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the EventClassType xsd enumeration.")]
@@ -104225,7 +103667,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PumpOpType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the PumpOpType xsd enumeration.")]
@@ -104252,7 +103693,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ScrType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ScrType xsd enumeration.")]
@@ -104281,7 +103721,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PlaneAngleUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the PlaneAngleUom xsd enumeration.")]
@@ -104348,7 +103787,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the SupportCraftType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the SupportCraftType xsd enumeration.")]
@@ -104390,7 +103828,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LinearAccelerationUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LinearAccelerationUom xsd enumeration.")]
@@ -104436,7 +103873,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MagneticFluxDensityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MagneticFluxDensityUom xsd enumeration.")]
@@ -104546,7 +103982,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the TrajStationType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the TrajStationType xsd enumeration.")]
@@ -104793,7 +104228,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the TypeSurveyTool xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the TypeSurveyTool xsd enumeration.")]
@@ -104833,7 +104267,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the TrajStnCalcAlgorithm xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the TrajStnCalcAlgorithm xsd enumeration.")]
@@ -104880,7 +104313,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AnglePerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AnglePerLengthUom xsd enumeration.")]
@@ -104935,7 +104367,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the TrajStationStatus xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the TrajStationStatus xsd enumeration.")]
@@ -104957,7 +104388,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the RelatedTimeTypeRelativePosition xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
         [Description("This class represents the RelatedTimeTypeRelativePosition xsd enumeration.")]
@@ -105019,7 +104449,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AggregationType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
         [Description("This class represents the AggregationType xsd enumeration.")]
@@ -105053,7 +104482,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ErrorPropagationMode xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ErrorPropagationMode xsd enumeration.")]
@@ -105083,7 +104511,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ErrorModelMisalignmentMode xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ErrorModelMisalignmentMode xsd enumeration.")]
@@ -105112,7 +104539,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AuthorizationStatus xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the AuthorizationStatus xsd enumeration.")]
@@ -105138,7 +104564,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the GeologyType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the GeologyType xsd enumeration.")]
@@ -105156,7 +104581,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the BoreholeType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the BoreholeType xsd enumeration.")]
@@ -105182,7 +104606,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ConnectionFormType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ConnectionFormType xsd enumeration.")]
@@ -105212,7 +104635,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the OtherConnectionTypes xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the OtherConnectionTypes xsd enumeration.")]
@@ -105232,7 +104654,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the RodConnectionTypes xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the RodConnectionTypes xsd enumeration.")]
@@ -105269,7 +104690,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the TubingConnectionTypes xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the TubingConnectionTypes xsd enumeration.")]
@@ -105310,7 +104730,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the CasingConnectionTypes xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the CasingConnectionTypes xsd enumeration.")]
@@ -105333,7 +104752,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ConnectionPosition xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ConnectionPosition xsd enumeration.")]
@@ -105355,7 +104773,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the GradeType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the GradeType xsd enumeration.")]
@@ -106006,7 +105423,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the Coating xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the Coating xsd enumeration.")]
@@ -106409,7 +105825,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PerforationToolType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the PerforationToolType xsd enumeration.")]
@@ -106467,7 +105882,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the DownholeStringType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the DownholeStringType xsd enumeration.")]
@@ -106497,7 +105911,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the SubStringType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the SubStringType xsd enumeration.")]
@@ -106581,7 +105994,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumePerMassUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumePerMassUom xsd enumeration.")]
@@ -106701,7 +106113,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the WellboreFluidLocation xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the WellboreFluidLocation xsd enumeration.")]
@@ -106729,7 +106140,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the HoleCasingType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the HoleCasingType xsd enumeration.")]
@@ -106774,7 +106184,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the EtpDataType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the EtpDataType xsd enumeration.")]
@@ -106820,7 +106229,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ChannelIndexType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ChannelIndexType xsd enumeration.")]
@@ -106863,7 +106271,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the IndexDirection xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the IndexDirection xsd enumeration.")]
@@ -106881,7 +106288,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MudClass xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the MudClass xsd enumeration.")]
@@ -106909,7 +106315,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MudSubClass xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the MudSubClass xsd enumeration.")]
@@ -107115,7 +106520,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ReadingKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ReadingKind xsd enumeration.")]
@@ -107137,7 +106541,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ElectricPotentialDifferenceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ElectricPotentialDifferenceUom xsd enumeration.")]
@@ -107195,7 +106598,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the WellboreType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the WellboreType xsd enumeration.")]
@@ -107229,7 +106631,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PresTestType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the PresTestType xsd enumeration.")]
@@ -107249,7 +106650,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the DrillActivityCode xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the DrillActivityCode xsd enumeration.")]
@@ -108273,7 +107673,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the WellControlIncidentType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the WellControlIncidentType xsd enumeration.")]
@@ -108303,7 +107702,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the WellKillingProcedureType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the WellKillingProcedureType xsd enumeration.")]
@@ -108342,7 +107740,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the WellTestType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the WellTestType xsd enumeration.")]
@@ -108362,7 +107759,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the InnerBarrelType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the InnerBarrelType xsd enumeration.")]
@@ -108388,7 +107784,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the DrillActivityClassType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the DrillActivityClassType xsd enumeration.")]
@@ -108410,7 +107805,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the StateDetailActivity xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the StateDetailActivity xsd enumeration.")]
@@ -108462,7 +107856,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ItemState xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ItemState xsd enumeration.")]
@@ -108484,7 +107877,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the NozzleType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the NozzleType xsd enumeration.")]
@@ -108502,7 +107894,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the DeflectionMethod xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the DeflectionMethod xsd enumeration.")]
@@ -108526,7 +107917,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MeasurementType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the MeasurementType xsd enumeration.")]
@@ -109951,7 +109341,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the HoleOpenerType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the HoleOpenerType xsd enumeration.")]
@@ -109971,7 +109360,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the BladeShapeType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the BladeShapeType xsd enumeration.")]
@@ -110001,7 +109389,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the BladeType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the BladeType xsd enumeration.")]
@@ -110028,7 +109415,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the BearingType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the BearingType xsd enumeration.")]
@@ -110052,7 +109438,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the BitType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the BitType xsd enumeration.")]
@@ -110090,7 +109475,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the IadcIntegerCode xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the IadcIntegerCode xsd enumeration.")]
@@ -110145,7 +109529,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the BitDullCode xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the BitDullCode xsd enumeration.")]
@@ -110259,7 +109642,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the IadcBearingWearCode xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the IadcBearingWearCode xsd enumeration.")]
@@ -110330,7 +109712,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the BitReasonPulled xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the BitReasonPulled xsd enumeration.")]
@@ -110412,7 +109793,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the JarType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the JarType xsd enumeration.")]
@@ -110435,7 +109815,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the JarAction xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the JarAction xsd enumeration.")]
@@ -110461,7 +109840,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ForcePerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ForcePerLengthUom xsd enumeration.")]
@@ -110541,7 +109919,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LengthPerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LengthPerLengthUom xsd enumeration.")]
@@ -110615,7 +109992,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the TubularComponentType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the TubularComponentType xsd enumeration.")]
@@ -111359,7 +110735,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the BoxPinConfig xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the BoxPinConfig xsd enumeration.")]
@@ -111394,7 +110769,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MaterialType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the MaterialType xsd enumeration.")]
@@ -111448,7 +110822,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the EastOrWest xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the EastOrWest xsd enumeration.")]
@@ -111466,7 +110839,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the NorthOrSouth xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the NorthOrSouth xsd enumeration.")]
@@ -111484,7 +110856,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PrincipalMeridian xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the PrincipalMeridian xsd enumeration.")]
@@ -111674,7 +111045,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ParameterKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ParameterKind xsd enumeration.")]
@@ -111708,7 +111078,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PIDXCommodityCode xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the PIDXCommodityCode xsd enumeration.")]
@@ -111808,7 +111177,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the RiskType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the RiskType xsd enumeration.")]
@@ -111845,7 +111213,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the RiskCategory xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the RiskCategory xsd enumeration.")]
@@ -111903,7 +111270,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the RiskSubCategory xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the RiskSubCategory xsd enumeration.")]
@@ -112448,7 +111814,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the RiskAffectedPersonnel xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the RiskAffectedPersonnel xsd enumeration.")]
@@ -112586,7 +111951,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the RigType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the RigType xsd enumeration.")]
@@ -112626,7 +111990,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the DerrickType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the DerrickType xsd enumeration.")]
@@ -112652,7 +112015,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the DrawWorksType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the DrawWorksType xsd enumeration.")]
@@ -112681,7 +112043,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the DriveType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the DriveType xsd enumeration.")]
@@ -112706,7 +112067,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ChannelStatus xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ChannelStatus xsd enumeration.")]
@@ -112728,7 +112088,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ShowFluid xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ShowFluid xsd enumeration.")]
@@ -112746,7 +112105,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the FileNameType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the FileNameType xsd enumeration.")]
@@ -112775,7 +112133,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MimeType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the MimeType xsd enumeration.")]
@@ -112809,7 +112166,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MessageDigestType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the MessageDigestType xsd enumeration.")]
@@ -112831,7 +112187,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AziRef xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the AziRef xsd enumeration.")]
@@ -112856,7 +112211,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the CementJobType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the CementJobType xsd enumeration.")]
@@ -112878,7 +112232,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ChannelState xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ChannelState xsd enumeration.")]
@@ -112909,7 +112262,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ChannelDerivation xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ChannelDerivation xsd enumeration.")]
@@ -112939,7 +112291,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LoggingMethod xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the LoggingMethod xsd enumeration.")]
@@ -112977,7 +112328,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the BhaStatus xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the BhaStatus xsd enumeration.")]
@@ -112999,7 +112349,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the OpsReportVersion xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the OpsReportVersion xsd enumeration.")]
@@ -113021,7 +112370,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the TubularAssembly xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the TubularAssembly xsd enumeration.")]
@@ -113095,7 +112443,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the WellPurpose xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the WellPurpose xsd enumeration.")]
@@ -113221,7 +112568,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the WellboreShape xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the WellboreShape xsd enumeration.")]
@@ -113258,7 +112604,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the WellFluid xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the WellFluid xsd enumeration.")]
@@ -113331,7 +112676,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the WellDirection xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the WellDirection xsd enumeration.")]
@@ -113358,7 +112702,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AxisOrder2d xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AxisOrder2d xsd enumeration.")]
@@ -113398,7 +112741,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VerticalDirection xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VerticalDirection xsd enumeration.")]
@@ -113416,7 +112758,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LogarithmicPowerRatioUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LogarithmicPowerRatioUom xsd enumeration.")]
@@ -113434,7 +112775,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AmountOfSubstancePerTimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AmountOfSubstancePerTimeUom xsd enumeration.")]
@@ -113473,7 +112813,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ElectricConductivityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ElectricConductivityUom xsd enumeration.")]
@@ -113503,7 +112842,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumePerRotationUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumePerRotationUom xsd enumeration.")]
@@ -113528,7 +112866,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the DiffusiveTimeOfFlightUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the DiffusiveTimeOfFlightUom xsd enumeration.")]
@@ -113548,7 +112885,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumePerTimePerAreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumePerTimePerAreaUom xsd enumeration.")]
@@ -113603,7 +112939,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MobilityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MobilityUom xsd enumeration.")]
@@ -113648,7 +112983,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the HeatTransferCoefficientUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the HeatTransferCoefficientUom xsd enumeration.")]
@@ -113713,7 +113047,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MassPerEnergyUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MassPerEnergyUom xsd enumeration.")]
@@ -113748,7 +113081,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MomentOfInertiaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MomentOfInertiaUom xsd enumeration.")]
@@ -113768,7 +113100,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the CapacitanceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the CapacitanceUom xsd enumeration.")]
@@ -113830,7 +113161,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MagneticFluxDensityPerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MagneticFluxDensityPerLengthUom xsd enumeration.")]
@@ -113855,7 +113185,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LengthPerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LengthPerVolumeUom xsd enumeration.")]
@@ -113905,7 +113234,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the CationExchangeCapacityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the CationExchangeCapacityUom xsd enumeration.")]
@@ -113920,7 +113248,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MolecularWeightUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MolecularWeightUom xsd enumeration.")]
@@ -113945,7 +113272,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MagneticFluxUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MagneticFluxUom xsd enumeration.")]
@@ -114007,7 +113333,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ThermalConductanceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ThermalConductanceUom xsd enumeration.")]
@@ -114022,7 +113347,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MassPerVolumePerTemperatureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MassPerVolumePerTemperatureUom xsd enumeration.")]
@@ -114047,7 +113371,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the QuantityOfLightUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the QuantityOfLightUom xsd enumeration.")]
@@ -114062,7 +113385,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ForceLengthPerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ForceLengthPerLengthUom xsd enumeration.")]
@@ -114097,7 +113419,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the SolidAngleUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the SolidAngleUom xsd enumeration.")]
@@ -114111,7 +113432,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MassPerVolumePerPressureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MassPerVolumePerPressureUom xsd enumeration.")]
@@ -114131,7 +113451,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumePerTimePerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumePerTimePerVolumeUom xsd enumeration.")]
@@ -114151,7 +113470,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MolarVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MolarVolumeUom xsd enumeration.")]
@@ -114191,7 +113509,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AmountOfSubstanceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AmountOfSubstanceUom xsd enumeration.")]
@@ -114221,7 +113538,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the DipoleMomentUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the DipoleMomentUom xsd enumeration.")]
@@ -114236,7 +113552,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the APINeutronUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the APINeutronUom xsd enumeration.")]
@@ -114250,7 +113565,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ReciprocalTimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ReciprocalTimeUom xsd enumeration.")]
@@ -114300,7 +113614,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the TemperatureIntervalPerPressureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the TemperatureIntervalPerPressureUom xsd enumeration.")]
@@ -114325,7 +113638,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the APIGammaRayUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the APIGammaRayUom xsd enumeration.")]
@@ -114339,7 +113651,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ElectricCurrentDensityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ElectricCurrentDensityUom xsd enumeration.")]
@@ -114389,7 +113700,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumePerAreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumePerAreaUom xsd enumeration.")]
@@ -114419,7 +113729,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ReciprocalElectricPotentialDifferenceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ReciprocalElectricPotentialDifferenceUom xsd enumeration.")]
@@ -114439,7 +113748,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the TimePerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the TimePerLengthUom xsd enumeration.")]
@@ -114534,7 +113842,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumePerPressureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumePerPressureUom xsd enumeration.")]
@@ -114559,7 +113866,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ElectricChargePerAreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ElectricChargePerAreaUom xsd enumeration.")]
@@ -114589,7 +113895,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MassPerTimePerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MassPerTimePerLengthUom xsd enumeration.")]
@@ -114619,7 +113924,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the SignalingEventPerTimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the SignalingEventPerTimeUom xsd enumeration.")]
@@ -114633,7 +113937,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the EnergyPerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the EnergyPerLengthUom xsd enumeration.")]
@@ -114653,7 +113956,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PressureSquaredUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the PressureSquaredUom xsd enumeration.")]
@@ -114687,7 +113989,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AngularAccelerationUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AngularAccelerationUom xsd enumeration.")]
@@ -114707,7 +114008,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ReciprocalMassTimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ReciprocalMassTimeUom xsd enumeration.")]
@@ -114732,7 +114032,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ThermalDiffusivityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ThermalDiffusivityUom xsd enumeration.")]
@@ -114777,7 +114076,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumePerTimeLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumePerTimeLengthUom xsd enumeration.")]
@@ -114802,7 +114100,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the SecondMomentOfAreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the SecondMomentOfAreaUom xsd enumeration.")]
@@ -114824,7 +114121,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ForceAreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ForceAreaUom xsd enumeration.")]
@@ -114879,7 +114175,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ElectricFieldStrengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ElectricFieldStrengthUom xsd enumeration.")]
@@ -114914,7 +114209,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AmountOfSubstancePerAreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AmountOfSubstancePerAreaUom xsd enumeration.")]
@@ -114929,7 +114223,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AreaPerAmountOfSubstanceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AreaPerAmountOfSubstanceUom xsd enumeration.")]
@@ -114944,7 +114237,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LogarithmicPowerRatioPerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LogarithmicPowerRatioPerLengthUom xsd enumeration.")]
@@ -114974,7 +114266,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LuminanceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LuminanceUom xsd enumeration.")]
@@ -114989,7 +114280,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumePerTimePerTimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumePerTimePerTimeUom xsd enumeration.")]
@@ -115069,7 +114359,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MolarHeatCapacityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MolarHeatCapacityUom xsd enumeration.")]
@@ -115099,7 +114388,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumeFlowRatePerVolumeFlowRateUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumeFlowRatePerVolumeFlowRateUom xsd enumeration.")]
@@ -115138,7 +114426,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the FrequencyIntervalUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the FrequencyIntervalUom xsd enumeration.")]
@@ -115152,7 +114439,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the TemperatureIntervalUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the TemperatureIntervalUom xsd enumeration.")]
@@ -115178,7 +114464,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the RadiantIntensityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the RadiantIntensityUom xsd enumeration.")]
@@ -115193,7 +114478,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the DataTransferSpeedUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the DataTransferSpeedUom xsd enumeration.")]
@@ -115213,7 +114497,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the InductanceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the InductanceUom xsd enumeration.")]
@@ -115271,7 +114554,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the KinematicViscosityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the KinematicViscosityUom xsd enumeration.")]
@@ -115329,7 +114611,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumePerTimePerPressureLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumePerTimePerPressureLengthUom xsd enumeration.")]
@@ -115359,7 +114640,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ReciprocalForceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ReciprocalForceUom xsd enumeration.")]
@@ -115379,7 +114659,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ReciprocalAreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ReciprocalAreaUom xsd enumeration.")]
@@ -115409,7 +114688,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PressurePerTimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the PressurePerTimeUom xsd enumeration.")]
@@ -115464,7 +114742,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ElectricChargeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ElectricChargeUom xsd enumeration.")]
@@ -115536,7 +114813,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LuminousEfficacyUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LuminousEfficacyUom xsd enumeration.")]
@@ -115551,7 +114827,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PressurePerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the PressurePerVolumeUom xsd enumeration.")]
@@ -115571,7 +114846,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ActivityOfRadioactivityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ActivityOfRadioactivityUom xsd enumeration.")]
@@ -115617,7 +114891,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LengthPerPressureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LengthPerPressureUom xsd enumeration.")]
@@ -115642,7 +114915,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AreaPerCountUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AreaPerCountUom xsd enumeration.")]
@@ -115657,7 +114929,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MagneticVectorPotentialUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MagneticVectorPotentialUom xsd enumeration.")]
@@ -115677,7 +114948,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MagneticFieldStrengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MagneticFieldStrengthUom xsd enumeration.")]
@@ -115701,7 +114971,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ThermalResistanceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ThermalResistanceUom xsd enumeration.")]
@@ -115716,7 +114985,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ForcePerForceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ForcePerForceUom xsd enumeration.")]
@@ -115750,7 +115018,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LengthPerMassUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LengthPerMassUom xsd enumeration.")]
@@ -115770,7 +115037,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AmountOfSubstancePerTimePerAreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AmountOfSubstancePerTimePerAreaUom xsd enumeration.")]
@@ -115795,7 +115061,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LinearThermalExpansionUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LinearThermalExpansionUom xsd enumeration.")]
@@ -115825,7 +115090,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ElectricalResistivityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ElectricalResistivityUom xsd enumeration.")]
@@ -115865,7 +115129,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PressureSquaredPerForceTimePerAreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the PressureSquaredPerForceTimePerAreaUom xsd enumeration.")]
@@ -115900,7 +115163,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LuminousFluxUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LuminousFluxUom xsd enumeration.")]
@@ -115914,7 +115176,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumePerTimePerPressureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumePerTimePerPressureUom xsd enumeration.")]
@@ -115979,7 +115240,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AmountOfSubstancePerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AmountOfSubstancePerVolumeUom xsd enumeration.")]
@@ -116014,7 +115274,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the EnergyPerMassUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the EnergyPerMassUom xsd enumeration.")]
@@ -116104,7 +115363,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PermittivityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the PermittivityUom xsd enumeration.")]
@@ -116124,7 +115382,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ElectromagneticMomentUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ElectromagneticMomentUom xsd enumeration.")]
@@ -116139,7 +115396,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ThermalInsulanceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ThermalInsulanceUom xsd enumeration.")]
@@ -116169,7 +115425,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PowerPerAreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the PowerPerAreaUom xsd enumeration.")]
@@ -116239,7 +115494,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MassPerAreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MassPerAreaUom xsd enumeration.")]
@@ -116274,7 +115528,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AreaPerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AreaPerVolumeUom xsd enumeration.")]
@@ -116313,7 +115566,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the TemperatureIntervalPerTimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the TemperatureIntervalPerTimeUom xsd enumeration.")]
@@ -116358,7 +115610,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AmountOfSubstancePerAmountOfSubstanceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AmountOfSubstancePerAmountOfSubstanceUom xsd enumeration.")]
@@ -116399,7 +115650,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the RadianceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the RadianceUom xsd enumeration.")]
@@ -116414,7 +115664,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the HeatFlowRateUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the HeatFlowRateUom xsd enumeration.")]
@@ -116531,7 +115780,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the DoseEquivalentUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the DoseEquivalentUom xsd enumeration.")]
@@ -116557,7 +115805,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ElectricChargePerMassUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ElectricChargePerMassUom xsd enumeration.")]
@@ -116582,7 +115829,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MassPerVolumePerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MassPerVolumePerLengthUom xsd enumeration.")]
@@ -116627,7 +115873,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MassLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MassLengthUom xsd enumeration.")]
@@ -116647,7 +115892,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ElectricChargePerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ElectricChargePerVolumeUom xsd enumeration.")]
@@ -116677,7 +115921,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the APIGravityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the APIGravityUom xsd enumeration.")]
@@ -116691,7 +115934,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ReluctanceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ReluctanceUom xsd enumeration.")]
@@ -116706,7 +115948,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LengthPerTemperatureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LengthPerTemperatureUom xsd enumeration.")]
@@ -116726,7 +115967,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumePerTimePerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumePerTimePerLengthUom xsd enumeration.")]
@@ -116811,7 +116051,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the EnergyUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the EnergyUom xsd enumeration.")]
@@ -117072,7 +116311,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VerticalCoordinateUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VerticalCoordinateUom xsd enumeration.")]
@@ -117099,7 +116337,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the EnergyPerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the EnergyPerVolumeUom xsd enumeration.")]
@@ -117224,7 +116461,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MagneticPermeabilityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MagneticPermeabilityUom xsd enumeration.")]
@@ -117244,7 +116480,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ReciprocalMassUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ReciprocalMassUom xsd enumeration.")]
@@ -117269,7 +116504,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PotentialDifferencePerPowerDropUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the PotentialDifferencePerPowerDropUom xsd enumeration.")]
@@ -117289,7 +116523,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AreaPerTimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AreaPerTimeUom xsd enumeration.")]
@@ -117339,7 +116572,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the HeatCapacityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the HeatCapacityUom xsd enumeration.")]
@@ -117354,7 +116586,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ThermodynamicTemperaturePerThermodynamicTemperatureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ThermodynamicTemperaturePerThermodynamicTemperatureUom xsd enumeration.")]
@@ -117388,7 +116619,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MolarEnergyUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MolarEnergyUom xsd enumeration.")]
@@ -117423,7 +116653,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ElectricConductanceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ElectricConductanceUom xsd enumeration.")]
@@ -117485,7 +116714,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MomentumUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MomentumUom xsd enumeration.")]
@@ -117505,7 +116733,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MassPerTimePerAreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MassPerTimePerAreaUom xsd enumeration.")]
@@ -117550,7 +116777,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PowerPerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the PowerPerVolumeUom xsd enumeration.")]
@@ -117600,7 +116826,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the FrequencyUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the FrequencyUom xsd enumeration.")]
@@ -117662,7 +116887,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LuminousIntensityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LuminousIntensityUom xsd enumeration.")]
@@ -117680,7 +116904,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AbsorbedDoseUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AbsorbedDoseUom xsd enumeration.")]
@@ -117794,7 +117017,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the TimePerMassUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the TimePerMassUom xsd enumeration.")]
@@ -117809,7 +117031,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the VolumetricHeatTransferCoefficientUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the VolumetricHeatTransferCoefficientUom xsd enumeration.")]
@@ -117839,7 +117060,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the NormalizedPowerUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the NormalizedPowerUom xsd enumeration.")]
@@ -117869,7 +117089,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the EnergyLengthPerTimeAreaTemperatureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the EnergyLengthPerTimeAreaTemperatureUom xsd enumeration.")]
@@ -117899,7 +117118,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PressureTimePerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the PressureTimePerVolumeUom xsd enumeration.")]
@@ -117919,7 +117137,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AnglePerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AnglePerVolumeUom xsd enumeration.")]
@@ -117939,7 +117156,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the DiffusionCoefficientUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the DiffusionCoefficientUom xsd enumeration.")]
@@ -117954,7 +117170,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the TimePerTimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the TimePerTimeUom xsd enumeration.")]
@@ -117983,7 +117198,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the PressurePerPressureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the PressurePerPressureUom xsd enumeration.")]
@@ -118027,7 +117241,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the EnergyPerMassPerTimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the EnergyPerMassPerTimeUom xsd enumeration.")]
@@ -118062,7 +117275,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the TemperatureIntervalPerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the TemperatureIntervalPerLengthUom xsd enumeration.")]
@@ -118117,7 +117329,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the AttenuationPerFrequencyIntervalUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the AttenuationPerFrequencyIntervalUom xsd enumeration.")]
@@ -118137,7 +117348,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ElectricResistanceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ElectricResistanceUom xsd enumeration.")]
@@ -118199,7 +117409,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ReciprocalVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ReciprocalVolumeUom xsd enumeration.")]
@@ -118239,7 +117448,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the TimePerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the TimePerVolumeUom xsd enumeration.")]
@@ -118304,7 +117512,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the EnergyLengthPerAreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the EnergyLengthPerAreaUom xsd enumeration.")]
@@ -118324,7 +117531,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ElectricResistancePerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ElectricResistancePerLengthUom xsd enumeration.")]
@@ -118349,7 +117555,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ReciprocalPressureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ReciprocalPressureUom xsd enumeration.")]
@@ -118389,7 +117594,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the LightExposureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the LightExposureUom xsd enumeration.")]
@@ -118409,7 +117613,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the EnergyPerAreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the EnergyPerAreaUom xsd enumeration.")]
@@ -118459,7 +117662,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the MagneticDipoleMomentUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the MagneticDipoleMomentUom xsd enumeration.")]
@@ -118474,7 +117676,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ReferencePressureKind xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
         [Description("This class represents the ReferencePressureKind xsd enumeration.")]
@@ -118496,7 +117697,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the ElevCodeEnum xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the ElevCodeEnum xsd enumeration.")]
@@ -118574,7 +117774,6 @@ namespace Energistics.DataAccess.WITSML200
         /// <summary>
         /// This class represents the EquipmentType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
         [Description("This class represents the EquipmentType xsd enumeration.")]

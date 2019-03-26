@@ -386,6 +386,30 @@ namespace Energistics.SchemaGatherer
             }
         }
 
+        public static string CleanUpGeneratedText(string text)
+        {
+            // Normalize line endings
+            text = Regex.Replace(text, @"\r?\n", Environment.NewLine);
+
+            // Remove GeneratedCodeAttributes
+            text = Regex.Replace(
+                text, Environment.NewLine + @".*?System\.CodeDom\.Compiler\.GeneratedCodeAttribute.*?" + Environment.NewLine, Environment.NewLine);
+
+            // Remove Runtime Version auto-generated comments
+            text = Regex.Replace(
+                text, Environment.NewLine + @".*?//     Runtime Version:.*?" + Environment.NewLine, Environment.NewLine);
+
+            return text;
+        }
+
+        public static void CleanUpGeneratedCode(string path)
+        {
+            string contents = File.ReadAllText(path);
+
+            contents = CleanUpGeneratedText(contents);
+
+            File.WriteAllText(path, contents, Encoding.UTF8);
+        }
 
         private static void GenerateDataObjectsWithXsdUtility(string targetFolder, string targetXmlFile, string newTypeCatalog, string newTypeCatalogProdml)
         {
@@ -415,6 +439,7 @@ namespace Energistics.SchemaGatherer
 
                     if (File.Exists(sourceFile))
                     {
+                        CleanUpGeneratedCode(sourceFile);
                         if (File.Exists(targetCSFile))
                         {
                             File.Delete(targetCSFile);
