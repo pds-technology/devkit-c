@@ -1,5 +1,0 @@
-C:\projects\source\DevKitGenerator\SchemaGatherer\bin\Release\Energistics.SchemaGatherer.exe.config
-C:\projects\source\DevKitGenerator\SchemaGatherer\bin\Release\Energistics.SchemaGatherer.exe
-C:\projects\source\DevKitGenerator\SchemaGatherer\bin\Release\Energistics.SchemaGatherer.pdb
-C:\projects\source\DevKitGenerator\SchemaGatherer\obj\x86\Release\Energistics.SchemaGatherer.exe
-C:\projects\source\DevKitGenerator\SchemaGatherer\obj\x86\Release\Energistics.SchemaGatherer.pdb
