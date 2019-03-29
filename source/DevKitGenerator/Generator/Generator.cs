@@ -75,6 +75,7 @@
 // Illinois, Fortner Software, Unidata Program Center (netCDF), The Independent JPEG Group
 // (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
+using Mono.Options;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -83,6 +84,9 @@ using Energistics.DataAccess.EnumValue;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Security.AccessControl;
+using System.Configuration;
+using System.Linq;
+
 namespace Energistics.Generator
 {   
     partial class EnergisticsTextTemplate
@@ -103,14 +107,48 @@ namespace Energistics.Generator
 
     class Generator
     {
+        private static OptionSet options;
+
         [STAThread]
         static void Main(string[] args)        
         {
+            bool haveRootFolder = false;
+            options = new OptionSet()
+                .Add("?|help|h", "Displays this help", option => ShowHelp())
+                .Add("r=|root-folder=", "The root folder for the schemas.  If not set, the ${{ROOT_FOLDER}} application configuration setting will be used.", option => { ConfigurationManager.AppSettings["ROOT_FOLDER"] = option; haveRootFolder = true; });
+
+            // Hard code default to simplify debugging.
+            if (!haveRootFolder && !ConfigurationManager.AppSettings.AllKeys.Contains("ROOT_FOLDER"))
+                ConfigurationManager.AppSettings["ROOT_FOLDER"] = @"..\..\..\..\..\";
+
+            try
+            {
+                options.Parse(args);
+            }
+            catch (OptionException)
+            {
+                ShowHelp();
+            }
+
+            try
+            {
+                Energistics.SchemaGatherer.SchemaGatherer.VerifyAppConfig();
+            }
+            catch (Exception)
+            {
+                return;
+            }
+
             string currentPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             foreach (string set in Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting("SETS").Split(new Char[] { ',' }))
             { 
                 GenerateClasses(set, currentPath);
             }
+        }
+
+        private static void ShowHelp()
+        {
+            options.WriteOptionDescriptions(Console.Out);
         }
 
         private static void GenerateClasses(string setName, string currentPath)
@@ -122,6 +160,7 @@ namespace Energistics.Generator
             if (!setName.Contains("ML2"))
             {               
                 string csCode = EnumValuesXMLToClass.Convert(Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENUMVAL_PATH"), "Energistics.DataAccess." + setName, enumClassNames, false, null);
+                csCode = SchemaGatherer.SchemaGatherer.CleanUpGeneratedText(csCode);
 
                 if (targetFilename.Contains(".cs"))
                 {
@@ -138,7 +177,9 @@ namespace Energistics.Generator
                 if (!String.IsNullOrEmpty(prodMLPath))
                 {
                     targetFilename = String.Format(@"{0}\{1}\GeneratedProdmlEnumValues.cs", Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENERGY_ML_DATA_ACCESS_PROJ_PATH"), setName);
-                    File.WriteAllText(targetFilename, EnumValuesXMLToClass.Convert(prodMLPath, "Energistics.DataAccess." + setName, enumClassNames, false, null));
+                    var text = EnumValuesXMLToClass.Convert(prodMLPath, "Energistics.DataAccess." + setName, enumClassNames, false, null);
+                    text = SchemaGatherer.SchemaGatherer.CleanUpGeneratedText(text);
+                    File.WriteAllText(targetFilename, text);
                 }
             }
 
@@ -147,6 +188,7 @@ namespace Energistics.Generator
             {
                 ResqmlHD5Template resqmlTextTemplate = new ResqmlHD5Template();
                 string resmltext = resqmlTextTemplate.TransformText(setName);
+                resmltext = SchemaGatherer.SchemaGatherer.CleanUpGeneratedText(resmltext);
                 File.WriteAllText(String.Format(@"{0}\{1}\GeneratedResqmlHDF5PartialClasses.cs", Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENERGY_ML_DATA_ACCESS_PROJ_PATH"), setName), resmltext);
             }
 
@@ -154,6 +196,7 @@ namespace Energistics.Generator
             
             EnergisticsTextTemplate textTemplate = new EnergisticsTextTemplate(mlPath, setName, enumClassNames, versionString);
             String contents = textTemplate.TransformText();
+            contents = SchemaGatherer.SchemaGatherer.CleanUpGeneratedText(contents);
             File.WriteAllText(String.Format("{0}\\{1}\\DataObjects.cs", Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_ENERGY_ML_DATA_ACCESS_PROJ_PATH"), setName), contents);
 
             string wsdlPath = Energistics.SchemaGatherer.SchemaGatherer.GetAppSetting(setName + "_WSDL");
@@ -207,6 +250,11 @@ namespace Energistics.Generator
                         prodGDAText = prodGDAText.Replace("abstractObject", "AbstractObject");
 
                         File.WriteAllText(filename, prodGDAText);
+                    }
+                    foreach (Match m in Regex.Matches(output, @"Writing file '(.*?)'."))
+                    {
+                        string outputFile = m.Groups[1].Value;
+                        SchemaGatherer.SchemaGatherer.CleanUpGeneratedCode(outputFile);
                     }
                 }
             }

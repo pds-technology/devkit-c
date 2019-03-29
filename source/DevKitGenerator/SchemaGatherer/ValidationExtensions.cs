@@ -139,6 +139,7 @@ namespace Energistics.SchemaGatherer
             {
                 codeProvider.GenerateCodeFromCompileUnit(codeCompileUnit, writer, null);
             }
+            SchemaGatherer.CleanUpGeneratedCode(outputFile);
         }
 
         private static void AddNamespaceComments(CodeNamespace codeNamespace, string version)

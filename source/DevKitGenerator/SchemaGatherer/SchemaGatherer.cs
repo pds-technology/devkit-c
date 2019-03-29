@@ -73,6 +73,8 @@
 // Illinois, Fortner Software, Unidata Program Center (netCDF), The Independent JPEG Group
 // (JPEG), Jean-loup Gailly and Mark Adler (gzip), and Digital Equipment Corporation (DEC). 
 // 
+
+using Mono.Options;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -88,8 +90,28 @@ namespace Energistics.SchemaGatherer
 {
     public class SchemaGatherer
     {
+        private static OptionSet options;
+
         static int Main(string[] args)
         {
+            bool haveRootFolder = false;
+            options = new OptionSet()
+                .Add("?|help|h", "Displays this help", option => ShowHelp())
+                .Add("r=|root-folder=", "The root folder for the schemas.  If not set, the ${{ROOT_FOLDER}} application configuration setting will be used.", option => { ConfigurationManager.AppSettings["ROOT_FOLDER"] = option; haveRootFolder = true; });
+
+            // Hard code default to simplify debugging.
+            if (!haveRootFolder && !ConfigurationManager.AppSettings.AllKeys.Contains("ROOT_FOLDER"))
+                ConfigurationManager.AppSettings["ROOT_FOLDER"] = @"..\..\..\..\..\";
+
+            try
+            {
+                options.Parse(args);
+            }
+            catch (OptionException)
+            {
+                ShowHelp();
+            }
+
             try
             {
                 VerifyAppConfig();
@@ -107,7 +129,12 @@ namespace Energistics.SchemaGatherer
             return 0;
         }
 
-        private static void VerifyAppConfig()
+        private static void ShowHelp()
+        {
+            options.WriteOptionDescriptions(Console.Out);
+        }
+
+        public static void VerifyAppConfig()
         {
             VerifySetting("SETS");
             VerifyPath("ROOT_FOLDER");
@@ -150,6 +177,10 @@ namespace Energistics.SchemaGatherer
                 String message = String.Format("Path '{0}' defined by setting '{1}' in app.config does not exist. Please edit your app.config file.", value, settingName);
                 MessageBox.Show(message, "BUILD ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw new Exception(message);
+            }
+            else if (!String.IsNullOrEmpty(value))
+            {
+                ConfigurationManager.AppSettings[settingName] = Path.GetFullPath(value);
             }
         }
 
@@ -360,6 +391,30 @@ namespace Energistics.SchemaGatherer
             }
         }
 
+        public static string CleanUpGeneratedText(string text)
+        {
+            // Normalize line endings
+            text = Regex.Replace(text, @"\r?\n", Environment.NewLine);
+
+            // Remove GeneratedCodeAttributes
+            text = Regex.Replace(
+                text, Environment.NewLine + @".*?System\.CodeDom\.Compiler\.GeneratedCodeAttribute.*?" + Environment.NewLine, Environment.NewLine);
+
+            // Remove Runtime Version auto-generated comments
+            text = Regex.Replace(
+                text, Environment.NewLine + @".*?//     Runtime Version:.*?" + Environment.NewLine, Environment.NewLine);
+
+            return text;
+        }
+
+        public static void CleanUpGeneratedCode(string path)
+        {
+            string contents = File.ReadAllText(path);
+
+            contents = CleanUpGeneratedText(contents);
+
+            File.WriteAllText(path, contents, Encoding.UTF8);
+        }
 
         private static void GenerateDataObjectsWithXsdUtility(string targetFolder, string targetXmlFile, string newTypeCatalog, string newTypeCatalogProdml)
         {
@@ -389,6 +444,7 @@ namespace Energistics.SchemaGatherer
 
                     if (File.Exists(sourceFile))
                     {
+                        CleanUpGeneratedCode(sourceFile);
                         if (File.Exists(targetCSFile))
                         {
                             File.Delete(targetCSFile);

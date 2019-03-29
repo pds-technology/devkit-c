@@ -22,7 +22,6 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the abstractObject xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlDocumentList))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -59,7 +58,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the cs_customData xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -125,7 +123,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A single split node index description. The node is at one corner of a cell.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -291,7 +288,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Defines the 3D coordinates for each split node. Each node may represent part of an 8-way split.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -375,8 +371,8 @@ namespace Energistics.DataAccess.RESQML110
                 return ijkGridHdfGroupField;
             } 
             set {
-                if (value != null && SplitNodeSetSpecified) throw new Exception("Cannot set property IjkGridHdfGroup when property SplitNodeSet is already set");
                 if (value != null && SplitNodeReferenceSpecified) throw new Exception("Cannot set property IjkGridHdfGroup when property SplitNodeReference is already set");
+                if (value != null && SplitNodeSetSpecified) throw new Exception("Cannot set property IjkGridHdfGroup when property SplitNodeSet is already set");
                 ijkGridHdfGroupField = value;
                 IjkGridHdfGroupSpecified = (value!=null);
                 NotifyPropertyChanged("IjkGridHdfGroup");
@@ -429,7 +425,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Defines information relative to the array values in an HDF file.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -485,7 +480,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A set of points defined in 3 dimensional space.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -553,7 +547,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the point3d xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -644,7 +637,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A single split line index description. The line is at one corner of a cell.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -773,7 +765,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Defines explicit nodes on coordinate lines.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -911,7 +902,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// An i,j,k based corner point grid which uses i,j coordinate lines and k nodes to define the geometry. This may be used to define the overall geometry of a grid or may be used to define Local Grid Refinement.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1022,7 +1012,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the refGlobalNameString xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1118,7 +1107,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Defines the indices for one cell in a 3D grid.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1209,7 +1197,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Defines the local grid refinement (LGR) by dividing the individual cells.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1310,7 +1297,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Defines a local grid refinement (LGR).
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1434,9 +1420,8 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the cs_resqmlAbstractIJKGrid xsd type.
     /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlLocalIJKGrid))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlRootIJKGrid))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlLocalIJKGrid))]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2089,7 +2074,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the dublinCoreString xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2177,6 +2161,22 @@ namespace Energistics.DataAccess.RESQML110
         #endregion INotifyPropertyChanged Members
     } //here
 
+    /// <summary>
+    /// This class represents the abstractW3CDTF xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(W3CDTF))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://purl.org/dc/terms/")]
+    [System.Xml.Serialization.XmlRootAttribute("date", Namespace="http://purl.org/dc/terms/", IsNullable=false)]
+	[Description("This class represents the abstractW3CDTF xsd type.")]
+    public abstract partial class AbstractW3CDTF : AbstractTimestamp, INotifyPropertyChanged
+    {
+
+
+    } //here
+
     namespace ComponentSchemas 
     {
     /// <summary>
@@ -2184,7 +2184,6 @@ namespace Energistics.DataAccess.RESQML110
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractW3CDTF))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(W3CDTF))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2233,29 +2232,11 @@ namespace Energistics.DataAccess.RESQML110
     } //here
     }
 
-    /// <summary>
-    /// This class represents the abstractW3CDTF xsd type.
-    /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(W3CDTF))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://purl.org/dc/terms/")]
-    [System.Xml.Serialization.XmlRootAttribute("date", Namespace="http://purl.org/dc/terms/", IsNullable=false)]
-	[Description("This class represents the abstractW3CDTF xsd type.")]
-    public abstract partial class AbstractW3CDTF : AbstractTimestamp, INotifyPropertyChanged
-    {
-
-
-    } //here
-
     namespace ComponentSchemas 
     {
     /// <summary>
     /// This class represents the W3CDTF xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2294,7 +2275,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the shortValues xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2408,7 +2388,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Contains all property values.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2533,12 +2512,1016 @@ namespace Energistics.DataAccess.RESQML110
     namespace ComponentSchemas 
     {
     /// <summary>
+    /// Information specific to one continuous property. This type inherits the following items: grp_resqmlTraceabilityDublinCore resqmlKind localKind propertyAttachment timestamp timeStep attgrp_uidGlobal 
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlContinuousPropertyValues", Namespace="http://www.resqml.org/schemas/1series")]
+	[Description("Information specific to one continuous property. This type inherits the following items: grp_resqmlTraceabilityDublinCore resqmlKind localKind propertyAttachment timestamp timeStep attgrp_uidGlobal ")]
+    public partial class ResqmlContinuousPropertyValues : ResqmlAbstractPropertyValues, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// The minimum of the associated property values. The unit of measure is defined by unit.
+        /// </summary>
+		[Required]
+        [Description("The minimum of the associated property values. The unit of measure is defined by unit.")]
+		[XmlElement("minimumValue")]
+        public Double? MinimumValue {
+            get {
+                return minimumValueField;
+            } 
+            set {
+                minimumValueField = value;
+                NotifyPropertyChanged("MinimumValue");
+            }
+        }
+
+        private Double? minimumValueField; 
+
+        /// <summary>
+        /// The maximum of the associated property values. The unit of measure is defined by unit.
+        /// </summary>
+		[Required]
+        [Description("The maximum of the associated property values. The unit of measure is defined by unit.")]
+		[XmlElement("maximumValue")]
+        public Double? MaximumValue {
+            get {
+                return maximumValueField;
+            } 
+            set {
+                maximumValueField = value;
+                NotifyPropertyChanged("MaximumValue");
+            }
+        }
+
+        private Double? maximumValueField; 
+
+        /// <summary>
+        /// Defines information related to capturing the array data in an HDF5 formatted file.
+        /// </summary>
+        [XmlElement("hdfRepresentation")]
+        public ResqmlHdfGroup HdfRepresentation {
+            get {
+                return hdfRepresentationField;
+            } 
+            set {
+                hdfRepresentationField = value;
+                HdfRepresentationSpecified = (value!=null);
+                NotifyPropertyChanged("HdfRepresentation");
+            }
+        }
+
+        private ResqmlHdfGroup hdfRepresentationField; 
+        private bool hdfRepresentationSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if HdfRepresentation has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool HdfRepresentationSpecified
+        {
+            get {
+                return hdfRepresentationSpecified;
+            }
+            set {
+                hdfRepresentationSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// Captures the array of values in an XML representation.
+        /// </summary>
+        [XmlElement("xmlRepresentation")]
+        public ResqmlContinuousValues XmlRepresentation {
+            get {
+                return xmlRepresentationField;
+            } 
+            set {
+                xmlRepresentationField = value;
+                XmlRepresentationSpecified = (value!=null);
+                NotifyPropertyChanged("XmlRepresentation");
+            }
+        }
+
+        private ResqmlContinuousValues xmlRepresentationField; 
+        private bool xmlRepresentationSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if XmlRepresentation has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool XmlRepresentationSpecified
+        {
+            get {
+                return xmlRepresentationSpecified;
+            }
+            set {
+                xmlRepresentationSpecified= value;
+            }
+        }
+
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// Defines the numeric arrays whose values may represent a continuous numeric space.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlContinuousValues", Namespace="http://www.resqml.org/schemas/1series")]
+	[Description("Defines the numeric arrays whose values may represent a continuous numeric space.")]
+    public partial class ResqmlContinuousValues : ResqmlAbstractValues, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Defines a space delimited list of byte values.
+        /// </summary>
+        [XmlElement("byteValues")]
+        public ByteValueList ByteValues {
+            get {
+                return byteValuesField;
+            } 
+            set {
+                byteValuesField = value;
+                ByteValuesSpecified = (value!=null);
+                NotifyPropertyChanged("ByteValues");
+            }
+        }
+
+        private ByteValueList byteValuesField; 
+        private bool byteValuesSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if ByteValues has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool ByteValuesSpecified
+        {
+            get {
+                return byteValuesSpecified;
+            }
+            set {
+                byteValuesSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// Defines a space delimited list of double values.
+        /// </summary>
+        [XmlElement("doubleValues")]
+        public DoubleValueList DoubleValues {
+            get {
+                return doubleValuesField;
+            } 
+            set {
+                doubleValuesField = value;
+                DoubleValuesSpecified = (value!=null);
+                NotifyPropertyChanged("DoubleValues");
+            }
+        }
+
+        private DoubleValueList doubleValuesField; 
+        private bool doubleValuesSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if DoubleValues has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool DoubleValuesSpecified
+        {
+            get {
+                return doubleValuesSpecified;
+            }
+            set {
+                doubleValuesSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// Defines a space delimited list of float values.
+        /// </summary>
+        [XmlElement("floatValues")]
+        public FloatValueList FloatValues {
+            get {
+                return floatValuesField;
+            } 
+            set {
+                floatValuesField = value;
+                FloatValuesSpecified = (value!=null);
+                NotifyPropertyChanged("FloatValues");
+            }
+        }
+
+        private FloatValueList floatValuesField; 
+        private bool floatValuesSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if FloatValues has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool FloatValuesSpecified
+        {
+            get {
+                return floatValuesSpecified;
+            }
+            set {
+                floatValuesSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// Defines a space delimited list of int values.
+        /// </summary>
+        [XmlElement("intValues")]
+        public IntValueList IntValues {
+            get {
+                return intValuesField;
+            } 
+            set {
+                intValuesField = value;
+                IntValuesSpecified = (value!=null);
+                NotifyPropertyChanged("IntValues");
+            }
+        }
+
+        private IntValueList intValuesField; 
+        private bool intValuesSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if IntValues has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool IntValuesSpecified
+        {
+            get {
+                return intValuesSpecified;
+            }
+            set {
+                intValuesSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// Defines a space delimited list of long values.
+        /// </summary>
+        [XmlElement("longValues")]
+        public LongValueList LongValues {
+            get {
+                return longValuesField;
+            } 
+            set {
+                longValuesField = value;
+                LongValuesSpecified = (value!=null);
+                NotifyPropertyChanged("LongValues");
+            }
+        }
+
+        private LongValueList longValuesField; 
+        private bool longValuesSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if LongValues has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool LongValuesSpecified
+        {
+            get {
+                return longValuesSpecified;
+            }
+            set {
+                longValuesSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// Defines a space delimited list of short values.
+        /// </summary>
+        [XmlElement("shortValues")]
+        public ShortValueList ShortValues {
+            get {
+                return shortValuesField;
+            } 
+            set {
+                shortValuesField = value;
+                ShortValuesSpecified = (value!=null);
+                NotifyPropertyChanged("ShortValues");
+            }
+        }
+
+        private ShortValueList shortValuesField; 
+        private bool shortValuesSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if ShortValues has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool ShortValuesSpecified
+        {
+            get {
+                return shortValuesSpecified;
+            }
+            set {
+                shortValuesSpecified= value;
+            }
+        }
+
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the byteValues xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="byteValues", Namespace="http://www.resqml.org/schemas/1series")]
+	[Description("This class represents the byteValues xsd type.")]
+    public partial class ByteValueList : Object, IEnergisticsCollection, INotifyPropertyChanged
+    {
+
+		/// <summary>
+        /// nullValue property
+        /// </summary>
+		
+        [XmlAttribute("nullValue")]
+		
+        public SByte NullValue {
+            get {
+                return nullValueField;
+            } 
+            set {
+                nullValueField = value;
+                 this.NullValueSpecified = true;
+                NotifyPropertyChanged("NullValue");
+            }
+        }
+
+        private SByte nullValueField; 
+
+        /// <summary>
+        /// nullValueSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean NullValueSpecified {
+            get {
+                return nullValueSpecifiedField;
+            } 
+            set {
+                nullValueSpecifiedField = value;
+                NotifyPropertyChanged("NullValueSpecified");
+            }
+        }
+
+        private Boolean nullValueSpecifiedField; 
+
+		/// <summary>
+        /// array property
+        /// </summary>
+		[RecurringElement]
+        [XmlAttribute("array")]
+		
+        public List<SByte> Array {
+            get {
+                return arrayField;
+            } 
+            set {
+                arrayField = value;
+                NotifyPropertyChanged("Array");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Array has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ArraySpecified
+         {
+             get {
+             if(arrayField!=null)
+                 return arrayField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<SByte> arrayField; 
+
+        /// <summary>
+        /// array property
+        /// </summary>
+        [XmlIgnore]		
+        public IList Items
+        {
+		    get
+			{
+			    return Array;
+			}
+        }
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the doubleValues xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="doubleValues", Namespace="http://www.resqml.org/schemas/1series")]
+	[Description("This class represents the doubleValues xsd type.")]
+    public partial class DoubleValueList : Object, IEnergisticsCollection, INotifyPropertyChanged
+    {
+
+		/// <summary>
+        /// array property
+        /// </summary>
+		[RecurringElement]
+        [XmlAttribute("array")]
+		
+        public List<Double> Array {
+            get {
+                return arrayField;
+            } 
+            set {
+                arrayField = value;
+                NotifyPropertyChanged("Array");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Array has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ArraySpecified
+         {
+             get {
+             if(arrayField!=null)
+                 return arrayField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<Double> arrayField; 
+
+        /// <summary>
+        /// array property
+        /// </summary>
+        [XmlIgnore]		
+        public IList Items
+        {
+		    get
+			{
+			    return Array;
+			}
+        }
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the floatValues xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="floatValues", Namespace="http://www.resqml.org/schemas/1series")]
+	[Description("This class represents the floatValues xsd type.")]
+    public partial class FloatValueList : Object, IEnergisticsCollection, INotifyPropertyChanged
+    {
+
+		/// <summary>
+        /// array property
+        /// </summary>
+		[RecurringElement]
+        [XmlAttribute("array")]
+		
+        public List<Single> Array {
+            get {
+                return arrayField;
+            } 
+            set {
+                arrayField = value;
+                NotifyPropertyChanged("Array");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Array has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ArraySpecified
+         {
+             get {
+             if(arrayField!=null)
+                 return arrayField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<Single> arrayField; 
+
+        /// <summary>
+        /// array property
+        /// </summary>
+        [XmlIgnore]		
+        public IList Items
+        {
+		    get
+			{
+			    return Array;
+			}
+        }
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the intValues xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="intValues", Namespace="http://www.resqml.org/schemas/1series")]
+	[Description("This class represents the intValues xsd type.")]
+    public partial class IntValueList : Object, IEnergisticsCollection, INotifyPropertyChanged
+    {
+
+		/// <summary>
+        /// nullValue property
+        /// </summary>
+		
+        [XmlAttribute("nullValue")]
+		
+        public Int32 NullValue {
+            get {
+                return nullValueField;
+            } 
+            set {
+                nullValueField = value;
+                 this.NullValueSpecified = true;
+                NotifyPropertyChanged("NullValue");
+            }
+        }
+
+        private Int32 nullValueField; 
+
+        /// <summary>
+        /// nullValueSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean NullValueSpecified {
+            get {
+                return nullValueSpecifiedField;
+            } 
+            set {
+                nullValueSpecifiedField = value;
+                NotifyPropertyChanged("NullValueSpecified");
+            }
+        }
+
+        private Boolean nullValueSpecifiedField; 
+
+		/// <summary>
+        /// array property
+        /// </summary>
+		[RecurringElement]
+        [XmlAttribute("array")]
+		
+        public List<Int32> Array {
+            get {
+                return arrayField;
+            } 
+            set {
+                arrayField = value;
+                NotifyPropertyChanged("Array");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Array has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ArraySpecified
+         {
+             get {
+             if(arrayField!=null)
+                 return arrayField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<Int32> arrayField; 
+
+        /// <summary>
+        /// array property
+        /// </summary>
+        [XmlIgnore]		
+        public IList Items
+        {
+		    get
+			{
+			    return Array;
+			}
+        }
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the longValues xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="longValues", Namespace="http://www.resqml.org/schemas/1series")]
+	[Description("This class represents the longValues xsd type.")]
+    public partial class LongValueList : Object, IEnergisticsCollection, INotifyPropertyChanged
+    {
+
+		/// <summary>
+        /// nullValue property
+        /// </summary>
+		
+        [XmlAttribute("nullValue")]
+		
+        public Int64 NullValue {
+            get {
+                return nullValueField;
+            } 
+            set {
+                nullValueField = value;
+                 this.NullValueSpecified = true;
+                NotifyPropertyChanged("NullValue");
+            }
+        }
+
+        private Int64 nullValueField; 
+
+        /// <summary>
+        /// nullValueSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean NullValueSpecified {
+            get {
+                return nullValueSpecifiedField;
+            } 
+            set {
+                nullValueSpecifiedField = value;
+                NotifyPropertyChanged("NullValueSpecified");
+            }
+        }
+
+        private Boolean nullValueSpecifiedField; 
+
+		/// <summary>
+        /// array property
+        /// </summary>
+		[RecurringElement]
+        [XmlAttribute("array")]
+		
+        public List<Int64> Array {
+            get {
+                return arrayField;
+            } 
+            set {
+                arrayField = value;
+                NotifyPropertyChanged("Array");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Array has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ArraySpecified
+         {
+             get {
+             if(arrayField!=null)
+                 return arrayField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<Int64> arrayField; 
+
+        /// <summary>
+        /// array property
+        /// </summary>
+        [XmlIgnore]		
+        public IList Items
+        {
+		    get
+			{
+			    return Array;
+			}
+        }
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the cs_resqmlAbstractValues xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlDiscreteValues))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlContinuousValues))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractValues", Namespace="http://www.resqml.org/schemas/1series")]
+	[Description("This class represents the cs_resqmlAbstractValues xsd type.")]
+    public abstract partial class ResqmlAbstractValues : Object, INotifyPropertyChanged
+    {
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// Defines the whole numbered arrays.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlDiscreteValues", Namespace="http://www.resqml.org/schemas/1series")]
+	[Description("Defines the whole numbered arrays.")]
+    public partial class ResqmlDiscreteValues : ResqmlAbstractValues, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Defines a space delimited list of byte values.
+        /// </summary>
+        [XmlElement("byteValues")]
+        public ByteValueList ByteValues {
+            get {
+                return byteValuesField;
+            } 
+            set {
+                byteValuesField = value;
+                ByteValuesSpecified = (value!=null);
+                NotifyPropertyChanged("ByteValues");
+            }
+        }
+
+        private ByteValueList byteValuesField; 
+        private bool byteValuesSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if ByteValues has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool ByteValuesSpecified
+        {
+            get {
+                return byteValuesSpecified;
+            }
+            set {
+                byteValuesSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// Defines a space delimited list of int values.
+        /// </summary>
+        [XmlElement("intValues")]
+        public IntValueList IntValues {
+            get {
+                return intValuesField;
+            } 
+            set {
+                intValuesField = value;
+                IntValuesSpecified = (value!=null);
+                NotifyPropertyChanged("IntValues");
+            }
+        }
+
+        private IntValueList intValuesField; 
+        private bool intValuesSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if IntValues has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool IntValuesSpecified
+        {
+            get {
+                return intValuesSpecified;
+            }
+            set {
+                intValuesSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// Defines a space delimited list of long values.
+        /// </summary>
+        [XmlElement("longValues")]
+        public LongValueList LongValues {
+            get {
+                return longValuesField;
+            } 
+            set {
+                longValuesField = value;
+                LongValuesSpecified = (value!=null);
+                NotifyPropertyChanged("LongValues");
+            }
+        }
+
+        private LongValueList longValuesField; 
+        private bool longValuesSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if LongValues has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool LongValuesSpecified
+        {
+            get {
+                return longValuesSpecified;
+            }
+            set {
+                longValuesSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// Defines a space delimited list of short values.
+        /// </summary>
+        [XmlElement("shortValues")]
+        public ShortValueList ShortValues {
+            get {
+                return shortValuesField;
+            } 
+            set {
+                shortValuesField = value;
+                ShortValuesSpecified = (value!=null);
+                NotifyPropertyChanged("ShortValues");
+            }
+        }
+
+        private ShortValueList shortValuesField; 
+        private bool shortValuesSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if ShortValues has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool ShortValuesSpecified
+        {
+            get {
+                return shortValuesSpecified;
+            }
+            set {
+                shortValuesSpecified= value;
+            }
+        }
+
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
     /// This class represents the cs_resqmlAbstractPropertyValues xsd type.
     /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlCategoricalPropertyValues))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlDiscretePropertyValues))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlContinuousPropertyValues))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlCategoricalPropertyValues))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2958,1023 +3941,8 @@ namespace Energistics.DataAccess.RESQML110
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// Information specific to one continuous property. This type inherits the following items: grp_resqmlTraceabilityDublinCore resqmlKind localKind propertyAttachment timestamp timeStep attgrp_uidGlobal 
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlContinuousPropertyValues", Namespace="http://www.resqml.org/schemas/1series")]
-	[Description("Information specific to one continuous property. This type inherits the following items: grp_resqmlTraceabilityDublinCore resqmlKind localKind propertyAttachment timestamp timeStep attgrp_uidGlobal ")]
-    public partial class ResqmlContinuousPropertyValues : ResqmlAbstractPropertyValues, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// The minimum of the associated property values. The unit of measure is defined by unit.
-        /// </summary>
-		[Required]
-        [Description("The minimum of the associated property values. The unit of measure is defined by unit.")]
-		[XmlElement("minimumValue")]
-        public Double? MinimumValue {
-            get {
-                return minimumValueField;
-            } 
-            set {
-                minimumValueField = value;
-                NotifyPropertyChanged("MinimumValue");
-            }
-        }
-
-        private Double? minimumValueField; 
-
-        /// <summary>
-        /// The maximum of the associated property values. The unit of measure is defined by unit.
-        /// </summary>
-		[Required]
-        [Description("The maximum of the associated property values. The unit of measure is defined by unit.")]
-		[XmlElement("maximumValue")]
-        public Double? MaximumValue {
-            get {
-                return maximumValueField;
-            } 
-            set {
-                maximumValueField = value;
-                NotifyPropertyChanged("MaximumValue");
-            }
-        }
-
-        private Double? maximumValueField; 
-
-        /// <summary>
-        /// Defines information related to capturing the array data in an HDF5 formatted file.
-        /// </summary>
-        [XmlElement("hdfRepresentation")]
-        public ResqmlHdfGroup HdfRepresentation {
-            get {
-                return hdfRepresentationField;
-            } 
-            set {
-                hdfRepresentationField = value;
-                HdfRepresentationSpecified = (value!=null);
-                NotifyPropertyChanged("HdfRepresentation");
-            }
-        }
-
-        private ResqmlHdfGroup hdfRepresentationField; 
-        private bool hdfRepresentationSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if HdfRepresentation has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool HdfRepresentationSpecified
-        {
-            get {
-                return hdfRepresentationSpecified;
-            }
-            set {
-                hdfRepresentationSpecified= value;
-            }
-        }
-
-        /// <summary>
-        /// Captures the array of values in an XML representation.
-        /// </summary>
-        [XmlElement("xmlRepresentation")]
-        public ResqmlContinuousValues XmlRepresentation {
-            get {
-                return xmlRepresentationField;
-            } 
-            set {
-                xmlRepresentationField = value;
-                XmlRepresentationSpecified = (value!=null);
-                NotifyPropertyChanged("XmlRepresentation");
-            }
-        }
-
-        private ResqmlContinuousValues xmlRepresentationField; 
-        private bool xmlRepresentationSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if XmlRepresentation has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool XmlRepresentationSpecified
-        {
-            get {
-                return xmlRepresentationSpecified;
-            }
-            set {
-                xmlRepresentationSpecified= value;
-            }
-        }
-
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the cs_resqmlAbstractValues xsd type.
-    /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlContinuousValues))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlDiscreteValues))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlAbstractValues", Namespace="http://www.resqml.org/schemas/1series")]
-	[Description("This class represents the cs_resqmlAbstractValues xsd type.")]
-    public abstract partial class ResqmlAbstractValues : Object, INotifyPropertyChanged
-    {
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// Defines the numeric arrays whose values may represent a continuous numeric space.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlContinuousValues", Namespace="http://www.resqml.org/schemas/1series")]
-	[Description("Defines the numeric arrays whose values may represent a continuous numeric space.")]
-    public partial class ResqmlContinuousValues : ResqmlAbstractValues, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Defines a space delimited list of double values.
-        /// </summary>
-        [XmlElement("doubleValues")]
-        public DoubleValueList DoubleValues {
-            get {
-                return doubleValuesField;
-            } 
-            set {
-                doubleValuesField = value;
-                DoubleValuesSpecified = (value!=null);
-                NotifyPropertyChanged("DoubleValues");
-            }
-        }
-
-        private DoubleValueList doubleValuesField; 
-        private bool doubleValuesSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if DoubleValues has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool DoubleValuesSpecified
-        {
-            get {
-                return doubleValuesSpecified;
-            }
-            set {
-                doubleValuesSpecified= value;
-            }
-        }
-
-        /// <summary>
-        /// Defines a space delimited list of byte values.
-        /// </summary>
-        [XmlElement("byteValues")]
-        public ByteValueList ByteValues {
-            get {
-                return byteValuesField;
-            } 
-            set {
-                byteValuesField = value;
-                ByteValuesSpecified = (value!=null);
-                NotifyPropertyChanged("ByteValues");
-            }
-        }
-
-        private ByteValueList byteValuesField; 
-        private bool byteValuesSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if ByteValues has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool ByteValuesSpecified
-        {
-            get {
-                return byteValuesSpecified;
-            }
-            set {
-                byteValuesSpecified= value;
-            }
-        }
-
-        /// <summary>
-        /// Defines a space delimited list of int values.
-        /// </summary>
-        [XmlElement("intValues")]
-        public IntValueList IntValues {
-            get {
-                return intValuesField;
-            } 
-            set {
-                intValuesField = value;
-                IntValuesSpecified = (value!=null);
-                NotifyPropertyChanged("IntValues");
-            }
-        }
-
-        private IntValueList intValuesField; 
-        private bool intValuesSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if IntValues has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool IntValuesSpecified
-        {
-            get {
-                return intValuesSpecified;
-            }
-            set {
-                intValuesSpecified= value;
-            }
-        }
-
-        /// <summary>
-        /// Defines a space delimited list of float values.
-        /// </summary>
-        [XmlElement("floatValues")]
-        public FloatValueList FloatValues {
-            get {
-                return floatValuesField;
-            } 
-            set {
-                floatValuesField = value;
-                FloatValuesSpecified = (value!=null);
-                NotifyPropertyChanged("FloatValues");
-            }
-        }
-
-        private FloatValueList floatValuesField; 
-        private bool floatValuesSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if FloatValues has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool FloatValuesSpecified
-        {
-            get {
-                return floatValuesSpecified;
-            }
-            set {
-                floatValuesSpecified= value;
-            }
-        }
-
-        /// <summary>
-        /// Defines a space delimited list of long values.
-        /// </summary>
-        [XmlElement("longValues")]
-        public LongValueList LongValues {
-            get {
-                return longValuesField;
-            } 
-            set {
-                longValuesField = value;
-                LongValuesSpecified = (value!=null);
-                NotifyPropertyChanged("LongValues");
-            }
-        }
-
-        private LongValueList longValuesField; 
-        private bool longValuesSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if LongValues has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool LongValuesSpecified
-        {
-            get {
-                return longValuesSpecified;
-            }
-            set {
-                longValuesSpecified= value;
-            }
-        }
-
-        /// <summary>
-        /// Defines a space delimited list of short values.
-        /// </summary>
-        [XmlElement("shortValues")]
-        public ShortValueList ShortValues {
-            get {
-                return shortValuesField;
-            } 
-            set {
-                shortValuesField = value;
-                ShortValuesSpecified = (value!=null);
-                NotifyPropertyChanged("ShortValues");
-            }
-        }
-
-        private ShortValueList shortValuesField; 
-        private bool shortValuesSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if ShortValues has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool ShortValuesSpecified
-        {
-            get {
-                return shortValuesSpecified;
-            }
-            set {
-                shortValuesSpecified= value;
-            }
-        }
-
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the byteValues xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="byteValues", Namespace="http://www.resqml.org/schemas/1series")]
-	[Description("This class represents the byteValues xsd type.")]
-    public partial class ByteValueList : Object, IEnergisticsCollection, INotifyPropertyChanged
-    {
-
-		/// <summary>
-        /// nullValue property
-        /// </summary>
-		
-        [XmlAttribute("nullValue")]
-		
-        public SByte NullValue {
-            get {
-                return nullValueField;
-            } 
-            set {
-                nullValueField = value;
-                 this.NullValueSpecified = true;
-                NotifyPropertyChanged("NullValue");
-            }
-        }
-
-        private SByte nullValueField; 
-
-        /// <summary>
-        /// nullValueSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean NullValueSpecified {
-            get {
-                return nullValueSpecifiedField;
-            } 
-            set {
-                nullValueSpecifiedField = value;
-                NotifyPropertyChanged("NullValueSpecified");
-            }
-        }
-
-        private Boolean nullValueSpecifiedField; 
-
-		/// <summary>
-        /// array property
-        /// </summary>
-		[RecurringElement]
-        [XmlAttribute("array")]
-		
-        public List<SByte> Array {
-            get {
-                return arrayField;
-            } 
-            set {
-                arrayField = value;
-                NotifyPropertyChanged("Array");
-            }
-        }
-
-         /// <summary>
-         /// bool to indicate if Array has been set. Used for serialization.
-         /// </summary>
-         [XmlIgnore]
-         public bool ArraySpecified
-         {
-             get {
-             if(arrayField!=null)
-                 return arrayField.Count>0?true:false;
-             else return false;
-             }
-         }
-        private List<SByte> arrayField; 
-
-        /// <summary>
-        /// array property
-        /// </summary>
-        [XmlIgnore]		
-        public IList Items
-        {
-		    get
-			{
-			    return Array;
-			}
-        }
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the doubleValues xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="doubleValues", Namespace="http://www.resqml.org/schemas/1series")]
-	[Description("This class represents the doubleValues xsd type.")]
-    public partial class DoubleValueList : Object, IEnergisticsCollection, INotifyPropertyChanged
-    {
-
-		/// <summary>
-        /// array property
-        /// </summary>
-		[RecurringElement]
-        [XmlAttribute("array")]
-		
-        public List<Double> Array {
-            get {
-                return arrayField;
-            } 
-            set {
-                arrayField = value;
-                NotifyPropertyChanged("Array");
-            }
-        }
-
-         /// <summary>
-         /// bool to indicate if Array has been set. Used for serialization.
-         /// </summary>
-         [XmlIgnore]
-         public bool ArraySpecified
-         {
-             get {
-             if(arrayField!=null)
-                 return arrayField.Count>0?true:false;
-             else return false;
-             }
-         }
-        private List<Double> arrayField; 
-
-        /// <summary>
-        /// array property
-        /// </summary>
-        [XmlIgnore]		
-        public IList Items
-        {
-		    get
-			{
-			    return Array;
-			}
-        }
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the floatValues xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="floatValues", Namespace="http://www.resqml.org/schemas/1series")]
-	[Description("This class represents the floatValues xsd type.")]
-    public partial class FloatValueList : Object, IEnergisticsCollection, INotifyPropertyChanged
-    {
-
-		/// <summary>
-        /// array property
-        /// </summary>
-		[RecurringElement]
-        [XmlAttribute("array")]
-		
-        public List<Single> Array {
-            get {
-                return arrayField;
-            } 
-            set {
-                arrayField = value;
-                NotifyPropertyChanged("Array");
-            }
-        }
-
-         /// <summary>
-         /// bool to indicate if Array has been set. Used for serialization.
-         /// </summary>
-         [XmlIgnore]
-         public bool ArraySpecified
-         {
-             get {
-             if(arrayField!=null)
-                 return arrayField.Count>0?true:false;
-             else return false;
-             }
-         }
-        private List<Single> arrayField; 
-
-        /// <summary>
-        /// array property
-        /// </summary>
-        [XmlIgnore]		
-        public IList Items
-        {
-		    get
-			{
-			    return Array;
-			}
-        }
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the intValues xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="intValues", Namespace="http://www.resqml.org/schemas/1series")]
-	[Description("This class represents the intValues xsd type.")]
-    public partial class IntValueList : Object, IEnergisticsCollection, INotifyPropertyChanged
-    {
-
-		/// <summary>
-        /// nullValue property
-        /// </summary>
-		
-        [XmlAttribute("nullValue")]
-		
-        public Int32 NullValue {
-            get {
-                return nullValueField;
-            } 
-            set {
-                nullValueField = value;
-                 this.NullValueSpecified = true;
-                NotifyPropertyChanged("NullValue");
-            }
-        }
-
-        private Int32 nullValueField; 
-
-        /// <summary>
-        /// nullValueSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean NullValueSpecified {
-            get {
-                return nullValueSpecifiedField;
-            } 
-            set {
-                nullValueSpecifiedField = value;
-                NotifyPropertyChanged("NullValueSpecified");
-            }
-        }
-
-        private Boolean nullValueSpecifiedField; 
-
-		/// <summary>
-        /// array property
-        /// </summary>
-		[RecurringElement]
-        [XmlAttribute("array")]
-		
-        public List<Int32> Array {
-            get {
-                return arrayField;
-            } 
-            set {
-                arrayField = value;
-                NotifyPropertyChanged("Array");
-            }
-        }
-
-         /// <summary>
-         /// bool to indicate if Array has been set. Used for serialization.
-         /// </summary>
-         [XmlIgnore]
-         public bool ArraySpecified
-         {
-             get {
-             if(arrayField!=null)
-                 return arrayField.Count>0?true:false;
-             else return false;
-             }
-         }
-        private List<Int32> arrayField; 
-
-        /// <summary>
-        /// array property
-        /// </summary>
-        [XmlIgnore]		
-        public IList Items
-        {
-		    get
-			{
-			    return Array;
-			}
-        }
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the longValues xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="longValues", Namespace="http://www.resqml.org/schemas/1series")]
-	[Description("This class represents the longValues xsd type.")]
-    public partial class LongValueList : Object, IEnergisticsCollection, INotifyPropertyChanged
-    {
-
-		/// <summary>
-        /// nullValue property
-        /// </summary>
-		
-        [XmlAttribute("nullValue")]
-		
-        public Int64 NullValue {
-            get {
-                return nullValueField;
-            } 
-            set {
-                nullValueField = value;
-                 this.NullValueSpecified = true;
-                NotifyPropertyChanged("NullValue");
-            }
-        }
-
-        private Int64 nullValueField; 
-
-        /// <summary>
-        /// nullValueSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean NullValueSpecified {
-            get {
-                return nullValueSpecifiedField;
-            } 
-            set {
-                nullValueSpecifiedField = value;
-                NotifyPropertyChanged("NullValueSpecified");
-            }
-        }
-
-        private Boolean nullValueSpecifiedField; 
-
-		/// <summary>
-        /// array property
-        /// </summary>
-		[RecurringElement]
-        [XmlAttribute("array")]
-		
-        public List<Int64> Array {
-            get {
-                return arrayField;
-            } 
-            set {
-                arrayField = value;
-                NotifyPropertyChanged("Array");
-            }
-        }
-
-         /// <summary>
-         /// bool to indicate if Array has been set. Used for serialization.
-         /// </summary>
-         [XmlIgnore]
-         public bool ArraySpecified
-         {
-             get {
-             if(arrayField!=null)
-                 return arrayField.Count>0?true:false;
-             else return false;
-             }
-         }
-        private List<Int64> arrayField; 
-
-        /// <summary>
-        /// array property
-        /// </summary>
-        [XmlIgnore]		
-        public IList Items
-        {
-		    get
-			{
-			    return Array;
-			}
-        }
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// Defines the whole numbered arrays.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_resqmlDiscreteValues", Namespace="http://www.resqml.org/schemas/1series")]
-	[Description("Defines the whole numbered arrays.")]
-    public partial class ResqmlDiscreteValues : ResqmlAbstractValues, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Defines a space delimited list of byte values.
-        /// </summary>
-        [XmlElement("byteValues")]
-        public ByteValueList ByteValues {
-            get {
-                return byteValuesField;
-            } 
-            set {
-                byteValuesField = value;
-                ByteValuesSpecified = (value!=null);
-                NotifyPropertyChanged("ByteValues");
-            }
-        }
-
-        private ByteValueList byteValuesField; 
-        private bool byteValuesSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if ByteValues has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool ByteValuesSpecified
-        {
-            get {
-                return byteValuesSpecified;
-            }
-            set {
-                byteValuesSpecified= value;
-            }
-        }
-
-        /// <summary>
-        /// Defines a space delimited list of short values.
-        /// </summary>
-        [XmlElement("shortValues")]
-        public ShortValueList ShortValues {
-            get {
-                return shortValuesField;
-            } 
-            set {
-                shortValuesField = value;
-                ShortValuesSpecified = (value!=null);
-                NotifyPropertyChanged("ShortValues");
-            }
-        }
-
-        private ShortValueList shortValuesField; 
-        private bool shortValuesSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if ShortValues has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool ShortValuesSpecified
-        {
-            get {
-                return shortValuesSpecified;
-            }
-            set {
-                shortValuesSpecified= value;
-            }
-        }
-
-        /// <summary>
-        /// Defines a space delimited list of int values.
-        /// </summary>
-        [XmlElement("intValues")]
-        public IntValueList IntValues {
-            get {
-                return intValuesField;
-            } 
-            set {
-                intValuesField = value;
-                IntValuesSpecified = (value!=null);
-                NotifyPropertyChanged("IntValues");
-            }
-        }
-
-        private IntValueList intValuesField; 
-        private bool intValuesSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if IntValues has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool IntValuesSpecified
-        {
-            get {
-                return intValuesSpecified;
-            }
-            set {
-                intValuesSpecified= value;
-            }
-        }
-
-        /// <summary>
-        /// Defines a space delimited list of long values.
-        /// </summary>
-        [XmlElement("longValues")]
-        public LongValueList LongValues {
-            get {
-                return longValuesField;
-            } 
-            set {
-                longValuesField = value;
-                LongValuesSpecified = (value!=null);
-                NotifyPropertyChanged("LongValues");
-            }
-        }
-
-        private LongValueList longValuesField; 
-        private bool longValuesSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if LongValues has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool LongValuesSpecified
-        {
-            get {
-                return longValuesSpecified;
-            }
-            set {
-                longValuesSpecified= value;
-            }
-        }
-
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
     /// Points to a single timestamp within a timestep list.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4048,7 +4016,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Extension Schema. The intent is to allow standard schema extensions which will validate in older software. Software can ignore any schema that it does not recognize except that it should be replicated in any modified copies.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4114,7 +4081,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Extension values Schema. The intent is to allow standard "named" extensions without having to modify the schema. Software can ignore any name that it does not recognize but certain meta data is required in order to allow generic clients or servers to process the value.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4279,7 +4245,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the extensionvalue xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4375,7 +4340,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Information specific to one categorical (i.e., string) property. This type inherits the following items: grp_resqmlTraceabilityDublinCore resqmlKind localKind propertyAttachment timestamp timeStep attgrp_uidGlobal 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4416,38 +4380,6 @@ namespace Energistics.DataAccess.RESQML110
         private List<ResqmlStringLookup> stringLookupField; 
 
         /// <summary>
-        /// Captures the array of values in an XML representation.
-        /// </summary>
-        [XmlElement("xmlRepresentation")]
-        public ResqmlDiscreteValues XmlRepresentation {
-            get {
-                return xmlRepresentationField;
-            } 
-            set {
-                xmlRepresentationField = value;
-                XmlRepresentationSpecified = (value!=null);
-                NotifyPropertyChanged("XmlRepresentation");
-            }
-        }
-
-        private ResqmlDiscreteValues xmlRepresentationField; 
-        private bool xmlRepresentationSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if XmlRepresentation has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool XmlRepresentationSpecified
-        {
-            get {
-                return xmlRepresentationSpecified;
-            }
-            set {
-                xmlRepresentationSpecified= value;
-            }
-        }
-
-        /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
         [XmlElement("hdfRepresentation")]
@@ -4479,6 +4411,38 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+        /// <summary>
+        /// Captures the array of values in an XML representation.
+        /// </summary>
+        [XmlElement("xmlRepresentation")]
+        public ResqmlDiscreteValues XmlRepresentation {
+            get {
+                return xmlRepresentationField;
+            } 
+            set {
+                xmlRepresentationField = value;
+                XmlRepresentationSpecified = (value!=null);
+                NotifyPropertyChanged("XmlRepresentation");
+            }
+        }
+
+        private ResqmlDiscreteValues xmlRepresentationField; 
+        private bool xmlRepresentationSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if XmlRepresentation has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool XmlRepresentationSpecified
+        {
+            get {
+                return xmlRepresentationSpecified;
+            }
+            set {
+                xmlRepresentationSpecified= value;
+            }
+        }
+
 
 
     } //here
@@ -4489,7 +4453,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Defines a string to integer lookup table.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4583,7 +4546,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Information specific to one discrete property. This type inherits the following items: grp_resqmlTraceabilityDublinCore resqmlKind localKind propertyAttachment timestamp timeStep attgrp_uidGlobal 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4629,38 +4591,6 @@ namespace Energistics.DataAccess.RESQML110
         private Int64? maximumValueField; 
 
         /// <summary>
-        /// Captures the array of values in an XML representation.
-        /// </summary>
-        [XmlElement("xmlRepresentation")]
-        public ResqmlDiscreteValues XmlRepresentation {
-            get {
-                return xmlRepresentationField;
-            } 
-            set {
-                xmlRepresentationField = value;
-                XmlRepresentationSpecified = (value!=null);
-                NotifyPropertyChanged("XmlRepresentation");
-            }
-        }
-
-        private ResqmlDiscreteValues xmlRepresentationField; 
-        private bool xmlRepresentationSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if XmlRepresentation has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool XmlRepresentationSpecified
-        {
-            get {
-                return xmlRepresentationSpecified;
-            }
-            set {
-                xmlRepresentationSpecified= value;
-            }
-        }
-
-        /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
         /// </summary>
         [XmlElement("hdfRepresentation")]
@@ -4692,6 +4622,38 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
+        /// <summary>
+        /// Captures the array of values in an XML representation.
+        /// </summary>
+        [XmlElement("xmlRepresentation")]
+        public ResqmlDiscreteValues XmlRepresentation {
+            get {
+                return xmlRepresentationField;
+            } 
+            set {
+                xmlRepresentationField = value;
+                XmlRepresentationSpecified = (value!=null);
+                NotifyPropertyChanged("XmlRepresentation");
+            }
+        }
+
+        private ResqmlDiscreteValues xmlRepresentationField; 
+        private bool xmlRepresentationSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if XmlRepresentation has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool XmlRepresentationSpecified
+        {
+            get {
+                return xmlRepresentationSpecified;
+            }
+            set {
+                xmlRepresentationSpecified= value;
+            }
+        }
+
 
 
     } //here
@@ -4702,7 +4664,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// An IJK structured root geometry of a volume This type inherits the following: grp_resqmlTraceabilityDublinCore startIndexI startIndexJ startIndexK ni nj nk gridTopologyFlags gapAfterLayer gridCellShape positiveGridParity gridStatic mostComplexLineGeometry anyIJGap anyGeometryUndefined anyIJPinch anyKPinch anyLineNull attgrp_uidGlobal 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4769,7 +4730,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// An IJK structured local geometry of a volume. This type inherits the following: grp_resqmlTraceabilityDublinCore startIndexI startIndexJ startIndexK ni nj nk gridTopologyFlags gapAfterLayer gridCellShape positiveGridParity gridStatic mostComplexLineGeometry anyIJGap anyGeometryUndefined anyIJPinch anyKPinch anyLineNull attgrp_uidGlobal 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4979,7 +4939,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A cell-face-pair that defines a non-standard-adjacency.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5198,7 +5157,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Cell-face-pair non-standard adjacency geometry and properties for structured IJK grids.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5602,7 +5560,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A grid cell traversed by a wellbore.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5711,7 +5668,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This replaces an optional sequence of elements. The original purpose of the sequence was to insure that if one element was specified then both must be specified. This type was created in order to get around a "feature" of the MS xsd.exe utility. The utility does not look at the minOccurs of the sequence which results in the contents of the sequence being mandatory. See http://msdn.microsoft.com/en-us/library/zds0b35c%28v=vs.80%29.aspx
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5785,7 +5741,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// The (surface toward bottomhole) path of a wellbore defined as a list of grid cells. For sidetrack (lateral) wellbores the path starts at the kickoff point.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6189,7 +6144,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the refNameString xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6284,7 +6238,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Defines the grids and properties for volumes.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6414,7 +6367,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Defines the relationship between the 2D grid coordinates and the bin grid.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6901,7 +6853,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A gemetrical representation which is a set of pillar lines that approximate a surface. Note that that this does not fully represent a surface. It is just a list of lines (typically from seismic). More information is required to define an actual surface. All lines shall utilize the same CRS.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7061,7 +7012,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A set of points defined in 3 dimensional space.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7275,7 +7225,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the measuredDepthCoord xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7391,7 +7340,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A gemetrical representation which is a set of points that approximates a surface. Note that that this does not fullly represent a surface. It is just a random set of points (typically from seismic). More information is required to define an actual surface. All points shall utilize the same CRS.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7498,7 +7446,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A gemetrical representation which is a set of points that approximates a surface. Note that that this does not fullly represent a surface. It is just a random set of points (typically from seismic). More information is required to define an actual surface. All points shall utilize the same CRS.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7640,7 +7587,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A set of split edges.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7708,7 +7654,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the splitEdge xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7781,7 +7726,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A set of triangles.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7849,7 +7793,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the triangle xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7940,7 +7883,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A gemetrical representation of a surface patch using a triangulated grid.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8057,8 +7999,8 @@ namespace Energistics.DataAccess.RESQML110
                 return triangulatedHdfGroupField;
             } 
             set {
-                if (value != null && SplitEdgeNodeIndexSetSpecified) throw new Exception("Cannot set property TriangulatedHdfGroup when property SplitEdgeNodeIndexSet is already set");
                 if (value != null && Point3dSetSpecified) throw new Exception("Cannot set property TriangulatedHdfGroup when property Point3dSet is already set");
+                if (value != null && SplitEdgeNodeIndexSetSpecified) throw new Exception("Cannot set property TriangulatedHdfGroup when property SplitEdgeNodeIndexSet is already set");
                 if (value != null && TriangleNodeIndexSetSpecified) throw new Exception("Cannot set property TriangulatedHdfGroup when property TriangleNodeIndexSet is already set");
                 triangulatedHdfGroupField = value;
                 TriangulatedHdfGroupSpecified = (value!=null);
@@ -8150,7 +8092,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A gemetrical representation of a surface using a subset of a 2d binset grid.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8419,13 +8360,12 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the cs_resqmlAbstractFeatureRepresentation xsd type.
     /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlPointSetRepresentation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlPillarSetRepresentation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlWellMarkerRepresentation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlHybridGridRepresentation))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlGrid2dRepresentation))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlPointSetRepresentation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlTriangulatedRepresentation))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlGrid2dRepresentation))]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8714,7 +8654,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A set of pillar (line) set patches. All patches shall utilize the same CRS. This type inherits the following items: grp_resqmlTraceabilityDublinCore local3dCRS extensionAny extensionNameValue attgrp_uidGlobal 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8763,7 +8702,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A set of well marker patches. All patches shall utilize the same CRS. This type inherits the following items: grp_resqmlTraceabilityDublinCore local3dCRS extensionAny extensionNameValue attgrp_uidGlobal 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8800,7 +8738,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A hybrid surface composed of one 2D grid patch and one triangulated mesh patch. All patches shall utilize the same CRS. This type inherits the following items: grp_resqmlTraceabilityDublinCore local3dCRS extensionAny extensionNameValue attgrp_uidGlobal 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8868,7 +8805,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A set of point set patches. All patches shall utilize the same CRS. This type inherits the following items: grp_resqmlTraceabilityDublinCore local3dCRS extensionAny extensionNameValue attgrp_uidGlobal 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8917,7 +8853,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A set of triangulated mesh patches. All patches shall utilize the same CRS. This type inherits the following items: grp_resqmlTraceabilityDublinCore local3dCRS extensionAny extensionNameValue attgrp_uidGlobal 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8966,7 +8901,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A set of 2D grid patches. All patches shall utilize the same CRS. This type inherits the following items: grp_resqmlTraceabilityDublinCore local3dCRS extensionAny extensionNameValue attgrp_uidGlobal 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9017,7 +8951,6 @@ namespace Energistics.DataAccess.RESQML110
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlFaultInterpretation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlHorizonInterpretation))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9287,7 +9220,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// One interpretation of the geometry of a fault. Multiple representations are supported but all representations must be either in time or in depth. That is, a mixture of time and depth representations is not allowed. At least one representation is required. This type inherits the following items: grp_resqmlTraceabilityDublinCore extensionAny extensionNameValue attgrp_uidGlobal 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9455,7 +9387,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// One interpretation of the geometry of a horizon. Multiple representations are supported but all representations must be either in time or in depth. That is, a mixture of time and depth representations is not allowed. At least one representation is required. This type inherits the following items: grp_resqmlTraceabilityDublinCore extensionAny extensionNameValue attgrp_uidGlobal 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9625,7 +9556,6 @@ namespace Energistics.DataAccess.RESQML110
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlFault))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlHorizon))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9895,7 +9825,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Information specific to one geologic fault. This type inherits the following items: grp_resqmlTraceabilityDublinCore extensionAny extensionNameValue attgrp_uidGlobal 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9943,7 +9872,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Information specific to one geologic horizon. This type inherits the following items: grp_resqmlTraceabilityDublinCore extensionAny extensionNameValue attgrp_uidGlobal 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9991,7 +9919,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A container for interface features.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10118,7 +10045,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A list of timesteps.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10429,7 +10355,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Group of properties used or created together.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10784,7 +10709,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A container for property groups.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10881,7 +10805,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A description of property name relative to a standard definition.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11222,8 +11145,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 if (value != null && EnumValueSpecified) throw new Exception("Cannot set property UnitOfMeasure when property EnumValue is already set");
-                if (value != null && MinimumValueSpecified) throw new Exception("Cannot set property UnitOfMeasure when property MinimumValue is already set");
                 if (value != null && MaximumValueSpecified) throw new Exception("Cannot set property UnitOfMeasure when property MaximumValue is already set");
+                if (value != null && MinimumValueSpecified) throw new Exception("Cannot set property UnitOfMeasure when property MinimumValue is already set");
                 unitOfMeasureField = value;
                 UnitOfMeasureSpecified = (value!=null);
                 NotifyPropertyChanged("UnitOfMeasure");
@@ -11257,8 +11180,8 @@ namespace Energistics.DataAccess.RESQML110
             } 
             set {
                 if (value != null && EnumValueSpecified) throw new Exception("Cannot set property DimensionalClass when property EnumValue is already set");
-                if (value != null && MinimumValueSpecified) throw new Exception("Cannot set property DimensionalClass when property MinimumValue is already set");
                 if (value != null && MaximumValueSpecified) throw new Exception("Cannot set property DimensionalClass when property MaximumValue is already set");
+                if (value != null && MinimumValueSpecified) throw new Exception("Cannot set property DimensionalClass when property MinimumValue is already set");
                 dimensionalClassField = value;
                 DimensionalClassSpecified = (value!=null);
                 NotifyPropertyChanged("DimensionalClass");
@@ -11291,9 +11214,9 @@ namespace Energistics.DataAccess.RESQML110
                 return minimumValueField;
             } 
             set {
+                if (value != null && DimensionalClassSpecified) throw new Exception("Cannot set property MinimumValue when property DimensionalClass is already set");
                 if (value != null && EnumValueSpecified) throw new Exception("Cannot set property MinimumValue when property EnumValue is already set");
                 if (value != null && UnitOfMeasureSpecified) throw new Exception("Cannot set property MinimumValue when property UnitOfMeasure is already set");
-                if (value != null && DimensionalClassSpecified) throw new Exception("Cannot set property MinimumValue when property DimensionalClass is already set");
                 minimumValueField = value;
                 MinimumValueSpecified = (value!=null);
                 NotifyPropertyChanged("MinimumValue");
@@ -11326,9 +11249,9 @@ namespace Energistics.DataAccess.RESQML110
                 return maximumValueField;
             } 
             set {
+                if (value != null && DimensionalClassSpecified) throw new Exception("Cannot set property MaximumValue when property DimensionalClass is already set");
                 if (value != null && EnumValueSpecified) throw new Exception("Cannot set property MaximumValue when property EnumValue is already set");
                 if (value != null && UnitOfMeasureSpecified) throw new Exception("Cannot set property MaximumValue when property UnitOfMeasure is already set");
-                if (value != null && DimensionalClassSpecified) throw new Exception("Cannot set property MaximumValue when property DimensionalClass is already set");
                 maximumValueField = value;
                 MaximumValueSpecified = (value!=null);
                 NotifyPropertyChanged("MaximumValue");
@@ -11361,10 +11284,10 @@ namespace Energistics.DataAccess.RESQML110
                 return enumValueField;
             } 
             set {
-                if (value != null && UnitOfMeasureSpecified) throw new Exception("Cannot set property EnumValue when property UnitOfMeasure is already set");
-                if (value != null && MinimumValueSpecified) throw new Exception("Cannot set property EnumValue when property MinimumValue is already set");
                 if (value != null && DimensionalClassSpecified) throw new Exception("Cannot set property EnumValue when property DimensionalClass is already set");
                 if (value != null && MaximumValueSpecified) throw new Exception("Cannot set property EnumValue when property MaximumValue is already set");
+                if (value != null && MinimumValueSpecified) throw new Exception("Cannot set property EnumValue when property MinimumValue is already set");
+                if (value != null && UnitOfMeasureSpecified) throw new Exception("Cannot set property EnumValue when property UnitOfMeasure is already set");
                 enumValueField = value;
                 EnumValueSpecified = (value!=null);
                 NotifyPropertyChanged("EnumValue");
@@ -11514,7 +11437,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Defines a local 3D Coordinate Reference System (CRS). The local CRS MUST form a cartesian system of axes. The local areal axes MUST be in the plane of the projected system. The local areal axes MUST be orthogonal to each other. The ordinals of the local system MUST be defined in units of meters. This 3D system is semantically equivalent to a Compound CRS composed of a local 2d areal system and a local 1d vertical system. The vertical axis is always positive when moving from the origin toward the center of the Earth. The ordinal of the vertical axis MUST be defined in units of meter (or second if offset from a time system). The labels associated with the axes on this local system are X, Y, Z. The Y axis is 90 degrees counter-clockwise from the X axis. If this local system 1) has an areal origin which coincides (0,0) with the origin of the projected system 2) and has a rotation of zero then the first two axes of the local system will coincide with the axes of the global 2D system. That is, the Y axis would coincide with the global axis which is 90 degrees from the other global axis.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11891,7 +11813,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Defines a 1D Vertical Time Coordinate Reference System (CRS) relative to the global vertical (length) CRS. The label associated with the axis on this system is Z.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11964,7 +11885,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Defines the global 1D Vertical Coordinate Reference System (CRS).
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12099,376 +12019,8 @@ namespace Energistics.DataAccess.RESQML110
     }
 
     /// <summary>
-    /// This class represents the AbstractGMLType xsd type.
-    /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimePrimitiveType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionBaseType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeometryType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimeObjectType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PolygonType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeometricPrimitiveType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlAreaOfInterest))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractFeatureType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
-    [System.Xml.Serialization.XmlRootAttribute("AbstractGML", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
-	[Description("This class represents the AbstractGMLType xsd type.")]
-    public abstract partial class AbstractGMLType : Object, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// description property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("description")]
-        public StringOrRefType Description {
-            get {
-                return descriptionField;
-            } 
-            set {
-                descriptionField = value;
-                NotifyPropertyChanged("Description");
-            }
-        }
-
-        private StringOrRefType descriptionField; 
-
-        /// <summary>
-        /// descriptionReference property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("descriptionReference")]
-        public ReferenceType DescriptionReference {
-            get {
-                return descriptionReferenceField;
-            } 
-            set {
-                descriptionReferenceField = value;
-                NotifyPropertyChanged("DescriptionReference");
-            }
-        }
-
-        private ReferenceType descriptionReferenceField; 
-
-        /// <summary>
-        /// identifier property
-        /// </summary>
-		[ComponentElement]
-		[XmlElement("identifier")]
-        public CodeWithAuthorityType Identifier {
-            get {
-                return identifierField;
-            } 
-            set {
-                identifierField = value;
-                NotifyPropertyChanged("Identifier");
-            }
-        }
-
-        private CodeWithAuthorityType identifierField; 
-
-        /// <summary>
-        /// name property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("name")]
-        public List<CodeType> Name {
-            get {
-                return nameField;
-            } 
-            set {
-                nameField = value;
-                NotifyPropertyChanged("Name");
-            }
-        }
-
-         /// <summary>
-         /// bool to indicate if Name has been set. Used for serialization.
-         /// </summary>
-         [XmlIgnore]
-         public bool NameSpecified
-         {
-             get {
-             if(nameField!=null)
-                 return nameField.Count>0?true:false;
-             else return false;
-             }
-         }
-        private List<CodeType> nameField; 
-
-		/// <summary>
-        /// id property
-        /// </summary>
-		
-        [XmlAttribute("id", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
-		
-        public String Id {
-            get {
-                return idField;
-            } 
-            set {
-                idField = value;
-                NotifyPropertyChanged("Id");
-            }
-        }
-
-        private String idField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the DefinitionBaseType xsd type.
-    /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DefinitionBaseType", Namespace="http://www.opengis.net/gml/3.2")]
-	[Description("This class represents the DefinitionBaseType xsd type.")]
-    public partial class DefinitionBaseType : AbstractGMLType, INotifyPropertyChanged
-    {
-
-
-    } //here
-    }
-
-    /// <summary>
-    /// This class represents the DefinitionType xsd type.
-    /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
-    [System.Xml.Serialization.XmlRootAttribute("Definition", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
-	[Description("This class represents the DefinitionType xsd type.")]
-    public partial class DefinitionType : DefinitionBaseType, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// remarks property
-        /// </summary>
-		
-		[XmlElement("remarks")]
-        public String Remarks {
-            get {
-                return remarksField;
-            } 
-            set {
-                remarksField = value;
-                NotifyPropertyChanged("Remarks");
-            }
-        }
-
-        private String remarksField; 
-
-
-    } //here
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the IdentifiedObjectType xsd type.
-    /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="IdentifiedObjectType", Namespace="http://www.opengis.net/gml/3.2")]
-	[Description("This class represents the IdentifiedObjectType xsd type.")]
-    public abstract partial class IdentifiedObjectType : DefinitionType, INotifyPropertyChanged
-    {
-
-
-    } //here
-    }
-
-    /// <summary>
-    /// This class represents the AbstractCRSType xsd type.
-    /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
-    [System.Xml.Serialization.XmlRootAttribute("AbstractCRS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
-	[Description("This class represents the AbstractCRSType xsd type.")]
-    public abstract partial class AbstractCRSType : IdentifiedObjectType, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// domainOfValidity property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("domainOfValidity")]
-        public List<DomainOfValidity> DomainOfValidity {
-            get {
-                return domainOfValidityField;
-            } 
-            set {
-                domainOfValidityField = value;
-                NotifyPropertyChanged("DomainOfValidity");
-            }
-        }
-
-         /// <summary>
-         /// bool to indicate if DomainOfValidity has been set. Used for serialization.
-         /// </summary>
-         [XmlIgnore]
-         public bool DomainOfValiditySpecified
-         {
-             get {
-             if(domainOfValidityField!=null)
-                 return domainOfValidityField.Count>0?true:false;
-             else return false;
-             }
-         }
-        private List<DomainOfValidity> domainOfValidityField; 
-
-        /// <summary>
-        /// scope property
-        /// </summary>
-		[RecurringElement]
-		[XmlElement("scope")]
-        public List<String> Scope {
-            get {
-                return scopeField;
-            } 
-            set {
-                scopeField = value;
-                NotifyPropertyChanged("Scope");
-            }
-        }
-
-         /// <summary>
-         /// bool to indicate if Scope has been set. Used for serialization.
-         /// </summary>
-         [XmlIgnore]
-         public bool ScopeSpecified
-         {
-             get {
-             if(scopeField!=null)
-                 return scopeField.Count>0?true:false;
-             else return false;
-             }
-         }
-        private List<String> scopeField; 
-
-
-    } //here
-
-    /// <summary>
     /// This class represents the VerticalCRSType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12518,7 +12070,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the VerticalCSPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12586,13 +12137,27 @@ namespace Energistics.DataAccess.RESQML110
     } //here
 
     /// <summary>
+    /// This class represents the VerticalCSType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("VerticalCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the VerticalCSType xsd type.")]
+    public partial class VerticalCSType : AbstractCoordinateSystemType, INotifyPropertyChanged
+    {
+
+
+    } //here
+
+    /// <summary>
     /// This class represents the AbstractCoordinateSystemType xsd type.
     /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12671,25 +12236,8 @@ namespace Energistics.DataAccess.RESQML110
     } //here
 
     /// <summary>
-    /// This class represents the VerticalCSType xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
-    [System.Xml.Serialization.XmlRootAttribute("VerticalCS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
-	[Description("This class represents the VerticalCSType xsd type.")]
-    public partial class VerticalCSType : AbstractCoordinateSystemType, INotifyPropertyChanged
-    {
-
-
-    } //here
-
-    /// <summary>
     /// This class represents the CoordinateSystemAxisPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12759,7 +12307,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CoordinateSystemAxisType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12897,7 +12444,6 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the CodeType xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CodeWithAuthorityType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12988,7 +12534,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CodeWithAuthorityType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13022,10 +12567,294 @@ namespace Energistics.DataAccess.RESQML110
 
     } //here
 
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the IdentifiedObjectType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="IdentifiedObjectType", Namespace="http://www.opengis.net/gml/3.2")]
+	[Description("This class represents the IdentifiedObjectType xsd type.")]
+    public abstract partial class IdentifiedObjectType : DefinitionType, INotifyPropertyChanged
+    {
+
+
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the DefinitionType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("Definition", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the DefinitionType xsd type.")]
+    public partial class DefinitionType : DefinitionBaseType, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// remarks property
+        /// </summary>
+		
+		[XmlElement("remarks")]
+        public String Remarks {
+            get {
+                return remarksField;
+            } 
+            set {
+                remarksField = value;
+                NotifyPropertyChanged("Remarks");
+            }
+        }
+
+        private String remarksField; 
+
+
+    } //here
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the DefinitionBaseType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="DefinitionBaseType", Namespace="http://www.opengis.net/gml/3.2")]
+	[Description("This class represents the DefinitionBaseType xsd type.")]
+    public partial class DefinitionBaseType : AbstractGMLType, INotifyPropertyChanged
+    {
+
+
+    } //here
+    }
+
+    /// <summary>
+    /// This class represents the AbstractGMLType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimeObjectType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimePrimitiveType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifiedObjectType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimeMeridianType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateSystemAxisType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateSystemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipsoidalCSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCoordinateOperationType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeometryType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeometricPrimitiveType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PolygonType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractFeatureType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlAreaOfInterest))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractGML", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the AbstractGMLType xsd type.")]
+    public abstract partial class AbstractGMLType : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// description property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("description")]
+        public StringOrRefType Description {
+            get {
+                return descriptionField;
+            } 
+            set {
+                descriptionField = value;
+                NotifyPropertyChanged("Description");
+            }
+        }
+
+        private StringOrRefType descriptionField; 
+
+        /// <summary>
+        /// descriptionReference property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("descriptionReference")]
+        public ReferenceType DescriptionReference {
+            get {
+                return descriptionReferenceField;
+            } 
+            set {
+                descriptionReferenceField = value;
+                NotifyPropertyChanged("DescriptionReference");
+            }
+        }
+
+        private ReferenceType descriptionReferenceField; 
+
+        /// <summary>
+        /// identifier property
+        /// </summary>
+		[ComponentElement]
+		[XmlElement("identifier")]
+        public CodeWithAuthorityType Identifier {
+            get {
+                return identifierField;
+            } 
+            set {
+                identifierField = value;
+                NotifyPropertyChanged("Identifier");
+            }
+        }
+
+        private CodeWithAuthorityType identifierField; 
+
+        /// <summary>
+        /// name property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("name")]
+        public List<CodeType> Name {
+            get {
+                return nameField;
+            } 
+            set {
+                nameField = value;
+                NotifyPropertyChanged("Name");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Name has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool NameSpecified
+         {
+             get {
+             if(nameField!=null)
+                 return nameField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<CodeType> nameField; 
+
+		/// <summary>
+        /// id property
+        /// </summary>
+		
+        [XmlAttribute("id", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
+		
+        public String Id {
+            get {
+                return idField;
+            } 
+            set {
+                idField = value;
+                NotifyPropertyChanged("Id");
+            }
+        }
+
+        private String idField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
     /// <summary>
     /// This class represents the StringOrRefType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13116,7 +12945,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the ReferenceType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13188,7 +13016,6 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the AbstractTimeObjectType xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTimePrimitiveType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13204,7 +13031,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the AbstractTimePrimitiveType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13249,10 +13075,62 @@ namespace Energistics.DataAccess.RESQML110
     namespace ComponentSchemas 
     {
     /// <summary>
+    /// This class represents the RelatedTimeType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RelatedTimeType", Namespace="http://www.opengis.net/gml/3.2")]
+	[Description("This class represents the RelatedTimeType xsd type.")]
+    public partial class RelatedTimeType : TimePrimitivePropertyType, INotifyPropertyChanged
+    {
+
+		/// <summary>
+        /// relativePosition property
+        /// </summary>
+		
+        [XmlAttribute("relativePosition")]
+		
+        public RelatedTimeTypeRelativePosition RelativePosition {
+            get {
+                return relativePositionField;
+            } 
+            set {
+                relativePositionField = value;
+                 this.RelativePositionSpecified = true;
+                NotifyPropertyChanged("RelativePosition");
+            }
+        }
+
+        private RelatedTimeTypeRelativePosition relativePositionField; 
+
+        /// <summary>
+        /// relativePositionSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean RelativePositionSpecified {
+            get {
+                return relativePositionSpecifiedField;
+            } 
+            set {
+                relativePositionSpecifiedField = value;
+                NotifyPropertyChanged("RelativePositionSpecified");
+            }
+        }
+
+        private Boolean relativePositionSpecifiedField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
     /// This class represents the TimePrimitivePropertyType xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RelatedTimeType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13337,68 +13215,13 @@ namespace Energistics.DataAccess.RESQML110
     } //here
     }
 
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the RelatedTimeType xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RelatedTimeType", Namespace="http://www.opengis.net/gml/3.2")]
-	[Description("This class represents the RelatedTimeType xsd type.")]
-    public partial class RelatedTimeType : TimePrimitivePropertyType, INotifyPropertyChanged
-    {
-
-		/// <summary>
-        /// relativePosition property
-        /// </summary>
-		
-        [XmlAttribute("relativePosition")]
-		
-        public RelatedTimeTypeRelativePosition RelativePosition {
-            get {
-                return relativePositionField;
-            } 
-            set {
-                relativePositionField = value;
-                 this.RelativePositionSpecified = true;
-                NotifyPropertyChanged("RelativePosition");
-            }
-        }
-
-        private RelatedTimeTypeRelativePosition relativePositionField; 
-
-        /// <summary>
-        /// relativePositionSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean RelativePositionSpecified {
-            get {
-                return relativePositionSpecifiedField;
-            } 
-            set {
-                relativePositionSpecifiedField = value;
-                NotifyPropertyChanged("RelativePositionSpecified");
-            }
-        }
-
-        private Boolean relativePositionSpecifiedField; 
-
-
-    } //here
-    }
-
     /// <summary>
     /// This class represents the AbstractGeometryType xsd type.
     /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PolygonType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeometricPrimitiveType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PolygonType))]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13450,10 +13273,9 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the AbstractGeometricPrimitiveType xsd type.
     /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSurfaceType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PolygonType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13469,7 +13291,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the PointType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13502,7 +13323,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the DirectPositionType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13603,7 +13423,6 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the AbstractSurfaceType xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PolygonType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13619,7 +13438,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the PolygonType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13681,7 +13499,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the AbstractRingPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13731,45 +13548,8 @@ namespace Energistics.DataAccess.RESQML110
     } //here
 
     /// <summary>
-    /// This class represents the AbstractRingType xsd type.
-    /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinearRingType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
-    [System.Xml.Serialization.XmlRootAttribute("AbstractRing", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
-	[Description("This class represents the AbstractRingType xsd type.")]
-    public abstract partial class AbstractRingType : Object, INotifyPropertyChanged
-    {
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-
-    /// <summary>
     /// This class represents the LinearRingType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13850,7 +13630,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the DirectPositionListType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13965,13 +13744,47 @@ namespace Energistics.DataAccess.RESQML110
         #endregion INotifyPropertyChanged Members
     } //here
 
+    /// <summary>
+    /// This class represents the AbstractRingType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinearRingType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractRing", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the AbstractRingType xsd type.")]
+    public abstract partial class AbstractRingType : Object, INotifyPropertyChanged
+    {
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+
     namespace ComponentSchemas 
     {
     /// <summary>
     /// This class represents the AbstractFeatureType xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResqmlAreaOfInterest))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14004,7 +13817,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the BoundingShapeType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14074,7 +13886,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the EnvelopeType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14083,38 +13894,6 @@ namespace Energistics.DataAccess.RESQML110
 	[Description("This class represents the EnvelopeType xsd type.")]
     public partial class EnvelopeType : Object, INotifyPropertyChanged
     {
-
-        /// <summary>
-        /// upperCorner property
-        /// </summary>
-        [XmlElement("upperCorner")]
-        public DirectPositionType UpperCorner {
-            get {
-                return upperCornerField;
-            } 
-            set {
-                upperCornerField = value;
-                UpperCornerSpecified = (value!=null);
-                NotifyPropertyChanged("UpperCorner");
-            }
-        }
-
-        private DirectPositionType upperCornerField; 
-        private bool upperCornerSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if UpperCorner has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool UpperCornerSpecified
-        {
-            get {
-                return upperCornerSpecified;
-            }
-            set {
-                upperCornerSpecified= value;
-            }
-        }
 
         /// <summary>
         /// lowerCorner property
@@ -14177,6 +13956,38 @@ namespace Energistics.DataAccess.RESQML110
             }
             set {
                 posSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// upperCorner property
+        /// </summary>
+        [XmlElement("upperCorner")]
+        public DirectPositionType UpperCorner {
+            get {
+                return upperCornerField;
+            } 
+            set {
+                upperCornerField = value;
+                UpperCornerSpecified = (value!=null);
+                NotifyPropertyChanged("UpperCorner");
+            }
+        }
+
+        private DirectPositionType upperCornerField; 
+        private bool upperCornerSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if UpperCorner has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool UpperCornerSpecified
+        {
+            get {
+                return upperCornerSpecified;
+            }
+            set {
+                upperCornerSpecified= value;
             }
         }
 
@@ -14273,7 +14084,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A GML feature representing the overall area of interest. The following are inherited from the normative GML schema. The RESQML profiled schema represents a subset of the normative GML schema. attributes: gml:id (required) gml:boundedBy (optional but profiled to be mandatory) gml:location (deprecated - eliminated from the profiled schema.) elements: gml:metaDataProperty (deprecated - eliminated from the profiled schema.) gml:description (optional) gml:descriptionReference(optional) gml:identifier (optional) gml:name (optional maxOccurs="unbounded") 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14309,7 +14119,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the AreaOfInterestPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14361,7 +14170,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the EllipsoidType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14413,7 +14221,6 @@ namespace Energistics.DataAccess.RESQML110
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngleType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14488,7 +14295,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the LengthType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14525,7 +14331,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the AngleType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14562,7 +14367,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the secondDefiningParameter xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14614,7 +14418,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the SecondDefiningParameter xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14623,38 +14426,6 @@ namespace Energistics.DataAccess.RESQML110
 	[Description("This class represents the SecondDefiningParameter xsd type.")]
     public partial class SecondDefiningParameter : Object, INotifyPropertyChanged
     {
-
-        /// <summary>
-        /// isSphere property
-        /// </summary>
-        [XmlElement("isSphere")]
-        public Boolean? IsSphere {
-            get {
-                return isSphereField;
-            } 
-            set {
-                isSphereField = value;
-                IsSphereSpecified = (value!=null);
-                NotifyPropertyChanged("IsSphere");
-            }
-        }
-
-        private Boolean? isSphereField; 
-        private bool isSphereSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if IsSphere has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool IsSphereSpecified
-        {
-            get {
-                return isSphereSpecified;
-            }
-            set {
-                isSphereSpecified= value;
-            }
-        }
 
         /// <summary>
         /// inverseFlattening property
@@ -14685,6 +14456,38 @@ namespace Energistics.DataAccess.RESQML110
             }
             set {
                 inverseFlatteningSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// isSphere property
+        /// </summary>
+        [XmlElement("isSphere")]
+        public Boolean? IsSphere {
+            get {
+                return isSphereField;
+            } 
+            set {
+                isSphereField = value;
+                IsSphereSpecified = (value!=null);
+                NotifyPropertyChanged("IsSphere");
+            }
+        }
+
+        private Boolean? isSphereField; 
+        private bool isSphereSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if IsSphere has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool IsSphereSpecified
+        {
+            get {
+                return isSphereSpecified;
+            }
+            set {
+                isSphereSpecified= value;
             }
         }
 
@@ -14746,7 +14549,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the PrimeMeridianType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14781,7 +14583,6 @@ namespace Energistics.DataAccess.RESQML110
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalDatumType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticDatumType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14895,7 +14696,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the domainOfValidity xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14962,99 +14762,9 @@ namespace Energistics.DataAccess.RESQML110
         #endregion INotifyPropertyChanged Members
     } //here
 
-    namespace ComponentSchemas 
-    {
-    /// <summary>
-    /// This class represents the AbstractObject_Type xsd type.
-    /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_PositionalAccuracy_Type))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Citation_Type))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Series_Type))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_OnlineResource_Type))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Address_Type))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Telephone_Type))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Contact_Type))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_ResponsibleParty_Type))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Date_Type))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Result_Type))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MD_Identifier_Type))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Element_Type))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_VerticalExtent_Type))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_TemporalExtent_Type))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractEX_GeographicExtent_Type))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_Extent_Type))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractObject_Type", Namespace="http://www.isotc211.org/2005/gco")]
-	[Description("This class represents the AbstractObject_Type xsd type.")]
-    public abstract partial class AbstractObject_Type : Object, INotifyPropertyChanged
-    {
-
-		/// <summary>
-        /// id property
-        /// </summary>
-		
-        [XmlAttribute("id")]
-		
-        public String Id {
-            get {
-                return idField;
-            } 
-            set {
-                idField = value;
-                NotifyPropertyChanged("Id");
-            }
-        }
-
-        private String idField; 
-
-		/// <summary>
-        /// uuid property
-        /// </summary>
-		
-        [XmlAttribute("uuid")]
-		
-        public String Uuid {
-            get {
-                return uuidField;
-            } 
-            set {
-                uuidField = value;
-                NotifyPropertyChanged("Uuid");
-            }
-        }
-
-        private String uuidField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
     /// <summary>
     /// This class represents the EX_Extent_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15176,7 +14886,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CharacterString_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15248,7 +14957,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the EX_GeographicExtent_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15336,7 +15044,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the AbstractEX_GeographicExtent_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15371,7 +15078,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the Boolean_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15438,10 +15144,97 @@ namespace Energistics.DataAccess.RESQML110
     } //here
     }
 
+    namespace ComponentSchemas 
+    {
+    /// <summary>
+    /// This class represents the AbstractObject_Type xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Result_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Series_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_OnlineResource_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Address_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Telephone_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Contact_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_ResponsibleParty_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Date_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CI_Citation_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MD_Identifier_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_Element_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_PositionalAccuracy_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_VerticalExtent_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_TemporalExtent_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractEX_GeographicExtent_Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EX_Extent_Type))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="AbstractObject_Type", Namespace="http://www.isotc211.org/2005/gco")]
+	[Description("This class represents the AbstractObject_Type xsd type.")]
+    public abstract partial class AbstractObject_Type : Object, INotifyPropertyChanged
+    {
+
+		/// <summary>
+        /// id property
+        /// </summary>
+		
+        [XmlAttribute("id")]
+		
+        public String Id {
+            get {
+                return idField;
+            } 
+            set {
+                idField = value;
+                NotifyPropertyChanged("Id");
+            }
+        }
+
+        private String idField; 
+
+		/// <summary>
+        /// uuid property
+        /// </summary>
+		
+        [XmlAttribute("uuid")]
+		
+        public String Uuid {
+            get {
+                return uuidField;
+            } 
+            set {
+                uuidField = value;
+                NotifyPropertyChanged("Uuid");
+            }
+        }
+
+        private String uuidField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
     /// <summary>
     /// This class represents the AbstractDQ_Result_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15457,7 +15250,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_Series_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15524,7 +15316,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_OnlineResource_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15645,7 +15436,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the URL_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15717,7 +15507,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_OnLineFunctionCode_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15787,7 +15576,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CodeListValue_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15914,7 +15702,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_Address_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16056,7 +15843,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_Telephone_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16130,7 +15916,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_Contact_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16233,7 +16018,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_Telephone_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16323,7 +16107,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_Address_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16413,7 +16196,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_OnlineResource_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16501,7 +16283,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_ResponsibleParty_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16605,7 +16386,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_Contact_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16695,7 +16475,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_RoleCode_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16765,7 +16544,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_Date_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16819,7 +16597,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the Date_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16827,38 +16604,6 @@ namespace Energistics.DataAccess.RESQML110
 	[Description("This class represents the Date_PropertyType xsd type.")]
     public partial class Date_PropertyType : Object, INotifyPropertyChanged
     {
-
-        /// <summary>
-        /// DateTime property
-        /// </summary>
-        [XmlElement("DateTime")]
-        public DateTime? DateTime {
-            get {
-                return DateTimeField;
-            } 
-            set {
-                DateTimeField = value;
-                DateTimeSpecified = (value!=null);
-                NotifyPropertyChanged("DateTime");
-            }
-        }
-
-        private DateTime? DateTimeField; 
-        private bool dateTimeSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if DateTime has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool DateTimeSpecified
-        {
-            get {
-                return dateTimeSpecified;
-            }
-            set {
-                dateTimeSpecified= value;
-            }
-        }
 
         /// <summary>
         /// Date property
@@ -16889,6 +16634,38 @@ namespace Energistics.DataAccess.RESQML110
             }
             set {
                 dateSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// DateTime property
+        /// </summary>
+        [XmlElement("DateTime")]
+        public DateTime? DateTime {
+            get {
+                return DateTimeField;
+            } 
+            set {
+                DateTimeField = value;
+                DateTimeSpecified = (value!=null);
+                NotifyPropertyChanged("DateTime");
+            }
+        }
+
+        private DateTime? DateTimeField; 
+        private bool dateTimeSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if DateTime has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool DateTimeSpecified
+        {
+            get {
+                return dateTimeSpecified;
+            }
+            set {
+                dateTimeSpecified= value;
             }
         }
 
@@ -16939,7 +16716,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_DateTypeCode_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -17009,7 +16785,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_Citation_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -17310,7 +17085,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_Date_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -17400,7 +17174,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the MD_Identifier_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -17488,7 +17261,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the MD_Identifier_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -17541,7 +17313,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_Citation_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -17631,7 +17402,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_ResponsibleParty_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -17721,7 +17491,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_PresentationFormCode_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -17793,7 +17562,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CI_Series_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -17882,7 +17650,6 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the AbstractDQ_Element_Type xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDQ_PositionalAccuracy_Type))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18073,7 +17840,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the DQ_EvaluationMethodTypeCode_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18145,7 +17911,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the DateTime_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18217,7 +17982,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the DQ_Result_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18305,7 +18069,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the AbstractDQ_PositionalAccuracy_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18321,7 +18084,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the EX_VerticalExtent_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18393,7 +18155,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the Real_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18465,7 +18226,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the SC_CRS_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18551,9 +18311,85 @@ namespace Energistics.DataAccess.RESQML110
     }
 
     /// <summary>
+    /// This class represents the AbstractCRSType xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeodeticCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralDerivedCRSType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractCRS", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the AbstractCRSType xsd type.")]
+    public abstract partial class AbstractCRSType : IdentifiedObjectType, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// domainOfValidity property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("domainOfValidity")]
+        public List<DomainOfValidity> DomainOfValidity {
+            get {
+                return domainOfValidityField;
+            } 
+            set {
+                domainOfValidityField = value;
+                NotifyPropertyChanged("DomainOfValidity");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if DomainOfValidity has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool DomainOfValiditySpecified
+         {
+             get {
+             if(domainOfValidityField!=null)
+                 return domainOfValidityField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<DomainOfValidity> domainOfValidityField; 
+
+        /// <summary>
+        /// scope property
+        /// </summary>
+		[RecurringElement]
+		[XmlElement("scope")]
+        public List<String> Scope {
+            get {
+                return scopeField;
+            } 
+            set {
+                scopeField = value;
+                NotifyPropertyChanged("Scope");
+            }
+        }
+
+         /// <summary>
+         /// bool to indicate if Scope has been set. Used for serialization.
+         /// </summary>
+         [XmlIgnore]
+         public bool ScopeSpecified
+         {
+             get {
+             if(scopeField!=null)
+                 return scopeField.Count>0?true:false;
+             else return false;
+             }
+         }
+        private List<String> scopeField; 
+
+
+    } //here
+
+    /// <summary>
     /// This class represents the GeodeticCRSType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18564,34 +18400,34 @@ namespace Energistics.DataAccess.RESQML110
     {
 
         /// <summary>
-        /// sphericalCS property
+        /// cartesianCS property
         /// </summary>
-        [XmlElement("sphericalCS")]
-        public SphericalCSPropertyType SphericalCS {
+        [XmlElement("cartesianCS")]
+        public CartesianCSPropertyType CartesianCS {
             get {
-                return sphericalCSField;
+                return cartesianCSField;
             } 
             set {
-                sphericalCSField = value;
-                SphericalCSSpecified = (value!=null);
-                NotifyPropertyChanged("SphericalCS");
+                cartesianCSField = value;
+                CartesianCSSpecified = (value!=null);
+                NotifyPropertyChanged("CartesianCS");
             }
         }
 
-        private SphericalCSPropertyType sphericalCSField; 
-        private bool sphericalCSSpecified = false; 
+        private CartesianCSPropertyType cartesianCSField; 
+        private bool cartesianCSSpecified = false; 
 
         /// <summary>
-        /// bool to indicate if SphericalCS has been set. Used for serialization.
+        /// bool to indicate if CartesianCS has been set. Used for serialization.
         /// </summary>
         [XmlIgnore]
-        public bool SphericalCSSpecified
+        public bool CartesianCSSpecified
         {
             get {
-                return sphericalCSSpecified;
+                return cartesianCSSpecified;
             }
             set {
-                sphericalCSSpecified= value;
+                cartesianCSSpecified= value;
             }
         }
 
@@ -18628,34 +18464,34 @@ namespace Energistics.DataAccess.RESQML110
         }
 
         /// <summary>
-        /// cartesianCS property
+        /// sphericalCS property
         /// </summary>
-        [XmlElement("cartesianCS")]
-        public CartesianCSPropertyType CartesianCS {
+        [XmlElement("sphericalCS")]
+        public SphericalCSPropertyType SphericalCS {
             get {
-                return cartesianCSField;
+                return sphericalCSField;
             } 
             set {
-                cartesianCSField = value;
-                CartesianCSSpecified = (value!=null);
-                NotifyPropertyChanged("CartesianCS");
+                sphericalCSField = value;
+                SphericalCSSpecified = (value!=null);
+                NotifyPropertyChanged("SphericalCS");
             }
         }
 
-        private CartesianCSPropertyType cartesianCSField; 
-        private bool cartesianCSSpecified = false; 
+        private SphericalCSPropertyType sphericalCSField; 
+        private bool sphericalCSSpecified = false; 
 
         /// <summary>
-        /// bool to indicate if CartesianCS has been set. Used for serialization.
+        /// bool to indicate if SphericalCS has been set. Used for serialization.
         /// </summary>
         [XmlIgnore]
-        public bool CartesianCSSpecified
+        public bool SphericalCSSpecified
         {
             get {
-                return cartesianCSSpecified;
+                return sphericalCSSpecified;
             }
             set {
-                cartesianCSSpecified= value;
+                sphericalCSSpecified= value;
             }
         }
 
@@ -18683,7 +18519,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CartesianCSPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18753,7 +18588,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CartesianCSType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18769,7 +18603,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the EllipsoidalCSPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18839,7 +18672,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the EllipsoidalCSType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18855,7 +18687,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the SphericalCSPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18925,7 +18756,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the SphericalCSType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18941,7 +18771,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the GeodeticDatumPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19011,7 +18840,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the GeodeticDatumType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19061,7 +18889,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the PrimeMeridianPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19131,7 +18958,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the EllipsoidPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19202,7 +19028,6 @@ namespace Energistics.DataAccess.RESQML110
     /// This class represents the AbstractGeneralDerivedCRSType xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCRSType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19235,7 +19060,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the GeneralConversionPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19303,10 +19127,24 @@ namespace Energistics.DataAccess.RESQML110
     } //here
 
     /// <summary>
+    /// This class represents the AbstractGeneralConversionType xsd type.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
+    [System.Xml.Serialization.XmlRootAttribute("AbstractGeneralConversion", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
+	[Description("This class represents the AbstractGeneralConversionType xsd type.")]
+    public abstract partial class AbstractGeneralConversionType : AbstractCoordinateOperationType, INotifyPropertyChanged
+    {
+
+
+    } //here
+
+    /// <summary>
     /// This class represents the AbstractCoordinateOperationType xsd type.
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeneralConversionType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19446,25 +19284,8 @@ namespace Energistics.DataAccess.RESQML110
     } //here
 
     /// <summary>
-    /// This class represents the AbstractGeneralConversionType xsd type.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
-    [System.Xml.Serialization.XmlRootAttribute("AbstractGeneralConversion", Namespace="http://www.opengis.net/gml/3.2", IsNullable=false)]
-	[Description("This class represents the AbstractGeneralConversionType xsd type.")]
-    public abstract partial class AbstractGeneralConversionType : AbstractCoordinateOperationType, INotifyPropertyChanged
-    {
-
-
-    } //here
-
-    /// <summary>
     /// This class represents the coordinateOperationAccuracy xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19534,7 +19355,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the CRSPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19604,7 +19424,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the ProjectedCRSType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19654,7 +19473,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the GeodeticCRSPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19724,7 +19542,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the EX_TemporalExtent_Type xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19760,7 +19577,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the TM_Primitive_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19850,7 +19666,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the EX_TemporalExtent_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19940,7 +19755,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the EX_VerticalExtent_PropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20028,7 +19842,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the VerticalDatumType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20044,7 +19857,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the VerticalDatumPropertyType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20116,7 +19928,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Defines the global 2D CRS. 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20255,7 +20066,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A container for Coordinate Reference System (CRS) information.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20377,7 +20187,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// The non-contextual content of a RESQML document object.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20691,7 +20500,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// An event type captures the basic information about an event that has affected the data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -20850,7 +20658,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// WITSML - Extension values Schema. The intent is to allow standard WITSML "named" extensions without having to modify the schema. A client or server can ignore any name that it does not recognize but certain meta data is required in order to allow generic clients or servers to process the value.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -21103,7 +20910,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// Information about the security classification of the document. This is intended as a documentation of the security so that the file will not inadvertently be sent to someone who is not allowed access to the data. This block also carries a date that the security classification expires. For example, a well log is confidential for a period of time, and then becomes open. All security classes are characterized by their classification systems.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -21279,7 +21085,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A block of information about the creation of the XML file. This is different than the creation of the data that is included within the file.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -21388,7 +21193,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the nameStruct xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -21482,7 +21286,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -21764,7 +21567,6 @@ namespace Energistics.DataAccess.RESQML110
     /// <summary>
     /// This class represents the obj_resqmlDocuments xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -21865,7 +21667,6 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// This class represents the CellShape xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
         [Description("This class represents the CellShape xsd enumeration.")]
@@ -21879,7 +21680,6 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// This class represents the ResqmlMostComplexLineGeometry xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
         [Description("This class represents the ResqmlMostComplexLineGeometry xsd enumeration.")]
@@ -21901,7 +21701,6 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// This class represents the PropertyAttachment xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
         [Description("This class represents the PropertyAttachment xsd enumeration.")]
@@ -21927,7 +21726,6 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// This class represents the PrimitiveType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
         [Description("This class represents the PrimitiveType xsd enumeration.")]
@@ -22001,7 +21799,6 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// This class represents the MeasuredDepthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
         [Description("This class represents the MeasuredDepthUom xsd enumeration.")]
@@ -22023,7 +21820,6 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// This class represents the ItemChoiceType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
         [Description("This class represents the ItemChoiceType xsd enumeration.")]
@@ -22045,7 +21841,6 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// This class represents the ItemsChoiceType1 xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
         [Description("This class represents the ItemsChoiceType1 xsd enumeration.")]
@@ -22075,7 +21870,6 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// This class represents the VerticalTimeUnit xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
         [Description("This class represents the VerticalTimeUnit xsd enumeration.")]
@@ -22093,7 +21887,6 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// This class represents the RelatedTimeTypeRelativePosition xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
         [Description("This class represents the RelatedTimeTypeRelativePosition xsd enumeration.")]
@@ -22155,7 +21948,6 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// This class represents the ItemsChoiceType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
         [Description("This class represents the ItemsChoiceType xsd enumeration.")]
@@ -22177,7 +21969,6 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// This class represents the AggregationType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.opengis.net/gml/3.2")]
         [Description("This class represents the AggregationType xsd enumeration.")]
@@ -22211,7 +22002,6 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// This class represents the WellVerticalCoordinateUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
         [Description("This class represents the WellVerticalCoordinateUom xsd enumeration.")]
@@ -22238,7 +22028,6 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// This class represents the VerticalDirection xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
         [Description("This class represents the VerticalDirection xsd enumeration.")]
@@ -22256,7 +22045,6 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// This class represents the ProjectedCoordinateUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
         [Description("This class represents the ProjectedCoordinateUom xsd enumeration.")]
@@ -22319,7 +22107,6 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// This class represents the GlobalAxisOrder xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.resqml.org/schemas/1series")]
         [Description("This class represents the GlobalAxisOrder xsd enumeration.")]
@@ -22359,7 +22146,6 @@ namespace Energistics.DataAccess.RESQML110
         /// <summary>
         /// This class represents the ResqmlFormat xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://purl.org/dc/terms/")]
         [Description("This class represents the ResqmlFormat xsd enumeration.")]

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <xsd xmlns='http://microsoft.com/dotnet/tools/xsd/'>
   <generateClasses language='CS' namespace='Energistics.Generator.PRODML131'>
-    <schema>C:\projects\source_master\doc\Standards\DataSchema\prodml_v1.3\abstract_v1.0\xsd_schemas\sub_abstractSubstitutionGroup.xsd</schema>
-    <schema>C:\projects\source_master\source\DevKitGenerator\Generator\PRODML131\new_typ_catalog.xsd</schema>
-    <schema>C:\projects\source_master\source\DevKitGenerator\Generator\PRODML131\typ_catalogProdml.xsd</schema>
-    <schema>C:\projects\source_master\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_dtsInstalledSystem.xsd</schema>
-    <schema>C:\projects\source_master\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_dtsInstrumentBox.xsd</schema>
-    <schema>C:\projects\source_master\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_dtsMeasurement.xsd</schema>
-    <schema>C:\projects\source_master\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_fiberOpticalPath.xsd</schema>
-    <schema>C:\projects\source_master\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_fluidAnalysis.xsd</schema>
-    <schema>C:\projects\source_master\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_fluidAnalysisResult.xsd</schema>
-    <schema>C:\projects\source_master\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_fluidSample.xsd</schema>
-    <schema>C:\projects\source_master\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_productFlowModel.xsd</schema>
-    <schema>C:\projects\source_master\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_productionOperation.xsd</schema>
-    <schema>C:\projects\source_master\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_productVolume.xsd</schema>
-    <schema>C:\projects\source_master\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_report.xsd</schema>
-    <schema>C:\projects\source_master\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_timeSeriesData.xsd</schema>
-    <schema>C:\projects\source_master\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_timeSeriesStatistic.xsd</schema>
-    <schema>C:\projects\source_master\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_wellTest.xsd</schema>
-    <schema>C:\projects\source_master\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_wftRun.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\doc\Standards\DataSchema\prodml_v1.3\abstract_v1.0\xsd_schemas\sub_abstractSubstitutionGroup.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\source\DevKitGenerator\Generator\PRODML131\new_typ_catalog.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\source\DevKitGenerator\Generator\PRODML131\typ_catalogProdml.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_dtsInstalledSystem.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_dtsInstrumentBox.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_dtsMeasurement.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_fiberOpticalPath.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_fluidAnalysis.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_fluidAnalysisResult.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_fluidSample.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_productFlowModel.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_productionOperation.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_productVolume.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_report.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_timeSeriesData.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_timeSeriesStatistic.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_wellTest.xsd</schema>
+    <schema>C:\development\WITSML\devkit-c\doc\Standards\DataSchema\prodml_v1.3\prodml_v1.3_data\xsd_schemas\obj_wftRun.xsd</schema>
   </generateClasses>
 </xsd>

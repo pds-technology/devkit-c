@@ -21,11 +21,10 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the abstractObject xsd type.
     /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DownholeComponentList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCompletionList))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreCompletionList))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellCMLedgerList))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellboreCompletionList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DownholeComponentList))]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -60,7 +59,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// The non-contextual content of a well completion object.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -451,7 +449,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the CompletionStatusHistory xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -665,115 +662,8 @@ namespace Energistics.DataAccess.COMPLETION100
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the abstractMeasure xsd type.
-    /// </summary>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalConductivityMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerLengthMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AccelerationLinearMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MomentOfForceMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PerLengthMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageEastWest))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageNorthSouth))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellElevationCoord))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellVerticalDepthCoord))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasuredDepthCoord))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RatioGenericMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GenericMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasureOrQuantity))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasurePercent))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(YAxisAzimuth))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerLengthMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeFlowRateMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VelocityMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermodynamicTemperatureMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalVolumetricExpansionMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumePerTimeMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumeMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecificVolumeMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecificHeatCapacityMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RelativePowerMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PressureMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PowerMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlaneAngleMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PermeabilityRockMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassPerLengthMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassConcentrationMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MagneticInductionMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthPerLengthMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IlluminanceMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerVolumeMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerLengthMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForceMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EquivalentPerMassMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricPotentialMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricCurrentMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DynamicViscosityMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DimensionlessMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DensityMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompressibilityMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaPerAreaMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaMeasure))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerTimeMeasure))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="abstractMeasure", Namespace="http://www.witsml.org/schemas/1series")]
-	[Description("This class represents the abstractMeasure xsd type.")]
-    public abstract partial class AbstractMeasure : Object, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// Value property
-        /// </summary>
-        
-        [XmlText]
-        public Double Value {
-            get {
-                return ValueField;
-            } 
-            set {
-                ValueField = value;
-                NotifyPropertyChanged("Value");
-            }
-        }
-
-        private Double ValueField; 
-
-
-        
-		#region INotifyPropertyChanged Members
-		/// <summary>
-        /// Occurs when a property value changes. 
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-		/// <summary>
-        /// Triggers PropertyChanged Event
-        /// </summary>
-        /// <param name="info">Name of property changed</param>
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
-        #endregion INotifyPropertyChanged Members
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
     /// This class represents the measuredDepthCoord xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -851,9 +741,113 @@ namespace Energistics.DataAccess.COMPLETION100
     namespace ComponentSchemas 
     {
     /// <summary>
+    /// This class represents the abstractMeasure xsd type.
+    /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageEastWest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FootageNorthSouth))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellElevationCoord))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WellVerticalDepthCoord))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasuredDepthCoord))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RatioGenericMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GenericMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeasureOrQuantity))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasurePercent))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(YAxisAzimuth))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerVolumeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumePerLengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeFlowRateMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VolumeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VelocityMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermodynamicTemperatureMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalVolumetricExpansionMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThermalConductivityMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumePerTimeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StandardVolumeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecificVolumeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecificHeatCapacityMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RelativePowerMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PressureMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PowerMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlaneAngleMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PermeabilityRockMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PerLengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MomentOfForceMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassPerLengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MassConcentrationMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MagneticInductionMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthPerLengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IlluminanceMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerVolumeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForcePerLengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ForceMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EquivalentPerMassMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricPotentialMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElectricCurrentMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DynamicViscosityMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DimensionlessMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DensityMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompressibilityMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaPerAreaMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AreaMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerTimeMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnglePerLengthMeasure))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AccelerationLinearMeasure))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="abstractMeasure", Namespace="http://www.witsml.org/schemas/1series")]
+	[Description("This class represents the abstractMeasure xsd type.")]
+    public abstract partial class AbstractMeasure : Object, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// Value property
+        /// </summary>
+        
+        [XmlText]
+        public Double Value {
+            get {
+                return ValueField;
+            } 
+            set {
+                ValueField = value;
+                NotifyPropertyChanged("Value");
+            }
+        }
+
+        private Double ValueField; 
+
+
+        
+		#region INotifyPropertyChanged Members
+		/// <summary>
+        /// Occurs when a property value changes. 
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+		/// <summary>
+        /// Triggers PropertyChanged Event
+        /// </summary>
+        /// <param name="info">Name of property changed</param>
+        protected void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+        #endregion INotifyPropertyChanged Members
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
     /// This class represents the footageEastWest xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -932,7 +926,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the footageNorthSouth xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1011,7 +1004,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the wellElevationCoord xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1091,7 +1083,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the wellVerticalDepthCoord xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1171,7 +1162,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the ratioGenericMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1304,7 +1294,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the genericMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1365,7 +1354,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the measureOrQuantity xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1425,7 +1413,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the volumePerVolumeMeasurePercent xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1484,7 +1471,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the yAxisAzimuth xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1580,7 +1566,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the volumePerVolumeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1639,7 +1624,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the volumePerLengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1698,7 +1682,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the volumeFlowRateMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1757,7 +1740,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the volumeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1816,7 +1798,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the velocityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1875,7 +1856,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the timeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1934,7 +1914,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the thermodynamicTemperatureMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1993,7 +1972,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the thermalVolumetricExpansionMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2052,7 +2030,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the thermalConductivityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2111,7 +2088,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the standardVolumePerTimeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2170,7 +2146,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the standardVolumeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2229,7 +2204,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the specificVolumeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2288,7 +2262,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the specificHeatCapacityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2347,7 +2320,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the relativePowerMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2406,7 +2378,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the pressureMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2465,7 +2436,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the powerMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2524,7 +2494,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the planeAngleMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2583,7 +2552,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the permeabilityRockMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2642,7 +2610,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the perLengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2701,7 +2668,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the momentOfForceMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2760,7 +2726,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the massPerLengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2819,7 +2784,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the massMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2878,7 +2842,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the massConcentrationMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2937,7 +2900,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the magneticInductionMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2996,7 +2958,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the lengthPerLengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3055,7 +3016,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the lengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3114,7 +3074,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the illuminanceMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3173,7 +3132,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the forcePerVolumeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3232,7 +3190,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the forcePerLengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3291,7 +3248,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the forceMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3350,7 +3306,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the equivalentPerMassMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3409,7 +3364,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the electricPotentialMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3468,7 +3422,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the electricCurrentMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3527,7 +3480,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the dynamicViscosityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3586,7 +3538,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the dimensionlessMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3645,7 +3596,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the densityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3704,7 +3654,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the compressibilityMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3763,7 +3712,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the areaPerAreaMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3822,7 +3770,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the areaMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3881,7 +3828,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the anglePerTimeMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3940,7 +3886,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the anglePerLengthMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3999,7 +3944,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the accelerationLinearMeasure xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4058,7 +4002,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     ///  WITSML - Common Data Component Schema 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4384,7 +4327,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the timestampedTimeZone xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4495,7 +4437,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the refNameString xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4590,7 +4531,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// WITSML - Extension Schema. The intent is to allow standard WITSML schema extensions which will validate in older clients or servers. A client or server can ignore any schema that it does not recognize. New versions will modify specific elements to replace this type with a type that adds new elements, including another element with this type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4656,7 +4596,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// WITSML - Extension values Schema. The intent is to allow standard WITSML "named" extensions without having to modify the schema. A client or server can ignore any name that it does not recognize but certain meta data is required in order to allow generic clients or servers to process the value.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4909,7 +4848,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the extensionvalue xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5005,7 +4943,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the cs_customData xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5071,7 +5008,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the indexedObject xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5241,7 +5177,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the refObjectString xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5356,7 +5291,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Defines a member of an objectGroup.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5756,7 +5690,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the objectSequence xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5850,7 +5783,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on WITSML objects used
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5947,7 +5879,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// WITSML - Equipment NameTag Schema
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6230,7 +6161,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the cost xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6323,7 +6253,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     ///  WITSML - Day Cost Component Schema 
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6906,7 +6835,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on downhole related to this event.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7008,7 +6936,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on fluid report event.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7111,7 +7038,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on the perforating job.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7750,7 +7676,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on the perforating event.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7854,7 +7779,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on waiting event.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8027,7 +7951,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on pressure test event.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8487,7 +8410,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on the job event.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8625,7 +8547,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on fractionation event.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8728,7 +8649,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on bottom hole pressure during this event.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8831,7 +8751,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on lost circulation event.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8933,7 +8852,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on directional survey event.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9036,7 +8954,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on clean fill event.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9156,7 +9073,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on cement job event.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9258,7 +9174,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// WITSML - event extension schema
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9276,17 +9191,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return cementExtensionField;
             } 
             set {
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property CementExtension when property DownholeExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property CementExtension when property BHPExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property CementExtension when property AcidizeFracExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property CementExtension when property CleanFillExtension is already set");
                 if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property CementExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property CementExtension when property BHPExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property CementExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property CementExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property CementExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property CementExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property CementExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property CementExtension when property PressureTestExtension is already set");
                 if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property CementExtension when property WaitingOnExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property CementExtension when property AcidizeFracExtension is already set");
                 cementExtensionField = value;
                 CementExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("CementExtension");
@@ -9319,17 +9234,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return cleanFillExtensionField;
             } 
             set {
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property DownholeExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property BHPExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property CementExtension is already set");
                 if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property BHPExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property PressureTestExtension is already set");
                 if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property WaitingOnExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property CleanFillExtension when property AcidizeFracExtension is already set");
                 cleanFillExtensionField = value;
                 CleanFillExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("CleanFillExtension");
@@ -9362,17 +9277,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return directionalSurveyExtensionField;
             } 
             set {
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property DownholeExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property BHPExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property CleanFillExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property BHPExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property PressureTestExtension is already set");
                 if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property WaitingOnExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property DirectionalSurveyExtension when property AcidizeFracExtension is already set");
                 directionalSurveyExtensionField = value;
                 DirectionalSurveyExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("DirectionalSurveyExtension");
@@ -9405,17 +9320,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return lostCirculationExtensionField;
             } 
             set {
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property DownholeExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property BHPExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property CleanFillExtension is already set");
                 if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property BHPExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property JobExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property PressureTestExtension is already set");
                 if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property WaitingOnExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property LostCirculationExtension when property AcidizeFracExtension is already set");
                 lostCirculationExtensionField = value;
                 LostCirculationExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("LostCirculationExtension");
@@ -9448,17 +9363,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return BHPExtensionField;
             } 
             set {
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property DownholeExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property CleanFillExtension is already set");
                 if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property DirectionalSurveyExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property PressureTestExtension is already set");
                 if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property WaitingOnExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property BHPExtension when property AcidizeFracExtension is already set");
                 BHPExtensionField = value;
                 BHPExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("BHPExtension");
@@ -9491,11 +9406,11 @@ namespace Energistics.DataAccess.COMPLETION100
                 return acidizeFracExtensionField;
             } 
             set {
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property DownholeExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property BHPExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property CleanFillExtension is already set");
                 if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property BHPExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property AcidizeFracExtension when property LostCirculationExtension is already set");
@@ -9534,17 +9449,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return jobExtensionField;
             } 
             set {
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property JobExtension when property DownholeExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property JobExtension when property BHPExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property JobExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property JobExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property JobExtension when property CleanFillExtension is already set");
                 if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property JobExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property JobExtension when property BHPExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property JobExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property JobExtension when property FluidReportExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property JobExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property JobExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property JobExtension when property PressureTestExtension is already set");
                 if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property JobExtension when property WaitingOnExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property JobExtension when property AcidizeFracExtension is already set");
                 jobExtensionField = value;
                 JobExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("JobExtension");
@@ -9577,17 +9492,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return pressureTestExtensionField;
             } 
             set {
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property DownholeExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property BHPExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property CleanFillExtension is already set");
                 if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property BHPExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property PerforationExtension is already set");
                 if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property WaitingOnExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property PressureTestExtension when property AcidizeFracExtension is already set");
                 pressureTestExtensionField = value;
                 PressureTestExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("PressureTestExtension");
@@ -9620,17 +9535,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return waitingOnExtensionField;
             } 
             set {
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property DownholeExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property BHPExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property CleanFillExtension is already set");
                 if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property BHPExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property PressureTestExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property WaitingOnExtension when property AcidizeFracExtension is already set");
                 waitingOnExtensionField = value;
                 WaitingOnExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("WaitingOnExtension");
@@ -9663,17 +9578,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return perforationExtensionField;
             } 
             set {
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property DownholeExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property BHPExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property CleanFillExtension is already set");
                 if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property BHPExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property DownholeExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property LostCirculationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property PressureTestExtension is already set");
                 if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property WaitingOnExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property PerforationExtension when property AcidizeFracExtension is already set");
                 perforationExtensionField = value;
                 PerforationExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("PerforationExtension");
@@ -9706,17 +9621,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return fluidReportExtensionField;
             } 
             set {
-                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property DownholeExtension is already set");
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property BHPExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property CleanFillExtension is already set");
                 if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property BHPExtension is already set");
+                if (value != null && DownholeExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property DownholeExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property PressureTestExtension is already set");
                 if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property WaitingOnExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property FluidReportExtension when property AcidizeFracExtension is already set");
                 fluidReportExtensionField = value;
                 FluidReportExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("FluidReportExtension");
@@ -9749,17 +9664,17 @@ namespace Energistics.DataAccess.COMPLETION100
                 return downholeExtensionField;
             } 
             set {
+                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property BHPExtension is already set");
+                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property AcidizeFracExtension is already set");
                 if (value != null && CementExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property CementExtension is already set");
                 if (value != null && CleanFillExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property CleanFillExtension is already set");
                 if (value != null && DirectionalSurveyExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property DirectionalSurveyExtension is already set");
-                if (value != null && BHPExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property BHPExtension is already set");
                 if (value != null && FluidReportExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property FluidReportExtension is already set");
                 if (value != null && JobExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property JobExtension is already set");
                 if (value != null && LostCirculationExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property LostCirculationExtension is already set");
                 if (value != null && PerforationExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property PerforationExtension is already set");
                 if (value != null && PressureTestExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property PressureTestExtension is already set");
                 if (value != null && WaitingOnExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property WaitingOnExtension is already set");
-                if (value != null && AcidizeFracExtensionSpecified) throw new Exception("Cannot set property DownholeExtension when property AcidizeFracExtension is already set");
                 downholeExtensionField = value;
                 DownholeExtensionSpecified = (value!=null);
                 NotifyPropertyChanged("DownholeExtension");
@@ -9812,7 +9727,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the downholeStringRef xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9897,7 +9811,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the boreholeStringRef xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9982,7 +9895,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the downholeComponentRef xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10135,7 +10047,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the eventType xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -10244,7 +10155,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the obj_wellCMLedger xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11118,7 +11028,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the cs_slotsInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11372,7 +11281,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on the status history in the interval
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11624,7 +11532,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Event information type
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11727,7 +11634,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Event reference collection
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11818,7 +11724,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on collection of perforation status history
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12070,7 +11975,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the cs_perforationSetInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12324,7 +12228,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the cs_openHoleInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12578,7 +12481,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the cs_gravelPackInterval xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12832,7 +12734,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on collection of contact intervals
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12987,7 +12888,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the obj_wellboreCompletion xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -13521,7 +13421,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the cs_perforationSet xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14065,7 +13964,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on the perforated hole
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14329,7 +14227,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on slot resulting from perforation
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14503,7 +14400,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Name-value extensions for the equipment property
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -14576,7 +14472,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the cs_equipment xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15503,7 +15398,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Geology features found in the location of the borehole string.  
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15733,7 +15627,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on the borehole
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15999,7 +15892,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the cs_boreholeString xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16203,7 +16095,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the cs_stringEquipment xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -17096,7 +16987,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on containing or contained component  
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -17210,10 +17100,245 @@ namespace Energistics.DataAccess.COMPLETION100
     namespace ComponentSchemas 
     {
     /// <summary>
+    /// Information detailing the connection between 2 components
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_equipmentConnection", Namespace="http://www.witsml.org/schemas/1series")]
+	[Description("Information detailing the connection between 2 components")]
+    public partial class EquipmentConnection : Connection, INotifyPropertyChanged
+    {
+
+        /// <summary>
+        /// measurement of radial offset 
+        /// </summary>
+		[Description("measurement of radial offset")]
+        [ComponentElement]
+		[XmlElement("radialOffset")]
+        public LengthMeasure RadialOffset {
+            get {
+                return radialOffsetField;
+            } 
+            set {
+                radialOffsetField = value;
+                NotifyPropertyChanged("RadialOffset");
+            }
+        }
+
+        private LengthMeasure radialOffsetField; 
+
+        /// <summary>
+        /// The connection type of casing
+        /// </summary>
+        [XmlElement("casingConnectionType")]
+        public CasingConnectionType? CasingConnectionType {
+            get {
+                return casingConnectionTypeField;
+            } 
+            set {
+                casingConnectionTypeField = value;
+                CasingConnectionTypeSpecified = (value!=null);
+                NotifyPropertyChanged("CasingConnectionType");
+            }
+        }
+
+        private CasingConnectionType? casingConnectionTypeField; 
+        private bool casingConnectionTypeSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if CasingConnectionType has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool CasingConnectionTypeSpecified
+        {
+            get {
+                return casingConnectionTypeSpecified;
+            }
+            set {
+                casingConnectionTypeSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// The other connection type which is used for other tools
+        /// </summary>
+        [XmlElement("otherConnectionType")]
+        public OtherConnectionType? OtherConnectionType {
+            get {
+                return otherConnectionTypeField;
+            } 
+            set {
+                otherConnectionTypeField = value;
+                OtherConnectionTypeSpecified = (value!=null);
+                NotifyPropertyChanged("OtherConnectionType");
+            }
+        }
+
+        private OtherConnectionType? otherConnectionTypeField; 
+        private bool otherConnectionTypeSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if OtherConnectionType has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool OtherConnectionTypeSpecified
+        {
+            get {
+                return otherConnectionTypeSpecified;
+            }
+            set {
+                otherConnectionTypeSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// The connection type of rod
+        /// </summary>
+        [XmlElement("rodConnectionType")]
+        public RodConnectionType? RodConnectionType {
+            get {
+                return rodConnectionTypeField;
+            } 
+            set {
+                rodConnectionTypeField = value;
+                RodConnectionTypeSpecified = (value!=null);
+                NotifyPropertyChanged("RodConnectionType");
+            }
+        }
+
+        private RodConnectionType? rodConnectionTypeField; 
+        private bool rodConnectionTypeSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if RodConnectionType has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool RodConnectionTypeSpecified
+        {
+            get {
+                return rodConnectionTypeSpecified;
+            }
+            set {
+                rodConnectionTypeSpecified= value;
+            }
+        }
+
+        /// <summary>
+        /// The connection type of tubing
+        /// </summary>
+        [XmlElement("tubingConnectionType")]
+        public TubingConnectionType? TubingConnectionType {
+            get {
+                return tubingConnectionTypeField;
+            } 
+            set {
+                tubingConnectionTypeField = value;
+                TubingConnectionTypeSpecified = (value!=null);
+                NotifyPropertyChanged("TubingConnectionType");
+            }
+        }
+
+        private TubingConnectionType? tubingConnectionTypeField; 
+        private bool tubingConnectionTypeSpecified = false; 
+
+        /// <summary>
+        /// bool to indicate if TubingConnectionType has been set. Used for serialization.
+        /// </summary>
+        [XmlIgnore]
+        public bool TubingConnectionTypeSpecified
+        {
+            get {
+                return tubingConnectionTypeSpecified;
+            }
+            set {
+                tubingConnectionTypeSpecified= value;
+            }
+        }
+
+
+        /// <summary>
+        /// The form of connection: Box or Pin 
+        /// </summary>
+		[Description("The form of connection: Box or Pin")]
+		[XmlElement("connectionForm")]
+        public ConnectionFormType? ConnectionForm {
+            get {
+                return connectionFormField;
+            } 
+            set {
+                connectionFormField = value;
+                 this.ConnectionFormSpecified = true;
+                NotifyPropertyChanged("ConnectionForm");
+            }
+        }
+
+        private ConnectionFormType? connectionFormField; 
+
+        /// <summary>
+        /// connectionFormSpecified property
+        /// </summary>
+        [XmlIgnore]
+        [Browsable(false)]
+        public Boolean ConnectionFormSpecified {
+            get {
+                return connectionFormSpecifiedField;
+            } 
+            set {
+                connectionFormSpecifiedField = value;
+                NotifyPropertyChanged("ConnectionFormSpecified");
+            }
+        }
+
+        private Boolean connectionFormSpecifiedField; 
+
+        /// <summary>
+        /// Connection upset
+        /// </summary>
+		[StringLength(64)]
+        [Description("Connection upset")]
+		[XmlElement("connectionUpset")]
+        public String ConnectionUpset {
+            get {
+                return connectionUpsetField;
+            } 
+            set {
+                connectionUpsetField = value;
+                NotifyPropertyChanged("ConnectionUpset");
+            }
+        }
+
+        private String connectionUpsetField; 
+
+		/// <summary>
+        /// Reference to the string equipment
+        /// </summary>
+		[StringLength(64)]
+        [Description("Reference to the string equipment")]
+        [XmlAttribute("stringEquipmentRefUID")]
+		
+        public String StringEquipmentRefUID {
+            get {
+                return stringEquipmentRefUIDField;
+            } 
+            set {
+                stringEquipmentRefUIDField = value;
+                NotifyPropertyChanged("StringEquipmentRefUID");
+            }
+        }
+
+        private String stringEquipmentRefUIDField; 
+
+
+    } //here
+    }
+
+    namespace ComponentSchemas 
+    {
+    /// <summary>
     ///  WITSML - Tubular Connection Component Schema 
     /// </summary>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EquipmentConnection))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -17547,246 +17672,8 @@ namespace Energistics.DataAccess.COMPLETION100
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// Information detailing the connection between 2 components
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="cs_equipmentConnection", Namespace="http://www.witsml.org/schemas/1series")]
-	[Description("Information detailing the connection between 2 components")]
-    public partial class EquipmentConnection : Connection, INotifyPropertyChanged
-    {
-
-        /// <summary>
-        /// measurement of radial offset 
-        /// </summary>
-		[Description("measurement of radial offset")]
-        [ComponentElement]
-		[XmlElement("radialOffset")]
-        public LengthMeasure RadialOffset {
-            get {
-                return radialOffsetField;
-            } 
-            set {
-                radialOffsetField = value;
-                NotifyPropertyChanged("RadialOffset");
-            }
-        }
-
-        private LengthMeasure radialOffsetField; 
-
-        /// <summary>
-        /// The connection type of rod
-        /// </summary>
-        [XmlElement("rodConnectionType")]
-        public RodConnectionType? RodConnectionType {
-            get {
-                return rodConnectionTypeField;
-            } 
-            set {
-                rodConnectionTypeField = value;
-                RodConnectionTypeSpecified = (value!=null);
-                NotifyPropertyChanged("RodConnectionType");
-            }
-        }
-
-        private RodConnectionType? rodConnectionTypeField; 
-        private bool rodConnectionTypeSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if RodConnectionType has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool RodConnectionTypeSpecified
-        {
-            get {
-                return rodConnectionTypeSpecified;
-            }
-            set {
-                rodConnectionTypeSpecified= value;
-            }
-        }
-
-        /// <summary>
-        /// The connection type of tubing
-        /// </summary>
-        [XmlElement("tubingConnectionType")]
-        public TubingConnectionType? TubingConnectionType {
-            get {
-                return tubingConnectionTypeField;
-            } 
-            set {
-                tubingConnectionTypeField = value;
-                TubingConnectionTypeSpecified = (value!=null);
-                NotifyPropertyChanged("TubingConnectionType");
-            }
-        }
-
-        private TubingConnectionType? tubingConnectionTypeField; 
-        private bool tubingConnectionTypeSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if TubingConnectionType has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool TubingConnectionTypeSpecified
-        {
-            get {
-                return tubingConnectionTypeSpecified;
-            }
-            set {
-                tubingConnectionTypeSpecified= value;
-            }
-        }
-
-        /// <summary>
-        /// The connection type of casing
-        /// </summary>
-        [XmlElement("casingConnectionType")]
-        public CasingConnectionType? CasingConnectionType {
-            get {
-                return casingConnectionTypeField;
-            } 
-            set {
-                casingConnectionTypeField = value;
-                CasingConnectionTypeSpecified = (value!=null);
-                NotifyPropertyChanged("CasingConnectionType");
-            }
-        }
-
-        private CasingConnectionType? casingConnectionTypeField; 
-        private bool casingConnectionTypeSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if CasingConnectionType has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool CasingConnectionTypeSpecified
-        {
-            get {
-                return casingConnectionTypeSpecified;
-            }
-            set {
-                casingConnectionTypeSpecified= value;
-            }
-        }
-
-        /// <summary>
-        /// The other connection type which is used for other tools
-        /// </summary>
-        [XmlElement("otherConnectionType")]
-        public OtherConnectionType? OtherConnectionType {
-            get {
-                return otherConnectionTypeField;
-            } 
-            set {
-                otherConnectionTypeField = value;
-                OtherConnectionTypeSpecified = (value!=null);
-                NotifyPropertyChanged("OtherConnectionType");
-            }
-        }
-
-        private OtherConnectionType? otherConnectionTypeField; 
-        private bool otherConnectionTypeSpecified = false; 
-
-        /// <summary>
-        /// bool to indicate if OtherConnectionType has been set. Used for serialization.
-        /// </summary>
-        [XmlIgnore]
-        public bool OtherConnectionTypeSpecified
-        {
-            get {
-                return otherConnectionTypeSpecified;
-            }
-            set {
-                otherConnectionTypeSpecified= value;
-            }
-        }
-
-
-        /// <summary>
-        /// The form of connection: Box or Pin 
-        /// </summary>
-		[Description("The form of connection: Box or Pin")]
-		[XmlElement("connectionForm")]
-        public ConnectionFormType? ConnectionForm {
-            get {
-                return connectionFormField;
-            } 
-            set {
-                connectionFormField = value;
-                 this.ConnectionFormSpecified = true;
-                NotifyPropertyChanged("ConnectionForm");
-            }
-        }
-
-        private ConnectionFormType? connectionFormField; 
-
-        /// <summary>
-        /// connectionFormSpecified property
-        /// </summary>
-        [XmlIgnore]
-        [Browsable(false)]
-        public Boolean ConnectionFormSpecified {
-            get {
-                return connectionFormSpecifiedField;
-            } 
-            set {
-                connectionFormSpecifiedField = value;
-                NotifyPropertyChanged("ConnectionFormSpecified");
-            }
-        }
-
-        private Boolean connectionFormSpecifiedField; 
-
-        /// <summary>
-        /// Connection upset
-        /// </summary>
-		[StringLength(64)]
-        [Description("Connection upset")]
-		[XmlElement("connectionUpset")]
-        public String ConnectionUpset {
-            get {
-                return connectionUpsetField;
-            } 
-            set {
-                connectionUpsetField = value;
-                NotifyPropertyChanged("ConnectionUpset");
-            }
-        }
-
-        private String connectionUpsetField; 
-
-		/// <summary>
-        /// Reference to the string equipment
-        /// </summary>
-		[StringLength(64)]
-        [Description("Reference to the string equipment")]
-        [XmlAttribute("stringEquipmentRefUID")]
-		
-        public String StringEquipmentRefUID {
-            get {
-                return stringEquipmentRefUIDField;
-            } 
-            set {
-                stringEquipmentRefUIDField = value;
-                NotifyPropertyChanged("StringEquipmentRefUID");
-            }
-        }
-
-        private String stringEquipmentRefUIDField; 
-
-
-    } //here
-    }
-
-    namespace ComponentSchemas 
-    {
-    /// <summary>
     /// This class represents the cs_downholeString xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18169,7 +18056,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// The non-contextual content of a WITSML downhole component object.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18531,7 +18417,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// An event type captures the basic information about an event that has affected the data.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18690,7 +18575,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information about the security classification of the document. This is intended as a documentation of the security so that the file will not inadvertently be sent to someone who is not allowed access to the data. This block also carries a date that the security classification expires. For example, a well log is confidential for a period of time, and then becomes open. All security classes are characterized by their classification systems.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18866,7 +18750,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// A block of information about the creation of the XML file. This is different than the creation of the data that is included within the file.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -18975,7 +18858,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the nameStruct xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19069,7 +18951,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// A schema to capture a set of data that is relevant for many exchange documents. It includes information about the file that was created, and high-level information about the data that is being exchanged within the file.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19351,7 +19232,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// The WITSML API mandated plural root element which allows multiple singular objects to be sent. The plural name is formed by adding an "s" to the singular name.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19448,7 +19328,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the obj_wellCMLedgers xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19545,7 +19424,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// Information on wellbore completion collection.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19642,7 +19520,6 @@ namespace Energistics.DataAccess.COMPLETION100
     /// <summary>
     /// This class represents the obj_downholeComponents xsd type.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Energistics.Generator", "1.0.0.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19743,7 +19620,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the CompletionStatus xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the CompletionStatus xsd enumeration.")]
@@ -19783,7 +19659,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the MeasuredDepthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the MeasuredDepthUom xsd enumeration.")]
@@ -19805,7 +19680,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the LengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the LengthUom xsd enumeration.")]
@@ -20050,7 +19924,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the EastOrWest xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the EastOrWest xsd enumeration.")]
@@ -20072,7 +19945,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the NorthOrSouth xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the NorthOrSouth xsd enumeration.")]
@@ -20094,7 +19966,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the WellVerticalCoordinateUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the WellVerticalCoordinateUom xsd enumeration.")]
@@ -20121,7 +19992,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the PercentUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the PercentUom xsd enumeration.")]
@@ -20136,7 +20006,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the PlaneAngleUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the PlaneAngleUom xsd enumeration.")]
@@ -20210,7 +20079,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the AziRef xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the AziRef xsd enumeration.")]
@@ -20239,7 +20107,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the VolumePerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the VolumePerVolumeUom xsd enumeration.")]
@@ -20488,7 +20355,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the VolumePerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the VolumePerLengthUom xsd enumeration.")]
@@ -20564,7 +20430,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the VolumeFlowRateUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the VolumeFlowRateUom xsd enumeration.")]
@@ -20734,7 +20599,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the VolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the VolumeUom xsd enumeration.")]
@@ -20878,7 +20742,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the VelocityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the VelocityUom xsd enumeration.")]
@@ -21027,7 +20890,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the TimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the TimeUom xsd enumeration.")]
@@ -21104,7 +20966,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the ThermodynamicTemperatureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the ThermodynamicTemperatureUom xsd enumeration.")]
@@ -21130,7 +20991,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the ThermalVolumetricExpansionUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the ThermalVolumetricExpansionUom xsd enumeration.")]
@@ -21170,7 +21030,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the ThermalConductivityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the ThermalConductivityUom xsd enumeration.")]
@@ -21205,7 +21064,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the StandardVolumePerTimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the StandardVolumePerTimeUom xsd enumeration.")]
@@ -21270,7 +21128,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the StandardVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the StandardVolumeUom xsd enumeration.")]
@@ -21333,7 +21190,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the SpecificVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the SpecificVolumeUom xsd enumeration.")]
@@ -21453,7 +21309,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the SpecificHeatCapacityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the SpecificHeatCapacityUom xsd enumeration.")]
@@ -21503,7 +21358,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the RelativePowerUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the RelativePowerUom xsd enumeration.")]
@@ -21533,7 +21387,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the PressureUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the PressureUom xsd enumeration.")]
@@ -21718,7 +21571,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the PowerUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the PowerUom xsd enumeration.")]
@@ -21795,7 +21647,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the PermeabilityRockUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the PermeabilityRockUom xsd enumeration.")]
@@ -21813,7 +21664,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the PerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the PerLengthUom xsd enumeration.")]
@@ -21868,7 +21718,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the MomentOfForceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the MomentOfForceUom xsd enumeration.")]
@@ -21947,7 +21796,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the MassPerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the MassPerLengthUom xsd enumeration.")]
@@ -21982,7 +21830,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the MassUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the MassUom xsd enumeration.")]
@@ -22070,7 +21917,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the MassConcentrationUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the MassConcentrationUom xsd enumeration.")]
@@ -22125,7 +21971,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the MagneticInductionUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the MagneticInductionUom xsd enumeration.")]
@@ -22159,7 +22004,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the LengthPerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the LengthPerLengthUom xsd enumeration.")]
@@ -22229,7 +22073,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the IlluminanceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the IlluminanceUom xsd enumeration.")]
@@ -22256,7 +22099,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the ForcePerVolumeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the ForcePerVolumeUom xsd enumeration.")]
@@ -22351,7 +22193,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the ForcePerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the ForcePerLengthUom xsd enumeration.")]
@@ -22431,7 +22272,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the ForceUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the ForceUom xsd enumeration.")]
@@ -22509,7 +22349,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the EquivalentPerMassUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the EquivalentPerMassUom xsd enumeration.")]
@@ -22534,7 +22373,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the ElectricPotentialUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the ElectricPotentialUom xsd enumeration.")]
@@ -22564,7 +22402,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the ElectricCurrentUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the ElectricCurrentUom xsd enumeration.")]
@@ -22602,7 +22439,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the DynamicViscosityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the DynamicViscosityUom xsd enumeration.")]
@@ -22660,7 +22496,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the DimensionlessUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the DimensionlessUom xsd enumeration.")]
@@ -22695,7 +22530,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the DensityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the DensityUom xsd enumeration.")]
@@ -22849,7 +22683,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the CompressibilityUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the CompressibilityUom xsd enumeration.")]
@@ -22889,7 +22722,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the AreaPerAreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the AreaPerAreaUom xsd enumeration.")]
@@ -22928,7 +22760,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the AreaUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the AreaUom xsd enumeration.")]
@@ -22990,7 +22821,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the AnglePerTimeUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the AnglePerTimeUom xsd enumeration.")]
@@ -23034,7 +22864,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the AnglePerLengthUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the AnglePerLengthUom xsd enumeration.")]
@@ -23079,7 +22908,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the AccelerationLinearUom xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the AccelerationLinearUom xsd enumeration.")]
@@ -23120,7 +22948,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the ItemState xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the ItemState xsd enumeration.")]
@@ -23146,7 +22973,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the PrimitiveType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the PrimitiveType xsd enumeration.")]
@@ -23220,7 +23046,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the LogIndexType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the LogIndexType xsd enumeration.")]
@@ -23262,7 +23087,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the PerfConveyanceMethod xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the PerfConveyanceMethod xsd enumeration.")]
@@ -23291,7 +23115,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the EventClassType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the EventClassType xsd enumeration.")]
@@ -23340,7 +23163,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the PhysicalStatus xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the PhysicalStatus xsd enumeration.")]
@@ -23362,7 +23184,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the PerforationStatus xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the PerforationStatus xsd enumeration.")]
@@ -23384,7 +23205,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the PerforationToolType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the PerforationToolType xsd enumeration.")]
@@ -23442,7 +23262,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the EquipmentType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the EquipmentType xsd enumeration.")]
@@ -24036,7 +23855,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the GradeType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the GradeType xsd enumeration.")]
@@ -24691,7 +24509,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the Coating xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the Coating xsd enumeration.")]
@@ -25094,7 +24911,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the GeologyType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the GeologyType xsd enumeration.")]
@@ -25112,7 +24928,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the BoreholeType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the BoreholeType xsd enumeration.")]
@@ -25138,7 +24953,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the CasingConnectionType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the CasingConnectionType xsd enumeration.")]
@@ -25161,7 +24975,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the OtherConnectionType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the OtherConnectionType xsd enumeration.")]
@@ -25181,7 +24994,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the RodConnectionType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the RodConnectionType xsd enumeration.")]
@@ -25218,7 +25030,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the TubingConnectionType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the TubingConnectionType xsd enumeration.")]
@@ -25263,7 +25074,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the ConnectionFormType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the ConnectionFormType xsd enumeration.")]
@@ -25293,7 +25103,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the ConnectionPosition xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the ConnectionPosition xsd enumeration.")]
@@ -25319,7 +25128,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the DownholeStringType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the DownholeStringType xsd enumeration.")]
@@ -25349,7 +25157,6 @@ namespace Energistics.DataAccess.COMPLETION100
         /// <summary>
         /// This class represents the SubStringType xsd enumeration.
         /// </summary>
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
         [System.SerializableAttribute()]
         [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.witsml.org/schemas/1series")]
         [Description("This class represents the SubStringType xsd enumeration.")]
