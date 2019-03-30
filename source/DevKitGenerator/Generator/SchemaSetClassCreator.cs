@@ -503,77 +503,77 @@ namespace Energistics.Generator
             }
 
             //If the type referred to isn't one of the xsd.exe generated types, don't rename it.
-            if(!t.Assembly.Equals(Assembly.GetExecutingAssembly()))
+            if (!t.Assembly.Equals(Assembly.GetExecutingAssembly()))
             {
                 return t.Name;
             }
 
-                string newName = t.Name;
-                newName = newName.Replace("obj_", "");
+            string newName = t.Name;
+            newName = newName.Replace("obj_", "");
 
-                newName = newName.Replace("cs_", "");
+            newName = newName.Replace("cs_", "");
 
-                newName = string.Format("{0}{1}", newName.Substring(0, 1).ToUpper(), newName.Substring(1, newName.Length - 1));
+            newName = string.Format("{0}{1}", newName.Substring(0, 1).ToUpper(), newName.Substring(1, newName.Length - 1));
 
-                // previous code from exxon only works for version 1.0 , not future code.
-                if (!t.FullName.Contains("RESQML2") && !t.FullName.Contains("WITSML2"))
+            // previous code from exxon only works for version 1.0 , not future code.
+            if (!t.FullName.Contains("RESQML2") && !t.FullName.Contains("WITSML2"))
+            {
+                //There are two trajectoryStation and wbGeometry types in WITSML.  The cs_trajectoryStation is used when the station is a component of a larger
+                //xml document.  The obj_trajectoryStation is used when the trajectory stations represent the top level object in the xml document.
+                //Since trajectory stations are normally a part of a obj_trajectory document, allow that one to use the base name.  Follow a similar pattern
+                //for wbGeometry.
+                if (t.Name.Equals("obj_trajectoryStation") || t.Name.Equals("obj_wbGeometry") || t.Name.Equals("secondDefiningParameter") || t.Name.Equals("cs_resqmlPropertyKind"))
                 {
-                    //There are two trajectoryStation and wbGeometry types in WITSML.  The cs_trajectoryStation is used when the station is a component of a larger
-                    //xml document.  The obj_trajectoryStation is used when the trajectory stations represent the top level object in the xml document.
-                    //Since trajectory stations are normally a part of a obj_trajectory document, allow that one to use the base name.  Follow a similar pattern
-                    //for wbGeometry.
-                    if (t.Name.Equals("obj_trajectoryStation") || t.Name.Equals("obj_wbGeometry") || t.Name.Equals("secondDefiningParameter") || t.Name.Equals("cs_resqmlPropertyKind"))
-                    {
-                        newName = string.Format("StandAlone{0}", newName);
-                    }
+                    newName = string.Format("StandAlone{0}", newName);
+                }
 
-                    //The type listed below have both a class with the given name and an enumeration describing the "type" of that object.  Append "Type" to the name
-                    //of the enumeration to give them unique names.
-                    if (t.IsEnum && (newName.Equals("SupportCraft") || newName.Equals("TubularComponent")))
-                    {
-                        newName = string.Format("{0}Type", newName);
-                    }
+                //The type listed below have both a class with the given name and an enumeration describing the "type" of that object.  Append "Type" to the name
+                //of the enumeration to give them unique names.
+                if (t.IsEnum && (newName.Equals("SupportCraft") || newName.Equals("TubularComponent")))
+                {
+                    newName = string.Format("{0}Type", newName);
+                }
 
-                    //Rename plural class names to from [ClassName]s to [ClassName]List.
-                    if (t.Name.EndsWith("s") && !t.Name.EndsWith("Class") && !t.Name.EndsWith("Status") && !t.Name.EndsWith("Analysis") && !t.Name.StartsWith("cs_") && !t.Name.EndsWith("Press") && !t.Name.Equals("obj_capServers") && !t.Name.Equals("obj_capClients") && !t.Name.Equals("obj_capPublishers") && !t.Name.Equals("obj_capSubscribers"))
-                    {
-                        newName = string.Format("{0}List", newName.Substring(0, newName.Length - 1));
-                    }
+                //Rename plural class names to from [ClassName]s to [ClassName]List.
+                if (t.Name.EndsWith("s") && !t.Name.EndsWith("Class") && !t.Name.EndsWith("Status") && !t.Name.EndsWith("Analysis") && !t.Name.StartsWith("cs_") && !t.Name.EndsWith("Press") && !t.Name.Equals("obj_capServers") && !t.Name.Equals("obj_capClients") && !t.Name.Equals("obj_capPublishers") && !t.Name.Equals("obj_capSubscribers"))
+                {
+                    newName = string.Format("{0}List", newName.Substring(0, newName.Length - 1));
+                }
 
+                //Rename 1 from the end of class names that are duplicated between PRODML and WITSML.
+                if (t.Name.EndsWith("1") && !t.Name.StartsWith("Item"))
+                {
+                    newName = newName.Substring(0, newName.Length - 1);
+                }
+
+                newName = newName.Replace("Wb", "Wellbore");
+
+                if (newName.Equals("Data"))
+                {
+                    newName = "LogCurveInfoData";
+                }
+            }
+            else
+            {
+                if (t.FullName.Contains("WITSML2"))
+                {
                     //Rename 1 from the end of class names that are duplicated between PRODML and WITSML.
                     if (t.Name.EndsWith("1") && !t.Name.StartsWith("Item"))
                     {
                         newName = newName.Substring(0, newName.Length - 1);
                     }
-
-                    newName = newName.Replace("Wb", "Wellbore");
-
-                    if (newName.Equals("Data"))
-                    {
-                        newName = "LogCurveInfoData";
-                    }
                 }
-                else
+
+                //RESQML2.0 there is two same name class declared SecondDefiningParameter.
+                if (!OnceRename)
                 {
-                    if (t.FullName.Contains("WITSML2"))
-                    {
-                        //Rename 1 from the end of class names that are duplicated between PRODML and WITSML.
-                        if (t.Name.EndsWith("1") && !t.Name.StartsWith("Item"))
+                    if (t.FullName.Contains("secondDefiningParameter"))
                         {
-                            newName = newName.Substring(0, newName.Length - 1);
-                        }
-                    }
-
-                    //RESQML2.0 there is two same name class declared SecondDefiningParameter.
-                    if (!OnceRename)
-                    {
-                        if (t.FullName.Contains("secondDefiningParameter"))
-                            {
-                                newName = newName.Replace("SecondDefiningParameter", "SecondDefParameter");
-                               // OnceRename = true;
-                            } 
-                    }
+                            newName = newName.Replace("SecondDefiningParameter", "SecondDefParameter");
+                           // OnceRename = true;
+                        } 
                 }
+            }
              
             return newName;
         }
@@ -874,6 +874,7 @@ namespace Energistics.Generator
         {
            return name.Substring(0,1).ToLower() + name.Substring(1, name.Length - 1);
         }
+
         /// <summary>
         /// Gets the body of a property. Handles properties that are part of a ordered sequence as well as
         /// the special "FieldSpecified" boolean flags.
@@ -927,7 +928,7 @@ namespace Energistics.Generator
                 sb.AppendLine();
              
                 sb.AppendLine("        private " + wrapperClassName + (IsNullable(attr.Type) ? "?" : String.Empty) + array + " " + privateFieldName + "; ");
-                sb.AppendLine("        private bool " + propertyName +" = false; ");
+                sb.AppendLine("        private bool " + propertyName + " = false; ");
                 sb.AppendLine();
 
                 //here we need to need the specified property.
@@ -1107,13 +1108,14 @@ namespace Energistics.Generator
                     {
                         xmlElementAttrTag = String.Format("[XmlElement(\"{0}\"", property.Name);
                     
-                    if (property.DeclaringType.Name.EndsWith("ChannelData") && property.Name == "Data")
-                    {
-                        xmlElementAttrTag += String.Format(", Type=typeof({0})", typeof(XmlCDataSection).Name);
+	                    if (property.DeclaringType.Name.EndsWith("ChannelData") && property.Name == "Data")
+	                    {
+	                        xmlElementAttrTag += String.Format(", Type=typeof({0})", typeof(XmlCDataSection).Name);
+	                    }
+
+                        xmlElementAttrTag += ")]";
                     }
 
-                    xmlElementAttrTag += ")]";
-                    }
                     return xmlElementAttrTag;
                 }
             }
