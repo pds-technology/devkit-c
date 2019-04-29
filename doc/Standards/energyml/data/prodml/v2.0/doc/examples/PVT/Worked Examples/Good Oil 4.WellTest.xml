@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WellTest xmlns="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" schemaVersion="v29" uuid="00000000-0000-0000-0001-420123456701" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../../../../xsd_schemas/WellTest.xsd">
+	<eml:Citation>
+		<eml:Title>Good Oil No. 4</eml:Title>
+		<eml:Originator>Exxon</eml:Originator>
+		<eml:Creation>1994-01-01T12:08:22-06:00</eml:Creation>
+		<eml:Format>xml</eml:Format>
+	</eml:Citation>  
+	<TestDate>1994-01-01T12:08:22-06:00</TestDate>
+	<TestType>rock and fluid characterization</TestType>	
+	<WellTestData  uid="water" xsi:type="WellTestInjectionTestData">
+	<InjectedFluid>water</InjectedFluid>
+	</WellTestData>
+</WellTest>

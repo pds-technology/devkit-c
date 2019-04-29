@@ -1,0 +1,377 @@
+<prodml:DasAcquisition  xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2" uuid="dc0e381a-094a-4fd2-ab89-dce867e3b99d" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/DasAcquisition.xsd">
+    <eml:Aliases authority="abc" >
+        <eml:Identifier>My Alias</eml:Identifier>
+    </eml:Aliases>
+    <eml:Citation >
+        <eml:Title>DAS Acquisition</eml:Title>
+        <eml:Originator>Energistics</eml:Originator>
+        <eml:Creation>2015-07-20T01:00:00+01:00</eml:Creation>
+        <eml:Format>Energistics</eml:Format>
+    </eml:Citation>
+    <eml:CustomData />
+    <eml:ExtensionNameValue >
+        <eml:Name>customInt</eml:Name>
+        <eml:Value>2</eml:Value>
+    </eml:ExtensionNameValue>
+    <prodml:AcquisitionId>dc0e381a-094a-4fd2-ab89-dce867e3b99d</prodml:AcquisitionId>
+    <prodml:AcquisitionDescription>Energistics DAS PRODML Acquisition Sample</prodml:AcquisitionDescription>
+    <prodml:OpticalPath >
+        <eml:ContentType>OpticalPath</eml:ContentType>
+        <eml:Title>Optical Path</eml:Title>
+        <eml:Uuid>bfd164f4-f9e3-41c0-a74e-372b69cc2a09</eml:Uuid>
+    </prodml:OpticalPath>
+    <prodml:DasInstrumentBox >
+        <eml:ContentType>InstrumentBox</eml:ContentType>
+        <eml:Title>Instrument Box</eml:Title>
+        <eml:Uuid>df9447a1-8c6b-4634-88eb-ab07b41ac876</eml:Uuid>
+    </prodml:DasInstrumentBox>
+	<prodml:FacilityId>ABC facility</prodml:FacilityId>
+    <prodml:VendorCode >
+        <prodml:Name>ABCDE</prodml:Name>
+        <prodml:Role >operator</prodml:Role>
+        <prodml:Role >owner</prodml:Role>
+        <prodml:Alias />
+        <prodml:Address uid="main">
+            <prodml:Name>Wyle E Coyote</prodml:Name>
+            <prodml:Street>Suite 2100</prodml:Street>
+            <prodml:Street>515 Congress Avenue</prodml:Street>
+            <prodml:City>Austin</prodml:City>
+            <prodml:Country>USA</prodml:Country>
+            <prodml:County>Texas</prodml:County>
+            <prodml:PostalCode>78701</prodml:PostalCode>
+            <prodml:State>Texas</prodml:State>
+            <prodml:Province>Texas</prodml:Province>
+        </prodml:Address>
+        <prodml:PhoneNumber  type="voice"></prodml:PhoneNumber>
+        <prodml:Email />
+        <prodml:AssociatedWith></prodml:AssociatedWith>
+        <prodml:Contact></prodml:Contact>
+        <prodml:PersonName >
+            <prodml:First>Wyle</prodml:First>
+            <prodml:Middle>E</prodml:Middle>
+            <prodml:Last>Coyote</prodml:Last>
+            <prodml:Suffix>Esq.</prodml:Suffix>
+            <prodml:Suffix>PhD.</prodml:Suffix>
+        </prodml:PersonName>
+    </prodml:VendorCode>
+    <prodml:PulseRate  uom="Hz">50.0</prodml:PulseRate>
+    <prodml:PulseWidth  uom="ns">8.0</prodml:PulseWidth>
+    <prodml:GaugeLength  uom="m">40.0</prodml:GaugeLength>
+    <prodml:SpatialSamplingInterval  uom="m">5.0</prodml:SpatialSamplingInterval>
+    <prodml:MinimumFrequency  uom="Hz">0.5</prodml:MinimumFrequency>
+    <prodml:MaximumFrequency  uom="Hz">25.0</prodml:MaximumFrequency>
+    <prodml:NumberOfLoci>101</prodml:NumberOfLoci>
+    <prodml:StartLocusIndex>0</prodml:StartLocusIndex>
+    <prodml:MeasurementStartTime>2015-07-20T01:23:45.678000+01:00</prodml:MeasurementStartTime>
+    <prodml:TriggeredMeasurement>true</prodml:TriggeredMeasurement>
+    <prodml:Raw  uuid="dadd1266-3ce9-43e4-a1d6-a1fecb00e295">
+        <prodml:RawDataUnit>V</prodml:RawDataUnit>
+        <prodml:OutputDataRate  uom="Hz">50</prodml:OutputDataRate>
+        <prodml:StartLocusIndex>0</prodml:StartLocusIndex>
+        <prodml:NumberOfLoci>101</prodml:NumberOfLoci>
+        <prodml:RawData >
+            <prodml:Dimensions>time</prodml:Dimensions>
+            <prodml:Dimensions>locus</prodml:Dimensions>
+            <prodml:RawDataArray xsi:type="eml:DoubleExternalArray">
+                <eml:Values >
+                    <eml:ExternalFileProxy xsi:type="prodml:DasExternalDatasetPart">
+                        <eml:Count>3838</eml:Count>
+                        <eml:PathInExternalFile>/Acquisition/Raw/RawData</eml:PathInExternalFile>
+                        <eml:StartIndex>37</eml:StartIndex>
+                        <eml:EpcExternalPartReference >
+                            <eml:ContentType>application/x-prodml+xml;version=2.0;type=EpcExternalPartReference</eml:ContentType>
+                            <eml:Title>Hdf Proxy</eml:Title>
+                            <eml:Uuid>602735d9-0ebb-41e4-99c5-281582916805</eml:Uuid>
+                        </eml:EpcExternalPartReference>
+                        <prodml:PartStartTime>2015-07-20T01:23:46.418000+01:00</prodml:PartStartTime>
+                        <prodml:PartEndTime>2015-07-20T01:23:46.508000+01:00</prodml:PartEndTime>
+                    </eml:ExternalFileProxy>
+                    <eml:ExternalFileProxy xsi:type="prodml:DasExternalDatasetPart">
+                        <eml:Count>3737</eml:Count>
+                        <eml:PathInExternalFile>/Acquisition/Raw/RawData</eml:PathInExternalFile>
+                        <eml:StartIndex>0</eml:StartIndex>
+                        <eml:EpcExternalPartReference >
+                            <eml:ContentType>application/x-prodml+xml;version=2.0;type=EpcExternalPartReference</eml:ContentType>
+                            <eml:Title>Hdf Proxy</eml:Title>
+                            <eml:Uuid>80a1024d-7547-4f75-8927-a2785022c587</eml:Uuid>
+                        </eml:EpcExternalPartReference>
+                        <prodml:PartStartTime>2015-07-20T01:23:45.678000+01:00</prodml:PartStartTime>
+                        <prodml:PartEndTime>2015-07-20T01:23:46.398000+01:00</prodml:PartEndTime>
+                    </eml:ExternalFileProxy>
+                </eml:Values>
+            </prodml:RawDataArray>
+        </prodml:RawData>
+        <prodml:RawDataTime >
+            <prodml:StartTime>2015-07-20T01:23:45.678000+01:00</prodml:StartTime>
+            <prodml:EndTime>2015-07-20T01:23:46.508000+01:00</prodml:EndTime>
+            <prodml:TimeArray>
+                <eml:NullValue>-1</eml:NullValue>
+                <eml:Values >
+                    <eml:ExternalFileProxy xsi:type="prodml:DasExternalDatasetPart">
+                        <eml:Count>38</eml:Count>
+                        <eml:PathInExternalFile>/Acquisition/Raw/RawDataTime</eml:PathInExternalFile>
+                        <eml:StartIndex>37</eml:StartIndex>
+                        <eml:EpcExternalPartReference >
+                            <eml:ContentType>application/x-prodml+xml;version=2.0;type=EpcExternalPartReference</eml:ContentType>
+                            <eml:Title>Hdf Proxy</eml:Title>
+                            <eml:Uuid>602735d9-0ebb-41e4-99c5-281582916805</eml:Uuid>
+                        </eml:EpcExternalPartReference>
+                        <prodml:PartStartTime>2015-07-20T01:23:46.418000+01:00</prodml:PartStartTime>
+                        <prodml:PartEndTime>2015-07-20T01:23:46.508000+01:00</prodml:PartEndTime>
+                    </eml:ExternalFileProxy>
+                    <eml:ExternalFileProxy xsi:type="prodml:DasExternalDatasetPart">
+                        <eml:Count>37</eml:Count>
+                        <eml:PathInExternalFile>/Acquisition/Raw/RawDataTime</eml:PathInExternalFile>
+                        <eml:StartIndex>0</eml:StartIndex>
+                        <eml:EpcExternalPartReference >
+                            <eml:ContentType>application/x-prodml+xml;version=2.0;type=EpcExternalPartReference</eml:ContentType>
+                            <eml:Title>Hdf Proxy</eml:Title>
+                            <eml:Uuid>80a1024d-7547-4f75-8927-a2785022c587</eml:Uuid>
+                        </eml:EpcExternalPartReference>
+                        <prodml:PartStartTime>2015-07-20T01:23:45.678000+01:00</prodml:PartStartTime>
+                        <prodml:PartEndTime>2015-07-20T01:23:46.398000+01:00</prodml:PartEndTime>
+                    </eml:ExternalFileProxy>
+                </eml:Values>
+            </prodml:TimeArray>
+        </prodml:RawDataTime>
+        <prodml:RawDataTriggerTime >
+            <prodml:StartTime>2015-07-20T01:23:45.678000+01:00</prodml:StartTime>
+            <prodml:EndTime>2015-07-20T01:23:46.508000+01:00</prodml:EndTime>
+            <prodml:TimeArray>
+                <eml:NullValue>-1</eml:NullValue>
+                <eml:Values >
+                    <eml:ExternalFileProxy xsi:type="prodml:DasExternalDatasetPart">
+                        <eml:Count>1</eml:Count>
+                        <eml:PathInExternalFile>Acquisition/Raw/RawDataTriggerTime</eml:PathInExternalFile>
+                        <eml:StartIndex>0</eml:StartIndex>
+                        <eml:EpcExternalPartReference >
+                            <eml:ContentType>application/x-prodml+xml;version=2.0;type=EpcExternalPartReference</eml:ContentType>
+                            <eml:Title>Hdf Proxy</eml:Title>
+                            <eml:Uuid>80a1024d-7547-4f75-8927-a2785022c587</eml:Uuid>
+                        </eml:EpcExternalPartReference>
+                        <prodml:PartStartTime>2015-07-20T01:23:45.678000+01:00</prodml:PartStartTime>
+                        <prodml:PartEndTime>2015-07-20T01:23:46.508000+01:00</prodml:PartEndTime>
+                    </eml:ExternalFileProxy>
+                </eml:Values>
+            </prodml:TimeArray>
+        </prodml:RawDataTriggerTime>
+        <prodml:Custom/>
+    </prodml:Raw>
+    <prodml:Custom/>
+    <prodml:Calibration >
+        <prodml:CalibrationIndex>1</prodml:CalibrationIndex>
+        <prodml:NumberOfCalibrationPoints>4</prodml:NumberOfCalibrationPoints>
+        <prodml:CalibrationDescription>ABC well 1 surface cable</prodml:CalibrationDescription>
+        <prodml:CalibrationOpticalPathDistanceUnit>m</prodml:CalibrationOpticalPathDistanceUnit>
+        <prodml:CalibrationFacilityLengthUnit>m</prodml:CalibrationFacilityLengthUnit>
+        <prodml:FacilityName>ABC Well 1 Surface Cable</prodml:FacilityName>
+        <prodml:FacilityKind>generic</prodml:FacilityKind>
+        <prodml:CalibrationDataPoints >
+            <prodml:CalibrationLocusIndex>0</prodml:CalibrationLocusIndex>
+            <prodml:CalibrationOpticalPathDistance  uom="m">5.00</prodml:CalibrationOpticalPathDistance>
+            <prodml:CalibrationFacilityLength  uom="m">5.00</prodml:CalibrationFacilityLength>
+            <prodml:CalibrationType>locus calibration</prodml:CalibrationType>
+        </prodml:CalibrationDataPoints>
+        <prodml:CalibrationDataPoints >
+            <prodml:CalibrationLocusIndex>1</prodml:CalibrationLocusIndex>
+            <prodml:CalibrationOpticalPathDistance  uom="m">10.00</prodml:CalibrationOpticalPathDistance>
+            <prodml:CalibrationFacilityLength  uom="m">10.00</prodml:CalibrationFacilityLength>
+            <prodml:CalibrationType>locus calibration</prodml:CalibrationType>
+        </prodml:CalibrationDataPoints>
+        <prodml:CalibrationDataPoints >
+            <prodml:CalibrationLocusIndex>4</prodml:CalibrationLocusIndex>
+            <prodml:CalibrationOpticalPathDistance  uom="m">23.500</prodml:CalibrationOpticalPathDistance>
+            <prodml:CalibrationFacilityLength  uom="m">23.500</prodml:CalibrationFacilityLength>
+            <prodml:CalibrationType>tap test</prodml:CalibrationType>
+        </prodml:CalibrationDataPoints>
+        <prodml:CalibrationDataPoints >
+            <prodml:CalibrationLocusIndex>4</prodml:CalibrationLocusIndex>
+            <prodml:CalibrationOpticalPathDistance  uom="m">25.00</prodml:CalibrationOpticalPathDistance>
+            <prodml:CalibrationFacilityLength  uom="m">25.00</prodml:CalibrationFacilityLength>
+            <prodml:CalibrationType>locus calibration</prodml:CalibrationType>
+        </prodml:CalibrationDataPoints>
+    </prodml:Calibration>
+    <prodml:Calibration>
+        <prodml:CalibrationIndex>2</prodml:CalibrationIndex>
+        <prodml:NumberOfCalibrationPoints>5</prodml:NumberOfCalibrationPoints>
+        <prodml:CalibrationDescription>ABC well 1 wellbore</prodml:CalibrationDescription>
+        <prodml:CalibrationOpticalPathDistanceUnit>m</prodml:CalibrationOpticalPathDistanceUnit>
+        <prodml:CalibrationFacilityLengthUnit>m</prodml:CalibrationFacilityLengthUnit>
+        <prodml:CalibrationDatum>kelly bushing</prodml:CalibrationDatum>
+        <prodml:FacilityName>ABC Well 1 Wellbore</prodml:FacilityName>
+        <prodml:FacilityKind>well</prodml:FacilityKind>
+        <prodml:CalibrationDataPoints >
+            <prodml:CalibrationLocusIndex>5</prodml:CalibrationLocusIndex>
+            <prodml:CalibrationOpticalPathDistance  uom="m">30.00</prodml:CalibrationOpticalPathDistance>
+            <prodml:CalibrationFacilityLength  uom="m">4.907</prodml:CalibrationFacilityLength>
+            <prodml:CalibrationType>locus calibration</prodml:CalibrationType>
+        </prodml:CalibrationDataPoints>
+        <prodml:CalibrationDataPoints >
+            <prodml:CalibrationLocusIndex>6</prodml:CalibrationLocusIndex>
+            <prodml:CalibrationOpticalPathDistance  uom="m">35.00</prodml:CalibrationOpticalPathDistance>
+            <prodml:CalibrationFacilityLength  uom="m">9.814</prodml:CalibrationFacilityLength>
+            <prodml:CalibrationType>locus calibration</prodml:CalibrationType>
+        </prodml:CalibrationDataPoints>
+        <prodml:CalibrationDataPoints >
+            <prodml:CalibrationLocusIndex>99</prodml:CalibrationLocusIndex>
+            <prodml:CalibrationOpticalPathDistance  uom="m">500.00</prodml:CalibrationOpticalPathDistance>
+            <prodml:CalibrationFacilityLength  uom="m">466.143</prodml:CalibrationFacilityLength>
+            <prodml:CalibrationType>locus calibration</prodml:CalibrationType>
+        </prodml:CalibrationDataPoints>
+        <prodml:CalibrationDataPoints >
+            <prodml:CalibrationLocusIndex>100</prodml:CalibrationLocusIndex>
+            <prodml:CalibrationOpticalPathDistance  uom="m">505.00</prodml:CalibrationOpticalPathDistance>
+            <prodml:CalibrationFacilityLength  uom="m">471.050</prodml:CalibrationFacilityLength>
+            <prodml:CalibrationType>locus calibration</prodml:CalibrationType>
+        </prodml:CalibrationDataPoints>
+        <prodml:CalibrationDataPoints >
+            <prodml:CalibrationLocusIndex>100</prodml:CalibrationLocusIndex>
+            <prodml:CalibrationOpticalPathDistance  uom="m">12.430</prodml:CalibrationOpticalPathDistance>
+            <prodml:CalibrationFacilityLength  uom="m">-1</prodml:CalibrationFacilityLength>
+            <prodml:CalibrationType>last locus to end of fiber</prodml:CalibrationType>
+        </prodml:CalibrationDataPoints>
+    </prodml:Calibration>
+    <prodml:Processed >
+        <prodml:Fbe  uuid="5ce97c98-04e2-46b0-a72c-ccadb2d340b5">
+            <prodml:FbeDataUnit>V</prodml:FbeDataUnit>
+            <prodml:OutputDataRate  uom="Hz">10.0</prodml:OutputDataRate>
+            <prodml:StartLocusIndex>10</prodml:StartLocusIndex>
+            <prodml:NumberOfLoci>30</prodml:NumberOfLoci>
+            <prodml:SpatialSamplingInterval  uom="m">5</prodml:SpatialSamplingInterval>
+            <prodml:FilterType>BUTTERWORTH</prodml:FilterType>
+            <prodml:WindowSize>32</prodml:WindowSize>
+            <prodml:WindowOverlap>16</prodml:WindowOverlap>
+            <prodml:TransformType>FFT</prodml:TransformType>
+            <prodml:TransformSize>32</prodml:TransformSize>
+            <prodml:RawReference>dadd1266-3ce9-43e4-a1d6-a1fecb00e295</prodml:RawReference>
+            <prodml:SpectraReference>8fe98601-1b13-4a9a-9289-bd0fbf15ca61</prodml:SpectraReference>
+            <prodml:FbeData >
+				<prodml:FbeDataIndex>1</prodml:FbeDataIndex>
+                <prodml:StartFrequency  uom="Hz">0.5</prodml:StartFrequency>
+                <prodml:EndFrequency  uom="Hz">1.0</prodml:EndFrequency>
+                <prodml:Dimensions>time</prodml:Dimensions>
+                <prodml:Dimensions>locus</prodml:Dimensions>
+                <prodml:FbeDataArray xsi:type="eml:DoubleExternalArray">
+                    <eml:Values >
+                        <eml:ExternalFileProxy xsi:type="prodml:DasExternalDatasetPart">
+                            <eml:Count>450</eml:Count>
+                            <eml:PathInExternalFile>/Acquisition/Processed/Fbe/FbeData[1]</eml:PathInExternalFile>
+                            <eml:StartIndex>0</eml:StartIndex>
+                            <eml:EpcExternalPartReference >
+                                <eml:ContentType>application/x-prodml+xml;version=2.0;type=EpcExternalPartReference</eml:ContentType>
+                                <eml:Title>Hdf Proxy</eml:Title>
+                                <eml:Uuid>80a1024d-7547-4f75-8927-a2785022c587</eml:Uuid>
+                            </eml:EpcExternalPartReference>
+                            <prodml:PartStartTime>2015-07-20T01:23:45.678000+01:00</prodml:PartStartTime>
+                            <prodml:PartEndTime>2015-07-20T01:23:47.078000+01:00</prodml:PartEndTime>
+                        </eml:ExternalFileProxy>
+                    </eml:Values>
+                </prodml:FbeDataArray>
+            </prodml:FbeData>
+            <prodml:FbeData >
+				<prodml:FbeDataIndex>2</prodml:FbeDataIndex>
+                <prodml:StartFrequency  uom="Hz">1.0</prodml:StartFrequency>
+                <prodml:EndFrequency  uom="Hz">5.0</prodml:EndFrequency>
+                <prodml:Dimensions>time</prodml:Dimensions>
+                <prodml:Dimensions>locus</prodml:Dimensions>
+                <prodml:FbeDataArray xsi:type="eml:DoubleExternalArray">
+                    <eml:Values >
+                        <eml:ExternalFileProxy xsi:type="prodml:DasExternalDatasetPart">
+                            <eml:Count>450</eml:Count>
+                            <eml:PathInExternalFile>/Acquisition/Processed/Fbe/FbeData[2]</eml:PathInExternalFile>
+                            <eml:StartIndex>0</eml:StartIndex>
+                            <eml:EpcExternalPartReference >
+                                <eml:ContentType>application/x-prodml+xml;version=2.0;type=EpcExternalPartReference</eml:ContentType>
+                                <eml:Title>Hdf Proxy</eml:Title>
+                                <eml:Uuid>80a1024d-7547-4f75-8927-a2785022c587</eml:Uuid>
+                            </eml:EpcExternalPartReference>
+                            <prodml:PartStartTime>2015-07-20T01:23:45.678000+01:00</prodml:PartStartTime>
+                            <prodml:PartEndTime>2015-07-20T01:23:47.078000+01:00</prodml:PartEndTime>
+                        </eml:ExternalFileProxy>
+                    </eml:Values>
+                </prodml:FbeDataArray>
+            </prodml:FbeData>
+            <prodml:FbeDataTime >
+                <prodml:StartTime>2015-07-20T01:23:45.678000+01:00</prodml:StartTime>
+                <prodml:EndTime>2015-07-20T01:23:47.078000+01:00</prodml:EndTime>
+                <prodml:TimeArray>
+                    <eml:NullValue>-1</eml:NullValue>
+                    <eml:Values >
+                        <eml:ExternalFileProxy xsi:type="prodml:DasExternalDatasetPart">
+                            <eml:Count>15</eml:Count>
+                            <eml:PathInExternalFile>/Acquisition/Processed/Fbe/FbeDataTime</eml:PathInExternalFile>
+                            <eml:StartIndex>0</eml:StartIndex>
+                            <eml:EpcExternalPartReference >
+                                <eml:ContentType>application/x-prodml+xml;version=2.0;type=EpcExternalPartReference</eml:ContentType>
+                                <eml:Title>Hdf Proxy</eml:Title>
+                                <eml:Uuid>80a1024d-7547-4f75-8927-a2785022c587</eml:Uuid>
+                            </eml:EpcExternalPartReference>
+                            <prodml:PartStartTime>2015-07-20T01:23:45.678000+01:00</prodml:PartStartTime>
+                            <prodml:PartEndTime>2015-07-20T01:23:47.078000+01:00</prodml:PartEndTime>
+                        </eml:ExternalFileProxy>
+                    </eml:Values>
+                </prodml:TimeArray>
+            </prodml:FbeDataTime>
+            <prodml:Custom/>
+        </prodml:Fbe>
+        <prodml:Spectra  uuid="8fe98601-1b13-4a9a-9289-bd0fbf15ca61">
+            <prodml:SpectraDataUnit>Db</prodml:SpectraDataUnit>
+            <prodml:OutputDataRate  uom="Hz">3.125</prodml:OutputDataRate>
+            <prodml:StartLocusIndex>10</prodml:StartLocusIndex>
+            <prodml:NumberOfLoci>5</prodml:NumberOfLoci>
+            <prodml:SpatialSamplingInterval  uom="m">5</prodml:SpatialSamplingInterval>
+            <prodml:FilterType>NONE</prodml:FilterType>
+            <prodml:WindowSize>32</prodml:WindowSize>
+            <prodml:WindowOverlap>16</prodml:WindowOverlap>
+            <prodml:TransformType>FFT</prodml:TransformType>
+            <prodml:TransformSize>32</prodml:TransformSize>
+            <prodml:RawReference>dadd1266-3ce9-43e4-a1d6-a1fecb00e295</prodml:RawReference>
+            <prodml:FbeReference>5ce97c98-04e2-46b0-a72c-ccadb2d340b5</prodml:FbeReference>
+            <prodml:SpectraData >
+                <prodml:StartFrequency  uom="Hz">0.0</prodml:StartFrequency>
+                <prodml:EndFrequency  uom="Hz">50.0</prodml:EndFrequency>
+                <prodml:Dimensions>frequency</prodml:Dimensions>
+                <prodml:Dimensions>locus</prodml:Dimensions>
+                <prodml:Dimensions>time</prodml:Dimensions>
+                <prodml:SpectraDataArray xsi:type="eml:DoubleExternalArray">
+                    <eml:Values >
+                        <eml:ExternalFileProxy xsi:type="prodml:DasExternalDatasetPart">
+                            <eml:Count>480</eml:Count>
+                            <eml:PathInExternalFile>/Acquisition/Processed/Spectra/SpectraData</eml:PathInExternalFile>
+                            <eml:StartIndex>0</eml:StartIndex>
+                            <eml:EpcExternalPartReference >
+                                <eml:ContentType>application/x-prodml+xml;version=2.0;type=EpcExternalPartReference</eml:ContentType>
+                                <eml:Title>Hdf Proxy</eml:Title>
+                                <eml:Uuid>80a1024d-7547-4f75-8927-a2785022c587</eml:Uuid>
+                            </eml:EpcExternalPartReference>
+                            <prodml:PartStartTime>2015-07-20T01:23:45.678000+01:00</prodml:PartStartTime>
+                            <prodml:PartEndTime>2015-07-20T01:23:46.318000+01:00</prodml:PartEndTime>
+                        </eml:ExternalFileProxy>
+                    </eml:Values>
+                </prodml:SpectraDataArray>
+            </prodml:SpectraData>
+            <prodml:SpectraDataTime >
+                <prodml:StartTime>2015-07-20T01:23:45.678000+01:00</prodml:StartTime>
+                <prodml:EndTime>2015-07-20T01:23:46.318000+01:00</prodml:EndTime>
+                <prodml:TimeArray>
+                    <eml:NullValue>-1</eml:NullValue>
+                    <eml:Values >
+                        <eml:ExternalFileProxy xsi:type="prodml:DasExternalDatasetPart">
+                            <eml:Count>3</eml:Count>
+                            <eml:PathInExternalFile>/Acquisition/Processed/Spectra/SpectraDataTime</eml:PathInExternalFile>
+                            <eml:StartIndex>0</eml:StartIndex>
+                            <eml:EpcExternalPartReference >
+                                <eml:ContentType>application/x-prodml+xml;version=2.0;type=EpcExternalPartReference</eml:ContentType>
+                                <eml:Title>Hdf Proxy</eml:Title>
+                                <eml:Uuid>80a1024d-7547-4f75-8927-a2785022c587</eml:Uuid>
+                            </eml:EpcExternalPartReference>
+                            <prodml:PartStartTime>2015-07-20T01:23:45.678000+01:00</prodml:PartStartTime>
+                            <prodml:PartEndTime>2015-07-20T01:23:46.318000+01:00</prodml:PartEndTime>
+                        </eml:ExternalFileProxy>
+                    </eml:Values>
+                </prodml:TimeArray>
+            </prodml:SpectraDataTime>
+            <prodml:Custom/>
+        </prodml:Spectra>
+    </prodml:Processed>
+</prodml:DasAcquisition>

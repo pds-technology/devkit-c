@@ -1,0 +1,535 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2016r2sp1 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="xslt2"/>
+		<structure>
+			<children>
+				<component name="obj_timeSeriesStatistic" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-7" rbx="529" rby="646"/>
+					<data>
+						<root scrollposition="103">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.prodml.org/schemas/1series"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="timeSeriesStatistics" ns="1" expanded="1">
+										<entry name="version" type="attribute" outkey="26"/>
+										<entry name="timeSeriesStatistic" ns="1" expanded="1">
+											<entry name="uid" type="attribute" outkey="27"/>
+											<entry name="name" ns="1" outkey="28"/>
+											<entry name="key" ns="1" outkey="29">
+												<entry name="keyword" type="attribute" outkey="30"/>
+											</entry>
+											<entry name="unit" ns="1" outkey="31"/>
+											<entry name="measureClass" ns="1" outkey="32"/>
+											<entry name="comment" ns="1" outkey="33"/>
+											<entry name="dTimMin" ns="1" outkey="34" expanded="1">
+												<entry name="endpoint" type="attribute" outkey="35"/>
+											</entry>
+											<entry name="dTimMax" ns="1" outkey="36" expanded="1">
+												<entry name="endpoint" type="attribute" outkey="37"/>
+											</entry>
+											<entry name="minimum" ns="1" outkey="38"/>
+											<entry name="maximum" ns="1" outkey="39"/>
+											<entry name="sum" ns="1" outkey="40"/>
+											<entry name="mean" ns="1" outkey="41"/>
+											<entry name="median" ns="1" outkey="42"/>
+											<entry name="standardDeviation" ns="1" outkey="43"/>
+											<entry name="timeAtThreshold" ns="1" outkey="44">
+												<entry name="thresholdMinimum" ns="1" outkey="45">
+													<entry name="endpoint" type="attribute" outkey="46"/>
+												</entry>
+												<entry name="thresholdMaximum" ns="1" outkey="47">
+													<entry name="endpoint" type="attribute" outkey="48"/>
+												</entry>
+												<entry name="duration" ns="1" outkey="49"/>
+											</entry>
+											<entry name="customData" ns="1" outkey="50"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xsd_schemas\obj_timeSeriesStatistic.xsd" inputinstance="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xml_examples\timeSeriesStatistic.xml" outputinstance="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xsd_schemas\obj_timeSeriesStatistic.xml" instanceroot="{http://www.prodml.org/schemas/1series}timeSeriesStatistics"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="TimeSeriesStatistic" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="600" rbx="1225" rby="627"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.energistics.org/energyml/data/commonv2"/>
+									<namespace uid="http://www.energistics.org/energyml/data/prodmlv2"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="3" expanded="1">
+								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="TimeSeriesStatistic" ns="2" expanded="1">
+										<entry name="schemaVersion" type="attribute" inpkey="1"/>
+										<entry name="uuid" type="attribute" inpkey="2"/>
+										<entry name="Citation" ns="1">
+											<entry name="Title" ns="1" inpkey="3"/>
+										</entry>
+										<entry name="CustomData" ns="1" inpkey="4"/>
+										<entry name="Key" ns="2" inpkey="5">
+											<entry name="keyword" type="attribute" inpkey="6"/>
+										</entry>
+										<entry name="Unit" ns="2" inpkey="7"/>
+										<entry name="MeasureClass" ns="2" inpkey="8"/>
+										<entry name="Comment" ns="2" inpkey="9"/>
+										<entry name="DTimMin" ns="2" inpkey="10" expanded="1">
+											<entry name="endpoint" type="attribute" inpkey="11"/>
+										</entry>
+										<entry name="DTimMax" ns="2" inpkey="12">
+											<entry name="endpoint" type="attribute" inpkey="13"/>
+										</entry>
+										<entry name="Minimum" ns="2" inpkey="14"/>
+										<entry name="Maximum" ns="2" inpkey="15"/>
+										<entry name="Sum" ns="2" inpkey="16"/>
+										<entry name="Mean" ns="2" inpkey="17"/>
+										<entry name="Median" ns="2" inpkey="18"/>
+										<entry name="StandardDeviation" ns="2" inpkey="19"/>
+										<entry name="TimeAtThreshold" ns="2" inpkey="20">
+											<entry name="ThresholdMinimum" ns="2" inpkey="21">
+												<entry name="endpoint" type="attribute" inpkey="22"/>
+											</entry>
+											<entry name="ThresholdMaximum" ns="2" inpkey="23">
+												<entry name="endpoint" type="attribute" inpkey="24"/>
+											</entry>
+											<entry name="Duration" ns="2" inpkey="25"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\..\xsd_schemas\TimeSeriesStatistic.xsd" outputinstance="..\..\..\xml_examples\TimeSeriesStatistic.xml" instanceroot="{http://www.energistics.org/energyml/data/prodmlv2}TimeSeriesStatistic"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="51">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="52">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="26">
+						<edges>
+							<edge vertexkey="1" edgekey="53"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="27">
+						<edges>
+							<edge vertexkey="2" edgekey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="3" edgekey="55"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="29">
+						<edges>
+							<edge vertexkey="5" edgekey="56"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="30">
+						<edges>
+							<edge vertexkey="6" edgekey="57"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="7" edgekey="58"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="32">
+						<edges>
+							<edge vertexkey="8" edgekey="59"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="33">
+						<edges>
+							<edge vertexkey="9" edgekey="60"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="10" edgekey="76"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="35">
+						<edges>
+							<edge vertexkey="11" edgekey="62"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="36">
+						<edges>
+							<edge vertexkey="12" edgekey="63"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="13" edgekey="64"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="38">
+						<edges>
+							<edge vertexkey="14" edgekey="65"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="39">
+						<edges>
+							<edge vertexkey="15" edgekey="66"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="16" edgekey="67"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="41">
+						<edges>
+							<edge vertexkey="17" edgekey="68"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="42">
+						<edges>
+							<edge vertexkey="18" edgekey="69"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="43">
+						<edges>
+							<edge vertexkey="19" edgekey="70"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="44">
+						<edges>
+							<edge vertexkey="20" edgekey="71"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="45">
+						<edges>
+							<edge vertexkey="21" edgekey="72"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="46">
+						<edges>
+							<edge vertexkey="22" edgekey="73"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="47">
+						<edges>
+							<edge vertexkey="23" edgekey="74"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="48">
+						<edges>
+							<edge vertexkey="24" edgekey="75"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="25" edgekey="52"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="50">
+						<edges>
+							<edge vertexkey="4" edgekey="51"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2016r2sp1 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="xslt2"/>
+		<structure>
+			<children>
+				<component name="obj_timeSeriesStatistic" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-7" rbx="529" rby="646"/>
+					<data>
+						<root scrollposition="103">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.prodml.org/schemas/1series"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="timeSeriesStatistics" ns="1" expanded="1">
+										<entry name="version" type="attribute" outkey="26"/>
+										<entry name="timeSeriesStatistic" ns="1" expanded="1">
+											<entry name="uid" type="attribute" outkey="27"/>
+											<entry name="name" ns="1" outkey="28"/>
+											<entry name="key" ns="1" outkey="29">
+												<entry name="keyword" type="attribute" outkey="30"/>
+											</entry>
+											<entry name="unit" ns="1" outkey="31"/>
+											<entry name="measureClass" ns="1" outkey="32"/>
+											<entry name="comment" ns="1" outkey="33"/>
+											<entry name="dTimMin" ns="1" outkey="34" expanded="1">
+												<entry name="endpoint" type="attribute" outkey="35"/>
+											</entry>
+											<entry name="dTimMax" ns="1" outkey="36" expanded="1">
+												<entry name="endpoint" type="attribute" outkey="37"/>
+											</entry>
+											<entry name="minimum" ns="1" outkey="38"/>
+											<entry name="maximum" ns="1" outkey="39"/>
+											<entry name="sum" ns="1" outkey="40"/>
+											<entry name="mean" ns="1" outkey="41"/>
+											<entry name="median" ns="1" outkey="42"/>
+											<entry name="standardDeviation" ns="1" outkey="43"/>
+											<entry name="timeAtThreshold" ns="1" outkey="44">
+												<entry name="thresholdMinimum" ns="1" outkey="45">
+													<entry name="endpoint" type="attribute" outkey="46"/>
+												</entry>
+												<entry name="thresholdMaximum" ns="1" outkey="47">
+													<entry name="endpoint" type="attribute" outkey="48"/>
+												</entry>
+												<entry name="duration" ns="1" outkey="49"/>
+											</entry>
+											<entry name="customData" ns="1" outkey="50"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xsd_schemas\obj_timeSeriesStatistic.xsd" inputinstance="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xml_examples\timeSeriesStatistic.xml" outputinstance="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xsd_schemas\obj_timeSeriesStatistic.xml" instanceroot="{http://www.prodml.org/schemas/1series}timeSeriesStatistics"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="TimeSeriesStatistic" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="600" rbx="1225" rby="627"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.energistics.org/energyml/data/commonv2"/>
+									<namespace uid="http://www.energistics.org/energyml/data/prodmlv2"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="3" expanded="1">
+								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="TimeSeriesStatistic" ns="2" expanded="1">
+										<entry name="schemaVersion" type="attribute" inpkey="1"/>
+										<entry name="uuid" type="attribute" inpkey="2"/>
+										<entry name="Citation" ns="1">
+											<entry name="Title" ns="1" inpkey="3"/>
+										</entry>
+										<entry name="CustomData" ns="1" inpkey="4"/>
+										<entry name="Key" ns="2" inpkey="5">
+											<entry name="keyword" type="attribute" inpkey="6"/>
+										</entry>
+										<entry name="Unit" ns="2" inpkey="7"/>
+										<entry name="MeasureClass" ns="2" inpkey="8"/>
+										<entry name="Comment" ns="2" inpkey="9"/>
+										<entry name="DTimMin" ns="2" inpkey="10" expanded="1">
+											<entry name="endpoint" type="attribute" inpkey="11"/>
+										</entry>
+										<entry name="DTimMax" ns="2" inpkey="12">
+											<entry name="endpoint" type="attribute" inpkey="13"/>
+										</entry>
+										<entry name="Minimum" ns="2" inpkey="14"/>
+										<entry name="Maximum" ns="2" inpkey="15"/>
+										<entry name="Sum" ns="2" inpkey="16"/>
+										<entry name="Mean" ns="2" inpkey="17"/>
+										<entry name="Median" ns="2" inpkey="18"/>
+										<entry name="StandardDeviation" ns="2" inpkey="19"/>
+										<entry name="TimeAtThreshold" ns="2" inpkey="20">
+											<entry name="ThresholdMinimum" ns="2" inpkey="21">
+												<entry name="endpoint" type="attribute" inpkey="22"/>
+											</entry>
+											<entry name="ThresholdMaximum" ns="2" inpkey="23">
+												<entry name="endpoint" type="attribute" inpkey="24"/>
+											</entry>
+											<entry name="Duration" ns="2" inpkey="25"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\..\xsd_schemas\TimeSeriesStatistic.xsd" outputinstance="..\..\..\xml_examples\TimeSeriesStatistic.xml" instanceroot="{http://www.energistics.org/energyml/data/prodmlv2}TimeSeriesStatistic"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="51">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="52">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="26">
+						<edges>
+							<edge vertexkey="1" edgekey="53"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="27">
+						<edges>
+							<edge vertexkey="2" edgekey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="3" edgekey="55"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="29">
+						<edges>
+							<edge vertexkey="5" edgekey="56"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="30">
+						<edges>
+							<edge vertexkey="6" edgekey="57"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="7" edgekey="58"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="32">
+						<edges>
+							<edge vertexkey="8" edgekey="59"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="33">
+						<edges>
+							<edge vertexkey="9" edgekey="60"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="10" edgekey="76"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="35">
+						<edges>
+							<edge vertexkey="11" edgekey="62"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="36">
+						<edges>
+							<edge vertexkey="12" edgekey="63"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="13" edgekey="64"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="38">
+						<edges>
+							<edge vertexkey="14" edgekey="65"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="39">
+						<edges>
+							<edge vertexkey="15" edgekey="66"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="16" edgekey="67"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="41">
+						<edges>
+							<edge vertexkey="17" edgekey="68"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="42">
+						<edges>
+							<edge vertexkey="18" edgekey="69"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="43">
+						<edges>
+							<edge vertexkey="19" edgekey="70"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="44">
+						<edges>
+							<edge vertexkey="20" edgekey="71"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="45">
+						<edges>
+							<edge vertexkey="21" edgekey="72"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="46">
+						<edges>
+							<edge vertexkey="22" edgekey="73"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="47">
+						<edges>
+							<edge vertexkey="23" edgekey="74"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="48">
+						<edges>
+							<edge vertexkey="24" edgekey="75"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="25" edgekey="52"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="50">
+						<edges>
+							<edge vertexkey="4" edgekey="51"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
+>>>>>>> 31ed9b747eac7e4dce3c70863641adfa2051b5dd

@@ -18,6 +18,30 @@ namespace Energistics.Generator.RESQML200 {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractCitedDataObject))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractResqmlDataObject))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_MdDatum))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GlobalChronostratigraphicColumn))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTechnicalFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSeismicSurveyFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLatticeFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineSetFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLatticeSetFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_WellboreFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FrontierFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeologicFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_OrganizationFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_BoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TectonicBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeneticBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FluidBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeologicUnitFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeobodyFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StratigraphicUnitFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_RockFluidUnitFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TimeSeries))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_LocalDepth3dCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_LocalTime3dCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractProperty))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractValuesProperty))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_CategoricalProperty))]
@@ -83,30 +107,6 @@ namespace Energistics.Generator.RESQML200 {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StratigraphicColumnRankInterpretation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StructuralOrganizationInterpretation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_RockFluidOrganizationInterpretation))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GlobalChronostratigraphicColumn))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTechnicalFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSeismicSurveyFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLatticeFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineSetFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLatticeSetFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_WellboreFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FrontierFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeologicFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_OrganizationFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_BoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TectonicBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeneticBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FluidBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeologicUnitFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeobodyFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StratigraphicUnitFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_RockFluidUnitFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TimeSeries))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_LocalDepth3dCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_LocalTime3dCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_EpcExternalPartReference))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrs))]
@@ -363,171 +363,35 @@ namespace Energistics.Generator.RESQML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public partial class PropertyKindFacet {
+    public partial class ChronostratigraphicRank {
         
-        private Facet facetField;
+        private string nameField;
         
-        private string valueField;
+        private DataObjectReference[] containsField;
         
         /// <remarks/>
-        /// <summary>Facet of the property kind (see the enumeration)</summary>
+        /// <summary>Name of the chrono rank such as "epoch, era, ..."</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Facet of the property kind (see the enumeration)")]
-        public Facet Facet {
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
+        [System.ComponentModel.DescriptionAttribute("Name of the chrono rank such as \"epoch, era, ...\"")]
+        public string Name {
             get {
-                return this.facetField;
+                return this.nameField;
             }
             set {
-                this.facetField = value;
+                this.nameField = value;
             }
         }
         
         /// <remarks/>
-        /// <summary>Property facet value.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("Contains")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Property facet value.")]
-        public string Value {
+        public DataObjectReference[] Contains {
             get {
-                return this.valueField;
+                return this.containsField;
             }
             set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public enum Facet {
-        
-        /// <remarks/>
-        conditions,
-        
-        /// <remarks/>
-        direction,
-        
-        /// <remarks/>
-        netgross,
-        
-        /// <remarks/>
-        qualifier,
-        
-        /// <remarks/>
-        statistics,
-        
-        /// <remarks/>
-        what,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public partial class PatchOfValues {
-        
-        private string representationPatchIndexField;
-        
-        private AbstractValueArray valuesField;
-        
-        /// <remarks/>
-        /// <summary>Patch index used to attach properties to a specific patch of the indexable elements.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeInteger")]
-        [System.ComponentModel.DescriptionAttribute("Patch index used to attach properties to a specific patch of the indexable elemen" +
-            "ts.")]
-        public string RepresentationPatchIndex {
-            get {
-                return this.representationPatchIndexField;
-            }
-            set {
-                this.representationPatchIndexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Values to be attached to the indexable elements.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Values to be attached to the indexable elements.")]
-        public AbstractValueArray Values {
-            get {
-                return this.valuesField;
-            }
-            set {
-                this.valuesField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractBooleanArray))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanArrayFromDiscretePropertyArray))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanHdf5Array))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanConstantArray))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanArrayFromIndexArray))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractIntegerArray))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerRangeArray))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerLatticeArray))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerHdf5Array))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerConstantArray))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerArrayFromBooleanMaskArray))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StringHdf5Array))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDoubleArray))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleHdf5Array))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleConstantArray))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleLatticeArray))]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public abstract partial class AbstractValueArray {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanArrayFromDiscretePropertyArray))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanHdf5Array))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanConstantArray))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanArrayFromIndexArray))]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public abstract partial class AbstractBooleanArray : AbstractValueArray {
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public partial class BooleanArrayFromDiscretePropertyArray : AbstractBooleanArray {
-        
-        private string valueField;
-        
-        private DataObjectReference propertyField;
-        
-        /// <remarks/>
-        /// <summary>Integer to match for the value to be considered true</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Integer to match for the value to be considered true")]
-        public string Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference Property {
-            get {
-                return this.propertyField;
-            }
-            set {
-                this.propertyField = value;
+                this.containsField = value;
             }
         }
     }
@@ -724,6 +588,340 @@ namespace Energistics.Generator.RESQML200 {
         
         /// <remarks/>
         proportional,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public partial class WitsmlWellboreReference {
+        
+        private DataObjectReference witsmlWellField;
+        
+        private DataObjectReference witsmlWellboreField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference WitsmlWell {
+            get {
+                return this.witsmlWellField;
+            }
+            set {
+                this.witsmlWellField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference WitsmlWellbore {
+            get {
+                return this.witsmlWellboreField;
+            }
+            set {
+                this.witsmlWellboreField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public partial class TimeSeriesParentage {
+        
+        private bool hasOverlapField;
+        
+        private TimeIndex parentTimeIndexField;
+        
+        /// <remarks/>
+        /// <summary>Used to indicate that a time series overlaps with its parent time series, e.g., as may be done for simulation studies, where the end state of one calculation is the initial state of the next.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Used to indicate that a time series overlaps with its parent time series, e.g., a" +
+            "s may be done for simulation studies, where the end state of one calculation is " +
+            "the initial state of the next.")]
+        public bool HasOverlap {
+            get {
+                return this.hasOverlapField;
+            }
+            set {
+                this.hasOverlapField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public TimeIndex ParentTimeIndex {
+            get {
+                return this.parentTimeIndexField;
+            }
+            set {
+                this.parentTimeIndexField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public partial class TimeIndex {
+        
+        private string indexField;
+        
+        private DataObjectReference timeSeriesField;
+        
+        /// <remarks/>
+        /// <summary>The index of the time in the time series.</summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The index of the time in the time series.")]
+        public string Index {
+            get {
+                return this.indexField;
+            }
+            set {
+                this.indexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference TimeSeries {
+            get {
+                return this.timeSeriesField;
+            }
+            set {
+                this.timeSeriesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public partial class Timestamp {
+        
+        private System.DateTime dateTimeField;
+        
+        private long yearOffsetField;
+        
+        private bool yearOffsetFieldSpecified;
+        
+        /// <remarks/>
+        /// <summary>A date which can be represented according to the W3CDTF format.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("A date which can be represented according to the W3CDTF format.")]
+        public System.DateTime DateTime {
+            get {
+                return this.dateTimeField;
+            }
+            set {
+                this.dateTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Indicates that the dateTime attribute must be translated according to this value.</summary>
+        [System.ComponentModel.DescriptionAttribute("Indicates that the dateTime attribute must be translated according to this value." +
+            "")]
+        public long YearOffset {
+            get {
+                return this.yearOffsetField;
+            }
+            set {
+                this.yearOffsetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool YearOffsetSpecified {
+            get {
+                return this.yearOffsetFieldSpecified;
+            }
+            set {
+                this.yearOffsetFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public partial class PropertyKindFacet {
+        
+        private Facet facetField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        /// <summary>Facet of the property kind (see the enumeration)</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Facet of the property kind (see the enumeration)")]
+        public Facet Facet {
+            get {
+                return this.facetField;
+            }
+            set {
+                this.facetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Property facet value.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Property facet value.")]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public enum Facet {
+        
+        /// <remarks/>
+        conditions,
+        
+        /// <remarks/>
+        direction,
+        
+        /// <remarks/>
+        netgross,
+        
+        /// <remarks/>
+        qualifier,
+        
+        /// <remarks/>
+        statistics,
+        
+        /// <remarks/>
+        what,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public partial class PatchOfValues {
+        
+        private string representationPatchIndexField;
+        
+        private AbstractValueArray valuesField;
+        
+        /// <remarks/>
+        /// <summary>Patch index used to attach properties to a specific patch of the indexable elements.</summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeInteger")]
+        [System.ComponentModel.DescriptionAttribute("Patch index used to attach properties to a specific patch of the indexable elemen" +
+            "ts.")]
+        public string RepresentationPatchIndex {
+            get {
+                return this.representationPatchIndexField;
+            }
+            set {
+                this.representationPatchIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Values to be attached to the indexable elements.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Values to be attached to the indexable elements.")]
+        public AbstractValueArray Values {
+            get {
+                return this.valuesField;
+            }
+            set {
+                this.valuesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractBooleanArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanArrayFromDiscretePropertyArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanHdf5Array))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanConstantArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanArrayFromIndexArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractIntegerArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerRangeArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerLatticeArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerHdf5Array))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerConstantArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IntegerArrayFromBooleanMaskArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StringHdf5Array))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractDoubleArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleHdf5Array))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleConstantArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DoubleLatticeArray))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public abstract partial class AbstractValueArray {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanArrayFromDiscretePropertyArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanHdf5Array))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanConstantArray))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanArrayFromIndexArray))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public abstract partial class AbstractBooleanArray : AbstractValueArray {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public partial class BooleanArrayFromDiscretePropertyArray : AbstractBooleanArray {
+        
+        private string valueField;
+        
+        private DataObjectReference propertyField;
+        
+        /// <remarks/>
+        /// <summary>Integer to match for the value to be considered true</summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Integer to match for the value to be considered true")]
+        public string Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference Property {
+            get {
+                return this.propertyField;
+            }
+            set {
+                this.propertyField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -2922,43 +3120,6 @@ namespace Energistics.Generator.RESQML200 {
             }
             set {
                 this.localCrsField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public partial class TimeIndex {
-        
-        private string indexField;
-        
-        private DataObjectReference timeSeriesField;
-        
-        /// <remarks/>
-        /// <summary>The index of the time in the time series.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeInteger")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The index of the time in the time series.")]
-        public string Index {
-            get {
-                return this.indexField;
-            }
-            set {
-                this.indexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference TimeSeries {
-            get {
-                return this.timeSeriesField;
-            }
-            set {
-                this.timeSeriesField = value;
             }
         }
     }
@@ -7001,6 +7162,90 @@ namespace Energistics.Generator.RESQML200 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public partial class PlaneAngleMeasure {
+        
+        private PlaneAngleUom uomField;
+        
+        private double valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public PlaneAngleUom uom {
+            get {
+                return this.uomField;
+            }
+            set {
+                this.uomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public double Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum PlaneAngleUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("0.001 seca")]
+        Item0001seca,
+        
+        /// <remarks/>
+        ccgr,
+        
+        /// <remarks/>
+        cgr,
+        
+        /// <remarks/>
+        dega,
+        
+        /// <remarks/>
+        gon,
+        
+        /// <remarks/>
+        krad,
+        
+        /// <remarks/>
+        mila,
+        
+        /// <remarks/>
+        mina,
+        
+        /// <remarks/>
+        Mrad,
+        
+        /// <remarks/>
+        mrad,
+        
+        /// <remarks/>
+        rad,
+        
+        /// <remarks/>
+        rev,
+        
+        /// <remarks/>
+        seca,
+        
+        /// <remarks/>
+        urad,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
     public partial class LengthMeasure {
         
         private LengthUom uomField;
@@ -7713,251 +7958,6 @@ namespace Energistics.Generator.RESQML200 {
         
         /// <remarks/>
         includes,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public partial class ChronostratigraphicRank {
-        
-        private string nameField;
-        
-        private DataObjectReference[] containsField;
-        
-        /// <remarks/>
-        /// <summary>Name of the chrono rank such as "epoch, era, ..."</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DataAnnotations.StringLengthAttribute(64)]
-        [System.ComponentModel.DescriptionAttribute("Name of the chrono rank such as \"epoch, era, ...\"")]
-        public string Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Contains")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference[] Contains {
-            get {
-                return this.containsField;
-            }
-            set {
-                this.containsField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public partial class WitsmlWellboreReference {
-        
-        private DataObjectReference witsmlWellField;
-        
-        private DataObjectReference witsmlWellboreField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference WitsmlWell {
-            get {
-                return this.witsmlWellField;
-            }
-            set {
-                this.witsmlWellField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference WitsmlWellbore {
-            get {
-                return this.witsmlWellboreField;
-            }
-            set {
-                this.witsmlWellboreField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public partial class TimeSeriesParentage {
-        
-        private bool hasOverlapField;
-        
-        private TimeIndex parentTimeIndexField;
-        
-        /// <remarks/>
-        /// <summary>Used to indicate that a time series overlaps with its parent time series, e.g., as may be done for simulation studies, where the end state of one calculation is the initial state of the next.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Used to indicate that a time series overlaps with its parent time series, e.g., a" +
-            "s may be done for simulation studies, where the end state of one calculation is " +
-            "the initial state of the next.")]
-        public bool HasOverlap {
-            get {
-                return this.hasOverlapField;
-            }
-            set {
-                this.hasOverlapField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public TimeIndex ParentTimeIndex {
-            get {
-                return this.parentTimeIndexField;
-            }
-            set {
-                this.parentTimeIndexField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public partial class Timestamp {
-        
-        private System.DateTime dateTimeField;
-        
-        private long yearOffsetField;
-        
-        private bool yearOffsetFieldSpecified;
-        
-        /// <remarks/>
-        /// <summary>A date which can be represented according to the W3CDTF format.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("A date which can be represented according to the W3CDTF format.")]
-        public System.DateTime DateTime {
-            get {
-                return this.dateTimeField;
-            }
-            set {
-                this.dateTimeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Indicates that the dateTime attribute must be translated according to this value.</summary>
-        [System.ComponentModel.DescriptionAttribute("Indicates that the dateTime attribute must be translated according to this value." +
-            "")]
-        public long YearOffset {
-            get {
-                return this.yearOffsetField;
-            }
-            set {
-                this.yearOffsetField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool YearOffsetSpecified {
-            get {
-                return this.yearOffsetFieldSpecified;
-            }
-            set {
-                this.yearOffsetFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public partial class PlaneAngleMeasure {
-        
-        private PlaneAngleUom uomField;
-        
-        private double valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public PlaneAngleUom uom {
-            get {
-                return this.uomField;
-            }
-            set {
-                this.uomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public double Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum PlaneAngleUom {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("0.001 seca")]
-        Item0001seca,
-        
-        /// <remarks/>
-        ccgr,
-        
-        /// <remarks/>
-        cgr,
-        
-        /// <remarks/>
-        dega,
-        
-        /// <remarks/>
-        gon,
-        
-        /// <remarks/>
-        krad,
-        
-        /// <remarks/>
-        mila,
-        
-        /// <remarks/>
-        mina,
-        
-        /// <remarks/>
-        Mrad,
-        
-        /// <remarks/>
-        mrad,
-        
-        /// <remarks/>
-        rad,
-        
-        /// <remarks/>
-        rev,
-        
-        /// <remarks/>
-        seca,
-        
-        /// <remarks/>
-        urad,
     }
     
     /// <remarks/>
@@ -11966,6 +11966,30 @@ namespace Energistics.Generator.RESQML200 {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractResqmlDataObject))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_MdDatum))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GlobalChronostratigraphicColumn))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTechnicalFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSeismicSurveyFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLatticeFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineSetFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLatticeSetFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_WellboreFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FrontierFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeologicFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_OrganizationFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_BoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TectonicBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeneticBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FluidBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeologicUnitFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeobodyFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StratigraphicUnitFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_RockFluidUnitFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TimeSeries))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_LocalDepth3dCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_LocalTime3dCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractProperty))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractValuesProperty))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_CategoricalProperty))]
@@ -12031,30 +12055,6 @@ namespace Energistics.Generator.RESQML200 {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StratigraphicColumnRankInterpretation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StructuralOrganizationInterpretation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_RockFluidOrganizationInterpretation))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GlobalChronostratigraphicColumn))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTechnicalFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSeismicSurveyFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLatticeFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineSetFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLatticeSetFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_WellboreFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FrontierFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeologicFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_OrganizationFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_BoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TectonicBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeneticBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FluidBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeologicUnitFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeobodyFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StratigraphicUnitFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_RockFluidUnitFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TimeSeries))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_LocalDepth3dCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_LocalTime3dCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_EpcExternalPartReference))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VerticalCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectedCrs))]
@@ -12067,6 +12067,30 @@ namespace Energistics.Generator.RESQML200 {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_MdDatum))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GlobalChronostratigraphicColumn))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTechnicalFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSeismicSurveyFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLatticeFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineSetFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLatticeSetFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_WellboreFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FrontierFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeologicFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_OrganizationFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_BoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TectonicBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeneticBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FluidBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeologicUnitFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeobodyFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StratigraphicUnitFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_RockFluidUnitFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TimeSeries))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_LocalDepth3dCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_LocalTime3dCrs))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractProperty))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractValuesProperty))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_CategoricalProperty))]
@@ -12132,30 +12156,6 @@ namespace Energistics.Generator.RESQML200 {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StratigraphicColumnRankInterpretation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StructuralOrganizationInterpretation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_RockFluidOrganizationInterpretation))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GlobalChronostratigraphicColumn))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTechnicalFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSeismicSurveyFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLatticeFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineSetFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLatticeSetFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_WellboreFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FrontierFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeologicFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_OrganizationFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_BoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TectonicBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeneticBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FluidBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeologicUnitFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeobodyFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StratigraphicUnitFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_RockFluidUnitFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TimeSeries))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractLocal3dCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_LocalDepth3dCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_LocalTime3dCrs))]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12299,6 +12299,1011 @@ namespace Energistics.Generator.RESQML200 {
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("kickoff point")]
         kickoffpoint,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("GlobalChronostratigraphicColumn", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_GlobalChronostratigraphicColumn : AbstractResqmlDataObject {
+        
+        private ChronostratigraphicRank[] chronostratigraphicColumnComponentField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ChronostratigraphicColumnComponent")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public ChronostratigraphicRank[] ChronostratigraphicColumnComponent {
+            get {
+                return this.chronostratigraphicColumnComponentField;
+            }
+            set {
+                this.chronostratigraphicColumnComponentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTechnicalFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSeismicSurveyFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLatticeFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineSetFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLatticeSetFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_WellboreFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FrontierFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeologicFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_OrganizationFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_BoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TectonicBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeneticBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FluidBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeologicUnitFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeobodyFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StratigraphicUnitFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_RockFluidUnitFeature))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public abstract partial class AbstractFeature : AbstractResqmlDataObject {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSeismicSurveyFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLatticeFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineSetFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLatticeSetFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_WellboreFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FrontierFeature))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public abstract partial class AbstractTechnicalFeature : AbstractFeature {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLatticeFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineSetFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLatticeSetFeature))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public abstract partial class AbstractSeismicSurveyFeature : AbstractTechnicalFeature {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("SeismicLatticeFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_SeismicLatticeFeature : AbstractSeismicSurveyFeature {
+        
+        private string crosslineCountField;
+        
+        private string crosslineIndexIncrementField;
+        
+        private string firstCrosslineIndexField;
+        
+        private string firstInlineIndexField;
+        
+        private string inlineCountField;
+        
+        private string inlineIndexIncrementField;
+        
+        private SeismicLatticeSetFeature isPartOfField;
+        
+        /// <remarks/>
+        /// <summary>The count of crosslines in the 3D seismic survey.</summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The count of crosslines in the 3D seismic survey.")]
+        public string CrosslineCount {
+            get {
+                return this.crosslineCountField;
+            }
+            set {
+                this.crosslineCountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The constant index increment between two consecutive crosslines of the 3D seismic survey.</summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The constant index increment between two consecutive crosslines of the 3D seismic" +
+            " survey.")]
+        public string CrosslineIndexIncrement {
+            get {
+                return this.crosslineIndexIncrementField;
+            }
+            set {
+                this.crosslineIndexIncrementField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The index of the first crossline of the 3D seismic survey.</summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The index of the first crossline of the 3D seismic survey.")]
+        public string FirstCrosslineIndex {
+            get {
+                return this.firstCrosslineIndexField;
+            }
+            set {
+                this.firstCrosslineIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The index of the first inline of the 3D seismic survey.</summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The index of the first inline of the 3D seismic survey.")]
+        public string FirstInlineIndex {
+            get {
+                return this.firstInlineIndexField;
+            }
+            set {
+                this.firstInlineIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The count of inlines in the 3D seismic survey.</summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The count of inlines in the 3D seismic survey.")]
+        public string InlineCount {
+            get {
+                return this.inlineCountField;
+            }
+            set {
+                this.inlineCountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The constant index increment between two consecutive inlines of the 3D seismic survey.</summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The constant index increment between two consecutive inlines of the 3D seismic su" +
+            "rvey.")]
+        public string InlineIndexIncrement {
+            get {
+                return this.inlineIndexIncrementField;
+            }
+            set {
+                this.inlineIndexIncrementField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public SeismicLatticeSetFeature IsPartOf {
+            get {
+                return this.isPartOfField;
+            }
+            set {
+                this.isPartOfField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public partial class SeismicLatticeSetFeature : AbstractSeismicSurveyFeature {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("SeismicLineFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_SeismicLineFeature : AbstractSeismicSurveyFeature {
+        
+        private string firstTraceIndexField;
+        
+        private string traceCountField;
+        
+        private string traceIndexIncrementField;
+        
+        private DataObjectReference isPartOfField;
+        
+        /// <remarks/>
+        /// <summary>The index of the first trace of the seismic line.</summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The index of the first trace of the seismic line.")]
+        public string FirstTraceIndex {
+            get {
+                return this.firstTraceIndexField;
+            }
+            set {
+                this.firstTraceIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The count of traces in the seismic line.</summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The count of traces in the seismic line.")]
+        public string TraceCount {
+            get {
+                return this.traceCountField;
+            }
+            set {
+                this.traceCountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The constant index increment between two consecutive traces.</summary>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The constant index increment between two consecutive traces.")]
+        public string TraceIndexIncrement {
+            get {
+                return this.traceIndexIncrementField;
+            }
+            set {
+                this.traceIndexIncrementField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public DataObjectReference IsPartOf {
+            get {
+                return this.isPartOfField;
+            }
+            set {
+                this.isPartOfField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("SeismicLineSetFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_SeismicLineSetFeature : AbstractSeismicSurveyFeature {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("WellboreFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_WellboreFeature : AbstractTechnicalFeature {
+        
+        private WitsmlWellboreReference witsmlWellboreField;
+        
+        /// <remarks/>
+        public WitsmlWellboreReference WitsmlWellbore {
+            get {
+                return this.witsmlWellboreField;
+            }
+            set {
+                this.witsmlWellboreField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("FrontierFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_FrontierFeature : AbstractTechnicalFeature {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_OrganizationFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_BoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TectonicBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeneticBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FluidBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeologicUnitFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeobodyFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StratigraphicUnitFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_RockFluidUnitFeature))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public abstract partial class AbstractGeologicFeature : AbstractFeature {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("OrganizationFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_OrganizationFeature : AbstractGeologicFeature {
+        
+        private OrganizationKind organizationKindField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public OrganizationKind OrganizationKind {
+            get {
+                return this.organizationKindField;
+            }
+            set {
+                this.organizationKindField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public enum OrganizationKind {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("earth model")]
+        earthmodel,
+        
+        /// <remarks/>
+        fluid,
+        
+        /// <remarks/>
+        stratigraphic,
+        
+        /// <remarks/>
+        structural,
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TectonicBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeneticBoundaryFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FluidBoundaryFeature))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("BoundaryFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_BoundaryFeature : AbstractGeologicFeature {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("TectonicBoundaryFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_TectonicBoundaryFeature : obj_BoundaryFeature {
+        
+        private TectonicBoundaryKind tectonicBoundaryKindField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public TectonicBoundaryKind TectonicBoundaryKind {
+            get {
+                return this.tectonicBoundaryKindField;
+            }
+            set {
+                this.tectonicBoundaryKindField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public enum TectonicBoundaryKind {
+        
+        /// <remarks/>
+        fault,
+        
+        /// <remarks/>
+        fracture,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("GeneticBoundaryFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_GeneticBoundaryFeature : obj_BoundaryFeature {
+        
+        private GeneticBoundaryKind geneticBoundaryKindField;
+        
+        private Timestamp absoluteAgeField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public GeneticBoundaryKind GeneticBoundaryKind {
+            get {
+                return this.geneticBoundaryKindField;
+            }
+            set {
+                this.geneticBoundaryKindField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Timestamp AbsoluteAge {
+            get {
+                return this.absoluteAgeField;
+            }
+            set {
+                this.absoluteAgeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public enum GeneticBoundaryKind {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("geobody boundary")]
+        geobodyboundary,
+        
+        /// <remarks/>
+        horizon,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("FluidBoundaryFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_FluidBoundaryFeature : obj_BoundaryFeature {
+        
+        private FluidContact fluidContactField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public FluidContact FluidContact {
+            get {
+                return this.fluidContactField;
+            }
+            set {
+                this.fluidContactField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public enum FluidContact {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("free water contact")]
+        freewatercontact,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gas oil contact")]
+        gasoilcontact,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gas water contact")]
+        gaswatercontact,
+        
+        /// <remarks/>
+        seal,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("water oil contact")]
+        wateroilcontact,
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeobodyFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StratigraphicUnitFeature))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_RockFluidUnitFeature))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("GeologicUnitFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_GeologicUnitFeature : AbstractGeologicFeature {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("GeobodyFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_GeobodyFeature : obj_GeologicUnitFeature {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("StratigraphicUnitFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_StratigraphicUnitFeature : obj_GeologicUnitFeature {
+        
+        private DataObjectReference chronostratigraphicBottomField;
+        
+        private DataObjectReference chronostratigraphicTopField;
+        
+        /// <remarks/>
+        public DataObjectReference ChronostratigraphicBottom {
+            get {
+                return this.chronostratigraphicBottomField;
+            }
+            set {
+                this.chronostratigraphicBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public DataObjectReference ChronostratigraphicTop {
+            get {
+                return this.chronostratigraphicTopField;
+            }
+            set {
+                this.chronostratigraphicTopField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("RockFluidUnitFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_RockFluidUnitFeature : obj_GeologicUnitFeature {
+        
+        private Phase phaseField;
+        
+        private DataObjectReference fluidBoundaryBottomField;
+        
+        private DataObjectReference fluidBoundaryTopField;
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public Phase Phase {
+            get {
+                return this.phaseField;
+            }
+            set {
+                this.phaseField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference FluidBoundaryBottom {
+            get {
+                return this.fluidBoundaryBottomField;
+            }
+            set {
+                this.fluidBoundaryBottomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public DataObjectReference FluidBoundaryTop {
+            get {
+                return this.fluidBoundaryTopField;
+            }
+            set {
+                this.fluidBoundaryTopField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public enum Phase {
+        
+        /// <remarks/>
+        aquifer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("gas cap")]
+        gascap,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("oil column")]
+        oilcolumn,
+        
+        /// <remarks/>
+        seal,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("TimeSeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_TimeSeries : AbstractResqmlDataObject {
+        
+        private Timestamp[] timeField;
+        
+        private TimeSeriesParentage timeSeriesParentageField;
+        
+        /// <remarks/>
+        /// <summary>Individual times composing the series. The list ordering is used by the time index.</summary>
+        [System.Xml.Serialization.XmlElementAttribute("Time")]
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Individual times composing the series. The list ordering is used by the time inde" +
+            "x.")]
+        public Timestamp[] Time {
+            get {
+                return this.timeField;
+            }
+            set {
+                this.timeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TimeSeriesParentage TimeSeriesParentage {
+            get {
+                return this.timeSeriesParentageField;
+            }
+            set {
+                this.timeSeriesParentageField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_LocalDepth3dCrs))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_LocalTime3dCrs))]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public abstract partial class AbstractLocal3dCrs : AbstractResqmlDataObject {
+        
+        private double yOffsetField;
+        
+        private double zOffsetField;
+        
+        private PlaneAngleMeasure arealRotationField;
+        
+        private AxisOrder2d projectedAxisOrderField;
+        
+        private LengthUom projectedUomField;
+        
+        private LengthUom verticalUomField;
+        
+        private double xOffsetField;
+        
+        private bool zIncreasingDownwardField;
+        
+        private AbstractVerticalCrs verticalCrsField;
+        
+        private AbstractProjectedCrs projectedCrsField;
+        
+        /// <remarks/>
+        /// <summary>The Y offset of the origin of the local areal axes relative to the projected CRS origin. The value MUST represent the second axis of the coordinate system. The unit of measure is defined by the unit of measure for the projected 2D CRS.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The Y offset of the origin of the local areal axes relative to the projected CRS " +
+            "origin. The value MUST represent the second axis of the coordinate system. The u" +
+            "nit of measure is defined by the unit of measure for the projected 2D CRS.")]
+        public double YOffset {
+            get {
+                return this.yOffsetField;
+            }
+            set {
+                this.yOffsetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The Z offset of the origin of the local vertical axis relative to the vertical CRS origin. According to CRS type (depth or time) it corresponds to the depth or time datum  The value MUST represent the third axis of the coordinate system. The unit of measure is defined by the unit of measure for the vertical CRS.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"The Z offset of the origin of the local vertical axis relative to the vertical CRS origin. According to CRS type (depth or time) it corresponds to the depth or time datum  The value MUST represent the third axis of the coordinate system. The unit of measure is defined by the unit of measure for the vertical CRS.")]
+        public double ZOffset {
+            get {
+                return this.zOffsetField;
+            }
+            set {
+                this.zOffsetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The rotation of the local Y axis relative to the projected Y axis.   - A positive value indicates a clockwise rotation from the projected Y axis.   - A negative value indicates a counter-clockwise rotation form the projected Y axis.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The rotation of the local Y axis relative to the projected Y axis.   - A positive" +
+            " value indicates a clockwise rotation from the projected Y axis.   - A negative " +
+            "value indicates a counter-clockwise rotation form the projected Y axis.")]
+        public PlaneAngleMeasure ArealRotation {
+            get {
+                return this.arealRotationField;
+            }
+            set {
+                this.arealRotationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Defines the coordinate system axis order of the global projected CRS when the projected CRS is an unknown CRS, else it must be correspond to the axis order of the projected  CRS.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Defines the coordinate system axis order of the global projected CRS when the pro" +
+            "jected CRS is an unknown CRS, else it must be correspond to the axis order of th" +
+            "e projected  CRS.")]
+        public AxisOrder2d ProjectedAxisOrder {
+            get {
+                return this.projectedAxisOrderField;
+            }
+            set {
+                this.projectedAxisOrderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unit of measure of the associated Projected CRS. When the projected CRS is not unknown, it must be the same than the unit defined by the Projected CRS.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Unit of measure of the associated Projected CRS. When the projected CRS is not un" +
+            "known, it must be the same than the unit defined by the Projected CRS.")]
+        public LengthUom ProjectedUom {
+            get {
+                return this.projectedUomField;
+            }
+            set {
+                this.projectedUomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Unit of measure of the associated Vertical CRS. When the vertical CRS is not unknown, it must be the same than the unit defined by the Vertical CRS.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Unit of measure of the associated Vertical CRS. When the vertical CRS is not unkn" +
+            "own, it must be the same than the unit defined by the Vertical CRS.")]
+        public LengthUom VerticalUom {
+            get {
+                return this.verticalUomField;
+            }
+            set {
+                this.verticalUomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>The X location of the origin of the local areal axes relative to the projected CRS origin. The value MUST represent the first axis of the coordinate system. The unit of measure is defined by the unit of measure for the projected 2D CRS.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("The X location of the origin of the local areal axes relative to the projected CR" +
+            "S origin. The value MUST represent the first axis of the coordinate system. The " +
+            "unit of measure is defined by the unit of measure for the projected 2D CRS.")]
+        public double XOffset {
+            get {
+                return this.xOffsetField;
+            }
+            set {
+                this.xOffsetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        /// <summary>Indicates that Z values correspond to depth values and are increasing downward, as opposite to elevation values increasing upward. When the vertical CRS is not an unknown, it must correspond to the axis orientation of the vertical CRS.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Indicates that Z values correspond to depth values and are increasing downward, a" +
+            "s opposite to elevation values increasing upward. When the vertical CRS is not a" +
+            "n unknown, it must correspond to the axis orientation of the vertical CRS.")]
+        public bool ZIncreasingDownward {
+            get {
+                return this.zIncreasingDownwardField;
+            }
+            set {
+                this.zIncreasingDownwardField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public AbstractVerticalCrs VerticalCrs {
+            get {
+                return this.verticalCrsField;
+            }
+            set {
+                this.verticalCrsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        public AbstractProjectedCrs ProjectedCrs {
+            get {
+                return this.projectedCrsField;
+            }
+            set {
+                this.projectedCrsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum AxisOrder2d {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("easting northing")]
+        eastingnorthing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("northing easting")]
+        northingeasting,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("westing southing")]
+        westingsouthing,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("southing westing")]
+        southingwesting,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("northing westing")]
+        northingwesting,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("westing northing")]
+        westingnorthing,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("LocalDepth3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_LocalDepth3dCrs : AbstractLocal3dCrs {
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    [System.Xml.Serialization.XmlRootAttribute("LocalTime3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
+    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
+    public partial class obj_LocalTime3dCrs : AbstractLocal3dCrs {
+        
+        private TimeUom timeUomField;
+        
+        /// <remarks/>
+        /// <summary>Defines the unit of measure of the third (time) coordinates, for the geometries that refers to it.</summary>
+        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Defines the unit of measure of the third (time) coordinates, for the geometries t" +
+            "hat refers to it.")]
+        public TimeUom TimeUom {
+            get {
+                return this.timeUomField;
+            }
+            set {
+                this.timeUomField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
+    public enum TimeUom {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("1/2 ms")]
+        Item12ms,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("100 ka[t]")]
+        Item100kat,
+        
+        /// <remarks/>
+        a,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("a[t]")]
+        at,
+        
+        /// <remarks/>
+        ca,
+        
+        /// <remarks/>
+        cs,
+        
+        /// <remarks/>
+        d,
+        
+        /// <remarks/>
+        ds,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Ea[t]")]
+        Eat,
+        
+        /// <remarks/>
+        fa,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Ga[t]")]
+        Gat,
+        
+        /// <remarks/>
+        h,
+        
+        /// <remarks/>
+        hs,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("ka[t]")]
+        kat,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Ma[t]")]
+        Mat,
+        
+        /// <remarks/>
+        min,
+        
+        /// <remarks/>
+        ms,
+        
+        /// <remarks/>
+        na,
+        
+        /// <remarks/>
+        ns,
+        
+        /// <remarks/>
+        ps,
+        
+        /// <remarks/>
+        s,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Ta[t]")]
+        Tat,
+        
+        /// <remarks/>
+        us,
+        
+        /// <remarks/>
+        wk,
     }
     
     /// <remarks/>
@@ -18301,31 +19306,6 @@ namespace Energistics.Generator.RESQML200 {
     /// <remarks/>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public enum FluidContact {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("free water contact")]
-        freewatercontact,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gas oil contact")]
-        gasoilcontact,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gas water contact")]
-        gaswatercontact,
-        
-        /// <remarks/>
-        seal,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("water oil contact")]
-        wateroilcontact,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     public enum FluidMarker {
         
         /// <remarks/>
@@ -20545,26 +21525,6 @@ namespace Energistics.Generator.RESQML200 {
     
     /// <remarks/>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public enum Phase {
-        
-        /// <remarks/>
-        aquifer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("gas cap")]
-        gascap,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("oil column")]
-        oilcolumn,
-        
-        /// <remarks/>
-        seal,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
@@ -21116,966 +22076,6 @@ namespace Energistics.Generator.RESQML200 {
                 this.rockFluidUnitIndexField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("GlobalChronostratigraphicColumn", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_GlobalChronostratigraphicColumn : AbstractResqmlDataObject {
-        
-        private ChronostratigraphicRank[] chronostratigraphicColumnComponentField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ChronostratigraphicColumnComponent")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public ChronostratigraphicRank[] ChronostratigraphicColumnComponent {
-            get {
-                return this.chronostratigraphicColumnComponentField;
-            }
-            set {
-                this.chronostratigraphicColumnComponentField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractTechnicalFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSeismicSurveyFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLatticeFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineSetFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLatticeSetFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_WellboreFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FrontierFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractGeologicFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_OrganizationFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_BoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TectonicBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeneticBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FluidBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeologicUnitFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeobodyFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StratigraphicUnitFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_RockFluidUnitFeature))]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public abstract partial class AbstractFeature : AbstractResqmlDataObject {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AbstractSeismicSurveyFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLatticeFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineSetFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLatticeSetFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_WellboreFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FrontierFeature))]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public abstract partial class AbstractTechnicalFeature : AbstractFeature {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLatticeFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_SeismicLineSetFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SeismicLatticeSetFeature))]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public abstract partial class AbstractSeismicSurveyFeature : AbstractTechnicalFeature {
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("SeismicLatticeFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_SeismicLatticeFeature : AbstractSeismicSurveyFeature {
-        
-        private string crosslineCountField;
-        
-        private string crosslineIndexIncrementField;
-        
-        private string firstCrosslineIndexField;
-        
-        private string firstInlineIndexField;
-        
-        private string inlineCountField;
-        
-        private string inlineIndexIncrementField;
-        
-        private SeismicLatticeSetFeature isPartOfField;
-        
-        /// <remarks/>
-        /// <summary>The count of crosslines in the 3D seismic survey.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The count of crosslines in the 3D seismic survey.")]
-        public string CrosslineCount {
-            get {
-                return this.crosslineCountField;
-            }
-            set {
-                this.crosslineCountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The constant index increment between two consecutive crosslines of the 3D seismic survey.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The constant index increment between two consecutive crosslines of the 3D seismic" +
-            " survey.")]
-        public string CrosslineIndexIncrement {
-            get {
-                return this.crosslineIndexIncrementField;
-            }
-            set {
-                this.crosslineIndexIncrementField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The index of the first crossline of the 3D seismic survey.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The index of the first crossline of the 3D seismic survey.")]
-        public string FirstCrosslineIndex {
-            get {
-                return this.firstCrosslineIndexField;
-            }
-            set {
-                this.firstCrosslineIndexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The index of the first inline of the 3D seismic survey.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The index of the first inline of the 3D seismic survey.")]
-        public string FirstInlineIndex {
-            get {
-                return this.firstInlineIndexField;
-            }
-            set {
-                this.firstInlineIndexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The count of inlines in the 3D seismic survey.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The count of inlines in the 3D seismic survey.")]
-        public string InlineCount {
-            get {
-                return this.inlineCountField;
-            }
-            set {
-                this.inlineCountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The constant index increment between two consecutive inlines of the 3D seismic survey.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The constant index increment between two consecutive inlines of the 3D seismic su" +
-            "rvey.")]
-        public string InlineIndexIncrement {
-            get {
-                return this.inlineIndexIncrementField;
-            }
-            set {
-                this.inlineIndexIncrementField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public SeismicLatticeSetFeature IsPartOf {
-            get {
-                return this.isPartOfField;
-            }
-            set {
-                this.isPartOfField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public partial class SeismicLatticeSetFeature : AbstractSeismicSurveyFeature {
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("SeismicLineFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_SeismicLineFeature : AbstractSeismicSurveyFeature {
-        
-        private string firstTraceIndexField;
-        
-        private string traceCountField;
-        
-        private string traceIndexIncrementField;
-        
-        private DataObjectReference isPartOfField;
-        
-        /// <remarks/>
-        /// <summary>The index of the first trace of the seismic line.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The index of the first trace of the seismic line.")]
-        public string FirstTraceIndex {
-            get {
-                return this.firstTraceIndexField;
-            }
-            set {
-                this.firstTraceIndexField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The count of traces in the seismic line.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The count of traces in the seismic line.")]
-        public string TraceCount {
-            get {
-                return this.traceCountField;
-            }
-            set {
-                this.traceCountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The constant index increment between two consecutive traces.</summary>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The constant index increment between two consecutive traces.")]
-        public string TraceIndexIncrement {
-            get {
-                return this.traceIndexIncrementField;
-            }
-            set {
-                this.traceIndexIncrementField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public DataObjectReference IsPartOf {
-            get {
-                return this.isPartOfField;
-            }
-            set {
-                this.isPartOfField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("SeismicLineSetFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_SeismicLineSetFeature : AbstractSeismicSurveyFeature {
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("WellboreFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_WellboreFeature : AbstractTechnicalFeature {
-        
-        private WitsmlWellboreReference witsmlWellboreField;
-        
-        /// <remarks/>
-        public WitsmlWellboreReference WitsmlWellbore {
-            get {
-                return this.witsmlWellboreField;
-            }
-            set {
-                this.witsmlWellboreField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("FrontierFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_FrontierFeature : AbstractTechnicalFeature {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_OrganizationFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_BoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TectonicBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeneticBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FluidBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeologicUnitFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeobodyFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StratigraphicUnitFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_RockFluidUnitFeature))]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public abstract partial class AbstractGeologicFeature : AbstractFeature {
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("OrganizationFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_OrganizationFeature : AbstractGeologicFeature {
-        
-        private OrganizationKind organizationKindField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public OrganizationKind OrganizationKind {
-            get {
-                return this.organizationKindField;
-            }
-            set {
-                this.organizationKindField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public enum OrganizationKind {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("earth model")]
-        earthmodel,
-        
-        /// <remarks/>
-        fluid,
-        
-        /// <remarks/>
-        stratigraphic,
-        
-        /// <remarks/>
-        structural,
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_TectonicBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeneticBoundaryFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_FluidBoundaryFeature))]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("BoundaryFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_BoundaryFeature : AbstractGeologicFeature {
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("TectonicBoundaryFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_TectonicBoundaryFeature : obj_BoundaryFeature {
-        
-        private TectonicBoundaryKind tectonicBoundaryKindField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public TectonicBoundaryKind TectonicBoundaryKind {
-            get {
-                return this.tectonicBoundaryKindField;
-            }
-            set {
-                this.tectonicBoundaryKindField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public enum TectonicBoundaryKind {
-        
-        /// <remarks/>
-        fault,
-        
-        /// <remarks/>
-        fracture,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("GeneticBoundaryFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_GeneticBoundaryFeature : obj_BoundaryFeature {
-        
-        private GeneticBoundaryKind geneticBoundaryKindField;
-        
-        private Timestamp absoluteAgeField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public GeneticBoundaryKind GeneticBoundaryKind {
-            get {
-                return this.geneticBoundaryKindField;
-            }
-            set {
-                this.geneticBoundaryKindField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Timestamp AbsoluteAge {
-            get {
-                return this.absoluteAgeField;
-            }
-            set {
-                this.absoluteAgeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public enum GeneticBoundaryKind {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("geobody boundary")]
-        geobodyboundary,
-        
-        /// <remarks/>
-        horizon,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("FluidBoundaryFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_FluidBoundaryFeature : obj_BoundaryFeature {
-        
-        private FluidContact fluidContactField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public FluidContact FluidContact {
-            get {
-                return this.fluidContactField;
-            }
-            set {
-                this.fluidContactField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_GeobodyFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_StratigraphicUnitFeature))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_RockFluidUnitFeature))]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("GeologicUnitFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_GeologicUnitFeature : AbstractGeologicFeature {
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("GeobodyFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_GeobodyFeature : obj_GeologicUnitFeature {
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("StratigraphicUnitFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_StratigraphicUnitFeature : obj_GeologicUnitFeature {
-        
-        private DataObjectReference chronostratigraphicBottomField;
-        
-        private DataObjectReference chronostratigraphicTopField;
-        
-        /// <remarks/>
-        public DataObjectReference ChronostratigraphicBottom {
-            get {
-                return this.chronostratigraphicBottomField;
-            }
-            set {
-                this.chronostratigraphicBottomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public DataObjectReference ChronostratigraphicTop {
-            get {
-                return this.chronostratigraphicTopField;
-            }
-            set {
-                this.chronostratigraphicTopField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("RockFluidUnitFeature", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_RockFluidUnitFeature : obj_GeologicUnitFeature {
-        
-        private Phase phaseField;
-        
-        private DataObjectReference fluidBoundaryBottomField;
-        
-        private DataObjectReference fluidBoundaryTopField;
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public Phase Phase {
-            get {
-                return this.phaseField;
-            }
-            set {
-                this.phaseField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference FluidBoundaryBottom {
-            get {
-                return this.fluidBoundaryBottomField;
-            }
-            set {
-                this.fluidBoundaryBottomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public DataObjectReference FluidBoundaryTop {
-            get {
-                return this.fluidBoundaryTopField;
-            }
-            set {
-                this.fluidBoundaryTopField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("TimeSeries", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_TimeSeries : AbstractResqmlDataObject {
-        
-        private Timestamp[] timeField;
-        
-        private TimeSeriesParentage timeSeriesParentageField;
-        
-        /// <remarks/>
-        /// <summary>Individual times composing the series. The list ordering is used by the time index.</summary>
-        [System.Xml.Serialization.XmlElementAttribute("Time")]
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Individual times composing the series. The list ordering is used by the time inde" +
-            "x.")]
-        public Timestamp[] Time {
-            get {
-                return this.timeField;
-            }
-            set {
-                this.timeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public TimeSeriesParentage TimeSeriesParentage {
-            get {
-                return this.timeSeriesParentageField;
-            }
-            set {
-                this.timeSeriesParentageField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_LocalDepth3dCrs))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(obj_LocalTime3dCrs))]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    public abstract partial class AbstractLocal3dCrs : AbstractResqmlDataObject {
-        
-        private double yOffsetField;
-        
-        private double zOffsetField;
-        
-        private PlaneAngleMeasure arealRotationField;
-        
-        private AxisOrder2d projectedAxisOrderField;
-        
-        private LengthUom projectedUomField;
-        
-        private LengthUom verticalUomField;
-        
-        private double xOffsetField;
-        
-        private bool zIncreasingDownwardField;
-        
-        private AbstractVerticalCrs verticalCrsField;
-        
-        private AbstractProjectedCrs projectedCrsField;
-        
-        /// <remarks/>
-        /// <summary>The Y offset of the origin of the local areal axes relative to the projected CRS origin. The value MUST represent the second axis of the coordinate system. The unit of measure is defined by the unit of measure for the projected 2D CRS.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The Y offset of the origin of the local areal axes relative to the projected CRS " +
-            "origin. The value MUST represent the second axis of the coordinate system. The u" +
-            "nit of measure is defined by the unit of measure for the projected 2D CRS.")]
-        public double YOffset {
-            get {
-                return this.yOffsetField;
-            }
-            set {
-                this.yOffsetField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The Z offset of the origin of the local vertical axis relative to the vertical CRS origin. According to CRS type (depth or time) it corresponds to the depth or time datum  The value MUST represent the third axis of the coordinate system. The unit of measure is defined by the unit of measure for the vertical CRS.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute(@"The Z offset of the origin of the local vertical axis relative to the vertical CRS origin. According to CRS type (depth or time) it corresponds to the depth or time datum  The value MUST represent the third axis of the coordinate system. The unit of measure is defined by the unit of measure for the vertical CRS.")]
-        public double ZOffset {
-            get {
-                return this.zOffsetField;
-            }
-            set {
-                this.zOffsetField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The rotation of the local Y axis relative to the projected Y axis.   - A positive value indicates a clockwise rotation from the projected Y axis.   - A negative value indicates a counter-clockwise rotation form the projected Y axis.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The rotation of the local Y axis relative to the projected Y axis.   - A positive" +
-            " value indicates a clockwise rotation from the projected Y axis.   - A negative " +
-            "value indicates a counter-clockwise rotation form the projected Y axis.")]
-        public PlaneAngleMeasure ArealRotation {
-            get {
-                return this.arealRotationField;
-            }
-            set {
-                this.arealRotationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Defines the coordinate system axis order of the global projected CRS when the projected CRS is an unknown CRS, else it must be correspond to the axis order of the projected  CRS.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Defines the coordinate system axis order of the global projected CRS when the pro" +
-            "jected CRS is an unknown CRS, else it must be correspond to the axis order of th" +
-            "e projected  CRS.")]
-        public AxisOrder2d ProjectedAxisOrder {
-            get {
-                return this.projectedAxisOrderField;
-            }
-            set {
-                this.projectedAxisOrderField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Unit of measure of the associated Projected CRS. When the projected CRS is not unknown, it must be the same than the unit defined by the Projected CRS.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Unit of measure of the associated Projected CRS. When the projected CRS is not un" +
-            "known, it must be the same than the unit defined by the Projected CRS.")]
-        public LengthUom ProjectedUom {
-            get {
-                return this.projectedUomField;
-            }
-            set {
-                this.projectedUomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Unit of measure of the associated Vertical CRS. When the vertical CRS is not unknown, it must be the same than the unit defined by the Vertical CRS.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Unit of measure of the associated Vertical CRS. When the vertical CRS is not unkn" +
-            "own, it must be the same than the unit defined by the Vertical CRS.")]
-        public LengthUom VerticalUom {
-            get {
-                return this.verticalUomField;
-            }
-            set {
-                this.verticalUomField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>The X location of the origin of the local areal axes relative to the projected CRS origin. The value MUST represent the first axis of the coordinate system. The unit of measure is defined by the unit of measure for the projected 2D CRS.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("The X location of the origin of the local areal axes relative to the projected CR" +
-            "S origin. The value MUST represent the first axis of the coordinate system. The " +
-            "unit of measure is defined by the unit of measure for the projected 2D CRS.")]
-        public double XOffset {
-            get {
-                return this.xOffsetField;
-            }
-            set {
-                this.xOffsetField = value;
-            }
-        }
-        
-        /// <remarks/>
-        /// <summary>Indicates that Z values correspond to depth values and are increasing downward, as opposite to elevation values increasing upward. When the vertical CRS is not an unknown, it must correspond to the axis orientation of the vertical CRS.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Indicates that Z values correspond to depth values and are increasing downward, a" +
-            "s opposite to elevation values increasing upward. When the vertical CRS is not a" +
-            "n unknown, it must correspond to the axis orientation of the vertical CRS.")]
-        public bool ZIncreasingDownward {
-            get {
-                return this.zIncreasingDownwardField;
-            }
-            set {
-                this.zIncreasingDownwardField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public AbstractVerticalCrs VerticalCrs {
-            get {
-                return this.verticalCrsField;
-            }
-            set {
-                this.verticalCrsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public AbstractProjectedCrs ProjectedCrs {
-            get {
-                return this.projectedCrsField;
-            }
-            set {
-                this.projectedCrsField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum AxisOrder2d {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("easting northing")]
-        eastingnorthing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("northing easting")]
-        northingeasting,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("westing southing")]
-        westingsouthing,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("southing westing")]
-        southingwesting,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("northing westing")]
-        northingwesting,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("westing northing")]
-        westingnorthing,
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("LocalDepth3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_LocalDepth3dCrs : AbstractLocal3dCrs {
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
-    [System.Xml.Serialization.XmlRootAttribute("LocalTime3dCrs", Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
-    [Energistics.SchemaGatherer.EnergisticsDataObjectAttribute("RESQML", "2.0")]
-    public partial class obj_LocalTime3dCrs : AbstractLocal3dCrs {
-        
-        private TimeUom timeUomField;
-        
-        /// <remarks/>
-        /// <summary>Defines the unit of measure of the third (time) coordinates, for the geometries that refers to it.</summary>
-        [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        [System.ComponentModel.DescriptionAttribute("Defines the unit of measure of the third (time) coordinates, for the geometries t" +
-            "hat refers to it.")]
-        public TimeUom TimeUom {
-            get {
-                return this.timeUomField;
-            }
-            set {
-                this.timeUomField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/commonv2")]
-    public enum TimeUom {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("1/2 ms")]
-        Item12ms,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("100 ka[t]")]
-        Item100kat,
-        
-        /// <remarks/>
-        a,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("a[t]")]
-        at,
-        
-        /// <remarks/>
-        ca,
-        
-        /// <remarks/>
-        cs,
-        
-        /// <remarks/>
-        d,
-        
-        /// <remarks/>
-        ds,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Ea[t]")]
-        Eat,
-        
-        /// <remarks/>
-        fa,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Ga[t]")]
-        Gat,
-        
-        /// <remarks/>
-        h,
-        
-        /// <remarks/>
-        hs,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("ka[t]")]
-        kat,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Ma[t]")]
-        Mat,
-        
-        /// <remarks/>
-        min,
-        
-        /// <remarks/>
-        ms,
-        
-        /// <remarks/>
-        na,
-        
-        /// <remarks/>
-        ns,
-        
-        /// <remarks/>
-        ps,
-        
-        /// <remarks/>
-        s,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Ta[t]")]
-        Tat,
-        
-        /// <remarks/>
-        us,
-        
-        /// <remarks/>
-        wk,
     }
     
     /// <remarks/>
@@ -28212,5 +28212,217 @@ namespace Energistics.Generator.RESQML200 {
         
         /// <remarks/>
         Mibyte,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public enum UnstructuredColumnLayerIndexableElements {
+        
+        /// <remarks/>
+        cells,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("column edges")]
+        columnedges,
+        
+        /// <remarks/>
+        columns,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("coordinate lines")]
+        coordinatelines,
+        
+        /// <remarks/>
+        edges,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("edges per column")]
+        edgespercolumn,
+        
+        /// <remarks/>
+        faces,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("faces per cell")]
+        facespercell,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hinge node faces")]
+        hingenodefaces,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("interval edges")]
+        intervaledges,
+        
+        /// <remarks/>
+        intervals,
+        
+        /// <remarks/>
+        layers,
+        
+        /// <remarks/>
+        nodes,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nodes per cell")]
+        nodespercell,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nodes per edge")]
+        nodesperedge,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nodes per face")]
+        nodesperface,
+        
+        /// <remarks/>
+        pillars,
+        
+        /// <remarks/>
+        subnodes,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public enum IjkIndexableElements {
+        
+        /// <remarks/>
+        cells,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("column edges")]
+        columnedges,
+        
+        /// <remarks/>
+        columns,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("coordinate lines")]
+        coordinatelines,
+        
+        /// <remarks/>
+        edges,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("edges per column")]
+        edgespercolumn,
+        
+        /// <remarks/>
+        faces,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("faces per cell")]
+        facespercell,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hinge node faces")]
+        hingenodefaces,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("interval edges")]
+        intervaledges,
+        
+        /// <remarks/>
+        intervals,
+        
+        /// <remarks/>
+        I0,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("I0 edges")]
+        I0edges,
+        
+        /// <remarks/>
+        J0,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("J0 edges")]
+        J0edges,
+        
+        /// <remarks/>
+        layers,
+        
+        /// <remarks/>
+        nodes,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nodes per cell")]
+        nodespercell,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nodes per edge")]
+        nodesperedge,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nodes per face")]
+        nodesperface,
+        
+        /// <remarks/>
+        pillars,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("radial origin polyline")]
+        radialoriginpolyline,
+        
+        /// <remarks/>
+        subnodes,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public enum UnstructuredCellIndexableElements {
+        
+        /// <remarks/>
+        cells,
+        
+        /// <remarks/>
+        edges,
+        
+        /// <remarks/>
+        faces,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("faces per cell")]
+        facespercell,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("hinge node faces")]
+        hingenodefaces,
+        
+        /// <remarks/>
+        nodes,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nodes per cell")]
+        nodespercell,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nodes per edge")]
+        nodesperedge,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("nodes per face")]
+        nodesperface,
+        
+        /// <remarks/>
+        subnodes,
+    }
+    
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
+    public enum WellboreFrameIndexableElements {
+        
+        /// <remarks/>
+        intervals,
+        
+        /// <remarks/>
+        nodes,
+        
+        /// <remarks/>
+        cells,
     }
 }

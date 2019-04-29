@@ -384,7 +384,7 @@ namespace Energistics.DataAccess.EnumValue
                 name = name.Insert(locSpac, nextChar);
             }
 
-            string[] keywords = new string[] { "float", "double", "int", "long", "short", "event", "in", "string", "byte", "default", "fixed" };
+            string[] keywords = new string[] { "float", "double", "int", "long", "short", "event", "in", "string", "byte", "default", "fixed" ,"null"};
 
             if (keywords.Contains(name))
             {

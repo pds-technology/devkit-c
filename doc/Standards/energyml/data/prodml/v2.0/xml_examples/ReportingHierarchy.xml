@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportingHierarchy objectVersion="2.1" schemaVersion="2.1" uuid="00000000-0000-0000-0000-000000000001" xmlns="http://www.energistics.org/energyml/data/prodmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/SimpleProductVolume.xsd">
+	<eml:Citation>
+		<eml:Title>By Lease, Well and Layer Producing</eml:Title>
+		<eml:Originator/>
+		<eml:Creation>2015-01-01T09:30:47Z</eml:Creation>
+		<eml:Format>energistics:xmlspy/xml</eml:Format>
+	</eml:Citation>
+	<!--- Lease X ChildNode -->
+	<ReportingNode id="LeaseX" name="Lease X">
+		<ChildNode id="well01" name="well01">
+			<ChildNode name="contactInterval1A" id="contactInterval1A">
+				<ReportingEnitityReference>
+					<eml:ContentType/>
+					<eml:Title>contact1A</eml:Title>
+					<eml:Uuid>00000000-0000-0000-0000-000000000D21</eml:Uuid>
+				</ReportingEnitityReference>
+			</ChildNode>
+			<ReportingEnitityReference>
+				<eml:ContentType/>
+				<eml:Title>well01</eml:Title>
+				<eml:Uuid>00000000-0000-0000-0000-0000000000D1</eml:Uuid>
+			</ReportingEnitityReference>
+		</ChildNode>
+		<ChildNode id="well02" name="well02">
+			<ChildNode name="contactInterval2A" id="contactInterval2A">
+				<ReportingEnitityReference>
+					<eml:ContentType/>
+					<eml:Title>contact2A</eml:Title>
+					<eml:Uuid>00000000-0000-0000-0000-000000000D22</eml:Uuid>
+				</ReportingEnitityReference>
+			</ChildNode>
+			<ReportingEnitityReference>
+				<eml:ContentType/>
+				<eml:Title>well02</eml:Title>
+				<eml:Uuid>00000000-0000-0000-0000-0000000000D2</eml:Uuid>
+			</ReportingEnitityReference>
+		</ChildNode>
+		<ChildNode id="well03" name="well03">
+			<ChildNode name="contactInterval3A" id="contactInterval3A">
+				<ReportingEnitityReference>
+					<eml:ContentType/>
+					<eml:Title>contact3A</eml:Title>
+					<eml:Uuid>00000000-0000-0000-0000-000000000D23</eml:Uuid>
+				</ReportingEnitityReference>
+			</ChildNode>
+			<ChildNode id="contactInterval3B" name="contactInterval3B">
+				<ReportingEnitityReference>
+					<eml:ContentType/>
+					<eml:Title>contact3B</eml:Title>
+					<eml:Uuid>00000000-0000-0000-0000-000000000D24</eml:Uuid>
+				</ReportingEnitityReference>
+			</ChildNode>
+			<ReportingEnitityReference>
+				<eml:ContentType/>
+				<eml:Title>well03</eml:Title>
+				<eml:Uuid>00000000-0000-0000-0000-0000000000D3</eml:Uuid>
+			</ReportingEnitityReference>
+		</ChildNode>
+		<ChildNode id="well04" name="well04">
+			<ChildNode id="contactInterval4B" name="contactInterval4B">
+				<ReportingEnitityReference>
+					<eml:ContentType/>
+					<eml:Title>contact4B</eml:Title>
+					<eml:Uuid>00000000-0000-0000-0000-000000000D25</eml:Uuid>
+				</ReportingEnitityReference>
+			</ChildNode>
+			<ReportingEnitityReference>
+				<eml:ContentType/>
+				<eml:Title>well04</eml:Title>
+				<eml:Uuid>00000000-0000-0000-0000-0000000000D4</eml:Uuid>
+			</ReportingEnitityReference>
+		</ChildNode>
+		<ChildNode id="well05" name="well05">
+			<ChildNode id="contactInterval5B" name="contactInterval5B">
+				<ReportingEnitityReference>
+					<eml:ContentType/>
+					<eml:Title>contact5B</eml:Title>
+					<eml:Uuid>00000000-0000-0000-0000-000000000D26</eml:Uuid>
+				</ReportingEnitityReference>
+			</ChildNode>
+			<ReportingEnitityReference>
+				<eml:ContentType/>
+				<eml:Title>well05</eml:Title>
+				<eml:Uuid>00000000-0000-0000-0000-0000000000D5</eml:Uuid>
+			</ReportingEnitityReference>
+		</ChildNode>
+		<ReportingEnitityReference>
+			<eml:ContentType/>
+			<eml:Title>Lease X</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0000-0000000001A1</eml:Uuid>
+		</ReportingEnitityReference>
+	</ReportingNode>
+</ReportingHierarchy>

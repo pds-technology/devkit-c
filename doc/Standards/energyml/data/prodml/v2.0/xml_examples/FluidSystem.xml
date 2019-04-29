@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FluidSystem xmlns="http://www.energistics.org/energyml/data/prodmlv2" schemaVersion="0.29" uuid="00000001-0000-0000-0000-000000000000" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/FluidSystem.xsd">
+	<eml:Aliases authority="XOM.EMSDB.DEVSDB1.EG.FLUID_SYSTEM">
+		<eml:Identifier>46C65DC88B796D59E04400144F1E6737</eml:Identifier>
+	</eml:Aliases>
+	<eml:Citation>
+		<eml:Title>Productive Cretaceous</eml:Title>
+		<eml:Originator>Laman Reseflana</eml:Originator>
+		<eml:Creation>2015-01-29T10:02:32-06:00</eml:Creation>
+		<eml:Format>FluidSystem</eml:Format>
+	</eml:Citation>
+<StandardConditions xsi:type="eml:TemperaturePressure">
+		<eml:Temperature uom="degF">60</eml:Temperature>
+		<eml:Pressure uom="psi">14.7</eml:Pressure>
+	</StandardConditions>
+	<ReservoirFluidKind>black oil</ReservoirFluidKind>
+	<PhasesPresent>oil and gas</PhasesPresent>
+	<ReservoirLifeCycleState>primary production</ReservoirLifeCycleState>
+	<RockFluidUnitFeatureReference>
+		<eml:ContentType>RockFluidUnitFeature</eml:ContentType>
+		<eml:Title>Productive Cretaceous Reservoir</eml:Title>
+		<eml:Uuid>A73C3F01-2384-A663-9DDE-000000682001</eml:Uuid>
+	</RockFluidUnitFeatureReference>
+	<SolutionGOR uom="ft3/bbl">600</SolutionGOR>
+	<Remark>This data is based upon the Good Oil Company Oil Well No. 4 from Good Laboratories.</Remark>
+	<StockTankOil uid="oil1">
+		<APIGravity uom="dAPI">40.5</APIGravity>
+	</StockTankOil>
+	<NaturalGas uid="gas1">
+		<GasGravity>0.8</GasGravity>
+	</NaturalGas>
+</FluidSystem>

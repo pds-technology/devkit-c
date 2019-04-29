@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<witsml:ChannelSet schemaVersion="2" uuid="d191e44c-b1b3-4dd8-8395-8b588f127a40" xsi:schemaLocation="http://www.energistics.org/energyml/data/witsmlv2 ../../../../../witsml/v2.0/xsd_schemas/Log.xsd" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:witsml="http://www.energistics.org/energyml/data/witsmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<eml:Citation>
+			<eml:Title>Log Interpretation ChannelSet Data</eml:Title>
+			<eml:Originator>Energistics</eml:Originator>
+			<eml:Creation>2001-12-17T09:30:47Z</eml:Creation>
+			<eml:Format>2</eml:Format>
+		</eml:Citation>
+		<witsml:Index>
+			<witsml:IndexType>measured depth</witsml:IndexType>
+			<witsml:Uom>m</witsml:Uom>
+			<witsml:Direction>increasing</witsml:Direction>
+			<witsml:Mnemonic>facilityLength</witsml:Mnemonic>
+		</witsml:Index>
+		<witsml:Channel schemaVersion="2" uuid="86a1c354-b031-4a9b-863d-7945ac049d4f">
+			<eml:Citation>
+				<eml:Title>Channel for adjustedTemperature</eml:Title>
+				<eml:Originator>Energistics</eml:Originator>
+				<eml:Creation>2001-12-17T09:30:47Z</eml:Creation>
+				<eml:Format>2</eml:Format>
+			</eml:Citation>
+			<witsml:Mnemonic>adjustedTemperature</witsml:Mnemonic>
+			<witsml:DataType>double</witsml:DataType>
+			<witsml:Uom>degC</witsml:Uom>
+			<witsml:GrowingStatus>active</witsml:GrowingStatus>
+			<witsml:TimeDepth>depth</witsml:TimeDepth>
+			<witsml:ChannelClass schemaVersion="2" uuid="b39fb01e-984f-4cbc-afc6-a837ae9254e1">
+				<eml:Citation>
+					<eml:Title>ChannelClass for adjustedTemperature</eml:Title>
+					<eml:Originator>Energistics</eml:Originator>
+					<eml:Creation>2001-12-17T09:30:47Z</eml:Creation>
+					<eml:Format>2</eml:Format>
+				</eml:Citation>
+				<eml:QuantityClass>thermodynamic temperature</eml:QuantityClass>
+			</witsml:ChannelClass>
+			<witsml:LoggingCompanyName>Company name</witsml:LoggingCompanyName>
+			<witsml:Index>
+				<witsml:IndexType>measured depth</witsml:IndexType>
+				<witsml:Uom>m</witsml:Uom>
+				<witsml:Direction>increasing</witsml:Direction>
+				<witsml:Mnemonic>facilityLength</witsml:Mnemonic>
+			</witsml:Index>
+		</witsml:Channel>
+		<witsml:Data>
+			<witsml:Data>
+			[
+			[5,26.71171579]
+[10,27.09656061]
+[15,27.5836024]
+[20,28.01217283]
+[25,28.70658933]
+[30,29.01399983]
+[35,30.08226963]
+[40,30.23278028]
+[45,30.46990072]
+[50,30.75247844]
+[55,31.35674969]
+[60,32.00489023]
+[65,32.35965871]
+[70,33.58263378]
+[75,33.80568963]
+[80,34.5863939]
+[85,34.73630127]
+[90,35.64690089]
+[95,36.20771823]
+[100,36.71549683]
+[105,36.35435988]
+[110,36.98983547]
+[115,37.45454284]
+[120,38.44029843]
+[125,38.69643631]
+[130,39.50218779]
+[135,39.70610748]
+[140,40.62533542]
+[145,40.59899092]
+[150,41.16335403]
+[155,41.79405788]
+[160,41.89634379]
+[165,42.91644655]
+[170,43.55482499]
+[175,43.50486511]
+[180,44.06295292]
+[185,44.37594493]
+[190,44.79172688]
+[195,45.93403793]
+[200,46.10719846]
+[205,46.61813959]
+[210,46.96384729]
+[215,48.0349369]
+[220,48.43620612]
+[225,49.10757048]
+[230,49.38892087]
+[235,49.50773086]
+[240,50.664308]
+[245,50.40053708]
+[250,51.22489863]
+[255,51.63097517]
+[260,52.07591651]
+[265,52.64982791]
+[270,52.93143607]
+[275,53.51544489]
+[280,54.6472474]
+[285,55.03788953]
+[290,55.1653566]
+[295,55.98276609]
+[300,56.48445259]
+[305,56.42801991]
+[310,56.74682929]
+[315,58.09565222]
+[320,58.25723308]
+[325,58.69290888]
+[330,59.6626168]
+[335,59.47904058]
+[340,60.38217925]
+[345,60.96523324]
+[350,61.55639144]
+[355,61.27075068]
+[360,61.94263343]
+[365,62.66497717]
+[370,62.85282555]
+[375,63.83780322]
+[380,63.86056726]
+[385,65.21963836]
+[390,64.81340352]
+[395,65.65121433]
+[400,66.44695645]
+[405,66.71128319]
+[410,66.9107489]
+[415,67.58446499]
+[420,67.80237794]
+[425,68.87410956]
+[430,68.87183811]
+[435,69.8054376]
+[440,70.40942997]
+[445,71.15191214]
+[450,71.02334286]
+[455,71.93903248]
+[460,72.25700062]
+[465,72.38261234]
+[470,73.07550439]
+			]	
+			</witsml:Data>
+		</witsml:Data>
+	</witsml:ChannelSet>

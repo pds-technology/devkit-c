@@ -164,4 +164,4 @@ BUSINESS RULE : Only the top root abstract property kind has not to define a par
 			Energistics, WITSML, PRODML and RESQML are trademarks or registered trademarks of Energistics.
 			-->
 	<!--														-->
-	</xs:schema>
+</xs:schema>

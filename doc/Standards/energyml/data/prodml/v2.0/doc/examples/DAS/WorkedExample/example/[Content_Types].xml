@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+  <Override PartName="/obj_Acquisition_dc0e381a-094a-4fd2-ab89-dce867e3b99d.xml" ContentType="application/x-prodml+xml;version=1.0;type=DasAcquisition"/>
+  <Override PartName="/obj_EpcExternalPartReference_80a1024d-7547-4f75-8927-a2785022c587.xml" ContentType="application/x-prodml+xml;version=2.0;type=obj_EpcExternalPartReference"/>
+  <Override PartName="/obj_EpcExternalPartReference_602735d9-0ebb-41e4-99c5-281582916805.xml" ContentType="application/x-prodml+xml;version=2.0;type=obj_EpcExternalPartReference"/>
+  <Override PartName="/obj_FiberOpticalPath_bfd164f4-f9e3-41c0-a74e-372b69cc2a09.xml" ContentType="application/x-prodml+xml;version=2.0;type=obj_FiberOpticalPath"/>
+  <Override PartName="/obj_InstrumentBox_df9447a1-8c6b-4634-88eb-ab07b41ac876.xml" ContentType="application/x-prodml+xml;version=2.0;type=obj_InstrumentBox"/>
+  <Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/>
+  <Override PartName="/docProps/extendedCore.xml" ContentType="application/x-extended-core-properties+xml"/>
+  <Default ContentType="application/vnd.openxmlformats-package.relationships+xml" Extenstion="rels"/>
+</Types>

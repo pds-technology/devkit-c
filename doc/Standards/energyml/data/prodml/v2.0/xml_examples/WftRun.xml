@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WftRun xmlns="http://www.energistics.org/energyml/data/prodmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.2.0.0(PRODML)" uuid="00000000-0000-0000-0000-000000000000" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/WftRun.xsd">
+	<eml:Citation>
+		<eml:Title>ABCD</eml:Title>
+		<eml:Originator>energistics</eml:Originator>
+		<eml:Creation>2001-12-17T09:30:47Z</eml:Creation>
+		<eml:Format>xml</eml:Format>
+		<eml:VersionString>2.0</eml:VersionString>
+	</eml:Citation>
+	<eml:CustomData/>
+	<eml:ExtensionNameValue>
+		<eml:Name>abcd</eml:Name>
+		<eml:Value>ABCD</eml:Value>
+		<eml:MeasureClass>amount of substance</eml:MeasureClass>
+		<eml:DTim>2008-12-12T00:00:00Z</eml:DTim>
+		<eml:Index>1234</eml:Index>
+		<eml:Description>ABCD</eml:Description>
+	</eml:ExtensionNameValue>
+	<ObjectGrowing>true</ObjectGrowing>
+	<ServiceCompany>ABCD</ServiceCompany>
+	<DTimStart>2008-12-12T00:00:00Z</DTimStart>
+	<DTimEnd>2008-12-12T00:00:00Z</DTimEnd>
+	<MinIndex uom="m">123.456</MinIndex>
+	<MaxIndex uom="m">123.456</MaxIndex>
+	<Result uid="x21345abc">
+		<Kind>buildup result</Kind>
+		<Method>abcd</Method>
+		<MdTop uom="m">2344</MdTop>
+		<MdBottom uom="m">5566</MdBottom>
+		<TestData uid="x21345abc">
+			<Role>pressure stream</Role>
+			<CurveSection uid="x21345abc">
+				<ChannelReference>
+					<eml:ContentType>channel</eml:ContentType>
+					<eml:Title>curveA</eml:Title>
+					<eml:Uuid>00000000-0000-0000-0000-000000000000</eml:Uuid>
+				</ChannelReference>
+				<Mnemonic>ABCD</Mnemonic>
+				<DTimStart>2008-12-12T00:00:00Z</DTimStart>
+				<DTimEnd>2008-12-12T00:00:00Z</DTimEnd>
+			</CurveSection>
+			<Parameter uid="x21345abc">
+				<Name>ABCD</Name>
+				<Value uom="">2943</Value>
+				<MeasureClass>amount of substance</MeasureClass>
+			</Parameter>
+		</TestData>
+		<InputParameter uid="x21345abc">
+			<Name>ABCD</Name>
+			<Value uom="">3948</Value>
+			<MeasureClass>amount of substance</MeasureClass>
+		</InputParameter>
+		<OutputParameter uid="x21345abc">
+			<Name>ABCD</Name>
+			<Value uom="uom">3456</Value>
+			<MeasureClass>amount of substance</MeasureClass>
+		</OutputParameter>
+	</Result>
+	<Station uid="x21345abc">
+		<StationKind>conventional</StationKind>
+		<DTimStart>2008-12-12T00:00:00Z</DTimStart>
+		<DTimEnd>2008-12-12T00:00:00Z</DTimEnd>
+		<FlowingIntervalKind>probe</FlowingIntervalKind>
+		<MdTop uom="m">123.456</MdTop>
+		<MdBottom uom="m">123.456</MdBottom>
+		<DiaProbe uom="m">123.456</DiaProbe>
+		<Description>ABCD</Description>
+		<Result uid="x21345abc">
+			<Kind>buildup result</Kind>
+			<Method>abcd</Method>
+			<MdTop uom="m">123.456</MdTop>
+			<MdBottom uom="m">123.456</MdBottom>
+			<TestData uid="x21345abc">
+				<Role>pressure stream</Role>
+				<CurveSection uid="x21345abc">
+					<ChannelReference>
+						<eml:ContentType>Channel</eml:ContentType>
+						<eml:Title>curve B</eml:Title>
+						<eml:Uuid>00000000-0000-0000-0000-000000000000</eml:Uuid>
+					</ChannelReference>
+					<Mnemonic>ABCD</Mnemonic>
+					<DTimStart>2008-12-12T00:00:00Z</DTimStart>
+					<DTimEnd>2008-12-12T00:00:00Z</DTimEnd>
+				</CurveSection>
+				<Parameter uid="x21345abc">
+					<Name>ABCD</Name>
+					<Value uom="uom">123.456</Value>
+					<MeasureClass>absorbed dose</MeasureClass>
+				</Parameter>
+			</TestData>
+		</Result>
+		<SampleAcquisition uid="x21345abc">
+			<Kind>abcd</Kind>
+			<DTimStart>2008-12-12T00:00:00Z</DTimStart>
+			<DTimEnd>2008-12-12T00:00:00Z</DTimEnd>
+			<FieldComment>ABCD</FieldComment>
+			<InterpretationComment>ABCD</InterpretationComment> 
+			<CushionPressure xsi:type="eml:AbsolutePressure"> 
+						<eml:AbsolutePressure uom="atm">123.456</eml:AbsolutePressure> 
+			</CushionPressure>
+			<GrossFluidKind>ABCD</GrossFluidKind>
+			<TestData uid="x21345abc">
+				<Role>pressure stream</Role>
+				<CurveSection uid="x21345abc">
+					<ChannelReference>
+						<eml:ContentType>log</eml:ContentType>
+						<eml:Title>log</eml:Title>
+						<eml:Uuid>00000000-0000-0000-0000-000000000000</eml:Uuid>
+					</ChannelReference>
+					<Mnemonic>ABCD</Mnemonic>
+					<DTimStart>2008-12-12T00:00:00Z</DTimStart>
+					<DTimEnd>2008-12-12T00:00:00Z</DTimEnd>
+				</CurveSection>
+				<Parameter uid="x21345abc">
+					<Name>ABCD</Name>
+					<Value uom="uom">1234</Value>
+					<MeasureClass>amount of substance</MeasureClass>
+				</Parameter>
+			</TestData>
+			<Result uid="x21345abc">
+				<Kind>buildup result</Kind>
+				<Method>abcd</Method>
+				<MdTop uom="m">100</MdTop>
+				<MdBottom  uom="m">100</MdBottom>
+				<TestData uid="x21345abc">
+					<Role>pressure stream</Role>
+					<CurveSection uid="x21345abc">
+						<ChannelReference>
+							<eml:ContentType>log</eml:ContentType>
+							<eml:Title>log</eml:Title>
+							<eml:Uuid>00000000-0000-0000-0000-000000000000</eml:Uuid>
+						</ChannelReference>
+						<Mnemonic>ABCD</Mnemonic>
+						<DTimStart>2008-12-12T00:00:00Z</DTimStart>
+						<DTimEnd>2008-12-12T00:00:00Z</DTimEnd>
+					</CurveSection>
+					<Parameter uid="x21345abc">
+						<Name>ABCD</Name>
+						<Value uom="uom">1234</Value>
+						<MeasureClass>absorbed dose</MeasureClass>
+					</Parameter>
+				</TestData>
+				<InputParameter uid="x21345abc">
+					<Name>ABCD</Name>
+					<Value uom="uom">1234</Value>
+					<MeasureClass>area per volume</MeasureClass>
+				</InputParameter>
+				<OutputParameter uid="x21345abc">
+					<Name>ABCD</Name>
+					<Value uom="uom">1234</Value>
+					<MeasureClass>angular velocity</MeasureClass>
+				</OutputParameter>
+			</Result>
+		</SampleAcquisition>
+		<Event uid="x21345abc">
+			<Kind>tool retract</Kind>
+			<DTim>2008-12-12T00:00:00Z</DTim>
+			<Duration uom="s">123.456</Duration>
+		</Event>
+		<Test uid="x21345abc">
+			<TestKind>drawdown</TestKind>
+			<DTimStart>2008-12-12T00:00:00Z</DTimStart>
+			<DTimEnd>2008-12-12T00:00:00Z</DTimEnd>
+			<Result uid="x21345abc">
+				<Kind>buildup result</Kind>
+				<Method>abcd</Method>
+				<MdTop uom="m">100</MdTop>
+				<MdBottom  uom="m">100</MdBottom>
+				<TestData uid="x21345abc">
+					<Role>pressure stream</Role>
+					<CurveSection uid="x21345abc">
+						<ChannelReference>
+							<eml:ContentType>log</eml:ContentType>
+							<eml:Title>log</eml:Title>
+							<eml:Uuid>00000000-0000-0000-0000-000000000000</eml:Uuid>
+						</ChannelReference>
+						<Mnemonic>ABCD</Mnemonic>
+						<DTimStart>2008-12-12T00:00:00Z</DTimStart>
+						<DTimEnd>2008-12-12T00:00:00Z</DTimEnd>
+					</CurveSection>
+					<Parameter uid="x21345abc">
+						<Name>ABCD</Name>
+						<Value uom="uom">1234</Value>
+						<MeasureClass>capacitance</MeasureClass>
+					</Parameter>
+				</TestData>
+				<InputParameter uid="x21345abc">
+					<Name>ABCD</Name>
+					<Value uom="uom">1234</Value>
+					<MeasureClass>absorbed dose</MeasureClass>
+				</InputParameter>
+				<OutputParameter uid="x21345abc">
+					<Name>ABCD</Name>
+					<Value uom="uom">1234</Value>
+					<MeasureClass>digital storage</MeasureClass>
+				</OutputParameter>
+			</Result>
+		</Test>
+	</Station>
+</WftRun>

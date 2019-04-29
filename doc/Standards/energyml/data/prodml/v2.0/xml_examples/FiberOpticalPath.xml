@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<FiberOpticalPath xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="bfd164f4-f9e3-41c0-a74e-372b69cc2a09" schemaVersion="2.0" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/FiberOpticalPath.xsd">
+	<eml:Citation>
+		<eml:Title>OP1</eml:Title>
+		<eml:Originator>Source</eml:Originator>
+		<eml:Creation>2005-07-20T01:00:00</eml:Creation>
+		<eml:Format>1</eml:Format>
+		<eml:Description>FiberOpticalPath DAS worked example</eml:Description>
+	</eml:Citation>
+	<Inventory>
+		<Connection uid="20">
+			<Name>Surface Connector</Name>
+			<Type>connector</Type>
+			<ConnectorType>dry mate</ConnectorType>
+		</Connection>
+		<Segment uid="10">
+			<Name>Surface Fiber</Name>
+			<Type>fiber</Type>
+			<FiberLength uom="m">25</FiberLength>
+			<OverStuffing uom="m">0</OverStuffing>
+			<CableType>single-fiber-cable</CableType>
+		</Segment>
+		<Segment uid="30">
+			<Name>Downhole Fiber</Name>
+			<Type>fiber</Type>
+			<FiberLength uom="m">492.430</FiberLength>
+			<OverStuffing uom="m">9.182</OverStuffing>
+			<FiberConveyance>
+				<Cable xsi:type="PermanentCable">
+					<PermanentCableInstallationType>clamped to tubular</PermanentCableInstallationType>
+					<Comment>Over stuffing is equally distributed along the installed downhole cable</Comment>
+				</Cable>
+			</FiberConveyance>
+		</Segment>
+		<Terminator uid="40">
+			<Name>Main Terminator</Name>
+			<TerminationType>termination at cable</TerminationType>
+		</Terminator>
+	</Inventory>
+	<OpticalPathNetwork uid="OPN1">
+		<ContextFacility>text</ContextFacility>
+		<Network uid="N1">
+			<Name>Current Setup of Well-01</Name>
+			<Unit uid="OPNU10">
+				<Facility uidRef="10">Surface Fiber Segment</Facility>
+				<Port uid="1">
+					<Direction>inlet</Direction>
+					<Name>Connection to LightBox</Name>
+					<ConnectedNode uid="CN">
+						<Node>Instrument Box</Node>
+					</ConnectedNode>
+				</Port>
+				<Port uid="2">
+					<Direction>outlet</Direction>
+					<Name>Connection to Surface Connector</Name>
+					<ConnectedNode uid="CSC1">
+						<Node>Surface Connector 1</Node>
+					</ConnectedNode>
+				</Port>
+			</Unit>
+			<Unit uid="OPNU20">
+				<Facility uidRef="20">Surface Connector</Facility>
+				<Port uid="3">
+					<Direction>inlet</Direction>
+					<Name>Connection from Surface Connector to Surface Fiber</Name>
+					<ConnectedNode uid="CSC1">
+						<Node>Surface Connector 1</Node>
+					</ConnectedNode>
+				</Port>
+				<Port uid="4">
+					<Direction>outlet</Direction>
+					<Name>Connection from Surface Connector to Downhole Fiber</Name>
+					<ConnectedNode uid="CDF1">
+						<Node>Surface Connector 2</Node>
+					</ConnectedNode>
+				</Port>
+			</Unit>
+			<Unit uid="OPNU30">
+				<Facility uidRef="30">Downhole Fiber</Facility>
+				<Port uid="5">
+					<Direction>inlet</Direction>
+					<Name>Connection from Surface Connector to Downhole Fiber</Name>
+					<ConnectedNode uid="CDF1">
+						<Node>Surface Connector 2</Node>
+					</ConnectedNode>
+				</Port>
+				<Port uid="6">
+					<Direction>outlet</Direction>
+					<Name>Connection from Downhole Fiber to Terminator</Name>
+					<ConnectedNode uid="CT1">
+						<Node>Downhole Connection 1</Node>
+					</ConnectedNode>
+				</Port>
+			</Unit>
+			<Unit uid="OPNU40">
+				<Facility uidRef="40">Terminator</Facility>
+				<Port uid="7">
+					<Direction>inlet</Direction>
+					<Name>Connection from Downhole Fiber to Terminator</Name>
+					<ConnectedNode uid="CT1">
+						<Node>Downhole Connection 1</Node>
+					</ConnectedNode>
+				</Port>
+			</Unit>
+		</Network>
+	</OpticalPathNetwork>
+	<FacilityMapping uid="FM1">
+		<TimeStart>2005-07-20T01:00:00</TimeStart>
+		<FiberFacilityMappingPart uid="FMP1">
+			<OpticalPathDistanceStart uom="m">0.0</OpticalPathDistanceStart>
+			<OpticalPathDistanceEnd uom="m">25.0</OpticalPathDistanceEnd>
+			<FacilityLengthStart uom="m">0.0</FacilityLengthStart>
+			<FacilityLengthEnd uom="m">25.0</FacilityLengthEnd>
+			<Comment>No 'timeEnd' specified since this mapping is still valid. No overstuffing in surface cable</Comment>
+			<FiberFacility xsi:type="FiberFacilityGeneric">
+				<FacilityName>Surface Cable 1</FacilityName>
+				<FacilityKind>Surface Cable</FacilityKind>
+			</FiberFacility>
+		</FiberFacilityMappingPart>		
+		<FiberFacilityMappingPart uid="FMP2">
+			<OpticalPathDistanceStart uom="m">25.0</OpticalPathDistanceStart>
+			<OpticalPathDistanceEnd uom="m">517.43</OpticalPathDistanceEnd>
+			<FacilityLengthStart uom="m">0.0</FacilityLengthStart>
+			<FacilityLengthEnd uom="m">483.25</FacilityLengthEnd>
+			<Comment>No 'timeEnd' specified since this mapping is still valid. The over stuffing of 9.182 m equally distributed along the installed downhole cable</Comment>
+			<FiberFacility xsi:type="FiberFacilityWell">
+				<Name>Well-01 Fiber</Name>
+				<WellDatum>kelly bushing</WellDatum>
+				<WellboreReference>
+					<eml:ContentType>wellbore</eml:ContentType>
+					<eml:Title>Main wellbore of well Well-01</eml:Title>
+					<eml:Uuid>4ab0fae6-dc0e-405a-b812-203a154c1243</eml:Uuid>
+				</WellboreReference>
+			</FiberFacility>
+		</FiberFacilityMappingPart>
+	</FacilityMapping>
+	<Defect defectID="OPTDEFECT1">
+		<OpticalPathDistanceStart uom="m">352.80</OpticalPathDistanceStart>			
+		<DefectType>other</DefectType>
+		<TimeStart>2005-07-20T01:00:00</TimeStart>
+		<Comment>Consistent signal spike detected at this location</Comment>
+	</Defect>
+	<Otdr uid="OTDR1">
+		<Name>Initial OTDR</Name>
+		<DTimRun>2005-02-14T09:00:00</DTimRun>
+		<DataInOTDRFile>myOTDR.dat</DataInOTDRFile>
+		<OpticalPathDistanceStart uom="m">0</OpticalPathDistanceStart>
+		<OpticalPathDistanceEnd uom="m">517.43</OpticalPathDistanceEnd>
+		<Direction>forward</Direction>
+		<Wavelength uom="nm">1550</Wavelength>
+	</Otdr>
+	<InstallingVendor>
+		<Name>Vendor Name</Name>
+		<Contact>Mr A Vendor</Contact>
+	</InstallingVendor>
+	<FacilityIdentifier xsi:type="FacilityIdentifier" uid="">
+		<Name>Well-01</Name>
+	</FacilityIdentifier>
+</FiberOpticalPath>

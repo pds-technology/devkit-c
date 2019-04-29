@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TerminalLifting objectVersion="2.0" schemaVersion="2.0" uuid="00000000-0000-0000-0000-000000000A00" xmlns="http://www.energistics.org/energyml/data/prodmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodMLv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/SimpleProductVolume.xsd">
+	<eml:Aliases authority="energistics">
+		<eml:Identifier>TerminalLiftingXReport</eml:Identifier>
+		<eml:Description/>
+	</eml:Aliases>
+	<eml:Citation>
+		<eml:Title>LeaseX terminalLifting</eml:Title>
+		<eml:Originator>energistics</eml:Originator>
+		<eml:Creation>2015-01-30T00:00:00Z</eml:Creation>
+		<eml:Format>energistics:xmlspy/xml</eml:Format>
+		<eml:Editor>xmlspy</eml:Editor>
+		<eml:LastUpdate>2015-01-31T00:00:00Z</eml:LastUpdate>
+		<eml:VersionString>2.1</eml:VersionString>
+		<eml:Description>lease x terminal lifting</eml:Description>
+	</eml:Citation>
+	<StandardConditions xsi:type="eml:TemperaturePressure">
+		<eml:Temperature uom="degF">60</eml:Temperature>
+		<eml:Pressure uom="psi">14.7</eml:Pressure>
+	</StandardConditions>
+	<ApprovalDate>2015-01-31</ApprovalDate>
+	<FluidComponentCatalog>
+		<StockTankOil uid="00000000-0000-0000-0003-00000000091">
+			<APIGravity uom="dAPI">30</APIGravity>
+			<MolecularWeight uom="g/mol">100</MolecularWeight>
+			<Remark/>
+		</StockTankOil>
+		<NaturalGas uid="00000000-0000-0000-0003-00000000092">
+			<GasGravity>0.75</GasGravity>
+			<MolecularWeight uom="g/mol">20</MolecularWeight>
+		</NaturalGas>
+		<FormationWater uid="00000000-0000-0000-0003-00000000093">
+			<SpecificGravity>1.05</SpecificGravity>
+			<Salinity uom="ng/g">30000</Salinity>
+			<Remark/>
+		</FormationWater>
+	</FluidComponentCatalog>
+	<Operator>
+		<Name>Smith</Name>
+		<Role authority="energistics">operator</Role>
+		<PhoneNumber type="voicemail" qualifier="work">1800-023-xxxx</PhoneNumber>
+		<Email qualifier="permanent"/>
+		<Contact>Jonn smith</Contact>
+		<PersonnelCount>1</PersonnelCount>
+	</Operator>
+	<CertificateNumber>B-99 12345</CertificateNumber>
+	<StartTime>2015-01-29T00:00:00Z</StartTime>
+	<EndTime>2015-01-29T06:00:00Z</EndTime>
+	<ProductQuantity uid="pq1" xsi:type="ProductFluid" productFluidReference="00000000-0000-0000-0001-000000000001">
+		<Volume uom="1000 bbl">100</Volume>
+		<ProductFluidKind>oil - gross</ProductFluidKind>
+	</ProductQuantity>
+	<LoadingTerminalReference>
+		<eml:ContentType>application/x-resqml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+		<eml:Title>Lease X</eml:Title>
+		<eml:Uuid>00000000-0000-0000-0000-0000000001A1</eml:Uuid>
+		<eml:UuidAuthority>energistics</eml:UuidAuthority>
+		<eml:VersionString>2.1</eml:VersionString>
+	</LoadingTerminalReference>
+	<TankerReference>
+		<eml:ContentType>application/x-resqml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+		<eml:Title>Barge 99</eml:Title>
+		<eml:Uuid>00000000-0000-0000-0000-000000000D12</eml:Uuid>
+		<eml:UuidAuthority>energistics</eml:UuidAuthority>
+		<eml:VersionString>2.1</eml:VersionString>
+	</TankerReference>
+	<DestinationTerminalReference>
+		<eml:ContentType>application/x-resqml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+		<eml:Title>Terminal Z</eml:Title>
+		<eml:Uuid>00000000-0000-0000-0000-000000000D10</eml:Uuid>
+		<eml:UuidAuthority>energistics</eml:UuidAuthority>
+		<eml:VersionString>2.1</eml:VersionString>
+	</DestinationTerminalReference>
+</TerminalLifting>

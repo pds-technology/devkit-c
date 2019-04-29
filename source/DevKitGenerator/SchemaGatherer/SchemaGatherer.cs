@@ -296,23 +296,18 @@ namespace Energistics.SchemaGatherer
 
             }
 
-            // NOTE: Using CodeDom to generate data object classes
-            //bool addValidation = bool.Parse(GetAppSetting("INCLUDE_VALIDATION_ATTRIBUTES"));
-            //if (addValidation)
-            {
-                List<string> dataObjects = dataObjectSchemas.Select(Path.GetFileNameWithoutExtension).ToList();
+            List<string> dataObjects = dataObjectSchemas.Select(Path.GetFileNameWithoutExtension).ToList();
 
-                // Strip out numbers from the family name
-                string standardFamily = Regex.Replace(setName, @"\d", string.Empty);
+            // Strip out numbers from the family name
+            string standardFamily = Regex.Replace(setName, @"\d", string.Empty);
 
-                // Strip out anything not a digit or a '.'
-                dataSchemaVersion = Regex.Replace(dataSchemaVersion, @"[^\d.]", string.Empty);
-                ValidationExtensions.GenerateDataObjectsWithCodeDom(targetFolder, targetXmlFile, nameSpace, sourceFolder, standardFamily, dataSchemaVersion, dataObjects, schemaSubstitutions);
-            }
-            //else
-            //{
-            //    GenerateDataObjectsWithXsdUtility(targetFolder, targetXmlFile, newTypeCatalog, newTypeCatalogProdml);
-            //}
+            // Strip out anything not a digit or a '.'
+            dataSchemaVersion = Regex.Replace(dataSchemaVersion, @"[^\d.]", string.Empty);
+			
+            ValidationExtensions.GenerateDataObjectsWithCodeDom(targetFolder, targetXmlFile, nameSpace, sourceFolder, standardFamily, dataSchemaVersion, dataObjects, schemaSubstitutions);
+			
+            if(File.Exists(targetXmlFile))
+                File.Delete(targetXmlFile);
         }
 
         private static void GetSchemas(string setName, string enumList, string sourceFolder, List<string> dataObjectSchemas, List<string> apiSchemas, List<string> supportingSchemas, Dictionary<string, string> schemaSubstitutions)
@@ -325,34 +320,23 @@ namespace Energistics.SchemaGatherer
                 supportingSchemas.Add(abstractXsd);
             }
 
-            if (setName.StartsWith("RESQML"))
+            if (setName.StartsWith("RESQML1"))
             {
-                if (setName.StartsWith("RESQML1"))
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_DUBLIN_PATH"), "dcterms.xsd"));
+                if (enumList.Length > 0)
                 {
-                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_DUBLIN_PATH"), "dcterms.xsd"));
-                    if (enumList.Length > 0)
-                    {
-                        supportingSchemas.Add(Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd"));
-                        schemaSubstitutions.Add(Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd"), sourceFolder + @"\typ_catalog.xsd");
-                    }
-                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"xlink\1.0.0\xlinks.xsd"));
-                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"gml\3.2.1\gml.xsd"));
-                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gmd\gmd.xsd"));
-                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gco\gco.xsd"));
-                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gts\gts.xsd"));
-                    supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gsr\gsr.xsd"));
+                    supportingSchemas.Add(Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd"));
+                    schemaSubstitutions.Add(Path.Combine(Path.GetDirectoryName(enumList), "typ_catalog.xsd"), sourceFolder + @"\typ_catalog.xsd");
                 }
-                else
-                    if (setName.StartsWith("RESQML2"))
-                {
-                    // we also need to include all xsd file in common v2.
-                    foreach (string f in Directory.GetFiles(GetAppSetting(setName + "_COMMON_PATH"), "*.xsd", SearchOption.AllDirectories))
-                    {
-                        supportingSchemas.Add(f);
-                    }
-                }
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"xlink\1.0.0\xlinks.xsd"));
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"gml\3.2.1\gml.xsd"));
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gmd\gmd.xsd"));
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gco\gco.xsd"));
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gts\gts.xsd"));
+                supportingSchemas.Add(Path.Combine(GetAppSetting(setName + "_GML_PATH"), @"iso\19139\20070417\gsr\gsr.xsd"));
             }
-            else if (setName.StartsWith("WITSML2"))
+
+            if (setName.Contains("ML2"))
             {
                 // we also need to include all xsd file in common v2.
                 foreach (string f in Directory.GetFiles(GetAppSetting(setName + "_COMMON_PATH"), "*.xsd", SearchOption.AllDirectories))
@@ -364,9 +348,6 @@ namespace Energistics.SchemaGatherer
                 {
                     dataObjectSchemas.Add(f);
                 }
-
-                // stop processing now since there are no obj*.xsd in WITSML v2+
-                return;
             }
 
             if (!string.IsNullOrEmpty(wsdlPath))
@@ -379,7 +360,7 @@ namespace Energistics.SchemaGatherer
 
             foreach (string f in Directory.GetFiles(sourceFolder, "obj*.xsd", SearchOption.TopDirectoryOnly))
             {
-                if (!f.Contains("obj_coordinateReferenceSystem.xsd"))
+                if (!f.Contains("obj_coordinateReferenceSystem.xsd") && !dataObjectSchemas.Contains(f))
                 {
                     dataObjectSchemas.Add(f);
                 }
@@ -410,54 +391,6 @@ namespace Energistics.SchemaGatherer
 
             File.WriteAllText(path, contents, Encoding.UTF8);
         }
-
-        private static void GenerateDataObjectsWithXsdUtility(string targetFolder, string targetXmlFile, string newTypeCatalog, string newTypeCatalogProdml)
-        {
-            using (Process p = new Process())
-            {
-                p.StartInfo.FileName = GetAppSetting("MS_SDK") + @"\xsd.exe";
-                p.StartInfo.Arguments = String.Format(@"/parameters:{0} /out:{1}", targetXmlFile, targetFolder);
-                p.StartInfo.RedirectStandardError = true;
-                p.StartInfo.RedirectStandardOutput = true;
-                p.StartInfo.UseShellExecute = false;
-                p.Start();
-
-
-                string output = p.StandardOutput.ReadToEnd();
-                string error = p.StandardError.ReadToEnd();
-
-                p.WaitForExit();
-                if (!String.IsNullOrEmpty(error))
-                {
-                    Debugger.Break();
-                }
-
-                foreach (Match m in Regex.Matches(output, @"Writing file '(" + targetFolder.Replace(@"\", @"\\") + ".*?)'."))
-                {
-                    string sourceFile = m.Groups[1].Value;
-                    string targetCSFile = String.Format(@"{0}\DataObject.cs", targetFolder);
-
-                    if (File.Exists(sourceFile))
-                    {
-                        CleanUpGeneratedCode(sourceFile);
-                        if (File.Exists(targetCSFile))
-                        {
-                            File.Delete(targetCSFile);
-                        }
-                        File.Move(sourceFile, targetCSFile);
-                        File.Delete(targetXmlFile);
-                        File.Delete(newTypeCatalog);
-                        if (File.Exists(newTypeCatalogProdml))
-                        {
-                            File.Delete(newTypeCatalogProdml);
-                        }
-                    }
-
-                    break;
-                }
-            }
-        }
-
 
         /// <summary>
         /// Parses enumValues.xml and inserts the values into typ_catalog.xsd
@@ -507,10 +440,16 @@ namespace Energistics.SchemaGatherer
                     }
                 }
 
-                int simpleTypeLoc = contents.IndexOf(String.Format("<xsd:simpleType name=\"{0}\"", name));
-                if (simpleTypeLoc >= 0)
+                int xsSimpleTypeLoc = contents.IndexOf(String.Format("<xs:simpleType name=\"{0}\"", name));
+                int xsdSimpleTypeLoc = contents.IndexOf(String.Format("<xsd:simpleType name=\"{0}\"", name));
+                if (xsSimpleTypeLoc >= 0)
                 {
-                    int locRestrictString = contents.IndexOf(restrictString, simpleTypeLoc);
+                    int locRestrictString = contents.IndexOf(restrictString, xsSimpleTypeLoc);
+                    contents = contents.Insert(locRestrictString + restrictString.Length + 2, restriction.ToString());
+                }
+                if (xsdSimpleTypeLoc >= 0)
+                {
+                    int locRestrictString = contents.IndexOf(restrictString, xsdSimpleTypeLoc);
                     contents = contents.Insert(locRestrictString + restrictString.Length + 2, restriction.ToString());
                 }
 

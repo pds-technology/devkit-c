@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<prodml:DasInstrumentBox  xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="df9447a1-8c6b-4634-88eb-ab07b41ac876" schemaVersion="2.0" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/DasAcquisition.xsd">
+	<eml:Citation>
+		<eml:Title>Instrument Box</eml:Title>
+		<eml:Originator>Fred Mertz, Field Tech</eml:Originator>
+		<eml:Creation>2015-07-20T01:00:00.000000Z</eml:Creation>
+		<eml:Format>Vendor:ApplicationName</eml:Format>
+	</eml:Citation>
+	<SerialNumber>12645A</SerialNumber>
+	<Parameter index="1" name="Parameter1" uom="s" description="time"/>
+	<Instrument>
+		<Name>Instrument Box</Name>
+	</Instrument>
+	<FirmwareVersion>Firmware version 1</FirmwareVersion> 
+</prodml:DasInstrumentBox>
+

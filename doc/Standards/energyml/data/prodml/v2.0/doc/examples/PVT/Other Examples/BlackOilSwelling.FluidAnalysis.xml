@@ -1,0 +1,1489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prodml:FluidAnalysis schemaVersion="2.0" xsi:type="prodml:HydrocarbonAnalysis" uuid="00000000-0000-0000-0000-000000000000" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../../../../xsd_schemas/FluidAnalysis.xsd">
+	<eml:Citation>
+		<eml:Title>HydrocarbonAnalysis</eml:Title>
+		<eml:Originator>Kristian Krejbjerg</eml:Originator>
+		<eml:Creation>2015-03-17T09:30:47Z</eml:Creation>
+		<eml:Format>application/xml</eml:Format>
+		<eml:LastUpdate>2001-12-17T09:30:47Z</eml:LastUpdate>
+	</eml:Citation>
+	<eml:CustomData/>
+	<prodml:RequestDate>1967-08-13</prodml:RequestDate>
+	<prodml:AnalysisDescription>a</prodml:AnalysisDescription>
+	<prodml:AnalysisPurpose>a</prodml:AnalysisPurpose>
+	<prodml:AnalysisSite>a</prodml:AnalysisSite>
+	<prodml:LabContact>a</prodml:LabContact>
+	<prodml:AnalysisQuality>valid</prodml:AnalysisQuality>
+	<prodml:Remark>a</prodml:Remark>
+	<prodml:FluidSampleReference>
+		<eml:ContentType>String</eml:ContentType>
+		<eml:Title>a</eml:Title>
+		<eml:Uuid>00000000-0000-0000-0000-000000000000</eml:Uuid>
+		<eml:UuidAuthority>String</eml:UuidAuthority>
+		<eml:VersionString>a</eml:VersionString>
+	</prodml:FluidSampleReference>
+	<prodml:FluidAnalysisReport uid="r1">
+		<prodml:ReportIdentifier>!</prodml:ReportIdentifier>
+		<prodml:ReportDate>1967-08-13</prodml:ReportDate>
+		<prodml:Author>a</prodml:Author>
+		<prodml:AnalysisLaboratory>a</prodml:AnalysisLaboratory>
+		<prodml:ReportDocumentReference>
+			<eml:ContentType>String</eml:ContentType>
+			<eml:Title>a</eml:Title>
+			<eml:Uuid>00000000-0000-0000-0000-000000000000</eml:Uuid>
+			<eml:UuidAuthority>String</eml:UuidAuthority>
+			<eml:VersionString>a</eml:VersionString>
+		</prodml:ReportDocumentReference>
+		<prodml:ReportLocation uid="location1">
+			<prodml:LocationDate>1967-08-13</prodml:LocationDate>
+			<prodml:LocationType>a</prodml:LocationType>
+			<prodml:Location>a</prodml:Location>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ReportLocation>
+		<prodml:ReportLocation uid="location2">
+			<prodml:LocationDate>1967-08-13</prodml:LocationDate>
+			<prodml:LocationType>a</prodml:LocationType>
+			<prodml:Location>a</prodml:Location>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ReportLocation>
+	</prodml:FluidAnalysisReport>
+	<prodml:SampleIntegrityAndPreparation uid="sia1">
+		<prodml:OpeningDate>1967-08-13</prodml:OpeningDate> 
+		<prodml:OpeningRemark>a</prodml:OpeningRemark>
+		<prodml:SampleRestoration>
+			<prodml:Date>1967-08-13</prodml:Date> 
+			<prodml:MixingMechanism>a</prodml:MixingMechanism>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:SampleRestoration>
+		<prodml:SampleRestoration>
+			<prodml:Date>1967-08-13</prodml:Date> 
+			<prodml:MixingMechanism>a</prodml:MixingMechanism>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:SampleRestoration>
+	</prodml:SampleIntegrityAndPreparation>
+	<prodml:AtmosphericFlashTestAndCompositionalAnalysis uid="aft1">
+		<prodml:TestNumber>2</prodml:TestNumber>
+		<prodml:Date>1967-08-13</prodml:Date>
+		<prodml:FlashToPressure xsi:type="eml:RelativePressure">
+			<eml:RelativePressure uom="psi">0</eml:RelativePressure>
+			<eml:ReferencePressure uom="psi">14.7</eml:ReferencePressure>
+		</prodml:FlashToPressure>
+		<prodml:AtmosphericPressure uom="psi">14.7</prodml:AtmosphericPressure>
+		<prodml:AtmosphericTemperature uom="degF">60</prodml:AtmosphericTemperature>
+		<prodml:FlashGOR uom="bbl/(acre.ft)">2182.9</prodml:FlashGOR> 
+		<prodml:Remark>a</prodml:Remark>
+		<prodml:FlashedLiquid>
+			<prodml:OilAPIGravity uom="dAPI">37.13306
+</prodml:OilAPIGravity> 
+			<prodml:LiquidComposition>
+				<prodml:LiquidComponent fluidComponentReference="N2">
+					<prodml:MoleFraction uom="%[molar]">1.02e-3</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="CO2">
+					<prodml:MoleFraction uom="%[molar]">0.057</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C1">
+					<prodml:MoleFraction uom="%[molar]">0.396</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C2">
+					<prodml:MoleFraction uom="%[molar]">0.400</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C3">
+					<prodml:MoleFraction uom="%[molar]">1.021</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="iC4">
+					<prodml:MoleFraction uom="%[molar]">0.435</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="nC4">
+					<prodml:MoleFraction uom="%[molar]">1.494</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="iC5">
+					<prodml:MoleFraction uom="%[molar]">1.217</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="nC5">
+					<prodml:MoleFraction uom="%[molar]">2.083</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C6">
+					<prodml:MoleFraction uom="%[molar]">4.903</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C7">
+					<prodml:MoleFraction uom="%[molar]">9.480</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C8">
+					<prodml:MoleFraction uom="%[molar]">11.547</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C9">
+					<prodml:MoleFraction uom="%[molar]">7.778</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C10+">
+					<prodml:MoleFraction uom="%[molar]">59.186</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+			</prodml:LiquidComposition>
+		</prodml:FlashedLiquid>
+		<prodml:FlashedGas>
+			<prodml:GasGravity>0.851</prodml:GasGravity> 
+			<prodml:VaporComposition>
+				<prodml:VaporComponent fluidComponentReference="N2">
+					<prodml:MoleFraction uom="%[molar]">0.693</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="CO2">
+					<prodml:MoleFraction uom="%[molar]">3.571</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C1">
+					<prodml:MoleFraction uom="%[molar]">70.415</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C2">
+					<prodml:MoleFraction uom="%[molar]">10.800</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C3">
+					<prodml:MoleFraction uom="%[molar]">7.016</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC4">
+					<prodml:MoleFraction uom="%[molar]">1.163</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC4">
+					<prodml:MoleFraction uom="%[molar]">2.688</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC5">
+					<prodml:MoleFraction uom="%[molar]">0.808</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC5">
+					<prodml:MoleFraction uom="%[molar]">1.013</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C6">
+					<prodml:MoleFraction uom="%[molar]">0.687</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C7">
+					<prodml:MoleFraction uom="%[molar]">0.687</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C8">
+					<prodml:MoleFraction uom="%[molar]">0.379</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C9">
+					<prodml:MoleFraction uom="%[molar]">0.063</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C10+">
+					<prodml:MoleFraction uom="%[molar]">0.016</prodml:MoleFraction>
+				</prodml:VaporComponent>
+			</prodml:VaporComposition>
+		</prodml:FlashedGas>
+	</prodml:AtmosphericFlashTestAndCompositionalAnalysis>
+	<prodml:ConstantCompositionExpansionTest uid="ccet1">
+		<prodml:TestNumber>1</prodml:TestNumber>
+		<prodml:TestTemperature uom="degF">200</prodml:TestTemperature>
+		<prodml:SaturationPressure kind="bubble point" uom="psi">4434.3</prodml:SaturationPressure>
+		<prodml:RelativeVolumeReference uid="rvr1">
+			<prodml:Kind>separator stage 7</prodml:Kind> 
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:RelativeVolumeReference>
+		<prodml:RelativeVolumeReference uid="rvr2">
+			<prodml:Kind>separator stage 7</prodml:Kind> 
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:RelativeVolumeReference>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces1">
+			<prodml:StepNumber>1</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">8000</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">0.12</prodml:LiquidFraction>
+			<prodml:OilDensity uom="g/cm3">0.6108</prodml:OilDensity>
+			<prodml:OilCompressibility kind="average" uom="1/Pa">1.51e-5</prodml:OilCompressibility> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">0.9285</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>0.1</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces2">
+			<prodml:StepNumber>2</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">7000</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">0.1</prodml:LiquidFraction>
+			<prodml:OilDensity uom="g/cm3">0.6010</prodml:OilDensity>
+			<prodml:OilCompressibility kind="average" uom="1/Pa">1.76e-5</prodml:OilCompressibility> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">0.9437</prodml:RelativeVolumeRatio>
+			<prodml:YFunction>0.1</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces3">
+			<prodml:StepNumber>3</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">6000</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">0.1</prodml:LiquidFraction>
+			<prodml:OilDensity uom="g/cm3">0.5896</prodml:OilDensity>
+			<prodml:OilCompressibility kind="average" uom="1/Pa">2.10e-5</prodml:OilCompressibility>
+	    	<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">0.9620</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>0.1</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces4">
+			<prodml:StepNumber>4</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">5000</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">0.1</prodml:LiquidFraction>
+			<prodml:OilDensity uom="g/cm3">0.5760</prodml:OilDensity>
+			<prodml:OilCompressibility kind="average" uom="1/Pa">2.57e-5</prodml:OilCompressibility> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">0.9846</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>0.1</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces5">
+			<prodml:StepNumber>5</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">4434.3</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">0.1</prodml:LiquidFraction>
+			<prodml:OilDensity uom="g/cm3">0.5672</prodml:OilDensity>
+			<prodml:OilCompressibility kind="average" uom="1/Pa">2.94e-5</prodml:OilCompressibility> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">1.0000</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>0.1</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces6">
+			<prodml:StepNumber>6</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">4000</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">88.89</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">1.0378</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>2.87</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces7">
+			<prodml:StepNumber>7</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">3000</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">75.55</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">1.1945</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>2.46</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil and gas</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces8">
+			<prodml:StepNumber>8</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">2000</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">66.66</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">1.5891</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>2.07</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil and gas</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces9">
+			<prodml:StepNumber>9</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">1000</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">58.34</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">3.0218</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>1.70</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil and gas</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces10">
+			<prodml:StepNumber>10</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">500</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">53.16</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">6.1920</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>1.52</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil and gas</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces11">
+			<prodml:StepNumber>11</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">50</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">41.27</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">69.9262</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>1.27</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil and gas</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+	</prodml:ConstantCompositionExpansionTest>
+	<prodml:ConstantCompositionExpansionTest uid="ccet2">
+		<prodml:TestNumber>2</prodml:TestNumber>
+		<prodml:TestTemperature uom="degF">150</prodml:TestTemperature>
+		<prodml:SaturationPressure kind="bubble point" uom="psi">4028.0</prodml:SaturationPressure>
+		<prodml:RelativeVolumeReference uid="rvr3">
+			<prodml:Kind>separator stage 7</prodml:Kind> 
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:RelativeVolumeReference>
+		<prodml:RelativeVolumeReference uid="rvr4">
+			<prodml:Kind>separator stage 7</prodml:Kind> 
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:RelativeVolumeReference>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces21">
+			<prodml:StepNumber>1</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">8000</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.6300</prodml:OilDensity>
+			<prodml:OilCompressibility kind="average" uom="1/Pa">1.23e-5</prodml:OilCompressibility> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">0.9339</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>0.1</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces22">
+			<prodml:StepNumber>2</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">7000</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.6217</prodml:OilDensity>
+			<prodml:OilCompressibility kind="average" uom="1/Pa">1.42e-5</prodml:OilCompressibility> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">0.9463</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>0.1</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces23">
+			<prodml:StepNumber>3</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">6000</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.6123</prodml:OilDensity>
+			<prodml:OilCompressibility kind="average" uom="1/Pa">1.67e-5</prodml:OilCompressibility> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">0.9610</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>0.1</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces24">
+			<prodml:StepNumber>4</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">5000</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.6012</prodml:OilDensity>
+			<prodml:OilCompressibility kind="average" uom="1/Pa">2.00e-5</prodml:OilCompressibility> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">0.9787</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>0.1</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces25">
+			<prodml:StepNumber>5</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">4028.0</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">0.1</prodml:LiquidFraction>
+			<prodml:OilDensity uom="g/cm3">0.5884</prodml:OilDensity>
+			<prodml:OilCompressibility kind="average" uom="1/Pa">2.46e-5</prodml:OilCompressibility> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">1.0000</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>0.1</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces26">
+			<prodml:StepNumber>6</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">4000</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">99.25</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">1.0021</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>3.30</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces27">
+			<prodml:StepNumber>7</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">3000</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">82.24</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">1.1253</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>2.74</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil and gas</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces28">
+			<prodml:StepNumber>8</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">2000</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">71.93</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">1.4604</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>2.20</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil and gas</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces29">
+			<prodml:StepNumber>9</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">1000</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">62.68</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">2.7546</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>1.73</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil and gas</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces210">
+			<prodml:StepNumber>10</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">500</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">57.21</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">5.6805</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>1.51</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil and gas</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces211">
+			<prodml:StepNumber>11</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">50</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">46.17</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">64.6773</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>1.25</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil and gas</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+	</prodml:ConstantCompositionExpansionTest>
+	<prodml:ConstantCompositionExpansionTest uid="ccet3">
+		<prodml:TestNumber>3</prodml:TestNumber>
+		<prodml:TestTemperature uom="degF">100</prodml:TestTemperature>
+		<prodml:SaturationPressure kind="bubble point" uom="psi">3515.2</prodml:SaturationPressure>
+		<prodml:RelativeVolumeReference uid="rvr5">
+			<prodml:Kind>separator stage 7</prodml:Kind> 
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:RelativeVolumeReference>
+		<prodml:RelativeVolumeReference uid="rvr6">
+			<prodml:Kind>separator stage 7</prodml:Kind> 
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:RelativeVolumeReference>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces31">
+			<prodml:StepNumber>1</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">8000</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.6486</prodml:OilDensity>
+			<prodml:OilCompressibility kind="average" uom="1/Pa">1.51e-5</prodml:OilCompressibility> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">0.9386</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>0.1</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces32">
+			<prodml:StepNumber>2</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">7000</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.6417</prodml:OilDensity>
+			<prodml:OilCompressibility kind="average" uom="1/Pa">1.76e-5</prodml:OilCompressibility> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">0.9487</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>0.1</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces33">
+			<prodml:StepNumber>3</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">6000</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.6339</prodml:OilDensity>
+			<prodml:OilCompressibility kind="average" uom="1/Pa">2.10e-5</prodml:OilCompressibility> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">0.9603</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>0.1</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces34">
+			<prodml:StepNumber>4</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">5000</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.6250</prodml:OilDensity>
+			<prodml:OilCompressibility kind="average" uom="1/Pa">2.57e-5</prodml:OilCompressibility> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">0.9740</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>0.1</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces35">
+			<prodml:StepNumber>5</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">4000</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.6145</prodml:OilDensity>
+			<prodml:OilCompressibility kind="average" uom="1/Pa">2.94e-5</prodml:OilCompressibility> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">0.9906</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>0.1</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces36">
+			<prodml:StepNumber>6</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">3515.2</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">0.1</prodml:LiquidFraction>
+			<prodml:OilDensity uom="g/cm3">0.6088</prodml:OilDensity> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">1.000</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>0.1</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces37">
+			<prodml:StepNumber>7</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">3000</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">90.51</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">1.0541</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>3.17</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil and gas</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces38">
+			<prodml:StepNumber>8</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">2000</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">78.0</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">1.3162</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>2.40</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil and gas</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces39">
+			<prodml:StepNumber>9</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">1000</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">67.31</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">2.4490</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>1.74</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil and gas</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces310">
+			<prodml:StepNumber>10</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">500</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">61.32</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">5.1060</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>1.47</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil and gas</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+		<prodml:ConstantCompositionExpansionTestStep uid="cces311">
+			<prodml:StepNumber>11</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">50</prodml:StepPressure>
+			<prodml:LiquidFraction fluidVolumeReference="f1" uom="%[vol]">50.67</prodml:LiquidFraction> 
+			<prodml:RelativeVolumeRatio fluidVolumeReference="f1" uom="%[vol]">59.1867</prodml:RelativeVolumeRatio> 
+			<prodml:YFunction>1.19</prodml:YFunction>
+			<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil and gas</prodml:PhasesPresent>
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ConstantCompositionExpansionTestStep>
+	</prodml:ConstantCompositionExpansionTest>
+	<prodml:SaturationTest uid="st1">
+		<prodml:TestNumber>1</prodml:TestNumber>
+		<prodml:TestTemperature uom="degF">200</prodml:TestTemperature>
+		<prodml:SaturationPressure kind="bubble point" uom="psi">4434.3</prodml:SaturationPressure>
+		<prodml:Remark>a</prodml:Remark>
+	</prodml:SaturationTest>
+	<prodml:SaturationTest uid="st2">
+		<prodml:TestNumber>2</prodml:TestNumber>
+		<prodml:TestTemperature uom="degF">150</prodml:TestTemperature>
+		<prodml:SaturationPressure kind="bubble point" uom="psi">4028.0</prodml:SaturationPressure>
+		<prodml:Remark>a</prodml:Remark>
+	</prodml:SaturationTest>
+	<prodml:SaturationTest uid="st3">
+		<prodml:TestNumber>3</prodml:TestNumber>
+		<prodml:TestTemperature uom="degF">100</prodml:TestTemperature>
+		<prodml:SaturationPressure kind="bubble point" uom="psi">3515.2</prodml:SaturationPressure>
+		<prodml:Remark>a</prodml:Remark>
+	</prodml:SaturationTest>
+	<prodml:DifferentialLiberationTest uid="dlt1">
+		<prodml:TestNumber>1</prodml:TestNumber>
+		<prodml:TestTemperature uom="degF">200</prodml:TestTemperature>
+		<prodml:SaturationPressure kind="bubble point" uom="at">1</prodml:SaturationPressure>
+		<prodml:DlTestStep uid="dITs1">
+			<prodml:StepNumber>1</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">4434.3</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.5672</prodml:OilDensity>
+			<prodml:OilFormationVolumeFactor uom="0.001 bbl/m3">2.374</prodml:OilFormationVolumeFactor> 
+			<prodml:OilViscosity uom="cP">0.201</prodml:OilViscosity> 
+			<prodml:GasFormationVolumeFactor uom="bbl/(acre.ft)">0.1</prodml:GasFormationVolumeFactor> 
+			<prodml:SolutionGORMeasured uom="0.001 bbl/m3">2430.7</prodml:SolutionGORMeasured> 
+			<prodml:FluidCondition>current reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:LiquidComposition>
+				<prodml:LiquidComponent fluidComponentReference="N2"/>
+				<prodml:LiquidComponent fluidComponentReference="CO2"/>
+				<prodml:LiquidComponent fluidComponentReference="C1"/>
+				<prodml:LiquidComponent fluidComponentReference="C2"/>
+				<prodml:LiquidComponent fluidComponentReference="C3"/>
+				<prodml:LiquidComponent fluidComponentReference="iC4"/>
+				<prodml:LiquidComponent fluidComponentReference="nC4"/>
+				<prodml:LiquidComponent fluidComponentReference="iC5"/>
+				<prodml:LiquidComponent fluidComponentReference="nC5"/>
+				<prodml:LiquidComponent fluidComponentReference="C6"/>
+				<prodml:LiquidComponent fluidComponentReference="C7"/>
+				<prodml:LiquidComponent fluidComponentReference="C8"/>
+				<prodml:LiquidComponent fluidComponentReference="C9"/>
+				<prodml:LiquidComponent fluidComponentReference="C10+"/>
+			</prodml:LiquidComposition>
+			<prodml:VaporComposition>
+				<prodml:VaporComponent fluidComponentReference="N2"/>
+				<prodml:VaporComponent fluidComponentReference="CO2"/>
+				<prodml:VaporComponent fluidComponentReference="C1"/>
+				<prodml:VaporComponent fluidComponentReference="C2"/>
+				<prodml:VaporComponent fluidComponentReference="C3"/>
+				<prodml:VaporComponent fluidComponentReference="iC4"/>
+				<prodml:VaporComponent fluidComponentReference="nC4"/>
+				<prodml:VaporComponent fluidComponentReference="iC5"/>
+				<prodml:VaporComponent fluidComponentReference="nC5"/>
+				<prodml:VaporComponent fluidComponentReference="C6"/>
+				<prodml:VaporComponent fluidComponentReference="C7"/>
+				<prodml:VaporComponent fluidComponentReference="C8"/>
+				<prodml:VaporComponent fluidComponentReference="C9"/>
+				<prodml:VaporComponent fluidComponentReference="C10+"/>
+			</prodml:VaporComposition>
+		</prodml:DlTestStep>
+		<prodml:DlTestStep uid="dITs2">
+			<prodml:StepNumber>2</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">4000</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.5909</prodml:OilDensity>
+			<prodml:OilFormationVolumeFactor uom="%">2.110</prodml:OilFormationVolumeFactor> 
+			<prodml:OilViscosity uom="cP">0.256</prodml:OilViscosity> 
+			<prodml:GasGravity>0.946</prodml:GasGravity> 
+			<prodml:GasFormationVolumeFactor uom="%">0.0041</prodml:GasFormationVolumeFactor>
+			<prodml:GasZFactor>0.881</prodml:GasZFactor>
+			<prodml:GasViscosity uom="cP">0.034</prodml:GasViscosity>
+			<prodml:SolutionGORMeasured uom="%[vol]">1950.8</prodml:SolutionGORMeasured> 
+			<prodml:FluidCondition>current reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:VaporComposition>
+				<prodml:VaporComponent fluidComponentReference="N2">
+					<prodml:MoleFraction uom="%[molar]">0.905</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="CO2">
+					<prodml:MoleFraction uom="%[molar]">3.156</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C1">
+					<prodml:MoleFraction uom="%[molar]">73.138</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C2">
+					<prodml:MoleFraction uom="%[molar]">8.644</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C3">
+					<prodml:MoleFraction uom="%[molar]">4.832</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC4">
+					<prodml:MoleFraction uom="%[molar]">0.763</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC4">
+					<prodml:MoleFraction uom="%[molar]">1.712</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC5">
+					<prodml:MoleFraction uom="%[molar]">0.559</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC5">
+					<prodml:MoleFraction uom="%[molar]">0.740</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C6">
+					<prodml:MoleFraction uom="%[molar]">0.818</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C7">
+					<prodml:MoleFraction uom="%[molar]">1.170</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C8">
+					<prodml:MoleFraction uom="%[molar]">1.145</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C9">
+					<prodml:MoleFraction uom="%[molar]">0.607</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C10+">
+					<prodml:MoleFraction uom="%[molar]">1.811</prodml:MoleFraction>
+				</prodml:VaporComponent>
+			</prodml:VaporComposition>
+		</prodml:DlTestStep>
+		<prodml:DlTestStep uid="dITs3">
+			<prodml:StepNumber>3</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">3000</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.6390</prodml:OilDensity>
+			<prodml:OilFormationVolumeFactor uom="%">1.757</prodml:OilFormationVolumeFactor> 
+			<prodml:OilViscosity uom="cP">0.436</prodml:OilViscosity> 
+			<prodml:GasGravity>0.835</prodml:GasGravity> 
+			<prodml:GasFormationVolumeFactor uom="%">0.0052</prodml:GasFormationVolumeFactor>
+			<prodml:GasZFactor>0.839</prodml:GasZFactor>
+			<prodml:GasViscosity uom="cP">0.024</prodml:GasViscosity> 
+			<prodml:SolutionGORMeasured uom="%">1269.2</prodml:SolutionGORMeasured>
+			<prodml:FluidCondition>current reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:VaporComposition>
+				<prodml:VaporComponent fluidComponentReference="N2">
+					<prodml:MoleFraction uom="%[molar]">0.897</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="CO2">
+					<prodml:MoleFraction uom="%[molar]">3.298</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C1">
+					<prodml:MoleFraction uom="%[molar]">76.016</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C2">
+					<prodml:MoleFraction uom="%[molar]">8.743</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C3">
+					<prodml:MoleFraction uom="%[molar]">4.606</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC4">
+					<prodml:MoleFraction uom="%[molar]">0.687</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC4">
+					<prodml:MoleFraction uom="%[molar]">1.507</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC5">
+					<prodml:MoleFraction uom="%[molar]">0.459</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC5">
+					<prodml:MoleFraction uom="%[molar]">0.595</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C6">
+					<prodml:MoleFraction uom="%[molar]">0.598</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C7">
+					<prodml:MoleFraction uom="%[molar]">0.809</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C8">
+					<prodml:MoleFraction uom="%[molar]">0.740</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C9">
+					<prodml:MoleFraction uom="%[molar]">0.348</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C10+">
+					<prodml:MoleFraction uom="%[molar]">0.696</prodml:MoleFraction>
+				</prodml:VaporComponent>
+			</prodml:VaporComposition>
+		</prodml:DlTestStep>
+		<prodml:DlTestStep uid="dITs4">
+			<prodml:StepNumber>4</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">2000</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.6853</prodml:OilDensity>
+			<prodml:OilFormationVolumeFactor uom="%">1.522</prodml:OilFormationVolumeFactor>
+			<prodml:OilViscosity uom="cP">0.768</prodml:OilViscosity>
+			<prodml:GasGravity>0.786</prodml:GasGravity>
+			<prodml:GasFormationVolumeFactor uom="%">0.0079</prodml:GasFormationVolumeFactor>
+			<prodml:GasZFactor>0.841</prodml:GasZFactor>
+			<prodml:GasViscosity uom="cP">0.018</prodml:GasViscosity>
+			<prodml:SolutionGORMeasured uom="%">805.4</prodml:SolutionGORMeasured> 
+			<prodml:FluidCondition>current reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:VaporComposition>
+				<prodml:VaporComponent fluidComponentReference="N2">
+					<prodml:MoleFraction uom="%[molar]">0.767</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="CO2">
+					<prodml:MoleFraction uom="%[molar]">3.549</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C1">
+					<prodml:MoleFraction uom="%[molar]">76.915</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference=">C2">
+					<prodml:MoleFraction uom="%[molar]">9.291</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C3">
+					<prodml:MoleFraction uom="%[molar]">4.663</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC4">
+					<prodml:MoleFraction uom="%[molar]">0.651</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC4">
+					<prodml:MoleFraction uom="%[molar]">1.396</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC5">
+					<prodml:MoleFraction uom="%[molar]">0.389</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC5">
+					<prodml:MoleFraction uom="%[molar]">0.492</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C6">
+					<prodml:MoleFraction uom="%[molar]">0.435</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C7">
+					<prodml:MoleFraction uom="%[molar]">0.553</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C8">
+					<prodml:MoleFraction uom="%[molar]">0.464</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C9">
+					<prodml:MoleFraction uom="%[molar]">0.185</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C10+">
+					<prodml:MoleFraction uom="%[molar]">0.249</prodml:MoleFraction>
+				</prodml:VaporComponent>
+			</prodml:VaporComposition>
+		</prodml:DlTestStep>
+		<prodml:DlTestStep uid="dITs5">
+			<prodml:StepNumber>5</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">1000</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.7326</prodml:OilDensity>
+			<prodml:OilFormationVolumeFactor uom="%">1.338</prodml:OilFormationVolumeFactor> 
+			<prodml:OilViscosity uom="cP">1.427</prodml:OilViscosity> 
+			<prodml:GasGravity>0.797</prodml:GasGravity> 
+			<prodml:GasFormationVolumeFactor uom="%">0.0166</prodml:GasFormationVolumeFactor>
+			<prodml:GasZFactor>0.884</prodml:GasZFactor>
+			<prodml:GasViscosity uom="cP">0.014</prodml:GasViscosity>
+			<prodml:SolutionGORMeasured uom="%">445.6</prodml:SolutionGORMeasured> 
+			<prodml:FluidCondition>current reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:VaporComposition>
+				<prodml:VaporComponent fluidComponentReference="N2">
+					<prodml:MoleFraction uom="%[molar]">0.500</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="CO2">
+					<prodml:MoleFraction uom="%[molar]">4.064</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C1">
+					<prodml:MoleFraction uom="%[molar]">73.719</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C2">
+					<prodml:MoleFraction uom="%[molar]">11.329</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C3">
+					<prodml:MoleFraction uom="%[molar]">5.755</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC4">
+					<prodml:MoleFraction uom="%[molar]">0.758</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC4">
+					<prodml:MoleFraction uom="%[molar]">1.600</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC5">
+					<prodml:MoleFraction uom="%[molar]">0.404</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC5">
+					<prodml:MoleFraction uom="%[molar]">0.498</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C6">
+					<prodml:MoleFraction uom="%[molar]">0.376</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C7">
+					<prodml:MoleFraction uom="%[molar]">0.449</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C8">
+					<prodml:MoleFraction uom="%[molar]">0.338</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C9">
+					<prodml:MoleFraction uom="%[molar]">0.111</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C10+">
+					<prodml:MoleFraction uom="%[molar]">0.098</prodml:MoleFraction>
+				</prodml:VaporComponent>
+			</prodml:VaporComposition>
+		</prodml:DlTestStep>
+		<prodml:DlTestStep uid="dITs6">
+			<prodml:StepNumber>6</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">500</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.7575</prodml:OilDensity>
+			<prodml:OilFormationVolumeFactor uom="%">1.254</prodml:OilFormationVolumeFactor> 
+			<prodml:OilViscosity uom="cP">1.996</prodml:OilViscosity> 
+			<prodml:GasGravity>0.874</prodml:GasGravity>
+			<prodml:GasDensity uom="ug/cm3">3.14159265358979E0</prodml:GasDensity> 
+			<prodml:GasZFactor>0.919</prodml:GasZFactor>
+			<prodml:GasViscosity uom="cP">0.013</prodml:GasViscosity>
+			<prodml:SolutionGORMeasured uom="%">286.7</prodml:SolutionGORMeasured> 
+			<prodml:FluidCondition>current reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:LiquidComposition>
+				<prodml:LiquidComponent fluidComponentReference="N2"/>
+				<prodml:LiquidComponent fluidComponentReference="CO2"/>
+				<prodml:LiquidComponent fluidComponentReference="C1"/>
+				<prodml:LiquidComponent fluidComponentReference="C2"/>
+				<prodml:LiquidComponent fluidComponentReference="C3"/>
+				<prodml:LiquidComponent fluidComponentReference="C4"/>
+				<prodml:LiquidComponent fluidComponentReference="nC4"/>
+				<prodml:LiquidComponent fluidComponentReference="iC5"/>
+				<prodml:LiquidComponent fluidComponentReference="nC5"/>
+				<prodml:LiquidComponent fluidComponentReference="C6"/>
+				<prodml:LiquidComponent fluidComponentReference="C7"/>
+				<prodml:LiquidComponent fluidComponentReference="C8"/>
+				<prodml:LiquidComponent fluidComponentReference="C9"/>
+				<prodml:LiquidComponent fluidComponentReference="C10+"/>
+			</prodml:LiquidComposition>
+			<prodml:VaporComposition>
+				<prodml:VaporComponent fluidComponentReference="N2">
+					<prodml:MoleFraction uom="%[molar]">0.262</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="CO2">
+					<prodml:MoleFraction uom="%[molar]">4.634</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C1">
+					<prodml:MoleFraction uom="%[molar]">65.407</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C2">
+					<prodml:MoleFraction uom="%[molar]">14.958</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C3">
+					<prodml:MoleFraction uom="%[molar]">8.399</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC4">
+					<prodml:MoleFraction uom="%[molar]">1.106</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC4">
+					<prodml:MoleFraction uom="%[molar]">2.340</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC5">
+					<prodml:MoleFraction uom="%[molar]">0.567</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC5">
+					<prodml:MoleFraction uom="%[molar]">0.691</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C6">
+					<prodml:MoleFraction uom="%[molar]">0.482</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C7">
+					<prodml:MoleFraction uom="%[molar]">0.558</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C8">
+					<prodml:MoleFraction uom="%[molar]">0.397</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C9">
+					<prodml:MoleFraction uom="%[molar]">0.116</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C10+">
+					<prodml:MoleFraction uom="%[molar]">0.084</prodml:MoleFraction>
+				</prodml:VaporComponent>
+			</prodml:VaporComposition>
+		</prodml:DlTestStep>
+		<prodml:DlTestStep uid="dITs7">
+			<prodml:StepNumber>7</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">50</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.7995</prodml:OilDensity>
+			<prodml:OilFormationVolumeFactor uom="%">1.093</prodml:OilFormationVolumeFactor>
+			<prodml:OilViscosity uom="cP">3.602</prodml:OilViscosity>
+			<prodml:GasGravity>1.469</prodml:GasGravity>
+			<prodml:GasFormationVolumeFactor uom="%">0.3689</prodml:GasFormationVolumeFactor>
+			<prodml:GasZFactor>0.973</prodml:GasZFactor>
+			<prodml:GasViscosity uom="cP">0.011</prodml:GasViscosity>
+			<prodml:SolutionGORMeasured uom="%">53.3</prodml:SolutionGORMeasured> 
+			<prodml:FluidCondition>current reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:LiquidComposition>
+				<prodml:LiquidComponent fluidComponentReference="N2"/>
+				<prodml:LiquidComponent fluidComponentReference="CO2"/>
+				<prodml:LiquidComponent fluidComponentReference="C1"/>
+				<prodml:LiquidComponent fluidComponentReference="C2"/>
+				<prodml:LiquidComponent fluidComponentReference="C3"/>
+				<prodml:LiquidComponent fluidComponentReference="iC4"/>
+				<prodml:LiquidComponent fluidComponentReference="nC4"/>
+				<prodml:LiquidComponent fluidComponentReference="iC5"/>
+				<prodml:LiquidComponent fluidComponentReference="nC5"/>
+				<prodml:LiquidComponent fluidComponentReference="C6"/>
+				<prodml:LiquidComponent fluidComponentReference="C7"/>
+				<prodml:LiquidComponent fluidComponentReference="C8"/>
+				<prodml:LiquidComponent fluidComponentReference="C9"/>
+				<prodml:LiquidComponent fluidComponentReference="C10+"/>
+			</prodml:LiquidComposition>
+			<prodml:VaporComposition>
+				<prodml:VaporComponent fluidComponentReference="N2">
+					<prodml:MoleFraction uom="%[molar]">0.048</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="CO2">
+					<prodml:MoleFraction uom="%[molar]">3.409</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C1">
+					<prodml:MoleFraction uom="%[molar]">28.15</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C2">
+					<prodml:MoleFraction uom="%[molar]">18.425</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C3">
+					<prodml:MoleFraction uom="%[molar]">20.155</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC4">
+					<prodml:MoleFraction uom="%[molar]">3.868</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC4">
+					<prodml:MoleFraction uom="%[molar]">9.354</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC5">
+					<prodml:MoleFraction uom="%[molar]">2.896</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC5">
+					<prodml:MoleFraction uom="%[molar]">3.723</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C6">
+					<prodml:MoleFraction uom="%[molar]">2.927</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C7">
+					<prodml:MoleFraction uom="%[molar]">3.501</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C8">
+					<prodml:MoleFraction uom="%[molar]">2.468</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C9">
+					<prodml:MoleFraction uom="%[molar]">0.674</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C10+">
+					<prodml:MoleFraction uom="%[molar]">0.402</prodml:MoleFraction>
+				</prodml:VaporComponent>
+			</prodml:VaporComposition>
+		</prodml:DlTestStep>
+		<prodml:DlTestStep uid="dITs8">
+			<prodml:StepNumber>8</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">14.7</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.8101</prodml:OilDensity>
+			<prodml:OilFormationVolumeFactor uom="%">1.045</prodml:OilFormationVolumeFactor>
+			<prodml:OilViscosity uom="cP">4.194</prodml:OilViscosity>
+			<prodml:GasGravity>2.266</prodml:GasGravity>
+			<prodml:GasFormationVolumeFactor uom="%">1.2940</prodml:GasFormationVolumeFactor>
+			<prodml:GasZFactor>0.981</prodml:GasZFactor>
+			<prodml:GasViscosity uom="cP">0.010</prodml:GasViscosity>
+			<prodml:SolutionGORMeasured uom="%">0</prodml:SolutionGORMeasured> 
+			<prodml:FluidCondition>current reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:LiquidComposition>
+				<prodml:LiquidComponent fluidComponentReference="N2"/>
+				<prodml:LiquidComponent fluidComponentReference="CO2"/>
+				<prodml:LiquidComponent fluidComponentReference="C1"/>
+				<prodml:LiquidComponent fluidComponentReference="C2"/>
+				<prodml:LiquidComponent fluidComponentReference="C3"/>
+				<prodml:LiquidComponent fluidComponentReference="iC4"/>
+				<prodml:LiquidComponent fluidComponentReference="nC4"/>
+				<prodml:LiquidComponent fluidComponentReference="iC5"/>
+				<prodml:LiquidComponent fluidComponentReference="nC5"/>
+				<prodml:LiquidComponent fluidComponentReference="C6"/>
+				<prodml:LiquidComponent fluidComponentReference="C7"/>
+				<prodml:LiquidComponent fluidComponentReference="C8"/>
+				<prodml:LiquidComponent fluidComponentReference="C9"/>
+				<prodml:LiquidComponent fluidComponentReference="C10+"/>
+			</prodml:LiquidComposition>
+			<prodml:VaporComposition>
+				<prodml:VaporComponent fluidComponentReference="N2">
+					<prodml:MoleFraction uom="%[molar]">.003</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="CO2">
+					<prodml:MoleFraction uom="%[molar]">0.846</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C1">
+					<prodml:MoleFraction uom="%[molar]">3.882</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C2">
+					<prodml:MoleFraction uom="%[molar]">8.209</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C3">
+					<prodml:MoleFraction uom="%[molar]">19.056</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC4">
+					<prodml:MoleFraction uom="%[molar]">5.654</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC4">
+					<prodml:MoleFraction uom="%[molar]">15.793</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC5">
+					<prodml:MoleFraction uom="%[molar]">6.578</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC5">
+					<prodml:MoleFraction uom="%[molar]">9.014</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C6">
+					<prodml:MoleFraction uom="%[molar]">8.573</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C7">
+					<prodml:MoleFraction uom="%[molar]">10.843</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C8">
+					<prodml:MoleFraction uom="%[molar]">7.966</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C9">
+					<prodml:MoleFraction uom="%[molar]">2.244</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C10+">
+					<prodml:MoleFraction uom="%[molar]">1.339</prodml:MoleFraction>
+				</prodml:VaporComponent>
+			</prodml:VaporComposition>
+		</prodml:DlTestStep>
+		<prodml:DlTestStep uid="dITs9">
+			<prodml:StepNumber>9</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">14.7</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.8463</prodml:OilDensity>
+			<prodml:OilFormationVolumeFactor uom="%">1.000</prodml:OilFormationVolumeFactor>
+			<prodml:GasZFactor>0.881</prodml:GasZFactor> 
+			<prodml:FluidCondition>current reservoir conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+			<prodml:LiquidComposition>
+				<prodml:LiquidComponent fluidComponentReference="N2">
+					<prodml:MoleFraction uom="%[molar]">3.79e-6</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="CO2">
+					<prodml:MoleFraction uom="%[molar]">5.97e-3</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C1">
+					<prodml:MoleFraction uom="%[molar]">0.015</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C2">
+					<prodml:MoleFraction uom="%[molar]">0.111</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C3">
+					<prodml:MoleFraction uom="%[molar]">0.659</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="iC4">
+					<prodml:MoleFraction uom="%[molar]">0.380</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="nC4">
+					<prodml:MoleFraction uom="%[molar]">1.376</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="iC5">
+					<prodml:MoleFraction uom="%[molar]">1.139</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="nC5">
+					<prodml:MoleFraction uom="%[molar]">1.895</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C6">
+					<prodml:MoleFraction uom="%[molar]">4.217</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C7">
+					<prodml:MoleFraction uom="%[molar]">8.224</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C8">
+					<prodml:MoleFraction uom="%[molar]">10.286</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C9">
+					<prodml:MoleFraction uom="%[molar]">7.392</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C10+">
+					<prodml:MoleFraction uom="%[molar]">64.302</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+			</prodml:LiquidComposition>
+			<prodml:VaporComposition>
+				<prodml:VaporComponent fluidComponentReference="N2">
+					<prodml:MoleFraction uom="%[molar]">0.905</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="CO2">
+					<prodml:MoleFraction uom="%[molar]">3.156</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C1">
+					<prodml:MoleFraction uom="%[molar]">73.138</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C2">
+					<prodml:MoleFraction uom="%[molar]">8.644</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C3">
+					<prodml:MoleFraction uom="%[molar]">4.832</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC4">
+					<prodml:MoleFraction uom="%[molar]">0.763</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC4">
+					<prodml:MoleFraction uom="%[molar]">1.712</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC5">
+					<prodml:MoleFraction uom="%[molar]">0.559</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC5">
+					<prodml:MoleFraction uom="%[molar]">0.740</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C6">
+					<prodml:MoleFraction uom="%[molar]">0.818</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C7">
+					<prodml:MoleFraction uom="%[molar]">1.170</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C8">
+					<prodml:MoleFraction uom="%[molar]">1.145</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C9">
+					<prodml:MoleFraction uom="%[molar]">0.607</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C10+">
+					<prodml:MoleFraction uom="%[molar]">1.811</prodml:MoleFraction>
+				</prodml:VaporComponent>
+			</prodml:VaporComposition>
+		</prodml:DlTestStep>
+		<prodml:ShrinkageReference uid="sr1">
+			<prodml:Kind>separator stage 10</prodml:Kind> 
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ShrinkageReference>
+	</prodml:DifferentialLiberationTest>
+	<prodml:ConstantVolumeDepletionTest uid="cvdt1">
+		<prodml:TestNumber>2</prodml:TestNumber>
+		<prodml:TestTemperature uom="degF">3.14159265358979E0</prodml:TestTemperature> 
+		<prodml:LiquidDropoutReference uid="lqdr1">
+			<prodml:Kind>separator stage 9</prodml:Kind>  
+		</prodml:LiquidDropoutReference>
+		<prodml:LiquidDropoutReference uid="lqdr2">
+			<prodml:Kind>separator stage 10</prodml:Kind> 
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:LiquidDropoutReference>
+		<prodml:CvdTestStep uid="cvdts1">
+			<prodml:StepNumber>2</prodml:StepNumber>
+			<prodml:StepPressure uom="inH2O[60degF]">3.14159265358979E0</prodml:StepPressure> 
+			<prodml:FluidCondition>initial saturation conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+		</prodml:CvdTestStep>
+		<prodml:CvdTestStep uid="cvdts2">
+			<prodml:StepNumber>2</prodml:StepNumber>
+			<prodml:StepPressure uom="umHg[0degC]">3.14159265358979E0</prodml:StepPressure>
+			<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+		</prodml:CvdTestStep>
+	</prodml:ConstantVolumeDepletionTest>
+	<prodml:SeparatorTest uid="st1">
+		<prodml:TestNumber>2</prodml:TestNumber>
+		<prodml:ShrinkageReference uid="st1">
+			<prodml:Kind>separator stage 1</prodml:Kind> 
+			<prodml:Remark>a</prodml:Remark>
+		</prodml:ShrinkageReference>
+		<prodml:SeparatorTestStep uid="sts1">
+			<prodml:StepNumber>1</prodml:StepNumber>
+			<prodml:StepTemperature uom="degF">100</prodml:StepTemperature>
+			<prodml:StepPressure uom="psi">500</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.7688</prodml:OilDensity>
+			<prodml:OilFormationVolumeFactorStd uom="%">1.143</prodml:OilFormationVolumeFactorStd>
+			<prodml:StageSeparatorGORStd uom="%">1630.9</prodml:StageSeparatorGORStd>
+			<prodml:GasMolecularWeight uom="g/mol">20.79</prodml:GasMolecularWeight>
+			<prodml:GasGravity>0.718</prodml:GasGravity>
+			<prodml:FluidCondition>stock tank conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>gas</prodml:PhasesPresent>
+			<prodml:VaporComposition>
+				<prodml:VaporComponent fluidComponentReference="N2">
+					<prodml:MoleFraction uom="%[molar]">0.823</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="CO2">
+					<prodml:MoleFraction uom="%[molar]">3.680</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C1">
+					<prodml:MoleFraction uom="%[molar]">79.365</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C2">
+					<prodml:MoleFraction uom="%[molar]">9.713</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C3">
+					<prodml:MoleFraction uom="%[molar]">4.300</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC4">
+					<prodml:MoleFraction uom="%[molar]">0.487</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC4">
+					<prodml:MoleFraction uom="%[molar]">0.937</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC5">
+					<prodml:MoleFraction uom="%[molar]">0.185</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC5">
+					<prodml:MoleFraction uom="%[molar]">0.208</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C6">
+					<prodml:MoleFraction uom="%[molar]">0.110</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C7">
+					<prodml:MoleFraction uom="%[molar]">0.107</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C8">
+					<prodml:MoleFraction uom="%[molar]">0.064</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C9">
+					<prodml:MoleFraction uom="%[molar]">0.014</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C10+">
+					<prodml:MoleFraction uom="%[molar]">6.0e-3</prodml:MoleFraction>
+				</prodml:VaporComponent>
+			</prodml:VaporComposition>
+		</prodml:SeparatorTestStep>
+		<prodml:SeparatorTestStep uid="sts2">
+			<prodml:StepNumber>2</prodml:StepNumber>
+			<prodml:StepTemperature uom="degF">80</prodml:StepTemperature>
+			<prodml:StepPressure uom="psi">150</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.7951</prodml:OilDensity>
+			<prodml:OilFormationVolumeFactorStd uom="%">1.076</prodml:OilFormationVolumeFactorStd>
+			<prodml:StageSeparatorGORStd uom="%">125.2</prodml:StageSeparatorGORStd>
+			<prodml:GasMolecularWeight uom="g/mol">23.93</prodml:GasMolecularWeight>
+			<prodml:GasGravity>0.826</prodml:GasGravity>
+			<prodml:FluidCondition>stock tank conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>gas</prodml:PhasesPresent>
+			<prodml:VaporComposition>
+				<prodml:VaporComponent fluidComponentReference="N2">
+					<prodml:MoleFraction uom="%[molar]">0.276</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="CO2">
+					<prodml:MoleFraction uom="%[molar]">4.984</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C1">
+					<prodml:MoleFraction uom="%[molar]">65.886</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C2">
+					<prodml:MoleFraction uom="%[molar]">16.833</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C3">
+					<prodml:MoleFraction uom="%[molar]">8.395</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC4">
+					<prodml:MoleFraction uom="%[molar]">0.910</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC4">
+					<prodml:MoleFraction uom="%[molar]">1.711</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC5">
+					<prodml:MoleFraction uom="%[molar]">0.304</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC5">
+					<prodml:MoleFraction uom="%[molar]">0.329</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C6">
+					<prodml:MoleFraction uom="%[molar]">0.148</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C7">
+					<prodml:MoleFraction uom="%[molar]">0.135</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C8">
+					<prodml:MoleFraction uom="%[molar]">0.072</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C9">
+					<prodml:MoleFraction uom="%[molar]">0.013</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C10+">
+					<prodml:MoleFraction uom="%[molar]">4.0e-3</prodml:MoleFraction>
+				</prodml:VaporComponent>
+			</prodml:VaporComposition>
+		</prodml:SeparatorTestStep>
+		<prodml:SeparatorTestStep uid="sts3">
+			<prodml:StepNumber>3</prodml:StepNumber>
+			<prodml:StepTemperature uom="degF">60</prodml:StepTemperature>
+			<prodml:StepPressure uom="psi">14.7</prodml:StepPressure>
+			<prodml:OilDensity uom="g/cm3">0.8206</prodml:OilDensity>
+			<prodml:OilFormationVolumeFactorStd uom="%">1.000</prodml:OilFormationVolumeFactorStd>
+			<prodml:StageSeparatorGORStd uom="%">120.7</prodml:StageSeparatorGORStd>
+			<prodml:GasMolecularWeight uom="g/mol">38.37</prodml:GasMolecularWeight>
+			<prodml:GasGravity>1.325</prodml:GasGravity>
+			<prodml:FluidCondition>stock tank conditions</prodml:FluidCondition>
+			<prodml:PhasesPresent>gas</prodml:PhasesPresent>
+			<prodml:LiquidComposition>
+				<prodml:LiquidComponent fluidComponentReference="N2">
+					<prodml:MoleFraction uom="%[molar]">3.97e-5</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="CO2">
+					<prodml:MoleFraction uom="%[molar]">0.063</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C1">
+					<prodml:MoleFraction uom="%[molar]">0.122</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C2">
+					<prodml:MoleFraction uom="%[molar]">0.960</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C3">
+					<prodml:MoleFraction uom="%[molar]">4.347</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="iC4">
+					<prodml:MoleFraction uom="%[molar]">1.684</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="nC4">
+					<prodml:MoleFraction uom="%[molar]">5.079</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="iC5">
+					<prodml:MoleFraction uom="%[molar]">2.633</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="nC5">
+					<prodml:MoleFraction uom="%[molar]">3.889</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C6">
+					<prodml:MoleFraction uom="%[molar]">5.705</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C7">
+					<prodml:MoleFraction uom="%[molar]">9.520</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C8">
+					<prodml:MoleFraction uom="%[molar]">10.467</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C9">
+					<prodml:MoleFraction uom="%[molar]">6.575</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+				<prodml:LiquidComponent fluidComponentReference="C10+">
+					<prodml:MoleFraction uom="%[molar]">48.956</prodml:MoleFraction>
+				</prodml:LiquidComponent>
+			</prodml:LiquidComposition>
+			<prodml:VaporComposition>
+				<prodml:VaporComponent fluidComponentReference="N2">
+					<prodml:MoleFraction uom="%[molar]">0.027</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="CO2">
+					<prodml:MoleFraction uom="%[molar]">3.878</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C1">
+					<prodml:MoleFraction uom="%[molar]">21.307</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C2">
+					<prodml:MoleFraction uom="%[molar]">25.744</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C3">
+					<prodml:MoleFraction uom="%[molar]">29.800</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC4">
+					<prodml:MoleFraction uom="%[molar]">4.501</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC4">
+					<prodml:MoleFraction uom="%[molar]">9.162</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="iC5">
+					<prodml:MoleFraction uom="%[molar]">1.758</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="nC5">
+					<prodml:MoleFraction uom="%[molar]">1.903</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C6">
+					<prodml:MoleFraction uom="%[molar]">0.807</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C7">
+					<prodml:MoleFraction uom="%[molar]">0.699</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C8">
+					<prodml:MoleFraction uom="%[molar]">0.348</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C9">
+					<prodml:MoleFraction uom="%[molar]">0.054</prodml:MoleFraction>
+				</prodml:VaporComponent>
+				<prodml:VaporComponent fluidComponentReference="C10+">
+					<prodml:MoleFraction uom="%[molar]">1.33e-2</prodml:MoleFraction>
+				</prodml:VaporComponent>
+			</prodml:VaporComposition>
+		</prodml:SeparatorTestStep>
+	</prodml:SeparatorTest>
+	<prodml:SwellingTest uid="sw1">
+		<prodml:TestNumber>1</prodml:TestNumber>
+		<prodml:TestTemperature uom="degF">200</prodml:TestTemperature>
+		<prodml:SwellingTestStep uid="swts1">
+			<prodml:StepNumber>1</prodml:StepNumber>
+			<prodml:IncrementalGasAdded injectionGasReference="gas1" uom="%[molar]">0</prodml:IncrementalGasAdded>
+			<prodml:CumulativeGasAdded injectionGasReference="gas1" uom="%[molar]">0</prodml:CumulativeGasAdded>
+			<prodml:Gor uom="%">0</prodml:Gor>
+			<prodml:SaturationPressure kind="bubble point" uom="psi">4434.3</prodml:SaturationPressure>
+			<prodml:SwollenVolume fluidVolumeReference="f1" uom="%">1</prodml:SwollenVolume>
+			<prodml:DensityAtSaturationPoint uom="g/cm3">0.5672</prodml:DensityAtSaturationPoint>
+		</prodml:SwellingTestStep>
+		<prodml:SwellingTestStep uid="swts2">
+			<prodml:StepNumber>2</prodml:StepNumber>
+			<prodml:CumulativeGasAdded injectionGasReference="g1"  uom="%[molar]">20</prodml:CumulativeGasAdded>
+			<prodml:Gor uom="%">252</prodml:Gor>
+			<prodml:SaturationPressure kind="bubble point" uom="psi">4591.8</prodml:SaturationPressure>
+			<prodml:SwollenVolume  fluidVolumeReference="f1" uom="%">1.1169</prodml:SwollenVolume>
+			<prodml:DensityAtSaturationPoint uom="g/cm3">0.5829</prodml:DensityAtSaturationPoint>
+		</prodml:SwellingTestStep>
+		<prodml:SwellingTestStep uid="swts3">
+			<prodml:StepNumber>3</prodml:StepNumber>
+			<prodml:CumulativeGasAdded injectionGasReference="g1" uom="%[molar]">40</prodml:CumulativeGasAdded>
+			<prodml:Gor uom="%">504</prodml:Gor>
+			<prodml:SaturationPressure kind="bubble point" uom="psi">4783.3</prodml:SaturationPressure>
+			<prodml:SwollenVolume  fluidVolumeReference="f1" uom="%">1.2309</prodml:SwollenVolume>
+			<prodml:DensityAtSaturationPoint uom="g/cm3">0.5971</prodml:DensityAtSaturationPoint>
+		</prodml:SwellingTestStep>
+		<prodml:SwellingTestStep uid="swts4">
+			<prodml:StepNumber>4</prodml:StepNumber>
+			<prodml:CumulativeGasAdded injectionGasReference="g1" uom="%[molar]">60</prodml:CumulativeGasAdded>
+			<prodml:CumulativeGasAdded injectionGasReference="g1" uom="%[molar]">60</prodml:CumulativeGasAdded>
+			<prodml:Gor uom="%[vol]">755.9</prodml:Gor>
+			<prodml:SaturationPressure kind="bubble point" uom="psi">4990.7</prodml:SaturationPressure>
+			<prodml:SwollenVolume  fluidVolumeReference="f1"  uom="%[vol]">1.3417</prodml:SwollenVolume>
+			<prodml:DensityAtSaturationPoint uom="g/cm3">0.6103</prodml:DensityAtSaturationPoint>
+		</prodml:SwellingTestStep>
+		<prodml:SwellingTestStep uid="swts5">
+			<prodml:StepNumber>5</prodml:StepNumber>
+			<prodml:CumulativeGasAdded injectionGasReference="g1" uom="%[molar]">80</prodml:CumulativeGasAdded>
+			<prodml:Gor uom="%">1007.9</prodml:Gor>
+			<prodml:SaturationPressure kind="bubble point" uom="psi">5199.1</prodml:SaturationPressure>
+			<prodml:SwollenVolume   fluidVolumeReference="f1" uom="%">1.4494</prodml:SwollenVolume>
+			<prodml:DensityAtSaturationPoint uom="g/cm3">0.6229</prodml:DensityAtSaturationPoint>
+		</prodml:SwellingTestStep>
+		<prodml:SwellingTestStep uid="swts6">
+			<prodml:StepNumber>5</prodml:StepNumber>
+			<prodml:CumulativeGasAdded injectionGasReference="g1" uom="%[molar]">100</prodml:CumulativeGasAdded>
+			<prodml:Gor uom="%">1259.9</prodml:Gor>
+			<prodml:SaturationPressure kind="bubble point" uom="psi">1259.9</prodml:SaturationPressure>
+			<prodml:SwollenVolume  fluidVolumeReference="f1"  uom="%[vol]">1.5546</prodml:SwollenVolume>
+			<prodml:DensityAtSaturationPoint uom="g/cm3">0.6347</prodml:DensityAtSaturationPoint>
+		</prodml:SwellingTestStep>
+	</prodml:SwellingTest>
+	<prodml:STOAnalysis>
+		<prodml:Date>1967-08-13</prodml:Date> 
+		<prodml:FluidCondition>stock tank conditions</prodml:FluidCondition>
+		<prodml:PhasesPresent>oil</prodml:PhasesPresent>
+		<prodml:Remark>a</prodml:Remark>
+	</prodml:STOAnalysis>
+	<prodml:STOAnalysis>
+		<prodml:Date>1967-08-13</prodml:Date> 
+		<prodml:FluidCondition>initial reservoir conditions</prodml:FluidCondition>
+		<prodml:PhasesPresent>gas and water</prodml:PhasesPresent>
+		<prodml:Remark>a</prodml:Remark>
+	</prodml:STOAnalysis>
+</prodml:FluidAnalysis>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Transfer objectVersion="2.0" schemaVersion="2.0" uuid="00000000-0000-0000-0000-000000000B00" xmlns="http://www.energistics.org/energyml/data/prodmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodMLv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/SimpleProductVolume.xsd">
+	<eml:Aliases authority="energistics">
+		<eml:Identifier>Terminal Lifting From X to Z</eml:Identifier>
+		<eml:Description/>
+	</eml:Aliases>
+	<eml:Citation>
+		<eml:Title>Lease X transfer</eml:Title>
+		<eml:Originator>energistics</eml:Originator>
+		<eml:Creation>2015-01-10T09:30:47Z</eml:Creation>
+		<eml:Format>energistics:xmlspy/xml</eml:Format>
+		<eml:Editor>xmlspy</eml:Editor>
+		<eml:LastUpdate>2015-01-10T11:30:47Z</eml:LastUpdate>
+		<eml:VersionString>2.1</eml:VersionString>
+		<eml:Description>Lease Y to Lease X transfer</eml:Description>
+	</eml:Citation>
+	<StandardConditions xsi:type="eml:TemperaturePressure">
+		<eml:Temperature uom="degF">60</eml:Temperature>
+		<eml:Pressure uom="psi">14.7</eml:Pressure>
+	</StandardConditions>
+	<ApprovalDate>2015-01-10</ApprovalDate>
+	<FluidComponentCatalog>
+		<StockTankOil uid="00000000-0000-0000-0003-00000000091">
+			<APIGravity uom="dAPI">30</APIGravity>
+			<MolecularWeight uom="g/mol">100</MolecularWeight>
+			<Remark/>
+		</StockTankOil>
+		<NaturalGas uid="00000000-0000-0000-0003-00000000092">
+			<GasGravity>0.75</GasGravity>
+			<MolecularWeight uom="g/mol">20</MolecularWeight>
+		</NaturalGas>
+		<FormationWater uid="00000000-0000-0000-0003-00000000093">
+			<SpecificGravity>1.05</SpecificGravity>
+			<Salinity uom="ng/g">30000</Salinity>
+			<Remark/>
+		</FormationWater>
+	</FluidComponentCatalog>
+	<Operator>
+		<Name>Smith</Name>
+		<Role authority="energistics">operator</Role>
+		<PhoneNumber type="voicemail" qualifier="work">1800-023-xxxx</PhoneNumber>
+		<Email qualifier="permanent"/>
+		<Contact>Jonn smith</Contact>
+		<PersonnelCount>1</PersonnelCount>
+	</Operator>
+	<TransferKind>input</TransferKind>
+	<StartTime>2015-01-10T03:30:47Z</StartTime>
+	<EndTime>2015-01-10T09:30:47Z</EndTime>
+	<ProductTransferQuantity uid="pt1" xsi:type="ProductFluid" productFluidReference="00000000-0000-0000-0001-000000000001">
+		<Volume uom="1000 bbl">100</Volume>
+		<ProductFluidKind>oil - net</ProductFluidKind>
+	</ProductTransferQuantity>
+	<DestinationFacilityReference>
+		<eml:ContentType>application/x-prodml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+		<eml:Title>Lease X</eml:Title>
+		<eml:Uuid>00000000-0000-0000-0000-0000000001A1</eml:Uuid>
+		<eml:UuidAuthority>energistics</eml:UuidAuthority>
+		<eml:VersionString>2.1</eml:VersionString>
+	</DestinationFacilityReference>
+	<SourceFacilityReference>
+		<eml:ContentType>application/x-prodml+xml;version=2.0;type=obj_ReportingEntity</eml:ContentType>
+		<eml:Title>Lease Y</eml:Title>
+		<eml:Uuid>00000000-0000-0000-0000-0000000001A2</eml:Uuid>
+		<eml:UuidAuthority>energistics</eml:UuidAuthority>
+		<eml:VersionString>2.1</eml:VersionString>
+	</SourceFacilityReference>
+</Transfer>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prodml:FluidAnalysis xsi:type="prodml:WaterAnalysis" schemaVersion="0.29" uuid="00000000-0AB1-A111-0001-000000003955" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../../../../xsd_schemas/FluidAnalysis.xsd">
+	<eml:Aliases authority="PVT lab Co">
+		<eml:Identifier>RFL 88001</eml:Identifier>
+		<eml:Description>Good Oil Company Well 4</eml:Description>
+	</eml:Aliases>
+	<eml:Citation>
+		<eml:Title>Water Reservoir Fluid Study for Good Oil Company Well No. 4, Productive Field, Sampson County, Texas</eml:Title>
+		<eml:Originator>Unknown</eml:Originator>
+		<eml:Creation>2015-03-17T09:30:47Z</eml:Creation>
+		<eml:Format>application/xml</eml:Format>
+		<eml:LastUpdate>2001-12-17T09:30:47Z</eml:LastUpdate>
+	</eml:Citation>
+	<prodml:RequestDate>1994-04-01</prodml:RequestDate>
+	<prodml:AnalysisDescription>Reservoir Study for Good Oil Company Well No. 4</prodml:AnalysisDescription>
+	<prodml:AnalysisPurpose>Fluid Characterization</prodml:AnalysisPurpose>
+	<prodml:AnalysisSite>PVT lab Co (Irving Texas)</prodml:AnalysisSite>
+	<prodml:LabContact>Laman Reseflana</prodml:LabContact>
+	<prodml:StandardConditions xsi:type="eml:TemperaturePressure">
+		<eml:Temperature uom="degF">60</eml:Temperature>
+		<eml:Pressure uom="psi">14.7</eml:Pressure>
+	</prodml:StandardConditions>
+	<prodml:AnalysisQuality>valid</prodml:AnalysisQuality>
+	<prodml:Remark>Lab's statement about their analysis</prodml:Remark>
+	<prodml:FluidSampleReference>
+		<eml:ContentType>FluidSample</eml:ContentType>
+		<eml:Title>GO4 Aqueous Contaminant 1</eml:Title>
+		<eml:Uuid>00000000-0000-0000-0003-000000003955</eml:Uuid>
+		<eml:VersionString>0.24</eml:VersionString>
+	</prodml:FluidSampleReference>
+	<prodml:FluidAnalysisReport uid="report_1">
+		<prodml:ReportIdentifier>RFL-88001</prodml:ReportIdentifier>
+		<prodml:ReportDate>1994-01-01</prodml:ReportDate>
+		<prodml:AnalysisLaboratory>PVT lab Co</prodml:AnalysisLaboratory>
+		<prodml:ReportDocumentReference>
+			<eml:ContentType>application/vnd.ms-excel</eml:ContentType>
+			<eml:Title>RFL 88001</eml:Title>
+			<eml:Uuid>00000000-AAB1-0011-0001-000000003954</eml:Uuid>
+		</prodml:ReportDocumentReference>
+		<prodml:ReportLocation uid="location1">
+			<prodml:LocationDate>1994-02-01</prodml:LocationDate>
+			<prodml:LocationType>URL</prodml:LocationType>
+			<prodml:Location>C:\Folder\File.xlsx</prodml:Location>
+			<prodml:Remark>Here is where the report is stored</prodml:Remark>
+		</prodml:ReportLocation>
+	</prodml:FluidAnalysisReport>
+	<prodml:WaterAnalysisTest uid="watertest1">
+		<prodml:TestNumber>1</prodml:TestNumber>
+		<prodml:LiquidGravity>1.02</prodml:LiquidGravity>
+		<prodml:Salinity uom="ppm">80000</prodml:Salinity>
+		<prodml:PH>6.9</prodml:PH>
+		<prodml:Resistivity uom="ohm.m">0.0421</prodml:Resistivity>
+		<prodml:WaterAnalysisTestStep uid="step1">
+		<prodml:StepNumber>1</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">4000</prodml:StepPressure>
+			<prodml:StepTemperature uom="degF">217</prodml:StepTemperature>
+			<prodml:WaterFormationVolumeFactor uom="bbl/bbl">1.0372</prodml:WaterFormationVolumeFactor>
+			<prodml:WaterIsothermalCompressibility uom="1/psi">0.00000268</prodml:WaterIsothermalCompressibility>
+			<prodml:WaterDensity uom="lbm/ft3">63.612</prodml:WaterDensity>
+			<prodml:WaterViscosity uom="cP">0.4251</prodml:WaterViscosity>
+		</prodml:WaterAnalysisTestStep>
+		<prodml:WaterAnalysisTestStep uid="step2">
+		<prodml:StepNumber>2</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">3000</prodml:StepPressure>
+			<prodml:StepTemperature uom="degF">217</prodml:StepTemperature>
+			<prodml:WaterFormationVolumeFactor uom="bbl/bbl">1.0399</prodml:WaterFormationVolumeFactor>
+			<prodml:WaterIsothermalCompressibility uom="1/psi">0.00000276</prodml:WaterIsothermalCompressibility>
+			<prodml:WaterDensity uom="lbm/ft3">63.445</prodml:WaterDensity>
+			<prodml:WaterViscosity uom="cP">0.4033</prodml:WaterViscosity>
+		</prodml:WaterAnalysisTestStep>
+		<prodml:WaterAnalysisTestStep  uid="step3">
+		<prodml:StepNumber>3</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">2000</prodml:StepPressure>
+			<prodml:StepTemperature uom="degF">217</prodml:StepTemperature>
+			<prodml:WaterFormationVolumeFactor uom="bbl/bbl">1.0421</prodml:WaterFormationVolumeFactor>
+			<prodml:WaterIsothermalCompressibility uom="1/psi">0.00000283</prodml:WaterIsothermalCompressibility>
+			<prodml:WaterDensity uom="lbm/ft3">63.311</prodml:WaterDensity>
+			<prodml:WaterViscosity uom="cP">0.3837</prodml:WaterViscosity>
+		</prodml:WaterAnalysisTestStep>
+		<prodml:WaterAnalysisTestStep  uid="step4">
+		<prodml:StepNumber>4</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">1000</prodml:StepPressure>
+			<prodml:StepTemperature uom="degF">217</prodml:StepTemperature>
+			<prodml:WaterFormationVolumeFactor uom="bbl/bbl">1.0438</prodml:WaterFormationVolumeFactor>
+			<prodml:WaterIsothermalCompressibility uom="1/psi">0.00000291</prodml:WaterIsothermalCompressibility>
+			<prodml:WaterDensity uom="lbm/ft3">63.212</prodml:WaterDensity>
+			<prodml:WaterViscosity uom="cP">0.3662</prodml:WaterViscosity>
+		</prodml:WaterAnalysisTestStep>
+		<prodml:WaterAnalysisTestStep  uid="step5">
+		<prodml:StepNumber>5</prodml:StepNumber>
+			<prodml:StepPressure uom="psi">15</prodml:StepPressure>
+			<prodml:StepTemperature uom="degF">217</prodml:StepTemperature>
+			<prodml:WaterFormationVolumeFactor uom="bbl/bbl">1.0449</prodml:WaterFormationVolumeFactor>
+			<prodml:WaterIsothermalCompressibility uom="1/psi">0.000003</prodml:WaterIsothermalCompressibility>
+			<prodml:WaterDensity uom="lbm/ft3">63.146</prodml:WaterDensity>
+			<prodml:WaterViscosity uom="cP">0.3512</prodml:WaterViscosity>
+		</prodml:WaterAnalysisTestStep>
+	</prodml:WaterAnalysisTest>
+</prodml:FluidAnalysis>

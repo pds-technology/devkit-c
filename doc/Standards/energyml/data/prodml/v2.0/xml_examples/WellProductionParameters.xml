@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WellProductionParameters objectVersion="2.0" schemaVersion="2.0" uuid="ddb9da9a-601a-11e5-9d70-feff819cdc9f" xmlns="http://www.energistics.org/energyml/data/prodmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/SimpleProductVolume.xsd">
+	<eml:Aliases authority="energistics">
+		<eml:Identifier>sample demo the choke change  on 2005-1-15</eml:Identifier>
+		<eml:Description>Energistics</eml:Description>
+	</eml:Aliases>
+	<eml:Citation>
+		<eml:Title>NAPR SAMPLE DATA 2015</eml:Title>
+		<eml:Originator>Energistics</eml:Originator>
+		<eml:Creation>2015-01-01T00:00:47Z</eml:Creation>
+		<eml:Format>energistics:xmlspy/xml</eml:Format>
+		<eml:Editor>Mark Mao</eml:Editor>
+		<eml:LastUpdate>2015-06-23T00:00:00Z</eml:LastUpdate>
+		<eml:VersionString>2.0</eml:VersionString>
+		<eml:Description>NAPR SAMPLE DATA</eml:Description>
+		<eml:DescriptiveKeywords>NAPR SAMPLE DATA</eml:DescriptiveKeywords>
+	</eml:Citation>
+	<StandardConditions xsi:type="eml:TemperaturePressure">
+		<eml:Temperature uom="degF">60</eml:Temperature>
+		<eml:Pressure uom="psi">14.7</eml:Pressure>
+	</StandardConditions>
+	<ApprovalDate>2015-01-01</ApprovalDate>
+	<StartDate>2015-01-01</StartDate>
+	<EndDate>2015-01-31</EndDate>
+	<NominalPeriod>month</NominalPeriod>
+	<ProductionPeriod>
+		<StartTime>2015-01-01T00:00:00Z</StartTime>
+		<Duration uom="d">15</Duration>
+		<WellStatus>active</WellStatus>
+		<WellFlowingCondition>
+			<ChokeOrificeSize uom="1/64 in">32</ChokeOrificeSize>
+			<BottomHoleFlowingPressure uom="psi">2</BottomHoleFlowingPressure>
+			<BottomHoleFlowingTemperature uom="degF">200</BottomHoleFlowingTemperature>
+			<BottomHoleShutInPressure uom="atm">2000</BottomHoleShutInPressure>
+			<TubingHeadFlowingPressure xsi:type="eml:AbsolutePressure">
+				<eml:AbsolutePressure uom="atm">500</eml:AbsolutePressure>
+			</TubingHeadFlowingPressure>
+		</WellFlowingCondition>
+		<ProductRate uid="r1">
+			<ProductFluidReference/>
+			<VolumeFlowRate uom="bbl/d">320</VolumeFlowRate>
+			<ProductFluidKind>oil - gross</ProductFluidKind>
+		</ProductRate>
+		<ProductRate uid="r2">
+			<ProductFluidReference/>
+			<VolumeFlowRate uom="1000 bbl/d">138</VolumeFlowRate>
+			<ProductFluidKind>gas - dry</ProductFluidKind>
+		</ProductRate>
+		<ProductRate uid="r3">
+			<ProductFluidReference/>
+			<VolumeFlowRate uom="bbl/d">5</VolumeFlowRate>
+			<ProductFluidKind>water - processed</ProductFluidKind>
+		</ProductRate>
+	</ProductionPeriod>
+	<ProductionPeriod>
+		<StartTime>2015-01-16T00:00:00Z</StartTime>
+		<Duration uom="d">16</Duration>
+		<WellStatus>active</WellStatus>
+		<WellFlowingCondition>
+			<ChokeOrificeSize uom="1/64 in">48</ChokeOrificeSize>
+			<BottomHoleFlowingPressure  uom="psi">1188</BottomHoleFlowingPressure>
+			<BottomHoleFlowingTemperature uom="degF">200</BottomHoleFlowingTemperature>
+			<BottomHoleShutInPressure uom="psi">4000</BottomHoleShutInPressure>
+			<TubingHeadFlowingPressure xsi:type="eml:AbsolutePressure">
+				<eml:AbsolutePressure uom="psi">500</eml:AbsolutePressure>
+			</TubingHeadFlowingPressure>
+		</WellFlowingCondition>
+		<ProductRate uid="r1">
+			<ProductFluidReference/>
+			<VolumeFlowRate uom="bbl/d">450</VolumeFlowRate>
+			<ProductFluidKind>oil - gross</ProductFluidKind>
+		</ProductRate>
+		<ProductRate uid="r2">
+			<ProductFluidReference/>
+			<VolumeFlowRate uom="1000 bbl/d">195</VolumeFlowRate>
+			<ProductFluidKind>gas - dry</ProductFluidKind>
+		</ProductRate>
+		<ProductRate uid="r3">
+			<ProductFluidReference/>
+			<VolumeFlowRate uom="bbl/d">7</VolumeFlowRate>
+			<ProductFluidKind>water - processed</ProductFluidKind>
+		</ProductRate>
+	</ProductionPeriod>
+	<ReportingEntityReference>
+		<eml:ContentType/>
+		<eml:Title>well01</eml:Title>
+		<eml:Uuid>00000000-0000-0000-0000-0000000000D1</eml:Uuid>
+	</ReportingEntityReference>
+</WellProductionParameters>

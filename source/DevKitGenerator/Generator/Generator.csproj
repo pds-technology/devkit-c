@@ -69,7 +69,7 @@
     <Compile Include="..\DataAccess\EnumValue\EnumValuesXMLToClass.cs">
       <Link>EnumValue\EnumValuesXMLToClass.cs</Link>
     </Compile>
-    <Compile Include="AssemblyInfo1.cs" />
+    <Compile Include="AssemblyInfo.cs" />
     <Compile Include="COMPLETION100\DataObject.cs" />
     <Compile Include="EnergisticsTextTemplate.cs">
       <AutoGen>True</AutoGen>
@@ -79,9 +79,11 @@
     <Compile Include="Generator.cs" />
     <Compile Include="PRODML122\DataObject.cs" />
     <Compile Include="PRODML131\DataObject.cs" />
+    <Compile Include="PRODML200\DataObject.cs" />
     <Compile Include="RESQML110\DataObject.cs" />
     <Compile Include="RESQML200\DataObject.cs" />
     <Compile Include="RESQML201\DataObject.cs" />
+    <Compile Include="RESQML210\DataObject.cs" />
     <Compile Include="ResqmlHD5Template.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

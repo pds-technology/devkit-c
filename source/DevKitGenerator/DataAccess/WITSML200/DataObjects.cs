@@ -552,7 +552,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<IntervalStatusHistory> StatusHistoryField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of GravelPackInterval.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -1297,7 +1297,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// EventReferenceId property
+        /// The referencing eventledger ID.
         /// </summary>
 		[StringLength(64)]
         [Description("The referencing eventledger ID.")]
@@ -1315,7 +1315,7 @@ namespace Energistics.DataAccess.WITSML200
         private String EventReferenceIdField; 
 
         /// <summary>
-        /// EventDate property
+        /// Install/pull date.
         /// </summary>
 		[Description("Install/pull date.")]
 		[XmlElement("EventDate")]
@@ -1368,7 +1368,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// PhysicalStatus property
+        /// The physical status of an interval (e.g., open, closed, proposed).
         /// </summary>
 		[Description("The physical status of an interval (e.g., open, closed, proposed).")]
 		[XmlElement("PhysicalStatus")]
@@ -1403,7 +1403,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean PhysicalStatusSpecifiedField; 
 
         /// <summary>
-        /// StartDate property
+        /// The start date of the status and allocation factor.
         /// </summary>
 		[Description("The start date of  the status and allocation factor.")]
 		[XmlElement("StartDate")]
@@ -1420,7 +1420,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? StartDateField; 
 
         /// <summary>
-        /// EndDate property
+        /// The end date of status and allocation factor.
         /// </summary>
 		[Description("The end date of status and allocation factor.")]
 		[XmlElement("EndDate")]
@@ -1437,7 +1437,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? EndDateField; 
 
         /// <summary>
-        /// StatusMdInterval property
+        /// Measured depth interval over which this status is valid for the given time frame.
         /// </summary>
 		[Description("Measured depth interval over which this status is valid for the given time frame.")]
         [ComponentElement]
@@ -1455,7 +1455,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval StatusMdIntervalField; 
 
         /// <summary>
-        /// AllocationFactor property
+        /// Defines the proportional amount of fluid from the well completion that is flowing through this interval within a wellbore.
         /// </summary>
 		[Description("Defines the proportional amount of fluid from the well completion that is flowing through this interval within a wellbore.")]
 		[XmlElement("AllocationFactor")]
@@ -1490,7 +1490,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean AllocationFactorSpecifiedField; 
 
         /// <summary>
-        /// Comment property
+        /// Comments and remarks about the interval over this period of time.
         /// </summary>
 		[StringLength(2000)]
         [Description("Comments and remarks about the interval over this period of time.")]
@@ -1508,7 +1508,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CommentField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of IntervalStatusHistory.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -1564,7 +1564,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// PerforationStatus property
+        /// Perforation status.
         /// </summary>
 		[Description("Perforation status.")]
 		[XmlElement("PerforationStatus")]
@@ -1599,7 +1599,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean PerforationStatusSpecifiedField; 
 
         /// <summary>
-        /// StartDate property
+        /// The start date of the status.
         /// </summary>
 		[Description("The start date of the status.")]
 		[XmlElement("StartDate")]
@@ -1616,7 +1616,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? StartDateField; 
 
         /// <summary>
-        /// EndDate property
+        /// The end date of the status.
         /// </summary>
 		[Description("The end date of the status.")]
 		[XmlElement("EndDate")]
@@ -1633,7 +1633,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? EndDateField; 
 
         /// <summary>
-        /// PerforationMdInterval property
+        /// Overall measured depth interval for this perforated interval.
         /// </summary>
 		[Description("Overall measured depth interval for this perforated interval.")]
         [ComponentElement]
@@ -1651,7 +1651,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval PerforationMdIntervalField; 
 
         /// <summary>
-        /// PerforationTvdInterval property
+        /// Overall true vertical depth interval for this perforated interval.
         /// </summary>
 		[Description("Overall true vertical depth interval for this perforated interval.")]
         [ComponentElement]
@@ -1669,7 +1669,7 @@ namespace Energistics.DataAccess.WITSML200
         private TvdInterval PerforationTvdIntervalField; 
 
         /// <summary>
-        /// AllocationFactor property
+        /// Defines the proportional amount of fluid from the well completion that is flowing through this interval within a wellbore.
         /// </summary>
 		[Description("Defines the proportional amount of fluid from the well completion that is flowing through this interval within a wellbore.")]
 		[XmlElement("AllocationFactor")]
@@ -1704,7 +1704,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean AllocationFactorSpecifiedField; 
 
         /// <summary>
-        /// Comment property
+        /// Remarks and comments about the status.
         /// </summary>
 		[StringLength(2000)]
         [Description("Remarks and comments about the status.")]
@@ -1722,7 +1722,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CommentField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of PerforationStatusHistory.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -1939,7 +1939,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<PerforationStatusHistory> PerforationStatusHistoryField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of PerforationSetInterval.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -2156,7 +2156,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<IntervalStatusHistory> StatusHistoryField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of OpenHoleInterval.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -2373,7 +2373,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<IntervalStatusHistory> StatusHistoryField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of SlotsInterval.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -2581,7 +2581,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Status property
+        /// Completion status. 
         /// </summary>
 		[Description("Completion status.")]
 		[XmlElement("Status")]
@@ -2616,7 +2616,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean StatusSpecifiedField; 
 
         /// <summary>
-        /// StartDate property
+        /// The start date of the status.
         /// </summary>
 		[Description("The start date of the status.")]
 		[XmlElement("StartDate")]
@@ -2633,7 +2633,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? StartDateField; 
 
         /// <summary>
-        /// EndDate property
+        /// The end date of the status.
         /// </summary>
 		[Description("The end date of the status.")]
 		[XmlElement("EndDate")]
@@ -2650,7 +2650,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? EndDateField; 
 
         /// <summary>
-        /// PerforationMdInterval property
+        /// Measured depth interval between the top and the base of the perforations.
         /// </summary>
 		[Description("Measured depth interval between the top and the base of the perforations.")]
         [ComponentElement]
@@ -2668,7 +2668,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval PerforationMdIntervalField; 
 
         /// <summary>
-        /// Comment property
+        /// Comments or remarks on the status. 
         /// </summary>
 		[StringLength(2000)]
         [Description("Comments or remarks on the status.")]
@@ -2686,7 +2686,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CommentField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of CompletionStatusHistory.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -2746,7 +2746,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of AbstractIscwsaErrorCoefficient.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -2998,7 +2998,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<AbstractIscwsaErrorCoefficient> AbstractIscwsaErrorCoefficientField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of IscwsaErrorCoefficient.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -3270,7 +3270,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<IscwsaErrorCoefficient> ErrorCoefficientField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of IscwsaErrorTerm.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -3347,7 +3347,7 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         /// <summary>
-        /// Name property
+        /// The name of the constant.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -3366,7 +3366,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameField; 
 
         /// <summary>
-        /// Value property
+        /// The value of the constant.
         /// </summary>
 		[Required]
         [Description("The value of the constant.")]
@@ -3384,7 +3384,7 @@ namespace Energistics.DataAccess.WITSML200
         private Double? ValueField; 
 
         /// <summary>
-        /// Unit property
+        /// The unit of measure of the constant. This value must match an acronym from the Energistics unit of measure dictionary.
         /// </summary>
 		[Required]
         [StringLength(32)]
@@ -3403,7 +3403,7 @@ namespace Energistics.DataAccess.WITSML200
         private String UnitField; 
 
         /// <summary>
-        /// Description property
+        /// A textual description of the constant.
         /// </summary>
 		[Required]
         [StringLength(2000)]
@@ -3422,7 +3422,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DescriptionField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -3452,7 +3452,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of IscwsaNomenclatureConstant.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -3508,7 +3508,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Name property
+        /// The name of the item.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -3527,7 +3527,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameField; 
 
         /// <summary>
-        /// Description property
+        /// A textual description of the item.
         /// </summary>
 		[Required]
         [StringLength(2000)]
@@ -3546,7 +3546,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DescriptionField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -3576,7 +3576,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of IscwsaNameAndDescription.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -3809,7 +3809,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval MdIntervalField; 
 
         /// <summary>
-        /// NameSurveyCompany property
+        /// Company who will run or has run the survey tool.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -3828,7 +3828,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameSurveyCompanyField; 
 
         /// <summary>
-        /// NameTool property
+        /// Name of survey tool used in this section.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -3847,7 +3847,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameToolField; 
 
         /// <summary>
-        /// TypeTool property
+        /// Type of tool used.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -3866,7 +3866,7 @@ namespace Energistics.DataAccess.WITSML200
         private String TypeToolField; 
 
         /// <summary>
-        /// ModelError property
+        /// Error model used to calculate the ellipses of uncertainty.
         /// </summary>
 		[StringLength(64)]
         [Description("Error model used to calculate the ellipses of uncertainty.")]
@@ -3884,7 +3884,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ModelErrorField; 
 
         /// <summary>
-        /// Overwrite property
+        /// Higher index trajectory takes precedence over overlapping section of previous trajectory? Values are "true" (or "1") and "false" (or "0"). Normally, this is true.
         /// </summary>
 		[Description("Higher index trajectory takes precedence over overlapping section of previous trajectory?   Values are \"true\" (or \"1\") and \"false\" (or \"0\"). Normally, this is true.")]
 		[XmlElement("Overwrite")]
@@ -3919,7 +3919,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean OverwriteSpecifiedField; 
 
         /// <summary>
-        /// FrequencyMx property
+        /// Maximum allowable depth frequency for survey stations for this survey run.
         /// </summary>
 		[Description("Maximum allowable depth frequency for survey stations for this survey run.")]
         [ComponentElement]
@@ -3937,7 +3937,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure FrequencyMxField; 
 
         /// <summary>
-        /// ItemState property
+        /// The item state for the data object.
         /// </summary>
 		[Description("The item state for the data object.")]
 		[XmlElement("ItemState")]
@@ -3972,7 +3972,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean ItemStateSpecifiedField; 
 
         /// <summary>
-        /// Comments property
+        /// Comments and remarks.
         /// </summary>
 		[StringLength(2000)]
         [Description("Comments and remarks.")]
@@ -3990,7 +3990,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CommentsField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -4020,7 +4020,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier of this instance of SurveySection.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -4159,18 +4159,18 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the StimISO13503_5Point xsd type.
+    /// A stress, conductivity, permeability, and temperature data point.
     /// </summary>
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimISO13503_5Point", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the StimISO13503_5Point xsd type.")]
+	[Description("A stress, conductivity, permeability, and temperature data point.")]
     public partial class StimISO13503_5Point : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
-        /// Conductivity property
+        /// The conductivity under stress.
         /// </summary>
 		[Required]
         [Description("The conductivity under stress.")]
@@ -4189,7 +4189,7 @@ namespace Energistics.DataAccess.WITSML200
         private PermeabilityLengthMeasure ConductivityField; 
 
         /// <summary>
-        /// Temperature property
+        /// The temperature at the time measurements were taken.
         /// </summary>
 		[Required]
         [Description("The temperature at the time measurements were taken.")]
@@ -4208,7 +4208,7 @@ namespace Energistics.DataAccess.WITSML200
         private ThermodynamicTemperatureMeasure TemperatureField; 
 
         /// <summary>
-        /// Permeability property
+        /// The permeability under stress.
         /// </summary>
 		[Required]
         [Description("The permeability under stress.")]
@@ -4227,7 +4227,7 @@ namespace Energistics.DataAccess.WITSML200
         private PermeabilityRockMeasure PermeabilityField; 
 
         /// <summary>
-        /// Stress property
+        /// The amount of stress applied.
         /// </summary>
 		[Required]
         [Description("The amount of stress applied.")]
@@ -4246,7 +4246,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure StressField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimISO13503_5Point
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -4573,18 +4573,18 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the ISO13503_2SieveAnalysisData xsd type.
+    /// Proppant properties on percent retained and sieve number. Data from this ISO anaylsis. 
     /// </summary>
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ISO13503_2SieveAnalysisData", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the ISO13503_2SieveAnalysisData xsd type.")]
+	[Description("Proppant properties on percent retained and sieve number. Data from this ISO anaylsis. ")]
     public partial class ISO13503_2SieveAnalysisData : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
-        /// PercentRetained property
+        /// The percentage of mass retained in the sieve.
         /// </summary>
 		[Required]
         [Description("The percentage of mass retained in the sieve.")]
@@ -4603,7 +4603,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerMassMeasure PercentRetainedField; 
 
         /// <summary>
-        /// SieveNumber property
+        /// ASTM US Standard mesh opening size used in the sieve analysis test. To indicate "Pan", use "0". 
         /// </summary>
 		[Required]
         [Description("ASTM US Standard mesh opening size used in the sieve analysis test.  To indicate \"Pan\",  use \"0\".")]
@@ -4621,7 +4621,7 @@ namespace Energistics.DataAccess.WITSML200
         private Int64? SieveNumberField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of ISO13503_2SieveAnalysisData.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -4760,18 +4760,18 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the ISO13503_2CrushTestData xsd type.
+    /// Crush test data point. 
     /// </summary>
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="ISO13503_2CrushTestData", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the ISO13503_2CrushTestData xsd type.")]
+	[Description("Crush test data point. ")]
     public partial class ISO13503_2CrushTestData : Object, IUniqueId, INotifyPropertyChanged
     {
 
         /// <summary>
-        /// Fines property
+        /// Mass percentage of fines after being exposed to stress.
         /// </summary>
 		[Required]
         [Description("Mass percentage of fines after being exposed to stress.")]
@@ -4790,7 +4790,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerMassMeasure FinesField; 
 
         /// <summary>
-        /// Stress property
+        /// Stress measured at a point during a crush test.
         /// </summary>
 		[Required]
         [Description("Stress measured at a point during a crush test.")]
@@ -4809,7 +4809,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure StressField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of ISO13503_2CrushTestData. 
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -4854,13 +4854,13 @@ namespace Energistics.DataAccess.WITSML200
     namespace ComponentSchemas 
     {
     /// <summary>
-    /// This class represents the StimISO13503_2Properties xsd type.
+    /// ISO13503-2 properties.
     /// </summary>
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="StimISO13503_2Properties", Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
-	[Description("This class represents the StimISO13503_2Properties xsd type.")]
+	[Description("ISO13503-2 properties.")]
     public partial class StimISO13503_2Properties : Object, IUniqueId, INotifyPropertyChanged
     {
 
@@ -5242,7 +5242,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ISO13503_2SieveAnalysisData> SieveAnalysisDataField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimISO13503_2Properties.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -5582,7 +5582,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Kind property
+        /// The material kind.
         /// </summary>
 		[Description("The material kind.")]
 		[XmlElement("Kind")]
@@ -5617,7 +5617,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean KindSpecifiedField; 
 
         /// <summary>
-        /// Name property
+        /// The name of the material.
         /// </summary>
 		[StringLength(2000)]
         [Description("The name of the material.")]
@@ -5635,7 +5635,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameField; 
 
         /// <summary>
-        /// Supplier property
+        /// The name of the material supplier.
         /// </summary>
 		[StringLength(2000)]
         [Description("The name of the material supplier.")]
@@ -5653,7 +5653,7 @@ namespace Energistics.DataAccess.WITSML200
         private String SupplierField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -5683,7 +5683,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimMaterial.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -5739,7 +5739,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// AdditiveKind property
+        /// Additive type or function from the enumeration 'StimAdditiveKind'.
         /// </summary>
 		[Description("Additive type or function from the enumeration 'StimAdditiveKind'.")]
 		[XmlElement("AdditiveKind")]
@@ -5774,7 +5774,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean AdditiveKindSpecifiedField; 
 
         /// <summary>
-        /// Type property
+        /// The type of additive that is used, which can represent a suppliers description or type of AdditiveKind. For example, 5% HCl could be the type when AdditiveKind=acid.
         /// </summary>
 		[Required]
         [StringLength(2000)]
@@ -5793,7 +5793,7 @@ namespace Energistics.DataAccess.WITSML200
         private String TypeField; 
 
         /// <summary>
-        /// SupplierCode property
+        /// A code used to identify the supplier of the additive.
         /// </summary>
 		[Required]
         [StringLength(2000)]
@@ -6115,7 +6115,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Additives property
+        /// List of additives in the catalog.
         /// </summary>
 		[Description("List of additives in the catalog.")]
         [RecurringElement]
@@ -6145,7 +6145,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<StimAdditive> AdditivesField; 
 
         /// <summary>
-        /// ProppantAgents property
+        /// List of proppant agents in the catalog.
         /// </summary>
 		[Description("List of proppant agents in the catalog.")]
         [RecurringElement]
@@ -6211,7 +6211,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Contractor property
+        /// Name of the diversion contractor.
         /// </summary>
 		[StringLength(2000)]
         [Description("Name of the diversion contractor.")]
@@ -6229,7 +6229,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ContractorField; 
 
         /// <summary>
-        /// Method property
+        /// The diversion method used.
         /// </summary>
 		[Description("The diversion method used.")]
 		[XmlElement("Method")]
@@ -6264,7 +6264,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean MethodSpecifiedField; 
 
         /// <summary>
-        /// ToolDescription property
+        /// A supplier description of the diversion tool, such as its commercial name.
         /// </summary>
 		[StringLength(2000)]
         [Description("A supplier description of the diversion tool, such as its commercial name.")]
@@ -6282,7 +6282,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ToolDescriptionField; 
 
         /// <summary>
-        /// ElementSpacing property
+        /// Spacing between packer elements.
         /// </summary>
 		[Description("Spacing between packer elements.")]
         [ComponentElement]
@@ -6336,7 +6336,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// LithMdInterval property
+        /// Lithology measured depth interval.
         /// </summary>
 		[Description("Lithology measured depth interval.")]
         [ComponentElement]
@@ -6354,7 +6354,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval LithMdIntervalField; 
 
         /// <summary>
-        /// LithFormationPermeability property
+        /// Formation permeability, a measurement of the ability of a fluid to flow through a rock. Commonly measured in milliDarcys (1m2 = 0.000000000000986923 Darcy).
         /// </summary>
 		[Description("Formation permeability, a measurement of the ability of a fluid to flow through a rock. Commonly measured in milliDarcys (1m2 = 0.000000000000986923 Darcy).")]
         [ComponentElement]
@@ -6372,7 +6372,7 @@ namespace Energistics.DataAccess.WITSML200
         private PermeabilityRockMeasure LithFormationPermeabilityField; 
 
         /// <summary>
-        /// LithYoungsModulus property
+        /// Young's modulus (E) is a measure of the stiffness of an isotropic elastic material. It is also known as the Young modulus, modulus of elasticity, elastic modulus (though Young's modulus is actually one of several elastic moduli such as the bulk modulus and the shear modulus) or tensile modulus. It is defined as the ratio of the uniaxial stress over the uniaxial strain.
         /// </summary>
 		[Description("Young's modulus (E) is a measure of the stiffness of an isotropic elastic material. It is also known as the Young modulus, modulus of elasticity, elastic modulus (though Young's modulus is actually one  of several elastic moduli such as the bulk modulus and the shear modulus) or tensile modulus. It is  defined as the ratio of the uniaxial stress over the uniaxial strain.")]
         [ComponentElement]
@@ -6390,7 +6390,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure LithYoungsModulusField; 
 
         /// <summary>
-        /// LithPorePres property
+        /// Refers to the pressure of fluids held within a soil or rock, in gaps between particles’ formation porosity.
         /// </summary>
 		[Description("Refers to the pressure of fluids held within a soil or rock, in gaps between particles’ formation porosity.")]
         [ComponentElement]
@@ -6408,7 +6408,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure LithPorePresField; 
 
         /// <summary>
-        /// LithNetPayThickness property
+        /// Net pay is computed. It is the thickness of rock that can deliver hydrocarbons to the wellbore formation.
         /// </summary>
 		[Description("Net pay is computed. It is the thickness of rock that can deliver hydrocarbons to the wellbore formation.")]
         [ComponentElement]
@@ -6426,7 +6426,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure LithNetPayThicknessField; 
 
         /// <summary>
-        /// LithName property
+        /// A name for the formation lithology.
         /// </summary>
 		[StringLength(2000)]
         [Description("A name for the formation lithology.")]
@@ -6444,7 +6444,7 @@ namespace Energistics.DataAccess.WITSML200
         private String LithNameField; 
 
         /// <summary>
-        /// GrossPayMdInterval property
+        /// Measured depth of the bottom of the formation.
         /// </summary>
 		[Description("Measured depth of the bottom of the formation.")]
         [ComponentElement]
@@ -6462,7 +6462,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval GrossPayMdIntervalField; 
 
         /// <summary>
-        /// GrossPayThickness property
+        /// The total thickness of the interval being treated, whether or not it is productive.
         /// </summary>
 		[Description("The total thickness of the interval being treated, whether or not it is productive.")]
         [ComponentElement]
@@ -6480,7 +6480,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure GrossPayThicknessField; 
 
         /// <summary>
-        /// NetPayThickness property
+        /// The thickness of the most productive part of the interval. Net pay is a subset of the gross.
         /// </summary>
 		[Description("The thickness of the most productive part of the interval. Net pay is a subset of the gross.")]
         [ComponentElement]
@@ -6498,7 +6498,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure NetPayThicknessField; 
 
         /// <summary>
-        /// NetPayPorePres property
+        /// The pore pressure of the net pay.
         /// </summary>
 		[Description("The pore pressure of the net pay.")]
         [ComponentElement]
@@ -6516,7 +6516,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure NetPayPorePresField; 
 
         /// <summary>
-        /// NetPayFluidCompressibility property
+        /// The volume change of the fluid in the net pay when pressure is applied.
         /// </summary>
 		[Description("The volume change of the fluid in the net pay when pressure is applied.")]
         [ComponentElement]
@@ -6534,7 +6534,7 @@ namespace Energistics.DataAccess.WITSML200
         private IsothermalCompressibilityMeasure NetPayFluidCompressibilityField; 
 
         /// <summary>
-        /// NetPayFluidViscosity property
+        /// With respect to the net pay, a measurement of the internal resistance of a fluid to flow against itself. Expressed as the ratio of shear stress to shear rate.
         /// </summary>
 		[Description("With respect to the net pay, a measurement of the internal resistance of a fluid to flow against itself. Expressed as the ratio of shear stress to shear rate.")]
         [ComponentElement]
@@ -6552,7 +6552,7 @@ namespace Energistics.DataAccess.WITSML200
         private DynamicViscosityMeasure NetPayFluidViscosityField; 
 
         /// <summary>
-        /// NetPayName property
+        /// The name used for the net pay zone.
         /// </summary>
 		[StringLength(2000)]
         [Description("The name used for the net pay zone.")]
@@ -6570,7 +6570,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NetPayNameField; 
 
         /// <summary>
-        /// NetPayFormationPermeability property
+        /// The permeability of the net pay of the formation.
         /// </summary>
 		[Description("The permeability of the net pay of the formation.")]
         [ComponentElement]
@@ -6588,7 +6588,7 @@ namespace Energistics.DataAccess.WITSML200
         private PermeabilityRockMeasure NetPayFormationPermeabilityField; 
 
         /// <summary>
-        /// LithPoissonsRatio property
+        /// The ratio of the relative contraction strain, or transverse strain (normal to the applied load), divided by the relative extension strain, or axial strain (in the direction of the applied load).
         /// </summary>
 		[Description("The ratio of the relative contraction strain, or transverse strain (normal to the applied load), divided by the relative extension strain, or axial strain (in the direction of the applied load).")]
         [ComponentElement]
@@ -6606,7 +6606,7 @@ namespace Energistics.DataAccess.WITSML200
         private DimensionlessMeasure LithPoissonsRatioField; 
 
         /// <summary>
-        /// NetPayFormationPorosity property
+        /// The porosity of the net pay formation.
         /// </summary>
 		[Description("The porosity of the net pay formation.")]
         [ComponentElement]
@@ -6624,7 +6624,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure NetPayFormationPorosityField; 
 
         /// <summary>
-        /// FormationPermeability property
+        /// Permeability of the formation.
         /// </summary>
 		[Description("Permeability of the formation.")]
         [ComponentElement]
@@ -6642,7 +6642,7 @@ namespace Energistics.DataAccess.WITSML200
         private PermeabilityRockMeasure FormationPermeabilityField; 
 
         /// <summary>
-        /// FormationPorosity property
+        /// Porosity of the formation.
         /// </summary>
 		[Description("Porosity of the formation.")]
         [ComponentElement]
@@ -6660,7 +6660,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure FormationPorosityField; 
 
         /// <summary>
-        /// NameFormation property
+        /// Name of the formation.
         /// </summary>
 		[StringLength(2000)]
         [Description("Name of the formation.")]
@@ -6678,7 +6678,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameFormationField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -6708,7 +6708,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimReservoirInterval
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -7140,7 +7140,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Type property
+        /// The type of tubular (e.g., casing, tubing, liner, packer, open hole, other).
         /// </summary>
 		[StringLength(64)]
         [Description("The type of tubular (e.g., casing, tubing, liner, packer, open hole, other).")]
@@ -7158,7 +7158,7 @@ namespace Energistics.DataAccess.WITSML200
         private String TypeField; 
 
         /// <summary>
-        /// Id property
+        /// The inside diameter of the tubular used.
         /// </summary>
 		[Description("The inside diameter of the tubular used.")]
         [ComponentElement]
@@ -7176,7 +7176,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure IdField; 
 
         /// <summary>
-        /// Od property
+        /// The outside diameter of the tubular used.
         /// </summary>
 		[Description("The outside diameter of the tubular used.")]
         [ComponentElement]
@@ -7194,7 +7194,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure OdField; 
 
         /// <summary>
-        /// Weight property
+        /// The weight per length of the tubular.
         /// </summary>
 		[Description("The weight per length of the tubular.")]
         [ComponentElement]
@@ -7212,7 +7212,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerLengthMeasure WeightField; 
 
         /// <summary>
-        /// TubularMdInterval property
+        /// Measured depth interval over which the tubular was used.
         /// </summary>
 		[Description("Measured depth interval over which the tubular was used.")]
         [ComponentElement]
@@ -7230,7 +7230,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval TubularMdIntervalField; 
 
         /// <summary>
-        /// TubularTvdInterval property
+        /// True vertical depth interval over which the tubular was used.
         /// </summary>
 		[Description("True vertical depth interval over which the tubular was used.")]
         [ComponentElement]
@@ -7248,7 +7248,7 @@ namespace Energistics.DataAccess.WITSML200
         private TvdInterval TubularTvdIntervalField; 
 
         /// <summary>
-        /// VolumeFactor property
+        /// The volume per length of the tubular.
         /// </summary>
 		[Description("The volume per length of the tubular.")]
         [ComponentElement]
@@ -7266,7 +7266,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerLengthMeasure VolumeFactorField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -7296,7 +7296,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimTubular.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -7767,7 +7767,7 @@ namespace Energistics.DataAccess.WITSML200
         }
 
 		/// <summary>
-        /// uom property
+        /// Unit of measure used by this measured depth coordinate.
         /// </summary>
 		[Required]
         [Description("Unit of measure used by this measured depth coordinate.")]
@@ -7786,7 +7786,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthUom uomField; 
 
 		/// <summary>
-        /// datum property
+        /// Defines the vertical datums associated with elevation, vertical depth, and measured depth coordinates.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -8506,7 +8506,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Density property
+        /// The density of material used.
         /// </summary>
 		[Description("The density of material used.")]
         [ComponentElement]
@@ -8524,7 +8524,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerVolumeMeasure DensityField; 
 
         /// <summary>
-        /// Mass property
+        /// The mass of material used. This should be used without specifying any of the other material measures (e.g. volume, standard volume, etc.).
         /// </summary>
 		[Description("The mass of material used.  This should be used without specifying any of the other material measures (e.g. volume, standard volume, etc.).")]
         [ComponentElement]
@@ -8542,7 +8542,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassMeasure MassField; 
 
         /// <summary>
-        /// MassFlowRate property
+        /// Rate at which mass of material is flowing.
         /// </summary>
 		[Description("Rate at which mass of material is flowing.")]
         [ComponentElement]
@@ -8560,7 +8560,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerTimeMeasure MassFlowRateField; 
 
         /// <summary>
-        /// StdVolume property
+        /// The standard volume of material used. Standard volume is the volume measured under the same conditions. This should be used without specifying any of the other material measures (e.g., mass, volume, etc.).
         /// </summary>
 		[Description("The standard volume of material used. Standard volume is the volume measured under the same conditions. This should be used without specifying any of the other material measures (e.g., mass, volume, etc.).")]
         [ComponentElement]
@@ -8578,7 +8578,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure StdVolumeField; 
 
         /// <summary>
-        /// Volume property
+        /// The volume of material used. This should be used without specifying any of the other material measures (e.g. mass, standard volume, etc.).
         /// </summary>
 		[Description("The volume of material used.  This should be used without specifying any of the other material measures (e.g. mass, standard volume, etc.).")]
         [ComponentElement]
@@ -8596,7 +8596,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolumeField; 
 
         /// <summary>
-        /// VolumeConcentration property
+        /// The volume per volume measure of material used. This should be used without specifying any of the other material measures (e.g. mass, density, standard volume, etc.).
         /// </summary>
 		[Description("The volume per volume measure of material used.  This should be used without specifying any of the other material measures (e.g. mass, density, standard volume, etc.).")]
         [ComponentElement]
@@ -8614,7 +8614,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure VolumeConcentrationField; 
 
         /// <summary>
-        /// VolumetricFlowRate property
+        /// Rate at which the volume of material is flowing.
         /// </summary>
 		[Description("Rate at which the volume of material is flowing.")]
         [ComponentElement]
@@ -8632,7 +8632,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure VolumetricFlowRateField; 
 
         /// <summary>
-        /// MaterialReference property
+        /// Material ID is equal to AbstractStimMaterial.RefId. This is a reference to the UID of the StimMaterial in the StimJobMaterialCatalog.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -8651,7 +8651,7 @@ namespace Energistics.DataAccess.WITSML200
         private String MaterialReferenceField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -8681,7 +8681,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimMaterialQuantity
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -10327,7 +10327,7 @@ namespace Energistics.DataAccess.WITSML200
         private StimFluid FluidField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimJobStep.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -10571,7 +10571,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Number property
+        /// Event number.
         /// </summary>
 		[Required]
         [Description("Event number.")]
@@ -10589,7 +10589,7 @@ namespace Energistics.DataAccess.WITSML200
         private Int64? NumberField; 
 
         /// <summary>
-        /// DTim property
+        /// Date and time of this event.
         /// </summary>
 		[Description("Date and time of this event.")]
 		[XmlElement("DTim")]
@@ -10606,7 +10606,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimField; 
 
         /// <summary>
-        /// Comment property
+        /// A short description of the event.
         /// </summary>
 		[StringLength(2000)]
         [Description("A short description of the event.")]
@@ -10624,7 +10624,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CommentField; 
 
         /// <summary>
-        /// NumStep property
+        /// Step number. Use it to reference an existing job step entry.
         /// </summary>
 		[Description("Step number. Use it to reference an existing job step entry.")]
 		[XmlElement("NumStep")]
@@ -10659,7 +10659,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean NumStepSpecifiedField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -10689,7 +10689,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimEvent.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -10745,7 +10745,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Pressure property
+        /// The shut-in pressure.
         /// </summary>
 		[Required]
         [Description("The shut-in pressure.")]
@@ -10764,7 +10764,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PressureField; 
 
         /// <summary>
-        /// TimeAfterShutin property
+        /// The time span after shut in at which the pressure was measured.
         /// </summary>
 		[Required]
         [Description("The time span after shut in at which the pressure was measured.")]
@@ -10783,7 +10783,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure TimeAfterShutinField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -10813,7 +10813,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimShutInPressure.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -11052,7 +11052,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<StimPumpFlowBackTestStep> StepField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimPumpFlowBackTest.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -11108,7 +11108,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// DTim property
+        /// Time stamp of the pressure measurement.
         /// </summary>
 		[Description("Time stamp of the pressure measurement.")]
 		[XmlElement("DTim")]
@@ -11125,7 +11125,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimField; 
 
         /// <summary>
-        /// FlowbackVolume property
+        /// Volume of flowback since the start of the test.
         /// </summary>
 		[Description("Volume of flowback since the start of the test.")]
         [ComponentElement]
@@ -11143,7 +11143,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure FlowbackVolumeField; 
 
         /// <summary>
-        /// FlowbackVolumeRate property
+        /// Flowback rate.
         /// </summary>
 		[Description("Flowback rate.")]
         [ComponentElement]
@@ -11161,7 +11161,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure FlowbackVolumeRateField; 
 
         /// <summary>
-        /// Number property
+        /// The number of the step. Identifies the step within the step down test.
         /// </summary>
 		[Required]
         [Description("The number of the step. Identifies the step within the step down test.")]
@@ -11179,7 +11179,7 @@ namespace Energistics.DataAccess.WITSML200
         private Int64? NumberField; 
 
         /// <summary>
-        /// BottomholeRate property
+        /// Bottomhole flow rate for the specific step.
         /// </summary>
 		[Description("Bottomhole flow rate for the specific step.")]
         [ComponentElement]
@@ -11197,7 +11197,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure BottomholeRateField; 
 
         /// <summary>
-        /// Pres property
+        /// Surface pressure measured for the specific step.
         /// </summary>
 		[Description("Surface pressure measured for the specific step.")]
         [ComponentElement]
@@ -11215,7 +11215,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresField; 
 
         /// <summary>
-        /// PipeFriction property
+        /// Calculated pipe friction for the specific step.
         /// </summary>
 		[Description("Calculated pipe friction for the specific step.")]
         [ComponentElement]
@@ -11233,7 +11233,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PipeFrictionField; 
 
         /// <summary>
-        /// EntryFriction property
+        /// Calculated entry friction accounting for perforation and near wellbore restrictions for the specific step.
         /// </summary>
 		[Description("Calculated entry friction accounting for perforation and near wellbore restrictions for the specific step.")]
         [ComponentElement]
@@ -11251,7 +11251,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure EntryFrictionField; 
 
         /// <summary>
-        /// PerfFriction property
+        /// Calculated perforation friction for the specific step.
         /// </summary>
 		[Description("Calculated perforation friction for the specific step.")]
         [ComponentElement]
@@ -11269,7 +11269,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PerfFrictionField; 
 
         /// <summary>
-        /// NearWellboreFriction property
+        /// Calculated near-wellbore friction loss.
         /// </summary>
 		[Description("Calculated near-wellbore friction loss.")]
         [ComponentElement]
@@ -11287,7 +11287,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure NearWellboreFrictionField; 
 
         /// <summary>
-        /// SurfaceRate property
+        /// Surface rate entering the well for the specific step.
         /// </summary>
 		[Description("Surface rate entering the well for the specific step.")]
         [ComponentElement]
@@ -11305,7 +11305,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure SurfaceRateField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -11335,7 +11335,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimPumpFlowBackTestStep.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -11391,7 +11391,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Pressure property
+        /// The pressure of the step test.
         /// </summary>
 		[Description("The pressure of the step test.")]
         [ComponentElement]
@@ -11409,7 +11409,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PressureField; 
 
         /// <summary>
-        /// BottomholeRate property
+        /// The flow of the fluid at the bottomhole.
         /// </summary>
 		[Description("The flow of the fluid at the bottomhole.")]
         [ComponentElement]
@@ -11427,7 +11427,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure BottomholeRateField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -11457,7 +11457,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimPressureFlowRate.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -11513,7 +11513,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// FractureExtensionPres property
+        /// The pressure necessary to extend the fracture once initiated. The fracture extension pressure may rise slightly with increasing fracture length and/or height because of friction pressure drop down the length of the fracture.
         /// </summary>
 		[Description("The pressure necessary to extend the fracture once initiated.  The fracture extension pressure may rise slightly with increasing fracture length and/or height because of friction pressure drop down the length of the fracture.")]
         [ComponentElement]
@@ -11531,7 +11531,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure FractureExtensionPresField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -11561,7 +11561,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
         /// <summary>
-        /// PresMeasurement property
+        /// A pressure and fluid rate data reading.
         /// </summary>
 		[Description("A pressure and fluid rate data reading.")]
         [RecurringElement]
@@ -11591,7 +11591,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<StimPressureFlowRate> PresMeasurementField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimStepTest.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -11647,7 +11647,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// InitialShutinPres property
+        /// The initial shutin pressure.
         /// </summary>
 		[Description("The initial shutin pressure.")]
         [ComponentElement]
@@ -11665,7 +11665,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure InitialShutinPresField; 
 
         /// <summary>
-        /// BottomholeFluidDensity property
+        /// The density of the fluid at the bottom of the hole adjusting for bottomhole temperature and pressure during the step-down test.
         /// </summary>
 		[Description("The density of the fluid at the bottom of the hole adjusting for bottomhole temperature and pressure during the step-down test.")]
         [ComponentElement]
@@ -11683,7 +11683,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerVolumeMeasure BottomholeFluidDensityField; 
 
         /// <summary>
-        /// DiameterEntryHole property
+        /// Diameter of the injection point or perforation.
         /// </summary>
 		[Description("Diameter of the injection point or perforation.")]
         [ComponentElement]
@@ -11701,7 +11701,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure DiameterEntryHoleField; 
 
         /// <summary>
-        /// PerforationCount property
+        /// The number of perforations in the interval being tested.
         /// </summary>
 		[Description("The number of perforations in the interval being tested.")]
 		[XmlElement("PerforationCount")]
@@ -11736,7 +11736,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean PerforationCountSpecifiedField; 
 
         /// <summary>
-        /// DischargeCoefficient property
+        /// A coefficient used in the equation for calculation of the pressure drop across a perforation set.
         /// </summary>
 		[Description("A coefficient used in the equation for calculation of the pressure drop across a perforation set.")]
         [ComponentElement]
@@ -11754,7 +11754,7 @@ namespace Energistics.DataAccess.WITSML200
         private DimensionlessMeasure DischargeCoefficientField; 
 
         /// <summary>
-        /// EffectivePerfs property
+        /// The number of perforations in the interval being tested that are calculated to be open to injection, which is determined during the step-down test.
         /// </summary>
 		[Description("The number of perforations in the interval being tested that are  calculated to be open to injection, which is determined during the step-down test.")]
 		[XmlElement("EffectivePerfs")]
@@ -11789,7 +11789,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean EffectivePerfsSpecifiedField; 
 
         /// <summary>
-        /// Step property
+        /// The data related to a particular step in the step-down test.
         /// </summary>
 		[Description("The data related to a particular step in the step-down test.")]
         [RecurringElement]
@@ -11819,7 +11819,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<StimPumpFlowBackTestStep> StepField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -11849,7 +11849,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimStepDownTest
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -11905,7 +11905,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// AnalysisMethod property
+        /// An analysis method used for this FET.
         /// </summary>
 		[Description("An analysis method used for this FET.")]
         [RecurringElement]
@@ -11935,7 +11935,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<StimFetTestAnalysisMethod> AnalysisMethodField; 
 
         /// <summary>
-        /// DTimStart property
+        /// Start time for the FET.
         /// </summary>
 		[Description("Start time for the FET.")]
 		[XmlElement("DTimStart")]
@@ -11952,7 +11952,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimStartField; 
 
         /// <summary>
-        /// DTimEnd property
+        /// End time for the FET.
         /// </summary>
 		[Description("End time for the FET.")]
 		[XmlElement("DTimEnd")]
@@ -11969,7 +11969,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimEndField; 
 
         /// <summary>
-        /// EndPdlDuration property
+        /// The end of the pressure-dependent leak-off portion of the FET.
         /// </summary>
 		[Description("The end of the pressure-dependent leak-off portion of the FET.")]
         [ComponentElement]
@@ -11987,7 +11987,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure EndPdlDurationField; 
 
         /// <summary>
-        /// FluidEfficiency property
+        /// A measurement, derived from a data frac, of the efficiency of a particular fluid in creating fracture area on a particular formation at a set of conditions.
         /// </summary>
 		[Description("A measurement, derived from a data frac, of the efficiency of a particular fluid in creating fracture area on a particular formation at a set of conditions.")]
         [ComponentElement]
@@ -12005,7 +12005,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure FluidEfficiencyField; 
 
         /// <summary>
-        /// FractureCloseDuration property
+        /// The time at which the fracture effectively closes without proppant in place.
         /// </summary>
 		[Description("The time at which the fracture effectively closes without proppant in place.")]
         [ComponentElement]
@@ -12023,7 +12023,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure FractureCloseDurationField; 
 
         /// <summary>
-        /// FractureClosePres property
+        /// The pressure at which the fracture effectively closes without proppant in place.
         /// </summary>
 		[Description("The pressure at which the fracture effectively closes without proppant in place.")]
         [ComponentElement]
@@ -12041,7 +12041,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure FractureClosePresField; 
 
         /// <summary>
-        /// FractureExtensionPres property
+        /// The fracture pressure limit for an unfractured formation is the fracture initiation pressure. This is typically considered the upper bound for the minimum horizontal stress or closure pressure. A step-rate test is used to determine the fracture extension pressure.
         /// </summary>
 		[Description("The fracture pressure limit for an unfractured formation is the fracture initiation pressure. This is typically considered the upper bound for the minimum horizontal stress or closure pressure. A step-rate test is used to determine the fracture extension pressure.")]
         [ComponentElement]
@@ -12059,7 +12059,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure FractureExtensionPresField; 
 
         /// <summary>
-        /// FractureGradient property
+        /// The fracture gradient.
         /// </summary>
 		[Description("The fracture gradient.")]
         [ComponentElement]
@@ -12077,7 +12077,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForcePerVolumeMeasure FractureGradientField; 
 
         /// <summary>
-        /// FractureLength property
+        /// The length of the fracture tip to tip; fracture half length is the length of one wing of a fracture from the wellbore to the tip.
         /// </summary>
 		[Description("The length of the fracture tip to tip; fracture half length is the length of one wing of a fracture from the wellbore to the tip.")]
         [ComponentElement]
@@ -12095,7 +12095,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure FractureLengthField; 
 
         /// <summary>
-        /// FractureWidth property
+        /// The width of a fracture at the wellbore. Hydraulic frac width is generated by frac fluid viscosity and/or pump rate (i.e., horsepower).
         /// </summary>
 		[Description("The width of a fracture at the wellbore. Hydraulic frac width is generated by frac fluid viscosity and/or pump rate (i.e., horsepower).")]
         [ComponentElement]
@@ -12113,7 +12113,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure FractureWidthField; 
 
         /// <summary>
-        /// NetPres property
+        /// The difference between the fracture extension pressure and the pressure that exists in the fracture.
         /// </summary>
 		[Description("The difference between the fracture extension pressure and the pressure that exists in the fracture.")]
         [ComponentElement]
@@ -12131,7 +12131,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure NetPresField; 
 
         /// <summary>
-        /// PdlCoef property
+        /// The pressure dependent leak-off coefficient.
         /// </summary>
 		[Description("The pressure dependent leak-off coefficient.")]
         [ComponentElement]
@@ -12149,7 +12149,7 @@ namespace Energistics.DataAccess.WITSML200
         private DimensionlessMeasure PdlCoefField; 
 
         /// <summary>
-        /// PorePres property
+        /// The pressure of the liquids in the formation pores.
         /// </summary>
 		[Description("The pressure of the liquids in the formation pores.")]
         [ComponentElement]
@@ -12167,7 +12167,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PorePresField; 
 
         /// <summary>
-        /// PseudoRadialPres property
+        /// The Horner plot is used to determine if pseudo-radial flow developed during pressure decline. If a semi-log straight line is observed and the line can be extrapolated to a reasonable value of reservoir pressure, then radial or pseudo-radial flow may be affecting the decline behavior. This suggests that the fracture is already closed and that data beyond the point of influence need not be considered in the evaluation of closure.
         /// </summary>
 		[Description("The Horner plot is used to determine if pseudo-radial flow developed during pressure decline.  If a semi-log straight line is observed and the line can be extrapolated to a reasonable value of reservoir pressure, then radial or pseudo-radial flow may be affecting the decline behavior.  This suggests that the fracture is already closed and that data beyond the point of influence need not be considered in the evaluation of closure.")]
         [ComponentElement]
@@ -12185,7 +12185,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PseudoRadialPresField; 
 
         /// <summary>
-        /// ResidualPermeability property
+        /// That permeability which remains after a fractured formation has closed, allowing the the formation fracture face to be pressurized before the fracture is mechanically reopened.
         /// </summary>
 		[Description("That permeability which remains after a fractured formation has closed, allowing the the formation fracture face to be pressurized before the fracture is mechanically reopened.")]
         [ComponentElement]
@@ -12203,7 +12203,7 @@ namespace Energistics.DataAccess.WITSML200
         private PermeabilityRockMeasure ResidualPermeabilityField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -12233,7 +12233,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimFetTest.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -12571,7 +12571,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Name property
+        /// The name of the session.
         /// </summary>
 		[StringLength(64)]
         [Description("The name of the session.")]
@@ -12589,7 +12589,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameField; 
 
         /// <summary>
-        /// Number property
+        /// The number of this pumping diagnostics session.
         /// </summary>
 		[Description("The number of this pumping diagnostics session.")]
 		[XmlElement("Number")]
@@ -12624,7 +12624,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean NumberSpecifiedField; 
 
         /// <summary>
-        /// Description property
+        /// A description of the session.
         /// </summary>
 		[StringLength(2000)]
         [Description("A description of the session.")]
@@ -12642,7 +12642,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DescriptionField; 
 
         /// <summary>
-        /// ChokeSize property
+        /// The size of the choke used during a flow back test.
         /// </summary>
 		[Description("The size of the choke used during a flow back test.")]
         [ComponentElement]
@@ -12660,7 +12660,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure ChokeSizeField; 
 
         /// <summary>
-        /// DTimPumpOn property
+        /// The date and time pumping began.
         /// </summary>
 		[Description("The date and time pumping began.")]
 		[XmlElement("DTimPumpOn")]
@@ -12677,7 +12677,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimPumpOnField; 
 
         /// <summary>
-        /// DTimPumpOff property
+        /// The date and time pumping ended.
         /// </summary>
 		[Description("The date and time pumping ended.")]
 		[XmlElement("DTimPumpOff")]
@@ -12694,7 +12694,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimPumpOffField; 
 
         /// <summary>
-        /// PumpDuration property
+        /// The time between the shutin time and the pump on time.
         /// </summary>
 		[Description("The time between the shutin time and the pump on time.")]
         [ComponentElement]
@@ -12712,7 +12712,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure PumpDurationField; 
 
         /// <summary>
-        /// DTimWellShutin property
+        /// The date and time at which a well ceases flowing and the valves are closed.
         /// </summary>
 		[Description("The date and time at which a well ceases flowing and the valves are closed.")]
 		[XmlElement("DTimWellShutin")]
@@ -12729,7 +12729,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimWellShutinField; 
 
         /// <summary>
-        /// DTimFractureClose property
+        /// The date and time when the fluid in the fracture is completely leaked off into the formation and the fracture closes on its faces.
         /// </summary>
 		[Description("The date and time when the fluid in the fracture is completely leaked off into the formation and the fracture closes on its faces.")]
 		[XmlElement("DTimFractureClose")]
@@ -12746,7 +12746,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimFractureCloseField; 
 
         /// <summary>
-        /// AvgBottomholeTreatmentPres property
+        /// Average bottomhole treatment pressure.
         /// </summary>
 		[Description("Average bottomhole treatment pressure.")]
         [ComponentElement]
@@ -12764,7 +12764,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure AvgBottomholeTreatmentPresField; 
 
         /// <summary>
-        /// AvgBottomholeTreatmentRate property
+        /// Average bottomhole treatment flow rate.
         /// </summary>
 		[Description("Average bottomhole treatment flow rate.")]
         [ComponentElement]
@@ -12782,7 +12782,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure AvgBottomholeTreatmentRateField; 
 
         /// <summary>
-        /// BaseFluidVol property
+        /// Base fluid volume entering equipment.
         /// </summary>
 		[Description("Base fluid volume entering equipment.")]
         [ComponentElement]
@@ -12800,7 +12800,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure BaseFluidVolField; 
 
         /// <summary>
-        /// BottomholeHydrostaticPres property
+        /// Bottomhole hydrostatic pressure.
         /// </summary>
 		[Description("Bottomhole hydrostatic pressure.")]
         [ComponentElement]
@@ -12818,7 +12818,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure BottomholeHydrostaticPresField; 
 
         /// <summary>
-        /// BubblePointPres property
+        /// The pressure at which gas begins to break out of an under saturated oil and form a free gas phase in the matrix or a gas cap.
         /// </summary>
 		[Description("The pressure at which gas begins to break out of an under saturated oil and form a free gas phase in the matrix or a gas cap.")]
         [ComponentElement]
@@ -12836,7 +12836,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure BubblePointPresField; 
 
         /// <summary>
-        /// FluidDensity property
+        /// The density of the fluid.
         /// </summary>
 		[Description("The density of the fluid.")]
         [ComponentElement]
@@ -12854,7 +12854,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerVolumeMeasure FluidDensityField; 
 
         /// <summary>
-        /// FractureClosePres property
+        /// The pressure when the fracture width becomes zero.
         /// </summary>
 		[Description("The pressure when the fracture width becomes zero.")]
         [ComponentElement]
@@ -12872,7 +12872,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure FractureClosePresField; 
 
         /// <summary>
-        /// FrictionPres property
+        /// The pressure loss due to fluid friction with the pipe while a fluid is being pumped.
         /// </summary>
 		[Description("The pressure loss due to fluid friction with the pipe while a fluid is being pumped.")]
         [ComponentElement]
@@ -12890,7 +12890,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure FrictionPresField; 
 
         /// <summary>
-        /// InitialShutinPres property
+        /// Initial shutin pressure.
         /// </summary>
 		[Description("Initial shutin pressure.")]
         [ComponentElement]
@@ -12908,7 +12908,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure InitialShutinPresField; 
 
         /// <summary>
-        /// PorePres property
+        /// The pressure of the liquids in the formation pores.
         /// </summary>
 		[Description("The pressure of the liquids in the formation pores.")]
         [ComponentElement]
@@ -12926,7 +12926,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PorePresField; 
 
         /// <summary>
-        /// WellboreVolume property
+        /// The volume of fluid in the wellbore.
         /// </summary>
 		[Description("The volume of fluid in the wellbore.")]
         [ComponentElement]
@@ -12944,7 +12944,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure WellboreVolumeField; 
 
         /// <summary>
-        /// MdSurface property
+        /// The measured depth of the wellbore to its injection point.
         /// </summary>
 		[Description("The measured depth of the wellbore to its injection point.")]
         [ComponentElement]
@@ -12962,7 +12962,7 @@ namespace Energistics.DataAccess.WITSML200
         private MeasuredDepthCoord MdSurfaceField; 
 
         /// <summary>
-        /// MdBottomhole property
+        /// The measured depth of the bottom of the hole.
         /// </summary>
 		[Description("The measured depth of the bottom of the hole.")]
         [ComponentElement]
@@ -12980,7 +12980,7 @@ namespace Energistics.DataAccess.WITSML200
         private MeasuredDepthCoord MdBottomholeField; 
 
         /// <summary>
-        /// MdMidPerforation property
+        /// The measured depth of the middle perforation.
         /// </summary>
 		[Description("The measured depth of the middle perforation.")]
         [ComponentElement]
@@ -12998,7 +12998,7 @@ namespace Energistics.DataAccess.WITSML200
         private MeasuredDepthCoord MdMidPerforationField; 
 
         /// <summary>
-        /// TvdMidPerforation property
+        /// The true vertical depth of the middle perforation.
         /// </summary>
 		[Description("The true vertical depth of the middle perforation.")]
         [ComponentElement]
@@ -13016,7 +13016,7 @@ namespace Energistics.DataAccess.WITSML200
         private WellVerticalDepthCoord TvdMidPerforationField; 
 
         /// <summary>
-        /// SurfaceTemperature property
+        /// The constant earth temperature at a given depth specific to a region.
         /// </summary>
 		[Description("The constant earth temperature at a given depth specific to a region.")]
         [ComponentElement]
@@ -13034,7 +13034,7 @@ namespace Energistics.DataAccess.WITSML200
         private ThermodynamicTemperatureMeasure SurfaceTemperatureField; 
 
         /// <summary>
-        /// BottomholeTemperature property
+        /// Static bottomhole temperature.
         /// </summary>
 		[Description("Static bottomhole temperature.")]
         [ComponentElement]
@@ -13052,7 +13052,7 @@ namespace Energistics.DataAccess.WITSML200
         private ThermodynamicTemperatureMeasure BottomholeTemperatureField; 
 
         /// <summary>
-        /// SurfaceFluidTemperature property
+        /// Temperature of the fluid at the surface.
         /// </summary>
 		[Description("Temperature of the fluid at the surface.")]
         [ComponentElement]
@@ -13070,7 +13070,7 @@ namespace Energistics.DataAccess.WITSML200
         private ThermodynamicTemperatureMeasure SurfaceFluidTemperatureField; 
 
         /// <summary>
-        /// FluidCompressibility property
+        /// The volume change of a fluid when pressure is applied.
         /// </summary>
 		[Description("The volume change of a fluid when pressure is applied.")]
         [ComponentElement]
@@ -13088,7 +13088,7 @@ namespace Energistics.DataAccess.WITSML200
         private IsothermalCompressibilityMeasure FluidCompressibilityField; 
 
         /// <summary>
-        /// ReservoirTotalCompressibility property
+        /// The volume change of a reservoir material when pressure is applied.
         /// </summary>
 		[Description("The volume change of a reservoir material when pressure is applied.")]
         [ComponentElement]
@@ -13106,7 +13106,7 @@ namespace Energistics.DataAccess.WITSML200
         private IsothermalCompressibilityMeasure ReservoirTotalCompressibilityField; 
 
         /// <summary>
-        /// FluidNprimeFactor property
+        /// Power law component. As 'n' decreases from 1, the fluid becomes more shear thinning. Reducing 'n' produces more non-Newtonian behavior.
         /// </summary>
 		[Description("Power law component. As 'n' decreases from 1, the fluid becomes more shear thinning. Reducing 'n' produces more non-Newtonian behavior.")]
         [ComponentElement]
@@ -13124,7 +13124,7 @@ namespace Energistics.DataAccess.WITSML200
         private DimensionlessMeasure FluidNprimeFactorField; 
 
         /// <summary>
-        /// FluidKprimeFactor property
+        /// The consistency index K is the shear stress or viscosity of the fluid at one sec-1 shear rate. An increasing K raises the effective viscosity.
         /// </summary>
 		[Description("The consistency index K is the shear stress or viscosity of the fluid at one sec-1 shear rate. An increasing K raises the effective viscosity.")]
         [ComponentElement]
@@ -13142,7 +13142,7 @@ namespace Energistics.DataAccess.WITSML200
         private DimensionlessMeasure FluidKprimeFactorField; 
 
         /// <summary>
-        /// FluidSpecificHeat property
+        /// The heat required to raise one unit mass of a substance by one degree.
         /// </summary>
 		[Description("The heat required to raise one unit mass of a substance by one degree.")]
         [ComponentElement]
@@ -13160,7 +13160,7 @@ namespace Energistics.DataAccess.WITSML200
         private SpecificHeatCapacityMeasure FluidSpecificHeatField; 
 
         /// <summary>
-        /// FluidThermalConductivity property
+        /// In physics, thermal conductivity is the property of a material describing its ability to conduct heat. It appears primarily in Fourier's Law for heat conduction. Thermal conductivity is measured in watts per kelvin-meter. Multiplied by a temperature difference (in kelvins) and an area (in square meters), and divided by a thickness (in meters), the thermal conductivity predicts the rate of energy loss (in watts) through a piece of material.
         /// </summary>
 		[Description("In physics, thermal conductivity is the property of a material describing its ability to conduct heat. It appears primarily in Fourier's Law for heat conduction. Thermal conductivity is measured in watts per kelvin-meter.  Multiplied by a temperature difference (in kelvins) and an area (in square meters), and divided by a thickness (in meters), the thermal conductivity predicts the rate of energy loss (in watts) through a piece of material.")]
         [ComponentElement]
@@ -13178,7 +13178,7 @@ namespace Energistics.DataAccess.WITSML200
         private ThermalConductivityMeasure FluidThermalConductivityField; 
 
         /// <summary>
-        /// FluidThermalExpansionCoefficient property
+        /// Dimensional response to temperature change is expressed by its coefficient of thermal expansion. When the temperature of a substance changes, the energy that is stored in the intermolecular bonds between atoms also changes. When the stored energy increases, so does the length of the molecular bonds. As a result, solids typically expand in response to heating and contract on cooling. The degree of expansion divided by the change in temperature is called the material's coefficient of thermal expansion and generally varies with temperature.
         /// </summary>
 		[Description("Dimensional response to temperature change is expressed by its coefficient of thermal expansion. When the temperature of a substance changes, the energy that is stored in the intermolecular bonds between atoms also changes. When the stored energy increases, so does the length of the molecular bonds.  As a result, solids typically expand in response to heating and contract on cooling.  The degree of expansion divided by the change in temperature is called the material's coefficient of thermal expansion and generally varies with temperature.")]
         [ComponentElement]
@@ -13196,7 +13196,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumetricThermalExpansionMeasure FluidThermalExpansionCoefficientField; 
 
         /// <summary>
-        /// FluidEfficiency property
+        /// A measurement, derived from a data frac, of the efficiency of a particular fluid in creating fracture area on a particular formation at a set of conditions.
         /// </summary>
 		[Description("A measurement, derived from a data frac, of the efficiency of a particular fluid in creating fracture area on a particular formation at a set of conditions.")]
         [ComponentElement]
@@ -13214,7 +13214,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure FluidEfficiencyField; 
 
         /// <summary>
-        /// FoamQuality property
+        /// Foam quality percentage of foam for the job during the stimulation services.
         /// </summary>
 		[Description("Foam quality percentage of foam for the job during the stimulation services.")]
         [ComponentElement]
@@ -13232,7 +13232,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure FoamQualityField; 
 
         /// <summary>
-        /// PercentPad property
+        /// The volume of the pad divided by the (volume of the pad + the volume of the proppant laden fluid).
         /// </summary>
 		[Description("The volume of the pad divided by the (volume of the pad + the volume of the proppant laden fluid).")]
         [ComponentElement]
@@ -13250,7 +13250,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure PercentPadField; 
 
         /// <summary>
-        /// StageNumber property
+        /// The number of a stage associated with this diagnostics session.
         /// </summary>
 		[Description("The number of a stage associated with this diagnostics session.")]
 		[XmlElement("StageNumber")]
@@ -13285,7 +13285,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean StageNumberSpecifiedField; 
 
         /// <summary>
-        /// TemperatureCorrectionApplied property
+        /// Are the calculations corrected for temperature? A value of "true" (or "1") indicates that the calculations were corrected for temperature. A value of "false" (or "0") or not given indicates otherwise.
         /// </summary>
 		[Description("Are the calculations corrected for temperature? A value of \"true\" (or \"1\") indicates that the calculations were corrected for temperature.  A value of \"false\" (or \"0\") or not given indicates otherwise.")]
 		[XmlElement("TemperatureCorrectionApplied")]
@@ -13320,7 +13320,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean TemperatureCorrectionAppliedSpecifiedField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -13350,7 +13350,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
         /// <summary>
-        /// FluidEfficiencyTest property
+        /// A diagnostic test determining fluid efficiency.
         /// </summary>
 		[Description("A diagnostic test determining fluid efficiency.")]
         [RecurringElement]
@@ -13380,7 +13380,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<StimFetTest> FluidEfficiencyTestField; 
 
         /// <summary>
-        /// StepDownTest property
+        /// An injection test involving multiple steps of injection rate and pressure, where a curve deflection and change of slope indicates the fracture breakdown pressure. An injection test involving multiple steps of injection rate and pressure, where a curve deflection and change of slope indicates the fracture breakdown pressure.
         /// </summary>
 		[Description("An injection test involving multiple steps of injection rate and pressure, where a curve deflection and change of slope indicates the fracture breakdown pressure. An injection test involving multiple steps of injection rate and pressure, where a curve deflection and change of slope indicates the fracture breakdown pressure.")]
         [RecurringElement]
@@ -13410,7 +13410,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<StimStepDownTest> StepDownTestField; 
 
         /// <summary>
-        /// StepRateTest property
+        /// An injection test, plotted pressure against injection rate, where a curve deflection and change of slope indicates the fracture breakdown pressure.
         /// </summary>
 		[Description("An injection test, plotted pressure against injection rate, where a curve deflection and change of slope indicates the fracture breakdown pressure.")]
         [RecurringElement]
@@ -13440,7 +13440,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<StimStepTest> StepRateTestField; 
 
         /// <summary>
-        /// PumpFlowBackTest property
+        /// A diagnostic test involving flowing a well back after treatment.
         /// </summary>
 		[Description("A diagnostic test involving flowing a well back after treatment.")]
         [RecurringElement]
@@ -13470,7 +13470,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<StimPumpFlowBackTest> PumpFlowBackTestField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimJobDiagnosticSession.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -13549,7 +13549,7 @@ namespace Energistics.DataAccess.WITSML200
         }
 
 		/// <summary>
-        /// uom property
+        /// Unit of measure used by this vertical depth coordinate
         /// </summary>
 		[Required]
         [Description("Unit of measure used by this vertical depth coordinate")]
@@ -13568,7 +13568,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthUom uomField; 
 
 		/// <summary>
-        /// datum property
+        /// Defines the vertical datums associated with elevation, vertical depth and measured depth coordinates
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -13641,7 +13641,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Description property
+        /// Description of item and details.
         /// </summary>
 		[StringLength(2000)]
         [Description("Description of item and details.")]
@@ -13659,7 +13659,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DescriptionField; 
 
         /// <summary>
-        /// PresRating property
+        /// Pressure rating of the item.
         /// </summary>
 		[Description("Pressure rating of the item.")]
         [ComponentElement]
@@ -13677,7 +13677,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresRatingField; 
 
         /// <summary>
-        /// TypeSurfEquip property
+        /// Surface equipment type (IADC1-4, Custom, Coiled Tubing).
         /// </summary>
 		[Required]
         [Description("Surface equipment type (IADC1-4, Custom, Coiled Tubing).")]
@@ -13695,7 +13695,7 @@ namespace Energistics.DataAccess.WITSML200
         private SurfEquipType? TypeSurfEquipField; 
 
         /// <summary>
-        /// UsePumpDischarge property
+        /// Use pump discharge line? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Use pump discharge line?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UsePumpDischarge")]
@@ -13730,7 +13730,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean UsePumpDischargeSpecifiedField; 
 
         /// <summary>
-        /// UseStandpipe property
+        /// Use standpipe geometry? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Use standpipe geometry?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UseStandpipe")]
@@ -13765,7 +13765,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean UseStandpipeSpecifiedField; 
 
         /// <summary>
-        /// UseHose property
+        /// Use kelly hose geometry? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Use kelly hose geometry?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UseHose")]
@@ -13800,7 +13800,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean UseHoseSpecifiedField; 
 
         /// <summary>
-        /// UseSwivel property
+        /// Use swivel geometry? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Use swivel geometry?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UseSwivel")]
@@ -13835,7 +13835,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean UseSwivelSpecifiedField; 
 
         /// <summary>
-        /// UseKelly property
+        /// Use kelly geometry? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Use kelly geometry?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UseKelly")]
@@ -13870,7 +13870,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean UseKellySpecifiedField; 
 
         /// <summary>
-        /// UseTopStack property
+        /// Use top stack height? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Use top stack height?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UseTopStack")]
@@ -13905,7 +13905,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean UseTopStackSpecifiedField; 
 
         /// <summary>
-        /// UseInjStack property
+        /// Use injector stack height? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Use injector stack height?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UseInjStack")]
@@ -13940,7 +13940,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean UseInjStackSpecifiedField; 
 
         /// <summary>
-        /// UseSurfaceIron property
+        /// Use surface iron description? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Use surface iron description?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UseSurfaceIron")]
@@ -13975,25 +13975,25 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean UseSurfaceIronSpecifiedField; 
 
         /// <summary>
-        /// IdStandpipe property
+        /// Inner diameter of the standpipe.
         /// </summary>
 		[Description("Inner diameter of the standpipe.")]
         [ComponentElement]
 		[XmlElement("IdStandpipe")]
-        public LengthMeasure IdStandpipe {
+        public LengthMeasure InnerDiameterStandpipe {
             get {
                 return IdStandpipeField;
             } 
             set {
                 IdStandpipeField = value;
-                NotifyPropertyChanged("IdStandpipe");
+                NotifyPropertyChanged("InnerDiameterStandpipe");
             }
         }
 
         private LengthMeasure IdStandpipeField; 
 
         /// <summary>
-        /// LenStandpipe property
+        /// Length of the standpipe.
         /// </summary>
 		[Description("Length of the standpipe.")]
         [ComponentElement]
@@ -14011,25 +14011,25 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure LenStandpipeField; 
 
         /// <summary>
-        /// IdHose property
+        /// Inner diameter of the kelly hose.
         /// </summary>
 		[Description("Inner diameter of the kelly hose.")]
         [ComponentElement]
 		[XmlElement("IdHose")]
-        public LengthMeasure IdHose {
+        public LengthMeasure InnerDiameterHose {
             get {
                 return IdHoseField;
             } 
             set {
                 IdHoseField = value;
-                NotifyPropertyChanged("IdHose");
+                NotifyPropertyChanged("InnerDiameterHose");
             }
         }
 
         private LengthMeasure IdHoseField; 
 
         /// <summary>
-        /// LenHose property
+        /// Length of the kelly hose.
         /// </summary>
 		[Description("Length of the kelly hose.")]
         [ComponentElement]
@@ -14047,25 +14047,25 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure LenHoseField; 
 
         /// <summary>
-        /// IdSwivel property
+        /// Inner diameter of the swivel.
         /// </summary>
 		[Description("Inner diameter of the swivel.")]
         [ComponentElement]
 		[XmlElement("IdSwivel")]
-        public LengthMeasure IdSwivel {
+        public LengthMeasure InnerDiameterSwivel {
             get {
                 return IdSwivelField;
             } 
             set {
                 IdSwivelField = value;
-                NotifyPropertyChanged("IdSwivel");
+                NotifyPropertyChanged("InnerDiameterSwivel");
             }
         }
 
         private LengthMeasure IdSwivelField; 
 
         /// <summary>
-        /// LenSwivel property
+        /// Length of the swivel.
         /// </summary>
 		[Description("Length of the swivel.")]
         [ComponentElement]
@@ -14083,25 +14083,25 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure LenSwivelField; 
 
         /// <summary>
-        /// IdKelly property
+        /// Inner diameter of the kelly bushing.
         /// </summary>
 		[Description("Inner diameter of the kelly bushing.")]
         [ComponentElement]
 		[XmlElement("IdKelly")]
-        public LengthMeasure IdKelly {
+        public LengthMeasure InnerDiameterKelly {
             get {
                 return IdKellyField;
             } 
             set {
                 IdKellyField = value;
-                NotifyPropertyChanged("IdKelly");
+                NotifyPropertyChanged("InnerDiameterKelly");
             }
         }
 
         private LengthMeasure IdKellyField; 
 
         /// <summary>
-        /// LenKelly property
+        /// Length of the kelly bushing.
         /// </summary>
 		[Description("Length of the kelly bushing.")]
         [ComponentElement]
@@ -14119,25 +14119,25 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure LenKellyField; 
 
         /// <summary>
-        /// IdSurfaceIron property
+        /// Inner diameter of the surface iron.
         /// </summary>
 		[Description("Inner diameter of the surface iron.")]
         [ComponentElement]
 		[XmlElement("IdSurfaceIron")]
-        public LengthMeasure IdSurfaceIron {
+        public LengthMeasure InnerDiameterSurfaceIron {
             get {
                 return IdSurfaceIronField;
             } 
             set {
                 IdSurfaceIronField = value;
-                NotifyPropertyChanged("IdSurfaceIron");
+                NotifyPropertyChanged("InnerDiameterSurfaceIron");
             }
         }
 
         private LengthMeasure IdSurfaceIronField; 
 
         /// <summary>
-        /// LenSurfaceIron property
+        /// Length of the surface iron.
         /// </summary>
 		[Description("Length of the surface iron.")]
         [ComponentElement]
@@ -14155,7 +14155,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure LenSurfaceIronField; 
 
         /// <summary>
-        /// HtSurfaceIron property
+        /// Height of the surface iron.
         /// </summary>
 		[Description("Height of the surface iron.")]
         [ComponentElement]
@@ -14173,25 +14173,25 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure HtSurfaceIronField; 
 
         /// <summary>
-        /// IdDischargeLine property
+        /// Coiled tubing: inner diameter of the pump discharge line.
         /// </summary>
 		[Description("Coiled tubing: inner diameter of the pump discharge line.")]
         [ComponentElement]
 		[XmlElement("IdDischargeLine")]
-        public LengthMeasure IdDischargeLine {
+        public LengthMeasure InnerDiameterDischargeLine {
             get {
                 return IdDischargeLineField;
             } 
             set {
                 IdDischargeLineField = value;
-                NotifyPropertyChanged("IdDischargeLine");
+                NotifyPropertyChanged("InnerDiameterDischargeLine");
             }
         }
 
         private LengthMeasure IdDischargeLineField; 
 
         /// <summary>
-        /// LenDischargeLine property
+        /// Coiled tubing: length of the pump discharge line.
         /// </summary>
 		[Description("Coiled tubing: length of the pump discharge line.")]
         [ComponentElement]
@@ -14209,7 +14209,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure LenDischargeLineField; 
 
         /// <summary>
-        /// CtWrapType property
+        /// Coiled tubing: the coiled tubing wrap type.
         /// </summary>
 		[StringLength(64)]
         [Description("Coiled tubing: the coiled tubing wrap type.")]
@@ -14227,7 +14227,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CtWrapTypeField; 
 
         /// <summary>
-        /// OdReel property
+        /// Coiled tubing: outside diameter of the coiled tubing reel.
         /// </summary>
 		[Description("Coiled tubing: outside diameter of the coiled tubing reel.")]
         [ComponentElement]
@@ -14245,7 +14245,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure OdReelField; 
 
         /// <summary>
-        /// OdCore property
+        /// Coiled tubing: outside diameter of the reel core that the coiled tubing is wrapped around.
         /// </summary>
 		[Description("Coiled tubing: outside diameter of the reel core that the coiled tubing is wrapped around.")]
         [ComponentElement]
@@ -14263,7 +14263,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure OdCoreField; 
 
         /// <summary>
-        /// WidReelWrap property
+        /// Coiled tubing: width of the reel core. This is the inside dimension.
         /// </summary>
 		[Description("Coiled tubing: width of the reel core. This is the inside dimension.")]
         [ComponentElement]
@@ -14281,7 +14281,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure WidReelWrapField; 
 
         /// <summary>
-        /// LenReel property
+        /// Coiled tubing: length of the coiled tubing remaining on the reel.
         /// </summary>
 		[Description("Coiled tubing: length of the coiled tubing remaining on the reel.")]
         [ComponentElement]
@@ -14299,7 +14299,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure LenReelField; 
 
         /// <summary>
-        /// InjStkUp property
+        /// Coiled tubing: Does it have an injector stack up? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Coiled tubing: Does it have an injector stack up? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("InjStkUp")]
@@ -14334,7 +14334,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean InjStkUpSpecifiedField; 
 
         /// <summary>
-        /// HtInjStk property
+        /// Coiled tubing: The length of tubing from the end of the coil reel to the rotary kelly bushing. This length includes the tubing in the hole and the tubing on the reel. This measurement takes into account the 20 or so feet of tubing that is being straightened and pushed through the injector head.
         /// </summary>
 		[Description("Coiled tubing: The length of tubing from the end of the coil reel to the rotary kelly bushing. This length includes the tubing in the hole and the tubing on the reel. This measurement takes into account the 20 or so feet of tubing that is being straightened and pushed through the injector head.")]
         [ComponentElement]
@@ -14352,7 +14352,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure HtInjStkField; 
 
         /// <summary>
-        /// UmbInside property
+        /// Coiled tubing: Umbilical inside, true/false flag to account for the wireline inside the coiled tubing. With this pressure loss calculation, you can calculate for the strings used for logging, wireline coring, etc. Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Coiled tubing: Umbilical inside, true/false flag to account for the wireline inside the coiled tubing. With this pressure loss calculation, you can calculate for the strings used for logging, wireline coring, etc.  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UmbInside")]
@@ -14387,7 +14387,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean UmbInsideSpecifiedField; 
 
         /// <summary>
-        /// OdUmbilical property
+        /// Coiled tubing: outer diameter of the umbilical.
         /// </summary>
 		[Description("Coiled tubing: outer diameter of the umbilical.")]
         [ComponentElement]
@@ -14405,7 +14405,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure OdUmbilicalField; 
 
         /// <summary>
-        /// LenUmbilical property
+        /// Coiled tubing: length of the umbilical.
         /// </summary>
 		[Description("Coiled tubing: length of the umbilical.")]
         [ComponentElement]
@@ -14423,25 +14423,25 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure LenUmbilicalField; 
 
         /// <summary>
-        /// IdTopStk property
+        /// Top drive: inner diameter of the top stack.
         /// </summary>
 		[Description("Top drive: inner diameter of the top stack.")]
         [ComponentElement]
 		[XmlElement("IdTopStk")]
-        public LengthMeasure IdTopStk {
+        public LengthMeasure InnerDiameterTopStk {
             get {
                 return IdTopStkField;
             } 
             set {
                 IdTopStkField = value;
-                NotifyPropertyChanged("IdTopStk");
+                NotifyPropertyChanged("InnerDiameterTopStk");
             }
         }
 
         private LengthMeasure IdTopStkField; 
 
         /// <summary>
-        /// HtTopStk property
+        /// Top drive: The distance that the mud travels from the end of the standpipe hose to the drill pipe connection at the bottom of the top drive. We are measuring the distance that the mud will flow through the top drive.For the top drive. The distance that the mud travels from the end of the standpipe hose to the drill pipe connection at the bottom of the top drive. This is the measurement of the distance that the mud flows through the top drive.
         /// </summary>
 		[Description("Top drive: The distance that the mud travels from the end of the standpipe hose to the drill pipe connection at the bottom of the top drive. We are measuring the distance that the mud will flow through the top drive.For the top drive. The distance that the mud travels from the end of the standpipe hose to the drill pipe connection at the bottom of the top drive. This is the measurement of the distance that the mud flows through the top drive.")]
         [ComponentElement]
@@ -14459,7 +14459,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure HtTopStkField; 
 
         /// <summary>
-        /// HtFlange property
+        /// Height of the flange. 
         /// </summary>
 		[Description("Height of the flange.")]
         [ComponentElement]
@@ -14513,7 +14513,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Manufacturer property
+        /// Manufacturer or supplier of the item.
         /// </summary>
 		[StringLength(64)]
         [Description("Manufacturer or supplier of the item.")]
@@ -14531,7 +14531,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ManufacturerField; 
 
         /// <summary>
-        /// Model property
+        /// Manufacturer's designated model.
         /// </summary>
 		[StringLength(64)]
         [Description("Manufacturer's designated model.")]
@@ -14549,7 +14549,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ModelField; 
 
         /// <summary>
-        /// DTimInstall property
+        /// Date and time the degasser was installed.
         /// </summary>
 		[Description("Date and time the degasser was installed.")]
 		[XmlElement("DTimInstall")]
@@ -14566,7 +14566,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimInstallField; 
 
         /// <summary>
-        /// DTimRemove property
+        /// Date and time the degasser was removed.
         /// </summary>
 		[Description("Date and time the degasser was removed.")]
 		[XmlElement("DTimRemove")]
@@ -14583,7 +14583,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimRemoveField; 
 
         /// <summary>
-        /// Type property
+        /// Description for the type of object.
         /// </summary>
 		[StringLength(64)]
         [Description("Description for the type of object.")]
@@ -14601,7 +14601,7 @@ namespace Energistics.DataAccess.WITSML200
         private String TypeField; 
 
         /// <summary>
-        /// Owner property
+        /// Contractor/owner.
         /// </summary>
 		[StringLength(64)]
         [Description("Contractor/owner.")]
@@ -14619,7 +14619,7 @@ namespace Energistics.DataAccess.WITSML200
         private String OwnerField; 
 
         /// <summary>
-        /// Height property
+        /// Height of the separator.
         /// </summary>
 		[Description("Height of the separator.")]
         [ComponentElement]
@@ -14637,7 +14637,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure HeightField; 
 
         /// <summary>
-        /// Len property
+        /// Length of the separator.
         /// </summary>
 		[Description("Length of the separator.")]
         [ComponentElement]
@@ -14655,25 +14655,25 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure LenField; 
 
         /// <summary>
-        /// Id property
+        /// Internal diameter of the object.
         /// </summary>
 		[Description("Internal diameter of the object.")]
         [ComponentElement]
 		[XmlElement("Id")]
-        public LengthMeasure Id {
+        public LengthMeasure InnerDiameter {
             get {
                 return IdField;
             } 
             set {
                 IdField = value;
-                NotifyPropertyChanged("Id");
+                NotifyPropertyChanged("InnerDiameter");
             }
         }
 
         private LengthMeasure IdField; 
 
         /// <summary>
-        /// CapFlow property
+        /// Maximum pump rate at which the unit efficiently operates.
         /// </summary>
 		[Description("Maximum pump rate at which the unit efficiently operates.")]
         [ComponentElement]
@@ -14691,7 +14691,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure CapFlowField; 
 
         /// <summary>
-        /// AreaSeparatorFlow property
+        /// Flow area of the separator.
         /// </summary>
 		[Description("Flow area of the separator.")]
         [ComponentElement]
@@ -14709,7 +14709,7 @@ namespace Energistics.DataAccess.WITSML200
         private AreaMeasure AreaSeparatorFlowField; 
 
         /// <summary>
-        /// HtMudSeal property
+        /// Depth of trip-tank fluid level to provide back pressure against the separator flow.
         /// </summary>
 		[Description("Depth of trip-tank fluid level to provide back pressure against the separator flow.")]
         [ComponentElement]
@@ -14727,43 +14727,43 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure HtMudSealField; 
 
         /// <summary>
-        /// IdInlet property
+        /// Internal diameter of the inlet line.
         /// </summary>
 		[Description("Internal diameter of the inlet line.")]
         [ComponentElement]
 		[XmlElement("IdInlet")]
-        public LengthMeasure IdInlet {
+        public LengthMeasure InnerDiameterInlet {
             get {
                 return IdInletField;
             } 
             set {
                 IdInletField = value;
-                NotifyPropertyChanged("IdInlet");
+                NotifyPropertyChanged("InnerDiameterInlet");
             }
         }
 
         private LengthMeasure IdInletField; 
 
         /// <summary>
-        /// IdVentLine property
+        /// Internal diameter of the vent line.
         /// </summary>
 		[Description("Internal diameter of the vent line.")]
         [ComponentElement]
 		[XmlElement("IdVentLine")]
-        public LengthMeasure IdVentLine {
+        public LengthMeasure InnerDiameterVentLine {
             get {
                 return IdVentLineField;
             } 
             set {
                 IdVentLineField = value;
-                NotifyPropertyChanged("IdVentLine");
+                NotifyPropertyChanged("InnerDiameterVentLine");
             }
         }
 
         private LengthMeasure IdVentLineField; 
 
         /// <summary>
-        /// LenVentLine property
+        /// Length of the vent line.
         /// </summary>
 		[Description("Length of the vent line.")]
         [ComponentElement]
@@ -14781,7 +14781,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure LenVentLineField; 
 
         /// <summary>
-        /// CapGasSep property
+        /// Safe gas-separating capacity.
         /// </summary>
 		[Description("Safe gas-separating capacity.")]
         [ComponentElement]
@@ -14799,7 +14799,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure CapGasSepField; 
 
         /// <summary>
-        /// CapBlowdown property
+        /// Gas vent rate at which the vent line pressure drop exceeds the hydrostatic head because of the mud seal.
         /// </summary>
 		[Description("Gas vent rate at which the vent line pressure drop exceeds the hydrostatic head because of the mud seal.")]
         [ComponentElement]
@@ -14817,7 +14817,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure CapBlowdownField; 
 
         /// <summary>
-        /// PresRating property
+        /// Pressure rating of the item.
         /// </summary>
 		[Description("Pressure rating of the item.")]
         [ComponentElement]
@@ -14835,7 +14835,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresRatingField; 
 
         /// <summary>
-        /// TempRating property
+        /// Temperature rating of the separator.
         /// </summary>
 		[Description("Temperature rating of the separator.")]
         [ComponentElement]
@@ -14853,7 +14853,7 @@ namespace Energistics.DataAccess.WITSML200
         private ThermodynamicTemperatureMeasure TempRatingField; 
 
         /// <summary>
-        /// NameTag property
+        /// An identification tag for the degasser. A serial number is a type of identification tag; however, some tags contain many pieces of information.This element only identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the degasser. A serial number is a type of identification tag; however, some tags contain many pieces of information.This element only identifies the tag and does not describe the contents.")]
         [RecurringElement]
@@ -14883,7 +14883,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<NameTag> NameTagField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -14913,7 +14913,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of degasser
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -15063,7 +15063,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Name property
+        /// The physical identification string of the equipment tag.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -15082,7 +15082,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameField; 
 
         /// <summary>
-        /// NumberingScheme property
+        /// The format or encoding specification of the equipment tag. The tag may contain different pieces of information and knowledge of that information is inherent in the specification. The "identification string" is a mandatory part of the information in a tag.
         /// </summary>
 		[Required]
         [Description("The format or encoding specification of the equipment tag. The tag may contain different pieces of information and knowledge of that information is inherent in the specification. The \"identification string\" is a mandatory part of the information in a tag.")]
@@ -15100,7 +15100,7 @@ namespace Energistics.DataAccess.WITSML200
         private NameTagNumberingScheme? NumberingSchemeField; 
 
         /// <summary>
-        /// Technology property
+        /// Identifies the general type of identifier on an item. If multiple identifiers exist on an item, a separate description set for each identifier should be created. For example, a joint of casing may have a barcode label on it along with a painted-on code and an RFID tag attached or embedded into the coupling. The barcode label may in turn be an RFID-equipped label. This particular scenario would require populating five nameTags to fully describe and decode all the possible identifiers as follows: 'tagged' - RFID tag embedded in the coupling, 'label' - Serial number printed on the label, 'tagged' - RFID tag embedded into the label, 'label' - Barcode printed on the label, 'painted'- Mill number painted on the pipe body.
         /// </summary>
 		[Description("Identifies the general type of identifier on an item.  If multiple identifiers exist on an item, a separate description set for each identifier should be created.  For example, a joint of casing may have a barcode label on it along with a painted-on code and an RFID tag attached or embedded into the coupling.  The barcode label may in turn be an RFID-equipped label. This particular scenario would require populating five nameTags to fully describe and decode all the possible identifiers as follows: 'tagged' - RFID tag embedded in the coupling, 'label'  - Serial number printed on the label, 'tagged' - RFID tag embedded into the label, 'label'  - Barcode printed on the label, 'painted'- Mill number painted on the pipe body.")]
 		[XmlElement("Technology")]
@@ -15135,7 +15135,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean TechnologySpecifiedField; 
 
         /// <summary>
-        /// Location property
+        /// An indicator of where the tag is attached to the item. This is used to assist the user in finding where an identifier is located on an item. This optional field also helps to differentiate where an identifier is located when multiple identifiers exist on an item. Most downhole components have a box (female thread) and pin (male thread) end as well as a pipe body in between the ends. Where multiple identifiers are used on an item, it is convenient to have a reference as to which end, or somewhere in the middle, an identifier may be closer to. Some items may have an identifier on a non-standard location, such as on the arm of a hole opener. 'other', by exclusion, tells a user to look elsewhere than on the body or near the ends of an item. Most non-downhole tools use either 'body', 'other' or not specified because the location tends to lose value with smaller or non threaded items.
         /// </summary>
 		[Description("An indicator of where the tag is attached to the item. This is used to assist the user in finding where an identifier is located on an item.  This optional field also helps to differentiate where an identifier is located when multiple identifiers exist on an item. Most downhole components have a box (female thread) and pin (male thread) end as well as a pipe body in between the ends. Where multiple identifiers are used on an item, it is convenient to have a reference as to which end, or somewhere in the middle, an identifier may be closer to. Some items may have an identifier on a non-standard location, such as on the arm of a hole opener.  'other', by exclusion, tells a user to look elsewhere than on the body or near the ends of an item.  Most non-downhole tools use either 'body', 'other' or not specified because the location tends to lose value with smaller or non threaded items.")]
 		[XmlElement("Location")]
@@ -15170,7 +15170,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean LocationSpecifiedField; 
 
         /// <summary>
-        /// InstallationDate property
+        /// When the tag was installed in or on the item.
         /// </summary>
 		[Description("When the tag was installed in or on the item.")]
 		[XmlElement("InstallationDate")]
@@ -15187,7 +15187,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? InstallationDateField; 
 
         /// <summary>
-        /// InstallationCompany property
+        /// The name of the company that installed the tag.
         /// </summary>
 		[StringLength(64)]
         [Description("The name of the company that installed the tag.")]
@@ -15205,7 +15205,7 @@ namespace Energistics.DataAccess.WITSML200
         private String InstallationCompanyField; 
 
         /// <summary>
-        /// MountingCode property
+        /// Reference to a manufacturer's or installer's installation description, code, or method.
         /// </summary>
 		[StringLength(64)]
         [Description("Reference to a manufacturer's or installer's installation description, code, or method.")]
@@ -15223,7 +15223,7 @@ namespace Energistics.DataAccess.WITSML200
         private String MountingCodeField; 
 
         /// <summary>
-        /// Comment property
+        /// A comment or remark about the tag.
         /// </summary>
 		[StringLength(2000)]
         [Description("A comment or remark about the tag.")]
@@ -15241,7 +15241,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CommentField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -15271,7 +15271,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of NameTag.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -15327,7 +15327,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Manufacturer property
+        /// Manufacturer or supplier of the item.
         /// </summary>
 		[StringLength(64)]
         [Description("Manufacturer or supplier of the item.")]
@@ -15345,7 +15345,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ManufacturerField; 
 
         /// <summary>
-        /// Model property
+        /// Manufacturer's designated model.
         /// </summary>
 		[StringLength(64)]
         [Description("Manufacturer's designated model.")]
@@ -15363,7 +15363,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ModelField; 
 
         /// <summary>
-        /// DTimInstall property
+        /// Date and time the hydroclone was installed.
         /// </summary>
 		[Description("Date and time the hydroclone was installed.")]
 		[XmlElement("DTimInstall")]
@@ -15380,7 +15380,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimInstallField; 
 
         /// <summary>
-        /// DTimRemove property
+        /// Removal date and time the hydroclone was removed.
         /// </summary>
 		[Description("Removal date and time the hydroclone was removed.")]
 		[XmlElement("DTimRemove")]
@@ -15397,7 +15397,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimRemoveField; 
 
         /// <summary>
-        /// Type property
+        /// Description of the type of object.
         /// </summary>
 		[StringLength(64)]
         [Description("Description of the type of object.")]
@@ -15415,7 +15415,7 @@ namespace Energistics.DataAccess.WITSML200
         private String TypeField; 
 
         /// <summary>
-        /// DescCone property
+        /// Cone description.
         /// </summary>
 		[StringLength(64)]
         [Description("Cone description.")]
@@ -15433,7 +15433,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DescConeField; 
 
         /// <summary>
-        /// Owner property
+        /// Contractor/owner.
         /// </summary>
 		[StringLength(64)]
         [Description("Contractor/owner.")]
@@ -15451,7 +15451,7 @@ namespace Energistics.DataAccess.WITSML200
         private String OwnerField; 
 
         /// <summary>
-        /// NameTag property
+        /// An identification tag for the hydrocyclone. A serial number is a type of identification tag; however, some tags contain many pieces of information. This element only identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the hydrocyclone. A serial number is a type of identification tag; however, some tags contain many pieces of information. This element only identifies the tag and does not describe the contents.")]
         [RecurringElement]
@@ -15481,7 +15481,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<NameTag> NameTagField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -15511,7 +15511,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Hydrocyclone.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -15567,7 +15567,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Manufacturer property
+        /// Manufacturer or supplier of the item.
         /// </summary>
 		[StringLength(64)]
         [Description("Manufacturer or supplier of the item.")]
@@ -15585,7 +15585,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ManufacturerField; 
 
         /// <summary>
-        /// Model property
+        /// Manufacturer's designated model.
         /// </summary>
 		[StringLength(64)]
         [Description("Manufacturer's designated model.")]
@@ -15603,7 +15603,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ModelField; 
 
         /// <summary>
-        /// DTimInstall property
+        /// Date and time the centrifuge was installed.
         /// </summary>
 		[Description("Date and time the centrifuge was installed.")]
 		[XmlElement("DTimInstall")]
@@ -15620,7 +15620,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimInstallField; 
 
         /// <summary>
-        /// DTimRemove property
+        /// Date and time the centrifuge was removed.
         /// </summary>
 		[Description("Date and time the centrifuge was removed.")]
 		[XmlElement("DTimRemove")]
@@ -15637,7 +15637,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimRemoveField; 
 
         /// <summary>
-        /// Type property
+        /// Description for the type of object.
         /// </summary>
 		[StringLength(64)]
         [Description("Description for the type of object.")]
@@ -15655,7 +15655,7 @@ namespace Energistics.DataAccess.WITSML200
         private String TypeField; 
 
         /// <summary>
-        /// CapFlow property
+        /// Maximum pump rate at which the unit efficiently operates.
         /// </summary>
 		[Description("Maximum pump rate at which the unit efficiently operates.")]
         [ComponentElement]
@@ -15673,7 +15673,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure CapFlowField; 
 
         /// <summary>
-        /// Owner property
+        /// Contractor/owner.
         /// </summary>
 		[StringLength(64)]
         [Description("Contractor/owner.")]
@@ -15691,7 +15691,7 @@ namespace Energistics.DataAccess.WITSML200
         private String OwnerField; 
 
         /// <summary>
-        /// NameTag property
+        /// An identification tag for the centrifuge. A serial number is a type of identification tag; however, some tags contain many pieces of information.This element only identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the centrifuge. A serial number is a type of identification tag; however, some tags contain many pieces of information.This element only identifies the tag and does not describe the contents.")]
         [RecurringElement]
@@ -15721,7 +15721,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<NameTag> NameTagField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -15751,7 +15751,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Centrifuge.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -15807,7 +15807,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Index property
+        /// Relative pump number. One-based.
         /// </summary>
 		[Required]
         [Description("Relative pump number. One-based.")]
@@ -15825,7 +15825,7 @@ namespace Energistics.DataAccess.WITSML200
         private Int32? IndexField; 
 
         /// <summary>
-        /// Manufacturer property
+        /// Manufacturer or supplier of the item.
         /// </summary>
 		[StringLength(64)]
         [Description("Manufacturer or supplier of the item.")]
@@ -15843,7 +15843,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ManufacturerField; 
 
         /// <summary>
-        /// Model property
+        /// Manufacturer's designated model.
         /// </summary>
 		[StringLength(64)]
         [Description("Manufacturer's designated model.")]
@@ -15861,7 +15861,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ModelField; 
 
         /// <summary>
-        /// DTimInstall property
+        /// Date and time the pump was installed.
         /// </summary>
 		[Description("Date and time the pump was installed.")]
 		[XmlElement("DTimInstall")]
@@ -15878,7 +15878,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimInstallField; 
 
         /// <summary>
-        /// DTimRemove property
+        /// Date and time the pump was removed.
         /// </summary>
 		[Description("Date and time the pump was removed.")]
 		[XmlElement("DTimRemove")]
@@ -15895,7 +15895,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimRemoveField; 
 
         /// <summary>
-        /// Owner property
+        /// Contractor/owner.
         /// </summary>
 		[StringLength(64)]
         [Description("Contractor/owner.")]
@@ -15913,7 +15913,7 @@ namespace Energistics.DataAccess.WITSML200
         private String OwnerField; 
 
         /// <summary>
-        /// TypePump property
+        /// Pump type reference list.
         /// </summary>
 		[Description("Pump type reference list.")]
 		[XmlElement("TypePump")]
@@ -15948,7 +15948,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean TypePumpSpecifiedField; 
 
         /// <summary>
-        /// NumCyl property
+        /// Number of cylinders (3 = single acting, 2 = double acting)
         /// </summary>
 		[Description("Number of cylinders (3 = single acting, 2 = double acting)")]
 		[XmlElement("NumCyl")]
@@ -15983,7 +15983,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean NumCylSpecifiedField; 
 
         /// <summary>
-        /// OdRod property
+        /// Rod outer diameter.
         /// </summary>
 		[Description("Rod outer diameter.")]
         [ComponentElement]
@@ -16001,7 +16001,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure OdRodField; 
 
         /// <summary>
-        /// IdLiner property
+        /// Inner diameter of the pump liner.
         /// </summary>
 		[Required]
         [Description("Inner diameter of the pump liner.")]
@@ -16020,7 +16020,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure IdLinerField; 
 
         /// <summary>
-        /// PumpAction property
+        /// Pump action. 1 = single acting, 2 = double acting.
         /// </summary>
 		[Description("Pump action. 1 = single acting, 2 = double acting.")]
 		[XmlElement("PumpAction")]
@@ -16055,7 +16055,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean PumpActionSpecifiedField; 
 
         /// <summary>
-        /// Eff property
+        /// Efficiency of the pump.
         /// </summary>
 		[Description("Efficiency of the pump.")]
         [ComponentElement]
@@ -16073,7 +16073,7 @@ namespace Energistics.DataAccess.WITSML200
         private PowerPerPowerMeasure EffField; 
 
         /// <summary>
-        /// LenStroke property
+        /// Stroke length.
         /// </summary>
 		[Description("Stroke length.")]
         [ComponentElement]
@@ -16091,7 +16091,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure LenStrokeField; 
 
         /// <summary>
-        /// PresMx property
+        /// Maximum pump pressure.
         /// </summary>
 		[Description("Maximum pump pressure.")]
         [ComponentElement]
@@ -16109,7 +16109,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresMxField; 
 
         /// <summary>
-        /// PowHydMx property
+        /// Maximum hydraulics horsepower.
         /// </summary>
 		[Description("Maximum hydraulics horsepower.")]
         [ComponentElement]
@@ -16127,7 +16127,7 @@ namespace Energistics.DataAccess.WITSML200
         private PowerMeasure PowHydMxField; 
 
         /// <summary>
-        /// SpmMx property
+        /// Maximum speed.
         /// </summary>
 		[Description("Maximum speed.")]
         [ComponentElement]
@@ -16145,7 +16145,7 @@ namespace Energistics.DataAccess.WITSML200
         private AngularVelocityMeasure SpmMxField; 
 
         /// <summary>
-        /// Displacement property
+        /// Pump displacement.
         /// </summary>
 		[Required]
         [Description("Pump displacement.")]
@@ -16164,7 +16164,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure DisplacementField; 
 
         /// <summary>
-        /// PresDamp property
+        /// Pulsation dampener pressure.
         /// </summary>
 		[Description("Pulsation dampener pressure.")]
         [ComponentElement]
@@ -16182,7 +16182,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresDampField; 
 
         /// <summary>
-        /// VolDamp property
+        /// Pulsation dampener volume.
         /// </summary>
 		[Description("Pulsation dampener volume.")]
         [ComponentElement]
@@ -16200,7 +16200,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolDampField; 
 
         /// <summary>
-        /// PowMechMx property
+        /// Maximum mechanical power.
         /// </summary>
 		[Description("Maximum mechanical power.")]
         [ComponentElement]
@@ -16218,7 +16218,7 @@ namespace Energistics.DataAccess.WITSML200
         private PowerMeasure PowMechMxField; 
 
         /// <summary>
-        /// NameTag property
+        /// An identification tag for the pump. A serial number is a type of identification tag; however, some tags contain many pieces of information.This element onlyidentifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the pump. A serial number is a type of identification tag; however, some tags contain many pieces of information.This element onlyidentifies the tag and does not describe the contents.")]
         [RecurringElement]
@@ -16248,7 +16248,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<NameTag> NameTagField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -16278,7 +16278,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of MudPump.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -16522,7 +16522,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Index property
+        /// Relative pit number of all pits on the rig. One-based.
         /// </summary>
 		[Required]
         [Description("Relative pit number of all pits on the rig. One-based.")]
@@ -16540,7 +16540,7 @@ namespace Energistics.DataAccess.WITSML200
         private Int32? IndexField; 
 
         /// <summary>
-        /// DTimInstall property
+        /// Date and time the pit was installed.
         /// </summary>
 		[Description("Date and time the pit was installed.")]
 		[XmlElement("DTimInstall")]
@@ -16557,7 +16557,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimInstallField; 
 
         /// <summary>
-        /// DTimRemove property
+        /// Date and time the pit was removed.
         /// </summary>
 		[Description("Date and time the pit was removed.")]
 		[XmlElement("DTimRemove")]
@@ -16574,7 +16574,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimRemoveField; 
 
         /// <summary>
-        /// CapMx property
+        /// Maximum pit capacity.
         /// </summary>
 		[Required]
         [Description("Maximum pit capacity.")]
@@ -16593,7 +16593,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure CapMxField; 
 
         /// <summary>
-        /// Owner property
+        /// Contractor/owner.
         /// </summary>
 		[StringLength(64)]
         [Description("Contractor/owner.")]
@@ -16611,7 +16611,7 @@ namespace Energistics.DataAccess.WITSML200
         private String OwnerField; 
 
         /// <summary>
-        /// TypePit property
+        /// The type of pit.
         /// </summary>
 		[Description("The type of pit.")]
 		[XmlElement("TypePit")]
@@ -16646,7 +16646,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean TypePitSpecifiedField; 
 
         /// <summary>
-        /// IsActive property
+        /// Flag to indicate if the pit is part of the active system. Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Flag to indicate if the pit is part of the active system.  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("IsActive")]
@@ -16681,7 +16681,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean IsActiveSpecifiedField; 
 
         /// <summary>
-        /// NameTag property
+        /// An identification tag for the pit. A serial number is a type of identification tag; however, some tags contain many pieces of information. This element only identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the pit. A serial number is a type of identification tag; however, some tags contain many pieces of information. This element only identifies the tag and does not describe the contents.")]
         [RecurringElement]
@@ -16711,7 +16711,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<NameTag> NameTagField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -16741,7 +16741,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of pit
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -16797,7 +16797,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// TypeBopComp property
+        /// Type of ram or preventer.
         /// </summary>
 		[Description("Type of ram or preventer.")]
 		[XmlElement("TypeBopComp")]
@@ -16832,7 +16832,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean TypeBopCompSpecifiedField; 
 
         /// <summary>
-        /// DescComp property
+        /// Description of the component.
         /// </summary>
 		[StringLength(64)]
         [Description("Description of the component.")]
@@ -16850,25 +16850,25 @@ namespace Energistics.DataAccess.WITSML200
         private String DescCompField; 
 
         /// <summary>
-        /// IdPassThru property
+        /// Inner diameter that tubulars can pass through.
         /// </summary>
 		[Description("Inner diameter that tubulars can pass through.")]
         [ComponentElement]
 		[XmlElement("IdPassThru")]
-        public LengthMeasure IdPassThru {
+        public LengthMeasure InnerDiameterPassThru {
             get {
                 return IdPassThruField;
             } 
             set {
                 IdPassThruField = value;
-                NotifyPropertyChanged("IdPassThru");
+                NotifyPropertyChanged("InnerDiameterPassThru");
             }
         }
 
         private LengthMeasure IdPassThruField; 
 
         /// <summary>
-        /// PresWork property
+        /// Working rating pressure of the component.
         /// </summary>
 		[Description("Working rating pressure of the component.")]
         [ComponentElement]
@@ -16886,7 +16886,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresWorkField; 
 
         /// <summary>
-        /// DiaCloseMn property
+        /// Minimum diameter of the component it will seal.
         /// </summary>
 		[Description("Minimum diameter of the component it will seal.")]
         [ComponentElement]
@@ -16904,7 +16904,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure DiaCloseMnField; 
 
         /// <summary>
-        /// DiaCloseMx property
+        /// Maximum diameter of the component it will seal.
         /// </summary>
 		[Description("Maximum diameter of the component it will seal.")]
         [ComponentElement]
@@ -16922,7 +16922,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure DiaCloseMxField; 
 
         /// <summary>
-        /// Nomenclature property
+        /// Arrangement nomenclature for the blowout preventer stack (e.g., S, R, A).
         /// </summary>
 		[StringLength(64)]
         [Description("Arrangement nomenclature for the blowout preventer stack (e.g., S, R, A).")]
@@ -16940,7 +16940,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NomenclatureField; 
 
         /// <summary>
-        /// IsVariable property
+        /// Is ram bore variable or single size? Defaults to false. Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Is ram bore variable or single size? Defaults to false.  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("IsVariable")]
@@ -16975,7 +16975,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean IsVariableSpecifiedField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -17005,7 +17005,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of BopComponent
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -17275,13 +17275,13 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Inner diameter of the booster line.")]
         [ComponentElement]
 		[XmlElement("IdBoosterLine")]
-        public LengthMeasure IdBoosterLine {
+        public LengthMeasure InnerDiameterBoosterLine {
             get {
                 return IdBoosterLineField;
             } 
             set {
                 IdBoosterLineField = value;
-                NotifyPropertyChanged("IdBoosterLine");
+                NotifyPropertyChanged("InnerDiameterBoosterLine");
             }
         }
 
@@ -17329,13 +17329,13 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Inner diameter of the surface line.")]
         [ComponentElement]
 		[XmlElement("IdSurfLine")]
-        public LengthMeasure IdSurfLine {
+        public LengthMeasure InnerDiameterSurfLine {
             get {
                 return IdSurfLineField;
             } 
             set {
                 IdSurfLineField = value;
-                NotifyPropertyChanged("IdSurfLine");
+                NotifyPropertyChanged("InnerDiameterSurfLine");
             }
         }
 
@@ -17383,13 +17383,13 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Inner diameter of the choke line.")]
         [ComponentElement]
 		[XmlElement("IdChkLine")]
-        public LengthMeasure IdChkLine {
+        public LengthMeasure InnerDiameterChkLine {
             get {
                 return IdChkLineField;
             } 
             set {
                 IdChkLineField = value;
-                NotifyPropertyChanged("IdChkLine");
+                NotifyPropertyChanged("InnerDiameterChkLine");
             }
         }
 
@@ -17437,13 +17437,13 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Inner diameter of the kill line.")]
         [ComponentElement]
 		[XmlElement("IdKillLine")]
-        public LengthMeasure IdKillLine {
+        public LengthMeasure InnerDiameterKillLine {
             get {
                 return IdKillLineField;
             } 
             set {
                 IdKillLineField = value;
-                NotifyPropertyChanged("IdKillLine");
+                NotifyPropertyChanged("InnerDiameterKillLine");
             }
         }
 
@@ -17767,7 +17767,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Name property
+        /// Human-recognizable context for the shaker.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -17786,7 +17786,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameField; 
 
         /// <summary>
-        /// Manufacturer property
+        /// Manufacturer or supplier of the item.
         /// </summary>
 		[StringLength(64)]
         [Description("Manufacturer or supplier of the item.")]
@@ -17804,7 +17804,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ManufacturerField; 
 
         /// <summary>
-        /// Model property
+        /// Manufacturer's designated model.
         /// </summary>
 		[StringLength(64)]
         [Description("Manufacturer's designated model.")]
@@ -17822,7 +17822,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ModelField; 
 
         /// <summary>
-        /// DTimInstall property
+        /// Date and time the shaker was installed.
         /// </summary>
 		[Description("Date and time the shaker was installed.")]
 		[XmlElement("DTimInstall")]
@@ -17839,7 +17839,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimInstallField; 
 
         /// <summary>
-        /// DTimRemove property
+        /// Date and time the shaker was removed. 
         /// </summary>
 		[Description("Date and time the shaker was removed.")]
 		[XmlElement("DTimRemove")]
@@ -17856,7 +17856,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimRemoveField; 
 
         /// <summary>
-        /// Type property
+        /// Description for the type of object.
         /// </summary>
 		[StringLength(64)]
         [Description("Description for the type of object.")]
@@ -17874,7 +17874,7 @@ namespace Energistics.DataAccess.WITSML200
         private String TypeField; 
 
         /// <summary>
-        /// LocationShaker property
+        /// Shaker location on the rig.
         /// </summary>
 		[StringLength(64)]
         [Description("Shaker location on the rig.")]
@@ -17892,7 +17892,7 @@ namespace Energistics.DataAccess.WITSML200
         private String LocationShakerField; 
 
         /// <summary>
-        /// NumDecks property
+        /// Number of decks.
         /// </summary>
 		[Description("Number of decks.")]
 		[XmlElement("NumDecks")]
@@ -17927,7 +17927,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean NumDecksSpecifiedField; 
 
         /// <summary>
-        /// NumCascLevel property
+        /// Number of cascade levels.
         /// </summary>
 		[Description("Number of cascade levels.")]
 		[XmlElement("NumCascLevel")]
@@ -17962,7 +17962,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean NumCascLevelSpecifiedField; 
 
         /// <summary>
-        /// MudCleaner property
+        /// Is part of mud-cleaning assembly as opposed to discrete shale shaker? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Is part of mud-cleaning assembly as opposed to discrete shale shaker? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("MudCleaner")]
@@ -17997,7 +17997,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean MudCleanerSpecifiedField; 
 
         /// <summary>
-        /// CapFlow property
+        /// Maximum pump rate at which the unit efficiently operates.
         /// </summary>
 		[Description("Maximum pump rate at which the unit efficiently operates.")]
         [ComponentElement]
@@ -18015,7 +18015,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure CapFlowField; 
 
         /// <summary>
-        /// Owner property
+        /// Contractor/owner.
         /// </summary>
 		[StringLength(64)]
         [Description("Contractor/owner.")]
@@ -18033,7 +18033,7 @@ namespace Energistics.DataAccess.WITSML200
         private String OwnerField; 
 
         /// <summary>
-        /// SizeMeshMn property
+        /// Minimum mesh size.
         /// </summary>
 		[Description("Minimum mesh size.")]
         [ComponentElement]
@@ -18051,7 +18051,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure SizeMeshMnField; 
 
         /// <summary>
-        /// NameTag property
+        /// An identification tag for the shaker. A serial number is a type of identification tag; however, some tags contain many pieces of information. This element only identifies the tag and does not describe the contents. .
         /// </summary>
 		[Description("An identification tag for the shaker. A serial number is a type of identification tag; however, some tags contain many pieces of information. This element only identifies the tag and does not describe the contents. .")]
         [RecurringElement]
@@ -18081,7 +18081,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<NameTag> NameTagField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -18111,7 +18111,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Shaker. 
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -18548,7 +18548,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// MdInterval property
+        /// Measured depth interval that is the focus of this parameter.
         /// </summary>
 		[Description("Measured depth interval that is the focus of this parameter.")]
         [ComponentElement]
@@ -18566,7 +18566,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval MdIntervalField; 
 
         /// <summary>
-        /// Citation property
+        /// An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the MudLogParameter.
         /// </summary>
 		[Required]
         [Description("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the MudLogParameter.")]
@@ -18585,7 +18585,7 @@ namespace Energistics.DataAccess.WITSML200
         private Citation CitationField; 
 
         /// <summary>
-        /// Comments property
+        /// Description or secondary qualifier pertaining to MudlogParameter or to Value attribute.
         /// </summary>
 		[Required]
         [StringLength(2000)]
@@ -18604,7 +18604,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CommentsField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of MudLogParameter.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -19707,7 +19707,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Average property
+        /// Corrected drilling exponent calculated for the interval.
         /// </summary>
 		[Description("Corrected drilling exponent calculated for the interval.")]
         [ComponentElement]
@@ -19725,7 +19725,7 @@ namespace Energistics.DataAccess.WITSML200
         private DimensionlessMeasure AverageField; 
 
         /// <summary>
-        /// Channel property
+        /// Log channel from which the drilling coefficient statistics were calculated.
         /// </summary>
 		[Description("Log channel from which the drilling coefficient statistics were calculated.")]
         [ComponentElement]
@@ -19779,7 +19779,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Average property
+        /// Average equivalent circulating density at TD through the interval.
         /// </summary>
 		[Description("Average equivalent circulating density at TD through the interval.")]
         [ComponentElement]
@@ -19797,7 +19797,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerVolumeMeasure AverageField; 
 
         /// <summary>
-        /// Channel property
+        /// Log channel from which the equivalent circulating density at TD statistics were calculated.
         /// </summary>
 		[Description("Log channel from which the equivalent circulating density at TD statistics were calculated.")]
         [ComponentElement]
@@ -19851,7 +19851,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Average property
+        /// Average mud density through the interval.
         /// </summary>
 		[Description("Average mud density through the interval.")]
         [ComponentElement]
@@ -19869,7 +19869,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerVolumeMeasure AverageField; 
 
         /// <summary>
-        /// Channel property
+        /// Log channel from which the mud density statistics were calculated.
         /// </summary>
 		[Description("Log channel from which the mud density statistics were calculated.")]
         [ComponentElement]
@@ -19923,7 +19923,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Average property
+        /// Average bit turn rate through the interval.
         /// </summary>
 		[Description("Average bit turn rate through the interval.")]
         [ComponentElement]
@@ -19941,7 +19941,7 @@ namespace Energistics.DataAccess.WITSML200
         private AngularVelocityMeasure AverageField; 
 
         /// <summary>
-        /// Channel property
+        /// Log channel from which the turn rate statistics were calculated.
         /// </summary>
 		[Description("Log channel from which the turn rate statistics were calculated.")]
         [ComponentElement]
@@ -20089,7 +20089,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Average property
+        /// Average electric current through the interval
         /// </summary>
 		[Description("Average electric current through the interval")]
         [ComponentElement]
@@ -20107,7 +20107,7 @@ namespace Energistics.DataAccess.WITSML200
         private ElectricCurrentMeasure AverageField; 
 
         /// <summary>
-        /// Channel property
+        /// Log channel from which the electric current statistics were calculated.
         /// </summary>
 		[Description("Log channel from which the electric current statistics were calculated.")]
         [ComponentElement]
@@ -20161,7 +20161,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Average property
+        /// Average torque through the interval.
         /// </summary>
 		[Description("Average torque through the interval.")]
         [ComponentElement]
@@ -20179,7 +20179,7 @@ namespace Energistics.DataAccess.WITSML200
         private MomentOfForceMeasure AverageField; 
 
         /// <summary>
-        /// Channel property
+        /// Log channel from which the torque statistics were calculated.
         /// </summary>
 		[Description("Log channel from which the torque statistics were calculated.")]
         [ComponentElement]
@@ -20327,7 +20327,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Average property
+        /// Average weight on bit through the interval.
         /// </summary>
 		[Description("Average weight on bit through the interval.")]
         [ComponentElement]
@@ -20345,7 +20345,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForceMeasure AverageField; 
 
         /// <summary>
-        /// Channel property
+        /// Log channel from which the WOB statistics were calculated.
         /// </summary>
 		[Description("Log channel from which the WOB statistics were calculated.")]
         [ComponentElement]
@@ -20493,7 +20493,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Average property
+        /// Average rate of penetration through the interval.
         /// </summary>
 		[Description("Average rate of penetration through the interval.")]
         [ComponentElement]
@@ -20511,7 +20511,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthPerTimeMeasure AverageField; 
 
         /// <summary>
-        /// Minimum property
+        /// Minimum rate of penetration through the interval.
         /// </summary>
 		[Description("Minimum rate of penetration through the interval.")]
         [ComponentElement]
@@ -20529,7 +20529,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthPerTimeMeasure MinimumField; 
 
         /// <summary>
-        /// Maximum property
+        /// Maximum rate of penetration through the interval.
         /// </summary>
 		[Description("Maximum rate of penetration through the interval.")]
         [ComponentElement]
@@ -20547,7 +20547,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthPerTimeMeasure MaximumField; 
 
         /// <summary>
-        /// Channel property
+        /// Log channel from which the ROP statistics were calculated.
         /// </summary>
 		[Description("Log channel from which the ROP statistics were calculated.")]
         [ComponentElement]
@@ -20695,7 +20695,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Rop property
+        /// Rate of penetration through the interval.
         /// </summary>
 		[Description("Rate of penetration through the interval.")]
         [ComponentElement]
@@ -20713,7 +20713,7 @@ namespace Energistics.DataAccess.WITSML200
         private RopStatistics RopField; 
 
         /// <summary>
-        /// AverageWeightOnBit property
+        /// Surface weight on bit: average through the interval.
         /// </summary>
 		[Description("Surface weight on bit: average through the interval.")]
         [ComponentElement]
@@ -20731,7 +20731,7 @@ namespace Energistics.DataAccess.WITSML200
         private WobStatistics AverageWeightOnBitField; 
 
         /// <summary>
-        /// AverageTorque property
+        /// Average torque through the interval.
         /// </summary>
 		[Description("Average torque through the interval.")]
         [ComponentElement]
@@ -20749,7 +20749,7 @@ namespace Energistics.DataAccess.WITSML200
         private TorqueStatistics AverageTorqueField; 
 
         /// <summary>
-        /// AverageTorqueCurrent property
+        /// Average torque current through the interval. This is the raw measurement from which the average torque can be calculated.
         /// </summary>
 		[Description("Average torque current through the interval. This is the raw measurement from which the average torque can be calculated.")]
         [ComponentElement]
@@ -20767,7 +20767,7 @@ namespace Energistics.DataAccess.WITSML200
         private TorqueCurrentStatistics AverageTorqueCurrentField; 
 
         /// <summary>
-        /// AverageTurnRate property
+        /// Average turn rate through the interval (commonly in rpm).
         /// </summary>
 		[Description("Average turn rate through the interval (commonly in rpm).")]
         [ComponentElement]
@@ -20785,7 +20785,7 @@ namespace Energistics.DataAccess.WITSML200
         private RpmStatistics AverageTurnRateField; 
 
         /// <summary>
-        /// AverageMudDensity property
+        /// Average mud density through the interval.
         /// </summary>
 		[Description("Average mud density through the interval.")]
         [ComponentElement]
@@ -20803,7 +20803,7 @@ namespace Energistics.DataAccess.WITSML200
         private MudDensityStatistics AverageMudDensityField; 
 
         /// <summary>
-        /// AverageEcdAtTd property
+        /// Average effective circulating density at TD through the interval.
         /// </summary>
 		[Description("Average effective circulating density at TD through the interval.")]
         [ComponentElement]
@@ -20821,7 +20821,7 @@ namespace Energistics.DataAccess.WITSML200
         private EcdStatistics AverageEcdAtTdField; 
 
         /// <summary>
-        /// AverageDrillingCoefficient property
+        /// Average drilling exponent through the interval.
         /// </summary>
 		[Description("Average drilling exponent through the interval.")]
         [ComponentElement]
@@ -21865,7 +21865,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<MudGas> MudGasField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of MudLogReportInterval.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -21920,7 +21920,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Citation property
+        /// An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the CuttingsIntervalShow.
         /// </summary>
 		[Description("An ISO 19115 EIP-derived set of metadata attached to ensure the traceability of the CuttingsIntervalShow.")]
         [ComponentElement]
@@ -21938,7 +21938,7 @@ namespace Energistics.DataAccess.WITSML200
         private Citation CitationField; 
 
         /// <summary>
-        /// ShowRating property
+        /// Show Rating. 
         /// </summary>
 		[Description("Show Rating.")]
 		[XmlElement("ShowRating")]
@@ -21973,7 +21973,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean ShowRatingSpecifiedField; 
 
         /// <summary>
-        /// StainColor property
+        /// Visible stain color. 
         /// </summary>
 		[StringLength(64)]
         [Description("Visible stain color.")]
@@ -21991,7 +21991,7 @@ namespace Energistics.DataAccess.WITSML200
         private String StainColorField; 
 
         /// <summary>
-        /// StainDistr property
+        /// Visible stain distribution. 
         /// </summary>
 		[StringLength(64)]
         [Description("Visible stain distribution.")]
@@ -22009,7 +22009,7 @@ namespace Energistics.DataAccess.WITSML200
         private String StainDistrField; 
 
         /// <summary>
-        /// StainPc property
+        /// Visible stain (commonly in percent). 
         /// </summary>
 		[Description("Visible stain (commonly in percent).")]
         [ComponentElement]
@@ -22027,7 +22027,7 @@ namespace Energistics.DataAccess.WITSML200
         private AreaPerAreaMeasure StainPcField; 
 
         /// <summary>
-        /// CutSpeed property
+        /// Cut speed. 
         /// </summary>
 		[Description("Cut speed.")]
 		[XmlElement("CutSpeed")]
@@ -22062,7 +22062,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean CutSpeedSpecifiedField; 
 
         /// <summary>
-        /// CutColor property
+        /// Cut color. 
         /// </summary>
 		[StringLength(64)]
         [Description("Cut color.")]
@@ -22080,7 +22080,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CutColorField; 
 
         /// <summary>
-        /// CutStrength property
+        /// Cut strength. 
         /// </summary>
 		[StringLength(64)]
         [Description("Cut strength.")]
@@ -22098,7 +22098,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CutStrengthField; 
 
         /// <summary>
-        /// CutForm property
+        /// Cut formulation. 
         /// </summary>
 		[Description("Cut formulation.")]
 		[XmlElement("CutForm")]
@@ -22133,7 +22133,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean CutFormSpecifiedField; 
 
         /// <summary>
-        /// CutLevel property
+        /// Cut level (faint, bright, etc.). 
         /// </summary>
 		[StringLength(64)]
         [Description("Cut level (faint, bright, etc.).")]
@@ -22151,7 +22151,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CutLevelField; 
 
         /// <summary>
-        /// CutFlorForm property
+        /// Cut fluorescence form. 
         /// </summary>
 		[Description("Cut fluorescence form.")]
 		[XmlElement("CutFlorForm")]
@@ -22186,7 +22186,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean CutFlorFormSpecifiedField; 
 
         /// <summary>
-        /// CutFlorColor property
+        /// Cut fluorescence color. 
         /// </summary>
 		[StringLength(64)]
         [Description("Cut fluorescence color.")]
@@ -22204,7 +22204,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CutFlorColorField; 
 
         /// <summary>
-        /// CutFlorStrength property
+        /// Cut fluorescence strength. 
         /// </summary>
 		[StringLength(64)]
         [Description("Cut fluorescence strength.")]
@@ -22222,7 +22222,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CutFlorStrengthField; 
 
         /// <summary>
-        /// CutFlorSpeed property
+        /// Cut fluorescence speed. 
         /// </summary>
 		[Description("Cut fluorescence speed.")]
 		[XmlElement("CutFlorSpeed")]
@@ -22257,7 +22257,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean CutFlorSpeedSpecifiedField; 
 
         /// <summary>
-        /// CutFlorLevel property
+        /// Cut fluorescence level. 
         /// </summary>
 		[Description("Cut fluorescence level.")]
 		[XmlElement("CutFlorLevel")]
@@ -22292,7 +22292,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean CutFlorLevelSpecifiedField; 
 
         /// <summary>
-        /// NatFlorColor property
+        /// Natural fluorescence color. 
         /// </summary>
 		[StringLength(64)]
         [Description("Natural fluorescence color.")]
@@ -22310,7 +22310,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NatFlorColorField; 
 
         /// <summary>
-        /// NatFlorPc property
+        /// Natural fluorescence (commonly in percent). 
         /// </summary>
 		[Description("Natural fluorescence (commonly in percent).")]
         [ComponentElement]
@@ -22328,7 +22328,7 @@ namespace Energistics.DataAccess.WITSML200
         private AreaPerAreaMeasure NatFlorPcField; 
 
         /// <summary>
-        /// NatFlorLevel property
+        /// Natural fluorescence level. 
         /// </summary>
 		[Description("Natural fluorescence level.")]
 		[XmlElement("NatFlorLevel")]
@@ -22363,7 +22363,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean NatFlorLevelSpecifiedField; 
 
         /// <summary>
-        /// NatFlorDesc property
+        /// Natural fluorescence description. 
         /// </summary>
 		[StringLength(64)]
         [Description("Natural fluorescence description.")]
@@ -22381,7 +22381,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NatFlorDescField; 
 
         /// <summary>
-        /// ResidueColor property
+        /// Residue color. 
         /// </summary>
 		[StringLength(64)]
         [Description("Residue color.")]
@@ -22399,7 +22399,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ResidueColorField; 
 
         /// <summary>
-        /// ImpregnatedLitho property
+        /// Impregnated lithology. 
         /// </summary>
 		[StringLength(64)]
         [Description("Impregnated lithology.")]
@@ -22417,7 +22417,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ImpregnatedLithoField; 
 
         /// <summary>
-        /// Odor property
+        /// Description of any hydrocarbon type odors smelled. 
         /// </summary>
 		[StringLength(64)]
         [Description("Description of any hydrocarbon type odors smelled.")]
@@ -22435,7 +22435,7 @@ namespace Energistics.DataAccess.WITSML200
         private String OdorField; 
 
         /// <summary>
-        /// CuttingFluid property
+        /// Description of the cutting solvent used to treat the cuttings.
         /// </summary>
 		[StringLength(64)]
         [Description("Description of the cutting solvent used to treat the cuttings.")]
@@ -22453,7 +22453,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CuttingFluidField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of CuttingsIntervalShow.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -22967,7 +22967,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<LithologyQualifier> QualifierField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of CuttingsIntervalLithology.
         /// </summary>
 		[StringLength(64)]
         [Description("Unique identifier for this instance of CuttingsIntervalLithology.")]
@@ -23022,7 +23022,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Kind property
+        /// The type of qualifier.
         /// </summary>
 		[Required]
         [Description("The type of qualifier.")]
@@ -23040,7 +23040,7 @@ namespace Energistics.DataAccess.WITSML200
         private LithologyQualifierKind? KindField; 
 
         /// <summary>
-        /// MdInterval property
+        /// The measured depth interval represented by the qualifier. This must be within the range of the parent geologic interval. If MdInterval is not given then the qualifier is deemed to exist over the entire depth range of the parent geologyInterval.
         /// </summary>
 		[Description("The measured depth interval represented by the qualifier. This must be within the range of the parent geologic interval. If MdInterval is not given then the qualifier is deemed to exist over the entire depth range of the parent geologyInterval.")]
         [ComponentElement]
@@ -23058,7 +23058,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval MdIntervalField; 
 
         /// <summary>
-        /// Abundance property
+        /// The relative abundance of the qualifier estimated based on a "visual area" by inspecting the cuttings spread out on the shaker table before washing, or in the sample tray after washing. This represents the upper bound of the observed range, and is in the following increments at the upper bound: 1 = less than or equal to 1% 2 = greater than 1% and less than 2% 5 = greater than or equal to 2% and less than 5% and then in 5% increments, 10 (=5-10%), 15 (=10-15%) up to 100 (=95-100%). The end user can then elect to either display the %, or map them to an operator-specific term or coding, e.g., 1 less than or equal to 1% = rare trace, or occasional, or very sparse, etc., depending on the end users' terminology. i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., depending on the the end users' terminology.)
         /// </summary>
 		[Description("The relative abundance of the qualifier estimated based on a \"visual area\" by inspecting the cuttings spread out on the shaker table before washing, or in the sample tray after washing. This represents the upper bound of the observed range, and is in the following increments at the upper bound: 1 = less than or equal to 1% 2 = greater than 1% and less than 2% 5 = greater than or equal to 2% and less than 5% and then in 5% increments, 10 (=5-10%), 15 (=10-15%) up to 100 (=95-100%). The end user can then elect to either display the %, or map them to an operator-specific term or coding, e.g., 1 less than or equal to 1% = rare trace, or occasional, or very sparse, etc., depending on the end users' terminology. i.e. 1 less then or equal to 1%=Rare Trace, or occasional, or very sparse etc., depending on the the end users' terminology.)")]
         [ComponentElement]
@@ -23076,7 +23076,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure AbundanceField; 
 
         /// <summary>
-        /// Description property
+        /// A textual description of the qualifier.
         /// </summary>
 		[StringLength(2000)]
         [Description("A textual description of the qualifier.")]
@@ -23094,7 +23094,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DescriptionField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of LithologyQualifier
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -23560,7 +23560,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<LithologyQualifier> QualifierField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of InterpretedIntervalLithology.
         /// </summary>
 		[StringLength(64)]
         [Description("Unique identifier for this instance of InterpretedIntervalLithology.")]
@@ -23636,7 +23636,7 @@ namespace Energistics.DataAccess.WITSML200
         }
 
 		/// <summary>
-        /// authority property
+        /// Person or collective body responsible for authorizing the information.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -23656,7 +23656,7 @@ namespace Energistics.DataAccess.WITSML200
         private String authorityField; 
 
 		/// <summary>
-        /// kind property
+        /// Specifies the lithostratigraphic unit-hierarchy (group, formation, member or bed).
         /// </summary>
 		[Required]
         [Description("Specifies the lithostratigraphic unit-hierarchy (group, formation, member or bed).")]
@@ -23749,7 +23749,7 @@ namespace Energistics.DataAccess.WITSML200
         }
 
 		/// <summary>
-        /// authority property
+        /// Person or collective body responsible for authorizing the information.
         /// </summary>
 		[StringLength(64)]
         [Description("Person or collective body responsible for authorizing the information.")]
@@ -23768,7 +23768,7 @@ namespace Energistics.DataAccess.WITSML200
         private String authorityField; 
 
 		/// <summary>
-        /// kind property
+        /// Defines the time spans in geochronology.
         /// </summary>
 		[Required]
         [Description("Defines the time spans in geochronology.")]
@@ -23840,7 +23840,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// CurveInfo property
+        /// Curve mnemonic
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -23859,7 +23859,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CurveInfoField; 
 
         /// <summary>
-        /// LineStyle property
+        /// Image line style
         /// </summary>
 		[Required]
         [Description("Image line style")]
@@ -23877,7 +23877,7 @@ namespace Energistics.DataAccess.WITSML200
         private LineStyle? LineStyleField; 
 
         /// <summary>
-        /// LineWeight property
+        /// Description of line graveness
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -23896,7 +23896,7 @@ namespace Energistics.DataAccess.WITSML200
         private String LineWeightField; 
 
         /// <summary>
-        /// LineColor property
+        /// Color of this line
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -23915,7 +23915,7 @@ namespace Energistics.DataAccess.WITSML200
         private String LineColorField; 
 
         /// <summary>
-        /// CurveScaleType property
+        /// Scale linearity
         /// </summary>
 		[Required]
         [Description("Scale linearity")]
@@ -23933,7 +23933,7 @@ namespace Energistics.DataAccess.WITSML200
         private ScaleType? CurveScaleTypeField; 
 
         /// <summary>
-        /// CurveUnit property
+        /// Unit of data represented
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -23952,7 +23952,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CurveUnitField; 
 
         /// <summary>
-        /// CurveLeftScaleValue property
+        /// Scale value on the left axis
         /// </summary>
 		[Required]
         [Description("Scale value on the left axis")]
@@ -23970,7 +23970,7 @@ namespace Energistics.DataAccess.WITSML200
         private Double? CurveLeftScaleValueField; 
 
         /// <summary>
-        /// CurveRightScaleValue property
+        /// Scale value on the right axis
         /// </summary>
 		[Required]
         [Description("Scale value on the right axis")]
@@ -23988,7 +23988,7 @@ namespace Energistics.DataAccess.WITSML200
         private Double? CurveRightScaleValueField; 
 
         /// <summary>
-        /// CurveBackupScaleType property
+        /// Scale of the backup curve
         /// </summary>
 		[Required]
         [Description("Scale of the backup curve")]
@@ -24006,7 +24006,7 @@ namespace Energistics.DataAccess.WITSML200
         private BackupScaleType? CurveBackupScaleTypeField; 
 
         /// <summary>
-        /// CurveScaleRect property
+        /// Coordinates of rectangle representing the area describing the scale.
         /// </summary>
 		[Description("Coordinates of rectangle representing the area describing the scale.")]
         [RecurringElement]
@@ -24036,7 +24036,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<DepthRegRectangle> CurveScaleRectField; 
 
         /// <summary>
-        /// Description property
+        /// Details of the line
         /// </summary>
 		[StringLength(2000)]
         [Description("Details of the line")]
@@ -24054,7 +24054,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DescriptionField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for the curve.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -24110,7 +24110,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -24140,7 +24140,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
         /// <summary>
-        /// Ul property
+        /// The upper left point of a rectangular region.
         /// </summary>
 		[Description("The upper left point of a rectangular region.")]
         [ComponentElement]
@@ -24158,7 +24158,7 @@ namespace Energistics.DataAccess.WITSML200
         private DepthRegPoint UlField; 
 
         /// <summary>
-        /// Ur property
+        /// The upper right point of a rectangular region.
         /// </summary>
 		[Description("The upper right point of a rectangular region.")]
         [ComponentElement]
@@ -24176,7 +24176,7 @@ namespace Energistics.DataAccess.WITSML200
         private DepthRegPoint UrField; 
 
         /// <summary>
-        /// Ll property
+        /// The lower left point of a rectangular region.
         /// </summary>
 		[Description("The lower left point of a rectangular region.")]
         [ComponentElement]
@@ -24194,7 +24194,7 @@ namespace Energistics.DataAccess.WITSML200
         private DepthRegPoint LlField; 
 
         /// <summary>
-        /// Lr property
+        /// The lower right point of a rectangular region.
         /// </summary>
 		[Description("The lower right point of a rectangular region.")]
         [ComponentElement]
@@ -24212,7 +24212,7 @@ namespace Energistics.DataAccess.WITSML200
         private DepthRegPoint LrField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for the rectangular area.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -24268,7 +24268,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// X property
+        /// The x pixel position of a point.
         /// </summary>
 		[Required]
         [Description("The x pixel position of a point.")]
@@ -24286,7 +24286,7 @@ namespace Energistics.DataAccess.WITSML200
         private Int64? XField; 
 
         /// <summary>
-        /// Y property
+        /// The y pixel position of a point.
         /// </summary>
 		[Required]
         [Description("The y pixel position of a point.")]
@@ -24501,7 +24501,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<DepthRegTrackCurve> AssociatedCurveField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for the track.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -24578,7 +24578,7 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         /// <summary>
-        /// Mnemonic property
+        /// A dictionary-controlled mnemonic.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -24597,7 +24597,7 @@ namespace Energistics.DataAccess.WITSML200
         private String MnemonicField; 
 
         /// <summary>
-        /// Dictionary property
+        /// The name or identifier of the controlling dictionary.
         /// </summary>
 		[StringLength(64)]
         [Description("The name or identifier of the controlling dictionary.")]
@@ -24615,7 +24615,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DictionaryField; 
 
         /// <summary>
-        /// TopIndex property
+        /// The upper limit of a vertical region for which the parameter value is applicable. '@uom' must be consistent with '//indexType'.
         /// </summary>
 		[Description("The upper limit of a vertical region for which the parameter value is applicable.  '@uom' must be consistent with '//indexType'.")]
         [ComponentElement]
@@ -24633,7 +24633,7 @@ namespace Energistics.DataAccess.WITSML200
         private GenericMeasure TopIndexField; 
 
         /// <summary>
-        /// BottomIndex property
+        /// The lower limit of a vertical region for which the parameter value is applicable. '@uom' must be consistent with '//indexType'.
         /// </summary>
 		[Description("The lower limit of a vertical region for which the parameter value is applicable.  '@uom' must be consistent with '//indexType'.")]
         [ComponentElement]
@@ -24651,7 +24651,7 @@ namespace Energistics.DataAccess.WITSML200
         private GenericMeasure BottomIndexField; 
 
         /// <summary>
-        /// Value property
+        /// The value assigned to the parameter. The unit of measure should be consistent with the property implied by 'mnemonic' in 'dictionary'. If the value is unitless, then use a unit of 'Euc'.
         /// </summary>
 		[Required]
         [Description("The value assigned to the parameter.   The unit of measure should be consistent with the property implied by 'mnemonic' in 'dictionary'. If the value is unitless, then use a unit of 'Euc'.")]
@@ -24670,7 +24670,7 @@ namespace Energistics.DataAccess.WITSML200
         private GenericMeasure ValueField; 
 
         /// <summary>
-        /// Description property
+        /// A description or definition for the mnemonic; required when ../dictionary is absent.
         /// </summary>
 		[StringLength(2000)]
         [Description("A description or definition for the mnemonic; required when ../dictionary is absent.")]
@@ -24688,7 +24688,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DescriptionField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -24718,7 +24718,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for the parameter.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -25068,7 +25068,7 @@ namespace Energistics.DataAccess.WITSML200
         private DepthRegPoint PointField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for the calibration point.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -25669,7 +25669,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<DepthRegTrack> TrackField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for the log section.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -25825,7 +25825,7 @@ namespace Energistics.DataAccess.WITSML200
         private DepthRegRectangle PositionField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for the log section.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -26234,7 +26234,7 @@ namespace Energistics.DataAccess.WITSML200
         private ObjectSequence Sequence2Field; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of MemberObject
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -26290,7 +26290,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
 		/// <summary>
-        /// description property
+        /// The description of this object sequence.
         /// </summary>
 		[Required]
         [StringLength(2000)]
@@ -26441,7 +26441,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// StringEquipmentReferenceId property
+        /// Reference to string equipment
         /// </summary>
 		[Description("Reference to string equipment")]
         [RecurringElement]
@@ -26471,7 +26471,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<String> StringEquipmentReferenceIdField; 
 
 		/// <summary>
-        /// downholeStringReferenceId property
+        /// Reference to downhole string
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -26527,7 +26527,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// StringEquipmentReferenceId property
+        /// Reference to string equipment
         /// </summary>
 		[Description("Reference to string equipment")]
         [RecurringElement]
@@ -26557,7 +26557,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<String> StringEquipmentReferenceIdField; 
 
 		/// <summary>
-        /// boreholeStringReferenceId property
+        /// Reference to borehole String
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -26767,7 +26767,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// StageNumber property
+        /// index number of stage
         /// </summary>
 		[Description("index number of stage")]
 		[XmlElement("StageNumber")]
@@ -26802,7 +26802,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean StageNumberSpecifiedField; 
 
         /// <summary>
-        /// BottomPackerSet property
+        /// Perf-Bottom of packer set depth
         /// </summary>
 		[Description("Perf-Bottom of packer set depth")]
         [ComponentElement]
@@ -26820,7 +26820,7 @@ namespace Energistics.DataAccess.WITSML200
         private MeasuredDepthCoord BottomPackerSetField; 
 
         /// <summary>
-        /// PerforationFluidType property
+        /// Perforation fluid type
         /// </summary>
 		[StringLength(64)]
         [Description("Perforation fluid type")]
@@ -26838,7 +26838,7 @@ namespace Energistics.DataAccess.WITSML200
         private String PerforationFluidTypeField; 
 
         /// <summary>
-        /// HydrostaticPressure property
+        /// hydrostaticPressure
         /// </summary>
 		[Description("hydrostaticPressure")]
         [ComponentElement]
@@ -26856,7 +26856,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure HydrostaticPressureField; 
 
         /// <summary>
-        /// SurfacePressure property
+        /// Surface pressure
         /// </summary>
 		[Description("Surface pressure")]
         [ComponentElement]
@@ -26874,7 +26874,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure SurfacePressureField; 
 
         /// <summary>
-        /// ReservoirPressure property
+        /// Reservoir pressure
         /// </summary>
 		[Description("Reservoir pressure")]
         [ComponentElement]
@@ -26892,7 +26892,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure ReservoirPressureField; 
 
         /// <summary>
-        /// FluidDensity property
+        /// The density of fluid
         /// </summary>
 		[Description("The density of fluid")]
         [ComponentElement]
@@ -26910,7 +26910,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerMassMeasure FluidDensityField; 
 
         /// <summary>
-        /// FluidLevel property
+        /// Fluid level.
         /// </summary>
 		[Description("Fluid level.")]
         [ComponentElement]
@@ -26928,7 +26928,7 @@ namespace Energistics.DataAccess.WITSML200
         private MeasuredDepthCoord FluidLevelField; 
 
         /// <summary>
-        /// ConveyanceMethod property
+        /// The conveyance method
         /// </summary>
 		[Description("The conveyance method")]
 		[XmlElement("ConveyanceMethod")]
@@ -26963,7 +26963,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean ConveyanceMethodSpecifiedField; 
 
         /// <summary>
-        /// ShotsPlanned property
+        /// Number of shots planned
         /// </summary>
 		[Description("Number of shots planned")]
 		[XmlElement("ShotsPlanned")]
@@ -26998,7 +26998,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean ShotsPlannedSpecifiedField; 
 
         /// <summary>
-        /// ShotsDensity property
+        /// Number of shots per unit length (ft, m)
         /// </summary>
 		[Description("Number of shots per unit length (ft, m)")]
         [ComponentElement]
@@ -27016,7 +27016,7 @@ namespace Energistics.DataAccess.WITSML200
         private ReciprocalLengthMeasure ShotsDensityField; 
 
         /// <summary>
-        /// ShotsMisfired property
+        /// The number of missed firings from the gun.
         /// </summary>
 		[Description("The number of missed firings from the gun.")]
 		[XmlElement("ShotsMisfired")]
@@ -27051,7 +27051,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean ShotsMisfiredSpecifiedField; 
 
         /// <summary>
-        /// Orientation property
+        /// orientaton
         /// </summary>
 		[StringLength(64)]
         [Description("orientaton")]
@@ -27069,7 +27069,7 @@ namespace Energistics.DataAccess.WITSML200
         private String OrientationField; 
 
         /// <summary>
-        /// OrientationMethod property
+        /// Description of orientaton method
         /// </summary>
 		[StringLength(64)]
         [Description("Description of orientaton method")]
@@ -27087,7 +27087,7 @@ namespace Energistics.DataAccess.WITSML200
         private String OrientationMethodField; 
 
         /// <summary>
-        /// PerforationCompany property
+        /// The name of company providing the perforation.
         /// </summary>
 		[StringLength(64)]
         [Description("The name of company providing the perforation.")]
@@ -27105,7 +27105,7 @@ namespace Energistics.DataAccess.WITSML200
         private String PerforationCompanyField; 
 
         /// <summary>
-        /// CarrierManufacturer property
+        /// The manufacturer of the carrier.
         /// </summary>
 		[StringLength(64)]
         [Description("The manufacturer of the carrier.")]
@@ -27123,7 +27123,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CarrierManufacturerField; 
 
         /// <summary>
-        /// CarrierSize property
+        /// Size of the carrier.
         /// </summary>
 		[Description("Size of the carrier.")]
         [ComponentElement]
@@ -27141,7 +27141,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure CarrierSizeField; 
 
         /// <summary>
-        /// CarrierDescription property
+        /// Description from carrier
         /// </summary>
 		[StringLength(2000)]
         [Description("Description from carrier")]
@@ -27159,7 +27159,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CarrierDescriptionField; 
 
         /// <summary>
-        /// ChargeManufacturer property
+        /// The manufacturer of the charge.
         /// </summary>
 		[StringLength(64)]
         [Description("The manufacturer of the charge.")]
@@ -27177,7 +27177,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ChargeManufacturerField; 
 
         /// <summary>
-        /// ChargeSize property
+        /// The size of the charge.
         /// </summary>
 		[Description("The size of the charge.")]
         [ComponentElement]
@@ -27195,7 +27195,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure ChargeSizeField; 
 
         /// <summary>
-        /// ChargeWeight property
+        /// The weight of the charge.
         /// </summary>
 		[Description("The weight of the charge.")]
         [ComponentElement]
@@ -27213,7 +27213,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassMeasure ChargeWeightField; 
 
         /// <summary>
-        /// ChargeType property
+        /// The type of the charge.
         /// </summary>
 		[StringLength(64)]
         [Description("The type of the charge.")]
@@ -27231,7 +27231,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ChargeTypeField; 
 
         /// <summary>
-        /// RefLog property
+        /// Reference to the log
         /// </summary>
 		[StringLength(64)]
         [Description("Reference to the log")]
@@ -27249,7 +27249,7 @@ namespace Energistics.DataAccess.WITSML200
         private String RefLogField; 
 
         /// <summary>
-        /// GunCentralized property
+        /// True if centralized, else decentralized.
         /// </summary>
 		[StringLength(64)]
         [Description("True if centralized, else decentralized.")]
@@ -27267,7 +27267,7 @@ namespace Energistics.DataAccess.WITSML200
         private String GunCentralizedField; 
 
         /// <summary>
-        /// GunSize property
+        /// The size of the perforation gun.
         /// </summary>
 		[Description("The size of the perforation gun.")]
         [ComponentElement]
@@ -27285,7 +27285,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure GunSizeField; 
 
         /// <summary>
-        /// GunDesciption property
+        /// Description about the perforating gun.
         /// </summary>
 		[StringLength(2000)]
         [Description("Description about the perforating gun.")]
@@ -27303,7 +27303,7 @@ namespace Energistics.DataAccess.WITSML200
         private String GunDesciptionField; 
 
         /// <summary>
-        /// GunLeftInHole property
+        /// Flag indicating whether the gun is left in hole or not.
         /// </summary>
 		[Description("Flag indicating whether the gun is left in hole or not.")]
 		[XmlElement("GunLeftInHole")]
@@ -27338,7 +27338,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean GunLeftInHoleSpecifiedField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -27368,7 +27368,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Perforating
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -29101,7 +29101,7 @@ namespace Energistics.DataAccess.WITSML200
         }
 
 		/// <summary>
-        /// Class property
+        /// The type of the event (job, daily report, etc.)
         /// </summary>
 		[Required]
         [Description("The type of the event (job, daily report, etc.)")]
@@ -29173,7 +29173,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// DTim property
+        /// Date and time the information is related to.
         /// </summary>
 		[Description("Date and time the information is related to.")]
 		[XmlElement("DTim")]
@@ -29190,7 +29190,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimField; 
 
         /// <summary>
-        /// Pump property
+        /// A pointer to the corresponding pump on the rig.
         /// </summary>
 		[Required]
         [Description("A pointer to the corresponding pump on the rig.")]
@@ -29208,7 +29208,7 @@ namespace Energistics.DataAccess.WITSML200
         private Int32? PumpField; 
 
         /// <summary>
-        /// TypeOperation property
+        /// Type of pump operation.
         /// </summary>
 		[Description("Type of pump operation.")]
 		[XmlElement("TypeOperation")]
@@ -29243,7 +29243,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean TypeOperationSpecifiedField; 
 
         /// <summary>
-        /// IdLiner property
+        /// Liner inside diameter. 
         /// </summary>
 		[Description("Liner inside diameter.")]
         [ComponentElement]
@@ -29261,7 +29261,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure IdLinerField; 
 
         /// <summary>
-        /// LenStroke property
+        /// Stroke length.
         /// </summary>
 		[Description("Stroke length.")]
         [ComponentElement]
@@ -29279,7 +29279,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure LenStrokeField; 
 
         /// <summary>
-        /// RateStroke property
+        /// Pump rate (strokes per minute).
         /// </summary>
 		[Required]
         [Description("Pump rate (strokes per minute).")]
@@ -29298,7 +29298,7 @@ namespace Energistics.DataAccess.WITSML200
         private AngularVelocityMeasure RateStrokeField; 
 
         /// <summary>
-        /// Pressure property
+        /// Pump pressure recorded.
         /// </summary>
 		[Required]
         [Description("Pump pressure recorded.")]
@@ -29317,7 +29317,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PressureField; 
 
         /// <summary>
-        /// PcEfficiency property
+        /// Pump efficiency.
         /// </summary>
 		[Description("Pump efficiency.")]
         [ComponentElement]
@@ -29335,7 +29335,7 @@ namespace Energistics.DataAccess.WITSML200
         private PowerPerPowerMeasure PcEfficiencyField; 
 
         /// <summary>
-        /// PumpOutput property
+        /// Pump output (included for efficiency).
         /// </summary>
 		[Description("Pump output (included for efficiency).")]
         [ComponentElement]
@@ -29353,7 +29353,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure PumpOutputField; 
 
         /// <summary>
-        /// MdBit property
+        /// Along-hole measured depth of the measurement from the drill datum.
         /// </summary>
 		[Description("Along-hole measured depth of the measurement from the drill datum.")]
         [ComponentElement]
@@ -29371,7 +29371,7 @@ namespace Energistics.DataAccess.WITSML200
         private MeasuredDepthCoord MdBitField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -29401,7 +29401,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of PumpOp.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -29457,7 +29457,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Pit property
+        /// This is a pointer to the corresponding pit on the rig containing the volume being described. 
         /// </summary>
 		[Required]
         [Description("This is a pointer to the corresponding pit on the rig containing the volume being described.")]
@@ -29475,7 +29475,7 @@ namespace Energistics.DataAccess.WITSML200
         private Int32? PitField; 
 
         /// <summary>
-        /// DTim property
+        /// Date and time the information is related to.
         /// </summary>
 		[Description("Date and time the information is related to.")]
 		[XmlElement("DTim")]
@@ -29492,7 +29492,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimField; 
 
         /// <summary>
-        /// VolPit property
+        /// Volume of fluid in the pit.
         /// </summary>
 		[Required]
         [Description("Volume of fluid in the pit.")]
@@ -29511,7 +29511,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolPitField; 
 
         /// <summary>
-        /// DensFluid property
+        /// Density of fluid in the pit.
         /// </summary>
 		[Description("Density of fluid in the pit.")]
         [ComponentElement]
@@ -29529,7 +29529,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerVolumeMeasure DensFluidField; 
 
         /// <summary>
-        /// DescFluid property
+        /// Description of the fluid in the pit.
         /// </summary>
 		[StringLength(64)]
         [Description("Description of the fluid in the pit.")]
@@ -29547,7 +29547,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DescFluidField; 
 
         /// <summary>
-        /// VisFunnel property
+        /// Funnel viscosity (in seconds).
         /// </summary>
 		[Description("Funnel viscosity (in seconds).")]
         [ComponentElement]
@@ -29565,7 +29565,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure VisFunnelField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -29595,7 +29595,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of PitVolume.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -29651,7 +29651,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// DTim property
+        /// Date and time the information is related to.
         /// </summary>
 		[Required]
         [Description("Date and time the information is related to.")]
@@ -29669,7 +29669,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimField; 
 
         /// <summary>
-        /// Pump property
+        /// A pointer to the corresponding pump on the rig.
         /// </summary>
 		[Required]
         [Description("A pointer to the corresponding pump on the rig.")]
@@ -29687,7 +29687,7 @@ namespace Energistics.DataAccess.WITSML200
         private Int32? PumpField; 
 
         /// <summary>
-        /// TypeScr property
+        /// Type of slow circulation rate.
         /// </summary>
 		[Required]
         [Description("Type of slow circulation rate.")]
@@ -29705,7 +29705,7 @@ namespace Energistics.DataAccess.WITSML200
         private ScrType? TypeScrField; 
 
         /// <summary>
-        /// RateStroke property
+        /// Pump stroke rate.
         /// </summary>
 		[Required]
         [Description("Pump stroke rate.")]
@@ -29724,7 +29724,7 @@ namespace Energistics.DataAccess.WITSML200
         private AngularVelocityMeasure RateStrokeField; 
 
         /// <summary>
-        /// PresRecorded property
+        /// Recorded pump pressure for the stroke rate.
         /// </summary>
 		[Required]
         [Description("Recorded pump pressure for the stroke rate.")]
@@ -29743,7 +29743,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresRecordedField; 
 
         /// <summary>
-        /// MdBit property
+        /// Along hole measured depth of measurement from the drill datum.
         /// </summary>
 		[Description("Along hole measured depth of measurement from the drill datum.")]
         [ComponentElement]
@@ -29761,7 +29761,7 @@ namespace Energistics.DataAccess.WITSML200
         private MeasuredDepthCoord MdBitField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -29791,7 +29791,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Scr
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -29847,7 +29847,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// NumAFE property
+        /// AFE number that this cost item applies to.
         /// </summary>
 		[StringLength(64)]
         [Description("AFE number that this cost item applies to.")]
@@ -29865,7 +29865,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NumAFEField; 
 
         /// <summary>
-        /// CostGroup property
+        /// Cost group code.
         /// </summary>
 		[StringLength(64)]
         [Description("Cost group code.")]
@@ -29883,7 +29883,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CostGroupField; 
 
         /// <summary>
-        /// CostClass property
+        /// Cost class code.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -29902,7 +29902,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CostClassField; 
 
         /// <summary>
-        /// CostCode property
+        /// Cost code.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -29921,7 +29921,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CostCodeField; 
 
         /// <summary>
-        /// CostSubCode property
+        /// Cost subcode.
         /// </summary>
 		[StringLength(64)]
         [Description("Cost subcode.")]
@@ -29939,7 +29939,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CostSubCodeField; 
 
         /// <summary>
-        /// CostItemDescription property
+        /// Description of the cost item.
         /// </summary>
 		[StringLength(64)]
         [Description("Description of the cost item.")]
@@ -29957,7 +29957,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CostItemDescriptionField; 
 
         /// <summary>
-        /// ItemKind property
+        /// The kind of cost item specified (e.g., rig dayrate, joints casing).
         /// </summary>
 		[StringLength(32)]
         [Description("The kind of cost item specified (e.g., rig dayrate, joints casing).")]
@@ -29975,7 +29975,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ItemKindField; 
 
         /// <summary>
-        /// ItemSize property
+        /// Size of one cost item.
         /// </summary>
 		[Description("Size of one cost item.")]
 		[XmlElement("ItemSize")]
@@ -30010,7 +30010,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean ItemSizeSpecifiedField; 
 
         /// <summary>
-        /// QtyItem property
+        /// Number of cost items used that day, e.g., 1 rig dayrate, 30 joints of casing.
         /// </summary>
 		[Description("Number of cost items used that day, e.g., 1 rig dayrate, 30 joints of casing.")]
 		[XmlElement("QtyItem")]
@@ -30045,7 +30045,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean QtyItemSpecifiedField; 
 
         /// <summary>
-        /// NumInvoice property
+        /// Invoice number for cost item; the bill is sent to the operator.
         /// </summary>
 		[StringLength(64)]
         [Description("Invoice number for cost item; the  bill is sent to the operator.")]
@@ -30063,7 +30063,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NumInvoiceField; 
 
         /// <summary>
-        /// NumPO property
+        /// Purchase order number provided by the operator.
         /// </summary>
 		[StringLength(64)]
         [Description("Purchase order number provided by the operator.")]
@@ -30081,7 +30081,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NumPOField; 
 
         /// <summary>
-        /// NumTicket property
+        /// The field ticket number issued by the service company on location.
         /// </summary>
 		[StringLength(64)]
         [Description("The field ticket number issued by the service company on location.")]
@@ -30099,7 +30099,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NumTicketField; 
 
         /// <summary>
-        /// IsCarryOver property
+        /// Is this item carried from day to day? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Is this item carried from day to day? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("IsCarryOver")]
@@ -30134,7 +30134,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean IsCarryOverSpecifiedField; 
 
         /// <summary>
-        /// IsRental property
+        /// Is this item a rental? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Is this item a rental? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("IsRental")]
@@ -30169,7 +30169,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean IsRentalSpecifiedField; 
 
         /// <summary>
-        /// NameTag property
+        /// An identification tag for the item. A serial number is a type of identification tag; however, some tags contain many pieces of information. This element only identifies the tag and does not describe the contents.
         /// </summary>
 		[Description("An identification tag for the item. A serial number is a type of identification tag; however, some tags contain many pieces of information. This element only identifies the tag and does not describe the contents.")]
         [RecurringElement]
@@ -30199,7 +30199,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<NameTag> NameTagField; 
 
         /// <summary>
-        /// NumSerial property
+        /// Serial number.
         /// </summary>
 		[StringLength(64)]
         [Description("Serial number.")]
@@ -30217,7 +30217,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NumSerialField; 
 
         /// <summary>
-        /// NameVendor property
+        /// Name of the vendor.
         /// </summary>
 		[StringLength(64)]
         [Description("Name of the vendor.")]
@@ -30235,7 +30235,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameVendorField; 
 
         /// <summary>
-        /// NumVendor property
+        /// Vendor number.
         /// </summary>
 		[StringLength(64)]
         [Description("Vendor number.")]
@@ -30253,7 +30253,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NumVendorField; 
 
         /// <summary>
-        /// Pool property
+        /// Name of pool/reservoir that this cost item can be accounted to.
         /// </summary>
 		[StringLength(64)]
         [Description("Name of pool/reservoir that this cost item can be accounted to.")]
@@ -30271,7 +30271,7 @@ namespace Energistics.DataAccess.WITSML200
         private String PoolField; 
 
         /// <summary>
-        /// Estimated property
+        /// Is this an estimated cost? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Is this an estimated cost? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("Estimated")]
@@ -30306,7 +30306,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean EstimatedSpecifiedField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -30336,7 +30336,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
         /// <summary>
-        /// CostAmount property
+        /// Cost for the item for this record.
         /// </summary>
 		[Description("Cost for the item for this record.")]
         [ComponentElement]
@@ -30354,7 +30354,7 @@ namespace Energistics.DataAccess.WITSML200
         private Cost CostAmountField; 
 
         /// <summary>
-        /// CostPerItem property
+        /// Cost of each cost item, assume same currency.
         /// </summary>
 		[Description("Cost of each cost item, assume same currency.")]
         [ComponentElement]
@@ -30372,7 +30372,7 @@ namespace Energistics.DataAccess.WITSML200
         private Cost CostPerItemField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of DayCost
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -30428,7 +30428,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
 		/// <summary>
-        /// currency property
+        /// Currency used for this Cost.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -30484,7 +30484,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Company property
+        /// Name of the company. 
         /// </summary>
 		[StringLength(64)]
         [Description("Name of the company.")]
@@ -30502,7 +30502,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CompanyField; 
 
         /// <summary>
-        /// TypeService property
+        /// Service provided by the company. 
         /// </summary>
 		[StringLength(64)]
         [Description("Service provided by the company.")]
@@ -30520,7 +30520,7 @@ namespace Energistics.DataAccess.WITSML200
         private String TypeServiceField; 
 
         /// <summary>
-        /// NumPeople property
+        /// Number of people on board for that company.
         /// </summary>
 		[Description("Number of people on board for that company.")]
 		[XmlElement("NumPeople")]
@@ -30555,7 +30555,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean NumPeopleSpecifiedField; 
 
         /// <summary>
-        /// TotalTime property
+        /// Total time worked by the company (commonly in hours).
         /// </summary>
 		[Description("Total time worked by the company (commonly in hours).")]
         [ComponentElement]
@@ -30573,7 +30573,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure TotalTimeField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -30603,7 +30603,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Personnel.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -30659,7 +30659,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// VolLostShakerSurf property
+        /// Volume of mud lost at shakers (at surface).
         /// </summary>
 		[Description("Volume of mud lost at shakers (at surface).")]
         [ComponentElement]
@@ -30677,7 +30677,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolLostShakerSurfField; 
 
         /// <summary>
-        /// VolLostMudCleanerSurf property
+        /// Volume of mud lost in mud cleaning equipment (at surface).
         /// </summary>
 		[Description("Volume of mud lost in mud cleaning equipment (at surface).")]
         [ComponentElement]
@@ -30695,7 +30695,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolLostMudCleanerSurfField; 
 
         /// <summary>
-        /// VolLostPitsSurf property
+        /// Volume of mud lost in pit room (at surface).
         /// </summary>
 		[Description("Volume of mud lost in pit room (at surface).")]
         [ComponentElement]
@@ -30713,7 +30713,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolLostPitsSurfField; 
 
         /// <summary>
-        /// VolLostTrippingSurf property
+        /// Volume of mud lost while tripping (at surface).
         /// </summary>
 		[Description("Volume of mud lost while tripping (at surface).")]
         [ComponentElement]
@@ -30731,7 +30731,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolLostTrippingSurfField; 
 
         /// <summary>
-        /// VolLostOtherSurf property
+        /// Surface volume lost other location.
         /// </summary>
 		[Description("Surface volume lost other location.")]
         [ComponentElement]
@@ -30749,7 +30749,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolLostOtherSurfField; 
 
         /// <summary>
-        /// VolTotMudLostSurf property
+        /// Total volume of mud lost at surface.
         /// </summary>
 		[Description("Total volume of mud lost at surface.")]
         [ComponentElement]
@@ -30767,7 +30767,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolTotMudLostSurfField; 
 
         /// <summary>
-        /// VolLostCircHole property
+        /// Mud volume lost downhole while circulating.
         /// </summary>
 		[Description("Mud volume lost downhole while circulating.")]
         [ComponentElement]
@@ -30785,7 +30785,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolLostCircHoleField; 
 
         /// <summary>
-        /// VolLostCsgHole property
+        /// Mud volume lost downhole while running casing.
         /// </summary>
 		[Description("Mud volume lost downhole while running casing.")]
         [ComponentElement]
@@ -30803,7 +30803,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolLostCsgHoleField; 
 
         /// <summary>
-        /// VolLostCmtHole property
+        /// Mud volume lost downhole while cementing.
         /// </summary>
 		[Description("Mud volume lost downhole while cementing.")]
         [ComponentElement]
@@ -30821,7 +30821,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolLostCmtHoleField; 
 
         /// <summary>
-        /// VolLostBhdCsgHole property
+        /// Mud volume lost downhole behind casing.
         /// </summary>
 		[Description("Mud volume lost downhole behind casing.")]
         [ComponentElement]
@@ -30839,7 +30839,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolLostBhdCsgHoleField; 
 
         /// <summary>
-        /// VolLostAbandonHole property
+        /// Mud volume lost downhole during abandonment.
         /// </summary>
 		[Description("Mud volume lost downhole during abandonment.")]
         [ComponentElement]
@@ -30857,7 +30857,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolLostAbandonHoleField; 
 
         /// <summary>
-        /// VolLostOtherHole property
+        /// Mud volume lost downhole from other location.
         /// </summary>
 		[Description("Mud volume lost downhole from other location.")]
         [ComponentElement]
@@ -30875,7 +30875,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolLostOtherHoleField; 
 
         /// <summary>
-        /// VolTotMudLostHole property
+        /// Total volume of mud lost downhole.
         /// </summary>
 		[Description("Total volume of mud lost downhole.")]
         [ComponentElement]
@@ -31268,7 +31268,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Name property
+        /// Name or type of inventory item.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -31287,7 +31287,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameField; 
 
         /// <summary>
-        /// ItemWtOrVolPerUnit property
+        /// Item weight or volume per unit.
         /// </summary>
 		[Required]
         [Description("Item weight or volume per unit.")]
@@ -31305,7 +31305,7 @@ namespace Energistics.DataAccess.WITSML200
         private AbstractItemWtOrVolPerUnit ItemWtOrVolPerUnitField; 
 
         /// <summary>
-        /// PricePerUnit property
+        /// Price per item unit, assume same currency for all items.
         /// </summary>
 		[Description("Price per item unit, assume same currency for all items.")]
         [ComponentElement]
@@ -31323,7 +31323,7 @@ namespace Energistics.DataAccess.WITSML200
         private Cost PricePerUnitField; 
 
         /// <summary>
-        /// QtyStart property
+        /// Start quantity for report interval.
         /// </summary>
 		[Description("Start quantity for report interval.")]
 		[XmlElement("QtyStart")]
@@ -31358,7 +31358,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean QtyStartSpecifiedField; 
 
         /// <summary>
-        /// QtyAdjustment property
+        /// Daily quantity adjustment/correction.
         /// </summary>
 		[Description("Daily quantity adjustment/correction.")]
 		[XmlElement("QtyAdjustment")]
@@ -31393,7 +31393,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean QtyAdjustmentSpecifiedField; 
 
         /// <summary>
-        /// QtyReceived property
+        /// Quantity received at the site.
         /// </summary>
 		[Description("Quantity received at the site.")]
 		[XmlElement("QtyReceived")]
@@ -31428,7 +31428,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean QtyReceivedSpecifiedField; 
 
         /// <summary>
-        /// QtyReturned property
+        /// Quantity returned to base from site.
         /// </summary>
 		[Description("Quantity returned to base from site.")]
 		[XmlElement("QtyReturned")]
@@ -31463,7 +31463,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean QtyReturnedSpecifiedField; 
 
         /// <summary>
-        /// QtyUsed property
+        /// Quantity used for the report interval.
         /// </summary>
 		[Description("Quantity used for the report interval.")]
 		[XmlElement("QtyUsed")]
@@ -31498,7 +31498,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean QtyUsedSpecifiedField; 
 
         /// <summary>
-        /// CostItem property
+        /// Cost for the product for the report interval.
         /// </summary>
 		[Description("Cost for the product for the report interval.")]
         [ComponentElement]
@@ -31516,7 +31516,7 @@ namespace Energistics.DataAccess.WITSML200
         private Cost CostItemField; 
 
         /// <summary>
-        /// QtyOnLocation property
+        /// Amount of the item remaining on location after all adjustments for the report interval.
         /// </summary>
 		[Description("Amount of the item remaining on location after all adjustments for the report interval.")]
 		[XmlElement("QtyOnLocation")]
@@ -31551,7 +31551,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean QtyOnLocationSpecifiedField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -31581,7 +31581,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Inventory.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -31637,7 +31637,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// DTim property
+        /// Date and time the information is related to.
         /// </summary>
 		[Required]
         [Description("Date and time the information is related to.")]
@@ -31655,7 +31655,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimField; 
 
         /// <summary>
-        /// Agency property
+        /// Name of company that supplied the weather data.
         /// </summary>
 		[StringLength(64)]
         [Description("Name of company that supplied the weather data.")]
@@ -31673,7 +31673,7 @@ namespace Energistics.DataAccess.WITSML200
         private String AgencyField; 
 
         /// <summary>
-        /// BarometricPressure property
+        /// Atmospheric pressure.
         /// </summary>
 		[Description("Atmospheric pressure.")]
         [ComponentElement]
@@ -31691,7 +31691,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure BarometricPressureField; 
 
         /// <summary>
-        /// BeaufortScaleNumber property
+        /// The Beaufort wind force scale is a system used to estimate and report wind speeds when no measuring apparatus is available. It was invented in the early 19th century by Admiral Sir Francis Beaufort of the British Navy as a way to interpret winds from conditions. Values range from 0 (calm) to 12 (hurricane force). 
         /// </summary>
 		[Description("The Beaufort wind force scale is a system used to estimate and report wind speeds when no measuring apparatus is available. It was invented in the early 19th century by Admiral Sir Francis Beaufort of the British Navy as a way to interpret winds from conditions. Values range from 0 (calm) to 12 (hurricane force).")]
 		[XmlElement("BeaufortScaleNumber")]
@@ -31726,7 +31726,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean BeaufortScaleNumberSpecifiedField; 
 
         /// <summary>
-        /// TempSurfaceMn property
+        /// Minimum temperature above ground. Temperature of the atmosphere.
         /// </summary>
 		[Description("Minimum temperature above ground. Temperature of the atmosphere.")]
         [ComponentElement]
@@ -31744,7 +31744,7 @@ namespace Energistics.DataAccess.WITSML200
         private ThermodynamicTemperatureMeasure TempSurfaceMnField; 
 
         /// <summary>
-        /// TempSurfaceMx property
+        /// Maximum temperature above ground.
         /// </summary>
 		[Description("Maximum temperature above ground.")]
         [ComponentElement]
@@ -31762,7 +31762,7 @@ namespace Energistics.DataAccess.WITSML200
         private ThermodynamicTemperatureMeasure TempSurfaceMxField; 
 
         /// <summary>
-        /// TempWindChill property
+        /// A measure of the combined chilling effect of wind and low temperature on living things, also named chill factor, e.g., according to the US weather service table, an air temperature of 30 degF with a 10 mph corresponds to a windchill of 22 degF.
         /// </summary>
 		[Description("A measure of the combined chilling effect of wind and low temperature on living things, also named chill factor, e.g., according to the US weather service table, an air temperature of 30 degF with a 10 mph corresponds to a windchill of 22 degF.")]
         [ComponentElement]
@@ -31780,7 +31780,7 @@ namespace Energistics.DataAccess.WITSML200
         private ThermodynamicTemperatureMeasure TempWindChillField; 
 
         /// <summary>
-        /// Tempsea property
+        /// Sea temperature.
         /// </summary>
 		[Description("Sea temperature.")]
         [ComponentElement]
@@ -31798,7 +31798,7 @@ namespace Energistics.DataAccess.WITSML200
         private ThermodynamicTemperatureMeasure TempseaField; 
 
         /// <summary>
-        /// Visibility property
+        /// Horizontal visibility.
         /// </summary>
 		[Description("Horizontal visibility.")]
         [ComponentElement]
@@ -31816,7 +31816,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure VisibilityField; 
 
         /// <summary>
-        /// AziWave property
+        /// The direction from which the waves are coming, measured from true north.
         /// </summary>
 		[Description("The direction from which the waves are coming, measured from true north.")]
         [ComponentElement]
@@ -31834,7 +31834,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure AziWaveField; 
 
         /// <summary>
-        /// HtWave property
+        /// Average height of the waves.
         /// </summary>
 		[Description("Average height of the waves.")]
         [ComponentElement]
@@ -31852,7 +31852,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure HtWaveField; 
 
         /// <summary>
-        /// SignificantWave property
+        /// An average of the higher 1/3 of the wave heights passing during a sample period (typically 20 to 30 minutes).
         /// </summary>
 		[Description("An average of the higher 1/3 of the wave heights passing during a  sample period (typically 20 to 30 minutes).")]
         [ComponentElement]
@@ -31870,7 +31870,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure SignificantWaveField; 
 
         /// <summary>
-        /// MaxWave property
+        /// The maximum wave height.
         /// </summary>
 		[Description("The maximum wave height.")]
         [ComponentElement]
@@ -31888,7 +31888,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure MaxWaveField; 
 
         /// <summary>
-        /// PeriodWave property
+        /// The elapsed time between the passing of two wave tops.
         /// </summary>
 		[Description("The elapsed time between the passing of two wave tops.")]
         [ComponentElement]
@@ -31906,7 +31906,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure PeriodWaveField; 
 
         /// <summary>
-        /// AziWind property
+        /// The direction from which the wind is blowing, measured from true north.
         /// </summary>
 		[Description("The direction from which the wind is blowing, measured from true north.")]
         [ComponentElement]
@@ -31924,7 +31924,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure AziWindField; 
 
         /// <summary>
-        /// VelWind property
+        /// Wind speed.
         /// </summary>
 		[Description("Wind speed.")]
         [ComponentElement]
@@ -31942,7 +31942,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthPerTimeMeasure VelWindField; 
 
         /// <summary>
-        /// TypePrecip property
+        /// Type of precipitation.
         /// </summary>
 		[StringLength(64)]
         [Description("Type of precipitation.")]
@@ -31960,7 +31960,7 @@ namespace Energistics.DataAccess.WITSML200
         private String TypePrecipField; 
 
         /// <summary>
-        /// AmtPrecip property
+        /// Amount of precipitation.
         /// </summary>
 		[Description("Amount of precipitation.")]
         [ComponentElement]
@@ -31978,7 +31978,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure AmtPrecipField; 
 
         /// <summary>
-        /// CoverCloud property
+        /// Description of cloud cover.
         /// </summary>
 		[StringLength(64)]
         [Description("Description of cloud cover.")]
@@ -31996,7 +31996,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CoverCloudField; 
 
         /// <summary>
-        /// CeilingCloud property
+        /// Height of cloud cover.
         /// </summary>
 		[Description("Height of cloud cover.")]
         [ComponentElement]
@@ -32014,7 +32014,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure CeilingCloudField; 
 
         /// <summary>
-        /// CurrentSea property
+        /// The speed of the ocean current.
         /// </summary>
 		[Description("The speed of the ocean current.")]
         [ComponentElement]
@@ -32032,7 +32032,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthPerTimeMeasure CurrentSeaField; 
 
         /// <summary>
-        /// AziCurrentSea property
+        /// Azimuth of current.
         /// </summary>
 		[Description("Azimuth of current.")]
         [ComponentElement]
@@ -32050,7 +32050,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure AziCurrentSeaField; 
 
         /// <summary>
-        /// Comments property
+        /// Comments and remarks.
         /// </summary>
 		[StringLength(2000)]
         [Description("Comments and remarks.")]
@@ -32068,7 +32068,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CommentsField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -32098,7 +32098,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Weather
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -32248,7 +32248,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Name property
+        /// Human-recognizable context for the support craft.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -32267,7 +32267,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameField; 
 
         /// <summary>
-        /// TypeSupportCraft property
+        /// Type of support craft (e.g., barge, helicopter, tug boat, etc.)
         /// </summary>
 		[Required]
         [Description("Type of support craft (e.g., barge, helicopter, tug boat, etc.)")]
@@ -32285,7 +32285,7 @@ namespace Energistics.DataAccess.WITSML200
         private SupportCraftType? TypeSupportCraftField; 
 
         /// <summary>
-        /// DTimArrived property
+        /// Date and time when the vehicle arrived at the rig site.
         /// </summary>
 		[Description("Date and time when the vehicle arrived at the rig site.")]
 		[XmlElement("DTimArrived")]
@@ -32302,7 +32302,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimArrivedField; 
 
         /// <summary>
-        /// DTimDeparted property
+        /// Date and time when the vehicle departed from the rig site.
         /// </summary>
 		[Description("Date and time when the vehicle departed from the rig site.")]
 		[XmlElement("DTimDeparted")]
@@ -32319,7 +32319,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimDepartedField; 
 
         /// <summary>
-        /// Comments property
+        /// Comments and remarks.
         /// </summary>
 		[StringLength(2000)]
         [Description("Comments and remarks.")]
@@ -32337,7 +32337,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CommentsField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -32367,7 +32367,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of SupportCraft.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -32423,7 +32423,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// DTim property
+        /// Date and time the information is related to.
         /// </summary>
 		[Required]
         [Description("Date and time the information is related to.")]
@@ -32441,7 +32441,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimField; 
 
         /// <summary>
-        /// Reporter property
+        /// Name of the person who prepared the incident report.
         /// </summary>
 		[StringLength(64)]
         [Description("Name of the person who prepared the incident report.")]
@@ -32459,7 +32459,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ReporterField; 
 
         /// <summary>
-        /// NumMinorInjury property
+        /// Number of personnel with minor injuries.
         /// </summary>
 		[Description("Number of personnel with minor injuries.")]
 		[XmlElement("NumMinorInjury")]
@@ -32494,7 +32494,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean NumMinorInjurySpecifiedField; 
 
         /// <summary>
-        /// NumMajorInjury property
+        /// Number of personnel with major injuries.
         /// </summary>
 		[Description("Number of personnel with major injuries.")]
 		[XmlElement("NumMajorInjury")]
@@ -32529,7 +32529,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean NumMajorInjurySpecifiedField; 
 
         /// <summary>
-        /// NumFatality property
+        /// Number of personnel killed due to the incident.
         /// </summary>
 		[Description("Number of personnel killed due to the incident.")]
 		[XmlElement("NumFatality")]
@@ -32564,7 +32564,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean NumFatalitySpecifiedField; 
 
         /// <summary>
-        /// IsNearMiss property
+        /// Near miss incident occurrence? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Near miss incident occurrence?   Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("IsNearMiss")]
@@ -32599,7 +32599,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean IsNearMissSpecifiedField; 
 
         /// <summary>
-        /// DescLocation property
+        /// Location description.
         /// </summary>
 		[StringLength(64)]
         [Description("Location description.")]
@@ -32617,7 +32617,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DescLocationField; 
 
         /// <summary>
-        /// DescAccident property
+        /// Accident description.
         /// </summary>
 		[StringLength(2000)]
         [Description("Accident description.")]
@@ -32635,7 +32635,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DescAccidentField; 
 
         /// <summary>
-        /// RemedialActionDesc property
+        /// Remedial action description.
         /// </summary>
 		[StringLength(2000)]
         [Description("Remedial action description.")]
@@ -32653,7 +32653,7 @@ namespace Energistics.DataAccess.WITSML200
         private String RemedialActionDescField; 
 
         /// <summary>
-        /// CauseDesc property
+        /// Cause description.
         /// </summary>
 		[StringLength(2000)]
         [Description("Cause description.")]
@@ -32671,7 +32671,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CauseDescField; 
 
         /// <summary>
-        /// ETimLostGross property
+        /// Number of hours lost due to the incident.
         /// </summary>
 		[Description("Number of hours lost due to the incident.")]
         [ComponentElement]
@@ -32689,7 +32689,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure ETimLostGrossField; 
 
         /// <summary>
-        /// CostLossGross property
+        /// Gross estimate of the cost incurred due to the incident.
         /// </summary>
 		[Description("Gross estimate of the cost incurred due to the incident.")]
         [ComponentElement]
@@ -32707,7 +32707,7 @@ namespace Energistics.DataAccess.WITSML200
         private Cost CostLossGrossField; 
 
         /// <summary>
-        /// ResponsibleCompany property
+        /// Name of the company that caused the incident.
         /// </summary>
 		[StringLength(64)]
         [Description("Name of the company that caused the incident.")]
@@ -32725,7 +32725,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ResponsibleCompanyField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -32755,7 +32755,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Incident
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -33420,7 +33420,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// DTimStart property
+        /// Date and time that activities started.
         /// </summary>
 		[Description("Date and time that activities started.")]
 		[XmlElement("DTimStart")]
@@ -33437,7 +33437,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimStartField; 
 
         /// <summary>
-        /// DTimEnd property
+        /// Date and time activities were completed.
         /// </summary>
 		[Description("Date and time activities were completed.")]
 		[XmlElement("DTimEnd")]
@@ -33454,7 +33454,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimEndField; 
 
         /// <summary>
-        /// NumDeck property
+        /// Deck number the mesh is installed on.
         /// </summary>
 		[Description("Deck number the mesh is installed on.")]
 		[XmlElement("NumDeck")]
@@ -33489,7 +33489,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean NumDeckSpecifiedField; 
 
         /// <summary>
-        /// MeshX property
+        /// Mesh size in the X direction.
         /// </summary>
 		[Description("Mesh size in the X direction.")]
         [ComponentElement]
@@ -33507,7 +33507,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure MeshXField; 
 
         /// <summary>
-        /// MeshY property
+        /// Mesh size in the Y direction.
         /// </summary>
 		[Description("Mesh size in the Y direction.")]
         [ComponentElement]
@@ -33525,7 +33525,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure MeshYField; 
 
         /// <summary>
-        /// Manufacturer property
+        /// Manufacturer or supplier of the item.
         /// </summary>
 		[StringLength(64)]
         [Description("Manufacturer or supplier of the item.")]
@@ -33543,7 +33543,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ManufacturerField; 
 
         /// <summary>
-        /// Model property
+        /// Manufacturers designated model.
         /// </summary>
 		[StringLength(64)]
         [Description("Manufacturers designated model.")]
@@ -33561,7 +33561,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ModelField; 
 
         /// <summary>
-        /// CutPoint property
+        /// Shaker screen cut point, which is the maximum size cuttings that will pass through the screen.
         /// </summary>
 		[Description("Shaker screen cut point, which is the maximum size cuttings that will pass through the screen.")]
         [ComponentElement]
@@ -33752,7 +33752,7 @@ namespace Energistics.DataAccess.WITSML200
         private ShakerScreen ShakerScreenField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of ShakerOp
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -33808,7 +33808,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// AnchorName property
+        /// The anchor number within a mooring system, or name if a name is used instead.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -33827,7 +33827,7 @@ namespace Energistics.DataAccess.WITSML200
         private String AnchorNameField; 
 
         /// <summary>
-        /// AnchorAngle property
+        /// Angle of the anchor or mooring line.
         /// </summary>
 		[Description("Angle of the anchor or mooring line.")]
         [ComponentElement]
@@ -33845,7 +33845,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure AnchorAngleField; 
 
         /// <summary>
-        /// AnchorTension property
+        /// Tension on the mooring line represented by the named anchor.
         /// </summary>
 		[Description("Tension on the mooring line represented by the named anchor.")]
         [ComponentElement]
@@ -33863,7 +33863,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForceMeasure AnchorTensionField; 
 
         /// <summary>
-        /// Description property
+        /// Free-test description of the state of this anchor or mooring line.
         /// </summary>
 		[StringLength(2000)]
         [Description("Free-test description of the state of this anchor or mooring line.")]
@@ -34396,7 +34396,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// GravAxialAccelCor property
+        /// Calculated gravitational field strength correction.
         /// </summary>
 		[Description("Calculated gravitational field strength correction.")]
         [ComponentElement]
@@ -34414,7 +34414,7 @@ namespace Energistics.DataAccess.WITSML200
         private LinearAccelerationMeasure GravAxialAccelCorField; 
 
         /// <summary>
-        /// GravTran1AccelCor property
+        /// The correction applied to a cross-axial (direction 1) component of the Earth's gravitational field.
         /// </summary>
 		[Description("The correction applied to a cross-axial (direction 1) component of the Earth's gravitational field.")]
         [ComponentElement]
@@ -34432,7 +34432,7 @@ namespace Energistics.DataAccess.WITSML200
         private LinearAccelerationMeasure GravTran1AccelCorField; 
 
         /// <summary>
-        /// GravTran2AccelCor property
+        /// The correction applied to a cross-axial (direction 2) component of the Earth's gravitational field.
         /// </summary>
 		[Description("The correction applied to a cross-axial (direction 2) component of the Earth's gravitational field.")]
         [ComponentElement]
@@ -34450,7 +34450,7 @@ namespace Energistics.DataAccess.WITSML200
         private LinearAccelerationMeasure GravTran2AccelCorField; 
 
         /// <summary>
-        /// MagAxialDrlstrCor property
+        /// Axial magnetic drill string correction.
         /// </summary>
 		[Description("Axial magnetic drill string correction.")]
         [ComponentElement]
@@ -34468,7 +34468,7 @@ namespace Energistics.DataAccess.WITSML200
         private MagneticFluxDensityMeasure MagAxialDrlstrCorField; 
 
         /// <summary>
-        /// MagTran1DrlstrCor property
+        /// Cross-axial (direction 1) magnetic correction.
         /// </summary>
 		[Description("Cross-axial (direction 1) magnetic correction.")]
         [ComponentElement]
@@ -34486,7 +34486,7 @@ namespace Energistics.DataAccess.WITSML200
         private MagneticFluxDensityMeasure MagTran1DrlstrCorField; 
 
         /// <summary>
-        /// MagTran2DrlstrCor property
+        /// Cross-axial (direction 2) magnetic correction.
         /// </summary>
 		[Description("Cross-axial (direction 2) magnetic correction.")]
         [ComponentElement]
@@ -34504,7 +34504,7 @@ namespace Energistics.DataAccess.WITSML200
         private MagneticFluxDensityMeasure MagTran2DrlstrCorField; 
 
         /// <summary>
-        /// MagTran1MSACor property
+        /// Cross-axial (direction 1) magnetic correction due to a multi-station analysis process.
         /// </summary>
 		[Description("Cross-axial (direction 1) magnetic correction due to a multi-station analysis process.")]
         [ComponentElement]
@@ -34522,7 +34522,7 @@ namespace Energistics.DataAccess.WITSML200
         private MagneticFluxDensityMeasure MagTran1MSACorField; 
 
         /// <summary>
-        /// MagTran2MSACor property
+        /// Cross-axial (direction 2) magnetic correction due to a multi-station analysis process.
         /// </summary>
 		[Description("Cross-axial (direction 2) magnetic correction due to a multi-station analysis process.")]
         [ComponentElement]
@@ -34540,7 +34540,7 @@ namespace Energistics.DataAccess.WITSML200
         private MagneticFluxDensityMeasure MagTran2MSACorField; 
 
         /// <summary>
-        /// MagAxialMSACor property
+        /// Axial magnetic correction due to a multi-station analysis process.
         /// </summary>
 		[Description("Axial magnetic correction due to a multi-station analysis process.")]
         [ComponentElement]
@@ -34558,7 +34558,7 @@ namespace Energistics.DataAccess.WITSML200
         private MagneticFluxDensityMeasure MagAxialMSACorField; 
 
         /// <summary>
-        /// SagIncCor property
+        /// Calculated sag correction to the inclination.
         /// </summary>
 		[Description("Calculated sag correction to the inclination.")]
         [ComponentElement]
@@ -34576,7 +34576,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure SagIncCorField; 
 
         /// <summary>
-        /// SagAziCor property
+        /// Calculated cosag correction to the azimuth.
         /// </summary>
 		[Description("Calculated cosag correction to the azimuth.")]
         [ComponentElement]
@@ -34594,7 +34594,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure SagAziCorField; 
 
         /// <summary>
-        /// StnMagDeclUsed property
+        /// Magnetic declination used to correct a Magnetic North referenced azimuth to a True North azimuth. Magnetic declination angles are measured positive clockwise from True North to Magnetic North (or negative in the anti-clockwise direction). To convert a Magnetic azimuth to a True North azimuth, the magnetic declination should be added.
         /// </summary>
 		[Description("Magnetic declination used to correct a Magnetic North referenced azimuth  to a True North azimuth.  Magnetic declination angles are measured positive clockwise  from True North to Magnetic North (or negative in the anti-clockwise direction).  To convert a Magnetic azimuth to a True North azimuth, the magnetic declination should be added.")]
         [ComponentElement]
@@ -34612,7 +34612,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure StnMagDeclUsedField; 
 
         /// <summary>
-        /// StnGridConUsed property
+        /// Magnetic declination used to correct a Magnetic North referenced azimuth to a True North azimuth. Magnetic declination angles are measured positive clockwise from True North to Magnetic North (or negative in the anti-clockwise direction). To convert a Magnetic azimuth to a True North azimuth, the magnetic declination should be added.
         /// </summary>
 		[Description("Magnetic declination used to correct a Magnetic North referenced azimuth  to a True North azimuth.  Magnetic declination angles are measured positive clockwise  from True North to Magnetic North (or negative in the anti-clockwise direction).  To convert a Magnetic azimuth to a True North azimuth, the magnetic declination should be added.")]
         [ComponentElement]
@@ -34630,7 +34630,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure StnGridConUsedField; 
 
         /// <summary>
-        /// DirSensorOffset property
+        /// Offset relative to the bit.
         /// </summary>
 		[Description("Offset relative to the bit.")]
         [ComponentElement]
@@ -34872,7 +34872,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// GravAxialRaw property
+        /// Uncorrected gravitational field strength measured in the axial direction.
         /// </summary>
 		[Description("Uncorrected gravitational field strength measured in the axial direction.")]
         [ComponentElement]
@@ -34890,7 +34890,7 @@ namespace Energistics.DataAccess.WITSML200
         private LinearAccelerationMeasure GravAxialRawField; 
 
         /// <summary>
-        /// GravTran1Raw property
+        /// Uncorrected gravitational field strength measured in the transverse direction.
         /// </summary>
 		[Description("Uncorrected gravitational field strength measured in the transverse direction.")]
         [ComponentElement]
@@ -34908,7 +34908,7 @@ namespace Energistics.DataAccess.WITSML200
         private LinearAccelerationMeasure GravTran1RawField; 
 
         /// <summary>
-        /// GravTran2Raw property
+        /// Uncorrected gravitational field strength measured in the transverse direction, approximately normal to tran1.
         /// </summary>
 		[Description("Uncorrected gravitational field strength measured in the transverse direction, approximately normal to tran1.")]
         [ComponentElement]
@@ -34926,7 +34926,7 @@ namespace Energistics.DataAccess.WITSML200
         private LinearAccelerationMeasure GravTran2RawField; 
 
         /// <summary>
-        /// MagAxialRaw property
+        /// Uncorrected magnetic field strength measured in the axial direction.
         /// </summary>
 		[Description("Uncorrected magnetic field strength measured in the axial direction.")]
         [ComponentElement]
@@ -34944,7 +34944,7 @@ namespace Energistics.DataAccess.WITSML200
         private MagneticFluxDensityMeasure MagAxialRawField; 
 
         /// <summary>
-        /// MagTran1Raw property
+        /// Uncorrected magnetic field strength measured in the transverse direction.
         /// </summary>
 		[Description("Uncorrected magnetic field strength measured in the transverse direction.")]
         [ComponentElement]
@@ -34962,7 +34962,7 @@ namespace Energistics.DataAccess.WITSML200
         private MagneticFluxDensityMeasure MagTran1RawField; 
 
         /// <summary>
-        /// MagTran2Raw property
+        /// Uncorrected magnetic field strength measured in the transverse direction, approximately normal to tran1.
         /// </summary>
 		[Description("Uncorrected magnetic field strength measured in the transverse direction, approximately normal to tran1.")]
         [ComponentElement]
@@ -35016,7 +35016,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// StationReference property
+        /// A pointer to the trajectoryStation within the parent trajectory. StationReference is a special case where WITSML only uses a UID for the pointer.The natural identity of a station is its physical characteristics (e.g., md).
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -35035,7 +35035,7 @@ namespace Energistics.DataAccess.WITSML200
         private String StationReferenceField; 
 
         /// <summary>
-        /// TrajectoryParent property
+        /// A pointer to the trajectory within the parent wellbore. This trajectory contains the trajectoryStation.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -35054,7 +35054,7 @@ namespace Energistics.DataAccess.WITSML200
         private String TrajectoryParentField; 
 
         /// <summary>
-        /// WellboreParent property
+        /// A pointer to the wellbore that contains the trajectory. WellboreParent is not needed unless the trajectory is outside the context of a common parent wellbore.
         /// </summary>
 		[StringLength(64)]
         [Description("A pointer to the wellbore that contains the trajectory. WellboreParent is not needed unless the trajectory is outside the context of a common parent wellbore.")]
@@ -35108,7 +35108,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// VarianceNN property
+        /// Covariance north north.
         /// </summary>
 		[Description("Covariance north north.")]
         [ComponentElement]
@@ -35126,7 +35126,7 @@ namespace Energistics.DataAccess.WITSML200
         private AreaMeasure VarianceNNField; 
 
         /// <summary>
-        /// VarianceNE property
+        /// Crossvariance north east.
         /// </summary>
 		[Description("Crossvariance north east.")]
         [ComponentElement]
@@ -35144,7 +35144,7 @@ namespace Energistics.DataAccess.WITSML200
         private AreaMeasure VarianceNEField; 
 
         /// <summary>
-        /// VarianceNVert property
+        /// Crossvariance north vertical.
         /// </summary>
 		[Description("Crossvariance north vertical.")]
         [ComponentElement]
@@ -35162,7 +35162,7 @@ namespace Energistics.DataAccess.WITSML200
         private AreaMeasure VarianceNVertField; 
 
         /// <summary>
-        /// VarianceEE property
+        /// Covariance east east.
         /// </summary>
 		[Description("Covariance east east.")]
         [ComponentElement]
@@ -35180,7 +35180,7 @@ namespace Energistics.DataAccess.WITSML200
         private AreaMeasure VarianceEEField; 
 
         /// <summary>
-        /// VarianceEVert property
+        /// Crossvariance east vertical.
         /// </summary>
 		[Description("Crossvariance east vertical.")]
         [ComponentElement]
@@ -35198,7 +35198,7 @@ namespace Energistics.DataAccess.WITSML200
         private AreaMeasure VarianceEVertField; 
 
         /// <summary>
-        /// VarianceVertVert property
+        /// Covariance vertical vertical.
         /// </summary>
 		[Description("Covariance vertical vertical.")]
         [ComponentElement]
@@ -35216,7 +35216,7 @@ namespace Energistics.DataAccess.WITSML200
         private AreaMeasure VarianceVertVertField; 
 
         /// <summary>
-        /// BiasN property
+        /// Bias north.
         /// </summary>
 		[Description("Bias north.")]
         [ComponentElement]
@@ -35234,7 +35234,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure BiasNField; 
 
         /// <summary>
-        /// BiasE property
+        /// Bias east.
         /// </summary>
 		[Description("Bias east.")]
         [ComponentElement]
@@ -35252,7 +35252,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure BiasEField; 
 
         /// <summary>
-        /// BiasVert property
+        /// Bias vertical. The coordinate system is set up in a right-handed configuration, which makes the vertical direction increasing (i.e., positive) downwards.
         /// </summary>
 		[Description("Bias vertical. The coordinate system is set up in a right-handed configuration, which makes the vertical direction increasing (i.e., positive) downwards.")]
         [ComponentElement]
@@ -35306,7 +35306,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// MagTotalFieldCalc property
+        /// Calculated total intensity of the geomagnetic field as sum of BGGM, IFR and local field.
         /// </summary>
 		[Description("Calculated total intensity of the geomagnetic field as sum of BGGM,  IFR and local field.")]
         [ComponentElement]
@@ -35324,7 +35324,7 @@ namespace Energistics.DataAccess.WITSML200
         private MagneticFluxDensityMeasure MagTotalFieldCalcField; 
 
         /// <summary>
-        /// MagDipAngleCalc property
+        /// Calculated magnetic dip (inclination), the angle between the horizontal and the geomagnetic field (positive down, res .001).
         /// </summary>
 		[Description("Calculated magnetic dip (inclination), the angle between the horizontal  and the geomagnetic field (positive down, res .001).")]
         [ComponentElement]
@@ -35342,7 +35342,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure MagDipAngleCalcField; 
 
         /// <summary>
-        /// GravTotalFieldCalc property
+        /// Calculated total gravitational field.
         /// </summary>
 		[Description("Calculated total gravitational field.")]
         [ComponentElement]
@@ -36514,7 +36514,7 @@ namespace Energistics.DataAccess.WITSML200
         private DataObjectReference IscwsaToolErrorModelField; 
 
 		/// <summary>
-        /// uid property
+        /// A unique identifier for an instance of a trajectory station.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -36665,7 +36665,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Original property
+        /// Flag indicating (if that Is this pair of values the original data given for the location? Values are "true" or "1". Or, if the pair of values was calculated from an original pair of values, set to "false" (or "0") or leave blank. 
         /// </summary>
 		[Description("Flag indicating (if that Is this pair of values the original data given for the location? Values are \"true\" or \"1\". Or, if the pair of values was calculated from an original pair of values, set to \"false\" (or \"0\") or leave blank.")]
 		[XmlElement("Original")]
@@ -36700,7 +36700,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean OriginalSpecifiedField; 
 
         /// <summary>
-        /// Description property
+        /// A comment, generally given to help the reader interpret the coordinates if the CRS and the chosen pair do not make them clear.
         /// </summary>
 		[StringLength(2000)]
         [Description("A comment, generally given to help the reader interpret the coordinates if the CRS and the chosen pair do not make them clear.")]
@@ -36718,7 +36718,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DescriptionField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -36748,7 +36748,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// A unique identifier for a well location.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -43042,13 +43042,13 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[ComponentElement]
 		[XmlElement("secondDefiningParameter")]
-        public SecondDefParameter SecondDefiningParameter {
+        public SecondDefParameter SecondDefPara {
             get {
                 return secondDefiningParameterField;
             } 
             set {
                 secondDefiningParameterField = value;
-                NotifyPropertyChanged("SecondDefiningParameter");
+                NotifyPropertyChanged("SecondDefPara");
             }
         }
 
@@ -43074,13 +43074,13 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[ComponentElement]
 		[XmlElement("SecondDefiningParameter")]
-        public SecondDefiningParameter SecondDefiningParameter {
+        public SecondDefiningParameter SecondDefPara {
             get {
                 return SecondDefiningParameterField;
             } 
             set {
                 SecondDefiningParameterField = value;
-                NotifyPropertyChanged("SecondDefiningParameter");
+                NotifyPropertyChanged("SecondDefPara");
             }
         }
 
@@ -44459,7 +44459,7 @@ namespace Energistics.DataAccess.WITSML200
         }
 
 		/// <summary>
-        /// uom property
+        /// A measure with a UOM or a quantity (without a UOM). This should not be used except in situations where the underlying class of data is captured elsewhere, e.g., in a measure class.
         /// </summary>
 		[Required]
         [StringLength(32)]
@@ -44691,7 +44691,7 @@ namespace Energistics.DataAccess.WITSML200
         private MeasureOrQuantity ValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of IscwsaErrorTermValue.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -44747,7 +44747,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// MisalignmentMode property
+        /// Choice of mathmatical modelling of misalignment.
         /// </summary>
 		[Required]
         [Description("Choice of mathmatical modelling of misalignment.")]
@@ -44765,7 +44765,7 @@ namespace Energistics.DataAccess.WITSML200
         private ErrorModelMisalignmentMode? MisalignmentModeField; 
 
         /// <summary>
-        /// GyroInitialization property
+        /// Inclination at which gyro initialization occurs.
         /// </summary>
 		[Description("Inclination at which gyro initialization occurs.")]
         [ComponentElement]
@@ -44783,7 +44783,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure GyroInitializationField; 
 
         /// <summary>
-        /// GyroReinitializationDistance property
+        /// Maximum length of continuous survey before re-initialization.
         /// </summary>
 		[Description("Maximum length of continuous survey before re-initialization.")]
         [ComponentElement]
@@ -44801,7 +44801,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure GyroReinitializationDistanceField; 
 
         /// <summary>
-        /// Switching property
+        /// True if the survey tool is rotated at inclinations greater than 90 degrees.
         /// </summary>
 		[Description("True if the survey tool is rotated at inclinations greater than 90 degrees.")]
 		[XmlElement("Switching")]
@@ -44836,7 +44836,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean SwitchingSpecifiedField; 
 
         /// <summary>
-        /// NoiseReductionFactor property
+        /// Factor applied to random noise error terms, depending on the mode of gyro initialization. Values must be greater than zero and less than or equal to 1.
         /// </summary>
 		[Description("Factor applied to random noise error terms, depending on the mode of gyro initialization. Values must be greater than zero and less than or equal to 1.")]
 		[XmlElement("NoiseReductionFactor")]
@@ -44871,7 +44871,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean NoiseReductionFactorSpecifiedField; 
 
         /// <summary>
-        /// GyroRunningSpeed property
+        /// Speed at which the tool traverses the wellbore during a continuous survey.
         /// </summary>
 		[Description("Speed at which the tool traverses the wellbore during a continuous survey.")]
         [ComponentElement]
@@ -44925,7 +44925,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Mode property
+        /// Tool operating mode over this interval.
         /// </summary>
 		[Required]
         [Description("Tool operating mode over this interval.")]
@@ -44943,7 +44943,7 @@ namespace Energistics.DataAccess.WITSML200
         private SurveyToolOperatingMode? ModeField; 
 
         /// <summary>
-        /// Start property
+        /// Inclination at which the mode begins.
         /// </summary>
 		[Required]
         [Description("Inclination at which the mode begins.")]
@@ -44962,7 +44962,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure StartField; 
 
         /// <summary>
-        /// End property
+        /// Inclination at which the mode terminates.
         /// </summary>
 		[Required]
         [Description("Inclination at which the mode terminates.")]
@@ -44981,7 +44981,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure EndField; 
 
         /// <summary>
-        /// Speed property
+        /// Running speed for continuous surveys.
         /// </summary>
 		[Description("Running speed for continuous surveys.")]
         [ComponentElement]
@@ -44999,7 +44999,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthPerTimeMeasure SpeedField; 
 
         /// <summary>
-        /// SampleRate property
+        /// Time between survey samples for continuous surveys.
         /// </summary>
 		[Description("Time between survey samples for continuous surveys.")]
         [ComponentElement]
@@ -45017,7 +45017,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure SampleRateField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -45047,7 +45047,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of IscwsaSurveyToolOperatingInterval.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -45124,7 +45124,7 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         /// <summary>
-        /// Parameter property
+        /// A particular constraint.
         /// </summary>
 		[StringLength(64)]
         [Description("A particular constraint.")]
@@ -45142,7 +45142,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ParameterField; 
 
         /// <summary>
-        /// Min property
+        /// The least value the constraint may take.
         /// </summary>
 		[Description("The least value the constraint may take.")]
         [ComponentElement]
@@ -45160,7 +45160,7 @@ namespace Energistics.DataAccess.WITSML200
         private GenericMeasure MinField; 
 
         /// <summary>
-        /// Max property
+        /// The greatest value the constraint may take.
         /// </summary>
 		[Description("The greatest value the constraint may take.")]
         [ComponentElement]
@@ -45178,7 +45178,7 @@ namespace Energistics.DataAccess.WITSML200
         private GenericMeasure MaxField; 
 
         /// <summary>
-        /// Value property
+        /// A fixed value that the constraint must take.
         /// </summary>
 		[StringLength(64)]
         [Description("A fixed value that the constraint must take.")]
@@ -45196,7 +45196,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ValueField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -45226,7 +45226,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of IscwsaSurveyToolOperatingCondition.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -45282,7 +45282,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Author property
+        /// Person responsible for the information.
         /// </summary>
 		[StringLength(64)]
         [Description("Person responsible for the information.")]
@@ -45300,7 +45300,7 @@ namespace Energistics.DataAccess.WITSML200
         private String AuthorField; 
 
         /// <summary>
-        /// Source property
+        /// Source from which the information is derived.
         /// </summary>
 		[StringLength(64)]
         [Description("Source from which the information is derived.")]
@@ -45318,7 +45318,7 @@ namespace Energistics.DataAccess.WITSML200
         private String SourceField; 
 
         /// <summary>
-        /// Authority property
+        /// Person or collective body responsible for authorizing the information.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -45337,7 +45337,7 @@ namespace Energistics.DataAccess.WITSML200
         private String AuthorityField; 
 
         /// <summary>
-        /// Status property
+        /// Authorization state of the information.
         /// </summary>
 		[Required]
         [Description("Authorization state of the information.")]
@@ -45355,7 +45355,7 @@ namespace Energistics.DataAccess.WITSML200
         private AuthorizationStatus? StatusField; 
 
         /// <summary>
-        /// Version property
+        /// Version name or number.
         /// </summary>
 		[StringLength(64)]
         [Description("Version name or number.")]
@@ -45373,7 +45373,7 @@ namespace Energistics.DataAccess.WITSML200
         private String VersionField; 
 
         /// <summary>
-        /// Comment property
+        /// A comment about the object. This should include information regarding the derivation of the information.
         /// </summary>
 		[StringLength(2000)]
         [Description("A comment about the object.  This should include information regarding the derivation of the information.")]
@@ -45427,7 +45427,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Name property
+        /// Name of the feature.
         /// </summary>
 		[StringLength(64)]
         [Description("Name of the feature.")]
@@ -45445,7 +45445,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameField; 
 
         /// <summary>
-        /// GeologyType property
+        /// Aquifer or reservoir.
         /// </summary>
 		[Description("Aquifer or reservoir.")]
 		[XmlElement("GeologyType")]
@@ -45480,7 +45480,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean GeologyTypeSpecifiedField; 
 
         /// <summary>
-        /// FeatureMdInterval property
+        /// Measured depth interval for this feature.
         /// </summary>
 		[Description("Measured depth interval for this feature.")]
         [ComponentElement]
@@ -45498,7 +45498,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval FeatureMdIntervalField; 
 
         /// <summary>
-        /// FeatureTvdInterval property
+        /// True vertical depth interval for this feature.
         /// </summary>
 		[Description("True vertical depth interval for this feature.")]
         [ComponentElement]
@@ -45516,7 +45516,7 @@ namespace Energistics.DataAccess.WITSML200
         private TvdInterval FeatureTvdIntervalField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -45546,7 +45546,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of GeologyFeature.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -45774,7 +45774,7 @@ namespace Energistics.DataAccess.WITSML200
         private EventInfo EquipmentEventHistoryField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Borehole.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -45954,7 +45954,7 @@ namespace Energistics.DataAccess.WITSML200
         private DataObjectReference ReferenceWellboreField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of BoreholeString.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -46714,7 +46714,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<EquipmentConnection> ConnectionNextField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StringEquipment.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -46734,7 +46734,7 @@ namespace Energistics.DataAccess.WITSML200
         private String uidField; 
 
 		/// <summary>
-        /// equipmentReferenceUid property
+        /// Reference to a piece of equipment.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -46790,7 +46790,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// StringReferenceId property
+        /// DownholeString reference ID.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -46809,7 +46809,7 @@ namespace Energistics.DataAccess.WITSML200
         private String StringReferenceIdField; 
 
         /// <summary>
-        /// EquipmentReferenceId property
+        /// Equipment reference ID.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -46828,7 +46828,7 @@ namespace Energistics.DataAccess.WITSML200
         private String EquipmentReferenceIdField; 
 
         /// <summary>
-        /// AccesoryEquipmentReferenceId property
+        /// Reference to the equipment for this accessory.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -46847,7 +46847,7 @@ namespace Energistics.DataAccess.WITSML200
         private String AccesoryEquipmentReferenceIdField; 
 
         /// <summary>
-        /// Comment property
+        /// Comment or remarks on this container reference.
         /// </summary>
 		[Required]
         [StringLength(2000)]
@@ -46866,7 +46866,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CommentField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of ReferenceContainer.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -47010,7 +47010,7 @@ namespace Energistics.DataAccess.WITSML200
         private AbstractConnectionType ConnectionTypeField; 
 
 		/// <summary>
-        /// stringEquipmentReferenceUid property
+        /// Reference to the string equipment. 
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -47229,13 +47229,13 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Inside diameter of the connection.")]
         [ComponentElement]
 		[XmlElement("Id")]
-        public LengthMeasure Id {
+        public LengthMeasure InnerDiameter {
             get {
                 return IdField;
             } 
             set {
                 IdField = value;
-                NotifyPropertyChanged("Id");
+                NotifyPropertyChanged("InnerDiameter");
             }
         }
 
@@ -47486,7 +47486,7 @@ namespace Energistics.DataAccess.WITSML200
         private CustomData ExtensionAnyField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Connection.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -47542,7 +47542,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// MdInterval property
+        /// Measured depth interval for the perforation hole.
         /// </summary>
 		[Description("Measured depth interval for the perforation hole.")]
         [ComponentElement]
@@ -47560,7 +47560,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval MdIntervalField; 
 
         /// <summary>
-        /// TvdInterval property
+        /// The true vertical depth that describes the hole.
         /// </summary>
 		[Description("The true vertical depth that describes the hole.")]
         [ComponentElement]
@@ -47578,7 +47578,7 @@ namespace Energistics.DataAccess.WITSML200
         private TvdInterval TvdIntervalField; 
 
         /// <summary>
-        /// HoleDiameter property
+        /// The diameter of the hole.
         /// </summary>
 		[Description("The diameter of the hole.")]
         [ComponentElement]
@@ -47596,7 +47596,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure HoleDiameterField; 
 
         /// <summary>
-        /// HoleAngle property
+        /// The angle of the holes.
         /// </summary>
 		[Description("The angle of the holes.")]
         [ComponentElement]
@@ -47614,7 +47614,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure HoleAngleField; 
 
         /// <summary>
-        /// HolePattern property
+        /// The pattern of the holes.
         /// </summary>
 		[StringLength(64)]
         [Description("The pattern of the holes.")]
@@ -47632,7 +47632,7 @@ namespace Energistics.DataAccess.WITSML200
         private String HolePatternField; 
 
         /// <summary>
-        /// Remarks property
+        /// Remarks and comments about this perforated hole.
         /// </summary>
 		[StringLength(2000)]
         [Description("Remarks and comments about this perforated hole.")]
@@ -47650,7 +47650,7 @@ namespace Energistics.DataAccess.WITSML200
         private String RemarksField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -47680,7 +47680,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
         /// <summary>
-        /// HoleDensity property
+        /// The density of the holes.
         /// </summary>
 		[Description("The density of the holes.")]
         [ComponentElement]
@@ -47698,7 +47698,7 @@ namespace Energistics.DataAccess.WITSML200
         private ReciprocalLengthMeasure HoleDensityField; 
 
         /// <summary>
-        /// HoleCount property
+        /// The number of holes.
         /// </summary>
 		[Description("The number of holes.")]
 		[XmlElement("HoleCount")]
@@ -47733,7 +47733,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean HoleCountSpecifiedField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of PerfHole.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -47789,7 +47789,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// SlotHeight property
+        /// The height of slot.
         /// </summary>
 		[Description("The height of slot.")]
         [ComponentElement]
@@ -47807,7 +47807,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure SlotHeightField; 
 
         /// <summary>
-        /// SlotWidth property
+        /// The width of the slot.
         /// </summary>
 		[Description("The width of the slot.")]
         [ComponentElement]
@@ -47825,7 +47825,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure SlotWidthField; 
 
         /// <summary>
-        /// SlotCenterDistance property
+        /// Distance from center point.
         /// </summary>
 		[Description("Distance from center point.")]
         [ComponentElement]
@@ -47843,7 +47843,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure SlotCenterDistanceField; 
 
         /// <summary>
-        /// SlotCount property
+        /// The number of the slots.
         /// </summary>
 		[Description("The number of the slots.")]
 		[XmlElement("SlotCount")]
@@ -47878,7 +47878,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean SlotCountSpecifiedField; 
 
         /// <summary>
-        /// Remarks property
+        /// Remarks and comments about this perforation slot.
         /// </summary>
 		[StringLength(2000)]
         [Description("Remarks and comments about this perforation slot.")]
@@ -47896,7 +47896,7 @@ namespace Energistics.DataAccess.WITSML200
         private String RemarksField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -47926,7 +47926,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of PerfSlot.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -48003,7 +48003,7 @@ namespace Energistics.DataAccess.WITSML200
         }
 
         /// <summary>
-        /// Name property
+        /// A string representing the name of property.
         /// </summary>
 		[StringLength(64)]
         [Description("A string representing the name of property.")]
@@ -48021,7 +48021,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameField; 
 
         /// <summary>
-        /// Value property
+        /// A value string representing the units of measure of the value.
         /// </summary>
 		[StringLength(2000)]
         [Description("A value string representing the units of measure of the value.")]
@@ -48039,7 +48039,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of ExtPropNameValue.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -48962,7 +48962,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<PerfHole> HoleAsManufacturedField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Equipment.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -49450,7 +49450,7 @@ namespace Energistics.DataAccess.WITSML200
         private EventInfo EventHistoryField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of PerforationSet.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -49790,7 +49790,7 @@ namespace Energistics.DataAccess.WITSML200
         private DownholeString ParentStringField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of DownholeString.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -49846,7 +49846,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// NameAdd property
+        /// Additive name.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -49865,7 +49865,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameAddField; 
 
         /// <summary>
-        /// TypeAdd property
+        /// Additive type or function (e.g., retarder, visosifier, weighting agent).
         /// </summary>
 		[StringLength(64)]
         [Description("Additive type or function (e.g., retarder, visosifier, weighting agent).")]
@@ -49883,7 +49883,7 @@ namespace Energistics.DataAccess.WITSML200
         private String TypeAddField; 
 
         /// <summary>
-        /// FormAdd property
+        /// Wet or dry.
         /// </summary>
 		[StringLength(64)]
         [Description("Wet or dry.")]
@@ -49901,7 +49901,7 @@ namespace Energistics.DataAccess.WITSML200
         private String FormAddField; 
 
         /// <summary>
-        /// DensAdd property
+        /// Additive density.
         /// </summary>
 		[Description("Additive density.")]
         [ComponentElement]
@@ -49919,7 +49919,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerVolumeMeasure DensAddField; 
 
         /// <summary>
-        /// Additive property
+        /// Additive amount.
         /// </summary>
 		[Required]
         [Description("Additive amount.")]
@@ -49938,7 +49938,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassMeasure AdditiveField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -49968,7 +49968,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for the additive. 
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -51380,7 +51380,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<Rheometer> RheometerField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this cementing fluid.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -51531,7 +51531,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<RheometerViscosity> ViscosityField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Rheometer.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -51587,7 +51587,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Speed property
+        /// Rotational speed of the rheometer, typically in RPM.
         /// </summary>
 		[Required]
         [Description("Rotational speed of the rheometer, typically in RPM.")]
@@ -51606,7 +51606,7 @@ namespace Energistics.DataAccess.WITSML200
         private AngularVelocityMeasure SpeedField; 
 
         /// <summary>
-        /// Viscosity property
+        /// The raw reading from a rheometer. This could be , but is not necessarily, a viscosity.
         /// </summary>
 		[Required]
         [Description("The raw reading from a rheometer. This could be , but is not necessarily, a viscosity.")]
@@ -51624,7 +51624,7 @@ namespace Energistics.DataAccess.WITSML200
         private Double? ViscosityField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of RheometerViscosity.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -51680,7 +51680,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// FluidReferenceId property
+        /// UUID feference to a fluid used in CementJob.
         /// </summary>
 		[Required]
         [RegularExpression("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
@@ -51699,7 +51699,7 @@ namespace Energistics.DataAccess.WITSML200
         private String FluidReferenceIdField; 
 
         /// <summary>
-        /// RatioFluidExcess property
+        /// The ratio of excess fluid to total fluid pumped during the step.
         /// </summary>
 		[Description("The ratio of excess fluid to total fluid pumped during the step.")]
         [ComponentElement]
@@ -51717,7 +51717,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure RatioFluidExcessField; 
 
         /// <summary>
-        /// ETimPump property
+        /// The duration of the fluid pumping.
         /// </summary>
 		[Description("The duration of the fluid pumping.")]
         [ComponentElement]
@@ -51735,7 +51735,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure ETimPumpField; 
 
         /// <summary>
-        /// RatePump property
+        /// Rate at which the fluid is pumped. 0 means it is a pause.
         /// </summary>
 		[Description("Rate at which the fluid is pumped. 0 means it is a pause.")]
         [ComponentElement]
@@ -51753,7 +51753,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure RatePumpField; 
 
         /// <summary>
-        /// VolPump property
+        /// Volume pumped = eTimPump * ratePump.
         /// </summary>
 		[Description("Volume pumped = eTimPump * ratePump.")]
         [ComponentElement]
@@ -51771,7 +51771,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolPumpField; 
 
         /// <summary>
-        /// StrokePump property
+        /// Number of pump strokes for the fluid to be pumped (assumes the pump output is known).
         /// </summary>
 		[Description("Number of pump strokes for the fluid to be pumped (assumes the pump output is known).")]
 		[XmlElement("StrokePump")]
@@ -51806,7 +51806,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean StrokePumpSpecifiedField; 
 
         /// <summary>
-        /// PresBack property
+        /// Back pressure applied during the pumping stage.
         /// </summary>
 		[Description("Back pressure applied during the pumping stage.")]
         [ComponentElement]
@@ -51824,7 +51824,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresBackField; 
 
         /// <summary>
-        /// ETimShutdown property
+        /// The duration of the shutdown event.
         /// </summary>
 		[Description("The duration of the shutdown event.")]
         [ComponentElement]
@@ -51842,7 +51842,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure ETimShutdownField; 
 
         /// <summary>
-        /// Comments property
+        /// Comments and remarks.
         /// </summary>
 		[StringLength(2000)]
         [Description("Comments and remarks.")]
@@ -51860,7 +51860,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CommentsField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this pump schedule step.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -52009,7 +52009,7 @@ namespace Energistics.DataAccess.WITSML200
         private WellboreFluidLocation? LocationTypeField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of FluidLocation.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -53258,7 +53258,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// DTimMixStart property
+        /// Date and time when mixing of cement started.
         /// </summary>
 		[Description("Date and time when mixing of cement started.")]
 		[XmlElement("DTimMixStart")]
@@ -53275,7 +53275,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimMixStartField; 
 
         /// <summary>
-        /// DTimPumpStart property
+        /// Date and time when pumping cement started.
         /// </summary>
 		[Description("Date and time when pumping cement started.")]
 		[XmlElement("DTimPumpStart")]
@@ -53292,7 +53292,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimPumpStartField; 
 
         /// <summary>
-        /// DTimPumpEnd property
+        /// Date and time when pumping cement ended.
         /// </summary>
 		[Description("Date and time when pumping cement ended.")]
 		[XmlElement("DTimPumpEnd")]
@@ -53309,7 +53309,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimPumpEndField; 
 
         /// <summary>
-        /// DTimDisplaceStart property
+        /// Date and time when displacing of cement started.
         /// </summary>
 		[Description("Date and time when displacing of cement started.")]
 		[XmlElement("DTimDisplaceStart")]
@@ -53326,7 +53326,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimDisplaceStartField; 
 
         /// <summary>
-        /// PresBreakDown property
+        /// Breakdown pressure.
         /// </summary>
 		[Description("Breakdown pressure.")]
         [ComponentElement]
@@ -53344,7 +53344,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresBreakDownField; 
 
         /// <summary>
-        /// FlowrateBreakDown property
+        /// Breakdown rate.
         /// </summary>
 		[Description("Breakdown rate.")]
         [ComponentElement]
@@ -53362,7 +53362,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure FlowrateBreakDownField; 
 
         /// <summary>
-        /// FlowrateDisplaceAv property
+        /// Average displacement rate.
         /// </summary>
 		[Description("Average displacement rate.")]
         [ComponentElement]
@@ -53380,7 +53380,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure FlowrateDisplaceAvField; 
 
         /// <summary>
-        /// FlowrateDisplaceMx property
+        /// Maximum displacement rate.
         /// </summary>
 		[Description("Maximum displacement rate.")]
         [ComponentElement]
@@ -53398,7 +53398,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure FlowrateDisplaceMxField; 
 
         /// <summary>
-        /// PresSqueezeAv property
+        /// Squeeze pressure average.
         /// </summary>
 		[Description("Squeeze pressure average.")]
         [ComponentElement]
@@ -53416,7 +53416,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresSqueezeAvField; 
 
         /// <summary>
-        /// PresSqueezeEnd property
+        /// Squeeze pressure final.
         /// </summary>
 		[Description("Squeeze pressure final.")]
         [ComponentElement]
@@ -53434,7 +53434,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresSqueezeEndField; 
 
         /// <summary>
-        /// PresSqueezeHeld property
+        /// Squeeze pressure held. Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Squeeze pressure held.  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("PresSqueezeHeld")]
@@ -53469,7 +53469,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean PresSqueezeHeldSpecifiedField; 
 
         /// <summary>
-        /// ETimMudCirculation property
+        /// Elapsed time of mud circulation before the job/stage.
         /// </summary>
 		[Description("Elapsed time of mud circulation before the job/stage.")]
         [ComponentElement]
@@ -53487,7 +53487,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure ETimMudCirculationField; 
 
         /// <summary>
-        /// PresSqueeze property
+        /// Squeeze pressure left on pipe.
         /// </summary>
 		[Description("Squeeze pressure left on pipe.")]
         [ComponentElement]
@@ -53505,7 +53505,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresSqueezeField; 
 
         /// <summary>
-        /// FlowrateSqueezeAv property
+        /// Squeeze job average rate.
         /// </summary>
 		[Description("Squeeze job average rate.")]
         [ComponentElement]
@@ -53523,7 +53523,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure FlowrateSqueezeAvField; 
 
         /// <summary>
-        /// FlowrateSqueezeMx property
+        /// Squeeze job maximum rate.
         /// </summary>
 		[Description("Squeeze job maximum rate.")]
         [ComponentElement]
@@ -53541,7 +53541,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure FlowrateSqueezeMxField; 
 
         /// <summary>
-        /// FlowrateEnd property
+        /// Final displacement pump rate.
         /// </summary>
 		[Description("Final displacement pump rate.")]
         [ComponentElement]
@@ -53559,7 +53559,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure FlowrateEndField; 
 
         /// <summary>
-        /// FlowratePumpStart property
+        /// Pump rate at the start of the job.
         /// </summary>
 		[Description("Pump rate at the start of the job.")]
         [ComponentElement]
@@ -53577,7 +53577,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure FlowratePumpStartField; 
 
         /// <summary>
-        /// FlowratePumpEnd property
+        /// Pump rate at the end of the job.
         /// </summary>
 		[Description("Pump rate at the end of the job.")]
         [ComponentElement]
@@ -53595,7 +53595,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure FlowratePumpEndField; 
 
         /// <summary>
-        /// VisFunnelMud property
+        /// Funnel viscosity in seconds (in hole at start of job/stage).
         /// </summary>
 		[Description("Funnel viscosity in seconds (in hole at start of job/stage).")]
         [ComponentElement]
@@ -53613,7 +53613,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure VisFunnelMudField; 
 
         /// <summary>
-        /// PlugBumped property
+        /// Plug bumped? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Plug bumped? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("PlugBumped")]
@@ -53648,7 +53648,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean PlugBumpedSpecifiedField; 
 
         /// <summary>
-        /// SqueezeObtained property
+        /// Squeeze obtained. Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Squeeze obtained.  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("SqueezeObtained")]
@@ -53683,7 +53683,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean SqueezeObtainedSpecifiedField; 
 
         /// <summary>
-        /// PresPriorBump property
+        /// Pressure before bumping plug / pressure at the end of the displacement.
         /// </summary>
 		[Description("Pressure before bumping plug / pressure at the end of  the displacement.")]
         [ComponentElement]
@@ -53701,7 +53701,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresPriorBumpField; 
 
         /// <summary>
-        /// FloatHeld property
+        /// Float held? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Float held?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("FloatHeld")]
@@ -53736,7 +53736,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean FloatHeldSpecifiedField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of CementStageReport
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -53809,7 +53809,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// CementEngr property
+        /// Cementing engineer.
         /// </summary>
 		[StringLength(64)]
         [Description("Cementing engineer.")]
@@ -53827,7 +53827,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CementEngrField; 
 
         /// <summary>
-        /// ETimWaitingOnCement property
+        /// Duration for waiting on cement to set.
         /// </summary>
 		[Description("Duration for waiting on cement to set.")]
         [ComponentElement]
@@ -53845,7 +53845,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure ETimWaitingOnCementField; 
 
         /// <summary>
-        /// PlugInterval property
+        /// If plug used, measured depth interval between the top and base of the plug.
         /// </summary>
 		[Description("If plug used,  measured depth interval between the top and base of the plug.")]
         [ComponentElement]
@@ -53863,7 +53863,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval PlugIntervalField; 
 
         /// <summary>
-        /// MdHole property
+        /// Measured depth at the bottom of the hole.
         /// </summary>
 		[Description("Measured depth at the bottom of  the hole.")]
         [ComponentElement]
@@ -53881,7 +53881,7 @@ namespace Energistics.DataAccess.WITSML200
         private MeasuredDepthCoord MdHoleField; 
 
         /// <summary>
-        /// Contractor property
+        /// Name of cementing contractor.
         /// </summary>
 		[StringLength(64)]
         [Description("Name of cementing contractor.")]
@@ -53899,7 +53899,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ContractorField; 
 
         /// <summary>
-        /// RpmPipe property
+        /// Pipe rotation rate (commonly in rotations per minute (RPM)).
         /// </summary>
 		[Description("Pipe rotation rate (commonly in rotations per minute (RPM)).")]
         [ComponentElement]
@@ -53917,7 +53917,7 @@ namespace Energistics.DataAccess.WITSML200
         private AngularVelocityMeasure RpmPipeField; 
 
         /// <summary>
-        /// TqInitPipeRot property
+        /// Pipe rotation: initial torque.
         /// </summary>
 		[Description("Pipe rotation: initial torque.")]
         [ComponentElement]
@@ -53935,7 +53935,7 @@ namespace Energistics.DataAccess.WITSML200
         private MomentOfForceMeasure TqInitPipeRotField; 
 
         /// <summary>
-        /// TqPipeAv property
+        /// Pipe rotation: average torque.
         /// </summary>
 		[Description("Pipe rotation: average torque.")]
         [ComponentElement]
@@ -53953,7 +53953,7 @@ namespace Energistics.DataAccess.WITSML200
         private MomentOfForceMeasure TqPipeAvField; 
 
         /// <summary>
-        /// TqPipeMx property
+        /// Pipe rotation: maximum torque.
         /// </summary>
 		[Description("Pipe rotation: maximum torque.")]
         [ComponentElement]
@@ -53971,7 +53971,7 @@ namespace Energistics.DataAccess.WITSML200
         private MomentOfForceMeasure TqPipeMxField; 
 
         /// <summary>
-        /// OverPull property
+        /// String-up weight during reciprocation.
         /// </summary>
 		[Description("String-up weight during reciprocation.")]
         [ComponentElement]
@@ -53989,7 +53989,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForceMeasure OverPullField; 
 
         /// <summary>
-        /// SlackOff property
+        /// String-down weight during reciprocation.
         /// </summary>
 		[Description("String-down weight during reciprocation.")]
         [ComponentElement]
@@ -54007,7 +54007,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForceMeasure SlackOffField; 
 
         /// <summary>
-        /// RpmPipeRecip property
+        /// Pipe reciprocation (RPM).
         /// </summary>
 		[Description("Pipe reciprocation (RPM).")]
         [ComponentElement]
@@ -54025,7 +54025,7 @@ namespace Energistics.DataAccess.WITSML200
         private AngularVelocityMeasure RpmPipeRecipField; 
 
         /// <summary>
-        /// LenPipeRecipStroke property
+        /// Pipe reciprocation: stroke length.
         /// </summary>
 		[Description("Pipe reciprocation: stroke length.")]
         [ComponentElement]
@@ -54043,7 +54043,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure LenPipeRecipStrokeField; 
 
         /// <summary>
-        /// Reciprocating property
+        /// Is the pipe being reciprocated (raised and lowered)? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Is the pipe being reciprocated (raised and lowered)?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("Reciprocating")]
@@ -54721,7 +54721,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<DataObjectReference> BhaRunField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier of this WbGeometrySection within the WbGeometry object.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -54815,7 +54815,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// ChannelReference property
+        /// The channel refers to another Energistics data object.
         /// </summary>
 		[Required]
         [Description("The channel refers to another Energistics data object.")]
@@ -54834,7 +54834,7 @@ namespace Energistics.DataAccess.WITSML200
         private DataObjectReference ChannelReferenceField; 
 
         /// <summary>
-        /// DataValue property
+        /// A free-form format to specify the data value.
         /// </summary>
 		[Required]
         [Description("A free-form format to specify the data value.")]
@@ -54869,7 +54869,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// ObjectReference property
+        /// The context object points to another Energistics data object.
         /// </summary>
 		[Required]
         [Description("The context object points to another Energistics data object.")]
@@ -54888,7 +54888,7 @@ namespace Energistics.DataAccess.WITSML200
         private DataObjectReference ObjectReferenceField; 
 
         /// <summary>
-        /// SubObjectReference property
+        /// If the reference is to a sub-object in a growing object (e.g., a WellboreGeometry section), then this must contain the UID of the growing part.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -54924,7 +54924,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// StartIndex property
+        /// When the log header defines the direction as: - "Increasing", the endIndex is the ending (maximum) index value at which the last non-null data point is located. - “Decreasing”, the endIndex is the ending (minimum) index value at which the last non-null data point is located.
         /// </summary>
 		[Required]
         [Description("When the log header defines the direction as:   - \"Increasing\", the endIndex is the ending (maximum) index value at which the last non-null data point is located.  -  “Decreasing”, the endIndex is the ending (minimum) index value at which the last non-null data point is located.")]
@@ -54942,7 +54942,7 @@ namespace Energistics.DataAccess.WITSML200
         private AbstractIndexValue StartIndexField; 
 
         /// <summary>
-        /// EndIndex property
+        /// When the log header defines the direction as: - "Increasing", the startIndex is the starting (minimum) index value at which the first non-null data point is located. - "Decreasing", the startIndex is the starting (maximum) index value at which the first non-null data point is located.
         /// </summary>
 		[Required]
         [Description("When the log header defines the direction as:  - \"Increasing\", the startIndex is the starting (minimum) index value at which the first non-null data point is located.  - \"Decreasing\", the startIndex is the starting (maximum) index value at which the first non-null data point is located.")]
@@ -55016,7 +55016,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Depth property
+        /// Used to specify the channel start and end index.
         /// </summary>
 		[Required]
         [Description("Used to specify the channel start and end index.")]
@@ -55051,7 +55051,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Time property
+        /// Used to specify the channel start and end index.
         /// </summary>
 		[Required]
         [Description("Used to specify the channel start and end index.")]
@@ -55086,7 +55086,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Pass property
+        /// The pass number. Increase the pass number each time the tool direction changes twice.
         /// </summary>
 		[Required]
         [Description("The pass number. Increase the pass number each time the tool direction changes twice.")]
@@ -55104,7 +55104,7 @@ namespace Energistics.DataAccess.WITSML200
         private Int32? PassField; 
 
         /// <summary>
-        /// Direction property
+        /// 0 = down (increasing depth) 1= up (decreasing depth) Changes each time the logging tool direction changes. When a log starts from the bottom, start with pass = 0, direction = 1. When you get to the top of the interval and start down again, change the pass.
         /// </summary>
 		[Required]
         [Description("0 = down (increasing depth) 1= up (decreasing depth) Changes each time the logging tool direction changes.  When a log starts from the bottom, start with pass = 0, direction = 1.  When you get to the top of the interval and start down again, change the pass.")]
@@ -55122,7 +55122,7 @@ namespace Energistics.DataAccess.WITSML200
         private Int32? DirectionField; 
 
         /// <summary>
-        /// Depth property
+        /// The measured depth of the point.
         /// </summary>
 		[Required]
         [Description("The measured depth of the point.")]
@@ -55157,7 +55157,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Data property
+        /// The data blob in JSON form. This attribute lets you embed the bulk data in a single file with the xml, to avoid the issues that arise when splitting data across multiple files. BUSINESS RULE: Either this element or the FileUri element must be present.
         /// </summary>
 		[Description("The data blob in JSON form. This attribute lets you embed the bulk data in a single file with the xml, to avoid the issues that arise when splitting data across multiple files. BUSINESS RULE: Either this element or the FileUri element must be present.")]
 		[XmlElement("Data", Type=typeof(XmlCDataSection))]
@@ -55174,7 +55174,7 @@ namespace Energistics.DataAccess.WITSML200
         private XmlCDataSection DataField; 
 
         /// <summary>
-        /// FileUri property
+        /// The URI of a file containing the bulk data. If this field is non-null, then the data field is ignored. For files written to disk, this should normally contain a simple file name in relative URI form. For example, if an application writes a log file to disk, it might write the xml as abc.xml, and the bulk data as abc.avro. In this case, the value of this element would be './abc.avro'. BUSINESS RULE: Either this element or the Data element must be present. 
         /// </summary>
 		[Description("The URI of a file containing the bulk data. If this field is non-null, then the data field is ignored. For files written to disk, this should normally contain a simple file name in relative URI form. For example, if an application writes a log file to disk, it might write the xml as abc.xml, and the bulk data as abc.avro. In this case, the value of this element would be './abc.avro'.  BUSINESS RULE: Either this element or the Data element must be present.")]
 		[XmlElement("FileUri", DataType="anyURI")]
@@ -55227,7 +55227,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Name property
+        /// The name of the point metadata.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -55246,7 +55246,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameField; 
 
         /// <summary>
-        /// EtpDataType property
+        /// The underlying ETP data type of the point metadata.
         /// </summary>
 		[Required]
         [Description("The underlying ETP data type of the point metadata.")]
@@ -55264,7 +55264,7 @@ namespace Energistics.DataAccess.WITSML200
         private EtpDataType? EtpDataTypeField; 
 
         /// <summary>
-        /// Description property
+        /// Free format description of the point metadata.
         /// </summary>
 		[Required]
         [StringLength(2000)]
@@ -55413,7 +55413,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// AxisStart property
+        /// Value of the initial entry in the list of axis index values.
         /// </summary>
 		[Required]
         [Description("Value of the initial entry in the list of axis index values.")]
@@ -55431,7 +55431,7 @@ namespace Energistics.DataAccess.WITSML200
         private Double? AxisStartField; 
 
         /// <summary>
-        /// AxisSpacing property
+        /// The increment to be used to fill out the list of the log channel axis index values.
         /// </summary>
 		[Required]
         [Description("The increment to be used to fill out the list of the log channel axis index values.")]
@@ -55449,7 +55449,7 @@ namespace Energistics.DataAccess.WITSML200
         private Double? AxisSpacingField; 
 
         /// <summary>
-        /// AxisCount property
+        /// The count of elements along this axis of the array.
         /// </summary>
 		[Required]
         [Description("The count of elements along this axis of the array.")]
@@ -55467,7 +55467,7 @@ namespace Energistics.DataAccess.WITSML200
         private Int64? AxisCountField; 
 
         /// <summary>
-        /// AxisName property
+        /// The name of the array axis.
         /// </summary>
 		[StringLength(64)]
         [Description("The name of the array axis.")]
@@ -55485,7 +55485,7 @@ namespace Energistics.DataAccess.WITSML200
         private String AxisNameField; 
 
         /// <summary>
-        /// AxisPropertyKind property
+        /// The property type by which the array axis is classified. Like "measured depth" or "elapsed time".
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -55504,7 +55504,7 @@ namespace Energistics.DataAccess.WITSML200
         private String AxisPropertyKindField; 
 
         /// <summary>
-        /// AxisUom property
+        /// A string representing the units of measure of the axis values.
         /// </summary>
 		[Required]
         [Description("A string representing the units of measure of the axis values.")]
@@ -55522,7 +55522,7 @@ namespace Energistics.DataAccess.WITSML200
         private UnitOfMeasure? AxisUomField; 
 
 		/// <summary>
-        /// uid property
+        /// A unique identifier for an instance of a log channel axis
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -55578,7 +55578,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// IndexType property
+        /// The type of index (time, depth, etc.).
         /// </summary>
 		[Required]
         [Description("The type of index (time, depth, etc.).")]
@@ -55596,7 +55596,7 @@ namespace Energistics.DataAccess.WITSML200
         private ChannelIndexType? IndexTypeField; 
 
         /// <summary>
-        /// Uom property
+        /// The unit of measure of the index. Must be one of the units allowed for the specified IndexType (i.e., time or distance).
         /// </summary>
 		[Required]
         [Description("The unit of measure of the index. Must be one of the units allowed for the specified IndexType (i.e., time or distance).")]
@@ -55614,7 +55614,7 @@ namespace Energistics.DataAccess.WITSML200
         private UnitOfMeasure? UomField; 
 
         /// <summary>
-        /// Direction property
+        /// The direction of the index, either increasing or decreasing. Index direction may not change within the life of a channel.
         /// </summary>
 		[Required]
         [Description("The direction of the index, either increasing or decreasing. Index direction may not change within the life of a channel.")]
@@ -55632,7 +55632,7 @@ namespace Energistics.DataAccess.WITSML200
         private IndexDirection? DirectionField; 
 
         /// <summary>
-        /// Mnemonic property
+        /// The mnemonic for the index.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -55651,7 +55651,7 @@ namespace Energistics.DataAccess.WITSML200
         private String MnemonicField; 
 
         /// <summary>
-        /// DatumReference property
+        /// For depth indexes, this contains the UID of the datum, in a channel's Well object, to which all of the index values are referenced.
         /// </summary>
 		[StringLength(64)]
         [Description("For depth indexes, this contains the UID of the datum, in a channel's Well object, to which all of the index values are referenced.")]
@@ -55705,7 +55705,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// ETimOpBit property
+        /// Operating time spent by bit for run. BUSINESS RULE: When reporting an actual as opposed to design, this is required.
         /// </summary>
 		[Description("Operating time spent by bit for run.  BUSINESS RULE: When reporting an actual as opposed to design, this is required.")]
         [ComponentElement]
@@ -55723,7 +55723,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure ETimOpBitField; 
 
         /// <summary>
-        /// MdHoleStart property
+        /// Measured depth at start of the run. 
         /// </summary>
 		[Description("Measured depth at start of the run.")]
         [ComponentElement]
@@ -55741,7 +55741,7 @@ namespace Energistics.DataAccess.WITSML200
         private MeasuredDepthCoord MdHoleStartField; 
 
         /// <summary>
-        /// MdHoleStop property
+        /// Measured depth at the end of the run.
         /// </summary>
 		[Required]
         [Description("Measured depth at the end of the run.")]
@@ -55760,7 +55760,7 @@ namespace Energistics.DataAccess.WITSML200
         private MeasuredDepthCoord MdHoleStopField; 
 
         /// <summary>
-        /// Tubular property
+        /// A pointer to the tubular assembly.
         /// </summary>
 		[StringLength(64)]
         [Description("A pointer to the tubular assembly.")]
@@ -55778,7 +55778,7 @@ namespace Energistics.DataAccess.WITSML200
         private String TubularField; 
 
         /// <summary>
-        /// HkldRot property
+        /// Hookload: rotating.
         /// </summary>
 		[Description("Hookload: rotating.")]
         [ComponentElement]
@@ -55796,7 +55796,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForceMeasure HkldRotField; 
 
         /// <summary>
-        /// OverPull property
+        /// Overpull = HkldUp - HkldRot
         /// </summary>
 		[Description("Overpull = HkldUp - HkldRot")]
         [ComponentElement]
@@ -55814,7 +55814,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForceMeasure OverPullField; 
 
         /// <summary>
-        /// SlackOff property
+        /// Slackoff = HkldRot - HkdDown.
         /// </summary>
 		[Description("Slackoff = HkldRot  - HkdDown.")]
         [ComponentElement]
@@ -55832,7 +55832,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForceMeasure SlackOffField; 
 
         /// <summary>
-        /// HkldUp property
+        /// Hookload when the string is moving up.
         /// </summary>
 		[Description("Hookload when the string is moving up.")]
         [ComponentElement]
@@ -55850,7 +55850,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForceMeasure HkldUpField; 
 
         /// <summary>
-        /// HkldDn property
+        /// Hookload when the string is moving down.
         /// </summary>
 		[Description("Hookload when the string is moving down.")]
         [ComponentElement]
@@ -55868,7 +55868,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForceMeasure HkldDnField; 
 
         /// <summary>
-        /// TqOnBotAv property
+        /// Average Torque: on bottom.
         /// </summary>
 		[Description("Average Torque: on bottom.")]
         [ComponentElement]
@@ -55886,7 +55886,7 @@ namespace Energistics.DataAccess.WITSML200
         private MomentOfForceMeasure TqOnBotAvField; 
 
         /// <summary>
-        /// TqOnBotMx property
+        /// Maximum torque: on bottom.
         /// </summary>
 		[Description("Maximum torque: on bottom.")]
         [ComponentElement]
@@ -55904,7 +55904,7 @@ namespace Energistics.DataAccess.WITSML200
         private MomentOfForceMeasure TqOnBotMxField; 
 
         /// <summary>
-        /// TqOnBotMn property
+        /// Minimum torque: on bottom.
         /// </summary>
 		[Description("Minimum torque: on bottom.")]
         [ComponentElement]
@@ -55922,7 +55922,7 @@ namespace Energistics.DataAccess.WITSML200
         private MomentOfForceMeasure TqOnBotMnField; 
 
         /// <summary>
-        /// TqOffBotAv property
+        /// Average torque: off bottom.
         /// </summary>
 		[Description("Average torque: off bottom.")]
         [ComponentElement]
@@ -55940,7 +55940,7 @@ namespace Energistics.DataAccess.WITSML200
         private MomentOfForceMeasure TqOffBotAvField; 
 
         /// <summary>
-        /// TqDhAv property
+        /// Average torque: downhole.
         /// </summary>
 		[Description("Average torque: downhole.")]
         [ComponentElement]
@@ -55958,7 +55958,7 @@ namespace Energistics.DataAccess.WITSML200
         private MomentOfForceMeasure TqDhAvField; 
 
         /// <summary>
-        /// WtAboveJar property
+        /// Weight of the string above the jars.
         /// </summary>
 		[Description("Weight of the string above the jars.")]
         [ComponentElement]
@@ -55976,7 +55976,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForceMeasure WtAboveJarField; 
 
         /// <summary>
-        /// WtBelowJar property
+        /// Weight of the string below the jars.
         /// </summary>
 		[Description("Weight  of the string below the jars.")]
         [ComponentElement]
@@ -55994,7 +55994,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForceMeasure WtBelowJarField; 
 
         /// <summary>
-        /// WtMud property
+        /// Drilling fluid density.
         /// </summary>
 		[Description("Drilling fluid density.")]
         [ComponentElement]
@@ -56012,7 +56012,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerVolumeMeasure WtMudField; 
 
         /// <summary>
-        /// FlowratePumpAv property
+        /// Average mud pump flow rate.
         /// </summary>
 		[Description("Average mud pump flow rate.")]
         [ComponentElement]
@@ -56030,7 +56030,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure FlowratePumpAvField; 
 
         /// <summary>
-        /// FlowratePumpMx property
+        /// Maximum mud pump flow rate.
         /// </summary>
 		[Description("Maximum mud pump flow rate.")]
         [ComponentElement]
@@ -56048,7 +56048,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure FlowratePumpMxField; 
 
         /// <summary>
-        /// FlowratePumpMn property
+        /// Minimum mud pump flow rate.
         /// </summary>
 		[Description("Minimum mud pump flow rate.")]
         [ComponentElement]
@@ -56066,7 +56066,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure FlowratePumpMnField; 
 
         /// <summary>
-        /// VelNozzleAv property
+        /// Bit nozzle average velocity.
         /// </summary>
 		[Description("Bit nozzle average velocity.")]
         [ComponentElement]
@@ -56084,7 +56084,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthPerTimeMeasure VelNozzleAvField; 
 
         /// <summary>
-        /// PowBit property
+        /// Bit hydraulic.
         /// </summary>
 		[Description("Bit hydraulic.")]
         [ComponentElement]
@@ -56102,7 +56102,7 @@ namespace Energistics.DataAccess.WITSML200
         private PowerMeasure PowBitField; 
 
         /// <summary>
-        /// PresDropBit property
+        /// Pressure drop in bit.
         /// </summary>
 		[Description("Pressure drop in bit.")]
         [ComponentElement]
@@ -56120,7 +56120,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresDropBitField; 
 
         /// <summary>
-        /// CTimHold property
+        /// Time spent on hold from start of bit run.
         /// </summary>
 		[Description("Time spent on hold from start of bit run.")]
         [ComponentElement]
@@ -56138,7 +56138,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure CTimHoldField; 
 
         /// <summary>
-        /// CTimSteering property
+        /// Time spent steering from start of bit run.
         /// </summary>
 		[Description("Time spent steering from start of bit run.")]
         [ComponentElement]
@@ -56156,7 +56156,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure CTimSteeringField; 
 
         /// <summary>
-        /// CTimDrillRot property
+        /// Time spent rotary drilling from start of bit run.
         /// </summary>
 		[Description("Time spent rotary drilling from start of bit run.")]
         [ComponentElement]
@@ -56174,7 +56174,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure CTimDrillRotField; 
 
         /// <summary>
-        /// CTimDrillSlid property
+        /// Time spent slide drilling from start of bit run.
         /// </summary>
 		[Description("Time spent slide drilling from start of bit run.")]
         [ComponentElement]
@@ -56192,7 +56192,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure CTimDrillSlidField; 
 
         /// <summary>
-        /// CTimCirc property
+        /// Time spent circulating from start of bit run.
         /// </summary>
 		[Description("Time spent circulating from start of bit run.")]
         [ComponentElement]
@@ -56210,7 +56210,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure CTimCircField; 
 
         /// <summary>
-        /// CTimReam property
+        /// Time spent reaming from start of bit run.
         /// </summary>
 		[Description("Time spent reaming from start of bit run.")]
         [ComponentElement]
@@ -56228,7 +56228,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure CTimReamField; 
 
         /// <summary>
-        /// DistDrillRot property
+        /// Distance drilled - rotating.
         /// </summary>
 		[Description("Distance drilled - rotating.")]
         [ComponentElement]
@@ -56246,7 +56246,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure DistDrillRotField; 
 
         /// <summary>
-        /// DistDrillSlid property
+        /// Distance drilled - sliding
         /// </summary>
 		[Description("Distance drilled - sliding")]
         [ComponentElement]
@@ -56264,7 +56264,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure DistDrillSlidField; 
 
         /// <summary>
-        /// DistReam property
+        /// Distance reamed.
         /// </summary>
 		[Description("Distance reamed.")]
         [ComponentElement]
@@ -56282,7 +56282,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure DistReamField; 
 
         /// <summary>
-        /// DistHold property
+        /// Distance covered while holding angle with a steerable drilling assembly.
         /// </summary>
 		[Description("Distance covered while holding angle with a steerable drilling assembly.")]
         [ComponentElement]
@@ -56300,7 +56300,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure DistHoldField; 
 
         /// <summary>
-        /// DistSteering property
+        /// Distance covered while actively steering with a steerable drilling assembly.
         /// </summary>
 		[Description("Distance covered while actively steering with a steerable drilling assembly.")]
         [ComponentElement]
@@ -56318,7 +56318,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure DistSteeringField; 
 
         /// <summary>
-        /// RpmAv property
+        /// Average turn rate (commonly in rpm) through Interval.
         /// </summary>
 		[Description("Average turn rate (commonly in rpm) through Interval.")]
         [ComponentElement]
@@ -56336,7 +56336,7 @@ namespace Energistics.DataAccess.WITSML200
         private AngularVelocityMeasure RpmAvField; 
 
         /// <summary>
-        /// RpmMx property
+        /// Maximum turn rate (commonly in rpm).
         /// </summary>
 		[Description("Maximum turn rate (commonly in rpm).")]
         [ComponentElement]
@@ -56354,7 +56354,7 @@ namespace Energistics.DataAccess.WITSML200
         private AngularVelocityMeasure RpmMxField; 
 
         /// <summary>
-        /// RpmMn property
+        /// Minimum turn rate (commonly in rpm).
         /// </summary>
 		[Description("Minimum turn rate (commonly in rpm).")]
         [ComponentElement]
@@ -56372,7 +56372,7 @@ namespace Energistics.DataAccess.WITSML200
         private AngularVelocityMeasure RpmMnField; 
 
         /// <summary>
-        /// RpmAvDh property
+        /// Average turn rate (commonly in rpm) downhole.
         /// </summary>
 		[Description("Average turn rate (commonly in rpm) downhole.")]
         [ComponentElement]
@@ -56390,7 +56390,7 @@ namespace Energistics.DataAccess.WITSML200
         private AngularVelocityMeasure RpmAvDhField; 
 
         /// <summary>
-        /// RopAv property
+        /// Average rate of penetration through Interval.
         /// </summary>
 		[Description("Average rate of penetration through Interval.")]
         [ComponentElement]
@@ -56408,7 +56408,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthPerTimeMeasure RopAvField; 
 
         /// <summary>
-        /// RopMx property
+        /// Maximum rate of penetration through Interval.
         /// </summary>
 		[Description("Maximum rate of penetration through Interval.")]
         [ComponentElement]
@@ -56426,7 +56426,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthPerTimeMeasure RopMxField; 
 
         /// <summary>
-        /// RopMn property
+        /// Minimum rate of penetration through Interval.
         /// </summary>
 		[Description("Minimum rate of penetration through Interval.")]
         [ComponentElement]
@@ -56444,7 +56444,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthPerTimeMeasure RopMnField; 
 
         /// <summary>
-        /// WobAv property
+        /// Surface weight on bit - average through interval.
         /// </summary>
 		[Description("Surface weight on bit - average through interval.")]
         [ComponentElement]
@@ -56462,7 +56462,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForceMeasure WobAvField; 
 
         /// <summary>
-        /// WobMx property
+        /// Weight on bit - maximum.
         /// </summary>
 		[Description("Weight on bit - maximum.")]
         [ComponentElement]
@@ -56480,7 +56480,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForceMeasure WobMxField; 
 
         /// <summary>
-        /// WobMn property
+        /// Weight on bit - minimum.
         /// </summary>
 		[Description("Weight on bit - minimum.")]
         [ComponentElement]
@@ -56498,7 +56498,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForceMeasure WobMnField; 
 
         /// <summary>
-        /// WobAvDh property
+        /// Weight on bit - average downhole.
         /// </summary>
 		[Description("Weight on bit - average downhole.")]
         [ComponentElement]
@@ -56516,7 +56516,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForceMeasure WobAvDhField; 
 
         /// <summary>
-        /// ReasonTrip property
+        /// Reason for trip.
         /// </summary>
 		[StringLength(2000)]
         [Description("Reason for trip.")]
@@ -56534,7 +56534,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ReasonTripField; 
 
         /// <summary>
-        /// ObjectiveBha property
+        /// Objective of bottom hole assembly.
         /// </summary>
 		[StringLength(2000)]
         [Description("Objective of bottom hole assembly.")]
@@ -56552,7 +56552,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ObjectiveBhaField; 
 
         /// <summary>
-        /// AziTop property
+        /// Azimuth at start measured depth.
         /// </summary>
 		[Description("Azimuth at start measured depth.")]
         [ComponentElement]
@@ -56570,7 +56570,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure AziTopField; 
 
         /// <summary>
-        /// AziBottom property
+        /// Azimuth at stop measured depth.
         /// </summary>
 		[Description("Azimuth at stop measured depth.")]
         [ComponentElement]
@@ -56588,7 +56588,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure AziBottomField; 
 
         /// <summary>
-        /// InclStart property
+        /// Inclination at start measured depth.
         /// </summary>
 		[Description("Inclination at start measured depth.")]
         [ComponentElement]
@@ -56606,7 +56606,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure InclStartField; 
 
         /// <summary>
-        /// InclMx property
+        /// Maximum inclination.
         /// </summary>
 		[Description("Maximum inclination.")]
         [ComponentElement]
@@ -56624,7 +56624,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure InclMxField; 
 
         /// <summary>
-        /// InclMn property
+        /// Minimum inclination.
         /// </summary>
 		[Description("Minimum inclination.")]
         [ComponentElement]
@@ -56642,7 +56642,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure InclMnField; 
 
         /// <summary>
-        /// InclStop property
+        /// Inclination at stop measured depth.
         /// </summary>
 		[Description("Inclination at stop measured depth.")]
         [ComponentElement]
@@ -56660,7 +56660,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure InclStopField; 
 
         /// <summary>
-        /// TempMudDhMx property
+        /// Maximum mud temperature downhole during run.
         /// </summary>
 		[Description("Maximum mud temperature downhole during run.")]
         [ComponentElement]
@@ -56678,7 +56678,7 @@ namespace Energistics.DataAccess.WITSML200
         private ThermodynamicTemperatureMeasure TempMudDhMxField; 
 
         /// <summary>
-        /// PresPumpAv property
+        /// Average pump pressure.
         /// </summary>
 		[Description("Average pump pressure.")]
         [ComponentElement]
@@ -56696,7 +56696,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresPumpAvField; 
 
         /// <summary>
-        /// FlowrateBit property
+        /// Flow rate at bit.
         /// </summary>
 		[Description("Flow rate at bit.")]
         [ComponentElement]
@@ -56714,7 +56714,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure FlowrateBitField; 
 
         /// <summary>
-        /// MudClass property
+        /// The class of the drilling fluid.
         /// </summary>
 		[Description("The class of the drilling fluid.")]
 		[XmlElement("MudClass")]
@@ -56749,7 +56749,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean MudClassSpecifiedField; 
 
         /// <summary>
-        /// MudSubClass property
+        /// Mud Subtype at event occurrence.
         /// </summary>
 		[Description("Mud Subtype at event occurrence.")]
 		[XmlElement("MudSubClass")]
@@ -56784,7 +56784,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean MudSubClassSpecifiedField; 
 
         /// <summary>
-        /// Comments property
+        /// Comments and remarks.
         /// </summary>
 		[StringLength(2000)]
         [Description("Comments and remarks.")]
@@ -56802,7 +56802,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CommentsField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -56832,7 +56832,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for the parameters
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -57074,7 +57074,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<AbstractWellLocation> LocationField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of DrillReportSurveyStation.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -57151,7 +57151,7 @@ namespace Energistics.DataAccess.WITSML200
         }
 
 		/// <summary>
-        /// dTim property
+        /// The timestamp of the time-qualified comment.
         /// </summary>
 		[Required]
         [Description("The timestamp of the time-qualified comment.")]
@@ -57223,7 +57223,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// ReadingKind property
+        /// Indicate if the reading was estimated or measured. 
         /// </summary>
 		[Required]
         [Description("Indicate if the reading was estimated or measured.")]
@@ -57241,7 +57241,7 @@ namespace Energistics.DataAccess.WITSML200
         private ReadingKind? ReadingKindField; 
 
         /// <summary>
-        /// EquivalentMudWeight property
+        /// The equivalent mud weight value of the pore pressure reading.
         /// </summary>
 		[Required]
         [Description("The equivalent mud weight value of the pore pressure reading.")]
@@ -57260,7 +57260,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerVolumeMeasure EquivalentMudWeightField; 
 
         /// <summary>
-        /// DTim property
+        /// Date and time at the reading was recorded.
         /// </summary>
 		[Description("Date and time at the reading was recorded.")]
 		[XmlElement("DTim")]
@@ -57277,7 +57277,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimField; 
 
         /// <summary>
-        /// Md property
+        /// Measured depth where the readings were recorded.
         /// </summary>
 		[Description("Measured depth where the readings were recorded.")]
         [ComponentElement]
@@ -57295,7 +57295,7 @@ namespace Energistics.DataAccess.WITSML200
         private MeasuredDepthCoord MdField; 
 
         /// <summary>
-        /// Tvd property
+        /// True vertical depth where the readings were recorded.
         /// </summary>
 		[Description("True vertical depth where the readings were recorded.")]
         [ComponentElement]
@@ -57313,7 +57313,7 @@ namespace Energistics.DataAccess.WITSML200
         private WellVerticalDepthCoord TvdField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -57343,7 +57343,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of DrillReportPorePressure.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -59042,7 +59042,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<Rheometer> RheometerField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Fluid.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -60317,7 +60317,7 @@ namespace Energistics.DataAccess.WITSML200
         private Cost CostDayMudField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of DrillReportStatusInfo.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -60396,7 +60396,7 @@ namespace Energistics.DataAccess.WITSML200
         }
 
 		/// <summary>
-        /// uom property
+        /// The unit of measure by which the datum is expressed.
         /// </summary>
 		[Required]
         [Description("The unit of measure by which the datum is expressed.")]
@@ -60415,7 +60415,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthUom uomField; 
 
 		/// <summary>
-        /// datum property
+        /// Defines the vertical datums associated with elevation, vertical depth, and measured depth coordinates.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -60658,7 +60658,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// DTim property
+        /// Date and time of the gas reading.
         /// </summary>
 		[Description("Date and time of the gas reading.")]
 		[XmlElement("DTim")]
@@ -60675,7 +60675,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimField; 
 
         /// <summary>
-        /// ReadingType property
+        /// Type of gas reading.
         /// </summary>
 		[Description("Type of gas reading.")]
 		[XmlElement("ReadingType")]
@@ -60710,7 +60710,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean ReadingTypeSpecifiedField; 
 
         /// <summary>
-        /// GasReadingMdInterval property
+        /// Measured depth interval over which the gas reading was conducted.
         /// </summary>
 		[Description("Measured depth interval over which the gas reading was conducted.")]
         [ComponentElement]
@@ -60728,7 +60728,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval GasReadingMdIntervalField; 
 
         /// <summary>
-        /// GasReadingTvdInterval property
+        /// True vertical depth interval over which the gas reading was conducted.
         /// </summary>
 		[Description("True vertical depth interval over which the gas reading was conducted.")]
         [ComponentElement]
@@ -60746,7 +60746,7 @@ namespace Energistics.DataAccess.WITSML200
         private TvdInterval GasReadingTvdIntervalField; 
 
         /// <summary>
-        /// GasHigh property
+        /// The highest gas reading.
         /// </summary>
 		[Description("The highest gas reading.")]
         [ComponentElement]
@@ -60764,7 +60764,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure GasHighField; 
 
         /// <summary>
-        /// GasLow property
+        /// The lowest gas reading.
         /// </summary>
 		[Description("The lowest gas reading.")]
         [ComponentElement]
@@ -60782,7 +60782,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure GasLowField; 
 
         /// <summary>
-        /// Meth property
+        /// Methane (C1) concentration.
         /// </summary>
 		[Description("Methane (C1) concentration.")]
         [ComponentElement]
@@ -60800,7 +60800,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure MethField; 
 
         /// <summary>
-        /// Eth property
+        /// Ethane (C2) concentration.
         /// </summary>
 		[Description("Ethane (C2) concentration.")]
         [ComponentElement]
@@ -60818,7 +60818,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure EthField; 
 
         /// <summary>
-        /// Prop property
+        /// Propane (C3) concentration.
         /// </summary>
 		[Description("Propane (C3) concentration.")]
         [ComponentElement]
@@ -60836,7 +60836,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure PropField; 
 
         /// <summary>
-        /// Ibut property
+        /// Iso-butane (iC4) concentration.
         /// </summary>
 		[Description("Iso-butane (iC4) concentration.")]
         [ComponentElement]
@@ -60854,7 +60854,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure IbutField; 
 
         /// <summary>
-        /// Nbut property
+        /// Nor-butane (nC4) concentration.
         /// </summary>
 		[Description("Nor-butane (nC4) concentration.")]
         [ComponentElement]
@@ -60872,7 +60872,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure NbutField; 
 
         /// <summary>
-        /// Ipent property
+        /// Iso-pentane (iC5) concentration.
         /// </summary>
 		[Description("Iso-pentane (iC5) concentration.")]
         [ComponentElement]
@@ -60890,7 +60890,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure IpentField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -60920,7 +60920,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of DrillReportGasReadingInfo. 
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -60976,7 +60976,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// DTimOpen property
+        /// The date and time at which the well perforation interval is opened.
         /// </summary>
 		[Description("The date and time at which the well perforation interval is opened.")]
 		[XmlElement("DTimOpen")]
@@ -60993,7 +60993,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimOpenField; 
 
         /// <summary>
-        /// DTimClose property
+        /// The date and time at which the well perforation interval is closed.
         /// </summary>
 		[Description("The date and time at which the well perforation interval is closed.")]
 		[XmlElement("DTimClose")]
@@ -61010,7 +61010,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimCloseField; 
 
         /// <summary>
-        /// PerforationMdInterval property
+        /// Measured depth interval between the top and the base of the perforations.
         /// </summary>
 		[Description("Measured depth interval between the top and the base of the perforations.")]
         [ComponentElement]
@@ -61028,7 +61028,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval PerforationMdIntervalField; 
 
         /// <summary>
-        /// PerforationTvdInterval property
+        /// True vertical depth interval between the top and the base of the perforations.
         /// </summary>
 		[Description("True vertical depth interval between the top and the base of the perforations.")]
         [ComponentElement]
@@ -61046,7 +61046,7 @@ namespace Energistics.DataAccess.WITSML200
         private TvdInterval PerforationTvdIntervalField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -61076,7 +61076,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of DrillReportPerfInfo.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -61132,7 +61132,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// DTim property
+        /// Date and time at which a preliminary zonation was established.
         /// </summary>
 		[Description("Date and time at which a preliminary zonation was established.")]
 		[XmlElement("DTim")]
@@ -61149,7 +61149,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimField; 
 
         /// <summary>
-        /// MdTop property
+        /// Measured depth at the top of the formation. 
         /// </summary>
 		[Description("Measured depth at the top of the formation.")]
         [ComponentElement]
@@ -61167,7 +61167,7 @@ namespace Energistics.DataAccess.WITSML200
         private MeasuredDepthCoord MdTopField; 
 
         /// <summary>
-        /// TvdTop property
+        /// True vertical depth at the top of the formation. 
         /// </summary>
 		[Description("True vertical depth at the top of the formation.")]
         [ComponentElement]
@@ -61185,7 +61185,7 @@ namespace Energistics.DataAccess.WITSML200
         private WellVerticalDepthCoord TvdTopField; 
 
         /// <summary>
-        /// Description property
+        /// A lithological description of the geological formation at the given depth.
         /// </summary>
 		[StringLength(2000)]
         [Description("A lithological description of the geological formation at the given depth.")]
@@ -61203,7 +61203,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DescriptionField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -61233,7 +61233,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of DrillReportStratInfo.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -61812,7 +61812,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ObjectAlias> ProprietaryCodeField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of DrillReportControlIncidentInfo.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -61868,7 +61868,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// DTim property
+        /// Date and time that the equipment failed.
         /// </summary>
 		[Description("Date and time that the equipment failed.")]
 		[XmlElement("DTim")]
@@ -61885,7 +61885,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimField; 
 
         /// <summary>
-        /// Md property
+        /// The measured depth of the operation end point where the failure happened.
         /// </summary>
 		[Description("The measured depth of the operation end point where the failure happened.")]
         [ComponentElement]
@@ -61903,7 +61903,7 @@ namespace Energistics.DataAccess.WITSML200
         private MeasuredDepthCoord MdField; 
 
         /// <summary>
-        /// Tvd property
+        /// The true vertical depth of the operation end point where failure the failure happened.
         /// </summary>
 		[Description("The true vertical depth of the  operation end point where failure the failure happened.")]
         [ComponentElement]
@@ -61921,7 +61921,7 @@ namespace Energistics.DataAccess.WITSML200
         private WellVerticalDepthCoord TvdField; 
 
         /// <summary>
-        /// EquipClass property
+        /// The classification of the equipment that failed.
         /// </summary>
 		[StringLength(64)]
         [Description("The classification of the equipment that failed.")]
@@ -61939,7 +61939,7 @@ namespace Energistics.DataAccess.WITSML200
         private String EquipClassField; 
 
         /// <summary>
-        /// ETimMissProduction property
+        /// The missed production time because of the equipment failure.
         /// </summary>
 		[Description("The missed production time because of the equipment failure.")]
         [ComponentElement]
@@ -61957,7 +61957,7 @@ namespace Energistics.DataAccess.WITSML200
         private TimeMeasure ETimMissProductionField; 
 
         /// <summary>
-        /// DTimRepair property
+        /// The date and time at which the production equipment was repaired and ready for production.
         /// </summary>
 		[Description("The date and time at which the production equipment was  repaired and ready for production.")]
 		[XmlElement("DTimRepair")]
@@ -61974,7 +61974,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimRepairField; 
 
         /// <summary>
-        /// Description property
+        /// A description of the equipment failure. 
         /// </summary>
 		[StringLength(2000)]
         [Description("A description of the equipment failure.")]
@@ -61992,7 +61992,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DescriptionField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -62022,7 +62022,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of DrillReportEquipFailureInfo.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -62078,7 +62078,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// DTim property
+        /// Date and time that the well test was completed.
         /// </summary>
 		[Description("Date and time that the well test was completed.")]
 		[XmlElement("DTim")]
@@ -62095,7 +62095,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimField; 
 
         /// <summary>
-        /// ShowMdInterval property
+        /// Measured depth interval over which the show appears.
         /// </summary>
 		[Description("Measured depth interval over which the show appears.")]
         [ComponentElement]
@@ -62113,7 +62113,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval ShowMdIntervalField; 
 
         /// <summary>
-        /// ShowTvdInterval property
+        /// True vertical depth interval over which the show appears.
         /// </summary>
 		[Description("True vertical depth interval over which the show appears.")]
         [ComponentElement]
@@ -62131,7 +62131,7 @@ namespace Energistics.DataAccess.WITSML200
         private TvdInterval ShowTvdIntervalField; 
 
         /// <summary>
-        /// Show property
+        /// A textual description of any shows in the interval.
         /// </summary>
 		[StringLength(2000)]
         [Description("A textual description of any shows in the interval.")]
@@ -62149,7 +62149,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ShowField; 
 
         /// <summary>
-        /// Lithology property
+        /// A geological/lithological description/evaluation of the interval.
         /// </summary>
 		[StringLength(2000)]
         [Description("A geological/lithological description/evaluation of the interval.")]
@@ -62167,7 +62167,7 @@ namespace Energistics.DataAccess.WITSML200
         private String LithologyField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -62197,7 +62197,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of DrillReportLithShowInfo
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -62253,7 +62253,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// DTim property
+        /// Date and time that the wireline formation test was completed.
         /// </summary>
 		[Description("Date and time that the wireline formation test was completed.")]
 		[XmlElement("DTim")]
@@ -62270,7 +62270,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimField; 
 
         /// <summary>
-        /// Md property
+        /// Measured depth at which the wireline formation test was conducted. 
         /// </summary>
 		[Description("Measured depth at which the wireline formation test was conducted.")]
         [ComponentElement]
@@ -62288,7 +62288,7 @@ namespace Energistics.DataAccess.WITSML200
         private MeasuredDepthCoord MdField; 
 
         /// <summary>
-        /// Tvd property
+        /// True vertical depth at which the wireline formation test was conducted.
         /// </summary>
 		[Description("True vertical depth at which the wireline formation test was conducted.")]
         [ComponentElement]
@@ -62306,7 +62306,7 @@ namespace Energistics.DataAccess.WITSML200
         private WellVerticalDepthCoord TvdField; 
 
         /// <summary>
-        /// PresPore property
+        /// The formation pore pressure. The pressure of fluids within the pores of a reservoir, usually hydrostatic pressure, or the pressure exerted by a column of water from the formation's depth to sea level.
         /// </summary>
 		[Description("The formation pore pressure. The pressure of fluids within the pores of a reservoir, usually hydrostatic pressure,  or the pressure exerted by a column of water from the formation's depth to sea level.")]
         [ComponentElement]
@@ -62324,7 +62324,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresPoreField; 
 
         /// <summary>
-        /// GoodSeal property
+        /// Was there a good seal for the wireline formation test? Values are "true" or "1" or "false" or "0".
         /// </summary>
 		[Description("Was there a good seal for the wireline formation test? Values are \"true\" or \"1\" or \"false\" or \"0\".")]
 		[XmlElement("GoodSeal")]
@@ -62359,7 +62359,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean GoodSealSpecifiedField; 
 
         /// <summary>
-        /// MdSample property
+        /// Measured depth where the fluid sample was taken.
         /// </summary>
 		[Description("Measured depth where the fluid sample was taken.")]
         [ComponentElement]
@@ -62377,7 +62377,7 @@ namespace Energistics.DataAccess.WITSML200
         private MeasuredDepthCoord MdSampleField; 
 
         /// <summary>
-        /// DominateComponent property
+        /// The dominate component in the fluid sample.
         /// </summary>
 		[StringLength(64)]
         [Description("The dominate component in the fluid sample.")]
@@ -62395,7 +62395,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DominateComponentField; 
 
         /// <summary>
-        /// DensityHC property
+        /// The density of the hydrocarbon component of the fluid sample.
         /// </summary>
 		[Description("The density of the hydrocarbon component of the fluid sample.")]
         [ComponentElement]
@@ -62413,7 +62413,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerVolumeMeasure DensityHCField; 
 
         /// <summary>
-        /// VolumeSample property
+        /// The volume of the fluid sample.
         /// </summary>
 		[Description("The volume of the fluid sample.")]
         [ComponentElement]
@@ -62431,7 +62431,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolumeSampleField; 
 
         /// <summary>
-        /// Description property
+        /// A detailed description of the wireline formation test.
         /// </summary>
 		[StringLength(2000)]
         [Description("A detailed description of the wireline formation test.")]
@@ -62449,7 +62449,7 @@ namespace Energistics.DataAccess.WITSML200
         private String DescriptionField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -62479,7 +62479,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of DrillReportFormTestInfo.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -62535,7 +62535,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// DTim property
+        /// Date and time that the well test was completed.
         /// </summary>
 		[Description("Date and time that the well test was completed.")]
 		[XmlElement("DTim")]
@@ -62552,7 +62552,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimField; 
 
         /// <summary>
-        /// TestType property
+        /// The type of well test.
         /// </summary>
 		[Description("The type of well test.")]
 		[XmlElement("TestType")]
@@ -62587,7 +62587,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean TestTypeSpecifiedField; 
 
         /// <summary>
-        /// TestNumber property
+        /// The number of the well test.
         /// </summary>
 		[Description("The number of the well test.")]
 		[XmlElement("TestNumber")]
@@ -62622,7 +62622,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean TestNumberSpecifiedField; 
 
         /// <summary>
-        /// TestMdInterval property
+        /// Test interval expressed as a measured depth.
         /// </summary>
 		[Description("Test interval expressed as a measured depth.")]
         [ComponentElement]
@@ -62640,7 +62640,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval TestMdIntervalField; 
 
         /// <summary>
-        /// TestTvdInterval property
+        /// Test interval expressed as a true vertical depth.
         /// </summary>
 		[Description("Test interval expressed as a true vertical depth.")]
         [ComponentElement]
@@ -62658,7 +62658,7 @@ namespace Energistics.DataAccess.WITSML200
         private TvdInterval TestTvdIntervalField; 
 
         /// <summary>
-        /// ChokeOrificeSize property
+        /// The diameter of the choke opening.
         /// </summary>
 		[Description("The diameter of the choke opening.")]
         [ComponentElement]
@@ -62676,7 +62676,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure ChokeOrificeSizeField; 
 
         /// <summary>
-        /// DensityOil property
+        /// The density of the produced oil.
         /// </summary>
 		[Description("The density of the produced oil.")]
         [ComponentElement]
@@ -62694,7 +62694,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerVolumeMeasure DensityOilField; 
 
         /// <summary>
-        /// DensityWater property
+        /// The density of the produced water.
         /// </summary>
 		[Description("The density of the produced water.")]
         [ComponentElement]
@@ -62712,7 +62712,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerVolumeMeasure DensityWaterField; 
 
         /// <summary>
-        /// DensityGas property
+        /// The density of the produced gas.
         /// </summary>
 		[Description("The density of the produced gas.")]
         [ComponentElement]
@@ -62730,7 +62730,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerVolumeMeasure DensityGasField; 
 
         /// <summary>
-        /// FlowRateOil property
+        /// The maximum rate at which oil was produced.
         /// </summary>
 		[Description("The maximum rate at which oil was produced.")]
         [ComponentElement]
@@ -62748,7 +62748,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure FlowRateOilField; 
 
         /// <summary>
-        /// FlowRateWater property
+        /// The maximum rate at which water was produced.
         /// </summary>
 		[Description("The maximum rate at which water was produced.")]
         [ComponentElement]
@@ -62766,7 +62766,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure FlowRateWaterField; 
 
         /// <summary>
-        /// FlowRateGas property
+        /// The maximum rate at which gas was produced.
         /// </summary>
 		[Description("The maximum rate at which gas was produced.")]
         [ComponentElement]
@@ -62784,7 +62784,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerTimeMeasure FlowRateGasField; 
 
         /// <summary>
-        /// PresShutIn property
+        /// The final shut-in pressure.
         /// </summary>
 		[Description("The final shut-in pressure.")]
         [ComponentElement]
@@ -62802,7 +62802,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresShutInField; 
 
         /// <summary>
-        /// PresFlowing property
+        /// The final flowing pressure.
         /// </summary>
 		[Description("The final flowing pressure.")]
         [ComponentElement]
@@ -62820,7 +62820,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresFlowingField; 
 
         /// <summary>
-        /// PresBottom property
+        /// The final bottomhole pressure.
         /// </summary>
 		[Description("The final bottomhole pressure.")]
         [ComponentElement]
@@ -62838,7 +62838,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure PresBottomField; 
 
         /// <summary>
-        /// GasOilRatio property
+        /// The ratio of the volume of gas to the volume of oil.
         /// </summary>
 		[Description("The ratio of the volume of gas to the volume of oil.")]
         [ComponentElement]
@@ -62856,7 +62856,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure GasOilRatioField; 
 
         /// <summary>
-        /// WaterOilRatio property
+        /// The relative amount of water per amount of oil.
         /// </summary>
 		[Description("The relative amount of water per amount of oil.")]
         [ComponentElement]
@@ -62874,7 +62874,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure WaterOilRatioField; 
 
         /// <summary>
-        /// Chloride property
+        /// The relative amount of chloride in the produced water.
         /// </summary>
 		[Description("The relative amount of chloride in the produced water.")]
         [ComponentElement]
@@ -62892,7 +62892,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerMassMeasure ChlorideField; 
 
         /// <summary>
-        /// CarbonDioxide property
+        /// The relative amount of CO2 gas.
         /// </summary>
 		[Description("The relative amount of CO2 gas.")]
         [ComponentElement]
@@ -62910,7 +62910,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerMassMeasure CarbonDioxideField; 
 
         /// <summary>
-        /// HydrogenSulfide property
+        /// The relative amount of H2S gas.
         /// </summary>
 		[Description("The relative amount of H2S gas.")]
         [ComponentElement]
@@ -62928,7 +62928,7 @@ namespace Energistics.DataAccess.WITSML200
         private MassPerMassMeasure HydrogenSulfideField; 
 
         /// <summary>
-        /// VolOilTotal property
+        /// The total amount of oil produced. This includes oil that was disposed of (e.g., burned).
         /// </summary>
 		[Description("The total amount of oil produced. This includes oil that was disposed of (e.g., burned).")]
         [ComponentElement]
@@ -62946,7 +62946,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolOilTotalField; 
 
         /// <summary>
-        /// VolGasTotal property
+        /// The total amount of gas produced. This includes gas that was disposed of (e.g., burned).
         /// </summary>
 		[Description("The total amount of gas produced. This includes gas that was disposed of (e.g., burned).")]
         [ComponentElement]
@@ -62964,7 +62964,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolGasTotalField; 
 
         /// <summary>
-        /// VolWaterTotal property
+        /// The total amount of water produced. This includes water that was disposed of.
         /// </summary>
 		[Description("The total amount of water produced. This includes water that was disposed of.")]
         [ComponentElement]
@@ -62982,7 +62982,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolWaterTotalField; 
 
         /// <summary>
-        /// VolOilStored property
+        /// The total amount of produced oil that was stored.
         /// </summary>
 		[Description("The total amount of produced oil that was stored.")]
         [ComponentElement]
@@ -63000,7 +63000,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumeMeasure VolOilStoredField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -63030,7 +63030,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of DrillReportWellTestInfo.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -63086,7 +63086,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// DTim property
+        /// Date and time that the core was completed.
         /// </summary>
 		[Description("Date and time that the core was completed.")]
 		[XmlElement("DTim")]
@@ -63103,7 +63103,7 @@ namespace Energistics.DataAccess.WITSML200
         private Timestamp? DTimField; 
 
         /// <summary>
-        /// CoreNumber property
+        /// Core identification number.
         /// </summary>
 		[StringLength(64)]
         [Description("Core identification number.")]
@@ -63121,7 +63121,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CoreNumberField; 
 
         /// <summary>
-        /// CoredMdInterval property
+        /// Cored interval expressed as measured depth.
         /// </summary>
 		[Description("Cored interval expressed as measured depth.")]
         [ComponentElement]
@@ -63139,7 +63139,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval CoredMdIntervalField; 
 
         /// <summary>
-        /// CoredTvdInterval property
+        /// Cored interval expressed as true vertical depth.
         /// </summary>
 		[Description("Cored interval expressed as true vertical depth.")]
         [ComponentElement]
@@ -63157,7 +63157,7 @@ namespace Energistics.DataAccess.WITSML200
         private TvdInterval CoredTvdIntervalField; 
 
         /// <summary>
-        /// LenRecovered property
+        /// Length of the core recovered.
         /// </summary>
 		[Description("Length of the core recovered.")]
         [ComponentElement]
@@ -63175,7 +63175,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure LenRecoveredField; 
 
         /// <summary>
-        /// RecoverPc property
+        /// The relative amount of core recovered.
         /// </summary>
 		[Description("The relative amount of core recovered.")]
         [ComponentElement]
@@ -63193,7 +63193,7 @@ namespace Energistics.DataAccess.WITSML200
         private VolumePerVolumeMeasure RecoverPcField; 
 
         /// <summary>
-        /// LenBarrel property
+        /// Length of the core barrel.
         /// </summary>
 		[Description("Length of  the core barrel.")]
         [ComponentElement]
@@ -63211,7 +63211,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure LenBarrelField; 
 
         /// <summary>
-        /// InnerBarrelType property
+        /// Core inner barrel type.
         /// </summary>
 		[Description("Core inner barrel type.")]
 		[XmlElement("InnerBarrelType")]
@@ -63246,7 +63246,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean InnerBarrelTypeSpecifiedField; 
 
         /// <summary>
-        /// CoreDescription property
+        /// General core description.
         /// </summary>
 		[StringLength(2000)]
         [Description("General core description.")]
@@ -63264,7 +63264,7 @@ namespace Energistics.DataAccess.WITSML200
         private String CoreDescriptionField; 
 
         /// <summary>
-        /// ExtensionNameValue property
+        /// Extensions to the schema based on a name-value construct.
         /// </summary>
 		[Description("Extensions to the schema based on a name-value construct.")]
         [RecurringElement]
@@ -63294,7 +63294,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ExtensionNameValue> ExtensionNameValueField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of DrillReportCoreInfo.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -63352,7 +63352,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// BottomHoleTemperature property
+        /// Bottomhole temperature for the job or reporting period.
         /// </summary>
 		[Description("Bottomhole temperature for the job or reporting period.")]
         [ComponentElement]
@@ -63406,7 +63406,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// eTimStatic property
+        /// Elapsed time since circulation stopped.
         /// </summary>
 		[Description("Elapsed time since circulation stopped.")]
         [ComponentElement]
@@ -63648,7 +63648,7 @@ namespace Energistics.DataAccess.WITSML200
         private AbstractBottomHoleTemperature BottomHoleTemperatureField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of DrillReportLogInfo.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -64223,7 +64223,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<ObjectAlias> ProprietaryCodeField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of DrillActivity.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -64450,7 +64450,7 @@ namespace Energistics.DataAccess.WITSML200
         private CustomData ExtensionAnyField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Nozzle
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -65169,7 +65169,7 @@ namespace Energistics.DataAccess.WITSML200
         private CustomData ExtensionAnyField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Sensor.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -65467,7 +65467,7 @@ namespace Energistics.DataAccess.WITSML200
         private CustomData ExtensionAnyField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Bend.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -65765,7 +65765,7 @@ namespace Energistics.DataAccess.WITSML200
         private CustomData ExtensionAnyField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of Stabilizer.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -67001,7 +67001,7 @@ namespace Energistics.DataAccess.WITSML200
         private CustomData ExtensionAnyField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of BitRecord.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -67690,13 +67690,13 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Internal diameter of object.")]
         [ComponentElement]
 		[XmlElement("Id")]
-        public LengthMeasure Id {
+        public LengthMeasure InnerDiameter {
             get {
                 return IdField;
             } 
             set {
                 IdField = value;
-                NotifyPropertyChanged("Id");
+                NotifyPropertyChanged("InnerDiameter");
             }
         }
 
@@ -68573,7 +68573,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<Nozzle> NozzleField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of TubularComponent
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -68629,7 +68629,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// RigReference property
+        /// A pointer to the rig with which there is a relationship.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -68648,7 +68648,7 @@ namespace Energistics.DataAccess.WITSML200
         private String RigReferenceField; 
 
         /// <summary>
-        /// WellboreParent property
+        /// A pointer to the wellbore that contains the rigReference. This is not needed unless the referenced rig is outside the context of a common parent wellbore.
         /// </summary>
 		[StringLength(64)]
         [Description("A pointer to the wellbore that contains the rigReference. This is not needed unless the referenced rig is outside the  context of a common parent wellbore.")]
@@ -68666,7 +68666,7 @@ namespace Energistics.DataAccess.WITSML200
         private String WellboreParentField; 
 
         /// <summary>
-        /// WellParent property
+        /// A pointer to the well that contains the wellboreParent. This is not needed unless the referenced wellbore is outside the context of a common parent well.
         /// </summary>
 		[StringLength(64)]
         [Description("A pointer to the well that contains the wellboreParent. This is not needed unless the referenced wellbore is outside the  context of a common parent well.")]
@@ -68720,7 +68720,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// WellboreReference property
+        /// A pointer the wellbore with which there is a relationship.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -68739,7 +68739,7 @@ namespace Energistics.DataAccess.WITSML200
         private String WellboreReferenceField; 
 
         /// <summary>
-        /// WellParent property
+        /// A pointer to the well that contains the wellboreReference. This is not needed unless the referenced wellbore is outside the context of a common parent well.
         /// </summary>
 		[StringLength(64)]
         [Description("A pointer to the well that contains the wellboreReference. This is not needed unless the referenced wellbore is outside the  context of a common parent well.")]
@@ -69011,7 +69011,7 @@ namespace Energistics.DataAccess.WITSML200
         private AbstractWellLocation HorizontalLocationField; 
 
         /// <summary>
-        /// Crs property
+        /// Points to one of the optional for a geodetic vertical CRS, Allows the datum to be positioned in real-world space.l
         /// </summary>
 		[Required]
         [Description("Points to one of the optional for a geodetic vertical CRS, Allows the datum to be positioned in real-world space.l")]
@@ -69029,7 +69029,7 @@ namespace Energistics.DataAccess.WITSML200
         private AbstractVerticalCrs CrsField; 
 
 		/// <summary>
-        /// uid property
+        /// A unique identifier for an instance of a well datum.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -69450,7 +69450,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<AbstractWellLocation> LocationField; 
 
 		/// <summary>
-        /// uid property
+        /// A unique identifier for an instance of a ReferencePoint.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -69529,7 +69529,7 @@ namespace Energistics.DataAccess.WITSML200
         }
 
 		/// <summary>
-        /// uom property
+        /// The unit of measure of the east-west distance.
         /// </summary>
 		[Required]
         [Description("The unit of measure of the east-west distance.")]
@@ -69548,7 +69548,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthUom uomField; 
 
 		/// <summary>
-        /// reference property
+        /// East or west direction.
         /// </summary>
 		[Required]
         [Description("East or west direction.")]
@@ -69643,7 +69643,7 @@ namespace Energistics.DataAccess.WITSML200
         }
 
 		/// <summary>
-        /// uom property
+        /// The unit of measure of the north-south distance.
         /// </summary>
 		[Required]
         [Description("The unit of measure of the north-south distance.")]
@@ -69662,7 +69662,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthUom uomField; 
 
 		/// <summary>
-        /// reference property
+        /// North or south direction.
         /// </summary>
 		[Required]
         [Description("North or south direction.")]
@@ -73878,7 +73878,7 @@ namespace Energistics.DataAccess.WITSML200
         private StimJobDiversion DiversionField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of StimJobStage.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -73913,7 +73913,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// MdPerforatedInterval property
+        /// Measured depths of the top and base perforation.
         /// </summary>
 		[Description("Measured depths of the top and base perforation.")]
         [ComponentElement]
@@ -73931,7 +73931,7 @@ namespace Energistics.DataAccess.WITSML200
         private MdInterval MdPerforatedIntervalField; 
 
         /// <summary>
-        /// TvdPerforatedInterval property
+        /// True vertical depth of the top and base perforation.
         /// </summary>
 		[Description("True vertical depth of the top and base perforation.")]
         [ComponentElement]
@@ -73949,7 +73949,7 @@ namespace Energistics.DataAccess.WITSML200
         private TvdInterval TvdPerforatedIntervalField; 
 
         /// <summary>
-        /// Type property
+        /// The type of perforation and/or how the perforation was created.
         /// </summary>
 		[StringLength(64)]
         [Description("The type of perforation and/or how the perforation was created.")]
@@ -73967,7 +73967,7 @@ namespace Energistics.DataAccess.WITSML200
         private String TypeField; 
 
         /// <summary>
-        /// PerforationCount property
+        /// The number of perforations in this interval.
         /// </summary>
 		[Description("The number of perforations in this interval.")]
 		[XmlElement("PerforationCount")]
@@ -74002,7 +74002,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean PerforationCountSpecifiedField; 
 
         /// <summary>
-        /// Size property
+        /// The size of the perforations.
         /// </summary>
 		[Description("The size of the perforations.")]
         [ComponentElement]
@@ -74020,7 +74020,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure SizeField; 
 
         /// <summary>
-        /// DensityPerforation property
+        /// The number of perforation holes per length across the treatment interval. Used to describe but not limited to the configuration of perforating guns or the placement of perforations (holes, slots, openings, etc.) in the wellbore, and is often abbreviated to spf (shots per foot).
         /// </summary>
 		[Description("The number of perforation holes per length across the treatment interval.  Used to describe but not limited to the configuration of perforating guns or the placement of perforations (holes, slots, openings, etc.) in the wellbore, and is often abbreviated to spf (shots per foot).")]
         [ComponentElement]
@@ -74038,7 +74038,7 @@ namespace Energistics.DataAccess.WITSML200
         private ReciprocalLengthMeasure DensityPerforationField; 
 
         /// <summary>
-        /// PhasingPerforation property
+        /// The radial distribution of successive perforations around the wellbore axis. Radial distribution is commonly available in 0, 180 120, 90 and 60 degree phasing.
         /// </summary>
 		[Description("The radial distribution of successive perforations around the wellbore axis.  Radial distribution is commonly available in 0, 180 120, 90 and 60 degree phasing.")]
         [ComponentElement]
@@ -74056,7 +74056,7 @@ namespace Energistics.DataAccess.WITSML200
         private PlaneAngleMeasure PhasingPerforationField; 
 
         /// <summary>
-        /// FrictionFactor property
+        /// The friction factor of each perforation set.
         /// </summary>
 		[Description("The friction factor of each perforation set.")]
 		[XmlElement("FrictionFactor")]
@@ -74091,7 +74091,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean FrictionFactorSpecifiedField; 
 
         /// <summary>
-        /// FrictionPres property
+        /// The friction pressure for the perforation set.
         /// </summary>
 		[Description("The friction pressure for the perforation set.")]
         [ComponentElement]
@@ -74109,7 +74109,7 @@ namespace Energistics.DataAccess.WITSML200
         private PressureMeasure FrictionPresField; 
 
         /// <summary>
-        /// DischargeCoefficient property
+        /// A coefficient used in the equation for calculation of pressure drop across a perforation set.
         /// </summary>
 		[Description("A coefficient used in the equation for calculation of pressure drop across a perforation set.")]
 		[XmlElement("DischargeCoefficient")]
@@ -75314,7 +75314,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// Owner property
+        /// The name of the company that owns the rig.
         /// </summary>
 		[StringLength(64)]
         [Description("The name of the company that owns the rig.")]
@@ -75332,7 +75332,7 @@ namespace Energistics.DataAccess.WITSML200
         private String OwnerField; 
 
         /// <summary>
-        /// TypeRig property
+        /// The type of rig (e.g., semi-submersible, jack-up, etc.) 
         /// </summary>
 		[Description("The type of rig (e.g., semi-submersible, jack-up, etc.)")]
 		[XmlElement("TypeRig")]
@@ -75367,7 +75367,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean TypeRigSpecifiedField; 
 
         /// <summary>
-        /// Manufacturer property
+        /// The company that manufactured the rig.
         /// </summary>
 		[StringLength(64)]
         [Description("The company that manufactured the rig.")]
@@ -75385,7 +75385,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ManufacturerField; 
 
         /// <summary>
-        /// YearEntService property
+        /// The year the rig entered service. 
         /// </summary>
 		[Description("The year the rig entered service.")]
 		[XmlElement("YearEntService", DataType="gYear")]
@@ -75402,7 +75402,7 @@ namespace Energistics.DataAccess.WITSML200
         private String YearEntServiceField; 
 
         /// <summary>
-        /// ClassRig property
+        /// Classification of the rig. 
         /// </summary>
 		[StringLength(64)]
         [Description("Classification of the rig.")]
@@ -75420,7 +75420,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ClassRigField; 
 
         /// <summary>
-        /// Approvals property
+        /// Rig approvals/certification.
         /// </summary>
 		[StringLength(64)]
         [Description("Rig approvals/certification.")]
@@ -75438,7 +75438,7 @@ namespace Energistics.DataAccess.WITSML200
         private String ApprovalsField; 
 
         /// <summary>
-        /// Registration property
+        /// Rig registration location.
         /// </summary>
 		[StringLength(64)]
         [Description("Rig registration location.")]
@@ -75456,7 +75456,7 @@ namespace Energistics.DataAccess.WITSML200
         private String RegistrationField; 
 
         /// <summary>
-        /// TelNumber property
+        /// Telephone number on the rig.
         /// </summary>
 		[StringLength(64)]
         [Description("Telephone number on the rig.")]
@@ -75474,7 +75474,7 @@ namespace Energistics.DataAccess.WITSML200
         private String TelNumberField; 
 
         /// <summary>
-        /// FaxNumber property
+        /// Fax number on the rig. 
         /// </summary>
 		[StringLength(64)]
         [Description("Fax number on the rig.")]
@@ -75492,7 +75492,7 @@ namespace Energistics.DataAccess.WITSML200
         private String FaxNumberField; 
 
         /// <summary>
-        /// EmailAddress property
+        /// Email address of the contact person. 
         /// </summary>
 		[StringLength(64)]
         [Description("Email address of the contact person.")]
@@ -75510,7 +75510,7 @@ namespace Energistics.DataAccess.WITSML200
         private String EmailAddressField; 
 
         /// <summary>
-        /// NameContact property
+        /// Name of the contact person. 
         /// </summary>
 		[StringLength(64)]
         [Description("Name of the contact person.")]
@@ -75528,7 +75528,7 @@ namespace Energistics.DataAccess.WITSML200
         private String NameContactField; 
 
         /// <summary>
-        /// RatingDrillDepth property
+        /// Maximum hole depth rating for the rig.
         /// </summary>
 		[Description("Maximum hole depth rating for the rig.")]
         [ComponentElement]
@@ -75546,7 +75546,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure RatingDrillDepthField; 
 
         /// <summary>
-        /// RatingWaterDepth property
+        /// Maximum water depth rating for the rig.
         /// </summary>
 		[Description("Maximum water depth rating for the rig.")]
         [ComponentElement]
@@ -75564,7 +75564,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure RatingWaterDepthField; 
 
         /// <summary>
-        /// IsOffshore property
+        /// Flag to indicate that the rig is an offshore rig (drill ship, semi-submersible, jack-up, platform, TADU). Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Flag to indicate that the rig is an offshore rig (drill ship, semi-submersible, jack-up, platform, TADU).  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("IsOffshore")]
@@ -75599,7 +75599,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean IsOffshoreSpecifiedField; 
 
         /// <summary>
-        /// TypeDerrick property
+        /// Derrick type.
         /// </summary>
 		[Description("Derrick type.")]
 		[XmlElement("TypeDerrick")]
@@ -75634,7 +75634,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean TypeDerrickSpecifiedField; 
 
         /// <summary>
-        /// RatingDerrick property
+        /// Derrick rating. 
         /// </summary>
 		[Description("Derrick rating.")]
         [ComponentElement]
@@ -75652,7 +75652,7 @@ namespace Energistics.DataAccess.WITSML200
         private ForceMeasure RatingDerrickField; 
 
         /// <summary>
-        /// HtDerrick property
+        /// Height of the derrick.
         /// </summary>
 		[Description("Height of the derrick.")]
         [ComponentElement]
@@ -75670,7 +75670,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthMeasure HtDerrickField; 
 
         /// <summary>
-        /// CapWindDerrick property
+        /// Derrick wind capacity.
         /// </summary>
 		[Description("Derrick wind capacity.")]
         [ComponentElement]
@@ -75688,7 +75688,7 @@ namespace Energistics.DataAccess.WITSML200
         private LengthPerTimeMeasure CapWindDerrickField; 
 
         /// <summary>
-        /// NumCranes property
+        /// Number of cranes on the rig. 
         /// </summary>
 		[Description("Number of cranes on the rig.")]
 		[XmlElement("NumCranes")]
@@ -77621,7 +77621,7 @@ namespace Energistics.DataAccess.WITSML200
         private List<CuttingsIntervalLithology> CuttingsIntervalLithologyField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of CuttingsGeologyInterval.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -77868,7 +77868,7 @@ namespace Energistics.DataAccess.WITSML200
         private InterpretedIntervalLithology InterpretedLithologyField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of InterpretedGeologyInterval.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -78002,7 +78002,7 @@ namespace Energistics.DataAccess.WITSML200
     {
 
         /// <summary>
-        /// MdInterval property
+        /// The measured depth interval over which the show is evaluated.
         /// </summary>
 		[Required]
         [Description("The measured depth interval over which the show is evaluated.")]
@@ -78038,7 +78038,7 @@ namespace Energistics.DataAccess.WITSML200
         private Citation Citation1Field; 
 
         /// <summary>
-        /// ShowFluid property
+        /// Gas or oil exhibited at the show interval.
         /// </summary>
 		[Required]
         [Description("Gas or oil exhibited at the show interval.")]
@@ -78056,7 +78056,7 @@ namespace Energistics.DataAccess.WITSML200
         private ShowFluid? ShowFluidField; 
 
         /// <summary>
-        /// ShowRating property
+        /// Quality of the fluid showing at this interval.
         /// </summary>
 		[Description("Quality of the fluid showing at this interval.")]
 		[XmlElement("ShowRating")]
@@ -78091,7 +78091,7 @@ namespace Energistics.DataAccess.WITSML200
         private Boolean ShowRatingSpecifiedField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for this instance of ShowEvaluationInterval.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -78675,7 +78675,7 @@ namespace Energistics.DataAccess.WITSML200
         private DataObjectReference WellboreField; 
 
 		/// <summary>
-        /// uid property
+        /// Unique identifier for the registration image.
         /// </summary>
 		[Required]
         [StringLength(64)]
@@ -99294,7 +99294,7 @@ namespace Energistics.DataAccess.WITSML200
         public enum ErrorTermSource 
         {
         /// <summary>
-        /// sensor property
+        /// Errors arising from sensors in the survey tool.
         /// </summary>
           sensor,
         /// <summary>
@@ -99303,23 +99303,23 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("azimuth reference")]
           azimuthreference,
         /// <summary>
-        /// magnetic property
+        /// Errors arising from external magnetic field influences.
         /// </summary>
           magnetic,
         /// <summary>
-        /// alignment property
+        /// Errors arising from the misalignment of the tool relative to the borehole.
         /// </summary>
           alignment,
         /// <summary>
-        /// misalignment property
+        /// Specifies the codes for the various classes of error source.
         /// </summary>
           misalignment,
         /// <summary>
-        /// depth property
+        /// Errors arising from the measurement of depth. 
         /// </summary>
           depth,
         /// <summary>
-        /// reference property
+        /// Errors arising from the measurement of depth.
         /// </summary>
           reference
         }
@@ -99351,7 +99351,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           unknown,
         /// <summary>
-        /// stationary property
+        /// Tool is operating in a stationary mode.
         /// </summary>
           stationary
         }
@@ -100801,11 +100801,11 @@ namespace Energistics.DataAccess.WITSML200
         public enum StimFlowPathType 
         {
         /// <summary>
-        /// annulus property
+        /// Fluid is conducted through the annulus.
         /// </summary>
           annulus,
         /// <summary>
-        /// casing property
+        /// Fluid is conducted through the casing (no tubing present).
         /// </summary>
           casing,
         /// <summary>
@@ -100819,7 +100819,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("open hole")]
           openhole,
         /// <summary>
-        /// tubing property
+        /// Fluid is conducted through tubing.
         /// </summary>
           tubing,
         /// <summary>
@@ -102049,7 +102049,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("coiled tubing")]
           coiledtubing,
         /// <summary>
-        /// unknown property
+        /// The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. 
         /// </summary>
           unknown
         }
@@ -102240,15 +102240,15 @@ namespace Energistics.DataAccess.WITSML200
         public enum PumpType 
         {
         /// <summary>
-        /// centrifugal property
+        /// Centrifugal mud pump.
         /// </summary>
           centrifugal,
         /// <summary>
-        /// duplex property
+        /// Duplex mud mump, two cylinders.
         /// </summary>
           duplex,
         /// <summary>
-        /// triplex property
+        /// Triplex mud pump, three cylinders.
         /// </summary>
           triplex
         }
@@ -103389,7 +103389,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           traces,
         /// <summary>
-        /// other property
+        /// The index used by the track is something other than depth.
         /// </summary>
           other
         }
@@ -103412,11 +103412,11 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("right edge")]
           rightedge,
         /// <summary>
-        /// fraction property
+        /// Denotes an intermediate point from the left edge to the right edge. 
         /// </summary>
           fraction,
         /// <summary>
-        /// other property
+        /// The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. 
         /// </summary>
           other
         }
@@ -103451,7 +103451,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("going in hole")]
           goinginhole,
         /// <summary>
-        /// other property
+        /// The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
           other
         }
@@ -103474,7 +103474,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("elapsed time")]
           elapsedtime,
         /// <summary>
-        /// length property
+        /// Log is indexed on length (not a depth).
         /// </summary>
           length,
         /// <summary>
@@ -103488,7 +103488,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("vertical depth")]
           verticaldepth,
         /// <summary>
-        /// other property
+        /// Any other index type for a log.
         /// </summary>
           other
         }
@@ -103714,7 +103714,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("string choke line")]
           stringchokeline,
         /// <summary>
-        /// unknown property
+        /// The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. 
         /// </summary>
           unknown
         }
@@ -104053,7 +104053,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("casing TVD")]
           casingTVD,
         /// <summary>
-        /// DLS property
+        /// Section follows a given dogleg severity.
         /// </summary>
           DLS,
         /// <summary>
@@ -104152,7 +104152,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("INCL AZI and TVD")]
           INCLAZIandTVD,
         /// <summary>
-        /// interpolated property
+        /// Derived by interpolating between stations with entered values (either planned or surveyed).
         /// </summary>
           interpolated,
         /// <summary>
@@ -104221,7 +104221,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("turnrate to TVD")]
           turnratetoTVD,
         /// <summary>
-        /// unknown property
+        /// The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
           unknown
         }
@@ -104373,15 +104373,15 @@ namespace Energistics.DataAccess.WITSML200
         public enum TrajStationStatus 
         {
         /// <summary>
-        /// open property
+        /// Has not been validated; does not influence position computation for stations below it.
         /// </summary>
           open,
         /// <summary>
-        /// rejected property
+        /// The quality is not ok; does not influence position computation for stations below it.
         /// </summary>
           rejected,
         /// <summary>
-        /// position property
+        /// Validated and in-use.
         /// </summary>
           position
         }
@@ -104488,23 +104488,23 @@ namespace Energistics.DataAccess.WITSML200
         public enum ErrorPropagationMode 
         {
         /// <summary>
-        /// B property
+        /// Bias.
         /// </summary>
           B,
         /// <summary>
-        /// R property
+        /// Random.
         /// </summary>
           R,
         /// <summary>
-        /// S property
+        /// Systematic.
         /// </summary>
           S,
         /// <summary>
-        /// W property
+        /// Well.
         /// </summary>
           W,
         /// <summary>
-        /// G property
+        /// Global.
         /// </summary>
           G
         }
@@ -104545,19 +104545,19 @@ namespace Energistics.DataAccess.WITSML200
         public enum AuthorizationStatus 
         {
         /// <summary>
-        /// draft property
+        /// Not yet approved.
         /// </summary>
           draft,
         /// <summary>
-        /// authorized property
+        /// Approved for use.
         /// </summary>
           authorized,
         /// <summary>
-        /// superseded property
+        /// Obsolete; a newer version is available.
         /// </summary>
           superseded,
         /// <summary>
-        /// withdrawn property
+        /// No longer approved in this or any other version.
         /// </summary>
           withdrawn
         }
@@ -104758,15 +104758,15 @@ namespace Energistics.DataAccess.WITSML200
         public enum ConnectionPosition 
         {
         /// <summary>
-        /// both property
+        /// The connection is the same at both ends of the component.
         /// </summary>
           both,
         /// <summary>
-        /// bottom property
+        /// This connection is only at the bottom of the component.
         /// </summary>
           bottom,
         /// <summary>
-        /// top property
+        /// This connection is only at the top of the component.
         /// </summary>
           top
         }
@@ -106190,39 +106190,39 @@ namespace Energistics.DataAccess.WITSML200
         public enum EtpDataType 
         {
         /// <summary>
-        /// boolean property
+        /// True or false values.
         /// </summary>
           boolean,
         /// <summary>
-        /// bytes property
+        /// Integer data value (nominally a one-byte value). The value must conform to the format of the xsd:dateTime data type (minInclusive=-128 and maxInclusive=127).
         /// </summary>
           bytes,
         /// <summary>
-        /// double property
+        /// Double-precision floating-point value (nominally an 8-byte value). The value must conform to the format of the xsd:double data type.
         /// </summary>
           @double,
         /// <summary>
-        /// float property
+        /// Single-precision floating-point value (nominally a 4-byte value). The value must conform to the format of the xsd:float data type
         /// </summary>
           @float,
         /// <summary>
-        /// int property
+        /// Integer data value (nominally a 4-byte value). The value must conform to the format of the xsd:int data type.
         /// </summary>
           @int,
         /// <summary>
-        /// long property
+        /// Long integer data value (nominally an 8-byte value). The value must conform to the format of the xsd:long data type.
         /// </summary>
           @long,
         /// <summary>
-        /// null property
+        /// No value or the value is null.
         /// </summary>
           @null,
         /// <summary>
-        /// string property
+        /// Character string data. The value must conform to the format of the xsd:string data type. The maximum length of a value is determined by individual servers. 
         /// </summary>
           @string,
         /// <summary>
-        /// vector property
+        /// An array of doubles.
         /// </summary>
           vector
         }
@@ -106260,11 +106260,11 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("elapsed time")]
           elapsedtime,
         /// <summary>
-        /// temperature property
+        /// Temperature.
         /// </summary>
           temperature,
         /// <summary>
-        /// pressure property
+        /// Pressure.
         /// </summary>
           pressure
         }
@@ -106277,11 +106277,11 @@ namespace Energistics.DataAccess.WITSML200
         public enum IndexDirection 
         {
         /// <summary>
-        /// decreasing property
+        /// The sort order of the data row index values. For a "decreasing" direction, the index value of consecutive data nodes are descending.
         /// </summary>
           decreasing,
         /// <summary>
-        /// increasing property
+        /// The sort order of the data row index values. For an "increasing" direction, the index value of consecutive data nodes are ascending.
         /// </summary>
           increasing
         }
@@ -106304,11 +106304,11 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("water-based")]
           waterbased,
         /// <summary>
-        /// other property
+        /// A drilling fluid in which neither water nor oil is the continuous phase.
         /// </summary>
           other,
         /// <summary>
-        /// pneumatic property
+        /// A drilling fluid which is gas-based.
         /// </summary>
           pneumatic
         }
@@ -106526,15 +106526,15 @@ namespace Energistics.DataAccess.WITSML200
         public enum ReadingKind 
         {
         /// <summary>
-        /// measured property
+        /// The reading was measured.
         /// </summary>
           measured,
         /// <summary>
-        /// estimated property
+        /// The reading was estimated.
         /// </summary>
           estimated,
         /// <summary>
-        /// unknown property
+        /// The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. 
         /// </summary>
           unknown
         }
@@ -106604,27 +106604,27 @@ namespace Energistics.DataAccess.WITSML200
         public enum WellboreType 
         {
         /// <summary>
-        /// bypass property
+        /// The original wellbore had to be abandoned before its final usage. This wellbore is being drilled as a different wellbore, but one which has the same target as the one that was abandoned.
         /// </summary>
           bypass,
         /// <summary>
-        /// initial property
+        /// This is the first wellbore that has been drilled, or attempted, in a given well.
         /// </summary>
           initial,
         /// <summary>
-        /// redrill property
+        /// The wellbore is being redrilled.
         /// </summary>
           redrill,
         /// <summary>
-        /// reentry property
+        /// The wellbore is being reentered after a period of abandonment.
         /// </summary>
           reentry,
         /// <summary>
-        /// respud property
+        /// The wellbore is part of an existing regulatory well. The original borehole did not reach the target depth. This borehole required the well to be respudded (drilled from a different surface position).
         /// </summary>
           respud,
         /// <summary>
-        /// sidetrack property
+        /// The wellbore is a deviation from a given wellbore that produces a different borehole from the others, and whose bottomhole differs from any previously existing wellbore bottomholes.
         /// </summary>
           sidetrack
         }
@@ -107718,7 +107718,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("wait and weight")]
           waitandweight,
         /// <summary>
-        /// bullheading property
+        /// Prescribes pumping kill-weight fluid down the tubing and forcing the wellbore fluids back into the formation through the perforations.
         /// </summary>
           bullheading,
         /// <summary>
@@ -107765,19 +107765,19 @@ namespace Energistics.DataAccess.WITSML200
         public enum InnerBarrelType 
         {
         /// <summary>
-        /// undifferentiated property
+        /// A pipe that is located inside a core barrel to hold the core sample.
         /// </summary>
           undifferentiated,
         /// <summary>
-        /// aluminum property
+        /// An inner core barrel made of aluminium.
         /// </summary>
           aluminum,
         /// <summary>
-        /// gel property
+        /// An inner core barrel that that seals off the core sample using gel as the sealing material.
         /// </summary>
           gel,
         /// <summary>
-        /// fiberglass property
+        /// An inner core barrel made of glass fiber reinforced plastic.
         /// </summary>
           fiberglass
         }
@@ -107811,7 +107811,7 @@ namespace Energistics.DataAccess.WITSML200
         public enum StateDetailActivity 
         {
         /// <summary>
-        /// injury property
+        /// Personnel injury in connection with drilling and/or drilling related operations.
         /// </summary>
           injury,
         /// <summary>
@@ -107820,7 +107820,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("operation failed")]
           operationfailed,
         /// <summary>
-        /// kick property
+        /// Formation fluid invading the wellbore.
         /// </summary>
           kick,
         /// <summary>
@@ -107849,7 +107849,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("equipment hang")]
           equipmenthang,
         /// <summary>
-        /// success property
+        /// Operation achieved the objective.
         /// </summary>
           success
         }
@@ -107862,15 +107862,15 @@ namespace Energistics.DataAccess.WITSML200
         public enum ItemState 
         {
         /// <summary>
-        /// actual property
+        /// Actual data measured or entered at the well site.
         /// </summary>
           actual,
         /// <summary>
-        /// model property
+        /// Model data used for "what if" calculations.
         /// </summary>
           model,
         /// <summary>
-        /// plan property
+        /// A planned object. That is, one which is expected to be executed in the future.
         /// </summary>
           plan
         }
@@ -107900,7 +107900,7 @@ namespace Energistics.DataAccess.WITSML200
         public enum DeflectionMethod 
         {
         /// <summary>
-        /// hybrid property
+        /// Rotary steerable system that changes the trajectory of a wellbore using both point-the-bit and push-the-bit methods.
         /// </summary>
           hybrid,
         /// <summary>
@@ -108926,11 +108926,11 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("oil saturation")]
           oilsaturation,
         /// <summary>
-        /// perforating property
+        /// The procedure for introducing holes through casing into a formation so that formation fluids can enter into the casing.
         /// </summary>
           perforating,
         /// <summary>
-        /// permeability property
+        /// The permeability of the surrounding formation.
         /// </summary>
           permeability,
         /// <summary>
@@ -108959,7 +108959,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("plane angle")]
           planeangle,
         /// <summary>
-        /// porosity property
+        /// The total pore volume occupied by fluid in a rock. Includes isolated nonconnecting pores and volume occupied by absorbed, immobile fluid.
         /// </summary>
           porosity,
         /// <summary>
@@ -108968,11 +108968,11 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("porosity correction")]
           porositycorrection,
         /// <summary>
-        /// potassium property
+        /// The measurement of gamma radiation emitted by potassium.
         /// </summary>
           potassium,
         /// <summary>
-        /// pressure property
+        /// The force or thrust exerted upon a surface divided by the area of the surface.
         /// </summary>
           pressure,
         /// <summary>
@@ -108981,7 +108981,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("pressure correction")]
           pressurecorrection,
         /// <summary>
-        /// processed property
+        /// A well log trace which has been processed in some way; e.g., depth adjusted or environmentally corrected.
         /// </summary>
           processed,
         /// <summary>
@@ -108990,15 +108990,15 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("pulsed neutron porosity")]
           pulsedneutronporosity,
         /// <summary>
-        /// quality property
+        /// Degree of excellence.
         /// </summary>
           quality,
         /// <summary>
-        /// ratio property
+        /// A relationship between two values usually expressed as a fraction.
         /// </summary>
           ratio,
         /// <summary>
-        /// raw property
+        /// A well log trace which has not had any processing. In other words, a trace which has not been depth adjusted or environmentally corrected.
         /// </summary>
           raw,
         /// <summary>
@@ -109007,7 +109007,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("relative bearing")]
           relativebearing,
         /// <summary>
-        /// resistivity property
+        /// The property measuring the resistance to flow of an electrical current.
         /// </summary>
           resistivity,
         /// <summary>
@@ -109036,11 +109036,11 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("resistivity ratio")]
           resistivityratio,
         /// <summary>
-        /// salinity property
+        /// The concentration of ions in solution.
         /// </summary>
           salinity,
         /// <summary>
-        /// sampling property
+        /// To take a sample of or from something.
         /// </summary>
           sampling,
         /// <summary>
@@ -109059,7 +109059,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("sandstone neutron porosity")]
           sandstoneneutronporosity,
         /// <summary>
-        /// saturation property
+        /// The fraction or percentage of the pore volume of a rock.
         /// </summary>
           saturation,
         /// <summary>
@@ -109123,7 +109123,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("shear wave travel time")]
           shearwavetraveltime,
         /// <summary>
-        /// shifted property
+        /// A well log trace which has had its original values shifted by some factor; e.g., added or multiplied by a constant.
         /// </summary>
           shifted,
         /// <summary>
@@ -109132,7 +109132,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("sidewall core porosity")]
           sidewallcoreporosity,
         /// <summary>
-        /// sigma property
+        /// The macroscopic capture cross section, i.e. the effective cross-sectional area per unit volume for the capture of neutrons.
         /// </summary>
           sigma,
         /// <summary>
@@ -109171,7 +109171,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("slippage velocity correction")]
           slippagevelocitycorrection,
         /// <summary>
-        /// smoothed property
+        /// A well log trace which has been filtered to smooth, or average the trace.
         /// </summary>
           smoothed,
         /// <summary>
@@ -109205,7 +109205,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("synthetic well log trace")]
           syntheticwelllogtrace,
         /// <summary>
-        /// temperature property
+        /// A temperature measurement.
         /// </summary>
           temperature,
         /// <summary>
@@ -109214,7 +109214,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("temperature correction")]
           temperaturecorrection,
         /// <summary>
-        /// tension property
+        /// The tension on the wireline cable while logging.
         /// </summary>
           tension,
         /// <summary>
@@ -109223,11 +109223,11 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("Th/K ratio")]
           ThKratio,
         /// <summary>
-        /// thorium property
+        /// The measurement of gamma radiation emitted by thorium.
         /// </summary>
           thorium,
         /// <summary>
-        /// time property
+        /// A measured or measurable period.
         /// </summary>
           time,
         /// <summary>
@@ -109301,15 +109301,15 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("tube wave travel time")]
           tubewavetraveltime,
         /// <summary>
-        /// uranium property
+        /// The measurement of gamma radiation emitted by uranium.
         /// </summary>
           uranium,
         /// <summary>
-        /// velocity property
+        /// directional speed
         /// </summary>
           velocity,
         /// <summary>
-        /// volume property
+        /// cubic capacity
         /// </summary>
           volume,
         /// <summary>
@@ -109444,7 +109444,7 @@ namespace Energistics.DataAccess.WITSML200
         public enum BitType 
         {
         /// <summary>
-        /// diamond property
+        /// Diamond bit.
         /// </summary>
           diamond,
         /// <summary>
@@ -109458,7 +109458,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("insert roller cone")]
           insertrollercone,
         /// <summary>
-        /// PDC property
+        /// Polycrystalline diamond compact fixed-cutter bit.
         /// </summary>
           PDC,
         /// <summary>
@@ -109535,107 +109535,107 @@ namespace Energistics.DataAccess.WITSML200
         public enum BitDullCode 
         {
         /// <summary>
-        /// BC property
+        /// Broken Cone
         /// </summary>
           BC,
         /// <summary>
-        /// BT property
+        /// Broken teeth/cutters
         /// </summary>
           BT,
         /// <summary>
-        /// BU property
+        /// Balled Up
         /// </summary>
           BU,
         /// <summary>
-        /// CC property
+        /// Cracked Cone
         /// </summary>
           CC,
         /// <summary>
-        /// CD property
+        /// Cone Dragged
         /// </summary>
           CD,
         /// <summary>
-        /// CI property
+        /// Cone Interference
         /// </summary>
           CI,
         /// <summary>
-        /// CR property
+        /// Cored
         /// </summary>
           CR,
         /// <summary>
-        /// CT property
+        /// Chipped Teeth
         /// </summary>
           CT,
         /// <summary>
-        /// ER property
+        /// Erosion
         /// </summary>
           ER,
         /// <summary>
-        /// FC property
+        /// Flat Crested Wear
         /// </summary>
           FC,
         /// <summary>
-        /// HC property
+        /// Heat Checking
         /// </summary>
           HC,
         /// <summary>
-        /// JD property
+        /// Junk Damage
         /// </summary>
           JD,
         /// <summary>
-        /// LC property
+        /// Lost Nozzle
         /// </summary>
           LC,
         /// <summary>
-        /// LN property
+        /// Lost Nozzle
         /// </summary>
           LN,
         /// <summary>
-        /// LT property
+        /// Lost Teeth/Cutters
         /// </summary>
           LT,
         /// <summary>
-        /// NO property
+        /// No Dull/No Other Wear
         /// </summary>
           NO,
         /// <summary>
-        /// OC property
+        /// Off-Center Wear
         /// </summary>
           OC,
         /// <summary>
-        /// PB property
+        /// Pinched Bit
         /// </summary>
           PB,
         /// <summary>
-        /// PN property
+        /// Plugged Nozzle
         /// </summary>
           PN,
         /// <summary>
-        /// RG property
+        /// Rounded Gauge
         /// </summary>
           RG,
         /// <summary>
-        /// RO property
+        /// Ring Out
         /// </summary>
           RO,
         /// <summary>
-        /// SD property
+        /// Shirttail Damage
         /// </summary>
           SD,
         /// <summary>
-        /// SS property
+        /// Self-Sharpening Wear
         /// </summary>
           SS,
         /// <summary>
-        /// TR property
+        /// Tracking
         /// </summary>
           TR,
         /// <summary>
-        /// WO property
+        /// WashOut on Bit
         /// </summary>
           WO,
         /// <summary>
-        /// WT property
+        /// Worn Teeth/Cutters
         /// </summary>
           WT
         }
@@ -109718,75 +109718,75 @@ namespace Energistics.DataAccess.WITSML200
         public enum BitReasonPulled 
         {
         /// <summary>
-        /// BHA property
+        /// Change Bottom Hole Assembly
         /// </summary>
           BHA,
         /// <summary>
-        /// CM property
+        /// Condition Mud
         /// </summary>
           CM,
         /// <summary>
-        /// CP property
+        /// Core Point
         /// </summary>
           CP,
         /// <summary>
-        /// DMF property
+        /// Downhole Motor Failure
         /// </summary>
           DMF,
         /// <summary>
-        /// DP property
+        /// Drill Plug
         /// </summary>
           DP,
         /// <summary>
-        /// DST property
+        /// Drill Stem Test
         /// </summary>
           DST,
         /// <summary>
-        /// DTF property
+        /// Downhole Tool Failure
         /// </summary>
           DTF,
         /// <summary>
-        /// FM property
+        /// Formation Change
         /// </summary>
           FM,
         /// <summary>
-        /// HP property
+        /// Hole Problems
         /// </summary>
           HP,
         /// <summary>
-        /// HR property
+        /// Hours on Bit
         /// </summary>
           HR,
         /// <summary>
-        /// LOG property
+        /// Run Logs
         /// </summary>
           LOG,
         /// <summary>
-        /// PP property
+        /// Pump Pressure
         /// </summary>
           PP,
         /// <summary>
-        /// PR property
+        /// Penetration Rate
         /// </summary>
           PR,
         /// <summary>
-        /// RIG property
+        /// Rig Repairs
         /// </summary>
           RIG,
         /// <summary>
-        /// TD property
+        /// Total Depth/Casing Depth
         /// </summary>
           TD,
         /// <summary>
-        /// TQ property
+        /// Torque
         /// </summary>
           TQ,
         /// <summary>
-        /// TW property
+        /// Twist Off
         /// </summary>
           TW,
         /// <summary>
-        /// WC property
+        /// Weather Conditions
         /// </summary>
           WC
         }
@@ -110828,11 +110828,11 @@ namespace Energistics.DataAccess.WITSML200
         public enum EastOrWest 
         {
         /// <summary>
-        /// east property
+        /// East of something.
         /// </summary>
           east,
         /// <summary>
-        /// west property
+        /// West of something.
         /// </summary>
           west
         }
@@ -110845,11 +110845,11 @@ namespace Energistics.DataAccess.WITSML200
         public enum NorthOrSouth 
         {
         /// <summary>
-        /// north property
+        /// North of something.
         /// </summary>
           north,
         /// <summary>
-        /// south property
+        /// South of something.
         /// </summary>
           south
         }
@@ -111263,7 +111263,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           other,
         /// <summary>
-        /// HSE property
+        /// health, safety and environmental
         /// </summary>
           HSE
         }
@@ -111807,7 +111807,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
           time,
         /// <summary>
-        /// HSE property
+        /// health, safety and environmental
         /// </summary>
           HSE
         }
@@ -111957,7 +111957,7 @@ namespace Energistics.DataAccess.WITSML200
         public enum RigType 
         {
         /// <summary>
-        /// barge property
+        /// Barge rig.
         /// </summary>
           barge,
         /// <summary>
@@ -111966,19 +111966,19 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("coiled tubing")]
           coiledtubing,
         /// <summary>
-        /// floater property
+        /// Floating rig.
         /// </summary>
           floater,
         /// <summary>
-        /// jackup property
+        /// Jackup rig.
         /// </summary>
           jackup,
         /// <summary>
-        /// land property
+        /// Land rig.
         /// </summary>
           land,
         /// <summary>
-        /// platform property
+        /// Fixed platform.
         /// </summary>
           platform,
         /// <summary>
@@ -111996,19 +111996,19 @@ namespace Energistics.DataAccess.WITSML200
         public enum DerrickType 
         {
         /// <summary>
-        /// double property
+        /// 2-stand capacity derrick.
         /// </summary>
           @double,
         /// <summary>
-        /// quadruple property
+        /// 4-stand capacity derrick.
         /// </summary>
           quadruple,
         /// <summary>
-        /// slant property
+        /// Slant derrick.
         /// </summary>
           slant,
         /// <summary>
-        /// triple property
+        /// 3-stand capacity derrick.
         /// </summary>
           triple
         }
@@ -112073,15 +112073,15 @@ namespace Energistics.DataAccess.WITSML200
         public enum ChannelStatus 
         {
         /// <summary>
-        /// active property
+        /// Actively producing data points.
         /// </summary>
           active,
         /// <summary>
-        /// closed property
+        /// Closed and will never produce new data points.
         /// </summary>
           closed,
         /// <summary>
-        /// inactive property
+        /// Currently inactive but may produce data points in the future.
         /// </summary>
           inactive
         }
@@ -112126,7 +112126,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("universal resource locator")]
           universalresourcelocator,
         /// <summary>
-        /// other property
+        /// The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
           other
         }
@@ -112159,7 +112159,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("image/xml+svg")]
           imagexmlsvg,
         /// <summary>
-        /// other property
+        /// The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
           other
         }
@@ -112238,19 +112238,19 @@ namespace Energistics.DataAccess.WITSML200
         public enum ChannelState 
         {
         /// <summary>
-        /// calculated property
+        /// Calculated from measurements
         /// </summary>
           calculated,
         /// <summary>
-        /// final property
+        /// Considered final and not subject to change
         /// </summary>
           final,
         /// <summary>
-        /// memory property
+        /// Sensor data is recorded into downhole memory of a tool, rather than transmitting in "real time" to surface. 
         /// </summary>
           memory,
         /// <summary>
-        /// processed property
+        /// Results of calculations based on measurements
         /// </summary>
           processed,
         /// <summary>
@@ -112268,23 +112268,23 @@ namespace Energistics.DataAccess.WITSML200
         public enum ChannelDerivation 
         {
         /// <summary>
-        /// raw property
+        /// Raw measured data, directly from sensors.
         /// </summary>
           raw,
         /// <summary>
-        /// simulated property
+        /// Simulated.
         /// </summary>
           simulated,
         /// <summary>
-        /// spliced property
+        /// Derived by splicing values from two or more other channels.
         /// </summary>
           spliced,
         /// <summary>
-        /// sampled property
+        /// Derived by sampling values from one or more other channels.
         /// </summary>
           sampled,
         /// <summary>
-        /// model property
+        /// Based on some modeled results of values in another one or more channels.
         /// </summary>
           model
         }
@@ -112297,31 +112297,31 @@ namespace Energistics.DataAccess.WITSML200
         public enum LoggingMethod 
         {
         /// <summary>
-        /// computed property
+        /// The log is a result of computed analyses from various sources.
         /// </summary>
           computed,
         /// <summary>
-        /// distributed property
+        /// The log is derived from various different systems.
         /// </summary>
           distributed,
         /// <summary>
-        /// LWD property
+        /// The data of the log is a result of logging-while-drilling.
         /// </summary>
           LWD,
         /// <summary>
-        /// mixed property
+        /// The data is derived from multiple logging methods.
         /// </summary>
           mixed,
         /// <summary>
-        /// MWD property
+        /// The data of the log is a result of measurement-while-drilling.
         /// </summary>
           MWD,
         /// <summary>
-        /// surface property
+        /// The data is recorded on the surface or in real time.
         /// </summary>
           surface,
         /// <summary>
-        /// wireline property
+        /// The data is derived as a function of wellbore depth.
         /// </summary>
           wireline
         }
@@ -112355,15 +112355,15 @@ namespace Energistics.DataAccess.WITSML200
         public enum OpsReportVersion 
         {
         /// <summary>
-        /// preliminary property
+        /// A report that has not yet been approved by the drilling operator. This report is normally issued at the beginning of the work day (e.g., 6:00 am). 
         /// </summary>
           preliminary,
         /// <summary>
-        /// normal property
+        /// A daily status report that has been approved by the drilling operator.
         /// </summary>
           normal,
         /// <summary>
-        /// final property
+        /// A report that represents the final definitive status for the well. This report is typically issued some period of time (e.g., 6 months) after drilling has concluded.
         /// </summary>
           final
         }
@@ -112436,7 +112436,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("wiper or check or reaming")]
           wiperorcheckorreaming,
         /// <summary>
-        /// unknown property
+        /// The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations. 
         /// </summary>
           unknown
         }
@@ -112449,7 +112449,7 @@ namespace Energistics.DataAccess.WITSML200
         public enum WellPurpose 
         {
         /// <summary>
-        /// appraisal property
+        /// A well drilled into a formation shown to be potentially productive of oil or gas by an earlier well for the purpose of obtaining more information about the reservoir. Also known as a delineation well.
         /// </summary>
           appraisal,
         /// <summary>
@@ -112463,7 +112463,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("appraisal -- exploratory appraisal")]
           appraisalexploratoryappraisal,
         /// <summary>
-        /// exploration property
+        /// An exploratory well drilled in an unproved area to test for a new field, a new pay, a deeper reservoir, or a shallower reservoir. Also known as a wildcat.
         /// </summary>
           exploration,
         /// <summary>
@@ -112492,7 +112492,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("exploration -- shallower-pool wildcat")]
           explorationshallowerpoolwildcat,
         /// <summary>
-        /// development property
+        /// A well drilled in a zone in an area already proved productive.
         /// </summary>
           development,
         /// <summary>
@@ -112561,7 +112561,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("general srvc -- waste disposal")]
           generalsrvcwastedisposal,
         /// <summary>
-        /// mineral property
+        /// A non-oil and gas well drilled for the purpose of locating and/or extracting a mineral from the subsurface, usually through the injection and/or extraction of mineral-bearing fluids.
         /// </summary>
           mineral
         }
@@ -112579,7 +112579,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("build and hold")]
           buildandhold,
         /// <summary>
-        /// deviated property
+        /// A wellbore that significantly departs from vertical with respect to the surface location.
         /// </summary>
           deviated,
         /// <summary>
@@ -112588,7 +112588,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("double kickoff")]
           doublekickoff,
         /// <summary>
-        /// horizontal property
+        /// A wellbore whose path deviates from the vertical by at least 75 degrees.
         /// </summary>
           horizontal,
         /// <summary>
@@ -112597,7 +112597,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("S-shaped")]
           Sshaped,
         /// <summary>
-        /// vertical property
+        /// A wellbore that is nearly vertical with respect to the surface location.
         /// </summary>
           vertical
         }
@@ -112610,19 +112610,19 @@ namespace Energistics.DataAccess.WITSML200
         public enum WellFluid 
         {
         /// <summary>
-        /// air property
+        /// This is generally an injected fluid.
         /// </summary>
           air,
         /// <summary>
-        /// condensate property
+        /// Liquid hydrocarbons produced with natural gas that are separated from the gas by cooling and various other means. Condensate generally has an API gravity of 50 degrees to 120 degrees and is water white, straw, or bluish in color. It is the liquid recovery from a well classified as a gas well. It is generally dissolved in the gaseous state under reservoir conditions but separates as a liquid either in passing up the hole or at the surface. These hydrocarbons, from associated and non-associated gas well gas, normally are recovered from lease separators or field facilities by mechanical separation.
         /// </summary>
           condensate,
         /// <summary>
-        /// dry property
+        /// The well facility is classified as a dry well. It has not been, nor will it be used to produce or inject any fluids.
         /// </summary>
           dry,
         /// <summary>
-        /// gas property
+        /// The well is classified as a gas well, producing or injecting a hydrocarbon gas. The gas is generally methane but may have a mixture of other gases also.
         /// </summary>
           gas,
         /// <summary>
@@ -112641,7 +112641,7 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("non HC gas -- CO2")]
           nonHCgasCO2,
         /// <summary>
-        /// oil property
+        /// The liquid hydrocarbon generally referred to as crude oil.
         /// </summary>
           oil,
         /// <summary>
@@ -112655,11 +112655,11 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("oil-water")]
           oilwater,
         /// <summary>
-        /// steam property
+        /// The gaseous state of water. This is generally an injected fluid, but it is possible that some hydrothermal wells produce steam.
         /// </summary>
           steam,
         /// <summary>
-        /// water property
+        /// The well is classified as a water well without distinguishing between brine or fresh water.
         /// </summary>
           water,
         /// <summary>
@@ -112687,15 +112687,15 @@ namespace Energistics.DataAccess.WITSML200
           [XmlEnum("huff-n-puff")]
           huffnpuff,
         /// <summary>
-        /// injector property
+        /// The well facility is injecting fluids into the subsurface.
         /// </summary>
           injector,
         /// <summary>
-        /// producer property
+        /// The well facility is producing fluids from the subsurface.
         /// </summary>
           producer,
         /// <summary>
-        /// uncertain property
+        /// The flow direction of the fluids is variable, but not on a regular basis as is the case with the huff-n-puff flow.
         /// </summary>
           uncertain
         }
@@ -117703,71 +117703,71 @@ namespace Energistics.DataAccess.WITSML200
         public enum ElevCodeEnum 
         {
         /// <summary>
-        /// CF property
+        /// Casing flange: A flange affixed to the top of the casing string used to attach production equipment.
         /// </summary>
           CF,
         /// <summary>
-        /// CV property
+        /// Crown valve.
         /// </summary>
           CV,
         /// <summary>
-        /// DF property
+        /// Derrick floor.
         /// </summary>
           DF,
         /// <summary>
-        /// GL property
+        /// Ground level.
         /// </summary>
           GL,
         /// <summary>
-        /// KB property
+        /// Kelly bushing.
         /// </summary>
           KB,
         /// <summary>
-        /// RB property
+        /// Rotary bushing.
         /// </summary>
           RB,
         /// <summary>
-        /// RT property
+        /// Rotary table.
         /// </summary>
           RT,
         /// <summary>
-        /// SF property
+        /// Sea floor.
         /// </summary>
           SF,
         /// <summary>
-        /// LAT property
+        /// Lowest astronomical tide (LAT). The lowest tide level over the duration of the National Tidal Datum Epoch (19 years).
         /// </summary>
           LAT,
         /// <summary>
-        /// SL property
+        /// Mean sea level: a tidal datum. The arithmetic mean of hourly heights observed over the National Tidal Datum Epoch (19 years).
         /// </summary>
           SL,
         /// <summary>
-        /// MHHW property
+        /// Mean higher high water: a tidal datum. The average of the higher high water height of each tidal day observed over the National Tidal Datum Epoch (19 years).
         /// </summary>
           MHHW,
         /// <summary>
-        /// MHW property
+        /// Mean high water: a tidal datum. The average of all the high water heights observed over the National Tidal Datum Epoch (19 years).
         /// </summary>
           MHW,
         /// <summary>
-        /// MLLW property
+        /// Mean lower low water: a tidal datum. The average of the lower low water height of each tidal day observed over the National Tidal Datum Epoch (19 years ).
         /// </summary>
           MLLW,
         /// <summary>
-        /// MLW property
+        /// Mean low water: a tidal datum. The average of all the low water heights observed over the National Tidal Datum Epoch (19 years).
         /// </summary>
           MLW,
         /// <summary>
-        /// MTL property
+        /// Mean tide level: a tidal datum. The arithmetic mean of mean high water and mean low water. Same as the half-tide level.
         /// </summary>
           MTL,
         /// <summary>
-        /// KO property
+        /// Kickoff point. 
         /// </summary>
           KO,
         /// <summary>
-        /// unknown property
+        /// The value is not known. Avoid using this value. All reasonable attempts should be made to determine the appropriate value. Use of this value may result in rejection in some situations.
         /// </summary>
           unknown
         }

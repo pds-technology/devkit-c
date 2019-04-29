@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<prodml:ProductionWellTest objectVersion="2.0" schemaVersion="2.0" uuid="00000000-0000-0000-0000-000000000BB2" xmlns="http://www.energistics.org/energyml/data/prodmlv2"  xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/SimpleProductVolume.xsd">
+	<eml:Citation>
+		<eml:Title>production well test</eml:Title>
+		<eml:Originator>Energy Co</eml:Originator>
+		<eml:Creation>2015-01-04T09:30:47Z</eml:Creation>
+		<eml:Format>xmlspy/xml</eml:Format>
+		<eml:Editor>xmlspy</eml:Editor>
+		<eml:LastUpdate>2015-01-05T09:30:47Z</eml:LastUpdate>
+		<eml:VersionString>2.0</eml:VersionString>
+	</eml:Citation>
+	<eml:CustomData/>
+	<StandardConditions xsi:type="eml:TemperaturePressure">
+		<eml:Temperature uom="degF">60</eml:Temperature>
+		<eml:Pressure uom="psi">14.7</eml:Pressure>
+	</StandardConditions>
+	<prodml:ApprovalDate>2015-01-05</prodml:ApprovalDate>
+	<FluidComponentCatalog>
+			<StockTankOil uid="00000000-0000-0000-0003-00000000091">
+			<APIGravity uom="dAPI">30</APIGravity>
+			<MolecularWeight uom="g/mol">100</MolecularWeight>
+			<Remark/>
+		</StockTankOil>
+		<NaturalGas uid="00000000-0000-0000-0003-00000000092">
+			<GasGravity>0.75</GasGravity>
+			<MolecularWeight uom="g/mol">20</MolecularWeight> 
+		</NaturalGas>
+		<FormationWater uid="00000000-0000-0000-0003-00000000093">
+			<SpecificGravity>1.05</SpecificGravity>
+			<Salinity uom="ng/g">30000</Salinity>
+			<Remark/>
+		</FormationWater>
+	</FluidComponentCatalog>
+	<prodml:WellTestMethod/>
+	<prodml:Validate>true</prodml:Validate>
+	<prodml:TestCondition>
+		<prodml:StartTime>2015-01-03T00:00:00Z</prodml:StartTime>
+		<prodml:TestDuration uom="d">1</prodml:TestDuration>
+		<prodml:ProductRate uid="oilRate01">
+			<prodml:ProductFluidReference>00000000-0000-0000-0004-00000000091</prodml:ProductFluidReference>
+			<prodml:VolumeFlowRate uom="bbl/d">387</prodml:VolumeFlowRate>
+		</prodml:ProductRate>
+		<prodml:ProductRate uid="gasRate01">
+			<prodml:ProductFluidReference>00000000-0000-0000-0004-00000000092</prodml:ProductFluidReference>
+			<prodml:VolumeFlowRate uom="bbl/d">167742</prodml:VolumeFlowRate>
+		</prodml:ProductRate>
+		<prodml:ProductRate uid="water01">
+			<prodml:ProductFluidReference>00000000-0000-0000-0004-00000000093</prodml:ProductFluidReference>
+			<prodml:VolumeFlowRate uom="bbl/d">6</prodml:VolumeFlowRate>
+		</prodml:ProductRate>
+		<Parameters>
+				<ChokeOrificeSize uom="1/64 in">40</ChokeOrificeSize>
+				<BottomHoleFlowingPressure  uom="psi">4500</BottomHoleFlowingPressure>
+				<BottomHoleFlowingTemperature uom="degF">210</BottomHoleFlowingTemperature> 
+						<BottomHoleShutInPressure uom="psi">4500</BottomHoleShutInPressure>
+				<TubingHeadFlowingPressure xsi:type="eml:AbsolutePressure"> 
+						<eml:AbsolutePressure uom="psi">500</eml:AbsolutePressure> 
+			</TubingHeadFlowingPressure>
+		</Parameters>
+	</prodml:TestCondition>	
+	<prodml:ReportingEntity>
+		<eml:ContentType/>
+		<eml:Title>well02</eml:Title>
+		<eml:Uuid>00000000-0000-0000-0000-000000000D02</eml:Uuid>
+	</prodml:ReportingEntity>
+</prodml:ProductionWellTest>

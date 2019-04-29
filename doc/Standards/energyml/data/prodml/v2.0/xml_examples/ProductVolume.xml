@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProductVolume objectVersion="2.0" schemaVersion="2.0" uuid="ddb9da9a-601a-11e5-9d70-feff819cdc9f" xmlns="http://www.energistics.org/energyml/data/prodmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/ProductVolume.xsd">
+	<eml:Aliases authority="energistics">
+		<eml:Identifier>sample demo</eml:Identifier>
+		<eml:Description>Energistics</eml:Description>
+	</eml:Aliases>
+	<eml:Citation>
+		<eml:Title>ProductVolume SAMPLE DATA 2015</eml:Title>
+		<eml:Originator>Energistics</eml:Originator>
+		<eml:Creation>2015-01-01T00:00:47Z</eml:Creation>
+		<eml:Format>energistics:xmlspy/xml</eml:Format>
+		<eml:Editor>Mark Mao</eml:Editor>
+		<eml:LastUpdate>2015-06-23T00:00:00Z</eml:LastUpdate>
+		<eml:VersionString>2.0</eml:VersionString>
+		<eml:Description>ProductVolume SAMPLE DATA</eml:Description>
+		<eml:DescriptiveKeywords>ProductVolume SAMPLE DATA</eml:DescriptiveKeywords>
+	</eml:Citation>
+	<Installation kind="field">FLOW-1</Installation>
+	<Kind>PRODML optimization</Kind>
+	<PeriodKind>month to date</PeriodKind>
+	<DateTime xsi:type="StartEndDate">
+		<DateStart>2005-10-26</DateStart>
+	</DateTime>
+	<Facility uid="f1">
+		<FacilityParent kind="field">FLOW-1</FacilityParent>
+		<Unit>A</Unit>
+		<Name kind="compressor">Compressor Bank A</Name>
+		<Flow uid="f1">
+			<Kind>gas lift</Kind>
+			<Port>2</Port>
+			<Direction>outlet</Direction>
+			<Qualifier>constraint</Qualifier>
+			<SubQualifier>maximum</SubQualifier>
+			<Product uid="p1">
+				<Kind>gas</Kind>
+				<Period uid="perd1">
+					<DateTime xsi:type="StartEndTime">
+						<DTime>2005-10-26T00:00:00.000Z</DTime>
+					</DateTime>
+					<Properties>
+						<FlowRateValue>
+							<eml:FlowRate uom="m3/d">234</eml:FlowRate>
+							<eml:MeasurementPressureTemperature xsi:type="eml:ReferenceTemperaturePressure">
+								<eml:ReferenceTempPres>15 degC 1 atm</eml:ReferenceTempPres>
+							</eml:MeasurementPressureTemperature>
+						</FlowRateValue>
+					</Properties>
+				</Period>
+			</Product>
+		</Flow>
+		<Flow uid="f2">
+			<Kind>gas lift</Kind>
+			<Port>2</Port>
+			<Direction>outlet</Direction>
+			<Qualifier>constraint</Qualifier>
+			<SubQualifier>fixed</SubQualifier>
+			<Product uid="p2">
+				<Kind>gas</Kind>
+				<Period uid="perd2">
+					<DateTime xsi:type="StartEndTime">
+						<DTime>2005-10-26T00:00:00.000Z</DTime>
+					</DateTime>
+					<Properties>
+						<Pres uom="kPa">5500</Pres>
+					</Properties>
+				</Period>
+				<Period uid="perd3">
+					<DateTime xsi:type="StartEndTime">
+						<DTime>2005-10-26T00:00:00.000Z</DTime>
+					</DateTime>
+					<Properties>
+						<Pres uom="kPa">5500</Pres>
+					</Properties>
+				</Period>
+				<Period uid="perd4">
+					<DateTime xsi:type="StartEndTime">
+						<DTime>2005-10-26T00:00:00.000Z</DTime>
+					</DateTime>
+					<Properties>
+						<Pres uom="kPa">5500</Pres>
+					</Properties>
+				</Period>
+				<Period uid="perd5">
+					<DateTime xsi:type="StartEndTime">
+						<DTime>2005-10-26T00:00:00.000Z</DTime>
+					</DateTime>
+					<Properties>
+						<Pres uom="kPa">5500</Pres>
+					</Properties>
+				</Period>
+			</Product>
+		</Flow>
+		<Flow uid="f3">
+			<Kind>gas lift</Kind>
+			<Port>2</Port>
+			<Direction>outlet</Direction>
+			<Qualifier>estimate</Qualifier>
+			<SubQualifier>fixed</SubQualifier>
+			<Product uid="p3">
+				<Kind>gas</Kind>
+				<Period  uid="perd4">
+					<DateTime xsi:type="StartEndTime">
+						<DTime>2005-10-26T00:00:00.000Z</DTime>
+					</DateTime>
+					<Properties>
+						<Temp uom="degC">40</Temp>
+					</Properties>
+				</Period>
+				<Period  uid="perd5">
+					<DateTime xsi:type="StartEndTime">
+						<DTime>2005-10-26T00:00:00.000Z</DTime>
+					</DateTime>
+					<Properties>
+						<Temp uom="degC">40</Temp>
+					</Properties>
+				</Period>
+				<Period  uid="perd6">
+					<DateTime xsi:type="StartEndTime">
+						<DTime>2005-10-26T00:00:00.000Z</DTime>
+					</DateTime>
+					<Properties>
+						<Temp uom="degC">40</Temp>
+					</Properties>
+				</Period>
+				<Period  uid="perd7">
+					<DateTime xsi:type="StartEndTime">
+						<DTime>2005-10-26T00:00:00.000Z</DTime>
+					</DateTime>
+					<Properties>
+						<Temp uom="degC">40</Temp>
+					</Properties>
+				</Period>
+			</Product>
+		</Flow>
+		<Flow uid="f4">
+			<Kind>gas lift</Kind>
+			<Port>2</Port>
+			<Direction>outlet</Direction>
+			<Qualifier>recommended</Qualifier>
+			<Product uid="p4">
+				<Kind>gas</Kind>
+				<Period uid="perd10">
+					<DateTime xsi:type="StartEndTime">
+						<DTime>2005-10-26T00:00:00.000Z</DTime>
+					</DateTime>
+					<Properties>
+						<FlowRateValue>
+							<eml:FlowRate uom="m3/d">3343</eml:FlowRate>
+							<eml:MeasurementPressureTemperature xsi:type="eml:ReferenceTemperaturePressure">
+								<eml:ReferenceTempPres>15 degC 1 atm</eml:ReferenceTempPres>
+							</eml:MeasurementPressureTemperature>
+						</FlowRateValue>
+					</Properties>
+				</Period>
+				<Period  uid="perd11">
+					<DateTime xsi:type="StartEndTime">
+						<DTime>2005-10-26T00:00:00.000Z</DTime>
+					</DateTime>
+					<Properties>
+						<FlowRateValue>
+							<eml:FlowRate uom="m3/d">3434</eml:FlowRate>
+							<eml:MeasurementPressureTemperature xsi:type="eml:ReferenceTemperaturePressure">
+								<eml:ReferenceTempPres>15 degC 1 atm</eml:ReferenceTempPres>
+							</eml:MeasurementPressureTemperature>
+						</FlowRateValue>
+					</Properties>
+				</Period>
+				<Period  uid="perd12">
+					<DateTime xsi:type="StartEndTime">
+						<DTime>2005-10-26T00:00:00.000Z</DTime>
+					</DateTime>
+					<Properties>
+						<FlowRateValue>
+							<eml:FlowRate uom="m3/d">343</eml:FlowRate>
+							<eml:MeasurementPressureTemperature xsi:type="eml:ReferenceTemperaturePressure">
+								<eml:ReferenceTempPres>15 degC 1 atm</eml:ReferenceTempPres>
+							</eml:MeasurementPressureTemperature>
+						</FlowRateValue>
+					</Properties>
+				</Period>
+				<Period  uid="perd13">
+					<DateTime xsi:type="StartEndTime">
+						<DTime>2005-10-26T00:00:00.000Z</DTime>
+					</DateTime>
+					<Properties>
+						<FlowRateValue>
+							<eml:FlowRate uom="m3/d">34</eml:FlowRate>
+							<eml:MeasurementPressureTemperature xsi:type="eml:ReferenceTemperaturePressure">
+								<eml:ReferenceTempPres>15 degC 1 atm</eml:ReferenceTempPres>
+							</eml:MeasurementPressureTemperature>
+						</FlowRateValue>
+					</Properties>
+				</Period>
+			</Product>
+		</Flow>
+	</Facility>
+</ProductVolume>

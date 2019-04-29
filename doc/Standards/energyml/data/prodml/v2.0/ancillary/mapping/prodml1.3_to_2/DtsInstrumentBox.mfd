@@ -1,0 +1,1765 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2016r2sp1 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="obj_dtsInstrumentBox" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-52" lty="-677" rbx="450" rby="331"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.prodml.org/schemas/1series"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="dtsInstrumentBoxes" ns="1" expanded="1">
+										<entry name="version" type="attribute" outkey="1"/>
+										<entry name="facilityIdentifier" ns="1">
+											<entry name="name" ns="1" expanded="1"/>
+											<entry name="installation" ns="1" expanded="1"/>
+											<entry name="contextFacility" ns="1" expanded="1"/>
+											<entry name="geographicContext" ns="1" expanded="1">
+												<entry name="offshoreLocation" ns="1" expanded="1">
+													<entry name="northSeaOffshore" ns="1" expanded="1"/>
+												</entry>
+											</entry>
+											<entry name="businessUnit" ns="1" expanded="1">
+												<entry name="subUnit" ns="1" expanded="1"/>
+											</entry>
+											<entry name="operator" ns="1" expanded="1">
+												<entry name="personName" ns="1" expanded="1"/>
+												<entry name="address" ns="1" expanded="1"/>
+												<entry name="phoneNumber" ns="1" expanded="1"/>
+												<entry name="email" ns="1" expanded="1"/>
+											</entry>
+										</entry>
+										<entry name="fiberInstrumentBox" ns="1" outkey="349" expanded="1">
+											<entry name="grp_dtsInstrumentBox" ns="1" expanded="1">
+												<entry name="name" ns="1" outkey="3"/>
+												<entry name="manufacturer" ns="1" outkey="4"/>
+												<entry name="manufacturingDate" ns="1" outkey="5"/>
+												<entry name="type" ns="1" outkey="6"/>
+												<entry name="supplier" ns="1" outkey="7">
+													<entry name="name" ns="1" outkey="8"/>
+													<entry name="role" ns="1" outkey="9"/>
+													<entry name="personName" ns="1" outkey="350" expanded="1">
+														<entry name="prefix" ns="1" outkey="351"/>
+														<entry name="first" ns="1" outkey="352"/>
+														<entry name="middle" ns="1" outkey="353"/>
+														<entry name="last" ns="1" outkey="354"/>
+														<entry name="suffix" ns="1" outkey="355"/>
+													</entry>
+													<entry name="alias" ns="1" outkey="10" expanded="1"/>
+													<entry name="address" ns="1" outkey="12" expanded="1">
+														<entry name="kind" type="attribute" outkey="13"/>
+														<entry name="uid" type="attribute" outkey="14"/>
+														<entry name="name" ns="1" outkey="15"/>
+														<entry name="street" ns="1" outkey="16"/>
+														<entry name="city" ns="1" outkey="17"/>
+														<entry name="state" ns="1" outkey="18"/>
+														<entry name="province" ns="1" outkey="19"/>
+														<entry name="county" ns="1" outkey="20"/>
+														<entry name="country" ns="1" outkey="21"/>
+														<entry name="postalCode" ns="1" outkey="356"/>
+													</entry>
+													<entry name="phoneNumber" ns="1" outkey="22" expanded="1">
+														<entry name="type" type="attribute" outkey="23"/>
+														<entry name="qualifier" type="attribute" outkey="24"/>
+														<entry name="extension" type="attribute" outkey="25"/>
+													</entry>
+													<entry name="email" ns="1" outkey="26" expanded="1">
+														<entry name="qualifier" type="attribute" outkey="27"/>
+													</entry>
+													<entry name="associatedWith" ns="1" outkey="28"/>
+													<entry name="contact" ns="1" outkey="357"/>
+													<entry name="personnelCount" ns="1" outkey="358"/>
+												</entry>
+												<entry name="supplyDate" ns="1" outkey="359"/>
+												<entry name="supplierModelNumber" ns="1" outkey="360"/>
+												<entry name="softwareVersion" ns="1" outkey="361"/>
+												<entry name="comment" ns="1" outkey="362"/>
+												<entry name="instrumentVendor" ns="1" outkey="29">
+													<entry name="name" ns="1" outkey="30"/>
+													<entry name="role" ns="1" outkey="31" expanded="1"/>
+													<entry name="personName" ns="1" outkey="363" expanded="1">
+														<entry name="prefix" ns="1" outkey="364"/>
+														<entry name="first" ns="1" outkey="365"/>
+														<entry name="middle" ns="1" outkey="366"/>
+														<entry name="last" ns="1" outkey="367"/>
+														<entry name="suffix" ns="1" outkey="368"/>
+													</entry>
+													<entry name="alias" ns="1" outkey="369"/>
+													<entry name="address" ns="1" outkey="33" expanded="1">
+														<entry name="kind" type="attribute" outkey="34"/>
+														<entry name="uid" type="attribute" outkey="35"/>
+														<entry name="name" ns="1" outkey="36"/>
+														<entry name="street" ns="1" outkey="37"/>
+														<entry name="city" ns="1" outkey="38"/>
+														<entry name="state" ns="1" outkey="39"/>
+														<entry name="province" ns="1" outkey="40"/>
+														<entry name="county" ns="1" outkey="41"/>
+														<entry name="country" ns="1" outkey="42"/>
+														<entry name="postalCode" ns="1" outkey="370"/>
+													</entry>
+													<entry name="phoneNumber" ns="1" outkey="43" expanded="1">
+														<entry name="type" type="attribute" outkey="44"/>
+														<entry name="qualifier" type="attribute" outkey="45"/>
+														<entry name="extension" type="attribute" outkey="46"/>
+													</entry>
+													<entry name="email" ns="1" outkey="47" expanded="1">
+														<entry name="qualifier" type="attribute" outkey="48"/>
+													</entry>
+													<entry name="associatedWith" ns="1" outkey="371"/>
+													<entry name="contact" ns="1" outkey="49"/>
+													<entry name="personnelCount" ns="1" outkey="50"/>
+												</entry>
+												<entry name="serial_number" ns="1" outkey="51"/>
+												<entry name="internalOvenLocationNear" ns="1" outkey="372"/>
+												<entry name="internalOvenLocationFar" ns="1" outkey="373" expanded="1"/>
+												<entry name="referenceCoilTemperature" ns="1" outkey="374"/>
+												<entry name="parameter" ns="1" outkey="375"/>
+												<entry name="warmupTime" ns="1" outkey="376"/>
+												<entry name="startupTime" ns="1" outkey="377"/>
+												<entry name="instrumentCalibration" ns="1" outkey="378">
+													<entry name="uid" type="attribute" outkey="379"/>
+													<entry name="dTimCalibration" ns="1" outkey="380"/>
+													<entry name="calibratedBy" ns="1" outkey="381"/>
+													<entry name="calibrationProtocol" ns="1" outkey="382"/>
+													<entry name="parameter" ns="1" outkey="383" expanded="1">
+														<entry name="uom" type="attribute" outkey="384"/>
+														<entry name="name" type="attribute" outkey="385"/>
+													</entry>
+													<entry name="extensionNameValue" ns="1" outkey="386" expanded="1">
+														<entry name="name" ns="1" outkey="387"/>
+														<entry name="value" ns="1" outkey="388"/>
+														<entry name="dTim" ns="1" outkey="389"/>
+														<entry name="index" ns="1" outkey="390"/>
+														<entry name="measureClass" ns="1" outkey="391"/>
+														<entry name="description" ns="1" outkey="392"/>
+													</entry>
+												</entry>
+												<entry name="extensionNameValue" ns="1" outkey="393">
+													<entry name="name" ns="1" outkey="394"/>
+													<entry name="value" ns="1" outkey="395"/>
+													<entry name="dTim" ns="1" outkey="396"/>
+													<entry name="index" ns="1" outkey="397"/>
+													<entry name="measureClass" ns="1" outkey="398"/>
+													<entry name="description" ns="1" outkey="399"/>
+												</entry>
+												<entry name="cs_dtsPatchCord" ns="1" outkey="400" expanded="1">
+													<entry name="fiberLength" ns="1" outkey="401"/>
+													<entry name="description" ns="1" outkey="402"/>
+												</entry>
+											</entry>
+											<entry name="customData" ns="1" outkey="52"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xsd_schemas\obj_dtsInstrumentBox.xsd" inputinstance="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xml_examples\dtsInstrumentBox.xml" outputinstance="..\..\..\xml_examples\dtsInstrumentBox.xml" instanceroot="{http://www.prodml.org/schemas/1series}dtsInstrumentBoxes"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="DtsInstrumentBox" library="xml" uid="6" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="560" lty="-677" rbx="1031" rby="-1"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.energistics.org/energyml/data/commonv2"/>
+									<namespace uid="http://www.energistics.org/energyml/data/prodmlv2"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="3" expanded="1">
+								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="DtsInstrumentBox" ns="2" inpkey="403" expanded="1">
+										<entry name="schemaVersion" type="attribute" inpkey="404"/>
+										<entry name="Citation" ns="1">
+											<entry name="Title" ns="1" inpkey="405"/>
+										</entry>
+										<entry name="CustomData" ns="1" inpkey="406"/>
+										<entry name="SerialNumber" ns="2" inpkey="407"/>
+										<entry name="InternalOvenLocationNear" ns="2" inpkey="408"/>
+										<entry name="InternalOvenLocationFar" ns="2" inpkey="409"/>
+										<entry name="ReferenceCoilTemperature" ns="2" inpkey="410"/>
+										<entry name="Parameter" ns="2" inpkey="411"/>
+										<entry name="WarmupTime" ns="2" inpkey="412"/>
+										<entry name="StartupTime" ns="2" inpkey="413"/>
+										<entry name="DtsPatchCord" ns="2" inpkey="414">
+											<entry name="FiberLength" ns="2" inpkey="415"/>
+											<entry name="Description" ns="2" inpkey="416"/>
+										</entry>
+										<entry name="InstrumentCalibration" ns="2" inpkey="417">
+											<entry name="uid" type="attribute" inpkey="418"/>
+											<entry name="DTimCalibration" ns="2" inpkey="419"/>
+											<entry name="CalibratedBy" ns="2" inpkey="420"/>
+											<entry name="CalibrationProtocol" ns="2" inpkey="421"/>
+											<entry name="Parameter" ns="2" inpkey="422">
+												<entry name="uom" type="attribute" inpkey="423"/>
+												<entry name="name" type="attribute" inpkey="424"/>
+											</entry>
+											<entry name="ExtensionNameValue" ns="2" inpkey="425">
+												<entry name="Name" ns="1" inpkey="426"/>
+												<entry name="Value" ns="1" inpkey="427"/>
+												<entry name="MeasureClass" ns="1" inpkey="428"/>
+												<entry name="DTim" ns="1" inpkey="429"/>
+												<entry name="Index" ns="1" inpkey="430"/>
+												<entry name="Description" ns="1" inpkey="431"/>
+											</entry>
+										</entry>
+										<entry name="ExtensionNameValue" ns="2" inpkey="432">
+											<entry name="Name" ns="1" inpkey="433"/>
+											<entry name="Value" ns="1" inpkey="434"/>
+											<entry name="MeasureClass" ns="1" inpkey="435"/>
+											<entry name="DTim" ns="1" inpkey="436"/>
+											<entry name="Index" ns="1" inpkey="437"/>
+											<entry name="Description" ns="1" inpkey="438"/>
+										</entry>
+										<entry name="Instrument" ns="2">
+											<entry name="Manufacturer" ns="2" inpkey="439"/>
+											<entry name="ManufacturingDate" ns="2" inpkey="440"/>
+											<entry name="Type" ns="2" inpkey="441"/>
+											<entry name="SupplyDate" ns="2" inpkey="442"/>
+											<entry name="SupplierModelNumber" ns="2" inpkey="443"/>
+											<entry name="SoftwareVersion" ns="2" inpkey="444"/>
+											<entry name="Comment" ns="2" inpkey="445"/>
+											<entry name="Supplier" ns="2" inpkey="446">
+												<entry name="Name" ns="2" inpkey="447"/>
+												<entry name="Role" ns="2" inpkey="448"/>
+												<entry name="Alias" ns="2" inpkey="449"/>
+												<entry name="Address" ns="2" inpkey="450">
+													<entry name="uid" type="attribute" inpkey="451"/>
+													<entry name="kind" type="attribute" inpkey="452"/>
+													<entry name="Name" ns="2" inpkey="453"/>
+													<entry name="Street" ns="2" inpkey="454"/>
+													<entry name="City" ns="2" inpkey="455"/>
+													<entry name="Country" ns="2" inpkey="456"/>
+													<entry name="County" ns="2" inpkey="457"/>
+													<entry name="PostalCode" ns="2" inpkey="458"/>
+													<entry name="State" ns="2" inpkey="459"/>
+													<entry name="Province" ns="2" inpkey="460"/>
+												</entry>
+												<entry name="PhoneNumber" ns="2" inpkey="461">
+													<entry name="type" type="attribute" inpkey="462"/>
+													<entry name="qualifier" type="attribute" inpkey="463"/>
+													<entry name="extension" type="attribute" inpkey="464"/>
+												</entry>
+												<entry name="Email" ns="2" inpkey="465">
+													<entry name="qualifier" type="attribute" inpkey="466"/>
+												</entry>
+												<entry name="AssociatedWith" ns="2" inpkey="467"/>
+												<entry name="Contact" ns="2" inpkey="468"/>
+												<entry name="PersonnelCount" ns="2" inpkey="469"/>
+												<entry name="PersonName" ns="2" inpkey="470">
+													<entry name="Prefix" ns="2" inpkey="471"/>
+													<entry name="First" ns="2" inpkey="472"/>
+													<entry name="Middle" ns="2" inpkey="473"/>
+													<entry name="Last" ns="2" inpkey="474"/>
+													<entry name="Suffix" ns="2" inpkey="475"/>
+												</entry>
+											</entry>
+											<entry name="InstrumentVendor" ns="2" inpkey="476">
+												<entry name="Name" ns="2" inpkey="477"/>
+												<entry name="Role" ns="2" inpkey="478"/>
+												<entry name="Alias" ns="2" inpkey="479"/>
+												<entry name="Address" ns="2" inpkey="480">
+													<entry name="uid" type="attribute" inpkey="481"/>
+													<entry name="kind" type="attribute" inpkey="482"/>
+													<entry name="Name" ns="2" inpkey="483"/>
+													<entry name="Street" ns="2" inpkey="484"/>
+													<entry name="City" ns="2" inpkey="485"/>
+													<entry name="Country" ns="2" inpkey="486"/>
+													<entry name="County" ns="2" inpkey="487"/>
+													<entry name="PostalCode" ns="2" inpkey="488"/>
+													<entry name="State" ns="2" inpkey="489"/>
+													<entry name="Province" ns="2" inpkey="490"/>
+												</entry>
+												<entry name="PhoneNumber" ns="2" inpkey="491">
+													<entry name="type" type="attribute" inpkey="492"/>
+													<entry name="qualifier" type="attribute" inpkey="493"/>
+													<entry name="extension" type="attribute" inpkey="494"/>
+												</entry>
+												<entry name="Email" ns="2" inpkey="495">
+													<entry name="qualifier" type="attribute" inpkey="496"/>
+												</entry>
+												<entry name="AssociatedWith" ns="2" inpkey="497"/>
+												<entry name="Contact" ns="2" inpkey="498"/>
+												<entry name="PersonnelCount" ns="2" inpkey="499"/>
+												<entry name="PersonName" ns="2" inpkey="500">
+													<entry name="Prefix" ns="2" inpkey="501"/>
+													<entry name="First" ns="2" inpkey="502"/>
+													<entry name="Middle" ns="2" inpkey="503"/>
+													<entry name="Last" ns="2" inpkey="504"/>
+													<entry name="Suffix" ns="2" inpkey="505"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\..\xsd_schemas\DtsInstrumentBox.xsd" outputinstance="..\..\..\..\xml_examples\DtsInstrumentBox.xml" instanceroot="{http://www.energistics.org/energyml/data/prodmlv2}DtsInstrumentBox"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="506">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="507">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="508">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="509">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="510">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="511">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="512">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="513">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="404" edgekey="514"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="405" edgekey="515"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="439" edgekey="516"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="440" edgekey="517"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="441" edgekey="518"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="446" edgekey="519"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="447" edgekey="520"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="448" edgekey="521"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="449" edgekey="522"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="450" edgekey="523"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="452" edgekey="524"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="451" edgekey="525"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="453" edgekey="526"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="454" edgekey="527"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="455" edgekey="528"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="459" edgekey="529"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="460" edgekey="530"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="20">
+						<edges>
+							<edge vertexkey="457" edgekey="531"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="456" edgekey="532"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="461" edgekey="533"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="23">
+						<edges>
+							<edge vertexkey="462" edgekey="534"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="463" edgekey="535"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="464" edgekey="536"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="26">
+						<edges>
+							<edge vertexkey="465" edgekey="537"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="27">
+						<edges>
+							<edge vertexkey="466" edgekey="538"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="467" edgekey="539"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="29">
+						<edges>
+							<edge vertexkey="476" edgekey="540"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="30">
+						<edges>
+							<edge vertexkey="477" edgekey="541"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="478" edgekey="542"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="33">
+						<edges>
+							<edge vertexkey="480" edgekey="543"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="482" edgekey="544"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="35">
+						<edges>
+							<edge vertexkey="481" edgekey="545"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="36">
+						<edges>
+							<edge vertexkey="483" edgekey="546"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="484" edgekey="547"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="38">
+						<edges>
+							<edge vertexkey="485" edgekey="548"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="39">
+						<edges>
+							<edge vertexkey="489" edgekey="549"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="490" edgekey="550"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="41">
+						<edges>
+							<edge vertexkey="487" edgekey="551"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="42">
+						<edges>
+							<edge vertexkey="486" edgekey="552"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="43">
+						<edges>
+							<edge vertexkey="491" edgekey="553"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="44">
+						<edges>
+							<edge vertexkey="492" edgekey="554"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="45">
+						<edges>
+							<edge vertexkey="493" edgekey="555"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="46">
+						<edges>
+							<edge vertexkey="494" edgekey="556"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="47">
+						<edges>
+							<edge vertexkey="495" edgekey="557"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="48">
+						<edges>
+							<edge vertexkey="496" edgekey="558"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="498" edgekey="559"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="50">
+						<edges>
+							<edge vertexkey="499" edgekey="560"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51">
+						<edges>
+							<edge vertexkey="407" edgekey="561"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="52">
+						<edges>
+							<edge vertexkey="406" edgekey="513"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="349">
+						<edges>
+							<edge vertexkey="403" edgekey="562"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="350">
+						<edges>
+							<edge vertexkey="470" edgekey="563"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="351">
+						<edges>
+							<edge vertexkey="471" edgekey="564"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="352">
+						<edges>
+							<edge vertexkey="472" edgekey="565"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="353">
+						<edges>
+							<edge vertexkey="473" edgekey="566"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="354">
+						<edges>
+							<edge vertexkey="474" edgekey="567"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="355">
+						<edges>
+							<edge vertexkey="475" edgekey="568"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="356">
+						<edges>
+							<edge vertexkey="458" edgekey="569"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="357">
+						<edges>
+							<edge vertexkey="468" edgekey="570"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="358">
+						<edges>
+							<edge vertexkey="469" edgekey="571"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="359">
+						<edges>
+							<edge vertexkey="442" edgekey="572"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="360">
+						<edges>
+							<edge vertexkey="443" edgekey="573"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="361">
+						<edges>
+							<edge vertexkey="444" edgekey="574"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="362">
+						<edges>
+							<edge vertexkey="445" edgekey="575"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="363">
+						<edges>
+							<edge vertexkey="500" edgekey="576"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="364">
+						<edges>
+							<edge vertexkey="501" edgekey="577"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="365">
+						<edges>
+							<edge vertexkey="502" edgekey="578"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="366">
+						<edges>
+							<edge vertexkey="503" edgekey="579"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="367">
+						<edges>
+							<edge vertexkey="504" edgekey="580"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="368">
+						<edges>
+							<edge vertexkey="505" edgekey="581"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="369">
+						<edges>
+							<edge vertexkey="479" edgekey="582"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="370">
+						<edges>
+							<edge vertexkey="488" edgekey="583"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="371">
+						<edges>
+							<edge vertexkey="497" edgekey="584"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="372">
+						<edges>
+							<edge vertexkey="408" edgekey="509"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="373">
+						<edges>
+							<edge vertexkey="409" edgekey="506"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="374">
+						<edges>
+							<edge vertexkey="410" edgekey="511"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="375">
+						<edges>
+							<edge vertexkey="411" edgekey="510"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="376">
+						<edges>
+							<edge vertexkey="412" edgekey="508"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="377">
+						<edges>
+							<edge vertexkey="413" edgekey="507"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="378">
+						<edges>
+							<edge vertexkey="417" edgekey="585"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="379">
+						<edges>
+							<edge vertexkey="418" edgekey="586"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="380">
+						<edges>
+							<edge vertexkey="419" edgekey="587"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="381">
+						<edges>
+							<edge vertexkey="420" edgekey="588"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="382">
+						<edges>
+							<edge vertexkey="421" edgekey="589"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="383">
+						<edges>
+							<edge vertexkey="422" edgekey="590"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="384">
+						<edges>
+							<edge vertexkey="423" edgekey="591"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="385">
+						<edges>
+							<edge vertexkey="424" edgekey="592"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="386">
+						<edges>
+							<edge vertexkey="425" edgekey="593"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="387">
+						<edges>
+							<edge vertexkey="426" edgekey="594"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="388">
+						<edges>
+							<edge vertexkey="427" edgekey="595"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="389">
+						<edges>
+							<edge vertexkey="429" edgekey="596"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="390">
+						<edges>
+							<edge vertexkey="430" edgekey="597"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="391">
+						<edges>
+							<edge vertexkey="428" edgekey="598"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="392">
+						<edges>
+							<edge vertexkey="431" edgekey="599"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="393">
+						<edges>
+							<edge vertexkey="432" edgekey="600"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="394">
+						<edges>
+							<edge vertexkey="433" edgekey="601"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="395">
+						<edges>
+							<edge vertexkey="434" edgekey="602"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="396">
+						<edges>
+							<edge vertexkey="436" edgekey="603"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="397">
+						<edges>
+							<edge vertexkey="437" edgekey="604"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="398">
+						<edges>
+							<edge vertexkey="435" edgekey="605"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="399">
+						<edges>
+							<edge vertexkey="438" edgekey="606"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="400">
+						<edges>
+							<edge vertexkey="414" edgekey="607"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="401">
+						<edges>
+							<edge vertexkey="415" edgekey="512"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="402">
+						<edges>
+							<edge vertexkey="416" edgekey="608"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2016r2sp1 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="obj_dtsInstrumentBox" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-52" lty="-677" rbx="450" rby="331"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.prodml.org/schemas/1series"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="dtsInstrumentBoxes" ns="1" expanded="1">
+										<entry name="version" type="attribute" outkey="1"/>
+										<entry name="facilityIdentifier" ns="1">
+											<entry name="name" ns="1" expanded="1"/>
+											<entry name="installation" ns="1" expanded="1"/>
+											<entry name="contextFacility" ns="1" expanded="1"/>
+											<entry name="geographicContext" ns="1" expanded="1">
+												<entry name="offshoreLocation" ns="1" expanded="1">
+													<entry name="northSeaOffshore" ns="1" expanded="1"/>
+												</entry>
+											</entry>
+											<entry name="businessUnit" ns="1" expanded="1">
+												<entry name="subUnit" ns="1" expanded="1"/>
+											</entry>
+											<entry name="operator" ns="1" expanded="1">
+												<entry name="personName" ns="1" expanded="1"/>
+												<entry name="address" ns="1" expanded="1"/>
+												<entry name="phoneNumber" ns="1" expanded="1"/>
+												<entry name="email" ns="1" expanded="1"/>
+											</entry>
+										</entry>
+										<entry name="fiberInstrumentBox" ns="1" outkey="349" expanded="1">
+											<entry name="grp_dtsInstrumentBox" ns="1" expanded="1">
+												<entry name="name" ns="1" outkey="3"/>
+												<entry name="manufacturer" ns="1" outkey="4"/>
+												<entry name="manufacturingDate" ns="1" outkey="5"/>
+												<entry name="type" ns="1" outkey="6"/>
+												<entry name="supplier" ns="1" outkey="7">
+													<entry name="name" ns="1" outkey="8"/>
+													<entry name="role" ns="1" outkey="9"/>
+													<entry name="personName" ns="1" outkey="350" expanded="1">
+														<entry name="prefix" ns="1" outkey="351"/>
+														<entry name="first" ns="1" outkey="352"/>
+														<entry name="middle" ns="1" outkey="353"/>
+														<entry name="last" ns="1" outkey="354"/>
+														<entry name="suffix" ns="1" outkey="355"/>
+													</entry>
+													<entry name="alias" ns="1" outkey="10" expanded="1"/>
+													<entry name="address" ns="1" outkey="12" expanded="1">
+														<entry name="kind" type="attribute" outkey="13"/>
+														<entry name="uid" type="attribute" outkey="14"/>
+														<entry name="name" ns="1" outkey="15"/>
+														<entry name="street" ns="1" outkey="16"/>
+														<entry name="city" ns="1" outkey="17"/>
+														<entry name="state" ns="1" outkey="18"/>
+														<entry name="province" ns="1" outkey="19"/>
+														<entry name="county" ns="1" outkey="20"/>
+														<entry name="country" ns="1" outkey="21"/>
+														<entry name="postalCode" ns="1" outkey="356"/>
+													</entry>
+													<entry name="phoneNumber" ns="1" outkey="22" expanded="1">
+														<entry name="type" type="attribute" outkey="23"/>
+														<entry name="qualifier" type="attribute" outkey="24"/>
+														<entry name="extension" type="attribute" outkey="25"/>
+													</entry>
+													<entry name="email" ns="1" outkey="26" expanded="1">
+														<entry name="qualifier" type="attribute" outkey="27"/>
+													</entry>
+													<entry name="associatedWith" ns="1" outkey="28"/>
+													<entry name="contact" ns="1" outkey="357"/>
+													<entry name="personnelCount" ns="1" outkey="358"/>
+												</entry>
+												<entry name="supplyDate" ns="1" outkey="359"/>
+												<entry name="supplierModelNumber" ns="1" outkey="360"/>
+												<entry name="softwareVersion" ns="1" outkey="361"/>
+												<entry name="comment" ns="1" outkey="362"/>
+												<entry name="instrumentVendor" ns="1" outkey="29">
+													<entry name="name" ns="1" outkey="30"/>
+													<entry name="role" ns="1" outkey="31" expanded="1"/>
+													<entry name="personName" ns="1" outkey="363" expanded="1">
+														<entry name="prefix" ns="1" outkey="364"/>
+														<entry name="first" ns="1" outkey="365"/>
+														<entry name="middle" ns="1" outkey="366"/>
+														<entry name="last" ns="1" outkey="367"/>
+														<entry name="suffix" ns="1" outkey="368"/>
+													</entry>
+													<entry name="alias" ns="1" outkey="369"/>
+													<entry name="address" ns="1" outkey="33" expanded="1">
+														<entry name="kind" type="attribute" outkey="34"/>
+														<entry name="uid" type="attribute" outkey="35"/>
+														<entry name="name" ns="1" outkey="36"/>
+														<entry name="street" ns="1" outkey="37"/>
+														<entry name="city" ns="1" outkey="38"/>
+														<entry name="state" ns="1" outkey="39"/>
+														<entry name="province" ns="1" outkey="40"/>
+														<entry name="county" ns="1" outkey="41"/>
+														<entry name="country" ns="1" outkey="42"/>
+														<entry name="postalCode" ns="1" outkey="370"/>
+													</entry>
+													<entry name="phoneNumber" ns="1" outkey="43" expanded="1">
+														<entry name="type" type="attribute" outkey="44"/>
+														<entry name="qualifier" type="attribute" outkey="45"/>
+														<entry name="extension" type="attribute" outkey="46"/>
+													</entry>
+													<entry name="email" ns="1" outkey="47" expanded="1">
+														<entry name="qualifier" type="attribute" outkey="48"/>
+													</entry>
+													<entry name="associatedWith" ns="1" outkey="371"/>
+													<entry name="contact" ns="1" outkey="49"/>
+													<entry name="personnelCount" ns="1" outkey="50"/>
+												</entry>
+												<entry name="serial_number" ns="1" outkey="51"/>
+												<entry name="internalOvenLocationNear" ns="1" outkey="372"/>
+												<entry name="internalOvenLocationFar" ns="1" outkey="373" expanded="1"/>
+												<entry name="referenceCoilTemperature" ns="1" outkey="374"/>
+												<entry name="parameter" ns="1" outkey="375"/>
+												<entry name="warmupTime" ns="1" outkey="376"/>
+												<entry name="startupTime" ns="1" outkey="377"/>
+												<entry name="instrumentCalibration" ns="1" outkey="378">
+													<entry name="uid" type="attribute" outkey="379"/>
+													<entry name="dTimCalibration" ns="1" outkey="380"/>
+													<entry name="calibratedBy" ns="1" outkey="381"/>
+													<entry name="calibrationProtocol" ns="1" outkey="382"/>
+													<entry name="parameter" ns="1" outkey="383" expanded="1">
+														<entry name="uom" type="attribute" outkey="384"/>
+														<entry name="name" type="attribute" outkey="385"/>
+													</entry>
+													<entry name="extensionNameValue" ns="1" outkey="386" expanded="1">
+														<entry name="name" ns="1" outkey="387"/>
+														<entry name="value" ns="1" outkey="388"/>
+														<entry name="dTim" ns="1" outkey="389"/>
+														<entry name="index" ns="1" outkey="390"/>
+														<entry name="measureClass" ns="1" outkey="391"/>
+														<entry name="description" ns="1" outkey="392"/>
+													</entry>
+												</entry>
+												<entry name="extensionNameValue" ns="1" outkey="393">
+													<entry name="name" ns="1" outkey="394"/>
+													<entry name="value" ns="1" outkey="395"/>
+													<entry name="dTim" ns="1" outkey="396"/>
+													<entry name="index" ns="1" outkey="397"/>
+													<entry name="measureClass" ns="1" outkey="398"/>
+													<entry name="description" ns="1" outkey="399"/>
+												</entry>
+												<entry name="cs_dtsPatchCord" ns="1" outkey="400" expanded="1">
+													<entry name="fiberLength" ns="1" outkey="401"/>
+													<entry name="description" ns="1" outkey="402"/>
+												</entry>
+											</entry>
+											<entry name="customData" ns="1" outkey="52"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xsd_schemas\obj_dtsInstrumentBox.xsd" inputinstance="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xml_examples\dtsInstrumentBox.xml" outputinstance="..\..\..\xml_examples\dtsInstrumentBox.xml" instanceroot="{http://www.prodml.org/schemas/1series}dtsInstrumentBoxes"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="DtsInstrumentBox" library="xml" uid="6" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="560" lty="-677" rbx="1031" rby="-1"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.energistics.org/energyml/data/commonv2"/>
+									<namespace uid="http://www.energistics.org/energyml/data/prodmlv2"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="3" expanded="1">
+								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="DtsInstrumentBox" ns="2" inpkey="403" expanded="1">
+										<entry name="schemaVersion" type="attribute" inpkey="404"/>
+										<entry name="Citation" ns="1">
+											<entry name="Title" ns="1" inpkey="405"/>
+										</entry>
+										<entry name="CustomData" ns="1" inpkey="406"/>
+										<entry name="SerialNumber" ns="2" inpkey="407"/>
+										<entry name="InternalOvenLocationNear" ns="2" inpkey="408"/>
+										<entry name="InternalOvenLocationFar" ns="2" inpkey="409"/>
+										<entry name="ReferenceCoilTemperature" ns="2" inpkey="410"/>
+										<entry name="Parameter" ns="2" inpkey="411"/>
+										<entry name="WarmupTime" ns="2" inpkey="412"/>
+										<entry name="StartupTime" ns="2" inpkey="413"/>
+										<entry name="DtsPatchCord" ns="2" inpkey="414">
+											<entry name="FiberLength" ns="2" inpkey="415"/>
+											<entry name="Description" ns="2" inpkey="416"/>
+										</entry>
+										<entry name="InstrumentCalibration" ns="2" inpkey="417">
+											<entry name="uid" type="attribute" inpkey="418"/>
+											<entry name="DTimCalibration" ns="2" inpkey="419"/>
+											<entry name="CalibratedBy" ns="2" inpkey="420"/>
+											<entry name="CalibrationProtocol" ns="2" inpkey="421"/>
+											<entry name="Parameter" ns="2" inpkey="422">
+												<entry name="uom" type="attribute" inpkey="423"/>
+												<entry name="name" type="attribute" inpkey="424"/>
+											</entry>
+											<entry name="ExtensionNameValue" ns="2" inpkey="425">
+												<entry name="Name" ns="1" inpkey="426"/>
+												<entry name="Value" ns="1" inpkey="427"/>
+												<entry name="MeasureClass" ns="1" inpkey="428"/>
+												<entry name="DTim" ns="1" inpkey="429"/>
+												<entry name="Index" ns="1" inpkey="430"/>
+												<entry name="Description" ns="1" inpkey="431"/>
+											</entry>
+										</entry>
+										<entry name="ExtensionNameValue" ns="2" inpkey="432">
+											<entry name="Name" ns="1" inpkey="433"/>
+											<entry name="Value" ns="1" inpkey="434"/>
+											<entry name="MeasureClass" ns="1" inpkey="435"/>
+											<entry name="DTim" ns="1" inpkey="436"/>
+											<entry name="Index" ns="1" inpkey="437"/>
+											<entry name="Description" ns="1" inpkey="438"/>
+										</entry>
+										<entry name="Instrument" ns="2">
+											<entry name="Manufacturer" ns="2" inpkey="439"/>
+											<entry name="ManufacturingDate" ns="2" inpkey="440"/>
+											<entry name="Type" ns="2" inpkey="441"/>
+											<entry name="SupplyDate" ns="2" inpkey="442"/>
+											<entry name="SupplierModelNumber" ns="2" inpkey="443"/>
+											<entry name="SoftwareVersion" ns="2" inpkey="444"/>
+											<entry name="Comment" ns="2" inpkey="445"/>
+											<entry name="Supplier" ns="2" inpkey="446">
+												<entry name="Name" ns="2" inpkey="447"/>
+												<entry name="Role" ns="2" inpkey="448"/>
+												<entry name="Alias" ns="2" inpkey="449"/>
+												<entry name="Address" ns="2" inpkey="450">
+													<entry name="uid" type="attribute" inpkey="451"/>
+													<entry name="kind" type="attribute" inpkey="452"/>
+													<entry name="Name" ns="2" inpkey="453"/>
+													<entry name="Street" ns="2" inpkey="454"/>
+													<entry name="City" ns="2" inpkey="455"/>
+													<entry name="Country" ns="2" inpkey="456"/>
+													<entry name="County" ns="2" inpkey="457"/>
+													<entry name="PostalCode" ns="2" inpkey="458"/>
+													<entry name="State" ns="2" inpkey="459"/>
+													<entry name="Province" ns="2" inpkey="460"/>
+												</entry>
+												<entry name="PhoneNumber" ns="2" inpkey="461">
+													<entry name="type" type="attribute" inpkey="462"/>
+													<entry name="qualifier" type="attribute" inpkey="463"/>
+													<entry name="extension" type="attribute" inpkey="464"/>
+												</entry>
+												<entry name="Email" ns="2" inpkey="465">
+													<entry name="qualifier" type="attribute" inpkey="466"/>
+												</entry>
+												<entry name="AssociatedWith" ns="2" inpkey="467"/>
+												<entry name="Contact" ns="2" inpkey="468"/>
+												<entry name="PersonnelCount" ns="2" inpkey="469"/>
+												<entry name="PersonName" ns="2" inpkey="470">
+													<entry name="Prefix" ns="2" inpkey="471"/>
+													<entry name="First" ns="2" inpkey="472"/>
+													<entry name="Middle" ns="2" inpkey="473"/>
+													<entry name="Last" ns="2" inpkey="474"/>
+													<entry name="Suffix" ns="2" inpkey="475"/>
+												</entry>
+											</entry>
+											<entry name="InstrumentVendor" ns="2" inpkey="476">
+												<entry name="Name" ns="2" inpkey="477"/>
+												<entry name="Role" ns="2" inpkey="478"/>
+												<entry name="Alias" ns="2" inpkey="479"/>
+												<entry name="Address" ns="2" inpkey="480">
+													<entry name="uid" type="attribute" inpkey="481"/>
+													<entry name="kind" type="attribute" inpkey="482"/>
+													<entry name="Name" ns="2" inpkey="483"/>
+													<entry name="Street" ns="2" inpkey="484"/>
+													<entry name="City" ns="2" inpkey="485"/>
+													<entry name="Country" ns="2" inpkey="486"/>
+													<entry name="County" ns="2" inpkey="487"/>
+													<entry name="PostalCode" ns="2" inpkey="488"/>
+													<entry name="State" ns="2" inpkey="489"/>
+													<entry name="Province" ns="2" inpkey="490"/>
+												</entry>
+												<entry name="PhoneNumber" ns="2" inpkey="491">
+													<entry name="type" type="attribute" inpkey="492"/>
+													<entry name="qualifier" type="attribute" inpkey="493"/>
+													<entry name="extension" type="attribute" inpkey="494"/>
+												</entry>
+												<entry name="Email" ns="2" inpkey="495">
+													<entry name="qualifier" type="attribute" inpkey="496"/>
+												</entry>
+												<entry name="AssociatedWith" ns="2" inpkey="497"/>
+												<entry name="Contact" ns="2" inpkey="498"/>
+												<entry name="PersonnelCount" ns="2" inpkey="499"/>
+												<entry name="PersonName" ns="2" inpkey="500">
+													<entry name="Prefix" ns="2" inpkey="501"/>
+													<entry name="First" ns="2" inpkey="502"/>
+													<entry name="Middle" ns="2" inpkey="503"/>
+													<entry name="Last" ns="2" inpkey="504"/>
+													<entry name="Suffix" ns="2" inpkey="505"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\..\xsd_schemas\DtsInstrumentBox.xsd" outputinstance="..\..\..\..\xml_examples\DtsInstrumentBox.xml" instanceroot="{http://www.energistics.org/energyml/data/prodmlv2}DtsInstrumentBox"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="506">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="507">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="508">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="509">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="510">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="511">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="512">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="513">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="404" edgekey="514"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="405" edgekey="515"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="439" edgekey="516"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="440" edgekey="517"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="441" edgekey="518"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="446" edgekey="519"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="447" edgekey="520"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="448" edgekey="521"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="449" edgekey="522"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="450" edgekey="523"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="452" edgekey="524"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="451" edgekey="525"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="453" edgekey="526"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="454" edgekey="527"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="455" edgekey="528"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="459" edgekey="529"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="460" edgekey="530"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="20">
+						<edges>
+							<edge vertexkey="457" edgekey="531"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="456" edgekey="532"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="461" edgekey="533"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="23">
+						<edges>
+							<edge vertexkey="462" edgekey="534"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="463" edgekey="535"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="464" edgekey="536"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="26">
+						<edges>
+							<edge vertexkey="465" edgekey="537"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="27">
+						<edges>
+							<edge vertexkey="466" edgekey="538"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="467" edgekey="539"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="29">
+						<edges>
+							<edge vertexkey="476" edgekey="540"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="30">
+						<edges>
+							<edge vertexkey="477" edgekey="541"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="478" edgekey="542"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="33">
+						<edges>
+							<edge vertexkey="480" edgekey="543"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="482" edgekey="544"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="35">
+						<edges>
+							<edge vertexkey="481" edgekey="545"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="36">
+						<edges>
+							<edge vertexkey="483" edgekey="546"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="484" edgekey="547"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="38">
+						<edges>
+							<edge vertexkey="485" edgekey="548"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="39">
+						<edges>
+							<edge vertexkey="489" edgekey="549"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="490" edgekey="550"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="41">
+						<edges>
+							<edge vertexkey="487" edgekey="551"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="42">
+						<edges>
+							<edge vertexkey="486" edgekey="552"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="43">
+						<edges>
+							<edge vertexkey="491" edgekey="553"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="44">
+						<edges>
+							<edge vertexkey="492" edgekey="554"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="45">
+						<edges>
+							<edge vertexkey="493" edgekey="555"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="46">
+						<edges>
+							<edge vertexkey="494" edgekey="556"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="47">
+						<edges>
+							<edge vertexkey="495" edgekey="557"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="48">
+						<edges>
+							<edge vertexkey="496" edgekey="558"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="498" edgekey="559"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="50">
+						<edges>
+							<edge vertexkey="499" edgekey="560"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51">
+						<edges>
+							<edge vertexkey="407" edgekey="561"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="52">
+						<edges>
+							<edge vertexkey="406" edgekey="513"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="349">
+						<edges>
+							<edge vertexkey="403" edgekey="562"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="350">
+						<edges>
+							<edge vertexkey="470" edgekey="563"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="351">
+						<edges>
+							<edge vertexkey="471" edgekey="564"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="352">
+						<edges>
+							<edge vertexkey="472" edgekey="565"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="353">
+						<edges>
+							<edge vertexkey="473" edgekey="566"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="354">
+						<edges>
+							<edge vertexkey="474" edgekey="567"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="355">
+						<edges>
+							<edge vertexkey="475" edgekey="568"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="356">
+						<edges>
+							<edge vertexkey="458" edgekey="569"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="357">
+						<edges>
+							<edge vertexkey="468" edgekey="570"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="358">
+						<edges>
+							<edge vertexkey="469" edgekey="571"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="359">
+						<edges>
+							<edge vertexkey="442" edgekey="572"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="360">
+						<edges>
+							<edge vertexkey="443" edgekey="573"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="361">
+						<edges>
+							<edge vertexkey="444" edgekey="574"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="362">
+						<edges>
+							<edge vertexkey="445" edgekey="575"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="363">
+						<edges>
+							<edge vertexkey="500" edgekey="576"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="364">
+						<edges>
+							<edge vertexkey="501" edgekey="577"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="365">
+						<edges>
+							<edge vertexkey="502" edgekey="578"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="366">
+						<edges>
+							<edge vertexkey="503" edgekey="579"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="367">
+						<edges>
+							<edge vertexkey="504" edgekey="580"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="368">
+						<edges>
+							<edge vertexkey="505" edgekey="581"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="369">
+						<edges>
+							<edge vertexkey="479" edgekey="582"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="370">
+						<edges>
+							<edge vertexkey="488" edgekey="583"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="371">
+						<edges>
+							<edge vertexkey="497" edgekey="584"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="372">
+						<edges>
+							<edge vertexkey="408" edgekey="509"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="373">
+						<edges>
+							<edge vertexkey="409" edgekey="506"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="374">
+						<edges>
+							<edge vertexkey="410" edgekey="511"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="375">
+						<edges>
+							<edge vertexkey="411" edgekey="510"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="376">
+						<edges>
+							<edge vertexkey="412" edgekey="508"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="377">
+						<edges>
+							<edge vertexkey="413" edgekey="507"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="378">
+						<edges>
+							<edge vertexkey="417" edgekey="585"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="379">
+						<edges>
+							<edge vertexkey="418" edgekey="586"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="380">
+						<edges>
+							<edge vertexkey="419" edgekey="587"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="381">
+						<edges>
+							<edge vertexkey="420" edgekey="588"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="382">
+						<edges>
+							<edge vertexkey="421" edgekey="589"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="383">
+						<edges>
+							<edge vertexkey="422" edgekey="590"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="384">
+						<edges>
+							<edge vertexkey="423" edgekey="591"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="385">
+						<edges>
+							<edge vertexkey="424" edgekey="592"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="386">
+						<edges>
+							<edge vertexkey="425" edgekey="593"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="387">
+						<edges>
+							<edge vertexkey="426" edgekey="594"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="388">
+						<edges>
+							<edge vertexkey="427" edgekey="595"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="389">
+						<edges>
+							<edge vertexkey="429" edgekey="596"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="390">
+						<edges>
+							<edge vertexkey="430" edgekey="597"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="391">
+						<edges>
+							<edge vertexkey="428" edgekey="598"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="392">
+						<edges>
+							<edge vertexkey="431" edgekey="599"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="393">
+						<edges>
+							<edge vertexkey="432" edgekey="600"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="394">
+						<edges>
+							<edge vertexkey="433" edgekey="601"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="395">
+						<edges>
+							<edge vertexkey="434" edgekey="602"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="396">
+						<edges>
+							<edge vertexkey="436" edgekey="603"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="397">
+						<edges>
+							<edge vertexkey="437" edgekey="604"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="398">
+						<edges>
+							<edge vertexkey="435" edgekey="605"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="399">
+						<edges>
+							<edge vertexkey="438" edgekey="606"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="400">
+						<edges>
+							<edge vertexkey="414" edgekey="607"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="401">
+						<edges>
+							<edge vertexkey="415" edgekey="512"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="402">
+						<edges>
+							<edge vertexkey="416" edgekey="608"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
+>>>>>>> 31ed9b747eac7e4dce3c70863641adfa2051b5dd

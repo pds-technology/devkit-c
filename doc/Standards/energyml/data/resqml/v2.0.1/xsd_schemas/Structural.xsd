@@ -8,7 +8,8 @@
 
 	- Representation of Organization Representations. Each organization representations is a consistent assembly of different representations of interpretations of organizations (such as, earth model, structural organization, stratigraphic organizations, stratigraphic columns, and fluid organizations). </xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../commonv2/v2.0/xsd_schemas/AllCommonObjects.xsd"/><xs:include schemaLocation="Properties.xsd"/>
+	<xs:import namespace="http://www.energistics.org/energyml/data/commonv2" schemaLocation="../../../commonv2/v2.0/xsd_schemas/AllCommonObjects.xsd"/>
+	<xs:include schemaLocation="Properties.xsd"/>
 	<xs:include schemaLocation="Representations.xsd"/>
 	<xs:include schemaLocation="Geometry.xsd"/>
 	<xs:include schemaLocation="Interpretations.xsd"/>
@@ -295,7 +296,7 @@ Two triangles that are connected may be in different patches.</xs:documentation>
 
 Definition from Wikipedia (http://en.wikipedia.org/wiki/Piecewise_linear_curve):
 
-A polygonal chain, polygonal curve, polygonal path, or piecewise linear curve, is a connected series of line segments. More formally, a polygonal chain P is a curve specified by a sequence of points \scriptstyle(A_1, A_2, \dots, A_n) called its vertices so that the curve consists of the line segments connecting the consecutive vertices.
+A polygonal chain, polygonal curve, polygonal path, or piecewise linear curve, is a connected series of line segments. More formally, a polygonal chain P is a curve specified by a sequence of points A_1, A_2, ..., A_n called its vertices so that the curve consists of the line segments connecting the consecutive vertices.
 
 In computer graphics a polygonal chain is called a polyline and is often used to approximate curved paths.
 

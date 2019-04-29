@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prodml:DtsMeasurement xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/DtsMeasurement.xsd" uuid="dc0e381a-094a-4fd2-ab89-dce867e3b99d">
+	<eml:Citation>
+		<eml:Title>DTS1</eml:Title>
+		<eml:Originator>Energistics</eml:Originator>
+		<eml:Creation>2001-12-17T09:30:47Z</eml:Creation>
+		<eml:Format>Energistics</eml:Format>
+	</eml:Citation>
+	<prodml:BadSetFlag>0</prodml:BadSetFlag>
+	<prodml:EmptySetFlag>0</prodml:EmptySetFlag>
+	<prodml:TimeStart>2013-12-21T08:00:00Z</prodml:TimeStart>
+	<prodml:TimeEnd>2013-12-21T08:00:30Z</prodml:TimeEnd>
+	<prodml:TimeSinceInstrumentStartup uom="min">90</prodml:TimeSinceInstrumentStartup>
+	<prodml:MeasurementTags/>
+	<prodml:InstalledSystemReference>
+		<eml:ContentType>sample Installed System</eml:ContentType>
+		<eml:Title>System 1</eml:Title>
+		<eml:Uuid>dc0e381a-094a-4fd2-ab89-dce867e3b99d</eml:Uuid>
+	</prodml:InstalledSystemReference>
+	<prodml:MeasurementConfiguration>single-ended</prodml:MeasurementConfiguration>
+	<prodml:FacilityIdentifier uid="Well of System 1">
+		<prodml:Name>Sample Well</prodml:Name>
+	</prodml:FacilityIdentifier>
+	<prodml:InterpretationLog >
+		<prodml:InterpretationData measurementReference="Measurement 1" uid="ID1" >
+			<prodml:FacilityMapping>FMP2</prodml:FacilityMapping>
+			<prodml:SamplingInterval uom="m">5</prodml:SamplingInterval>
+			<prodml:BadFlag>false</prodml:BadFlag>
+			<prodml:CreationStartTime>1967-08-13</prodml:CreationStartTime>
+			<prodml:InterpretationProcessingType>temperature-shifted</prodml:InterpretationProcessingType>
+			<prodml:IndexMnemonic>facilityDistance</prodml:IndexMnemonic>
+			<prodml:PointCount>1500</prodml:PointCount>
+			<prodml:ChannelSetReference>
+				<eml:ContentType>Log Interpretation ChannelSet Data</eml:ContentType>
+				<eml:Title>Log Interpretation ChannelSet Data</eml:Title>
+				<eml:Uuid>d191e44c-b1b3-4dd8-8395-8b588f127a40</eml:Uuid>
+			</prodml:ChannelSetReference>
+		</prodml:InterpretationData>
+	</prodml:InterpretationLog>
+	<prodml:MeasurementTrace uid="Measurement 1">
+		<prodml:TraceProcessingType>as acquired</prodml:TraceProcessingType>
+		<prodml:SamplingInterval uom="m">5</prodml:SamplingInterval>
+		<prodml:IndexMnemonic>fiberDistance</prodml:IndexMnemonic>
+		<prodml:PointCount>94</prodml:PointCount>
+		<prodml:FrequencyRayleigh1 uom="Hz">10</prodml:FrequencyRayleigh1>
+		<prodml:FrequencyRayleigh2 uom="Hz">20</prodml:FrequencyRayleigh2>
+		<prodml:ChannelSetReference>
+			<eml:ContentType>Measurement Trace Channel Set for ID1</eml:ContentType>
+			<eml:Title>Measurement Trace Channel Set for DTS1</eml:Title>
+			<eml:Uuid>987587b3-18bd-4461-b4b5-50144548bf96</eml:Uuid>
+		</prodml:ChannelSetReference>
+	</prodml:MeasurementTrace>
+</prodml:DtsMeasurement>
+

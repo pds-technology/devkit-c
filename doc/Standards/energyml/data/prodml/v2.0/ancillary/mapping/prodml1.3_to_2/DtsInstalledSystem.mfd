@@ -1,0 +1,515 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2016r2sp1 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1" blackbox="0">
+		<properties ShowSchemaTypes="1" ShowAnnotations="0" SelectedLanguage="xslt2"/>
+		<structure>
+			<children>
+				<component name="DtsInstalledSystem" library="xml" uid="4" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="632" lty="39" rbx="1150" rby="623"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.energistics.org/energyml/data/commonv2"/>
+									<namespace uid="http://www.energistics.org/energyml/data/prodmlv2"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="3" expanded="1">
+								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="DtsInstalledSystem" ns="2" inpkey="28" expanded="1">
+										<entry name="schemaVersion" type="attribute" inpkey="83"/>
+										<entry name="CustomData" ns="1" inpkey="31"/>
+										<entry name="DateMin" ns="2" inpkey="32"/>
+										<entry name="DateMax" ns="2" inpkey="33"/>
+										<entry name="OpticalPathLength" ns="2" inpkey="34"/>
+										<entry name="OpticalBudget" ns="2" inpkey="35"/>
+										<entry name="OpticalPathReference" ns="2" inpkey="36"/>
+										<entry name="InstrumentBoxReference" ns="2" inpkey="37"/>
+										<entry name="Comment" ns="2" inpkey="38"/>
+										<entry name="DtsCalibration" ns="2" inpkey="39">
+											<entry name="uid" type="attribute" inpkey="40"/>
+											<entry name="DTimCalibration" ns="2" inpkey="41"/>
+											<entry name="CalibratedBy" ns="2" inpkey="42"/>
+											<entry name="CalibrationProtocol" ns="2" inpkey="43"/>
+											<entry name="Parameter" ns="2" inpkey="44" expanded="1">
+												<entry name="uom" type="attribute" inpkey="45"/>
+												<entry name="name" type="attribute" inpkey="46"/>
+											</entry>
+											<entry name="ExtensionNameValue" ns="2" inpkey="48" expanded="1">
+												<entry name="Name" ns="1" inpkey="49"/>
+												<entry name="Value" ns="1" inpkey="50"/>
+												<entry name="MeasureClass" ns="1" inpkey="51"/>
+												<entry name="DTim" ns="1" inpkey="52"/>
+												<entry name="Index" ns="1" inpkey="53"/>
+												<entry name="Description" ns="1" inpkey="54"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\..\..\..\..\..\..\..\..\..\..\EnergyML\energyml\data\prodml\v2.0\xsd_schemas\DtsInstalledSystem.xsd" outputinstance="..\..\..\..\..\..\..\..\..\..\..\..\EnergyML\energyml\data\prodml\xml_examples\DtsInstalledSystem.xml" instanceroot="{http://www.energistics.org/energyml/data/prodmlv2}DtsInstalledSystem"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="obj_dtsInstalledSystem" library="xml" uid="5" kind="14">
+					<properties/>
+					<view ltx="123" lty="14" rbx="423" rby="214"/>
+					<data>
+						<root scrollposition="107">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.prodml.org/schemas/1series"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="dtsInstalledSystems" ns="1" expanded="1">
+										<entry name="version" type="attribute" outkey="85"/>
+										<entry name="dtsinstalledSystem" ns="1" outkey="86" expanded="1">
+											<entry name="dateMin" ns="1" outkey="87"/>
+											<entry name="dateMax" ns="1" outkey="88"/>
+											<entry name="opticalPathLength" ns="1" outkey="89"/>
+											<entry name="opticalBudget" ns="1" outkey="90"/>
+											<entry name="opticalPathRef" ns="1" outkey="91"/>
+											<entry name="instrumentBoxRef" ns="1" outkey="92"/>
+											<entry name="comment" ns="1" outkey="93"/>
+											<entry name="dtsCalibration" ns="1" outkey="94">
+												<entry name="uid" type="attribute" outkey="95"/>
+												<entry name="dTimCalibration" ns="1" outkey="96"/>
+												<entry name="calibratedBy" ns="1" outkey="97"/>
+												<entry name="calibrationProtocol" ns="1" outkey="98"/>
+												<entry name="parameter" ns="1" outkey="99">
+													<entry name="uom" type="attribute" outkey="100"/>
+													<entry name="name" type="attribute" outkey="101"/>
+												</entry>
+												<entry name="extensionNameValue" ns="1" outkey="102">
+													<entry name="name" ns="1" outkey="103"/>
+													<entry name="value" ns="1" outkey="104"/>
+													<entry name="dTim" ns="1" outkey="105"/>
+													<entry name="index" ns="1" outkey="106"/>
+													<entry name="measureClass" ns="1" outkey="107"/>
+													<entry name="description" ns="1" outkey="108"/>
+												</entry>
+											</entry>
+											<entry name="customData" ns="1" outkey="109"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xsd_schemas\obj_dtsInstalledSystem.xsd" inputinstance="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xml_examples\dtsInstalledSystem.xml" outputinstance="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xml_examples\dtsInstalledSystem.xml" instanceroot="{http://www.prodml.org/schemas/1series}dtsInstalledSystems"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="110">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="111">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="85">
+						<edges>
+							<edge vertexkey="83" edgekey="112"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="86">
+						<edges>
+							<edge vertexkey="28" edgekey="113"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="87">
+						<edges>
+							<edge vertexkey="32" edgekey="114"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="88">
+						<edges>
+							<edge vertexkey="33" edgekey="115"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="89">
+						<edges>
+							<edge vertexkey="34" edgekey="111"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="90">
+						<edges>
+							<edge vertexkey="35" edgekey="116"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="91">
+						<edges>
+							<edge vertexkey="36" edgekey="117"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="92">
+						<edges>
+							<edge vertexkey="37" edgekey="118"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="93">
+						<edges>
+							<edge vertexkey="38" edgekey="119"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="94">
+						<edges>
+							<edge vertexkey="39" edgekey="120"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="95">
+						<edges>
+							<edge vertexkey="40" edgekey="121"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="96">
+						<edges>
+							<edge vertexkey="41" edgekey="122"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="97">
+						<edges>
+							<edge vertexkey="42" edgekey="123"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="98">
+						<edges>
+							<edge vertexkey="43" edgekey="124"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="99">
+						<edges>
+							<edge vertexkey="44" edgekey="125"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="100">
+						<edges>
+							<edge vertexkey="45" edgekey="126"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101">
+						<edges>
+							<edge vertexkey="46" edgekey="127"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="102">
+						<edges>
+							<edge vertexkey="48" edgekey="128"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="103">
+						<edges>
+							<edge vertexkey="49" edgekey="129"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="104">
+						<edges>
+							<edge vertexkey="50" edgekey="130"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="105">
+						<edges>
+							<edge vertexkey="52" edgekey="131"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="106">
+						<edges>
+							<edge vertexkey="53" edgekey="132"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="107">
+						<edges>
+							<edge vertexkey="51" edgekey="133"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="108">
+						<edges>
+							<edge vertexkey="54" edgekey="134"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="109">
+						<edges>
+							<edge vertexkey="31" edgekey="110"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2016r2sp1 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1" blackbox="0">
+		<properties ShowSchemaTypes="1" ShowAnnotations="0" SelectedLanguage="xslt2"/>
+		<structure>
+			<children>
+				<component name="DtsInstalledSystem" library="xml" uid="4" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="632" lty="39" rbx="1150" rby="623"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.energistics.org/energyml/data/commonv2"/>
+									<namespace uid="http://www.energistics.org/energyml/data/prodmlv2"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="3" expanded="1">
+								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="DtsInstalledSystem" ns="2" inpkey="28" expanded="1">
+										<entry name="schemaVersion" type="attribute" inpkey="83"/>
+										<entry name="CustomData" ns="1" inpkey="31"/>
+										<entry name="DateMin" ns="2" inpkey="32"/>
+										<entry name="DateMax" ns="2" inpkey="33"/>
+										<entry name="OpticalPathLength" ns="2" inpkey="34"/>
+										<entry name="OpticalBudget" ns="2" inpkey="35"/>
+										<entry name="OpticalPathReference" ns="2" inpkey="36"/>
+										<entry name="InstrumentBoxReference" ns="2" inpkey="37"/>
+										<entry name="Comment" ns="2" inpkey="38"/>
+										<entry name="DtsCalibration" ns="2" inpkey="39">
+											<entry name="uid" type="attribute" inpkey="40"/>
+											<entry name="DTimCalibration" ns="2" inpkey="41"/>
+											<entry name="CalibratedBy" ns="2" inpkey="42"/>
+											<entry name="CalibrationProtocol" ns="2" inpkey="43"/>
+											<entry name="Parameter" ns="2" inpkey="44" expanded="1">
+												<entry name="uom" type="attribute" inpkey="45"/>
+												<entry name="name" type="attribute" inpkey="46"/>
+											</entry>
+											<entry name="ExtensionNameValue" ns="2" inpkey="48" expanded="1">
+												<entry name="Name" ns="1" inpkey="49"/>
+												<entry name="Value" ns="1" inpkey="50"/>
+												<entry name="MeasureClass" ns="1" inpkey="51"/>
+												<entry name="DTim" ns="1" inpkey="52"/>
+												<entry name="Index" ns="1" inpkey="53"/>
+												<entry name="Description" ns="1" inpkey="54"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\..\..\..\..\..\..\..\..\..\..\EnergyML\energyml\data\prodml\v2.0\xsd_schemas\DtsInstalledSystem.xsd" outputinstance="..\..\..\..\..\..\..\..\..\..\..\..\EnergyML\energyml\data\prodml\xml_examples\DtsInstalledSystem.xml" instanceroot="{http://www.energistics.org/energyml/data/prodmlv2}DtsInstalledSystem"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="obj_dtsInstalledSystem" library="xml" uid="5" kind="14">
+					<properties/>
+					<view ltx="123" lty="14" rbx="423" rby="214"/>
+					<data>
+						<root scrollposition="107">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.prodml.org/schemas/1series"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="dtsInstalledSystems" ns="1" expanded="1">
+										<entry name="version" type="attribute" outkey="85"/>
+										<entry name="dtsinstalledSystem" ns="1" outkey="86" expanded="1">
+											<entry name="dateMin" ns="1" outkey="87"/>
+											<entry name="dateMax" ns="1" outkey="88"/>
+											<entry name="opticalPathLength" ns="1" outkey="89"/>
+											<entry name="opticalBudget" ns="1" outkey="90"/>
+											<entry name="opticalPathRef" ns="1" outkey="91"/>
+											<entry name="instrumentBoxRef" ns="1" outkey="92"/>
+											<entry name="comment" ns="1" outkey="93"/>
+											<entry name="dtsCalibration" ns="1" outkey="94">
+												<entry name="uid" type="attribute" outkey="95"/>
+												<entry name="dTimCalibration" ns="1" outkey="96"/>
+												<entry name="calibratedBy" ns="1" outkey="97"/>
+												<entry name="calibrationProtocol" ns="1" outkey="98"/>
+												<entry name="parameter" ns="1" outkey="99">
+													<entry name="uom" type="attribute" outkey="100"/>
+													<entry name="name" type="attribute" outkey="101"/>
+												</entry>
+												<entry name="extensionNameValue" ns="1" outkey="102">
+													<entry name="name" ns="1" outkey="103"/>
+													<entry name="value" ns="1" outkey="104"/>
+													<entry name="dTim" ns="1" outkey="105"/>
+													<entry name="index" ns="1" outkey="106"/>
+													<entry name="measureClass" ns="1" outkey="107"/>
+													<entry name="description" ns="1" outkey="108"/>
+												</entry>
+											</entry>
+											<entry name="customData" ns="1" outkey="109"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xsd_schemas\obj_dtsInstalledSystem.xsd" inputinstance="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xml_examples\dtsInstalledSystem.xml" outputinstance="..\..\..\..\..\..\..\..\prodML_v1.3\prodml_v1.3_data\xml_examples\dtsInstalledSystem.xml" instanceroot="{http://www.prodml.org/schemas/1series}dtsInstalledSystems"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="110">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="111">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="85">
+						<edges>
+							<edge vertexkey="83" edgekey="112"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="86">
+						<edges>
+							<edge vertexkey="28" edgekey="113"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="87">
+						<edges>
+							<edge vertexkey="32" edgekey="114"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="88">
+						<edges>
+							<edge vertexkey="33" edgekey="115"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="89">
+						<edges>
+							<edge vertexkey="34" edgekey="111"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="90">
+						<edges>
+							<edge vertexkey="35" edgekey="116"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="91">
+						<edges>
+							<edge vertexkey="36" edgekey="117"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="92">
+						<edges>
+							<edge vertexkey="37" edgekey="118"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="93">
+						<edges>
+							<edge vertexkey="38" edgekey="119"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="94">
+						<edges>
+							<edge vertexkey="39" edgekey="120"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="95">
+						<edges>
+							<edge vertexkey="40" edgekey="121"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="96">
+						<edges>
+							<edge vertexkey="41" edgekey="122"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="97">
+						<edges>
+							<edge vertexkey="42" edgekey="123"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="98">
+						<edges>
+							<edge vertexkey="43" edgekey="124"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="99">
+						<edges>
+							<edge vertexkey="44" edgekey="125"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="100">
+						<edges>
+							<edge vertexkey="45" edgekey="126"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101">
+						<edges>
+							<edge vertexkey="46" edgekey="127"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="102">
+						<edges>
+							<edge vertexkey="48" edgekey="128"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="103">
+						<edges>
+							<edge vertexkey="49" edgekey="129"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="104">
+						<edges>
+							<edge vertexkey="50" edgekey="130"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="105">
+						<edges>
+							<edge vertexkey="52" edgekey="131"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="106">
+						<edges>
+							<edge vertexkey="53" edgekey="132"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="107">
+						<edges>
+							<edge vertexkey="51" edgekey="133"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="108">
+						<edges>
+							<edge vertexkey="54" edgekey="134"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="109">
+						<edges>
+							<edge vertexkey="31" edgekey="110"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
+>>>>>>> 31ed9b747eac7e4dce3c70863641adfa2051b5dd

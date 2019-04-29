@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Well xmlns="http://www.energistics.org/energyml/data/witsmlv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" schemaVersion="v29" uuid="00000000-0000-0000-0000-420123456700">
+	<eml:Citation>
+		<eml:Title>Good Oil No. 4 Well</eml:Title>
+		<eml:Originator>Daman Opcomp</eml:Originator>
+		<eml:Creation>1979-01-20T06:33:44-06:00</eml:Creation>
+		<eml:Format>Well</eml:Format>
+	</eml:Citation> 
+	<TimeZone>-06:00</TimeZone>
+	<GeographicLocationWGS84 uid="">
+		<Latitude>3.1415926</Latitude>
+		<Longitude>3.1415926</Longitude>
+		<Crs xsi:type="eml:GeodeticUnknownCrs">
+			<eml:Unknown></eml:Unknown>
+		</Crs>
+	</GeographicLocationWGS84>
+</Well>

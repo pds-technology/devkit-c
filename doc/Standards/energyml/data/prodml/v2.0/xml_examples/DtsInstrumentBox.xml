@@ -1,0 +1,30 @@
+<prodml:DtsInstrumentBox xmlns:prodml="http://www.energistics.org/energyml/data/prodmlv2" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2" uuid="dc0e381a-094a-4fd2-ab89-dce867e3b99d" xsi:schemaLocation="http://www.energistics.org/energyml/data/prodmlv2 ../xsd_schemas/DtsInstrumentBox.xsd">
+	<eml:Citation>
+		<eml:Title>Sample Instrument Box</eml:Title>
+		<eml:Originator>Energistics</eml:Originator>
+		<eml:Creation>2001-12-17T09:30:47Z</eml:Creation>
+		<eml:Format>Energistics</eml:Format>
+	</eml:Citation>
+	<prodml:SerialNumber></prodml:SerialNumber>	
+	<prodml:InternalOvenLocationNear uom="0.1 ft">1</prodml:InternalOvenLocationNear>
+	<prodml:InternalOvenLocationFar uom="0.1 ft">2</prodml:InternalOvenLocationFar>
+	<prodml:FacilityIdentifier uid="System 1">
+		<prodml:Name>Sample Well</prodml:Name>
+		<prodml:Installation>my platform</prodml:Installation>
+		<prodml:Kind>well</prodml:Kind>
+		<prodml:ContextFacility>my facility</prodml:ContextFacility>
+		<prodml:Operator>
+			<prodml:Name>Oper 1</prodml:Name>
+		</prodml:Operator>
+	</prodml:FacilityIdentifier>
+	<prodml:InstrumentCalibration uid="Instrument Calibration1">
+		<prodml:DTimCalibration>2002-05-30Z</prodml:DTimCalibration>
+	</prodml:InstrumentCalibration>
+	<prodml:Instrument> 
+		<prodml:Name>Instrument 1</prodml:Name>
+		<prodml:Manufacturer>Nimbus 2000</prodml:Manufacturer>
+		<prodml:ManufacturingDate>2001-07-22Z</prodml:ManufacturingDate>
+		<prodml:Type>Turbo</prodml:Type>
+	</prodml:Instrument>
+</prodml:DtsInstrumentBox>
+

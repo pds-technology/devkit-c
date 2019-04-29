@@ -162,7 +162,7 @@ namespace Energistics.DataAccess
         /// <returns>The Energistics object of type T returned from the call to the WITSML web service</returns>
         public T Read<T>(T queryObject, Dictionary<string, string> optionsInDictionary)
         {
-            string queryXml = EnergisticsConverter.ObjectToXml<T>(queryObject);
+            string queryXml = EnergisticsConverter.ObjectToXml(queryObject);
             string optionsIn = OptionsInDictionaryToString(optionsInDictionary);
             string responseXml = String.Empty;
             string message = String.Empty;
@@ -197,7 +197,7 @@ namespace Energistics.DataAccess
         /// <param name="optionsInDictionary">A dictionary of keyword value pairs used to pass additional options to the server. See API documentation for more information</param>
         public void Write<T>(T energisticsObject, Dictionary<string, string> optionsInDictionary)
         {
-            string xmlIn = EnergisticsConverter.ObjectToXml<T>(energisticsObject);
+            string xmlIn = EnergisticsConverter.ObjectToXml(energisticsObject);
             string optionsIn = OptionsInDictionaryToString(optionsInDictionary);
             string message = String.Empty;
 
@@ -224,7 +224,7 @@ namespace Energistics.DataAccess
         /// <param name="optionsInDictionary">A dictionary of keyword value pairs used to pass additional options to the server. See API documentation for more information</param>
         public void Delete<T>(T queryObject, Dictionary<string, string> optionsInDictionary)
         {
-            string queryXml = EnergisticsConverter.ObjectToXml<T>(queryObject);
+            string queryXml = EnergisticsConverter.ObjectToXml(queryObject);
             string optionsIn = OptionsInDictionaryToString(optionsInDictionary);
             string message = String.Empty;
 
@@ -251,7 +251,7 @@ namespace Energistics.DataAccess
         /// <param name="optionsInDictionary">A dictionary of keyword value pairs used to pass additional options to the server. See API documentation for more information</param>
         public void Update<T>(T energisticsObject, Dictionary<string, string> optionsInDictionary)
         {
-            string xmlIn = EnergisticsConverter.ObjectToXml<T>(energisticsObject);
+            string xmlIn = EnergisticsConverter.ObjectToXml(energisticsObject);
             string optionsIn = OptionsInDictionaryToString(optionsInDictionary);
             string message = String.Empty;
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Well schemaVersion="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns="http://www.energistics.org/energyml/data/witsmlv2" uuid="A3000000-0000-0000-0000-000000000003" xsi:schemaLocation="http://www.witsml.org/schemas/1series">
+	<eml:Citation>
+		<eml:Title>well03</eml:Title>
+		<eml:Originator>MarkMao</eml:Originator>
+		<eml:Creation>2015-01-01T00:00:00Z</eml:Creation>
+		<eml:Format>energistics:xmlspy/xml</eml:Format>
+		<eml:LastUpdate>2016-06-23T15:37:00Z</eml:LastUpdate>
+	</eml:Citation>
+	<NameLegal>well03</NameLegal> 
+	<DTimLicense>2015-01-01T00:00:00Z</DTimLicense>
+	<Field>HoustonField</Field>
+	<Country>US</Country>
+	<Region>TX</Region>
+	<Block>OML 99</Block>
+	<TimeZone>+01:00</TimeZone>
+	<Operator>Energistics.</Operator>
+	<StatusWell>active -- producing</StatusWell>
+	<PurposeWell>development -- producer</PurposeWell>
+	<DirectionWell>producer</DirectionWell>
+	<DTimSpud>2015-01-02T09:30:47Z</DTimSpud>
+	<GeographicLocationWGS84 uid="01">
+		<Latitude>3.1415926</Latitude>
+		<Longitude>3.1415926</Longitude>
+		<Crs xsi:type="eml:GeodeticUnknownCrs ">
+			<eml:Unknown></eml:Unknown>
+		</Crs>
+	</GeographicLocationWGS84>
+</Well>
