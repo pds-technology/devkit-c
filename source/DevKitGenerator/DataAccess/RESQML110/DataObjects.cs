@@ -137,7 +137,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The I direction cell coordinate for a column of cells.  Minimum value of startIndexI.  Maximum value of ni+startIndexI-1.")]
 		[XmlElement("i")]
-        public Int32? I {
+        public int? I {
             get {
                 return iField;
             } 
@@ -147,7 +147,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? iField; 
+        private int? iField; 
 
         /// <summary>
         /// The I direction cell coordinate for a column of cells. Minimum value of startIndexJ. Maximum value of nj+startIndexJ-1.
@@ -155,7 +155,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The I direction cell coordinate for a column of cells. Minimum value of startIndexJ.  Maximum value of nj+startIndexJ-1.")]
 		[XmlElement("j")]
-        public Int32? J {
+        public int? J {
             get {
                 return jField;
             } 
@@ -165,7 +165,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? jField; 
+        private int? jField; 
 
         /// <summary>
         /// The K direction cell coordinate for a column of cells. Minimum value of startIndexK. Maximum value of nj+startIndexK-1.
@@ -173,7 +173,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The K direction cell coordinate for a column of cells. Minimum value of startIndexK.  Maximum value of nj+startIndexK-1.")]
 		[XmlElement("k")]
-        public Int32? K {
+        public int? K {
             get {
                 return kField;
             } 
@@ -183,7 +183,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? kField; 
+        private int? kField; 
 
         /// <summary>
         /// The I direction corner coordinate for a node within a column of cells.
@@ -192,7 +192,7 @@ namespace Energistics.DataAccess.RESQML110
         [Range(0, 1)]
         [Description("The I direction corner coordinate for a node within a column of cells.")]
 		[XmlElement("iCorn")]
-        public Int16? ICorn {
+        public short? ICorn {
             get {
                 return iCornField;
             } 
@@ -202,7 +202,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int16? iCornField; 
+        private short? iCornField; 
 
         /// <summary>
         /// The J direction corner coordinate for a node within a column of cells.
@@ -211,7 +211,7 @@ namespace Energistics.DataAccess.RESQML110
         [Range(0, 1)]
         [Description("The J direction corner coordinate for a node within a column of cells.")]
 		[XmlElement("jCorn")]
-        public Int16? JCorn {
+        public short? JCorn {
             get {
                 return jCornField;
             } 
@@ -221,7 +221,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int16? jCornField; 
+        private short? jCornField; 
 
         /// <summary>
         /// The K direction corner coordinate for a node within a column of cells.
@@ -230,7 +230,7 @@ namespace Energistics.DataAccess.RESQML110
         [Range(0, 1)]
         [Description("The K direction corner coordinate for a node within a column of cells.")]
 		[XmlElement("kCorn")]
-        public Int16? KCorn {
+        public short? KCorn {
             get {
                 return kCornField;
             } 
@@ -240,7 +240,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int16? kCornField; 
+        private short? kCornField; 
 
         /// <summary>
         /// A 0-based index into the additional split node list. A value of zero represents the first additional node.
@@ -248,7 +248,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("A 0-based index into the additional split node list. A value of zero represents the first additional node.")]
 		[XmlElement("reference")]
-        public Int32? Reference {
+        public int? Reference {
             get {
                 return referenceField;
             } 
@@ -258,7 +258,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? referenceField; 
+        private int? referenceField; 
 
 
         
@@ -443,7 +443,7 @@ namespace Energistics.DataAccess.RESQML110
         [StringLength(4000)]
         [Description("Defines the internal path to data group inside an HDF5 formatted file. The hdf file name is the name of the XML message file (including extension) with an extension of \".h5\". in the same folder with the XML message file.")]
 		[XmlElement("groupPath", DataType="anyURI")]
-        public String GroupPath {
+        public string GroupPath {
             get {
                 return groupPathField;
             } 
@@ -453,7 +453,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String groupPathField; 
+        private string groupPathField; 
 
 
         
@@ -564,7 +564,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [XmlAttribute("x")]
 		
-        public Double X {
+        public double X {
             get {
                 return xField;
             } 
@@ -574,7 +574,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double xField; 
+        private double xField; 
 
 		/// <summary>
         /// y property
@@ -582,7 +582,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [XmlAttribute("y")]
 		
-        public Double Y {
+        public double Y {
             get {
                 return yField;
             } 
@@ -592,7 +592,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double yField; 
+        private double yField; 
 
 		/// <summary>
         /// z property
@@ -600,7 +600,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [XmlAttribute("z")]
 		
-        public Double Z {
+        public double Z {
             get {
                 return zField;
             } 
@@ -610,7 +610,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double zField; 
+        private double zField; 
 
 
         
@@ -654,7 +654,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The I direction cell coordinate for a column of cells.  Minimum value of startIndexI.  Maximum value of ni+startIndexI-1.")]
 		[XmlElement("i")]
-        public Int32? I {
+        public int? I {
             get {
                 return iField;
             } 
@@ -664,7 +664,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? iField; 
+        private int? iField; 
 
         /// <summary>
         /// The I direction cell coordinate for a column of cells. Minimum value of startIndexJ. Maximum value of nj+startIndexJ-1.
@@ -672,7 +672,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The I direction cell coordinate for a column of cells. Minimum value of startIndexJ.  Maximum value of nj+startIndexJ-1.")]
 		[XmlElement("j")]
-        public Int32? J {
+        public int? J {
             get {
                 return jField;
             } 
@@ -682,7 +682,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? jField; 
+        private int? jField; 
 
         /// <summary>
         /// The I direction corner coordinate for a coordinate line within a column of cells.
@@ -691,7 +691,7 @@ namespace Energistics.DataAccess.RESQML110
         [Range(0, 1)]
         [Description("The I direction corner coordinate for a coordinate line within a column of cells.")]
 		[XmlElement("iCorn")]
-        public Int16? ICorn {
+        public short? ICorn {
             get {
                 return iCornField;
             } 
@@ -701,7 +701,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int16? iCornField; 
+        private short? iCornField; 
 
         /// <summary>
         /// The J direction corner coordinate for a coordinate line within a column of cells.
@@ -710,7 +710,7 @@ namespace Energistics.DataAccess.RESQML110
         [Range(0, 1)]
         [Description("The J direction corner coordinate for a coordinate line within a column of cells.")]
 		[XmlElement("jCorn")]
-        public Int16? JCorn {
+        public short? JCorn {
             get {
                 return jCornField;
             } 
@@ -720,7 +720,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int16? jCornField; 
+        private short? jCornField; 
 
         /// <summary>
         /// A 0-based index into the coordinate line list. A value of zero represents the first line in the line list.
@@ -728,7 +728,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("A 0-based index into the coordinate line list. A value of zero represents the first line in the line list.")]
 		[XmlElement("reference")]
-        public Int32? Reference {
+        public int? Reference {
             get {
                 return referenceField;
             } 
@@ -738,7 +738,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? referenceField; 
+        private int? referenceField; 
 
 
         
@@ -922,7 +922,7 @@ namespace Energistics.DataAccess.RESQML110
 		[StringLength(4000)]
         [Description("A textual description of the grid.")]
 		[XmlElement("description")]
-        public String Description {
+        public string Description {
             get {
                 return descriptionField;
             } 
@@ -932,7 +932,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String descriptionField; 
+        private string descriptionField; 
 
         /// <summary>
         /// A pointer to the localCRS which represents the 3D coordinates in this grid.
@@ -1034,7 +1034,7 @@ namespace Energistics.DataAccess.RESQML110
         /// Initializes a new instance of the RefGlobalNameString class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public RefGlobalNameString(String value)
+        public RefGlobalNameString(string value)
         {
             this.Value = value;
         }
@@ -1056,7 +1056,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("A reference to the globally unique identifier (uid attribute) in the node referenced by the name value.  This attribute is required within the context of a WITSML server.")]
         [XmlAttribute("uidRef")]
 		
-        public String UidRef {
+        public string UidRef {
             get {
                 return uidRefField;
             } 
@@ -1066,14 +1066,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidRefField; 
+        private string uidRefField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         [StringLength(64)]
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -1083,7 +1083,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -1127,7 +1127,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The I index of the cell.")]
 		[XmlElement("i")]
-        public Int32? I {
+        public int? I {
             get {
                 return iField;
             } 
@@ -1137,7 +1137,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? iField; 
+        private int? iField; 
 
         /// <summary>
         /// The J index of the cell.
@@ -1145,7 +1145,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The J index of the cell.")]
 		[XmlElement("j")]
-        public Int32? J {
+        public int? J {
             get {
                 return jField;
             } 
@@ -1155,7 +1155,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? jField; 
+        private int? jField; 
 
         /// <summary>
         /// The K index of the cell.
@@ -1163,7 +1163,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The K index of the cell.")]
 		[XmlElement("k")]
-        public Int32? K {
+        public int? K {
             get {
                 return kField;
             } 
@@ -1173,7 +1173,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? kField; 
+        private int? kField; 
 
 
         
@@ -1219,7 +1219,7 @@ namespace Energistics.DataAccess.RESQML110
         [RecurringElement]
         [XmlAttribute("count")]
 		
-        public List<Int16> Count {
+        public List<short> Count {
             get {
                 return countField;
             } 
@@ -1241,7 +1241,7 @@ namespace Energistics.DataAccess.RESQML110
              else return false;
              }
          }
-        private List<Int16> countField; 
+        private List<short> countField; 
 
 		/// <summary>
         /// A list that defines the weight to apply to each refined cell within each target cell. The length of the array must be equal to the sum of the counts in the count list. The order in the aggregate is significant. The first count(1) values represent the list of refinements for the the first target cell. The next count(2) values represent the list of refinements for the second target cell. The first weight within each refinement list applies to the lower index side of the target cell. The width of each refined cell will be proportional to the weights within each refinement list. Readers are advised to normalize the weights within each refinement list.
@@ -1251,7 +1251,7 @@ namespace Energistics.DataAccess.RESQML110
         [RecurringElement]
         [XmlAttribute("weight")]
 		
-        public List<Single> Weight {
+        public List<float> Weight {
             get {
                 return weightField;
             } 
@@ -1273,7 +1273,7 @@ namespace Energistics.DataAccess.RESQML110
              else return false;
              }
          }
-        private List<Single> weightField; 
+        private List<float> weightField; 
 
 
         
@@ -1560,7 +1560,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
-        public String Source {
+        public string Source {
             get {
                 return sourceField;
             } 
@@ -1570,7 +1570,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String sourceField; 
+        private string sourceField; 
 
         /// <summary>
         /// bibliographicCitation property
@@ -1607,7 +1607,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("I indices lower bound. All \"I\" values will be greater than or equal to this value. May be negative.")]
 		[XmlElement("startIndexI")]
-        public Int32? StartIndexI {
+        public int? StartIndexI {
             get {
                 return startIndexIField;
             } 
@@ -1617,7 +1617,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? startIndexIField; 
+        private int? startIndexIField; 
 
         /// <summary>
         /// J indices lower bound. All "J" values will be greater than or equal to this value. May be negative.
@@ -1625,7 +1625,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("J indices lower bound. All \"J\" values will be greater than or equal to this value. May be negative.")]
 		[XmlElement("startIndexJ")]
-        public Int32? StartIndexJ {
+        public int? StartIndexJ {
             get {
                 return startIndexJField;
             } 
@@ -1635,7 +1635,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? startIndexJField; 
+        private int? startIndexJField; 
 
         /// <summary>
         /// K indices lower bound. All "K" values will be greater than or equal to this value. May be negative.
@@ -1643,7 +1643,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("K indices lower bound. All \"K\" values will be greater than or equal to this value. May be negative.")]
 		[XmlElement("startIndexK")]
-        public Int32? StartIndexK {
+        public int? StartIndexK {
             get {
                 return startIndexKField;
             } 
@@ -1653,7 +1653,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? startIndexKField; 
+        private int? startIndexKField; 
 
         /// <summary>
         /// Number of cells in the "I" direction. Minimum value = 1.
@@ -1661,7 +1661,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("Number of cells in the \"I\" direction. Minimum value = 1.")]
 		[XmlElement("ni")]
-        public Int32? Ni {
+        public int? Ni {
             get {
                 return niField;
             } 
@@ -1671,7 +1671,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? niField; 
+        private int? niField; 
 
         /// <summary>
         /// Number of cells in the "J" direction. Minimum value = 1.
@@ -1679,7 +1679,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("Number of cells in the \"J\" direction. Minimum value = 1.")]
 		[XmlElement("nj")]
-        public Int32? Nj {
+        public int? Nj {
             get {
                 return njField;
             } 
@@ -1689,7 +1689,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? njField; 
+        private int? njField; 
 
         /// <summary>
         /// Number of cells in the "K" direction. Minimum value = 1.
@@ -1697,7 +1697,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("Number of cells in the \"K\" direction. Minimum value = 1.")]
 		[XmlElement("nk")]
-        public Int32? Nk {
+        public int? Nk {
             get {
                 return nkField;
             } 
@@ -1707,7 +1707,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? nkField; 
+        private int? nkField; 
 
         /// <summary>
         /// An encoded array of boolean flags which indicate cell node identity without the need for any floating point comparison The underlying type of each item is an integer. Each integer value represents the sum of integer components where:: 1=cellGeometryDefined, 2=iPinch, 4=jPinch, 8=kPinch, 16=iStandardAdjacency, 32=jStandardAdjacency, 64=kStandardAdjacency. This creates a bit encoded array within one integer value. Example: A "standard" cell has a value of 1+16+32+64 = 113 (hex 0x71 binary 1110001). A non-zero value for cellGeometryDefined indicates that the apparent geometry in a cell is well defined. A non-zero value for kPinch indicates that the top four nodes of a cell are identical to the corresponding bottom four nodes of the same cell. Similar for iPinch and jPinch. A non-zero value for iStandardAdjacency indicates that the four "I+" face nodes of cell (I,J,K) are identical to the four corresponding "I-" face nodes of cell (I+1,J,K). iStandardAdjacency=0 indicates that the only kind of adjacency you can expect will be described in the nonStandardAdjacency list. Similar for jStandardAdjacency and kStandardAdjacency. Consistent with this definition, standardAdjacency=0 off the edge of a grid.
@@ -1784,7 +1784,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Description("Defines a K layer after which a gap exists in the K layering.  For example, if gapAfterLayer=2 then the node arrays will contain an  extra node for the top of layer 3. If there is no gap then each node (except the first and last) represents  the bottom of one layer and the top of the next. The length of the aggregate specifies the number of gaps in the K layering.")]
         [RecurringElement]
 		[XmlElement("gapAfterLayer")]
-        public List<Int16> GapAfterLayer {
+        public List<short> GapAfterLayer {
             get {
                 return gapAfterLayerField;
             } 
@@ -1806,7 +1806,7 @@ namespace Energistics.DataAccess.RESQML110
              else return false;
              }
          }
-        private List<Int16> gapAfterLayerField; 
+        private List<short> gapAfterLayerField; 
 
         /// <summary>
         /// Defines the shape of all grid cells.
@@ -1832,7 +1832,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The grid parity is the sign of (I cross J dot K) where I, J, and K  are vectors in the direction of increasing I, J, and K numbering. Positive parity means that the IJK cell numbering is right-handed. True (\"true\" or \"1\") indicates that the grid has positive parity.  False (\"false\" or \"0\") indicates that the grid has negative parity.")]
 		[XmlElement("positiveGridParity")]
-        public Boolean? PositiveGridParity {
+        public bool? PositiveGridParity {
             get {
                 return positiveGridParityField;
             } 
@@ -1842,7 +1842,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean? positiveGridParityField; 
+        private bool? positiveGridParityField; 
 
         /// <summary>
         ///  True ("true" or "1") indicates that the grid does not deform in time. False ("false" or "0") indicates that the grid DOES deform in time.
@@ -1850,7 +1850,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("True (\"true\" or \"1\") indicates that the grid does not deform in time.  False (\"false\" or \"0\") indicates that the grid DOES deform in time.")]
 		[XmlElement("gridStatic")]
-        public Boolean? GridStatic {
+        public bool? GridStatic {
             get {
                 return gridStaticField;
             } 
@@ -1860,7 +1860,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean? gridStaticField; 
+        private bool? gridStaticField; 
 
         /// <summary>
         /// Asserts the most complex type of line used in the grid.
@@ -1886,7 +1886,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("True (\"true\" or \"1\") indicates that the grid will have split lines with laterally separated geometry.  False (\"false\" or \"0\") indicates that the grid will NOT have split lines with laterally separated geometry.")]
 		[XmlElement("anyIJGap")]
-        public Boolean? AnyIJGap {
+        public bool? AnyIJGap {
             get {
                 return anyIJGapField;
             } 
@@ -1896,7 +1896,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean? anyIJGapField; 
+        private bool? anyIJGapField; 
 
         /// <summary>
         ///  True ("true" or "1") indicates that the grid will have at least one cell with undefined geometry. False ("false" or "0") indicates that all cells in the grid have well-defined geometry.
@@ -1904,7 +1904,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("True (\"true\" or \"1\") indicates that the grid will have at least one cell with undefined geometry.  False (\"false\" or \"0\") indicates that all cells in the grid have well-defined geometry.")]
 		[XmlElement("anyGeometryUndefined")]
-        public Boolean? AnyGeometryUndefined {
+        public bool? AnyGeometryUndefined {
             get {
                 return anyGeometryUndefinedField;
             } 
@@ -1914,7 +1914,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean? anyGeometryUndefinedField; 
+        private bool? anyGeometryUndefinedField; 
 
         /// <summary>
         ///  True ("true" or "1") indicates that the grid will have at least one cell pinched in the I or J direction. False ("false" or "0") indicates that the grid has neither iPinch nor jPinch.
@@ -1922,7 +1922,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("True (\"true\" or \"1\") indicates that the grid will have at least one cell pinched in the I or J direction. False (\"false\" or \"0\") indicates that the grid has neither iPinch nor jPinch.")]
 		[XmlElement("anyIJPinch")]
-        public Boolean? AnyIJPinch {
+        public bool? AnyIJPinch {
             get {
                 return anyIJPinchField;
             } 
@@ -1932,7 +1932,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean? anyIJPinchField; 
+        private bool? anyIJPinchField; 
 
         /// <summary>
         ///  True ("true" or "1") indicates that the grid will have at least one cell pinched in the K direction. False ("false" or "0") indicates that the grid has no kPinch.
@@ -1940,7 +1940,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("True (\"true\" or \"1\") indicates that the grid will have at least one cell pinched in the K direction.  False (\"false\" or \"0\") indicates that the grid has no kPinch.")]
 		[XmlElement("anyKPinch")]
-        public Boolean? AnyKPinch {
+        public bool? AnyKPinch {
             get {
                 return anyKPinchField;
             } 
@@ -1950,7 +1950,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean? anyKPinchField; 
+        private bool? anyKPinchField; 
 
         /// <summary>
         ///  True ("true" or "1") indicates that at least one coordinate node list line has entirely undefined geometry. False ("false" or "0") indicates that all coordinate node lists are defined. Individual nodal values may still be undefined in this case.
@@ -1958,7 +1958,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("True (\"true\" or \"1\") indicates that at least one coordinate node list line has entirely undefined geometry.  False (\"false\" or \"0\") indicates that all coordinate node lists are defined. Individual nodal values may still be undefined in this case.")]
 		[XmlElement("anyLineNull")]
-        public Boolean? AnyLineNull {
+        public bool? AnyLineNull {
             get {
                 return anyLineNullField;
             } 
@@ -1968,7 +1968,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean? anyLineNullField; 
+        private bool? anyLineNullField; 
 
         /// <summary>
         /// Properties for this object.
@@ -2044,7 +2044,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. The value must be globally unique.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -2054,7 +2054,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -2099,7 +2099,7 @@ namespace Energistics.DataAccess.RESQML110
         /// Initializes a new instance of the DublinCoreString class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public DublinCoreString(String value)
+        public DublinCoreString(string value)
         {
             this.Value = value;
         }
@@ -2118,7 +2118,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("lang", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.w3.org/XML/1998/namespace")]
 		
-        public String Lang {
+        public string Lang {
             get {
                 return langField;
             } 
@@ -2128,14 +2128,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String langField; 
+        private string langField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -2145,7 +2145,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -2288,7 +2288,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="shortValues", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("This class represents the shortValues xsd type.")]
-    public partial class ShortValueList : Object, IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ShortValueList : Object, INotifyPropertyChanged
     {
 
 		/// <summary>
@@ -2297,7 +2297,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nullValue")]
 		
-        public Int16 NullValue {
+        public short NullValue {
             get {
                 return nullValueField;
             } 
@@ -2308,14 +2308,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int16 nullValueField; 
+        private short nullValueField; 
 
         /// <summary>
         /// nullValueSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NullValueSpecified {
+        public bool NullValueSpecified {
             get {
                 return nullValueSpecifiedField;
             } 
@@ -2325,7 +2325,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean nullValueSpecifiedField; 
+        private bool nullValueSpecifiedField; 
 
 		/// <summary>
         /// array property
@@ -2333,7 +2333,7 @@ namespace Energistics.DataAccess.RESQML110
 		[RecurringElement]
         [XmlAttribute("array")]
 		
-        public List<Int16> Array {
+        public List<short> Array {
             get {
                 return arrayField;
             } 
@@ -2355,19 +2355,8 @@ namespace Energistics.DataAccess.RESQML110
              else return false;
              }
          }
-        private List<Int16> arrayField; 
+        private List<short> arrayField; 
 
-        /// <summary>
-        /// array property
-        /// </summary>
-        [XmlIgnore]		
-        public IList Items
-        {
-		    get
-			{
-			    return Array;
-			}
-        }
 
         
 		#region INotifyPropertyChanged Members
@@ -2536,7 +2525,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The minimum of the associated property values. The unit of measure is defined by unit.")]
 		[XmlElement("minimumValue")]
-        public Double? MinimumValue {
+        public double? MinimumValue {
             get {
                 return minimumValueField;
             } 
@@ -2546,7 +2535,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? minimumValueField; 
+        private double? minimumValueField; 
 
         /// <summary>
         /// The maximum of the associated property values. The unit of measure is defined by unit.
@@ -2554,7 +2543,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The maximum of the associated property values. The unit of measure is defined by unit.")]
 		[XmlElement("maximumValue")]
-        public Double? MaximumValue {
+        public double? MaximumValue {
             get {
                 return maximumValueField;
             } 
@@ -2564,7 +2553,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? maximumValueField; 
+        private double? maximumValueField; 
 
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
@@ -2863,7 +2852,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="byteValues", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("This class represents the byteValues xsd type.")]
-    public partial class ByteValueList : Object, IEnergisticsCollection, INotifyPropertyChanged
+    public partial class ByteValueList : Object, INotifyPropertyChanged
     {
 
 		/// <summary>
@@ -2890,7 +2879,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NullValueSpecified {
+        public bool NullValueSpecified {
             get {
                 return nullValueSpecifiedField;
             } 
@@ -2900,7 +2889,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean nullValueSpecifiedField; 
+        private bool nullValueSpecifiedField; 
 
 		/// <summary>
         /// array property
@@ -2976,7 +2965,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="doubleValues", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("This class represents the doubleValues xsd type.")]
-    public partial class DoubleValueList : Object, IEnergisticsCollection, INotifyPropertyChanged
+    public partial class DoubleValueList : Object, INotifyPropertyChanged
     {
 
 		/// <summary>
@@ -2985,7 +2974,7 @@ namespace Energistics.DataAccess.RESQML110
 		[RecurringElement]
         [XmlAttribute("array")]
 		
-        public List<Double> Array {
+        public List<double> Array {
             get {
                 return arrayField;
             } 
@@ -3007,19 +2996,8 @@ namespace Energistics.DataAccess.RESQML110
              else return false;
              }
          }
-        private List<Double> arrayField; 
+        private List<double> arrayField; 
 
-        /// <summary>
-        /// array property
-        /// </summary>
-        [XmlIgnore]		
-        public IList Items
-        {
-		    get
-			{
-			    return Array;
-			}
-        }
 
         
 		#region INotifyPropertyChanged Members
@@ -3053,7 +3031,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="floatValues", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("This class represents the floatValues xsd type.")]
-    public partial class FloatValueList : Object, IEnergisticsCollection, INotifyPropertyChanged
+    public partial class FloatValueList : Object, INotifyPropertyChanged
     {
 
 		/// <summary>
@@ -3062,7 +3040,7 @@ namespace Energistics.DataAccess.RESQML110
 		[RecurringElement]
         [XmlAttribute("array")]
 		
-        public List<Single> Array {
+        public List<float> Array {
             get {
                 return arrayField;
             } 
@@ -3084,19 +3062,8 @@ namespace Energistics.DataAccess.RESQML110
              else return false;
              }
          }
-        private List<Single> arrayField; 
+        private List<float> arrayField; 
 
-        /// <summary>
-        /// array property
-        /// </summary>
-        [XmlIgnore]		
-        public IList Items
-        {
-		    get
-			{
-			    return Array;
-			}
-        }
 
         
 		#region INotifyPropertyChanged Members
@@ -3130,7 +3097,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="intValues", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("This class represents the intValues xsd type.")]
-    public partial class IntValueList : Object, IEnergisticsCollection, INotifyPropertyChanged
+    public partial class IntValueList : Object, INotifyPropertyChanged
     {
 
 		/// <summary>
@@ -3139,7 +3106,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nullValue")]
 		
-        public Int32 NullValue {
+        public int NullValue {
             get {
                 return nullValueField;
             } 
@@ -3150,14 +3117,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32 nullValueField; 
+        private int nullValueField; 
 
         /// <summary>
         /// nullValueSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NullValueSpecified {
+        public bool NullValueSpecified {
             get {
                 return nullValueSpecifiedField;
             } 
@@ -3167,7 +3134,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean nullValueSpecifiedField; 
+        private bool nullValueSpecifiedField; 
 
 		/// <summary>
         /// array property
@@ -3175,7 +3142,7 @@ namespace Energistics.DataAccess.RESQML110
 		[RecurringElement]
         [XmlAttribute("array")]
 		
-        public List<Int32> Array {
+        public List<int> Array {
             get {
                 return arrayField;
             } 
@@ -3197,19 +3164,8 @@ namespace Energistics.DataAccess.RESQML110
              else return false;
              }
          }
-        private List<Int32> arrayField; 
+        private List<int> arrayField; 
 
-        /// <summary>
-        /// array property
-        /// </summary>
-        [XmlIgnore]		
-        public IList Items
-        {
-		    get
-			{
-			    return Array;
-			}
-        }
 
         
 		#region INotifyPropertyChanged Members
@@ -3243,7 +3199,7 @@ namespace Energistics.DataAccess.RESQML110
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(TypeName="longValues", Namespace="http://www.resqml.org/schemas/1series")]
 	[Description("This class represents the longValues xsd type.")]
-    public partial class LongValueList : Object, IEnergisticsCollection, INotifyPropertyChanged
+    public partial class LongValueList : Object, INotifyPropertyChanged
     {
 
 		/// <summary>
@@ -3252,7 +3208,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nullValue")]
 		
-        public Int64 NullValue {
+        public long NullValue {
             get {
                 return nullValueField;
             } 
@@ -3263,14 +3219,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int64 nullValueField; 
+        private long nullValueField; 
 
         /// <summary>
         /// nullValueSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NullValueSpecified {
+        public bool NullValueSpecified {
             get {
                 return nullValueSpecifiedField;
             } 
@@ -3280,7 +3236,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean nullValueSpecifiedField; 
+        private bool nullValueSpecifiedField; 
 
 		/// <summary>
         /// array property
@@ -3288,7 +3244,7 @@ namespace Energistics.DataAccess.RESQML110
 		[RecurringElement]
         [XmlAttribute("array")]
 		
-        public List<Int64> Array {
+        public List<long> Array {
             get {
                 return arrayField;
             } 
@@ -3310,19 +3266,8 @@ namespace Energistics.DataAccess.RESQML110
              else return false;
              }
          }
-        private List<Int64> arrayField; 
+        private List<long> arrayField; 
 
-        /// <summary>
-        /// array property
-        /// </summary>
-        [XmlIgnore]		
-        public IList Items
-        {
-		    get
-			{
-			    return Array;
-			}
-        }
 
         
 		#region INotifyPropertyChanged Members
@@ -3674,7 +3619,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
-        public String Source {
+        public string Source {
             get {
                 return sourceField;
             } 
@@ -3684,7 +3629,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String sourceField; 
+        private string sourceField; 
 
         /// <summary>
         /// bibliographicCitation property
@@ -3719,7 +3664,7 @@ namespace Energistics.DataAccess.RESQML110
         /// The standard RESQML property which represents these values. For properties which have a unit of measure, this kind will directly or indirectly specify the single unit of measure which must be utilized for the property values.
         /// </summary>
         [XmlElement("resqmlKind")]
-        public String ResqmlKind {
+        public string ResqmlKind {
             get {
                 return resqmlKindField;
             } 
@@ -3731,7 +3676,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String resqmlKindField; 
+        private string resqmlKindField; 
         private bool resqmlKindSpecified = false; 
 
         /// <summary>
@@ -3925,7 +3870,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. The value must be globally unique.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -3935,7 +3880,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -3998,7 +3943,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The zero-based index of the timestamp within the list.")]
 		[XmlElement("timeIndex")]
-        public Int16? TimeIndex {
+        public short? TimeIndex {
             get {
                 return timeIndexField;
             } 
@@ -4008,7 +3953,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int16? timeIndexField; 
+        private short? timeIndexField; 
 
 
         
@@ -4189,7 +4134,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MeasureClassSpecified {
+        public bool MeasureClassSpecified {
             get {
                 return measureClassSpecifiedField;
             } 
@@ -4199,7 +4144,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean measureClassSpecifiedField; 
+        private bool measureClassSpecifiedField; 
 
         /// <summary>
         /// A textual description of the extension.
@@ -4207,7 +4152,7 @@ namespace Energistics.DataAccess.RESQML110
 		[StringLength(256)]
         [Description("A textual description of the extension.")]
 		[XmlElement("description")]
-        public String Description {
+        public string Description {
             get {
                 return descriptionField;
             } 
@@ -4217,7 +4162,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String descriptionField; 
+        private string descriptionField; 
 
 		/// <summary>
         /// uid property
@@ -4227,7 +4172,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -4237,7 +4182,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -4284,7 +4229,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public Extensionvalue(String value, String uom)
+        public Extensionvalue(string value, string uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -4305,7 +4250,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unit of measure for the value. This value must conform to the values allowed by a measure class.")]
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -4315,14 +4260,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -4332,7 +4277,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -4492,7 +4437,7 @@ namespace Energistics.DataAccess.RESQML110
         [StringLength(40)]
         [Description("A string value.")]
 		[XmlElement("stringValue")]
-        public String StringValue {
+        public string StringValue {
             get {
                 return stringValueField;
             } 
@@ -4502,7 +4447,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String stringValueField; 
+        private string stringValueField; 
 
         /// <summary>
         /// The corresponding integer value. This value will be used in HDF instead of the string value. The value of nullIntegerValue must be reserved for NULL. The size of this value is constrained by the size of the format used within HDF.
@@ -4510,7 +4455,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The corresponding integer value. This value will be used in HDF instead of the string value. The value of nullIntegerValue must be reserved for NULL. The size of this value is constrained by the size of the format used within HDF.")]
 		[XmlElement("integerValue")]
-        public Int64? IntegerValue {
+        public long? IntegerValue {
             get {
                 return integerValueField;
             } 
@@ -4520,7 +4465,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int64? integerValueField; 
+        private long? integerValueField; 
 
 		/// <summary>
         /// uid property
@@ -4530,7 +4475,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -4540,7 +4485,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -4584,7 +4529,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The minimum of the associated property values.")]
 		[XmlElement("minimumValue")]
-        public Int64? MinimumValue {
+        public long? MinimumValue {
             get {
                 return minimumValueField;
             } 
@@ -4594,7 +4539,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int64? minimumValueField; 
+        private long? minimumValueField; 
 
         /// <summary>
         /// The maximum of the associated property values.
@@ -4602,7 +4547,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The maximum of the associated property values.")]
 		[XmlElement("maximumValue")]
-        public Int64? MaximumValue {
+        public long? MaximumValue {
             get {
                 return maximumValueField;
             } 
@@ -4612,7 +4557,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int64? maximumValueField; 
+        private long? maximumValueField; 
 
         /// <summary>
         /// Defines information related to capturing the array data in an HDF5 formatted file.
@@ -4789,7 +4734,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The beginning cell of the redefinition window in the I direction.  The \"redefinition window\" defines the cells to be replaced in the parent grid.")]
 		[XmlElement("parentIMin")]
-        public Int32? ParentIMin {
+        public int? ParentIMin {
             get {
                 return parentIMinField;
             } 
@@ -4799,7 +4744,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? parentIMinField; 
+        private int? parentIMinField; 
 
         /// <summary>
         /// The ending cell of the redefinition window in I direction.
@@ -4807,7 +4752,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The ending cell of the redefinition window in I direction.")]
 		[XmlElement("parentIMax")]
-        public Int32? ParentIMax {
+        public int? ParentIMax {
             get {
                 return parentIMaxField;
             } 
@@ -4817,7 +4762,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? parentIMaxField; 
+        private int? parentIMaxField; 
 
         /// <summary>
         /// The beginning cell of the redefinition window in the J direction. The "redefinition window" defines the cells to be replaced in the parent grid.
@@ -4825,7 +4770,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The beginning cell of the redefinition window in the J direction.  The \"redefinition window\" defines the cells to be replaced in the parent grid.")]
 		[XmlElement("parentJMin")]
-        public Int32? ParentJMin {
+        public int? ParentJMin {
             get {
                 return parentJMinField;
             } 
@@ -4835,7 +4780,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? parentJMinField; 
+        private int? parentJMinField; 
 
         /// <summary>
         /// The ending cell of the redefinition window in J direction.
@@ -4843,7 +4788,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The ending cell of the redefinition window in J direction.")]
 		[XmlElement("parentJMax")]
-        public Int32? ParentJMax {
+        public int? ParentJMax {
             get {
                 return parentJMaxField;
             } 
@@ -4853,7 +4798,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? parentJMaxField; 
+        private int? parentJMaxField; 
 
         /// <summary>
         /// The beginning cell of the redefinition window in the K direction. The "redefinition window" defines the cells to be replaced in the parent grid.
@@ -4861,7 +4806,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The beginning cell of the redefinition window in the K direction.  The \"redefinition window\" defines the cells to be replaced in the parent grid.")]
 		[XmlElement("parentKMin")]
-        public Int32? ParentKMin {
+        public int? ParentKMin {
             get {
                 return parentKMinField;
             } 
@@ -4871,7 +4816,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? parentKMinField; 
+        private int? parentKMinField; 
 
         /// <summary>
         /// The ending cell of the redefinition window in K direction.
@@ -4879,7 +4824,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The ending cell of the redefinition window in K direction.")]
 		[XmlElement("parentKMax")]
-        public Int32? ParentKMax {
+        public int? ParentKMax {
             get {
                 return parentKMaxField;
             } 
@@ -4889,7 +4834,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? parentKMaxField; 
+        private int? parentKMaxField; 
 
         /// <summary>
         /// A 3D corner point grid representation using explicit nodes on coordinate lines.
@@ -4981,7 +4926,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("A zero-based pointer to the grid that contains the cell-face. A value of zero represents the first grid in the grid3dGUID aggregate of the parent.")]
 		[XmlElement("gridID1")]
-        public Int32? GridID1 {
+        public int? GridID1 {
             get {
                 return gridID1Field;
             } 
@@ -4991,7 +4936,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? gridID1Field; 
+        private int? gridID1Field; 
 
         /// <summary>
         /// The I index of the cell.
@@ -4999,7 +4944,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The I index of the cell.")]
 		[XmlElement("i1")]
-        public Int32? I1 {
+        public int? I1 {
             get {
                 return i1Field;
             } 
@@ -5009,7 +4954,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? i1Field; 
+        private int? i1Field; 
 
         /// <summary>
         /// The J index of the cell.
@@ -5017,7 +4962,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The J index of the cell.")]
 		[XmlElement("j1")]
-        public Int32? J1 {
+        public int? J1 {
             get {
                 return j1Field;
             } 
@@ -5027,7 +4972,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? j1Field; 
+        private int? j1Field; 
 
         /// <summary>
         /// The K index of the cell.
@@ -5035,7 +4980,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The K index of the cell.")]
 		[XmlElement("k1")]
-        public Int32? K1 {
+        public int? K1 {
             get {
                 return k1Field;
             } 
@@ -5045,7 +4990,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? k1Field; 
+        private int? k1Field; 
 
         /// <summary>
         /// 0-based cell face index. The value must be from 0 to 5.
@@ -5054,7 +4999,7 @@ namespace Energistics.DataAccess.RESQML110
         [Range(0, 5)]
         [Description("0-based cell face index. The value must be from 0 to 5.")]
 		[XmlElement("face1")]
-        public Int16? Face1 {
+        public short? Face1 {
             get {
                 return face1Field;
             } 
@@ -5064,7 +5009,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int16? face1Field; 
+        private short? face1Field; 
 
         /// <summary>
         /// A zero-based pointer to the grid that contains the cell-face. A value of zero represents the first grid in the grid3dGUID aggregate of the parent.
@@ -5072,7 +5017,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("A zero-based pointer to the grid that contains the cell-face. A value of zero represents the first grid in the grid3dGUID aggregate of the parent.")]
 		[XmlElement("gridID2")]
-        public Int32? GridID2 {
+        public int? GridID2 {
             get {
                 return gridID2Field;
             } 
@@ -5082,7 +5027,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? gridID2Field; 
+        private int? gridID2Field; 
 
         /// <summary>
         /// The I index of the cell.
@@ -5090,7 +5035,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The I index of the cell.")]
 		[XmlElement("i2")]
-        public Int32? I2 {
+        public int? I2 {
             get {
                 return i2Field;
             } 
@@ -5100,7 +5045,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? i2Field; 
+        private int? i2Field; 
 
         /// <summary>
         /// The J index of the cell.
@@ -5108,7 +5053,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The J index of the cell.")]
 		[XmlElement("j2")]
-        public Int32? J2 {
+        public int? J2 {
             get {
                 return j2Field;
             } 
@@ -5118,7 +5063,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? j2Field; 
+        private int? j2Field; 
 
         /// <summary>
         /// The K index of the cell.
@@ -5126,7 +5071,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The K index of the cell.")]
 		[XmlElement("k2")]
-        public Int32? K2 {
+        public int? K2 {
             get {
                 return k2Field;
             } 
@@ -5136,7 +5081,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? k2Field; 
+        private int? k2Field; 
 
         /// <summary>
         /// 0-based cell face index. The value must be from 0 to 5.
@@ -5145,7 +5090,7 @@ namespace Energistics.DataAccess.RESQML110
         [Range(0, 5)]
         [Description("0-based cell face index. The value must be from 0 to 5.")]
 		[XmlElement("face2")]
-        public Int16? Face2 {
+        public short? Face2 {
             get {
                 return face2Field;
             } 
@@ -5155,7 +5100,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int16? face2Field; 
+        private short? face2Field; 
 
 
         
@@ -5317,7 +5262,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
-        public String Source {
+        public string Source {
             get {
                 return sourceField;
             } 
@@ -5327,7 +5272,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String sourceField; 
+        private string sourceField; 
 
         /// <summary>
         /// bibliographicCitation property
@@ -5550,7 +5495,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. The value must be globally unique.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -5560,7 +5505,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -5604,7 +5549,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("A zero-based pointer to the grid that contains the traversed cell. A value of zero represents the first grid in the grid3dGUID aggregate of the parent.")]
 		[XmlElement("gridID")]
-        public Int32? GridID {
+        public int? GridID {
             get {
                 return gridIDField;
             } 
@@ -5614,7 +5559,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? gridIDField; 
+        private int? gridIDField; 
 
         /// <summary>
         /// The I index of the cell.
@@ -5622,7 +5567,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The I index of the cell.")]
 		[XmlElement("i")]
-        public Int32? I {
+        public int? I {
             get {
                 return iField;
             } 
@@ -5632,7 +5577,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? iField; 
+        private int? iField; 
 
         /// <summary>
         /// The J index of the cell.
@@ -5640,7 +5585,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The J index of the cell.")]
 		[XmlElement("j")]
-        public Int32? J {
+        public int? J {
             get {
                 return jField;
             } 
@@ -5650,7 +5595,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? jField; 
+        private int? jField; 
 
         /// <summary>
         /// The K index of the cell.
@@ -5658,7 +5603,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The K index of the cell.")]
 		[XmlElement("k")]
-        public Int32? K {
+        public int? K {
             get {
                 return kField;
             } 
@@ -5668,7 +5613,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? kField; 
+        private int? kField; 
 
 
         
@@ -5731,7 +5676,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("A zero-based pointer to the kickoff point cell within parentBlockedWellbore.")]
 		[XmlElement("parentIndex")]
-        public Int32? ParentIndex {
+        public int? ParentIndex {
             get {
                 return parentIndexField;
             } 
@@ -5741,7 +5686,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? parentIndexField; 
+        private int? parentIndexField; 
 
 
         
@@ -5903,7 +5848,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
-        public String Source {
+        public string Source {
             get {
                 return sourceField;
             } 
@@ -5913,7 +5858,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String sourceField; 
+        private string sourceField; 
 
         /// <summary>
         /// bibliographicCitation property
@@ -6134,7 +6079,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. The value must be globally unique.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -6144,7 +6089,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -6190,7 +6135,7 @@ namespace Energistics.DataAccess.RESQML110
         /// Initializes a new instance of the RefNameString class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public RefNameString(String value)
+        public RefNameString(string value)
         {
             this.Value = value;
         }
@@ -6211,7 +6156,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("A reference to the unique identifier (uid attribute) in the node referenced by the name value.  This attribute is required within the context of a WITSML server.")]
         [XmlAttribute("uidRef")]
 		
-        public String UidRef {
+        public string UidRef {
             get {
                 return uidRefField;
             } 
@@ -6221,14 +6166,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidRefField; 
+        private string uidRefField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -6238,7 +6183,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -6529,7 +6474,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
-        public String Source {
+        public string Source {
             get {
                 return sourceField;
             } 
@@ -6539,7 +6484,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String sourceField; 
+        private string sourceField; 
 
         /// <summary>
         /// bibliographicCitation property
@@ -6595,7 +6540,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The number of nodes in the I dimension. This axis is parallel to the first axis in the local3dCRS.")]
 		[XmlElement("ni")]
-        public Int32? Ni {
+        public int? Ni {
             get {
                 return niField;
             } 
@@ -6605,7 +6550,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? niField; 
+        private int? niField; 
 
         /// <summary>
         /// The number of nodes in the J dimension. This axis is parallel to the second axis in the local2dCRS.
@@ -6613,7 +6558,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The number of nodes in the J dimension. This axis is parallel to the second axis in the local2dCRS.")]
 		[XmlElement("nj")]
-        public Int32? Nj {
+        public int? Nj {
             get {
                 return njField;
             } 
@@ -6623,7 +6568,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? njField; 
+        private int? njField; 
 
         /// <summary>
         /// The inline/crossline value at the origin (namely at i=0, j=0).
@@ -6631,7 +6576,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The inline/crossline value at the origin (namely at i=0, j=0).")]
 		[XmlElement("originOrdinal1")]
-        public Double? OriginOrdinal1 {
+        public double? OriginOrdinal1 {
             get {
                 return originOrdinal1Field;
             } 
@@ -6641,7 +6586,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? originOrdinal1Field; 
+        private double? originOrdinal1Field; 
 
         /// <summary>
         /// The inline/crossline value at the origin (namely at i=0, j=0).
@@ -6649,7 +6594,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The inline/crossline value at the origin (namely at i=0, j=0).")]
 		[XmlElement("originOrdinal2")]
-        public Double? OriginOrdinal2 {
+        public double? OriginOrdinal2 {
             get {
                 return originOrdinal2Field;
             } 
@@ -6659,7 +6604,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? originOrdinal2Field; 
+        private double? originOrdinal2Field; 
 
         /// <summary>
         /// The constant distance between nodes along the I axis of the grid. The unit of measure is defined by the CRS.
@@ -6667,7 +6612,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The constant distance between nodes along the I axis of the grid. The unit of measure is defined by the CRS.")]
 		[XmlElement("deltaI")]
-        public Double? DeltaI {
+        public double? DeltaI {
             get {
                 return deltaIField;
             } 
@@ -6677,7 +6622,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? deltaIField; 
+        private double? deltaIField; 
 
         /// <summary>
         /// The constant distance between nodes along the J axis of the grid. The unit of measure is defined by arealUnit.
@@ -6685,7 +6630,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The constant distance between nodes along the J axis of the grid. The unit of measure is defined by arealUnit.")]
 		[XmlElement("deltaJ")]
-        public Double? DeltaJ {
+        public double? DeltaJ {
             get {
                 return deltaJField;
             } 
@@ -6695,14 +6640,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? deltaJField; 
+        private double? deltaJField; 
 
         /// <summary>
         /// True ("true" or "1") indicates that the inlines are parallel to the i-axis which means that each inline represents a constant value of j and each crossline represents a constant value of i. False ("false" or "0") indicates that the inlines are parallel to the j-axis which means that each inline represents a constant value of i and each crossline represents a constant value of j.
         /// </summary>
 		[Description("True (\"true\" or \"1\") indicates that the inlines are parallel to the i-axis which means that each inline represents a constant value of j and  each crossline represents a constant value of i. False (\"false\" or \"0\") indicates that the inlines are parallel to the j-axis which means that each inline represents a constant value of i and  each crossline represents a constant value of j.")]
 		[XmlElement("inlineParallelToIAxis")]
-        public Boolean? InlineParallelToIAxis {
+        public bool? InlineParallelToIAxis {
             get {
                 return inlineParallelToIAxisField;
             } 
@@ -6712,14 +6657,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean? inlineParallelToIAxisField; 
+        private bool? inlineParallelToIAxisField; 
 
         /// <summary>
         /// The index of the first inline beginning at i=0, j=0.
         /// </summary>
 		[Description("The index of the first inline beginning at i=0, j=0.")]
 		[XmlElement("originInline")]
-        public Int32? OriginInline {
+        public int? OriginInline {
             get {
                 return originInlineField;
             } 
@@ -6729,14 +6674,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? originInlineField; 
+        private int? originInlineField; 
 
         /// <summary>
         /// The index of the first crosslineline beginning at i=0, j=0.
         /// </summary>
 		[Description("The index of the first crosslineline beginning at i=0, j=0.")]
 		[XmlElement("originCrossline")]
-        public Int32? OriginCrossline {
+        public int? OriginCrossline {
             get {
                 return originCrosslineField;
             } 
@@ -6746,14 +6691,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? originCrosslineField; 
+        private int? originCrosslineField; 
 
         /// <summary>
         /// The inline increment increment. If inlines are parallel to the i-axis the inline increment will be the difference in the inline number from node i=0, j=0 to node i=1, j=0. If inlines are parallel to the j-axis the inline increment will be the difference in the inline number from node i=0, j=0 to node i=0, j=1. The increment can be a positive or negative integer, but not zero.
         /// </summary>
 		[Description("The inline increment increment. If inlines are parallel to the i-axis the inline increment will be the difference  in the inline number from node i=0, j=0 to node i=1, j=0. If inlines are parallel to the j-axis the inline increment will be the difference  in the inline number from node i=0, j=0 to node i=0, j=1.  The increment can be a positive or negative integer, but not zero.")]
 		[XmlElement("inlineIncrement")]
-        public Int32? InlineIncrement {
+        public int? InlineIncrement {
             get {
                 return inlineIncrementField;
             } 
@@ -6763,14 +6708,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? inlineIncrementField; 
+        private int? inlineIncrementField; 
 
         /// <summary>
         /// The crossline increment. The increment can be a positive or negative integer, but not zero.
         /// </summary>
 		[Description("The crossline increment. The increment can be a positive or negative integer, but not zero.")]
 		[XmlElement("crosslineIncrement")]
-        public Int32? CrosslineIncrement {
+        public int? CrosslineIncrement {
             get {
                 return crosslineIncrementField;
             } 
@@ -6780,7 +6725,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? crosslineIncrementField; 
+        private int? crosslineIncrementField; 
 
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
@@ -6838,7 +6783,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. The value must be globally unique.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -6848,7 +6793,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -6892,7 +6837,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The number of nodes per pillar.")]
 		[XmlElement("nodeCountPerPillar")]
-        public Int32? NodeCountPerPillar {
+        public int? NodeCountPerPillar {
             get {
                 return nodeCountPerPillarField;
             } 
@@ -6902,7 +6847,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? nodeCountPerPillarField; 
+        private int? nodeCountPerPillarField; 
 
         /// <summary>
         /// A list of points representing all the nodes of all the pillars. The first nodeCountPerPillar points represent the nodes of the first pillar, the second nodeCountPerPillar points represent the nodes of the second pillar, and so on. A point defined by with NaN values shall be ignored.
@@ -6999,7 +6944,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -7009,7 +6954,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -7124,7 +7069,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		[Description("The x-coordinate of the intersected point.")]
 		[XmlElement("x")]
-        public Double? X {
+        public double? X {
             get {
                 return xField;
             } 
@@ -7135,14 +7080,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? xField; 
+        private double? xField; 
 
         /// <summary>
         /// xSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean XSpecified {
+        public bool XSpecified {
             get {
                 return xSpecifiedField;
             } 
@@ -7152,14 +7097,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean xSpecifiedField; 
+        private bool xSpecifiedField; 
 
         /// <summary>
         /// The y-coordinate of the intersected point.
         /// </summary>
 		[Description("The y-coordinate of the intersected point.")]
 		[XmlElement("y")]
-        public Double? Y {
+        public double? Y {
             get {
                 return yField;
             } 
@@ -7170,14 +7115,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? yField; 
+        private double? yField; 
 
         /// <summary>
         /// ySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean YSpecified {
+        public bool YSpecified {
             get {
                 return ySpecifiedField;
             } 
@@ -7187,14 +7132,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean ySpecifiedField; 
+        private bool ySpecifiedField; 
 
         /// <summary>
         /// The z-coordinate of the intersected point.
         /// </summary>
 		[Description("The z-coordinate of the intersected point.")]
 		[XmlElement("z")]
-        public Double? Z {
+        public double? Z {
             get {
                 return zField;
             } 
@@ -7205,14 +7150,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? zField; 
+        private double? zField; 
 
         /// <summary>
         /// zSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ZSpecified {
+        public bool ZSpecified {
             get {
                 return zSpecifiedField;
             } 
@@ -7222,7 +7167,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean zSpecifiedField; 
+        private bool zSpecifiedField; 
 
 
         
@@ -7269,7 +7214,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MeasuredDepthCoord(Double value, MeasuredDepthUom uom)
+        public MeasuredDepthCoord(double value, MeasuredDepthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -7310,7 +7255,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("A pointer to the reference datum for this coordinate  value as defined in WellDatum. This value is assumed to match the uid value in a WellDatum. If not given then the default WellDatum must be assumed.")]
         [XmlAttribute("datum")]
 		
-        public String Datum {
+        public string Datum {
             get {
                 return datumField;
             } 
@@ -7320,14 +7265,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String datumField; 
+        private string datumField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -7337,7 +7282,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -7433,7 +7378,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -7443,7 +7388,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -7576,7 +7521,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -7586,7 +7531,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -7697,7 +7642,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [XmlAttribute("ix1")]
 		
-        public Int32 Ix1 {
+        public int Ix1 {
             get {
                 return ix1Field;
             } 
@@ -7707,7 +7652,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32 ix1Field; 
+        private int ix1Field; 
 
 		/// <summary>
         /// ix2 property
@@ -7715,7 +7660,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [XmlAttribute("ix2")]
 		
-        public Int32 Ix2 {
+        public int Ix2 {
             get {
                 return ix2Field;
             } 
@@ -7725,7 +7670,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32 ix2Field; 
+        private int ix2Field; 
 
 
         
@@ -7836,7 +7781,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [XmlAttribute("ix1")]
 		
-        public Int32 Ix1 {
+        public int Ix1 {
             get {
                 return ix1Field;
             } 
@@ -7846,7 +7791,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32 ix1Field; 
+        private int ix1Field; 
 
 		/// <summary>
         /// ix2 property
@@ -7854,7 +7799,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [XmlAttribute("ix2")]
 		
-        public Int32 Ix2 {
+        public int Ix2 {
             get {
                 return ix2Field;
             } 
@@ -7864,7 +7809,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32 ix2Field; 
+        private int ix2Field; 
 
 		/// <summary>
         /// ix3 property
@@ -7872,7 +7817,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [XmlAttribute("ix3")]
 		
-        public Int32 Ix3 {
+        public int Ix3 {
             get {
                 return ix3Field;
             } 
@@ -7882,7 +7827,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32 ix3Field; 
+        private int ix3Field; 
 
 
         
@@ -8085,7 +8030,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -8095,7 +8040,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -8139,7 +8084,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The number of patch nodes in the I dimension of the bin grid.")]
 		[XmlElement("ni")]
-        public Int32? Ni {
+        public int? Ni {
             get {
                 return niField;
             } 
@@ -8149,7 +8094,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? niField; 
+        private int? niField; 
 
         /// <summary>
         /// The number of patch nodes in the J dimension of the bin grid.
@@ -8157,7 +8102,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The number of patch nodes in the J dimension of the bin grid.")]
 		[XmlElement("nj")]
-        public Int32? Nj {
+        public int? Nj {
             get {
                 return njField;
             } 
@@ -8167,7 +8112,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? njField; 
+        private int? njField; 
 
         /// <summary>
         /// The location of the patch grid origin on the I dimension of the the binGrid/survey
@@ -8175,7 +8120,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The location of the patch grid origin on the I dimension of the the binGrid/survey")]
 		[XmlElement("iStart")]
-        public Int32? IStart {
+        public int? IStart {
             get {
                 return iStartField;
             } 
@@ -8185,7 +8130,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? iStartField; 
+        private int? iStartField; 
 
         /// <summary>
         /// The location of the patch grid origin on the J dimension of the the binGrid/survey
@@ -8193,7 +8138,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The location of the patch grid origin on the J dimension of the the binGrid/survey")]
 		[XmlElement("jStart")]
-        public Int32? JStart {
+        public int? JStart {
             get {
                 return jStartField;
             } 
@@ -8203,7 +8148,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? jStartField; 
+        private int? jStartField; 
 
         /// <summary>
         /// The constant increment between nodes along the I axis of the binGrid. An increment that is not equal to one represents a grid coarsening where a patch cell exactly overlays iIncrement*jIncrement of the binGrid cells.
@@ -8211,7 +8156,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The constant increment between nodes along the I axis of the binGrid. An increment that is not equal to one represents a grid coarsening where a patch cell  exactly overlays iIncrement*jIncrement of the binGrid cells.")]
 		[XmlElement("iIncrement")]
-        public Int32? IIncrement {
+        public int? IIncrement {
             get {
                 return iIncrementField;
             } 
@@ -8221,7 +8166,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? iIncrementField; 
+        private int? iIncrementField; 
 
         /// <summary>
         /// The constant increment between nodes along the J axis of the binGrid. An increment that is not equal to one represents a grid coarsening where a patch cell exactly overlays iIncrement*jIncrement of the binGrid cells.
@@ -8229,7 +8174,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The constant increment between nodes along the J axis of the binGrid. An increment that is not equal to one represents a grid coarsening where a patch cell  exactly overlays iIncrement*jIncrement of the binGrid cells.")]
 		[XmlElement("jIncrement")]
-        public Int32? JIncrement {
+        public int? JIncrement {
             get {
                 return jIncrementField;
             } 
@@ -8239,7 +8184,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int32? jIncrementField; 
+        private int? jIncrementField; 
 
         /// <summary>
         /// Points to the bin grid for which this patch is a subset.
@@ -8355,7 +8300,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -8365,7 +8310,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -8533,7 +8478,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
-        public String Source {
+        public string Source {
             get {
                 return sourceField;
             } 
@@ -8543,7 +8488,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String sourceField; 
+        private string sourceField; 
 
         /// <summary>
         /// bibliographicCitation property
@@ -8649,7 +8594,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. The value must be globally unique.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -8659,7 +8604,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -9118,7 +9063,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
-        public String Source {
+        public string Source {
             get {
                 return sourceField;
             } 
@@ -9128,7 +9073,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String sourceField; 
+        private string sourceField; 
 
         /// <summary>
         /// bibliographicCitation property
@@ -9215,7 +9160,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. The value must be globally unique.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -9225,7 +9170,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -9723,7 +9668,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
-        public String Source {
+        public string Source {
             get {
                 return sourceField;
             } 
@@ -9733,7 +9678,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String sourceField; 
+        private string sourceField; 
 
         /// <summary>
         /// bibliographicCitation property
@@ -9820,7 +9765,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. The value must be globally unique.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -9830,7 +9775,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -10212,7 +10157,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
-        public String Source {
+        public string Source {
             get {
                 return sourceField;
             } 
@@ -10222,7 +10167,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String sourceField; 
+        private string sourceField; 
 
         /// <summary>
         /// bibliographicCitation property
@@ -10350,7 +10295,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. The value must be globally unique.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -10360,7 +10305,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -10523,7 +10468,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
-        public String Source {
+        public string Source {
             get {
                 return sourceField;
             } 
@@ -10533,7 +10478,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String sourceField; 
+        private string sourceField; 
 
         /// <summary>
         /// bibliographicCitation property
@@ -10587,7 +10532,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("description")]
-        public String Description1 {
+        public string Description1 {
             get {
                 return description1Field;
             } 
@@ -10597,7 +10542,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String description1Field; 
+        private string description1Field; 
 
         /// <summary>
         /// A pointer to a specific timestamp in a timestep list.
@@ -10704,7 +10649,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. The value must be globally unique.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -10714,7 +10659,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -10972,7 +10917,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
-        public String Source {
+        public string Source {
             get {
                 return sourceField;
             } 
@@ -10982,7 +10927,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String sourceField; 
+        private string sourceField; 
 
         /// <summary>
         /// bibliographicCitation property
@@ -11020,7 +10965,7 @@ namespace Energistics.DataAccess.RESQML110
         [StringLength(4000)]
         [Description("The name of the dictionary within which the property is unique. This also defines the name of the controlling authority. A URN of the form \"urn:x-resqml:domainOrEmail:dictionaryName\" should be used for the namingSystem value. An example public dictionary,    \"urn:resqml:energistics.org:RESQML\" assigned to values defined by ResqmlPropertyKind. An example corporate dictionary, \"urn:resqml:slb.com:product-x\". An example personal dictionary,  \"urn:resqml:first.last@mycompany.com:my.first.dictionary\". The purpose of this scheme is to generate a unique name. Parsing for semantics is not intended.")]
 		[XmlElement("namingSystem", DataType="anyURI")]
-        public String NamingSystem {
+        public string NamingSystem {
             get {
                 return namingSystemField;
             } 
@@ -11030,7 +10975,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String namingSystemField; 
+        private string namingSystemField; 
 
         /// <summary>
         /// A value of True ("true" or "1") indicates that the property kind is abstract and an instance of property values must not represent this kind. A value of False ("false" or "0") indicates otherise (i.e., that an instance of property values may represent this kind). 
@@ -11038,7 +10983,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("A value of True (\"true\" or \"1\") indicates that the property kind is abstract and an instance of property values must not represent this kind. A value of False (\"false\" or \"0\") indicates otherise (i.e., that an instance of property values  may represent this kind).")]
 		[XmlElement("isAbstract")]
-        public Boolean? IsAbstract {
+        public bool? IsAbstract {
             get {
                 return isAbstractField;
             } 
@@ -11048,7 +10993,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean? isAbstractField; 
+        private bool? isAbstractField; 
 
         /// <summary>
         /// The name of the RESQML standard property that this represents. For properties which have a unit of measure, the standard kind will directly or indirectly specify the single unit of measure which must be utilized for the property values.
@@ -11210,7 +11155,7 @@ namespace Energistics.DataAccess.RESQML110
         /// The dimensional analysis of the unit of measure. For example, a meter (m) would be of class "L", which represents length. Note that angle is considered to be dimensionless ratio of length. Note that solid angle is considered to be dimensionless ratio of area. The following nomenclature is used: A = angle (SI unit = radian) B = luminous intensity (SI unit = candela) C = electrical current (SI unit = ampere) K = thermodynamic temperature (SI unit = kelvin) L = length (SI unit = metre) M = mass (SI unit = kilogram) N = amount of substance (SI unit = mole) S = solid angle (SI unit = steradian) T = time (SI unit = second) 1 = dimensionless 2 = squared (e.g., "M2") 3 = cubed 4 = 4th power 5 = 5th power 6 = 6th power 7 = 7th power 8 = 8th power / = division ratio(X) = A dimensionless ratio of another dimension. For example, a dimensionless ratio of area would be indicated by "ratio(L2)" and represents the equivalent of "L2/L2". This is only used when the underlying dimension would otherwise be "1". The values may be broken into numerator and denominator separated by a slash "/" but multiple slashes must not be used. A slash must not terminate the string. For example, length per time would be indicated by "L/T" A number other than "1" will always follow a single dimensional character (e.g., "M2") and will represent the power of that component. The number "1" will only exist by itself or as the whole numerator (e.g., "1" or "1/T"). The number "1" must not be used as a denominator because it is implied (e.g., "M" impiles "M/1"). For consistency, the items within a numerator or denominator are listed in alphabetical order (e.g., LM - not ML). If you set this property, you must also set UnitOfMeasure.
         /// </summary>
         [XmlElement("dimensionalClass")]
-        public String DimensionalClass {
+        public string DimensionalClass {
             get {
                 return dimensionalClassField;
             } 
@@ -11224,7 +11169,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String dimensionalClassField; 
+        private string dimensionalClassField; 
         private bool dimensionalClassSpecified = false; 
 
         /// <summary>
@@ -11245,7 +11190,7 @@ namespace Energistics.DataAccess.RESQML110
         /// The minimum value allowed for the discrete property. If you set this property, you must also set MaximumValue.
         /// </summary>
         [XmlElement("minimumValue")]
-        public Int64? MinimumValue {
+        public long? MinimumValue {
             get {
                 return minimumValueField;
             } 
@@ -11259,7 +11204,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int64? minimumValueField; 
+        private long? minimumValueField; 
         private bool minimumValueSpecified = false; 
 
         /// <summary>
@@ -11280,7 +11225,7 @@ namespace Energistics.DataAccess.RESQML110
         /// The maximum value allowed for the discrete property. If you set this property, you must also set MinimumValue.
         /// </summary>
         [XmlElement("maximumValue")]
-        public Int64? MaximumValue {
+        public long? MaximumValue {
             get {
                 return maximumValueField;
             } 
@@ -11294,7 +11239,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int64? maximumValueField; 
+        private long? maximumValueField; 
         private bool maximumValueSpecified = false; 
 
         /// <summary>
@@ -11315,7 +11260,7 @@ namespace Energistics.DataAccess.RESQML110
         /// A value allowed for the categorical property.
         /// </summary>
         [XmlElement("enumValue")]
-        public String[] EnumValue {
+        public string[] EnumValue {
             get {
                 return enumValueField;
             } 
@@ -11330,7 +11275,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String[] enumValueField; 
+        private string[] enumValueField; 
         private bool enumValueSpecified = false; 
 
         /// <summary>
@@ -11433,7 +11378,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. The value must be globally unique.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -11443,7 +11388,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -11605,7 +11550,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("source", Namespace="http://purl.org/dc/terms/")]
-        public String Source {
+        public string Source {
             get {
                 return sourceField;
             } 
@@ -11615,7 +11560,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String sourceField; 
+        private string sourceField; 
 
         /// <summary>
         /// bibliographicCitation property
@@ -11652,7 +11597,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The first ordinal of the location of the origin of the  local areal axes relative to the global projected CRS. The value MUST represent the first axis of the global system. The unit of measure is defined by the unit of measure for the global 2D CRS.")]
 		[XmlElement("originOrdinal1")]
-        public Double? OriginOrdinal1 {
+        public double? OriginOrdinal1 {
             get {
                 return originOrdinal1Field;
             } 
@@ -11662,7 +11607,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? originOrdinal1Field; 
+        private double? originOrdinal1Field; 
 
         /// <summary>
         /// The second ordinal of the location of the origin of the local areal axes relative to the global projected CRS. The value MUST represent the second axis of the global system. The unit of measure is defined by the unit of measure for the global 2D CRS.
@@ -11670,7 +11615,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The second ordinal of the location of the origin of the  local areal axes relative to the global projected CRS. The value MUST represent the second axis of the global system. The unit of measure is defined by the unit of measure for the global 2D CRS.")]
 		[XmlElement("originOrdinal2")]
-        public Double? OriginOrdinal2 {
+        public double? OriginOrdinal2 {
             get {
                 return originOrdinal2Field;
             } 
@@ -11680,7 +11625,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? originOrdinal2Field; 
+        private double? originOrdinal2Field; 
 
         /// <summary>
         /// The rotation in radians of the the local Y axis relative to the global projected axis which is 90 degrees counter-clockwise from the other global axis. A positive value indicates a clockwise rotation from the global axis. A negative value indicates a counterclockwise rotation form the global axis. 
@@ -11688,7 +11633,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The rotation in radians of the the local Y axis relative to the  global projected axis which is 90 degrees counter-clockwise from the other global axis. A positive value indicates a clockwise rotation from the global axis. A negative value indicates a counterclockwise rotation form the global axis.")]
 		[XmlElement("arealRotation")]
-        public Double? ArealRotation {
+        public double? ArealRotation {
             get {
                 return arealRotationField;
             } 
@@ -11698,7 +11643,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? arealRotationField; 
+        private double? arealRotationField; 
 
         /// <summary>
         /// The vertical location of the origin of this local system in the global vertical CRS. The unit of measure is defined by the unit of measure for the global vertical CRS.
@@ -11706,7 +11651,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The vertical location of the origin of this local system in the global vertical CRS. The unit of measure is defined by the unit of measure for the global vertical CRS.")]
 		[XmlElement("originOrdinal3")]
-        public Double? OriginOrdinal3 {
+        public double? OriginOrdinal3 {
             get {
                 return originOrdinal3Field;
             } 
@@ -11716,14 +11661,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? originOrdinal3Field; 
+        private double? originOrdinal3Field; 
 
         /// <summary>
         /// The vertical location of the origin of this local system in the global vertical CRS. The unit of measure is defined by the unit of measure for the global vertical time CRS. The vertical ordinal of the local system MUST be defined in units of second. If this element is not defined then the vertical ordinal of the local system MUST be defined in units of meter.
         /// </summary>
 		[Description("The vertical location of the origin of this local system in the global vertical CRS. The unit of measure is defined by the unit of measure for the global vertical time CRS. The vertical ordinal of the local system MUST be defined in units of second. If this element is not defined then the vertical ordinal of the local system MUST be defined in units of meter.")]
 		[XmlElement("timeOrigin")]
-        public Double? TimeOrigin {
+        public double? TimeOrigin {
             get {
                 return timeOriginField;
             } 
@@ -11734,14 +11679,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? timeOriginField; 
+        private double? timeOriginField; 
 
         /// <summary>
         /// timeOriginSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TimeOriginSpecified {
+        public bool TimeOriginSpecified {
             get {
                 return timeOriginSpecifiedField;
             } 
@@ -11751,7 +11696,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean timeOriginSpecifiedField; 
+        private bool timeOriginSpecifiedField; 
 
         /// <summary>
         /// Extensions to the schema using an xsd:any construct.
@@ -11809,7 +11754,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. The value must be globally unique.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -11819,7 +11764,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -11863,7 +11808,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [Description("The vertical location of the origin of this local system in the global vertical (length) CRS. The unit of measure is defined by the unit of measure for the global vertical CRS.")]
 		[XmlElement("verticalOrigin")]
-        public Double? VerticalOrigin {
+        public double? VerticalOrigin {
             get {
                 return verticalOriginField;
             } 
@@ -11873,7 +11818,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? verticalOriginField; 
+        private double? verticalOriginField; 
 
         /// <summary>
         /// Defines the unit of measure of all vertical (seismic two-way) time coordinates. The direction is positve when traveling toward the center of the Earth.
@@ -11933,7 +11878,7 @@ namespace Energistics.DataAccess.RESQML110
         /// A URN to a well-known Vertical CRS.
         /// </summary>
         [XmlElement("srsName", DataType="anyURI")]
-        public String SrsName {
+        public string SrsName {
             get {
                 return srsNameField;
             } 
@@ -11945,7 +11890,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String srsNameField; 
+        private string srsNameField; 
         private bool srsNameSpecified = false; 
 
         /// <summary>
@@ -12139,7 +12084,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -12149,7 +12094,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -12257,7 +12202,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AggregationTypeSpecified {
+        public bool AggregationTypeSpecified {
             get {
                 return aggregationTypeSpecifiedField;
             } 
@@ -12267,7 +12212,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean aggregationTypeSpecifiedField; 
+        private bool aggregationTypeSpecifiedField; 
 
 
     } //here
@@ -12307,7 +12252,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -12317,7 +12262,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -12392,7 +12337,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("minimumValue")]
-        public Double? MinimumValue {
+        public double? MinimumValue {
             get {
                 return minimumValueField;
             } 
@@ -12403,14 +12348,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? minimumValueField; 
+        private double? minimumValueField; 
 
         /// <summary>
         /// minimumValueSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MinimumValueSpecified {
+        public bool MinimumValueSpecified {
             get {
                 return minimumValueSpecifiedField;
             } 
@@ -12420,14 +12365,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean minimumValueSpecifiedField; 
+        private bool minimumValueSpecifiedField; 
 
         /// <summary>
         /// maximumValue property
         /// </summary>
 		
 		[XmlElement("maximumValue")]
-        public Double? MaximumValue {
+        public double? MaximumValue {
             get {
                 return maximumValueField;
             } 
@@ -12438,14 +12383,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? maximumValueField; 
+        private double? maximumValueField; 
 
         /// <summary>
         /// maximumValueSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MaximumValueSpecified {
+        public bool MaximumValueSpecified {
             get {
                 return maximumValueSpecifiedField;
             } 
@@ -12455,7 +12400,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean maximumValueSpecifiedField; 
+        private bool maximumValueSpecifiedField; 
 
         /// <summary>
         /// rangeMeaning property
@@ -12498,7 +12443,7 @@ namespace Energistics.DataAccess.RESQML110
         /// Initializes a new instance of the CodeType class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public CodeType(String value)
+        public CodeType(string value)
         {
             this.Value = value;
         }
@@ -12517,7 +12462,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("codeSpace")]
 		
-        public String CodeSpace {
+        public string CodeSpace {
             get {
                 return codeSpaceField;
             } 
@@ -12527,14 +12472,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String codeSpaceField; 
+        private string codeSpaceField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -12544,7 +12489,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -12588,7 +12533,7 @@ namespace Energistics.DataAccess.RESQML110
         /// Initializes a new instance of the CodeWithAuthorityType class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public CodeWithAuthorityType(String value)
+        public CodeWithAuthorityType(string value)
         {
             this.Value = value;
         }
@@ -12675,7 +12620,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("remarks")]
-        public String Remarks {
+        public string Remarks {
             get {
                 return remarksField;
             } 
@@ -12685,7 +12630,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String remarksField; 
+        private string remarksField; 
 
 
     } //here
@@ -12855,7 +12800,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("id", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
 		
-        public String Id {
+        public string Id {
             get {
                 return idField;
             } 
@@ -12865,7 +12810,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String idField; 
+        private string idField; 
 
 
         
@@ -12909,7 +12854,7 @@ namespace Energistics.DataAccess.RESQML110
         /// Initializes a new instance of the StringOrRefType class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public StringOrRefType(String value)
+        public StringOrRefType(string value)
         {
             this.Value = value;
         }
@@ -12928,7 +12873,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -12938,14 +12883,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -12955,7 +12900,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -12997,7 +12942,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("owns")]
 		
-        public Boolean Owns {
+        public bool Owns {
             get {
                 return ownsField;
             } 
@@ -13007,7 +12952,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean ownsField; 
+        private bool ownsField; 
 
 		/// <summary>
         /// nilReason property
@@ -13015,7 +12960,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -13025,7 +12970,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -13146,7 +13091,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean RelativePositionSpecified {
+        public bool RelativePositionSpecified {
             get {
                 return relativePositionSpecifiedField;
             } 
@@ -13156,7 +13101,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean relativePositionSpecifiedField; 
+        private bool relativePositionSpecifiedField; 
 
 
     } //here
@@ -13199,7 +13144,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -13209,7 +13154,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 		/// <summary>
         /// owns property
@@ -13217,7 +13162,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("owns")]
 		
-        public Boolean Owns {
+        public bool Owns {
             get {
                 return ownsField;
             } 
@@ -13227,7 +13172,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean ownsField; 
+        private bool ownsField; 
 
 
         
@@ -13274,7 +13219,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("srsName")]
 		
-        public String SrsName {
+        public string SrsName {
             get {
                 return srsNameField;
             } 
@@ -13284,7 +13229,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String srsNameField; 
+        private string srsNameField; 
 
 		/// <summary>
         /// srsDimension property
@@ -13292,7 +13237,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("srsDimension")]
 		
-        public String SrsDimension {
+        public string SrsDimension {
             get {
                 return srsDimensionField;
             } 
@@ -13302,7 +13247,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String srsDimensionField; 
+        private string srsDimensionField; 
 
 
     } //here
@@ -13375,7 +13320,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("srsName")]
 		
-        public String SrsName {
+        public string SrsName {
             get {
                 return srsNameField;
             } 
@@ -13385,7 +13330,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String srsNameField; 
+        private string srsNameField; 
 
 		/// <summary>
         /// srsDimension property
@@ -13393,7 +13338,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("srsDimension")]
 		
-        public String SrsDimension {
+        public string SrsDimension {
             get {
                 return srsDimensionField;
             } 
@@ -13403,14 +13348,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String srsDimensionField; 
+        private string srsDimensionField; 
 
         /// <summary>
         /// Text property
         /// </summary>
         [RecurringElement]
         [XmlText]
-        public List<String> Text {
+        public List<string> Text {
             get {
                 return TextField;
             } 
@@ -13432,7 +13377,7 @@ namespace Energistics.DataAccess.RESQML110
              else return false;
              }
          }
-        private List<String> TextField; 
+        private List<string> TextField; 
 
 
         
@@ -13684,7 +13629,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("srsName")]
 		
-        public String SrsName {
+        public string SrsName {
             get {
                 return srsNameField;
             } 
@@ -13694,7 +13639,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String srsNameField; 
+        private string srsNameField; 
 
 		/// <summary>
         /// srsDimension property
@@ -13702,7 +13647,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("srsDimension")]
 		
-        public String SrsDimension {
+        public string SrsDimension {
             get {
                 return srsDimensionField;
             } 
@@ -13712,7 +13657,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String srsDimensionField; 
+        private string srsDimensionField; 
 
 		/// <summary>
         /// count property
@@ -13720,7 +13665,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("count")]
 		
-        public String Count {
+        public string Count {
             get {
                 return countField;
             } 
@@ -13730,14 +13675,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String countField; 
+        private string countField; 
 
         /// <summary>
         /// Text property
         /// </summary>
         [RecurringElement]
         [XmlText]
-        public List<String> Text {
+        public List<string> Text {
             get {
                 return TextField;
             } 
@@ -13759,7 +13704,7 @@ namespace Energistics.DataAccess.RESQML110
              else return false;
              }
          }
-        private List<String> TextField; 
+        private List<string> TextField; 
 
 
         
@@ -13888,7 +13833,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -13898,7 +13843,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -14069,7 +14014,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("srsName")]
 		
-        public String SrsName {
+        public string SrsName {
             get {
                 return srsNameField;
             } 
@@ -14079,7 +14024,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String srsNameField; 
+        private string srsNameField; 
 
 		/// <summary>
         /// srsDimension property
@@ -14087,7 +14032,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("srsDimension")]
 		
-        public String SrsDimension {
+        public string SrsDimension {
             get {
                 return srsDimensionField;
             } 
@@ -14097,7 +14042,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String srsDimensionField; 
+        private string srsDimensionField; 
 
 
         
@@ -14280,7 +14225,7 @@ namespace Energistics.DataAccess.RESQML110
         /// Initializes a new instance of the MeasureType class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public MeasureType(Double value)
+        public MeasureType(double value)
         {
             this.Value = value;
         }
@@ -14298,7 +14243,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -14308,7 +14253,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -14353,7 +14298,7 @@ namespace Energistics.DataAccess.RESQML110
         /// Initializes a new instance of the LengthType class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public LengthType(Double value)
+        public LengthType(double value)
         {
             this.Value = value;
         }
@@ -14390,7 +14335,7 @@ namespace Energistics.DataAccess.RESQML110
         /// Initializes a new instance of the AngleType class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public AngleType(Double value)
+        public AngleType(double value)
         {
             this.Value = value;
         }
@@ -14505,7 +14450,7 @@ namespace Energistics.DataAccess.RESQML110
         /// isSphere property
         /// </summary>
         [XmlElement("isSphere")]
-        public Boolean? IsSphere {
+        public bool? IsSphere {
             get {
                 return isSphereField;
             } 
@@ -14516,7 +14461,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean? isSphereField; 
+        private bool? isSphereField; 
         private bool isSphereSpecified = false; 
 
         /// <summary>
@@ -14656,7 +14601,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		[RecurringElement]
 		[XmlElement("scope")]
-        public List<String> Scope {
+        public List<string> Scope {
             get {
                 return scopeField;
             } 
@@ -14678,7 +14623,7 @@ namespace Energistics.DataAccess.RESQML110
              else return false;
              }
          }
-        private List<String> scopeField; 
+        private List<string> scopeField; 
 
         /// <summary>
         /// anchorDefinition property
@@ -14720,7 +14665,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean RealizationEpochSpecified {
+        public bool RealizationEpochSpecified {
             get {
                 return realizationEpochSpecifiedField;
             } 
@@ -14730,7 +14675,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean realizationEpochSpecifiedField; 
+        private bool realizationEpochSpecifiedField; 
 
 
     } //here
@@ -14770,7 +14715,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -14780,7 +14725,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -14941,7 +14886,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("CharacterString")]
-        public String CharacterString {
+        public string CharacterString {
             get {
                 return CharacterStringField;
             } 
@@ -14951,7 +14896,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String CharacterStringField; 
+        private string CharacterStringField; 
 
 		/// <summary>
         /// nilReason property
@@ -14959,7 +14904,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -14969,7 +14914,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -15030,7 +14975,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -15040,7 +14985,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -15048,7 +14993,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -15058,7 +15003,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -15133,7 +15078,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("Boolean")]
-        public Boolean? Boolean {
+        public bool? Boolean {
             get {
                 return BooleanField;
             } 
@@ -15143,7 +15088,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean? BooleanField; 
+        private bool? BooleanField; 
 
 		/// <summary>
         /// nilReason property
@@ -15151,7 +15096,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -15161,7 +15106,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -15221,7 +15166,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("id")]
 		
-        public String Id {
+        public string Id {
             get {
                 return idField;
             } 
@@ -15231,7 +15176,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String idField; 
+        private string idField; 
 
 		/// <summary>
         /// uuid property
@@ -15239,7 +15184,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("uuid")]
 		
-        public String Uuid {
+        public string Uuid {
             get {
                 return uuidField;
             } 
@@ -15249,7 +15194,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uuidField; 
+        private string uuidField; 
 
 
         
@@ -15491,7 +15436,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("URL", DataType="anyURI")]
-        public String URL {
+        public string URL {
             get {
                 return URLField;
             } 
@@ -15501,7 +15446,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String URLField; 
+        private string URLField; 
 
 		/// <summary>
         /// nilReason property
@@ -15509,7 +15454,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -15519,7 +15464,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -15580,7 +15525,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -15590,7 +15535,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -15635,7 +15580,7 @@ namespace Energistics.DataAccess.RESQML110
         /// Initializes a new instance of the CodeListValue_Type class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public CodeListValue_Type(String value)
+        public CodeListValue_Type(string value)
         {
             this.Value = value;
         }
@@ -15654,7 +15599,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [XmlAttribute("codeList")]
 		
-        public String CodeList {
+        public string CodeList {
             get {
                 return codeListField;
             } 
@@ -15664,7 +15609,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String codeListField; 
+        private string codeListField; 
 
 		/// <summary>
         /// codeListValue property
@@ -15672,7 +15617,7 @@ namespace Energistics.DataAccess.RESQML110
 		[Required]
         [XmlAttribute("codeListValue")]
 		
-        public String CodeListValue {
+        public string CodeListValue {
             get {
                 return codeListValueField;
             } 
@@ -15682,7 +15627,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String codeListValueField; 
+        private string codeListValueField; 
 
 		/// <summary>
         /// codeSpace property
@@ -15690,7 +15635,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("codeSpace")]
 		
-        public String CodeSpace {
+        public string CodeSpace {
             get {
                 return codeSpaceField;
             } 
@@ -15700,14 +15645,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String codeSpaceField; 
+        private string codeSpaceField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -15717,7 +15662,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -16091,7 +16036,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -16101,7 +16046,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -16109,7 +16054,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -16119,7 +16064,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -16180,7 +16125,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -16190,7 +16135,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -16198,7 +16143,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -16208,7 +16153,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -16269,7 +16214,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -16279,7 +16224,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -16287,7 +16232,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -16297,7 +16242,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -16459,7 +16404,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -16469,7 +16414,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -16477,7 +16422,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -16487,7 +16432,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -16548,7 +16493,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -16558,7 +16503,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -16651,7 +16596,7 @@ namespace Energistics.DataAccess.RESQML110
         /// Date property
         /// </summary>
         [XmlElement("Date")]
-        public String Date {
+        public string Date {
             get {
                 return DateField;
             } 
@@ -16662,7 +16607,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String DateField; 
+        private string DateField; 
         private bool dateSpecified = false; 
 
         /// <summary>
@@ -16718,7 +16663,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -16728,7 +16673,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -16789,7 +16734,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -16799,7 +16744,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -17158,7 +17103,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -17168,7 +17113,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -17176,7 +17121,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -17186,7 +17131,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -17247,7 +17192,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -17257,7 +17202,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -17265,7 +17210,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -17275,7 +17220,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -17386,7 +17331,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -17396,7 +17341,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -17404,7 +17349,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -17414,7 +17359,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -17475,7 +17420,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -17485,7 +17430,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -17493,7 +17438,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -17503,7 +17448,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -17564,7 +17509,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -17574,7 +17519,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -17635,7 +17580,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -17645,7 +17590,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -17653,7 +17598,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -17663,7 +17608,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -17913,7 +17858,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -17923,7 +17868,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -17984,7 +17929,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -17994,7 +17939,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -18055,7 +18000,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -18065,7 +18010,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -18073,7 +18018,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -18083,7 +18028,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -18210,7 +18155,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		
 		[XmlElement("Real")]
-        public Double? Real {
+        public double? Real {
             get {
                 return RealField;
             } 
@@ -18220,7 +18165,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Double? RealField; 
+        private double? RealField; 
 
 		/// <summary>
         /// nilReason property
@@ -18228,7 +18173,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -18238,7 +18183,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -18299,7 +18244,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -18309,7 +18254,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -18317,7 +18262,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -18327,7 +18272,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -18402,7 +18347,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		[RecurringElement]
 		[XmlElement("scope")]
-        public List<String> Scope {
+        public List<string> Scope {
             get {
                 return scopeField;
             } 
@@ -18424,7 +18369,7 @@ namespace Energistics.DataAccess.RESQML110
              else return false;
              }
          }
-        private List<String> scopeField; 
+        private List<string> scopeField; 
 
 
     } //here
@@ -18596,7 +18541,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -18606,7 +18551,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -18680,7 +18625,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -18690,7 +18635,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -18764,7 +18709,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -18774,7 +18719,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -18848,7 +18793,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -18858,7 +18803,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -18966,7 +18911,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -18976,7 +18921,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -19035,7 +18980,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -19045,7 +18990,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -19137,7 +19082,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -19147,7 +19092,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -19221,7 +19166,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		[RecurringElement]
 		[XmlElement("scope")]
-        public List<String> Scope {
+        public List<string> Scope {
             get {
                 return scopeField;
             } 
@@ -19243,14 +19188,14 @@ namespace Energistics.DataAccess.RESQML110
              else return false;
              }
          }
-        private List<String> scopeField; 
+        private List<string> scopeField; 
 
         /// <summary>
         /// operationVersion property
         /// </summary>
 		
 		[XmlElement("operationVersion")]
-        public String OperationVersion {
+        public string OperationVersion {
             get {
                 return operationVersionField;
             } 
@@ -19260,7 +19205,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String operationVersionField; 
+        private string operationVersionField; 
 
         /// <summary>
         /// coordinateOperationAccuracy property
@@ -19363,7 +19308,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -19373,7 +19318,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -19432,7 +19377,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -19442,7 +19387,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -19550,7 +19495,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -19560,7 +19505,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -19653,7 +19598,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -19663,7 +19608,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -19671,7 +19616,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -19681,7 +19626,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -19742,7 +19687,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -19752,7 +19697,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -19760,7 +19705,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -19770,7 +19715,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -19831,7 +19776,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -19841,7 +19786,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -19849,7 +19794,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -19859,7 +19804,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -19934,7 +19879,7 @@ namespace Energistics.DataAccess.RESQML110
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -19944,7 +19889,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -19985,7 +19930,7 @@ namespace Energistics.DataAccess.RESQML110
         /// A URN to a well-known Projected CRS.
         /// </summary>
         [XmlElement("srsName", DataType="anyURI")]
-        public String SrsName {
+        public string SrsName {
             get {
                 return srsNameField;
             } 
@@ -19997,7 +19942,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String srsNameField; 
+        private string srsNameField; 
         private bool srsNameSpecified = false; 
 
         /// <summary>
@@ -20507,7 +20452,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of an object. This should not be used for child nodes within an object. For an independent object, the value may be globally unique. For a dependent object, the value must be unique (for the same object type) within the context of the parent object. There should be no assumption as to the semantic content of this attribute. The purpose of this type is to facilitate modifying the optionality in derived schemas.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -20517,7 +20462,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -20578,7 +20523,7 @@ namespace Energistics.DataAccess.RESQML110
 		[StringLength(64)]
         [Description("The kind of event event.")]
 		[XmlElement("eventType")]
-        public String EventType {
+        public string EventType {
             get {
                 return eventTypeField;
             } 
@@ -20588,7 +20533,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String eventTypeField; 
+        private string eventTypeField; 
 
         /// <summary>
         /// The party responsible for the event.
@@ -20596,7 +20541,7 @@ namespace Energistics.DataAccess.RESQML110
 		[StringLength(64)]
         [Description("The party responsible for the event.")]
 		[XmlElement("responsibleParty")]
-        public String ResponsibleParty {
+        public string ResponsibleParty {
             get {
                 return responsiblePartyField;
             } 
@@ -20606,7 +20551,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String responsiblePartyField; 
+        private string responsiblePartyField; 
 
         /// <summary>
         /// A free form comment that can further define the event that occurred.
@@ -20614,7 +20559,7 @@ namespace Energistics.DataAccess.RESQML110
 		[StringLength(4000)]
         [Description("A free form comment that can further  define the event that occurred.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -20624,7 +20569,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -20664,7 +20609,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -20674,7 +20619,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -20790,7 +20735,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateTimeSpecified {
+        public bool DateTimeSpecified {
             get {
                 return dTimSpecifiedField;
             } 
@@ -20800,7 +20745,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean dTimSpecifiedField; 
+        private bool dTimSpecifiedField; 
 
         /// <summary>
         /// The measured depth associated with the value.
@@ -20825,7 +20770,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
 		[Description("Indexes things with the same name.  That is, 1 indicates the first one, 2 incidates the second one, etc.")]
 		[XmlElement("index")]
-        public Int16? Index {
+        public short? Index {
             get {
                 return indexField;
             } 
@@ -20836,14 +20781,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Int16? indexField; 
+        private short? indexField; 
 
         /// <summary>
         /// indexSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IndexSpecified {
+        public bool IndexSpecified {
             get {
                 return indexSpecifiedField;
             } 
@@ -20853,7 +20798,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean indexSpecifiedField; 
+        private bool indexSpecifiedField; 
 
         /// <summary>
         /// The kind of the measure. For example, "length". This should be specified if the value requires a unit of measure.
@@ -20878,7 +20823,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MeasureClassSpecified {
+        public bool MeasureClassSpecified {
             get {
                 return measureClassSpecifiedField;
             } 
@@ -20888,7 +20833,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean measureClassSpecifiedField; 
+        private bool measureClassSpecifiedField; 
 
         /// <summary>
         /// A textual description of the extension.
@@ -20896,7 +20841,7 @@ namespace Energistics.DataAccess.RESQML110
 		[StringLength(256)]
         [Description("A textual description of the extension.")]
 		[XmlElement("description")]
-        public String Description {
+        public string Description {
             get {
                 return descriptionField;
             } 
@@ -20906,7 +20851,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String descriptionField; 
+        private string descriptionField; 
 
 		/// <summary>
         /// uid property
@@ -20916,7 +20861,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -20926,7 +20871,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -20970,7 +20915,7 @@ namespace Energistics.DataAccess.RESQML110
 		[StringLength(40)]
         [Description("The security class in which this document is  classified. Examples would be confidential, partner confidential,  tight. The meaning of the class is determined by the System in which  it is defined.")]
 		[XmlElement("class")]
-        public String Class {
+        public string Class {
             get {
                 return classField;
             } 
@@ -20980,7 +20925,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String classField; 
+        private string classField; 
 
         /// <summary>
         /// The security classification system. This gives context to the meaning of the Class value.
@@ -20988,7 +20933,7 @@ namespace Energistics.DataAccess.RESQML110
 		[StringLength(40)]
         [Description("The security classification system.  This gives context to the meaning of the Class value.")]
 		[XmlElement("securitySystem")]
-        public String SecuritySystem {
+        public string SecuritySystem {
             get {
                 return securitySystemField;
             } 
@@ -20998,7 +20943,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String securitySystemField; 
+        private string securitySystemField; 
 
         /// <summary>
         /// The date on which this security class is no longer applicable.
@@ -21023,7 +20968,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean EndDateSpecified {
+        public bool EndDateSpecified {
             get {
                 return endDateSpecifiedField;
             } 
@@ -21033,7 +20978,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean endDateSpecifiedField; 
+        private bool endDateSpecifiedField; 
 
         /// <summary>
         /// A general comment to further define the security class.
@@ -21041,7 +20986,7 @@ namespace Energistics.DataAccess.RESQML110
 		[StringLength(4000)]
         [Description("A general comment to further define the security  class.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -21051,7 +20996,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -21091,7 +21036,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The unique identifier of a container element. This attribute is generally required within the context of a WITSML server. There should be no assumption as to the semantic content of this attribute. This should only be used with recurring container types (i.e., maxOccurs greater than one). The value is only required to be unique within the context of the nearest recurring parent element.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -21101,7 +21046,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -21163,7 +21108,7 @@ namespace Energistics.DataAccess.RESQML110
 		[StringLength(64)]
         [Description("If appropriate, the software that created the file.  This is a free form string, and may include whatever information  is deemed relevant.")]
 		[XmlElement("softwareName")]
-        public String SoftwareName {
+        public string SoftwareName {
             get {
                 return softwareNameField;
             } 
@@ -21173,7 +21118,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String softwareNameField; 
+        private string softwareNameField; 
 
         /// <summary>
         /// The person or business associate that created the file.
@@ -21181,7 +21126,7 @@ namespace Energistics.DataAccess.RESQML110
 		[StringLength(64)]
         [Description("The person or business associate that created  the file.")]
 		[XmlElement("fileCreator")]
-        public String FileCreator {
+        public string FileCreator {
             get {
                 return fileCreatorField;
             } 
@@ -21191,7 +21136,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String fileCreatorField; 
+        private string fileCreatorField; 
 
         /// <summary>
         /// Any comment that would be useful to further explain the creation of this instance document.
@@ -21199,7 +21144,7 @@ namespace Energistics.DataAccess.RESQML110
 		[StringLength(4000)]
         [Description("Any comment that would be useful to further  explain the creation of this instance document.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -21209,7 +21154,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
 
         
@@ -21255,7 +21200,7 @@ namespace Energistics.DataAccess.RESQML110
         /// Initializes a new instance of the NameStruct class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public NameStruct(String value)
+        public NameStruct(string value)
         {
             this.Value = value;
         }
@@ -21275,7 +21220,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("The naming system within the name is (hopefully) unique.")]
         [XmlAttribute("namingSystem")]
 		
-        public String NamingSystem {
+        public string NamingSystem {
             get {
                 return namingSystemField;
             } 
@@ -21285,14 +21230,14 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String namingSystemField; 
+        private string namingSystemField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         [StringLength(64)]
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -21302,7 +21247,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -21412,7 +21357,7 @@ namespace Energistics.DataAccess.RESQML110
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DocumentDateSpecified {
+        public bool DocumentDateSpecified {
             get {
                 return documentDateSpecifiedField;
             } 
@@ -21422,7 +21367,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private Boolean documentDateSpecifiedField; 
+        private bool documentDateSpecifiedField; 
 
         /// <summary>
         /// A document class. Examples of classes would be a metadata classification or a set of keywords. 
@@ -21508,7 +21453,7 @@ namespace Energistics.DataAccess.RESQML110
 		[StringLength(4000)]
         [Description("A free-form string that allows a disclaimer to  accompany the information.")]
 		[XmlElement("disclaimer")]
-        public String Disclaimer {
+        public string Disclaimer {
             get {
                 return disclaimerField;
             } 
@@ -21518,7 +21463,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String disclaimerField; 
+        private string disclaimerField; 
 
         /// <summary>
         /// A collection of events that can document the history of the data.
@@ -21557,7 +21502,7 @@ namespace Energistics.DataAccess.RESQML110
 		[StringLength(64)]
         [Description("The owner of the data.")]
 		[XmlElement("owner")]
-        public String Owner {
+        public string Owner {
             get {
                 return ownerField;
             } 
@@ -21567,7 +21512,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String ownerField; 
+        private string ownerField; 
 
         /// <summary>
         /// An optional comment about the document.
@@ -21575,7 +21520,7 @@ namespace Energistics.DataAccess.RESQML110
 		[StringLength(4000)]
         [Description("An optional comment about the document.")]
 		[XmlElement("comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return commentField;
             } 
@@ -21585,7 +21530,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String commentField; 
+        private string commentField; 
 
 
         
@@ -21691,7 +21636,7 @@ namespace Energistics.DataAccess.RESQML110
         [Description("Data object schema version.  The fourth level must match the  version of the schema constraints (enumerations and XML loader files) that are assumed by the document instance.")]
         [XmlAttribute("version")]
 		
-        public String Version {
+        public string Version {
             get {
                 return versionField;
             } 
@@ -21701,7 +21646,7 @@ namespace Energistics.DataAccess.RESQML110
             }
         }
 
-        private String versionField = "1.1.0.0(RESQML)"; 
+        private string versionField = "1.1.0.0(RESQML)"; 
 
 
     } //here

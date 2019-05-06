@@ -25925,7 +25925,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class CuttingsIntervalLithology {
         
-        private LithologyKind kindField;
+        private Energistics.DataAccess.ExtensibleEnum<LithologyKind> kindField;
         
         private VolumePerVolumeMeasure lithPcField;
         
@@ -25970,7 +25970,7 @@ namespace Energistics.Generator.WITSML200 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The geological name for the type of lithology from the enum table listing a subse" +
             "t of the OneGeology/CGI defined formation types.")]
-        public LithologyKind Kind {
+        public Energistics.DataAccess.ExtensibleEnum<LithologyKind> Kind {
             get {
                 return this.kindField;
             }
@@ -26237,7 +26237,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class LithologyQualifier {
         
-        private LithologyQualifierKind kindField;
+        private Energistics.DataAccess.ExtensibleEnum<LithologyQualifierKind> kindField;
         
         private MdInterval mdIntervalField;
         
@@ -26251,7 +26251,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>The type of qualifier.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The type of qualifier.")]
-        public LithologyQualifierKind Kind {
+        public Energistics.DataAccess.ExtensibleEnum<LithologyQualifierKind> Kind {
             get {
                 return this.kindField;
             }
@@ -26377,7 +26377,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class InterpretedIntervalLithology {
         
-        private LithologyKind kindField;
+        private Energistics.DataAccess.ExtensibleEnum<LithologyKind> kindField;
         
         private Citation citationField;
         
@@ -26418,7 +26418,7 @@ namespace Energistics.Generator.WITSML200 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The geological name for the type of lithology from the enum table listing a  subs" +
             "et of the OneGeology / CGI defined formation types.")]
-        public LithologyKind Kind {
+        public Energistics.DataAccess.ExtensibleEnum<LithologyKind> Kind {
             get {
                 return this.kindField;
             }
@@ -41366,7 +41366,7 @@ namespace Energistics.Generator.WITSML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/witsmlv2")]
     public partial class StringEquipment {
         
-        private EquipmentType equipmentTypeField;
+        private Energistics.DataAccess.ExtensibleEnum<EquipmentType> equipmentTypeField;
         
         private string nameField;
         
@@ -41443,7 +41443,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <remarks/>
         /// <summary>The type of the equipment. See enumerated values.</summary>
         [System.ComponentModel.DescriptionAttribute("The type of the equipment. See enumerated values.")]
-        public EquipmentType EquipmentType {
+        public Energistics.DataAccess.ExtensibleEnum<EquipmentType> EquipmentType {
             get {
                 return this.equipmentTypeField;
             }
@@ -42869,7 +42869,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private string equipmentNameField;
         
-        private EquipmentType equipmentTypeField;
+        private Energistics.DataAccess.ExtensibleEnum<EquipmentType> equipmentTypeField;
         
         private string manufacturerField;
         
@@ -42978,7 +42978,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>The equipment type etc. bridge plug, bull plug. capillary tubing.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The equipment type etc. bridge plug, bull plug. capillary tubing.")]
-        public EquipmentType EquipmentType {
+        public Energistics.DataAccess.ExtensibleEnum<EquipmentType> EquipmentType {
             get {
                 return this.equipmentTypeField;
             }
@@ -49158,7 +49158,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private string axisPropertyKindField;
         
-        private UnitOfMeasure axisUomField;
+        private Energistics.DataAccess.ExtensibleEnum<UnitOfMeasure> axisUomField;
         
         private string uidField;
         
@@ -49234,7 +49234,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>A string representing the units of measure of the axis values.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A string representing the units of measure of the axis values.")]
-        public UnitOfMeasure AxisUom {
+        public Energistics.DataAccess.ExtensibleEnum<UnitOfMeasure> AxisUom {
             get {
                 return this.axisUomField;
             }
@@ -49268,7 +49268,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private ChannelIndexType indexTypeField;
         
-        private UnitOfMeasure uomField;
+        private Energistics.DataAccess.ExtensibleEnum<UnitOfMeasure> uomField;
         
         private IndexDirection directionField;
         
@@ -49294,7 +49294,7 @@ namespace Energistics.Generator.WITSML200 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The unit of measure of the index. Must be one of the units allowed for the specif" +
             "ied IndexType (i.e., time or distance).")]
-        public UnitOfMeasure Uom {
+        public Energistics.DataAccess.ExtensibleEnum<UnitOfMeasure> Uom {
             get {
                 return this.uomField;
             }
@@ -63595,7 +63595,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private double valueField;
         
-        private UnitOfMeasure uomField;
+        private Energistics.DataAccess.ExtensibleEnum<UnitOfMeasure> uomField;
         
         private DataObjectReference customUnitDictionaryField;
         
@@ -63616,7 +63616,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>Unit of measure associated with the value</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Unit of measure associated with the value")]
-        public UnitOfMeasure Uom {
+        public Energistics.DataAccess.ExtensibleEnum<UnitOfMeasure> Uom {
             get {
                 return this.uomField;
             }
@@ -73876,7 +73876,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private EtpDataType dataTypeField;
         
-        private UnitOfMeasure uomField;
+        private Energistics.DataAccess.ExtensibleEnum<UnitOfMeasure> uomField;
         
         private ChannelStatus growingStatusField;
         
@@ -73959,7 +73959,7 @@ namespace Energistics.Generator.WITSML200 {
         /// <summary>The underlying unit of measure of the value.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The underlying unit of measure of the value.")]
-        public UnitOfMeasure Uom {
+        public Energistics.DataAccess.ExtensibleEnum<UnitOfMeasure> Uom {
             get {
                 return this.uomField;
             }
@@ -76994,7 +76994,7 @@ namespace Energistics.Generator.WITSML200 {
         
         private Energistics.SchemaGatherer.Timestamp deprecationDateField;
         
-        private QuantityClassKind quantityClassField;
+        private Energistics.DataAccess.ExtensibleEnum<QuantityClassKind> quantityClassField;
         
         private DataObjectReference parentField;
         
@@ -77031,7 +77031,7 @@ namespace Energistics.Generator.WITSML200 {
         [System.ComponentModel.DescriptionAttribute("A reference to the name of a quantity class in the Energistics Unit of Measure Di" +
             "ctionary. If there is no match in the Energistics Unit of Measure Dictionary, th" +
             "en this attribute is purely for human information.")]
-        public QuantityClassKind QuantityClass {
+        public Energistics.DataAccess.ExtensibleEnum<QuantityClassKind> QuantityClass {
             get {
                 return this.quantityClassField;
             }

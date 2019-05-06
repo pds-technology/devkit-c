@@ -464,7 +464,7 @@ namespace Energistics.SchemaGatherer
 
             if (memberType != null)
             {
-                SetMemberPropertyType(typeDeclaration, memberProperty, memberType.Name);
+                SetExtensibleEnum(typeDeclaration, memberProperty, memberType.Name);
             }
 
             AddRestrictionAttributes(codeNamespace, typeDeclaration, memberProperty, restrictions);
@@ -598,11 +598,23 @@ namespace Energistics.SchemaGatherer
             SetMemberPropertyType(typeDeclaration, memberProperty, "Energistics.SchemaGatherer.Timestamp");
         }
 
+        private static void SetExtensibleEnum(CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty, string typeName)
+        {
+            var typeReference = new CodeTypeReference("Energistics.DataAccess.ExtensibleEnum", new[] { new CodeTypeReference(typeName) });
+            SetMemberPropertyType(typeDeclaration, memberProperty, typeReference);
+        }
+
         private static void SetMemberPropertyType(CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty, string typeName)
         {
+            var typeReference = new CodeTypeReference(typeName);
+            SetMemberPropertyType(typeDeclaration, memberProperty, typeReference);
+        }
+
+        private static void SetMemberPropertyType(CodeTypeDeclaration typeDeclaration, CodeMemberProperty memberProperty, CodeTypeReference typeReference)
+        {
             var memberField = GetMemberField(typeDeclaration, memberProperty.Name + "Field");
-            memberField.Type = new CodeTypeReference(typeName);
-            memberProperty.Type = memberField.Type;
+            memberField.Type = typeReference;
+            memberProperty.Type = typeReference;
         }
 
         private static void AddDescriptionAttribute(CodeMemberProperty memberProperty, string description)

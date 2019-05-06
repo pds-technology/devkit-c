@@ -253,7 +253,7 @@ using Energistics.DataAccess.");
             #line hidden
             
             #line 81 "C:\development\WITSML\devkit-merge\devkit-pdscontrib\source\DevKitGenerator\Generator\EnergisticsTextTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(generator.RenameClass(type).EndsWith("List") ? ", IEnergisticsCollection" : generator.GetDataObjectInterface(type)));
+            this.Write(this.ToStringHelper.ToStringWithCulture(generator.IsEnergisticsCollection(type) ? ", IEnergisticsCollection" : generator.GetDataObjectInterface(type)));
             
             #line default
             #line hidden

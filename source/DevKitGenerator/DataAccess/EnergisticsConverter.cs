@@ -135,10 +135,7 @@ namespace Energistics.DataAccess
         {
             if (encoding != null)
             {
-                //ArraySetting(ref obj); fixed by specific field
-                Type type = obj.GetType();
                 var serializer = new XmlSerializer(obj.GetType()); 
-               // var serializer = new XmlSerializer(obj.GetType(), GetXmlRootAttribute(type));
                 
                 using (var memstream = new MemoryStream())
                 {
@@ -198,36 +195,35 @@ namespace Energistics.DataAccess
         /// <returns>The Energistics object</returns>
         public static T XmlToObject<T>(string xml, Encoding encoding)
         {
-            
-            if (encoding != null)
+            if (encoding == null) return default(T);
+
+            Type type = typeof(T);
+            //var serializer = new XmlSerializer(type, GetXmlRootAttribute(type));
+            var serializer = new XmlSerializer(type);
+            if (type.FullName.Contains("RESQML200") || (type.FullName.Contains("RESQML201")))
             {
-                Type type = typeof(T);
-                //var serializer = new XmlSerializer(type, GetXmlRootAttribute(type));
-                var serializer = new XmlSerializer(type);
-                if (type.FullName.Contains("RESQML200") || (type.FullName.Contains("RESQML201")))
-                {
-                    // Strip out any unnecessary xsi:type attributes
-                    xml = Regex.Replace(xml, ":type=\"(.*?)\"", new MatchEvaluator(XsiTypeConvert));
-                }
-                if (type.Name == "ResqmlDocument")
-                {
-                    // Find all arrays of numbers, and removes extra whitespace so that .net can parse
-                    xml = Regex.Replace(xml, "\"([\\d\\. ]*?)\"", new MatchEvaluator(ArrayCleaner));
+                // Strip out any unnecessary xsi:type attributes
+                xml = Regex.Replace(xml, ":type=\"(.*?)\"", new MatchEvaluator(XsiTypeConvert));
+            }
+            if (type.Name == "ResqmlDocument")
+            {
+                // Find all arrays of numbers, and removes extra whitespace so that .net can parse
+                xml = Regex.Replace(xml, "\"([\\d\\. ]*?)\"", new MatchEvaluator(ArrayCleaner));
 
-                    // Strip out any unnecessary xsi:type attributes
-                    xml = Regex.Replace(xml, "xsi:type=\"(.*?)\"", new MatchEvaluator(XsiTypeCleaner));
-                }
+                // Strip out any unnecessary xsi:type attributes
+                xml = Regex.Replace(xml, "xsi:type=\"(.*?)\"", new MatchEvaluator(XsiTypeCleaner));
+            }
 
-                using (var memstream = new MemoryStream(encoding.GetBytes(xml)))
+            using (var memstream = new MemoryStream(encoding.GetBytes(xml)))
+            {
+                object xmlobject = serializer.Deserialize(memstream);
+
+                if (xmlobject is T)
                 {
-                    object xmlobject = serializer.Deserialize(memstream);
-
-                    if (xmlobject is T)
-                    {
-                        return (T) xmlobject;
-                    }
+                    return (T) xmlobject;
                 }
             }
+
             return default(T);
         }
 

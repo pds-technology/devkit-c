@@ -10369,7 +10369,7 @@ namespace Energistics.Generator.RESQML210 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     public partial class PropertyKindFacet {
         
-        private Facet facetField;
+        private Energistics.DataAccess.ExtensibleEnum<Facet> facetField;
         
         private FacetKind kindField;
         
@@ -10379,7 +10379,7 @@ namespace Energistics.Generator.RESQML210 {
         [System.ComponentModel.DescriptionAttribute("A facet allows you to better define a property in the context of its property kin" +
             "d. The technical advantage of using a facet vs. a specialized property kind is t" +
             "o limit the number of property kinds.")]
-        public Facet Facet {
+        public Energistics.DataAccess.ExtensibleEnum<Facet> Facet {
             get {
                 return this.facetField;
             }
@@ -15333,14 +15333,14 @@ namespace Energistics.Generator.RESQML210 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2")]
     public partial class FaultThrow {
         
-        private ThrowKind throwField;
+        private Energistics.DataAccess.ExtensibleEnum<ThrowKind> throwField;
         
         private AbstractTimeInterval hasOccurredDuringField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Throw")]
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
-        public ThrowKind Throw {
+        public Energistics.DataAccess.ExtensibleEnum<ThrowKind> Throw {
             get {
                 return this.throwField;
             }
@@ -20768,7 +20768,7 @@ namespace Energistics.Generator.RESQML210 {
         
         private double valueField;
         
-        private UnitOfMeasure uomField;
+        private Energistics.DataAccess.ExtensibleEnum<UnitOfMeasure> uomField;
         
         private DataObjectReference customUnitDictionaryField;
         
@@ -20789,7 +20789,7 @@ namespace Energistics.Generator.RESQML210 {
         /// <summary>Unit of measure associated with the value</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Unit of measure associated with the value")]
-        public UnitOfMeasure Uom {
+        public Energistics.DataAccess.ExtensibleEnum<UnitOfMeasure> Uom {
             get {
                 return this.uomField;
             }
@@ -21343,7 +21343,7 @@ namespace Energistics.Generator.RESQML210 {
         
         private Energistics.SchemaGatherer.Timestamp deprecationDateField;
         
-        private QuantityClassKind quantityClassField;
+        private Energistics.DataAccess.ExtensibleEnum<QuantityClassKind> quantityClassField;
         
         private DataObjectReference parentField;
         
@@ -21380,7 +21380,7 @@ namespace Energistics.Generator.RESQML210 {
         [System.ComponentModel.DescriptionAttribute("A reference to the name of a quantity class in the Energistics Unit of Measure Di" +
             "ctionary. If there is no match in the Energistics Unit of Measure Dictionary, th" +
             "en this attribute is purely for human information.")]
-        public QuantityClassKind QuantityClass {
+        public Energistics.DataAccess.ExtensibleEnum<QuantityClassKind> QuantityClass {
             get {
                 return this.quantityClassField;
             }
@@ -21519,7 +21519,7 @@ namespace Energistics.Generator.RESQML210 {
         
         private double[] maximumValueField;
         
-        private UnitOfMeasure uomField;
+        private Energistics.DataAccess.ExtensibleEnum<UnitOfMeasure> uomField;
         
         private DataObjectReference customUnitDictionaryField;
         
@@ -21555,7 +21555,7 @@ namespace Energistics.Generator.RESQML210 {
         /// <summary>Unit of measure for the property.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Unit of measure for the property.")]
-        public UnitOfMeasure Uom {
+        public Energistics.DataAccess.ExtensibleEnum<UnitOfMeasure> Uom {
             get {
                 return this.uomField;
             }
@@ -21650,9 +21650,9 @@ namespace Energistics.Generator.RESQML210 {
         
         private DataObjectReference projectedUomCustomDictField;
         
-        private LengthUom projectedUomField;
+        private Energistics.DataAccess.ExtensibleEnum<LengthUom> projectedUomField;
         
-        private LengthUom verticalUomField;
+        private Energistics.DataAccess.ExtensibleEnum<LengthUom> verticalUomField;
         
         private DataObjectReference verticalUomCustomDictField;
         
@@ -21739,7 +21739,7 @@ namespace Energistics.Generator.RESQML210 {
         /// <summary>Unit of measure of the associated projected CRS. BUSINESS RULE: When the projected CRS is well known, it must have the same UOM as the UOM defined by the well-known projected CRS. Explanation: A well-known CRS already defines the UOM. When you indicate that you use a CRS EPSG code, e.g., 7500, if you go to the EPSG database, you find the constrained UOM. This approach removes the need to depend on an EPSG database (or other external database), so RESQML copies the UOM of the well-known CRS into the RESQML CRS.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute(@"Unit of measure of the associated projected CRS. BUSINESS RULE: When the projected CRS is well known, it must have the same UOM as the UOM defined by the well-known projected CRS. Explanation: A well-known CRS already defines the UOM. When you indicate that you use a CRS EPSG code, e.g., 7500, if you go to the EPSG database, you find the constrained UOM. This approach removes the need to depend on an EPSG database (or other external database), so RESQML copies the UOM of the well-known CRS into the RESQML CRS.")]
-        public LengthUom ProjectedUom {
+        public Energistics.DataAccess.ExtensibleEnum<LengthUom> ProjectedUom {
             get {
                 return this.projectedUomField;
             }
@@ -21754,7 +21754,7 @@ namespace Energistics.Generator.RESQML210 {
         [System.ComponentModel.DescriptionAttribute("Unit of measure of the associated vertical CRS. BUSINESS RULE: When the vertical " +
             "CRS is well known, it must have the same UOM defined by the well-known vertical " +
             "CRS. Explanation: See ProjectedUom.")]
-        public LengthUom VerticalUom {
+        public Energistics.DataAccess.ExtensibleEnum<LengthUom> VerticalUom {
             get {
                 return this.verticalUomField;
             }
@@ -21865,7 +21865,7 @@ namespace Energistics.Generator.RESQML210 {
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
     public partial class LocalTime3dCrs : AbstractLocal3dCrs {
         
-        private TimeUom timeUomField;
+        private Energistics.DataAccess.ExtensibleEnum<TimeUom> timeUomField;
         
         private DataObjectReference customUnitDictionaryField;
         
@@ -21874,7 +21874,7 @@ namespace Energistics.Generator.RESQML210 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Defines the unit of measure of the third (time) coordinates, for the geometries t" +
             "hat refer to it.")]
-        public TimeUom TimeUom {
+        public Energistics.DataAccess.ExtensibleEnum<TimeUom> TimeUom {
             get {
                 return this.timeUomField;
             }
@@ -22256,7 +22256,7 @@ namespace Energistics.Generator.RESQML210 {
         
         private double finishMdField;
         
-        private LengthUom mdUomField;
+        private Energistics.DataAccess.ExtensibleEnum<LengthUom> mdUomField;
         
         private DataObjectReference customUnitDictionaryField;
         
@@ -22308,7 +22308,7 @@ namespace Energistics.Generator.RESQML210 {
         /// <summary>Units of measure of the measured depths along this trajectory.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Units of measure of the measured depths along this trajectory.")]
-        public LengthUom MdUom {
+        public Energistics.DataAccess.ExtensibleEnum<LengthUom> MdUom {
             get {
                 return this.mdUomField;
             }
@@ -22661,7 +22661,7 @@ namespace Energistics.Generator.RESQML210 {
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
     public partial class DeviationSurveyRepresentation : AbstractRepresentation {
         
-        private PlaneAngleUom angleUomField;
+        private Energistics.DataAccess.ExtensibleEnum<PlaneAngleUom> angleUomField;
         
         private DataObjectReference angleUomCustomDictField;
         
@@ -22675,7 +22675,7 @@ namespace Energistics.Generator.RESQML210 {
         
         private AbstractFloatingPointArray mdsField;
         
-        private LengthUom mdUomField;
+        private Energistics.DataAccess.ExtensibleEnum<LengthUom> mdUomField;
         
         private DataObjectReference mdUomCustomDictField;
         
@@ -22689,7 +22689,7 @@ namespace Energistics.Generator.RESQML210 {
         /// <summary>Defines the units of measure for the azimuth and inclination.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Defines the units of measure for the azimuth and inclination.")]
-        public PlaneAngleUom AngleUom {
+        public Energistics.DataAccess.ExtensibleEnum<PlaneAngleUom> AngleUom {
             get {
                 return this.angleUomField;
             }
@@ -22780,7 +22780,7 @@ namespace Energistics.Generator.RESQML210 {
         /// <summary>Units of measure of the measured depths along this deviation survey.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Units of measure of the measured depths along this deviation survey.")]
-        public LengthUom MdUom {
+        public Energistics.DataAccess.ExtensibleEnum<LengthUom> MdUom {
             get {
                 return this.mdUomField;
             }
@@ -24184,16 +24184,16 @@ namespace Energistics.Generator.RESQML210 {
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.energistics.org/energyml/data/resqmlv2", IsNullable=false)]
     public partial class GeologicUnitInterpretation : AbstractFeatureInterpretation {
         
-        private LithologyKind geologicUnitCompositionField;
+        private Energistics.DataAccess.ExtensibleEnum<LithologyKind> geologicUnitCompositionField;
         
         private GeologicUnitMaterialEmplacement geologicUnitMaterialEmplacementField;
         
         private bool geologicUnitMaterialEmplacementFieldSpecified;
         
-        private Shape3d geologicUnit3dShapeField;
+        private Energistics.DataAccess.ExtensibleEnum<Shape3d> geologicUnit3dShapeField;
         
         /// <remarks/>
-        public LithologyKind GeologicUnitComposition {
+        public Energistics.DataAccess.ExtensibleEnum<LithologyKind> GeologicUnitComposition {
             get {
                 return this.geologicUnitCompositionField;
             }
@@ -24229,7 +24229,7 @@ namespace Energistics.Generator.RESQML210 {
         /// <remarks/>
         /// <summary>3D shape of the geologic unit.</summary>
         [System.ComponentModel.DescriptionAttribute("3D shape of the geologic unit.")]
-        public Shape3d GeologicUnit3dShape {
+        public Energistics.DataAccess.ExtensibleEnum<Shape3d> GeologicUnit3dShape {
             get {
                 return this.geologicUnit3dShapeField;
             }

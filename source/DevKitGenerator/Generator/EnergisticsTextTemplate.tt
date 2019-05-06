@@ -78,7 +78,7 @@ namespace Energistics.DataAccess.<#=mlVersion#>
     }
 #>
 	<#=generator.GetEnergisticsDataObjectAttribute(type)#>[Description("<#=generator.GetDescription(type).Replace("\"", "")#>")]
-    public<#=type.IsAbstract ? " abstract" : string.Empty#> partial class <#=generator.RenameClass(type, true)#> <#=type.BaseType.Equals(typeof(object)) ?  ": Object" : string.Format(": {0}", generator.RenameClass(type.BaseType))#><#=generator.RenameClass(type).EndsWith("List") ? ", IEnergisticsCollection" : generator.GetDataObjectInterface(type)#>, INotifyPropertyChanged
+    public<#=type.IsAbstract ? " abstract" : string.Empty#> partial class <#=generator.RenameClass(type, true)#> <#=type.BaseType.Equals(typeof(object)) ?  ": Object" : string.Format(": {0}", generator.RenameClass(type.BaseType))#><#=generator.IsEnergisticsCollection(type) ? ", IEnergisticsCollection" : generator.GetDataObjectInterface(type)#>, INotifyPropertyChanged
     {
 <#=generator.GetConstructor(type)#>
 <#        

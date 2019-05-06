@@ -19661,7 +19661,7 @@ namespace Energistics.Generator.PRODML200 {
         
         private string remarkField;
         
-        private ProductFluidKind productFluidKindField;
+        private Energistics.DataAccess.ExtensibleEnum<ProductFluidKind> productFluidKindField;
         
         private string uidField;
         
@@ -19720,7 +19720,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <summary>Information about the product that the product quantity represents. See enum ProductFluidKind (in the ProdmlCommon package).</summary>
         [System.ComponentModel.DescriptionAttribute("Information about the product that the product quantity represents. See enum Prod" +
             "uctFluidKind (in the ProdmlCommon package).")]
-        public ProductFluidKind ProductFluidKind {
+        public Energistics.DataAccess.ExtensibleEnum<ProductFluidKind> ProductFluidKind {
             get {
                 return this.productFluidKindField;
             }
@@ -19988,7 +19988,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     public partial class ServiceFluid : AbstractProductQuantity {
         
-        private ServiceFluidKind serviceFluidKindField;
+        private Energistics.DataAccess.ExtensibleEnum<ServiceFluidKind> serviceFluidKindField;
         
         private string serviceFluidReferenceField;
         
@@ -19997,7 +19997,7 @@ namespace Energistics.Generator.PRODML200 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Indicates the kind of service fluid. See enum ServiceFluidKind (in ProdmlCommon)." +
             "")]
-        public ServiceFluidKind ServiceFluidKind {
+        public Energistics.DataAccess.ExtensibleEnum<ServiceFluidKind> ServiceFluidKind {
             get {
                 return this.serviceFluidKindField;
             }
@@ -20272,7 +20272,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     public partial class ProductFluid : AbstractProductQuantity {
         
-        private ProductFluidKind productFluidKindField;
+        private Energistics.DataAccess.ExtensibleEnum<ProductFluidKind> productFluidKindField;
         
         private EnergyMeasure grossEnergyContentField;
         
@@ -20287,7 +20287,7 @@ namespace Energistics.Generator.PRODML200 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("A simple enumeration to provide information about the product that the production" +
             " quantity represents.")]
-        public ProductFluidKind ProductFluidKind {
+        public Energistics.DataAccess.ExtensibleEnum<ProductFluidKind> ProductFluidKind {
             get {
                 return this.productFluidKindField;
             }
@@ -20783,7 +20783,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     public partial class DeferredProduction {
         
-        private EstimationMethod estimationMethodField;
+        private Energistics.DataAccess.ExtensibleEnum<EstimationMethod> estimationMethodField;
         
         private string remarkField;
         
@@ -20793,7 +20793,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <summary>The method used to estimate deferred production. See enum EstimationMethod.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The method used to estimate deferred production. See enum EstimationMethod.")]
-        public EstimationMethod EstimationMethod {
+        public Energistics.DataAccess.ExtensibleEnum<EstimationMethod> EstimationMethod {
             get {
                 return this.estimationMethodField;
             }
@@ -21024,7 +21024,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     public partial class Production {
         
-        private QuantityMethod quantityMethodField;
+        private Energistics.DataAccess.ExtensibleEnum<QuantityMethod> quantityMethodField;
         
         private string remarkField;
         
@@ -21034,7 +21034,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <summary>The method in which the quantity/volume was determined. See enum QuantityMethod.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The method in which the quantity/volume was determined. See enum QuantityMethod.")]
-        public QuantityMethod QuantityMethod {
+        public Energistics.DataAccess.ExtensibleEnum<QuantityMethod> QuantityMethod {
             get {
                 return this.quantityMethodField;
             }
@@ -21078,7 +21078,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     public abstract partial class AbstractDisposition {
         
-        private QuantityMethod quantityMethodField;
+        private Energistics.DataAccess.ExtensibleEnum<QuantityMethod> quantityMethodField;
         
         private AuthorityQualifiedName productDispositionCodeField;
         
@@ -21092,7 +21092,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <summary>Quantity method.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Quantity method.")]
-        public QuantityMethod QuantityMethod {
+        public Energistics.DataAccess.ExtensibleEnum<QuantityMethod> QuantityMethod {
             get {
                 return this.quantityMethodField;
             }
@@ -22275,7 +22275,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     public partial class PureFluidComponent : AbstractFluidComponent {
         
-        private PureComponentEnum kindField;
+        private Energistics.DataAccess.ExtensibleEnum<PureComponentEnum> kindField;
         
         private MolecularWeightMeasure molecularWeightField;
         
@@ -22286,7 +22286,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <remarks/>
         /// <summary>The type of component.</summary>
         [System.ComponentModel.DescriptionAttribute("The type of component.")]
-        public PureComponentEnum Kind {
+        public Energistics.DataAccess.ExtensibleEnum<PureComponentEnum> Kind {
             get {
                 return this.kindField;
             }
@@ -22340,7 +22340,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     public partial class PseudoFluidComponent : AbstractFluidComponent {
         
-        private PseudoComponentEnum kindField;
+        private Energistics.DataAccess.ExtensibleEnum<PseudoComponentEnum> kindField;
         
         private double specificGravityField;
         
@@ -22369,7 +22369,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <remarks/>
         /// <summary>The type from pseudo component enumeration.</summary>
         [System.ComponentModel.DescriptionAttribute("The type from pseudo component enumeration.")]
-        public PseudoComponentEnum Kind {
+        public Energistics.DataAccess.ExtensibleEnum<PseudoComponentEnum> Kind {
             get {
                 return this.kindField;
             }
@@ -22528,7 +22528,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     public partial class PlusFluidComponent : AbstractFluidComponent {
         
-        private PlusComponentEnum kindField;
+        private Energistics.DataAccess.ExtensibleEnum<PlusComponentEnum> kindField;
         
         private double specificGravityField;
         
@@ -22549,7 +22549,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <remarks/>
         /// <summary>The kind from plus fluid component. See PlusComponentEnum.</summary>
         [System.ComponentModel.DescriptionAttribute("The kind from plus fluid component. See PlusComponentEnum.")]
-        public PlusComponentEnum Kind {
+        public Energistics.DataAccess.ExtensibleEnum<PlusComponentEnum> Kind {
             get {
                 return this.kindField;
             }
@@ -22854,7 +22854,7 @@ namespace Energistics.Generator.PRODML200 {
         
         private bool endDateFieldSpecified;
         
-        private ReportingDurationKind nominalPeriodField;
+        private Energistics.DataAccess.ExtensibleEnum<ReportingDurationKind> nominalPeriodField;
         
         private ProductionWellPeriod[] productionPeriodField;
         
@@ -22912,7 +22912,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <summary>Name or identifier for the reporting period to which the well production parameters apply.</summary>
         [System.ComponentModel.DescriptionAttribute("Name or identifier for the reporting period to which the well production paramete" +
             "rs apply.")]
-        public ReportingDurationKind NominalPeriod {
+        public Energistics.DataAccess.ExtensibleEnum<ReportingDurationKind> NominalPeriod {
             get {
                 return this.nominalPeriodField;
             }
@@ -23166,7 +23166,7 @@ namespace Energistics.Generator.PRODML200 {
         
         private System.DateTime endDateField;
         
-        private ReportingDurationKind nominalPeriodField;
+        private Energistics.DataAccess.ExtensibleEnum<ReportingDurationKind> nominalPeriodField;
         
         private ReportingEntityVolumes[] reportingEntityVolumesField;
         
@@ -23200,7 +23200,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <summary>Nominal period.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Nominal period.")]
-        public ReportingDurationKind NominalPeriod {
+        public Energistics.DataAccess.ExtensibleEnum<ReportingDurationKind> NominalPeriod {
             get {
                 return this.nominalPeriodField;
             }
@@ -23368,7 +23368,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     public partial class Injection {
         
-        private QuantityMethod quantityMethodField;
+        private Energistics.DataAccess.ExtensibleEnum<QuantityMethod> quantityMethodField;
         
         private string remarkField;
         
@@ -23378,7 +23378,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <summary>The method in which the quantity/volume was determined. See enum QuantityMethod.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The method in which the quantity/volume was determined. See enum QuantityMethod.")]
-        public QuantityMethod QuantityMethod {
+        public Energistics.DataAccess.ExtensibleEnum<QuantityMethod> QuantityMethod {
             get {
                 return this.quantityMethodField;
             }
@@ -23439,13 +23439,13 @@ namespace Energistics.Generator.PRODML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     public partial class ProductDisposition : AbstractDisposition {
         
-        private DispositionKind kindField;
+        private Energistics.DataAccess.ExtensibleEnum<DispositionKind> kindField;
         
         /// <remarks/>
         /// <summary>The method of disposition. See enum DispositionKind.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The method of disposition. See enum DispositionKind.")]
-        public DispositionKind Kind {
+        public Energistics.DataAccess.ExtensibleEnum<DispositionKind> Kind {
             get {
                 return this.kindField;
             }
@@ -28499,7 +28499,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     public partial class FluidCharacterizationTableConstant {
         
-        private OutputFluidProperty propertyField;
+        private Energistics.DataAccess.ExtensibleEnum<OutputFluidProperty> propertyField;
         
         private ThermodynamicPhase phaseField;
         
@@ -28520,7 +28520,7 @@ namespace Energistics.Generator.PRODML200 {
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The property that this table constant contains. Enum. See output fluid property e" +
             "xt.")]
-        public OutputFluidProperty Property {
+        public Energistics.DataAccess.ExtensibleEnum<OutputFluidProperty> Property {
             get {
                 return this.propertyField;
             }
@@ -28800,7 +28800,7 @@ namespace Energistics.Generator.PRODML200 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.energistics.org/energyml/data/prodmlv2")]
     public partial class FluidCharacterizationTableColumn {
         
-        private OutputFluidProperty propertyField;
+        private Energistics.DataAccess.ExtensibleEnum<OutputFluidProperty> propertyField;
         
         private ThermodynamicPhase phaseField;
         
@@ -28822,7 +28822,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <summary>The property that this column contains. Enum. See output fluid property ext.</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("The property that this column contains. Enum. See output fluid property ext.")]
-        public OutputFluidProperty Property {
+        public Energistics.DataAccess.ExtensibleEnum<OutputFluidProperty> Property {
             get {
                 return this.propertyField;
             }
@@ -37543,7 +37543,7 @@ namespace Energistics.Generator.PRODML200 {
         
         private LengthMeasure calibrationFacilityLengthField;
         
-        private DasCalibrationType calibrationTypeField;
+        private Energistics.DataAccess.ExtensibleEnum<DasCalibrationType> calibrationTypeField;
         
         /// <remarks/>
         /// <summary>The locus index for the calibration point. Where ‘Locus Index 0’ is the acoustic sample point at the connector of the measurement instrument.</summary>
@@ -37590,7 +37590,7 @@ namespace Energistics.Generator.PRODML200 {
         [System.ComponentModel.DescriptionAttribute("A brief meaningful description of the type of calibration point. This is an exten" +
             "sible enumeration type. Current reserved keywords are ‘locus calibration’, ‘tap " +
             "test’ and ‘last locus to end of fiber’ for commonly used calibration points.")]
-        public DasCalibrationType CalibrationType {
+        public Energistics.DataAccess.ExtensibleEnum<DasCalibrationType> CalibrationType {
             get {
                 return this.calibrationTypeField;
             }
@@ -52661,7 +52661,7 @@ namespace Energistics.Generator.PRODML200 {
         
         private double valueField;
         
-        private UnitOfMeasure uomField;
+        private Energistics.DataAccess.ExtensibleEnum<UnitOfMeasure> uomField;
         
         private DataObjectReference customUnitDictionaryField;
         
@@ -52682,7 +52682,7 @@ namespace Energistics.Generator.PRODML200 {
         /// <summary>Unit of measure associated with the value</summary>
         [System.ComponentModel.DataAnnotations.RequiredAttribute()]
         [System.ComponentModel.DescriptionAttribute("Unit of measure associated with the value")]
-        public UnitOfMeasure Uom {
+        public Energistics.DataAccess.ExtensibleEnum<UnitOfMeasure> Uom {
             get {
                 return this.uomField;
             }
@@ -58246,7 +58246,7 @@ namespace Energistics.Generator.PRODML200 {
         
         private Energistics.SchemaGatherer.Timestamp deprecationDateField;
         
-        private QuantityClassKind quantityClassField;
+        private Energistics.DataAccess.ExtensibleEnum<QuantityClassKind> quantityClassField;
         
         private DataObjectReference parentField;
         
@@ -58283,7 +58283,7 @@ namespace Energistics.Generator.PRODML200 {
         [System.ComponentModel.DescriptionAttribute("A reference to the name of a quantity class in the Energistics Unit of Measure Di" +
             "ctionary. If there is no match in the Energistics Unit of Measure Dictionary, th" +
             "en this attribute is purely for human information.")]
-        public QuantityClassKind QuantityClass {
+        public Energistics.DataAccess.ExtensibleEnum<QuantityClassKind> QuantityClass {
             get {
                 return this.quantityClassField;
             }

@@ -497,6 +497,41 @@ namespace Energistics.Generator
                    !type.IsDefined(typeof(XmlRootAttribute), false);
         }
 
+        public string GetFriendlyName(Type type)
+        {
+            // Get friendly name of common and generic types
+            // https://stackoverflow.com/a/16466437/74601
+
+            if (type == typeof(int))
+                return "int";
+            else if (type == typeof(short))
+                return "short";
+            else if (type == typeof(byte))
+                return "byte";
+            else if (type == typeof(bool))
+                return "bool";
+            else if (type == typeof(long))
+                return "long";
+            else if (type == typeof(float))
+                return "float";
+            else if (type == typeof(double))
+                return "double";
+            else if (type == typeof(decimal))
+                return "decimal";
+            else if (type == typeof(string))
+                return "string";
+            else if (type.IsGenericType)
+                return type.Name.Split('`')[0] + "<" + string.Join(", ", type.GetGenericArguments().Select(GetFriendlyName).ToArray()) + ">";
+            else
+                return type.Name;
+        }
+
+        public bool IsEnergisticsCollection(Type t)
+        {
+            var name = RenameClass(t);
+            return name.EndsWith("List") && !name.EndsWith("ValueList");
+        }
+
         public string RenameClass(Type t, bool isDeclaration = false)
         {
             Type elementType = t.GetElementType();
@@ -511,10 +546,10 @@ namespace Energistics.Generator
             //If the type referred to isn't one of the xsd.exe generated types, don't rename it.
             if (!t.Assembly.Equals(Assembly.GetExecutingAssembly()))
             {
-                return t.Name;
+                return GetFriendlyName(t);
             }
 
-            string newName = t.Name;
+            string newName = GetFriendlyName(t);
             newName = newName.Replace("obj_", "");
 
             newName = newName.Replace("cs_", "");

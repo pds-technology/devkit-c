@@ -179,7 +179,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [XmlAttribute("objectVersion")]
 		
-        public String ObjectVersion {
+        public string ObjectVersion {
             get {
                 return objectVersionField;
             } 
@@ -189,7 +189,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String objectVersionField; 
+        private string objectVersionField; 
 
 		/// <summary>
         /// schemaVersion property
@@ -198,7 +198,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [XmlAttribute("schemaVersion")]
 		
-        public String SchemaVersion {
+        public string SchemaVersion {
             get {
                 return schemaVersionField;
             } 
@@ -208,7 +208,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String schemaVersionField; 
+        private string schemaVersionField; 
 
 		/// <summary>
         /// uuid property
@@ -217,7 +217,7 @@ namespace Energistics.DataAccess.WITSML200
         [RegularExpression("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
         [XmlAttribute("uuid")]
 		
-        public String Uuid {
+        public string Uuid {
             get {
                 return uuidField;
             } 
@@ -227,7 +227,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidField; 
+        private string uuidField; 
 
 		/// <summary>
         /// existenceKind property
@@ -253,7 +253,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ExistenceKindSpecified {
+        public bool ExistenceKindSpecified {
             get {
                 return existenceKindSpecifiedField;
             } 
@@ -263,7 +263,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean existenceKindSpecifiedField; 
+        private bool existenceKindSpecifiedField; 
 
 
         
@@ -306,7 +306,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [StringLength(64)]
 		[XmlElement("Identifier")]
-        public String Identifier {
+        public string Identifier {
             get {
                 return IdentifierField;
             } 
@@ -316,14 +316,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String IdentifierField; 
+        private string IdentifierField; 
 
         /// <summary>
         /// Description property
         /// </summary>
 		[StringLength(2000)]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -333,7 +333,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
 		/// <summary>
         /// authority property
@@ -342,7 +342,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [XmlAttribute("authority")]
 		
-        public String Authority {
+        public string Authority {
             get {
                 return authorityField;
             } 
@@ -352,7 +352,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String authorityField; 
+        private string authorityField; 
 
 
         
@@ -396,7 +396,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Reference to the downhole string that denotes the interval of the gravel pack.")]
 		[XmlElement("DownholeStringReferenceId")]
-        public String DownholeStringReferenceId {
+        public string DownholeStringReferenceId {
             get {
                 return DownholeStringReferenceIdField;
             } 
@@ -406,7 +406,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DownholeStringReferenceIdField; 
+        private string DownholeStringReferenceIdField; 
 
         /// <summary>
         /// GravelPackMdInterval property
@@ -468,7 +468,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Reference to a geology feature.")]
         [RecurringElement]
 		[XmlElement("GeologyFeatureReferenceId")]
-        public List<String> GeologyFeatureReferenceId {
+        public List<string> GeologyFeatureReferenceId {
             get {
                 return GeologyFeatureReferenceIdField;
             } 
@@ -490,7 +490,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> GeologyFeatureReferenceIdField; 
+        private List<string> GeologyFeatureReferenceIdField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -559,7 +559,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of GravelPackInterval.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -569,7 +569,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -650,7 +650,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [XmlAttribute("datum")]
 		
-        public String Datum {
+        public string Datum {
             get {
                 return datumField;
             } 
@@ -660,7 +660,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String datumField; 
+        private string datumField; 
 
 
         
@@ -707,7 +707,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public LengthMeasure(Double value, LengthUom uom)
+        public LengthMeasure(double value, LengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -744,7 +744,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -754,7 +754,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -836,7 +836,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [XmlAttribute("datum")]
 		
-        public String Datum {
+        public string Datum {
             get {
                 return datumField;
             } 
@@ -846,7 +846,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String datumField; 
+        private string datumField; 
 
 
         
@@ -1012,7 +1012,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("The name of the extension. Each standard name should document the expected measure class. Each standard name should document the expected maximum size.  For numeric values the size should be in terms of xsd types such as int, long, short, byte, float or double. For strings, the maximum length should be defined in number of characters. Local extensions to the list of standard names are allowed but it is strongly recommended that the names and definitions be approved by the  respective SIG Technical Team before use.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -1022,7 +1022,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// Value property
@@ -1066,7 +1066,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MeasureClassSpecified {
+        public bool MeasureClassSpecified {
             get {
                 return MeasureClassSpecifiedField;
             } 
@@ -1076,7 +1076,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean MeasureClassSpecifiedField; 
+        private bool MeasureClassSpecifiedField; 
 
         /// <summary>
         /// DTim property
@@ -1100,7 +1100,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Indexes things with the same name.  That is, 1 indicates the first one, 2 indicates the second one, etc.")]
 		[XmlElement("Index")]
-        public Int32? Index {
+        public int? Index {
             get {
                 return IndexField;
             } 
@@ -1111,14 +1111,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? IndexField; 
+        private int? IndexField; 
 
         /// <summary>
         /// IndexSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IndexSpecified {
+        public bool IndexSpecified {
             get {
                 return IndexSpecifiedField;
             } 
@@ -1128,7 +1128,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IndexSpecifiedField; 
+        private bool IndexSpecifiedField; 
 
         /// <summary>
         /// Description property
@@ -1136,7 +1136,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A textual description of the extension.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -1146,7 +1146,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
 
         
@@ -1193,7 +1193,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public StringMeasure(String value, UnitOfMeasure uom)
+        public StringMeasure(string value, UnitOfMeasure uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -1231,7 +1231,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean UomSpecified {
+        public bool UomSpecified {
             get {
                 return uomSpecifiedField;
             } 
@@ -1241,14 +1241,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean uomSpecifiedField; 
+        private bool uomSpecifiedField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -1258,7 +1258,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -1302,7 +1302,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The referencing eventledger ID.")]
 		[XmlElement("EventReferenceId")]
-        public String EventReferenceId {
+        public string EventReferenceId {
             get {
                 return EventReferenceIdField;
             } 
@@ -1312,7 +1312,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String EventReferenceIdField; 
+        private string EventReferenceIdField; 
 
         /// <summary>
         /// Install/pull date.
@@ -1390,7 +1390,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PhysicalStatusSpecified {
+        public bool PhysicalStatusSpecified {
             get {
                 return PhysicalStatusSpecifiedField;
             } 
@@ -1400,7 +1400,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PhysicalStatusSpecifiedField; 
+        private bool PhysicalStatusSpecifiedField; 
 
         /// <summary>
         /// The start date of the status and allocation factor.
@@ -1459,7 +1459,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Defines the proportional amount of fluid from the well completion that is flowing through this interval within a wellbore.")]
 		[XmlElement("AllocationFactor")]
-        public Double? AllocationFactor {
+        public double? AllocationFactor {
             get {
                 return AllocationFactorField;
             } 
@@ -1470,14 +1470,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? AllocationFactorField; 
+        private double? AllocationFactorField; 
 
         /// <summary>
         /// AllocationFactorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AllocationFactorSpecified {
+        public bool AllocationFactorSpecified {
             get {
                 return AllocationFactorSpecifiedField;
             } 
@@ -1487,7 +1487,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean AllocationFactorSpecifiedField; 
+        private bool AllocationFactorSpecifiedField; 
 
         /// <summary>
         /// Comments and remarks about the interval over this period of time.
@@ -1495,7 +1495,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Comments and remarks about the interval over this period of time.")]
 		[XmlElement("Comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return CommentField;
             } 
@@ -1505,7 +1505,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentField; 
+        private string CommentField; 
 
 		/// <summary>
         /// Unique identifier for this instance of IntervalStatusHistory.
@@ -1515,7 +1515,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of IntervalStatusHistory.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -1525,7 +1525,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -1586,7 +1586,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PerforationStatusSpecified {
+        public bool PerforationStatusSpecified {
             get {
                 return PerforationStatusSpecifiedField;
             } 
@@ -1596,7 +1596,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PerforationStatusSpecifiedField; 
+        private bool PerforationStatusSpecifiedField; 
 
         /// <summary>
         /// The start date of the status.
@@ -1673,7 +1673,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Defines the proportional amount of fluid from the well completion that is flowing through this interval within a wellbore.")]
 		[XmlElement("AllocationFactor")]
-        public Double? AllocationFactor {
+        public double? AllocationFactor {
             get {
                 return AllocationFactorField;
             } 
@@ -1684,14 +1684,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? AllocationFactorField; 
+        private double? AllocationFactorField; 
 
         /// <summary>
         /// AllocationFactorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AllocationFactorSpecified {
+        public bool AllocationFactorSpecified {
             get {
                 return AllocationFactorSpecifiedField;
             } 
@@ -1701,7 +1701,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean AllocationFactorSpecifiedField; 
+        private bool AllocationFactorSpecifiedField; 
 
         /// <summary>
         /// Remarks and comments about the status.
@@ -1709,7 +1709,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Remarks and comments about the status.")]
 		[XmlElement("Comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return CommentField;
             } 
@@ -1719,7 +1719,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentField; 
+        private string CommentField; 
 
 		/// <summary>
         /// Unique identifier for this instance of PerforationStatusHistory.
@@ -1729,7 +1729,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of PerforationStatusHistory.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -1739,7 +1739,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -1783,7 +1783,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Reference to a perforation set.")]
 		[XmlElement("PerforationSetReferenceId")]
-        public String PerforationSetReferenceId {
+        public string PerforationSetReferenceId {
             get {
                 return PerforationSetReferenceIdField;
             } 
@@ -1793,7 +1793,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PerforationSetReferenceIdField; 
+        private string PerforationSetReferenceIdField; 
 
         /// <summary>
         /// PerforationSetMdInterval property
@@ -1855,7 +1855,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Reference to a geology feature.")]
         [RecurringElement]
 		[XmlElement("GeologyFeatureReferenceId")]
-        public List<String> GeologyFeatureReferenceId {
+        public List<string> GeologyFeatureReferenceId {
             get {
                 return GeologyFeatureReferenceIdField;
             } 
@@ -1877,7 +1877,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> GeologyFeatureReferenceIdField; 
+        private List<string> GeologyFeatureReferenceIdField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -1946,7 +1946,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of PerforationSetInterval.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -1956,7 +1956,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -2000,7 +2000,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Reference to a borehole (the as-drilled hole through the earth).")]
 		[XmlElement("BoreholeStringReferenceId")]
-        public String BoreholeStringReferenceId {
+        public string BoreholeStringReferenceId {
             get {
                 return BoreholeStringReferenceIdField;
             } 
@@ -2010,7 +2010,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String BoreholeStringReferenceIdField; 
+        private string BoreholeStringReferenceIdField; 
 
         /// <summary>
         /// OpenHoleMdInterval property
@@ -2072,7 +2072,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Reference to a geology feature.")]
         [RecurringElement]
 		[XmlElement("GeologyFeatureReferenceId")]
-        public List<String> GeologyFeatureReferenceId {
+        public List<string> GeologyFeatureReferenceId {
             get {
                 return GeologyFeatureReferenceIdField;
             } 
@@ -2094,7 +2094,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> GeologyFeatureReferenceIdField; 
+        private List<string> GeologyFeatureReferenceIdField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -2163,7 +2163,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of OpenHoleInterval.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -2173,7 +2173,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -2217,7 +2217,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Reference to an equipment string, which is the equipment (e.g., tubing, gravel pack screens, etc.) that compose the completion.")]
 		[XmlElement("StringEquipmentReferenceId")]
-        public String StringEquipmentReferenceId {
+        public string StringEquipmentReferenceId {
             get {
                 return StringEquipmentReferenceIdField;
             } 
@@ -2227,7 +2227,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String StringEquipmentReferenceIdField; 
+        private string StringEquipmentReferenceIdField; 
 
         /// <summary>
         /// SlottedMdInterval property
@@ -2289,7 +2289,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Reference to a geology feature.")]
         [RecurringElement]
 		[XmlElement("GeologyFeatureRefID")]
-        public List<String> GeologyFeatureRefID {
+        public List<string> GeologyFeatureRefID {
             get {
                 return GeologyFeatureRefIDField;
             } 
@@ -2311,7 +2311,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> GeologyFeatureRefIDField; 
+        private List<string> GeologyFeatureRefIDField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -2380,7 +2380,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of SlotsInterval.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -2390,7 +2390,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -2603,7 +2603,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StatusSpecified {
+        public bool StatusSpecified {
             get {
                 return StatusSpecifiedField;
             } 
@@ -2613,7 +2613,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean StatusSpecifiedField; 
+        private bool StatusSpecifiedField; 
 
         /// <summary>
         /// The start date of the status.
@@ -2673,7 +2673,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Comments or remarks on the status.")]
 		[XmlElement("Comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return CommentField;
             } 
@@ -2683,7 +2683,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentField; 
+        private string CommentField; 
 
 		/// <summary>
         /// Unique identifier for this instance of CompletionStatusHistory.
@@ -2693,7 +2693,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of CompletionStatusHistory.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -2703,7 +2703,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -2753,7 +2753,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of AbstractIscwsaErrorCoefficient.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -2763,7 +2763,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -2806,7 +2806,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		
 		[XmlElement("Tvd")]
-        public String Tvd1 {
+        public string Tvd1 {
             get {
                 return Tvd1Field;
             } 
@@ -2816,7 +2816,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String Tvd1Field; 
+        private string Tvd1Field; 
 
 
     } //here
@@ -2840,7 +2840,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		
 		[XmlElement("Depth")]
-        public String Depth1 {
+        public string Depth1 {
             get {
                 return Depth1Field;
             } 
@@ -2850,7 +2850,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String Depth1Field; 
+        private string Depth1Field; 
 
 
     } //here
@@ -2874,7 +2874,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		
 		[XmlElement("Inc")]
-        public String Inc1 {
+        public string Inc1 {
             get {
                 return Inc1Field;
             } 
@@ -2884,7 +2884,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String Inc1Field; 
+        private string Inc1Field; 
 
 
     } //here
@@ -2908,7 +2908,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		
 		[XmlElement("Azi")]
-        public String Azi1 {
+        public string Azi1 {
             get {
                 return Azi1Field;
             } 
@@ -2918,7 +2918,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String Azi1Field; 
+        private string Azi1Field; 
 
 
     } //here
@@ -3005,7 +3005,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of IscwsaErrorCoefficient.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -3015,7 +3015,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -3060,7 +3060,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("This is the unique mnemonic for this term, e.g., \"ABIX\" or \"DECR\".")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -3070,7 +3070,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// Type property
@@ -3095,7 +3095,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeSpecified {
+        public bool TypeSpecified {
             get {
                 return TypeSpecifiedField;
             } 
@@ -3105,7 +3105,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeSpecifiedField; 
+        private bool TypeSpecifiedField; 
 
         /// <summary>
         /// MeasureClass property
@@ -3130,7 +3130,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MeasureClassSpecified {
+        public bool MeasureClassSpecified {
             get {
                 return MeasureClassSpecifiedField;
             } 
@@ -3140,7 +3140,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean MeasureClassSpecifiedField; 
+        private bool MeasureClassSpecifiedField; 
 
         /// <summary>
         /// Label property
@@ -3149,7 +3149,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Human-readable name for the term, may be presented in  application software. E.g., \"MWD: X-Acceleromter Bias with Z-Axis Corr.\"")]
 		[XmlElement("Label")]
-        public String Label {
+        public string Label {
             get {
                 return LabelField;
             } 
@@ -3159,7 +3159,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String LabelField; 
+        private string LabelField; 
 
         /// <summary>
         /// Description property
@@ -3167,7 +3167,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Human-readable name for the term. It may be presented in application software, e.g., \"MWD: X-Acceleromter Bias with Z-Axis Corr.\"")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -3177,7 +3177,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// OperatingMode property
@@ -3277,7 +3277,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of IscwsaErrorTerm.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -3287,7 +3287,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -3333,7 +3333,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the IscwsaNomenclatureConstant class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public IscwsaNomenclatureConstant(Double value)
+        public IscwsaNomenclatureConstant(double value)
         {
             this.Value = value;
         }
@@ -3353,7 +3353,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("The name of the constant.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -3363,7 +3363,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// The value of the constant.
@@ -3371,7 +3371,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The value of the constant.")]
 		[XmlElement("Value")]
-        public Double? Value {
+        public double? Value {
             get {
                 return ValueField;
             } 
@@ -3381,7 +3381,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? ValueField; 
+        private double? ValueField; 
 
         /// <summary>
         /// The unit of measure of the constant. This value must match an acronym from the Energistics unit of measure dictionary.
@@ -3390,7 +3390,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(32)]
         [Description("The unit of measure of the constant. This value must match an acronym from the Energistics unit of measure dictionary.")]
 		[XmlElement("Unit")]
-        public String Unit {
+        public string Unit {
             get {
                 return UnitField;
             } 
@@ -3400,7 +3400,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String UnitField; 
+        private string UnitField; 
 
         /// <summary>
         /// A textual description of the constant.
@@ -3409,7 +3409,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("A textual description of the constant.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -3419,7 +3419,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -3459,7 +3459,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of IscwsaNomenclatureConstant.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -3469,7 +3469,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -3514,7 +3514,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("The name of the item.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -3524,7 +3524,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// A textual description of the item.
@@ -3533,7 +3533,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("A textual description of the item.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -3543,7 +3543,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -3583,7 +3583,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of IscwsaNameAndDescription.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -3593,7 +3593,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -3760,7 +3760,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Order in which the program sections are or were executed.")]
 		[XmlElement("Sequence")]
-        public Int64? Sequence {
+        public long? Sequence {
             get {
                 return SequenceField;
             } 
@@ -3770,7 +3770,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? SequenceField; 
+        private long? SequenceField; 
 
         /// <summary>
         /// Name property
@@ -3778,7 +3778,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the survey program section.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -3788,7 +3788,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// MdInterval property
@@ -3815,7 +3815,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Company who will run or has run the survey tool.")]
 		[XmlElement("NameSurveyCompany")]
-        public String NameSurveyCompany {
+        public string NameSurveyCompany {
             get {
                 return NameSurveyCompanyField;
             } 
@@ -3825,7 +3825,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameSurveyCompanyField; 
+        private string NameSurveyCompanyField; 
 
         /// <summary>
         /// Name of survey tool used in this section.
@@ -3834,7 +3834,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Name of survey tool used in this section.")]
 		[XmlElement("NameTool")]
-        public String NameTool {
+        public string NameTool {
             get {
                 return NameToolField;
             } 
@@ -3844,7 +3844,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameToolField; 
+        private string NameToolField; 
 
         /// <summary>
         /// Type of tool used.
@@ -3853,7 +3853,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Type of tool used.")]
 		[XmlElement("TypeTool")]
-        public String TypeTool {
+        public string TypeTool {
             get {
                 return TypeToolField;
             } 
@@ -3863,7 +3863,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeToolField; 
+        private string TypeToolField; 
 
         /// <summary>
         /// Error model used to calculate the ellipses of uncertainty.
@@ -3871,7 +3871,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Error model used to calculate the ellipses of uncertainty.")]
 		[XmlElement("ModelError")]
-        public String ModelError {
+        public string ModelError {
             get {
                 return ModelErrorField;
             } 
@@ -3881,14 +3881,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ModelErrorField; 
+        private string ModelErrorField; 
 
         /// <summary>
         /// Higher index trajectory takes precedence over overlapping section of previous trajectory? Values are "true" (or "1") and "false" (or "0"). Normally, this is true.
         /// </summary>
 		[Description("Higher index trajectory takes precedence over overlapping section of previous trajectory?   Values are \"true\" (or \"1\") and \"false\" (or \"0\"). Normally, this is true.")]
 		[XmlElement("Overwrite")]
-        public Boolean? Overwrite {
+        public bool? Overwrite {
             get {
                 return OverwriteField;
             } 
@@ -3899,14 +3899,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? OverwriteField; 
+        private bool? OverwriteField; 
 
         /// <summary>
         /// OverwriteSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean OverwriteSpecified {
+        public bool OverwriteSpecified {
             get {
                 return OverwriteSpecifiedField;
             } 
@@ -3916,7 +3916,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean OverwriteSpecifiedField; 
+        private bool OverwriteSpecifiedField; 
 
         /// <summary>
         /// Maximum allowable depth frequency for survey stations for this survey run.
@@ -3959,7 +3959,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ItemStateSpecified {
+        public bool ItemStateSpecified {
             get {
                 return ItemStateSpecifiedField;
             } 
@@ -3969,7 +3969,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ItemStateSpecifiedField; 
+        private bool ItemStateSpecifiedField; 
 
         /// <summary>
         /// Comments and remarks.
@@ -3977,7 +3977,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Comments and remarks.")]
 		[XmlElement("Comments")]
-        public String Comments {
+        public string Comments {
             get {
                 return CommentsField;
             } 
@@ -3987,7 +3987,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentsField; 
+        private string CommentsField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -4027,7 +4027,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier of this instance of SurveySection.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -4037,7 +4037,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -4084,7 +4084,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public PermeabilityLengthMeasure(Double value, PermeabilityLengthUom uom)
+        public PermeabilityLengthMeasure(double value, PermeabilityLengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -4121,7 +4121,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -4131,7 +4131,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -4253,7 +4253,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimISO13503_5Point")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -4263,7 +4263,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -4310,7 +4310,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public ThermodynamicTemperatureMeasure(Double value, ThermodynamicTemperatureUom uom)
+        public ThermodynamicTemperatureMeasure(double value, ThermodynamicTemperatureUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -4347,7 +4347,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -4357,7 +4357,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -4404,7 +4404,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public PermeabilityRockMeasure(Double value, PermeabilityRockUom uom)
+        public PermeabilityRockMeasure(double value, PermeabilityRockUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -4441,7 +4441,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -4451,7 +4451,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -4498,7 +4498,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public PressureMeasure(Double value, PressureUom uom)
+        public PressureMeasure(double value, PressureUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -4535,7 +4535,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -4545,7 +4545,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -4608,7 +4608,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("ASTM US Standard mesh opening size used in the sieve analysis test.  To indicate \"Pan\",  use \"0\".")]
 		[XmlElement("SieveNumber")]
-        public Int64? SieveNumber {
+        public long? SieveNumber {
             get {
                 return SieveNumberField;
             } 
@@ -4618,7 +4618,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? SieveNumberField; 
+        private long? SieveNumberField; 
 
 		/// <summary>
         /// Unique identifier for this instance of ISO13503_2SieveAnalysisData.
@@ -4628,7 +4628,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of ISO13503_2SieveAnalysisData.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -4638,7 +4638,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -4685,7 +4685,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MassPerMassMeasure(Double value, MassPerMassUom uom)
+        public MassPerMassMeasure(double value, MassPerMassUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -4722,7 +4722,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -4732,7 +4732,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -4816,7 +4816,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of ISO13503_2CrushTestData.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -4826,7 +4826,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -4905,7 +4905,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Crush test classification indicating the highest stress level at which a proppant generated no more than 10% crushed material rounded down to the nearest 1,000 psi during a crush test. For example, a value of 14 means ‘14K’ which is 14000 psi.")]
 		[XmlElement("KValue")]
-        public Double? KValue {
+        public double? KValue {
             get {
                 return KValueField;
             } 
@@ -4916,14 +4916,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? KValueField; 
+        private double? KValueField; 
 
         /// <summary>
         /// KValueSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean KValueSpecified {
+        public bool KValueSpecified {
             get {
                 return KValueSpecifiedField;
             } 
@@ -4933,7 +4933,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean KValueSpecifiedField; 
+        private bool KValueSpecifiedField; 
 
         /// <summary>
         /// MeanParticleDiameter property
@@ -4976,7 +4976,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Not formally part of ISO 13503.2 properties, the specific gravity is the apparent density of the proppant divided by the density of water.")]
 		[XmlElement("SpecificGravity")]
-        public Double? SpecificGravity {
+        public double? SpecificGravity {
             get {
                 return SpecificGravityField;
             } 
@@ -4987,14 +4987,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? SpecificGravityField; 
+        private double? SpecificGravityField; 
 
         /// <summary>
         /// SpecificGravitySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SpecificGravitySpecified {
+        public bool SpecificGravitySpecified {
             get {
                 return SpecificGravitySpecifiedField;
             } 
@@ -5004,14 +5004,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean SpecificGravitySpecifiedField; 
+        private bool SpecificGravitySpecifiedField; 
 
         /// <summary>
         /// Roundness property
         /// </summary>
 		[Description("Krumbein Roundness Shape Factor that is a measure of the relative sharpness of grain corners or of grain curvature. Krumbein and Sloss (1963) are the most widely used method of determining shape factors.")]
 		[XmlElement("Roundness")]
-        public Double? Roundness {
+        public double? Roundness {
             get {
                 return RoundnessField;
             } 
@@ -5022,14 +5022,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? RoundnessField; 
+        private double? RoundnessField; 
 
         /// <summary>
         /// RoundnessSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean RoundnessSpecified {
+        public bool RoundnessSpecified {
             get {
                 return RoundnessSpecifiedField;
             } 
@@ -5039,7 +5039,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean RoundnessSpecifiedField; 
+        private bool RoundnessSpecifiedField; 
 
         /// <summary>
         /// AcidSolubility property
@@ -5118,7 +5118,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Krumbein Sphericity Shape Factor that is a measure of how closely a proppant particle approaches the shape of a sphere. Krumbein and Sloss (1963) are the most widely used method of determining shape factors.")]
 		[XmlElement("Sphericity")]
-        public Double? Sphericity {
+        public double? Sphericity {
             get {
                 return SphericityField;
             } 
@@ -5129,14 +5129,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? SphericityField; 
+        private double? SphericityField; 
 
         /// <summary>
         /// SphericitySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SphericitySpecified {
+        public bool SphericitySpecified {
             get {
                 return SphericitySpecifiedField;
             } 
@@ -5146,14 +5146,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean SphericitySpecifiedField; 
+        private bool SphericitySpecifiedField; 
 
         /// <summary>
         /// Turbidity property
         /// </summary>
 		[Description("A measure of water clarity, how much the material suspended in water decreases the passage of light through the water. Unit of measure may be Nephelometric Turbidity Unit (NTU), but may vary based upon the detector geometry.")]
 		[XmlElement("Turbidity")]
-        public Double? Turbidity {
+        public double? Turbidity {
             get {
                 return TurbidityField;
             } 
@@ -5164,14 +5164,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? TurbidityField; 
+        private double? TurbidityField; 
 
         /// <summary>
         /// TurbiditySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TurbiditySpecified {
+        public bool TurbiditySpecified {
             get {
                 return TurbiditySpecifiedField;
             } 
@@ -5181,7 +5181,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TurbiditySpecifiedField; 
+        private bool TurbiditySpecifiedField; 
 
         /// <summary>
         /// CrushTestData property
@@ -5249,7 +5249,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimISO13503_2Properties.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -5259,7 +5259,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -5306,7 +5306,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MassPerVolumeMeasure(Double value, MassPerVolumeUom uom)
+        public MassPerVolumeMeasure(double value, MassPerVolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -5343,7 +5343,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -5353,7 +5353,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -5400,7 +5400,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public DimensionlessMeasure(Double value, DimensionlessUom uom)
+        public DimensionlessMeasure(double value, DimensionlessUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -5437,7 +5437,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -5447,7 +5447,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -5494,7 +5494,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public AreaPerMassMeasure(Double value, AreaPerMassUom uom)
+        public AreaPerMassMeasure(double value, AreaPerMassUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -5531,7 +5531,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -5541,7 +5541,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -5604,7 +5604,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean KindSpecified {
+        public bool KindSpecified {
             get {
                 return KindSpecifiedField;
             } 
@@ -5614,7 +5614,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean KindSpecifiedField; 
+        private bool KindSpecifiedField; 
 
         /// <summary>
         /// The name of the material.
@@ -5622,7 +5622,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("The name of the material.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -5632,7 +5632,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// The name of the material supplier.
@@ -5640,7 +5640,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("The name of the material supplier.")]
 		[XmlElement("Supplier")]
-        public String Supplier {
+        public string Supplier {
             get {
                 return SupplierField;
             } 
@@ -5650,7 +5650,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SupplierField; 
+        private string SupplierField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -5690,7 +5690,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimMaterial.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -5700,7 +5700,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -5761,7 +5761,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AdditiveKindSpecified {
+        public bool AdditiveKindSpecified {
             get {
                 return AdditiveKindSpecifiedField;
             } 
@@ -5771,7 +5771,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean AdditiveKindSpecifiedField; 
+        private bool AdditiveKindSpecifiedField; 
 
         /// <summary>
         /// The type of additive that is used, which can represent a suppliers description or type of AdditiveKind. For example, 5% HCl could be the type when AdditiveKind=acid.
@@ -5780,7 +5780,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("The type of additive that is used, which can represent a suppliers description or type of AdditiveKind.  For example, 5% HCl could be the type when AdditiveKind=acid.")]
 		[XmlElement("Type")]
-        public String Type {
+        public string Type {
             get {
                 return TypeField;
             } 
@@ -5790,7 +5790,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeField; 
+        private string TypeField; 
 
         /// <summary>
         /// A code used to identify the supplier of the additive.
@@ -5799,7 +5799,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("A code used to identify the supplier of the additive.")]
 		[XmlElement("SupplierCode")]
-        public String SupplierCode {
+        public string SupplierCode {
             get {
                 return SupplierCodeField;
             } 
@@ -5809,7 +5809,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SupplierCodeField; 
+        private string SupplierCodeField; 
 
 
     } //here
@@ -5833,7 +5833,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Laminar flow friction coefficient.")]
 		[XmlElement("FrictionCoefficientLaminar")]
-        public Double? FrictionCoefficientLaminar {
+        public double? FrictionCoefficientLaminar {
             get {
                 return FrictionCoefficientLaminarField;
             } 
@@ -5844,14 +5844,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? FrictionCoefficientLaminarField; 
+        private double? FrictionCoefficientLaminarField; 
 
         /// <summary>
         /// FrictionCoefficientLaminarSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean FrictionCoefficientLaminarSpecified {
+        public bool FrictionCoefficientLaminarSpecified {
             get {
                 return FrictionCoefficientLaminarSpecifiedField;
             } 
@@ -5861,14 +5861,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean FrictionCoefficientLaminarSpecifiedField; 
+        private bool FrictionCoefficientLaminarSpecifiedField; 
 
         /// <summary>
         /// FrictionCoefficientTurbulent property
         /// </summary>
 		[Description("Turbulent flow friction coefficient.")]
 		[XmlElement("FrictionCoefficientTurbulent")]
-        public Double? FrictionCoefficientTurbulent {
+        public double? FrictionCoefficientTurbulent {
             get {
                 return FrictionCoefficientTurbulentField;
             } 
@@ -5879,14 +5879,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? FrictionCoefficientTurbulentField; 
+        private double? FrictionCoefficientTurbulentField; 
 
         /// <summary>
         /// FrictionCoefficientTurbulentSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean FrictionCoefficientTurbulentSpecified {
+        public bool FrictionCoefficientTurbulentSpecified {
             get {
                 return FrictionCoefficientTurbulentSpecifiedField;
             } 
@@ -5896,7 +5896,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean FrictionCoefficientTurbulentSpecifiedField; 
+        private bool FrictionCoefficientTurbulentSpecifiedField; 
 
         /// <summary>
         /// MassAbsorptionCoefficient property
@@ -5921,7 +5921,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("High value of sieve mesh size: for 40/70 sand, this value is 70.")]
 		[XmlElement("MeshSizeHigh")]
-        public Int64? MeshSizeHigh {
+        public long? MeshSizeHigh {
             get {
                 return MeshSizeHighField;
             } 
@@ -5932,14 +5932,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? MeshSizeHighField; 
+        private long? MeshSizeHighField; 
 
         /// <summary>
         /// MeshSizeHighSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MeshSizeHighSpecified {
+        public bool MeshSizeHighSpecified {
             get {
                 return MeshSizeHighSpecifiedField;
             } 
@@ -5949,14 +5949,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean MeshSizeHighSpecifiedField; 
+        private bool MeshSizeHighSpecifiedField; 
 
         /// <summary>
         /// MeshSizeLow property
         /// </summary>
 		[Description("Low value of sieve mesh size: for 40/70 sand, this value is 40.")]
 		[XmlElement("MeshSizeLow")]
-        public Int64? MeshSizeLow {
+        public long? MeshSizeLow {
             get {
                 return MeshSizeLowField;
             } 
@@ -5967,14 +5967,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? MeshSizeLowField; 
+        private long? MeshSizeLowField; 
 
         /// <summary>
         /// MeshSizeLowSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MeshSizeLowSpecified {
+        public bool MeshSizeLowSpecified {
             get {
                 return MeshSizeLowSpecifiedField;
             } 
@@ -5984,7 +5984,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean MeshSizeLowSpecifiedField; 
+        private bool MeshSizeLowSpecifiedField; 
 
         /// <summary>
         /// UnconfinedCompressiveStrength property
@@ -6027,7 +6027,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ProppantAgentKindSpecified {
+        public bool ProppantAgentKindSpecified {
             get {
                 return ProppantAgentKindSpecifiedField;
             } 
@@ -6037,7 +6037,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ProppantAgentKindSpecifiedField; 
+        private bool ProppantAgentKindSpecifiedField; 
 
         /// <summary>
         /// ISO13503_2Properties property
@@ -6216,7 +6216,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Name of the diversion contractor.")]
 		[XmlElement("Contractor")]
-        public String Contractor {
+        public string Contractor {
             get {
                 return ContractorField;
             } 
@@ -6226,7 +6226,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ContractorField; 
+        private string ContractorField; 
 
         /// <summary>
         /// The diversion method used.
@@ -6251,7 +6251,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MethodSpecified {
+        public bool MethodSpecified {
             get {
                 return MethodSpecifiedField;
             } 
@@ -6261,7 +6261,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean MethodSpecifiedField; 
+        private bool MethodSpecifiedField; 
 
         /// <summary>
         /// A supplier description of the diversion tool, such as its commercial name.
@@ -6269,7 +6269,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A supplier description of the diversion tool, such as its commercial name.")]
 		[XmlElement("ToolDescription")]
-        public String ToolDescription {
+        public string ToolDescription {
             get {
                 return ToolDescriptionField;
             } 
@@ -6279,7 +6279,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ToolDescriptionField; 
+        private string ToolDescriptionField; 
 
         /// <summary>
         /// Spacing between packer elements.
@@ -6431,7 +6431,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A name for the formation lithology.")]
 		[XmlElement("LithName")]
-        public String LithName {
+        public string LithName {
             get {
                 return LithNameField;
             } 
@@ -6441,7 +6441,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String LithNameField; 
+        private string LithNameField; 
 
         /// <summary>
         /// Measured depth of the bottom of the formation.
@@ -6557,7 +6557,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("The name used for the net pay zone.")]
 		[XmlElement("NetPayName")]
-        public String NetPayName {
+        public string NetPayName {
             get {
                 return NetPayNameField;
             } 
@@ -6567,7 +6567,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NetPayNameField; 
+        private string NetPayNameField; 
 
         /// <summary>
         /// The permeability of the net pay of the formation.
@@ -6665,7 +6665,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Name of the formation.")]
 		[XmlElement("NameFormation")]
-        public String NameFormation {
+        public string NameFormation {
             get {
                 return NameFormationField;
             } 
@@ -6675,7 +6675,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameFormationField; 
+        private string NameFormationField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -6715,7 +6715,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimReservoirInterval")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -6725,7 +6725,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -6772,7 +6772,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public IsothermalCompressibilityMeasure(Double value, IsothermalCompressibilityUom uom)
+        public IsothermalCompressibilityMeasure(double value, IsothermalCompressibilityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -6809,7 +6809,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -6819,7 +6819,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -6866,7 +6866,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public DynamicViscosityMeasure(Double value, DynamicViscosityUom uom)
+        public DynamicViscosityMeasure(double value, DynamicViscosityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -6903,7 +6903,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -6913,7 +6913,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -6960,7 +6960,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public VolumePerVolumeMeasure(Double value, VolumePerVolumeUom uom)
+        public VolumePerVolumeMeasure(double value, VolumePerVolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -6997,7 +6997,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -7007,7 +7007,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -7054,7 +7054,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public VolumePerLengthMeasure(Double value, VolumePerLengthUom uom)
+        public VolumePerLengthMeasure(double value, VolumePerLengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -7091,7 +7091,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -7101,7 +7101,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -7145,7 +7145,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The type of tubular (e.g., casing, tubing, liner, packer, open hole, other).")]
 		[XmlElement("Type")]
-        public String Type {
+        public string Type {
             get {
                 return TypeField;
             } 
@@ -7155,7 +7155,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeField; 
+        private string TypeField; 
 
         /// <summary>
         /// The inside diameter of the tubular used.
@@ -7303,7 +7303,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimTubular.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -7313,7 +7313,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -7360,7 +7360,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MassPerLengthMeasure(Double value, MassPerLengthUom uom)
+        public MassPerLengthMeasure(double value, MassPerLengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -7397,7 +7397,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -7407,7 +7407,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -7576,7 +7576,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean KindSpecified {
+        public bool KindSpecified {
             get {
                 return KindSpecifiedField;
             } 
@@ -7586,7 +7586,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean KindSpecifiedField; 
+        private bool KindSpecifiedField; 
 
         /// <summary>
         /// MaxPmaxPacPres property
@@ -7752,7 +7752,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MeasuredDepthCoord(Double value, LengthUom uom)
+        public MeasuredDepthCoord(double value, LengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -7793,7 +7793,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Defines the vertical datums associated with elevation, vertical depth, and measured depth coordinates.")]
         [XmlAttribute("datum")]
 		
-        public String Datum {
+        public string Datum {
             get {
                 return datumField;
             } 
@@ -7803,14 +7803,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String datumField; 
+        private string datumField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -7820,7 +7820,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -7867,7 +7867,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public ForcePerVolumeMeasure(Double value, ForcePerVolumeUom uom)
+        public ForcePerVolumeMeasure(double value, ForcePerVolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -7904,7 +7904,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -7914,7 +7914,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -7960,7 +7960,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the UnitlessMeasure class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public UnitlessMeasure(Double value)
+        public UnitlessMeasure(double value)
         {
             this.Value = value;
         }
@@ -7978,7 +7978,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -7988,7 +7988,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -8032,7 +8032,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("The name of the fluid.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -8042,7 +8042,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// Kind property
@@ -8067,7 +8067,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean KindSpecified {
+        public bool KindSpecified {
             get {
                 return KindSpecifiedField;
             } 
@@ -8077,7 +8077,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean KindSpecifiedField; 
+        private bool KindSpecifiedField; 
 
         /// <summary>
         /// Subtype property
@@ -8102,7 +8102,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SubtypeSpecified {
+        public bool SubtypeSpecified {
             get {
                 return SubtypeSpecifiedField;
             } 
@@ -8112,7 +8112,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean SubtypeSpecifiedField; 
+        private bool SubtypeSpecifiedField; 
 
         /// <summary>
         /// Purpose property
@@ -8120,7 +8120,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("The purpose of the fluid.")]
 		[XmlElement("Purpose")]
-        public String Purpose {
+        public string Purpose {
             get {
                 return PurposeField;
             } 
@@ -8130,7 +8130,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PurposeField; 
+        private string PurposeField; 
 
         /// <summary>
         /// Description property
@@ -8138,7 +8138,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("The description of the fluid.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -8148,7 +8148,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// Supplier property
@@ -8156,7 +8156,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("The supplier of the fluid.")]
 		[XmlElement("Supplier")]
-        public String Supplier {
+        public string Supplier {
             get {
                 return SupplierField;
             } 
@@ -8166,14 +8166,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SupplierField; 
+        private string SupplierField; 
 
         /// <summary>
         /// IsKillFluid property
         /// </summary>
 		[Description("Is the fluid a kill fluid?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("IsKillFluid")]
-        public Boolean? IsKillFluid {
+        public bool? IsKillFluid {
             get {
                 return IsKillFluidField;
             } 
@@ -8184,14 +8184,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsKillFluidField; 
+        private bool? IsKillFluidField; 
 
         /// <summary>
         /// IsKillFluidSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IsKillFluidSpecified {
+        public bool IsKillFluidSpecified {
             get {
                 return IsKillFluidSpecifiedField;
             } 
@@ -8201,7 +8201,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IsKillFluidSpecifiedField; 
+        private bool IsKillFluidSpecifiedField; 
 
         /// <summary>
         /// Volume property
@@ -8420,7 +8420,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public VolumeMeasure(Double value, VolumeUom uom)
+        public VolumeMeasure(double value, VolumeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -8457,7 +8457,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -8467,7 +8467,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -8638,7 +8638,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Material ID is  equal to AbstractStimMaterial.RefId.  This is a reference to the UID of the StimMaterial in the StimJobMaterialCatalog.")]
 		[XmlElement("MaterialReference")]
-        public String MaterialReference {
+        public string MaterialReference {
             get {
                 return MaterialReferenceField;
             } 
@@ -8648,7 +8648,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MaterialReferenceField; 
+        private string MaterialReferenceField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -8688,7 +8688,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimMaterialQuantity")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -8698,7 +8698,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -8745,7 +8745,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MassMeasure(Double value, MassUom uom)
+        public MassMeasure(double value, MassUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -8782,7 +8782,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -8792,7 +8792,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -8839,7 +8839,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MassPerTimeMeasure(Double value, MassPerTimeUom uom)
+        public MassPerTimeMeasure(double value, MassPerTimeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -8876,7 +8876,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -8886,7 +8886,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -8933,7 +8933,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public VolumePerTimeMeasure(Double value, VolumePerTimeUom uom)
+        public VolumePerTimeMeasure(double value, VolumePerTimeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -8970,7 +8970,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -8980,7 +8980,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -9024,7 +9024,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A human readable name for the step.")]
 		[XmlElement("StepName")]
-        public String StepName {
+        public string StepName {
             get {
                 return StepNameField;
             } 
@@ -9034,7 +9034,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String StepNameField; 
+        private string StepNameField; 
 
         /// <summary>
         /// StepNumber property
@@ -9042,7 +9042,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Step number.")]
 		[XmlElement("StepNumber")]
-        public Int64? StepNumber {
+        public long? StepNumber {
             get {
                 return StepNumberField;
             } 
@@ -9052,7 +9052,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? StepNumberField; 
+        private long? StepNumberField; 
 
         /// <summary>
         /// Kind property
@@ -9060,7 +9060,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("The type of step.")]
 		[XmlElement("Kind")]
-        public String Kind {
+        public string Kind {
             get {
                 return KindField;
             } 
@@ -9070,7 +9070,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String KindField; 
+        private string KindField; 
 
         /// <summary>
         /// Description property
@@ -9078,7 +9078,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A short description of the step.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -9088,7 +9088,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// DTimStart property
@@ -9441,7 +9441,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Balls recovered during execution of the step.")]
 		[XmlElement("BallsRecovered")]
-        public Int64? BallsRecovered {
+        public long? BallsRecovered {
             get {
                 return BallsRecoveredField;
             } 
@@ -9452,14 +9452,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? BallsRecoveredField; 
+        private long? BallsRecoveredField; 
 
         /// <summary>
         /// BallsRecoveredSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean BallsRecoveredSpecified {
+        public bool BallsRecoveredSpecified {
             get {
                 return BallsRecoveredSpecifiedField;
             } 
@@ -9469,14 +9469,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean BallsRecoveredSpecifiedField; 
+        private bool BallsRecoveredSpecifiedField; 
 
         /// <summary>
         /// BallsUsed property
         /// </summary>
 		[Description("Balls used during execution of the step.")]
 		[XmlElement("BallsUsed")]
-        public Int64? BallsUsed {
+        public long? BallsUsed {
             get {
                 return BallsUsedField;
             } 
@@ -9487,14 +9487,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? BallsUsedField; 
+        private long? BallsUsedField; 
 
         /// <summary>
         /// BallsUsedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean BallsUsedSpecified {
+        public bool BallsUsedSpecified {
             get {
                 return BallsUsedSpecifiedField;
             } 
@@ -9504,7 +9504,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean BallsUsedSpecifiedField; 
+        private bool BallsUsedSpecifiedField; 
 
         /// <summary>
         /// BaseFluidBypassVol property
@@ -10334,7 +10334,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimJobStep.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -10344,7 +10344,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -10391,7 +10391,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public PowerMeasure(Double value, PowerUom uom)
+        public PowerMeasure(double value, PowerUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -10428,7 +10428,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -10438,7 +10438,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -10485,7 +10485,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public TimeMeasure(Double value, TimeUom uom)
+        public TimeMeasure(double value, TimeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -10522,7 +10522,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -10532,7 +10532,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -10576,7 +10576,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Event number.")]
 		[XmlElement("Number")]
-        public Int64? Number {
+        public long? Number {
             get {
                 return NumberField;
             } 
@@ -10586,7 +10586,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? NumberField; 
+        private long? NumberField; 
 
         /// <summary>
         /// Date and time of this event.
@@ -10611,7 +10611,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A short description of the event.")]
 		[XmlElement("Comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return CommentField;
             } 
@@ -10621,14 +10621,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentField; 
+        private string CommentField; 
 
         /// <summary>
         /// Step number. Use it to reference an existing job step entry.
         /// </summary>
 		[Description("Step number. Use it to reference an existing job step entry.")]
 		[XmlElement("NumStep")]
-        public Int64? NumStep {
+        public long? NumStep {
             get {
                 return NumStepField;
             } 
@@ -10639,14 +10639,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? NumStepField; 
+        private long? NumStepField; 
 
         /// <summary>
         /// NumStepSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumStepSpecified {
+        public bool NumStepSpecified {
             get {
                 return NumStepSpecifiedField;
             } 
@@ -10656,7 +10656,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumStepSpecifiedField; 
+        private bool NumStepSpecifiedField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -10696,7 +10696,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimEvent.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -10706,7 +10706,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -10820,7 +10820,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimShutInPressure.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -10830,7 +10830,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -11059,7 +11059,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimPumpFlowBackTest.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -11069,7 +11069,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -11166,7 +11166,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The number of the step. Identifies the step within the step down test.")]
 		[XmlElement("Number")]
-        public Int64? Number {
+        public long? Number {
             get {
                 return NumberField;
             } 
@@ -11176,7 +11176,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? NumberField; 
+        private long? NumberField; 
 
         /// <summary>
         /// Bottomhole flow rate for the specific step.
@@ -11342,7 +11342,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimPumpFlowBackTestStep.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -11352,7 +11352,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -11464,7 +11464,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimPressureFlowRate.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -11474,7 +11474,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -11598,7 +11598,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimStepTest.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -11608,7 +11608,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -11705,7 +11705,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("The number of perforations in the interval being tested.")]
 		[XmlElement("PerforationCount")]
-        public Int64? PerforationCount {
+        public long? PerforationCount {
             get {
                 return PerforationCountField;
             } 
@@ -11716,14 +11716,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? PerforationCountField; 
+        private long? PerforationCountField; 
 
         /// <summary>
         /// PerforationCountSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PerforationCountSpecified {
+        public bool PerforationCountSpecified {
             get {
                 return PerforationCountSpecifiedField;
             } 
@@ -11733,7 +11733,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PerforationCountSpecifiedField; 
+        private bool PerforationCountSpecifiedField; 
 
         /// <summary>
         /// A coefficient used in the equation for calculation of the pressure drop across a perforation set.
@@ -11758,7 +11758,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("The number of perforations in the interval being tested that are  calculated to be open to injection, which is determined during the step-down test.")]
 		[XmlElement("EffectivePerfs")]
-        public Int64? EffectivePerfs {
+        public long? EffectivePerfs {
             get {
                 return EffectivePerfsField;
             } 
@@ -11769,14 +11769,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? EffectivePerfsField; 
+        private long? EffectivePerfsField; 
 
         /// <summary>
         /// EffectivePerfsSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean EffectivePerfsSpecified {
+        public bool EffectivePerfsSpecified {
             get {
                 return EffectivePerfsSpecifiedField;
             } 
@@ -11786,7 +11786,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean EffectivePerfsSpecifiedField; 
+        private bool EffectivePerfsSpecifiedField; 
 
         /// <summary>
         /// The data related to a particular step in the step-down test.
@@ -11856,7 +11856,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimStepDownTest")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -11866,7 +11866,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -12240,7 +12240,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimFetTest.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -12250,7 +12250,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -12297,7 +12297,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public VolumetricThermalExpansionMeasure(Double value, VolumetricThermalExpansionUom uom)
+        public VolumetricThermalExpansionMeasure(double value, VolumetricThermalExpansionUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -12334,7 +12334,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -12344,7 +12344,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -12391,7 +12391,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public ThermalConductivityMeasure(Double value, ThermalConductivityUom uom)
+        public ThermalConductivityMeasure(double value, ThermalConductivityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -12428,7 +12428,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -12438,7 +12438,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -12485,7 +12485,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public SpecificHeatCapacityMeasure(Double value, SpecificHeatCapacityUom uom)
+        public SpecificHeatCapacityMeasure(double value, SpecificHeatCapacityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -12522,7 +12522,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -12532,7 +12532,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -12576,7 +12576,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The name of the session.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -12586,14 +12586,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// The number of this pumping diagnostics session.
         /// </summary>
 		[Description("The number of this pumping diagnostics session.")]
 		[XmlElement("Number")]
-        public Int64? Number {
+        public long? Number {
             get {
                 return NumberField;
             } 
@@ -12604,14 +12604,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? NumberField; 
+        private long? NumberField; 
 
         /// <summary>
         /// NumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumberSpecified {
+        public bool NumberSpecified {
             get {
                 return NumberSpecifiedField;
             } 
@@ -12621,7 +12621,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumberSpecifiedField; 
+        private bool NumberSpecifiedField; 
 
         /// <summary>
         /// A description of the session.
@@ -12629,7 +12629,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A description of the session.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -12639,7 +12639,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// The size of the choke used during a flow back test.
@@ -13254,7 +13254,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("The number of a stage associated with this diagnostics session.")]
 		[XmlElement("StageNumber")]
-        public Int64? StageNumber {
+        public long? StageNumber {
             get {
                 return StageNumberField;
             } 
@@ -13265,14 +13265,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? StageNumberField; 
+        private long? StageNumberField; 
 
         /// <summary>
         /// StageNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StageNumberSpecified {
+        public bool StageNumberSpecified {
             get {
                 return StageNumberSpecifiedField;
             } 
@@ -13282,14 +13282,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean StageNumberSpecifiedField; 
+        private bool StageNumberSpecifiedField; 
 
         /// <summary>
         /// Are the calculations corrected for temperature? A value of "true" (or "1") indicates that the calculations were corrected for temperature. A value of "false" (or "0") or not given indicates otherwise.
         /// </summary>
 		[Description("Are the calculations corrected for temperature? A value of \"true\" (or \"1\") indicates that the calculations were corrected for temperature.  A value of \"false\" (or \"0\") or not given indicates otherwise.")]
 		[XmlElement("TemperatureCorrectionApplied")]
-        public Boolean? TemperatureCorrectionApplied {
+        public bool? TemperatureCorrectionApplied {
             get {
                 return TemperatureCorrectionAppliedField;
             } 
@@ -13300,14 +13300,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? TemperatureCorrectionAppliedField; 
+        private bool? TemperatureCorrectionAppliedField; 
 
         /// <summary>
         /// TemperatureCorrectionAppliedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TemperatureCorrectionAppliedSpecified {
+        public bool TemperatureCorrectionAppliedSpecified {
             get {
                 return TemperatureCorrectionAppliedSpecifiedField;
             } 
@@ -13317,7 +13317,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TemperatureCorrectionAppliedSpecifiedField; 
+        private bool TemperatureCorrectionAppliedSpecifiedField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -13477,7 +13477,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimJobDiagnosticSession.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -13487,7 +13487,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -13534,7 +13534,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public WellVerticalDepthCoord(Double value, LengthUom uom)
+        public WellVerticalDepthCoord(double value, LengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -13575,7 +13575,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Defines the vertical datums associated with elevation, vertical depth and measured depth coordinates")]
         [XmlAttribute("datum")]
 		
-        public String Datum {
+        public string Datum {
             get {
                 return datumField;
             } 
@@ -13585,14 +13585,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String datumField; 
+        private string datumField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -13602,7 +13602,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -13646,7 +13646,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Description of item and details.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -13656,7 +13656,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// Pressure rating of the item.
@@ -13699,7 +13699,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Use pump discharge line?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UsePumpDischarge")]
-        public Boolean? UsePumpDischarge {
+        public bool? UsePumpDischarge {
             get {
                 return UsePumpDischargeField;
             } 
@@ -13710,14 +13710,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? UsePumpDischargeField; 
+        private bool? UsePumpDischargeField; 
 
         /// <summary>
         /// UsePumpDischargeSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean UsePumpDischargeSpecified {
+        public bool UsePumpDischargeSpecified {
             get {
                 return UsePumpDischargeSpecifiedField;
             } 
@@ -13727,14 +13727,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean UsePumpDischargeSpecifiedField; 
+        private bool UsePumpDischargeSpecifiedField; 
 
         /// <summary>
         /// Use standpipe geometry? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Use standpipe geometry?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UseStandpipe")]
-        public Boolean? UseStandpipe {
+        public bool? UseStandpipe {
             get {
                 return UseStandpipeField;
             } 
@@ -13745,14 +13745,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? UseStandpipeField; 
+        private bool? UseStandpipeField; 
 
         /// <summary>
         /// UseStandpipeSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean UseStandpipeSpecified {
+        public bool UseStandpipeSpecified {
             get {
                 return UseStandpipeSpecifiedField;
             } 
@@ -13762,14 +13762,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean UseStandpipeSpecifiedField; 
+        private bool UseStandpipeSpecifiedField; 
 
         /// <summary>
         /// Use kelly hose geometry? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Use kelly hose geometry?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UseHose")]
-        public Boolean? UseHose {
+        public bool? UseHose {
             get {
                 return UseHoseField;
             } 
@@ -13780,14 +13780,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? UseHoseField; 
+        private bool? UseHoseField; 
 
         /// <summary>
         /// UseHoseSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean UseHoseSpecified {
+        public bool UseHoseSpecified {
             get {
                 return UseHoseSpecifiedField;
             } 
@@ -13797,14 +13797,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean UseHoseSpecifiedField; 
+        private bool UseHoseSpecifiedField; 
 
         /// <summary>
         /// Use swivel geometry? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Use swivel geometry?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UseSwivel")]
-        public Boolean? UseSwivel {
+        public bool? UseSwivel {
             get {
                 return UseSwivelField;
             } 
@@ -13815,14 +13815,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? UseSwivelField; 
+        private bool? UseSwivelField; 
 
         /// <summary>
         /// UseSwivelSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean UseSwivelSpecified {
+        public bool UseSwivelSpecified {
             get {
                 return UseSwivelSpecifiedField;
             } 
@@ -13832,14 +13832,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean UseSwivelSpecifiedField; 
+        private bool UseSwivelSpecifiedField; 
 
         /// <summary>
         /// Use kelly geometry? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Use kelly geometry?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UseKelly")]
-        public Boolean? UseKelly {
+        public bool? UseKelly {
             get {
                 return UseKellyField;
             } 
@@ -13850,14 +13850,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? UseKellyField; 
+        private bool? UseKellyField; 
 
         /// <summary>
         /// UseKellySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean UseKellySpecified {
+        public bool UseKellySpecified {
             get {
                 return UseKellySpecifiedField;
             } 
@@ -13867,14 +13867,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean UseKellySpecifiedField; 
+        private bool UseKellySpecifiedField; 
 
         /// <summary>
         /// Use top stack height? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Use top stack height?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UseTopStack")]
-        public Boolean? UseTopStack {
+        public bool? UseTopStack {
             get {
                 return UseTopStackField;
             } 
@@ -13885,14 +13885,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? UseTopStackField; 
+        private bool? UseTopStackField; 
 
         /// <summary>
         /// UseTopStackSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean UseTopStackSpecified {
+        public bool UseTopStackSpecified {
             get {
                 return UseTopStackSpecifiedField;
             } 
@@ -13902,14 +13902,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean UseTopStackSpecifiedField; 
+        private bool UseTopStackSpecifiedField; 
 
         /// <summary>
         /// Use injector stack height? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Use injector stack height?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UseInjStack")]
-        public Boolean? UseInjStack {
+        public bool? UseInjStack {
             get {
                 return UseInjStackField;
             } 
@@ -13920,14 +13920,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? UseInjStackField; 
+        private bool? UseInjStackField; 
 
         /// <summary>
         /// UseInjStackSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean UseInjStackSpecified {
+        public bool UseInjStackSpecified {
             get {
                 return UseInjStackSpecifiedField;
             } 
@@ -13937,14 +13937,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean UseInjStackSpecifiedField; 
+        private bool UseInjStackSpecifiedField; 
 
         /// <summary>
         /// Use surface iron description? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Use surface iron description?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UseSurfaceIron")]
-        public Boolean? UseSurfaceIron {
+        public bool? UseSurfaceIron {
             get {
                 return UseSurfaceIronField;
             } 
@@ -13955,14 +13955,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? UseSurfaceIronField; 
+        private bool? UseSurfaceIronField; 
 
         /// <summary>
         /// UseSurfaceIronSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean UseSurfaceIronSpecified {
+        public bool UseSurfaceIronSpecified {
             get {
                 return UseSurfaceIronSpecifiedField;
             } 
@@ -13972,7 +13972,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean UseSurfaceIronSpecifiedField; 
+        private bool UseSurfaceIronSpecifiedField; 
 
         /// <summary>
         /// Inner diameter of the standpipe.
@@ -14214,7 +14214,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Coiled tubing: the coiled tubing wrap type.")]
 		[XmlElement("CtWrapType")]
-        public String CTWrapType {
+        public string CTWrapType {
             get {
                 return CtWrapTypeField;
             } 
@@ -14224,7 +14224,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CtWrapTypeField; 
+        private string CtWrapTypeField; 
 
         /// <summary>
         /// Coiled tubing: outside diameter of the coiled tubing reel.
@@ -14303,7 +14303,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Coiled tubing: Does it have an injector stack up? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("InjStkUp")]
-        public Boolean? InjStkUp {
+        public bool? InjStkUp {
             get {
                 return InjStkUpField;
             } 
@@ -14314,14 +14314,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? InjStkUpField; 
+        private bool? InjStkUpField; 
 
         /// <summary>
         /// InjStkUpSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean InjStkUpSpecified {
+        public bool InjStkUpSpecified {
             get {
                 return InjStkUpSpecifiedField;
             } 
@@ -14331,7 +14331,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean InjStkUpSpecifiedField; 
+        private bool InjStkUpSpecifiedField; 
 
         /// <summary>
         /// Coiled tubing: The length of tubing from the end of the coil reel to the rotary kelly bushing. This length includes the tubing in the hole and the tubing on the reel. This measurement takes into account the 20 or so feet of tubing that is being straightened and pushed through the injector head.
@@ -14356,7 +14356,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Coiled tubing: Umbilical inside, true/false flag to account for the wireline inside the coiled tubing. With this pressure loss calculation, you can calculate for the strings used for logging, wireline coring, etc.  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("UmbInside")]
-        public Boolean? UmbInside {
+        public bool? UmbInside {
             get {
                 return UmbInsideField;
             } 
@@ -14367,14 +14367,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? UmbInsideField; 
+        private bool? UmbInsideField; 
 
         /// <summary>
         /// UmbInsideSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean UmbInsideSpecified {
+        public bool UmbInsideSpecified {
             get {
                 return UmbInsideSpecifiedField;
             } 
@@ -14384,7 +14384,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean UmbInsideSpecifiedField; 
+        private bool UmbInsideSpecifiedField; 
 
         /// <summary>
         /// Coiled tubing: outer diameter of the umbilical.
@@ -14518,7 +14518,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturer or supplier of the item.")]
 		[XmlElement("Manufacturer")]
-        public String Manufacturer {
+        public string Manufacturer {
             get {
                 return ManufacturerField;
             } 
@@ -14528,7 +14528,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ManufacturerField; 
+        private string ManufacturerField; 
 
         /// <summary>
         /// Manufacturer's designated model.
@@ -14536,7 +14536,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturer's designated model.")]
 		[XmlElement("Model")]
-        public String Model {
+        public string Model {
             get {
                 return ModelField;
             } 
@@ -14546,7 +14546,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ModelField; 
+        private string ModelField; 
 
         /// <summary>
         /// Date and time the degasser was installed.
@@ -14588,7 +14588,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description for the type of object.")]
 		[XmlElement("Type")]
-        public String Type {
+        public string Type {
             get {
                 return TypeField;
             } 
@@ -14598,7 +14598,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeField; 
+        private string TypeField; 
 
         /// <summary>
         /// Contractor/owner.
@@ -14606,7 +14606,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Contractor/owner.")]
 		[XmlElement("Owner")]
-        public String Owner {
+        public string Owner {
             get {
                 return OwnerField;
             } 
@@ -14616,7 +14616,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OwnerField; 
+        private string OwnerField; 
 
         /// <summary>
         /// Height of the separator.
@@ -14920,7 +14920,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of degasser")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -14930,7 +14930,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -14977,7 +14977,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public AreaMeasure(Double value, AreaUom uom)
+        public AreaMeasure(double value, AreaUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -15014,7 +15014,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -15024,7 +15024,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -15069,7 +15069,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("The physical identification string of the equipment tag.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -15079,7 +15079,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// The format or encoding specification of the equipment tag. The tag may contain different pieces of information and knowledge of that information is inherent in the specification. The "identification string" is a mandatory part of the information in a tag.
@@ -15122,7 +15122,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TechnologySpecified {
+        public bool TechnologySpecified {
             get {
                 return TechnologySpecifiedField;
             } 
@@ -15132,7 +15132,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TechnologySpecifiedField; 
+        private bool TechnologySpecifiedField; 
 
         /// <summary>
         /// An indicator of where the tag is attached to the item. This is used to assist the user in finding where an identifier is located on an item. This optional field also helps to differentiate where an identifier is located when multiple identifiers exist on an item. Most downhole components have a box (female thread) and pin (male thread) end as well as a pipe body in between the ends. Where multiple identifiers are used on an item, it is convenient to have a reference as to which end, or somewhere in the middle, an identifier may be closer to. Some items may have an identifier on a non-standard location, such as on the arm of a hole opener. 'other', by exclusion, tells a user to look elsewhere than on the body or near the ends of an item. Most non-downhole tools use either 'body', 'other' or not specified because the location tends to lose value with smaller or non threaded items.
@@ -15157,7 +15157,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean LocationSpecified {
+        public bool LocationSpecified {
             get {
                 return LocationSpecifiedField;
             } 
@@ -15167,7 +15167,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean LocationSpecifiedField; 
+        private bool LocationSpecifiedField; 
 
         /// <summary>
         /// When the tag was installed in or on the item.
@@ -15192,7 +15192,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The name of the company that installed the tag.")]
 		[XmlElement("InstallationCompany")]
-        public String InstallationCompany {
+        public string InstallationCompany {
             get {
                 return InstallationCompanyField;
             } 
@@ -15202,7 +15202,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String InstallationCompanyField; 
+        private string InstallationCompanyField; 
 
         /// <summary>
         /// Reference to a manufacturer's or installer's installation description, code, or method.
@@ -15210,7 +15210,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Reference to a manufacturer's or installer's installation description, code, or method.")]
 		[XmlElement("MountingCode")]
-        public String MountingCode {
+        public string MountingCode {
             get {
                 return MountingCodeField;
             } 
@@ -15220,7 +15220,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MountingCodeField; 
+        private string MountingCodeField; 
 
         /// <summary>
         /// A comment or remark about the tag.
@@ -15228,7 +15228,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A comment or remark about the tag.")]
 		[XmlElement("Comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return CommentField;
             } 
@@ -15238,7 +15238,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentField; 
+        private string CommentField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -15278,7 +15278,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of NameTag.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -15288,7 +15288,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -15332,7 +15332,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturer or supplier of the item.")]
 		[XmlElement("Manufacturer")]
-        public String Manufacturer {
+        public string Manufacturer {
             get {
                 return ManufacturerField;
             } 
@@ -15342,7 +15342,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ManufacturerField; 
+        private string ManufacturerField; 
 
         /// <summary>
         /// Manufacturer's designated model.
@@ -15350,7 +15350,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturer's designated model.")]
 		[XmlElement("Model")]
-        public String Model {
+        public string Model {
             get {
                 return ModelField;
             } 
@@ -15360,7 +15360,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ModelField; 
+        private string ModelField; 
 
         /// <summary>
         /// Date and time the hydroclone was installed.
@@ -15402,7 +15402,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of the type of object.")]
 		[XmlElement("Type")]
-        public String Type {
+        public string Type {
             get {
                 return TypeField;
             } 
@@ -15412,7 +15412,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeField; 
+        private string TypeField; 
 
         /// <summary>
         /// Cone description.
@@ -15420,7 +15420,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Cone description.")]
 		[XmlElement("DescCone")]
-        public String DescCone {
+        public string DescCone {
             get {
                 return DescConeField;
             } 
@@ -15430,7 +15430,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescConeField; 
+        private string DescConeField; 
 
         /// <summary>
         /// Contractor/owner.
@@ -15438,7 +15438,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Contractor/owner.")]
 		[XmlElement("Owner")]
-        public String Owner {
+        public string Owner {
             get {
                 return OwnerField;
             } 
@@ -15448,7 +15448,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OwnerField; 
+        private string OwnerField; 
 
         /// <summary>
         /// An identification tag for the hydrocyclone. A serial number is a type of identification tag; however, some tags contain many pieces of information. This element only identifies the tag and does not describe the contents.
@@ -15518,7 +15518,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Hydrocyclone.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -15528,7 +15528,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -15572,7 +15572,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturer or supplier of the item.")]
 		[XmlElement("Manufacturer")]
-        public String Manufacturer {
+        public string Manufacturer {
             get {
                 return ManufacturerField;
             } 
@@ -15582,7 +15582,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ManufacturerField; 
+        private string ManufacturerField; 
 
         /// <summary>
         /// Manufacturer's designated model.
@@ -15590,7 +15590,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturer's designated model.")]
 		[XmlElement("Model")]
-        public String Model {
+        public string Model {
             get {
                 return ModelField;
             } 
@@ -15600,7 +15600,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ModelField; 
+        private string ModelField; 
 
         /// <summary>
         /// Date and time the centrifuge was installed.
@@ -15642,7 +15642,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description for the type of object.")]
 		[XmlElement("Type")]
-        public String Type {
+        public string Type {
             get {
                 return TypeField;
             } 
@@ -15652,7 +15652,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeField; 
+        private string TypeField; 
 
         /// <summary>
         /// Maximum pump rate at which the unit efficiently operates.
@@ -15678,7 +15678,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Contractor/owner.")]
 		[XmlElement("Owner")]
-        public String Owner {
+        public string Owner {
             get {
                 return OwnerField;
             } 
@@ -15688,7 +15688,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OwnerField; 
+        private string OwnerField; 
 
         /// <summary>
         /// An identification tag for the centrifuge. A serial number is a type of identification tag; however, some tags contain many pieces of information.This element only identifies the tag and does not describe the contents.
@@ -15758,7 +15758,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Centrifuge.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -15768,7 +15768,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -15812,7 +15812,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Relative pump number. One-based.")]
 		[XmlElement("Index")]
-        public Int32? Index {
+        public int? Index {
             get {
                 return IndexField;
             } 
@@ -15822,7 +15822,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? IndexField; 
+        private int? IndexField; 
 
         /// <summary>
         /// Manufacturer or supplier of the item.
@@ -15830,7 +15830,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturer or supplier of the item.")]
 		[XmlElement("Manufacturer")]
-        public String Manufacturer {
+        public string Manufacturer {
             get {
                 return ManufacturerField;
             } 
@@ -15840,7 +15840,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ManufacturerField; 
+        private string ManufacturerField; 
 
         /// <summary>
         /// Manufacturer's designated model.
@@ -15848,7 +15848,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturer's designated model.")]
 		[XmlElement("Model")]
-        public String Model {
+        public string Model {
             get {
                 return ModelField;
             } 
@@ -15858,7 +15858,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ModelField; 
+        private string ModelField; 
 
         /// <summary>
         /// Date and time the pump was installed.
@@ -15900,7 +15900,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Contractor/owner.")]
 		[XmlElement("Owner")]
-        public String Owner {
+        public string Owner {
             get {
                 return OwnerField;
             } 
@@ -15910,7 +15910,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OwnerField; 
+        private string OwnerField; 
 
         /// <summary>
         /// Pump type reference list.
@@ -15935,7 +15935,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypePumpSpecified {
+        public bool TypePumpSpecified {
             get {
                 return TypePumpSpecifiedField;
             } 
@@ -15945,14 +15945,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypePumpSpecifiedField; 
+        private bool TypePumpSpecifiedField; 
 
         /// <summary>
         /// Number of cylinders (3 = single acting, 2 = double acting)
         /// </summary>
 		[Description("Number of cylinders (3 = single acting, 2 = double acting)")]
 		[XmlElement("NumCyl")]
-        public Int32? NumCyl {
+        public int? NumCyl {
             get {
                 return NumCylField;
             } 
@@ -15963,14 +15963,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumCylField; 
+        private int? NumCylField; 
 
         /// <summary>
         /// NumCylSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumCylSpecified {
+        public bool NumCylSpecified {
             get {
                 return NumCylSpecifiedField;
             } 
@@ -15980,7 +15980,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumCylSpecifiedField; 
+        private bool NumCylSpecifiedField; 
 
         /// <summary>
         /// Rod outer diameter.
@@ -16024,7 +16024,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Pump action. 1 = single acting, 2 = double acting.")]
 		[XmlElement("PumpAction")]
-        public Int16? PumpAction {
+        public short? PumpAction {
             get {
                 return PumpActionField;
             } 
@@ -16035,14 +16035,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int16? PumpActionField; 
+        private short? PumpActionField; 
 
         /// <summary>
         /// PumpActionSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PumpActionSpecified {
+        public bool PumpActionSpecified {
             get {
                 return PumpActionSpecifiedField;
             } 
@@ -16052,7 +16052,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PumpActionSpecifiedField; 
+        private bool PumpActionSpecifiedField; 
 
         /// <summary>
         /// Efficiency of the pump.
@@ -16285,7 +16285,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of MudPump.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -16295,7 +16295,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -16342,7 +16342,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public PowerPerPowerMeasure(Double value, PowerPerPowerUom uom)
+        public PowerPerPowerMeasure(double value, PowerPerPowerUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -16379,7 +16379,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -16389,7 +16389,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -16436,7 +16436,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public AngularVelocityMeasure(Double value, AngularVelocityUom uom)
+        public AngularVelocityMeasure(double value, AngularVelocityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -16473,7 +16473,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -16483,7 +16483,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -16527,7 +16527,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Relative pit number of all pits on the rig. One-based.")]
 		[XmlElement("Index")]
-        public Int32? Index {
+        public int? Index {
             get {
                 return IndexField;
             } 
@@ -16537,7 +16537,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? IndexField; 
+        private int? IndexField; 
 
         /// <summary>
         /// Date and time the pit was installed.
@@ -16598,7 +16598,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Contractor/owner.")]
 		[XmlElement("Owner")]
-        public String Owner {
+        public string Owner {
             get {
                 return OwnerField;
             } 
@@ -16608,7 +16608,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OwnerField; 
+        private string OwnerField; 
 
         /// <summary>
         /// The type of pit.
@@ -16633,7 +16633,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypePitSpecified {
+        public bool TypePitSpecified {
             get {
                 return TypePitSpecifiedField;
             } 
@@ -16643,14 +16643,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypePitSpecifiedField; 
+        private bool TypePitSpecifiedField; 
 
         /// <summary>
         /// Flag to indicate if the pit is part of the active system. Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Flag to indicate if the pit is part of the active system.  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("IsActive")]
-        public Boolean? IsActive {
+        public bool? IsActive {
             get {
                 return IsActiveField;
             } 
@@ -16661,14 +16661,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsActiveField; 
+        private bool? IsActiveField; 
 
         /// <summary>
         /// IsActiveSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IsActiveSpecified {
+        public bool IsActiveSpecified {
             get {
                 return IsActiveSpecifiedField;
             } 
@@ -16678,7 +16678,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IsActiveSpecifiedField; 
+        private bool IsActiveSpecifiedField; 
 
         /// <summary>
         /// An identification tag for the pit. A serial number is a type of identification tag; however, some tags contain many pieces of information. This element only identifies the tag and does not describe the contents.
@@ -16748,7 +16748,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of pit")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -16758,7 +16758,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -16819,7 +16819,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeBopCompSpecified {
+        public bool TypeBopCompSpecified {
             get {
                 return TypeBopCompSpecifiedField;
             } 
@@ -16829,7 +16829,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeBopCompSpecifiedField; 
+        private bool TypeBopCompSpecifiedField; 
 
         /// <summary>
         /// Description of the component.
@@ -16837,7 +16837,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of the component.")]
 		[XmlElement("DescComp")]
-        public String DescComp {
+        public string DescComp {
             get {
                 return DescCompField;
             } 
@@ -16847,7 +16847,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescCompField; 
+        private string DescCompField; 
 
         /// <summary>
         /// Inner diameter that tubulars can pass through.
@@ -16927,7 +16927,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Arrangement nomenclature for the blowout preventer stack (e.g., S, R, A).")]
 		[XmlElement("Nomenclature")]
-        public String Nomenclature {
+        public string Nomenclature {
             get {
                 return NomenclatureField;
             } 
@@ -16937,14 +16937,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NomenclatureField; 
+        private string NomenclatureField; 
 
         /// <summary>
         /// Is ram bore variable or single size? Defaults to false. Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Is ram bore variable or single size? Defaults to false.  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("IsVariable")]
-        public Boolean? IsVariable {
+        public bool? IsVariable {
             get {
                 return IsVariableField;
             } 
@@ -16955,14 +16955,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsVariableField; 
+        private bool? IsVariableField; 
 
         /// <summary>
         /// IsVariableSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IsVariableSpecified {
+        public bool IsVariableSpecified {
             get {
                 return IsVariableSpecifiedField;
             } 
@@ -16972,7 +16972,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IsVariableSpecifiedField; 
+        private bool IsVariableSpecifiedField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -17012,7 +17012,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of BopComponent")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -17022,7 +17022,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -17066,7 +17066,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturer or supplier of the item.")]
 		[XmlElement("Manufacturer")]
-        public String Manufacturer {
+        public string Manufacturer {
             get {
                 return ManufacturerField;
             } 
@@ -17076,7 +17076,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ManufacturerField; 
+        private string ManufacturerField; 
 
         /// <summary>
         /// Model property
@@ -17084,7 +17084,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturer's designated model.")]
 		[XmlElement("Model")]
-        public String Model {
+        public string Model {
             get {
                 return ModelField;
             } 
@@ -17094,7 +17094,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ModelField; 
+        private string ModelField; 
 
         /// <summary>
         /// DTimInstall property
@@ -17166,7 +17166,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Type of connection to the blowout preventer.")]
 		[XmlElement("TypeConnectionBop")]
-        public String TypeConnectionBop {
+        public string TypeConnectionBop {
             get {
                 return TypeConnectionBopField;
             } 
@@ -17176,7 +17176,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeConnectionBopField; 
+        private string TypeConnectionBopField; 
 
         /// <summary>
         /// SizeConnectionBop property
@@ -17239,7 +17239,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Is this a rotating blowout preventer? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("RotBop")]
-        public Boolean? RotBop {
+        public bool? RotBop {
             get {
                 return RotBopField;
             } 
@@ -17250,14 +17250,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? RotBopField; 
+        private bool? RotBopField; 
 
         /// <summary>
         /// RotBopSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean RotBopSpecified {
+        public bool RotBopSpecified {
             get {
                 return RotBopSpecifiedField;
             } 
@@ -17267,7 +17267,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean RotBopSpecifiedField; 
+        private bool RotBopSpecifiedField; 
 
         /// <summary>
         /// IdBoosterLine property
@@ -17491,7 +17491,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Diverter description.")]
 		[XmlElement("TypeDiverter")]
-        public String TypeDiverter {
+        public string TypeDiverter {
             get {
                 return TypeDiverterField;
             } 
@@ -17501,7 +17501,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeDiverterField; 
+        private string TypeDiverterField; 
 
         /// <summary>
         /// DiaDiverter property
@@ -17545,7 +17545,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Type of accumulator/description.")]
 		[XmlElement("Accumulator")]
-        public String Accumulator {
+        public string Accumulator {
             get {
                 return AccumulatorField;
             } 
@@ -17555,7 +17555,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String AccumulatorField; 
+        private string AccumulatorField; 
 
         /// <summary>
         /// CapAccFluid property
@@ -17635,7 +17635,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The blowout preventer control system.")]
 		[XmlElement("TypeControlManifold")]
-        public String TypeControlManifold {
+        public string TypeControlManifold {
             get {
                 return TypeControlManifoldField;
             } 
@@ -17645,7 +17645,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeControlManifoldField; 
+        private string TypeControlManifoldField; 
 
         /// <summary>
         /// DescControlManifold property
@@ -17653,7 +17653,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Description of the control system.")]
 		[XmlElement("DescControlManifold")]
-        public String DescControlManifold {
+        public string DescControlManifold {
             get {
                 return DescControlManifoldField;
             } 
@@ -17663,7 +17663,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescControlManifoldField; 
+        private string DescControlManifoldField; 
 
         /// <summary>
         /// TypeChokeManifold property
@@ -17671,7 +17671,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Type of choke manifold.")]
 		[XmlElement("TypeChokeManifold")]
-        public String TypeChokeManifold {
+        public string TypeChokeManifold {
             get {
                 return TypeChokeManifoldField;
             } 
@@ -17681,7 +17681,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeChokeManifoldField; 
+        private string TypeChokeManifoldField; 
 
         /// <summary>
         /// PresChokeManifold property
@@ -17773,7 +17773,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Human-recognizable context for the shaker.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -17783,7 +17783,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// Manufacturer or supplier of the item.
@@ -17791,7 +17791,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturer or supplier of the item.")]
 		[XmlElement("Manufacturer")]
-        public String Manufacturer {
+        public string Manufacturer {
             get {
                 return ManufacturerField;
             } 
@@ -17801,7 +17801,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ManufacturerField; 
+        private string ManufacturerField; 
 
         /// <summary>
         /// Manufacturer's designated model.
@@ -17809,7 +17809,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturer's designated model.")]
 		[XmlElement("Model")]
-        public String Model {
+        public string Model {
             get {
                 return ModelField;
             } 
@@ -17819,7 +17819,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ModelField; 
+        private string ModelField; 
 
         /// <summary>
         /// Date and time the shaker was installed.
@@ -17861,7 +17861,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description for the type of object.")]
 		[XmlElement("Type")]
-        public String Type {
+        public string Type {
             get {
                 return TypeField;
             } 
@@ -17871,7 +17871,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeField; 
+        private string TypeField; 
 
         /// <summary>
         /// Shaker location on the rig.
@@ -17879,7 +17879,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Shaker location on the rig.")]
 		[XmlElement("LocationShaker")]
-        public String LocationShaker {
+        public string LocationShaker {
             get {
                 return LocationShakerField;
             } 
@@ -17889,14 +17889,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String LocationShakerField; 
+        private string LocationShakerField; 
 
         /// <summary>
         /// Number of decks.
         /// </summary>
 		[Description("Number of decks.")]
 		[XmlElement("NumDecks")]
-        public Int32? NumDecks {
+        public int? NumDecks {
             get {
                 return NumDecksField;
             } 
@@ -17907,14 +17907,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumDecksField; 
+        private int? NumDecksField; 
 
         /// <summary>
         /// NumDecksSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumDecksSpecified {
+        public bool NumDecksSpecified {
             get {
                 return NumDecksSpecifiedField;
             } 
@@ -17924,14 +17924,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumDecksSpecifiedField; 
+        private bool NumDecksSpecifiedField; 
 
         /// <summary>
         /// Number of cascade levels.
         /// </summary>
 		[Description("Number of cascade levels.")]
 		[XmlElement("NumCascLevel")]
-        public Int32? NumCascLevel {
+        public int? NumCascLevel {
             get {
                 return NumCascLevelField;
             } 
@@ -17942,14 +17942,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumCascLevelField; 
+        private int? NumCascLevelField; 
 
         /// <summary>
         /// NumCascLevelSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumCascLevelSpecified {
+        public bool NumCascLevelSpecified {
             get {
                 return NumCascLevelSpecifiedField;
             } 
@@ -17959,14 +17959,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumCascLevelSpecifiedField; 
+        private bool NumCascLevelSpecifiedField; 
 
         /// <summary>
         /// Is part of mud-cleaning assembly as opposed to discrete shale shaker? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Is part of mud-cleaning assembly as opposed to discrete shale shaker? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("MudCleaner")]
-        public Boolean? MudCleaner {
+        public bool? MudCleaner {
             get {
                 return MudCleanerField;
             } 
@@ -17977,14 +17977,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? MudCleanerField; 
+        private bool? MudCleanerField; 
 
         /// <summary>
         /// MudCleanerSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MudCleanerSpecified {
+        public bool MudCleanerSpecified {
             get {
                 return MudCleanerSpecifiedField;
             } 
@@ -17994,7 +17994,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean MudCleanerSpecifiedField; 
+        private bool MudCleanerSpecifiedField; 
 
         /// <summary>
         /// Maximum pump rate at which the unit efficiently operates.
@@ -18020,7 +18020,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Contractor/owner.")]
 		[XmlElement("Owner")]
-        public String Owner {
+        public string Owner {
             get {
                 return OwnerField;
             } 
@@ -18030,7 +18030,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OwnerField; 
+        private string OwnerField; 
 
         /// <summary>
         /// Minimum mesh size.
@@ -18118,7 +18118,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Shaker.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -18128,7 +18128,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -18175,7 +18175,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public VolumePerVolumeMeasureExt(Double value, String uom)
+        public VolumePerVolumeMeasureExt(double value, string uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -18195,7 +18195,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -18205,14 +18205,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -18222,7 +18222,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -18269,7 +18269,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public ForcePerVolumeMeasureExt(Double value, String uom)
+        public ForcePerVolumeMeasureExt(double value, string uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -18289,7 +18289,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -18299,14 +18299,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -18316,7 +18316,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -18363,7 +18363,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public PressureMeasureExt(Double value, String uom)
+        public PressureMeasureExt(double value, string uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -18383,7 +18383,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -18393,14 +18393,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -18410,7 +18410,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -18457,7 +18457,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public ForceMeasureExt(Double value, String uom)
+        public ForceMeasureExt(double value, string uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -18477,7 +18477,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -18487,14 +18487,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -18504,7 +18504,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -18591,7 +18591,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("Description or secondary qualifier pertaining to MudlogParameter or to Value attribute.")]
 		[XmlElement("Comments")]
-        public String Comments {
+        public string Comments {
             get {
                 return CommentsField;
             } 
@@ -18601,7 +18601,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentsField; 
+        private string CommentsField; 
 
 		/// <summary>
         /// Unique identifier for this instance of MudLogParameter.
@@ -18611,7 +18611,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of MudLogParameter.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -18621,7 +18621,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -18666,7 +18666,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("One line description/name of the object.  This is the equivalent in ISO 19115 of CI_Citation.title  Legacy DCGroup - title")]
 		[XmlElement("Title")]
-        public String Title {
+        public string Title {
             get {
                 return TitleField;
             } 
@@ -18676,7 +18676,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TitleField; 
+        private string TitleField; 
 
         /// <summary>
         /// Originator property
@@ -18685,7 +18685,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Name (or other human-readable identifier) of the person who initially originated the object or document in the source application. If that information is not available, then this is the user who created the format file. The originator remains the same as the object is subsequently edited.   This is the equivalent in ISO 19115 to the CI_Individual.name or the CI_Organization.name of the citedResponsibleParty whose role is \"originator\".  Legacy DCGroup - author")]
 		[XmlElement("Originator")]
-        public String Originator {
+        public string Originator {
             get {
                 return OriginatorField;
             } 
@@ -18695,7 +18695,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OriginatorField; 
+        private string OriginatorField; 
 
         /// <summary>
         /// Creation property
@@ -18722,7 +18722,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("Software or service that was used to originate the object and the file format created. Must be human and machine readable and unambiguously identify the software by including the company name, software name and software version. This is the equivalent in ISO 19115 to the distributionFormat.MD_Format.  The ISO format for this is [vendor:applicationName]/fileExtension where the application name includes the version number of the application.  SIG Implementation Notes - Legacy DCGroup from v1.1 - publisher - fileExtension is not relevant and will be ignored if present. - vendor and applicationName are mandatory.")]
 		[XmlElement("Format")]
-        public String Format {
+        public string Format {
             get {
                 return FormatField;
             } 
@@ -18732,7 +18732,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FormatField; 
+        private string FormatField; 
 
         /// <summary>
         /// Editor property
@@ -18740,7 +18740,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name (or other human-readable identifier) of the last person who updated the object.   This is the equivalent in ISO 19115 to the CI_Individual.name or the CI_Organization.name of the citedResponsibleParty whose role is \"editor\".  Legacy DCGroup - contributor")]
 		[XmlElement("Editor")]
-        public String Editor {
+        public string Editor {
             get {
                 return EditorField;
             } 
@@ -18750,7 +18750,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String EditorField; 
+        private string EditorField; 
 
         /// <summary>
         /// LastUpdate property
@@ -18775,7 +18775,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean LastUpdateSpecified {
+        public bool LastUpdateSpecified {
             get {
                 return LastUpdateSpecifiedField;
             } 
@@ -18785,14 +18785,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean LastUpdateSpecifiedField; 
+        private bool LastUpdateSpecifiedField; 
 
         /// <summary>
         /// VersionString property
         /// </summary>
 		[StringLength(64)]
 		[XmlElement("VersionString")]
-        public String VersionString {
+        public string VersionString {
             get {
                 return VersionStringField;
             } 
@@ -18802,7 +18802,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String VersionStringField; 
+        private string VersionStringField; 
 
         /// <summary>
         /// Description property
@@ -18810,7 +18810,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("User descriptive comments about the object. Intended for end-user use (human readable); not necessarily meant to be used by software.  This is the equivalent of the ISO 19115 abstract.CharacterString  Legacy DCGroup - description")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -18820,7 +18820,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// DescriptiveKeywords property
@@ -18828,7 +18828,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Key words to describe the activity, for example, history match or volumetric calculations, relevant to this object. Intended to be used in a search function by software.  This is the equivalent in ISO 19115 of descriptiveKeywords.MD_Keywords  Legacy DCGroup - subject")]
 		[XmlElement("DescriptiveKeywords")]
-        public String DescriptiveKeywords {
+        public string DescriptiveKeywords {
             get {
                 return DescriptiveKeywordsField;
             } 
@@ -18838,7 +18838,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptiveKeywordsField; 
+        private string DescriptiveKeywordsField; 
 
 
         
@@ -18957,7 +18957,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the MudLogStringParameter class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public MudLogStringParameter(String value)
+        public MudLogStringParameter(string value)
         {
             this.Value = value;
         }
@@ -18977,7 +18977,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("The value of the parameter as a character string.")]
 		[XmlElement("Value")]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -18987,7 +18987,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
         /// <summary>
         /// MudLogStringParameterKind property
@@ -19395,7 +19395,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("The content type of the referenced element.")]
 		[XmlElement("ContentType")]
-        public String ContentType {
+        public string ContentType {
             get {
                 return ContentTypeField;
             } 
@@ -19405,7 +19405,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ContentTypeField; 
+        private string ContentTypeField; 
 
         /// <summary>
         /// Title property
@@ -19414,7 +19414,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("The Title of the referenced object. The Title of a top level element would be inherited from AbstractObject and must be present on any referenced object.")]
 		[XmlElement("Title")]
-        public String Title {
+        public string Title {
             get {
                 return TitleField;
             } 
@@ -19424,7 +19424,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TitleField; 
+        private string TitleField; 
 
         /// <summary>
         /// Uuid property
@@ -19433,7 +19433,7 @@ namespace Energistics.DataAccess.WITSML200
         [RegularExpression("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
         [Description("Reference to an object using its global UID.")]
 		[XmlElement("Uuid")]
-        public String Uuid {
+        public string Uuid {
             get {
                 return UuidField;
             } 
@@ -19443,7 +19443,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String UuidField; 
+        private string UuidField; 
 
         /// <summary>
         /// UuidAuthority property
@@ -19451,7 +19451,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The authority that issued and maintains the uuid of the referenced object. Used mainly in alias context.")]
 		[XmlElement("UuidAuthority")]
-        public String UuidAuthority {
+        public string UuidAuthority {
             get {
                 return UuidAuthorityField;
             } 
@@ -19461,14 +19461,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String UuidAuthorityField; 
+        private string UuidAuthorityField; 
 
         /// <summary>
         /// Uri property
         /// </summary>
 		[Description("This is the URI of a referenced object.   Do not use this to store the path and file names of an external object - that is done through the External Dataset machinery.  This element is intended for use with the Energistics Transfer Protocol.")]
 		[XmlElement("Uri", DataType="anyURI")]
-        public String Uri {
+        public string Uri {
             get {
                 return UriField;
             } 
@@ -19478,7 +19478,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String UriField; 
+        private string UriField; 
 
         /// <summary>
         /// VersionString property
@@ -19486,7 +19486,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Indicates the version of the object which is referenced.")]
 		[XmlElement("VersionString")]
-        public String VersionString {
+        public string VersionString {
             get {
                 return VersionStringField;
             } 
@@ -19496,7 +19496,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String VersionStringField; 
+        private string VersionStringField; 
 
 
         
@@ -20003,7 +20003,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public ElectricCurrentMeasure(Double value, ElectricCurrentUom uom)
+        public ElectricCurrentMeasure(double value, ElectricCurrentUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -20040,7 +20040,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -20050,7 +20050,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -20241,7 +20241,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MomentOfForceMeasure(Double value, MomentOfForceUom uom)
+        public MomentOfForceMeasure(double value, MomentOfForceUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -20278,7 +20278,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -20288,7 +20288,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -20407,7 +20407,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public ForceMeasure(Double value, ForceUom uom)
+        public ForceMeasure(double value, ForceUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -20444,7 +20444,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -20454,7 +20454,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -20609,7 +20609,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public LengthPerTimeMeasure(Double value, LengthPerTimeUom uom)
+        public LengthPerTimeMeasure(double value, LengthPerTimeUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -20646,7 +20646,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -20656,7 +20656,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -20915,7 +20915,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Chromatograph type.")]
 		[XmlElement("ChromatographType")]
-        public String ChromatographType {
+        public string ChromatographType {
             get {
                 return ChromatographTypeField;
             } 
@@ -20925,7 +20925,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ChromatographTypeField; 
+        private string ChromatographTypeField; 
 
         /// <summary>
         /// ETimChromCycle property
@@ -21872,7 +21872,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of MudLogReportInterval.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -21882,7 +21882,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -21960,7 +21960,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ShowRatingSpecified {
+        public bool ShowRatingSpecified {
             get {
                 return ShowRatingSpecifiedField;
             } 
@@ -21970,7 +21970,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ShowRatingSpecifiedField; 
+        private bool ShowRatingSpecifiedField; 
 
         /// <summary>
         /// Visible stain color. 
@@ -21978,7 +21978,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Visible stain color.")]
 		[XmlElement("StainColor")]
-        public String StainColor {
+        public string StainColor {
             get {
                 return StainColorField;
             } 
@@ -21988,7 +21988,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String StainColorField; 
+        private string StainColorField; 
 
         /// <summary>
         /// Visible stain distribution. 
@@ -21996,7 +21996,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Visible stain distribution.")]
 		[XmlElement("StainDistr")]
-        public String StainDistr {
+        public string StainDistr {
             get {
                 return StainDistrField;
             } 
@@ -22006,7 +22006,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String StainDistrField; 
+        private string StainDistrField; 
 
         /// <summary>
         /// Visible stain (commonly in percent). 
@@ -22049,7 +22049,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CutSpeedSpecified {
+        public bool CutSpeedSpecified {
             get {
                 return CutSpeedSpecifiedField;
             } 
@@ -22059,7 +22059,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CutSpeedSpecifiedField; 
+        private bool CutSpeedSpecifiedField; 
 
         /// <summary>
         /// Cut color. 
@@ -22067,7 +22067,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Cut color.")]
 		[XmlElement("CutColor")]
-        public String CutColor {
+        public string CutColor {
             get {
                 return CutColorField;
             } 
@@ -22077,7 +22077,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CutColorField; 
+        private string CutColorField; 
 
         /// <summary>
         /// Cut strength. 
@@ -22085,7 +22085,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Cut strength.")]
 		[XmlElement("CutStrength")]
-        public String CutStrength {
+        public string CutStrength {
             get {
                 return CutStrengthField;
             } 
@@ -22095,7 +22095,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CutStrengthField; 
+        private string CutStrengthField; 
 
         /// <summary>
         /// Cut formulation. 
@@ -22120,7 +22120,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CutFormSpecified {
+        public bool CutFormSpecified {
             get {
                 return CutFormSpecifiedField;
             } 
@@ -22130,7 +22130,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CutFormSpecifiedField; 
+        private bool CutFormSpecifiedField; 
 
         /// <summary>
         /// Cut level (faint, bright, etc.). 
@@ -22138,7 +22138,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Cut level (faint, bright, etc.).")]
 		[XmlElement("CutLevel")]
-        public String CutLevel {
+        public string CutLevel {
             get {
                 return CutLevelField;
             } 
@@ -22148,7 +22148,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CutLevelField; 
+        private string CutLevelField; 
 
         /// <summary>
         /// Cut fluorescence form. 
@@ -22173,7 +22173,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CutFlorFormSpecified {
+        public bool CutFlorFormSpecified {
             get {
                 return CutFlorFormSpecifiedField;
             } 
@@ -22183,7 +22183,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CutFlorFormSpecifiedField; 
+        private bool CutFlorFormSpecifiedField; 
 
         /// <summary>
         /// Cut fluorescence color. 
@@ -22191,7 +22191,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Cut fluorescence color.")]
 		[XmlElement("CutFlorColor")]
-        public String CutFlorColor {
+        public string CutFlorColor {
             get {
                 return CutFlorColorField;
             } 
@@ -22201,7 +22201,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CutFlorColorField; 
+        private string CutFlorColorField; 
 
         /// <summary>
         /// Cut fluorescence strength. 
@@ -22209,7 +22209,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Cut fluorescence strength.")]
 		[XmlElement("CutFlorStrength")]
-        public String CutFlorStrength {
+        public string CutFlorStrength {
             get {
                 return CutFlorStrengthField;
             } 
@@ -22219,7 +22219,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CutFlorStrengthField; 
+        private string CutFlorStrengthField; 
 
         /// <summary>
         /// Cut fluorescence speed. 
@@ -22244,7 +22244,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CutFlorSpeedSpecified {
+        public bool CutFlorSpeedSpecified {
             get {
                 return CutFlorSpeedSpecifiedField;
             } 
@@ -22254,7 +22254,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CutFlorSpeedSpecifiedField; 
+        private bool CutFlorSpeedSpecifiedField; 
 
         /// <summary>
         /// Cut fluorescence level. 
@@ -22279,7 +22279,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CutFlorLevelSpecified {
+        public bool CutFlorLevelSpecified {
             get {
                 return CutFlorLevelSpecifiedField;
             } 
@@ -22289,7 +22289,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CutFlorLevelSpecifiedField; 
+        private bool CutFlorLevelSpecifiedField; 
 
         /// <summary>
         /// Natural fluorescence color. 
@@ -22297,7 +22297,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Natural fluorescence color.")]
 		[XmlElement("NatFlorColor")]
-        public String NatFlorColor {
+        public string NatFlorColor {
             get {
                 return NatFlorColorField;
             } 
@@ -22307,7 +22307,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NatFlorColorField; 
+        private string NatFlorColorField; 
 
         /// <summary>
         /// Natural fluorescence (commonly in percent). 
@@ -22350,7 +22350,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NatFlorLevelSpecified {
+        public bool NatFlorLevelSpecified {
             get {
                 return NatFlorLevelSpecifiedField;
             } 
@@ -22360,7 +22360,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NatFlorLevelSpecifiedField; 
+        private bool NatFlorLevelSpecifiedField; 
 
         /// <summary>
         /// Natural fluorescence description. 
@@ -22368,7 +22368,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Natural fluorescence description.")]
 		[XmlElement("NatFlorDesc")]
-        public String NatFlorDesc {
+        public string NatFlorDesc {
             get {
                 return NatFlorDescField;
             } 
@@ -22378,7 +22378,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NatFlorDescField; 
+        private string NatFlorDescField; 
 
         /// <summary>
         /// Residue color. 
@@ -22386,7 +22386,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Residue color.")]
 		[XmlElement("ResidueColor")]
-        public String ResidueColor {
+        public string ResidueColor {
             get {
                 return ResidueColorField;
             } 
@@ -22396,7 +22396,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ResidueColorField; 
+        private string ResidueColorField; 
 
         /// <summary>
         /// Impregnated lithology. 
@@ -22404,7 +22404,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Impregnated lithology.")]
 		[XmlElement("ImpregnatedLitho")]
-        public String ImpregnatedLitho {
+        public string ImpregnatedLitho {
             get {
                 return ImpregnatedLithoField;
             } 
@@ -22414,7 +22414,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ImpregnatedLithoField; 
+        private string ImpregnatedLithoField; 
 
         /// <summary>
         /// Description of any hydrocarbon type odors smelled. 
@@ -22422,7 +22422,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of any hydrocarbon type odors smelled.")]
 		[XmlElement("Odor")]
-        public String Odor {
+        public string Odor {
             get {
                 return OdorField;
             } 
@@ -22432,7 +22432,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OdorField; 
+        private string OdorField; 
 
         /// <summary>
         /// Description of the cutting solvent used to treat the cuttings.
@@ -22440,7 +22440,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of the cutting solvent used to treat the cuttings.")]
 		[XmlElement("CuttingFluid")]
-        public String CuttingFluid {
+        public string CuttingFluid {
             get {
                 return CuttingFluidField;
             } 
@@ -22450,7 +22450,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CuttingFluidField; 
+        private string CuttingFluidField; 
 
 		/// <summary>
         /// Unique identifier for this instance of CuttingsIntervalShow.
@@ -22460,7 +22460,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of CuttingsIntervalShow.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -22470,7 +22470,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -22517,7 +22517,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public AreaPerAreaMeasure(Double value, AreaPerAreaUom uom)
+        public AreaPerAreaMeasure(double value, AreaPerAreaUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -22554,7 +22554,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -22564,7 +22564,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -22608,7 +22608,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The geological name for the type of lithology from the enum table listing a subset of the OneGeology/CGI defined formation types.")]
 		[XmlElement("Kind")]
-        public LithologyKind? Kind {
+        public ExtensibleEnum<LithologyKind>? Kind {
             get {
                 return KindField;
             } 
@@ -22618,7 +22618,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private LithologyKind? KindField; 
+        private ExtensibleEnum<LithologyKind>? KindField; 
 
         /// <summary>
         /// LithPc property
@@ -22663,7 +22663,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("An optional custom lithology encoding scheme. If used, it is recommended that the scheme follows the NPD required usage. With the numeric values noted in the enum tables, which was the original intent for this item. The NPD Coding System assigns a digital code to the main lithologies as per the Norwegian Blue Book data standards. The code was then derived by lithology = (main lithology * 10) + cement + (modifier / 100). Example: Calcite cemented silty micaceous sandstone: (33 * 10) + 1 + (21 / 100) gives a numeric code of 331.21. However, the NPD is also working through Energistics/Caesar to potentially change this usage.) This scheme should not be used for mnemonics, because those vary by operator, and if an abbreviation is required, a local look-up table should be used by the rendering client, based on Lithology Type.")]
 		[XmlElement("CodeLith")]
-        public String CodeLith {
+        public string CodeLith {
             get {
                 return CodeLithField;
             } 
@@ -22673,7 +22673,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CodeLithField; 
+        private string CodeLithField; 
 
         /// <summary>
         /// Color property
@@ -22681,7 +22681,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology color description, from Shell 1995 4.3.3.1 and 4.3.3.2 colors with the addition of: frosted. e.g., black, blue, brown, buff, green, grey, olive, orange, pink, purple, red, translucent, frosted, white, yellow; modified by: dark, light, moderate, medium, mottled, variegated, slight, weak, strong, and vivid.")]
 		[XmlElement("Color")]
-        public String Color {
+        public string Color {
             get {
                 return ColorField;
             } 
@@ -22691,7 +22691,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ColorField; 
+        private string ColorField; 
 
         /// <summary>
         /// Texture property
@@ -22699,7 +22699,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6: crystalline, (often \"feather-edge\" appearance on breaking), friable, dull, earthy, chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular, sucrosic, (often exhibits capillary imbibition). Examples: compact interlocking, particulate, (Gradational textures are quite common.) chalky matrix with sucrosic patches, (Composite textures also occur).")]
 		[XmlElement("Texture")]
-        public String Texture {
+        public string Texture {
             get {
                 return TextureField;
             } 
@@ -22709,7 +22709,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TextureField; 
+        private string TextureField; 
 
         /// <summary>
         /// Hardness property
@@ -22717,7 +22717,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Mineral hardness. Typically, this element is rarely used because mineral hardness is not typically recorded. What typically is recorded is compaction. However, this element is retained for use defined as per Mohs scale of mineral hardness.")]
 		[XmlElement("Hardness")]
-        public String Hardness {
+        public string Hardness {
             get {
                 return HardnessField;
             } 
@@ -22727,7 +22727,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String HardnessField; 
+        private string HardnessField; 
 
         /// <summary>
         /// Compaction property
@@ -22735,7 +22735,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5, which includes: not compacted, slightly compacted, compacted, strongly compacted, friable, indurated, hard.")]
 		[XmlElement("Compaction")]
-        public String Compaction {
+        public string Compaction {
             get {
                 return CompactionField;
             } 
@@ -22745,7 +22745,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CompactionField; 
+        private string CompactionField; 
 
         /// <summary>
         /// SizeGrain property
@@ -22753,7 +22753,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1.(Wentworth) modified to remove the ambiguous term pelite.  Size ranges in millimeter (or micrometer) and inches. LT 256 mm        LT 10.1 in         \"boulder\" 64-256 mm        2.5–10.1 in        \"cobble\"; 32–64 mm        1.26–2.5 in       \"very coarse gravel\" 16–32 mm        0.63–1.26 in        \"coarse gravel\" 8–16 mm            0.31–0.63 in        \"medium gravel\" 4–8 mm            0.157–0.31 in        \"fine gravel\" 2–4 mm            0.079–0.157 in     \"very fine gravel\" 1–2 mm           0.039–0.079 in    \"very coarse sand\" 0.5–1 mm        0.020–0.039 in        \"coarse sand\" 0.25–0.5 mm        0.010–0.020 in     \"medium sand\" 125–250 um        0.0049–0.010 in        \"fine sand\" 62.5–125 um      .0025–0.0049 in   \"very fine sand\" 3.90625–62.5 um        0.00015–0.0025 in    \"silt\" LT 3.90625 um        LT 0.00015 in        \"clay\" LT 1 um            LT 0.000039 in        \"colloid\"")]
 		[XmlElement("SizeGrain")]
-        public String SizeGrain {
+        public string SizeGrain {
             get {
                 return SizeGrainField;
             } 
@@ -22763,7 +22763,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SizeGrainField; 
+        private string SizeGrainField; 
 
         /// <summary>
         /// Roundness property
@@ -22771,7 +22771,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3. Roundness refers to modal size class: very angular, angular, subangular, subrounded, rounded, well rounded.")]
 		[XmlElement("Roundness")]
-        public String Roundness {
+        public string Roundness {
             get {
                 return RoundnessField;
             } 
@@ -22781,7 +22781,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RoundnessField; 
+        private string RoundnessField; 
 
         /// <summary>
         /// Sphericity property
@@ -22789,7 +22789,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity: very elongated, elongated, slightly elongated, slightly spherical, spherical, very spherical.")]
 		[XmlElement("Sphericity")]
-        public String Sphericity {
+        public string Sphericity {
             get {
                 return SphericityField;
             } 
@@ -22799,7 +22799,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SphericityField; 
+        private string SphericityField; 
 
         /// <summary>
         /// Sorting property
@@ -22807,7 +22807,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology sorting description from Shell 4.3.1.2 Sorting: very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.")]
 		[XmlElement("Sorting")]
-        public String Sorting {
+        public string Sorting {
             get {
                 return SortingField;
             } 
@@ -22817,7 +22817,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SortingField; 
+        private string SortingField; 
 
         /// <summary>
         /// MatrixCement property
@@ -22842,7 +22842,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MatrixCementSpecified {
+        public bool MatrixCementSpecified {
             get {
                 return MatrixCementSpecifiedField;
             } 
@@ -22852,7 +22852,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean MatrixCementSpecifiedField; 
+        private bool MatrixCementSpecifiedField; 
 
         /// <summary>
         /// PorosityVisible property
@@ -22860,7 +22860,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates. The theoretical maximum porosity for a clastic rock is about 26%, which is normally much reduced by other factors. When estimating porosities use: more than 15% \"good\"; 10 to 15% \"fair\"; 5 to 10% \"poor\"; less than 5% \"trace\"; 0 \"none\".")]
 		[XmlElement("PorosityVisible")]
-        public String PorosityVisible {
+        public string PorosityVisible {
             get {
                 return PorosityVisibleField;
             } 
@@ -22870,7 +22870,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PorosityVisibleField; 
+        private string PorosityVisibleField; 
 
         /// <summary>
         /// PorosityFabric property
@@ -22878,7 +22878,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2: intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.")]
 		[XmlElement("PorosityFabric")]
-        public String PorosityFabric {
+        public string PorosityFabric {
             get {
                 return PorosityFabricField;
             } 
@@ -22888,7 +22888,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PorosityFabricField; 
+        private string PorosityFabricField; 
 
         /// <summary>
         /// Permeability property
@@ -22896,7 +22896,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2.5. In the future, these values would benefit from quantification, e.g., tight, slightly, fairly, highly.")]
 		[XmlElement("Permeability")]
-        public String Permeability {
+        public string Permeability {
             get {
                 return PermeabilityField;
             } 
@@ -22906,7 +22906,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PermeabilityField; 
+        private string PermeabilityField; 
 
         /// <summary>
         /// Shows property
@@ -22973,7 +22973,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of CuttingsIntervalLithology.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -22983,7 +22983,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -23027,7 +23027,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The type of qualifier.")]
 		[XmlElement("Kind")]
-        public LithologyQualifierKind? Kind {
+        public ExtensibleEnum<LithologyQualifierKind>? Kind {
             get {
                 return KindField;
             } 
@@ -23037,7 +23037,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private LithologyQualifierKind? KindField; 
+        private ExtensibleEnum<LithologyQualifierKind>? KindField; 
 
         /// <summary>
         /// The measured depth interval represented by the qualifier. This must be within the range of the parent geologic interval. If MdInterval is not given then the qualifier is deemed to exist over the entire depth range of the parent geologyInterval.
@@ -23081,7 +23081,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A textual description of the qualifier.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -23091,7 +23091,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
 		/// <summary>
         /// Unique identifier for this instance of LithologyQualifier
@@ -23101,7 +23101,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of LithologyQualifier")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -23111,7 +23111,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -23158,7 +23158,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public IlluminanceMeasure(Double value, IlluminanceUom uom)
+        public IlluminanceMeasure(double value, IlluminanceUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -23195,7 +23195,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -23205,7 +23205,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -23249,7 +23249,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The geological name for the type of lithology from the enum table listing a  subset of the OneGeology / CGI defined formation types.")]
 		[XmlElement("Kind")]
-        public LithologyKind? Kind {
+        public ExtensibleEnum<LithologyKind>? Kind {
             get {
                 return KindField;
             } 
@@ -23259,7 +23259,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private LithologyKind? KindField; 
+        private ExtensibleEnum<LithologyKind>? KindField; 
 
         /// <summary>
         /// Citation property
@@ -23285,7 +23285,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("An optional custom lithology encoding scheme. If used, it is recommended that the scheme follows the NPD required usage. With the numeric values noted in the enum tables, which was the original intent for this item. The NPD Coding System assigns a digital code to the main lithologies as per the Norwegian Blue Book data standards. The code was then derived by lithology = (main lithology * 10) + cement + (modifier / 100). Example: Calcite cemented silty micaceous sandstone: (33 * 10) + 1 + (21 / 100) gives a numeric code of 331.21. However, the NPD is also working through Energistics/Caesar to potentially change this usage.) This scheme should not be used for mnemonics, because those vary by operator, and if an abbreviation is required, a local look-up table should be used by the rendering client, based on Lithology Type.")]
 		[XmlElement("CodeLith")]
-        public String CodeLith {
+        public string CodeLith {
             get {
                 return CodeLithField;
             } 
@@ -23295,7 +23295,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CodeLithField; 
+        private string CodeLithField; 
 
         /// <summary>
         /// Color property
@@ -23303,7 +23303,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology color description, from Shell 1995 4.3.3.1 and 4.3.3.2 Colors with the addition of: frosted. e.g., black, blue, brown, buff, green, grey, olive, orange, pink, purple, red, translucent, frosted, white, yellow; modified by: dark, light, moderate, medium, mottled, variegated, slight, weak, strong, and vivid.")]
 		[XmlElement("Color")]
-        public String Color {
+        public string Color {
             get {
                 return ColorField;
             } 
@@ -23313,7 +23313,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ColorField; 
+        private string ColorField; 
 
         /// <summary>
         /// Texture property
@@ -23321,7 +23321,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology matrix texture description from Shell 1995 4.3.2.6: crystalline, (often \"feather-edge\" appearance on breaking), friable, dull, earthy, chalky, (particle size less than 20m; often exhibits capillary imbibition) visibly particulate, granular, sucrosic, (often exhibits capillary imbibition). Examples: compact interlocking, particulate, (Gradational textures are quite common.) chalky matrix with sucrosic patches, (Composite textures also occur).")]
 		[XmlElement("Texture")]
-        public String Texture {
+        public string Texture {
             get {
                 return TextureField;
             } 
@@ -23331,7 +23331,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TextureField; 
+        private string TextureField; 
 
         /// <summary>
         /// Hardness property
@@ -23339,7 +23339,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Mineral hardness. Typically, this element is rarely used because mineral hardness is not typically recorded. What typically is recorded is compaction. However, this element is retained for use defined as per Mohs scale of mineral hardness.")]
 		[XmlElement("Hardness")]
-        public String Hardness {
+        public string Hardness {
             get {
                 return HardnessField;
             } 
@@ -23349,7 +23349,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String HardnessField; 
+        private string HardnessField; 
 
         /// <summary>
         /// Compaction property
@@ -23357,7 +23357,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology compaction from Shell 1995 4.3.1.5, which includes: not compacted, slightly compacted, compacted, strongly compacted, friable, indurated, hard.")]
 		[XmlElement("Compaction")]
-        public String Compaction {
+        public string Compaction {
             get {
                 return CompactionField;
             } 
@@ -23367,7 +23367,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CompactionField; 
+        private string CompactionField; 
 
         /// <summary>
         /// SizeGrain property
@@ -23375,7 +23375,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology grain size description. Defined from Shell 4.3.1.1. (Wentworth) modified to remove the ambiguous term pelite.  Size ranges in millimeter (or micrometer) and inches. LT 256 mm        LT 10.1 in         \"boulder\" 64-256 mm        2.5–10.1 in        \"cobble\"; 32–64 mm        1.26–2.5 in       \"very coarse gravel\" 16–32 mm        0.63–1.26 in        \"coarse gravel\" 8–16 mm            0.31–0.63 in        \"medium gravel\" 4–8 mm            0.157–0.31 in        \"fine gravel\" 2–4 mm            0.079–0.157 in     \"very fine gravel\" 1–2 mm           0.039–0.079 in    \"very coarse sand\" 0.5–1 mm        0.020–0.039 in        \"coarse sand\" 0.25–0.5 mm        0.010–0.020 in     \"medium sand\" 125–250 um        0.0049–0.010 in        \"fine sand\" 62.5–125 um      .0025–0.0049 in   \"very fine sand\" 3.90625–62.5 um        0.00015–0.0025 in    \"silt\" LT 3.90625 um        LT 0.00015 in        \"clay\" LT 1 um            LT 0.000039 in        \"colloid\"")]
 		[XmlElement("SizeGrain")]
-        public String SizeGrain {
+        public string SizeGrain {
             get {
                 return SizeGrainField;
             } 
@@ -23385,7 +23385,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SizeGrainField; 
+        private string SizeGrainField; 
 
         /// <summary>
         /// Roundness property
@@ -23393,7 +23393,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology roundness description from Shell 4.3.1.3. Roundness refers to modal size class: very angular, angular, subangular, subrounded, rounded, well rounded.")]
 		[XmlElement("Roundness")]
-        public String Roundness {
+        public string Roundness {
             get {
                 return RoundnessField;
             } 
@@ -23403,7 +23403,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RoundnessField; 
+        private string RoundnessField; 
 
         /// <summary>
         /// Sorting property
@@ -23411,7 +23411,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology sorting description from Shell 4.3.1.2 Sorting: very poorly sorted, unsorted, poorly sorted, poorly to moderately well sorted, moderately well sorted, well sorted, very well sorted, unimodally sorted, bimodally sorted.")]
 		[XmlElement("Sorting")]
-        public String Sorting {
+        public string Sorting {
             get {
                 return SortingField;
             } 
@@ -23421,7 +23421,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SortingField; 
+        private string SortingField; 
 
         /// <summary>
         /// Sphericity property
@@ -23429,7 +23429,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology sphericity description for the modal size class of grains in the sample, defined as per Shell 4.3.1.4 Sphericity: very elongated, elongated, slightly elongated, slightly spherical, spherical, very spherical.")]
 		[XmlElement("Sphericity")]
-        public String Sphericity {
+        public string Sphericity {
             get {
                 return SphericityField;
             } 
@@ -23439,7 +23439,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SphericityField; 
+        private string SphericityField; 
 
         /// <summary>
         /// MatrixCement property
@@ -23464,7 +23464,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MatrixCementSpecified {
+        public bool MatrixCementSpecified {
             get {
                 return MatrixCementSpecifiedField;
             } 
@@ -23474,7 +23474,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean MatrixCementSpecifiedField; 
+        private bool MatrixCementSpecifiedField; 
 
         /// <summary>
         /// PorosityVisible property
@@ -23482,7 +23482,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology visible porosity description. Defined after BakerHughes definitions, as opposed to Shell, which has no linkage to actual numeric estimates.")]
 		[XmlElement("PorosityVisible")]
-        public String PorosityVisible {
+        public string PorosityVisible {
             get {
                 return PorosityVisibleField;
             } 
@@ -23492,7 +23492,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PorosityVisibleField; 
+        private string PorosityVisibleField; 
 
         /// <summary>
         /// PorosityFabric property
@@ -23500,7 +23500,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Visible porosity fabric description from after Shell 4.3.2.1 and 4.3.2.2: intergranular (particle size greater than 20m), fine interparticle (particle size less than 20m), intercrystalline, intragranular, intraskeletal, intracrystalline, mouldic, fenestral, shelter, framework, stylolitic, replacement, solution, vuggy, channel, cavernous.")]
 		[XmlElement("PorosityFabric")]
-        public String PorosityFabric {
+        public string PorosityFabric {
             get {
                 return PorosityFabricField;
             } 
@@ -23510,7 +23510,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PorosityFabricField; 
+        private string PorosityFabricField; 
 
         /// <summary>
         /// Permeability property
@@ -23518,7 +23518,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("STRUCTURED DESCRIPTION USAGE. Lithology permeability description from Shell 4.3.2.5. In the future, these values would benefit from quantification, e.g., tight, slightly, fairly, highly.")]
 		[XmlElement("Permeability")]
-        public String Permeability {
+        public string Permeability {
             get {
                 return PermeabilityField;
             } 
@@ -23528,7 +23528,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PermeabilityField; 
+        private string PermeabilityField; 
 
         /// <summary>
         /// Qualifier property
@@ -23566,7 +23566,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of InterpretedIntervalLithology.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -23576,7 +23576,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -23622,7 +23622,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the LithostratigraphicUnit class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public LithostratigraphicUnit(String value)
+        public LithostratigraphicUnit(string value)
         {
             this.Value = value;
         }
@@ -23643,7 +23643,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Person or collective body responsible for authorizing the information.")]
         [XmlAttribute("authority")]
 		
-        public String Authority {
+        public string Authority {
             get {
                 return authorityField;
             } 
@@ -23653,7 +23653,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String authorityField; 
+        private string authorityField; 
 
 		/// <summary>
         /// Specifies the lithostratigraphic unit-hierarchy (group, formation, member or bed).
@@ -23679,7 +23679,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [StringLength(64)]
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -23689,7 +23689,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -23735,7 +23735,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the GeochronologicalUnit class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public GeochronologicalUnit(String value)
+        public GeochronologicalUnit(string value)
         {
             this.Value = value;
         }
@@ -23755,7 +23755,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Person or collective body responsible for authorizing the information.")]
         [XmlAttribute("authority")]
 		
-        public String Authority {
+        public string Authority {
             get {
                 return authorityField;
             } 
@@ -23765,7 +23765,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String authorityField; 
+        private string authorityField; 
 
 		/// <summary>
         /// Defines the time spans in geochronology.
@@ -23791,7 +23791,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [StringLength(64)]
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -23801,7 +23801,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -23846,7 +23846,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Curve mnemonic")]
 		[XmlElement("CurveInfo")]
-        public String CurveInfo {
+        public string CurveInfo {
             get {
                 return CurveInfoField;
             } 
@@ -23856,7 +23856,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CurveInfoField; 
+        private string CurveInfoField; 
 
         /// <summary>
         /// Image line style
@@ -23883,7 +23883,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Description of line graveness")]
 		[XmlElement("LineWeight")]
-        public String LineWeight {
+        public string LineWeight {
             get {
                 return LineWeightField;
             } 
@@ -23893,7 +23893,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String LineWeightField; 
+        private string LineWeightField; 
 
         /// <summary>
         /// Color of this line
@@ -23902,7 +23902,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Color of this line")]
 		[XmlElement("LineColor")]
-        public String LineColor {
+        public string LineColor {
             get {
                 return LineColorField;
             } 
@@ -23912,7 +23912,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String LineColorField; 
+        private string LineColorField; 
 
         /// <summary>
         /// Scale linearity
@@ -23939,7 +23939,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Unit of data represented")]
 		[XmlElement("CurveUnit")]
-        public String CurveUnit {
+        public string CurveUnit {
             get {
                 return CurveUnitField;
             } 
@@ -23949,7 +23949,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CurveUnitField; 
+        private string CurveUnitField; 
 
         /// <summary>
         /// Scale value on the left axis
@@ -23957,7 +23957,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Scale value on the left axis")]
 		[XmlElement("CurveLeftScaleValue")]
-        public Double? CurveLeftScaleValue {
+        public double? CurveLeftScaleValue {
             get {
                 return CurveLeftScaleValueField;
             } 
@@ -23967,7 +23967,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? CurveLeftScaleValueField; 
+        private double? CurveLeftScaleValueField; 
 
         /// <summary>
         /// Scale value on the right axis
@@ -23975,7 +23975,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Scale value on the right axis")]
 		[XmlElement("CurveRightScaleValue")]
-        public Double? CurveRightScaleValue {
+        public double? CurveRightScaleValue {
             get {
                 return CurveRightScaleValueField;
             } 
@@ -23985,7 +23985,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? CurveRightScaleValueField; 
+        private double? CurveRightScaleValueField; 
 
         /// <summary>
         /// Scale of the backup curve
@@ -24041,7 +24041,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Details of the line")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -24051,7 +24051,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
 		/// <summary>
         /// Unique identifier for the curve.
@@ -24061,7 +24061,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for the curve.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -24071,7 +24071,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -24219,7 +24219,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for the rectangular area.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -24229,7 +24229,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -24273,7 +24273,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The x pixel position of a point.")]
 		[XmlElement("X")]
-        public Int64? X {
+        public long? X {
             get {
                 return XField;
             } 
@@ -24283,7 +24283,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? XField; 
+        private long? XField; 
 
         /// <summary>
         /// The y pixel position of a point.
@@ -24291,7 +24291,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The y pixel position of a point.")]
 		[XmlElement("Y")]
-        public Int64? Y {
+        public long? Y {
             get {
                 return YField;
             } 
@@ -24301,7 +24301,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? YField; 
+        private long? YField; 
 
 
         
@@ -24345,7 +24345,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A label associated with the track.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -24355,7 +24355,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// Type property
@@ -24381,7 +24381,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The position of the left edge of the track.")]
 		[XmlElement("LeftEdge")]
-        public Int64? LeftEdge {
+        public long? LeftEdge {
             get {
                 return LeftEdgeField;
             } 
@@ -24391,7 +24391,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? LeftEdgeField; 
+        private long? LeftEdgeField; 
 
         /// <summary>
         /// RightEdge property
@@ -24399,7 +24399,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The position of the right edge of the track.")]
 		[XmlElement("RightEdge")]
-        public Int64? RightEdge {
+        public long? RightEdge {
             get {
                 return RightEdgeField;
             } 
@@ -24409,7 +24409,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? RightEdgeField; 
+        private long? RightEdgeField; 
 
         /// <summary>
         /// TrackCurveScaleRect property
@@ -24508,7 +24508,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for the track.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -24518,7 +24518,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -24584,7 +24584,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("A dictionary-controlled mnemonic.")]
 		[XmlElement("Mnemonic")]
-        public String Mnemonic {
+        public string Mnemonic {
             get {
                 return MnemonicField;
             } 
@@ -24594,7 +24594,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MnemonicField; 
+        private string MnemonicField; 
 
         /// <summary>
         /// The name or identifier of the controlling dictionary.
@@ -24602,7 +24602,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The name or identifier of the controlling dictionary.")]
 		[XmlElement("Dictionary")]
-        public String Dictionary {
+        public string Dictionary {
             get {
                 return DictionaryField;
             } 
@@ -24612,7 +24612,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DictionaryField; 
+        private string DictionaryField; 
 
         /// <summary>
         /// The upper limit of a vertical region for which the parameter value is applicable. '@uom' must be consistent with '//indexType'.
@@ -24675,7 +24675,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A description or definition for the mnemonic; required when ../dictionary is absent.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -24685,7 +24685,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -24725,7 +24725,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for the parameter.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -24735,7 +24735,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -24782,7 +24782,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public GenericMeasure(Double value, String uom)
+        public GenericMeasure(double value, string uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -24803,7 +24803,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(32)]
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -24813,14 +24813,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -24830,7 +24830,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -24894,7 +24894,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("A pointer to the track containing the point.")]
 		[XmlElement("Track")]
-        public String Track {
+        public string Track {
             get {
                 return TrackField;
             } 
@@ -24904,7 +24904,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TrackField; 
+        private string TrackField; 
 
         /// <summary>
         /// Role property
@@ -24930,7 +24930,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Facilitates searching for logs based on curve type.")]
 		[XmlElement("CurveName")]
-        public String CurveName {
+        public string CurveName {
             get {
                 return CurveNameField;
             } 
@@ -24940,7 +24940,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CurveNameField; 
+        private string CurveNameField; 
 
         /// <summary>
         /// Fraction property
@@ -24966,7 +24966,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Comments about the log section.")]
         [RecurringElement]
 		[XmlElement("Comment")]
-        public List<String> Comment {
+        public List<string> Comment {
             get {
                 return CommentField;
             } 
@@ -24988,7 +24988,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> CommentField; 
+        private List<string> CommentField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -25075,7 +25075,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for the calibration point.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -25085,7 +25085,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -25129,7 +25129,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Zero-based index in the log sections, in order of appearance.")]
 		[XmlElement("LogSectionSequenceNumber")]
-        public Int64? LogSectionSequenceNumber {
+        public long? LogSectionSequenceNumber {
             get {
                 return LogSectionSequenceNumberField;
             } 
@@ -25139,7 +25139,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? LogSectionSequenceNumberField; 
+        private long? LogSectionSequenceNumberField; 
 
         /// <summary>
         /// LogSectionType property
@@ -25164,7 +25164,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean LogSectionTypeSpecified {
+        public bool LogSectionTypeSpecified {
             get {
                 return LogSectionTypeSpecifiedField;
             } 
@@ -25174,7 +25174,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean LogSectionTypeSpecifiedField; 
+        private bool LogSectionTypeSpecifiedField; 
 
         /// <summary>
         /// LogSectionName property
@@ -25182,7 +25182,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of a log section;  used to distinguish log sections of the same type.")]
 		[XmlElement("LogSectionName")]
-        public String LogSectionName {
+        public string LogSectionName {
             get {
                 return LogSectionNameField;
             } 
@@ -25192,7 +25192,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String LogSectionNameField; 
+        private string LogSectionNameField; 
 
         /// <summary>
         /// LogMatrix property
@@ -25200,7 +25200,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Log matrix assumed for porosity computations.")]
 		[XmlElement("LogMatrix")]
-        public String LogMatrix {
+        public string LogMatrix {
             get {
                 return LogMatrixField;
             } 
@@ -25210,7 +25210,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String LogMatrixField; 
+        private string LogMatrixField; 
 
         /// <summary>
         /// ScaleNumerator property
@@ -25273,7 +25273,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Index UOM of the original log.")]
 		[XmlElement("IndexUom")]
-        public String IndexUom {
+        public string IndexUom {
             get {
                 return IndexUomField;
             } 
@@ -25283,7 +25283,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String IndexUomField; 
+        private string IndexUomField; 
 
         /// <summary>
         /// IndexReference property
@@ -25308,7 +25308,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IndexReferenceSpecified {
+        public bool IndexReferenceSpecified {
             get {
                 return IndexReferenceSpecifiedField;
             } 
@@ -25318,7 +25318,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IndexReferenceSpecifiedField; 
+        private bool IndexReferenceSpecifiedField; 
 
         /// <summary>
         /// Log property
@@ -25382,7 +25382,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Vertical log scale label (e.g., “1 IN/100 F”).")]
 		[XmlElement("VerticalLabel")]
-        public String VerticalLabel {
+        public string VerticalLabel {
             get {
                 return VerticalLabelField;
             } 
@@ -25392,7 +25392,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String VerticalLabelField; 
+        private string VerticalLabelField; 
 
         /// <summary>
         /// VerticalRatio property
@@ -25400,7 +25400,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Second term of the vertical scale ratio (e.g., “240” for a 5-inch-per-100-foot log section).")]
 		[XmlElement("VerticalRatio")]
-        public String VerticalRatio {
+        public string VerticalRatio {
             get {
                 return VerticalRatioField;
             } 
@@ -25410,7 +25410,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String VerticalRatioField; 
+        private string VerticalRatioField; 
 
         /// <summary>
         /// Comment property
@@ -25418,7 +25418,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Comments about the calibration.")]
 		[XmlElement("Comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return CommentField;
             } 
@@ -25428,7 +25428,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentField; 
+        private string CommentField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -25676,7 +25676,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for the log section.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -25686,7 +25686,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -25747,7 +25747,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeSpecified {
+        public bool TypeSpecified {
             get {
                 return TypeSpecifiedField;
             } 
@@ -25757,7 +25757,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeSpecifiedField; 
+        private bool TypeSpecifiedField; 
 
         /// <summary>
         /// Name property
@@ -25765,7 +25765,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The name of a rectangular section.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -25775,7 +25775,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -25832,7 +25832,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for the log section.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -25842,7 +25842,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -25889,7 +25889,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public DigitalStorageMeasure(Double value, DigitalStorageUom uom)
+        public DigitalStorageMeasure(double value, DigitalStorageUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -25926,7 +25926,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -25936,7 +25936,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -25997,7 +25997,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IndexTypeSpecified {
+        public bool IndexTypeSpecified {
             get {
                 return IndexTypeSpecifiedField;
             } 
@@ -26007,7 +26007,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IndexTypeSpecifiedField; 
+        private bool IndexTypeSpecifiedField; 
 
         /// <summary>
         /// RangeMin property
@@ -26084,7 +26084,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("A comma delimited list of log curve mnemonics. Each mnemonic should only occur once in the list. If not specified then the group applies to all curves in the log.")]
 		[XmlElement("MnemonicList")]
-        public String MnemonicList {
+        public string MnemonicList {
             get {
                 return MnemonicListField;
             } 
@@ -26094,7 +26094,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MnemonicListField; 
+        private string MnemonicListField; 
 
         /// <summary>
         /// ReferenceDepth property
@@ -26241,7 +26241,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of MemberObject")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -26251,7 +26251,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -26297,7 +26297,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("The description of this object sequence.")]
         [XmlAttribute("description")]
 		
-        public String Description {
+        public string Description {
             get {
                 return descriptionField;
             } 
@@ -26307,7 +26307,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String descriptionField; 
+        private string descriptionField; 
 
 
         
@@ -26446,7 +26446,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Reference to string equipment")]
         [RecurringElement]
 		[XmlElement("StringEquipmentReferenceId")]
-        public List<String> StringEquipmentReferenceId {
+        public List<string> StringEquipmentReferenceId {
             get {
                 return StringEquipmentReferenceIdField;
             } 
@@ -26468,7 +26468,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> StringEquipmentReferenceIdField; 
+        private List<string> StringEquipmentReferenceIdField; 
 
 		/// <summary>
         /// Reference to downhole string
@@ -26478,7 +26478,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Reference to downhole string")]
         [XmlAttribute("downholeStringReferenceId")]
 		
-        public String DownholeStringReferenceId {
+        public string DownholeStringReferenceId {
             get {
                 return downholeStringReferenceIdField;
             } 
@@ -26488,7 +26488,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String downholeStringReferenceIdField; 
+        private string downholeStringReferenceIdField; 
 
 
         
@@ -26532,7 +26532,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Reference to string equipment")]
         [RecurringElement]
 		[XmlElement("StringEquipmentReferenceId")]
-        public List<String> StringEquipmentReferenceId {
+        public List<string> StringEquipmentReferenceId {
             get {
                 return StringEquipmentReferenceIdField;
             } 
@@ -26554,7 +26554,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> StringEquipmentReferenceIdField; 
+        private List<string> StringEquipmentReferenceIdField; 
 
 		/// <summary>
         /// Reference to borehole String
@@ -26564,7 +26564,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Reference to borehole String")]
         [XmlAttribute("boreholeStringReferenceId")]
 		
-        public String BoreholeStringReferenceId {
+        public string BoreholeStringReferenceId {
             get {
                 return boreholeStringReferenceIdField;
             } 
@@ -26574,7 +26574,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String boreholeStringReferenceIdField; 
+        private string boreholeStringReferenceIdField; 
 
 
         
@@ -26618,7 +26618,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Reference to string equipment")]
         [RecurringElement]
 		[XmlElement("StringEquipmentReferenceId")]
-        public List<String> StringEquipmentReferenceId {
+        public List<string> StringEquipmentReferenceId {
             get {
                 return StringEquipmentReferenceIdField;
             } 
@@ -26640,7 +26640,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> StringEquipmentReferenceIdField; 
+        private List<string> StringEquipmentReferenceIdField; 
 
         /// <summary>
         /// PerforationSetReferenceId property
@@ -26648,7 +26648,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Reference to perforation set")]
         [RecurringElement]
 		[XmlElement("PerforationSetReferenceId")]
-        public List<String> PerforationSetReferenceId {
+        public List<string> PerforationSetReferenceId {
             get {
                 return PerforationSetReferenceIdField;
             } 
@@ -26670,7 +26670,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> PerforationSetReferenceIdField; 
+        private List<string> PerforationSetReferenceIdField; 
 
         /// <summary>
         /// BoreholeStringReference property
@@ -26771,7 +26771,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("index number of stage")]
 		[XmlElement("StageNumber")]
-        public Int32? StageNumber {
+        public int? StageNumber {
             get {
                 return StageNumberField;
             } 
@@ -26782,14 +26782,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? StageNumberField; 
+        private int? StageNumberField; 
 
         /// <summary>
         /// StageNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StageNumberSpecified {
+        public bool StageNumberSpecified {
             get {
                 return StageNumberSpecifiedField;
             } 
@@ -26799,7 +26799,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean StageNumberSpecifiedField; 
+        private bool StageNumberSpecifiedField; 
 
         /// <summary>
         /// Perf-Bottom of packer set depth
@@ -26825,7 +26825,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Perforation fluid type")]
 		[XmlElement("PerforationFluidType")]
-        public String PerforationFluidType {
+        public string PerforationFluidType {
             get {
                 return PerforationFluidTypeField;
             } 
@@ -26835,7 +26835,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PerforationFluidTypeField; 
+        private string PerforationFluidTypeField; 
 
         /// <summary>
         /// hydrostaticPressure
@@ -26950,7 +26950,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ConveyanceMethodSpecified {
+        public bool ConveyanceMethodSpecified {
             get {
                 return ConveyanceMethodSpecifiedField;
             } 
@@ -26960,14 +26960,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ConveyanceMethodSpecifiedField; 
+        private bool ConveyanceMethodSpecifiedField; 
 
         /// <summary>
         /// Number of shots planned
         /// </summary>
 		[Description("Number of shots planned")]
 		[XmlElement("ShotsPlanned")]
-        public Int32? ShotsPlanned {
+        public int? ShotsPlanned {
             get {
                 return ShotsPlannedField;
             } 
@@ -26978,14 +26978,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? ShotsPlannedField; 
+        private int? ShotsPlannedField; 
 
         /// <summary>
         /// ShotsPlannedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ShotsPlannedSpecified {
+        public bool ShotsPlannedSpecified {
             get {
                 return ShotsPlannedSpecifiedField;
             } 
@@ -26995,7 +26995,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ShotsPlannedSpecifiedField; 
+        private bool ShotsPlannedSpecifiedField; 
 
         /// <summary>
         /// Number of shots per unit length (ft, m)
@@ -27020,7 +27020,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("The number of missed firings from the gun.")]
 		[XmlElement("ShotsMisfired")]
-        public Int32? ShotsMisfired {
+        public int? ShotsMisfired {
             get {
                 return ShotsMisfiredField;
             } 
@@ -27031,14 +27031,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? ShotsMisfiredField; 
+        private int? ShotsMisfiredField; 
 
         /// <summary>
         /// ShotsMisfiredSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ShotsMisfiredSpecified {
+        public bool ShotsMisfiredSpecified {
             get {
                 return ShotsMisfiredSpecifiedField;
             } 
@@ -27048,7 +27048,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ShotsMisfiredSpecifiedField; 
+        private bool ShotsMisfiredSpecifiedField; 
 
         /// <summary>
         /// orientaton
@@ -27056,7 +27056,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("orientaton")]
 		[XmlElement("Orientation")]
-        public String Orientation {
+        public string Orientation {
             get {
                 return OrientationField;
             } 
@@ -27066,7 +27066,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OrientationField; 
+        private string OrientationField; 
 
         /// <summary>
         /// Description of orientaton method
@@ -27074,7 +27074,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of orientaton method")]
 		[XmlElement("OrientationMethod")]
-        public String OrientationMethod {
+        public string OrientationMethod {
             get {
                 return OrientationMethodField;
             } 
@@ -27084,7 +27084,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OrientationMethodField; 
+        private string OrientationMethodField; 
 
         /// <summary>
         /// The name of company providing the perforation.
@@ -27092,7 +27092,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The name of company providing the perforation.")]
 		[XmlElement("PerforationCompany")]
-        public String PerforationCompany {
+        public string PerforationCompany {
             get {
                 return PerforationCompanyField;
             } 
@@ -27102,7 +27102,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PerforationCompanyField; 
+        private string PerforationCompanyField; 
 
         /// <summary>
         /// The manufacturer of the carrier.
@@ -27110,7 +27110,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The manufacturer of the carrier.")]
 		[XmlElement("CarrierManufacturer")]
-        public String CarrierManufacturer {
+        public string CarrierManufacturer {
             get {
                 return CarrierManufacturerField;
             } 
@@ -27120,7 +27120,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CarrierManufacturerField; 
+        private string CarrierManufacturerField; 
 
         /// <summary>
         /// Size of the carrier.
@@ -27146,7 +27146,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Description from carrier")]
 		[XmlElement("CarrierDescription")]
-        public String CarrierDescription {
+        public string CarrierDescription {
             get {
                 return CarrierDescriptionField;
             } 
@@ -27156,7 +27156,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CarrierDescriptionField; 
+        private string CarrierDescriptionField; 
 
         /// <summary>
         /// The manufacturer of the charge.
@@ -27164,7 +27164,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The manufacturer of the charge.")]
 		[XmlElement("ChargeManufacturer")]
-        public String ChargeManufacturer {
+        public string ChargeManufacturer {
             get {
                 return ChargeManufacturerField;
             } 
@@ -27174,7 +27174,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ChargeManufacturerField; 
+        private string ChargeManufacturerField; 
 
         /// <summary>
         /// The size of the charge.
@@ -27218,7 +27218,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The type of the charge.")]
 		[XmlElement("ChargeType")]
-        public String ChargeType {
+        public string ChargeType {
             get {
                 return ChargeTypeField;
             } 
@@ -27228,7 +27228,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ChargeTypeField; 
+        private string ChargeTypeField; 
 
         /// <summary>
         /// Reference to the log
@@ -27236,7 +27236,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Reference to the log")]
 		[XmlElement("RefLog")]
-        public String RefLog {
+        public string RefLog {
             get {
                 return RefLogField;
             } 
@@ -27246,7 +27246,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RefLogField; 
+        private string RefLogField; 
 
         /// <summary>
         /// True if centralized, else decentralized.
@@ -27254,7 +27254,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("True if centralized, else decentralized.")]
 		[XmlElement("GunCentralized")]
-        public String GunCentralized {
+        public string GunCentralized {
             get {
                 return GunCentralizedField;
             } 
@@ -27264,7 +27264,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String GunCentralizedField; 
+        private string GunCentralizedField; 
 
         /// <summary>
         /// The size of the perforation gun.
@@ -27290,7 +27290,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Description about the perforating gun.")]
 		[XmlElement("GunDesciption")]
-        public String GunDesciption {
+        public string GunDesciption {
             get {
                 return GunDesciptionField;
             } 
@@ -27300,14 +27300,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String GunDesciptionField; 
+        private string GunDesciptionField; 
 
         /// <summary>
         /// Flag indicating whether the gun is left in hole or not.
         /// </summary>
 		[Description("Flag indicating whether the gun is left in hole or not.")]
 		[XmlElement("GunLeftInHole")]
-        public Boolean? GunLeftInHole {
+        public bool? GunLeftInHole {
             get {
                 return GunLeftInHoleField;
             } 
@@ -27318,14 +27318,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? GunLeftInHoleField; 
+        private bool? GunLeftInHoleField; 
 
         /// <summary>
         /// GunLeftInHoleSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GunLeftInHoleSpecified {
+        public bool GunLeftInHoleSpecified {
             get {
                 return GunLeftInHoleSpecifiedField;
             } 
@@ -27335,7 +27335,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean GunLeftInHoleSpecifiedField; 
+        private bool GunLeftInHoleSpecifiedField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -27375,7 +27375,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Perforating")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -27385,7 +27385,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -27432,7 +27432,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public ReciprocalLengthMeasure(Double value, ReciprocalLengthUom uom)
+        public ReciprocalLengthMeasure(double value, ReciprocalLengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -27469,7 +27469,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -27479,7 +27479,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -27571,7 +27571,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Reference to downhole component")]
 		[XmlElement("DownholeComponentRefID")]
-        public String DownholeComponentRefID {
+        public string DownholeComponentRefID {
             get {
                 return DownholeComponentRefIDField;
             } 
@@ -27581,7 +27581,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DownholeComponentRefIDField; 
+        private string DownholeComponentRefIDField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -27718,7 +27718,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Reference to the fluid report")]
 		[XmlElement("FluidReportRefID")]
-        public String FluidReportRefID {
+        public string FluidReportRefID {
             get {
                 return FluidReportRefIDField;
             } 
@@ -27728,7 +27728,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FluidReportRefIDField; 
+        private string FluidReportRefIDField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -27801,7 +27801,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("The perforationSet reference ID.")]
 		[XmlElement("PerforationSetRefID")]
-        public String PerforationSetRefID {
+        public string PerforationSetRefID {
             get {
                 return PerforationSetRefIDField;
             } 
@@ -27811,7 +27811,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PerforationSetRefIDField; 
+        private string PerforationSetRefIDField; 
 
         /// <summary>
         /// ExtensionAny property
@@ -27882,7 +27882,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Sub category")]
 		[XmlElement("SubCategory")]
-        public String SubCategory {
+        public string SubCategory {
             get {
                 return SubCategoryField;
             } 
@@ -27892,7 +27892,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SubCategoryField; 
+        private string SubCategoryField; 
 
         /// <summary>
         /// ChargeTypeCode property
@@ -27900,7 +27900,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Code for charge type")]
 		[XmlElement("ChargeTypeCode")]
-        public String ChargeTypeCode {
+        public string ChargeTypeCode {
             get {
                 return ChargeTypeCodeField;
             } 
@@ -27910,7 +27910,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ChargeTypeCodeField; 
+        private string ChargeTypeCodeField; 
 
         /// <summary>
         /// BusinessOrgWaitingOn property
@@ -27918,7 +27918,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Business organization waiting on")]
 		[XmlElement("BusinessOrgWaitingOn")]
-        public String BusinessOrgWaitingOn {
+        public string BusinessOrgWaitingOn {
             get {
                 return BusinessOrgWaitingOnField;
             } 
@@ -27928,14 +27928,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String BusinessOrgWaitingOnField; 
+        private string BusinessOrgWaitingOnField; 
 
         /// <summary>
         /// IsNoChargeToProducer property
         /// </summary>
 		[Description("Flag indicating whether producer is charged or not")]
 		[XmlElement("IsNoChargeToProducer")]
-        public Boolean? IsNoChargeToProducer {
+        public bool? IsNoChargeToProducer {
             get {
                 return IsNoChargeToProducerField;
             } 
@@ -27946,14 +27946,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsNoChargeToProducerField; 
+        private bool? IsNoChargeToProducerField; 
 
         /// <summary>
         /// IsNoChargeToProducerSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IsNoChargeToProducerSpecified {
+        public bool IsNoChargeToProducerSpecified {
             get {
                 return IsNoChargeToProducerSpecifiedField;
             } 
@@ -27963,7 +27963,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IsNoChargeToProducerSpecifiedField; 
+        private bool IsNoChargeToProducerSpecifiedField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -28088,7 +28088,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("String Being Tested")]
 		[XmlElement("IdentifierJob")]
-        public String IdentifierJob {
+        public string IdentifierJob {
             get {
                 return IdentifierJobField;
             } 
@@ -28098,14 +28098,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String IdentifierJobField; 
+        private string IdentifierJobField; 
 
         /// <summary>
         /// IsSuccess property
         /// </summary>
 		[Description("True if successful")]
 		[XmlElement("IsSuccess")]
-        public Boolean? IsSuccess {
+        public bool? IsSuccess {
             get {
                 return IsSuccessField;
             } 
@@ -28116,14 +28116,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsSuccessField; 
+        private bool? IsSuccessField; 
 
         /// <summary>
         /// IsSuccessSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IsSuccessSpecified {
+        public bool IsSuccessSpecified {
             get {
                 return IsSuccessSpecifiedField;
             } 
@@ -28133,7 +28133,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IsSuccessSpecifiedField; 
+        private bool IsSuccessSpecifiedField; 
 
         /// <summary>
         /// MaxPressureDuration property
@@ -28159,7 +28159,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Circulating position")]
 		[XmlElement("CirculatingPosition")]
-        public String CirculatingPosition {
+        public string CirculatingPosition {
             get {
                 return CirculatingPositionField;
             } 
@@ -28169,7 +28169,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CirculatingPositionField; 
+        private string CirculatingPositionField; 
 
         /// <summary>
         /// FluidBledType property
@@ -28177,7 +28177,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Fluid bled type")]
 		[XmlElement("FluidBledType")]
-        public String FluidBledType {
+        public string FluidBledType {
             get {
                 return FluidBledTypeField;
             } 
@@ -28187,7 +28187,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FluidBledTypeField; 
+        private string FluidBledTypeField; 
 
         /// <summary>
         /// OrientationMethod property
@@ -28195,7 +28195,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of orientaton method")]
 		[XmlElement("OrientationMethod")]
-        public String OrientationMethod {
+        public string OrientationMethod {
             get {
                 return OrientationMethodField;
             } 
@@ -28205,7 +28205,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OrientationMethodField; 
+        private string OrientationMethodField; 
 
         /// <summary>
         /// TestFluidType property
@@ -28213,7 +28213,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Test fluid type")]
 		[XmlElement("TestFluidType")]
-        public String TestFluidType {
+        public string TestFluidType {
             get {
                 return TestFluidTypeField;
             } 
@@ -28223,7 +28223,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TestFluidTypeField; 
+        private string TestFluidTypeField; 
 
         /// <summary>
         /// TestSubType property
@@ -28231,7 +28231,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Test sub type")]
 		[XmlElement("TestSubType")]
-        public String TestSubType {
+        public string TestSubType {
             get {
                 return TestSubTypeField;
             } 
@@ -28241,7 +28241,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TestSubTypeField; 
+        private string TestSubTypeField; 
 
         /// <summary>
         /// TestType property
@@ -28249,7 +28249,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Test type")]
 		[XmlElement("TestType")]
-        public String TestType {
+        public string TestType {
             get {
                 return TestTypeField;
             } 
@@ -28259,7 +28259,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TestTypeField; 
+        private string TestTypeField; 
 
         /// <summary>
         /// AnnulusPressure property
@@ -28285,7 +28285,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Well pressure used")]
 		[XmlElement("WellPressureUsed")]
-        public String WellPressureUsed {
+        public string WellPressureUsed {
             get {
                 return WellPressureUsedField;
             } 
@@ -28295,7 +28295,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String WellPressureUsedField; 
+        private string WellPressureUsedField; 
 
         /// <summary>
         /// Str10Reference property
@@ -28303,7 +28303,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Reference #")]
 		[XmlElement("Str10Reference")]
-        public String Str10Reference {
+        public string Str10Reference {
             get {
                 return Str10ReferenceField;
             } 
@@ -28313,7 +28313,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String Str10ReferenceField; 
+        private string Str10ReferenceField; 
 
         /// <summary>
         /// UidAssembly property
@@ -28321,7 +28321,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Well (Assembly)")]
 		[XmlElement("UidAssembly")]
-        public String UidAssembly {
+        public string UidAssembly {
             get {
                 return UidAssemblyField;
             } 
@@ -28331,7 +28331,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String UidAssemblyField; 
+        private string UidAssemblyField; 
 
         /// <summary>
         /// VolumeBled property
@@ -28457,7 +28457,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Comment on the reason for the job")]
 		[XmlElement("JobReason")]
-        public String JobReason {
+        public string JobReason {
             get {
                 return JobReasonField;
             } 
@@ -28467,7 +28467,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String JobReasonField; 
+        private string JobReasonField; 
 
         /// <summary>
         /// JobStatus property
@@ -28475,7 +28475,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Status of job")]
 		[XmlElement("JobStatus")]
-        public String JobStatus {
+        public string JobStatus {
             get {
                 return JobStatusField;
             } 
@@ -28485,7 +28485,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String JobStatusField; 
+        private string JobStatusField; 
 
         /// <summary>
         /// PrimaryMotivationForJob property
@@ -28493,7 +28493,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The primary reason for doing this job.")]
 		[XmlElement("PrimaryMotivationForJob")]
-        public String PrimaryMotivationForJob {
+        public string PrimaryMotivationForJob {
             get {
                 return PrimaryMotivationForJobField;
             } 
@@ -28503,7 +28503,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PrimaryMotivationForJobField; 
+        private string PrimaryMotivationForJobField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -28575,7 +28575,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Reference to a StimJob.")]
 		[XmlElement("StimJobID")]
-        public String StimJobID {
+        public string StimJobID {
             get {
                 return StimJobIDField;
             } 
@@ -28585,7 +28585,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String StimJobIDField; 
+        private string StimJobIDField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -28657,7 +28657,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Reference to bottom hole pressure")]
 		[XmlElement("BHPRefID")]
-        public String BHPRefID {
+        public string BHPRefID {
             get {
                 return BHPRefIDField;
             } 
@@ -28667,7 +28667,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String BHPRefIDField; 
+        private string BHPRefIDField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -28821,7 +28821,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Reference to trajectory")]
 		[XmlElement("TrajectoryRefID")]
-        public String TrajectoryRefID {
+        public string TrajectoryRefID {
             get {
                 return TrajectoryRefIDField;
             } 
@@ -28831,7 +28831,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TrajectoryRefIDField; 
+        private string TrajectoryRefIDField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -28903,7 +28903,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("method of fill and cleaning")]
 		[XmlElement("FillCleaningMethod")]
-        public String FillCleaningMethod {
+        public string FillCleaningMethod {
             get {
                 return FillCleaningMethodField;
             } 
@@ -28913,7 +28913,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FillCleaningMethodField; 
+        private string FillCleaningMethodField; 
 
         /// <summary>
         /// ToolSize property
@@ -29003,7 +29003,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("unique id of cementJob")]
 		[XmlElement("CementJobRefID")]
-        public String CementJobRefID {
+        public string CementJobRefID {
             get {
                 return CementJobRefIDField;
             } 
@@ -29013,7 +29013,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CementJobRefIDField; 
+        private string CementJobRefIDField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -29087,7 +29087,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the EventType class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public EventType(String value)
+        public EventType(string value)
         {
             this.Value = value;
         }
@@ -29124,7 +29124,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -29134,7 +29134,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -29195,7 +29195,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("A pointer to the corresponding pump on the rig.")]
 		[XmlElement("Pump")]
-        public Int32? Pump {
+        public int? Pump {
             get {
                 return PumpField;
             } 
@@ -29205,7 +29205,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? PumpField; 
+        private int? PumpField; 
 
         /// <summary>
         /// Type of pump operation.
@@ -29230,7 +29230,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeOperationSpecified {
+        public bool TypeOperationSpecified {
             get {
                 return TypeOperationSpecifiedField;
             } 
@@ -29240,7 +29240,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeOperationSpecifiedField; 
+        private bool TypeOperationSpecifiedField; 
 
         /// <summary>
         /// Liner inside diameter. 
@@ -29408,7 +29408,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of PumpOp.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -29418,7 +29418,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -29462,7 +29462,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("This is a pointer to the corresponding pit on the rig containing the volume being described.")]
 		[XmlElement("Pit")]
-        public Int32? Pit {
+        public int? Pit {
             get {
                 return PitField;
             } 
@@ -29472,7 +29472,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? PitField; 
+        private int? PitField; 
 
         /// <summary>
         /// Date and time the information is related to.
@@ -29534,7 +29534,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of the fluid in the pit.")]
 		[XmlElement("DescFluid")]
-        public String DescFluid {
+        public string DescFluid {
             get {
                 return DescFluidField;
             } 
@@ -29544,7 +29544,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescFluidField; 
+        private string DescFluidField; 
 
         /// <summary>
         /// Funnel viscosity (in seconds).
@@ -29602,7 +29602,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of PitVolume.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -29612,7 +29612,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -29674,7 +29674,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("A pointer to the corresponding pump on the rig.")]
 		[XmlElement("Pump")]
-        public Int32? Pump {
+        public int? Pump {
             get {
                 return PumpField;
             } 
@@ -29684,7 +29684,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? PumpField; 
+        private int? PumpField; 
 
         /// <summary>
         /// Type of slow circulation rate.
@@ -29798,7 +29798,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Scr")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -29808,7 +29808,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -29852,7 +29852,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("AFE number that this cost item applies to.")]
 		[XmlElement("NumAFE")]
-        public String NumAFE {
+        public string NumAFE {
             get {
                 return NumAFEField;
             } 
@@ -29862,7 +29862,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NumAFEField; 
+        private string NumAFEField; 
 
         /// <summary>
         /// Cost group code.
@@ -29870,7 +29870,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Cost group code.")]
 		[XmlElement("CostGroup")]
-        public String CostGroup {
+        public string CostGroup {
             get {
                 return CostGroupField;
             } 
@@ -29880,7 +29880,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CostGroupField; 
+        private string CostGroupField; 
 
         /// <summary>
         /// Cost class code.
@@ -29889,7 +29889,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Cost class code.")]
 		[XmlElement("CostClass")]
-        public String CostClass {
+        public string CostClass {
             get {
                 return CostClassField;
             } 
@@ -29899,7 +29899,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CostClassField; 
+        private string CostClassField; 
 
         /// <summary>
         /// Cost code.
@@ -29908,7 +29908,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Cost code.")]
 		[XmlElement("CostCode")]
-        public String CostCode {
+        public string CostCode {
             get {
                 return CostCodeField;
             } 
@@ -29918,7 +29918,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CostCodeField; 
+        private string CostCodeField; 
 
         /// <summary>
         /// Cost subcode.
@@ -29926,7 +29926,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Cost subcode.")]
 		[XmlElement("CostSubCode")]
-        public String CostSubCode {
+        public string CostSubCode {
             get {
                 return CostSubCodeField;
             } 
@@ -29936,7 +29936,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CostSubCodeField; 
+        private string CostSubCodeField; 
 
         /// <summary>
         /// Description of the cost item.
@@ -29944,7 +29944,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of the cost item.")]
 		[XmlElement("CostItemDescription")]
-        public String CostItemDescription {
+        public string CostItemDescription {
             get {
                 return CostItemDescriptionField;
             } 
@@ -29954,7 +29954,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CostItemDescriptionField; 
+        private string CostItemDescriptionField; 
 
         /// <summary>
         /// The kind of cost item specified (e.g., rig dayrate, joints casing).
@@ -29962,7 +29962,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(32)]
         [Description("The kind of cost item specified (e.g., rig dayrate, joints casing).")]
 		[XmlElement("ItemKind")]
-        public String ItemKind {
+        public string ItemKind {
             get {
                 return ItemKindField;
             } 
@@ -29972,14 +29972,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ItemKindField; 
+        private string ItemKindField; 
 
         /// <summary>
         /// Size of one cost item.
         /// </summary>
 		[Description("Size of one cost item.")]
 		[XmlElement("ItemSize")]
-        public Double? ItemSize {
+        public double? ItemSize {
             get {
                 return ItemSizeField;
             } 
@@ -29990,14 +29990,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? ItemSizeField; 
+        private double? ItemSizeField; 
 
         /// <summary>
         /// ItemSizeSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ItemSizeSpecified {
+        public bool ItemSizeSpecified {
             get {
                 return ItemSizeSpecifiedField;
             } 
@@ -30007,14 +30007,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ItemSizeSpecifiedField; 
+        private bool ItemSizeSpecifiedField; 
 
         /// <summary>
         /// Number of cost items used that day, e.g., 1 rig dayrate, 30 joints of casing.
         /// </summary>
 		[Description("Number of cost items used that day, e.g., 1 rig dayrate, 30 joints of casing.")]
 		[XmlElement("QtyItem")]
-        public Int32? QtyItem {
+        public int? QtyItem {
             get {
                 return QtyItemField;
             } 
@@ -30025,14 +30025,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? QtyItemField; 
+        private int? QtyItemField; 
 
         /// <summary>
         /// QtyItemSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean QtyItemSpecified {
+        public bool QtyItemSpecified {
             get {
                 return QtyItemSpecifiedField;
             } 
@@ -30042,7 +30042,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean QtyItemSpecifiedField; 
+        private bool QtyItemSpecifiedField; 
 
         /// <summary>
         /// Invoice number for cost item; the bill is sent to the operator.
@@ -30050,7 +30050,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Invoice number for cost item; the  bill is sent to the operator.")]
 		[XmlElement("NumInvoice")]
-        public String NumInvoice {
+        public string NumInvoice {
             get {
                 return NumInvoiceField;
             } 
@@ -30060,7 +30060,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NumInvoiceField; 
+        private string NumInvoiceField; 
 
         /// <summary>
         /// Purchase order number provided by the operator.
@@ -30068,7 +30068,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Purchase order number provided by the operator.")]
 		[XmlElement("NumPO")]
-        public String NumPO {
+        public string NumPO {
             get {
                 return NumPOField;
             } 
@@ -30078,7 +30078,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NumPOField; 
+        private string NumPOField; 
 
         /// <summary>
         /// The field ticket number issued by the service company on location.
@@ -30086,7 +30086,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The field ticket number issued by the service company on location.")]
 		[XmlElement("NumTicket")]
-        public String NumTicket {
+        public string NumTicket {
             get {
                 return NumTicketField;
             } 
@@ -30096,14 +30096,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NumTicketField; 
+        private string NumTicketField; 
 
         /// <summary>
         /// Is this item carried from day to day? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Is this item carried from day to day? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("IsCarryOver")]
-        public Boolean? IsCarryOver {
+        public bool? IsCarryOver {
             get {
                 return IsCarryOverField;
             } 
@@ -30114,14 +30114,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsCarryOverField; 
+        private bool? IsCarryOverField; 
 
         /// <summary>
         /// IsCarryOverSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IsCarryOverSpecified {
+        public bool IsCarryOverSpecified {
             get {
                 return IsCarryOverSpecifiedField;
             } 
@@ -30131,14 +30131,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IsCarryOverSpecifiedField; 
+        private bool IsCarryOverSpecifiedField; 
 
         /// <summary>
         /// Is this item a rental? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Is this item a rental? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("IsRental")]
-        public Boolean? IsRental {
+        public bool? IsRental {
             get {
                 return IsRentalField;
             } 
@@ -30149,14 +30149,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsRentalField; 
+        private bool? IsRentalField; 
 
         /// <summary>
         /// IsRentalSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IsRentalSpecified {
+        public bool IsRentalSpecified {
             get {
                 return IsRentalSpecifiedField;
             } 
@@ -30166,7 +30166,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IsRentalSpecifiedField; 
+        private bool IsRentalSpecifiedField; 
 
         /// <summary>
         /// An identification tag for the item. A serial number is a type of identification tag; however, some tags contain many pieces of information. This element only identifies the tag and does not describe the contents.
@@ -30204,7 +30204,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Serial number.")]
 		[XmlElement("NumSerial")]
-        public String NumSerial {
+        public string NumSerial {
             get {
                 return NumSerialField;
             } 
@@ -30214,7 +30214,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NumSerialField; 
+        private string NumSerialField; 
 
         /// <summary>
         /// Name of the vendor.
@@ -30222,7 +30222,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the vendor.")]
 		[XmlElement("NameVendor")]
-        public String NameVendor {
+        public string NameVendor {
             get {
                 return NameVendorField;
             } 
@@ -30232,7 +30232,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameVendorField; 
+        private string NameVendorField; 
 
         /// <summary>
         /// Vendor number.
@@ -30240,7 +30240,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Vendor number.")]
 		[XmlElement("NumVendor")]
-        public String NumVendor {
+        public string NumVendor {
             get {
                 return NumVendorField;
             } 
@@ -30250,7 +30250,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NumVendorField; 
+        private string NumVendorField; 
 
         /// <summary>
         /// Name of pool/reservoir that this cost item can be accounted to.
@@ -30258,7 +30258,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of pool/reservoir that this cost item can be accounted to.")]
 		[XmlElement("Pool")]
-        public String Pool {
+        public string Pool {
             get {
                 return PoolField;
             } 
@@ -30268,14 +30268,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PoolField; 
+        private string PoolField; 
 
         /// <summary>
         /// Is this an estimated cost? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Is this an estimated cost? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("Estimated")]
-        public Boolean? Estimated {
+        public bool? Estimated {
             get {
                 return EstimatedField;
             } 
@@ -30286,14 +30286,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? EstimatedField; 
+        private bool? EstimatedField; 
 
         /// <summary>
         /// EstimatedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean EstimatedSpecified {
+        public bool EstimatedSpecified {
             get {
                 return EstimatedSpecifiedField;
             } 
@@ -30303,7 +30303,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean EstimatedSpecifiedField; 
+        private bool EstimatedSpecifiedField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -30379,7 +30379,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of DayCost")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -30389,7 +30389,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -30435,7 +30435,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Currency used for this Cost.")]
         [XmlAttribute("currency")]
 		
-        public String Currency {
+        public string Currency {
             get {
                 return currencyField;
             } 
@@ -30445,7 +30445,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String currencyField; 
+        private string currencyField; 
 
 
         
@@ -30489,7 +30489,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the company.")]
 		[XmlElement("Company")]
-        public String Company {
+        public string Company {
             get {
                 return CompanyField;
             } 
@@ -30499,7 +30499,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CompanyField; 
+        private string CompanyField; 
 
         /// <summary>
         /// Service provided by the company. 
@@ -30507,7 +30507,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Service provided by the company.")]
 		[XmlElement("TypeService")]
-        public String TypeService {
+        public string TypeService {
             get {
                 return TypeServiceField;
             } 
@@ -30517,14 +30517,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeServiceField; 
+        private string TypeServiceField; 
 
         /// <summary>
         /// Number of people on board for that company.
         /// </summary>
 		[Description("Number of people on board for that company.")]
 		[XmlElement("NumPeople")]
-        public Int32? NumPeople {
+        public int? NumPeople {
             get {
                 return NumPeopleField;
             } 
@@ -30535,14 +30535,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumPeopleField; 
+        private int? NumPeopleField; 
 
         /// <summary>
         /// NumPeopleSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumPeopleSpecified {
+        public bool NumPeopleSpecified {
             get {
                 return NumPeopleSpecifiedField;
             } 
@@ -30552,7 +30552,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumPeopleSpecifiedField; 
+        private bool NumPeopleSpecifiedField; 
 
         /// <summary>
         /// Total time worked by the company (commonly in hours).
@@ -30610,7 +30610,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Personnel.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -30620,7 +30620,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -31274,7 +31274,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Name or type of inventory item.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -31284,7 +31284,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// Item weight or volume per unit.
@@ -31327,7 +31327,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Start quantity for report interval.")]
 		[XmlElement("QtyStart")]
-        public Int32? QtyStart {
+        public int? QtyStart {
             get {
                 return QtyStartField;
             } 
@@ -31338,14 +31338,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? QtyStartField; 
+        private int? QtyStartField; 
 
         /// <summary>
         /// QtyStartSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean QtyStartSpecified {
+        public bool QtyStartSpecified {
             get {
                 return QtyStartSpecifiedField;
             } 
@@ -31355,14 +31355,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean QtyStartSpecifiedField; 
+        private bool QtyStartSpecifiedField; 
 
         /// <summary>
         /// Daily quantity adjustment/correction.
         /// </summary>
 		[Description("Daily quantity adjustment/correction.")]
 		[XmlElement("QtyAdjustment")]
-        public Int32? QtyAdjustment {
+        public int? QtyAdjustment {
             get {
                 return QtyAdjustmentField;
             } 
@@ -31373,14 +31373,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? QtyAdjustmentField; 
+        private int? QtyAdjustmentField; 
 
         /// <summary>
         /// QtyAdjustmentSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean QtyAdjustmentSpecified {
+        public bool QtyAdjustmentSpecified {
             get {
                 return QtyAdjustmentSpecifiedField;
             } 
@@ -31390,14 +31390,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean QtyAdjustmentSpecifiedField; 
+        private bool QtyAdjustmentSpecifiedField; 
 
         /// <summary>
         /// Quantity received at the site.
         /// </summary>
 		[Description("Quantity received at the site.")]
 		[XmlElement("QtyReceived")]
-        public Int32? QtyReceived {
+        public int? QtyReceived {
             get {
                 return QtyReceivedField;
             } 
@@ -31408,14 +31408,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? QtyReceivedField; 
+        private int? QtyReceivedField; 
 
         /// <summary>
         /// QtyReceivedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean QtyReceivedSpecified {
+        public bool QtyReceivedSpecified {
             get {
                 return QtyReceivedSpecifiedField;
             } 
@@ -31425,14 +31425,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean QtyReceivedSpecifiedField; 
+        private bool QtyReceivedSpecifiedField; 
 
         /// <summary>
         /// Quantity returned to base from site.
         /// </summary>
 		[Description("Quantity returned to base from site.")]
 		[XmlElement("QtyReturned")]
-        public Int32? QtyReturned {
+        public int? QtyReturned {
             get {
                 return QtyReturnedField;
             } 
@@ -31443,14 +31443,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? QtyReturnedField; 
+        private int? QtyReturnedField; 
 
         /// <summary>
         /// QtyReturnedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean QtyReturnedSpecified {
+        public bool QtyReturnedSpecified {
             get {
                 return QtyReturnedSpecifiedField;
             } 
@@ -31460,14 +31460,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean QtyReturnedSpecifiedField; 
+        private bool QtyReturnedSpecifiedField; 
 
         /// <summary>
         /// Quantity used for the report interval.
         /// </summary>
 		[Description("Quantity used for the report interval.")]
 		[XmlElement("QtyUsed")]
-        public Int32? QtyUsed {
+        public int? QtyUsed {
             get {
                 return QtyUsedField;
             } 
@@ -31478,14 +31478,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? QtyUsedField; 
+        private int? QtyUsedField; 
 
         /// <summary>
         /// QtyUsedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean QtyUsedSpecified {
+        public bool QtyUsedSpecified {
             get {
                 return QtyUsedSpecifiedField;
             } 
@@ -31495,7 +31495,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean QtyUsedSpecifiedField; 
+        private bool QtyUsedSpecifiedField; 
 
         /// <summary>
         /// Cost for the product for the report interval.
@@ -31520,7 +31520,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Amount of the item remaining on location after all adjustments for the report interval.")]
 		[XmlElement("QtyOnLocation")]
-        public Int32? QtyOnLocation {
+        public int? QtyOnLocation {
             get {
                 return QtyOnLocationField;
             } 
@@ -31531,14 +31531,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? QtyOnLocationField; 
+        private int? QtyOnLocationField; 
 
         /// <summary>
         /// QtyOnLocationSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean QtyOnLocationSpecified {
+        public bool QtyOnLocationSpecified {
             get {
                 return QtyOnLocationSpecifiedField;
             } 
@@ -31548,7 +31548,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean QtyOnLocationSpecifiedField; 
+        private bool QtyOnLocationSpecifiedField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -31588,7 +31588,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Inventory.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -31598,7 +31598,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -31660,7 +31660,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of company that supplied the weather data.")]
 		[XmlElement("Agency")]
-        public String Agency {
+        public string Agency {
             get {
                 return AgencyField;
             } 
@@ -31670,7 +31670,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String AgencyField; 
+        private string AgencyField; 
 
         /// <summary>
         /// Atmospheric pressure.
@@ -31695,7 +31695,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("The Beaufort wind force scale is a system used to estimate and report wind speeds when no measuring apparatus is available. It was invented in the early 19th century by Admiral Sir Francis Beaufort of the British Navy as a way to interpret winds from conditions. Values range from 0 (calm) to 12 (hurricane force).")]
 		[XmlElement("BeaufortScaleNumber")]
-        public Int16? BeaufortScaleNumber {
+        public short? BeaufortScaleNumber {
             get {
                 return BeaufortScaleNumberField;
             } 
@@ -31706,14 +31706,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int16? BeaufortScaleNumberField; 
+        private short? BeaufortScaleNumberField; 
 
         /// <summary>
         /// BeaufortScaleNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean BeaufortScaleNumberSpecified {
+        public bool BeaufortScaleNumberSpecified {
             get {
                 return BeaufortScaleNumberSpecifiedField;
             } 
@@ -31723,7 +31723,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean BeaufortScaleNumberSpecifiedField; 
+        private bool BeaufortScaleNumberSpecifiedField; 
 
         /// <summary>
         /// Minimum temperature above ground. Temperature of the atmosphere.
@@ -31947,7 +31947,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Type of precipitation.")]
 		[XmlElement("TypePrecip")]
-        public String TypePrecip {
+        public string TypePrecip {
             get {
                 return TypePrecipField;
             } 
@@ -31957,7 +31957,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypePrecipField; 
+        private string TypePrecipField; 
 
         /// <summary>
         /// Amount of precipitation.
@@ -31983,7 +31983,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of cloud cover.")]
 		[XmlElement("CoverCloud")]
-        public String CoverCloud {
+        public string CoverCloud {
             get {
                 return CoverCloudField;
             } 
@@ -31993,7 +31993,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CoverCloudField; 
+        private string CoverCloudField; 
 
         /// <summary>
         /// Height of cloud cover.
@@ -32055,7 +32055,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Comments and remarks.")]
 		[XmlElement("Comments")]
-        public String Comments {
+        public string Comments {
             get {
                 return CommentsField;
             } 
@@ -32065,7 +32065,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentsField; 
+        private string CommentsField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -32105,7 +32105,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Weather")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -32115,7 +32115,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -32162,7 +32162,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public PlaneAngleMeasure(Double value, PlaneAngleUom uom)
+        public PlaneAngleMeasure(double value, PlaneAngleUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -32199,7 +32199,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -32209,7 +32209,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -32254,7 +32254,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Human-recognizable context for the support craft.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -32264,7 +32264,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// Type of support craft (e.g., barge, helicopter, tug boat, etc.)
@@ -32324,7 +32324,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Comments and remarks.")]
 		[XmlElement("Comments")]
-        public String Comments {
+        public string Comments {
             get {
                 return CommentsField;
             } 
@@ -32334,7 +32334,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentsField; 
+        private string CommentsField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -32374,7 +32374,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of SupportCraft.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -32384,7 +32384,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -32446,7 +32446,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the person who prepared the incident report.")]
 		[XmlElement("Reporter")]
-        public String Reporter {
+        public string Reporter {
             get {
                 return ReporterField;
             } 
@@ -32456,14 +32456,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ReporterField; 
+        private string ReporterField; 
 
         /// <summary>
         /// Number of personnel with minor injuries.
         /// </summary>
 		[Description("Number of personnel with minor injuries.")]
 		[XmlElement("NumMinorInjury")]
-        public Int32? NumMinorInjury {
+        public int? NumMinorInjury {
             get {
                 return NumMinorInjuryField;
             } 
@@ -32474,14 +32474,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumMinorInjuryField; 
+        private int? NumMinorInjuryField; 
 
         /// <summary>
         /// NumMinorInjurySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumMinorInjurySpecified {
+        public bool NumMinorInjurySpecified {
             get {
                 return NumMinorInjurySpecifiedField;
             } 
@@ -32491,14 +32491,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumMinorInjurySpecifiedField; 
+        private bool NumMinorInjurySpecifiedField; 
 
         /// <summary>
         /// Number of personnel with major injuries.
         /// </summary>
 		[Description("Number of personnel with major injuries.")]
 		[XmlElement("NumMajorInjury")]
-        public Int32? NumMajorInjury {
+        public int? NumMajorInjury {
             get {
                 return NumMajorInjuryField;
             } 
@@ -32509,14 +32509,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumMajorInjuryField; 
+        private int? NumMajorInjuryField; 
 
         /// <summary>
         /// NumMajorInjurySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumMajorInjurySpecified {
+        public bool NumMajorInjurySpecified {
             get {
                 return NumMajorInjurySpecifiedField;
             } 
@@ -32526,14 +32526,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumMajorInjurySpecifiedField; 
+        private bool NumMajorInjurySpecifiedField; 
 
         /// <summary>
         /// Number of personnel killed due to the incident.
         /// </summary>
 		[Description("Number of personnel killed due to the incident.")]
 		[XmlElement("NumFatality")]
-        public Int32? NumFatality {
+        public int? NumFatality {
             get {
                 return NumFatalityField;
             } 
@@ -32544,14 +32544,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumFatalityField; 
+        private int? NumFatalityField; 
 
         /// <summary>
         /// NumFatalitySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumFatalitySpecified {
+        public bool NumFatalitySpecified {
             get {
                 return NumFatalitySpecifiedField;
             } 
@@ -32561,14 +32561,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumFatalitySpecifiedField; 
+        private bool NumFatalitySpecifiedField; 
 
         /// <summary>
         /// Near miss incident occurrence? Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Near miss incident occurrence?   Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("IsNearMiss")]
-        public Boolean? IsNearMiss {
+        public bool? IsNearMiss {
             get {
                 return IsNearMissField;
             } 
@@ -32579,14 +32579,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsNearMissField; 
+        private bool? IsNearMissField; 
 
         /// <summary>
         /// IsNearMissSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IsNearMissSpecified {
+        public bool IsNearMissSpecified {
             get {
                 return IsNearMissSpecifiedField;
             } 
@@ -32596,7 +32596,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IsNearMissSpecifiedField; 
+        private bool IsNearMissSpecifiedField; 
 
         /// <summary>
         /// Location description.
@@ -32604,7 +32604,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Location description.")]
 		[XmlElement("DescLocation")]
-        public String DescLocation {
+        public string DescLocation {
             get {
                 return DescLocationField;
             } 
@@ -32614,7 +32614,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescLocationField; 
+        private string DescLocationField; 
 
         /// <summary>
         /// Accident description.
@@ -32622,7 +32622,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Accident description.")]
 		[XmlElement("DescAccident")]
-        public String DescAccident {
+        public string DescAccident {
             get {
                 return DescAccidentField;
             } 
@@ -32632,7 +32632,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescAccidentField; 
+        private string DescAccidentField; 
 
         /// <summary>
         /// Remedial action description.
@@ -32640,7 +32640,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Remedial action description.")]
 		[XmlElement("RemedialActionDesc")]
-        public String RemedialActionDesc {
+        public string RemedialActionDesc {
             get {
                 return RemedialActionDescField;
             } 
@@ -32650,7 +32650,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RemedialActionDescField; 
+        private string RemedialActionDescField; 
 
         /// <summary>
         /// Cause description.
@@ -32658,7 +32658,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Cause description.")]
 		[XmlElement("CauseDesc")]
-        public String CauseDesc {
+        public string CauseDesc {
             get {
                 return CauseDescField;
             } 
@@ -32668,7 +32668,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CauseDescField; 
+        private string CauseDescField; 
 
         /// <summary>
         /// Number of hours lost due to the incident.
@@ -32712,7 +32712,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the company that caused the incident.")]
 		[XmlElement("ResponsibleCompany")]
-        public String ResponsibleCompany {
+        public string ResponsibleCompany {
             get {
                 return ResponsibleCompanyField;
             } 
@@ -32722,7 +32722,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ResponsibleCompanyField; 
+        private string ResponsibleCompanyField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -32762,7 +32762,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Incident")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -32772,7 +32772,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -33164,7 +33164,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Governmental regulatory inspection agency inspection?   Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("RegAgencyInsp")]
-        public Boolean? RegAgencyInsp {
+        public bool? RegAgencyInsp {
             get {
                 return RegAgencyInspField;
             } 
@@ -33175,14 +33175,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? RegAgencyInspField; 
+        private bool? RegAgencyInspField; 
 
         /// <summary>
         /// RegAgencyInspSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean RegAgencyInspSpecified {
+        public bool RegAgencyInspSpecified {
             get {
                 return RegAgencyInspSpecifiedField;
             } 
@@ -33192,14 +33192,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean RegAgencyInspSpecifiedField; 
+        private bool RegAgencyInspSpecifiedField; 
 
         /// <summary>
         /// NonComplianceIssued property
         /// </summary>
 		[Description("Inspection non-compliance notice served?   Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("NonComplianceIssued")]
-        public Boolean? NonComplianceIssued {
+        public bool? NonComplianceIssued {
             get {
                 return NonComplianceIssuedField;
             } 
@@ -33210,14 +33210,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? NonComplianceIssuedField; 
+        private bool? NonComplianceIssuedField; 
 
         /// <summary>
         /// NonComplianceIssuedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NonComplianceIssuedSpecified {
+        public bool NonComplianceIssuedSpecified {
             get {
                 return NonComplianceIssuedSpecifiedField;
             } 
@@ -33227,14 +33227,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NonComplianceIssuedSpecifiedField; 
+        private bool NonComplianceIssuedSpecifiedField; 
 
         /// <summary>
         /// NumStopCards property
         /// </summary>
 		[Description("Number of health, safety and environment incidents reported.")]
 		[XmlElement("NumStopCards")]
-        public Int32? NumStopCards {
+        public int? NumStopCards {
             get {
                 return NumStopCardsField;
             } 
@@ -33245,14 +33245,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumStopCardsField; 
+        private int? NumStopCardsField; 
 
         /// <summary>
         /// NumStopCardsSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumStopCardsSpecified {
+        public bool NumStopCardsSpecified {
             get {
                 return NumStopCardsSpecifiedField;
             } 
@@ -33262,7 +33262,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumStopCardsSpecifiedField; 
+        private bool NumStopCardsSpecifiedField; 
 
         /// <summary>
         /// FluidDischarged property
@@ -33342,7 +33342,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Comments and remarks.")]
 		[XmlElement("Comments")]
-        public String Comments {
+        public string Comments {
             get {
                 return CommentsField;
             } 
@@ -33352,7 +33352,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentsField; 
+        private string CommentsField; 
 
         /// <summary>
         /// Incident property
@@ -33458,7 +33458,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Deck number the mesh is installed on.")]
 		[XmlElement("NumDeck")]
-        public Int32? NumDeck {
+        public int? NumDeck {
             get {
                 return NumDeckField;
             } 
@@ -33469,14 +33469,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumDeckField; 
+        private int? NumDeckField; 
 
         /// <summary>
         /// NumDeckSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumDeckSpecified {
+        public bool NumDeckSpecified {
             get {
                 return NumDeckSpecifiedField;
             } 
@@ -33486,7 +33486,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumDeckSpecifiedField; 
+        private bool NumDeckSpecifiedField; 
 
         /// <summary>
         /// Mesh size in the X direction.
@@ -33530,7 +33530,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturer or supplier of the item.")]
 		[XmlElement("Manufacturer")]
-        public String Manufacturer {
+        public string Manufacturer {
             get {
                 return ManufacturerField;
             } 
@@ -33540,7 +33540,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ManufacturerField; 
+        private string ManufacturerField; 
 
         /// <summary>
         /// Manufacturers designated model.
@@ -33548,7 +33548,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturers designated model.")]
 		[XmlElement("Model")]
-        public String Model {
+        public string Model {
             get {
                 return ModelField;
             } 
@@ -33558,7 +33558,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ModelField; 
+        private string ModelField; 
 
         /// <summary>
         /// Shaker screen cut point, which is the maximum size cuttings that will pass through the screen.
@@ -33621,7 +33621,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("A pointer to the shaker that is characterized by this report.")]
 		[XmlElement("Shaker")]
-        public String Shaker {
+        public string Shaker {
             get {
                 return ShakerField;
             } 
@@ -33631,7 +33631,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ShakerField; 
+        private string ShakerField; 
 
         /// <summary>
         /// MdHole property
@@ -33759,7 +33759,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of ShakerOp")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -33769,7 +33769,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -33814,7 +33814,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("The anchor number within a mooring system, or name if a name is used instead.")]
 		[XmlElement("AnchorName")]
-        public String AnchorName {
+        public string AnchorName {
             get {
                 return AnchorNameField;
             } 
@@ -33824,7 +33824,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String AnchorNameField; 
+        private string AnchorNameField; 
 
         /// <summary>
         /// Angle of the anchor or mooring line.
@@ -33868,7 +33868,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Free-test description of the state of this anchor or mooring line.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -33878,7 +33878,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
 
         
@@ -34692,7 +34692,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public LinearAccelerationMeasure(Double value, LinearAccelerationUom uom)
+        public LinearAccelerationMeasure(double value, LinearAccelerationUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -34729,7 +34729,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -34739,7 +34739,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -34786,7 +34786,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MagneticFluxDensityMeasure(Double value, MagneticFluxDensityUom uom)
+        public MagneticFluxDensityMeasure(double value, MagneticFluxDensityUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -34823,7 +34823,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -34833,7 +34833,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -35022,7 +35022,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("A pointer to the trajectoryStation within the parent trajectory. StationReference is a special case where WITSML only uses a UID for the pointer.The natural identity of a station is its physical characteristics (e.g., md).")]
 		[XmlElement("StationReference")]
-        public String StationReference {
+        public string StationReference {
             get {
                 return StationReferenceField;
             } 
@@ -35032,7 +35032,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String StationReferenceField; 
+        private string StationReferenceField; 
 
         /// <summary>
         /// A pointer to the trajectory within the parent wellbore. This trajectory contains the trajectoryStation.
@@ -35041,7 +35041,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("A pointer to the trajectory within the parent wellbore. This trajectory contains the trajectoryStation.")]
 		[XmlElement("TrajectoryParent")]
-        public String TrajectoryParent {
+        public string TrajectoryParent {
             get {
                 return TrajectoryParentField;
             } 
@@ -35051,7 +35051,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TrajectoryParentField; 
+        private string TrajectoryParentField; 
 
         /// <summary>
         /// A pointer to the wellbore that contains the trajectory. WellboreParent is not needed unless the trajectory is outside the context of a common parent wellbore.
@@ -35059,7 +35059,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A pointer to the wellbore that contains the trajectory. WellboreParent is not needed unless the trajectory is outside the context of a common parent wellbore.")]
 		[XmlElement("WellboreParent")]
-        public String WellboreParent {
+        public string WellboreParent {
             get {
                 return WellboreParentField;
             } 
@@ -35069,7 +35069,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String WellboreParentField; 
+        private string WellboreParentField; 
 
 
         
@@ -35399,7 +35399,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Indicates whether the trajectory station information was manually entered by a human.")]
 		[XmlElement("ManuallyEntered")]
-        public Boolean? ManuallyEntered {
+        public bool? ManuallyEntered {
             get {
                 return ManuallyEnteredField;
             } 
@@ -35410,14 +35410,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? ManuallyEnteredField; 
+        private bool? ManuallyEnteredField; 
 
         /// <summary>
         /// ManuallyEnteredSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ManuallyEnteredSpecified {
+        public bool ManuallyEnteredSpecified {
             get {
                 return ManuallyEnteredSpecifiedField;
             } 
@@ -35427,7 +35427,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ManuallyEnteredSpecifiedField; 
+        private bool ManuallyEnteredSpecifiedField; 
 
         /// <summary>
         /// Target property
@@ -35435,7 +35435,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A pointer to the intended target of this station.")]
 		[XmlElement("Target")]
-        public String Target {
+        public string Target {
             get {
                 return TargetField;
             } 
@@ -35445,7 +35445,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TargetField; 
+        private string TargetField; 
 
         /// <summary>
         /// DTimStn property
@@ -35505,7 +35505,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeSurveyToolSpecified {
+        public bool TypeSurveyToolSpecified {
             get {
                 return TypeSurveyToolSpecifiedField;
             } 
@@ -35515,7 +35515,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeSurveyToolSpecifiedField; 
+        private bool TypeSurveyToolSpecifiedField; 
 
         /// <summary>
         /// CalcAlgorithm property
@@ -35540,7 +35540,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CalcAlgorithmSpecified {
+        public bool CalcAlgorithmSpecified {
             get {
                 return CalcAlgorithmSpecifiedField;
             } 
@@ -35550,7 +35550,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CalcAlgorithmSpecifiedField; 
+        private bool CalcAlgorithmSpecifiedField; 
 
         /// <summary>
         /// Md property
@@ -35864,7 +35864,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Was an accelerometer alignment correction applied to survey computation?   Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("GravAccelCorUsed")]
-        public Boolean? GravAccelCorUsed {
+        public bool? GravAccelCorUsed {
             get {
                 return GravAccelCorUsedField;
             } 
@@ -35875,14 +35875,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? GravAccelCorUsedField; 
+        private bool? GravAccelCorUsedField; 
 
         /// <summary>
         /// GravAccelCorUsedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GravAccelCorUsedSpecified {
+        public bool GravAccelCorUsedSpecified {
             get {
                 return GravAccelCorUsedSpecifiedField;
             } 
@@ -35892,14 +35892,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean GravAccelCorUsedSpecifiedField; 
+        private bool GravAccelCorUsedSpecifiedField; 
 
         /// <summary>
         /// MagXAxialCorUsed property
         /// </summary>
 		[Description("Was a magnetometer alignment correction applied to survey computation?   Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("MagXAxialCorUsed")]
-        public Boolean? MagXAxialCorUsed {
+        public bool? MagXAxialCorUsed {
             get {
                 return MagXAxialCorUsedField;
             } 
@@ -35910,14 +35910,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? MagXAxialCorUsedField; 
+        private bool? MagXAxialCorUsedField; 
 
         /// <summary>
         /// MagXAxialCorUsedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MagXAxialCorUsedSpecified {
+        public bool MagXAxialCorUsedSpecified {
             get {
                 return MagXAxialCorUsedSpecifiedField;
             } 
@@ -35927,14 +35927,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean MagXAxialCorUsedSpecifiedField; 
+        private bool MagXAxialCorUsedSpecifiedField; 
 
         /// <summary>
         /// SagCorUsed property
         /// </summary>
 		[Description("Was a bottom hole assembly sag correction applied to the survey computation?   Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("SagCorUsed")]
-        public Boolean? SagCorUsed {
+        public bool? SagCorUsed {
             get {
                 return SagCorUsedField;
             } 
@@ -35945,14 +35945,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? SagCorUsedField; 
+        private bool? SagCorUsedField; 
 
         /// <summary>
         /// SagCorUsedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SagCorUsedSpecified {
+        public bool SagCorUsedSpecified {
             get {
                 return SagCorUsedSpecifiedField;
             } 
@@ -35962,14 +35962,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean SagCorUsedSpecifiedField; 
+        private bool SagCorUsedSpecifiedField; 
 
         /// <summary>
         /// MagDrlstrCorUsed property
         /// </summary>
 		[Description("Was a drillstring magnetism correction applied to survey computation?   Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("MagDrlstrCorUsed")]
-        public Boolean? MagDrlstrCorUsed {
+        public bool? MagDrlstrCorUsed {
             get {
                 return MagDrlstrCorUsedField;
             } 
@@ -35980,14 +35980,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? MagDrlstrCorUsedField; 
+        private bool? MagDrlstrCorUsedField; 
 
         /// <summary>
         /// MagDrlstrCorUsedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MagDrlstrCorUsedSpecified {
+        public bool MagDrlstrCorUsedSpecified {
             get {
                 return MagDrlstrCorUsedSpecifiedField;
             } 
@@ -35997,14 +35997,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean MagDrlstrCorUsedSpecifiedField; 
+        private bool MagDrlstrCorUsedSpecifiedField; 
 
         /// <summary>
         /// InfieldRefCorUsed property
         /// </summary>
 		[Description("Was an In Field Referencing (IFR) correction applied to the azimuth value?   Values are \"true\" (or \"1\") and \"false\" (or \"0\"). An IFR survey measures the strength and direction of the Earth's magnetic field over the area of interest.  By taking a geomagnetic modelled values away  from these field survey results, we are left with a local crustal correction,  which since it is assumed geological in nature, only varies over geological timescales.   For MWD survey operations, these corrections are applied in addition to the geomagnetic model  to provide accurate knowledge of the local magnetic field and hence to improve the  accuracy of MWD magnetic azimuth measurements.")]
 		[XmlElement("InfieldRefCorUsed")]
-        public Boolean? InfieldRefCorUsed {
+        public bool? InfieldRefCorUsed {
             get {
                 return InfieldRefCorUsedField;
             } 
@@ -36015,14 +36015,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? InfieldRefCorUsedField; 
+        private bool? InfieldRefCorUsedField; 
 
         /// <summary>
         /// InfieldRefCorUsedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean InfieldRefCorUsedSpecified {
+        public bool InfieldRefCorUsedSpecified {
             get {
                 return InfieldRefCorUsedSpecifiedField;
             } 
@@ -36032,14 +36032,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean InfieldRefCorUsedSpecifiedField; 
+        private bool InfieldRefCorUsedSpecifiedField; 
 
         /// <summary>
         /// InterpolatedInfieldRefCorUsed property
         /// </summary>
 		[Description("Was an Interpolated In Field Referencing (IIFR) correction applied to the azimuth value?   Values are \"true\" (or \"1\") and \"false\" (or \"0\"). Interpolated In Field Referencing measures the diurnal Earth magnetic field variations resulting from electrical  currents in the ionosphere and effects of magnetic storms hitting the Earth. It increases again the accuracy  of the magnetic azimuth measurement.")]
 		[XmlElement("InterpolatedInfieldRefCorUsed")]
-        public Boolean? InterpolatedInfieldRefCorUsed {
+        public bool? InterpolatedInfieldRefCorUsed {
             get {
                 return InterpolatedInfieldRefCorUsedField;
             } 
@@ -36050,14 +36050,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? InterpolatedInfieldRefCorUsedField; 
+        private bool? InterpolatedInfieldRefCorUsedField; 
 
         /// <summary>
         /// InterpolatedInfieldRefCorUsedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean InterpolatedInfieldRefCorUsedSpecified {
+        public bool InterpolatedInfieldRefCorUsedSpecified {
             get {
                 return InterpolatedInfieldRefCorUsedSpecifiedField;
             } 
@@ -36067,14 +36067,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean InterpolatedInfieldRefCorUsedSpecifiedField; 
+        private bool InterpolatedInfieldRefCorUsedSpecifiedField; 
 
         /// <summary>
         /// InHoleRefCorUsed property
         /// </summary>
 		[Description("Was an In Hole Referencing (IHR) correction applied to the inclination and/or azimuth values?   Values are \"true\" (or \"1\") and \"false\" (or \"0\"). In-Hole Referencing essentially involves comparing gyro surveys to MWD surveys in a tangent  section of a well. Once a small part of a tangent section has been drilled and surveyed using an  MWD tool, then an open hole (OH) gyro is run. By comparing the Gyro surveys to the MWD  surveys a correction can be calculated for the MWD. This correction is then assumed as valid  for the rest of the tangent section allowing to have a near gyro accuracy for the whole section,  therefore reducing the ellipse of uncertainty (EOU) size.")]
 		[XmlElement("InHoleRefCorUsed")]
-        public Boolean? InHoleRefCorUsed {
+        public bool? InHoleRefCorUsed {
             get {
                 return InHoleRefCorUsedField;
             } 
@@ -36085,14 +36085,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? InHoleRefCorUsedField; 
+        private bool? InHoleRefCorUsedField; 
 
         /// <summary>
         /// InHoleRefCorUsedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean InHoleRefCorUsedSpecified {
+        public bool InHoleRefCorUsedSpecified {
             get {
                 return InHoleRefCorUsedSpecifiedField;
             } 
@@ -36102,14 +36102,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean InHoleRefCorUsedSpecifiedField; 
+        private bool InHoleRefCorUsedSpecifiedField; 
 
         /// <summary>
         /// AxialMagInterferenceCorUsed property
         /// </summary>
 		[Description("Was an Axial Magnetic Interference (AMI) correction applied to the azimuth value?   Values are \"true\" (or \"1\") and \"false\" (or \"0\"). Most of the BHAs used to drill wells include an MWD tool. An MWD is a magnetic survey tool and as  such suffer from magnetic interferences from a wide variety of sources. Magnetic interferences can be  categorized into axial and radial type interferences.  Axial interferences are mainly the result of magnetic poles from the drill string steel components  located below and above the MWD tool. Radial interferences are numerous.  Therefore, there is a risk that magXAxialCorUsed includes both Axial and radial corrections.")]
 		[XmlElement("AxialMagInterferenceCorUsed")]
-        public Boolean? AxialMagInterferenceCorUsed {
+        public bool? AxialMagInterferenceCorUsed {
             get {
                 return AxialMagInterferenceCorUsedField;
             } 
@@ -36120,14 +36120,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? AxialMagInterferenceCorUsedField; 
+        private bool? AxialMagInterferenceCorUsedField; 
 
         /// <summary>
         /// AxialMagInterferenceCorUsedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AxialMagInterferenceCorUsedSpecified {
+        public bool AxialMagInterferenceCorUsedSpecified {
             get {
                 return AxialMagInterferenceCorUsedSpecifiedField;
             } 
@@ -36137,14 +36137,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean AxialMagInterferenceCorUsedSpecifiedField; 
+        private bool AxialMagInterferenceCorUsedSpecifiedField; 
 
         /// <summary>
         /// CosagCorUsed property
         /// </summary>
 		[Description("WWas a Cosag Correction applied to the azimuth values?   Values are \"true\" (or \"1\") and \"false\" (or \"0\"). The BHA Sag Correction is the same as the Sag Correction except it includes the horizontal  misalignment (Cosag).")]
 		[XmlElement("CosagCorUsed")]
-        public Boolean? CosagCorUsed {
+        public bool? CosagCorUsed {
             get {
                 return CosagCorUsedField;
             } 
@@ -36155,14 +36155,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? CosagCorUsedField; 
+        private bool? CosagCorUsedField; 
 
         /// <summary>
         /// CosagCorUsedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CosagCorUsedSpecified {
+        public bool CosagCorUsedSpecified {
             get {
                 return CosagCorUsedSpecifiedField;
             } 
@@ -36172,14 +36172,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CosagCorUsedSpecifiedField; 
+        private bool CosagCorUsedSpecifiedField; 
 
         /// <summary>
         /// MSACorUsed property
         /// </summary>
 		[Description("Was a correction applied to the survey due to a  Multi-Station Analysis process?   Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("MSACorUsed")]
-        public Boolean? MSACorUsed {
+        public bool? MSACorUsed {
             get {
                 return MSACorUsedField;
             } 
@@ -36190,14 +36190,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? MSACorUsedField; 
+        private bool? MSACorUsedField; 
 
         /// <summary>
         /// MSACorUsedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MSACorUsedSpecified {
+        public bool MSACorUsedSpecified {
             get {
                 return MSACorUsedSpecifiedField;
             } 
@@ -36207,7 +36207,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean MSACorUsedSpecifiedField; 
+        private bool MSACorUsedSpecifiedField; 
 
         /// <summary>
         /// GravTotalFieldReference property
@@ -36269,7 +36269,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Geomagnetic model used.")]
 		[XmlElement("MagModelUsed")]
-        public String MagModelUsed {
+        public string MagModelUsed {
             get {
                 return MagModelUsedField;
             } 
@@ -36279,7 +36279,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MagModelUsedField; 
+        private string MagModelUsedField; 
 
         /// <summary>
         /// MagModelValid property
@@ -36287,7 +36287,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Current valid interval for the geomagnetic model used.")]
 		[XmlElement("MagModelValid")]
-        public String MagModelValid {
+        public string MagModelValid {
             get {
                 return MagModelValidField;
             } 
@@ -36297,7 +36297,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MagModelValidField; 
+        private string MagModelValidField; 
 
         /// <summary>
         /// GeoModelUsed property
@@ -36305,7 +36305,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Gravitational model used.")]
 		[XmlElement("GeoModelUsed")]
-        public String GeoModelUsed {
+        public string GeoModelUsed {
             get {
                 return GeoModelUsedField;
             } 
@@ -36315,7 +36315,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String GeoModelUsedField; 
+        private string GeoModelUsedField; 
 
         /// <summary>
         /// StatusTrajStation property
@@ -36340,7 +36340,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StatusTrajStationSpecified {
+        public bool StatusTrajStationSpecified {
             get {
                 return StatusTrajStationSpecifiedField;
             } 
@@ -36350,7 +36350,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean StatusTrajStationSpecifiedField; 
+        private bool StatusTrajStationSpecifiedField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -36521,7 +36521,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("A unique identifier for an instance of a trajectory station.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -36531,7 +36531,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -36577,7 +36577,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public AnglePerLengthMeasure(Double value, AnglePerLengthUom uom)
+        public AnglePerLengthMeasure(double value, AnglePerLengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -36614,7 +36614,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -36624,7 +36624,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -36669,7 +36669,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Flag indicating (if that Is this pair of values the original data given for the location? Values are \"true\" or \"1\". Or, if the pair of values was calculated from an original pair of values, set to \"false\" (or \"0\") or leave blank.")]
 		[XmlElement("Original")]
-        public Boolean? Original {
+        public bool? Original {
             get {
                 return OriginalField;
             } 
@@ -36680,14 +36680,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? OriginalField; 
+        private bool? OriginalField; 
 
         /// <summary>
         /// OriginalSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean OriginalSpecified {
+        public bool OriginalSpecified {
             get {
                 return OriginalSpecifiedField;
             } 
@@ -36697,7 +36697,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean OriginalSpecifiedField; 
+        private bool OriginalSpecifiedField; 
 
         /// <summary>
         /// A comment, generally given to help the reader interpret the coordinates if the CRS and the chosen pair do not make them clear.
@@ -36705,7 +36705,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A comment, generally given to help the reader interpret the coordinates if the CRS and the chosen pair do not make them clear.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -36715,7 +36715,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -36755,7 +36755,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("A unique identifier for a well location.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -36765,7 +36765,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -36809,7 +36809,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The first coordinate based on a projected coordinate reference system.")]
 		[XmlElement("Coordinate1")]
-        public Double? Coordinate1 {
+        public double? Coordinate1 {
             get {
                 return Coordinate1Field;
             } 
@@ -36819,7 +36819,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? Coordinate1Field; 
+        private double? Coordinate1Field; 
 
         /// <summary>
         /// Coordinate2 property
@@ -36827,7 +36827,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The second coordinate based on a projected coordinate reference system.")]
 		[XmlElement("Coordinate2")]
-        public Double? Coordinate2 {
+        public double? Coordinate2 {
             get {
                 return Coordinate2Field;
             } 
@@ -36837,7 +36837,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? Coordinate2Field; 
+        private double? Coordinate2Field; 
 
         /// <summary>
         /// Crs property
@@ -36957,7 +36957,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the AuthorityQualifiedName class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public AuthorityQualifiedName(String value)
+        public AuthorityQualifiedName(string value)
         {
             this.Value = value;
         }
@@ -36977,7 +36977,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [XmlAttribute("authority")]
 		
-        public String Authority {
+        public string Authority {
             get {
                 return authorityField;
             } 
@@ -36987,7 +36987,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String authorityField; 
+        private string authorityField; 
 
 		/// <summary>
         /// code property
@@ -36995,7 +36995,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [XmlAttribute("code")]
 		
-        public String Code {
+        public string Code {
             get {
                 return codeField;
             } 
@@ -37005,14 +37005,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String codeField; 
+        private string codeField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -37022,7 +37022,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -37166,7 +37166,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -37176,7 +37176,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -37367,7 +37367,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -37377,7 +37377,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -37485,7 +37485,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AggregationTypeSpecified {
+        public bool AggregationTypeSpecified {
             get {
                 return aggregationTypeSpecifiedField;
             } 
@@ -37495,7 +37495,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean aggregationTypeSpecifiedField; 
+        private bool aggregationTypeSpecifiedField; 
 
 
     } //here
@@ -37535,7 +37535,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -37545,7 +37545,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -37620,7 +37620,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		
 		[XmlElement("minimumValue")]
-        public Double? MinimumValue {
+        public double? MinimumValue {
             get {
                 return minimumValueField;
             } 
@@ -37631,14 +37631,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? minimumValueField; 
+        private double? minimumValueField; 
 
         /// <summary>
         /// minimumValueSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MinimumValueSpecified {
+        public bool MinimumValueSpecified {
             get {
                 return minimumValueSpecifiedField;
             } 
@@ -37648,14 +37648,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean minimumValueSpecifiedField; 
+        private bool minimumValueSpecifiedField; 
 
         /// <summary>
         /// maximumValue property
         /// </summary>
 		
 		[XmlElement("maximumValue")]
-        public Double? MaximumValue {
+        public double? MaximumValue {
             get {
                 return maximumValueField;
             } 
@@ -37666,14 +37666,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? maximumValueField; 
+        private double? maximumValueField; 
 
         /// <summary>
         /// maximumValueSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MaximumValueSpecified {
+        public bool MaximumValueSpecified {
             get {
                 return maximumValueSpecifiedField;
             } 
@@ -37683,7 +37683,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean maximumValueSpecifiedField; 
+        private bool maximumValueSpecifiedField; 
 
         /// <summary>
         /// rangeMeaning property
@@ -37726,7 +37726,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the CodeType class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public CodeType(String value)
+        public CodeType(string value)
         {
             this.Value = value;
         }
@@ -37745,7 +37745,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("codeSpace")]
 		
-        public String CodeSpace {
+        public string CodeSpace {
             get {
                 return codeSpaceField;
             } 
@@ -37755,14 +37755,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String codeSpaceField; 
+        private string codeSpaceField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -37772,7 +37772,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -37816,7 +37816,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the CodeWithAuthorityType class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public CodeWithAuthorityType(String value)
+        public CodeWithAuthorityType(string value)
         {
             this.Value = value;
         }
@@ -37903,7 +37903,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		
 		[XmlElement("remarks")]
-        public String Remarks {
+        public string Remarks {
             get {
                 return remarksField;
             } 
@@ -37913,7 +37913,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String remarksField; 
+        private string remarksField; 
 
 
     } //here
@@ -38076,7 +38076,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("id", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
 		
-        public String Id {
+        public string Id {
             get {
                 return idField;
             } 
@@ -38086,7 +38086,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String idField; 
+        private string idField; 
 
 
         
@@ -38130,7 +38130,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the StringOrRefType class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public StringOrRefType(String value)
+        public StringOrRefType(string value)
         {
             this.Value = value;
         }
@@ -38149,7 +38149,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -38159,14 +38159,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -38176,7 +38176,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -38218,7 +38218,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("owns")]
 		
-        public Boolean Owns {
+        public bool Owns {
             get {
                 return ownsField;
             } 
@@ -38228,7 +38228,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ownsField; 
+        private bool ownsField; 
 
 		/// <summary>
         /// nilReason property
@@ -38236,7 +38236,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -38246,7 +38246,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -38367,7 +38367,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean RelativePositionSpecified {
+        public bool RelativePositionSpecified {
             get {
                 return relativePositionSpecifiedField;
             } 
@@ -38377,7 +38377,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean relativePositionSpecifiedField; 
+        private bool relativePositionSpecifiedField; 
 
 
     } //here
@@ -38420,7 +38420,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -38430,7 +38430,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 		/// <summary>
         /// owns property
@@ -38438,7 +38438,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("owns")]
 		
-        public Boolean Owns {
+        public bool Owns {
             get {
                 return ownsField;
             } 
@@ -38448,7 +38448,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ownsField; 
+        private bool ownsField; 
 
 
         
@@ -38508,7 +38508,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[RecurringElement]
 		[XmlElement("scope")]
-        public List<String> Scope {
+        public List<string> Scope {
             get {
                 return scopeField;
             } 
@@ -38530,14 +38530,14 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> scopeField; 
+        private List<string> scopeField; 
 
         /// <summary>
         /// operationVersion property
         /// </summary>
 		
 		[XmlElement("operationVersion")]
-        public String OperationVersion {
+        public string OperationVersion {
             get {
                 return operationVersionField;
             } 
@@ -38547,7 +38547,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String operationVersionField; 
+        private string operationVersionField; 
 
         /// <summary>
         /// coordinateOperationAccuracy property
@@ -38650,7 +38650,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -38660,7 +38660,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -38821,7 +38821,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		
 		[XmlElement("CharacterString")]
-        public String CharacterString {
+        public string CharacterString {
             get {
                 return CharacterStringField;
             } 
@@ -38831,7 +38831,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CharacterStringField; 
+        private string CharacterStringField; 
 
 		/// <summary>
         /// nilReason property
@@ -38839,7 +38839,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -38849,7 +38849,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -38910,7 +38910,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -38920,7 +38920,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -38928,7 +38928,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -38938,7 +38938,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -39013,7 +39013,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		
 		[XmlElement("Boolean")]
-        public Boolean? Boolean {
+        public bool? Boolean {
             get {
                 return BooleanField;
             } 
@@ -39023,7 +39023,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? BooleanField; 
+        private bool? BooleanField; 
 
 		/// <summary>
         /// nilReason property
@@ -39031,7 +39031,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -39041,7 +39041,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -39101,7 +39101,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("id")]
 		
-        public String Id {
+        public string Id {
             get {
                 return idField;
             } 
@@ -39111,7 +39111,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String idField; 
+        private string idField; 
 
 		/// <summary>
         /// uuid property
@@ -39119,7 +39119,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uuid")]
 		
-        public String Uuid {
+        public string Uuid {
             get {
                 return uuidField;
             } 
@@ -39129,7 +39129,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidField; 
+        private string uuidField; 
 
 
         
@@ -39371,7 +39371,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		
 		[XmlElement("URL", DataType="anyURI")]
-        public String URL {
+        public string URL {
             get {
                 return URLField;
             } 
@@ -39381,7 +39381,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String URLField; 
+        private string URLField; 
 
 		/// <summary>
         /// nilReason property
@@ -39389,7 +39389,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -39399,7 +39399,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -39460,7 +39460,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -39470,7 +39470,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -39515,7 +39515,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the CodeListValue_Type class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public CodeListValue_Type(String value)
+        public CodeListValue_Type(string value)
         {
             this.Value = value;
         }
@@ -39534,7 +39534,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [XmlAttribute("codeList")]
 		
-        public String CodeList {
+        public string CodeList {
             get {
                 return codeListField;
             } 
@@ -39544,7 +39544,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String codeListField; 
+        private string codeListField; 
 
 		/// <summary>
         /// codeListValue property
@@ -39552,7 +39552,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [XmlAttribute("codeListValue")]
 		
-        public String CodeListValue {
+        public string CodeListValue {
             get {
                 return codeListValueField;
             } 
@@ -39562,7 +39562,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String codeListValueField; 
+        private string codeListValueField; 
 
 		/// <summary>
         /// codeSpace property
@@ -39570,7 +39570,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("codeSpace")]
 		
-        public String CodeSpace {
+        public string CodeSpace {
             get {
                 return codeSpaceField;
             } 
@@ -39580,14 +39580,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String codeSpaceField; 
+        private string codeSpaceField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -39597,7 +39597,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -39971,7 +39971,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -39981,7 +39981,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -39989,7 +39989,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -39999,7 +39999,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -40060,7 +40060,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -40070,7 +40070,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -40078,7 +40078,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -40088,7 +40088,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -40149,7 +40149,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -40159,7 +40159,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -40167,7 +40167,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -40177,7 +40177,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -40339,7 +40339,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -40349,7 +40349,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -40357,7 +40357,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -40367,7 +40367,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -40428,7 +40428,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -40438,7 +40438,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -40531,7 +40531,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Date property
         /// </summary>
         [XmlElement("Date")]
-        public String Date {
+        public string Date {
             get {
                 return DateField;
             } 
@@ -40542,7 +40542,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DateField; 
+        private string DateField; 
         private bool dateSpecified = false; 
 
         /// <summary>
@@ -40598,7 +40598,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -40608,7 +40608,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -40669,7 +40669,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -40679,7 +40679,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -41038,7 +41038,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -41048,7 +41048,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -41056,7 +41056,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -41066,7 +41066,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -41127,7 +41127,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -41137,7 +41137,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -41145,7 +41145,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -41155,7 +41155,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -41266,7 +41266,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -41276,7 +41276,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -41284,7 +41284,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -41294,7 +41294,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -41355,7 +41355,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -41365,7 +41365,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -41373,7 +41373,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -41383,7 +41383,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -41444,7 +41444,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -41454,7 +41454,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -41515,7 +41515,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -41525,7 +41525,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -41533,7 +41533,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -41543,7 +41543,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -41793,7 +41793,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -41803,7 +41803,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -41864,7 +41864,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -41874,7 +41874,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -41935,7 +41935,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -41945,7 +41945,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -41953,7 +41953,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -41963,7 +41963,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -42090,7 +42090,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		
 		[XmlElement("Real")]
-        public Double? Real {
+        public double? Real {
             get {
                 return RealField;
             } 
@@ -42100,7 +42100,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? RealField; 
+        private double? RealField; 
 
 		/// <summary>
         /// nilReason property
@@ -42108,7 +42108,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified)]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -42118,7 +42118,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -42179,7 +42179,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -42189,7 +42189,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -42197,7 +42197,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -42207,7 +42207,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -42282,7 +42282,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[RecurringElement]
 		[XmlElement("scope")]
-        public List<String> Scope {
+        public List<string> Scope {
             get {
                 return scopeField;
             } 
@@ -42304,7 +42304,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> scopeField; 
+        private List<string> scopeField; 
 
 
     } //here
@@ -42393,7 +42393,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -42403,7 +42403,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -42477,7 +42477,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -42487,7 +42487,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -42562,7 +42562,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[RecurringElement]
 		[XmlElement("scope")]
-        public List<String> Scope {
+        public List<string> Scope {
             get {
                 return scopeField;
             } 
@@ -42584,7 +42584,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> scopeField; 
+        private List<string> scopeField; 
 
         /// <summary>
         /// anchorDefinition property
@@ -42626,7 +42626,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean RealizationEpochSpecified {
+        public bool RealizationEpochSpecified {
             get {
                 return realizationEpochSpecifiedField;
             } 
@@ -42636,7 +42636,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean realizationEpochSpecifiedField; 
+        private bool realizationEpochSpecifiedField; 
 
 
     } //here
@@ -42725,7 +42725,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -42735,7 +42735,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -42811,7 +42811,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the AngleType class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public AngleType(Double value)
+        public AngleType(double value)
         {
             this.Value = value;
         }
@@ -42849,7 +42849,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the MeasureType class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public MeasureType(Double value)
+        public MeasureType(double value)
         {
             this.Value = value;
         }
@@ -42867,7 +42867,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -42877,7 +42877,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -42922,7 +42922,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the LengthType class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public LengthType(Double value)
+        public LengthType(double value)
         {
             this.Value = value;
         }
@@ -42974,7 +42974,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -42984,7 +42984,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -43156,7 +43156,7 @@ namespace Energistics.DataAccess.WITSML200
         /// isSphere property
         /// </summary>
         [XmlElement("isSphere")]
-        public Boolean? IsSphere {
+        public bool? IsSphere {
             get {
                 return isSphereField;
             } 
@@ -43167,7 +43167,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? isSphereField; 
+        private bool? isSphereField; 
         private bool isSphereSpecified = false; 
 
         /// <summary>
@@ -43307,7 +43307,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -43317,7 +43317,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -43425,7 +43425,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -43435,7 +43435,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -43443,7 +43443,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -43453,7 +43453,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -43514,7 +43514,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -43524,7 +43524,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -43532,7 +43532,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -43542,7 +43542,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -43603,7 +43603,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uuidref")]
 		
-        public String Uuidref {
+        public string Uuidref {
             get {
                 return uuidrefField;
             } 
@@ -43613,7 +43613,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uuidrefField; 
+        private string uuidrefField; 
 
 		/// <summary>
         /// nilReason property
@@ -43621,7 +43621,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason", Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.isotc211.org/2005/gco")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -43631,7 +43631,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -43691,7 +43691,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -43701,7 +43701,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -43760,7 +43760,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -43770,7 +43770,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -43859,7 +43859,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -43869,7 +43869,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -43928,7 +43928,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -43938,7 +43938,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -43997,7 +43997,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("nilReason")]
 		
-        public String NilReason {
+        public string NilReason {
             get {
                 return nilReasonField;
             } 
@@ -44007,7 +44007,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String nilReasonField; 
+        private string nilReasonField; 
 
 
         
@@ -44050,7 +44050,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [StringLength(2000)]
 		[XmlElement("Unknown")]
-        public String Unknown {
+        public string Unknown {
             get {
                 return UnknownField;
             } 
@@ -44060,7 +44060,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String UnknownField; 
+        private string UnknownField; 
 
 
     } //here
@@ -44085,7 +44085,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("ISO 19162 compliant well known text of the CRS")]
 		[XmlElement("WellKnownText")]
-        public String WellKnownText {
+        public string WellKnownText {
             get {
                 return WellKnownTextField;
             } 
@@ -44095,7 +44095,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String WellKnownTextField; 
+        private string WellKnownTextField; 
 
 
     } //here
@@ -44119,7 +44119,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
 		[XmlElement("EpsgCode")]
-        public Int64? EpsgCode {
+        public long? EpsgCode {
             get {
                 return EpsgCodeField;
             } 
@@ -44129,7 +44129,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? EpsgCodeField; 
+        private long? EpsgCodeField; 
 
 
     } //here
@@ -44267,7 +44267,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("ISO 19162 compliant well known text of the CRS")]
 		[XmlElement("WellKnownText")]
-        public String WellKnownText {
+        public string WellKnownText {
             get {
                 return WellKnownTextField;
             } 
@@ -44277,7 +44277,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String WellKnownTextField; 
+        private string WellKnownTextField; 
 
 
     } //here
@@ -44336,7 +44336,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
 		[XmlElement("EpsgCode")]
-        public Int64? EpsgCode {
+        public long? EpsgCode {
             get {
                 return EpsgCodeField;
             } 
@@ -44346,7 +44346,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? EpsgCodeField; 
+        private long? EpsgCodeField; 
 
 
     } //here
@@ -44406,7 +44406,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [StringLength(2000)]
 		[XmlElement("Unknown")]
-        public String Unknown {
+        public string Unknown {
             get {
                 return UnknownField;
             } 
@@ -44416,7 +44416,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String UnknownField; 
+        private string UnknownField; 
 
 
     } //here
@@ -44444,7 +44444,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public MeasureOrQuantity(Double value, String uom)
+        public MeasureOrQuantity(double value, string uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -44466,7 +44466,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("A measure with a UOM or a quantity (without a UOM). This should not be used except in situations where the underlying class of data is captured elsewhere, e.g., in a measure class.")]
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -44476,14 +44476,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -44493,7 +44493,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -44559,7 +44559,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("A pointer to the errorTerm represented by this value. This term must exist in the toolErrorTermSet referenced by the parent of this node. The same term may only be referenced once in the model.")]
 		[XmlElement("Term")]
-        public String Term {
+        public string Term {
             get {
                 return TermField;
             } 
@@ -44569,7 +44569,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TermField; 
+        private string TermField; 
 
         /// <summary>
         /// Prop property
@@ -44594,7 +44594,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("The mean or expected value of the variance.")]
 		[XmlElement("Bias")]
-        public Double? Bias {
+        public double? Bias {
             get {
                 return BiasField;
             } 
@@ -44605,14 +44605,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? BiasField; 
+        private double? BiasField; 
 
         /// <summary>
         /// BiasSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean BiasSpecified {
+        public bool BiasSpecified {
             get {
                 return BiasSpecifiedField;
             } 
@@ -44622,7 +44622,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean BiasSpecifiedField; 
+        private bool BiasSpecifiedField; 
 
         /// <summary>
         /// Comment property
@@ -44630,7 +44630,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A textual comment about this error term value.")]
 		[XmlElement("Comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return CommentField;
             } 
@@ -44640,7 +44640,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentField; 
+        private string CommentField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -44698,7 +44698,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of IscwsaErrorTermValue.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -44708,7 +44708,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -44805,7 +44805,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("True if the survey tool is rotated at inclinations greater than 90 degrees.")]
 		[XmlElement("Switching")]
-        public Boolean? Switching {
+        public bool? Switching {
             get {
                 return SwitchingField;
             } 
@@ -44816,14 +44816,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? SwitchingField; 
+        private bool? SwitchingField; 
 
         /// <summary>
         /// SwitchingSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SwitchingSpecified {
+        public bool SwitchingSpecified {
             get {
                 return SwitchingSpecifiedField;
             } 
@@ -44833,14 +44833,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean SwitchingSpecifiedField; 
+        private bool SwitchingSpecifiedField; 
 
         /// <summary>
         /// Factor applied to random noise error terms, depending on the mode of gyro initialization. Values must be greater than zero and less than or equal to 1.
         /// </summary>
 		[Description("Factor applied to random noise error terms, depending on the mode of gyro initialization. Values must be greater than zero and less than or equal to 1.")]
 		[XmlElement("NoiseReductionFactor")]
-        public Double? NoiseReductionFactor {
+        public double? NoiseReductionFactor {
             get {
                 return NoiseReductionFactorField;
             } 
@@ -44851,14 +44851,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? NoiseReductionFactorField; 
+        private double? NoiseReductionFactorField; 
 
         /// <summary>
         /// NoiseReductionFactorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NoiseReductionFactorSpecified {
+        public bool NoiseReductionFactorSpecified {
             get {
                 return NoiseReductionFactorSpecifiedField;
             } 
@@ -44868,7 +44868,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NoiseReductionFactorSpecifiedField; 
+        private bool NoiseReductionFactorSpecifiedField; 
 
         /// <summary>
         /// Speed at which the tool traverses the wellbore during a continuous survey.
@@ -45054,7 +45054,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of IscwsaSurveyToolOperatingInterval.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -45064,7 +45064,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -45110,7 +45110,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the IscwsaSurveyToolOperatingCondition class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public IscwsaSurveyToolOperatingCondition(String value)
+        public IscwsaSurveyToolOperatingCondition(string value)
         {
             this.Value = value;
         }
@@ -45129,7 +45129,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A particular constraint.")]
 		[XmlElement("Parameter")]
-        public String Parameter {
+        public string Parameter {
             get {
                 return ParameterField;
             } 
@@ -45139,7 +45139,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ParameterField; 
+        private string ParameterField; 
 
         /// <summary>
         /// The least value the constraint may take.
@@ -45183,7 +45183,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A fixed value that the constraint must take.")]
 		[XmlElement("Value")]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -45193,7 +45193,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -45233,7 +45233,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of IscwsaSurveyToolOperatingCondition.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -45243,7 +45243,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -45287,7 +45287,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Person responsible for the information.")]
 		[XmlElement("Author")]
-        public String Author {
+        public string Author {
             get {
                 return AuthorField;
             } 
@@ -45297,7 +45297,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String AuthorField; 
+        private string AuthorField; 
 
         /// <summary>
         /// Source from which the information is derived.
@@ -45305,7 +45305,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Source from which the information is derived.")]
 		[XmlElement("Source")]
-        public String Source {
+        public string Source {
             get {
                 return SourceField;
             } 
@@ -45315,7 +45315,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SourceField; 
+        private string SourceField; 
 
         /// <summary>
         /// Person or collective body responsible for authorizing the information.
@@ -45324,7 +45324,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Person or collective body responsible for authorizing the information.")]
 		[XmlElement("Authority")]
-        public String Authority {
+        public string Authority {
             get {
                 return AuthorityField;
             } 
@@ -45334,7 +45334,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String AuthorityField; 
+        private string AuthorityField; 
 
         /// <summary>
         /// Authorization state of the information.
@@ -45360,7 +45360,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Version name or number.")]
 		[XmlElement("Version")]
-        public String Version {
+        public string Version {
             get {
                 return VersionField;
             } 
@@ -45370,7 +45370,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String VersionField; 
+        private string VersionField; 
 
         /// <summary>
         /// A comment about the object. This should include information regarding the derivation of the information.
@@ -45378,7 +45378,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A comment about the object.  This should include information regarding the derivation of the information.")]
 		[XmlElement("Comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return CommentField;
             } 
@@ -45388,7 +45388,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentField; 
+        private string CommentField; 
 
 
         
@@ -45432,7 +45432,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the feature.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -45442,7 +45442,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// Aquifer or reservoir.
@@ -45467,7 +45467,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GeologyTypeSpecified {
+        public bool GeologyTypeSpecified {
             get {
                 return GeologyTypeSpecifiedField;
             } 
@@ -45477,7 +45477,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean GeologyTypeSpecifiedField; 
+        private bool GeologyTypeSpecifiedField; 
 
         /// <summary>
         /// Measured depth interval for this feature.
@@ -45553,7 +45553,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of GeologyFeature.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -45563,7 +45563,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -45607,7 +45607,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The name of the borehole.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -45617,7 +45617,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// TypeBorehole property
@@ -45642,7 +45642,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeBoreholeSpecified {
+        public bool TypeBoreholeSpecified {
             get {
                 return TypeBoreholeSpecifiedField;
             } 
@@ -45652,7 +45652,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeBoreholeSpecifiedField; 
+        private bool TypeBoreholeSpecifiedField; 
 
         /// <summary>
         /// MdInterval property
@@ -45714,7 +45714,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("The description of this equipment to be permanently kept.")]
 		[XmlElement("DescriptionPermanent")]
-        public String DescriptionPermanent {
+        public string DescriptionPermanent {
             get {
                 return DescriptionPermanentField;
             } 
@@ -45724,7 +45724,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionPermanentField; 
+        private string DescriptionPermanentField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -45781,7 +45781,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Borehole.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -45791,7 +45791,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -45835,7 +45835,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The name of the borehole string.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -45845,7 +45845,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// Accessories property
@@ -45961,7 +45961,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of BoreholeString.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -45971,7 +45971,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -46014,7 +46014,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("The type of the equipment. See enumerated values.")]
 		[XmlElement("EquipmentType")]
-        public EquipmentType? EquipmentType {
+        public ExtensibleEnum<EquipmentType>? EquipmentType {
             get {
                 return EquipmentTypeField;
             } 
@@ -46024,7 +46024,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private EquipmentType? EquipmentTypeField; 
+        private ExtensibleEnum<EquipmentType>? EquipmentTypeField; 
 
         /// <summary>
         /// Name property
@@ -46032,7 +46032,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("The name of the equipment.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -46042,7 +46042,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// EquipmentEventHistory property
@@ -46080,7 +46080,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The status of the piece of equipment.")]
 		[XmlElement("Status")]
-        public String Status {
+        public string Status {
             get {
                 return StatusField;
             } 
@@ -46090,7 +46090,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String StatusField; 
+        private string StatusField; 
 
         /// <summary>
         /// RunNo property
@@ -46098,7 +46098,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The well run number.")]
 		[XmlElement("RunNo")]
-        public String RunNo {
+        public string RunNo {
             get {
                 return RunNoField;
             } 
@@ -46108,7 +46108,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RunNoField; 
+        private string RunNoField; 
 
         /// <summary>
         /// PreviousRunDays property
@@ -46134,7 +46134,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Object condition at installation.")]
 		[XmlElement("ObjectCondition")]
-        public String ObjectCondition {
+        public string ObjectCondition {
             get {
                 return ObjectConditionField;
             } 
@@ -46144,7 +46144,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ObjectConditionField; 
+        private string ObjectConditionField; 
 
         /// <summary>
         /// SurfaceCondition property
@@ -46152,7 +46152,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Object surface condition.")]
 		[XmlElement("SurfaceCondition")]
-        public String SurfaceCondition {
+        public string SurfaceCondition {
             get {
                 return SurfaceConditionField;
             } 
@@ -46162,14 +46162,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SurfaceConditionField; 
+        private string SurfaceConditionField; 
 
         /// <summary>
         /// Count property
         /// </summary>
 		[Description("The count number of the same equipment. The default is 1.  In some cases, multiple pieces group into one component.")]
 		[XmlElement("Count")]
-        public Int32? Count {
+        public int? Count {
             get {
                 return CountField;
             } 
@@ -46180,14 +46180,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? CountField; 
+        private int? CountField; 
 
         /// <summary>
         /// CountSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CountSpecified {
+        public bool CountSpecified {
             get {
                 return CountSpecifiedField;
             } 
@@ -46197,7 +46197,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CountSpecifiedField; 
+        private bool CountSpecifiedField; 
 
         /// <summary>
         /// Length property
@@ -46258,7 +46258,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Flag indicating whether this component is inside the string or not .")]
 		[XmlElement("OutsideString")]
-        public Boolean? OutsideString {
+        public bool? OutsideString {
             get {
                 return OutsideStringField;
             } 
@@ -46269,14 +46269,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? OutsideStringField; 
+        private bool? OutsideStringField; 
 
         /// <summary>
         /// OutsideStringSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean OutsideStringSpecified {
+        public bool OutsideStringSpecified {
             get {
                 return OutsideStringSpecifiedField;
             } 
@@ -46286,7 +46286,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean OutsideStringSpecifiedField; 
+        private bool OutsideStringSpecifiedField; 
 
         /// <summary>
         /// TensileMax property
@@ -46383,7 +46383,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Flag indicating the equipment has a line connected to the surface.")]
 		[XmlElement("IsLinetoSurface")]
-        public Boolean? IsLinetoSurface {
+        public bool? IsLinetoSurface {
             get {
                 return IsLinetoSurfaceField;
             } 
@@ -46394,14 +46394,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsLinetoSurfaceField; 
+        private bool? IsLinetoSurfaceField; 
 
         /// <summary>
         /// IsLinetoSurfaceSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IsLinetoSurfaceSpecified {
+        public bool IsLinetoSurfaceSpecified {
             get {
                 return IsLinetoSurfaceSpecifiedField;
             } 
@@ -46411,14 +46411,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IsLinetoSurfaceSpecifiedField; 
+        private bool IsLinetoSurfaceSpecifiedField; 
 
         /// <summary>
         /// IsCentralized property
         /// </summary>
 		[Description("Flag indicating equipment is centralized.")]
 		[XmlElement("IsCentralized")]
-        public Boolean? IsCentralized {
+        public bool? IsCentralized {
             get {
                 return IsCentralizedField;
             } 
@@ -46429,14 +46429,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsCentralizedField; 
+        private bool? IsCentralizedField; 
 
         /// <summary>
         /// IsCentralizedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IsCentralizedSpecified {
+        public bool IsCentralizedSpecified {
             get {
                 return IsCentralizedSpecifiedField;
             } 
@@ -46446,14 +46446,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IsCentralizedSpecifiedField; 
+        private bool IsCentralizedSpecifiedField; 
 
         /// <summary>
         /// HasScratchers property
         /// </summary>
 		[Description("Flag indicating scratchers have been added to the equipment.")]
 		[XmlElement("HasScratchers")]
-        public Boolean? HasScratchers {
+        public bool? HasScratchers {
             get {
                 return HasScratchersField;
             } 
@@ -46464,14 +46464,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? HasScratchersField; 
+        private bool? HasScratchersField; 
 
         /// <summary>
         /// HasScratchersSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean HasScratchersSpecified {
+        public bool HasScratchersSpecified {
             get {
                 return HasScratchersSpecifiedField;
             } 
@@ -46481,7 +46481,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean HasScratchersSpecifiedField; 
+        private bool HasScratchersSpecifiedField; 
 
         /// <summary>
         /// PerforationSetRefId property
@@ -46489,7 +46489,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Reference to the perforated hole in the equipment after a perforation event.")]
         [RecurringElement]
 		[XmlElement("PerforationSetRefId")]
-        public List<String> PerforationSetRefId {
+        public List<string> PerforationSetRefId {
             get {
                 return PerforationSetRefIdField;
             } 
@@ -46511,7 +46511,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> PerforationSetRefIdField; 
+        private List<string> PerforationSetRefIdField; 
 
         /// <summary>
         /// PermanentRemarks property
@@ -46519,7 +46519,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Remarks on the equipment stored permanently.")]
 		[XmlElement("PermanentRemarks")]
-        public String PermanentRemarks {
+        public string PermanentRemarks {
             get {
                 return PermanentRemarksField;
             } 
@@ -46529,7 +46529,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PermanentRemarksField; 
+        private string PermanentRemarksField; 
 
         /// <summary>
         /// UsageComment property
@@ -46537,7 +46537,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Remarks on the usage of this equipment.")]
 		[XmlElement("UsageComment")]
-        public String UsageComment {
+        public string UsageComment {
             get {
                 return UsageCommentField;
             } 
@@ -46547,7 +46547,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String UsageCommentField; 
+        private string UsageCommentField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -46721,7 +46721,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StringEquipment.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -46731,7 +46731,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 		/// <summary>
         /// Reference to a piece of equipment.
@@ -46741,7 +46741,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Reference to a piece of equipment.")]
         [XmlAttribute("equipmentReferenceUid")]
 		
-        public String EquipmentReferenceUid {
+        public string EquipmentReferenceUid {
             get {
                 return equipmentReferenceUidField;
             } 
@@ -46751,7 +46751,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String equipmentReferenceUidField; 
+        private string equipmentReferenceUidField; 
 
 
         
@@ -46796,7 +46796,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("DownholeString reference ID.")]
 		[XmlElement("StringReferenceId")]
-        public String StringReferenceId {
+        public string StringReferenceId {
             get {
                 return StringReferenceIdField;
             } 
@@ -46806,7 +46806,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String StringReferenceIdField; 
+        private string StringReferenceIdField; 
 
         /// <summary>
         /// Equipment reference ID.
@@ -46815,7 +46815,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Equipment reference ID.")]
 		[XmlElement("EquipmentReferenceId")]
-        public String EquipmentReferenceId {
+        public string EquipmentReferenceId {
             get {
                 return EquipmentReferenceIdField;
             } 
@@ -46825,7 +46825,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String EquipmentReferenceIdField; 
+        private string EquipmentReferenceIdField; 
 
         /// <summary>
         /// Reference to the equipment for this accessory.
@@ -46834,7 +46834,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Reference to the equipment for this accessory.")]
 		[XmlElement("AccesoryEquipmentReferenceId")]
-        public String AccesoryEquipmentReferenceId {
+        public string AccesoryEquipmentReferenceId {
             get {
                 return AccesoryEquipmentReferenceIdField;
             } 
@@ -46844,7 +46844,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String AccesoryEquipmentReferenceIdField; 
+        private string AccesoryEquipmentReferenceIdField; 
 
         /// <summary>
         /// Comment or remarks on this container reference.
@@ -46853,7 +46853,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("Comment or remarks on this container reference.")]
 		[XmlElement("Comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return CommentField;
             } 
@@ -46863,7 +46863,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentField; 
+        private string CommentField; 
 
 		/// <summary>
         /// Unique identifier for this instance of ReferenceContainer.
@@ -46873,7 +46873,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of ReferenceContainer.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -46883,7 +46883,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -46962,7 +46962,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ConnectionFormSpecified {
+        public bool ConnectionFormSpecified {
             get {
                 return ConnectionFormSpecifiedField;
             } 
@@ -46972,7 +46972,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ConnectionFormSpecifiedField; 
+        private bool ConnectionFormSpecifiedField; 
 
         /// <summary>
         /// ConnectionUpset property
@@ -46980,7 +46980,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Connection upset.")]
 		[XmlElement("ConnectionUpset")]
-        public String ConnectionUpset {
+        public string ConnectionUpset {
             get {
                 return ConnectionUpsetField;
             } 
@@ -46990,7 +46990,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ConnectionUpsetField; 
+        private string ConnectionUpsetField; 
 
         /// <summary>
         /// ConnectionType property
@@ -47017,7 +47017,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Reference to the string equipment.")]
         [XmlAttribute("stringEquipmentReferenceUid")]
 		
-        public String StringEquipmentReferenceUid {
+        public string StringEquipmentReferenceUid {
             get {
                 return stringEquipmentReferenceUidField;
             } 
@@ -47027,7 +47027,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String stringEquipmentReferenceUidField; 
+        private string stringEquipmentReferenceUidField; 
 
 
     } //here
@@ -47283,7 +47283,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Thread type from API RP7G, 5CT.")]
 		[XmlElement("TypeThread")]
-        public String TypeThread {
+        public string TypeThread {
             get {
                 return TypeThreadField;
             } 
@@ -47293,7 +47293,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeThreadField; 
+        private string TypeThreadField; 
 
         /// <summary>
         /// SizeThread property
@@ -47372,7 +47372,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PositionSpecified {
+        public bool PositionSpecified {
             get {
                 return PositionSpecifiedField;
             } 
@@ -47382,7 +47382,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PositionSpecifiedField; 
+        private bool PositionSpecifiedField; 
 
         /// <summary>
         /// CriticalCrossSection property
@@ -47493,7 +47493,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Connection.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -47503,7 +47503,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -47619,7 +47619,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The pattern of the holes.")]
 		[XmlElement("HolePattern")]
-        public String HolePattern {
+        public string HolePattern {
             get {
                 return HolePatternField;
             } 
@@ -47629,7 +47629,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String HolePatternField; 
+        private string HolePatternField; 
 
         /// <summary>
         /// Remarks and comments about this perforated hole.
@@ -47637,7 +47637,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Remarks and comments about this perforated hole.")]
 		[XmlElement("Remarks")]
-        public String Remarks {
+        public string Remarks {
             get {
                 return RemarksField;
             } 
@@ -47647,7 +47647,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RemarksField; 
+        private string RemarksField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -47702,7 +47702,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("The number of holes.")]
 		[XmlElement("HoleCount")]
-        public Int32? HoleCount {
+        public int? HoleCount {
             get {
                 return HoleCountField;
             } 
@@ -47713,14 +47713,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? HoleCountField; 
+        private int? HoleCountField; 
 
         /// <summary>
         /// HoleCountSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean HoleCountSpecified {
+        public bool HoleCountSpecified {
             get {
                 return HoleCountSpecifiedField;
             } 
@@ -47730,7 +47730,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean HoleCountSpecifiedField; 
+        private bool HoleCountSpecifiedField; 
 
 		/// <summary>
         /// Unique identifier for this instance of PerfHole.
@@ -47740,7 +47740,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of PerfHole.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -47750,7 +47750,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -47847,7 +47847,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("The number of the slots.")]
 		[XmlElement("SlotCount")]
-        public Int32? SlotCount {
+        public int? SlotCount {
             get {
                 return SlotCountField;
             } 
@@ -47858,14 +47858,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? SlotCountField; 
+        private int? SlotCountField; 
 
         /// <summary>
         /// SlotCountSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SlotCountSpecified {
+        public bool SlotCountSpecified {
             get {
                 return SlotCountSpecifiedField;
             } 
@@ -47875,7 +47875,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean SlotCountSpecifiedField; 
+        private bool SlotCountSpecifiedField; 
 
         /// <summary>
         /// Remarks and comments about this perforation slot.
@@ -47883,7 +47883,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Remarks and comments about this perforation slot.")]
 		[XmlElement("Remarks")]
-        public String Remarks {
+        public string Remarks {
             get {
                 return RemarksField;
             } 
@@ -47893,7 +47893,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RemarksField; 
+        private string RemarksField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -47933,7 +47933,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of PerfSlot.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -47943,7 +47943,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -47989,7 +47989,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the ExtPropNameValue class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public ExtPropNameValue(String value)
+        public ExtPropNameValue(string value)
         {
             this.Value = value;
         }
@@ -48008,7 +48008,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A string representing the name of property.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -48018,7 +48018,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// A value string representing the units of measure of the value.
@@ -48026,7 +48026,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A value string representing the units of measure of the value.")]
 		[XmlElement("Value")]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -48036,7 +48036,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 		/// <summary>
         /// Unique identifier for this instance of ExtPropNameValue.
@@ -48046,7 +48046,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of ExtPropNameValue.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -48056,7 +48056,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -48100,7 +48100,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The name of the piece of equipment.")]
 		[XmlElement("EquipmentName")]
-        public String EquipmentName {
+        public string EquipmentName {
             get {
                 return EquipmentNameField;
             } 
@@ -48110,7 +48110,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String EquipmentNameField; 
+        private string EquipmentNameField; 
 
         /// <summary>
         /// EquipmentType property
@@ -48118,7 +48118,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The equipment type etc. bridge plug, bull plug. capillary tubing.")]
 		[XmlElement("EquipmentType")]
-        public EquipmentType? EquipmentType {
+        public ExtensibleEnum<EquipmentType>? EquipmentType {
             get {
                 return EquipmentTypeField;
             } 
@@ -48128,7 +48128,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private EquipmentType? EquipmentTypeField; 
+        private ExtensibleEnum<EquipmentType>? EquipmentTypeField; 
 
         /// <summary>
         /// Manufacturer property
@@ -48136,7 +48136,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturer of this equipment.")]
 		[XmlElement("Manufacturer")]
-        public String Manufacturer {
+        public string Manufacturer {
             get {
                 return ManufacturerField;
             } 
@@ -48146,7 +48146,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ManufacturerField; 
+        private string ManufacturerField; 
 
         /// <summary>
         /// Model property
@@ -48154,7 +48154,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The model of the equipment.")]
 		[XmlElement("Model")]
-        public String Model {
+        public string Model {
             get {
                 return ModelField;
             } 
@@ -48164,7 +48164,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ModelField; 
+        private string ModelField; 
 
         /// <summary>
         /// CatalogId property
@@ -48172,7 +48172,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Catalog where equipment can be found.")]
 		[XmlElement("CatalogId")]
-        public String CatalogId {
+        public string CatalogId {
             get {
                 return CatalogIdField;
             } 
@@ -48182,7 +48182,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CatalogIdField; 
+        private string CatalogIdField; 
 
         /// <summary>
         /// CatalogName property
@@ -48190,7 +48190,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of equipment as found in the catalog.")]
 		[XmlElement("CatalogName")]
-        public String CatalogName {
+        public string CatalogName {
             get {
                 return CatalogNameField;
             } 
@@ -48200,7 +48200,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CatalogNameField; 
+        private string CatalogNameField; 
 
         /// <summary>
         /// BrandName property
@@ -48208,7 +48208,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The equipment's brand name.")]
 		[XmlElement("BrandName")]
-        public String BrandName {
+        public string BrandName {
             get {
                 return BrandNameField;
             } 
@@ -48218,7 +48218,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String BrandNameField; 
+        private string BrandNameField; 
 
         /// <summary>
         /// ModelType property
@@ -48226,7 +48226,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The equipment's model type.")]
 		[XmlElement("ModelType")]
-        public String ModelType {
+        public string ModelType {
             get {
                 return ModelTypeField;
             } 
@@ -48236,7 +48236,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ModelTypeField; 
+        private string ModelTypeField; 
 
         /// <summary>
         /// Series property
@@ -48244,7 +48244,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Series number.")]
 		[XmlElement("Series")]
-        public String Series {
+        public string Series {
             get {
                 return SeriesField;
             } 
@@ -48254,14 +48254,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SeriesField; 
+        private string SeriesField; 
 
         /// <summary>
         /// IsSerialized property
         /// </summary>
 		[Description("A flag that indicates the equipment has a serial number.")]
 		[XmlElement("IsSerialized")]
-        public Boolean? IsSerialized {
+        public bool? IsSerialized {
             get {
                 return IsSerializedField;
             } 
@@ -48272,14 +48272,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsSerializedField; 
+        private bool? IsSerializedField; 
 
         /// <summary>
         /// IsSerializedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IsSerializedSpecified {
+        public bool IsSerializedSpecified {
             get {
                 return IsSerializedSpecifiedField;
             } 
@@ -48289,7 +48289,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IsSerializedSpecifiedField; 
+        private bool IsSerializedSpecifiedField; 
 
         /// <summary>
         /// SerialNumber property
@@ -48297,7 +48297,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Serial number.")]
 		[XmlElement("SerialNumber")]
-        public String SerialNumber {
+        public string SerialNumber {
             get {
                 return SerialNumberField;
             } 
@@ -48307,7 +48307,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SerialNumberField; 
+        private string SerialNumberField; 
 
         /// <summary>
         /// PartNo property
@@ -48315,7 +48315,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Number that identifies this part.")]
 		[XmlElement("PartNo")]
-        public String PartNo {
+        public string PartNo {
             get {
                 return PartNoField;
             } 
@@ -48325,7 +48325,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PartNoField; 
+        private string PartNoField; 
 
         /// <summary>
         /// SurfaceCondition property
@@ -48333,7 +48333,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Surface condition.")]
 		[XmlElement("SurfaceCondition")]
-        public String SurfaceCondition {
+        public string SurfaceCondition {
             get {
                 return SurfaceConditionField;
             } 
@@ -48343,7 +48343,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SurfaceConditionField; 
+        private string SurfaceConditionField; 
 
         /// <summary>
         /// Material property
@@ -48351,7 +48351,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Material that the equipment is made from.")]
 		[XmlElement("Material")]
-        public String Material {
+        public string Material {
             get {
                 return MaterialField;
             } 
@@ -48361,7 +48361,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MaterialField; 
+        private string MaterialField; 
 
         /// <summary>
         /// Grade property
@@ -48386,7 +48386,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GradeSpecified {
+        public bool GradeSpecified {
             get {
                 return GradeSpecifiedField;
             } 
@@ -48396,7 +48396,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean GradeSpecifiedField; 
+        private bool GradeSpecifiedField; 
 
         /// <summary>
         /// UnitWeight property
@@ -48421,7 +48421,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Flag indicating whether equipment has a coating.")]
 		[XmlElement("CoatingLinerApplied")]
-        public Boolean? CoatingLinerApplied {
+        public bool? CoatingLinerApplied {
             get {
                 return CoatingLinerAppliedField;
             } 
@@ -48432,14 +48432,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? CoatingLinerAppliedField; 
+        private bool? CoatingLinerAppliedField; 
 
         /// <summary>
         /// CoatingLinerAppliedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CoatingLinerAppliedSpecified {
+        public bool CoatingLinerAppliedSpecified {
             get {
                 return CoatingLinerAppliedSpecifiedField;
             } 
@@ -48449,7 +48449,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CoatingLinerAppliedSpecifiedField; 
+        private bool CoatingLinerAppliedSpecifiedField; 
 
         /// <summary>
         /// OutsideCoating property
@@ -48474,7 +48474,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean OutsideCoatingSpecified {
+        public bool OutsideCoatingSpecified {
             get {
                 return OutsideCoatingSpecifiedField;
             } 
@@ -48484,7 +48484,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean OutsideCoatingSpecifiedField; 
+        private bool OutsideCoatingSpecifiedField; 
 
         /// <summary>
         /// InsideCoating property
@@ -48509,7 +48509,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean InsideCoatingSpecified {
+        public bool InsideCoatingSpecified {
             get {
                 return InsideCoatingSpecifiedField;
             } 
@@ -48519,7 +48519,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean InsideCoatingSpecifiedField; 
+        private bool InsideCoatingSpecifiedField; 
 
         /// <summary>
         /// UnitLength property
@@ -48761,7 +48761,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Sweet or sour service.")]
 		[XmlElement("NameService")]
-        public String NameService {
+        public string NameService {
             get {
                 return NameServiceField;
             } 
@@ -48771,7 +48771,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameServiceField; 
+        private string NameServiceField; 
 
         /// <summary>
         /// Description property
@@ -48779,7 +48779,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("The description of this equipment.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -48789,7 +48789,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// DescriptionPermanent property
@@ -48797,7 +48797,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("The description of this equipment to be permanently kept.")]
 		[XmlElement("DescriptionPermanent")]
-        public String DescriptionPermanent {
+        public string DescriptionPermanent {
             get {
                 return DescriptionPermanentField;
             } 
@@ -48807,7 +48807,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionPermanentField; 
+        private string DescriptionPermanentField; 
 
         /// <summary>
         /// Remark property
@@ -48815,7 +48815,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Remarks about this equipment property.")]
 		[XmlElement("Remark")]
-        public String Remark {
+        public string Remark {
             get {
                 return RemarkField;
             } 
@@ -48825,7 +48825,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RemarkField; 
+        private string RemarkField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -48969,7 +48969,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Equipment.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -48979,7 +48979,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -49023,7 +49023,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Reference to the borehole that contains the perf set.")]
         [RecurringElement]
 		[XmlElement("BoreholeStringReferenceId")]
-        public List<String> BoreholeStringReferenceId {
+        public List<string> BoreholeStringReferenceId {
             get {
                 return BoreholeStringReferenceIdField;
             } 
@@ -49045,7 +49045,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> BoreholeStringReferenceIdField; 
+        private List<string> BoreholeStringReferenceIdField; 
 
         /// <summary>
         /// DownholeStringReferenceId property
@@ -49053,7 +49053,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Reference to the downhole string.")]
         [RecurringElement]
 		[XmlElement("DownholeStringReferenceId")]
-        public List<String> DownholeStringReferenceId {
+        public List<string> DownholeStringReferenceId {
             get {
                 return DownholeStringReferenceIdField;
             } 
@@ -49075,7 +49075,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> DownholeStringReferenceIdField; 
+        private List<string> DownholeStringReferenceIdField; 
 
         /// <summary>
         /// MdInterval property
@@ -49155,7 +49155,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The pattern of the holes.")]
 		[XmlElement("HolePattern")]
-        public String HolePattern {
+        public string HolePattern {
             get {
                 return HolePatternField;
             } 
@@ -49165,7 +49165,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String HolePatternField; 
+        private string HolePatternField; 
 
         /// <summary>
         /// HoleDensity property
@@ -49190,7 +49190,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("The number of holes.")]
 		[XmlElement("HoleCount")]
-        public Int32? HoleCount {
+        public int? HoleCount {
             get {
                 return HoleCountField;
             } 
@@ -49201,14 +49201,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? HoleCountField; 
+        private int? HoleCountField; 
 
         /// <summary>
         /// HoleCountSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean HoleCountSpecified {
+        public bool HoleCountSpecified {
             get {
                 return HoleCountSpecifiedField;
             } 
@@ -49218,14 +49218,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean HoleCountSpecifiedField; 
+        private bool HoleCountSpecifiedField; 
 
         /// <summary>
         /// FrictionFactor property
         /// </summary>
 		[Description("The friction factor of each perforation set.")]
 		[XmlElement("FrictionFactor")]
-        public Double? FrictionFactor {
+        public double? FrictionFactor {
             get {
                 return FrictionFactorField;
             } 
@@ -49236,14 +49236,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? FrictionFactorField; 
+        private double? FrictionFactorField; 
 
         /// <summary>
         /// FrictionFactorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean FrictionFactorSpecified {
+        public bool FrictionFactorSpecified {
             get {
                 return FrictionFactorSpecifiedField;
             } 
@@ -49253,7 +49253,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean FrictionFactorSpecifiedField; 
+        private bool FrictionFactorSpecifiedField; 
 
         /// <summary>
         /// FrictionPres property
@@ -49278,7 +49278,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("A coefficient used in the equation for calculation of pressure drop  across a perforation set.")]
 		[XmlElement("DischargeCoefficient")]
-        public Double? DischargeCoefficient {
+        public double? DischargeCoefficient {
             get {
                 return DischargeCoefficientField;
             } 
@@ -49289,14 +49289,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? DischargeCoefficientField; 
+        private double? DischargeCoefficientField; 
 
         /// <summary>
         /// DischargeCoefficientSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DischargeCoefficientSpecified {
+        public bool DischargeCoefficientSpecified {
             get {
                 return DischargeCoefficientSpecifiedField;
             } 
@@ -49306,7 +49306,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean DischargeCoefficientSpecifiedField; 
+        private bool DischargeCoefficientSpecifiedField; 
 
         /// <summary>
         /// PerforationTool property
@@ -49331,7 +49331,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PerforationToolSpecified {
+        public bool PerforationToolSpecified {
             get {
                 return PerforationToolSpecifiedField;
             } 
@@ -49341,7 +49341,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PerforationToolSpecifiedField; 
+        private bool PerforationToolSpecifiedField; 
 
         /// <summary>
         /// PerforationPenetration property
@@ -49385,7 +49385,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The ratio value of crash damage.")]
 		[XmlElement("CrushDamageRatio")]
-        public String CrushDamageRatio {
+        public string CrushDamageRatio {
             get {
                 return CrushDamageRatioField;
             } 
@@ -49395,7 +49395,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CrushDamageRatioField; 
+        private string CrushDamageRatioField; 
 
         /// <summary>
         /// PerforationDate property
@@ -49420,7 +49420,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Remarks regarding this perforation set.")]
 		[XmlElement("PermanentRemarks")]
-        public String PermanentRemarks {
+        public string PermanentRemarks {
             get {
                 return PermanentRemarksField;
             } 
@@ -49430,7 +49430,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PermanentRemarksField; 
+        private string PermanentRemarksField; 
 
         /// <summary>
         /// EventHistory property
@@ -49457,7 +49457,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of PerforationSet.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -49467,7 +49467,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -49546,7 +49546,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SubStringTypeSpecified {
+        public bool SubStringTypeSpecified {
             get {
                 return SubStringTypeSpecifiedField;
             } 
@@ -49556,7 +49556,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean SubStringTypeSpecifiedField; 
+        private bool SubStringTypeSpecifiedField; 
 
         /// <summary>
         /// Name property
@@ -49564,7 +49564,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The name of the downhole string.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -49574,7 +49574,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// StringInstallDate property
@@ -49599,7 +49599,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The name of parent string.")]
 		[XmlElement("ParentStringsName")]
-        public String ParentStringsName {
+        public string ParentStringsName {
             get {
                 return ParentStringsNameField;
             } 
@@ -49609,7 +49609,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ParentStringsNameField; 
+        private string ParentStringsNameField; 
 
         /// <summary>
         /// StringMdInterval property
@@ -49797,7 +49797,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of DownholeString.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -49807,7 +49807,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -49852,7 +49852,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Additive name.")]
 		[XmlElement("NameAdd")]
-        public String NameAdd {
+        public string NameAdd {
             get {
                 return NameAddField;
             } 
@@ -49862,7 +49862,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameAddField; 
+        private string NameAddField; 
 
         /// <summary>
         /// Additive type or function (e.g., retarder, visosifier, weighting agent).
@@ -49870,7 +49870,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Additive type or function (e.g., retarder, visosifier, weighting agent).")]
 		[XmlElement("TypeAdd")]
-        public String TypeAdd {
+        public string TypeAdd {
             get {
                 return TypeAddField;
             } 
@@ -49880,7 +49880,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeAddField; 
+        private string TypeAddField; 
 
         /// <summary>
         /// Wet or dry.
@@ -49888,7 +49888,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Wet or dry.")]
 		[XmlElement("FormAdd")]
-        public String FormAdd {
+        public string FormAdd {
             get {
                 return FormAddField;
             } 
@@ -49898,7 +49898,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FormAddField; 
+        private string FormAddField; 
 
         /// <summary>
         /// Additive density.
@@ -49975,7 +49975,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for the additive.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -49985,7 +49985,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -50032,7 +50032,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public VolumePerMassMeasure(Double value, VolumePerMassUom uom)
+        public VolumePerMassMeasure(double value, VolumePerMassUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -50069,7 +50069,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -50079,7 +50079,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -50159,7 +50159,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Fluid type: Mud, Wash, Spacer, Slurry.")]
 		[XmlElement("TypeFluid")]
-        public String TypeFluid {
+        public string TypeFluid {
             get {
                 return TypeFluidField;
             } 
@@ -50169,14 +50169,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeFluidField; 
+        private string TypeFluidField; 
 
         /// <summary>
         /// FluidIndex property
         /// </summary>
 		[Description("Fluid Index: 1: first fluid pumped (= original mud), last - 1 = tail cement, last = displacement mud.")]
 		[XmlElement("FluidIndex")]
-        public Int64? FluidIndex {
+        public long? FluidIndex {
             get {
                 return FluidIndexField;
             } 
@@ -50187,14 +50187,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? FluidIndexField; 
+        private long? FluidIndexField; 
 
         /// <summary>
         /// FluidIndexSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean FluidIndexSpecified {
+        public bool FluidIndexSpecified {
             get {
                 return FluidIndexSpecifiedField;
             } 
@@ -50204,7 +50204,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean FluidIndexSpecifiedField; 
+        private bool FluidIndexSpecifiedField; 
 
         /// <summary>
         /// DescFluid property
@@ -50212,7 +50212,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Fluid description.")]
 		[XmlElement("DescFluid")]
-        public String DescFluid {
+        public string DescFluid {
             get {
                 return DescFluidField;
             } 
@@ -50222,7 +50222,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescFluidField; 
+        private string DescFluidField; 
 
         /// <summary>
         /// Purpose property
@@ -50230,7 +50230,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Purpose description.")]
 		[XmlElement("Purpose")]
-        public String Purpose {
+        public string Purpose {
             get {
                 return PurposeField;
             } 
@@ -50240,7 +50240,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PurposeField; 
+        private string PurposeField; 
 
         /// <summary>
         /// ClassSlurryDryBlend property
@@ -50248,7 +50248,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Slurry class.")]
 		[XmlElement("ClassSlurryDryBlend")]
-        public String ClassSlurryDryBlend {
+        public string ClassSlurryDryBlend {
             get {
                 return ClassSlurryDryBlendField;
             } 
@@ -50258,7 +50258,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ClassSlurryDryBlendField; 
+        private string ClassSlurryDryBlendField; 
 
         /// <summary>
         /// SlurryPlacementInterval property
@@ -50284,7 +50284,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Water source description.")]
 		[XmlElement("SourceWater")]
-        public String SourceWater {
+        public string SourceWater {
             get {
                 return SourceWaterField;
             } 
@@ -50294,7 +50294,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SourceWaterField; 
+        private string SourceWaterField; 
 
         /// <summary>
         /// VolWater property
@@ -50482,7 +50482,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Specify one of these models: Newtonian, Bingham, Power Law, and Herschel Bulkley.")]
 		[XmlElement("FluidRheologicalModel")]
-        public String FluidRheologicalModel {
+        public string FluidRheologicalModel {
             get {
                 return FluidRheologicalModelField;
             } 
@@ -50492,7 +50492,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FluidRheologicalModelField; 
+        private string FluidRheologicalModelField; 
 
         /// <summary>
         /// Viscosity property
@@ -50680,7 +50680,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Type of base fluid: fresh water, sea water, brine, brackish water.")]
 		[XmlElement("TypeBaseFluid")]
-        public String TypeBaseFluid {
+        public string TypeBaseFluid {
             get {
                 return TypeBaseFluidField;
             } 
@@ -50690,7 +50690,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeBaseFluidField; 
+        private string TypeBaseFluidField; 
 
         /// <summary>
         /// DensBaseFluid property
@@ -50716,7 +50716,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of dry blend.")]
 		[XmlElement("DryBlendName")]
-        public String DryBlendName {
+        public string DryBlendName {
             get {
                 return DryBlendNameField;
             } 
@@ -50726,7 +50726,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DryBlendNameField; 
+        private string DryBlendNameField; 
 
         /// <summary>
         /// DryBlendDescription property
@@ -50734,7 +50734,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of dry blend.")]
 		[XmlElement("DryBlendDescription")]
-        public String DryBlendDescription {
+        public string DryBlendDescription {
             get {
                 return DryBlendDescriptionField;
             } 
@@ -50744,7 +50744,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DryBlendDescriptionField; 
+        private string DryBlendDescriptionField; 
 
         /// <summary>
         /// MassDryBlend property
@@ -50805,7 +50805,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Foam used?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("FoamUsed")]
-        public Boolean? FoamUsed {
+        public bool? FoamUsed {
             get {
                 return FoamUsedField;
             } 
@@ -50816,14 +50816,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? FoamUsedField; 
+        private bool? FoamUsedField; 
 
         /// <summary>
         /// FoamUsedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean FoamUsedSpecified {
+        public bool FoamUsedSpecified {
             get {
                 return FoamUsedSpecifiedField;
             } 
@@ -50833,7 +50833,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean FoamUsedSpecifiedField; 
+        private bool FoamUsedSpecifiedField; 
 
         /// <summary>
         /// TypeGasFoam property
@@ -50841,7 +50841,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Gas type used for foam job.")]
 		[XmlElement("TypeGasFoam")]
-        public String TypeGasFoam {
+        public string TypeGasFoam {
             get {
                 return TypeGasFoamField;
             } 
@@ -50851,7 +50851,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeGasFoamField; 
+        private string TypeGasFoamField; 
 
         /// <summary>
         /// VolGasFoam property
@@ -51387,7 +51387,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this cementing fluid.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -51397,7 +51397,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -51538,7 +51538,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Rheometer.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -51548,7 +51548,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -51611,7 +51611,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The raw reading from a rheometer. This could be , but is not necessarily, a viscosity.")]
 		[XmlElement("Viscosity")]
-        public Double? Viscosity {
+        public double? Viscosity {
             get {
                 return ViscosityField;
             } 
@@ -51621,7 +51621,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? ViscosityField; 
+        private double? ViscosityField; 
 
 		/// <summary>
         /// Unique identifier for this instance of RheometerViscosity.
@@ -51631,7 +51631,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of RheometerViscosity.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -51641,7 +51641,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -51686,7 +51686,7 @@ namespace Energistics.DataAccess.WITSML200
         [RegularExpression("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
         [Description("UUID feference to a fluid used in CementJob.")]
 		[XmlElement("FluidReferenceId")]
-        public String FluidReferenceId {
+        public string FluidReferenceId {
             get {
                 return FluidReferenceIdField;
             } 
@@ -51696,7 +51696,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FluidReferenceIdField; 
+        private string FluidReferenceIdField; 
 
         /// <summary>
         /// The ratio of excess fluid to total fluid pumped during the step.
@@ -51775,7 +51775,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Number of pump strokes for the fluid to be pumped (assumes the pump output is known).")]
 		[XmlElement("StrokePump")]
-        public Int32? StrokePump {
+        public int? StrokePump {
             get {
                 return StrokePumpField;
             } 
@@ -51786,14 +51786,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? StrokePumpField; 
+        private int? StrokePumpField; 
 
         /// <summary>
         /// StrokePumpSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StrokePumpSpecified {
+        public bool StrokePumpSpecified {
             get {
                 return StrokePumpSpecifiedField;
             } 
@@ -51803,7 +51803,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean StrokePumpSpecifiedField; 
+        private bool StrokePumpSpecifiedField; 
 
         /// <summary>
         /// Back pressure applied during the pumping stage.
@@ -51847,7 +51847,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Comments and remarks.")]
 		[XmlElement("Comments")]
-        public String Comments {
+        public string Comments {
             get {
                 return CommentsField;
             } 
@@ -51857,7 +51857,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentsField; 
+        private string CommentsField; 
 
 		/// <summary>
         /// Unique identifier for this pump schedule step.
@@ -51867,7 +51867,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this pump schedule step.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -51877,7 +51877,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -51922,7 +51922,7 @@ namespace Energistics.DataAccess.WITSML200
         [RegularExpression("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
         [Description("Reference to fluid used in the CementJob.")]
 		[XmlElement("FluidReferenceId")]
-        public String FluidReferenceId {
+        public string FluidReferenceId {
             get {
                 return FluidReferenceIdField;
             } 
@@ -51932,7 +51932,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FluidReferenceIdField; 
+        private string FluidReferenceIdField; 
 
         /// <summary>
         /// MDFluidBase property
@@ -52016,7 +52016,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of FluidLocation.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -52026,7 +52026,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -52072,7 +52072,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Annular flow present after the stage was completed?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("AnnularFlowAfter")]
-        public Boolean? AnnularFlowAfter {
+        public bool? AnnularFlowAfter {
             get {
                 return AnnularFlowAfterField;
             } 
@@ -52083,14 +52083,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? AnnularFlowAfterField; 
+        private bool? AnnularFlowAfterField; 
 
         /// <summary>
         /// AnnularFlowAfterSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AnnularFlowAfterSpecified {
+        public bool AnnularFlowAfterSpecified {
             get {
                 return AnnularFlowAfterSpecifiedField;
             } 
@@ -52100,7 +52100,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean AnnularFlowAfterSpecifiedField; 
+        private bool AnnularFlowAfterSpecifiedField; 
 
         /// <summary>
         /// ReciprocationSlackoff property
@@ -52125,7 +52125,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Bottom plug used?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("BotPlug")]
-        public Boolean? BotPlug {
+        public bool? BotPlug {
             get {
                 return BotPlugField;
             } 
@@ -52136,14 +52136,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? BotPlugField; 
+        private bool? BotPlugField; 
 
         /// <summary>
         /// BotPlugSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean BotPlugSpecified {
+        public bool BotPlugSpecified {
             get {
                 return BotPlugSpecifiedField;
             } 
@@ -52153,14 +52153,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean BotPlugSpecifiedField; 
+        private bool BotPlugSpecifiedField; 
 
         /// <summary>
         /// BotPlugNumber property
         /// </summary>
 		[Description("Amount of bottom plug used.")]
 		[XmlElement("BotPlugNumber")]
-        public Int32? BotPlugNumber {
+        public int? BotPlugNumber {
             get {
                 return BotPlugNumberField;
             } 
@@ -52171,14 +52171,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? BotPlugNumberField; 
+        private int? BotPlugNumberField; 
 
         /// <summary>
         /// BotPlugNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean BotPlugNumberSpecified {
+        public bool BotPlugNumberSpecified {
             get {
                 return BotPlugNumberSpecifiedField;
             } 
@@ -52188,7 +52188,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean BotPlugNumberSpecifiedField; 
+        private bool BotPlugNumberSpecifiedField; 
 
         /// <summary>
         /// DiaTailPipe property
@@ -52214,7 +52214,7 @@ namespace Energistics.DataAccess.WITSML200
 		[RegularExpression("[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}")]
         [Description("Reference to displacement fluid properties.")]
 		[XmlElement("DisplacementFluidRefId")]
-        public String DisplacementFluidRefId {
+        public string DisplacementFluidRefId {
             get {
                 return DisplacementFluidRefIdField;
             } 
@@ -52224,7 +52224,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DisplacementFluidRefIdField; 
+        private string DisplacementFluidRefIdField; 
 
         /// <summary>
         /// ETimPresHeld property
@@ -52406,7 +52406,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Mix method.")]
 		[XmlElement("MixMethod")]
-        public String MixMethod {
+        public string MixMethod {
             get {
                 return MixMethodField;
             } 
@@ -52416,7 +52416,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MixMethodField; 
+        private string MixMethodField; 
 
         /// <summary>
         /// NumStage property
@@ -52424,7 +52424,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Stage number.")]
 		[XmlElement("NumStage")]
-        public Int32? NumStage {
+        public int? NumStage {
             get {
                 return NumStageField;
             } 
@@ -52434,7 +52434,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumStageField; 
+        private int? NumStageField; 
 
         /// <summary>
         /// ReciprocationOverpull property
@@ -52459,7 +52459,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Pill below plug?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("PillBelowPlug")]
-        public Boolean? PillBelowPlug {
+        public bool? PillBelowPlug {
             get {
                 return PillBelowPlugField;
             } 
@@ -52470,14 +52470,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? PillBelowPlugField; 
+        private bool? PillBelowPlugField; 
 
         /// <summary>
         /// PillBelowPlugSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PillBelowPlugSpecified {
+        public bool PillBelowPlugSpecified {
             get {
                 return PillBelowPlugSpecifiedField;
             } 
@@ -52487,14 +52487,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PillBelowPlugSpecifiedField; 
+        private bool PillBelowPlugSpecifiedField; 
 
         /// <summary>
         /// PlugCatcher property
         /// </summary>
 		[Description("Plug catcher?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("PlugCatcher")]
-        public Boolean? PlugCatcher {
+        public bool? PlugCatcher {
             get {
                 return PlugCatcherField;
             } 
@@ -52505,14 +52505,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? PlugCatcherField; 
+        private bool? PlugCatcherField; 
 
         /// <summary>
         /// PlugCatcherSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PlugCatcherSpecified {
+        public bool PlugCatcherSpecified {
             get {
                 return PlugCatcherSpecifiedField;
             } 
@@ -52522,7 +52522,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PlugCatcherSpecifiedField; 
+        private bool PlugCatcherSpecifiedField; 
 
         /// <summary>
         /// PresBackPressure property
@@ -52746,7 +52746,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Squeeze objective.")]
 		[XmlElement("SqueezeObjective")]
-        public String SqueezeObjective {
+        public string SqueezeObjective {
             get {
                 return SqueezeObjectiveField;
             } 
@@ -52756,7 +52756,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SqueezeObjectiveField; 
+        private string SqueezeObjectiveField; 
 
         /// <summary>
         /// StageMdInterval property
@@ -52781,7 +52781,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Tail pipe perforated?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("TailPipePerf")]
-        public Boolean? TailPipePerf {
+        public bool? TailPipePerf {
             get {
                 return TailPipePerfField;
             } 
@@ -52792,14 +52792,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? TailPipePerfField; 
+        private bool? TailPipePerfField; 
 
         /// <summary>
         /// TailPipePerfSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TailPipePerfSpecified {
+        public bool TailPipePerfSpecified {
             get {
                 return TailPipePerfSpecifiedField;
             } 
@@ -52809,14 +52809,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TailPipePerfSpecifiedField; 
+        private bool TailPipePerfSpecifiedField; 
 
         /// <summary>
         /// TailPipeUsed property
         /// </summary>
 		[Description("Tail pipe used?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("TailPipeUsed")]
-        public Boolean? TailPipeUsed {
+        public bool? TailPipeUsed {
             get {
                 return TailPipeUsedField;
             } 
@@ -52827,14 +52827,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? TailPipeUsedField; 
+        private bool? TailPipeUsedField; 
 
         /// <summary>
         /// TailPipeUsedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TailPipeUsedSpecified {
+        public bool TailPipeUsedSpecified {
             get {
                 return TailPipeUsedSpecifiedField;
             } 
@@ -52844,7 +52844,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TailPipeUsedSpecifiedField; 
+        private bool TailPipeUsedSpecifiedField; 
 
         /// <summary>
         /// TempBHCT property
@@ -52887,7 +52887,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Top plug used?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("TopPlug")]
-        public Boolean? TopPlug {
+        public bool? TopPlug {
             get {
                 return TopPlugField;
             } 
@@ -52898,14 +52898,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? TopPlugField; 
+        private bool? TopPlugField; 
 
         /// <summary>
         /// TopPlugSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TopPlugSpecified {
+        public bool TopPlugSpecified {
             get {
                 return TopPlugSpecifiedField;
             } 
@@ -52915,7 +52915,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TopPlugSpecifiedField; 
+        private bool TopPlugSpecifiedField; 
 
         /// <summary>
         /// TypeOriginalMud property
@@ -52923,7 +52923,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Type of mud in the hole.")]
 		[XmlElement("TypeOriginalMud")]
-        public String TypeOriginalMud {
+        public string TypeOriginalMud {
             get {
                 return TypeOriginalMudField;
             } 
@@ -52933,7 +52933,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeOriginalMudField; 
+        private string TypeOriginalMudField; 
 
         /// <summary>
         /// TypeStage property
@@ -52942,7 +52942,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Stage type.")]
 		[XmlElement("TypeStage")]
-        public String TypeStage {
+        public string TypeStage {
             get {
                 return TypeStageField;
             } 
@@ -52952,7 +52952,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeStageField; 
+        private string TypeStageField; 
 
         /// <summary>
         /// VolCircPrior property
@@ -53050,7 +53050,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Method to estimate excess volume.")]
 		[XmlElement("VolExcessMethod")]
-        public String VolExcessMethod {
+        public string VolExcessMethod {
             get {
                 return VolExcessMethodField;
             } 
@@ -53060,7 +53060,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String VolExcessMethodField; 
+        private string VolExcessMethodField; 
 
         /// <summary>
         /// VolMudLost property
@@ -53438,7 +53438,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Squeeze pressure held.  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("PresSqueezeHeld")]
-        public Boolean? PresSqueezeHeld {
+        public bool? PresSqueezeHeld {
             get {
                 return PresSqueezeHeldField;
             } 
@@ -53449,14 +53449,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? PresSqueezeHeldField; 
+        private bool? PresSqueezeHeldField; 
 
         /// <summary>
         /// PresSqueezeHeldSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PresSqueezeHeldSpecified {
+        public bool PresSqueezeHeldSpecified {
             get {
                 return PresSqueezeHeldSpecifiedField;
             } 
@@ -53466,7 +53466,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PresSqueezeHeldSpecifiedField; 
+        private bool PresSqueezeHeldSpecifiedField; 
 
         /// <summary>
         /// Elapsed time of mud circulation before the job/stage.
@@ -53617,7 +53617,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Plug bumped? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("PlugBumped")]
-        public Boolean? PlugBumped {
+        public bool? PlugBumped {
             get {
                 return PlugBumpedField;
             } 
@@ -53628,14 +53628,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? PlugBumpedField; 
+        private bool? PlugBumpedField; 
 
         /// <summary>
         /// PlugBumpedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PlugBumpedSpecified {
+        public bool PlugBumpedSpecified {
             get {
                 return PlugBumpedSpecifiedField;
             } 
@@ -53645,14 +53645,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PlugBumpedSpecifiedField; 
+        private bool PlugBumpedSpecifiedField; 
 
         /// <summary>
         /// Squeeze obtained. Values are "true" (or "1") and "false" (or "0").
         /// </summary>
 		[Description("Squeeze obtained.  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("SqueezeObtained")]
-        public Boolean? SqueezeObtained {
+        public bool? SqueezeObtained {
             get {
                 return SqueezeObtainedField;
             } 
@@ -53663,14 +53663,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? SqueezeObtainedField; 
+        private bool? SqueezeObtainedField; 
 
         /// <summary>
         /// SqueezeObtainedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SqueezeObtainedSpecified {
+        public bool SqueezeObtainedSpecified {
             get {
                 return SqueezeObtainedSpecifiedField;
             } 
@@ -53680,7 +53680,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean SqueezeObtainedSpecifiedField; 
+        private bool SqueezeObtainedSpecifiedField; 
 
         /// <summary>
         /// Pressure before bumping plug / pressure at the end of the displacement.
@@ -53705,7 +53705,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Float held?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("FloatHeld")]
-        public Boolean? FloatHeld {
+        public bool? FloatHeld {
             get {
                 return FloatHeldField;
             } 
@@ -53716,14 +53716,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? FloatHeldField; 
+        private bool? FloatHeldField; 
 
         /// <summary>
         /// FloatHeldSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean FloatHeldSpecified {
+        public bool FloatHeldSpecified {
             get {
                 return FloatHeldSpecifiedField;
             } 
@@ -53733,7 +53733,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean FloatHeldSpecifiedField; 
+        private bool FloatHeldSpecifiedField; 
 
 		/// <summary>
         /// Unique identifier for this instance of CementStageReport
@@ -53743,7 +53743,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of CementStageReport")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -53753,7 +53753,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
     } //here
@@ -53814,7 +53814,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Cementing engineer.")]
 		[XmlElement("CementEngr")]
-        public String CementEngr {
+        public string CementEngr {
             get {
                 return CementEngrField;
             } 
@@ -53824,7 +53824,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CementEngrField; 
+        private string CementEngrField; 
 
         /// <summary>
         /// Duration for waiting on cement to set.
@@ -53886,7 +53886,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of cementing contractor.")]
 		[XmlElement("Contractor")]
-        public String Contractor {
+        public string Contractor {
             get {
                 return ContractorField;
             } 
@@ -53896,7 +53896,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ContractorField; 
+        private string ContractorField; 
 
         /// <summary>
         /// Pipe rotation rate (commonly in rotations per minute (RPM)).
@@ -54047,7 +54047,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Is the pipe being reciprocated (raised and lowered)?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("Reciprocating")]
-        public Boolean? Reciprocating {
+        public bool? Reciprocating {
             get {
                 return ReciprocatingField;
             } 
@@ -54058,14 +54058,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? ReciprocatingField; 
+        private bool? ReciprocatingField; 
 
         /// <summary>
         /// ReciprocatingSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ReciprocatingSpecified {
+        public bool ReciprocatingSpecified {
             get {
                 return ReciprocatingSpecifiedField;
             } 
@@ -54075,7 +54075,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ReciprocatingSpecifiedField; 
+        private bool ReciprocatingSpecifiedField; 
 
 
         
@@ -54216,7 +54216,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Was the cement drilled out? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("CementDrillOut")]
-        public Boolean? CementDrillOut {
+        public bool? CementDrillOut {
             get {
                 return CementDrillOutField;
             } 
@@ -54227,14 +54227,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? CementDrillOutField; 
+        private bool? CementDrillOutField; 
 
         /// <summary>
         /// CementDrillOutSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CementDrillOutSpecified {
+        public bool CementDrillOutSpecified {
             get {
                 return CementDrillOutSpecifiedField;
             } 
@@ -54244,7 +54244,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CementDrillOutSpecifiedField; 
+        private bool CementDrillOutSpecifiedField; 
 
         /// <summary>
         /// DTimCementDrillOut property
@@ -54354,7 +54354,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Method by which density is measured.")]
 		[XmlElement("DensMeasBy")]
-        public String DensMeasBy {
+        public string DensMeasBy {
             get {
                 return DensMeasByField;
             } 
@@ -54364,7 +54364,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DensMeasByField; 
+        private string DensMeasByField; 
 
         /// <summary>
         /// CementReportStage property
@@ -54453,7 +54453,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeHoleCasingSpecified {
+        public bool TypeHoleCasingSpecified {
             get {
                 return TypeHoleCasingSpecifiedField;
             } 
@@ -54463,7 +54463,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeHoleCasingSpecifiedField; 
+        private bool TypeHoleCasingSpecifiedField; 
 
         /// <summary>
         /// SectionMdInterval property
@@ -54561,7 +54561,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Material grade for the tubular section.")]
 		[XmlElement("Grade")]
-        public String Grade {
+        public string Grade {
             get {
                 return GradeField;
             } 
@@ -54571,14 +54571,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String GradeField; 
+        private string GradeField; 
 
         /// <summary>
         /// CurveConductor property
         /// </summary>
 		[Description("Curved conductor? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("CurveConductor")]
-        public Boolean? CurveConductor {
+        public bool? CurveConductor {
             get {
                 return CurveConductorField;
             } 
@@ -54589,14 +54589,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? CurveConductorField; 
+        private bool? CurveConductorField; 
 
         /// <summary>
         /// CurveConductorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CurveConductorSpecified {
+        public bool CurveConductorSpecified {
             get {
                 return CurveConductorSpecifiedField;
             } 
@@ -54606,7 +54606,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CurveConductorSpecifiedField; 
+        private bool CurveConductorSpecifiedField; 
 
         /// <summary>
         /// DiaDrift property
@@ -54631,7 +54631,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Friction factor.")]
 		[XmlElement("FactFric")]
-        public Double? FactFric {
+        public double? FactFric {
             get {
                 return FactFricField;
             } 
@@ -54642,14 +54642,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? FactFricField; 
+        private double? FactFricField; 
 
         /// <summary>
         /// FactFricSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean FactFricSpecified {
+        public bool FactFricSpecified {
             get {
                 return FactFricSpecifiedField;
             } 
@@ -54659,7 +54659,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean FactFricSpecifiedField; 
+        private bool FactFricSpecifiedField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -54728,7 +54728,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier of this WbGeometrySection within the WbGeometry object.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -54738,7 +54738,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -54839,7 +54839,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("A free-form format to specify the data value.")]
 		[XmlElement("DataValue")]
-        public String DataValue {
+        public string DataValue {
             get {
                 return DataValueField;
             } 
@@ -54849,7 +54849,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DataValueField; 
+        private string DataValueField; 
 
 
     } //here
@@ -54894,7 +54894,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("If the reference is to a sub-object in a growing object  (e.g., a WellboreGeometry section), then this must contain the UID of the growing part.")]
 		[XmlElement("SubObjectReference")]
-        public String SubObjectReference {
+        public string SubObjectReference {
             get {
                 return SubObjectReferenceField;
             } 
@@ -54904,7 +54904,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SubObjectReferenceField; 
+        private string SubObjectReferenceField; 
 
 
     } //here
@@ -55021,7 +55021,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Used to specify the channel start and end index.")]
 		[XmlElement("Depth")]
-        public Single? Depth {
+        public float? Depth {
             get {
                 return DepthField;
             } 
@@ -55031,7 +55031,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Single? DepthField; 
+        private float? DepthField; 
 
 
     } //here
@@ -55091,7 +55091,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The pass number. Increase the pass number each time the tool direction changes twice.")]
 		[XmlElement("Pass")]
-        public Int32? Pass {
+        public int? Pass {
             get {
                 return PassField;
             } 
@@ -55101,7 +55101,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? PassField; 
+        private int? PassField; 
 
         /// <summary>
         /// 0 = down (increasing depth) 1= up (decreasing depth) Changes each time the logging tool direction changes. When a log starts from the bottom, start with pass = 0, direction = 1. When you get to the top of the interval and start down again, change the pass.
@@ -55109,7 +55109,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("0 = down (increasing depth) 1= up (decreasing depth) Changes each time the logging tool direction changes.  When a log starts from the bottom, start with pass = 0, direction = 1.  When you get to the top of the interval and start down again, change the pass.")]
 		[XmlElement("Direction")]
-        public Int32? Direction {
+        public int? Direction {
             get {
                 return DirectionField;
             } 
@@ -55119,7 +55119,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? DirectionField; 
+        private int? DirectionField; 
 
         /// <summary>
         /// The measured depth of the point.
@@ -55127,7 +55127,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The measured depth of the point.")]
 		[XmlElement("Depth")]
-        public Single? Depth {
+        public float? Depth {
             get {
                 return DepthField;
             } 
@@ -55137,7 +55137,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Single? DepthField; 
+        private float? DepthField; 
 
 
     } //here
@@ -55178,7 +55178,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("The URI of a file containing the bulk data. If this field is non-null, then the data field is ignored. For files written to disk, this should normally contain a simple file name in relative URI form. For example, if an application writes a log file to disk, it might write the xml as abc.xml, and the bulk data as abc.avro. In this case, the value of this element would be './abc.avro'.  BUSINESS RULE: Either this element or the Data element must be present.")]
 		[XmlElement("FileUri", DataType="anyURI")]
-        public String FileUri {
+        public string FileUri {
             get {
                 return FileUriField;
             } 
@@ -55188,7 +55188,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FileUriField; 
+        private string FileUriField; 
 
 
         
@@ -55233,7 +55233,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("The name of the point metadata.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -55243,7 +55243,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// The underlying ETP data type of the point metadata.
@@ -55270,7 +55270,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("Free format description of the point metadata.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -55280,7 +55280,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
 
         
@@ -55327,7 +55327,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public LengthMeasureExt(Double value, String uom)
+        public LengthMeasureExt(double value, string uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -55347,7 +55347,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -55357,14 +55357,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -55374,7 +55374,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -55418,7 +55418,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Value of the initial entry in the list of axis index values.")]
 		[XmlElement("AxisStart")]
-        public Double? AxisStart {
+        public double? AxisStart {
             get {
                 return AxisStartField;
             } 
@@ -55428,7 +55428,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? AxisStartField; 
+        private double? AxisStartField; 
 
         /// <summary>
         /// The increment to be used to fill out the list of the log channel axis index values.
@@ -55436,7 +55436,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The increment to be used to fill out the list of the log channel axis index values.")]
 		[XmlElement("AxisSpacing")]
-        public Double? AxisSpacing {
+        public double? AxisSpacing {
             get {
                 return AxisSpacingField;
             } 
@@ -55446,7 +55446,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? AxisSpacingField; 
+        private double? AxisSpacingField; 
 
         /// <summary>
         /// The count of elements along this axis of the array.
@@ -55454,7 +55454,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The count of elements along this axis of the array.")]
 		[XmlElement("AxisCount")]
-        public Int64? AxisCount {
+        public long? AxisCount {
             get {
                 return AxisCountField;
             } 
@@ -55464,7 +55464,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? AxisCountField; 
+        private long? AxisCountField; 
 
         /// <summary>
         /// The name of the array axis.
@@ -55472,7 +55472,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The name of the array axis.")]
 		[XmlElement("AxisName")]
-        public String AxisName {
+        public string AxisName {
             get {
                 return AxisNameField;
             } 
@@ -55482,7 +55482,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String AxisNameField; 
+        private string AxisNameField; 
 
         /// <summary>
         /// The property type by which the array axis is classified. Like "measured depth" or "elapsed time".
@@ -55491,7 +55491,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("The property type by which the array axis is classified. Like \"measured depth\" or \"elapsed time\".")]
 		[XmlElement("AxisPropertyKind")]
-        public String AxisPropertyKind {
+        public string AxisPropertyKind {
             get {
                 return AxisPropertyKindField;
             } 
@@ -55501,7 +55501,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String AxisPropertyKindField; 
+        private string AxisPropertyKindField; 
 
         /// <summary>
         /// A string representing the units of measure of the axis values.
@@ -55509,7 +55509,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("A string representing the units of measure of the axis values.")]
 		[XmlElement("AxisUom")]
-        public UnitOfMeasure? AxisUom {
+        public ExtensibleEnum<UnitOfMeasure>? AxisUom {
             get {
                 return AxisUomField;
             } 
@@ -55519,7 +55519,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private UnitOfMeasure? AxisUomField; 
+        private ExtensibleEnum<UnitOfMeasure>? AxisUomField; 
 
 		/// <summary>
         /// A unique identifier for an instance of a log channel axis
@@ -55529,7 +55529,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("A unique identifier for an instance of a log channel axis")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -55539,7 +55539,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -55601,7 +55601,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The unit of measure of the index. Must be one of the units allowed for the specified IndexType (i.e., time or distance).")]
 		[XmlElement("Uom")]
-        public UnitOfMeasure? Uom {
+        public ExtensibleEnum<UnitOfMeasure>? Uom {
             get {
                 return UomField;
             } 
@@ -55611,7 +55611,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private UnitOfMeasure? UomField; 
+        private ExtensibleEnum<UnitOfMeasure>? UomField; 
 
         /// <summary>
         /// The direction of the index, either increasing or decreasing. Index direction may not change within the life of a channel.
@@ -55638,7 +55638,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("The mnemonic for the index.")]
 		[XmlElement("Mnemonic")]
-        public String Mnemonic {
+        public string Mnemonic {
             get {
                 return MnemonicField;
             } 
@@ -55648,7 +55648,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MnemonicField; 
+        private string MnemonicField; 
 
         /// <summary>
         /// For depth indexes, this contains the UID of the datum, in a channel's Well object, to which all of the index values are referenced.
@@ -55656,7 +55656,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("For depth indexes, this contains the UID of the datum, in a channel's Well object, to which all of the index values are referenced.")]
 		[XmlElement("DatumReference")]
-        public String DatumReference {
+        public string DatumReference {
             get {
                 return DatumReferenceField;
             } 
@@ -55666,7 +55666,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DatumReferenceField; 
+        private string DatumReferenceField; 
 
 
         
@@ -55765,7 +55765,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A pointer to the tubular assembly.")]
 		[XmlElement("Tubular")]
-        public String Tubular {
+        public string Tubular {
             get {
                 return TubularField;
             } 
@@ -55775,7 +55775,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TubularField; 
+        private string TubularField; 
 
         /// <summary>
         /// Hookload: rotating.
@@ -56521,7 +56521,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Reason for trip.")]
 		[XmlElement("ReasonTrip")]
-        public String ReasonTrip {
+        public string ReasonTrip {
             get {
                 return ReasonTripField;
             } 
@@ -56531,7 +56531,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ReasonTripField; 
+        private string ReasonTripField; 
 
         /// <summary>
         /// Objective of bottom hole assembly.
@@ -56539,7 +56539,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Objective of bottom hole assembly.")]
 		[XmlElement("ObjectiveBha")]
-        public String ObjectiveBha {
+        public string ObjectiveBha {
             get {
                 return ObjectiveBhaField;
             } 
@@ -56549,7 +56549,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ObjectiveBhaField; 
+        private string ObjectiveBhaField; 
 
         /// <summary>
         /// Azimuth at start measured depth.
@@ -56736,7 +56736,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MudClassSpecified {
+        public bool MudClassSpecified {
             get {
                 return MudClassSpecifiedField;
             } 
@@ -56746,7 +56746,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean MudClassSpecifiedField; 
+        private bool MudClassSpecifiedField; 
 
         /// <summary>
         /// Mud Subtype at event occurrence.
@@ -56771,7 +56771,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MudSubClassSpecified {
+        public bool MudSubClassSpecified {
             get {
                 return MudSubClassSpecifiedField;
             } 
@@ -56781,7 +56781,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean MudSubClassSpecifiedField; 
+        private bool MudSubClassSpecifiedField; 
 
         /// <summary>
         /// Comments and remarks.
@@ -56789,7 +56789,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Comments and remarks.")]
 		[XmlElement("Comments")]
-        public String Comments {
+        public string Comments {
             get {
                 return CommentsField;
             } 
@@ -56799,7 +56799,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentsField; 
+        private string CommentsField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -56839,7 +56839,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for the parameters")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -56849,7 +56849,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -57081,7 +57081,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of DrillReportSurveyStation.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -57091,7 +57091,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -57137,7 +57137,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the TimestampedCommentString class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public TimestampedCommentString(String value)
+        public TimestampedCommentString(string value)
         {
             this.Value = value;
         }
@@ -57174,7 +57174,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -57184,7 +57184,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
         
@@ -57350,7 +57350,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of DrillReportPorePressure.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -57360,7 +57360,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -57407,7 +57407,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public ElectricPotentialDifferenceMeasure(Double value, ElectricPotentialDifferenceUom uom)
+        public ElectricPotentialDifferenceMeasure(double value, ElectricPotentialDifferenceUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -57444,7 +57444,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -57454,7 +57454,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -57498,7 +57498,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description for the type of fluid.")]
 		[XmlElement("Type")]
-        public String Type {
+        public string Type {
             get {
                 return TypeField;
             } 
@@ -57508,7 +57508,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeField; 
+        private string TypeField; 
 
         /// <summary>
         /// LocationSample property
@@ -57516,7 +57516,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Sample location.")]
 		[XmlElement("LocationSample")]
-        public String LocationSample {
+        public string LocationSample {
             get {
                 return LocationSampleField;
             } 
@@ -57526,7 +57526,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String LocationSampleField; 
+        private string LocationSampleField; 
 
         /// <summary>
         /// DTim property
@@ -57694,7 +57694,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MudClassSpecified {
+        public bool MudClassSpecified {
             get {
                 return MudClassSpecifiedField;
             } 
@@ -57704,7 +57704,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean MudClassSpecifiedField; 
+        private bool MudClassSpecifiedField; 
 
         /// <summary>
         /// Density property
@@ -58143,7 +58143,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Mud pH.")]
 		[XmlElement("Ph")]
-        public Double? PH {
+        public double? PH {
             get {
                 return PhField;
             } 
@@ -58154,14 +58154,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? PhField; 
+        private double? PhField; 
 
         /// <summary>
         /// PhSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PHSpecified {
+        public bool PHSpecified {
             get {
                 return PhSpecifiedField;
             } 
@@ -58171,7 +58171,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PhSpecifiedField; 
+        private bool PhSpecifiedField; 
 
         /// <summary>
         /// TempPh property
@@ -58467,7 +58467,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of company.")]
 		[XmlElement("Company")]
-        public String Company {
+        public string Company {
             get {
                 return CompanyField;
             } 
@@ -58477,7 +58477,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CompanyField; 
+        private string CompanyField; 
 
         /// <summary>
         /// Engineer property
@@ -58485,7 +58485,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Engineer name")]
 		[XmlElement("Engineer")]
-        public String Engineer {
+        public string Engineer {
             get {
                 return EngineerField;
             } 
@@ -58495,7 +58495,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String EngineerField; 
+        private string EngineerField; 
 
         /// <summary>
         /// Asg property
@@ -58575,7 +58575,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Type of polymers present in the mud system.")]
 		[XmlElement("PolyType")]
-        public String PolyType {
+        public string PolyType {
             get {
                 return PolyTypeField;
             } 
@@ -58585,7 +58585,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PolyTypeField; 
+        private string PolyTypeField; 
 
         /// <summary>
         /// SolCorPc property
@@ -58754,7 +58754,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Turbidity units to measure the cloudiness or haziness of a fluid.")]
 		[XmlElement("Turbidity")]
-        public Double? Turbidity {
+        public double? Turbidity {
             get {
                 return TurbidityField;
             } 
@@ -58765,14 +58765,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? TurbidityField; 
+        private double? TurbidityField; 
 
         /// <summary>
         /// TurbiditySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TurbiditySpecified {
+        public bool TurbiditySpecified {
             get {
                 return TurbiditySpecifiedField;
             } 
@@ -58782,7 +58782,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TurbiditySpecifiedField; 
+        private bool TurbiditySpecifiedField; 
 
         /// <summary>
         /// OilGrease property
@@ -58970,7 +58970,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Comments and remarks.")]
 		[XmlElement("Comments")]
-        public String Comments {
+        public string Comments {
             get {
                 return CommentsField;
             } 
@@ -58980,7 +58980,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentsField; 
+        private string CommentsField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -59049,7 +59049,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Fluid.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -59059,7 +59059,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -59281,7 +59281,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeWellboreSpecified {
+        public bool TypeWellboreSpecified {
             get {
                 return TypeWellboreSpecifiedField;
             } 
@@ -59291,7 +59291,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeWellboreSpecifiedField; 
+        private bool TypeWellboreSpecifiedField; 
 
         /// <summary>
         /// MdKickoff property
@@ -59460,7 +59460,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PresTestTypeSpecified {
+        public bool PresTestTypeSpecified {
             get {
                 return PresTestTypeSpecifiedField;
             } 
@@ -59470,7 +59470,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PresTestTypeSpecifiedField; 
+        private bool PresTestTypeSpecifiedField; 
 
         /// <summary>
         /// MdPlanned property
@@ -59514,7 +59514,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A summary of the activities performed and the status of the ongoing activities.")]
 		[XmlElement("Sum24Hr")]
-        public String Sum24Hr {
+        public string Sum24Hr {
             get {
                 return Sum24HrField;
             } 
@@ -59524,7 +59524,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String Sum24HrField; 
+        private string Sum24HrField; 
 
         /// <summary>
         /// Forecast24Hr property
@@ -59532,7 +59532,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A summary of  planned activities for the next reporting period.")]
 		[XmlElement("Forecast24Hr")]
-        public String Forecast24Hr {
+        public string Forecast24Hr {
             get {
                 return Forecast24HrField;
             } 
@@ -59542,7 +59542,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String Forecast24HrField; 
+        private string Forecast24HrField; 
 
         /// <summary>
         /// RopCurrent property
@@ -59568,7 +59568,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A pointer to the rig used.")]
 		[XmlElement("Rig")]
-        public String Rig {
+        public string Rig {
             get {
                 return RigField;
             } 
@@ -59578,7 +59578,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RigField; 
+        private string RigField; 
 
         /// <summary>
         /// ETimStart property
@@ -59676,7 +59676,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the operator's rig supervisor.")]
 		[XmlElement("Supervisor")]
-        public String Supervisor {
+        public string Supervisor {
             get {
                 return SupervisorField;
             } 
@@ -59686,7 +59686,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SupervisorField; 
+        private string SupervisorField; 
 
         /// <summary>
         /// Engineer property
@@ -59694,7 +59694,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the operator's drilling engineer.")]
 		[XmlElement("Engineer")]
-        public String Engineer {
+        public string Engineer {
             get {
                 return EngineerField;
             } 
@@ -59704,7 +59704,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String EngineerField; 
+        private string EngineerField; 
 
         /// <summary>
         /// Geologist property
@@ -59712,7 +59712,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of operator's wellsite geologist.")]
 		[XmlElement("Geologist")]
-        public String Geologist {
+        public string Geologist {
             get {
                 return GeologistField;
             } 
@@ -59722,7 +59722,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String GeologistField; 
+        private string GeologistField; 
 
         /// <summary>
         /// ETimDrillRot property
@@ -59927,7 +59927,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Total number of personnel on the rig.")]
 		[XmlElement("NumPob")]
-        public Int32? NumPob {
+        public int? NumPob {
             get {
                 return NumPobField;
             } 
@@ -59938,14 +59938,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumPobField; 
+        private int? NumPobField; 
 
         /// <summary>
         /// NumPobSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumPobSpecified {
+        public bool NumPobSpecified {
             get {
                 return NumPobSpecifiedField;
             } 
@@ -59955,14 +59955,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumPobSpecifiedField; 
+        private bool NumPobSpecifiedField; 
 
         /// <summary>
         /// NumContract property
         /// </summary>
 		[Description("Number of contractor personnel on the rig.")]
 		[XmlElement("NumContract")]
-        public Int32? NumContract {
+        public int? NumContract {
             get {
                 return NumContractField;
             } 
@@ -59973,14 +59973,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumContractField; 
+        private int? NumContractField; 
 
         /// <summary>
         /// NumContractSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumContractSpecified {
+        public bool NumContractSpecified {
             get {
                 return NumContractSpecifiedField;
             } 
@@ -59990,14 +59990,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumContractSpecifiedField; 
+        private bool NumContractSpecifiedField; 
 
         /// <summary>
         /// NumOperator property
         /// </summary>
 		[Description("Number of operator personnel on the rig.")]
 		[XmlElement("NumOperator")]
-        public Int32? NumOperator {
+        public int? NumOperator {
             get {
                 return NumOperatorField;
             } 
@@ -60008,14 +60008,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumOperatorField; 
+        private int? NumOperatorField; 
 
         /// <summary>
         /// NumOperatorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumOperatorSpecified {
+        public bool NumOperatorSpecified {
             get {
                 return NumOperatorSpecifiedField;
             } 
@@ -60025,14 +60025,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumOperatorSpecifiedField; 
+        private bool NumOperatorSpecifiedField; 
 
         /// <summary>
         /// NumService property
         /// </summary>
 		[Description("Number of service company personnel on the rig.")]
 		[XmlElement("NumService")]
-        public Int32? NumService {
+        public int? NumService {
             get {
                 return NumServiceField;
             } 
@@ -60043,14 +60043,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumServiceField; 
+        private int? NumServiceField; 
 
         /// <summary>
         /// NumServiceSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumServiceSpecified {
+        public bool NumServiceSpecified {
             get {
                 return NumServiceSpecifiedField;
             } 
@@ -60060,7 +60060,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumServiceSpecifiedField; 
+        private bool NumServiceSpecifiedField; 
 
         /// <summary>
         /// NumAFE property
@@ -60068,7 +60068,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Authorization for expenditure (AFE) number that this cost item applies to.")]
 		[XmlElement("NumAFE")]
-        public String NumAFE {
+        public string NumAFE {
             get {
                 return NumAFEField;
             } 
@@ -60078,7 +60078,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NumAFEField; 
+        private string NumAFEField; 
 
         /// <summary>
         /// ConditionHole property
@@ -60086,7 +60086,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of the hole condition.")]
 		[XmlElement("ConditionHole")]
-        public String ConditionHole {
+        public string ConditionHole {
             get {
                 return ConditionHoleField;
             } 
@@ -60096,7 +60096,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ConditionHoleField; 
+        private string ConditionHoleField; 
 
         /// <summary>
         /// TvdLot property
@@ -60194,7 +60194,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A pointer to the tubular (assembly) used in this report period.")]
 		[XmlElement("Tubular")]
-        public String Tubular {
+        public string Tubular {
             get {
                 return TubularField;
             } 
@@ -60204,7 +60204,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TubularField; 
+        private string TubularField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -60324,7 +60324,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of DrillReportStatusInfo.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -60334,7 +60334,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -60381,7 +60381,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public WellElevationCoord(Double value, LengthUom uom)
+        public WellElevationCoord(double value, LengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -60422,7 +60422,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Defines the vertical datums associated with elevation, vertical depth, and measured depth coordinates.")]
         [XmlAttribute("datum")]
 		
-        public String Datum {
+        public string Datum {
             get {
                 return datumField;
             } 
@@ -60432,14 +60432,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String datumField; 
+        private string datumField; 
 
         /// <summary>
         /// Value property
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -60449,7 +60449,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -60544,7 +60544,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DateDrillCompleteSpecified {
+        public bool DateDrillCompleteSpecified {
             get {
                 return DateDrillCompleteSpecifiedField;
             } 
@@ -60554,7 +60554,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean DateDrillCompleteSpecifiedField; 
+        private bool DateDrillCompleteSpecifiedField; 
 
         /// <summary>
         /// Operator property
@@ -60562,7 +60562,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The name of the drilling Operator company responsible for the well being drilled (the company for whom the well is being drilled).")]
 		[XmlElement("Operator")]
-        public String Operator {
+        public string Operator {
             get {
                 return OperatorField;
             } 
@@ -60572,7 +60572,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OperatorField; 
+        private string OperatorField; 
 
         /// <summary>
         /// DrillContractor property
@@ -60580,7 +60580,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The name of the drilling contractor company.")]
 		[XmlElement("DrillContractor")]
-        public String DrillContractor {
+        public string DrillContractor {
             get {
                 return DrillContractorField;
             } 
@@ -60590,7 +60590,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DrillContractorField; 
+        private string DrillContractorField; 
 
         /// <summary>
         /// RigAlias property
@@ -60697,7 +60697,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ReadingTypeSpecified {
+        public bool ReadingTypeSpecified {
             get {
                 return ReadingTypeSpecifiedField;
             } 
@@ -60707,7 +60707,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ReadingTypeSpecifiedField; 
+        private bool ReadingTypeSpecifiedField; 
 
         /// <summary>
         /// Measured depth interval over which the gas reading was conducted.
@@ -60927,7 +60927,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of DrillReportGasReadingInfo.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -60937,7 +60937,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -61083,7 +61083,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of DrillReportPerfInfo.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -61093,7 +61093,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -61190,7 +61190,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A lithological description of the geological formation at the given depth.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -61200,7 +61200,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -61240,7 +61240,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of DrillReportStratInfo.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -61250,7 +61250,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -61347,7 +61347,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Phase is large activity classification, e.g. drill surface hole.")]
 		[XmlElement("Phase")]
-        public String Phase {
+        public string Phase {
             get {
                 return PhaseField;
             } 
@@ -61357,7 +61357,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PhaseField; 
+        private string PhaseField; 
 
         /// <summary>
         /// ActivityCode property
@@ -61382,7 +61382,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ActivityCodeSpecified {
+        public bool ActivityCodeSpecified {
             get {
                 return ActivityCodeSpecifiedField;
             } 
@@ -61392,7 +61392,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ActivityCodeSpecifiedField; 
+        private bool ActivityCodeSpecifiedField; 
 
         /// <summary>
         /// DetailActivity property
@@ -61400,7 +61400,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Custom string to further define an activity.")]
 		[XmlElement("DetailActivity")]
-        public String DetailActivity {
+        public string DetailActivity {
             get {
                 return DetailActivityField;
             } 
@@ -61410,7 +61410,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DetailActivityField; 
+        private string DetailActivityField; 
 
         /// <summary>
         /// ETimLost property
@@ -61633,7 +61633,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IncidentTypeSpecified {
+        public bool IncidentTypeSpecified {
             get {
                 return IncidentTypeSpecifiedField;
             } 
@@ -61643,7 +61643,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IncidentTypeSpecifiedField; 
+        private bool IncidentTypeSpecifiedField; 
 
         /// <summary>
         /// KillingType property
@@ -61668,7 +61668,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean KillingTypeSpecified {
+        public bool KillingTypeSpecified {
             get {
                 return KillingTypeSpecifiedField;
             } 
@@ -61678,7 +61678,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean KillingTypeSpecifiedField; 
+        private bool KillingTypeSpecifiedField; 
 
         /// <summary>
         /// Formation property
@@ -61686,7 +61686,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("The lithological description of the geological formation at the incident depth.")]
 		[XmlElement("Formation")]
-        public String Formation {
+        public string Formation {
             get {
                 return FormationField;
             } 
@@ -61696,7 +61696,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FormationField; 
+        private string FormationField; 
 
         /// <summary>
         /// TempBottom property
@@ -61740,7 +61740,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A description of the well control incident.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -61750,7 +61750,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -61819,7 +61819,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of DrillReportControlIncidentInfo.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -61829,7 +61829,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -61926,7 +61926,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The classification of the equipment that failed.")]
 		[XmlElement("EquipClass")]
-        public String EquipClass {
+        public string EquipClass {
             get {
                 return EquipClassField;
             } 
@@ -61936,7 +61936,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String EquipClassField; 
+        private string EquipClassField; 
 
         /// <summary>
         /// The missed production time because of the equipment failure.
@@ -61979,7 +61979,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A description of the equipment failure.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -61989,7 +61989,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -62029,7 +62029,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of DrillReportEquipFailureInfo.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -62039,7 +62039,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -62136,7 +62136,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A textual description of any shows in the interval.")]
 		[XmlElement("Show")]
-        public String Show {
+        public string Show {
             get {
                 return ShowField;
             } 
@@ -62146,7 +62146,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ShowField; 
+        private string ShowField; 
 
         /// <summary>
         /// A geological/lithological description/evaluation of the interval.
@@ -62154,7 +62154,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A geological/lithological description/evaluation of the interval.")]
 		[XmlElement("Lithology")]
-        public String Lithology {
+        public string Lithology {
             get {
                 return LithologyField;
             } 
@@ -62164,7 +62164,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String LithologyField; 
+        private string LithologyField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -62204,7 +62204,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of DrillReportLithShowInfo")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -62214,7 +62214,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -62328,7 +62328,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Was there a good seal for the wireline formation test? Values are \"true\" or \"1\" or \"false\" or \"0\".")]
 		[XmlElement("GoodSeal")]
-        public Boolean? GoodSeal {
+        public bool? GoodSeal {
             get {
                 return GoodSealField;
             } 
@@ -62339,14 +62339,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? GoodSealField; 
+        private bool? GoodSealField; 
 
         /// <summary>
         /// GoodSealSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean GoodSealSpecified {
+        public bool GoodSealSpecified {
             get {
                 return GoodSealSpecifiedField;
             } 
@@ -62356,7 +62356,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean GoodSealSpecifiedField; 
+        private bool GoodSealSpecifiedField; 
 
         /// <summary>
         /// Measured depth where the fluid sample was taken.
@@ -62382,7 +62382,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The dominate component in the fluid sample.")]
 		[XmlElement("DominateComponent")]
-        public String DominateComponent {
+        public string DominateComponent {
             get {
                 return DominateComponentField;
             } 
@@ -62392,7 +62392,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DominateComponentField; 
+        private string DominateComponentField; 
 
         /// <summary>
         /// The density of the hydrocarbon component of the fluid sample.
@@ -62436,7 +62436,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A detailed description of the wireline formation test.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -62446,7 +62446,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -62486,7 +62486,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of DrillReportFormTestInfo.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -62496,7 +62496,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -62574,7 +62574,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TestTypeSpecified {
+        public bool TestTypeSpecified {
             get {
                 return TestTypeSpecifiedField;
             } 
@@ -62584,14 +62584,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TestTypeSpecifiedField; 
+        private bool TestTypeSpecifiedField; 
 
         /// <summary>
         /// The number of the well test.
         /// </summary>
 		[Description("The number of the well test.")]
 		[XmlElement("TestNumber")]
-        public Int32? TestNumber {
+        public int? TestNumber {
             get {
                 return TestNumberField;
             } 
@@ -62602,14 +62602,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? TestNumberField; 
+        private int? TestNumberField; 
 
         /// <summary>
         /// TestNumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TestNumberSpecified {
+        public bool TestNumberSpecified {
             get {
                 return TestNumberSpecifiedField;
             } 
@@ -62619,7 +62619,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TestNumberSpecifiedField; 
+        private bool TestNumberSpecifiedField; 
 
         /// <summary>
         /// Test interval expressed as a measured depth.
@@ -63037,7 +63037,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of DrillReportWellTestInfo.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -63047,7 +63047,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -63108,7 +63108,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Core identification number.")]
 		[XmlElement("CoreNumber")]
-        public String CoreNumber {
+        public string CoreNumber {
             get {
                 return CoreNumberField;
             } 
@@ -63118,7 +63118,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CoreNumberField; 
+        private string CoreNumberField; 
 
         /// <summary>
         /// Cored interval expressed as measured depth.
@@ -63233,7 +63233,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean InnerBarrelTypeSpecified {
+        public bool InnerBarrelTypeSpecified {
             get {
                 return InnerBarrelTypeSpecifiedField;
             } 
@@ -63243,7 +63243,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean InnerBarrelTypeSpecifiedField; 
+        private bool InnerBarrelTypeSpecifiedField; 
 
         /// <summary>
         /// General core description.
@@ -63251,7 +63251,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("General core description.")]
 		[XmlElement("CoreDescription")]
-        public String CoreDescription {
+        public string CoreDescription {
             get {
                 return CoreDescriptionField;
             } 
@@ -63261,7 +63261,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CoreDescriptionField; 
+        private string CoreDescriptionField; 
 
         /// <summary>
         /// Extensions to the schema based on a name-value construct.
@@ -63301,7 +63301,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of DrillReportCoreInfo.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -63311,7 +63311,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -63480,7 +63480,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Log run number.  For measurement while drilling, this should be the  bottom hole assembly number.")]
 		[XmlElement("RunNumber")]
-        public String RunNumber {
+        public string RunNumber {
             get {
                 return RunNumberField;
             } 
@@ -63490,7 +63490,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RunNumberField; 
+        private string RunNumberField; 
 
         /// <summary>
         /// ServiceCompany property
@@ -63498,7 +63498,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the contractor who provided the service.")]
 		[XmlElement("ServiceCompany")]
-        public String ServiceCompany {
+        public string ServiceCompany {
             get {
                 return ServiceCompanyField;
             } 
@@ -63508,7 +63508,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ServiceCompanyField; 
+        private string ServiceCompanyField; 
 
         /// <summary>
         /// LoggedMdInterval property
@@ -63552,7 +63552,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A description of the logging tool.")]
 		[XmlElement("Tool")]
-        public String Tool {
+        public string Tool {
             get {
                 return ToolField;
             } 
@@ -63562,7 +63562,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ToolField; 
+        private string ToolField; 
 
         /// <summary>
         /// MdTempTool property
@@ -63655,7 +63655,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of DrillReportLogInfo.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -63665,7 +63665,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -63797,7 +63797,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Phase refers to a large activity classification, e.g., drill surface hole.")]
 		[XmlElement("Phase")]
-        public String Phase {
+        public string Phase {
             get {
                 return PhaseField;
             } 
@@ -63807,7 +63807,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PhaseField; 
+        private string PhaseField; 
 
         /// <summary>
         /// ActivityCode property
@@ -63832,7 +63832,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ActivityCodeSpecified {
+        public bool ActivityCodeSpecified {
             get {
                 return ActivityCodeSpecifiedField;
             } 
@@ -63842,7 +63842,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ActivityCodeSpecifiedField; 
+        private bool ActivityCodeSpecifiedField; 
 
         /// <summary>
         /// DetailActivity property
@@ -63850,7 +63850,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Custom string to further define an activity.")]
 		[XmlElement("DetailActivity")]
-        public String DetailActivity {
+        public string DetailActivity {
             get {
                 return DetailActivityField;
             } 
@@ -63860,7 +63860,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DetailActivityField; 
+        private string DetailActivityField; 
 
         /// <summary>
         /// TypeActivityClass property
@@ -63885,7 +63885,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeActivityClassSpecified {
+        public bool TypeActivityClassSpecified {
             get {
                 return TypeActivityClassSpecifiedField;
             } 
@@ -63895,7 +63895,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeActivityClassSpecifiedField; 
+        private bool TypeActivityClassSpecifiedField; 
 
         /// <summary>
         /// ActivityMdInterval property
@@ -63957,7 +63957,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Finish, interrupted, failed, etc.")]
 		[XmlElement("State")]
-        public String State {
+        public string State {
             get {
                 return StateField;
             } 
@@ -63967,7 +63967,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String StateField; 
+        private string StateField; 
 
         /// <summary>
         /// StateDetailActivity property
@@ -63992,7 +63992,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StateDetailActivitySpecified {
+        public bool StateDetailActivitySpecified {
             get {
                 return StateDetailActivitySpecifiedField;
             } 
@@ -64002,7 +64002,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean StateDetailActivitySpecifiedField; 
+        private bool StateDetailActivitySpecifiedField; 
 
         /// <summary>
         /// Operator property
@@ -64010,7 +64010,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Operator company name.")]
 		[XmlElement("Operator")]
-        public String Operator {
+        public string Operator {
             get {
                 return OperatorField;
             } 
@@ -64020,7 +64020,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OperatorField; 
+        private string OperatorField; 
 
         /// <summary>
         /// Tubular property
@@ -64028,7 +64028,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A pointer to the tubular object  related to this activity.")]
 		[XmlElement("Tubular")]
-        public String Tubular {
+        public string Tubular {
             get {
                 return TubularField;
             } 
@@ -64038,14 +64038,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TubularField; 
+        private string TubularField; 
 
         /// <summary>
         /// Optimum property
         /// </summary>
 		[Description("Is the activity optimum.? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("Optimum")]
-        public Boolean? Optimum {
+        public bool? Optimum {
             get {
                 return OptimumField;
             } 
@@ -64056,14 +64056,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? OptimumField; 
+        private bool? OptimumField; 
 
         /// <summary>
         /// OptimumSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean OptimumSpecified {
+        public bool OptimumSpecified {
             get {
                 return OptimumSpecifiedField;
             } 
@@ -64073,14 +64073,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean OptimumSpecifiedField; 
+        private bool OptimumSpecifiedField; 
 
         /// <summary>
         /// Productive property
         /// </summary>
 		[Description("Does activity bring closer to objective?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("Productive")]
-        public Boolean? Productive {
+        public bool? Productive {
             get {
                 return ProductiveField;
             } 
@@ -64091,14 +64091,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? ProductiveField; 
+        private bool? ProductiveField; 
 
         /// <summary>
         /// ProductiveSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ProductiveSpecified {
+        public bool ProductiveSpecified {
             get {
                 return ProductiveSpecifiedField;
             } 
@@ -64108,7 +64108,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ProductiveSpecifiedField; 
+        private bool ProductiveSpecifiedField; 
 
         /// <summary>
         /// ItemState property
@@ -64133,7 +64133,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ItemStateSpecified {
+        public bool ItemStateSpecified {
             get {
                 return ItemStateSpecifiedField;
             } 
@@ -64143,7 +64143,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ItemStateSpecifiedField; 
+        private bool ItemStateSpecifiedField; 
 
         /// <summary>
         /// Comments property
@@ -64151,7 +64151,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Comments and remarks.")]
 		[XmlElement("Comments")]
-        public String Comments {
+        public string Comments {
             get {
                 return CommentsField;
             } 
@@ -64161,7 +64161,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentsField; 
+        private string CommentsField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -64230,7 +64230,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of DrillActivity.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -64240,7 +64240,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -64283,7 +64283,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Index if this is an indexed object.")]
 		[XmlElement("Index")]
-        public Int32? Index {
+        public int? Index {
             get {
                 return IndexField;
             } 
@@ -64294,14 +64294,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? IndexField; 
+        private int? IndexField; 
 
         /// <summary>
         /// IndexSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IndexSpecified {
+        public bool IndexSpecified {
             get {
                 return IndexSpecifiedField;
             } 
@@ -64311,7 +64311,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IndexSpecifiedField; 
+        private bool IndexSpecifiedField; 
 
         /// <summary>
         /// DiaNozzle property
@@ -64354,7 +64354,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeNozzleSpecified {
+        public bool TypeNozzleSpecified {
             get {
                 return TypeNozzleSpecifiedField;
             } 
@@ -64364,7 +64364,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeNozzleSpecifiedField; 
+        private bool TypeNozzleSpecifiedField; 
 
         /// <summary>
         /// Len property
@@ -64390,7 +64390,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Nozzle orientation.")]
 		[XmlElement("Orientation")]
-        public String Orientation {
+        public string Orientation {
             get {
                 return OrientationField;
             } 
@@ -64400,7 +64400,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OrientationField; 
+        private string OrientationField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -64457,7 +64457,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Nozzle")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -64467,7 +64467,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -64796,7 +64796,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Pressure drop across the tool.")]
 		[XmlElement("PressLossFact")]
-        public Double? PressLossFact {
+        public double? PressLossFact {
             get {
                 return PressLossFactField;
             } 
@@ -64807,14 +64807,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? PressLossFactField; 
+        private double? PressLossFactField; 
 
         /// <summary>
         /// PressLossFactSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PressLossFactSpecified {
+        public bool PressLossFactSpecified {
             get {
                 return PressLossFactSpecifiedField;
             } 
@@ -64824,14 +64824,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PressLossFactSpecifiedField; 
+        private bool PressLossFactSpecifiedField; 
 
         /// <summary>
         /// PadCount property
         /// </summary>
 		[Description("The number of contact pads.")]
 		[XmlElement("PadCount")]
-        public Int32? PadCount {
+        public int? PadCount {
             get {
                 return PadCountField;
             } 
@@ -64842,14 +64842,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? PadCountField; 
+        private int? PadCountField; 
 
         /// <summary>
         /// PadCountSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PadCountSpecified {
+        public bool PadCountSpecified {
             get {
                 return PadCountSpecifiedField;
             } 
@@ -64859,7 +64859,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PadCountSpecifiedField; 
+        private bool PadCountSpecifiedField; 
 
         /// <summary>
         /// PadLen property
@@ -65073,7 +65073,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeMeasurementSpecified {
+        public bool TypeMeasurementSpecified {
             get {
                 return TypeMeasurementSpecifiedField;
             } 
@@ -65083,7 +65083,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeMeasurementSpecifiedField; 
+        private bool TypeMeasurementSpecifiedField; 
 
         /// <summary>
         /// OffsetBot property
@@ -65109,7 +65109,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Comments and remarks.")]
 		[XmlElement("Comments")]
-        public String Comments {
+        public string Comments {
             get {
                 return CommentsField;
             } 
@@ -65119,7 +65119,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentsField; 
+        private string CommentsField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -65176,7 +65176,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Sensor.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -65186,7 +65186,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -65247,7 +65247,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeHoleOpenerSpecified {
+        public bool TypeHoleOpenerSpecified {
             get {
                 return TypeHoleOpenerSpecifiedField;
             } 
@@ -65257,14 +65257,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeHoleOpenerSpecifiedField; 
+        private bool TypeHoleOpenerSpecifiedField; 
 
         /// <summary>
         /// NumCutter property
         /// </summary>
 		[Description("Number of cutters on the tool.")]
 		[XmlElement("NumCutter")]
-        public Int32? NumCutter {
+        public int? NumCutter {
             get {
                 return NumCutterField;
             } 
@@ -65275,14 +65275,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumCutterField; 
+        private int? NumCutterField; 
 
         /// <summary>
         /// NumCutterSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumCutterSpecified {
+        public bool NumCutterSpecified {
             get {
                 return NumCutterSpecifiedField;
             } 
@@ -65292,7 +65292,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumCutterSpecifiedField; 
+        private bool NumCutterSpecifiedField; 
 
         /// <summary>
         /// Manufacturer property
@@ -65300,7 +65300,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturer or supplier of the tool.")]
 		[XmlElement("Manufacturer")]
-        public String Manufacturer {
+        public string Manufacturer {
             get {
                 return ManufacturerField;
             } 
@@ -65310,7 +65310,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ManufacturerField; 
+        private string ManufacturerField; 
 
         /// <summary>
         /// DiaHoleOpener property
@@ -65474,7 +65474,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Bend.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -65484,7 +65484,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -65635,7 +65635,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ShapeBladeSpecified {
+        public bool ShapeBladeSpecified {
             get {
                 return ShapeBladeSpecifiedField;
             } 
@@ -65645,14 +65645,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ShapeBladeSpecifiedField; 
+        private bool ShapeBladeSpecifiedField; 
 
         /// <summary>
         /// FactFric property
         /// </summary>
 		[Description("Friction factor.")]
 		[XmlElement("FactFric")]
-        public Double? FactFric {
+        public double? FactFric {
             get {
                 return FactFricField;
             } 
@@ -65663,14 +65663,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? FactFricField; 
+        private double? FactFricField; 
 
         /// <summary>
         /// FactFricSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean FactFricSpecified {
+        public bool FactFricSpecified {
             get {
                 return FactFricSpecifiedField;
             } 
@@ -65680,7 +65680,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean FactFricSpecifiedField; 
+        private bool FactFricSpecifiedField; 
 
         /// <summary>
         /// TypeBlade property
@@ -65705,7 +65705,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeBladeSpecified {
+        public bool TypeBladeSpecified {
             get {
                 return TypeBladeSpecifiedField;
             } 
@@ -65715,7 +65715,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeBladeSpecifiedField; 
+        private bool TypeBladeSpecifiedField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -65772,7 +65772,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of Stabilizer.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -65782,7 +65782,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -65843,7 +65843,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Pressure loss factor.")]
 		[XmlElement("PresLossFact")]
-        public Double? PresLossFact {
+        public double? PresLossFact {
             get {
                 return PresLossFactField;
             } 
@@ -65854,14 +65854,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? PresLossFactField; 
+        private double? PresLossFactField; 
 
         /// <summary>
         /// PresLossFactSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PresLossFactSpecified {
+        public bool PresLossFactSpecified {
             get {
                 return PresLossFactSpecifiedField;
             } 
@@ -65871,7 +65871,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PresLossFactSpecifiedField; 
+        private bool PresLossFactSpecifiedField; 
 
         /// <summary>
         /// FlowrateMn property
@@ -65950,7 +65950,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Number of rotor lobes.")]
 		[XmlElement("LobesRotor")]
-        public Int32? LobesRotor {
+        public int? LobesRotor {
             get {
                 return LobesRotorField;
             } 
@@ -65961,14 +65961,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? LobesRotorField; 
+        private int? LobesRotorField; 
 
         /// <summary>
         /// LobesRotorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean LobesRotorSpecified {
+        public bool LobesRotorSpecified {
             get {
                 return LobesRotorSpecifiedField;
             } 
@@ -65978,14 +65978,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean LobesRotorSpecifiedField; 
+        private bool LobesRotorSpecifiedField; 
 
         /// <summary>
         /// LobesStator property
         /// </summary>
 		[Description("Number of stator lobes.")]
 		[XmlElement("LobesStator")]
-        public Int32? LobesStator {
+        public int? LobesStator {
             get {
                 return LobesStatorField;
             } 
@@ -65996,14 +65996,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? LobesStatorField; 
+        private int? LobesStatorField; 
 
         /// <summary>
         /// LobesStatorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean LobesStatorSpecified {
+        public bool LobesStatorSpecified {
             get {
                 return LobesStatorSpecifiedField;
             } 
@@ -66013,7 +66013,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean LobesStatorSpecifiedField; 
+        private bool LobesStatorSpecifiedField; 
 
         /// <summary>
         /// TypeBearing property
@@ -66038,7 +66038,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeBearingSpecified {
+        public bool TypeBearingSpecified {
             get {
                 return TypeBearingSpecifiedField;
             } 
@@ -66048,7 +66048,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeBearingSpecifiedField; 
+        private bool TypeBearingSpecifiedField; 
 
         /// <summary>
         /// TempOpMx property
@@ -66073,7 +66073,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Is rotor catcher present?   Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("RotorCatcher")]
-        public Boolean? RotorCatcher {
+        public bool? RotorCatcher {
             get {
                 return RotorCatcherField;
             } 
@@ -66084,14 +66084,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? RotorCatcherField; 
+        private bool? RotorCatcherField; 
 
         /// <summary>
         /// RotorCatcherSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean RotorCatcherSpecified {
+        public bool RotorCatcherSpecified {
             get {
                 return RotorCatcherSpecifiedField;
             } 
@@ -66101,14 +66101,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean RotorCatcherSpecifiedField; 
+        private bool RotorCatcherSpecifiedField; 
 
         /// <summary>
         /// DumpValve property
         /// </summary>
 		[Description("Is dump valve present?   Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("DumpValve")]
-        public Boolean? DumpValve {
+        public bool? DumpValve {
             get {
                 return DumpValveField;
             } 
@@ -66119,14 +66119,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? DumpValveField; 
+        private bool? DumpValveField; 
 
         /// <summary>
         /// DumpValveSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DumpValveSpecified {
+        public bool DumpValveSpecified {
             get {
                 return DumpValveSpecifiedField;
             } 
@@ -66136,7 +66136,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean DumpValveSpecifiedField; 
+        private bool DumpValveSpecifiedField; 
 
         /// <summary>
         /// DiaNozzle property
@@ -66161,7 +66161,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Is motor rotatable?   Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("Rotatable")]
-        public Boolean? Rotatable {
+        public bool? Rotatable {
             get {
                 return RotatableField;
             } 
@@ -66172,14 +66172,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? RotatableField; 
+        private bool? RotatableField; 
 
         /// <summary>
         /// RotatableSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean RotatableSpecified {
+        public bool RotatableSpecified {
             get {
                 return RotatableSpecifiedField;
             } 
@@ -66189,7 +66189,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean RotatableSpecifiedField; 
+        private bool RotatableSpecifiedField; 
 
         /// <summary>
         /// BendSettingsMn property
@@ -66286,7 +66286,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Bit number and rerun number, e.g., \"4.1\" for the first rerun of bit 4.")]
 		[XmlElement("NumBit")]
-        public String NumBit {
+        public string NumBit {
             get {
                 return NumBitField;
             } 
@@ -66296,7 +66296,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NumBitField; 
+        private string NumBitField; 
 
         /// <summary>
         /// DiaBit property
@@ -66359,7 +66359,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Manufacturer or supplier of the item.")]
 		[XmlElement("Manufacturer")]
-        public String Manufacturer {
+        public string Manufacturer {
             get {
                 return ManufacturerField;
             } 
@@ -66369,7 +66369,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ManufacturerField; 
+        private string ManufacturerField; 
 
         /// <summary>
         /// TypeBit property
@@ -66394,7 +66394,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeBitSpecified {
+        public bool TypeBitSpecified {
             get {
                 return TypeBitSpecifiedField;
             } 
@@ -66404,7 +66404,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeBitSpecifiedField; 
+        private bool TypeBitSpecifiedField; 
 
         /// <summary>
         /// CodeMfg property
@@ -66412,7 +66412,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The manufacturer's code for the bit.")]
 		[XmlElement("CodeMfg")]
-        public String CodeMfg {
+        public string CodeMfg {
             get {
                 return CodeMfgField;
             } 
@@ -66422,7 +66422,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CodeMfgField; 
+        private string CodeMfgField; 
 
         /// <summary>
         /// CodeIADC property
@@ -66430,7 +66430,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("IADC bit code.")]
 		[XmlElement("CodeIADC")]
-        public String CodeIADC {
+        public string CodeIADC {
             get {
                 return CodeIADCField;
             } 
@@ -66440,7 +66440,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CodeIADCField; 
+        private string CodeIADCField; 
 
         /// <summary>
         /// CondInitInner property
@@ -66465,7 +66465,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CondInitInnerSpecified {
+        public bool CondInitInnerSpecified {
             get {
                 return CondInitInnerSpecifiedField;
             } 
@@ -66475,7 +66475,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CondInitInnerSpecifiedField; 
+        private bool CondInitInnerSpecifiedField; 
 
         /// <summary>
         /// CondInitOuter property
@@ -66500,7 +66500,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CondInitOuterSpecified {
+        public bool CondInitOuterSpecified {
             get {
                 return CondInitOuterSpecifiedField;
             } 
@@ -66510,7 +66510,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CondInitOuterSpecifiedField; 
+        private bool CondInitOuterSpecifiedField; 
 
         /// <summary>
         /// CondInitDull property
@@ -66535,7 +66535,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CondInitDullSpecified {
+        public bool CondInitDullSpecified {
             get {
                 return CondInitDullSpecifiedField;
             } 
@@ -66545,7 +66545,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CondInitDullSpecifiedField; 
+        private bool CondInitDullSpecifiedField; 
 
         /// <summary>
         /// CondInitLocation property
@@ -66553,7 +66553,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Initial row and cone numbers for items that need location information (e.g., cracked cone, lost cone, etc).")]
 		[XmlElement("CondInitLocation")]
-        public String CondInitLocation {
+        public string CondInitLocation {
             get {
                 return CondInitLocationField;
             } 
@@ -66563,7 +66563,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CondInitLocationField; 
+        private string CondInitLocationField; 
 
         /// <summary>
         /// CondInitBearing property
@@ -66588,7 +66588,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CondInitBearingSpecified {
+        public bool CondInitBearingSpecified {
             get {
                 return CondInitBearingSpecifiedField;
             } 
@@ -66598,7 +66598,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CondInitBearingSpecifiedField; 
+        private bool CondInitBearingSpecifiedField; 
 
         /// <summary>
         /// CondInitGauge property
@@ -66606,7 +66606,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Initial condition of the bit gauge in 1/16 of an inch. I = in gauge, else the number of 16ths out of gauge.")]
 		[XmlElement("CondInitGauge")]
-        public String CondInitGauge {
+        public string CondInitGauge {
             get {
                 return CondInitGaugeField;
             } 
@@ -66616,7 +66616,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CondInitGaugeField; 
+        private string CondInitGaugeField; 
 
         /// <summary>
         /// CondInitOther property
@@ -66624,7 +66624,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Other comments on initial bit condition from the IADC list (BitDullCode enumerated list).")]
 		[XmlElement("CondInitOther")]
-        public String CondInitOther {
+        public string CondInitOther {
             get {
                 return CondInitOtherField;
             } 
@@ -66634,7 +66634,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CondInitOtherField; 
+        private string CondInitOtherField; 
 
         /// <summary>
         /// CondInitReason property
@@ -66659,7 +66659,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CondInitReasonSpecified {
+        public bool CondInitReasonSpecified {
             get {
                 return CondInitReasonSpecifiedField;
             } 
@@ -66669,7 +66669,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CondInitReasonSpecifiedField; 
+        private bool CondInitReasonSpecifiedField; 
 
         /// <summary>
         /// CondFinalInner property
@@ -66694,7 +66694,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CondFinalInnerSpecified {
+        public bool CondFinalInnerSpecified {
             get {
                 return CondFinalInnerSpecifiedField;
             } 
@@ -66704,7 +66704,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CondFinalInnerSpecifiedField; 
+        private bool CondFinalInnerSpecifiedField; 
 
         /// <summary>
         /// CondFinalOuter property
@@ -66729,7 +66729,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CondFinalOuterSpecified {
+        public bool CondFinalOuterSpecified {
             get {
                 return CondFinalOuterSpecifiedField;
             } 
@@ -66739,7 +66739,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CondFinalOuterSpecifiedField; 
+        private bool CondFinalOuterSpecifiedField; 
 
         /// <summary>
         /// CondFinalDull property
@@ -66764,7 +66764,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CondFinalDullSpecified {
+        public bool CondFinalDullSpecified {
             get {
                 return CondFinalDullSpecifiedField;
             } 
@@ -66774,7 +66774,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CondFinalDullSpecifiedField; 
+        private bool CondFinalDullSpecifiedField; 
 
         /// <summary>
         /// CondFinalLocation property
@@ -66782,7 +66782,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Final conditions for row and cone numbers for items that need location information (e.g., cracked cone, lost cone, etc).")]
 		[XmlElement("CondFinalLocation")]
-        public String CondFinalLocation {
+        public string CondFinalLocation {
             get {
                 return CondFinalLocationField;
             } 
@@ -66792,7 +66792,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CondFinalLocationField; 
+        private string CondFinalLocationField; 
 
         /// <summary>
         /// CondFinalBearing property
@@ -66817,7 +66817,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CondFinalBearingSpecified {
+        public bool CondFinalBearingSpecified {
             get {
                 return CondFinalBearingSpecifiedField;
             } 
@@ -66827,7 +66827,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CondFinalBearingSpecifiedField; 
+        private bool CondFinalBearingSpecifiedField; 
 
         /// <summary>
         /// CondFinalGauge property
@@ -66835,7 +66835,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Final condition of the bit gauge in 1/16 of a inch. I = in gauge, else number of 16ths out of gauge.")]
 		[XmlElement("CondFinalGauge")]
-        public String CondFinalGauge {
+        public string CondFinalGauge {
             get {
                 return CondFinalGaugeField;
             } 
@@ -66845,7 +66845,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CondFinalGaugeField; 
+        private string CondFinalGaugeField; 
 
         /// <summary>
         /// CondFinalOther property
@@ -66853,7 +66853,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Other final comments on bit condition from the IADC list (BitDullCode enumerated list).")]
 		[XmlElement("CondFinalOther")]
-        public String CondFinalOther {
+        public string CondFinalOther {
             get {
                 return CondFinalOtherField;
             } 
@@ -66863,7 +66863,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CondFinalOtherField; 
+        private string CondFinalOtherField; 
 
         /// <summary>
         /// CondFinalReason property
@@ -66888,7 +66888,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CondFinalReasonSpecified {
+        public bool CondFinalReasonSpecified {
             get {
                 return CondFinalReasonSpecifiedField;
             } 
@@ -66898,7 +66898,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CondFinalReasonSpecifiedField; 
+        private bool CondFinalReasonSpecifiedField; 
 
         /// <summary>
         /// Drive property
@@ -66906,7 +66906,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Bit drive type (motor, rotary table, etc.).")]
 		[XmlElement("Drive")]
-        public String Drive {
+        public string Drive {
             get {
                 return DriveField;
             } 
@@ -66916,7 +66916,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DriveField; 
+        private string DriveField; 
 
         /// <summary>
         /// BitClass property
@@ -66924,7 +66924,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("N = new, U = used.")]
 		[XmlElement("BitClass")]
-        public String BitClass {
+        public string BitClass {
             get {
                 return BitClassField;
             } 
@@ -66934,7 +66934,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String BitClassField; 
+        private string BitClassField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -67008,7 +67008,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of BitRecord.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -67018,7 +67018,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -67341,7 +67341,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeJarSpecified {
+        public bool TypeJarSpecified {
             get {
                 return TypeJarSpecifiedField;
             } 
@@ -67351,7 +67351,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeJarSpecifiedField; 
+        private bool TypeJarSpecifiedField; 
 
         /// <summary>
         /// JarAction property
@@ -67376,7 +67376,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean JarActionSpecified {
+        public bool JarActionSpecified {
             get {
                 return JarActionSpecifiedField;
             } 
@@ -67386,7 +67386,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean JarActionSpecifiedField; 
+        private bool JarActionSpecifiedField; 
 
         /// <summary>
         /// ExtensionAny property
@@ -67450,7 +67450,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public ForcePerLengthMeasure(Double value, ForcePerLengthUom uom)
+        public ForcePerLengthMeasure(double value, ForcePerLengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -67487,7 +67487,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -67497,7 +67497,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -67544,7 +67544,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public LengthPerLengthMeasure(Double value, LengthPerLengthUom uom)
+        public LengthPerLengthMeasure(double value, LengthPerLengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -67581,7 +67581,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -67591,7 +67591,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -67653,7 +67653,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The sequence within which the components entered the hole. That is, a sequence number of 1 entered first, 2 entered next, etc.")]
 		[XmlElement("Sequence")]
-        public Int32? Sequence {
+        public int? Sequence {
             get {
                 return SequenceField;
             } 
@@ -67663,7 +67663,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? SequenceField; 
+        private int? SequenceField; 
 
         /// <summary>
         /// Description property
@@ -67671,7 +67671,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Description of item and details.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -67681,7 +67681,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// Id property
@@ -67781,7 +67781,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Number of joints per stand of tubulars.")]
 		[XmlElement("NumJointStand")]
-        public Int32? NumJointStand {
+        public int? NumJointStand {
             get {
                 return NumJointStandField;
             } 
@@ -67792,14 +67792,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumJointStandField; 
+        private int? NumJointStandField; 
 
         /// <summary>
         /// NumJointStandSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumJointStandSpecified {
+        public bool NumJointStandSpecified {
             get {
                 return NumJointStandSpecifiedField;
             } 
@@ -67809,7 +67809,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumJointStandSpecifiedField; 
+        private bool NumJointStandSpecifiedField; 
 
         /// <summary>
         /// WtPerLen property
@@ -67835,7 +67835,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Material grade for the tubular section.")]
 		[XmlElement("Grade")]
-        public String Grade {
+        public string Grade {
             get {
                 return GradeField;
             } 
@@ -67845,7 +67845,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String GradeField; 
+        private string GradeField; 
 
         /// <summary>
         /// OdDrift property
@@ -68033,7 +68033,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Service class.")]
 		[XmlElement("ClassService")]
-        public String ClassService {
+        public string ClassService {
             get {
                 return ClassServiceField;
             } 
@@ -68043,7 +68043,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ClassServiceField; 
+        private string ClassServiceField; 
 
         /// <summary>
         /// WearWall property
@@ -68104,7 +68104,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ConfigConSpecified {
+        public bool ConfigConSpecified {
             get {
                 return ConfigConSpecifiedField;
             } 
@@ -68114,7 +68114,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ConfigConSpecifiedField; 
+        private bool ConfigConSpecifiedField; 
 
         /// <summary>
         /// BendStiffness property
@@ -68193,7 +68193,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeMaterialSpecified {
+        public bool TypeMaterialSpecified {
             get {
                 return TypeMaterialSpecifiedField;
             } 
@@ -68203,7 +68203,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeMaterialSpecifiedField; 
+        private bool TypeMaterialSpecifiedField; 
 
         /// <summary>
         /// DoglegMx property
@@ -68229,7 +68229,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of vendor.")]
 		[XmlElement("Vendor")]
-        public String Vendor {
+        public string Vendor {
             get {
                 return VendorField;
             } 
@@ -68239,7 +68239,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String VendorField; 
+        private string VendorField; 
 
         /// <summary>
         /// Model property
@@ -68247,7 +68247,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Component name from manufacturer.")]
 		[XmlElement("Model")]
-        public String Model {
+        public string Model {
             get {
                 return ModelField;
             } 
@@ -68257,7 +68257,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ModelField; 
+        private string ModelField; 
 
         /// <summary>
         /// NameTag property
@@ -68580,7 +68580,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of TubularComponent")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -68590,7 +68590,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -68635,7 +68635,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("A pointer to the rig with which there is a relationship.")]
 		[XmlElement("RigReference")]
-        public String RigReference {
+        public string RigReference {
             get {
                 return RigReferenceField;
             } 
@@ -68645,7 +68645,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RigReferenceField; 
+        private string RigReferenceField; 
 
         /// <summary>
         /// A pointer to the wellbore that contains the rigReference. This is not needed unless the referenced rig is outside the context of a common parent wellbore.
@@ -68653,7 +68653,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A pointer to the wellbore that contains the rigReference. This is not needed unless the referenced rig is outside the  context of a common parent wellbore.")]
 		[XmlElement("WellboreParent")]
-        public String WellboreParent {
+        public string WellboreParent {
             get {
                 return WellboreParentField;
             } 
@@ -68663,7 +68663,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String WellboreParentField; 
+        private string WellboreParentField; 
 
         /// <summary>
         /// A pointer to the well that contains the wellboreParent. This is not needed unless the referenced wellbore is outside the context of a common parent well.
@@ -68671,7 +68671,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A pointer to the well that contains the wellboreParent. This is not needed unless the referenced wellbore is outside the  context of a common parent well.")]
 		[XmlElement("WellParent")]
-        public String WellParent {
+        public string WellParent {
             get {
                 return WellParentField;
             } 
@@ -68681,7 +68681,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String WellParentField; 
+        private string WellParentField; 
 
 
         
@@ -68726,7 +68726,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("A pointer the wellbore with which there is a relationship.")]
 		[XmlElement("WellboreReference")]
-        public String WellboreReference {
+        public string WellboreReference {
             get {
                 return WellboreReferenceField;
             } 
@@ -68736,7 +68736,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String WellboreReferenceField; 
+        private string WellboreReferenceField; 
 
         /// <summary>
         /// A pointer to the well that contains the wellboreReference. This is not needed unless the referenced wellbore is outside the context of a common parent well.
@@ -68744,7 +68744,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A pointer to the well that contains the wellboreReference. This is not needed unless the referenced wellbore is outside the  context of a common parent well.")]
 		[XmlElement("WellParent")]
-        public String WellParent {
+        public string WellParent {
             get {
                 return WellParentField;
             } 
@@ -68754,7 +68754,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String WellParentField; 
+        private string WellParentField; 
 
 
         
@@ -68799,7 +68799,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("The human-understandable contextual name of the reference datum.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -68809,7 +68809,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// Code property
@@ -68834,7 +68834,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CodeSpecified {
+        public bool CodeSpecified {
             get {
                 return CodeSpecifiedField;
             } 
@@ -68844,7 +68844,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CodeSpecifiedField; 
+        private bool CodeSpecifiedField; 
 
         /// <summary>
         /// Kind property
@@ -68852,7 +68852,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Because various activities may use different points as measurement datums, it is useful to characterize the point based on its usage. A well reference datum may have more than one such characterization. For example, it may be the datum used by the driller and logger for measuring their depths. Example usage values would be 'permanent','driller', 'logger' 'WRP' (well reference point) and 'SRP' (site reference point).")]
         [RecurringElement]
 		[XmlElement("Kind")]
-        public List<String> Kind {
+        public List<string> Kind {
             get {
                 return KindField;
             } 
@@ -68874,7 +68874,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> KindField; 
+        private List<string> KindField; 
 
         /// <summary>
         /// MeasuredDepth property
@@ -68900,7 +68900,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A contextual description of the well reference datum.")]
 		[XmlElement("Comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return CommentField;
             } 
@@ -68910,7 +68910,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentField; 
+        private string CommentField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -69036,7 +69036,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("A unique identifier for an instance of a well datum.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -69046,7 +69046,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -69131,7 +69131,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("ISO 19162 compliant well known text of the CRS")]
 		[XmlElement("WellKnownText")]
-        public String WellKnownText {
+        public string WellKnownText {
             get {
                 return WellKnownTextField;
             } 
@@ -69141,7 +69141,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String WellKnownTextField; 
+        private string WellKnownTextField; 
 
 
     } //here
@@ -69235,7 +69235,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Required]
 		[XmlElement("EpsgCode")]
-        public Int64? EpsgCode {
+        public long? EpsgCode {
             get {
                 return EpsgCodeField;
             } 
@@ -69245,7 +69245,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? EpsgCodeField; 
+        private long? EpsgCodeField; 
 
 
     } //here
@@ -69270,7 +69270,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [StringLength(2000)]
 		[XmlElement("Unknown")]
-        public String Unknown {
+        public string Unknown {
             get {
                 return UnknownField;
             } 
@@ -69280,7 +69280,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String UnknownField; 
+        private string UnknownField; 
 
 
     } //here
@@ -69306,7 +69306,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Human-recognizable context for the point.")]
 		[XmlElement("Name")]
-        public String Name {
+        public string Name {
             get {
                 return NameField;
             } 
@@ -69316,7 +69316,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameField; 
+        private string NameField; 
 
         /// <summary>
         /// Type property
@@ -69324,7 +69324,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The kind of point. For example,  'well reference point', 'platform reference point', 'sea surface', 'sea bottom'.")]
 		[XmlElement("Type")]
-        public String Type {
+        public string Type {
             get {
                 return TypeField;
             } 
@@ -69334,7 +69334,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeField; 
+        private string TypeField; 
 
         /// <summary>
         /// MeasuredDepth property
@@ -69360,7 +69360,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A textual description of the point.")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -69370,7 +69370,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// ExtensionNameValue property
@@ -69457,7 +69457,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("A unique identifier for an instance of a ReferencePoint.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -69467,7 +69467,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
         
@@ -69514,7 +69514,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public DistanceEastWest(Double value, LengthUom uom)
+        public DistanceEastWest(double value, LengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -69571,7 +69571,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -69581,7 +69581,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -69628,7 +69628,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         /// <param name="value">Initial value</param>
         /// <param name="uom">Initial unit of measure</param>
-        public DistanceNorthSouth(Double value, LengthUom uom)
+        public DistanceNorthSouth(double value, LengthUom uom)
         {
             this.Uom = uom;
             this.Value = value;
@@ -69685,7 +69685,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         
         [XmlText]
-        public Double Value {
+        public double Value {
             get {
                 return ValueField;
             } 
@@ -69695,7 +69695,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double ValueField; 
+        private double ValueField; 
 
 
         
@@ -69756,7 +69756,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PrincipalMeridianSpecified {
+        public bool PrincipalMeridianSpecified {
             get {
                 return PrincipalMeridianSpecifiedField;
             } 
@@ -69766,14 +69766,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PrincipalMeridianSpecifiedField; 
+        private bool PrincipalMeridianSpecifiedField; 
 
         /// <summary>
         /// Range property
         /// </summary>
 		[Description("Range number.")]
 		[XmlElement("Range")]
-        public Int32? Range {
+        public int? Range {
             get {
                 return RangeField;
             } 
@@ -69784,14 +69784,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? RangeField; 
+        private int? RangeField; 
 
         /// <summary>
         /// RangeSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean RangeSpecified {
+        public bool RangeSpecified {
             get {
                 return RangeSpecifiedField;
             } 
@@ -69801,7 +69801,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean RangeSpecifiedField; 
+        private bool RangeSpecifiedField; 
 
         /// <summary>
         /// RangeDir property
@@ -69826,7 +69826,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean RangeDirSpecified {
+        public bool RangeDirSpecified {
             get {
                 return RangeDirSpecifiedField;
             } 
@@ -69836,14 +69836,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean RangeDirSpecifiedField; 
+        private bool RangeDirSpecifiedField; 
 
         /// <summary>
         /// Township property
         /// </summary>
 		[Description("Township number.")]
 		[XmlElement("Township")]
-        public Int32? Township {
+        public int? Township {
             get {
                 return TownshipField;
             } 
@@ -69854,14 +69854,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? TownshipField; 
+        private int? TownshipField; 
 
         /// <summary>
         /// TownshipSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TownshipSpecified {
+        public bool TownshipSpecified {
             get {
                 return TownshipSpecifiedField;
             } 
@@ -69871,7 +69871,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TownshipSpecifiedField; 
+        private bool TownshipSpecifiedField; 
 
         /// <summary>
         /// TownshipDir property
@@ -69896,7 +69896,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TownshipDirSpecified {
+        public bool TownshipDirSpecified {
             get {
                 return TownshipDirSpecifiedField;
             } 
@@ -69906,7 +69906,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TownshipDirSpecifiedField; 
+        private bool TownshipDirSpecifiedField; 
 
         /// <summary>
         /// Section property
@@ -69915,7 +69915,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Section number.")]
 		[XmlElement("Section")]
-        public String Section {
+        public string Section {
             get {
                 return SectionField;
             } 
@@ -69925,7 +69925,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SectionField; 
+        private string SectionField; 
 
         /// <summary>
         /// QuarterSection property
@@ -69934,7 +69934,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("The location of the well within the section, with the primary component listed first. Spot location will be made from a combinationof the following codes: NE, NW, SW, SE, N2, S2, E2, W2, C (center quarter), LTxx (where xx represents a two digit lot designation), TRzz (where zz represents a one or two character trac designation).  Free format allows for entries such as NESW (southwest quarter of northeast quarter), E2NESE (southeast quarter of northeast quarter of east half), CNE (northeast quarter of center quarter), etc.")]
 		[XmlElement("QuarterSection")]
-        public String QuarterSection {
+        public string QuarterSection {
             get {
                 return QuarterSectionField;
             } 
@@ -69944,7 +69944,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String QuarterSectionField; 
+        private string QuarterSectionField; 
 
         /// <summary>
         /// QuarterTownship property
@@ -69953,7 +69953,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Quarter township.")]
 		[XmlElement("QuarterTownship")]
-        public String QuarterTownship {
+        public string QuarterTownship {
             get {
                 return QuarterTownshipField;
             } 
@@ -69963,7 +69963,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String QuarterTownshipField; 
+        private string QuarterTownshipField; 
 
         /// <summary>
         /// FootageNS property
@@ -70096,7 +70096,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("The minimum index for the range over which the referenced data's conformance with the policy is being assessed.")]
 		[XmlElement("IndexMinimum")]
-        public String IndexMinimum {
+        public string IndexMinimum {
             get {
                 return IndexMinimumField;
             } 
@@ -70106,7 +70106,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String IndexMinimumField; 
+        private string IndexMinimumField; 
 
         /// <summary>
         /// IndexMaximum property
@@ -70115,7 +70115,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("The maximum index for the range over which the referenced data's conformance with the policy is being assessed.")]
 		[XmlElement("IndexMaximum")]
-        public String IndexMaximum {
+        public string IndexMaximum {
             get {
                 return IndexMaximumField;
             } 
@@ -70125,7 +70125,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String IndexMaximumField; 
+        private string IndexMaximumField; 
 
 
         
@@ -70170,7 +70170,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Identifier of the atomic rule being checked against the data.")]
 		[XmlElement("RuleId")]
-        public String RuleId {
+        public string RuleId {
             get {
                 return RuleIdField;
             } 
@@ -70180,7 +70180,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RuleIdField; 
+        private string RuleIdField; 
 
         /// <summary>
         /// RuleName property
@@ -70188,7 +70188,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Human-readable name of the atomic rule being checked against the data.")]
 		[XmlElement("RuleName")]
-        public String RuleName {
+        public string RuleName {
             get {
                 return RuleNameField;
             } 
@@ -70198,7 +70198,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RuleNameField; 
+        private string RuleNameField; 
 
         /// <summary>
         /// Severity property
@@ -70206,7 +70206,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Severity of the failure. This could be used to indicate that a rule is a high-priority rule whose failure is considered as severe or could be used to indicate just how badly a rule was contravened.  The meaning of this field should be standardized within a company to maximize its utility.")]
 		[XmlElement("Severity")]
-        public String Severity {
+        public string Severity {
             get {
                 return SeverityField;
             } 
@@ -70216,7 +70216,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SeverityField; 
+        private string SeverityField; 
 
         /// <summary>
         /// FailingRuleExtensions property
@@ -70320,7 +70320,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Indicates if the parameter is an input of the activity. If the parameter is a data object and is also an output of the activity, it is strongly advised to use two parameters : one for input and one for output. The reason is to be able to give two different versions strings for the input and output dataobject which has got obviously the same UUID.")]
 		[XmlElement("IsInput")]
-        public Boolean? IsInput {
+        public bool? IsInput {
             get {
                 return IsInputField;
             } 
@@ -70330,7 +70330,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsInputField; 
+        private bool? IsInputField; 
 
         /// <summary>
         /// KeyConstraint property
@@ -70338,7 +70338,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Allows to indicate that, in the same activity, this parameter template must be associated to another parameter template identified by its title.")]
         [RecurringElement]
 		[XmlElement("KeyConstraint")]
-        public List<String> KeyConstraint {
+        public List<string> KeyConstraint {
             get {
                 return KeyConstraintField;
             } 
@@ -70360,7 +70360,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> KeyConstraintField; 
+        private List<string> KeyConstraintField; 
 
         /// <summary>
         /// IsOutput property
@@ -70368,7 +70368,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Indicates if the parameter is an output of the activity. If the parameter is a data object and is also an input of the activity, it is strongly advised to use two parameters : one for input and one for output. The reason is to be able to give two different versions strings for the input and output dataobject which has got obviously the same UUID.")]
 		[XmlElement("IsOutput")]
-        public Boolean? IsOutput {
+        public bool? IsOutput {
             get {
                 return IsOutputField;
             } 
@@ -70378,7 +70378,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsOutputField; 
+        private bool? IsOutputField; 
 
         /// <summary>
         /// Title property
@@ -70387,7 +70387,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("Name of the parameter in the activity. Key to identify parameter.")]
 		[XmlElement("Title")]
-        public String Title {
+        public string Title {
             get {
                 return TitleField;
             } 
@@ -70397,7 +70397,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TitleField; 
+        private string TitleField; 
 
         /// <summary>
         /// DataObjectContentType property
@@ -70405,7 +70405,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("When parameter is limited to data object of given types, describe the allowed types. Used only when ParameterType is dataObject")]
 		[XmlElement("DataObjectContentType")]
-        public String DataObjectContentType {
+        public string DataObjectContentType {
             get {
                 return DataObjectContentTypeField;
             } 
@@ -70415,7 +70415,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DataObjectContentTypeField; 
+        private string DataObjectContentTypeField; 
 
         /// <summary>
         /// MaxOccurs property
@@ -70423,7 +70423,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Maximum number of parameters of this type allowed in the activity. If the maximum number of parameters is infinite, use -1 value.")]
 		[XmlElement("MaxOccurs")]
-        public Int64? MaxOccurs {
+        public long? MaxOccurs {
             get {
                 return MaxOccursField;
             } 
@@ -70433,7 +70433,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? MaxOccursField; 
+        private long? MaxOccursField; 
 
         /// <summary>
         /// MinOccurs property
@@ -70441,7 +70441,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Minimum number of parameter of this type required by the activity. If the minimum number of parameters is infinite, use -1 value.")]
 		[XmlElement("MinOccurs")]
-        public Int64? MinOccurs {
+        public long? MinOccurs {
             get {
                 return MinOccursField;
             } 
@@ -70451,7 +70451,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? MinOccursField; 
+        private long? MinOccursField; 
 
         /// <summary>
         /// Constraint property
@@ -70459,7 +70459,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Textual description of additional constraint associated with the parameter. (note that it will be better to have a formal description of the constraint)")]
 		[XmlElement("Constraint")]
-        public String Constraint {
+        public string Constraint {
             get {
                 return ConstraintField;
             } 
@@ -70469,7 +70469,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ConstraintField; 
+        private string ConstraintField; 
 
         /// <summary>
         /// DefaultValue property
@@ -70548,7 +70548,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("Name of the parameter, used to identify it in the activity. Must have an equivalent in the activity descriptor parameters.")]
 		[XmlElement("Title")]
-        public String Title {
+        public string Title {
             get {
                 return TitleField;
             } 
@@ -70558,14 +70558,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TitleField; 
+        private string TitleField; 
 
         /// <summary>
         /// Index property
         /// </summary>
 		[Description("When parameter is an array, used to indicate the index in the array")]
 		[XmlElement("Index")]
-        public Int64? Index {
+        public long? Index {
             get {
                 return IndexField;
             } 
@@ -70576,14 +70576,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? IndexField; 
+        private long? IndexField; 
 
         /// <summary>
         /// IndexSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IndexSpecified {
+        public bool IndexSpecified {
             get {
                 return IndexSpecifiedField;
             } 
@@ -70593,7 +70593,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IndexSpecifiedField; 
+        private bool IndexSpecifiedField; 
 
         /// <summary>
         /// Selection property
@@ -70601,7 +70601,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Textual description about how this parameter was selected.")]
 		[XmlElement("Selection")]
-        public String Selection {
+        public string Selection {
             get {
                 return SelectionField;
             } 
@@ -70611,7 +70611,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SelectionField; 
+        private string SelectionField; 
 
         /// <summary>
         /// Key property
@@ -70792,7 +70792,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The index of the time in the time series.")]
 		[XmlElement("Index")]
-        public Int64? Index {
+        public long? Index {
             get {
                 return IndexField;
             } 
@@ -70802,7 +70802,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? IndexField; 
+        private long? IndexField; 
 
         /// <summary>
         /// TimeSeries property
@@ -70901,7 +70901,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the StringParameter class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public StringParameter(String value)
+        public StringParameter(string value)
         {
             this.Value = value;
         }
@@ -70921,7 +70921,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("String value")]
 		[XmlElement("Value")]
-        public String Value {
+        public string Value {
             get {
                 return ValueField;
             } 
@@ -70931,7 +70931,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ValueField; 
+        private string ValueField; 
 
 
     } //here
@@ -70958,7 +70958,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the IntegerQuantityParameter class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public IntegerQuantityParameter(Int64 value)
+        public IntegerQuantityParameter(long value)
         {
             this.Value = value;
         }
@@ -70977,7 +70977,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Integer value")]
 		[XmlElement("Value")]
-        public Int64? Value {
+        public long? Value {
             get {
                 return ValueField;
             } 
@@ -70987,7 +70987,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? ValueField; 
+        private long? ValueField; 
 
 
     } //here
@@ -71014,7 +71014,7 @@ namespace Energistics.DataAccess.WITSML200
         /// Initializes a new instance of the DoubleQuantityParameter class.
         /// </summary>
         /// <param name="value">Initial value</param>
-        public DoubleQuantityParameter(Double value)
+        public DoubleQuantityParameter(double value)
         {
             this.Value = value;
         }
@@ -71033,7 +71033,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Double value")]
 		[XmlElement("Value")]
-        public Double? Value {
+        public double? Value {
             get {
                 return ValueField;
             } 
@@ -71043,7 +71043,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? ValueField; 
+        private double? ValueField; 
 
         /// <summary>
         /// Uom property
@@ -71051,7 +71051,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Unit of measure associated with the value")]
 		[XmlElement("Uom")]
-        public UnitOfMeasure? Uom {
+        public ExtensibleEnum<UnitOfMeasure>? Uom {
             get {
                 return UomField;
             } 
@@ -71061,7 +71061,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private UnitOfMeasure? UomField; 
+        private ExtensibleEnum<UnitOfMeasure>? UomField; 
 
         /// <summary>
         /// CustomUnitDictionary property
@@ -71138,7 +71138,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Used to indicate that a time series overlaps with its parent time series, e.g., as may be done for simulation studies, where the end state of one calculation is the initial state of the next.")]
 		[XmlElement("HasOverlap")]
-        public Boolean? HasOverlap {
+        public bool? HasOverlap {
             get {
                 return HasOverlapField;
             } 
@@ -71148,7 +71148,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? HasOverlapField; 
+        private bool? HasOverlapField; 
 
         /// <summary>
         /// ParentTimeIndex property
@@ -71209,7 +71209,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("A Value in Years of the Age Offset between the DateTime Attribute value and the DateTime of a GeologicalEvent Occurrence. This value must be POSITIVE when it represents a Geological Event in The past.")]
 		[XmlElement("AgeOffsetAttribute")]
-        public Int64? AgeOffsetAttribute {
+        public long? AgeOffsetAttribute {
             get {
                 return AgeOffsetAttributeField;
             } 
@@ -71220,14 +71220,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? AgeOffsetAttributeField; 
+        private long? AgeOffsetAttributeField; 
 
         /// <summary>
         /// AgeOffsetAttributeSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AgeOffsetAttributeSpecified {
+        public bool AgeOffsetAttributeSpecified {
             get {
                 return AgeOffsetAttributeSpecifiedField;
             } 
@@ -71237,7 +71237,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean AgeOffsetAttributeSpecifiedField; 
+        private bool AgeOffsetAttributeSpecifiedField; 
 
         /// <summary>
         /// DateTime property
@@ -71538,7 +71538,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Human-recognizable context for the well completion that contains the completion.")]
 		[XmlElement("NameWellCompletion")]
-        public String NameWellCompletion {
+        public string NameWellCompletion {
             get {
                 return NameWellCompletionField;
             } 
@@ -71548,7 +71548,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameWellCompletionField; 
+        private string NameWellCompletionField; 
 
         /// <summary>
         /// WellboreCompletionNo property
@@ -71556,7 +71556,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("CompletionNo, etc. API14.")]
 		[XmlElement("WellboreCompletionNo")]
-        public String WellboreCompletionNo {
+        public string WellboreCompletionNo {
             get {
                 return WellboreCompletionNoField;
             } 
@@ -71566,7 +71566,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String WellboreCompletionNoField; 
+        private string WellboreCompletionNoField; 
 
         /// <summary>
         /// WellboreCompletionAlias property
@@ -71574,7 +71574,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Preferred alias name.")]
 		[XmlElement("WellboreCompletionAlias")]
-        public String WellboreCompletionAlias {
+        public string WellboreCompletionAlias {
             get {
                 return WellboreCompletionAliasField;
             } 
@@ -71584,7 +71584,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String WellboreCompletionAliasField; 
+        private string WellboreCompletionAliasField; 
 
         /// <summary>
         /// EventHistory property
@@ -71639,7 +71639,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("API suffix.")]
 		[XmlElement("SuffixAPI")]
-        public String SuffixAPI {
+        public string SuffixAPI {
             get {
                 return SuffixAPIField;
             } 
@@ -71649,7 +71649,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SuffixAPIField; 
+        private string SuffixAPIField; 
 
         /// <summary>
         /// CompletionMdInterval property
@@ -71710,7 +71710,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CurrentStatusSpecified {
+        public bool CurrentStatusSpecified {
             get {
                 return CurrentStatusSpecifiedField;
             } 
@@ -71720,7 +71720,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CurrentStatusSpecifiedField; 
+        private bool CurrentStatusSpecifiedField; 
 
         /// <summary>
         /// StatusDate property
@@ -71843,7 +71843,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Field ID.")]
 		[XmlElement("FieldID")]
-        public String FieldID {
+        public string FieldID {
             get {
                 return FieldIDField;
             } 
@@ -71853,7 +71853,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FieldIDField; 
+        private string FieldIDField; 
 
         /// <summary>
         /// FieldCode property
@@ -71861,7 +71861,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Field code.")]
 		[XmlElement("FieldCode")]
-        public String FieldCode {
+        public string FieldCode {
             get {
                 return FieldCodeField;
             } 
@@ -71871,7 +71871,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FieldCodeField; 
+        private string FieldCodeField; 
 
         /// <summary>
         /// FieldType property
@@ -71879,7 +71879,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Field type.")]
 		[XmlElement("FieldType")]
-        public String FieldType {
+        public string FieldType {
             get {
                 return FieldTypeField;
             } 
@@ -71889,7 +71889,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FieldTypeField; 
+        private string FieldTypeField; 
 
         /// <summary>
         /// EffectiveDate property
@@ -71931,7 +71931,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Documents exploration and production rights.")]
 		[XmlElement("E_P_RightsID")]
-        public String E_P_RightsID {
+        public string E_P_RightsID {
             get {
                 return E_P_RightsIDField;
             } 
@@ -71941,7 +71941,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String E_P_RightsIDField; 
+        private string E_P_RightsIDField; 
 
         /// <summary>
         /// CurrentStatus property
@@ -71966,7 +71966,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CurrentStatusSpecified {
+        public bool CurrentStatusSpecified {
             get {
                 return CurrentStatusSpecifiedField;
             } 
@@ -71976,7 +71976,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CurrentStatusSpecifiedField; 
+        private bool CurrentStatusSpecifiedField; 
 
         /// <summary>
         /// StatusDate property
@@ -72143,7 +72143,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Survey version number, incremented every time the program is modified.")]
 		[XmlElement("SurveyVer")]
-        public Int64? SurveyVer {
+        public long? SurveyVer {
             get {
                 return SurveyVerField;
             } 
@@ -72153,7 +72153,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? SurveyVerField; 
+        private long? SurveyVerField; 
 
         /// <summary>
         /// Engineer property
@@ -72161,7 +72161,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the engineer.")]
 		[XmlElement("Engineer")]
-        public String Engineer {
+        public string Engineer {
             get {
                 return EngineerField;
             } 
@@ -72171,7 +72171,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String EngineerField; 
+        private string EngineerField; 
 
         /// <summary>
         /// Final property
@@ -72179,7 +72179,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Is program  final or intermediate/preliminary?")]
 		[XmlElement("Final")]
-        public String Final {
+        public string Final {
             get {
                 return FinalField;
             } 
@@ -72189,7 +72189,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FinalField; 
+        private string FinalField; 
 
         /// <summary>
         /// SurveySection property
@@ -72258,7 +72258,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("The number associated with the stage.")]
 		[XmlElement("Number")]
-        public Int64? Number {
+        public long? Number {
             get {
                 return NumberField;
             } 
@@ -72269,14 +72269,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? NumberField; 
+        private long? NumberField; 
 
         /// <summary>
         /// NumberSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumberSpecified {
+        public bool NumberSpecified {
             get {
                 return NumberSpecifiedField;
             } 
@@ -72286,7 +72286,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumberSpecifiedField; 
+        private bool NumberSpecifiedField; 
 
         /// <summary>
         /// FractureHeight property
@@ -72719,7 +72719,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("The name of the formation being stimulated.")]
 		[XmlElement("FormationName")]
-        public String FormationName {
+        public string FormationName {
             get {
                 return FormationNameField;
             } 
@@ -72729,7 +72729,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FormationNameField; 
+        private string FormationNameField; 
 
         /// <summary>
         /// FormationProppantMass property
@@ -73205,7 +73205,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("A name for the open hole. To be used for open hole completions.")]
 		[XmlElement("OpenHoleName")]
-        public String OpenHoleName {
+        public string OpenHoleName {
             get {
                 return OpenHoleNameField;
             } 
@@ -73215,7 +73215,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OpenHoleNameField; 
+        private string OpenHoleNameField; 
 
         /// <summary>
         /// PercentProppantPumped property
@@ -73240,7 +73240,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Total number of perforation balls used while treating the stage.")]
 		[XmlElement("PerfBallCount")]
-        public Int64? PerfBallCount {
+        public long? PerfBallCount {
             get {
                 return PerfBallCountField;
             } 
@@ -73251,14 +73251,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? PerfBallCountField; 
+        private long? PerfBallCountField; 
 
         /// <summary>
         /// PerfBallCountSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PerfBallCountSpecified {
+        public bool PerfBallCountSpecified {
             get {
                 return PerfBallCountSpecifiedField;
             } 
@@ -73268,7 +73268,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PerfBallCountSpecifiedField; 
+        private bool PerfBallCountSpecifiedField; 
 
         /// <summary>
         /// PerfBallSize property
@@ -73329,7 +73329,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Did screen out occur? True (\"true\" or \"1\") indicates that screen out occurred. False (\"false\" or \"0\") or not given indicates otherwise.")]
 		[XmlElement("ScreenedOut")]
-        public Boolean? ScreenedOut {
+        public bool? ScreenedOut {
             get {
                 return ScreenedOutField;
             } 
@@ -73340,14 +73340,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? ScreenedOutField; 
+        private bool? ScreenedOutField; 
 
         /// <summary>
         /// ScreenedOutSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ScreenedOutSpecified {
+        public bool ScreenedOutSpecified {
             get {
                 return ScreenedOutSpecifiedField;
             } 
@@ -73357,7 +73357,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ScreenedOutSpecifiedField; 
+        private bool ScreenedOutSpecifiedField; 
 
         /// <summary>
         /// ScreenOutPres property
@@ -73383,7 +73383,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Text describing the technology used while pumping the stage.")]
 		[XmlElement("TechnologyType")]
-        public String TechnologyType {
+        public string TechnologyType {
             get {
                 return TechnologyTypeField;
             } 
@@ -73393,7 +73393,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TechnologyTypeField; 
+        private string TechnologyTypeField; 
 
         /// <summary>
         /// TotalProppantInFormation property
@@ -73581,7 +73581,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Water source for fluid pumped during stage.")]
 		[XmlElement("WaterSource")]
-        public String WaterSource {
+        public string WaterSource {
             get {
                 return WaterSourceField;
             } 
@@ -73591,7 +73591,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String WaterSourceField; 
+        private string WaterSourceField; 
 
         /// <summary>
         /// WellboreProppantMass property
@@ -73885,7 +73885,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of StimJobStage.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -73895,7 +73895,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
     } //here
@@ -73954,7 +73954,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The type of perforation and/or how the perforation was created.")]
 		[XmlElement("Type")]
-        public String Type {
+        public string Type {
             get {
                 return TypeField;
             } 
@@ -73964,14 +73964,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeField; 
+        private string TypeField; 
 
         /// <summary>
         /// The number of perforations in this interval.
         /// </summary>
 		[Description("The number of perforations in this interval.")]
 		[XmlElement("PerforationCount")]
-        public Int64? PerforationCount {
+        public long? PerforationCount {
             get {
                 return PerforationCountField;
             } 
@@ -73982,14 +73982,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? PerforationCountField; 
+        private long? PerforationCountField; 
 
         /// <summary>
         /// PerforationCountSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PerforationCountSpecified {
+        public bool PerforationCountSpecified {
             get {
                 return PerforationCountSpecifiedField;
             } 
@@ -73999,7 +73999,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PerforationCountSpecifiedField; 
+        private bool PerforationCountSpecifiedField; 
 
         /// <summary>
         /// The size of the perforations.
@@ -74060,7 +74060,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("The friction factor of each perforation set.")]
 		[XmlElement("FrictionFactor")]
-        public Double? FrictionFactor {
+        public double? FrictionFactor {
             get {
                 return FrictionFactorField;
             } 
@@ -74071,14 +74071,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? FrictionFactorField; 
+        private double? FrictionFactorField; 
 
         /// <summary>
         /// FrictionFactorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean FrictionFactorSpecified {
+        public bool FrictionFactorSpecified {
             get {
                 return FrictionFactorSpecifiedField;
             } 
@@ -74088,7 +74088,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean FrictionFactorSpecifiedField; 
+        private bool FrictionFactorSpecifiedField; 
 
         /// <summary>
         /// The friction pressure for the perforation set.
@@ -74113,7 +74113,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("A coefficient used in the equation for calculation of pressure drop across a perforation set.")]
 		[XmlElement("DischargeCoefficient")]
-        public Double? DischargeCoefficient {
+        public double? DischargeCoefficient {
             get {
                 return DischargeCoefficientField;
             } 
@@ -74124,14 +74124,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Double? DischargeCoefficientField; 
+        private double? DischargeCoefficientField; 
 
         /// <summary>
         /// DischargeCoefficientSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DischargeCoefficientSpecified {
+        public bool DischargeCoefficientSpecified {
             get {
                 return DischargeCoefficientSpecifiedField;
             } 
@@ -74141,7 +74141,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean DischargeCoefficientSpecifiedField; 
+        private bool DischargeCoefficientSpecifiedField; 
 
 
     } //here
@@ -74202,7 +74202,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("Customer or company name.")]
 		[XmlElement("CustomerName")]
-        public String CustomerName {
+        public string CustomerName {
             get {
                 return CustomerNameField;
             } 
@@ -74212,7 +74212,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CustomerNameField; 
+        private string CustomerNameField; 
 
         /// <summary>
         /// DTimArrival property
@@ -74411,7 +74411,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("Type of well stimulation job.")]
 		[XmlElement("Kind")]
-        public String Kind {
+        public string Kind {
             get {
                 return KindField;
             } 
@@ -74421,7 +74421,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String KindField; 
+        private string KindField; 
 
         /// <summary>
         /// MaxFluidRate property
@@ -74482,7 +74482,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PIDXCommodityCodeSpecified {
+        public bool PIDXCommodityCodeSpecified {
             get {
                 return PIDXCommodityCodeSpecifiedField;
             } 
@@ -74492,7 +74492,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PIDXCommodityCodeSpecifiedField; 
+        private bool PIDXCommodityCodeSpecifiedField; 
 
         /// <summary>
         /// ServiceCompany property
@@ -74501,7 +74501,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(2000)]
         [Description("Name of the well stimulation contractor.")]
 		[XmlElement("ServiceCompany")]
-        public String ServiceCompany {
+        public string ServiceCompany {
             get {
                 return ServiceCompanyField;
             } 
@@ -74511,14 +74511,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ServiceCompanyField; 
+        private string ServiceCompanyField; 
 
         /// <summary>
         /// StageCount property
         /// </summary>
 		[Description("Number of stages treated during the stimulation service.")]
 		[XmlElement("StageCount")]
-        public Int64? StageCount {
+        public long? StageCount {
             get {
                 return StageCountField;
             } 
@@ -74529,14 +74529,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? StageCountField; 
+        private long? StageCountField; 
 
         /// <summary>
         /// StageCountSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StageCountSpecified {
+        public bool StageCountSpecified {
             get {
                 return StageCountSpecifiedField;
             } 
@@ -74546,7 +74546,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean StageCountSpecifiedField; 
+        private bool StageCountSpecifiedField; 
 
         /// <summary>
         /// Supervisor property
@@ -74554,7 +74554,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the service company supervisor.")]
 		[XmlElement("Supervisor")]
-        public String Supervisor {
+        public string Supervisor {
             get {
                 return SupervisorField;
             } 
@@ -74564,7 +74564,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SupervisorField; 
+        private string SupervisorField; 
 
         /// <summary>
         /// TotalJobVolume property
@@ -74856,7 +74856,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SubCategorySpecified {
+        public bool SubCategorySpecified {
             get {
                 return SubCategorySpecifiedField;
             } 
@@ -74866,7 +74866,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean SubCategorySpecifiedField; 
+        private bool SubCategorySpecifiedField; 
 
         /// <summary>
         /// ExtendCategory property
@@ -74874,7 +74874,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Custom string to further categorize the risk.")]
 		[XmlElement("ExtendCategory")]
-        public String ExtendCategory {
+        public string ExtendCategory {
             get {
                 return ExtendCategoryField;
             } 
@@ -74884,7 +74884,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ExtendCategoryField; 
+        private string ExtendCategoryField; 
 
         /// <summary>
         /// AffectedPersonnel property
@@ -75082,7 +75082,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Range(0, 8)]
         [Description("Severity level of the risk. Values of 1 through 5, with 1 being the lowest risk level.")]
 		[XmlElement("SeverityLevel")]
-        public Int16? SeverityLevel {
+        public short? SeverityLevel {
             get {
                 return SeverityLevelField;
             } 
@@ -75093,14 +75093,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int16? SeverityLevelField; 
+        private short? SeverityLevelField; 
 
         /// <summary>
         /// SeverityLevelSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SeverityLevelSpecified {
+        public bool SeverityLevelSpecified {
             get {
                 return SeverityLevelSpecifiedField;
             } 
@@ -75110,7 +75110,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean SeverityLevelSpecifiedField; 
+        private bool SeverityLevelSpecifiedField; 
 
         /// <summary>
         /// ProbabilityLevel property
@@ -75118,7 +75118,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Range(0, 8)]
         [Description("Probability level of the risk occurring. Values of 1 through 5, with 1 being the lowest probability.")]
 		[XmlElement("ProbabilityLevel")]
-        public Int16? ProbabilityLevel {
+        public short? ProbabilityLevel {
             get {
                 return ProbabilityLevelField;
             } 
@@ -75129,14 +75129,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int16? ProbabilityLevelField; 
+        private short? ProbabilityLevelField; 
 
         /// <summary>
         /// ProbabilityLevelSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ProbabilityLevelSpecified {
+        public bool ProbabilityLevelSpecified {
             get {
                 return ProbabilityLevelSpecifiedField;
             } 
@@ -75146,7 +75146,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ProbabilityLevelSpecifiedField; 
+        private bool ProbabilityLevelSpecifiedField; 
 
         /// <summary>
         /// Summary property
@@ -75154,7 +75154,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Summary description of the risk.")]
 		[XmlElement("Summary")]
-        public String Summary {
+        public string Summary {
             get {
                 return SummaryField;
             } 
@@ -75164,7 +75164,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SummaryField; 
+        private string SummaryField; 
 
         /// <summary>
         /// Details property
@@ -75172,7 +75172,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Complete description of the risk.")]
 		[XmlElement("Details")]
-        public String Details {
+        public string Details {
             get {
                 return DetailsField;
             } 
@@ -75182,7 +75182,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DetailsField; 
+        private string DetailsField; 
 
         /// <summary>
         /// Identification property
@@ -75190,7 +75190,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Details for identifying the risk.")]
 		[XmlElement("Identification")]
-        public String Identification {
+        public string Identification {
             get {
                 return IdentificationField;
             } 
@@ -75200,7 +75200,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String IdentificationField; 
+        private string IdentificationField; 
 
         /// <summary>
         /// Contingency property
@@ -75208,7 +75208,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Plan of action if the risk materializes.")]
 		[XmlElement("Contingency")]
-        public String Contingency {
+        public string Contingency {
             get {
                 return ContingencyField;
             } 
@@ -75218,7 +75218,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ContingencyField; 
+        private string ContingencyField; 
 
         /// <summary>
         /// Mitigation property
@@ -75226,7 +75226,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Plan of action to ensure the risk does not materialize.")]
         [RecurringElement]
 		[XmlElement("Mitigation")]
-        public List<String> Mitigation {
+        public List<string> Mitigation {
             get {
                 return MitigationField;
             } 
@@ -75248,7 +75248,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> MitigationField; 
+        private List<string> MitigationField; 
 
         /// <summary>
         /// ObjectReference property
@@ -75319,7 +75319,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The name of the company that owns the rig.")]
 		[XmlElement("Owner")]
-        public String Owner {
+        public string Owner {
             get {
                 return OwnerField;
             } 
@@ -75329,7 +75329,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OwnerField; 
+        private string OwnerField; 
 
         /// <summary>
         /// The type of rig (e.g., semi-submersible, jack-up, etc.) 
@@ -75354,7 +75354,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeRigSpecified {
+        public bool TypeRigSpecified {
             get {
                 return TypeRigSpecifiedField;
             } 
@@ -75364,7 +75364,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeRigSpecifiedField; 
+        private bool TypeRigSpecifiedField; 
 
         /// <summary>
         /// The company that manufactured the rig.
@@ -75372,7 +75372,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The company that manufactured the rig.")]
 		[XmlElement("Manufacturer")]
-        public String Manufacturer {
+        public string Manufacturer {
             get {
                 return ManufacturerField;
             } 
@@ -75382,14 +75382,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ManufacturerField; 
+        private string ManufacturerField; 
 
         /// <summary>
         /// The year the rig entered service. 
         /// </summary>
 		[Description("The year the rig entered service.")]
 		[XmlElement("YearEntService", DataType="gYear")]
-        public String YearEntService {
+        public string YearEntService {
             get {
                 return YearEntServiceField;
             } 
@@ -75399,7 +75399,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String YearEntServiceField; 
+        private string YearEntServiceField; 
 
         /// <summary>
         /// Classification of the rig. 
@@ -75407,7 +75407,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Classification of the rig.")]
 		[XmlElement("ClassRig")]
-        public String ClassRig {
+        public string ClassRig {
             get {
                 return ClassRigField;
             } 
@@ -75417,7 +75417,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ClassRigField; 
+        private string ClassRigField; 
 
         /// <summary>
         /// Rig approvals/certification.
@@ -75425,7 +75425,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Rig approvals/certification.")]
 		[XmlElement("Approvals")]
-        public String Approvals {
+        public string Approvals {
             get {
                 return ApprovalsField;
             } 
@@ -75435,7 +75435,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ApprovalsField; 
+        private string ApprovalsField; 
 
         /// <summary>
         /// Rig registration location.
@@ -75443,7 +75443,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Rig registration location.")]
 		[XmlElement("Registration")]
-        public String Registration {
+        public string Registration {
             get {
                 return RegistrationField;
             } 
@@ -75453,7 +75453,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RegistrationField; 
+        private string RegistrationField; 
 
         /// <summary>
         /// Telephone number on the rig.
@@ -75461,7 +75461,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Telephone number on the rig.")]
 		[XmlElement("TelNumber")]
-        public String TelNumber {
+        public string TelNumber {
             get {
                 return TelNumberField;
             } 
@@ -75471,7 +75471,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TelNumberField; 
+        private string TelNumberField; 
 
         /// <summary>
         /// Fax number on the rig. 
@@ -75479,7 +75479,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Fax number on the rig.")]
 		[XmlElement("FaxNumber")]
-        public String FaxNumber {
+        public string FaxNumber {
             get {
                 return FaxNumberField;
             } 
@@ -75489,7 +75489,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FaxNumberField; 
+        private string FaxNumberField; 
 
         /// <summary>
         /// Email address of the contact person. 
@@ -75497,7 +75497,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Email address of the contact person.")]
 		[XmlElement("EmailAddress")]
-        public String EmailAddress {
+        public string EmailAddress {
             get {
                 return EmailAddressField;
             } 
@@ -75507,7 +75507,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String EmailAddressField; 
+        private string EmailAddressField; 
 
         /// <summary>
         /// Name of the contact person. 
@@ -75515,7 +75515,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the contact person.")]
 		[XmlElement("NameContact")]
-        public String NameContact {
+        public string NameContact {
             get {
                 return NameContactField;
             } 
@@ -75525,7 +75525,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameContactField; 
+        private string NameContactField; 
 
         /// <summary>
         /// Maximum hole depth rating for the rig.
@@ -75568,7 +75568,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Flag to indicate that the rig is an offshore rig (drill ship, semi-submersible, jack-up, platform, TADU).  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("IsOffshore")]
-        public Boolean? IsOffshore {
+        public bool? IsOffshore {
             get {
                 return IsOffshoreField;
             } 
@@ -75579,14 +75579,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsOffshoreField; 
+        private bool? IsOffshoreField; 
 
         /// <summary>
         /// IsOffshoreSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IsOffshoreSpecified {
+        public bool IsOffshoreSpecified {
             get {
                 return IsOffshoreSpecifiedField;
             } 
@@ -75596,7 +75596,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IsOffshoreSpecifiedField; 
+        private bool IsOffshoreSpecifiedField; 
 
         /// <summary>
         /// Derrick type.
@@ -75621,7 +75621,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeDerrickSpecified {
+        public bool TypeDerrickSpecified {
             get {
                 return TypeDerrickSpecifiedField;
             } 
@@ -75631,7 +75631,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeDerrickSpecifiedField; 
+        private bool TypeDerrickSpecifiedField; 
 
         /// <summary>
         /// Derrick rating. 
@@ -75692,7 +75692,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Number of cranes on the rig.")]
 		[XmlElement("NumCranes")]
-        public Int32? NumCranes {
+        public int? NumCranes {
             get {
                 return NumCranesField;
             } 
@@ -75703,14 +75703,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumCranesField; 
+        private int? NumCranesField; 
 
         /// <summary>
         /// NumCranesSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumCranesSpecified {
+        public bool NumCranesSpecified {
             get {
                 return NumCranesSpecifiedField;
             } 
@@ -75720,7 +75720,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumCranesSpecifiedField; 
+        private bool NumCranesSpecifiedField; 
 
 
     } //here
@@ -75813,7 +75813,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Datum for location reference.")]
 		[XmlElement("Datum")]
-        public String Datum {
+        public string Datum {
             get {
                 return DatumField;
             } 
@@ -75823,7 +75823,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DatumField; 
+        private string DatumField; 
 
         /// <summary>
         /// AirGap property
@@ -75884,7 +75884,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Number of block lines.")]
 		[XmlElement("NumBlockLines")]
-        public Int32? NumBlockLines {
+        public int? NumBlockLines {
             get {
                 return NumBlockLinesField;
             } 
@@ -75895,14 +75895,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumBlockLinesField; 
+        private int? NumBlockLinesField; 
 
         /// <summary>
         /// NumBlockLinesSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumBlockLinesSpecified {
+        public bool NumBlockLinesSpecified {
             get {
                 return NumBlockLinesSpecifiedField;
             } 
@@ -75912,7 +75912,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumBlockLinesSpecifiedField; 
+        private bool NumBlockLinesSpecifiedField; 
 
         /// <summary>
         /// TypeHook property
@@ -75920,7 +75920,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Type of hook installed for this rig usage.")]
 		[XmlElement("TypeHook")]
-        public String TypeHook {
+        public string TypeHook {
             get {
                 return TypeHookField;
             } 
@@ -75930,7 +75930,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeHookField; 
+        private string TypeHookField; 
 
         /// <summary>
         /// RatingHkld property
@@ -75991,7 +75991,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeDrawWorksSpecified {
+        public bool TypeDrawWorksSpecified {
             get {
                 return TypeDrawWorksSpecifiedField;
             } 
@@ -76001,7 +76001,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeDrawWorksSpecifiedField; 
+        private bool TypeDrawWorksSpecifiedField; 
 
         /// <summary>
         /// PowerDrawWorks property
@@ -76045,7 +76045,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of the draw works motor.")]
 		[XmlElement("MotorDrawWorks")]
-        public String MotorDrawWorks {
+        public string MotorDrawWorks {
             get {
                 return MotorDrawWorksField;
             } 
@@ -76055,7 +76055,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MotorDrawWorksField; 
+        private string MotorDrawWorksField; 
 
         /// <summary>
         /// DescBrake property
@@ -76063,7 +76063,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Rig brake description.")]
 		[XmlElement("DescBrake")]
-        public String DescBrake {
+        public string DescBrake {
             get {
                 return DescBrakeField;
             } 
@@ -76073,7 +76073,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescBrakeField; 
+        private string DescBrakeField; 
 
         /// <summary>
         /// TypeSwivel property
@@ -76081,7 +76081,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Type of swivel.")]
 		[XmlElement("TypeSwivel")]
-        public String TypeSwivel {
+        public string TypeSwivel {
             get {
                 return TypeSwivelField;
             } 
@@ -76091,7 +76091,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeSwivelField; 
+        private string TypeSwivelField; 
 
         /// <summary>
         /// RatingSwivel property
@@ -76134,7 +76134,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean RotSystemSpecified {
+        public bool RotSystemSpecified {
             get {
                 return RotSystemSpecifiedField;
             } 
@@ -76144,7 +76144,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean RotSystemSpecifiedField; 
+        private bool RotSystemSpecifiedField; 
 
         /// <summary>
         /// DescRotSystem property
@@ -76152,7 +76152,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of rotating system.")]
 		[XmlElement("DescRotSystem")]
-        public String DescRotSystem {
+        public string DescRotSystem {
             get {
                 return DescRotSystemField;
             } 
@@ -76162,7 +76162,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescRotSystemField; 
+        private string DescRotSystemField; 
 
         /// <summary>
         /// RatingTqRotSys property
@@ -76224,7 +76224,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of slow circulation rates (SCR) system.")]
 		[XmlElement("ScrSystem")]
-        public String ScrSystem {
+        public string ScrSystem {
             get {
                 return ScrSystemField;
             } 
@@ -76234,7 +76234,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ScrSystemField; 
+        private string ScrSystemField; 
 
         /// <summary>
         /// PipeHandlingSystem property
@@ -76242,7 +76242,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of pipe-handling system.")]
 		[XmlElement("PipeHandlingSystem")]
-        public String PipeHandlingSystem {
+        public string PipeHandlingSystem {
             get {
                 return PipeHandlingSystemField;
             } 
@@ -76252,7 +76252,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PipeHandlingSystemField; 
+        private string PipeHandlingSystemField; 
 
         /// <summary>
         /// CapBulkMud property
@@ -76368,7 +76368,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Power system.")]
 		[XmlElement("MainEngine")]
-        public String MainEngine {
+        public string MainEngine {
             get {
                 return MainEngineField;
             } 
@@ -76378,7 +76378,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MainEngineField; 
+        private string MainEngineField; 
 
         /// <summary>
         /// Generator property
@@ -76386,7 +76386,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of the electrical power generating system.")]
 		[XmlElement("Generator")]
-        public String Generator {
+        public string Generator {
             get {
                 return GeneratorField;
             } 
@@ -76396,7 +76396,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String GeneratorField; 
+        private string GeneratorField; 
 
         /// <summary>
         /// CementUnit property
@@ -76404,7 +76404,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the cement unit on the rig.")]
 		[XmlElement("CementUnit")]
-        public String CementUnit {
+        public string CementUnit {
             get {
                 return CementUnitField;
             } 
@@ -76414,14 +76414,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CementUnitField; 
+        private string CementUnitField; 
 
         /// <summary>
         /// NumBunks property
         /// </summary>
 		[Description("Number of beds available on the rig.")]
 		[XmlElement("NumBunks")]
-        public Int32? NumBunks {
+        public int? NumBunks {
             get {
                 return NumBunksField;
             } 
@@ -76432,14 +76432,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumBunksField; 
+        private int? NumBunksField; 
 
         /// <summary>
         /// NumBunksSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumBunksSpecified {
+        public bool NumBunksSpecified {
             get {
                 return NumBunksSpecifiedField;
             } 
@@ -76449,14 +76449,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumBunksSpecifiedField; 
+        private bool NumBunksSpecifiedField; 
 
         /// <summary>
         /// BunksPerRoom property
         /// </summary>
 		[Description("Number of bunks per room.")]
 		[XmlElement("BunksPerRoom")]
-        public Int32? BunksPerRoom {
+        public int? BunksPerRoom {
             get {
                 return BunksPerRoomField;
             } 
@@ -76467,14 +76467,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? BunksPerRoomField; 
+        private int? BunksPerRoomField; 
 
         /// <summary>
         /// BunksPerRoomSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean BunksPerRoomSpecified {
+        public bool BunksPerRoomSpecified {
             get {
                 return BunksPerRoomSpecifiedField;
             } 
@@ -76484,14 +76484,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean BunksPerRoomSpecifiedField; 
+        private bool BunksPerRoomSpecifiedField; 
 
         /// <summary>
         /// NumAnch property
         /// </summary>
 		[Description("Number of anchors.")]
 		[XmlElement("NumAnch")]
-        public Int32? NumAnch {
+        public int? NumAnch {
             get {
                 return NumAnchField;
             } 
@@ -76502,14 +76502,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumAnchField; 
+        private int? NumAnchField; 
 
         /// <summary>
         /// NumAnchSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumAnchSpecified {
+        public bool NumAnchSpecified {
             get {
                 return NumAnchSpecifiedField;
             } 
@@ -76519,7 +76519,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumAnchSpecifiedField; 
+        private bool NumAnchSpecifiedField; 
 
         /// <summary>
         /// MoorType property
@@ -76527,7 +76527,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Mooring type.")]
 		[XmlElement("MoorType")]
-        public String MoorType {
+        public string MoorType {
             get {
                 return MoorTypeField;
             } 
@@ -76537,14 +76537,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MoorTypeField; 
+        private string MoorTypeField; 
 
         /// <summary>
         /// NumGuideTens property
         /// </summary>
 		[Description("Number of guideline tensioners.")]
 		[XmlElement("NumGuideTens")]
-        public Int32? NumGuideTens {
+        public int? NumGuideTens {
             get {
                 return NumGuideTensField;
             } 
@@ -76555,14 +76555,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumGuideTensField; 
+        private int? NumGuideTensField; 
 
         /// <summary>
         /// NumGuideTensSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumGuideTensSpecified {
+        public bool NumGuideTensSpecified {
             get {
                 return NumGuideTensSpecifiedField;
             } 
@@ -76572,14 +76572,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumGuideTensSpecifiedField; 
+        private bool NumGuideTensSpecifiedField; 
 
         /// <summary>
         /// NumRiserTens property
         /// </summary>
 		[Description("Number of riser tensioners.")]
 		[XmlElement("NumRiserTens")]
-        public Int32? NumRiserTens {
+        public int? NumRiserTens {
             get {
                 return NumRiserTensField;
             } 
@@ -76590,14 +76590,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumRiserTensField; 
+        private int? NumRiserTensField; 
 
         /// <summary>
         /// NumRiserTensSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumRiserTensSpecified {
+        public bool NumRiserTensSpecified {
             get {
                 return NumRiserTensSpecifiedField;
             } 
@@ -76607,7 +76607,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumRiserTensSpecifiedField; 
+        private bool NumRiserTensSpecifiedField; 
 
         /// <summary>
         /// VarDeckLdMx property
@@ -76650,7 +76650,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Number of thrusters.")]
 		[XmlElement("NumThrusters")]
-        public Int32? NumThrusters {
+        public int? NumThrusters {
             get {
                 return NumThrustersField;
             } 
@@ -76661,14 +76661,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumThrustersField; 
+        private int? NumThrustersField; 
 
         /// <summary>
         /// NumThrustersSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumThrustersSpecified {
+        public bool NumThrustersSpecified {
             get {
                 return NumThrustersSpecifiedField;
             } 
@@ -76678,14 +76678,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumThrustersSpecifiedField; 
+        private bool NumThrustersSpecifiedField; 
 
         /// <summary>
         /// Azimuthing property
         /// </summary>
 		[Description("Are the thrusters azimuth?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("Azimuthing")]
-        public Boolean? Azimuthing {
+        public bool? Azimuthing {
             get {
                 return AzimuthingField;
             } 
@@ -76696,14 +76696,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? AzimuthingField; 
+        private bool? AzimuthingField; 
 
         /// <summary>
         /// AzimuthingSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AzimuthingSpecified {
+        public bool AzimuthingSpecified {
             get {
                 return AzimuthingSpecifiedField;
             } 
@@ -76713,7 +76713,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean AzimuthingSpecifiedField; 
+        private bool AzimuthingSpecifiedField; 
 
         /// <summary>
         /// MotionCompensationMn property
@@ -76811,7 +76811,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of the gantry.")]
 		[XmlElement("Gantry")]
-        public String Gantry {
+        public string Gantry {
             get {
                 return GantryField;
             } 
@@ -76821,7 +76821,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String GantryField; 
+        private string GantryField; 
 
         /// <summary>
         /// Flares property
@@ -76829,7 +76829,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of flare(s).")]
 		[XmlElement("Flares")]
-        public String Flares {
+        public string Flares {
             get {
                 return FlaresField;
             } 
@@ -76839,7 +76839,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FlaresField; 
+        private string FlaresField; 
 
         /// <summary>
         /// Shaker property
@@ -77136,7 +77136,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the company recording the information.")]
 		[XmlElement("MudLogCompany")]
-        public String MudLogCompany {
+        public string MudLogCompany {
             get {
                 return MudLogCompanyField;
             } 
@@ -77146,7 +77146,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MudLogCompanyField; 
+        private string MudLogCompanyField; 
 
         /// <summary>
         /// MudLogEngineers property
@@ -77154,7 +77154,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Concatenated names of the mudloggers constructing the log.")]
 		[XmlElement("MudLogEngineers")]
-        public String MudLogEngineers {
+        public string MudLogEngineers {
             get {
                 return MudLogEngineersField;
             } 
@@ -77164,7 +77164,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MudLogEngineersField; 
+        private string MudLogEngineersField; 
 
         /// <summary>
         /// MudLogGeologists property
@@ -77172,7 +77172,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Concatenated names of the geologists constructing the log.")]
 		[XmlElement("MudLogGeologists")]
-        public String MudLogGeologists {
+        public string MudLogGeologists {
             get {
                 return MudLogGeologistsField;
             } 
@@ -77182,7 +77182,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MudLogGeologistsField; 
+        private string MudLogGeologistsField; 
 
         /// <summary>
         /// ReportMdInterval property
@@ -77561,7 +77561,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Sample treatment: cleaning method.")]
 		[XmlElement("CleaningMethod")]
-        public String CleaningMethod {
+        public string CleaningMethod {
             get {
                 return CleaningMethodField;
             } 
@@ -77571,7 +77571,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CleaningMethodField; 
+        private string CleaningMethodField; 
 
         /// <summary>
         /// DryingMethod property
@@ -77579,7 +77579,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Sample treatment: drying method.")]
 		[XmlElement("DryingMethod")]
-        public String DryingMethod {
+        public string DryingMethod {
             get {
                 return DryingMethodField;
             } 
@@ -77589,7 +77589,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DryingMethodField; 
+        private string DryingMethodField; 
 
         /// <summary>
         /// CuttingsIntervalLithology property
@@ -77628,7 +77628,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of CuttingsGeologyInterval.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -77638,7 +77638,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
     } //here
@@ -77875,7 +77875,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of InterpretedGeologyInterval.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -77885,7 +77885,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
     } //here
@@ -78078,7 +78078,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ShowRatingSpecified {
+        public bool ShowRatingSpecified {
             get {
                 return ShowRatingSpecifiedField;
             } 
@@ -78088,7 +78088,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ShowRatingSpecifiedField; 
+        private bool ShowRatingSpecifiedField; 
 
 		/// <summary>
         /// Unique identifier for this instance of ShowEvaluationInterval.
@@ -78098,7 +78098,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for this instance of ShowEvaluationInterval.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -78108,7 +78108,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
     } //here
@@ -78352,7 +78352,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean FileNameTypeSpecified {
+        public bool FileNameTypeSpecified {
             get {
                 return FileNameTypeSpecifiedField;
             } 
@@ -78362,7 +78362,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean FileNameTypeSpecifiedField; 
+        private bool FileNameTypeSpecifiedField; 
 
         /// <summary>
         /// Mimetype property
@@ -78387,7 +78387,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MimetypeSpecified {
+        public bool MimetypeSpecified {
             get {
                 return MimetypeSpecifiedField;
             } 
@@ -78397,7 +78397,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean MimetypeSpecifiedField; 
+        private bool MimetypeSpecifiedField; 
 
         /// <summary>
         /// FileName property
@@ -78406,7 +78406,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Reference to the file containing the image content.")]
 		[XmlElement("FileName")]
-        public String FileName {
+        public string FileName {
             get {
                 return FileNameField;
             } 
@@ -78416,7 +78416,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FileNameField; 
+        private string FileNameField; 
 
         /// <summary>
         /// FileSize property
@@ -78459,7 +78459,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ChecksumSpecified {
+        public bool ChecksumSpecified {
             get {
                 return ChecksumSpecifiedField;
             } 
@@ -78469,14 +78469,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ChecksumSpecifiedField; 
+        private bool ChecksumSpecifiedField; 
 
         /// <summary>
         /// ImagePixelWidth property
         /// </summary>
 		[Description("Image file width, in pixels.")]
 		[XmlElement("ImagePixelWidth")]
-        public Int64? ImagePixelWidth {
+        public long? ImagePixelWidth {
             get {
                 return ImagePixelWidthField;
             } 
@@ -78487,14 +78487,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? ImagePixelWidthField; 
+        private long? ImagePixelWidthField; 
 
         /// <summary>
         /// ImagePixelWidthSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ImagePixelWidthSpecified {
+        public bool ImagePixelWidthSpecified {
             get {
                 return ImagePixelWidthSpecifiedField;
             } 
@@ -78504,14 +78504,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ImagePixelWidthSpecifiedField; 
+        private bool ImagePixelWidthSpecifiedField; 
 
         /// <summary>
         /// ImagePixelHeight property
         /// </summary>
 		[Description("Image file height, in pixels.")]
 		[XmlElement("ImagePixelHeight")]
-        public Int64? ImagePixelHeight {
+        public long? ImagePixelHeight {
             get {
                 return ImagePixelHeightField;
             } 
@@ -78522,14 +78522,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int64? ImagePixelHeightField; 
+        private long? ImagePixelHeightField; 
 
         /// <summary>
         /// ImagePixelHeightSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ImagePixelHeightSpecified {
+        public bool ImagePixelHeightSpecified {
             get {
                 return ImagePixelHeightSpecifiedField;
             } 
@@ -78539,7 +78539,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ImagePixelHeightSpecifiedField; 
+        private bool ImagePixelHeightSpecifiedField; 
 
         /// <summary>
         /// Version property
@@ -78547,7 +78547,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("File version.")]
 		[XmlElement("Version")]
-        public String Version {
+        public string Version {
             get {
                 return VersionField;
             } 
@@ -78557,7 +78557,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String VersionField; 
+        private string VersionField; 
 
         /// <summary>
         /// ImageBoundary property
@@ -78682,7 +78682,7 @@ namespace Energistics.DataAccess.WITSML200
         [Description("Unique identifier for the registration image.")]
         [XmlAttribute("uid")]
 		
-        public String Uid {
+        public string Uid {
             get {
                 return uidField;
             } 
@@ -78692,7 +78692,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uidField; 
+        private string uidField; 
 
 
     } //here
@@ -78716,7 +78716,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Parent event reference id.")]
 		[XmlElement("ParentEventID")]
-        public String ParentEventID {
+        public string ParentEventID {
             get {
                 return ParentEventIDField;
             } 
@@ -78726,7 +78726,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ParentEventIDField; 
+        private string ParentEventIDField; 
 
         /// <summary>
         /// DTimStart property
@@ -78803,7 +78803,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Order number of event.")]
 		[XmlElement("EventOrder")]
-        public Int32? EventOrder {
+        public int? EventOrder {
             get {
                 return EventOrderField;
             } 
@@ -78814,14 +78814,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? EventOrderField; 
+        private int? EventOrderField; 
 
         /// <summary>
         /// EventOrderSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean EventOrderSpecified {
+        public bool EventOrderSpecified {
             get {
                 return EventOrderSpecifiedField;
             } 
@@ -78831,7 +78831,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean EventOrderSpecifiedField; 
+        private bool EventOrderSpecifiedField; 
 
         /// <summary>
         /// RigID property
@@ -78839,7 +78839,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Description("Rig reference id.")]
         [RecurringElement]
 		[XmlElement("RigID")]
-        public List<String> RigID {
+        public List<string> RigID {
             get {
                 return RigIDField;
             } 
@@ -78861,7 +78861,7 @@ namespace Energistics.DataAccess.WITSML200
              else return false;
              }
          }
-        private List<String> RigIDField; 
+        private List<string> RigIDField; 
 
         /// <summary>
         /// ActivityCode property
@@ -78886,7 +78886,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ActivityCodeSpecified {
+        public bool ActivityCodeSpecified {
             get {
                 return ActivityCodeSpecifiedField;
             } 
@@ -78896,7 +78896,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ActivityCodeSpecifiedField; 
+        private bool ActivityCodeSpecifiedField; 
 
         /// <summary>
         /// Type property
@@ -78921,7 +78921,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("True if planned.")]
 		[XmlElement("IsPlan")]
-        public Boolean? IsPlan {
+        public bool? IsPlan {
             get {
                 return IsPlanField;
             } 
@@ -78932,14 +78932,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsPlanField; 
+        private bool? IsPlanField; 
 
         /// <summary>
         /// IsPlanSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IsPlanSpecified {
+        public bool IsPlanSpecified {
             get {
                 return IsPlanSpecifiedField;
             } 
@@ -78949,7 +78949,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IsPlanSpecifiedField; 
+        private bool IsPlanSpecifiedField; 
 
         /// <summary>
         /// WorkOrderID property
@@ -78957,7 +78957,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Extension event for work order id.")]
 		[XmlElement("WorkOrderID")]
-        public String WorkOrderID {
+        public string WorkOrderID {
             get {
                 return WorkOrderIDField;
             } 
@@ -78967,7 +78967,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String WorkOrderIDField; 
+        private string WorkOrderIDField; 
 
         /// <summary>
         /// BusinessAssociate property
@@ -78975,7 +78975,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Service company or business")]
 		[XmlElement("BusinessAssociate")]
-        public String BusinessAssociate {
+        public string BusinessAssociate {
             get {
                 return BusinessAssociateField;
             } 
@@ -78985,7 +78985,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String BusinessAssociateField; 
+        private string BusinessAssociateField; 
 
         /// <summary>
         /// ResponsiblePerson property
@@ -78993,7 +78993,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name or information about person responsible who is implementing the service or job.")]
 		[XmlElement("ResponsiblePerson")]
-        public String ResponsiblePerson {
+        public string ResponsiblePerson {
             get {
                 return ResponsiblePersonField;
             } 
@@ -79003,7 +79003,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ResponsiblePersonField; 
+        private string ResponsiblePersonField; 
 
         /// <summary>
         /// Contact property
@@ -79011,7 +79011,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Contact name or person to get in touch with. Might not necessarily be the person responsible.")]
 		[XmlElement("Contact")]
-        public String Contact {
+        public string Contact {
             get {
                 return ContactField;
             } 
@@ -79021,14 +79021,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ContactField; 
+        private string ContactField; 
 
         /// <summary>
         /// Nonproductive property
         /// </summary>
 		[Description("True if event is not productive.")]
 		[XmlElement("Nonproductive")]
-        public Boolean? Nonproductive {
+        public bool? Nonproductive {
             get {
                 return NonproductiveField;
             } 
@@ -79039,14 +79039,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? NonproductiveField; 
+        private bool? NonproductiveField; 
 
         /// <summary>
         /// NonproductiveSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NonproductiveSpecified {
+        public bool NonproductiveSpecified {
             get {
                 return NonproductiveSpecifiedField;
             } 
@@ -79056,14 +79056,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NonproductiveSpecifiedField; 
+        private bool NonproductiveSpecifiedField; 
 
         /// <summary>
         /// Trouble property
         /// </summary>
 		[Description("True if event implies is in-trouble")]
 		[XmlElement("Trouble")]
-        public Boolean? Trouble {
+        public bool? Trouble {
             get {
                 return TroubleField;
             } 
@@ -79074,14 +79074,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? TroubleField; 
+        private bool? TroubleField; 
 
         /// <summary>
         /// TroubleSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TroubleSpecified {
+        public bool TroubleSpecified {
             get {
                 return TroubleSpecifiedField;
             } 
@@ -79091,14 +79091,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TroubleSpecifiedField; 
+        private bool TroubleSpecifiedField; 
 
         /// <summary>
         /// PreventiveMaintenance property
         /// </summary>
 		[Description("True of event is for preventive maintenance")]
 		[XmlElement("PreventiveMaintenance")]
-        public Boolean? PreventiveMaintenance {
+        public bool? PreventiveMaintenance {
             get {
                 return PreventiveMaintenanceField;
             } 
@@ -79109,14 +79109,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? PreventiveMaintenanceField; 
+        private bool? PreventiveMaintenanceField; 
 
         /// <summary>
         /// PreventiveMaintenanceSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PreventiveMaintenanceSpecified {
+        public bool PreventiveMaintenanceSpecified {
             get {
                 return PreventiveMaintenanceSpecifiedField;
             } 
@@ -79126,14 +79126,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PreventiveMaintenanceSpecifiedField; 
+        private bool PreventiveMaintenanceSpecifiedField; 
 
         /// <summary>
         /// Unplanned property
         /// </summary>
 		[Description("True if there is no planning infomation for this activity.")]
 		[XmlElement("Unplanned")]
-        public Boolean? Unplanned {
+        public bool? Unplanned {
             get {
                 return UnplannedField;
             } 
@@ -79144,14 +79144,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? UnplannedField; 
+        private bool? UnplannedField; 
 
         /// <summary>
         /// UnplannedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean UnplannedSpecified {
+        public bool UnplannedSpecified {
             get {
                 return UnplannedSpecifiedField;
             } 
@@ -79161,7 +79161,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean UnplannedSpecifiedField; 
+        private bool UnplannedSpecifiedField; 
 
         /// <summary>
         /// Phase property
@@ -79169,7 +79169,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Phase (large activity classification) e.g. Drill Surface Hole.")]
 		[XmlElement("Phase")]
-        public String Phase {
+        public string Phase {
             get {
                 return PhaseField;
             } 
@@ -79179,7 +79179,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PhaseField; 
+        private string PhaseField; 
 
         /// <summary>
         /// Comment property
@@ -79187,7 +79187,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Comment on this ledger")]
 		[XmlElement("Comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return CommentField;
             } 
@@ -79197,7 +79197,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentField; 
+        private string CommentField; 
 
         /// <summary>
         /// Description property
@@ -79205,7 +79205,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Description of this ledger")]
 		[XmlElement("Description")]
-        public String Description {
+        public string Description {
             get {
                 return DescriptionField;
             } 
@@ -79215,7 +79215,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DescriptionField; 
+        private string DescriptionField; 
 
         /// <summary>
         /// Wellbore property
@@ -79366,7 +79366,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Hole condition description.")]
 		[XmlElement("ConditionHole")]
-        public String ConditionHole {
+        public string ConditionHole {
             get {
                 return ConditionHoleField;
             } 
@@ -79376,7 +79376,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ConditionHoleField; 
+        private string ConditionHoleField; 
 
         /// <summary>
         /// CostDay property
@@ -79582,7 +79582,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the engineer.")]
 		[XmlElement("Engineer")]
-        public String Engineer {
+        public string Engineer {
             get {
                 return EngineerField;
             } 
@@ -79592,7 +79592,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String EngineerField; 
+        private string EngineerField; 
 
         /// <summary>
         /// ETimCirc property
@@ -79780,7 +79780,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Forecast of activities for the next 24 hrs.")]
 		[XmlElement("Forecast24Hr")]
-        public String Forecast24Hr {
+        public string Forecast24Hr {
             get {
                 return Forecast24HrField;
             } 
@@ -79790,7 +79790,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String Forecast24HrField; 
+        private string Forecast24HrField; 
 
         /// <summary>
         /// Geologist property
@@ -79798,7 +79798,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the operator's wellsite geologist.")]
 		[XmlElement("Geologist")]
-        public String Geologist {
+        public string Geologist {
             get {
                 return GeologistField;
             } 
@@ -79808,7 +79808,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String GeologistField; 
+        private string GeologistField; 
 
         /// <summary>
         /// Lithology property
@@ -79816,7 +79816,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Description of the lithology for the interval.")]
 		[XmlElement("Lithology")]
-        public String Lithology {
+        public string Lithology {
             get {
                 return LithologyField;
             } 
@@ -79826,7 +79826,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String LithologyField; 
+        private string LithologyField; 
 
         /// <summary>
         /// Maasp property
@@ -79906,7 +79906,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the formation.")]
 		[XmlElement("NameFormation")]
-        public String NameFormation {
+        public string NameFormation {
             get {
                 return NameFormationField;
             } 
@@ -79916,7 +79916,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameFormationField; 
+        private string NameFormationField; 
 
         /// <summary>
         /// NumAFE property
@@ -79924,7 +79924,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Authorization for expenditure (AFE) number that this cost item applies to.")]
 		[XmlElement("NumAFE")]
-        public String NumAFE {
+        public string NumAFE {
             get {
                 return NumAFEField;
             } 
@@ -79934,14 +79934,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NumAFEField; 
+        private string NumAFEField; 
 
         /// <summary>
         /// NumContract property
         /// </summary>
 		[Description("Number of contractor personnel on board the rig.")]
 		[XmlElement("NumContract")]
-        public Int32? NumContract {
+        public int? NumContract {
             get {
                 return NumContractField;
             } 
@@ -79952,14 +79952,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumContractField; 
+        private int? NumContractField; 
 
         /// <summary>
         /// NumContractSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumContractSpecified {
+        public bool NumContractSpecified {
             get {
                 return NumContractSpecifiedField;
             } 
@@ -79969,14 +79969,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumContractSpecifiedField; 
+        private bool NumContractSpecifiedField; 
 
         /// <summary>
         /// NumOperator property
         /// </summary>
 		[Description("Number of operator personnel on board the rig.")]
 		[XmlElement("NumOperator")]
-        public Int32? NumOperator {
+        public int? NumOperator {
             get {
                 return NumOperatorField;
             } 
@@ -79987,14 +79987,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumOperatorField; 
+        private int? NumOperatorField; 
 
         /// <summary>
         /// NumOperatorSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumOperatorSpecified {
+        public bool NumOperatorSpecified {
             get {
                 return NumOperatorSpecifiedField;
             } 
@@ -80004,14 +80004,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumOperatorSpecifiedField; 
+        private bool NumOperatorSpecifiedField; 
 
         /// <summary>
         /// NumPob property
         /// </summary>
 		[Description("Total number of personnel on board the rig.")]
 		[XmlElement("NumPob")]
-        public Int32? NumPob {
+        public int? NumPob {
             get {
                 return NumPobField;
             } 
@@ -80022,14 +80022,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumPobField; 
+        private int? NumPobField; 
 
         /// <summary>
         /// NumPobSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumPobSpecified {
+        public bool NumPobSpecified {
             get {
                 return NumPobSpecifiedField;
             } 
@@ -80039,14 +80039,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumPobSpecifiedField; 
+        private bool NumPobSpecifiedField; 
 
         /// <summary>
         /// NumService property
         /// </summary>
 		[Description("Number of service company personnel on board the rig.")]
 		[XmlElement("NumService")]
-        public Int32? NumService {
+        public int? NumService {
             get {
                 return NumServiceField;
             } 
@@ -80057,14 +80057,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumServiceField; 
+        private int? NumServiceField; 
 
         /// <summary>
         /// NumServiceSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumServiceSpecified {
+        public bool NumServiceSpecified {
             get {
                 return NumServiceSpecifiedField;
             } 
@@ -80074,7 +80074,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumServiceSpecifiedField; 
+        private bool NumServiceSpecifiedField; 
 
         /// <summary>
         /// PresKickTol property
@@ -80118,7 +80118,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A pointer to the rig used in this reporting period.")]
 		[XmlElement("Rig")]
-        public String Rig {
+        public string Rig {
             get {
                 return RigField;
             } 
@@ -80128,7 +80128,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RigField; 
+        private string RigField; 
 
         /// <summary>
         /// RopAv property
@@ -80172,7 +80172,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Current status description.")]
 		[XmlElement("StatusCurrent")]
-        public String StatusCurrent {
+        public string StatusCurrent {
             get {
                 return StatusCurrentField;
             } 
@@ -80182,7 +80182,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String StatusCurrentField; 
+        private string StatusCurrentField; 
 
         /// <summary>
         /// Sum24Hr property
@@ -80190,7 +80190,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Summary of the operations and events for the reporting period (the previous 24 hours).")]
 		[XmlElement("Sum24Hr")]
-        public String Sum24Hr {
+        public string Sum24Hr {
             get {
                 return Sum24HrField;
             } 
@@ -80200,7 +80200,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String Sum24HrField; 
+        private string Sum24HrField; 
 
         /// <summary>
         /// Supervisor property
@@ -80208,7 +80208,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the operator's rig supervisor.")]
 		[XmlElement("Supervisor")]
-        public String Supervisor {
+        public string Supervisor {
             get {
                 return SupervisorField;
             } 
@@ -80218,7 +80218,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SupervisorField; 
+        private string SupervisorField; 
 
         /// <summary>
         /// Tubular property
@@ -80226,7 +80226,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A pointer to the tubular assembly (as specified in the Tubular object) used in this report period.")]
 		[XmlElement("Tubular")]
-        public String Tubular {
+        public string Tubular {
             get {
                 return TubularField;
             } 
@@ -80236,7 +80236,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TubularField; 
+        private string TubularField; 
 
         /// <summary>
         /// TvdCsgLast property
@@ -80912,7 +80912,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of contractor who provided the service.")]
 		[XmlElement("ServiceCompany")]
-        public String ServiceCompany {
+        public string ServiceCompany {
             get {
                 return ServiceCompanyField;
             } 
@@ -80922,7 +80922,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ServiceCompanyField; 
+        private string ServiceCompanyField; 
 
         /// <summary>
         /// MagDeclUsed property
@@ -81019,7 +81019,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("True (\"true\" or \"1\") indicates that this trajectory is definitive for  this wellbore. False (\"false\" or \"0\") or not given indicates otherwise. There can only be one trajectory per wellbore with definitive=true and it must define the geometry of the whole wellbore (surface to bottom). The definitive trajectory may represent a composite of information in many other trajectories. A query requesting a subset of the possible information can provide a simplistic view of the geometry of the wellbore.")]
 		[XmlElement("Definitive")]
-        public Boolean? Definitive {
+        public bool? Definitive {
             get {
                 return DefinitiveField;
             } 
@@ -81030,14 +81030,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? DefinitiveField; 
+        private bool? DefinitiveField; 
 
         /// <summary>
         /// DefinitiveSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DefinitiveSpecified {
+        public bool DefinitiveSpecified {
             get {
                 return DefinitiveSpecifiedField;
             } 
@@ -81047,14 +81047,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean DefinitiveSpecifiedField; 
+        private bool DefinitiveSpecifiedField; 
 
         /// <summary>
         /// Memory property
         /// </summary>
 		[Description("Is trajectory a result of a memory dump from a tool?   Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("Memory")]
-        public Boolean? Memory {
+        public bool? Memory {
             get {
                 return MemoryField;
             } 
@@ -81065,14 +81065,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? MemoryField; 
+        private bool? MemoryField; 
 
         /// <summary>
         /// MemorySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean MemorySpecified {
+        public bool MemorySpecified {
             get {
                 return MemorySpecifiedField;
             } 
@@ -81082,14 +81082,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean MemorySpecifiedField; 
+        private bool MemorySpecifiedField; 
 
         /// <summary>
         /// FinalTraj property
         /// </summary>
 		[Description("Is trajectory a final or intermediate/preliminary?   Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("FinalTraj")]
-        public Boolean? FinalTraj {
+        public bool? FinalTraj {
             get {
                 return FinalTrajField;
             } 
@@ -81100,14 +81100,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? FinalTrajField; 
+        private bool? FinalTrajField; 
 
         /// <summary>
         /// FinalTrajSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean FinalTrajSpecified {
+        public bool FinalTrajSpecified {
             get {
                 return FinalTrajSpecifiedField;
             } 
@@ -81117,7 +81117,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean FinalTrajSpecifiedField; 
+        private bool FinalTrajSpecifiedField; 
 
         /// <summary>
         /// AziRef property
@@ -81142,7 +81142,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AziRefSpecified {
+        public bool AziRefSpecified {
             get {
                 return AziRefSpecifiedField;
             } 
@@ -81152,7 +81152,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean AziRefSpecifiedField; 
+        private bool AziRefSpecifiedField; 
 
         /// <summary>
         /// TrajectoryStation property
@@ -81257,7 +81257,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeSurveyToolSpecified {
+        public bool TypeSurveyToolSpecified {
             get {
                 return TypeSurveyToolSpecifiedField;
             } 
@@ -81267,7 +81267,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeSurveyToolSpecifiedField; 
+        private bool TypeSurveyToolSpecifiedField; 
 
         /// <summary>
         /// UseErrorTermSet property
@@ -81275,7 +81275,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Reference to the toolErrorTermSet object that  contains the error terms used in this model.")]
 		[XmlElement("UseErrorTermSet")]
-        public String UseErrorTermSet {
+        public string UseErrorTermSet {
             get {
                 return UseErrorTermSetField;
             } 
@@ -81285,7 +81285,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String UseErrorTermSetField; 
+        private string UseErrorTermSetField; 
 
         /// <summary>
         /// Authorization property
@@ -81653,7 +81653,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean JobTypeSpecified {
+        public bool JobTypeSpecified {
             get {
                 return JobTypeSpecifiedField;
             } 
@@ -81663,7 +81663,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean JobTypeSpecifiedField; 
+        private bool JobTypeSpecifiedField; 
 
         /// <summary>
         /// JobConfig property
@@ -81671,7 +81671,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Job configuration.")]
 		[XmlElement("JobConfig")]
-        public String JobConfig {
+        public string JobConfig {
             get {
                 return JobConfigField;
             } 
@@ -81681,7 +81681,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String JobConfigField; 
+        private string JobConfigField; 
 
         /// <summary>
         /// NameCementedString property
@@ -81689,7 +81689,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name for the cemented string")]
 		[XmlElement("NameCementedString")]
-        public String NameCementedString {
+        public string NameCementedString {
             get {
                 return NameCementedStringField;
             } 
@@ -81699,7 +81699,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameCementedStringField; 
+        private string NameCementedStringField; 
 
         /// <summary>
         /// NameWorkString property
@@ -81707,7 +81707,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name for the cement work string")]
 		[XmlElement("NameWorkString")]
-        public String NameWorkString {
+        public string NameWorkString {
             get {
                 return NameWorkStringField;
             } 
@@ -81717,14 +81717,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameWorkStringField; 
+        private string NameWorkStringField; 
 
         /// <summary>
         /// OffshoreJob property
         /// </summary>
 		[Description("Offshore job? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("OffshoreJob")]
-        public Boolean? OffshoreJob {
+        public bool? OffshoreJob {
             get {
                 return OffshoreJobField;
             } 
@@ -81735,14 +81735,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? OffshoreJobField; 
+        private bool? OffshoreJobField; 
 
         /// <summary>
         /// OffshoreJobSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean OffshoreJobSpecified {
+        public bool OffshoreJobSpecified {
             get {
                 return OffshoreJobSpecifiedField;
             } 
@@ -81752,7 +81752,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean OffshoreJobSpecifiedField; 
+        private bool OffshoreJobSpecifiedField; 
 
         /// <summary>
         /// MdWater property
@@ -81777,7 +81777,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Returns to seabed? Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("ReturnsToSeabed")]
-        public Boolean? ReturnsToSeabed {
+        public bool? ReturnsToSeabed {
             get {
                 return ReturnsToSeabedField;
             } 
@@ -81788,14 +81788,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? ReturnsToSeabedField; 
+        private bool? ReturnsToSeabedField; 
 
         /// <summary>
         /// ReturnsToSeabedSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ReturnsToSeabedSpecified {
+        public bool ReturnsToSeabedSpecified {
             get {
                 return ReturnsToSeabedSpecifiedField;
             } 
@@ -81805,7 +81805,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ReturnsToSeabedSpecifiedField; 
+        private bool ReturnsToSeabedSpecifiedField; 
 
         /// <summary>
         /// MdPrevShoe property
@@ -81903,7 +81903,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Plug type.")]
 		[XmlElement("TypePlug")]
-        public String TypePlug {
+        public string TypePlug {
             get {
                 return TypePlugField;
             } 
@@ -81913,7 +81913,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypePlugField; 
+        private string TypePlugField; 
 
         /// <summary>
         /// NameCementString property
@@ -81921,7 +81921,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name for the cementing string")]
 		[XmlElement("NameCementString")]
-        public String NameCementString {
+        public string NameCementString {
             get {
                 return NameCementStringField;
             } 
@@ -81931,7 +81931,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameCementStringField; 
+        private string NameCementStringField; 
 
         /// <summary>
         /// TypeSqueeze property
@@ -81939,7 +81939,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Type of squeeze.")]
 		[XmlElement("TypeSqueeze")]
-        public String TypeSqueeze {
+        public string TypeSqueeze {
             get {
                 return TypeSqueezeField;
             } 
@@ -81949,7 +81949,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeSqueezeField; 
+        private string TypeSqueezeField; 
 
         /// <summary>
         /// MdSqueeze property
@@ -81975,7 +81975,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Company providing the cementing tool.")]
 		[XmlElement("ToolCompany")]
-        public String ToolCompany {
+        public string ToolCompany {
             get {
                 return ToolCompanyField;
             } 
@@ -81985,7 +81985,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ToolCompanyField; 
+        private string ToolCompanyField; 
 
         /// <summary>
         /// TypeTool property
@@ -81993,7 +81993,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Cement tool type.")]
 		[XmlElement("TypeTool")]
-        public String TypeTool {
+        public string TypeTool {
             get {
                 return TypeToolField;
             } 
@@ -82003,14 +82003,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TypeToolField; 
+        private string TypeToolField; 
 
         /// <summary>
         /// CoilTubing property
         /// </summary>
 		[Description("Is coiled tubing used?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("CoilTubing")]
-        public Boolean? CoilTubing {
+        public bool? CoilTubing {
             get {
                 return CoilTubingField;
             } 
@@ -82021,14 +82021,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? CoilTubingField; 
+        private bool? CoilTubingField; 
 
         /// <summary>
         /// CoilTubingSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CoilTubingSpecified {
+        public bool CoilTubingSpecified {
             get {
                 return CoilTubingSpecifiedField;
             } 
@@ -82038,7 +82038,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CoilTubingSpecifiedField; 
+        private bool CoilTubingSpecifiedField; 
 
         /// <summary>
         /// JobReport property
@@ -82194,7 +82194,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Cement found between shoe and collar?   Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("CementShoeCollar")]
-        public Boolean? CementShoeCollar {
+        public bool? CementShoeCollar {
             get {
                 return CementShoeCollarField;
             } 
@@ -82205,14 +82205,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? CementShoeCollarField; 
+        private bool? CementShoeCollarField; 
 
         /// <summary>
         /// CementShoeCollarSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CementShoeCollarSpecified {
+        public bool CementShoeCollarSpecified {
             get {
                 return CementShoeCollarSpecifiedField;
             } 
@@ -82222,14 +82222,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CementShoeCollarSpecifiedField; 
+        private bool CementShoeCollarSpecifiedField; 
 
         /// <summary>
         /// CetRun property
         /// </summary>
 		[Description("Cement evaluation tool run?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("CetRun")]
-        public Boolean? CetRun {
+        public bool? CetRun {
             get {
                 return CetRunField;
             } 
@@ -82240,14 +82240,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? CetRunField; 
+        private bool? CetRunField; 
 
         /// <summary>
         /// CetRunSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CetRunSpecified {
+        public bool CetRunSpecified {
             get {
                 return CetRunSpecifiedField;
             } 
@@ -82257,14 +82257,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CetRunSpecifiedField; 
+        private bool CetRunSpecifiedField; 
 
         /// <summary>
         /// CetBondQual property
         /// </summary>
 		[Description("Cement evaluation tool bond quality?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("CetBondQual")]
-        public Boolean? CetBondQual {
+        public bool? CetBondQual {
             get {
                 return CetBondQualField;
             } 
@@ -82275,14 +82275,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? CetBondQualField; 
+        private bool? CetBondQualField; 
 
         /// <summary>
         /// CetBondQualSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CetBondQualSpecified {
+        public bool CetBondQualSpecified {
             get {
                 return CetBondQualSpecifiedField;
             } 
@@ -82292,14 +82292,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CetBondQualSpecifiedField; 
+        private bool CetBondQualSpecifiedField; 
 
         /// <summary>
         /// CblRun property
         /// </summary>
 		[Description("Cement bond log run?   Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("CblRun")]
-        public Boolean? CblRun {
+        public bool? CblRun {
             get {
                 return CblRunField;
             } 
@@ -82310,14 +82310,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? CblRunField; 
+        private bool? CblRunField; 
 
         /// <summary>
         /// CblRunSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CblRunSpecified {
+        public bool CblRunSpecified {
             get {
                 return CblRunSpecifiedField;
             } 
@@ -82327,14 +82327,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CblRunSpecifiedField; 
+        private bool CblRunSpecifiedField; 
 
         /// <summary>
         /// CblBondQual property
         /// </summary>
 		[Description("Cement bond log quality indication?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("CblBondQual")]
-        public Boolean? CblBondQual {
+        public bool? CblBondQual {
             get {
                 return CblBondQualField;
             } 
@@ -82345,14 +82345,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? CblBondQualField; 
+        private bool? CblBondQualField; 
 
         /// <summary>
         /// CblBondQualSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CblBondQualSpecified {
+        public bool CblBondQualSpecified {
             get {
                 return CblBondQualSpecifiedField;
             } 
@@ -82362,7 +82362,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CblBondQualSpecifiedField; 
+        private bool CblBondQualSpecifiedField; 
 
         /// <summary>
         /// CblPres property
@@ -82387,7 +82387,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Temperature survey run?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("TempSurvey")]
-        public Boolean? TempSurvey {
+        public bool? TempSurvey {
             get {
                 return TempSurveyField;
             } 
@@ -82398,14 +82398,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? TempSurveyField; 
+        private bool? TempSurveyField; 
 
         /// <summary>
         /// TempSurveySpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TempSurveySpecified {
+        public bool TempSurveySpecified {
             get {
                 return TempSurveySpecifiedField;
             } 
@@ -82415,7 +82415,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TempSurveySpecifiedField; 
+        private bool TempSurveySpecifiedField; 
 
         /// <summary>
         /// ETimCementLog property
@@ -82459,7 +82459,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Tool name for the pressure integrity test.")]
 		[XmlElement("ToolCompanyPit")]
-        public String ToolCompanyPit {
+        public string ToolCompanyPit {
             get {
                 return ToolCompanyPitField;
             } 
@@ -82469,7 +82469,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ToolCompanyPitField; 
+        private string ToolCompanyPitField; 
 
         /// <summary>
         /// ETimPitStart property
@@ -82513,7 +82513,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Method to determine cement top.")]
 		[XmlElement("TopCementMethod")]
-        public String TopCementMethod {
+        public string TopCementMethod {
             get {
                 return TopCementMethodField;
             } 
@@ -82523,14 +82523,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TopCementMethodField; 
+        private string TopCementMethodField; 
 
         /// <summary>
         /// TocOK property
         /// </summary>
 		[Description("Is the top of cement sufficient?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("TocOK")]
-        public Boolean? TocOK {
+        public bool? TocOK {
             get {
                 return TocOKField;
             } 
@@ -82541,14 +82541,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? TocOKField; 
+        private bool? TocOKField; 
 
         /// <summary>
         /// TocOKSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TocOKSpecified {
+        public bool TocOKSpecified {
             get {
                 return TocOKSpecifiedField;
             } 
@@ -82558,7 +82558,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TocOKSpecifiedField; 
+        private bool TocOKSpecifiedField; 
 
         /// <summary>
         /// JobRating property
@@ -82566,7 +82566,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Job rating.")]
 		[XmlElement("JobRating")]
-        public String JobRating {
+        public string JobRating {
             get {
                 return JobRatingField;
             } 
@@ -82576,14 +82576,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String JobRatingField; 
+        private string JobRatingField; 
 
         /// <summary>
         /// RemedialCement property
         /// </summary>
 		[Description("Remedial cement required?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("RemedialCement")]
-        public Boolean? RemedialCement {
+        public bool? RemedialCement {
             get {
                 return RemedialCementField;
             } 
@@ -82594,14 +82594,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? RemedialCementField; 
+        private bool? RemedialCementField; 
 
         /// <summary>
         /// RemedialCementSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean RemedialCementSpecified {
+        public bool RemedialCementSpecified {
             get {
                 return RemedialCementSpecifiedField;
             } 
@@ -82611,14 +82611,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean RemedialCementSpecifiedField; 
+        private bool RemedialCementSpecifiedField; 
 
         /// <summary>
         /// NumRemedial property
         /// </summary>
 		[Description("Number of remedials.")]
 		[XmlElement("NumRemedial")]
-        public Int32? NumRemedial {
+        public int? NumRemedial {
             get {
                 return NumRemedialField;
             } 
@@ -82629,14 +82629,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumRemedialField; 
+        private int? NumRemedialField; 
 
         /// <summary>
         /// NumRemedialSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumRemedialSpecified {
+        public bool NumRemedialSpecified {
             get {
                 return NumRemedialSpecifiedField;
             } 
@@ -82646,7 +82646,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumRemedialSpecifiedField; 
+        private bool NumRemedialSpecifiedField; 
 
         /// <summary>
         /// FailureMethod property
@@ -82654,7 +82654,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Method used to determine that a cement job was unsuccessful.")]
 		[XmlElement("FailureMethod")]
-        public String FailureMethod {
+        public string FailureMethod {
             get {
                 return FailureMethodField;
             } 
@@ -82664,7 +82664,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FailureMethodField; 
+        private string FailureMethodField; 
 
         /// <summary>
         /// LinerTop property
@@ -82726,7 +82726,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Test negative tool used for the liner top seal.")]
 		[XmlElement("TestNegativeTool")]
-        public String TestNegativeTool {
+        public string TestNegativeTool {
             get {
                 return TestNegativeToolField;
             } 
@@ -82736,7 +82736,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TestNegativeToolField; 
+        private string TestNegativeToolField; 
 
         /// <summary>
         /// TestNegativeEmw property
@@ -82762,7 +82762,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Test positive tool for liner top seal.")]
 		[XmlElement("TestPositiveTool")]
-        public String TestPositiveTool {
+        public string TestPositiveTool {
             get {
                 return TestPositiveToolField;
             } 
@@ -82772,7 +82772,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TestPositiveToolField; 
+        private string TestPositiveToolField; 
 
         /// <summary>
         /// TestPositiveEmw property
@@ -82797,7 +82797,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Cement found on tool?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("CementFoundOnTool")]
-        public Boolean? CementFoundOnTool {
+        public bool? CementFoundOnTool {
             get {
                 return CementFoundOnToolField;
             } 
@@ -82808,14 +82808,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? CementFoundOnToolField; 
+        private bool? CementFoundOnToolField; 
 
         /// <summary>
         /// CementFoundOnToolSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean CementFoundOnToolSpecified {
+        public bool CementFoundOnToolSpecified {
             get {
                 return CementFoundOnToolSpecifiedField;
             } 
@@ -82825,7 +82825,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean CementFoundOnToolSpecifiedField; 
+        private bool CementFoundOnToolSpecifiedField; 
 
         /// <summary>
         /// MdDVTool property
@@ -83066,7 +83066,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ChannelStateSpecified {
+        public bool ChannelStateSpecified {
             get {
                 return ChannelStateSpecifiedField;
             } 
@@ -83076,7 +83076,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ChannelStateSpecifiedField; 
+        private bool ChannelStateSpecifiedField; 
 
         /// <summary>
         /// TimeDepth property
@@ -83084,7 +83084,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Use to indicate if this is a time or depth log.")]
 		[XmlElement("TimeDepth")]
-        public String TimeDepth {
+        public string TimeDepth {
             get {
                 return TimeDepthField;
             } 
@@ -83094,7 +83094,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TimeDepthField; 
+        private string TimeDepthField; 
 
         /// <summary>
         /// ChannelClass property
@@ -83120,7 +83120,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.")]
 		[XmlElement("RunNumber")]
-        public String RunNumber {
+        public string RunNumber {
             get {
                 return RunNumberField;
             } 
@@ -83130,7 +83130,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RunNumberField; 
+        private string RunNumberField; 
 
         /// <summary>
         /// PassNumber property
@@ -83138,7 +83138,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.")]
 		[XmlElement("PassNumber")]
-        public String PassNumber {
+        public string PassNumber {
             get {
                 return PassNumberField;
             } 
@@ -83148,7 +83148,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PassNumberField; 
+        private string PassNumberField; 
 
         /// <summary>
         /// StartIndex property
@@ -83190,7 +83190,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the logging company.")]
 		[XmlElement("LoggingCompanyName")]
-        public String LoggingCompanyName {
+        public string LoggingCompanyName {
             get {
                 return LoggingCompanyNameField;
             } 
@@ -83200,7 +83200,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String LoggingCompanyNameField; 
+        private string LoggingCompanyNameField; 
 
         /// <summary>
         /// LoggingCompanyCode property
@@ -83208,7 +83208,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes")]
 		[XmlElement("LoggingCompanyCode")]
-        public String LoggingCompanyCode {
+        public string LoggingCompanyCode {
             get {
                 return LoggingCompanyCodeField;
             } 
@@ -83218,7 +83218,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String LoggingCompanyCodeField; 
+        private string LoggingCompanyCodeField; 
 
         /// <summary>
         /// ToolName property
@@ -83226,7 +83226,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the logging tool as given by the logging contractor.")]
 		[XmlElement("ToolName")]
-        public String ToolName {
+        public string ToolName {
             get {
                 return ToolNameField;
             } 
@@ -83236,7 +83236,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ToolNameField; 
+        private string ToolNameField; 
 
         /// <summary>
         /// ToolClass property
@@ -83244,7 +83244,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.")]
 		[XmlElement("ToolClass")]
-        public String ToolClass {
+        public string ToolClass {
             get {
                 return ToolClassField;
             } 
@@ -83254,7 +83254,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ToolClassField; 
+        private string ToolClassField; 
 
         /// <summary>
         /// Derivation property
@@ -83279,7 +83279,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DerivationSpecified {
+        public bool DerivationSpecified {
             get {
                 return DerivationSpecifiedField;
             } 
@@ -83289,7 +83289,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean DerivationSpecifiedField; 
+        private bool DerivationSpecifiedField; 
 
         /// <summary>
         /// LoggingMethod property
@@ -83314,7 +83314,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean LoggingMethodSpecified {
+        public bool LoggingMethodSpecified {
             get {
                 return LoggingMethodSpecifiedField;
             } 
@@ -83324,7 +83324,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean LoggingMethodSpecifiedField; 
+        private bool LoggingMethodSpecifiedField; 
 
         /// <summary>
         /// NominalHoleSize property
@@ -83507,7 +83507,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ChannelStateSpecified {
+        public bool ChannelStateSpecified {
             get {
                 return ChannelStateSpecifiedField;
             } 
@@ -83517,7 +83517,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ChannelStateSpecifiedField; 
+        private bool ChannelStateSpecifiedField; 
 
         /// <summary>
         /// TimeDepth property
@@ -83525,7 +83525,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Use to indicate if this is a time or depth log.")]
 		[XmlElement("TimeDepth")]
-        public String TimeDepth {
+        public string TimeDepth {
             get {
                 return TimeDepthField;
             } 
@@ -83535,7 +83535,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TimeDepthField; 
+        private string TimeDepthField; 
 
         /// <summary>
         /// ChannelClass property
@@ -83561,7 +83561,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.")]
 		[XmlElement("RunNumber")]
-        public String RunNumber {
+        public string RunNumber {
             get {
                 return RunNumberField;
             } 
@@ -83571,7 +83571,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RunNumberField; 
+        private string RunNumberField; 
 
         /// <summary>
         /// PassNumber property
@@ -83579,7 +83579,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.")]
 		[XmlElement("PassNumber")]
-        public String PassNumber {
+        public string PassNumber {
             get {
                 return PassNumberField;
             } 
@@ -83589,7 +83589,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PassNumberField; 
+        private string PassNumberField; 
 
         /// <summary>
         /// StartIndex property
@@ -83631,7 +83631,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the logging company.")]
 		[XmlElement("LoggingCompanyName")]
-        public String LoggingCompanyName {
+        public string LoggingCompanyName {
             get {
                 return LoggingCompanyNameField;
             } 
@@ -83641,7 +83641,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String LoggingCompanyNameField; 
+        private string LoggingCompanyNameField; 
 
         /// <summary>
         /// LoggingCompanyCode property
@@ -83649,7 +83649,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes")]
 		[XmlElement("LoggingCompanyCode")]
-        public String LoggingCompanyCode {
+        public string LoggingCompanyCode {
             get {
                 return LoggingCompanyCodeField;
             } 
@@ -83659,7 +83659,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String LoggingCompanyCodeField; 
+        private string LoggingCompanyCodeField; 
 
         /// <summary>
         /// ToolName property
@@ -83667,7 +83667,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the logging tool as given by the logging contractor.")]
 		[XmlElement("ToolName")]
-        public String ToolName {
+        public string ToolName {
             get {
                 return ToolNameField;
             } 
@@ -83677,7 +83677,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ToolNameField; 
+        private string ToolNameField; 
 
         /// <summary>
         /// ToolClass property
@@ -83685,7 +83685,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.")]
 		[XmlElement("ToolClass")]
-        public String ToolClass {
+        public string ToolClass {
             get {
                 return ToolClassField;
             } 
@@ -83695,7 +83695,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ToolClassField; 
+        private string ToolClassField; 
 
         /// <summary>
         /// Derivation property
@@ -83720,7 +83720,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DerivationSpecified {
+        public bool DerivationSpecified {
             get {
                 return DerivationSpecifiedField;
             } 
@@ -83730,7 +83730,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean DerivationSpecifiedField; 
+        private bool DerivationSpecifiedField; 
 
         /// <summary>
         /// LoggingMethod property
@@ -83755,7 +83755,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean LoggingMethodSpecified {
+        public bool LoggingMethodSpecified {
             get {
                 return LoggingMethodSpecifiedField;
             } 
@@ -83765,7 +83765,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean LoggingMethodSpecifiedField; 
+        private bool LoggingMethodSpecifiedField; 
 
         /// <summary>
         /// NominalHoleSize property
@@ -83841,7 +83841,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("The mnemonic name for this channel. Mnemonics are not unique within a store.")]
 		[XmlElement("Mnemonic")]
-        public String Mnemonic {
+        public string Mnemonic {
             get {
                 return MnemonicField;
             } 
@@ -83851,7 +83851,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MnemonicField; 
+        private string MnemonicField; 
 
         /// <summary>
         /// DataType property
@@ -83877,7 +83877,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("The underlying unit of measure of the value.")]
 		[XmlElement("Uom")]
-        public UnitOfMeasure? Uom {
+        public ExtensibleEnum<UnitOfMeasure>? Uom {
             get {
                 return UomField;
             } 
@@ -83887,7 +83887,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private UnitOfMeasure? UomField; 
+        private ExtensibleEnum<UnitOfMeasure>? UomField; 
 
         /// <summary>
         /// GrowingStatus property
@@ -83913,7 +83913,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Source of the data in the channel. Enter the contractor name who conducted the log.")]
 		[XmlElement("Source")]
-        public String Source {
+        public string Source {
             get {
                 return SourceField;
             } 
@@ -83923,7 +83923,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SourceField; 
+        private string SourceField; 
 
         /// <summary>
         /// Wellbore property
@@ -83994,7 +83994,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ChannelStateSpecified {
+        public bool ChannelStateSpecified {
             get {
                 return ChannelStateSpecifiedField;
             } 
@@ -84004,7 +84004,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ChannelStateSpecifiedField; 
+        private bool ChannelStateSpecifiedField; 
 
         /// <summary>
         /// TimeDepth property
@@ -84013,7 +84013,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Is this a time or depth log?")]
 		[XmlElement("TimeDepth")]
-        public String TimeDepth {
+        public string TimeDepth {
             get {
                 return TimeDepthField;
             } 
@@ -84023,7 +84023,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TimeDepthField; 
+        private string TimeDepthField; 
 
         /// <summary>
         /// ChannelClass property
@@ -84050,7 +84050,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The nominal run number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a bit run number for LWD data and a wireline run number for logging data.")]
 		[XmlElement("RunNumber")]
-        public String RunNumber {
+        public string RunNumber {
             get {
                 return RunNumberField;
             } 
@@ -84060,7 +84060,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RunNumberField; 
+        private string RunNumberField; 
 
         /// <summary>
         /// PassNumber property
@@ -84068,7 +84068,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The nominal pass number for the channel. No precise meaning is declared for this attribute but it is so commonly used that it must be included.   The value here should match a wireline pass number for logging data.")]
 		[XmlElement("PassNumber")]
-        public String PassNumber {
+        public string PassNumber {
             get {
                 return PassNumberField;
             } 
@@ -84078,7 +84078,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PassNumberField; 
+        private string PassNumberField; 
 
         /// <summary>
         /// StartIndex property
@@ -84121,7 +84121,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Name of the logging company.")]
 		[XmlElement("LoggingCompanyName")]
-        public String LoggingCompanyName {
+        public string LoggingCompanyName {
             get {
                 return LoggingCompanyNameField;
             } 
@@ -84131,7 +84131,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String LoggingCompanyNameField; 
+        private string LoggingCompanyNameField; 
 
         /// <summary>
         /// LoggingCompanyCode property
@@ -84139,7 +84139,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The RP66 organization code assigned to a logging company. The list is available at http://www.energistics.org/geosciences/geology-standards/rp66-organization-codes")]
 		[XmlElement("LoggingCompanyCode")]
-        public String LoggingCompanyCode {
+        public string LoggingCompanyCode {
             get {
                 return LoggingCompanyCodeField;
             } 
@@ -84149,7 +84149,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String LoggingCompanyCodeField; 
+        private string LoggingCompanyCodeField; 
 
         /// <summary>
         /// ToolName property
@@ -84157,7 +84157,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the logging tool as given by the logging contractor.")]
 		[XmlElement("ToolName")]
-        public String ToolName {
+        public string ToolName {
             get {
                 return ToolNameField;
             } 
@@ -84167,7 +84167,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ToolNameField; 
+        private string ToolNameField; 
 
         /// <summary>
         /// ToolClass property
@@ -84175,7 +84175,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A value categorizing a logging tool. The classification system used in WITSML is the one from the PWLS group.  NOTE: This should turn into an extensible enumeration before WITSML is released")]
 		[XmlElement("ToolClass")]
-        public String ToolClass {
+        public string ToolClass {
             get {
                 return ToolClassField;
             } 
@@ -84185,7 +84185,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ToolClassField; 
+        private string ToolClassField; 
 
         /// <summary>
         /// Derivation property
@@ -84210,7 +84210,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DerivationSpecified {
+        public bool DerivationSpecified {
             get {
                 return DerivationSpecifiedField;
             } 
@@ -84220,7 +84220,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean DerivationSpecifiedField; 
+        private bool DerivationSpecifiedField; 
 
         /// <summary>
         /// LoggingMethod property
@@ -84245,7 +84245,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean LoggingMethodSpecified {
+        public bool LoggingMethodSpecified {
             get {
                 return LoggingMethodSpecifiedField;
             } 
@@ -84255,7 +84255,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean LoggingMethodSpecifiedField; 
+        private bool LoggingMethodSpecifiedField; 
 
         /// <summary>
         /// NominalHoleSize property
@@ -84541,7 +84541,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StatusBhaSpecified {
+        public bool StatusBhaSpecified {
             get {
                 return StatusBhaSpecifiedField;
             } 
@@ -84551,14 +84551,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean StatusBhaSpecifiedField; 
+        private bool StatusBhaSpecifiedField; 
 
         /// <summary>
         /// NumBitRun property
         /// </summary>
 		[Description("Bit run number.")]
 		[XmlElement("NumBitRun")]
-        public Int32? NumBitRun {
+        public int? NumBitRun {
             get {
                 return NumBitRunField;
             } 
@@ -84569,14 +84569,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumBitRunField; 
+        private int? NumBitRunField; 
 
         /// <summary>
         /// NumBitRunSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumBitRunSpecified {
+        public bool NumBitRunSpecified {
             get {
                 return NumBitRunSpecifiedField;
             } 
@@ -84586,14 +84586,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumBitRunSpecifiedField; 
+        private bool NumBitRunSpecifiedField; 
 
         /// <summary>
         /// NumStringRun property
         /// </summary>
 		[Description("The BHA (drilling string) run number.")]
 		[XmlElement("NumStringRun")]
-        public Int32? NumStringRun {
+        public int? NumStringRun {
             get {
                 return NumStringRunField;
             } 
@@ -84604,14 +84604,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumStringRunField; 
+        private int? NumStringRunField; 
 
         /// <summary>
         /// NumStringRunSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumStringRunSpecified {
+        public bool NumStringRunSpecified {
             get {
                 return NumStringRunSpecifiedField;
             } 
@@ -84621,7 +84621,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumStringRunSpecifiedField; 
+        private bool NumStringRunSpecifiedField; 
 
         /// <summary>
         /// ReasonTrip property
@@ -84629,7 +84629,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Reason for a trip.")]
 		[XmlElement("ReasonTrip")]
-        public String ReasonTrip {
+        public string ReasonTrip {
             get {
                 return ReasonTripField;
             } 
@@ -84639,7 +84639,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ReasonTripField; 
+        private string ReasonTripField; 
 
         /// <summary>
         /// ObjectiveBha property
@@ -84647,7 +84647,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Objective of the bottomhole assembly.")]
 		[XmlElement("ObjectiveBha")]
-        public String ObjectiveBha {
+        public string ObjectiveBha {
             get {
                 return ObjectiveBhaField;
             } 
@@ -84657,7 +84657,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ObjectiveBhaField; 
+        private string ObjectiveBhaField; 
 
         /// <summary>
         /// DrillingParams property
@@ -84799,7 +84799,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Fluids report number.")]
 		[XmlElement("NumReport")]
-        public Int32? NumReport {
+        public int? NumReport {
             get {
                 return NumReportField;
             } 
@@ -84810,14 +84810,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Int32? NumReportField; 
+        private int? NumReportField; 
 
         /// <summary>
         /// NumReportSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean NumReportSpecified {
+        public bool NumReportSpecified {
             get {
                 return NumReportSpecifiedField;
             } 
@@ -84827,7 +84827,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean NumReportSpecifiedField; 
+        private bool NumReportSpecifiedField; 
 
         /// <summary>
         /// Fluid property
@@ -84951,7 +84951,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean VersionKindSpecified {
+        public bool VersionKindSpecified {
             get {
                 return VersionKindSpecifiedField;
             } 
@@ -84961,7 +84961,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean VersionKindSpecifiedField; 
+        private bool VersionKindSpecifiedField; 
 
         /// <summary>
         /// CreateDate property
@@ -85612,7 +85612,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("Is float valve present?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("ValveFloat")]
-        public Boolean? ValveFloat {
+        public bool? ValveFloat {
             get {
                 return ValveFloatField;
             } 
@@ -85623,14 +85623,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? ValveFloatField; 
+        private bool? ValveFloatField; 
 
         /// <summary>
         /// ValveFloatSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ValveFloatSpecified {
+        public bool ValveFloatSpecified {
             get {
                 return ValveFloatSpecifiedField;
             } 
@@ -85640,14 +85640,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ValveFloatSpecifiedField; 
+        private bool ValveFloatSpecifiedField; 
 
         /// <summary>
         /// SourceNuclear property
         /// </summary>
 		[Description("Is nuclear tool present?  Values are \"true\" (or \"1\") and \"false\" (or \"0\").")]
 		[XmlElement("SourceNuclear")]
-        public Boolean? SourceNuclear {
+        public bool? SourceNuclear {
             get {
                 return SourceNuclearField;
             } 
@@ -85658,14 +85658,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? SourceNuclearField; 
+        private bool? SourceNuclearField; 
 
         /// <summary>
         /// SourceNuclearSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean SourceNuclearSpecified {
+        public bool SourceNuclearSpecified {
             get {
                 return SourceNuclearSpecifiedField;
             } 
@@ -85675,7 +85675,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean SourceNuclearSpecifiedField; 
+        private bool SourceNuclearSpecifiedField; 
 
         /// <summary>
         /// DiaHoleAssy property
@@ -85764,7 +85764,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Used to tell what the object is when you have multiple attachments of the same file type. E.g., if you have attached a picture of cuttings on a specific depth, you can tag it with Category=\"CuttingsPicture\".")]
 		[XmlElement("Category")]
-        public String Category {
+        public string Category {
             get {
                 return CategoryField;
             } 
@@ -85774,7 +85774,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CategoryField; 
+        private string CategoryField; 
 
         /// <summary>
         /// Md property
@@ -85848,7 +85848,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A file name associated with the attachment. Note this is NOT a file path and should contain a name only.")]
 		[XmlElement("FileName")]
-        public String FileName {
+        public string FileName {
             get {
                 return FileNameField;
             } 
@@ -85858,7 +85858,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FileNameField; 
+        private string FileNameField; 
 
         /// <summary>
         /// FileType property
@@ -85866,7 +85866,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("The file type. This field SHOULD be a registered mime type as cataloged at http://www.iana.org/assignments/media-types/media-types.xhtml.")]
 		[XmlElement("FileType")]
-        public String FileType {
+        public string FileType {
             get {
                 return FileTypeField;
             } 
@@ -85876,7 +85876,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FileTypeField; 
+        private string FileTypeField; 
 
         /// <summary>
         /// Content property
@@ -85932,7 +85932,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("A reference to a sub-object that is defined within the context of the object referenced by objectReference. This should only refer to recurring components of a growing object. The content is the UID of the sub-object.")]
 		[XmlElement("SubObjectReference")]
-        public String SubObjectReference {
+        public string SubObjectReference {
             get {
                 return SubObjectReferenceField;
             } 
@@ -85942,7 +85942,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SubObjectReferenceField; 
+        private string SubObjectReferenceField; 
 
         /// <summary>
         /// Wellbore property
@@ -85984,7 +85984,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Operator borehole number.")]
 		[XmlElement("Number")]
-        public String Number {
+        public string Number {
             get {
                 return NumberField;
             } 
@@ -85994,7 +85994,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NumberField; 
+        private string NumberField; 
 
         /// <summary>
         /// SuffixAPI property
@@ -86002,7 +86002,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("API suffix.")]
 		[XmlElement("SuffixAPI")]
-        public String SuffixAPI {
+        public string SuffixAPI {
             get {
                 return SuffixAPIField;
             } 
@@ -86012,7 +86012,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String SuffixAPIField; 
+        private string SuffixAPIField; 
 
         /// <summary>
         /// NumGovt property
@@ -86020,7 +86020,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Government assigned number.")]
 		[XmlElement("NumGovt")]
-        public String NumGovt {
+        public string NumGovt {
             get {
                 return NumGovtField;
             } 
@@ -86030,7 +86030,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NumGovtField; 
+        private string NumGovtField; 
 
         /// <summary>
         /// StatusWellbore property
@@ -86055,7 +86055,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StatusWellboreSpecified {
+        public bool StatusWellboreSpecified {
             get {
                 return StatusWellboreSpecifiedField;
             } 
@@ -86065,14 +86065,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean StatusWellboreSpecifiedField; 
+        private bool StatusWellboreSpecifiedField; 
 
         /// <summary>
         /// IsActive property
         /// </summary>
 		[Description("True (=\"1\" or \"true\") indicates that the wellbore is active. False (=\"0\" or \"false\") indicates otherwise. It is the servers responsibility to  set this value based on its available internal data (e.g., what objects are changing).")]
 		[XmlElement("IsActive")]
-        public Boolean? IsActive {
+        public bool? IsActive {
             get {
                 return IsActiveField;
             } 
@@ -86083,14 +86083,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsActiveField; 
+        private bool? IsActiveField; 
 
         /// <summary>
         /// IsActiveSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean IsActiveSpecified {
+        public bool IsActiveSpecified {
             get {
                 return IsActiveSpecifiedField;
             } 
@@ -86100,7 +86100,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean IsActiveSpecifiedField; 
+        private bool IsActiveSpecifiedField; 
 
         /// <summary>
         /// PurposeWellbore property
@@ -86125,7 +86125,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PurposeWellboreSpecified {
+        public bool PurposeWellboreSpecified {
             get {
                 return PurposeWellboreSpecifiedField;
             } 
@@ -86135,7 +86135,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PurposeWellboreSpecifiedField; 
+        private bool PurposeWellboreSpecifiedField; 
 
         /// <summary>
         /// TypeWellbore property
@@ -86160,7 +86160,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean TypeWellboreSpecified {
+        public bool TypeWellboreSpecified {
             get {
                 return TypeWellboreSpecifiedField;
             } 
@@ -86170,7 +86170,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean TypeWellboreSpecifiedField; 
+        private bool TypeWellboreSpecifiedField; 
 
         /// <summary>
         /// Shape property
@@ -86195,7 +86195,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean ShapeSpecified {
+        public bool ShapeSpecified {
             get {
                 return ShapeSpecifiedField;
             } 
@@ -86205,7 +86205,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean ShapeSpecifiedField; 
+        private bool ShapeSpecifiedField; 
 
         /// <summary>
         /// DTimKickoff property
@@ -86229,7 +86229,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[Description("True (\"true\" of \"1\") indicates that the wellbore has  acheieved total depth. That is, drilling has completed. False (\"false\" or \"0\") indicates otherwise.  Not given indicates that it is not known whether total depth has been reached.")]
 		[XmlElement("AchievedTD")]
-        public Boolean? AchievedTD {
+        public bool? AchievedTD {
             get {
                 return AchievedTDField;
             } 
@@ -86240,14 +86240,14 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? AchievedTDField; 
+        private bool? AchievedTDField; 
 
         /// <summary>
         /// AchievedTDSpecified property
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean AchievedTDSpecified {
+        public bool AchievedTDSpecified {
             get {
                 return AchievedTDSpecifiedField;
             } 
@@ -86257,7 +86257,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean AchievedTDSpecifiedField; 
+        private bool AchievedTDSpecifiedField; 
 
         /// <summary>
         /// Md property
@@ -86514,7 +86514,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Legal name of the well.")]
 		[XmlElement("NameLegal")]
-        public String NameLegal {
+        public string NameLegal {
             get {
                 return NameLegalField;
             } 
@@ -86524,7 +86524,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NameLegalField; 
+        private string NameLegalField; 
 
         /// <summary>
         /// NumLicense property
@@ -86532,7 +86532,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("License number of the well.")]
 		[XmlElement("NumLicense")]
-        public String NumLicense {
+        public string NumLicense {
             get {
                 return NumLicenseField;
             } 
@@ -86542,7 +86542,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NumLicenseField; 
+        private string NumLicenseField; 
 
         /// <summary>
         /// NumGovt property
@@ -86550,7 +86550,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Government assigned well number.")]
 		[XmlElement("NumGovt")]
-        public String NumGovt {
+        public string NumGovt {
             get {
                 return NumGovtField;
             } 
@@ -86560,7 +86560,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NumGovtField; 
+        private string NumGovtField; 
 
         /// <summary>
         /// DTimLicense property
@@ -86585,7 +86585,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Name of the field in which the well is located.")]
 		[XmlElement("Field")]
-        public String Field {
+        public string Field {
             get {
                 return FieldField;
             } 
@@ -86595,7 +86595,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FieldField; 
+        private string FieldField; 
 
         /// <summary>
         /// Country property
@@ -86603,7 +86603,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Country in which the well is located.")]
 		[XmlElement("Country")]
-        public String Country {
+        public string Country {
             get {
                 return CountryField;
             } 
@@ -86613,7 +86613,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CountryField; 
+        private string CountryField; 
 
         /// <summary>
         /// State property
@@ -86621,7 +86621,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("State or province in which the well is located.")]
 		[XmlElement("State")]
-        public String State {
+        public string State {
             get {
                 return StateField;
             } 
@@ -86631,7 +86631,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String StateField; 
+        private string StateField; 
 
         /// <summary>
         /// County property
@@ -86639,7 +86639,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("County in which the well is located.")]
 		[XmlElement("County")]
-        public String County {
+        public string County {
             get {
                 return CountyField;
             } 
@@ -86649,7 +86649,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CountyField; 
+        private string CountyField; 
 
         /// <summary>
         /// Region property
@@ -86657,7 +86657,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Geo-political region in which the well is located.")]
 		[XmlElement("Region")]
-        public String Region {
+        public string Region {
             get {
                 return RegionField;
             } 
@@ -86667,7 +86667,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String RegionField; 
+        private string RegionField; 
 
         /// <summary>
         /// District property
@@ -86675,7 +86675,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Geo-political district name.")]
 		[XmlElement("District")]
-        public String District {
+        public string District {
             get {
                 return DistrictField;
             } 
@@ -86685,7 +86685,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String DistrictField; 
+        private string DistrictField; 
 
         /// <summary>
         /// Block property
@@ -86693,7 +86693,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Block name in which the  well is located.")]
 		[XmlElement("Block")]
-        public String Block {
+        public string Block {
             get {
                 return BlockField;
             } 
@@ -86703,7 +86703,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String BlockField; 
+        private string BlockField; 
 
         /// <summary>
         /// TimeZone property
@@ -86712,7 +86712,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("The time zone in which the well is located. It is the deviation in hours and minutes from UTC. This should be the normal time zone at the well and not a seasonally-adjusted value, such as daylight savings time.")]
 		[XmlElement("TimeZone")]
-        public String TimeZone {
+        public string TimeZone {
             get {
                 return TimeZoneField;
             } 
@@ -86722,7 +86722,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String TimeZoneField; 
+        private string TimeZoneField; 
 
         /// <summary>
         /// Operator property
@@ -86730,7 +86730,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Operator company name.")]
 		[XmlElement("Operator")]
-        public String Operator {
+        public string Operator {
             get {
                 return OperatorField;
             } 
@@ -86740,7 +86740,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OperatorField; 
+        private string OperatorField; 
 
         /// <summary>
         /// OperatorDiv property
@@ -86748,7 +86748,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Division of the operator company.")]
 		[XmlElement("OperatorDiv")]
-        public String OperatorDivision {
+        public string OperatorDivision {
             get {
                 return OperatorDivField;
             } 
@@ -86758,7 +86758,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OperatorDivField; 
+        private string OperatorDivField; 
 
         /// <summary>
         /// OriginalOperator property
@@ -86766,7 +86766,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("Original operator of the well. This may be different than the current operator.")]
 		[XmlElement("OriginalOperator")]
-        public String OriginalOperator {
+        public string OriginalOperator {
             get {
                 return OriginalOperatorField;
             } 
@@ -86776,7 +86776,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OriginalOperatorField; 
+        private string OriginalOperatorField; 
 
         /// <summary>
         /// PcInterest property
@@ -86802,7 +86802,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("American Petroleum Institute well number.")]
 		[XmlElement("NumAPI")]
-        public String NumAPI {
+        public string NumAPI {
             get {
                 return NumAPIField;
             } 
@@ -86812,7 +86812,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String NumAPIField; 
+        private string NumAPIField; 
 
         /// <summary>
         /// StatusWell property
@@ -86837,7 +86837,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean StatusWellSpecified {
+        public bool StatusWellSpecified {
             get {
                 return StatusWellSpecifiedField;
             } 
@@ -86847,7 +86847,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean StatusWellSpecifiedField; 
+        private bool StatusWellSpecifiedField; 
 
         /// <summary>
         /// PurposeWell property
@@ -86872,7 +86872,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean PurposeWellSpecified {
+        public bool PurposeWellSpecified {
             get {
                 return PurposeWellSpecifiedField;
             } 
@@ -86882,7 +86882,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean PurposeWellSpecifiedField; 
+        private bool PurposeWellSpecifiedField; 
 
         /// <summary>
         /// FluidWell property
@@ -86907,7 +86907,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean FluidWellSpecified {
+        public bool FluidWellSpecified {
             get {
                 return FluidWellSpecifiedField;
             } 
@@ -86917,7 +86917,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean FluidWellSpecifiedField; 
+        private bool FluidWellSpecifiedField; 
 
         /// <summary>
         /// DirectionWell property
@@ -86942,7 +86942,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
         [XmlIgnore]
         [Browsable(false)]
-        public Boolean DirectionWellSpecified {
+        public bool DirectionWellSpecified {
             get {
                 return DirectionWellSpecifiedField;
             } 
@@ -86952,7 +86952,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean DirectionWellSpecifiedField; 
+        private bool DirectionWellSpecifiedField; 
 
         /// <summary>
         /// DTimSpud property
@@ -87228,7 +87228,7 @@ namespace Energistics.DataAccess.WITSML200
         [StringLength(64)]
         [Description("Identifier of the policy whose conformance is being described.")]
 		[XmlElement("PolicyId")]
-        public String PolicyId {
+        public string PolicyId {
             get {
                 return PolicyIdField;
             } 
@@ -87238,7 +87238,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PolicyIdField; 
+        private string PolicyIdField; 
 
         /// <summary>
         /// PolicyName property
@@ -87246,7 +87246,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("Human-readable name of the policy")]
 		[XmlElement("PolicyName")]
-        public String PolicyName {
+        public string PolicyName {
             get {
                 return PolicyNameField;
             } 
@@ -87256,7 +87256,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String PolicyNameField; 
+        private string PolicyNameField; 
 
         /// <summary>
         /// ReferencedElementName property
@@ -87264,7 +87264,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("If the Policy applies to a single element within the referenced data object this attribute holds its element name.")]
 		[XmlElement("ReferencedElementName")]
-        public String ReferencedElementName {
+        public string ReferencedElementName {
             get {
                 return ReferencedElementNameField;
             } 
@@ -87274,7 +87274,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ReferencedElementNameField; 
+        private string ReferencedElementNameField; 
 
         /// <summary>
         /// ReferencedElementUid property
@@ -87282,7 +87282,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(64)]
         [Description("If the Policy applies to a single occurrence of a recurring element within the referenced data object this attribute holds its uid.  The name of the recurring element would be in the ReferencedElementName.")]
 		[XmlElement("ReferencedElementUid")]
-        public String ReferencedElementUid {
+        public string ReferencedElementUid {
             get {
                 return ReferencedElementUidField;
             } 
@@ -87292,7 +87292,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String ReferencedElementUidField; 
+        private string ReferencedElementUidField; 
 
         /// <summary>
         /// Origin property
@@ -87300,7 +87300,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Agent which checked the data for conformance with the policy. This could be a person or an automated computer process or any number of other things.")]
 		[XmlElement("Origin")]
-        public String Origin {
+        public string Origin {
             get {
                 return OriginField;
             } 
@@ -87310,7 +87310,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String OriginField; 
+        private string OriginField; 
 
         /// <summary>
         /// Conformance property
@@ -87318,7 +87318,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("Yes/no flag indicating whether this particular data ???? conforms with the policy or not.")]
 		[XmlElement("Conformance")]
-        public Boolean? Conformance {
+        public bool? Conformance {
             get {
                 return ConformanceField;
             } 
@@ -87328,7 +87328,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? ConformanceField; 
+        private bool? ConformanceField; 
 
         /// <summary>
         /// Date property
@@ -87353,7 +87353,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		
 		[XmlElement("Comment")]
-        public String Comment {
+        public string Comment {
             get {
                 return CommentField;
             } 
@@ -87363,7 +87363,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String CommentField; 
+        private string CommentField; 
 
         /// <summary>
         /// FailingRules property
@@ -87519,7 +87519,7 @@ namespace Energistics.DataAccess.WITSML200
 		
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -87529,7 +87529,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
 
     } //here
@@ -87588,7 +87588,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [XmlAttribute("uom")]
 		
-        public String Uom {
+        public string Uom {
             get {
                 return uomField;
             } 
@@ -87598,7 +87598,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String uomField; 
+        private string uomField; 
 
 
     } //here
@@ -87810,7 +87810,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("This boolean indicates whether the PropertyKind should be used as a real property or not.  If the Is Abstract flag is set, then this entry should be used only as the parent of a real property. For example, the PropertyKind of \"force per length\" shouldn't be used directly, as it is really just a description of some units of measure. This entry should only be used as the parent of the real physical property \"surface tension\".")]
 		[XmlElement("IsAbstract")]
-        public Boolean? IsAbstract {
+        public bool? IsAbstract {
             get {
                 return IsAbstractField;
             } 
@@ -87820,7 +87820,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private Boolean? IsAbstractField; 
+        private bool? IsAbstractField; 
 
         /// <summary>
         /// DeprecationDate property
@@ -87845,7 +87845,7 @@ namespace Energistics.DataAccess.WITSML200
 		[Required]
         [Description("A reference to the name of a quantity class in the Energistics Unit of Measure Dictionary. If there is no match in the Energistics Unit of Measure Dictionary, then this attribute is purely for human information.")]
 		[XmlElement("QuantityClass")]
-        public QuantityClassKind? QuantityClass {
+        public ExtensibleEnum<QuantityClassKind>? QuantityClass {
             get {
                 return QuantityClassField;
             } 
@@ -87855,7 +87855,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private QuantityClassKind? QuantityClassField; 
+        private ExtensibleEnum<QuantityClassKind>? QuantityClassField; 
 
         /// <summary>
         /// Parent property
@@ -87941,7 +87941,7 @@ namespace Energistics.DataAccess.WITSML200
         /// </summary>
 		[StringLength(2000)]
 		[XmlElement("Filename")]
-        public String Filename {
+        public string Filename {
             get {
                 return FilenameField;
             } 
@@ -87951,7 +87951,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String FilenameField; 
+        private string FilenameField; 
 
         /// <summary>
         /// MimeType property
@@ -87959,7 +87959,7 @@ namespace Energistics.DataAccess.WITSML200
 		[StringLength(2000)]
         [Description("IAMF registered, if one exists, or a free text field. Needs documentation on seismic especially.  MIME type for HDF proxy is : application/x-hdf5 (by convention).")]
 		[XmlElement("MimeType")]
-        public String MimeType {
+        public string MimeType {
             get {
                 return MimeTypeField;
             } 
@@ -87969,7 +87969,7 @@ namespace Energistics.DataAccess.WITSML200
             }
         }
 
-        private String MimeTypeField; 
+        private string MimeTypeField; 
 
 
     } //here

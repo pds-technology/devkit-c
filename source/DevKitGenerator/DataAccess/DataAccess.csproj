@@ -35,6 +35,7 @@
     <DocumentationFile>bin\Debug\Energistics.DataAccess.XML</DocumentationFile>
     <Prefer32Bit>false</Prefer32Bit>
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -83,7 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractWebServiceConnection.cs" />
-    <Compile Include="BaseEnumExtension.cs" />
+    <Compile Include="ExtensibleEnum.cs" />
     <Compile Include="ClientCompression.cs" />
     <Compile Include="COMPLETION100\CommonData.cs" />
     <Compile Include="COMPLETION100\DataObjects.cs" />
@@ -180,13 +181,8 @@
     <PreBuildEvent>"$(SolutionDir)Generator\$(OutDir)Energistics.Generator.exe" "--root-folder=$(SolutionDir)..\..\\"</PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>copy $(TargetDir)Energistics.DataAccess.dll $(SolutionDir)..\DevKit\Assemblies
-
-copy $(TargetDir)Energistics.DataAccess.xml $(SolutionDir)..\DevKit\Assemblies
-
-copy $(TargetDir)Energistics.DataAccess.pdb $(SolutionDir)..\DevKit\Assemblies
-
-start xcopy /c /s /y "$(SolutionDir)packages\HDF5DotNet.x86.1.8.9\lib\net40\*.*" "$(SolutionDir)..\DevKit\Assemblies"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
